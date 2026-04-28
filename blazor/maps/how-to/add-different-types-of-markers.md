@@ -49,7 +49,7 @@ Initialize the Maps component with marker settings. A marker is added with the s
 }
 ```
 
-![Blazor Maps Marker with Circle Shape](../images/blazor-maps-marker-with-circle.PNG)
+![Blazor Maps Marker with Circle Shape](../images/blazor-maps-marker-with-circle.webp)
 
 <b>Step 2</b>
 
@@ -100,7 +100,7 @@ Customize the above option for multiple markers as shown in the following exampl
 
 ```
 
-![Blazor Maps with Multiple Marker](../images/blazor-maps-multiple-marker.PNG)
+![Blazor Maps with Multiple Marker](../images/blazor-maps-multiple-marker.webp)
 
 ## Tooltip for marker
 
@@ -141,4 +141,4 @@ A tooltip displays additional information about a marker on mouse over or touch 
 
 ```
 
-![Blazor Maps with Marker Tooltip](../images/blazor-maps-marker-tooltip.png)
+![Blazor Maps with Marker Tooltip](../images/blazor-maps-marker-tooltip.webp)

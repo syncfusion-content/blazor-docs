@@ -48,7 +48,7 @@ Set a chart title using the [Title](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor Stock Chart with Title](images/appearance/blazor-stock-chart-title.png)
+![Blazor Stock Chart with Title](images/appearance/blazor-stock-chart-title.webp)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -92,7 +92,7 @@ The `TextStyle` property of the chart title provides options to customize `Size`
 
 ```
 
-![Blazor Stock Chart with Custom Title](images/appearance/blazor-stock-chart-custom-title.png)
+![Blazor Stock Chart with Custom Title](images/appearance/blazor-stock-chart-custom-title.webp)
 
 ## Stock Chart Theme
 
@@ -135,7 +135,7 @@ Stock Chart includes several built-in themes such as `Material`, `Fabric`, `Boot
 
 ```
 
-![Applying Theme in Blazor Stock Chart](images/appearance/blazor-stock-chart-with-theme.png)
+![Applying Theme in Blazor Stock Chart](images/appearance/blazor-stock-chart-with-theme.webp)
 
 ## See Also
 

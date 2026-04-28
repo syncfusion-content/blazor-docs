@@ -166,8 +166,6 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
 </SfBulletChart>
 
@@ -188,7 +186,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bullet Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLJZMByKuOOgQjA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart Component](images/blazor-bullet-chart-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLJZMByKuOOgQjA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart Component](images/blazor-bullet-chart-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/BulletChart).
 
@@ -205,7 +203,7 @@ Add a title by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhpXWByfNMLYFQO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Title](images/blazor-bullet-chart-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhpXWByfNMLYFQO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Title](images/blazor-bullet-chart-title.webp)" %}
 
 ## Adding ranges
 
@@ -226,7 +224,7 @@ Add ranges by using the [BulletChartRangeCollection](https://help.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrJXMhezDHBfdQU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Range in Blazor Bullet Chart](images/blazor-bullet-chart-ranges.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrJXMhezDHBfdQU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Range in Blazor Bullet Chart](images/blazor-bullet-chart-ranges.webp)" %}
 
 ## Adding tooltip
 
@@ -247,7 +245,7 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBzDWVITXPjsQbH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBzDWVITXPjsQbH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.webp)" %}
 
 N> You can also explore our [Blazor Bullet Chart example](https://blazor.syncfusion.com/demos/bullet-chart/default-functionalities?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 

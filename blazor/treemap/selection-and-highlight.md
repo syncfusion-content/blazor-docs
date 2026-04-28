@@ -57,7 +57,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeM
 }
 ```
 
-![Blazor TreeMap Item with Selection](images/HighlightandSelection/blazor-treemap-selection.png)
+![Blazor TreeMap Item with Selection](images/HighlightandSelection/blazor-treemap-selection.webp)
 
 ## Highlight
 
@@ -88,4 +88,4 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeM
 
 N> Refer to the [code block](#selection) to know about the property value of **Employees**.
 
-![Highlighting Blazor TreeMap Item](images/HighlightandSelection/blazor-treemap-highlight-item.png)
+![Highlighting Blazor TreeMap Item](images/HighlightandSelection/blazor-treemap-highlight-item.webp)

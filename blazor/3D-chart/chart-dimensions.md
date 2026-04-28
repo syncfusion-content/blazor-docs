@@ -49,7 +49,7 @@ The 3D chart can be rendered to its container size and it can be set via inline 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrJtdsrpsPezXYL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size as Fit to Container](images/chart-dimensions/blazor-chart-size-for-container.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrJtdsrpsPezXYL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size as Fit to Container](images/chart-dimensions/blazor-chart-size-for-container.webp)" %}
 
 ## Size for chart
 
@@ -93,7 +93,7 @@ The size of the 3D chart can be set in pixel as demonstrated below.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLTZdCrpWvYfGmi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size in Pixel](images/chart-dimensions/blazor-chart-size-in-pixel.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLTZdCrpWvYfGmi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size in Pixel](images/chart-dimensions/blazor-chart-size-in-pixel.webp)" %}
 
 ### In Percentage
 
@@ -133,4 +133,4 @@ By setting the value in percentage, the 3D Chart gets its dimension with respec
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJDxMrpsargarf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size in Percentage](images/chart-dimensions/blazor-chart-size-in-percentage.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJDxMrpsargarf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor 3D Chart Size in Percentage](images/chart-dimensions/blazor-chart-size-in-percentage.webp)" %}

@@ -56,7 +56,7 @@ Enabling the [SnapToData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![SnapToData Crosshair in Blazor Line Chart](images/crosshair/blazor-line-chart-with-crosshair.png)
+![SnapToData Crosshair in Blazor Line Chart](images/crosshair/blazor-line-chart-with-crosshair.webp)
 
 ## Enable Tooltip
 
@@ -103,7 +103,7 @@ The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 ```
 
-![Crosshair with Tooltip in Blazor Line Chart](images/crosshair/blazor-line-chart-crosshair-with-tooltip.png)
+![Crosshair with Tooltip in Blazor Line Chart](images/crosshair/blazor-line-chart-crosshair-with-tooltip.webp)
 
 ## Crosshair customization
 
@@ -156,7 +156,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartA
 
 ```
 
-![Blazor Line Chart with Custom crosshair and Tooltip](images/crosshair/blazor-line-chart-custom-crosshair-and-tooltip.png)
+![Blazor Line Chart with Custom crosshair and Tooltip](images/crosshair/blazor-line-chart-custom-crosshair-and-tooltip.webp)
 
 ## Trackball
 
@@ -213,7 +213,7 @@ The trackball is used to track the data point that is closest to the mouse or to
 
 ```
 
-![Trackball in Blazor Line Chart](images/crosshair/blazor-line-chart-with-trackball.png)
+![Trackball in Blazor Line Chart](images/crosshair/blazor-line-chart-with-trackball.webp)
 
 ## Highlighting data range with crosshair
 
@@ -274,7 +274,7 @@ The [HighlightCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIjJjJztIfQRsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Crosshair in Blazor Line Chart with highlight background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIjJjJztIfQRsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Crosshair in Blazor Line Chart with highlight background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.webp)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
