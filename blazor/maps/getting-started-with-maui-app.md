@@ -160,7 +160,7 @@ N> The "world-map.json" file contains the World map GeoJSON data.
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Maps with GeoJSON Layer](./images/blazor-maps-maui-app.png)
+![Blazor Maps with GeoJSON Layer](./images/blazor-maps-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -170,7 +170,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Maps with GeoJSON Layer](./images/blazor-map.png)
+![Blazor Maps with GeoJSON Layer](./images/blazor-map.webp)
 
 ## Bind data source
 
@@ -264,7 +264,7 @@ The color mapping supports customization of shape colors based on the underlying
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)
+![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.webp)
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -300,7 +300,7 @@ Label provides information to users about the shapes, and you can enable label t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Label](./images/blazor-map-label.png)
+![Blazor Maps with Label](./images/blazor-map-label.webp)
 
 ## Adding title for Blazor Maps
 
@@ -335,7 +335,7 @@ Title can be added to the Maps to provide quick information to the users about t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Title](./images/blazor-map-title.png)
+![Blazor Maps with Title](./images/blazor-map-title.webp)
 
 ## Enable legend
 
@@ -371,7 +371,7 @@ The legend items are used to denote color mapping categories, and you can show l
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Legend](./images/blazor-map-legend.png)
+![Blazor Maps with Legend](./images/blazor-map-legend.webp)
 
 ## Enable tooltip
 
@@ -408,7 +408,7 @@ The tooltip can be used when you cannot display information using the data label
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)
+![Blazor Maps with Tooltip](./images/blazor-map-tooltip.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 

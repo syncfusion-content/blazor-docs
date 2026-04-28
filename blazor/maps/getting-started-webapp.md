@@ -193,7 +193,7 @@ You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRNhjJJCBhIpFe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with GeoJSON Layer](./images/blazor-map.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRNhjJJCBhIpFe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with GeoJSON Layer](./images/blazor-map.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 
@@ -287,7 +287,7 @@ The color mapping supports customization of shape colors based on the underlying
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdXVZpTCKEstPx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdXVZpTCKEstPx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.webp)" %}
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -321,7 +321,7 @@ Label provides information to users about the shapes, and you can enable label t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhHNLZzTMSPCHxK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Label](./images/blazor-map-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhHNLZzTMSPCHxK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Label](./images/blazor-map-label.webp)" %}
 
 ## Adding title for Blazor Maps
 
@@ -354,7 +354,7 @@ Title can be added to the Maps to provide quick information to the users about t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVnNLtpfWHcdHHC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Title](./images/blazor-map-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVnNLtpfWHcdHHC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Title](./images/blazor-map-title.webp)" %}
 
 ## Enable legend
 
@@ -388,7 +388,7 @@ The legend items are used to denote color mapping categories, and you can show l
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHDrZTJilZXniY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Legend](./images/blazor-map-legend.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHDrZTJilZXniY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Legend](./images/blazor-map-legend.webp)" %}
 
 ## Enable tooltip
 
@@ -423,7 +423,7 @@ The tooltip can be used when you cannot display information using the data label
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBdXhZpzMurAPfU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBdXhZpzMurAPfU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Tooltip](./images/blazor-map-tooltip.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 

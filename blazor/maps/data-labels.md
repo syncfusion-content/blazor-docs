@@ -31,7 +31,7 @@ Use the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
 
 ```
 
-![Blazor Maps with Data Label](./images/DataLabel/blazor-maps-data-label.png)
+![Blazor Maps with Data Label](./images/DataLabel/blazor-maps-data-label.webp)
 
 In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property value is taken from the field in the layer’s data source.
 
@@ -79,7 +79,7 @@ In the following example, the [LabelPath](https://help.syncfusion.com/cr/blazor/
 }
 ```
 
-![Getting Blazor Maps Label Path Value from Datasource](./images/DataLabel/blazor-maps-label-path-datasource.PNG)
+![Getting Blazor Maps Label Path Value from Datasource](./images/DataLabel/blazor-maps-label-path-datasource.webp)
 
 ## Customization
 
@@ -110,7 +110,7 @@ Customize the appearance of data labels using the following properties in [MapsD
 
 ```
 
-![Blazor Maps with Custom Data Label](./images/DataLabel/blazor-maps-custom-data-label.PNG)
+![Blazor Maps with Custom Data Label](./images/DataLabel/blazor-maps-custom-data-label.webp)
 
 ## Label animation
 
@@ -133,7 +133,7 @@ Animate data labels on initial render by setting the [AnimationDuration](https:/
 
 ```
 
-![Blazor Maps with data label animation](./images/DataLabel/blazor-maps-data-label-animation.gif)
+![Blazor Maps with data label animation](./images/DataLabel/blazor-maps-data-label-animation.webp)
 
 ## Smart labels
 
@@ -160,7 +160,7 @@ Manage labels that intersect shape borders by using the [SmartLabelMode](https:/
 
 ```
 
-![Blazor Maps with Smart Data Label](./images/DataLabel/blazor-maps-smart-data-label.png)
+![Blazor Maps with Smart Data Label](./images/DataLabel/blazor-maps-smart-data-label.webp)
 
 ## Intersect action
 
@@ -187,7 +187,7 @@ Manage labels that intersect with other labels by using the [IntersectionAction]
 
 ```
 
-![Blazor Maps Label with Intersect Action](./images/DataLabel/blazor-maps-data-label-trim.png)
+![Blazor Maps Label with Intersect Action](./images/DataLabel/blazor-maps-data-label-trim.webp)
 
 ## Adding data label as a template
 
@@ -241,4 +241,4 @@ N> The data label customization properties [SmartLabelMode](https://help.syncfus
 
 ```
 
-![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)
+![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.webp)

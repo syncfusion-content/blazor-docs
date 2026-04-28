@@ -57,7 +57,7 @@ The default color of series or points can be changed by providing a custom color
 
 ```
 
-![Blazor Column Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.png)
+![Blazor Column Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.webp)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -108,7 +108,7 @@ The chart's background color can be customized using the [Background](https://he
 
 ```
 
-![Blazor Column Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.png)
+![Blazor Column Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.webp)
 
 ### Chart margin
 
@@ -154,7 +154,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ```
 
-![Blazor Column Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)
+![Blazor Column Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.webp)
 
 ### Chart area customization
 
@@ -198,7 +198,7 @@ Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ```
 
-![Blazor Area Chart with Custom Background and Border](images/appearance/blazor-area-chart-custom-background-and-border.png)
+![Blazor Area Chart with Custom Background and Border](images/appearance/blazor-area-chart-custom-background-and-border.webp)
 
 ## Animation
 
@@ -285,7 +285,7 @@ A chart title can be specified using the [Title](https://help.syncfusion.com/cr/
 
 ```
 
-![Blazor Column Chart with Title](images/appearance/blazor-column-chart-title.png)
+![Blazor Column Chart with Title](images/appearance/blazor-column-chart-title.webp)
 
 ### Title position
 
@@ -330,7 +330,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIjzjTrISHobHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIjzjTrISHobHi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.webp)" %}
 
 When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
@@ -373,7 +373,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoXTtfLyEQbMWr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoXTtfLyEQbMWr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.webp)" %}
 
 ## Chart subtitle
 
@@ -419,7 +419,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ```
 
-![Blazor Column Chart with Subtitle](images/appearance/blazor-column-chart-with-subtitle.png)
+![Blazor Column Chart with Subtitle](images/appearance/blazor-column-chart-with-subtitle.webp)
 
 N> The chart components do not use any CSS style for customization; chart elements like axis labels, datalabel, background, series palette, legend text, and tooltip text can be customized by using the [ChartAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisLabelStyle.html), [ChartDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabelFont.html), [BackGround](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background), [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes), [ChartLegendTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendTextStyle.html), and [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html), respectively. 
 

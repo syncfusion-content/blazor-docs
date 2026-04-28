@@ -57,7 +57,7 @@ To add markers, assign a list of objects to the [DataSource](https://help.syncfu
 
 ```
 
-![Blazor Maps with Marker](./images/Marker/blazor-maps-marker.png)
+![Blazor Maps with Marker](./images/Marker/blazor-maps-marker.webp)
 
 ## Adding marker template
 
@@ -120,7 +120,7 @@ Markers can be rendered using a template. Use the [MarkerTemplate](https://help.
 
 ```
 
-![Blazor Maps with Marker Template](./images/Marker/blazor-maps-marker-template.PNG)
+![Blazor Maps with Marker Template](./images/Marker/blazor-maps-marker-template.webp)
 
 ## Customization
 
@@ -169,7 +169,7 @@ Use the following properties and class in [MapsMarker](https://help.syncfusion.c
 
 ```
 
-![Blazor Maps with Custom Marker](./images/Marker/blazor-maps-custom-marker.PNG)
+![Blazor Maps with Custom Marker](./images/Marker/blazor-maps-custom-marker.webp)
 
 ## Marker shapes
 
@@ -223,7 +223,7 @@ To render a marker as an image, set the [Shape](https://help.syncfusion.com/cr/b
 
 ```
 
-![Blazor Maps Marker with Image](./images/Marker/blazor-maps-marker-image.PNG)
+![Blazor Maps Marker with Image](./images/Marker/blazor-maps-marker-image.webp)
 
 ## Multiple marker groups
 
@@ -271,7 +271,7 @@ Multiple groups of markers can be added by including multiple [MapsMarker](https
 
 ```
 
-![Blazor Maps with Multiple Marker Group](./images/Marker/blazor-maps-multiple-marker-group.png)
+![Blazor Maps with Multiple Marker Group](./images/Marker/blazor-maps-multiple-marker-group.webp)
 
 ## Customize marker shapes from data source
 
@@ -313,7 +313,7 @@ Using [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.M
 
 ```
 
-![Blazor Maps with Custom Marker Shape](./images/Marker/blazor-maps-custom-marker-shape.PNG)
+![Blazor Maps with Custom Marker Shape](./images/Marker/blazor-maps-custom-marker-shape.webp)
 
 ### Setting value path from the data source
 
@@ -351,7 +351,7 @@ Latitude and longitude determine the location of each marker. Use [LatitudeValue
 
 ```
 
-![Setting Value Path from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker.PNG)
+![Setting Value Path from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker.webp)
 
 ### Setting different sizes for markers individually
 
@@ -391,7 +391,7 @@ Marker sizes within a group can vary using [WidthValuePath](https://help.syncfus
 
 ```
 
-![Setting different sizes for markers from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker-sizes.PNG)
+![Setting different sizes for markers from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker-sizes.webp)
 
 ## Repositioning the marker using drag and drop
 
@@ -434,7 +434,7 @@ Markers can be repositioned by dragging and dropping. Enable drag-and-drop by se
 
 ```
 
-![Marker with drag and drop functionality in Blazor Maps](./images/Marker/marker-drag-and-drop.gif)
+![Marker with drag and drop functionality in Blazor Maps](./images/Marker/marker-drag-and-drop.webp)
 
 The marker data can be updated during drag operations using the [OnMarkerDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerDragStart) and [OnMarkerDragEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerDragEnd) events. Updating the relevant marker data automatically refreshes tooltip and legend text for that marker. The following properties are available in the event arguments:
 
@@ -505,7 +505,7 @@ The example below demonstrates customizing marker data in response to drag event
 
 ```
 
-![Marker customization using marker drag events in Blazor Maps](./images/Marker/marker-drag-events.gif)
+![Marker customization using marker drag events in Blazor Maps](./images/Marker/marker-drag-events.webp)
 
 ## Marker zooming
 
@@ -547,7 +547,7 @@ Maps can initially zoom based on marker distribution by setting [ShouldZoomIniti
 
 ```
 
-![Blazor Maps Marker with Zooming](./images/Marker/blazor-maps-marker-zooming.PNG)
+![Blazor Maps Marker with Zooming](./images/Marker/blazor-maps-marker-zooming.webp)
 
 ## Disabling Zoom on Marker Click
 
@@ -589,7 +589,7 @@ Maps typically zoom on click or double-click, including when clicking a marker. 
 
 ```
 
-![Disabling Zoom on Marker Click in Blazor Maps](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.gif)
+![Disabling Zoom on Marker Click in Blazor Maps](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.webp)
 
 ## Marker clustering
 
@@ -640,7 +640,7 @@ To enable clustering within a layer, set [AllowClustering](https://help.syncfusi
 
 ```
 
-![Blazr Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.png)
+![Blazr Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.webp)
 
 ### Customization of marker cluster
 
@@ -703,7 +703,7 @@ The following properties and classes are available to customize marker clusterin
 
 ```
 
-![Blazor Maps Marker with Custom Cluster](./images/Marker/blazor-maps-custom-cluster.png)
+![Blazor Maps Marker with Custom Cluster](./images/Marker/blazor-maps-custom-cluster.webp)
 
 ### Expanding the marker cluster
 
@@ -750,7 +750,7 @@ Clusters group identical and non-identical markers in nearby locations. Enable e
 
 ```
 
-![Expanding Marker Cluster in Blazor Maps](./images/Marker/blazor-maps-marker-expand-cluster.PNG)
+![Expanding Marker Cluster in Blazor Maps](./images/Marker/blazor-maps-marker-expand-cluster.webp)
 
 ### Clustering markers within each marker group
 
@@ -854,7 +854,7 @@ Each marker group (France/India/USA) can have its own `MapsMarkerClusterSettings
 
 ```
 
-![Clustering Marker Within Each Marker Group in Blazor Maps](./images/Marker/blazor-maps-marker-cluster-for-specific-markergroup.PNG)
+![Clustering Marker Within Each Marker Group in Blazor Maps](./images/Marker/blazor-maps-marker-cluster-for-specific-markergroup.webp)
 
 ## Tooltip for marker
 
@@ -893,7 +893,7 @@ A tooltip displays additional information about a marker on mouseover or touch e
 
 ```
 
-![Blazor Maps with Marker Tooltip](./images/blazor-maps-marker-tooltip.png)
+![Blazor Maps with Marker Tooltip](./images/blazor-maps-marker-tooltip.webp)
 
 ## See also
 

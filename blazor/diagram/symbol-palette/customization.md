@@ -483,7 +483,7 @@ The following code is an example to set a symbol description for symbols in the 
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SymbolDescriptionSample.razor)
 
-![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.png)
+![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.webp)
 
 ## How to Customize the Symbol Description
 
@@ -609,7 +609,7 @@ The following code is an example to change the style of a symbol description for
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/DescriptionStyle.razor)
 
-![Style of the Symbol Description in Blazor Diagram](../images/blazor-diagram-symbol-description-style.png)
+![Style of the Symbol Description in Blazor Diagram](../images/blazor-diagram-symbol-description-style.webp)
 
 
 ## How to Provide Tooltip for Symbols in Symbol Palette
@@ -878,7 +878,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SymbolPaletteTooltip.razor)
 
-![Tooltip in symbol palette](../images/symboltooltip.png)
+![Tooltip in symbol palette](../images/symboltooltip.webp)
 
 ## How to Provide Different Tooltip for Symbols in the Palette and Diagram Elements.
 

@@ -23,7 +23,7 @@ Divide a progress bar into multiple segments by using the [SegmentCount](https:/
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Segments](images/blazor-progressbar-with-segments.png)
+![Blazor ProgressBar with Segments](images/blazor-progressbar-with-segments.webp)
 
 ## Thickness
 
@@ -36,7 +36,7 @@ You can customize the thickness of the track using the [TrackThickness](https://
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Thickness](images/blazor-progressbar-with-thickness.png)
+![Blazor ProgressBar with Thickness](images/blazor-progressbar-with-thickness.webp)
 
 
 ```cshtml
@@ -49,7 +49,7 @@ You can customize the thickness of the track using the [TrackThickness](https://
 </SfProgressBar>
 ```
 
-![Blazor Secondary ProgressBar with Thickness](images/blazor-progressbar-secondaryprogressbar-thickness.png)
+![Blazor Secondary ProgressBar with Thickness](images/blazor-progressbar-secondaryprogressbar-thickness.webp)
 
 ## Radius
 
@@ -62,7 +62,7 @@ The radius of the progress bar can be customized using the [Radius](https://help
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Radius](images/blazor-progressbar-with-radius.png)
+![Blazor ProgressBar with Radius](images/blazor-progressbar-with-radius.webp)
 
 ## Inner Radius
 
@@ -76,7 +76,7 @@ The inner radius of the progress bar can be customized using the [InnerRadius](h
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Inner Radius](images/blazor-progressbar-with-inner-radius.png)
+![Blazor ProgressBar with Inner Radius](images/blazor-progressbar-with-inner-radius.webp)
 
 ## Progress Color and Track Color
 
@@ -91,7 +91,7 @@ We can customize the color of the progress, secondary progress, and track using 
 </SfProgressBar>
 ```
 
-![Customizing Blazor ProgressBar and Track Color](images/blazor-progressbar-and-trackbar-with-custom-color.png)
+![Customizing Blazor ProgressBar and Track Color](images/blazor-progressbar-and-trackbar-with-custom-color.webp)
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
@@ -103,7 +103,7 @@ We can customize the color of the progress, secondary progress, and track using 
 </SfProgressBar>
 ```
 
-![Customizing Blazor Secondary ProgressBar Color](images/blazor-progressbar-secondaryprogressbar-color.png)
+![Customizing Blazor Secondary ProgressBar Color](images/blazor-progressbar-secondaryprogressbar-color.webp)
 
 ## Range Colors
 
@@ -124,7 +124,7 @@ The [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.
 </SfProgressBar>
 ```
 
-![Changing Range Color in Blazor ProgressBar](images/blazor-progressbar-change-range-color.png)
+![Changing Range Color in Blazor ProgressBar](images/blazor-progressbar-change-range-color.webp)
 
 ## RTL
 
@@ -140,7 +140,7 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 </SfProgressBar>
 ```
 
-![Right-to-left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.png)
+![Right-to-left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.webp)
 
 ## Progress Bar Visibility 
 
@@ -172,7 +172,7 @@ The progress bar visibility can be changed by using the [Visible](https://help.s
 }
 ```
 
-![Blazor ProgressBar Visibility](images/progress-bar-visibility.gif)
+![Blazor ProgressBar Visibility](images/progress-bar-visibility.webp)
 
 ## Progress Bar Margin
 
@@ -187,4 +187,4 @@ The spacing between the progress bar and its container can be adjusted using the
 </SfProgressBar>
 ```
 
-![Margin in Blazor ProgressBar](images/blazor-progressbar-margin.png)
+![Margin in Blazor ProgressBar](images/blazor-progressbar-margin.webp)

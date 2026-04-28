@@ -55,7 +55,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTDnMVpitELVMq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hiding Smart Axis Label in Blazor Column 3D Chart](images/axis-labels/blazor-column-chart-hide-smart-axis-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTDnMVpitELVMq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hiding Smart Axis Label in Blazor Column 3D Chart](images/axis-labels/blazor-column-chart-hide-smart-axis-label.webp)" %}
 
 **Case 2:** When setting `LabelIntersectAction` as **Rotate45**.
 
@@ -96,7 +96,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLptnWBJMsfXNjH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Smart Axis Label in Rotate45](images/axis-labels/blazor-column-chart-axis-label-in-rotate45.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLptnWBJMsfXNjH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Smart Axis Label in Rotate45](images/axis-labels/blazor-column-chart-axis-label-in-rotate45.webp)" %}
 
 **Case 3:** When setting `LabelIntersectAction` as **Rotate90**.
 
@@ -137,7 +137,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBJjnsLJMrjzDrD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Smart Axis Label in Rotate90](images/axis-labels/blazor-column-chart-axis-label-in-rotate90.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBJjnsLJMrjzDrD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Smart Axis Label in Rotate90](images/axis-labels/blazor-column-chart-axis-label-in-rotate90.webp)" %}
 
 ## Edge label placement
 
@@ -179,7 +179,7 @@ use the `EdgeLabelPlacement` property in axis, which moves the label inside t
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpDnsLTsLcphWe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Blazor Chart Axis Label in Edge Position](images/axis-labels/blazor-chart-axis-label-in-edge.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpDnsLTsLcphWe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Blazor Chart Axis Label in Edge Position](images/axis-labels/blazor-chart-axis-label-in-edge.webp)" %}
 
 ## Maximum labels
 
