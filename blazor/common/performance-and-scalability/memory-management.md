@@ -9,7 +9,7 @@ documentation: ug
 
 # Memory Management with Syncfusion® Blazor Components
 
-This section explains best practices for managing memory in Blazor applications that use [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Proper memory management helps minimize memory allocations, prevent memory leaks, and maintain consistent performance in both Blazor WebAssembly and Blazor Server hosting models.
+This guide explains best practices for managing memory in Blazor applications that use [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Proper memory management helps minimize memory allocations, prevent memory leaks, and maintain consistent performance in both Blazor WebAssembly and Blazor Server hosting models.
 
 ## What is memory management in Blazor?
 
@@ -35,66 +35,6 @@ In Blazor WebAssembly, releasing these references allows the browser runtime to 
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
-### Install required Syncfusion<sup style="font-size:70%">&reg;</sup> packages
-
-To add the Blazor components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
-
-* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
-* [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
-* [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-### Add required namespaces
-
-Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Buttons`, `Syncfusion.Blazor.Inputs` namespaces.
-
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Inputs
-
-{% endhighlight %}
-{% endtabs %}
-
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
-
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
-
-{% tabs %}
-{% highlight razor tabtitle="~/Program.cs" %}
-
-using Syncfusion.Blazor;
-...
-builder.Services.AddSyncfusionBlazor();
-...
-
-{% endhighlight %}
-{% endtabs %}
-
-### Add stylesheet and script resources
-
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file.
-
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
-
-<head>
-     <!-- Syncfusion theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
-<body>
-    <!-- Syncfusion Blazor component's script reference -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-</body>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
-
 ### Disposing data bound Syncfusion® components
 
 Data bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) frequently hold large data collections in memory. These references should be released when the component is removed from the render tree.
@@ -116,7 +56,7 @@ The following example demonstrates how to release large data collections used by
 </SfGrid>
 
 @code {
-    private List<Order> Orders = new();
+    private List<Order>? Orders = new();
 
     protected override void OnInitialized()
     {
@@ -161,7 +101,7 @@ The following example demonstrates how to release large data collections used by
 {% endhighlight %}
 {% endtabs %}
 
-In this example, the Orders collection is cleared and set to null in DisposeAsync. This ensures that references to large datasets are released when the component is removed from the render tree.
+In this example, the `Orders` collection is cleared and set to `null` in `DisposeAsync`. This ensures that references to large datasets are released when the component is removed from the render tree.
 
 This practice is particularly important in Blazor Server applications, where retained references can increase server memory usage across user circuits.
 
@@ -216,7 +156,7 @@ This example shows how to properly manage event subscriptions in a component tha
 
 **Add service file:**
 
-Create the service folder in the project root. Then create service file(e.g., `AppState.cs`) under the service folder and add the following code:
+Create the service folder in the project root. Then create a service file (e.g., `AppState.cs`) under the service folder and add the following code:
 
 {% tabs %}
 {% highlight cs tabtitle="AppState.cs" %}
@@ -257,13 +197,15 @@ builder.Services.AddScoped<AppState>();
 {% endhighlight %}
 {% endtabs %}
 
-The component subscribes to the OnChange event in OnInitialized and removes the subscription in Dispose.
+The component subscribes to the `OnChange` event in `OnInitialized` and removes the subscription in Dispose.
 
 Removing event subscriptions ensures the component instance is not retained in memory after it is removed from the UI. This is particularly important in Blazor Server applications with long lived circuits.
 
 ### Virtualizing large data with Syncfusion® components
 
-Rendering large datasets without virtualization increases memory allocation and DOM size. Syncfusion Blazor components provide built‑in virtualization support to address this scenario.
+Rendering large datasets without virtualization increases memory allocation and DOM size. Syncfusion Blazor components provide built‑in virtualization support to address this scenario. 
+
+To configure row virtualization, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** and define a fixed content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property. The number of rendered records is implicitly determined by the content height.
 
 The following example demonstrates how to use built‑in virtualization in the Syncfusion DataGrid component to efficiently render large data collections.
 
@@ -418,7 +360,7 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
 </div>
 
 @code {
-    private List<Item> Items = new();
+    private List<Item>? Items = new();
 
     protected override void OnInitialized()
     {
@@ -454,7 +396,7 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
 {% endhighlight %}
 {% endtabs %}
 
-The `@key` directive ensures that each SfTextBox component is associated with a stable identifier.
+The `@key` directive ensures that each TextBox component is associated with a stable identifier.
 
 When the collection changes, Blazor can correctly match existing components instead of destroying and recreating them, improving rendering efficiency and memory usage.
 

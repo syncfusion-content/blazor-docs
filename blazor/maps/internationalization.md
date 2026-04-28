@@ -59,7 +59,7 @@ Number, date, and time values in the Maps component can be globalized using the 
 
 ```
 
-![Blazor Maps with Gloabalization](./images/Internationalization/blazor-maps-globalization.PNG)
+![Blazor Maps with Gloabalization](./images/Internationalization/blazor-maps-globalization.webp)
 
 ## Numeric Format
 
@@ -104,7 +104,7 @@ Numeric formats such as currency and percentage can be displayed in tooltips and
 
 ```
 
-![Blazor Maps with Numeric Format](./images/Internationalization/blazor-maps-numeric-format.png)
+![Blazor Maps with Numeric Format](./images/Internationalization/blazor-maps-numeric-format.webp)
 
 ## See also
 

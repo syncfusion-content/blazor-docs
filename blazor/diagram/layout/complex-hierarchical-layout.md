@@ -75,7 +75,7 @@ The complex hierarchical tree layout arranges nodes in a tree-like structure in 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/ComplexHierarchicalTree.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheCZtRzgdyOSbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with multi-parent support](../images/blazor-diagram-complex.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheCZtRzgdyOSbC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with multi-parent support](../images/blazor-diagram-complex.webp)" %}
 
 ### How to Enable or Disable Line Distribution
 
@@ -148,7 +148,7 @@ The following code example shows how to create a complex hierarchical tree with 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/LineDistribution.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIWNtHfKwJNZDP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with SamePoint disabled](../images/blazor-diagram-samepoint.png) %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIWNtHfKwJNZDP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with SamePoint disabled](../images/blazor-diagram-samepoint.webp) %}
 
 >**Note:** In `DataSourceSettings`, the type of the `ID` and `ParentID` properties are **string**. The provided `DataSource` should have a parent-child relationship. It is necessary for at least one node to have an empty `ParentID`.
 
@@ -219,7 +219,7 @@ The following code illustrates how to arrange the nodes in a non linear manner.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/LinearArrangementNonLinear.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrSCXNxzKPCTjys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with nonlinear child arrangemen](../images/blazor-diagram-non-linear.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrSCXNxzKPCTjys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with nonlinear child arrangemen](../images/blazor-diagram-non-linear.webp)" %}
 
 The following code illustrates how to arrange the nodes in  linear manner by enabling linear arrangement.
 
@@ -285,4 +285,4 @@ The following code illustrates how to arrange the nodes in  linear manner by ena
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/LinearArrangementLinear.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBICjjHfqEiCuMb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with linear child arrangement](../images/blazor-diagram-lineararrangement.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBICjjHfqEiCuMb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor complex hierarchical layout with linear child arrangement](../images/blazor-diagram-lineararrangement.webp)" %}

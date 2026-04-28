@@ -92,7 +92,7 @@ N>
 
 ```
 
-![Chart Wizard serialization](images/chart-wizard-serialization.png)
+![Chart Wizard serialization](images/chart-wizard-serialization.webp)
 
 
 ## See Also

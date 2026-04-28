@@ -178,7 +178,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart Wizard component in the default web browser.
 
-![Chart Wizard Default](images/chart-wizard-default.png)
+![Chart Wizard Default](images/chart-wizard-default.webp)
 
 ## Populate Blazor Chart Wizard data
 
@@ -221,8 +221,6 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.ChartWizard
-
 <div class="control-section">
     <SfChartWizard>
         <ChartSettings DataSource="@OlympicsDataSource"
@@ -264,7 +262,7 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 {% endhighlight %}
 {% endtabs %}
 
-![Chart Wizard Example](images/chart-wizard-getting-started-example.png)
+![Chart Wizard Example](images/chart-wizard-getting-started-example.webp)
 
 ## Theme
 
@@ -289,8 +287,6 @@ The `Theme` property is used to specify the visual theme applied to the chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
     <SfChartWizard Theme="Theme.Material3">
@@ -333,7 +329,7 @@ The `Theme` property is used to specify the visual theme applied to the chart.
 {% endhighlight %}
 {% endtabs %}
 
-![Chart Wizard appearance - theme](images/chart-wizard-appearance-theme.png)
+![Chart Wizard appearance - theme](images/chart-wizard-appearance-theme.webp)
 
 ## See also
 
