@@ -153,7 +153,7 @@ In the Rich Text Editor, pressing the `Tab` key while the cursor is inside a lis
 
 Please refer to the below video for visual behavior and interaction examples:
 
-![Rich Text Editor list editing behaviour](../images/list-editing.gif)
+![Rich Text Editor list editing behaviour](../images/list-editing.webp)
 
 ## Increase and decrease indent
 
@@ -402,7 +402,7 @@ Using `Clear Format` makes it easy to undo styling changes and keep your text lo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-using-clear-format.gif)
+![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-using-clear-format.webp)
 
 ## Markdown Auto Format
 

@@ -58,7 +58,7 @@ N> When `PlainText` value is set true, the API property [Prompt](https://help.sy
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with plain text](./images/blazor-richtexteditor-paste-plain-text.gif)
+![Blazor RichTextEditor with plain text](./images/blazor-richtexteditor-paste-plain-text.webp)
 
 ## Keep format
 
@@ -78,7 +78,7 @@ This ensures that while the formatting is retained, it remains clean, safe, and 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with keep format](./images/blazor-richtexteditor-paste-keep-format.gif)
+![Blazor RichTextEditor with keep format](./images/blazor-richtexteditor-paste-keepformat.webp)
 
 >When `KeepFormat` is set to true, set both `Prompt` and `PlainText` to false.
 
@@ -109,7 +109,7 @@ The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with denied tags](./images/blazor-richtexteditor-paste-denied-tag.gif)
+![Blazor RichTextEditor with denied tags](./images/blazor-richtexteditor-paste-denied-tag.webp)
 
 > This setting is ignored when `PlainText` is set to `true`. <br>
 It only works when either `KeepFormat` is set to `true`, or when `Prompt`, `PlainText`, and `KeepFormat` are all set to `false`, which triggers clean format behavior.

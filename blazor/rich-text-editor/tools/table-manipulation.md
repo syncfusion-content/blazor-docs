@@ -194,11 +194,11 @@ The Rich Text Editor offers a simple and intuitive way to add rows and columns t
 
 ### Insert rows instantly
 
-- **Where to hover**: Place your cursor over any cell in the **first column** of your table.
+- **Where to hover**: Place your cursor over any cell in the **first column** of your cfcvtable.
 - **What you'll see**: A small dot icon (●) will appear at the **left edge** of the cell.
 - **How to add**: Hover over the dot to reveal a **plus icon (+)**. Click it to insert a new row above.
 
-![Blazor RichTextEditor table row quick insert](./images/table_row_quick_insert.gif)
+![Blazor RichTextEditor table row quick insert](../images/table_row_quick_insert.webp)
 
 ## Vertical align
 

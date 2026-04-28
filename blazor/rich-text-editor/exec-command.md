@@ -287,7 +287,7 @@ The following code block demonstrates the usage of the [ExecuteCommand](https://
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor execute command](./images/blazor-richtexteditor-execute-command.gif)
+![Blazor RichTextEditor execute command](./images/blazor-richtexteditor-execute-command.webp)
 
 ## Markdown editor commands  
 
@@ -426,6 +426,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 {% endhighlight %}
 {% endtabs %}
 
-![Execute Command in Markdown Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command-markdown.gif)
+![Execute Command in Markdown Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command-markdown.webp)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.

@@ -221,6 +221,6 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor com
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with highlight the specific lines](./images/blazor-richtexteditor-highlight-line.gif)
+![Blazor RichTextEditor with highlight the specific lines](./images/blazor-richtexteditor-highlight-line.webp)
 
 N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
