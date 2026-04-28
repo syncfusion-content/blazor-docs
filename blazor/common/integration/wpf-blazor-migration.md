@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a **structured, step-by-step migration path** for **[Syncfusion WPF components](https://www.syncfusion.com/wpf-controls)** to their **[Syncfusion Blazor equivalents](https://www.syncfusion.com/blazor-components)**, developed using **[Visual Studio Code](https://code.visualstudio.com/)**.
+Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a **structured, step-by-step migration path** for **[Syncfusion WPF components](https://www.syncfusion.com/wpf-controls)** to their **[Syncfusion Blazor equivalents](https://www.syncfusion.com/blazor-components)**, developed using [Visual Studio](https://visualstudio.microsoft.com/vs/) or **[Visual Studio Code](https://code.visualstudio.com/)**.
 
 This document covers:
 * Architectural differences between WPF and Blazor
@@ -19,6 +19,8 @@ This document covers:
 * Detailed DataGrid migration with feature parity mapping
 
 ### Why migrate from WPF to Blazor?
+
+N For WPF-like UI responsiveness and centralized state, Blazor Server is usually the closest architectural match.
 
 | Dimension | WPF | Blazor |
 |---|---|---|
@@ -42,13 +44,15 @@ This document covers:
 | **State management** | ViewModel + `INotifyPropertyChanged` | Component state + `StateHasChanged()`; in Blazor Server the state is stored per server circuit (per connection) |
 | **Dependency injection** | Typically third‑party containers (Unity, Prism, MEF, etc.) | Built‑in `IServiceCollection` / DI container |
 | **Navigation** | WPF `Frame` / Prism `RegionManager` | `NavigationManager` + `@page` routing |
-| **Render mode** | Native rendering pipeline | Use server render modes (e.g., `@rendermode InteractiveServer` / `[RenderModeInteractiveServer]`) for .NET 8+; Blazor WebAssembly uses client rendering |
+| **Render mode** | Native rendering pipeline | Use interactive render modes (for example, `@rendermode InteractiveServer`) in .NET 8+.
+Blazor WebAssembly uses client-side rendering |
 
 ## Development environment setup
 
 ### Prerequisites for Blazor
 
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
+* [Visual Studio](https://visualstudio.microsoft.com/vs/)
 * [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 **Verify installation:**
@@ -84,7 +88,7 @@ dotnet new list blazor   # List available/installed Blazor project templates
 
 ## Getting started: project creation
 
-### Creating a Blazor Server project in VS Code
+### Creating a Blazor Web App with Interactive Server in VS Code
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
