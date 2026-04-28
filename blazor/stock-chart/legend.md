@@ -49,7 +49,7 @@ To display the legend, set the [Visible](https://help.syncfusion.com/cr/blazor/S
 
 ```
 
-![Blazor Stock Chart with legend](images/blazor-stock-chart-legend.png)
+![Blazor Stock Chart with legend](images/blazor-stock-chart-legend.webp)
 
 ## Legend Position
 
@@ -89,7 +89,7 @@ Use the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ```
 
-![Blazor Stock Chart with legend position](images/blazor-stock-chart-legend-position.png)
+![Blazor Stock Chart with legend position](images/blazor-stock-chart-legend-position.webp)
 
 The **Custom** position allows placing the legend anywhere within the Stock Chart using x and y coordinates.
 
@@ -130,7 +130,7 @@ The **Custom** position allows placing the legend anywhere within the Stock Char
 
 ```
 
-![Blazor Stock Chart with custom legend position](images/blazor-stock-chart-legend-location.png)
+![Blazor Stock Chart with custom legend position](images/blazor-stock-chart-legend-location.webp)
 
 ## Reverse Legend
 
@@ -177,7 +177,7 @@ Reverse the order of legend items using the [Reversed](https://help.syncfusion.c
 
 ```
 
-![Blazor Stock Chart with legend reversed](images/blazor-stock-chart-legend-reversed.png)
+![Blazor Stock Chart with legend reversed](images/blazor-stock-chart-legend-reversed.webp)
 
 ## Legend Alignment
 
@@ -219,7 +219,7 @@ Use the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ```
 
-![Blazor Stock Chart with legend alignment](images/blazor-stock-chart-legend-alignment.png)
+![Blazor Stock Chart with legend alignment](images/blazor-stock-chart-legend-alignment.webp)
 
 ## Legend Customization
 
@@ -262,7 +262,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Blazor Stock Chart with legend shape](images/blazor-stock-chart-legend-shape.png)
+![Blazor Stock Chart with legend shape](images/blazor-stock-chart-legend-shape.webp)
 
 ### Legend Size
 
@@ -305,7 +305,7 @@ When placed at the top or bottom, the legend occupies approximately 20%–25% of
 
 ```
 
-![Blazor Stock Chart with legend size](images/blazor-stock-chart-legend-size.png)
+![Blazor Stock Chart with legend size](images/blazor-stock-chart-legend-size.webp)
 
 ### Legend Shape Size
 
@@ -346,7 +346,7 @@ Use the [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Blazor Stock Chart with legend shape size](images/blazor-stock-chart-legend-size-shape.png)
+![Blazor Stock Chart with legend shape size](images/blazor-stock-chart-legend-size-shape.webp)
 
 ### Legend Item Padding
 
@@ -388,7 +388,7 @@ Use the [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Blazor Stock Chart with legend item padding](images/Blazor-stock-chart-legend-itemPadding.png)
+![Blazor Stock Chart with legend item padding](images/Blazor-stock-chart-legend-itemPadding.webp)
 
 ### Legend Paging
 
@@ -431,7 +431,7 @@ When legend items exceed the available bounds, paging is enabled automatically. 
 
 ```
 
-![Blazor Stock Chart with legend paging](images/blazor-stock-chart-legend-paging.png)
+![Blazor Stock Chart with legend paging](images/blazor-stock-chart-legend-paging.webp)
 
 ### Legend Text Wrap
 
@@ -474,7 +474,7 @@ When legend text exceeds the container, enable wrapping using the [TextWrap](htt
 
 ```
 
-![Blazor Stock Chart with legend text wrap](images/blazor-stock-chart-legend-text-wrap.png)
+![Blazor Stock Chart with legend text wrap](images/blazor-stock-chart-legend-text-wrap.webp)
 
 ## Series selection based on legend
 
@@ -517,7 +517,7 @@ By default, clicking a legend item collapses the visibility of the corresponding
 
 ```
 
-![Blazor Stock Chart with selection mode](images/blazor-stock-chart-selection-mode.png)
+![Blazor Stock Chart with selection mode](images/blazor-stock-chart-selection-mode.webp)
 
 ## Hiding legend item
 
@@ -560,7 +560,7 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Blazor Stock Chart hiding legend item](images/blazor-stock-chart-hidding-legend.png)
+![Blazor Stock Chart hiding legend item](images/blazor-stock-chart-hidding-legend.webp)
 
 ## Legend Template
 
@@ -649,6 +649,6 @@ To use, add a `LegendItemTemplate` inside any [StockChartSeries](https://help.sy
     };
 }
 ```
-![Blazor Stock Chart legend template](images/blazor-stock-chart-legend-template.png)
+![Blazor Stock Chart legend template](images/blazor-stock-chart-legend-template.webp)
 
 

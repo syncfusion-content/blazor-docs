@@ -71,7 +71,7 @@ The following code shows how to change the appearance of the port.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Appearance/Appearance.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBesjXcLLVeqypd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing port appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBesjXcLLVeqypd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing port appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.webp)" %}
 
 ## How to Control the Port Visibility
 
@@ -144,7 +144,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/Appearance/CustomShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyMXtmLrqCMsyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port rendered with a custom path shape in Blazor Diagram](../images/blazor-diagram-port-custom-shape.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyMXtmLrqCMsyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port rendered with a custom path shape in Blazor Diagram](../images/blazor-diagram-port-custom-shape.webp)" %}
 
 ## How to Enable or Disable Port Behaviors Using Constraints
 
