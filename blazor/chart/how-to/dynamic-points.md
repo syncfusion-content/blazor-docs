@@ -193,7 +193,7 @@ The below code snippet illustrates a chart that allows users to add new data and
 }
 ```
 
-![Dynamic Points](../images/dynamic-points.gif)
+![Dynamic Points](../images/dynamic-points.webp)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

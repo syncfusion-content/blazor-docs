@@ -62,7 +62,7 @@ Customize the root container of the Range Navigator to apply global styling such
 
 This styles the entire Range Navigator container.
 
-![Blazor RangeNavigator with Background Customization](images/style/blazor-rangenavigator-background-color.png)
+![Blazor RangeNavigator with Background Customization](images/style/blazor-rangenavigator-background-color.webp)
 
 ## Customize Unselected Range Regions
 
@@ -86,7 +86,7 @@ Modify the appearance of unselected regions (left and right areas outside the se
 }
 ```
 
-![Blazor RangeNavigator Unselected Area Customization](images/style/blazor-rangenavigator-unselected-area-customization.png)
+![Blazor RangeNavigator Unselected Area Customization](images/style/blazor-rangenavigator-unselected-area-customization.webp)
 
 ## Customize Selected Range Region
 Style the highlighted selected range area to emphasize the active data range and improve visual focus. The selected region can be customized to stand out from unselected areas, making it easier for users to identify the current selection.
@@ -100,7 +100,7 @@ Style the highlighted selected range area to emphasize the active data range and
 
 This CSS overrides the default theme color and the color set through [RangeNavigatorStyleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html).
 
-![Blazor RangeNavigator Selected Area Customization](images/style/blazor-rangenavigator-selected-area-customization.png)
+![Blazor RangeNavigator Selected Area Customization](images/style/blazor-rangenavigator-selected-area-customization.webp)
 
 ## Customize Axis Label Text
 Format the axis labels to match your application's typography and readability standards. Control font size, color, weight, and family to ensure axis labels are prominent and aligned with your design system. This improves data readability and visual hierarchy in the Range Navigator.
@@ -114,6 +114,6 @@ Format the axis labels to match your application's typography and readability st
 }
 ```
 
-![Blazor RangeNavigator Label Customization](images/style/blazor-rangenavigator-label-customization.png)
+![Blazor RangeNavigator Label Customization](images/style/blazor-rangenavigator-label-customization.webp)
 
 N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.

@@ -48,7 +48,7 @@ The following code example shows, how to bind a flat collection as data source t
 }
 ```
 
-![Blazor TreeMap with Flat Data](images/Databinding/blazor-treemap-flat-data.png)
+![Blazor TreeMap with Flat Data](images/Databinding/blazor-treemap-flat-data.webp)
 
 ### Hierarchical data
 
@@ -180,7 +180,7 @@ The following code example shows, how to bind a hierarchical collection as data 
 }
 ```
 
-![Blazor TreeMap with Hierarchical Data](images/Databinding/blazor-treemap-hierarchical-data.png)
+![Blazor TreeMap with Hierarchical Data](images/Databinding/blazor-treemap-hierarchical-data.webp)
 
 ## Local data
 
@@ -221,7 +221,7 @@ The following code example shows, how to bind a `IEnumerable` object to the Tree
 }
 ```
 
-![Blazor TreeMap with Local Data](images/Databinding/blazor-treemap-local-data.png)
+![Blazor TreeMap with Local Data](images/Databinding/blazor-treemap-local-data.webp)
 
 ### Fetching data from the JSON file
 
@@ -261,7 +261,7 @@ else
 }
 ```
 
-![Loading Blazor TreeMap Data from JSON File](images/Databinding/blazor-treemap-flat-data.png)
+![Loading Blazor TreeMap Data from JSON File](images/Databinding/blazor-treemap-flat-data.webp)
 
 N> Refer the data values for [product_growth](https://www.syncfusion.com/downloads/support/directtrac/general/ze/product-growth-360857189) here. 
 
@@ -305,7 +305,7 @@ N> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 }
 ```
 
-![Data Binding with OData Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odata.png)
+![Data Binding with OData Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odata.webp)
 
 ### Binding with OData V4 services
 
@@ -341,7 +341,7 @@ N> For more details on OData V4 services, refer to the [OData documentation](htt
 }
 ```
 
-![Data Binding with OData V4 Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odatav4.png)
+![Data Binding with OData V4 Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odatav4.webp)
 
 ### Web API
 
@@ -377,7 +377,7 @@ Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?n
 }
 ```
 
-![Data binding with Web API Adaptor in Blazor TreeMap](images/Databinding/blazor-treemap-webapiadaptor.png)
+![Data binding with Web API Adaptor in Blazor TreeMap](images/Databinding/blazor-treemap-webapiadaptor.webp)
 
 ## Entity Framework
 
