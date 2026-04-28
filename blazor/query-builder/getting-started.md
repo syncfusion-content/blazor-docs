@@ -181,7 +181,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor QueryBuilder com
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Query Builder component in the default web browser.
 
-![Blazor Query Builder component](./images/blazor-querybuilder-component.png)
+![Blazor Query Builder component](./images/blazor-querybuilder-component.webp)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/QueryBuilder).
 
