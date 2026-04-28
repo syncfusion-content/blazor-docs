@@ -23,7 +23,7 @@ The `.e-gantt` class is the root container for the entire Blazor Gantt Chart. Cu
 
 Properties such as `font-family`, `background-color`, and spacing-related styles can be adjusted to align with the Gantt design.
 
-![Customizing root element](./images/blazor-gantt-chart-root-element.png)
+![Customizing root element](./images/blazor-gantt-chart-root-element.webp)
 
 This customization applies a cursive font to the Gantt Chart content. Additional styling can be applied to rows, alternate rows, selected rows, and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
 
@@ -50,7 +50,7 @@ The grid header in the Blazor Gantt Chart contains column headers and table stru
 
 Properties such as `background-color`, `border`, `font-weight`, and `padding` can be adjusted to align with the Gantt design.
 
-![Customizing header](./images/blazor-gantt-header.png)
+![Customizing header](./images/blazor-gantt-header.webp)
 
 ### Customizing grid content and rows
 
@@ -78,7 +78,7 @@ Style the grid content area that displays task data in a tabular format. Use the
 
 Properties such as `background-color`, `border`, `font-weight`, and `padding` can be adjusted to align with the Gantt design.
 
-![Customizing grid content](./images/blazor-gantt-grid-content.png)
+![Customizing grid content](./images/blazor-gantt-grid-content.webp)
 
 ## Styling the chart section
 
@@ -101,7 +101,7 @@ The chart content displays taskbars and the timeline visualization. Apply CSS to
 
 Properties such as `background-color`, `border`, and `height` can be adjusted to align with the Gantt design.
 
-![Customizing chart content](./images/blazor-gantt-chart-content.png)
+![Customizing chart content](./images/blazor-gantt-chart-content.webp)
 
 ### Customizing timeline headers and date display
 
@@ -123,7 +123,7 @@ The timeline displays date information and task scheduling. Style the timeline h
 
 Properties such as `background-color`, `border`, `font-weight`, and `padding` can be adjusted to align with the Gantt design.
 
-![Customizing timeline](./images/blazor-gantt-timeline.png)
+![Customizing timeline](./images/blazor-gantt-timeline.webp)
 
 ### Customizing taskbars and progress indicators
 
@@ -176,7 +176,7 @@ The taskbar represents tasks visually on the timeline. Customize parent taskbars
 
 Properties such as `background-color`, `border`, `height`, and `border-radius` can be adjusted to align with the Gantt design.
 
-![Customizing taskbar](./images/blazor-gantt-taskbar.png)
+![Customizing taskbar](./images/blazor-gantt-taskbar.webp)
 
 ### Customizing baseline bars and milestones
 
@@ -194,7 +194,7 @@ The baseline in the Blazor Gantt Chart represents planned task schedules for com
 
 Properties such as `background-color` and `height` can be adjusted to align with the Gantt design.
 
-![Customizing baseline](./images/blazor-gantt-baseline.png)
+![Customizing baseline](./images/blazor-gantt-baseline.webp)
 
 ### Customizing connector lines for task dependencies
 
@@ -212,7 +212,7 @@ The connector lines in the Blazor Gantt Chart show dependencies between tasks. A
 
 Properties such as `stroke`, `stroke-width`, and `fill` can be adjusted to align with the Gantt design.
 
-![Customizing connector lines](./images/blazor-gantt-connector-lines.png)
+![Customizing connector lines](./images/blazor-gantt-connector-lines.webp)
 
 ### Customizing splitter and resize handlers
 
@@ -241,7 +241,7 @@ The splitter divides the grid and chart sections, while resize handlers allow us
 
 Properties such as `background-color`, `border`, `width`, `height`, and `border-radius` can be adjusted to align with the Gantt design.
 
-![Customizing splitter](./images/blazor-gantt-splitter.png)
+![Customizing splitter](./images/blazor-gantt-splitter.webp)
 
 This customization applies a light blue background to the split bar and styles the resize handler with a circular appearance. Additional styling can be applied to arrow icons and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
 
@@ -270,7 +270,7 @@ The labels in the Blazor Gantt Chart display task information on the taskbars. A
 
 Properties such as `color`, `font-weight`, `font-size`, `background-color`, and `padding` can be adjusted to align with the Gantt design.
 
-![Customizing labels](./images/blazor-gantt-labels.png)
+![Customizing labels](./images/blazor-gantt-labels.webp)
 
 ### Customizing event markers and timeline indicators
 
@@ -289,7 +289,7 @@ The event markers in the Blazor Gantt Chart highlight important dates or milesto
 
 Properties such as `border-left-color`, `background-color`, `color`, and `font-weight` can be adjusted to align with the Gantt design.
 
-![Customizing event markers](./images/blazor-gantt-event-markers.png)
+![Customizing event markers](./images/blazor-gantt-event-markers.webp)
 
 ### Customizing tooltip content and appearance
 
@@ -311,7 +311,7 @@ The tooltip in the Blazor Gantt Chart displays detailed information when hoverin
 
 Properties such as `background-color`, `color`, `border`, `border-radius`, and `padding` can be adjusted to align with the Gantt design.
 
-![Customizing tooltip](./images/blazor-gantt-tooltip.png)
+![Customizing tooltip](./images/blazor-gantt-tooltip.webp)
  
 ## Complete code example with CSS customization
 
@@ -438,7 +438,7 @@ Below is a complete example demonstrating how to customize multiple aspects of t
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeNaVoAMMmqlIy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![style and appearance](./images/style-and-appearance.png)
+![style and appearance](./images/style-and-appearance.webp)
 
 ## Configuring grid lines in the Gantt Chart
 
