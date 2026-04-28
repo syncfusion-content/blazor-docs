@@ -1275,7 +1275,7 @@ namespace WpfDiagram
 
 ### 6. RichTextEditor
 
-For detailed explanation, refer to the [WPF RichTextBox getting started guide](https://help.syncfusion.com/wpf/richtextbox/getting-started) and [Blazor RichTextEditor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
+For detailed explanation, refer to the [WPF RichTextBox getting started guide](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started) and [Blazor RichTextEditor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
 
 #### Migration overview
 
