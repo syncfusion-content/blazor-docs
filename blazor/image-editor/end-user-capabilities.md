@@ -35,7 +35,7 @@ Image zooming can be performed in the following ways:
 
 * Using the keyboard
 
-![Blazor Image Editor with Zoom In/ Out an image showcase](./images/blazor-image-editor-end-zoom.jpg)
+![Blazor Image Editor with Zoom In/ Out an image showcase](./images/blazor-image-editor-end-zoom.webp)
 
 ### Using toolbar
 
@@ -97,7 +97,7 @@ To crop and transform an image:
 
 * When the crop region is finalized, click the tick icon at the top-right of the toolbar to apply the crop.
 
-![Blazor Image Editor with Cropping and Image Transformation showcase](./images/blazor-image-editor-end-crop.jpg)
+![Blazor Image Editor with Cropping and Image Transformation showcase](./images/blazor-image-editor-end-crop.webp)
 
 ## Image annotation
 
@@ -115,7 +115,7 @@ To add and modify annotations:
 
 * When annotations are selected, the quick access toolbar enables common actions such as duplicate, delete, and edit text to streamline editing.
 
-![Blazor Image Editor with annotation showcase](./images/blazor-image-editor-end-annotation.jpg)
+![Blazor Image Editor with annotation showcase](./images/blazor-image-editor-end-annotation.webp)
 
 ## Fine-tune
 
@@ -139,7 +139,7 @@ To apply filters:
 
 * Click on the canvas or the tick icon at the right corner of the toolbar to apply changes.
 
-![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-filter.jpg)
+![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-filter.webp)
 
 ## Undo and redo the operations
 
@@ -182,4 +182,4 @@ To save the modified image in the Image Editor, follow these steps:
 * Use keyboard shortcut (Ctrl + S)
   * Press Ctrl + S to download the image in the same format as the loaded image without opening the Save dialog. For example, if the loaded image is PNG, it will be saved as PNG.
 
-![Blazor Image Editor with Export an image showcase](./images/blazor-image-editor-end-save.jpg)
+![Blazor Image Editor with Export an image showcase](./images/blazor-image-editor-end-save.webp)
