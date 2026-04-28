@@ -127,7 +127,7 @@ To apply fine-tuning adjustments:
 
 * Click on the canvas or the tick icon at the right corner of the toolbar to apply changes.
 
-![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-finetune.jpg)
+![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-finetune.webp)
 
 ## Filter
 
