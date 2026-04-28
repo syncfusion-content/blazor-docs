@@ -11,7 +11,7 @@ documentation: ug
 
 The Rich Text Editor component in Blazor enables you to utilize the `HttpClientInstance` property to append the custom HttpClient instance to all file upload and download requests. This approach offers flexibility in managing authentication and custom request configurations for Word Import, Word and PDF Export and image/audio/video insertions.
 
-The following example illustrates how to configure the Rich Text Editor component with HttpClient in a Blazor application.
+The following example illustrates how to configure the Rich Text Editor component with HttpClient in a Blazor application .
 
 {% tabs %}
 {% highlight razor %}
