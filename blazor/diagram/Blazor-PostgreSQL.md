@@ -709,10 +709,9 @@ dotnet run
 
 ### No data in Diagram
 
-- Verify that `DataSourceSettings` uses the correct property names:
+- Verify that `DataSourceSettings` uses the correct property names. These property names must exactly match the model returned by the API:
   - `ID="Id"`
   - `ParentID="ParentId"`
-  These property names must exactly match the model returned by the API.
 - Check the browser developer console (F12) for errors from `LayoutService` class.
 - Ensure migrations completed successfully and that seed data exists in the database
   (you may verify this directly in PostgreSQL).
@@ -729,9 +728,9 @@ You can clone the repository, update the PostgreSQL connection string, apply mig
 
 This guide demonstrates how to:
 
-1. Install PostgreSQL. [🔗](#Installing-PostgreSQL)
-2. Create a PostgreSQL database with layout nodes using pgAdmin 4. [🔗](#PostgreSQL-database-setup)
-3. Configure backend implementations. [🔗](#Backend-implementation)
+1. Install PostgreSQL. [🔗](#installing-postgresql)
+2. Create a PostgreSQL database with layout nodes using pgAdmin 4. [🔗](#postgresql-database-setup)
+3. Configure backend implementations. [🔗](#backend-implementation)
 4. Create data models and DbContext for database communication with PostgreSQL-specific configuration. [🔗](#step-2-create-the-data-model)
 5. Configure connection strings and register services. [🔗](#step-4-configure-the-connection-string)
 6. HTTP service abstraction for data access using helper methods. [🔗](#step-6-create-the-layoutservice-class)
@@ -740,6 +739,5 @@ This guide demonstrates how to:
 The application now provides a complete solution for visualizing organizational chart data from PostgreSQL.
 
 ## See Also
-
-- **Data Binding** – https://blazor.syncfusion.com/documentation/diagram/data-binding#how-to-specify-parent-child-relationship-in-data-source
-- **Organizational Chart Layout** – https://blazor.syncfusion.com/documentation/diagram/layout/organizational-chart
+- [Data Binding](https://blazor.syncfusion.com/documentation/diagram/data-binding#how-to-specify-parent-child-relationship-in-data-source)
+- [Organizational Chart Layout](https://blazor.syncfusion.com/documentation/diagram/layout/organizational-chart)

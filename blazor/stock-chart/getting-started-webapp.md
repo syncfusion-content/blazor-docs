@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Charts
+
 <SfStockChart>
 
 </SfStockChart>
@@ -214,6 +216,8 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Charts
+
 <SfStockChart>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" YName="Close" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
@@ -235,6 +239,8 @@ A title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Historical">
     <StockChartSeriesCollection>
@@ -279,6 +285,8 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Charts
+
 <SfStockChart>
     <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
     <StockChartSeriesCollection>
@@ -318,6 +326,8 @@ The trackball is used to track a closest data point to the mouse or touch positi
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfStockChart>
     <StockChartCrosshairSettings Enable="true" LineType="LineType.Vertical"></StockChartCrosshairSettings>

@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.DropDowns
+
 <SfMultiSelect TValue="string[]" TItem="string" Placeholder='First Name'></SfMultiSelect>
 
 {% endhighlight %}
@@ -184,6 +186,8 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
@@ -223,6 +227,8 @@ The height and width of the popup list can also be customized using the [PopupHe
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" PopupHeight="350px" PopupWidth="350px" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>

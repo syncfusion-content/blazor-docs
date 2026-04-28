@@ -148,6 +148,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Menu Bar compone
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Navigations
+
 <SfMenu TValue="MenuItem">
     <MenuItems>
         <MenuItem Text="File">
