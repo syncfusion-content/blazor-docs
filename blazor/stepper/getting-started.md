@@ -192,6 +192,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stepper componen
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Navigations
+
 <SfStepper>
     <StepperSteps>
         <StepperStep></StepperStep>
