@@ -52,7 +52,7 @@ Markers can be added to the points by enabling the [Visible](https://help.syncf
 
 ```
 
-![Data Markers in Blazor Line Chart](images/marker/blazor-line-chart-data-marker.png)
+![Data Markers in Blazor Line Chart](images/marker/blazor-line-chart-data-marker.webp)
 
 ## Shape
 
@@ -91,7 +91,7 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
 
 ```
 
-![Blazor Line Chart with Diamond Marker](images/marker/blazor-line-chart-diamond-marker.png)
+![Blazor Line Chart with Diamond Marker](images/marker/blazor-line-chart-diamond-marker.webp)
 
 ## Auto marker shape
 
@@ -150,7 +150,7 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 
-![Blazor Chart with different marker shapes](images/marker/blazor-line-chart-with-different-marker.png)
+![Blazor Chart with different marker shapes](images/marker/blazor-line-chart-with-different-marker.webp)
 
 ## Images
 
@@ -190,7 +190,7 @@ Apart from shapes, one can also add custom images to mark the data point using t
 
 ```
 
-![Blazor Chart with image marker shape](images/marker/blazor-line-chart-image-marker.png)
+![Blazor Chart with image marker shape](images/marker/blazor-line-chart-image-marker.webp)
 
 ## Fill marker with series color
 
@@ -232,7 +232,7 @@ Marker can be filled with the series color by setting [IsFilled](https://help.sy
 
 ```
 
-![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-filled-marker.png)
+![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-filled-marker.webp)
 
 ## Customization
 
@@ -276,7 +276,7 @@ Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blaz
 
 ```
 
-![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-custom-marker.png)
+![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-custom-marker.webp)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

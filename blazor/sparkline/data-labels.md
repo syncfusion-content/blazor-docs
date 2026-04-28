@@ -34,7 +34,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spa
 
 ```
 
-![Blazor Sparkline Chart with Data Label](images/Datalabels/blazor-sparkline-data-label.png)
+![Blazor Sparkline Chart with Data Label](images/Datalabels/blazor-sparkline-data-label.webp)
 
 ## Data Label Customization
 
@@ -63,7 +63,7 @@ The following properties can be used to customize Sparkline data labels:
 
 ```
 
-![Blazor Sparkline Chart with Custom Data Label](images/Datalabels/blazor-sparkline-custom-data-label.png)
+![Blazor Sparkline Chart with Custom Data Label](images/Datalabels/blazor-sparkline-custom-data-label.webp)
 
 ## Format
 
@@ -104,4 +104,4 @@ The data label text can be formatted by specifying the property name from the da
 
 ```
 
-![Label Formatting in Blazor Sparkline Chart](images/Datalabels/blazor-sparkline-label-format.png)
+![Label Formatting in Blazor Sparkline Chart](images/Datalabels/blazor-sparkline-label-format.webp)

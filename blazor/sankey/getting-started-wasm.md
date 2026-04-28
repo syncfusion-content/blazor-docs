@@ -200,7 +200,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram c
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram in the default web browser.
 
-![Blazor Sankey Diagram](images/getting-started/blazor-sankey.png)
+![Blazor Sankey Diagram](images/getting-started/blazor-sankey.webp)
 
 ## Populate Blazor Sankey with data
 
@@ -267,13 +267,15 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
 </SfSankey>
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.png)
+![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.webp)
 
 ## Add node labels
 
@@ -282,6 +284,8 @@ You can add data labels to improve the readability of the sankey diagram. This c
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLabelSettings Visible="true"></SankeyLabelSettings>
 </SfSankey>
@@ -289,7 +293,7 @@ You can add data labels to improve the readability of the sankey diagram. This c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.png)
+![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.webp)
 
 ## Enable tooltip
 
@@ -298,6 +302,8 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
    <SankeyTooltipSettings Enable="true"></SankeyTooltipSettings>
 </SfSankey>
@@ -305,7 +311,7 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.png)
+![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.webp)
 
 ## Enable legend
 
@@ -314,6 +320,8 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Sankey
+
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
     <SankeyLegendSettings Visible="true"></SankeyLegendSettings>
 </SfSankey>
@@ -321,7 +329,7 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
+![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.webp)
 
 ## See also
 

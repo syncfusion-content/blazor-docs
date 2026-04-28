@@ -62,7 +62,7 @@ You can apply global styles such as borders, padding, and background color to th
 }
 ```
 
-![Blazor TreeMap with Border Customization](images/style/blazor-treemap-border-color.png)
+![Blazor TreeMap with Border Customization](images/style/blazor-treemap-border-color.webp)
 
 ## Customize TreeMap Item Rectangles (RectPath)
 
@@ -79,7 +79,7 @@ Each TreeMap item rectangle is rendered as an SVG path element. These elements c
 }
 ```
 
-![Blazor TreeMap with Item Rectangle Customization](images/style/blazor-treemap-item-rect-customization.png)
+![Blazor TreeMap with Item Rectangle Customization](images/style/blazor-treemap-item-rect-customization.webp)
 
 ### Level-Based Rectangle Styling
 
@@ -158,7 +158,7 @@ TreeMap text elements contain Text in their IDs and can be styled independently.
 }
 ```
 
-![Blazor TreeMap with Item Rectangle Customization](images/style/blazor-treemap-item-text-customization.png)
+![Blazor TreeMap with Item Rectangle Customization](images/style/blazor-treemap-item-text-customization.webp)
 
 ### Level-Based Text Styling
 
@@ -218,7 +218,7 @@ TreeMap text elements contain Text in their IDs and can be styled independently.
 }
 ```
 
-![Blazor TreeMap with Item Text Customization](images/style/blazor-treemap-item-text-advance-customization.png)
+![Blazor TreeMap with Item Text Customization](images/style/blazor-treemap-item-text-advance-customization.webp)
 
 ## Hover and Interactive States
 
@@ -239,6 +239,6 @@ You can improve interactivity by styling hover states:
 }
 ```
 
-![Blazor TreeMap with Item Text Customization](images/style/blazor-treemap-item-hover-customization.png)
+![Blazor TreeMap with Item Text Customization](images/style/blazor-treemap-item-hover-customization.webp)
 
 N> SVG presentation attributes such as fill, stroke, and font-size may require **!important** when overridden by inline SVG styles.

@@ -11,8 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get start quickly with Blazor Stock Chart component, refer this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/StockChart) sample.
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -150,6 +148,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stock Chart comp
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Charts
+
 <SfStockChart>
 
 </SfStockChart>
@@ -197,6 +197,8 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Charts
+
 <SfStockChart>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" YName="Close" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
@@ -208,7 +210,9 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stock Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZWAXpJFtLYFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZWAXpJFtLYFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.webp)" %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/StockChart).
 
 ## Adding Title
 
@@ -253,7 +257,7 @@ A title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJtMKjTJvplKeq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Title](images/blazor-stock-chart-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJtMKjTJvplKeq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Title](images/blazor-stock-chart-title.webp)" %}
 
 ## Adding Crosshair
 
@@ -295,7 +299,7 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTtsANzJEKAOXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTtsANzJEKAOXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.webp)" %}
 
 ## Adding Trackball
 
@@ -340,7 +344,7 @@ The trackball is used to track a closest data point to the mouse or touch positi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfXCgjzINVMeUY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfXCgjzINVMeUY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.webp)" %}
 
 ## See also
 

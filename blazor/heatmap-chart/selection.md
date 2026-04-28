@@ -56,11 +56,11 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 
 ```
 
-![Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-selection.png)
+![Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-selection.webp)
 
 The illustration below shows how to select multiple cells in the HeatMap by clicking and dragging the mouse across the cells.
 
-![Multiple selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-multiple-selection.gif)
+![Multiple selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-multiple-selection.webp)
 
 ## Enable single cell selection
 
@@ -98,7 +98,7 @@ In the HeatMap, the [EnableMultiSelect](https://help.syncfusion.com/cr/blazor/Sy
 }
 
 ```
-![Single cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-single-cell-selection.gif)
+![Single cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-single-cell-selection.webp)
 
 ### Clearing cell selection
 
@@ -142,4 +142,4 @@ The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Clearing cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-clear-selection-method.gif)
+![Clearing cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-clear-selection-method.webp)
