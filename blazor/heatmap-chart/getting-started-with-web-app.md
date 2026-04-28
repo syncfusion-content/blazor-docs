@@ -167,8 +167,6 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.HeatMap
-
 <SfHeatMap DataSource="@HeatMapData">
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitleSettings>
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
@@ -200,7 +198,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor HeatMap Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTDWBuJXfSXofp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor HeatMap Chart](images/blazor-heatmap-chart.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTDWBuJXfSXofp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor HeatMap Chart](images/blazor-heatmap-chart.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/HeatMapChart).
 

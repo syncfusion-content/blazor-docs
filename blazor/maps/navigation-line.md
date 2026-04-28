@@ -42,7 +42,7 @@ To draw a line between two cities on the world map, use [Latitude](https://help.
 
 ```
 
-![Blazor Maps with Navigation Lines](./images/NavigationLine/blazor-maps-navigation-line.png)
+![Blazor Maps with Navigation Lines](./images/NavigationLine/blazor-maps-navigation-line.webp)
 
 ## Enabling the arrows
 
@@ -73,4 +73,4 @@ Enable an arrow on the navigation line by setting the [ShowArrow](https://help.s
 
 ```
 
-![Blazor Maps with Navigation Line Arrow](./images/NavigationLine/blazor-maps-navigation-line-arrow.PNG)
+![Blazor Maps with Navigation Line Arrow](./images/NavigationLine/blazor-maps-navigation-line-arrow.webp)

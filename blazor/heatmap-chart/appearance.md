@@ -57,7 +57,7 @@ Change the width, color, and radius of the heat map cells by using the `HeatMapC
 
 ```
 
-![Changing Cell Border Color in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-cell-border-color.png)
+![Changing Cell Border Color in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-cell-border-color.webp)
 
 ### Cell highlighting
 
@@ -101,7 +101,7 @@ Enable or disable the cell highlighting while hover over the heat map cells by u
 
 ```
 
-![Enabling Cell Highlighting Color in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-cell-highlight-color.png)
+![Enabling Cell Highlighting Color in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-cell-highlight-color.webp)
 
 ## Margin
 
@@ -146,7 +146,7 @@ Set the margin for the heat map from its container by using the `HeatMapMargin` 
 
 ```
 
-![Blazor HeatMap Chart with Margin](images/appearance/blazor-heatmap-chart-with-margin.png)
+![Blazor HeatMap Chart with Margin](images/appearance/blazor-heatmap-chart-with-margin.webp)
 
 ## Title
 
@@ -192,7 +192,7 @@ The title is used to provide a quick information about the data plotted in heat 
 
 ```
 
-![Blazor HeatMap Chart with Title](images/appearance/blazor-heatmap-chart-with-title.png)
+![Blazor HeatMap Chart with Title](images/appearance/blazor-heatmap-chart-with-title.webp)
 
 ## Data label
 
@@ -236,7 +236,7 @@ You can toggle the visibility of data labels by using the `ShowLabel` property. 
 
 ```
 
-![Blazor HeatMap Chart with DataLabel](images/appearance/blazor-heatmap-chart-with-datalabel.png)
+![Blazor HeatMap Chart with DataLabel](images/appearance/blazor-heatmap-chart-with-datalabel.webp)
 
 ### Text style
 
@@ -283,7 +283,7 @@ You can customize the font family, font size, and color of the data label by usi
 
 ```
 
-![Customizing Text Style in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-text-style-customization.png)
+![Customizing Text Style in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-text-style-customization.webp)
 
 ### Format
 
@@ -327,7 +327,7 @@ You can change the format of the data label, such as currency, decimal, percent,
 
 ```
 
-![Formatting Data Label in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-format.png)
+![Formatting Data Label in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-format.webp)
 
 ### Template
 
@@ -385,7 +385,7 @@ The following example demonstrates how to add a data label template for array ta
 }
 
 ```
-![Data label template with array table binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-table-binding.png)
+![Data label template with array table binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-table-binding.webp)
 
 **Cell**
 
@@ -435,7 +435,7 @@ The following example demonstrates how to add a data label template for array ce
 
 ```
 
-![Data label template with array cell binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-cell-binding.png)
+![Data label template with array cell binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-cell-binding.webp)
 
 #### JSON binding
 
@@ -504,7 +504,7 @@ The following example demonstrates how to add a data label template for JSON tab
 }
 
 ```
-![Data label template with JSON table binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-table-binding.png)
+![Data label template with JSON table binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-table-binding.webp)
 
 **Cell**
 
@@ -569,7 +569,7 @@ The following example demonstrates how to add a data label template for JSON cel
 
 ```
 
-![Data label template with JSON cell binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-cell-binding.png)
+![Data label template with JSON cell binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-cell-binding.webp)
 
 ## See Also
 

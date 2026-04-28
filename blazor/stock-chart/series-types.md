@@ -51,7 +51,7 @@ To render a line series, set the series [Type](https://help.syncfusion.com/cr/bl
 
 ```
 
-![BLazor Line Stock Chart](images/series-types/blazor-line-stock-chart.png)
+![BLazor Line Stock Chart](images/series-types/blazor-line-stock-chart.webp)
 
 **Spline**
 
@@ -91,7 +91,7 @@ To render a spline series, set the series [Type](https://help.syncfusion.com/cr/
 
 ```
 
-![Blazor Spline Stock Chart](images/series-types/blazor-spline-stock-chart.png)
+![Blazor Spline Stock Chart](images/series-types/blazor-spline-stock-chart.webp)
 
 **HollowCandle**
 
@@ -139,7 +139,7 @@ To render a hilo series, set the series [Type](https://help.syncfusion.com/cr/bl
 
 ```
 
-![Blazor Hilo Stock Chart](images/series-types/blazor-hilo-stock-chart.png)
+![Blazor Hilo Stock Chart](images/series-types/blazor-hilo-stock-chart.webp)
 
 **HiloOpenClose**
 
@@ -183,7 +183,7 @@ To render a HiloOpenClose series, set the series [Type](https://help.syncfusion.
 
 ```
 
-![Blazor Hilo Open Close Stock Chart](images/series-types/blazor-hilo-open-close-stock-chart.png)
+![Blazor Hilo Open Close Stock Chart](images/series-types/blazor-hilo-open-close-stock-chart.webp)
 
 **Candle**
 
@@ -227,4 +227,4 @@ To render a candle series, set the series [Type](https://help.syncfusion.com/cr/
 
 ```
 
-![Blazor Candle Stock Chart](images/common/blazor-candle-stock-chart.png)
+![Blazor Candle Stock Chart](images/common/blazor-candle-stock-chart.webp)

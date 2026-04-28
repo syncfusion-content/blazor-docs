@@ -52,7 +52,7 @@ The DateTime axis uses a time-based scale and renders date-time values as axis l
 
 ```
 
-![Blazor Stock Chart with Datetime Axis](images/common/blazor-stock-chart-datetime-axis.png)
+![Blazor Stock Chart with Datetime Axis](images/common/blazor-stock-chart-datetime-axis.webp)
 
 ## DateTimeCategory Axis
 
@@ -122,7 +122,7 @@ The DateTimeCategory axis displays only business days by skipping non-trading da
 
 ```
 
-![Blazor Stock Chart with DateTimeCategory Axis](images/common/blazor-stock-chart-datetimecategory-axis.png)
+![Blazor Stock Chart with DateTimeCategory Axis](images/common/blazor-stock-chart-datetimecategory-axis.webp)
 
 ## Logarithmic Axis
 
@@ -167,7 +167,7 @@ The Logarithmic axis uses a logarithmic scale and is useful when data spans mult
 
 ```
 
-![Blazor Stock Chart with Logarithmic Axis](images/common/blazor-stock-chart-logarithmic-axis.png)
+![Blazor Stock Chart with Logarithmic Axis](images/common/blazor-stock-chart-logarithmic-axis.webp)
 
 ## See Also
 

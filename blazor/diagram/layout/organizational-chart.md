@@ -103,7 +103,7 @@ The following code example illustrates how to create an organizational chart.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/OrganizationLayout1.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVIstZxJweMEFvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Chart example](../images/blazor-organization-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVIstZxJweMEFvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Chart example](../images/blazor-organization-chart.webp)" %}
 
 Organizational chart layout starts parsing from the root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides information about a node’s children and the way to arrange them (direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained below.
 
@@ -145,13 +145,13 @@ The following table illustrates the different chart orientations and chart types
 
 |Orientation|Type|Description|Example|
 | -------- | ----------- | ------------- |------|
-|Horizontal|Left|Arranges the child nodes horizontally at the left side of the parent.|![Blazor Organization Chart Diagram ChildNode in Horizontal Left Position](../images/blazor-diagram-childnode-at-horizontal-left-side.png)|
-||Right|Arranges the child nodes horizontally at the right side of the parent.|![Blazor Organization Chart Diagram ChildNode in Horizontal Left Position](../images/blazor-diagram-childnode-at-horizontal-right-side.png)|
-||Center|Arranges the children like standard tree layout orientation.|![Blazor Organization Chart Diagram ChildNode in Horizontal Center Position](../images/blazor-diagram-childnode-at-horizontal-center-side.png)|
-||Balanced|Arranges the leaf level child nodes in multiple rows.|![Blazor Organization Chart Diagram ChildNode in Horizontal Balance Position](../images/blazor-diagram-childnode-at-horizontal-both-side.png)|
-|Vertical|Left|Arranges the children vertically at the left side of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Left Position](../images/blazor-diagram-childnode-at-vertical-left-side.png)|
-||Right|Arranges the children vertically at the right side of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Right Position](../images/blazor-diagram-childnode-at-vertical-right-side.png)|
-||Alternate|Arranges the children vertically at both left and right sides of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Alternate Position](../images/blazor-diagram-childnode-at-vertical-both-side.png)|
+|Horizontal|Left|Arranges the child nodes horizontally at the left side of the parent.|![Blazor Organization Chart Diagram ChildNode in Horizontal Left Position](../images/blazor-diagram-childnode-at-horizontal-left-side.webp)|
+||Right|Arranges the child nodes horizontally at the right side of the parent.|![Blazor Organization Chart Diagram ChildNode in Horizontal Left Position](../images/blazor-diagram-childnode-at-horizontal-right-side.webp)|
+||Center|Arranges the children like standard tree layout orientation.|![Blazor Organization Chart Diagram ChildNode in Horizontal Center Position](../images/blazor-diagram-childnode-at-horizontal-center-side.webp)|
+||Balanced|Arranges the leaf level child nodes in multiple rows.|![Blazor Organization Chart Diagram ChildNode in Horizontal Balance Position](../images/blazor-diagram-childnode-at-horizontal-both-side.webp)|
+|Vertical|Left|Arranges the children vertically at the left side of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Left Position](../images/blazor-diagram-childnode-at-vertical-left-side.webp)|
+||Right|Arranges the children vertically at the right side of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Right Position](../images/blazor-diagram-childnode-at-vertical-right-side.webp)|
+||Alternate|Arranges the children vertically at both left and right sides of the parent.|![Blazor Organization Chart Diagram ChildNode in Vertical Alternate Position](../images/blazor-diagram-childnode-at-vertical-both-side.webp)|
 
 The following code example illustrates how to set the vertical right arrangement for leaf-level trees.
 
@@ -225,7 +225,7 @@ The following code example illustrates how to set the vertical right arrangement
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/OrganizationLayout2.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrIsNDxzGyEpDVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrIsNDxzGyEpDVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.webp)" %}
 
 ### How to Update Layout Spacing
 

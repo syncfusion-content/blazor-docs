@@ -66,7 +66,7 @@ Axis labels are used to indicate what type of data is bound for the Smith Chart.
 }
 ```
 
-![Blazor Smith Chart Axis with Custom Label](./images/Axis/blazor-smith-chart-axis-with-custom-label.png)
+![Blazor Smith Chart Axis with Custom Label](./images/Axis/blazor-smith-chart-axis-with-custom-label.webp)
 
 ## Gridlines
 
@@ -120,7 +120,7 @@ The following properties can be customized in both the major and minor gridlines
 }
 ```
 
-![Blazor Smith Chart with GridLines](./images/Axis/blazor-smith-chart-with-gridlines.png)
+![Blazor Smith Chart with GridLines](./images/Axis/blazor-smith-chart-with-gridlines.webp)
 
 ## Axis Line
 
@@ -166,4 +166,4 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
 }
 ```
 
-![Blazor Smith Chart with Custom Axis Line](./images/Axis/blazor-smith-chart-custom-axis-line.png)
+![Blazor Smith Chart with Custom Axis Line](./images/Axis/blazor-smith-chart-custom-axis-line.webp)
