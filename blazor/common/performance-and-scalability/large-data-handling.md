@@ -211,7 +211,7 @@ The following measured values may vary based on browser, device, hosting model(B
 | 10,000 | ~50–90 | ~1,500–3,000 |
 | 20,000 | ~50–100 | ~3,000–10,000 |
 
-N > Without virtualization, render time increases as record count grows because all rows are rendered in the DOM. With virtualization enabled, render time remains nearly constant by limiting the DOM rows to those visible in the viewport, ensuring smooth UI performance for larger datasets.
+N> Without virtualization, render time increases as record count grows because all rows are rendered in the DOM. With virtualization enabled, render time remains nearly constant by limiting the DOM rows to those visible in the viewport, ensuring smooth UI performance for larger datasets.
 
 For more information, refer to the Syncfusion® Blazor DataGrid documentation for [Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) and [Infinite scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
 
@@ -227,12 +227,16 @@ Blazor Server applications use SignalR for communication between the client and 
 
 When features such as persistence are enabled with a large number of columns, SignalR message size limits may be exceeded, potentially resulting in connection errors. In such cases, adjust the SignalR configuration or reduce the amount of state being persisted.
 
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
+
 builder.Services.AddSignalR(hubOptions =>
 {
     hubOptions.MaximumReceiveMessageSize = 10 * 1024 * 1024; // 10MB
 });
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 For more details on SignalR configuration, refer to the [official documentation](https://learn.microsoft.com/en-us/aspnet/core/signalr/configuration?view=aspnetcore-9.0&tabs=dotnet#configure-server-options).
 
