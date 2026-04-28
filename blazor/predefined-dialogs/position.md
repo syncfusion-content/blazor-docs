@@ -35,12 +35,12 @@ Use the following code snippets for **alert.razor**, **confirm.razor**, and **pr
 
 **Alert**
 
-![Alert dialog positioned at top center](./images/blazor-alert-position.png)
+![Alert dialog positioned at top center](./images/blazor-alert-position.webp)
 
 **Confirm**
 
-![Confirm dialog positioned at top center](./images/blazor-confirm-position.png)
+![Confirm dialog positioned at top center](./images/blazor-confirm-position.webp)
 
 **Prompt**
 
-![Prompt dialog positioned at top center](./images/blazor-prompt-position.png)
+![Prompt dialog positioned at top center](./images/blazor-prompt-position.webp)
