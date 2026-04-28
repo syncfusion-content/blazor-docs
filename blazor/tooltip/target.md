@@ -17,7 +17,7 @@ The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Sf
 </SfTooltip>
 ```
 
-![Blazor Tooltip Target](images/target.png)
+![Blazor Tooltip Target](images/target.webp)
 
 ## Displaying Tooltip for dynamically created target element
 
