@@ -85,8 +85,7 @@ Use a value template to render a custom editor for a column’s value field. Def
 }
 
 ```
-
-![Blazor Query Builder with a value template](./images/blazor-querybuilder-value-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdtzLczZeswWRy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a value template](./images/blazor-querybuilder-value-template.webp)" %}
 
 ## Column Template
 
@@ -240,7 +239,7 @@ In the following sample, the DropDownList component is used as a custom editor f
 
 ```
 
-![Blazor Query Builder with a column template](./images/blazor-querybuilder-column-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrRNTLGTzptPYJT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a column template](./images/templates/blazor-querybuilder-column-template.webp)" %}
 
 ## Header Template
 
@@ -253,6 +252,7 @@ In the following sample, the DropDownList is used to switch the group condition 
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web;
 
 <SfQueryBuilder TValue="EmployeeDetails" @ref="qbObj">
     <QueryBuilderRule Condition="and" Rules="Rules"></QueryBuilderRule>
@@ -277,13 +277,13 @@ In the following sample, the DropDownList is used to switch the group condition 
         </HeaderTemplate>
     </QueryBuilderTemplates>
     <QueryBuilderColumns>
-        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title of Courtesy" Type="ColumnType.Boolean" Values="Values"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="Syncfusion.Blazor.QueryBuilder.ColumnType.Number"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="Syncfusion.Blazor.QueryBuilder.ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title of Courtesy" Type="Syncfusion.Blazor.QueryBuilder.ColumnType.Boolean" Values="Values"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Title" Label="Title" Type="Syncfusion.Blazor.QueryBuilder.ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="Syncfusion.Blazor.QueryBuilder.ColumnType.Date"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="Country" Label="Country" Type="Syncfusion.Blazor.QueryBuilder.ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="City" Label="City" Type="Syncfusion.Blazor.QueryBuilder.ColumnType.String"></QueryBuilderColumn>
     </QueryBuilderColumns>
 </SfQueryBuilder>
 
@@ -335,17 +335,17 @@ In the following sample, the DropDownList is used to switch the group condition 
             model.Condition = args.Value.ToLower();
         }
     }
-    private void addGrpBtn(MouseEventArgs args, HeaderTemplateModel model)
+    private void addGrpBtn(Microsoft.AspNetCore.Components.Web.MouseEventArgs args, HeaderTemplateModel model)
     {
         grpID = model.ID.Split("_")[1];
         qbObj.AddGroup(new RuleModel { Condition = "or", Rules = new List<RuleModel>() { new RuleModel() } }, grpID);
     }
-    private void addCondBtn(MouseEventArgs args, HeaderTemplateModel model)
+    private void addCondBtn(Microsoft.AspNetCore.Components.Web.MouseEventArgs args, HeaderTemplateModel model)
     {
         grpID = model.ID.Split("_")[1];
         qbObj.AddRule(new RuleModel(), grpID);
     }
-    private void deleteGrpBtn(MouseEventArgs args, HeaderTemplateModel model)
+    private void deleteGrpBtn(Microsoft.AspNetCore.Components.Web.MouseEventArgs args, HeaderTemplateModel model)
     {
         grpID = model.ID.Split("_")[1];
         qbObj.DeleteGroup(grpID);
@@ -360,7 +360,6 @@ In the following sample, the DropDownList is used to switch the group condition 
 </style>
 
 ```
-
-![Blazor Query Builder with a header template](./images/blazor-querybuilder-header-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRtzBQKQWXawOw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a header template](./images/templates/blazor-querybuilder-header-template.webp)" %}
 
 N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
