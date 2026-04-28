@@ -44,4 +44,4 @@ The following example demonstrates the severity of the messages.
 {% endhighlight %}
 {% endtabs %}
 
-![Message Severity with Icons](./images/message-severity-icon.png)
+![Message Severity with Icons](./images/message-severity-icon.webp)
