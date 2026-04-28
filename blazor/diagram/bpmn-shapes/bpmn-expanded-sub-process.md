@@ -51,7 +51,7 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/BpmnExpandedSubProcessSample.razor)
 
-![BPMN Expanded Sub-Process shape in Blazor Diagram.](../images/Bpmn-ExpandedSubProcess.png)
+![BPMN Expanded Sub-Process shape in Blazor Diagram.](../images/Bpmn-ExpandedSubProcess.webp)
 
 ## How to Add BPMN Nodes into a BPMN Expanded Sub-Process
 
@@ -105,7 +105,7 @@ The following code example explains how to add a BPMN node to an BPMN Expanded S
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/AddChildren.razor)
 
 
-![ExpandedSubProcess BPMN Shape](../images/Bpmn-ExpandedSubProcess-WithChildren.png)
+![ExpandedSubProcess BPMN Shape](../images/Bpmn-ExpandedSubProcess-WithChildren.webp)
 
 
 ## How to Add BPMN Nodes into BPMN Expanded Sub-Process at Runtime
@@ -116,7 +116,7 @@ While resizing or dragging the child element, if the child element bounds are wi
 
 The following image shows how to add BPMN node into the BPMN ExpandedSubProcess at runtime.
 
-![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSubProcess.gif)
+![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSubProcess1.webp)
 
 
 ### How to Set Loop Type
@@ -162,17 +162,17 @@ The following image shows how to add BPMN node into the BPMN ExpandedSubProcess 
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessLoop.razor)
 
-![Standard ExpandedSubProcess BPMN Shape](../images/Bpmn-Task-Loop-Standard.png)  
+![Standard ExpandedSubProcess BPMN Shape](../images/Bpmn-Task-Loop-Standard.webp)  
 
 The following table describes the available loop types for an Expanded Sub-Process.
 
 
 | LoopActivity | Task | Description|
 | -------- | -------- | --------|
-| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None) | ![None Task BPMN Shape](../images/Bpmn-Task-Loop-None.png) |None of the shape shows in the sub-process.|
-| [Standard](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_Standard) | ![Standard Task BPMN Shape](../images/Bpmn-Task-Loop-Standard.png) |Loop marker indicates that the sub-process repeats itself in the sequence.|
-| [SequenceMultiInstance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_SequenceMultiInstance) | ![Sequence MultiInstance Task BPMN Shape](../images/Bpmn-Task-Loop-Sequential.png) | Multi-Instance marker indicates that the sub-process can run with other identical sub-processes simultaneously. The three horizontal lines indicate the sequential execution.|
-| [ParallelMultiInstance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_ParallelMultiInstance) | ![ParallelMultiInstance Task BPMNShape](../images/Bpmn-Task-Loop-Parallel.png) | Multi-Instance marker indicates that the sub-process can run with other identical sub-processes simultaneously. The three vertical lines indicate that the instances will be executed in parallel.|
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None) | ![None Task BPMN Shape](../images/Bpmn-Task-Loop-None.webp) |None of the shape shows in the sub-process.|
+| [Standard](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_Standard) | ![Standard Task BPMN Shape](../images/Bpmn-Task-Loop-Standard.webp) |Loop marker indicates that the sub-process repeats itself in the sequence.|
+| [SequenceMultiInstance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_SequenceMultiInstance) | ![Sequence MultiInstance Task BPMN Shape](../images/Bpmn-Task-Loop-Sequential.webp) | Multi-Instance marker indicates that the sub-process can run with other identical sub-processes simultaneously. The three horizontal lines indicate the sequential execution.|
+| [ParallelMultiInstance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_ParallelMultiInstance) | ![ParallelMultiInstance Task BPMNShape](../images/Bpmn-Task-Loop-Parallel.webp) | Multi-Instance marker indicates that the sub-process can run with other identical sub-processes simultaneously. The three vertical lines indicate that the instances will be executed in parallel.|
 
 ### How to Enable Compensation
 
@@ -217,7 +217,7 @@ The following table describes the available loop types for an Expanded Sub-Proce
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessCompensation.razor)
 
 
- ![IsCompensationActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-Task-Compensation.png)
+ ![IsCompensationActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-Task-Compensation.webp)
  
 ### How to Enable Ad-Hoc
 
@@ -262,7 +262,7 @@ An Ad-Hoc Expanded Sub-Process is a group of tasks that are executed in any orde
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessAdhoc.razor)
 
 
-![IsAdHocActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-ExpandedSub-Process-Adhoc.png)
+![IsAdHocActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-ExpandedSub-Process-Adhoc.webp)
 
 ### How to Set Sub-Process Type
 
@@ -306,14 +306,14 @@ The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessType.razor)
 
-![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.png)
+![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.webp)
 
 The following table describes the available sub-process types.
 
 | SubProcessType | Image | Description|
 | -------- | -------- | -------- |
-| [Call](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Call) | ![Call Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Call.png) |It is a global sub-process that is reused at various points in the business flow.|
-| [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Event) | ![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.png) |The event sub-process is a sub-process that is triggered by an event. An event sub-process can be added at the process level or at any sub-process level.|
-| [Transaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Transaction) | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Transaction.png) |It is a specialized sub-process that involves payment.|
-| [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default) | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-None.png) |The task that is performed in a business process. It is represented by a rounded rectangle.|
+| [Call](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Call) | ![Call Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Call.webp) |It is a global sub-process that is reused at various points in the business flow.|
+| [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Event) | ![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.webp) |The event sub-process is a sub-process that is triggered by an event. An event sub-process can be added at the process level or at any sub-process level.|
+| [Transaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Transaction) | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Transaction.webp) |It is a specialized sub-process that involves payment.|
+| [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default) | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-None.webp) |The task that is performed in a business process. It is represented by a rounded rectangle.|
 
