@@ -107,7 +107,7 @@ Here is an example of configuring nodes in the Sankey Diagram:
 
 In this example, nodes represent categories such as sources, energy types, and usage groups.
 
-![Blazor Sankey Node Customization](images/nodes/sankey-node-basic.png)
+![Blazor Sankey Node Customization](images/nodes/sankey-node-basic.webp)
 
 ## Customizing Node Appearance
 

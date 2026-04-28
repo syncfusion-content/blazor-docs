@@ -39,7 +39,7 @@ The rendered Maps component can be printed directly from the browser by calling 
 
 ```
 
-![Printing in Blazor Maps](./images/Print/blazor-maps-printing.png)
+![Printing in Blazor Maps](./images/Print/blazor-maps-printing.webp)
 
 ## Export
 
@@ -74,7 +74,7 @@ Enable image export by setting the [AllowImageExport](https://help.syncfusion.co
 
 ```
 
-![Exporting in Blazor Maps](./images/Print/blazor-maps-exporting.png)
+![Exporting in Blazor Maps](./images/Print/blazor-maps-exporting.webp)
 
 ### PDF Export
 
@@ -103,7 +103,7 @@ Enable PDF export by setting the [AllowPdfExport](https://help.syncfusion.com/cr
 
 ```
 
-![Blazor Maps with PDF Export](./images/Print/blazor-maps-exporting.png)
+![Blazor Maps with PDF Export](./images/Print/blazor-maps-exporting.webp)
 
 ### Exporting Maps as base64 string of the file
 
@@ -168,4 +168,4 @@ Maps using tile providers such as OSM, Bing, and other providers can be exported
 
 ```
 
-![Blazor Maps with OSM Export](./images/Print/blazor-maps-osm-export.png)
+![Blazor Maps with OSM Export](./images/Print/blazor-maps-osm-export.webp)

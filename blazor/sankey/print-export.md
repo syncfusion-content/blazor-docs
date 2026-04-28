@@ -107,7 +107,7 @@ The Sankey Diagram provides a convenient way to print its contents from the brow
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Print](images/print-export/sankey-print-export.png)
+![Blazor Sankey Print](images/print-export/sankey-print-export.webp)
 
 ## Exporting the Sankey Diagram
 
@@ -206,7 +206,7 @@ The diagram can be exported to multiple formats, including PNG, JPEG, SVG, and P
 {% endtabs %}
 
 
-![Blazor Sankey Print](images/print-export/sankey-print-export.png)
+![Blazor Sankey Print](images/print-export/sankey-print-export.webp)
 
 ## Key Considerations
 

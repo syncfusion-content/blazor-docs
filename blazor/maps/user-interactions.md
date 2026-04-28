@@ -40,7 +40,7 @@ Enable zooming by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syn
 
 ```
 
-![Blazor Maps with Zooming](./images/UserInteraction/blazor-maps-zooming.png)
+![Blazor Maps with Zooming](./images/UserInteraction/blazor-maps-zooming.webp)
 
 <b>Enable panning</b>
 
@@ -258,7 +258,7 @@ Use [MapsZoomToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ```
 
-![Blazor Maps with custom zoom toolbar](./images/UserInteraction/blazor-maps-custom-zooming-toolbar.png)
+![Blazor Maps with custom zoom toolbar](./images/UserInteraction/blazor-maps-custom-zooming-toolbar.webp)
 
 **Customizing the buttons in the zoom toolbar**
 
@@ -297,7 +297,7 @@ Use [MapsZoomToolbarButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Maps with custom zoom toolbar buttons](./images/UserInteraction/blazor-maps-custom-zoom-toolbar-buttons.png)
+![Blazor Maps with custom zoom toolbar buttons](./images/UserInteraction/blazor-maps-custom-zoom-toolbar-buttons.webp)
 
 **Customizing the tooltip of the zoom toolbar**
 
@@ -337,7 +337,7 @@ Use [MapsZoomToolbarTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 
-![Blazor Maps with custom tooltip in zoom toolbar](./images/UserInteraction/blazor-maps-custom-tooltip-in-zoom-toolbar.png)
+![Blazor Maps with custom tooltip in zoom toolbar](./images/UserInteraction/blazor-maps-custom-tooltip-in-zoom-toolbar.webp)
 
 ## Selection
 
@@ -366,7 +366,7 @@ The following properties and class customize selection for shapes, bubbles, and 
 
 ```
 
-![Blazor Maps with Shape Selection](./images/UserInteraction/blazor-maps-shape-selection.png)
+![Blazor Maps with Shape Selection](./images/UserInteraction/blazor-maps-shape-selection.webp)
 
 Selecting a legend item selects the shapes bound to that legend, and selecting a shape highlights the corresponding legend.
 
@@ -411,7 +411,7 @@ Selecting a legend item selects the shapes bound to that legend, and selecting a
 
 ```
 
-![Blazor Maps with Shape Selection using Legend](./images/UserInteraction/blazor-maps-shape-selection-using-legend.png)
+![Blazor Maps with Shape Selection using Legend](./images/UserInteraction/blazor-maps-shape-selection-using-legend.webp)
 
 ### Enable selection for bubbles
 
@@ -462,7 +462,7 @@ Enable bubble selection by configuring [MapsBubbleSelectionSettings](https://hel
 
 ```
 
-![Enabling Bubble Selection in Blazor Maps](./images/UserInteraction/blazor-maps-bubble-selection.PNG)
+![Enabling Bubble Selection in Blazor Maps](./images/UserInteraction/blazor-maps-bubble-selection.webp)
 
 ### Enable selection for markers
 
@@ -513,7 +513,7 @@ Enable marker selection by configuring [MapsMarkerSelectionSettings](https://hel
 
 ```
 
-![Enabling Marker Selection in Blazor Maps](./images/UserInteraction/blazor-maps-marker-selection.PNG)
+![Enabling Marker Selection in Blazor Maps](./images/UserInteraction/blazor-maps-marker-selection.webp)
 
 ### Enable selection for polygons
 
@@ -587,7 +587,7 @@ The following example demonstrates selecting a polygon in a geometry map.
 }
 
 ```
-![Blazor Maps with selected polygon shape](./images/Polygon/blazor-map-polygon-shape-selected.gif)
+![Blazor Maps with selected polygon shape](./images/Polygon/blazor-map-polygon-shape-selected.webp)
 
 ### Public method for the shape selection
 
@@ -625,7 +625,7 @@ Use the [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Maps Marker with Cluster](./images/Marker/blazor-maps-marker-cluster.PNG)
+![Blazor Maps Marker with Cluster](./images/Marker/blazor-maps-marker-cluster.webp)
 
 ### Initial shape selection
 
@@ -649,7 +649,7 @@ Initialize selection using [MapsInitialShapeSelection](https://help.syncfusion.c
 
 ```
 
-![Blazor Maps with Initial Shape Selection](./images/Marker/blazor-maps-initial-shape-selection.PNG)
+![Blazor Maps with Initial Shape Selection](./images/Marker/blazor-maps-initial-shape-selection.webp)
 
 ### Initial marker selection
 
@@ -692,7 +692,7 @@ Select markers initially using [InitialMarkerSelection](https://help.syncfusion.
 
 ```
 
-![Blazor Maps with Initial Marker Selection](./images/UserInteraction/blazor-maps-marker-selection.PNG)
+![Blazor Maps with Initial Marker Selection](./images/UserInteraction/blazor-maps-marker-selection.webp)
 
 ## Highlight
 
@@ -722,7 +722,7 @@ The following properties and classes customize highlight behavior for shapes, bu
 
 ```
 
-![Highlighting Blazor Maps Shape](./images/UserInteraction/blazor-maps-highlight-shape.png)
+![Highlighting Blazor Maps Shape](./images/UserInteraction/blazor-maps-highlight-shape.webp)
 
 Hovering over a legend highlights the shapes bound to that legend, and hovering over a shape highlights the corresponding legend.
 
@@ -766,7 +766,7 @@ Hovering over a legend highlights the shapes bound to that legend, and hovering 
 
 ```
 
-![Highlighting Blazor Maps Shape with Legend](./images/UserInteraction/blazor-maps-shape-selection-using-legend.png)
+![Highlighting Blazor Maps Shape with Legend](./images/UserInteraction/blazor-maps-shape-selection-using-legend.webp)
 
 ### Enable highlight for bubbles
 
@@ -819,7 +819,7 @@ Enable bubble highlight by configuring [MapsBubbleHighlightSettings](https://hel
 
 ```
 
-![Enabling Bubble Selection in Blazor Maps](./images/UserInteraction/blazor-maps-bubble-selection.PNG)
+![Enabling Bubble Selection in Blazor Maps](./images/UserInteraction/blazor-maps-bubble-selection.webp)
 
 ### Enable highlight for markers
 
@@ -859,7 +859,7 @@ Enable marker highlight by configuring [MapsMarkerHighlightSettings](https://hel
 
 ```
 
-![Highlighting Marker Selection in Blazor Maps](./images/UserInteraction/blazor-maps-marker-selection.PNG)
+![Highlighting Marker Selection in Blazor Maps](./images/UserInteraction/blazor-maps-marker-selection.webp)
 
 ### Enable highlight for polygons
 
@@ -932,7 +932,7 @@ The following example illustrates highlighting a polygon on a geometry map.
 }
 
 ```
-![Blazor Maps with highlighted polygon shape](./images/Polygon/blazor-map-polygon-shape-highlight.gif)
+![Blazor Maps with highlighted polygon shape](./images/Polygon/blazor-map-polygon-shape-highlight.webp)
 
 ## Tooltip
 
@@ -957,7 +957,7 @@ Tooltips display additional information for layers, bubbles, or markers on mouse
 
 ```
 
-![Blazor Maps with Tooltip](./images/UserInteraction/blazor-maps-tooltip.PNG)
+![Blazor Maps with Tooltip](./images/UserInteraction/blazor-maps-tooltip.webp)
 
 ### Customization
 
@@ -1018,7 +1018,7 @@ Use the following properties to customize tooltips:
 
 ```
 
-![Blazor Maps with Custom Tooltip](./images/UserInteraction/blazor-maps-custom-tooltip.png)
+![Blazor Maps with Custom Tooltip](./images/UserInteraction/blazor-maps-custom-tooltip.webp)
 
 ### Tooltip template
 
@@ -1128,7 +1128,7 @@ Render HTML in tooltips using the [TooltipTemplate](https://help.syncfusion.com/
 
 ```
 
-![Blazor Maps with Tooltip Template](./images/UserInteraction/blazor-maps-tooltip-template.PNG)
+![Blazor Maps with Tooltip Template](./images/UserInteraction/blazor-maps-tooltip-template.webp)
 
 ### Changing duration in mobile devices
 
@@ -1152,7 +1152,7 @@ The following example changes tooltip duration for layer tooltips in the Maps co
 
 ```
 
-![Blazor Maps with Tooltip Duration](./images/UserInteraction/blazor-maps-tooltip-duration.gif)
+![Blazor Maps with Tooltip Duration](./images/UserInteraction/blazor-maps-tooltip-duration.webp)
 
 ## See also
 

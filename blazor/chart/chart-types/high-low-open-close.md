@@ -53,7 +53,7 @@ A detailed demonstration of the process for creating a HiloOpenClose chart using
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJNlLNJmhnNTVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor High Low Open Close Chart](../images/chart-types-images/blazor-high-low-open-close-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJNlLNJmhnNTVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor High Low Open Close Chart](../images/chart-types-images/blazor-high-low-open-close-chart.webp)" %}
 
 ## Binding data with series
 

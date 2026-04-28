@@ -23,7 +23,7 @@ This section briefly explains about how to include [Blazor HeatMap Chart](https:
 
 Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
-![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
+![Blazor WASM Create Project Template](images/blazor-wasm-app-template.webp)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor HeatMap and Themes NuGet in the App
 
@@ -223,7 +223,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor HeatMap Chart co
 
 *Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor HeatMap Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTDWBuJXfSXofp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor HeatMap Chart](images/blazor-heatmap-chart.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTDWBuJXfSXofp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor HeatMap Chart](images/blazor-heatmap-chart.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/HeatMapChart).
 

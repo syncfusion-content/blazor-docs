@@ -392,16 +392,8 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
 
 ### 12. Create the secure Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid and Charts pages
 
-Create two protected pages using `[Authorize]` that display Syncfusion DataGrid and Charts components. The generated components will use the default namespace `BlazorIdentitySyncfusion.Components.Pages`. If needed, adjust the `@namespace` directive in the generated files.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet new razorcomponent -n SecureGrid -o Components/Pages
-dotnet new razorcomponent -n SecureChart -o Components/Pages
-
-{% endhighlight %}
-{% endtabs %}
+Create two protected Razor pages named `SecureGrid.razor` and `SecureChart.razor` inside the `Components/Pages` folder.
+Apply the `[Authorize]` attribute to both pages and use them to display the Syncfusion DataGrid and Charts components respectively.
 
 **Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component**
 
@@ -520,7 +512,7 @@ Create the database tables required for ASP.NET Core Identity by running Entity 
 If you have not installed the EF Core command-line tools, install them first.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet tool install --global dotnet-ef 
 
@@ -530,7 +522,7 @@ dotnet tool install --global dotnet-ef
 Then create the migration and update the database.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet ef migrations add CreateIdentitySchema
 dotnet ef database update
@@ -547,7 +539,7 @@ N> If you receive an error that a migration with this name already exists, you c
 Run the application and verify the authentication flow.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet run
 
