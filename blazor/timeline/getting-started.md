@@ -166,4 +166,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Timeline compone
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Timeline component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrzZJtMfhknPrWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component](./images/blazor-timeline-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrzZJtMfhknPrWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component](./images/Blazor-timeline-component.webp)" %}

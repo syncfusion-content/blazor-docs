@@ -248,7 +248,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheMDMKCfviYktD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Context Menu in Blazor TreeView Component](./images/blazor-treeview-node-with-context-menu.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheMDMKCfviYktD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Context Menu in Blazor TreeView Component](./images/blazor-treeview-node-with-context-menu.webp)" %}
 
 ## Badge Integration
 
@@ -413,7 +413,7 @@ The Blazor TreeView component integrates with the Syncfusion Badge component, en
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXreitsqiTbQmSBM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Badge integration in Blazor TreeView](./images/blazor-treeview-badge-integration.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXreitsqiTbQmSBM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Badge integration in Blazor TreeView](./images/blazor-treeview-badge-integration.webp)" %}
 
 ## Icons Library Integration
 
@@ -570,7 +570,7 @@ The Blazor TreeView component has the built-in option to customize each node's a
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIWZsKWoisIIxY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Icons integration in Blazor TreeView](./images/blazor-treeview-Icon-integration.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIWZsKWoisIIxY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Icons integration in Blazor TreeView](./images/blazor-treeview-Icon-integration.webp)" %}
 
 ## Navigation within Sidebar
 
@@ -787,7 +787,7 @@ The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/b
 
 ```
 
-![Navigation within Sidebar](./images/blazor-treeview-navigation-within-sidebar.png)
+![Navigation within Sidebar](./images/blazor-treeview-navigation-within-sidebar.webp)
 
 ## Tooltip in Blazor TreeView Component
 

@@ -150,6 +150,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox componen
 
 @using Syncfusion.Blazor.Inputs
 
+@using Syncfusion.Blazor.Inputs
+
 <SfTextBox Placeholder='First Name'></SfTextBox>
 
 {% endhighlight %}
@@ -203,6 +205,8 @@ The floating label lifts above the input when the TextBox is focused or contains
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Inputs
 
 @using Syncfusion.Blazor.Inputs
 

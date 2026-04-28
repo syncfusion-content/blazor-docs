@@ -150,6 +150,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tabs component i
 
 @using Syncfusion.Blazor.Navigations
 
+@using Syncfusion.Blazor.Navigations
+
 <SfTab>
     <TabItems>
         <TabItem Content="Twitter is an online social networking service that enables users to send and read short 140-charactermessages called tweets.Registered users can read and post tweets, but those who are unregistered can only readthem.Users access Twitter through the website interface, SMS or mobile device app Twitter Inc. is based in SanFrancisco and has more than 25 offices around the world.Twitter was created in March 2006 by Jack Dorsey,Evan Williams, Biz Stone, and Noah Glass and launched in July 2006. The service rapidly gained worldwide popularity,with more than 100 million users posting 340 million tweets a day in 2012.The service also handled 1.6 billionsearch queries per day.">
@@ -175,7 +177,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tabs component i
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tabs component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBJNWKNzICuUXkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs Component](./images/blazor-tabs.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBJNWKNzICuUXkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs Component](./images/blazor-tabs.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs).
 
@@ -189,6 +191,8 @@ The following code explains how to initialize tab content using `ContentTemplate
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Navigations
 
 @using Syncfusion.Blazor.Navigations
 
@@ -224,7 +228,7 @@ The following code explains how to initialize tab content using `ContentTemplate
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLfjWqNJeVdyLDk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Template](./images/blazor-tabs-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLfjWqNJeVdyLDk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Template](./images/blazor-tabs-template.webp)" %}
 
 ## Two way binding of SelectedItem
 
@@ -276,7 +280,7 @@ Selected Tab
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBzDCgNzyqUhxZn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBzDCgNzyqUhxZn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.webp)" %}
 
 ## See also
 

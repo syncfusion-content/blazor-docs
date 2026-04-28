@@ -147,6 +147,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smith Chart comp
 
 @using Syncfusion.Blazor.Charts
 
+@using Syncfusion.Blazor.Charts
+
 <SfSmithchart>
 
 </SfSmithchart>
@@ -239,6 +241,8 @@ Title can be added to the Smith Chart to provide a quick information to the user
 
 @using Syncfusion.Blazor.Charts
 
+@using Syncfusion.Blazor.Charts
+
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
     </SmithChartTitle>
@@ -267,6 +271,8 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 @using Syncfusion.Blazor.Charts
 
@@ -299,6 +305,8 @@ To display data label for particular marker series, set the [Visible](https://he
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 @using Syncfusion.Blazor.Charts
 
@@ -336,6 +344,8 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 
 @using Syncfusion.Blazor.Charts
 
+@using Syncfusion.Blazor.Charts
+
 <SfSmithChart>
     <SmithChartLegendSettings Visible="true"></SmithChartLegendSettings>
     <SmithChartTitle Text="Impedance Transmission"></SmithChartTitle>
@@ -367,6 +377,8 @@ When space constraints prevents from displaying information using data labels, t
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 @using Syncfusion.Blazor.Charts
 

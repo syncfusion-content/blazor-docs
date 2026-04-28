@@ -130,6 +130,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler compon
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in your default web browser.
 
-![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.png)
+![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.webp)
 
 N> Refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview) to understand how to manage appointments with multiple resources.

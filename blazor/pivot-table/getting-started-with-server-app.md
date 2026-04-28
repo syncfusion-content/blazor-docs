@@ -163,6 +163,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.PivotView
+
 <SfPivotView TValue="ProductDetails"></SfPivotView>
 
 {% endhighlight %}

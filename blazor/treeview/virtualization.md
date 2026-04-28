@@ -79,6 +79,6 @@ The following sample shows the example of Virtualization.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSCNsUVVQcEAYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Virtualization](./images/virtualization.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSCNsUVVQcEAYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Virtualization](./images/Virtualization.webp)" %}
 
 N> Virtualization is not compatible with expand and collapse animation. Select all action will select only visible items in UI.

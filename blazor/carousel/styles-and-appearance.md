@@ -27,7 +27,7 @@ The following content provides the exact CSS structure that can be used to modif
 |.e-carousel .e-carousel-navigators .e-play-pause|To customize the play and pause button
 |.e-carousel.e-partial .e-carousel-slide-container|To customize the partial visible slides
 
-![Carousel](./images/carousel.jpg)
+![Carousel](./images/carousel.webp)
 
 ## Customizing the indicators
 
@@ -41,7 +41,7 @@ Use the following CSS to customize the space between indicators by overriding th
 
 ```
 
-![Carousel](./images/indicators.jpg)
+![Carousel](./images/indicators.webp)
 
 Use the following CSS to customize the indicators appearance by overriding the `.e-indicator` CSS class.
 
@@ -54,7 +54,7 @@ Use the following CSS to customize the indicators appearance by overriding the `
 
 ```
 
-![Carousel](./images/indicator-size.jpg)
+![Carousel](./images/indicator-size.webp)
 
 Use the following CSS to render the indicators outside the carousel items by overriding the `.e-carousel-indicators` CSS class.
 
@@ -66,7 +66,7 @@ Use the following CSS to render the indicators outside the carousel items by ove
 
 ```
 
-![Carousel](./images/indicators-outside.jpg)
+![Carousel](./images/indicators-outside.webp)
 
 ## Customizing the navigators
 
@@ -83,7 +83,7 @@ Use the following CSS to customize the previous and next icon size and colors.
 
 ```
 
-![Carousel](./images/navigators-size-color.jpg)
+![Carousel](./images/navigators-size-color.webp)
 
 Use the following CSS to customize the navigators position to bottom by overriding the `.e-carousel-navigators` CSS class.
 
@@ -95,7 +95,7 @@ Use the following CSS to customize the navigators position to bottom by overridi
 
 ```
 
-![Carousel](./images/navigators-position.jpg)
+![Carousel](./images/navigators-position.webp)
 
 Use the following CSS to render the previous and next icon to outside the carousel items by overriding the `.e-previous` and `.e-next` CSS class.
 
@@ -110,7 +110,7 @@ Use the following CSS to render the previous and next icon to outside the carous
 
 ```
 
-![Carousel](./images/previous-next.jpg)
+![Carousel](./images/previous-next.webp)
 
 ## Customizing partial slides size
 
@@ -124,4 +124,4 @@ You can customize the partial slide size by overriding the `.e-carousel-slide-co
 
 ```
 
-![Carousel](./images/partial-slide-size.jpg)
+![Carousel](./images/partial-slide-size.webp)

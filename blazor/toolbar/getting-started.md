@@ -167,7 +167,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toolbar componen
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Toolbar component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBfDCqZpxexmezs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Component](./images/blazor-toolbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBfDCqZpxexmezs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Component](./images/blazor-toolbar.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Toolbar).
 

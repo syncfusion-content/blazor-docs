@@ -145,7 +145,7 @@ This section explains how to create a Blazor server application with Windows aut
 
 You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-![Authentication](../images/customize-http-handler.png)
+![Authentication](../images/customize-http-handler.webp)
 
 Include the [Microsoft.AspNetCore.Authentication.JWTBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) package for generating user tokens.
 
