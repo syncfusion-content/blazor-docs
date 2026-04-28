@@ -15,7 +15,7 @@ A hyperlink can be inserted into the editor for quick access to the related info
 
 Point the cursor anywhere within the editor where you would like to insert the link. It is also possible to select a text or an image within the editor and can be converted to the hyperlink. Click the Insert HyperLink tool on the toolbar. The Insert Link Dialog will open. The dialog has the following options.
 
-![Insert Link in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-link.png)
+![Insert Link in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-link.webp)
 
 | Options | Description |
 |----------------|--------------------------------------|
@@ -54,7 +54,7 @@ N> The Rich Text Editor link tool validates the URLs as you type them in Web Add
 
 ```
 
-![Displaying Link Icon in Blazor RichTextEditor](./images/blazor-richtexteditor-link-icon.png)
+![Displaying Link Icon in Blazor RichTextEditor](./images/blazor-richtexteditor-link-icon.webp)
 
 ## Remove Link
 
@@ -72,7 +72,7 @@ When the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
 
-![Blazor RichTextEditor with Quick Toolbar Link](./images/blazor-richtexteditor-quick-toolbar-link.png)
+![Blazor RichTextEditor with Quick Toolbar Link](./images/blazor-richtexteditor-quick-toolbar-link.webp)
 
 The quick toolbar for the link has the following options.
 
@@ -111,7 +111,7 @@ The quick toolbar for the link has the following options.
 
 ```
 
-![Quick Link in Blazor RichTextEditor Content](./images/blazor-richtexteditor-quick-link.png)
+![Quick Link in Blazor RichTextEditor Content](../images/blazor-richtexteditor-quick-link.webp)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
 

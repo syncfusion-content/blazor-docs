@@ -26,7 +26,7 @@ You can customize the number of undo and redo steps using the [UndoRedoSteps](ht
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor undo/redo operation](./images/blazor-richtexteditor-undo-redo-operation.png)
+![Blazor RichTextEditor undo/redo operation](./images/blazor-richtexteditor-undo-redo-operation.webp)
 
 ## Disable undo redo
 
@@ -139,7 +139,7 @@ You can configure custom toolbar tools in the Rich Text Editor. Actions performe
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor remove undo/redo tools](./images/blazor-richtexteditor-remove-undo-redo.png)
+![Blazor RichTextEditor remove undo/redo tools](./images/blazor-richtexteditor-remove-undo-redo.webp)
 
 ## Clear undo/redo stack
 

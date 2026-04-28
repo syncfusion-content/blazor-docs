@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Rich Text Editor
 
-This section provides a step-by-step guide to integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich TextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section provides a step-by-step guide to integrating the Syncfusion® Blazor Rich Text Editor component into your Blazor Maui app using both Visual Studio and Visual Studio Code.
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -19,44 +19,15 @@ This section provides a step-by-step guide to integrating the [Syncfusion<sup st
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+To use the MAUI project templates, install the Mobile development with .NET extension for Visual Studio. For more details, refer to [Visual Studio](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Create a new Blazor MAUI App in Visual Studio
 
-Create a Blazor MAUI App using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+Create a Blazor MAUI app in Visual Studio using [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [ Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
-{% endtabcontent %}
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor and Themes NuGet in the app
 
-{% tabcontent Visual Studio Code %}
-
-## Prerequisites
-
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
-
-## Create a new Blazor MAUI App in Visual Studio Code
-
-Create a Blazor MAUI App using Visual Studio Code via [Microsoft templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
-
-Alternatively, create a MAUI application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor MAUI App" %}
-
-dotnet new maui-blazor -o MauiBlazorApp
-cd MauiBlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% endtabcontents %}
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
-
-Install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
-
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+To add the **Blazor Rich Text Editor** component, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -67,11 +38,45 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details.
 
-## Add import namespaces
+{% endtabcontent %}
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.RichTextEditor` namespaces.
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+To use the MAUI project templates, install the Mobile development with .NET workload. For more details, see the .NET MAUI installation guide for [Visual Studio Code](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+## Create a new Blazor MAUI App in Visual Studio Code
+
+Create a Blazor MAUI app using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, see the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
+
+## Install Blazor Rich Text Editor and Themes NuGet in the App
+
+To add the **Blazor Rich Text Editor** component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.RichTextEditor -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Add Import Namespaces
+
+Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.RichTextEditor` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -82,52 +87,67 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="2 19" %}
 
-....
+using Microsoft.Extensions.Logging;
 using Syncfusion.Blazor;
 
-....
+namespace MauiBlazorWindow;
 
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
+    public static class MauiProgram
     {
-        ....
-        builder.Services.AddSyncfusionBlazor();
-        ....
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddSyncfusionBlazor();
+#if DEBUG
+            builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Logging.AddDebug();
+#endif
+
+            return builder.Build();
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the `<head>` section of the **~/index.html** file.
 
 ```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
+    //Blazor RichTextEditor Component script reference.
+    <!-- <script src="_content/Syncfusion.Blazor.RichTextEditor/scripts/sf-richtexteditor.min.js" type="text/javascript"></script> -->
+</head>
 ```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor component
+## Add Blazor Rich Text Editor component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.RichTextEditor
+{% highlight razor %}
 
 <SfRichTextEditor>
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
@@ -138,13 +158,13 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor
 {% endhighlight %}
 {% endtabs %}
 
-### How to run the sample on Windows
+### How to Run the Sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Rich Text Editor Component](./images/blazor-richtexteditor-maui-app.png)
+![Blazor Rich Text Editor Component](./images/blazor-richtexteditor-maui-app.webp)
 
-### How to run the sample on Android
+### How to Run the Sample on Android
 
 To run the Blazor Rich Text Editor in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
@@ -152,16 +172,14 @@ Refer to the [Android Device Manager](https://learn.microsoft.com/en-us/dotnet/m
 
 N> If you encounter any errors while using the Android Emulator, refer to the [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for guidance.
 
-![Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)
+![Blazor Rich Text Editor Component](./images/blazor-richtexteditor.webp)
 
 ## Configure the Toolbar
 
 Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property as your application requires.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.RichTextEditor
+{% highlight razor %}
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -221,7 +239,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)
+![Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.webp)
 
 ## Insert images and links
 
@@ -230,9 +248,7 @@ The **Image** tool inserts an image into the Rich Text Editor content area, and 
 Specify quick toolbar items for target elements such as images, links, and tables. The quick toolbar opens when clicking the target element, allowing customization of that element.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.RichTextEditor
+{% highlight razor %}
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -286,14 +302,14 @@ Specify quick toolbar items for target elements such as images, links, and table
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-image.png)
+![Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-image.webp)
 
 ## Retrieve the formatted content
 
 To retrieve the editor contents in HTML format, use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property of Rich Text Editor. To fetch the editor content as plain text, use the [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetTextAsync) method of Rich Text Editor.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
@@ -343,7 +359,7 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
 To retrieve the maximum number of characters in the Rich Text Editor, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method of the Rich Text Editor.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
