@@ -50,12 +50,12 @@ A [BpmnDataObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnDataObject/BpmnDataObjectSample.razor)
 
-![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.png)
+![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.webp)
 
 The following table describes the different types of BPMN Data Objects.
 
 | DataObjectType | Symbol |IsCollectiveData| Description|
 | -------- | -------- |-------- | -------- |
-| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObjectType.html#Syncfusion_Blazor_Diagram_BpmnDataObjectType_None) | ![Collection Data BPMN Shape](../images/Bpmn-DataObject-None.png) |![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.png) |None of the business processes with the signified information collected within a DataObject|
-| [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObjectType.html#Syncfusion_Blazor_Diagram_BpmnDataObjectType_Input) | ![Data Input BPMN Shape](../images/Bpmn-DataObject-Input.png) |![Data Input BPMN Shape](../images/Bpmn-DataObject-Collective-Input.png) |Represents the data requirements on which the tasks in the business process depend on with the signified information collected within a DataObject|
-| [Output](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObjectType.html#Syncfusion_Blazor_Diagram_BpmnDataObjectType_Output) | ![Data Output BPMN Shape](../images/Bpmn-DataObject-Output.png) |![Data Output BPMN Shape](../images/Bpmn-DataObject-Collective-OutPut.png) |Demonstrates information produced as the result of a business process with the signified information collected within a DataObject|
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObjectType.html#Syncfusion_Blazor_Diagram_BpmnDataObjectType_None) | ![Collection Data BPMN Shape](../images/Bpmn-DataObject-None.webp) |![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.webp) |None of the business processes with the signified information collected within a DataObject|
+| [Input](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObjectType.html#Syncfusion_Blazor_Diagram_BpmnDataObjectType_Input) | ![Data Input BPMN Shape](../images/Bpmn-DataObject-Input.webp) |![Data Input BPMN Shape](../images/Bpmn-DataObject-Collective-Input.webp) |Represents the data requirements on which the tasks in the business process depend on with the signified information collected within a DataObject|
+| [Output](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObjectType.html#Syncfusion_Blazor_Diagram_BpmnDataObjectType_Output) | ![Data Output BPMN Shape](../images/Bpmn-DataObject-Output.webp) |![Data Output BPMN Shape](../images/Bpmn-DataObject-Collective-OutPut.webp) |Demonstrates information produced as the result of a business process with the signified information collected within a DataObject|

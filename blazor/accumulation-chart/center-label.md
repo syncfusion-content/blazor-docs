@@ -44,7 +44,7 @@ You can configure the text that appears in the center using the [Text](https://h
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBetHBdgvneoPva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Center Label](./images/center-label/blazor-accumulation-chart-with-center-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBetHBdgvneoPva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Center Label](./images/center-label/blazor-accumulation-chart-with-center-label.webp)" %}
 
 ## Hover Text
 
@@ -83,7 +83,7 @@ N> Line breaks can be provided to texts in the `HoverTextFormat` property using 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBINdVRqvFzEVfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Center Label Dynamic Text](./images/center-label/blazor-accumulation-chart-with-center-label-hover-text.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBINdVRqvFzEVfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Center Label Dynamic Text](./images/center-label/blazor-accumulation-chart-with-center-label-hover-text.webp)" %}
 
 ## Customization
 
@@ -123,7 +123,7 @@ The position of the center label can be adjusted using the [XOffset](https://hel
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryXRrRqbOzXVbD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Center Label Customization](./images/center-label/blazor-accumulation-chart-with-center-label-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryXRrRqbOzXVbD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Center Label Customization](./images/center-label/blazor-accumulation-chart-with-center-label-customization.webp)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 

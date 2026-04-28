@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.InteractiveChat
+
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView></SfAIAssistView>
 </div>
@@ -186,6 +188,8 @@ You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfu
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest"></SfAIAssistView>

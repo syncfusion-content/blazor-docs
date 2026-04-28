@@ -132,4 +132,4 @@ The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Events in Blazor Stock Chart](images/blazor-stock-chart-events.png)
+![Events in Blazor Stock Chart](images/blazor-stock-chart-events.webp)

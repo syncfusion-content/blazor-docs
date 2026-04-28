@@ -67,13 +67,13 @@ Configure export behavior declaratively using the `ChartExportSettings` within `
 
 ```
 
-![Chart Wizard export](images/chart-wizard-export.png)
+![Chart Wizard export](images/chart-wizard-export.webp)
 
 
 N> `PRINT` opens the browser's print dialog and prints the rendered chart. This does not generate a downloadable file, but is ideal for creating physical copies or printing to PDF using your browser's print-to-PDF feature.
 
 
-![Chart Wizard print](images/chart-wizard-print.png)
+![Chart Wizard print](images/chart-wizard-print.webp)
 
 
 ## Customizing the Exported Chart with the Exporting Event

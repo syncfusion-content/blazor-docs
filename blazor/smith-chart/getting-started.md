@@ -145,6 +145,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smith Chart comp
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Charts
+
 <SfSmithchart>
 
 </SfSmithchart>
@@ -226,7 +228,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smith Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLzXCAtAueCOnlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLzXCAtAueCOnlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.webp)" %}
 
 ## Adding Title
 
@@ -234,6 +236,8 @@ Title can be added to the Smith Chart to provide a quick information to the user
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
@@ -255,7 +259,7 @@ Title can be added to the Smith Chart to provide a quick information to the user
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBJXMUNfrbavmEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBJXMUNfrbavmEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.webp)" %}
 
 ## Enable Marker
 
@@ -263,6 +267,8 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
@@ -285,7 +291,7 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJZMANTVYSwBSX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJZMANTVYSwBSX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.webp)" %}
 
 ## Enable Data Label
 
@@ -293,6 +299,8 @@ To display data label for particular marker series, set the [Visible](https://he
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
@@ -317,7 +325,7 @@ To display data label for particular marker series, set the [Visible](https://he
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzjCANJgZtmWaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzjCANJgZtmWaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.webp)" %}
 
 ## Enable Legend
 
@@ -325,6 +333,8 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartLegendSettings Visible="true"></SmithChartLegendSettings>
@@ -349,7 +359,7 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLfDCAjfUjfvoAi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLfDCAjfUjfvoAi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.webp)" %}
 
 ## Enable Tooltip
 
@@ -357,6 +367,8 @@ When space constraints prevents from displaying information using data labels, t
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
     <SmithChartLegendSettings Visible="true"></SmithChartLegendSettings>
@@ -383,7 +395,7 @@ When space constraints prevents from displaying information using data labels, t
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhztsKjJAXFyuof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhztsKjJAXFyuof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SmithChart).
 
