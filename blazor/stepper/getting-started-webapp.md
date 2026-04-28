@@ -245,6 +245,6 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBzZsKNpJRTvqSH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper with Icon and Label](./images/blazor-iconwithlabel.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBzZsKNpJRTvqSH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper with Icon and Label](./images/blazor-iconwithlabel.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Stepper).

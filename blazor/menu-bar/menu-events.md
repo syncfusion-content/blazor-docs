@@ -135,4 +135,4 @@ The Blazor Menu Bar component’s [ItemSelected](https://help.syncfusion.com/cr/
 
 ```
 
-![Customizing Blazor MenuBar Items using Event](./images/blazor-menubar-events.png)
+![Customizing Blazor MenuBar Items using Event](./images/blazor-menubar-events.webp)

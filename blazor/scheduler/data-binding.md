@@ -726,7 +726,7 @@ To send an additional custom parameter to the server-side post, make use of the 
 
 The value passed to the additional parameter is shown in the following image.
 
-![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
+![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.webp)
 
 N> The parameters added using the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) property will be sent along with the data request sent to the server on every scheduler actions.
 

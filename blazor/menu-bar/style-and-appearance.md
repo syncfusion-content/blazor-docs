@@ -79,4 +79,4 @@ Use the following CSS to customize the background color of menu container, focus
 
 ```
 
-![Blazor Menubar with Style and Appearance](./images/blazor-menubar-style-and-appearance.png)
+![Blazor Menubar with Style and Appearance](./images/blazor-menubar-style-and-appearance.webp)

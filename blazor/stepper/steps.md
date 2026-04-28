@@ -61,7 +61,7 @@ You can define the CSS class to show the icon for each step using the `IconCss` 
 
 ```
 
-![Blazor Stepper Component with Icon](./images/Blazor-horizontal.png)
+![Blazor Stepper Component with Icon](./images/Blazor-horizontal.webp)
 
 ### Defining text content
 
@@ -97,7 +97,7 @@ You can define text instead of an icon by setting the [Text](https://help.syncfu
 </style>
 
 ```
-![Blazor Stepper Component with text content](./images/Blazor-text-content.png)
+![Blazor Stepper Component with text content](./images/Blazor-text-content.webp)
 
 ## Optional steps
 
@@ -144,7 +144,7 @@ You can show whether the step is optional or not by using [Optional](https://hel
 </style>
 
 ```
-![Blazor Stepper Component with Optional](./images/Blazor-optional.png)
+![Blazor Stepper Component with Optional](./images/Blazor-optional.webp)
 
 ## Disabling steps
 
@@ -191,7 +191,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </style>
 
 ```
-![Blazor Stepper Component with Disabled](./images/Blazor-disabled.png)
+![Blazor Stepper Component with Disabled](./images/Blazor-disabled.webp)
 
 ## Setting readonly
 
@@ -238,7 +238,7 @@ You can use [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
 </style>
 
 ```
-![Blazor Stepper Component with ReadOnly](./images/Blazor-Readonly.png)
+![Blazor Stepper Component with ReadOnly](./images/Blazor-Readonly.webp)
 
 ## Setting active step
 
@@ -285,7 +285,7 @@ You can set the active step by specifying its index using the [ActiveStep](https
 </style>
 
 ```
-![Blazor Stepper Component with ActiveStep](./images/Blazor-activeStep.png)
+![Blazor Stepper Component with ActiveStep](./images/Blazor-activeStep.webp)
 
 ## Step status
 
@@ -399,7 +399,7 @@ Each step's progress state can be specified using the [Status](https://help.sync
 
 
 ```
-![Blazor Stepper Component with step status](./images/Blazor-step-status.png)
+![Blazor Stepper Component with step status](./images/Blazor-step-status.webp)
 
 ## Step styling
 
@@ -460,7 +460,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Stepper Component with CssClass](./images/Blazor-cssclass.png)
+![Blazor Stepper Component with CssClass](./images/Blazor-cssclass.webp)
 
 ## Step validation
 

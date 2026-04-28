@@ -50,4 +50,4 @@ The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 
 ```
 
-![Enabling or Disabling TabItem in Blazor Tabs](../images/blazor-tabs-enable-disable-tabitem.gif)
+![Enabling or Disabling TabItem in Blazor Tabs](../images/blazor-tabs-enable-disable-tabitem.webp)
