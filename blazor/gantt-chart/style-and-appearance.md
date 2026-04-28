@@ -23,7 +23,7 @@ The `.e-gantt` class is the root container for the entire Blazor Gantt Chart. Cu
 
 Properties such as `font-family`, `background-color`, and spacing-related styles can be adjusted to align with the Gantt design.
 
-![Customizing root element](./images/blazor-gantt-root-element.png)
+![Customizing root element](./images/blazor-gantt-chart-root-element.png)
 
 This customization applies a cursive font to the Gantt Chart content. Additional styling can be applied to rows, alternate rows, selected rows, and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
 
@@ -92,7 +92,7 @@ The chart content displays taskbars and the timeline visualization. Apply CSS to
     border: 1px solid #ddd;
 }
 .e-chart-row {
-    background-color: #ffffff;
+    background-color: #ecf7ff;
 }
 .e-chart-row:hover {
     background-color: #fff3cd;
@@ -224,7 +224,7 @@ The splitter divides the grid and chart sections, while resize handlers allow us
     border: 1px solid #87ceeb;
 }
 .e-gantt .e-resize-handler {
-    background-color: red !important;
+    background-color: #0d6efd !important;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -301,7 +301,7 @@ The tooltip in the Blazor Gantt Chart displays detailed information when hoverin
 }
 
 .e-gantt-tooltip {
-    background-color: #8fa5cf !important;
+    background-color: #80b9f5 !important;
     color: #333 !important;
     border: 1px solid #87ceeb;
     border-radius: 4px;
