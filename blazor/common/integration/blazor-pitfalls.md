@@ -35,7 +35,7 @@ Before you begin, make sure you have:
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later installed
 * Access to [Syncfusion Blazor NuGet packages](https://www.nuget.org/packages?q=syncfusion.blazor)
 
-N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blazor components version 24.1.41 or later. Some details may differ in earlier versions.
+N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blazor components version 33.2.3 or later. Some details may differ in earlier versions.
 
 ## Common pitfalls in Blazor applications
 
@@ -359,11 +359,11 @@ Check your `.csproj` file for duplicate entries:
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
     <!-- PROBLEM: Duplicate references with different versions -->
-    <PackageReference Include="Syncfusion.Blazor.Grid" Version="24.1.41" />
-    <PackageReference Include="Syncfusion.Blazor.Grid" Version="23.2.7" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="32.1.19" />
     
     <!-- SOLUTION: Single reference with consistent version -->
-    <PackageReference Include="Syncfusion.Blazor.Grid" Version="24.1.41" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
   </ItemGroup>
 </Project>
 
@@ -380,10 +380,10 @@ Remove duplicate entries and ensure all Syncfusion packages use the same version
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
     <!-- All Syncfusion packages should use the same version -->
-    <PackageReference Include="Syncfusion.Blazor.Grid" Version="24.1.41" />
-    <PackageReference Include="Syncfusion.Blazor.Calendars" Version="24.1.41" />
-    <PackageReference Include="Syncfusion.Blazor.Charts" Version="24.1.41" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="24.1.41" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
+    <PackageReference Include="Syncfusion.Blazor.Calendars" Version="33.2.3" />
+    <PackageReference Include="Syncfusion.Blazor.Charts" Version="33.2.3" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="33.2.3" />
   </ItemGroup>
 </Project>
 
@@ -406,10 +406,10 @@ Create a `Directory.Packages.props` file in your solution root:
 
   <ItemGroup>
     <!-- Define versions centrally -->
-    <PackageVersion Include="Syncfusion.Blazor.Grid" Version="24.1.41" />
-    <PackageVersion Include="Syncfusion.Blazor.Calendars" Version="24.1.41" />
-    <PackageVersion Include="Syncfusion.Blazor.Charts" Version="24.1.41" />
-    <PackageVersion Include="Syncfusion.Blazor.Themes" Version="24.1.41" />
+    <PackageVersion Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
+    <PackageVersion Include="Syncfusion.Blazor.Calendars" Version="33.2.3" />
+    <PackageVersion Include="Syncfusion.Blazor.Charts" Version="33.2.3" />
+    <PackageVersion Include="Syncfusion.Blazor.Themes" Version="33.2.3" />
   </ItemGroup>
 </Project>
 
@@ -448,7 +448,7 @@ N> When upgrading Syncfusion packages, update **all** Syncfusion packages in you
 
 **Symptom**: Runtime exceptions such as `MissingMethodException`, `TypeLoadException`, or `FileLoadException`. Components may fail to initialize, throw errors during rendering, or exhibit unexpected behavior.
 
-**Root cause**: Different Syncfusion<sup style="font-size:70%">®</sup> Blazor packages are installed with incompatible versions. For example, `Syncfusion.Blazor.Grid` version 24.1.41 alongside `Syncfusion.Blazor.Calendars` version 23.2.7.
+**Root cause**: Different Syncfusion<sup style="font-size:70%">®</sup> Blazor packages are installed with incompatible versions. For example, `Syncfusion.Blazor.Grid` version 33.2.3 alongside `Syncfusion.Blazor.Calendars` version 32.1.19.
 
 **Impact**: Application crashes, component initialization failures, broken features, and difficult-to-diagnose runtime errors that only appear under specific conditions.
 
@@ -474,9 +474,9 @@ Look for version discrepancies in the output:
 Project 'YourApp' has the following package references
    [net8.0]:
    Top-level Package                    Requested   Resolved
-   > Syncfusion.Blazor.Grid             24.1.41     24.1.41
-   > Syncfusion.Blazor.Calendars        23.2.7      23.2.7    Version mismatch
-   > Syncfusion.Blazor.Charts           24.1.41     24.1.41
+   > Syncfusion.Blazor.Grid             33.2.3      33.2.3
+   > Syncfusion.Blazor.Calendars        32.1.19     32.1.19    Version mismatch
+   > Syncfusion.Blazor.Charts           33.2.3      33.2.3
 
 {% endhighlight %}
 {% endtabs %}
@@ -487,9 +487,9 @@ Project 'YourApp' has the following package references
 {% highlight bash tabtitle=".NET CLI" %}
 
 # Update individual packages to the latest version
-dotnet add package Syncfusion.Blazor.Grid -v 24.1.41
-dotnet add package Syncfusion.Blazor.Calendars -v 24.1.41
-dotnet add package Syncfusion.Blazor.Charts -v 24.1.41
+dotnet add package Syncfusion.Blazor.Grid -v 33.2.3
+dotnet add package Syncfusion.Blazor.Calendars -v 33.2.3
+dotnet add package Syncfusion.Blazor.Charts -v 33.2.3
 
 # Restore and rebuild
 dotnet restore
@@ -516,9 +516,9 @@ All Syncfusion packages should now show the same version:
 Project 'YourApp' has the following package references
    [net8.0]:
    Top-level Package                    Requested   Resolved
-   > Syncfusion.Blazor.Grid             24.1.41     24.1.41
-   > Syncfusion.Blazor.Calendars        24.1.41     24.1.41
-   > Syncfusion.Blazor.Charts           24.1.41     24.1.41
+   > Syncfusion.Blazor.Grid             33.2.3     33.2.3
+   > Syncfusion.Blazor.Calendars        33.2.3     33.2.3
+   > Syncfusion.Blazor.Charts           33.2.3     33.2.3
 
 {% endhighlight %}
 {% endtabs %}
@@ -529,7 +529,7 @@ Project 'YourApp' has the following package references
 * Use automated tools or scripts to ensure version consistency across projects
 * Review release notes before upgrading to understand breaking changes
 * Test critical functionality after version updates
-* Consider using wildcard versioning cautiously: `<PackageReference Include="Syncfusion.Blazor.Grid" Version="24.*" />`
+* Consider using wildcard versioning cautiously: `<PackageReference Include="Syncfusion.Blazor.Grid" Version="33.*" />`
 
 **Common version mismatch scenarios**:
 
