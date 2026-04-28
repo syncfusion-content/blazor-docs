@@ -454,7 +454,7 @@ N> When upgrading Syncfusion packages, update **all** Syncfusion packages in you
 
 **Solution**: Ensure all Syncfusion packages in your project use the **exact same version number**.
 
-**Verification Steps**:
+**Verification steps**:
 
 **Step 1: Check current package versions**
 
@@ -626,7 +626,7 @@ Some Syncfusion components require component-specific scripts in addition to the
 * Loading Syncfusion script before Blazor framework script
 * Using outdated script references from previous Syncfusion versions
 
-**Verification Steps**:
+**Verification steps**:
 
 1. Open browser developer tools (F12)
 2. Check the **Console** tab for JavaScript errors
@@ -781,7 +781,7 @@ N> The `AddSyncfusionBlazor()` service registration is mandatory for all Syncfus
 
 ### Pitfall 8: Incorrect SignalR configuration for large data
 
-**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like DataGrid, PDF Viewer, or File Manager fail to load large amounts of data. Browser console shows errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
+**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. Browser console shows errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
 
 **Root cause**: Default SignalR message size limits are too small for large data transfers. The default limit is 32KB, which is insufficient for components handling large files, images, or datasets.
 
