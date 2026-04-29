@@ -30,7 +30,7 @@ The `DataSource` property of the Mention component specifies the data that will 
 
 {% endhighlight %}
 
-![Blazor Mention with local data binding](./images/blazor-mention-local-binding.png)
+![Blazor Mention with local data binding](./images/blazor-mention-local-binding.webp)
 
 ### Primitive type
 
@@ -44,7 +44,7 @@ The following code demonstrates array of string values to the Mention component.
 
 {% endhighlight %}
 
-![Blazor Mention with primitive string type](./images/blazor-mention-primitive-type-string.png)
+![Blazor Mention with primitive string type](./images/blazor-mention-primitive-type-string.webp)
 
 The following code demonstrates array of integer values to the Mention component.
 
@@ -54,7 +54,7 @@ The following code demonstrates array of integer values to the Mention component
 
 {% endhighlight %}
 
-![Blazor Mention with primitive int type](./images/blazor-mention-primitive-type-int.png)
+![Blazor Mention with primitive int type](./images/blazor-mention-primitive-type-int.webp)
 
 ### Complex data type
 
@@ -68,7 +68,7 @@ In the following example, the `CodeFormat.ID` column and `Country.CountryName` c
 
 {% endhighlight %}
 
-![Blazor Mention with array of complex data](./images/blazor-mention-complex-data.png)
+![Blazor Mention with array of complex data](./images/blazor-mention-complex-data.webp)
 
 ### Expando object binding
 
@@ -82,7 +82,7 @@ In the following example, the `ExpandoObject` is bound to the collection of vehi
 
 {% endhighlight %}
 
-![Blazor Mention with expando object binding](./images/blazor-mention-expando-object-binding.png)
+![Blazor Mention with expando object binding](./images/blazor-mention-expando-object-binding.webp)
 
 ### Enum data binding
 
@@ -94,7 +94,7 @@ The Mention allows you to bind data from an enumeration (enum) to the component.
 
 {% endhighlight %}
 
-![Blazor Mention with enum data binding](./images/blazor-mention-enum-data-binding.png)
+![Blazor Mention with enum data binding](./images/blazor-mention-enum-data-binding.webp)
 
 ## Binding remote data
 
@@ -118,7 +118,7 @@ The following sample displays the first 6 contacts from `Customers` table of the
 
 {% endhighlight %}
 
-![Blazor Mention with OData v4 adaptor](./images/blazor-mention-ODatav4-adaptor.png)
+![Blazor Mention with OData v4 adaptor](./images/blazor-mention-ODatav4-adaptor.webp)
 
 ### Web API adaptor
 
@@ -130,7 +130,7 @@ The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-![Blazor Mention with web API adaptor](./images/blazor-mention-web-api-adaptor.png)
+![Blazor Mention with web API adaptor](./images/blazor-mention-web-api-adaptor.webp)
 
 ### Offline mode
 
@@ -144,7 +144,7 @@ The following example is for remote data binding and enabled `Offline` mode.
 
 {% endhighlight %}
 
-![Blazor Mention with Offline mode](./images/blazor-mention-offline-mode.png)
+![Blazor Mention with Offline mode](./images/blazor-mention-offline-mode.webp)
 
 ## Events
 

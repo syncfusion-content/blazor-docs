@@ -40,4 +40,4 @@ In the following sample, the Height of the ListBox is set to 250px to enable scr
 
 ```
 
-![Enabling Scroller in Blazor ListBox](./../images/blazor-listbox-enable-scroller.png)
+![Enabling Scroller in Blazor ListBox](./../images/blazor-listbox-enable-scroller.webp)

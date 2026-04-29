@@ -21,7 +21,7 @@ Specify a boolean value for the [Readonly](https://help.syncfusion.com/cr/blazor
 
 {% endhighlight %}
 
-![Blazor AutoComplete showing read-only mode](./images/style/blazor_autocomplete_readonly-mode.png)
+![Blazor AutoComplete showing read-only mode](./images/style/blazor_autocomplete_readonly-mode.webp)
 
 ## Disabled state
 
@@ -33,7 +33,7 @@ Specify a boolean value for the [Enabled](https://help.syncfusion.com/cr/blazor/
 
 {% endhighlight %}
 
-![Blazor AutoComplete in a disabled state](./images/style/blazor_autocomplete_disabled-state.png)
+![Blazor AutoComplete in a disabled state](./images/style/blazor_autocomplete_disabled-state.webp)
 
 ### Customizing the disabled component’s text color
 
@@ -45,7 +45,7 @@ Customize the text color of a disabled component by targeting the `.e-input[disa
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLUMBspqpbhLCdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Disabled component text color](./images/style/blazor_autocomplete_disabled-text-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLUMBspqpbhLCdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Disabled component text color](./images/style/blazor_autocomplete_disabled-text-color.webp)" %}
 
 ## Show the custom icon in dropdown icon
 
@@ -57,7 +57,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom dropdown icon](./images/style/blazor_autocomplete_dropdown-icon.png)
+![Blazor AutoComplete with a custom dropdown icon](./images/style/blazor_autocomplete_dropdown-icon.webp)
 
 Customize the dropdown icon for a specific component instance using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and apply styles to that custom class.
 
@@ -67,7 +67,7 @@ Customize the dropdown icon for a specific component instance using the [CssClas
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom dropdown icon using CssClass](./images/style/blazor_autocomplete_dropdown-icon.png)
+![Blazor AutoComplete with a custom dropdown icon using CssClass](./images/style/blazor_autocomplete_dropdown-icon.webp)
 
 ## Customizing the appearance of container element
 
@@ -79,7 +79,7 @@ Customize the container element within the AutoComplete by targeting the `.e-inp
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLKMhMJAzRFhNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete container element customization](./images/style/blazor_autocomplete_appearance-of-container.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLKMhMJAzRFhNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete container element customization](./images/style/blazor_autocomplete_appearance-of-container.webp)" %}
 
 ## Customizing the dropdown icon’s color
 
@@ -91,7 +91,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVqCVCfqzcCFPUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete icon color](./images/style/blazor_autocomplete_icon-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVqCVCfqzcCFPUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete icon color](./images/style/blazor_autocomplete_icon-color.webp)" %}
 
 ## Customizing the focus color
 
@@ -103,7 +103,7 @@ Customize the component’s color when focused by targeting the `.e-input-focus:
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBAMVipgpQeUpvV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete focus color](./images/style/blazor_autocomplete_focus-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBAMVipgpQeUpvV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete focus color](./images/style/blazor_autocomplete_focus-color.webp)" %}
 
 ## Customizing the outline theme's focus color
 
@@ -115,7 +115,7 @@ Customize the focus appearance when using an outline theme by targeting the `e-o
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgiBMzAzcPvKba?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete focusing color outline theme](./images/style/blazor_autocomplete_outline-focus-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgiBMzAzcPvKba?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete focusing color outline theme](./images/style/blazor_autocomplete_outline-focus-color.webp)" %}
 
 ## Customizing the background color of focus, hover, and active items
 
@@ -127,7 +127,7 @@ Customize the background and text colors of list items when focused, active, or 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUirWJAIjRQrXM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_background-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUirWJAIjRQrXM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_background-color.webp)" %}
 
 ## Customizing the appearance of popup element
 
@@ -139,7 +139,7 @@ Customize the popup element within the AutoComplete by targeting the `.e-list-it
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVAMBMTKeChemce?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with customizing popup color](./images/style/blazor_autocomplete_appearance-of-popup.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVAMBMTKeChemce?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with customizing popup color](./images/style/blazor_autocomplete_appearance-of-popup.webp)" %}
 
 ## Change the HTML attributes
 
@@ -151,7 +151,7 @@ Add additional HTML attributes, such as styles and classes, to the root element 
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom font family via HTMLAttributes](./images/style/blazor_autocomplete_html-attributes.png)
+![Blazor AutoComplete with a custom font family via HTMLAttributes](./images/style/blazor_autocomplete_html-attributes.webp)
 
 ## Set the various font family for autocomplete elements
 
@@ -165,7 +165,7 @@ In the following sample, the font family of the AutoComplete input, list item te
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a different font family](./images/style/blazor_autocomplete_font-family.png)
+![Blazor AutoComplete with a different font family](./images/style/blazor_autocomplete_font-family.webp)
 
 ## Show tooltip on list item
 
@@ -179,7 +179,7 @@ The following code demonstrates how to display a tooltip when hovering over an A
 
 {% endhighlight %}
 
-![Blazor AutoComplete showing a tooltip on list items](./images/style/blazor-autocomplete-tooltip.png)
+![Blazor AutoComplete showing a tooltip on list items](./images/style/blazor-autocomplete-tooltip.webp)
 
 ## Customize selected item opacity
 
@@ -191,7 +191,7 @@ In the following code, CSS targets the `.e-list-item` elements within `.e-dropdo
 
 {% endhighlight %}
 
-![Blazor AutoComplete with customized selected item opacity](./images/style/blazor_autocomplete_opacity-style.png)
+![Blazor AutoComplete with customized selected item opacity](./images/style/blazor_autocomplete_opacity-style.webp)
 
 ## Customizing the height
 
@@ -205,7 +205,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom popup height](./images/style/blazor_autocomplete_height.png)
+![Blazor AutoComplete with a custom popup height](./images/style/blazor_autocomplete_height.webp)
 
 ### Width of AutoComplete
 
@@ -217,7 +217,7 @@ To customize the width of the popup alone, use the [PopupWidth](https://help.syn
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom popup width](./images/style/blazor_autocomplete_width-popup-width.png)
+![Blazor AutoComplete with a custom popup width](./images/style/blazor_autocomplete_width-popup-width.webp)
 
 ## Disable specific items in AutoComplete
 
@@ -247,7 +247,7 @@ In the following code, a single list item is disabled using JavaScript interop.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AutoComplete with a disabled list item](./images/style/blazor_autocomplete_disable-listitem.png)
+![Blazor AutoComplete with a disabled list item](./images/style/blazor_autocomplete_disable-listitem.webp)
 
 ## Adding search icon in the Blazor AutoComplete component.
 
@@ -259,7 +259,7 @@ Add a search icon to the AutoComplete by overriding the content of the existing 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrAChsTqeiSPGka?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete Search Icon](./images/blazor_searchicon_autocomplete.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrAChsTqeiSPGka?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete Search Icon](./images/blazor_searchicon_autocomplete.webp)" %}
 
 ## Customizing the float label element's focusing color
 
@@ -271,7 +271,7 @@ Change the text color of the floating label on focus by targeting `.e-input-focu
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMrMfUfPwJAuJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with float label focusing color](./images/style/blazor_autocomplete_floatlabel-focus-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMrMfUfPwJAuJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with float label focusing color](./images/style/blazor_autocomplete_floatlabel-focus-color.webp)" %}
 
 ## Customizing the color of the placeholder text
 
@@ -283,7 +283,7 @@ Change the color of the placeholder by targeting `input.e-input::placeholder` (t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrKiLszgzkMoAhv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with color placeholder](./images/style/blazor_autocomplete_placeholder-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrKiLszgzkMoAhv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with color placeholder](./images/style/blazor_autocomplete_placeholder-color.webp)" %}
 
 ## Customizing the placeholder to add mandatory indicator(*)
 
@@ -295,7 +295,7 @@ Apply a mandatory indicator `*` to the placeholder by targeting `.e-float-text::
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgCBCfqpEyZQOn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with mandatory indicator placeholder](./images/style/blazor_autocomplete_placeholder-with-mandatory.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgCBCfqpEyZQOn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with mandatory indicator placeholder](./images/style/blazor_autocomplete_placeholder-with-mandatory.webp)" %}
 
 ## Customizing the text selection color
 
@@ -307,4 +307,4 @@ Customize the text selection appearance within the AutoComplete input by targeti
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgMBsJUzucuFKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_text-selection-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgMBsJUzucuFKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_text-selection-color.webp)" %}
