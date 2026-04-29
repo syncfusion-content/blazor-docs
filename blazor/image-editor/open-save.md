@@ -45,7 +45,7 @@ Note: To load an image in the Image Editor, place the image within the applicati
 }
 ```
 
-![Blazor Image Editor with Opening an image](./images/blazor-image-editor-open.jpg)
+![Blazor Image Editor with Opening an image](./images/blazor-image-editor-open.webp)
 
 ### Open an image from base64 format 
 
@@ -91,7 +91,7 @@ Images can be opened in the Image Editor using a Base64-encoded string. Pass the
 }
 ```
 
-![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-base64-open.jpg)
+![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-base64-open.webp)
 
 ### Open an image from Blob storage
 
@@ -144,7 +144,7 @@ Images can be opened in the Image Editor from Blob storage. Retrieve the image B
 }
 ```
 
-![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-blob-open.jpg)
+![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-blob-open.webp)
 
 ### Open an image from File Uploader 
 
@@ -184,7 +184,7 @@ Images can be opened in the Image Editor using a file uploader. After selecting 
 }
 ```
 
-![Blazor Image Editor with File uploader](./images/blazor-image-editor-uploader.jpg)
+![Blazor Image Editor with File uploader](./images/blazor-image-editor-uploader.webp)
 
 ### Open an image from File Manager 
 
@@ -334,7 +334,7 @@ Images can be opened in the Image Editor using the File Manager. After selecting
 }
 ```
 
-![Blazor Image Editor with File uploader](./images/blazor-image-editor-file-manager.jpg)
+![Blazor Image Editor with File uploader](./images/blazor-image-editor-file-manager.webp)
 
 ### Open an image from Treeview 
 
@@ -420,7 +420,7 @@ Images can be opened in the Syncfusion<sup style="font-size:70%">&reg;</sup> Ima
 }
 ```
 
-![Blazor Image Editor with Treeview](./images/blazor-image-editor-treeview.jpg)
+![Blazor Image Editor with Treeview](./images/blazor-image-editor-treeview.webp)
 
 ### Add watermarks while opening an image 
 
@@ -448,7 +448,7 @@ The [FileOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
-![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.jpg)
+![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.webp)
 
 ### Opening Images with Custom Width and Height
 
@@ -499,7 +499,7 @@ The following example demonstrates all three behaviors using the OpenAsync metho
 }
 ```
 
-![Blazor Image Editor with Opening an image](./images/blazor-image-editor-custom-height-width.jpg)
+![Blazor Image Editor with Opening an image](./images/blazor-image-editor-custom-height-width.webp)
 
 ## Save as image
 
@@ -534,7 +534,7 @@ In the following example, the `ExportAsync` method is invoked on a button click.
 }
 ```
 
-![Blazor Image Editor with Save an image](./images/blazor-image-editor-export.jpg)
+![Blazor Image Editor with Save an image](./images/blazor-image-editor-export.webp)
 
 ### Save the image as base64 format
 
@@ -572,7 +572,7 @@ To save an image as base64, use the [GetImageDataUrlAsync](https://help.syncfusi
 }
 ```
 
-![Blazor Image Editor with Base64](./images/blazor-image-editor-base64.jpg)
+![Blazor Image Editor with Base64](./images/blazor-image-editor-base64.webp)
 
 ### Save the image as byte[]
 
@@ -616,7 +616,7 @@ To save an image as a byte array, use the [GetImageDataAsync](https://help.syncf
 }
 ```
 
-![Blazor Image Editor with Byte](./images/blazor-image-editor-byte.jpg)
+![Blazor Image Editor with Byte](./images/blazor-image-editor-byte.webp)
 
 ### Save the image as Blob
 
@@ -658,7 +658,7 @@ To save an image as a blob, use the [GetImageDataUrlAsync](https://help.syncfusi
 }
 ```
 
-![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-blob.jpg)
+![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-blob.webp)
 
 ### Save as image in server
 
@@ -709,7 +709,7 @@ The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEdito
 }
 ```
 
-![Blazor Image Editor with Save to server](./images/blazor-image-editor-save-to-server.jpg)
+![Blazor Image Editor with Save to server](./images/blazor-image-editor-save-to-server.webp)
 
 ### Prevent default save option and save the image to specific location 
 
@@ -744,7 +744,7 @@ The [Saving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor
 }
 ```
 
-![Blazor Image Editor with Specific location](./images/blazor-image-editor-specific-location.jpg)
+![Blazor Image Editor with Specific location](./images/blazor-image-editor-specific-location.webp)
 
 ## Events to handle Save Actions 
 
@@ -796,7 +796,7 @@ In the following example, the `Created` event is used to load an image.
 }
 ```
 
-![Blazor Image Editor with Opening an image](./images/blazor-image-editor-open.jpg)
+![Blazor Image Editor with Opening an image](./images/blazor-image-editor-open.webp)
 
 ### Destroyed event
 

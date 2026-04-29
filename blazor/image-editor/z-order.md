@@ -75,4 +75,4 @@ The following example demonstrates z-order support:
 }
 ```
 
-![Blazor Image Editor z-order example](./images/blazor-image-editor-z-order.jpg)
+![Blazor Image Editor z-order example](./images/blazor-image-editor-z-order.webp)

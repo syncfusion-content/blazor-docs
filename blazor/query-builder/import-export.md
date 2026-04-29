@@ -67,8 +67,7 @@ To apply conditions during initial render, define rules in `QueryBuilderRule` us
     }
 }
 ```
-
-![Blazor Query Builder with a data Binding](./images/blazor-querybuilder-binding-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxDfLGyJXonqoe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/blazor-querybuilder-binding-data.png.webp)" %}
 
 #### Post rendering
 
@@ -126,8 +125,7 @@ Provide an inline SQL string and parse it into rules using the [`SetRulesFromSql
     }
 }
 ```
-
-![Importing from Inline SQL in Blazor Query Builder](./images/blazor-querybuilder-import-from-sql.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxXzBGITSUJWsT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Importing from Inline SQL in Blazor Query Builder](./images/blazor-querybuilder-import-from-sql.webp)" %}
 
 #### Importing from Parameter SQL Query
 
@@ -182,8 +180,7 @@ Importing from Parameter SQL involves integrating SQL queries with parameters di
     }
 }
 ```
-
-![Importing from Parameter SQL in Blazor Query Builder](./images/import-parameter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdjpBweSZiOGwF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Importing from Parameter SQL in Blazor Query Builder](./images/import-parameter.webp)" %}
 
 #### Importing from Named Parameter SQL Query
 
@@ -238,8 +235,7 @@ Importing from Named Parameter SQL involves integrating SQL queries with named p
     }
 }
 ```
-
-![Importing from Named Parameter SQL in Blazor Query Builder](./images/import-named-parameter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhdjfVwyIKtYUTM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Importing from Named Parameter SQL in Blazor Query Builder](./images/import-named-parameter.webp)" %}
 
 ### Importing from MongoDB Query
 
@@ -291,7 +287,7 @@ Import MongoDB queries directly and parse them into the rule model using the [`S
 }
 ```
 
-![Importing from MongoDB in Blazor Query Builder](./images/import-mongo.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBxNfLmdWnoVwgm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Importing from MongoDB in Blazor Query Builder](./images/import-mongo.webp)" %}
 
 ## Exporting
 
@@ -337,6 +333,7 @@ Convert the current rules to a structured JSON object using the [`GetRules`](htt
 
     private void Get() {
         rule = JsonConvert.SerializeObject(QueryBuilderObj.GetRules());
+        Console.WriteLine(rule);
     }
 
     private void Set() {
@@ -346,6 +343,7 @@ Convert the current rules to a structured JSON object using the [`GetRules`](htt
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhRtfLvWeJGITXK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/exporting-json.webp)" %}
 
 ### Exporting to SQL Query
 

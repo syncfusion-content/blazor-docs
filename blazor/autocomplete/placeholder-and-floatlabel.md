@@ -21,7 +21,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor AutoComplete showing placeholder text in the input](./images/placeholder-and-floatlabel/blazor_autocomplete_placeholder.png)
+![Blazor AutoComplete showing placeholder text in the input](./images/placeholder-and-floatlabel/blazor_autocomplete_placeholder.webp)
 
 ## Color of the placeholder text
 
@@ -33,7 +33,7 @@ Change the placeholder text color by targeting the `input.e-input::placeholder` 
 
 {% endhighlight %}
 
-![Blazor AutoComplete with customized placeholder text color](./images/placeholder-and-floatlabel/blazor_autocomplete_placeholder-with-color.png)
+![Blazor AutoComplete with customized placeholder text color](./images/placeholder-and-floatlabel/blazor_autocomplete_placeholder-with-color.webp)
 
 ## Add mandatory indicator using placeholder
 
@@ -45,7 +45,7 @@ Apply a mandatory indicator (*) to the floating label by targeting the `.e-float
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a mandatory indicator on the floating label](./images/placeholder-and-floatlabel/blazor_autocomplete_placeholder-with-mandatory.png)
+![Blazor AutoComplete with a mandatory indicator on the floating label](./images/placeholder-and-floatlabel/blazor_autocomplete_placeholder-with-mandatory.webp)
 
 ## FloatLabel
 
@@ -79,4 +79,4 @@ Change the floating label text color when focused by targeting the `.e-input-foc
 
 {% endhighlight %}
 
-![Blazor AutoComplete with customized floating label focus color](./images/placeholder-and-floatlabel/blazor_autocomplete_floatlabel-focusing-color.png)
+![Blazor AutoComplete with customized floating label focus color](./images/placeholder-and-floatlabel/blazor_autocomplete_floatlabel-focusing-color.webp)

@@ -75,7 +75,7 @@ Here is an example of filtering using the `ApplyImageFilterAsync` method.
 }
 ```
 
-![Blazor Image Editor showing a filter applied to an image](./images/blazor-image-editor-filter.jpg)
+![Blazor Image Editor showing a filter applied to an image](./images/blazor-image-editor-filter.webp)
 
 ## Image filtering event
 

@@ -94,4 +94,4 @@ The following example illustrates how to move items between the Group A and Grou
 
 ```
 
-![Blazor dual ListBox with toolbar to move items between lists](./images/blazor-dual-listbox.png)
+![Blazor dual ListBox with toolbar to move items between lists](./images/blazor-dual-listbox.webp)

@@ -31,7 +31,7 @@ In the following sample, each list item is split into two columns to display rel
 
 {% endhighlight %}
 
-![Blazor Mention with item template](./images/blazor-mention-item-template.png)
+![Blazor Mention with item template](./images/blazor-mention-item-template.webp)
 
 ## Display template
 
@@ -45,7 +45,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 {% endhighlight %}
 
-![Blazor Mention with display template](./images/blazor-mention-display-template.png)
+![Blazor Mention with display template](./images/blazor-mention-display-template.webp)
 
 ## No records template
 
@@ -57,7 +57,7 @@ The [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 {% endhighlight %}
 
-![Blazor Mention with no record template](./images/blazor-mention-noRecord-template.png)
+![Blazor Mention with no record template](./images/blazor-mention-noRecord-template.webp)
 
 ## Spinner template
 
@@ -69,7 +69,7 @@ The [SpinnerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor Mention with spinner template](./images/blazor-mention-spinner-template.png)
+![Blazor Mention with spinner template](./images/blazor-mention-spinner-template.webp)
 
 ## See also
 
