@@ -64,4 +64,4 @@ Here is an example of undoing and redoing the action using the [UndoAsync](https
 }
 ```
 
-![Blazor Image Editor showing undo and redo actions](./images/blazor-image-editor-undo-redo.jpg)
+![Blazor Image Editor showing undo and redo actions](./images/blazor-image-editor-undo-redo.webp)

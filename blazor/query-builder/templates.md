@@ -85,7 +85,7 @@ Use a value template to render a custom editor for a column’s value field. Def
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdtzLczZeswWRy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a value template](./images/blazor-querybuilder-value-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdtzLczZeswWRy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a value template](./images/templates/blazor-querybuilder-value-template.webp)" %}
 
 ## Column Template
 
