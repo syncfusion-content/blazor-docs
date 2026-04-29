@@ -45,7 +45,7 @@ Blazor replaces postback with **event-driven UI updates**, supports **reusable c
 | **Lifecycle model** | `Page_Load`, postback events, `Page_Unload` | Component lifecycle methods: `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}`, `Dispose` |
 | **State handling** | Hidden ViewState fields (serialized) | In-memory component state (persisted per connection for Blazor Server) |
 | **Event handling** | Server callbacks (AutoPostBack) | `EventCallback{T}` / delegates |
-| **Dependency injection** | Limited / manual (Service Locator pattern) | Built-in `IServiceCollection` and first-class support |
+| **Dependency injection** | Limited / manual | Built-in `IServiceCollection` and first-class support |
 | **Navigation model** | Page-based navigation (.aspx files) | SPA-style routing using `@page` directive |
 
 ## Development environment setup
@@ -245,7 +245,7 @@ In Web Forms, the DataGrid is a server control declared in markup with data assi
 {% endtabs %}
 
 {% tabs %}
-{% highlight c#tabtitle="Default.aspx.cs" %}
+{% highlight c# tabtitle="Default.aspx.cs" %}
 
 using System.Web.UI;
 namespace WebFormsGrid
@@ -314,7 +314,7 @@ namespace WebFormsGrid
 
 **Key differences:**
 
-Web Forms grids depend on postback and ViewState to persist UI state. Blazor grids receive data through component parameters such as DataSource and maintain both data and UI state in memory within the component instance. When this state changes, Blazor automatically re-renders the grid without postbacks, avoiding page refreshes and minimizing payload size.
+Web Forms grids depend on postback and ViewState to persist UI state. Blazor grids receive data through component parameters such as DataSource and maintain both data and UI state in memory within the component instance. When this state changes, Blazor automatically re-renders the grid without postback, avoiding page refreshes and minimizing payload size.
 
 ### Scheduler
 
