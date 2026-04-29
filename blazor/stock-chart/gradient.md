@@ -91,7 +91,7 @@ Apply a linear gradient to a series by adding `StockChartLinearGradient` inside 
 }
 
 ```
-![Linear Gradient for series in Blazor Stock Chart](images/gradient/blazor-stock-chart-linear-gradient-series.png)
+![Linear Gradient for series in Blazor Stock Chart](images/gradient/blazor-stock-chart-linear-gradient-series.webp)
 
 ### Trendlines
 
@@ -147,7 +147,7 @@ Apply a linear gradient to a stock chart trendline by adding `StockChartLinearGr
 }
 
 ```
-![Linear Gradient for trendlines in Blazor Stock Chart](images/gradient/blazor-stock-chart-linear-gradient-trendlines.png)
+![Linear Gradient for trendlines in Blazor Stock Chart](images/gradient/blazor-stock-chart-linear-gradient-trendlines.webp)
 
 ### Technical Indicators
 
@@ -204,7 +204,7 @@ Apply a linear gradient to a technical indicator by adding `StockChartLinearGrad
 }
 
 ```
-![Linear Gradient for indicators in Blazor Stock Chart](images/gradient/blazor-stock-chart-linear-gradient-indicators.png)
+![Linear Gradient for indicators in Blazor Stock Chart](images/gradient/blazor-stock-chart-linear-gradient-indicators.webp)
 
 ## Radial gradient
 
@@ -277,7 +277,7 @@ Apply a radial gradient to a series by adding `StockChartRadialGradient` inside 
 }
 
 ```
-![Radial Gradient for series in Blazor Stock Chart](images/gradient/blazor-stock-chart-radial-gradient-series.png)
+![Radial Gradient for series in Blazor Stock Chart](images/gradient/blazor-stock-chart-radial-gradient-series.webp)
 
 N> Radial gradients can also be applied to Trendlines and Technical Indicators in the same way by placing a `StockChartRadialGradient` with color stops inside the target `StockChartTrendline` or `StockChartIndicator`.
 

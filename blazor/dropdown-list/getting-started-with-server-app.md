@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DropDown List Component
 
-This section explains how to include the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor Server app using Visual Studio, Visual Studio Code, and the .NET CLI.
+This section explains how to include the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 

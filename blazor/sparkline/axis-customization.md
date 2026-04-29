@@ -44,7 +44,7 @@ A numeric axis value is provided by setting the [ValueType](https://help.syncfus
 
 ```
 
-![Blazor Sparkline Chart with Numeric Value](images/Axis/blazor-sparkline-numeric-value.png)
+![Blazor Sparkline Chart with Numeric Value](images/Axis/blazor-sparkline-numeric-value.webp)
 
 ### Category
 
@@ -78,7 +78,7 @@ A category axis value is provided by setting the [ValueType](https://help.syncfu
 
 ```
 
-![Blazor Sparkline Chart with Category Value](images/Axis/blazor-sparkline-category-value.png)
+![Blazor Sparkline Chart with Category Value](images/Axis/blazor-sparkline-category-value.webp)
 
 ### DateTime
 
@@ -112,7 +112,7 @@ A DateTime axis value is provided by setting the [ValueType](https://help.syncfu
 
 ```
 
-![Blazor Sparkline Chart with DateTime Value](images/Axis/blazor-sparkline-datetime-value.png)
+![Blazor Sparkline Chart with DateTime Value](images/Axis/blazor-sparkline-datetime-value.webp)
 
 ## Change the Min and Max Values of Axis
 
@@ -130,7 +130,7 @@ The minimum and maximum values of the X-axis can be customized using the [MinX](
 
 N> Refer to the [code block](#numeric) for the **ExpenditureReport** property value.
 
-![Changing Minimum and Maximum Values of Blazor Sparkline Chart Axis](images/Axis/blazor-sparkline-min-max-value.png)
+![Changing Minimum and Maximum Values of Blazor Sparkline Chart Axis](images/Axis/blazor-sparkline-min-max-value.webp)
 
 ## Change Value of Axis
 
@@ -148,7 +148,7 @@ The horizontal axis line value can be customized by setting the [Value](https://
 
 N> Refer to the [code block](#numeric) for the **ExpenditureReport** property value.
 
-![Blazor Sparkline Chart with Axis Value](images/Axis/blazor-sparkline-axis-value.png)
+![Blazor Sparkline Chart with Axis Value](images/Axis/blazor-sparkline-axis-value.webp)
 
 ## Axis Line Customization
 
@@ -177,4 +177,4 @@ The axis line can be customized using the following properties:
 
 N> Refer to the [code block](#numeric) for the **ExpenditureReport** property value.
 
-![Blazor Sparkline Chart with Custom Axis Line](images/Axis/blazor-sparkline-custom-axis-line.png)
+![Blazor Sparkline Chart with Custom Axis Line](images/Axis/blazor-sparkline-custom-axis-line.webp)
