@@ -18,4 +18,4 @@ Hide the spinner in the ProgressButton by applying the built-in e-hide-spinner C
 
 ```
 
-![Hide Spinner in Blazor ProgressButton](./../images/blazor-progressbutton-hide-spinner.png)
+![Hide Spinner in Blazor ProgressButton](./../images/blazor-progressbutton-hide-spinner.webp)
