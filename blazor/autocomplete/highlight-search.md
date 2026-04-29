@@ -17,7 +17,7 @@ Highlight the search text in the suggested list items of the AutoComplete compon
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.webp)" %}
 
 ## Highlight with template
 
@@ -34,7 +34,7 @@ Use the `HighLightSearch` method within an item template to highlight matched te
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.webp)" %}
 
 ## Change the highlight style
 
@@ -46,4 +46,4 @@ Customize the appearance of the highlighted text using the `.e-highlight` class.
 
 {% endhighlight %} 
 
-![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.png)
+![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.webp)
