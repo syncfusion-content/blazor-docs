@@ -115,4 +115,4 @@ The following sample explains about user interactions available in signature.
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-user.png)
+![Blazor Signature Component](./images/blazor-signature-user.webp)

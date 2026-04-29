@@ -23,7 +23,7 @@ DataForm supports standard and custom validation compatible with the[EditForm](h
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm showing validation errors using DataAnnotationsValidator](images/blazor_dataform_dataannotationsvalidator.png)
+![Blazor DataForm showing validation errors using DataAnnotationsValidator](images/blazor_dataform_dataannotationsvalidator.webp)
 
 ## Validation message display
 
@@ -31,9 +31,9 @@ Validation messages can be displayed inline, via tooltip, or hidden by using [Va
 
 | FormValidationDisplay | Snapshot |
 | ------------ | ----------------------- |
-|[FormValidationDisplay.Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Inline)|![Blazor DataForm with inline validation messages beneath fields](images/blazor_dataform_validation_display_inline.png)|
-|[FormValidationDisplay.Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Tooltip)|![Blazor DataForm displaying validation messages in tooltips](images/blazor_dataform_validation_display_tooltip.png)|
-|[FormValidationDisplay.None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_None)|![Blazor DataForm with validation messages hidden](images/blazor_dataform_validation_display_none.png)|
+|[FormValidationDisplay.Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Inline)|![Blazor DataForm with inline validation messages beneath fields](images/blazor_dataform_validation_display_inline.webp)|
+|[FormValidationDisplay.Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Tooltip)|![Blazor DataForm displaying validation messages in tooltips](images/blazor_dataform_validation_display_tooltip.webp)|
+|[FormValidationDisplay.None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_None)|![Blazor DataForm with validation messages hidden](images/blazor_dataform_validation_display_none.webp)|
 
 The following example demonstrates how to configure validation message presentation in the DataForm component.
 
@@ -59,7 +59,7 @@ N> Install the [Microsoft.AspNetCore.Components.DataAnnotations.Validation](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm validating nested and complex types using ObjectGraphDataAnnotationsValidator](images/blazor_dataform_complextypevalidation.png)
+![Blazor DataForm validating nested and complex types using ObjectGraphDataAnnotationsValidator](images/blazor_dataform_complextypevalidation.webp)
 
 ## Fluent validation 
 
@@ -75,7 +75,7 @@ N> Install the [Blazilla](https://www.nuget.org/packages/Blazilla) NuGet package
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm showing errors produced by Fluent validation rules](images/blazor_dataform_fluentvalidation.png)
+![Blazor DataForm showing errors produced by Fluent validation rules](images/blazor_dataform_fluentvalidation.webp)
 
 ## See also
 

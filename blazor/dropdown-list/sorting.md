@@ -27,4 +27,4 @@ In the following example, items in the data source are shuffled randomly, and th
 
 {% endhighlight %}
 
-![Blazor DropDownList with descending sort order](./images/sorting/blazor_dropdown_sorting.png)
+![Blazor DropDownList with descending sort order](./images/sorting/blazor_dropdown_sorting.webp)

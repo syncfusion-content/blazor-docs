@@ -69,7 +69,7 @@ Use the `EmptyTemplate` tag directive to customize the appearance of unrated ite
 
 ```
 
-![Blazor Rating component with EmptyTemplate](./images/blazor-rating-empty-template.png)
+![Blazor Rating component with EmptyTemplate](./images/blazor-rating-empty-template.webp)
 
 N> The current value of the rating item is available in the template context (`RatingItemContext`) as `Value` and `Index`. The rating item element also exposes a CSS custom property (`--rating-value`) representing the filled portion, which can be used to support precision in templates.
 
@@ -129,7 +129,7 @@ The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Rating component with FullTemplate](./images/blazor-rating-full-template.png)
+![Blazor Rating component with FullTemplate](./images/blazor-rating-full-template.webp)
 
 ## Using Emoji icon as rating symbol
 
@@ -175,7 +175,7 @@ Use emoji as rating symbols by placing them as template content within the `Empt
 
 ```
 
-![Blazor Rating component with Emoji icon](./images/blazor-rating-emoji-icon.png)
+![Blazor Rating component with Emoji icon](./images/blazor-rating-emoji-icon.webp)
 
 ## Using SVG icon as rating symbol
 
@@ -243,11 +243,11 @@ Use SVG icons as rating symbols by specifying them as template content within th
 
 ```
 
-![Blazor Rating component with SVG icon](./images/blazor-rating-svg-icon.png)
+![Blazor Rating component with SVG icon](./images/blazor-rating-svg-icon.webp)
 
-## Using PNG image as rating symbol
+## Using webp image as rating symbol
 
-Use PNG images as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
+Use webp images as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 
@@ -269,4 +269,4 @@ Use PNG images as rating symbols by specifying them as template content within t
 
 ```
 
-![Blazor Rating component with PNG icon](./images/blazor-rating-png.png)
+![Blazor Rating component with webp icon](./images/blazor-rating-webp.webp)

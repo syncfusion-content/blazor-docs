@@ -45,7 +45,7 @@ Specify the direction of the In-place Editor using the `EnableRtl` property. Use
 
 ```
 
-![Right to Left in Blazor In-place Editor](./images/blazor-inplace-editor-right-to-left.png)
+![Right to Left in Blazor In-place Editor](./images/blazor-inplace-editor-right-to-left.webp)
 
 ## Format
 
@@ -82,4 +82,4 @@ Formatting is a way of representing the value in different formats. Format the f
 
 ```
 
-![Formatting in Blazor In-place Editor](./images/blazor-inplace-editor-formatting.png)
+![Formatting in Blazor In-place Editor](./images/blazor-inplace-editor-formatting.webp)

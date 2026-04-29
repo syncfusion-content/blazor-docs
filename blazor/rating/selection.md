@@ -20,7 +20,7 @@ The Blazor Rating component lets users choose a value using a visual scale. Sele
 
 ```
 
-![Blazor Rating component with selection](./images/blazor-rating-selection.png)
+![Blazor Rating component with selection](./images/blazor-rating-selection.webp)
 
 ## Selected value
 
@@ -39,7 +39,7 @@ Rated Value : @value
 
 ```
 
-![Blazor Rating Component with Selected Value](./images/blazor-rating-selected-value.png)
+![Blazor Rating Component with Selected Value](./images/blazor-rating-selected-value.webp)
 
 ## Min value
 
@@ -53,7 +53,7 @@ Use the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfR
 
 ```
 
-![Blazor Rating component with a minimum value enforced](./images/blazor-rating-min.png)
+![Blazor Rating component with a minimum value enforced](./images/blazor-rating-min.webp)
 
 ## Single selection
 
@@ -67,7 +67,7 @@ Use the [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-![Blazor Rating component with single-selection](./images/blazor-rating-single-selection.png)
+![Blazor Rating component with single-selection](./images/blazor-rating-single-selection.webp)
 
 ## Show or hide reset button
 
@@ -81,4 +81,4 @@ Use the [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inp
 
 ```
 
-![Blazor Rating component with reset button](./images/blazor-rating-allow-reset.png)
+![Blazor Rating component with reset button](./images/blazor-rating-allow-reset.webp)

@@ -83,7 +83,7 @@ N> For more details about buttons, refer this documentation [section](../button/
 
 
 
-![Blazor In-place Editor with Buttons](./images/blazor-inplace-editor-with-buttons.png)
+![Blazor In-place Editor with Buttons](./images/blazor-inplace-editor-with-buttons.webp)
 
 ## See Also
 
