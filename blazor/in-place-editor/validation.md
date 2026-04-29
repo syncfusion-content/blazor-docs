@@ -72,4 +72,4 @@ Refer to the following link for more details, [EditForm Validation](https://lear
 ```
 
 
-![Validation in Blazor In-place Editor](./images/blazor-inplace-editor-validation.png)
+![Validation in Blazor In-place Editor](./images/blazor-inplace-editor-validation.webp)

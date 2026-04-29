@@ -21,7 +21,7 @@ The following example demonstrates filtering with local data in the MultiSelect 
 
 {% endhighlight %}
 
-![Filtering in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-filtering.png)
+![Filtering in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-filtering.webp)
 
 ## Remote data
 
@@ -66,7 +66,7 @@ In the following example, the `EndsWith` filter type is configured using the `Fi
 
 {% endhighlight %}
 
-![Blazor MultiSelect with filter type](./images/filtering/blazor_MultiSelect_filter-type.png)
+![Blazor MultiSelect with filter type](./images/filtering/blazor_MultiSelect_filter-type.webp)
 
 ## Case sensitive filtering
 
@@ -90,7 +90,7 @@ Display watermark text in the filter bar by using the [FilterBarPlaceholder](htt
 
 {% endhighlight %} 
 
-![Blazor MultiSelect Dropdown with FilterBarPlaceholder property](./images/filtering/blazor_multiselect_filterBarPlaceholder-property.png)
+![Blazor MultiSelect Dropdown with FilterBarPlaceholder property](./images/filtering/blazor_multiselect_filterBarPlaceholder-property.webp)
 
 ## Custom Filtering
 

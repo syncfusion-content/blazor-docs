@@ -21,7 +21,7 @@ Set the boolean [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 {% endhighlight %}
 
-![Blazor DropDownList in read-only mode](./images/style/blazor_dropdown_readonly-mode.png)
+![Blazor DropDownList in read-only mode](./images/style/blazor_dropdown_readonly-mode.webp)
 
 ## Disabled state
 
@@ -33,7 +33,7 @@ Set the boolean [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor DropDownList in disabled state](./images/style/blazor_dropdown_disabled-state.png)
+![Blazor DropDownList in disabled state](./images/style/blazor_dropdown_disabled-state.webp)
 
 ## CssClass  
 
@@ -53,7 +53,7 @@ Some common class names:
 
 {% endhighlight %} 
 
-![Blazor DropDownList styled via CssClass](./images/style/blazor_dropdown_cssclass-property.png)
+![Blazor DropDownList styled via CssClass](./images/style/blazor_dropdown_cssclass-property.webp)
 
 ## Customizing the disabled component’s text color
 
@@ -65,7 +65,7 @@ Target the disabled input selector (for example, `.e-input[disabled]`) and set `
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized disabled text color](./images/style/blazor_dropdown_disable-text-color.png)
+![Blazor DropDownList with customized disabled text color](./images/style/blazor_dropdown_disable-text-color.webp)
 
 ## Show the custom icon in dropdown icon
 
@@ -77,7 +77,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized dropdown icon](./images/style/blazor_dropdown_dropdown-icon.png)
+![Blazor DropDownList with customized dropdown icon](./images/style/blazor_dropdown_dropdown-icon.webp)
 
 Customize the dropdown icon for a specific component by adding a custom class through [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) and scoping the icon style to that class.
 
@@ -87,7 +87,7 @@ Customize the dropdown icon for a specific component by adding a custom class th
 
 {% endhighlight %}
 
-![Blazor DropDownList with dropdown icon using CssClass](./images/style/blazor_dropdown_dropdown-icon.png)
+![Blazor DropDownList with dropdown icon using CssClass](./images/style/blazor_dropdown_dropdown-icon.webp)
 
 ## Customizing the appearance of container element
 
@@ -99,7 +99,7 @@ Customize the appearance of the container element within the dropdown list compo
 
 {% endhighlight %}
 
-![Blazor DropDownList container appearance customized](./images/style/blazor_dropdown_appearance-of-container.png)
+![Blazor DropDownList container appearance customized](./images/style/blazor_dropdown_appearance-of-container.webp)
 
 ## Customizing the dropdown icon’s color
 
@@ -111,7 +111,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom icon color](./images/style/blazor_dropdown_icon-color.png)
+![Blazor DropDownList with custom icon color](./images/style/blazor_dropdown_icon-color.webp)
 
 ## Customizing the focus color
 
@@ -123,7 +123,7 @@ Customize the focus indicator by targeting `.e-input-focus::after` and setting t
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom focus color](./images/style/blazor_dropdown_focus-color.png)
+![Blazor DropDownList with custom focus color](./images/style/blazor_dropdown_focus-color.webp)
 
 ## Customizing the outline theme's focus color
 
@@ -135,7 +135,7 @@ When using the outline variant, target the `e-outline` style to adjust focus col
 
 {% endhighlight %}
 
-![Blazor DropDownList outline theme focus color](./images/style/blazor_dropdown_focusing-color-of-outline-theme.png)
+![Blazor DropDownList outline theme focus color](./images/style/blazor_dropdown_focusing-color-of-outline-theme.webp)
 
 Use `e-outline` in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property to enable the outline theme.
 
@@ -145,7 +145,7 @@ Use `e-outline` in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 {% endhighlight %}
 
-![Blazor DropDownList rendered with outline theme](./images/style/blazor_dropdown_outline-theme.png)
+![Blazor DropDownList rendered with outline theme](./images/style/blazor_dropdown_outline-theme.webp)
 
 
 ## Customizing the background color of focus, hover, and active items
@@ -158,7 +158,7 @@ Adjust list item background and text colors for focused, active, and hovered sta
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom item state colors](./images/style/blazor_dropdown_outline-theme.png)
+![Blazor DropDownList with custom item state colors](./images/style/blazor_dropdown_outline-theme.webp)
 
 ## Customizing the appearance of pop-up element
 
@@ -170,7 +170,7 @@ Customize popup appearance by targeting popup and list item selectors (for examp
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup appearance](./images/style/blazor_dropdown_outline-theme.png)
+![Blazor DropDownList with customized popup appearance](./images/style/blazor_dropdown_outline-theme.webp)
 
 ## Change the HTML attributes
 
@@ -182,7 +182,7 @@ Add additional attributes (for example, `style`, `class`, `title`) to the root e
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom HTML attributes](./images/style/blazor_dropdown_html-attributes.png)
+![Blazor DropDownList with custom HTML attributes](./images/style/blazor_dropdown_html-attributes.webp)
 
 ## Change the InputAttributes
 
@@ -194,7 +194,7 @@ Add the additional input attributes such as disabled, value, and more to the roo
 
 {% endhighlight %} 
 
-![Blazor DropDownList with input attributes](./images/style/blazor_dropdown_input-attributes-propety.png)
+![Blazor DropDownList with input attributes](./images/style/blazor_dropdown_input-attributes-propety.webp)
 
 ## Set the various font family for dropdown list elements
 
@@ -208,7 +208,7 @@ In the following sample, the font family of the DropDownList, ListItem text in D
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom font family](./images/style/blazor_dropdown_font-family.png)
+![Blazor DropDownList with custom font family](./images/style/blazor_dropdown_font-family.webp)
 
 ## Show tooltip on list item
 
@@ -222,7 +222,7 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 {% endhighlight %}
 
-![Blazor DropDownList with tooltip on items](./images/style/blazor-dropdownlist-tooltip.png)
+![Blazor DropDownList with tooltip on items](./images/style/blazor-dropdownlist-tooltip.webp)
 
 ### Tooltip using HTMLAttribute in dropdown component
 
@@ -236,7 +236,7 @@ In the following example, the `HtmlAttributes` property is used to add the title
 
 {% endhighlight %}
 
-![Blazor DropDownList with input tooltip](./images/style/blazor_dropdown_default-tooltip.png)
+![Blazor DropDownList with input tooltip](./images/style/blazor_dropdown_default-tooltip.webp)
 
 ## Customize selected item opacity
 
@@ -248,7 +248,7 @@ Adjust the opacity of selected (and selected + hovered) items by targeting `.e-d
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom selected item opacity](./images/style/blazor_dropdown_opacity-style.png)
+![Blazor DropDownList with custom selected item opacity](./images/style/blazor_dropdown_opacity-style.webp)
 
 ## Customizing the height
 
@@ -262,7 +262,7 @@ Use [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom popup height](./images/style/blazor_dropdown_height.png)
+![Blazor DropDownList with custom popup height](./images/style/blazor_dropdown_height.webp)
 
 ### Width of DropDownList
 
@@ -274,7 +274,7 @@ To change only the popup width, use [PopupWidth](https://help.syncfusion.com/cr/
 
 {% endhighlight %}
 
-![Blazor DropDownList with custom popup width](./images/style/blazor_dropdown_width-popup-width.png)
+![Blazor DropDownList with custom popup width](./images/style/blazor_dropdown_width-popup-width.webp)
 
 ## Disable specific items in DropDownList
 
@@ -302,7 +302,7 @@ Prevent selection of specific items by applying custom CSS classes to the popup 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_disable-listitem.png)
+![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_disable-listitem.webp)
 
 ## Adding conditional HTML attribute to list item
 
@@ -338,7 +338,7 @@ In the following example, the `Opened` event is used to call the `AddAttribute` 
 {% endhighlight %}
 {% endtabs %}
 
-![Adding attributes to list items in DropDownList](./images/style/blazor_dropdown_add-attribute-listitem.png)
+![Adding attributes to list items in DropDownList](./images/style/blazor_dropdown_add-attribute-listitem.webp)
 
 ## Displaying DropDownList in Tab
 
@@ -352,7 +352,7 @@ In the following example, the SfTab component is used to display a tab view with
 
 {% endhighlight %}
 
-![Blazor DropDownList displayed inside a tab view](./images/style/blazor_dropdown-in-tabview.png)
+![Blazor DropDownList displayed inside a tab view](./images/style/blazor_dropdown-in-tabview.webp)
 
 ## DropDownList inside Dialog
 
@@ -378,4 +378,4 @@ Call `ShowSpinnerAsync()` and `HideSpinnerAsync()` on the DropDownList instance 
 
 {% endhighlight %} 
 
-![Show or hide spinner in Blazor DropDownList](./images/style/blazor_dropdown_readonly-mode.png)
+![Show or hide spinner in Blazor DropDownList](./images/style/blazor_dropdown_readonly-mode.webp)

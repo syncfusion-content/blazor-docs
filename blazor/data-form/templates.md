@@ -25,7 +25,7 @@ Customize an individual field editor using the [Template](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm field customized using FormItem.Template](images/blazor_dataform_template.png)
+![Blazor DataForm field customized using FormItem.Template](images/blazor_dataform_template.webp)
 
 The above `Template` approach can also be used alongside [FormAutoGenerateItems](./form-items.md) to auto-generate all items except those explicitly customized with a `FormItem` template.
 
@@ -51,7 +51,7 @@ The `DataForm` supports customizing the entire form structure using a full-form 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm with a fully customized form template](images/blazor_dataform_template.png)
+![Blazor DataForm with a fully customized form template](images/blazor_dataform_template.webp)
 
 The `FormTemplate` renderer can also be integrated together with `FormItem` elements, as shown in the following example.
 
@@ -81,7 +81,7 @@ When using the `Template` renderer, validation messages can be displayed using a
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm showing validation messages in tooltips for templated editors](images/blazor_dataform_tooltip_with_templates.png)
+![Blazor DataForm showing validation messages in tooltips for templated editors](images/blazor_dataform_tooltip_with_templates.webp)
 
 ## Validation summary 
 
@@ -101,4 +101,4 @@ Use the [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microso
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm displaying a ValidationSummary with aggregated error messages](images/blazor_dataform_validation_summary.png)
+![Blazor DataForm displaying a ValidationSummary with aggregated error messages](images/blazor_dataform_validation_summary.webp)

@@ -36,7 +36,7 @@ The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.For
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item showing mapped field and custom ID](images/blazor_dataform_configure_model_ID.png)
+![Blazor DataForm form item showing mapped field and custom ID](images/blazor_dataform_configure_model_ID.webp)
 
 ## Set the placeholder
 
@@ -56,7 +56,7 @@ The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item with placeholder text in the editor](./images/blazor_dataform_placeholder.png)
+![Blazor DataForm form item with placeholder text in the editor](./images/blazor_dataform_placeholder.webp)
 
 ## Change the editor type
 
@@ -86,7 +86,7 @@ The [EditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form items rendered with different editor types](images/blazor_dataform_formitem.png)
+![Blazor DataForm form items rendered with different editor types](images/blazor_dataform_formitem.webp)
 
 ## Disable a form item
 
@@ -106,7 +106,7 @@ The [IsEnabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item in a disabled state](images/blazor_dataform_formitem_disabled.png)
+![Blazor DataForm form item in a disabled state](images/blazor_dataform_formitem_disabled.webp)
 
 ## Change the label text 
 
@@ -128,7 +128,7 @@ Set the label using the [LabelText](https://help.syncfusion.com/cr/blazor/Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item with customized label text](./images/blazor_dataform_label_text.png)
+![Blazor DataForm form item with customized label text](./images/blazor_dataform_label_text.webp)
 
 
 ## Change the appearance of the field editor
@@ -148,7 +148,7 @@ Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataF
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm form item styled using a custom CSS class](images/blazor_dataform_formitem_cssclass.png)
+![Blazor DataForm form item styled using a custom CSS class](images/blazor_dataform_formitem_cssclass.webp)
 
 ## See also
 

@@ -136,7 +136,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect Drop
 
 Run the sample on Windows to launch the .NET MAUI Blazor app.
 
-![Blazor MultiSelect Dropdown Component](./images/blazor-multiselect-dropdown-maui-app.png)
+![Blazor MultiSelect Dropdown Component](./images/blazor-multiselect-dropdown-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -146,7 +146,7 @@ To run the Blazor MultiSelect Dropdown in a .NET MAUI Android app using the Andr
 
 N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
+![Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)
 
 ## Binding data source
 
@@ -185,7 +185,7 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor MultiSelect Dropdown](./images/blazing-fast-multiselect-dropdown-data-binding.png)
+![Data Binding in Blazor MultiSelect Dropdown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)
 
 ## Configure the popup list
 
@@ -205,7 +205,7 @@ The height and width of the popup list can also be customized using the [PopupHe
 {% endhighlight %}
 {% endtabs %}
 
-![Configuring Popup List in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
+![Configuring Popup List in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-configure-poup-list.webp)
 
 ## Get selected value
 

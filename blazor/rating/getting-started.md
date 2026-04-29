@@ -155,7 +155,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating component
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBpNMqZALaYvkYW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rating Component](images/blazor-rating-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBpNMqZALaYvkYW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rating Component](images/blazor-rating-component.webp)" %}
 
 ## Value
 
@@ -169,4 +169,4 @@ Set the rating value by using the [Value](https://help.syncfusion.com/cr/blazor/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLTXiKDggXVnBqJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLTXiKDggXVnBqJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.webp)" %}

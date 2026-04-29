@@ -26,7 +26,7 @@ Value binding is achieved by using the [@bind-Value](https://help.syncfusion.com
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Bind Value](./images/value-binding/blazor_multiselect_bind-value.png)
+![Blazor MultiSelect with Bind Value](./images/value-binding/blazor_multiselect_bind-value.webp)
 
 ## Text and value
 
@@ -40,7 +40,7 @@ The following example demonstrates Text and Value field mapping. For instance, t
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Text and Value](./images/value-binding/blazor_MultiSelect_text-and-value.png)
+![Blazor MultiSelect with Text and Value](./images/value-binding/blazor_MultiSelect_text-and-value.webp)
 
 ## Primitive type binding
 
@@ -54,7 +54,7 @@ The following example demonstrates an array of strings as the data source.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Primitive Type as string](./images/value-binding/blazor_MultiSelect_primitive-type-string.png)
+![Blazor MultiSelect with Primitive Type as string](./images/value-binding/blazor_MultiSelect_primitive-type-string.webp)
 
 The following example demonstrates an array of integers as the data source.
 
@@ -76,7 +76,7 @@ In the following example, the `ID` column is mapped to the Value field, and `TVa
 
 {% endhighlight %}
 
-![Blazor MultiSelect with object values](./images/value-binding/blazor_MultiSelect_object-binding.png)
+![Blazor MultiSelect with object values](./images/value-binding/blazor_MultiSelect_object-binding.webp)
 
 ## Enum binding
 
@@ -88,7 +88,7 @@ Bind enum values to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Enum Data](./images/value-binding/blazor_MultiSelect_enum-binding.png)
+![Blazor MultiSelect with Enum Data](./images/value-binding/blazor_MultiSelect_enum-binding.webp)
 
 ## Show or hide clear button
 
@@ -104,7 +104,7 @@ The following example uses `int?` as `TValue`, so clearing sets the value to `nu
 
 {% endhighlight %}
 
-![Blazor MultiSelect with clear button](./images/value-binding/blazor_MultiSelect_show-hide-clear-button.png)
+![Blazor MultiSelect with clear button](./images/value-binding/blazor_MultiSelect_show-hide-clear-button.webp)
 
 ## Dynamically change TItem
 

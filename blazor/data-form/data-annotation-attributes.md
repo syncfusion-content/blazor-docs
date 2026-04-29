@@ -236,15 +236,15 @@ The [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.comp
 
 | Data type | Editor type | Image |
 | ------------ | ----------------------- | ------ |
-| `DataType.Date` | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) | ![Blazor DataForm DataType.Date editor example](images/blazor_dataform_data_type_date.png) |
-| `DataType.Time` | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) |![Blazor DataForm DataType.Time editor example](images/blazor_dataform_data_type_time.png) |
-| `DataType.DateTime` | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) |![Blazor DataForm DataType.DateTime editor example](images/blazor_dataform_data_type_date_time.png) |
-| `DataType.Currency` | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) |![Blazor DataForm DataType.Currency editor example](images/blazor_dataform_data_type_currency.png) |
-| `DataType.PhoneNumber` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.PhoneNumber editor example](images/blazor_dataform_data_type_phone.png) |
-| `DataType.CreditCard` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.CreditCard editor example](images/blazor_dataform_data_type_credit_card.png) |
-| `DataType.MultilineText` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.MultilineText editor example](images/blazor_dataform_data_type_multiline_text.png) |
-| `DataType.Password` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.Password editor example](images/blazor_dataform_data_type_password.png) |
-| <ul><li>`DataType.EmailAddress`</li><li>`DataType.Url`</li><li>`DataType.Text`</li><li> `DataType.ImageUrl`</li><li> `DataType.Html`</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor DataForm DataType.Text-like editors example](images/blazor_dataform_data_type_text.png) |
+| `DataType.Date` | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) | ![Blazor DataForm DataType.Date editor example](images/blazor_dataform_data_type_date.webp) |
+| `DataType.Time` | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) |![Blazor DataForm DataType.Time editor example](images/blazor_dataform_data_type_time.webp) |
+| `DataType.DateTime` | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) |![Blazor DataForm DataType.DateTime editor example](images/blazor_dataform_data_type_date_time.webp) |
+| `DataType.Currency` | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) |![Blazor DataForm DataType.Currency editor example](images/blazor_dataform_data_type_currency.webp) |
+| `DataType.PhoneNumber` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.PhoneNumber editor example](images/blazor_dataform_data_type_phone.webp) |
+| `DataType.CreditCard` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.CreditCard editor example](images/blazor_dataform_data_type_credit_card.webp) |
+| `DataType.MultilineText` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.MultilineText editor example](images/blazor_dataform_data_type_multiline_text.webp) |
+| `DataType.Password` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.Password editor example](images/blazor_dataform_data_type_password.webp) |
+| <ul><li>`DataType.EmailAddress`</li><li>`DataType.Url`</li><li>`DataType.Text`</li><li> `DataType.ImageUrl`</li><li> `DataType.Html`</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor DataForm DataType.Text-like editors example](images/blazor_dataform_data_type_text.webp) |
 
 If a different data type is specified that is not listed above, the DataForm uses the [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) editor by default.
 
@@ -322,7 +322,7 @@ The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endtabs %}
 
-![Blazor DataForm Custom Attributes](images/blazor_dataform_custom_attributes.png)
+![Blazor DataForm Custom Attributes](images/blazor_dataform_custom_attributes.webp)
 
 ## Custom validation
 
@@ -340,4 +340,4 @@ In the `IsValid` method, implement the validation logic. When validation fails, 
 
 In the example, the `PasswordValidationAttribute` checks whether the password meets the required criteria (length, uppercase, lowercase, and special character). If not, it returns a `ValidationResult` with an appropriate message. The `EmailValidationAttribute` validates the email format and returns a `ValidationResult` with an error message when invalid.
 
-![Blazor DataForm custom validation showing error messages for password and email](images/blazor_dataform_customvalidation.png)
+![Blazor DataForm custom validation showing error messages for password and email](images/blazor_dataform_customvalidation.webp)

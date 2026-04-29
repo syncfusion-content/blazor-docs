@@ -19,7 +19,7 @@ Use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 ```
 
-![Blazor Rating component with Label](./images/blazor-rating-label.png)
+![Blazor Rating component with Label](./images/blazor-rating-label.webp)
 
 ## Label position
 
@@ -50,7 +50,7 @@ The following label positions are supported:
 
 ```
 
-![Blazor Rating component with different label positions](./images/blazor-rating-label-positions.png)
+![Blazor Rating component with different label positions](./images/blazor-rating-label-positions.webp)
 
 
 ## Label template
@@ -67,4 +67,4 @@ Use the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Rating component with Label template](./images/blazor-rating-label-template.png)
+![Blazor Rating component with Label template](./images/blazor-rating-label-template.webp)
