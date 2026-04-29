@@ -34,8 +34,8 @@ FirstFourDayWeek | Set the week number based on the majority of dates present in
 
 
 
-![Blazor DatePicker displays Week Rule of FirstDay](./images/blazor-datepicker-first-day.png)
+![Blazor DatePicker displays Week Rule of FirstDay](./images/blazor-datepicker-first-day.webp)
 
-![Blazor DatePicker displays Week Rule of FirstFullWeek](./images/blazor-datepicker-first-full-week.png)
+![Blazor DatePicker displays Week Rule of FirstFullWeek](./images/blazor-datepicker-first-full-week.webp)
 
-![Blazor DatePicker displays Week Rule of FirstFourDayWeek](./images/blazor-datepicker-first-four-Day-Week.png)
+![Blazor DatePicker displays Week Rule of FirstFourDayWeek](./images/blazor-datepicker-first-four-Day-Week.webp)
