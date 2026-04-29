@@ -33,7 +33,7 @@ The annotations are used to add text, shapes, or images to the track area in the
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Annotation](images/blazor-progressbar-annotation.png)
+![Blazor ProgressBar with Annotation](images/blazor-progressbar-annotation.webp)
 
 ## Label
 
@@ -56,7 +56,7 @@ When the [ShowProgressValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-![Blazor ProgressBar with Label](images/blazor-progressbar-with-label.png)
+![Blazor ProgressBar with Label](images/blazor-progressbar-with-label.webp)
 
 ## See Also
 

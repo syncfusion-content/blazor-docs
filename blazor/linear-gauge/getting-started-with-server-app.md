@@ -173,7 +173,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor LinearGauge component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrzZCLkTTyPJnAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge Component](images/blazor-linear-gauge-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrzZCLkTTyPJnAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge Component](images/blazor-linear-gauge-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/LinearGauge).
 
@@ -200,7 +200,7 @@ N> In LinearGauge, you can configure multiple axes. On each axis, you can add a 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrJtWhEJTREUVHV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Pointer Value](images/blazor-linear-gauge-with-pointer.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrJtWhEJTREUVHV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Pointer Value](images/blazor-linear-gauge-with-pointer.webp)" %}
 
 ## Add a title for Blazor LinearGauge
 
@@ -222,7 +222,7 @@ The title can be added to the linear gauge to provide a piece of quick informati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVTtsBuJzGmldKw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Title](images/blazor-linear-gauge-with-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVTtsBuJzGmldKw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Title](images/blazor-linear-gauge-with-title.webp)" %}
 
 ## Add ranges in the Blazor LinearGauge
 
@@ -252,7 +252,7 @@ The range is used to specify a group of scale values in the gauge. You can set t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfjCrEpJFVEbRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Range Bar](images/blazor-linear-gauge-with-ranges.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfjCrEpJFVEbRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Range Bar](images/blazor-linear-gauge-with-ranges.webp)" %}
 
 ## See also
 

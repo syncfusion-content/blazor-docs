@@ -38,7 +38,7 @@ The Chip control has the following predefined styles that can be defined using t
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsrBcBIwnwbXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Chip Styles](./images/blazor-chip-style.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsrBcBIwnwbXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Chip Styles](./images/blazor-chip-style.webp)" %}
 
 ## Leading icon
 
@@ -151,7 +151,7 @@ You can add and customize the trailing icon of chip using the [`TrailingIconCss`
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUiBhwBekjUuOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUiBhwBekjUuOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.webp)" %}
 
 ## Outline chip
 
@@ -234,4 +234,4 @@ The following code example demonstrates how to customize the layout and design o
 
 ```
 
-![Template in Blazor Chip component](./images/blazor-chip-template.png)
+![Template in Blazor Chip component](./images/blazor-chip-template.webp)

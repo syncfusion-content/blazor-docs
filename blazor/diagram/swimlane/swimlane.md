@@ -11,7 +11,7 @@ documentation: ug
 
 A [Swimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html) is a type of diagram node that is used to visualize the connection between a business process and its responsible department. It emphasizes logical relationships among activities, making it easier to understand the dynamics of the process and the associated departmental responsibilities.
 
-![Swimlane Content](./Swimlane-images/Swimlane_Default.PNG)
+![Swimlane Content](./Swimlane-images/Swimlane_Default.webp)
 
 ## How to Create a Swimlane
 A swimlane can be created and added to the diagram either programmatically or interactively.
@@ -69,7 +69,7 @@ To create a swimlane, you have to define the swimlane object and add it to the [
 
 The swimlane appears as follows.
 
-![Add swimlane](Swimlane-images/Swimlane_Empty.PNG)
+![Add swimlane](Swimlane-images/Swimlane_Empty.webp)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneCreation/SwimlaneCreation.razor).
 
@@ -136,7 +136,7 @@ The following code example explains how to define the swimlane header.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneHeader/SwimlaneHeaderSample.razor)
 
-![Swimlane Header](Swimlane-images/Swimlane_Header.PNG)
+![Swimlane Header](Swimlane-images/Swimlane_Header.webp)
 
 ### How to Customize Swimlane Header
 
@@ -197,7 +197,7 @@ The following code example explains how to customize a swimlane header.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneHeader/SwimlaneHeaderCustomization.razor)
 
-![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Customization.PNG)
+![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Customization.webp)
 
 Swimlane header annotations also support templates. Define HTML content at the tag level and enable templating with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. To assign different templates per swimlane, differentiate annotations by the ID property.
 
@@ -270,13 +270,13 @@ The following code example explains how to define a Swimlane header annotation t
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate.razor)
 
-![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Template.PNG)
+![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Template.webp)
 
 ### How to Edit Header
 
 Edit swimlane headers at runtime by double-clicking the header label to enable in-place editing.
 
-![Header Editing](Swimlane-images/Header_Edit.gif).
+![Header Editing](Swimlane-images/Header_Edit.webp).
 
 ## Orientation
 
@@ -315,8 +315,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | Orientation | Output |
 |---|---|
-| Horizontal | ![Horizontal](Swimlane-images/Swimlane_Horizontal.PNG) |
-| Vertical | ![Vertical](Swimlane-images/Swimlane_Vertical.PNG) |
+| Horizontal | ![Horizontal](Swimlane-images/Swimlane_Horizontal.webp) |
+| Vertical | ![Vertical](Swimlane-images/Swimlane_Vertical.webp) |
 
 
 ## How to set spacing between lane or phase header and its children
@@ -441,4 +441,4 @@ Select a `Swimlane` by clicking (tapping) the header of the swimlane. Also, it c
 
 * During drag, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are raised; handle these events to implement pre/post-move logic.
 
-![Dragging a swimlane by its header](Swimlane-images/Swimlane_Select_Drag.gif)
+![Dragging a swimlane by its header](Swimlane-images/Swimlane_Select_Drag.webp)

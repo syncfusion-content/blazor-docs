@@ -41,7 +41,7 @@ The tooltip is not visible by default, to make it visible, set the [Visible](htt
 }
 ```
 
-![Blazor TreeMap with Tooltip](images/Tooltip/blazor-treemap-tooltip.png)
+![Blazor TreeMap with Tooltip](images/Tooltip/blazor-treemap-tooltip.webp)
 
 ## Customization
 
@@ -66,7 +66,7 @@ Customize the TreeMap tooltip using the following properties.
 
 N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![Blazor TreeMap with Custom Tooltip](images/Tooltip/blazor-treemap-custom-tooltip.png)
+![Blazor TreeMap with Custom Tooltip](images/Tooltip/blazor-treemap-custom-tooltip.webp)
 
 ## Formatting tooltip content
 
@@ -83,7 +83,7 @@ The tooltip content is displayed by default based on the [WeightValuePath](https
 
 N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![Changing Tooltip Format in Blazor TreeMap](images/Tooltip/blazor-treemap-tooltip-format.png)
+![Changing Tooltip Format in Blazor TreeMap](images/Tooltip/blazor-treemap-tooltip-format.webp)
 
 ## Tooltip template
 
@@ -112,4 +112,4 @@ Tooltip can be rendered as a custom component using the [TooltipTemplate](https:
 
 N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![Blazor TreeMap with Tooltip Template](images/Tooltip/blazor-treemap-tooltip-template.png)
+![Blazor TreeMap with Tooltip Template](images/Tooltip/blazor-treemap-tooltip-template.webp)

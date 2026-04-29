@@ -24,4 +24,4 @@ Use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Split
   
 ```
 
-![Blazor SplitButton in Disabled State](./../images/blazor-splitbutton-disabled-state.png)
+![Blazor SplitButton in Disabled State](./../images/blazor-splitbutton-disabled-state.webp)

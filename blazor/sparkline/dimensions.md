@@ -44,7 +44,7 @@ The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-compo
 
 ```
 
-![Blazor Sparkline Chart with Container Size](./images/SparklineDimension/blazor-sparkline-chart-container-size.png)
+![Blazor Sparkline Chart with Container Size](./images/SparklineDimension/blazor-sparkline-chart-container-size.webp)
 
 ## Size for Sparkline
 
@@ -70,7 +70,7 @@ Specify the Sparkline Chart size in pixels.
 
 N> Refer to the [code block](#size-for-the-container) for the `populationData` property value.
 
-![Changing Blazor Sparkline Chart Size in Pixel](./images/SparklineDimension/blazor-sparkline-chart-size-in-pixel.png)
+![Changing Blazor Sparkline Chart Size in Pixel](./images/SparklineDimension/blazor-sparkline-chart-size-in-pixel.webp)
 
 ### In Percentage
 
@@ -94,4 +94,4 @@ Set values in percentage to size the Sparkline Chart relative to its container. 
 
 N> Refer to the [code block](#size-for-the-container) for the `populationData` property value.
 
-![Changing Blazor Sparkline Chart Size in Percentage](./images/SparklineDimension/blazor-sparkline-chart-size-in-percentage.png)
+![Changing Blazor Sparkline Chart Size in Percentage](./images/SparklineDimension/blazor-sparkline-chart-size-in-percentage.webp)

@@ -156,7 +156,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ProgressBar comp
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ProgressBar component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVzNiAXLOxVFFXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVzNiAXLOxVFFXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar).
 
@@ -173,6 +173,6 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpDMUZLacfZQlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpDMUZLacfZQlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
 
 N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear) that shows you how to render and configure the ProgressBar.

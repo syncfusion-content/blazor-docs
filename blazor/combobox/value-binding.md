@@ -26,7 +26,7 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
 
 {% endhighlight %}
 
-![Blazor ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.png)
+![Blazor ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.webp)
 
 ## Index value binding
 
@@ -38,7 +38,7 @@ The Index value binding is achieved by using the [@bind-Index](https://help.sync
 
 {% endhighlight %}
 
-![Blazor ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)
+![Blazor ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.webp)
 
 ## Primitive type binding
 
@@ -52,7 +52,7 @@ The following code demonstrates array of string as datasource to the ComboBox co
 
 {% endhighlight %}
 
-![Blazor ComboBox with Primitive Type as string](./images/value-binding/blazor_combobox_primitive-type-string.png)
+![Blazor ComboBox with Primitive Type as string](./images/value-binding/blazor_combobox_primitive-type-string.webp)
 
 The following code demonstrates an array of int as the data source for the ComboBox component.
 
@@ -62,7 +62,7 @@ The following code demonstrates an array of int as the data source for the Combo
 
 {% endhighlight %}
 
-![Blazor ComboBox with Primitive Type as int](./images/value-binding/blazor_combobox_primitive-type-int.png)
+![Blazor ComboBox with Primitive Type as int](./images/value-binding/blazor_combobox_primitive-type-int.webp)
 
 ## Object binding
 
@@ -76,7 +76,7 @@ In the following example, the Name column is mapped to the Value field.
 
 {% endhighlight %}
 
-![Blazor ComboBox with object values](./images/value-binding/blazor_combobox_object-binding.png)
+![Blazor ComboBox with object values](./images/value-binding/blazor_combobox_object-binding.webp)
 
 ## Enum binding
 
@@ -88,7 +88,7 @@ Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sy
 
 {% endhighlight %}
 
-![Blazor ComboBox with Enum Data](./images/value-binding/blazor_combobox_enum-binding.png)
+![Blazor ComboBox with Enum Data](./images/value-binding/blazor_combobox_enum-binding.webp)
 
 ## Show or hide clear button
 
@@ -104,7 +104,7 @@ The following sample demonstrates using string as TValue. Clearing the value set
 
 {% endhighlight %}
 
-![Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)
+![Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.webp)
 
 ## Dynamically change TItem
 
