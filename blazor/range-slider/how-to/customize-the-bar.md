@@ -226,4 +226,4 @@ You can enhance the Blazor Range Slider by defining different track colors for s
 
 ```
 
-![Blazor Range Slider with track color](./../images/blazor-rangeslider-track.png)
+![Blazor Range Slider with track color](./../images/blazor-rangeslider-track.webp)

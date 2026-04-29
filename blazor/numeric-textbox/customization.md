@@ -19,7 +19,7 @@ Make the Numeric TextBox non-editable by setting the Readonly property. In read-
 </SfNumericTextBox>
 ```
 
-![Blazor Numeric TextBox](./images/blazor-numericte-xtbox-customization.png)
+![Blazor Numeric TextBox](./images/blazor-numericte-xtbox-customization.webp)
 
 ## Disable interaction in input
 
