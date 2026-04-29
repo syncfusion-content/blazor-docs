@@ -36,4 +36,4 @@ The following code example initializes the TimePicker component in `Arabic` cult
 ```
 
 
-![Right to Left in Blazor TimePicker](./images/blazor-timepicker-right-to-left.png)
+![Right to Left in Blazor TimePicker](./images/blazor-timepicker-right-to-left.webp)
