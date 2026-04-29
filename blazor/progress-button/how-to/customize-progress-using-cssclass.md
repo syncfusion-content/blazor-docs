@@ -32,4 +32,4 @@ Reverse progress can also be shown by adding a custom class through the [CssClas
 
 ```
 
-![Customizing Progress in Blazor ProgressButton](./../images/blazor-progressbutton-customization.png)
+![Customizing Progress in Blazor ProgressButton](./../images/blazor-progressbutton-customization.webp)
