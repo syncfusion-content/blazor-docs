@@ -24,4 +24,4 @@ The following example illustrates how to disable support in Toggle Switch Button
 
 ```
 
-![Blazor Toggle Switch Button in Disable State](./../images/blazor-toggle-switch-button-disable-state.png)
+![Blazor Toggle Switch Button in Disable State](./../images/blazor-toggle-switch-button-disable-state.webp)

@@ -40,4 +40,4 @@ The following example demonstrates how to enable right-to-left support in the Sp
   
 ```
 
-![Right to Left in Blazor SplitButton](./../images/blazor-splitbutton-right-to-left.png)
+![Right to Left in Blazor SplitButton](./../images/blazor-splitbutton-right-to-left.webp)
