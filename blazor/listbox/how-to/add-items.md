@@ -49,7 +49,7 @@ Use the [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-![Adding Items in Blazor ListBox](./../images/blazor-listbox-add-items.png)
+![Adding Items in Blazor ListBox](./../images/blazor-listbox-add-items.webp)
 
 ## Remove items from the listbox
 
@@ -95,4 +95,4 @@ Use the [RemoveItemAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-![Removing Items in Blazor ListBox](./../images/blazor-listbox-remove-items.png)
+![Removing Items in Blazor ListBox](./../images/blazor-listbox-remove-items.webp)
