@@ -123,4 +123,4 @@ In the following code, dialog footer buttons are customized with icons using the
 
 
 
-![Adding Icons to Blazor Dialog Button](../images/blazor-dialog-button-with-icon.webp)
+![Adding Icons to Blazor Dialog Button](../images/blazor-dialog-button-with-icon.png)

@@ -128,4 +128,4 @@ You can customize the dialog appearance by providing dialog template as string o
 
 
 
-![Customizing Blazor Dialog Appearance](../images/dialog-custom-apperance.webp)
+![Customizing Blazor Dialog Appearance](../images/dialog-custom-apperance.png)
