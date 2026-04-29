@@ -32,4 +32,4 @@ In the following example, the `e-round-corner` class sets a `5px` `border-radius
 
 ```
 
-![Blazor DropDownMenu with Rounded Corner](./../images/blazor-dropdownmenu-with-rounded-corner.png)
+![Blazor DropDownMenu with Rounded Corner](./../images/blazor-dropdownmenu-with-rounded-corner.webp)

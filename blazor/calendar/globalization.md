@@ -34,4 +34,4 @@ The following code example initializes the Calendar component in `Arabic` cultur
 ```
 
 
-![Right to left in Blazor Calendar](./images/blazor-calendar-right-to-left.png)
+![Right to left in Blazor Calendar](./images/blazor-calendar-right-to-left.webp)

@@ -65,4 +65,4 @@ In the following example, the dialog opens when selecting the Update item.
 
 ```
 
-![Opening a dialog from a Blazor SplitButton popup item Popup Item Click](./../images/blazor-splitbutton-dialog.png)
+![Opening a dialog from a Blazor SplitButton popup item Popup Item Click](./../images/blazor-splitbutton-dialog.webp)

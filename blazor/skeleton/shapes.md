@@ -25,7 +25,7 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Circle Shape](./images/Blazor-skeleton-circle-shape.png)
+![Blazor Skeleton Circle Shape](./images/Blazor-skeleton-circle-shape.webp)
 
 ## Square skeleton shape
 
@@ -39,7 +39,7 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Square Shape](./images/Blazor-skeleton-square.png)
+![Blazor Skeleton Square Shape](./images/Blazor-skeleton-square.webp)
 
 ## Rectangle skeleton shape
 
@@ -53,7 +53,7 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Rectangle Shape](./images/Blazor-skeleton-rectangle-shape.png)
+![Blazor Skeleton Rectangle Shape](./images/Blazor-skeleton-rectangle-shape.webp)
 
 ## Text skeleton shape
 
@@ -67,7 +67,7 @@ The Skeleton component supports the following content shapes:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Text Shape](./images/Blazor-skeleton-text-shape.png)
+![Blazor Skeleton Text Shape](./images/Blazor-skeleton-text-shape.webp)
 
 Below example demonstrates the above functionalities of a Skeleton component.
 
@@ -123,4 +123,4 @@ Below example demonstrates the above functionalities of a Skeleton component.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Shapes](./images/Blazor-skeleton-shape.png)
+![Blazor Skeleton Shapes](./images/Blazor-skeleton-shape.webp)

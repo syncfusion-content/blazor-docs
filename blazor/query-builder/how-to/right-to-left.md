@@ -52,4 +52,4 @@ Right-to-left (RTL) support mirrors the text direction and layout of the Query B
 
 ```
 
-![Right to left in Blazor Query Builder](./../images/blazor-querybuilder-right-to-left.png)
+![Right to left in Blazor Query Builder](./../images/blazor-querybuilder-right-to-left.webp)

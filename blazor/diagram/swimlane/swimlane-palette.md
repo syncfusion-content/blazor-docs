@@ -113,7 +113,7 @@ The following code shows how to add lanes and phases to a palette.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlanePalette/SwimlanePalette.razor)
 
-![Swimlane SymbolPalette Shapes](Swimlane-images/Swimlane_SymbolPalette.PNG)
+![Swimlane SymbolPalette Shapes](Swimlane-images/Swimlane_SymbolPalette.webp)
 
 ## How to Drag and Drop Swimlane Shapes from the Symbol Palette
 
@@ -123,4 +123,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The following image shows dragging a symbol from the palette.
 
-![Drag Symbol from Palette](Swimlane-images/Symbol_palette.gif)
+![Drag Symbol from Palette](Swimlane-images/Symbol_palette.webp)

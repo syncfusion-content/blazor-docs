@@ -29,4 +29,4 @@ In the following demonstration sample, the items in the data source are intentio
 
 {% endhighlight %}
 
-![Blazor AutoComplete sorted in descending order using SortOrder](./images/sorting/blazor_autocomplete_sorting.png)
+![Blazor AutoComplete sorted in descending order using SortOrder](./images/sorting/blazor_autocomplete_sorting.webp)

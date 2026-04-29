@@ -21,7 +21,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-![Blazor AutoComplete with local data filtering](./images/filtering/blazor_autocomplete_local-data.png)
+![Blazor AutoComplete with local data filtering](./images/filtering/blazor_autocomplete_local-data.webp)
 
 ## Remote data
 
@@ -35,7 +35,7 @@ The code below demonstrates the filtering functionality with [`ODataAdaptor`](ht
 
 {% endhighlight %}
 
-![Blazor AutoComplete with remote data filtering](./images/filtering/blazor_autocomplete_remote-data.png)
+![Blazor AutoComplete with remote data filtering](./images/filtering/blazor_autocomplete_remote-data.webp)
 
 ## Debounce delay
 
@@ -69,7 +69,7 @@ In the following example, `StartsWith` filter type has been mapped to the `Filte
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.webp)" %}
 
 ## Minimum length
 
@@ -83,7 +83,7 @@ In the following example, the search data will not be fetched (for either local 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.webp)" %}
 
 ## Multi-column filtering
 
@@ -95,7 +95,7 @@ The AutoComplete component can visually present data across multiple columns. Th
 
 {% endhighlight %}
 
-![Blazor AutoComplete with multi-column display](./images/filtering/blazor_autocomplete_multi-column.png)
+![Blazor AutoComplete with multi-column display](./images/filtering/blazor_autocomplete_multi-column.webp)
 
 Achieve filtering across multiple data fields by passing a list of [`predicates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [`And`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [`Or`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [`WhereFilters`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html).
 
@@ -137,7 +137,7 @@ Refer to the following example to restrict the suggestion list to 3 items.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.webp)" %}
 
 ## AutoComplete with Google search results
 
@@ -155,7 +155,7 @@ The Blazor AutoComplete component offers functionality for displaying Google-lik
 
 Highlight the search text within the suggested list items of the AutoComplete component by setting the [`Highlight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_Highlight) property to `true`. When enabled, characters that match the search query in the list items will be visually emphasized.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.webp)" %}
 
 ### Highlighting search characters using a method
 
@@ -172,4 +172,4 @@ Programmatically highlight the search text in the suggested list items of the Au
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.webp)" %}
