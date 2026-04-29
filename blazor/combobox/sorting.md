@@ -27,4 +27,4 @@ In the following sample, items in the data source are initially in random order.
 
 {% endhighlight %}
 
-![Blazor ComboBox with SortOrder descending](./images/sorting/blazor_combobox_sorting.png)
+![Blazor ComboBox with SortOrder descending](./images/sorting/blazor_combobox_sorting.webp)
