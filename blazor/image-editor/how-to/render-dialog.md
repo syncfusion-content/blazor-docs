@@ -66,4 +66,4 @@ Rendering the Image Editor in a dialog displays the component within a modal win
 }
 ```
 
-![Blazor Image Editor rendered in a dialog](../images/blazor-image-editor-dialog.jpg)
+![Blazor Image Editor rendered in a dialog](../images/blazor-image-editor-dialog.webp)

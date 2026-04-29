@@ -60,7 +60,7 @@ Here is an example of resizing the image using the `ImageResizeAsync` method.
 }
 ```
 
-![Blazor Image Editor with a resized image](./images/blazor-image-editor-resize.jpg)
+![Blazor Image Editor with a resized image](./images/blazor-image-editor-resize.webp)
 
 ## Resizing event
 
