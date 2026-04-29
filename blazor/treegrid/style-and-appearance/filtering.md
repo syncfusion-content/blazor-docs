@@ -238,9 +238,9 @@ Change properties like **font-family**, **background-color**, and **border** to 
 
 ![Filter dialog buttons](../images/style-and-appearance/filter-dialog-button-element.webp)
 
-## Customize the Excel-style number filter menu
+## Customize the Excel-style filter menu
 
-The **.e-contextmenu-container ul** class inside **.e-filter-popup** styles the number filter list in the Excel-style filter dialog. Apply CSS to change its appearance:
+The **.e-contextmenu-container ul** class inside **.e-filter-popup** styles the filter list in the Excel-style filter dialog. Apply CSS to change its appearance:
 
 ```css
 .e-treegrid .e-filter-popup .e-contextmenu-container ul {
