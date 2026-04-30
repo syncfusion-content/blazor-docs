@@ -49,12 +49,13 @@ Understanding the architectural differences between WinForms and Syncfusion® Bl
 
 When migrating from WinForms to Blazor, one of the first changes you will notice is the project structure. WinForms applications are designed for desktop environments, whereas Blazor applications follow a component‑based web architecture. Understanding how files and responsibilities map between the two frameworks helps simplify the migration process.
 
-| WinForms | Blazor | Description |
+
+| **WinForms** | **Blazor** | **Description** |
 |---|---|---|
 | `Program.cs` | `Program.cs` | Defines the application entry point and configures startup logic |
 | `Form1.cs` | `Pages/*.razor` | Represents a UI page or view |
-| `Form1.Designer.cs` | Defines the UI layout and component hierarchy |
-| UserControl | Razor component | Reusable UI components |
+| `Form1.Designer.cs` | `.razor` markup section | Defines the UI layout and component hierarchy |
+| `UserControl` | Razor component (`.razor`) | Reusable UI components |
 | Event handlers | Component methods | Handles UI events, typically implemented as async methods |
 
 ## Creating a Blazor project
