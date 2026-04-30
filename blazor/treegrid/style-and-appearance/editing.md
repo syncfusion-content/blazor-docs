@@ -202,10 +202,13 @@ The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes st
 
 ```css
 
-.e-treegrid .e-delete::before ,.e-treegrid .e-cancel-icon::before{
+.e-treegrid .e-unboundcelldiv .e-delete::before,
+.e-treegrid .e-unboundcelldiv .e-cancel-icon::before {
     color: #f51717;
 }
-.e-treegrid .e-edit::before, .e-treegrid .e-update::before {
+
+.e-treegrid .e-unboundcelldiv .e-edit::before,
+.e-treegrid .e-unboundcelldiv .e-update::before {
     color: #077005;
 }
 
@@ -239,10 +242,13 @@ Style properties like **color**, **font-size**, and **font-weight** can be adjus
     </TreeGridColumns>
 </SfTreeGrid>
 <style>
-    .e-treegrid .e-delete::before ,.e-treegrid .e-cancel-icon::before{
+    .e-treegrid .e-unboundcelldiv .e-delete::before,
+    .e-treegrid .e-unboundcelldiv .e-cancel-icon::before {
         color: #f51717;
     }
-    .e-treegrid .e-edit::before, .e-treegrid .e-update::before {
+
+    .e-treegrid .e-unboundcelldiv .e-edit::before,
+    .e-treegrid .e-unboundcelldiv .e-update::before {
         color: #077005;
     }
 </style>

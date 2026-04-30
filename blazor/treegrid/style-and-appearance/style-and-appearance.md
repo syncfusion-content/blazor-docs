@@ -48,7 +48,6 @@ The following table lists all CSS classes available in the TreeGrid for styling 
 | | e-table | Styles for the table of the content. Makes table width 100%. |
 | | e-altrow | Styles for alternate rows of the TreeGrid. Override alternate row colors here. |
 | | e-rowcell | Styles for all cells in the TreeGrid. Override cell appearance and styling. |
-| | e-groupcaption | Styles for the **td** element of group captions. Change background color of caption cells. |
 | | e-selectionbackground | Styles for selected rowcells of the TreeGrid. Override selection appearance. |
 | | e-hover | Styles added to rows when hovering over TreeGrid rows. |
 | **Pager** | e-pager | Styles for the root element of the pager. Change appearance, background color, and font color. |
