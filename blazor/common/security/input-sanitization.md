@@ -11,7 +11,7 @@ documentation: ug
 
 ## What is input sanitization?
 
-**Input sanitization** is the process of filtering and cleaning HTML content from untrusted sources. It removes unsafe tags (like `<script>`), inline scripts (JavaScript code embedded directly in HTML attributes), event handlers (such as `onclick`), and dangerous URLs (malicious javascript links). Only safe and valid markup is preserved.
+**Input sanitization** is the process of filtering and cleaning HTML content from untrusted sources. It removes unsafe tags (like `<script>`), inline scripts (JavaScript code embedded directly in HTML attributes), event handlers (such as `onclick`), and dangerous URLs (malicious JavaScript links). Only safe and valid markup is preserved.
 
 For plain text(such as a letter, number, symbols), input sanitization ensures special characters are treated as normal text so the browser does not execute them as HTML or code.
 
@@ -32,14 +32,14 @@ Sanitizing user input ensures that only safe and expected values are stored or d
 
 | Attacks | Description | Prevention |
 |--------|-------------|------------|
-| Cross-Site Scripting (XSS) | Malicious scripts are injected (e.g., event attributes like onclick, or javascript: URLs) and execute in the user’s browser. Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components such as the RTE. For plain text inputs, use HTML encoding (e.g., `HtmlEncoder.Default.Encode()`).|
+| Cross-Site Scripting (XSS) | Malicious scripts are injected (e.g., event attributes like onclick, or JavaScript: URLs) and execute in the user’s browser. Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components such as the RTE. For plain text inputs, use HTML encoding (e.g., `HtmlEncoder.Default.Encode()`).|
 | HTML Injection | Unwanted markup changes layout or behavior (e.g., injecting unexpected `<div>`, `<style>`, or risky attributes). Example: `<iframe src="phish-site.com"></iframe>`. | The built‑in sanitizer removes unsafe tags and attributes and helps avoid rendering raw HTML from untrusted sources. |
 
 ## Built-in sanitization features
 
 Several Syncfusion Blazor components include HTML sanitization capabilities to prevent harmful script or markup from being processed. Components that accept or render HTML content such as the [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering. Components like [Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip), [Toast](https://www.syncfusion.com/blazor-components/blazor-toast), and [Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) automatically apply sanitization when rendering HTML templates. For [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), manual encoding is recommended for user-provided content. This ensures that any user provided HTML is safe.
 
-In the example shown, the sanitizer removes embedded scripts and event based attacks to prevent malicious code execution. It strips `<script>` tags, inline event handlers, javascript URLs, and dangerous elements like `<iframe>` or `<object>` to ensure that only safe HTML is displayed.
+In the example shown, the sanitizer removes embedded scripts and event based attacks to prevent malicious code execution. It strips `<script>` tags, inline event handlers, JavaScript URLs, and dangerous elements like `<iframe>` or `<object>` to ensure that only safe HTML is displayed.
 
 ```cshtml
 <!-- User input -->
@@ -120,7 +120,7 @@ The [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-edi
 {% endhighlight %}
 {% endtabs %}
 
-When the `EnableHtmlSanitizer` property is enabled, the Block Editor automatically removes unsafe tags and attributes such as `<script>` tags, event attributes (like onload, onclick), javascript: URLs, and other harmful markup before rendering content. This ensures that only clean and trusted HTML remains in the editor output.
+When the `EnableHtmlSanitizer` property is enabled, the Block Editor automatically removes unsafe tags and attributes such as `<script>` tags, event attributes (like onload, onclick), JavaScript: URLs, and other harmful markup before rendering content. This ensures that only clean and trusted HTML remains in the editor output.
 
 #### Disabling the EnableHtmlSanitizer
 
