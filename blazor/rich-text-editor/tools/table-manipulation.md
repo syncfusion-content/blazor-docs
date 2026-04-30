@@ -194,7 +194,7 @@ The Rich Text Editor offers a simple and intuitive way to add rows and columns t
 
 ### Insert rows instantly
 
-- **Where to hover**: Place your cursor over any cell in the **first column** of your cfcvtable.
+- **Where to hover**: Place your cursor over any cell in the **first column** of your table.
 - **What you'll see**: A small dot icon (●) will appear at the **left edge** of the cell.
 - **How to add**: Hover over the dot to reveal a **plus icon (+)**. Click it to insert a new row above.
 
