@@ -13,7 +13,7 @@ documentation: ug
 
 To insert an image from an online source like Google, Bing, and more, enable the images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows inserting an image from the online source.
 
-![Blazor RichTextEditor inserting image](../images/blazor-richtexteditor-insert-image.png)
+![Blazor RichTextEditor inserting image](../images/blazor-richtexteditor-insert-image.webp)
 
 ## Uploading and inserting images
 
@@ -124,7 +124,7 @@ namespace ImageUpload.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with image](../images/blazor-richtexteditor-image.png)
+![Blazor RichTextEditor with image](../images/blazor-richtexteditor-image.webp)
 
 #### Save image in application path
 
@@ -270,7 +270,7 @@ To delete an image from the Rich Text Editor, select the image and click the `Re
 
 After selecting the image from the local machine, the URL for the image will be generated. From there also, remove the image from the service location by clicking the cross icon as in the following image.
 
-![Blazor RichTextEditor removing image](../images/blazor-richtexteditor-remove-image.png)
+![Blazor RichTextEditor removing image](../images/blazor-richtexteditor-remove-image.webp)
 
 ## Deleting images from server using keyboard and quick toolbar actions
 
@@ -332,7 +332,7 @@ Sets the default width and height of the image when it is inserted in the Rich T
 
 You can also adjust the image dimensions using the `Change Size` option in the quick toolbar. After clicking the option, the image size will open as follows. In that, specify the width and height of the image in pixels.
 
-![Blazor RichTextEditor changing image dimension](../images/blazor-richtexteditor-image-size.png)
+![Blazor RichTextEditor changing image dimension](../images/blazor-richtexteditor-image-size.webp)
 
 ## Adding captions and alt text to images
 
@@ -368,13 +368,13 @@ N> It has two possible options: `Inline` and `Break`.
 
 The hyperlink itself can be an image in the Rich Text Editor. If the image is given as a hyperlink, the remove, edit, and open links will be added to the quick toolbar of the image as follows. For further details about the link, refer to the [link documentation](#link-manipulation).
 
-![Blazor RichTextEditor image with link](../images/blazor-richtexteditor-image-link.png)
+![Blazor RichTextEditor image with link](../images/blazor-richtexteditor-image-link.webp)
 
 ## Resizing images
 
 The Rich Text Editor has built-in image inserting support. The resize points will appear on each corner of the image when focused. So, users can easily resize the image using mouse points or their thumbs through the resize points. Also, the resize calculation will be done based on the aspect ratio.
 
-![Image Resizing in Blazor RichTextEditor](../images/blazor-richtexteditor-image-resize.png)
+![Image Resizing in Blazor RichTextEditor](../images/blazor-richtexteditor-image-resize.webp)
 
 ### Renaming images before inserting
 
