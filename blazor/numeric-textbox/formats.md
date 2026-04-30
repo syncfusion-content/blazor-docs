@@ -22,7 +22,7 @@ Use standard numeric format specifiers such as `N`, `P`, and `C` to display numb
 <SfNumericTextBox TValue="int?" Value=10 Format="c2" Placeholder="Currency format" FloatLabelType="@FloatLabelType.Auto"></SfNumericTextBox>
 ```
 
-![Blazor Numeric TextBox with standard format](./images/blazor-numerictextbox-standard-format.png)
+![Blazor Numeric TextBox with standard format](./images/blazor-numerictextbox-standard-format.webp)
 
 ## Custom formats
 
@@ -35,4 +35,4 @@ Combine custom numeric format specifiers to create tailored display patterns. Th
 <SfNumericTextBox TValue="int?" Value=10 Format="000.00" Placeholder="Custom format string 0" FloatLabelType="@FloatLabelType.Always"></SfNumericTextBox>
 ```
 
-![Blazor Numeric TextBox with custom format](./images/blazor-numerictextbox-custom-format.png)
+![Blazor Numeric TextBox with custom format](./images/blazor-numerictextbox-custom-format.webp)

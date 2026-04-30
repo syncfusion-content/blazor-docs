@@ -157,7 +157,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox componen
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox component in the default web browser. If build issues occur, restore packages and verify the installed .NET SDK version.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox component in Blazor WebAssembly](./images/blazor-textbox.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox component in Blazor WebAssembly](./images/blazor-textbox.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextBox).
 
@@ -211,7 +211,7 @@ The floating label lifts above the input when the TextBox is focused or contains
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with floating label in Blazor WebAssembly](./images/blazor-textbox-float-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with floating label in Blazor WebAssembly](./images/blazor-textbox-float-label.webp)" %}
 
 ## See also
 

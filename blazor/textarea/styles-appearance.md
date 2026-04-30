@@ -72,7 +72,7 @@ Applying these classes helps align the TextArea with the overall density and vis
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextArea with Sizing](./images/blazor-textarea-sizing.png)
+![Blazor TextArea with Sizing](./images/blazor-textarea-sizing.webp)
 
 ## Filled and outline mode
 
@@ -147,7 +147,7 @@ Render the TextArea with rounded corners by adding the `e-corner` class to the i
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextArea with Rounded Corner](./images/blazor-textarea-rounded-corner.png)
+![Blazor TextArea with Rounded Corner](./images/blazor-textarea-rounded-corner.webp)
 
 ## Static Clear Button
 
@@ -342,4 +342,4 @@ Add a mandatory asterisk (*) to the floating label using CSS to append a symbol 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextArea with asterisk appended to the floating label](./images/blazor-textarea-asterisk.png)
+![Blazor TextArea with asterisk appended to the floating label](./images/blazor-textarea-asterisk.webp)
