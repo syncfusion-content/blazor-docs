@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Notifications
+
 <SfSkeleton Height="15px" Width="200px"></SfSkeleton><br/>
 <SfSkeleton Height="15px" Width="100px"></SfSkeleton>
 
@@ -175,7 +177,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Skeleton component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfNWgXUFWfbEvA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfNWgXUFWfbEvA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 
@@ -185,6 +187,8 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Notifications
 
 <div style="width: 200px">
     <SfSkeleton Shape="SkeletonType.Circle" Width="48px" CssClass="custom-css"></SfSkeleton>
@@ -203,6 +207,6 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfDiqjgFiEILVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfDiqjgFiEILVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.webp)" %}
 
 N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/skeleton/defaultfunctionalities) that shows how to render and configure the skeleton.

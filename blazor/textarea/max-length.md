@@ -21,4 +21,4 @@ Use the [MaxLength property](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 When the limit is reached, the TextArea prevents further input from typing or pasting. Newline characters count toward the limit. For robust validation, also validate on the server or with model attributes (for example, MaxLength or StringLength). The Input event fires as the user types until the limit is reached, and ValueChange occurs on blur when the value is committed.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpDRsUCffyeOfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with MaxLength](./images/blazor-textarea-maxlength.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpDRsUCffyeOfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with MaxLength](./images/blazor-textarea-maxlength.webp)" %}

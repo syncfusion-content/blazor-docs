@@ -42,7 +42,7 @@ Here is an example of configuring image restrictions using the `ImageEditorUploa
 }
 ```
 
-![Blazor Image Editor with Image file type restriction](./images/blazor-image-editor-file-type-restrict.jpg)
+![Blazor Image Editor with Image file type restriction](./images/blazor-image-editor-file-type-restrict.webp)
 
 ## Minimum and maximum image size
 
@@ -74,4 +74,4 @@ Here is an example of configuring image restrictions using the `ImageEditorUploa
 }
 ```
 
-![Blazor Image Editor with Image file size restriction](./images/blazor-image-editor-file-size-restrict.jpg)
+![Blazor Image Editor with Image file size restriction](./images/blazor-image-editor-file-size-restrict.webp)

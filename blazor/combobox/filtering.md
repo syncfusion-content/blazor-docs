@@ -21,7 +21,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-![Blazor ComboBox with local data filtering](images/filtering/blazor-combobox-with-local-data-filtering.png)
+![Blazor ComboBox with local data filtering](images/filtering/blazor-combobox-with-local-data-filtering.webp)
 
 ## Remote data
 
@@ -65,7 +65,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 {% endhighlight %}
 
-![Blazor ComboBox with Filter Type](images/filtering/blazor-combobox-filter-type.png)
+![Blazor ComboBox with Filter Type](images/filtering/blazor-combobox-filter-type.webp)
 
 ## Minimum filter length
 
@@ -91,7 +91,7 @@ In the built-in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme fi
 
 {% endhighlight %}
 
-![Blazor ComboBox with Multi Column filtering.](images/filtering/blazor-combobox-multi-column.png)
+![Blazor ComboBox with Multi Column filtering.](images/filtering/blazor-combobox-multi-column.webp)
 
 Achieve multiple column(field) filtering by passing the list of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 

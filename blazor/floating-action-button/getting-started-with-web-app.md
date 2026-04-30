@@ -178,7 +178,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Floating Action Button component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLTtsVaAldOGCVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Floating Action Button Component](./images/blazor-fab-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLTtsVaAldOGCVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Floating Action Button Component](./images/blazor-fab-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
 
@@ -188,6 +188,8 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
@@ -203,7 +205,7 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTtMrOqlmTgqWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTtMrOqlmTgqWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.webp)" %}
 
 N> You can also explore our [Blazor Floating Action Button example](https://blazor.syncfusion.com/demos/fab/overview) that shows how to render and configure the button.
 

@@ -72,7 +72,7 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
 ```
 
-![Chart Wizard dimensions in percentage](images/chart-wizard-dimension-in-percentage.png)
+![Chart Wizard dimensions in percentage](images/chart-wizard-dimension-in-percentage.webp)
 
 ### In pixel
 
@@ -118,7 +118,7 @@ You can control the size of the `Chart Wizard` by specifying the `Width` and `He
 
 ```
 
-![Chart Wizard dimensions in pixel](images/chart-wizard-dimension-in-pixel.png)
+![Chart Wizard dimensions in pixel](images/chart-wizard-dimension-in-pixel.webp)
 
 
 ### Theme
@@ -167,7 +167,7 @@ The `Theme` property applies a built-in visual style to the chart. Choose from a
 
 ```
 
-![Chart Wizard appearance theme](images/chart-wizard-appearance-theme.png)
+![Chart Wizard appearance theme](images/chart-wizard-appearance-theme.webp)
 
 
 N> The `Theme` property applies the selected theme to the chart area, not the entire Chart Wizard UI. For a consistent look across the whole component, refer to the theme section in [Getting started](./getting-started.md).
@@ -219,7 +219,7 @@ Set `EnableRtl` to `true` to support right-to-left languages such as Arabic or H
 
 ```
 
-![Chart Wizard appearance RTL](images/chart-wizard-appearance-rtl.png)
+![Chart Wizard appearance RTL](images/chart-wizard-appearance-rtl.webp)
 
 
 ### PropertyPanelExpanded
@@ -268,7 +268,7 @@ The `PropertyPanelExpanded` property controls whether the property panel is open
 
 ```
 
-![Chart Wizard appearance property panel](images/chart-wizard-appearance-property-panel.png)
+![Chart Wizard appearance property panel](images/chart-wizard-appearance-property-panel.webp)
 
 
 

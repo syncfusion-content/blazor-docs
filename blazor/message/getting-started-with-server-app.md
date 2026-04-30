@@ -161,6 +161,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Notifications
+
 <SfMessage>Please read the comments carefully</SfMessage>
 <style>
     .e-message {
@@ -173,6 +175,6 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Message component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJNiKZLsAMXCNa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Message Component](./images/message-default.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJNiKZLsAMXCNa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Message Component](./images/message-default.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Message).

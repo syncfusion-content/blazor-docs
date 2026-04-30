@@ -58,7 +58,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ```
 
-![Printing in Blazor Accumulation Chart](images/print/blazor-accumulation-chart-printing.png)
+![Printing in Blazor Accumulation Chart](images/print/blazor-accumulation-chart-printing.webp)
 
 ## Export
 

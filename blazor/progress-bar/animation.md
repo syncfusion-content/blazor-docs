@@ -21,4 +21,4 @@ The progress bar supports animation, which can be enabled by setting the [Enable
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Animation](images/blazor-progressbar-animation.png)
+![Blazor ProgressBar with Animation](images/blazor-progressbar-animation.webp)

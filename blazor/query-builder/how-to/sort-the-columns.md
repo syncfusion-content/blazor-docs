@@ -55,4 +55,4 @@ Sort the field list shown in the Query Builder’s field (column) dropdown to im
 
 ```
 
-![Sorting in Blazor Query Builder](./../images/blazor-querybuilder-sorting.png)
+![Sorting in Blazor Query Builder](./../images/blazor-querybuilder-sorting.webp)

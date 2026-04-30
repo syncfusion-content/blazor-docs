@@ -41,7 +41,7 @@ Show only an icon in SpeedDial items by setting the [IconCss](https://help.syncf
 
 ```
 
-![Blazor SpeedDial with icons](./images/Blazor-SpeedDial-Icon.png)
+![Blazor SpeedDial with icons](./images/Blazor-SpeedDial-Icon.webp)
 
 ### Text Only
 
@@ -61,7 +61,7 @@ Show only text in SpeedDial items by setting the [Text](https://help.syncfusion.
 
 ```
 
-![Blazor SpeedDial with text](./images/Blazor-SpeedDial-Text.png)
+![Blazor SpeedDial with text](./images/Blazor-SpeedDial-Text.webp)
 
 ### Icon with Text
 
@@ -81,7 +81,7 @@ Show an icon along with text in SpeedDial items by setting both the [IconCss](ht
 
 ```
 
-![Blazor SpeedDial with icon and text](./images/Blazor-SpeedDial-Iconwithtext.png)
+![Blazor SpeedDial with icon and text](./images/Blazor-SpeedDial-Iconwithtext.webp)
 
 ### Disabled
 
@@ -101,7 +101,7 @@ Disable SpeedDial items by setting the [Disabled](https://help.syncfusion.com/cr
 
 ```
 
-![Blazor SpeedDial with a disabled item](./images/Blazor-SpeedDial-DisabledItem.png)
+![Blazor SpeedDial with a disabled item](./images/Blazor-SpeedDial-DisabledItem.webp)
 
 ## Animation
 
@@ -124,7 +124,7 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ```
 
-![Blazor SpeedDial animation](./images/Blazor-SpeedDial-Animation.png)
+![Blazor SpeedDial animation](./images/Blazor-SpeedDial-Animation.webp)
 
 ## Template
 
@@ -150,4 +150,4 @@ The following example shows SpeedDial items with HTML attributes.
 
 ```
 
-![Blazor SpeedDial with HTML attributes](./images/Blazor-SpeedDial-HTML-Attribute.png)
+![Blazor SpeedDial with HTML attributes](./images/Blazor-SpeedDial-HTML-Attribute.webp)
