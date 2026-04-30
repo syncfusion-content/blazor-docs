@@ -42,7 +42,7 @@ In the following example, `SortOrder` is set to `Descending`.
 
 ```
 
-![Blazor ListBox with items sorted in descending order](images/blazor-listbox-sorting.png)
+![Blazor ListBox with items sorted in descending order](images/blazor-listbox-sorting.webp)
 
 
 ## Grouping
@@ -83,4 +83,4 @@ To get started quickly with grouping in the Blazor ListBox component, you can ch
 }
 ```
 
-![Blazor ListBox with items grouped by category](images/blazor-listbox-grouping.png)
+![Blazor ListBox with items grouped by category](images/blazor-listbox-grouping.webp)

@@ -59,7 +59,7 @@ A primary ProgressButton uses a solid background to emphasize a primary action. 
 <SfProgressButton Content="Primary" IsPrimary="true"></SfProgressButton>
 ```
 
-![Blazor Primary ProgressButton](./images/blazor-primary-progress-button.png)
+![Blazor Primary ProgressButton](./images/blazor-primary-progress-button.webp)
 
 ## Icons
 
@@ -82,4 +82,4 @@ The ProgressButton can display an icon to visually represent the action. Assign 
 
 ```
 
-![Blazor ProgressButton with Icon](./images/blazor-progress-button-icon.png)
+![Blazor ProgressButton with Icon](./images/blazor-progress-button-icon.webp)

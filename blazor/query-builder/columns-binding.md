@@ -46,6 +46,7 @@ N> When columns are auto-generated, the column type is inferred from the first r
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVRNprwBwWoUTJX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder AutoGeneration](./images/blazor-querybuilder-autogeneration.webp)" %}
 
 ## Labels
 
@@ -111,6 +112,7 @@ N> By default, the `Step` value is 1.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLxjzBwrwhqGCTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder Step](./images/blazor-querybuilder-step.webp)" %}
 
 N> You can also explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to learn how to render and configure the Query Builder.
 
@@ -155,7 +157,7 @@ In the following sample, the date field is formatted as `MM-yyyy-dd` and the num
 
 ```
 
-![Formatting in Blazor QueryBuilder](./images/blazor-querybuilder-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLxZJLcVwgXzpLf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder Format](./images/blazor-querybuilder-format.webp)" %}
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 
@@ -196,5 +198,4 @@ N> You can set `Min` and `Max` values for numeric fields using `QueryBuilderColu
 }
 
 ```
-
-![Validation in Blazor QueryBuilder](./images/blazor-querybuilder-validation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRDJBwLQUENnOY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor QueryBuilder AutoGeneration](./images/blazor-querybuilder-validation.webp)" %}
