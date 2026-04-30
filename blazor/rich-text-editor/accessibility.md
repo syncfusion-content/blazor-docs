@@ -67,7 +67,7 @@ The Blazor Rich Text Editor element is assigned the `application` role.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with accessibility](./images/blazor-richtexteditor-accessibility.png)
+![Blazor RichTextEditor with accessibility](./images/blazor-richtexteditor-accessibility.webp)
 
 ## Keyboard interaction
 

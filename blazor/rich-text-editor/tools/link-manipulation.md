@@ -15,7 +15,7 @@ The hyperlink can be inserted into the editor for quick access to the related in
 
 Point the cursor anywhere within the editor where you want to insert the link. It is also possible to select a text or an image within the editor that can be converted to the hyperlink. Click the insert hyperLink tool on the toolbar. The insert link dialog will open. The dialog has the following options.
 
-![Blazor Rich Text Editor insert link](../images/blazor-richtexteditor-insert-link.png)
+![Blazor Rich Text Editor insert link](../images/blazor-richtexteditor-insert-link.webp)
 
 | Options | Description |
 |----------------|--------------------------------------|
@@ -34,7 +34,7 @@ N> The Rich Text Editor link tool validates the URLs as you type them in the web
 {% endhighlight %}
 {% endtabs %}
 
-![Link icon displayed in Blazor Rich Text Editor toolbar](../images/blazor-richtexteditor-link-icon.png)
+![Link icon displayed in Blazor Rich Text Editor toolbar](../images/blazor-richtexteditor-link-icon.webp)
 
 ## Enable auto-linking
 
@@ -56,7 +56,7 @@ Add the custom tools on the selected link inside the Rich Text Editor through th
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor link quick toolbar](../images/blazor-richtexteditor-link-quick-toolbar.png)
+![Blazor Rich Text Editor link quick toolbar](../images/blazor-richtexteditor-link-quick-toolbar.webp)
 
 ## See also
 
