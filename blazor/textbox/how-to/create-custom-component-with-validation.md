@@ -37,6 +37,6 @@ An `EditForm` with a bound model is declared in the main Razor page. Inside the 
 
 The `SfTooltip` wraps the `CustomTextBox`, and the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) is set to the `id` of an element within the custom component so that the tooltip anchors to that input. Place `ValidationMessage` inside the [`TooltipTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.TooltipTemplates.html) to display validation errors within the tooltip for the same bound property.
 
-![Custom Component with Tooltip Validation Using Blazor TextBox](../images/blazor-textBox-custom-component-with-validation.png)
+![Custom Component with Tooltip Validation Using Blazor TextBox](../images/blazor-textBox-custom-component-with-validation.webp)
 
 T> To avoid empty tooltips, conditionally show the tooltip only when there is validation content (for example, by checking text content in the `OnOpen` event). Also ensure errors are conveyed to all users: do not rely on color or tooltip alone; consider setting `aria-invalid="true"` on the input and keeping a `ValidationMessage` visible for screen readers.

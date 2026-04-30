@@ -52,7 +52,7 @@ N> The Title or `Content` property can be given as HTML Element/element ID to a 
 
 ```
 
-![Blazor Toast with Button](./images/blazor-toast-with-button.png)
+![Blazor Toast with Button](./images/blazor-toast-with-button.webp)
 
 ## Specifying custom target
 
@@ -161,7 +161,7 @@ Here, the following sample demonstrates the combination of the `Target`, `ShowCl
 
 ```
 
-![Blazor Toast with ProgressBar](./images/blazor-toast-with-progressbar.png)
+![Blazor Toast with ProgressBar](./images/blazor-toast-with-progressbar.webp)
 
 ## Width and height
 
@@ -272,7 +272,7 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 
 ```
 
-![Changing Blazor Toast Size](./images/blazor-toast-size.png)
+![Changing Blazor Toast Size](./images/blazor-toast-size.webp)
 
 ## Show or hide toast using service
 

@@ -343,7 +343,7 @@ Convert the current rules to a structured JSON object using the [`GetRules`](htt
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxDfLGyJXonqoe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/drag-and-drop.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhRtfLvWeJGITXK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/exporting-json.webp)" %}
 
 ### Exporting to SQL Query
 
@@ -402,7 +402,6 @@ Exporting to Inline SQL Query entails embedding the defined conditions from the 
  }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxDfLGyJXonqoe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/drag-and-drop.webp)" %}
 
 #### Exporting to Parameter SQL Query
 
@@ -457,7 +456,6 @@ Generate SQL with positional parameters using [`GetParameterSql`](https://help.s
  }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxDfLGyJXonqoe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/drag-and-drop.webp)" %}
 
 #### Exporting to Named Parameter SQL Query
 
@@ -512,7 +510,6 @@ Generate SQL with named parameters using [`GetNamedParameterSql`](https://help.s
  }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxDfLGyJXonqoe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/drag-and-drop.webp)" %}
 
 ### Exporting to MongoDB Query
 
@@ -567,6 +564,5 @@ Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https:
  }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhxDfLGyJXonqoe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a data Binding](./images/drag-and-drop.webp)" %}
 
 N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.

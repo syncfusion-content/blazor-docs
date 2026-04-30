@@ -163,7 +163,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Split Button com
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Split Button component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzDWqZppKquUiR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Split Button Component](./images/blazor-splitbutton.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzDWqZppKquUiR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Split Button Component](./images/blazor-splitbutton.webp)" %}
 
 ## See also
 

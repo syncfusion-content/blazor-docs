@@ -57,7 +57,7 @@ Here is an example of square selection using the `SelectAsync` method.
 }
 ```
 
-![Blazor Image Editor with Square select](./images/blazor-image-editor-custom-square.jpg)
+![Blazor Image Editor with Square select](./images/blazor-image-editor-custom-square.webp)
 
 ## Insert selection based on aspect ratio 
 
@@ -98,7 +98,7 @@ Here is an example of ratio selection using the `SelectAsync` method.
 }
 ```
 
-![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.jpg)
+![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.webp)
 
 ## Crop an image
 
@@ -134,7 +134,7 @@ Here is an example of circle cropping using the `SelectAsync` and `CropAsync` me
 }
 ```
 
-![Blazor Image Editor with Crop an image](./images/blazor-image-editor-crop.jpg)
+![Blazor Image Editor with Crop an image](./images/blazor-image-editor-crop.webp)
 
 ## Cropping event
 
@@ -175,7 +175,7 @@ In the image editor, a cropped image is typically enlarged or scaled for better 
 }
 ```
 
-![Blazor Image Editor with Crop an image](./images/blazor-image-editor-original-size.jpg)
+![Blazor Image Editor with Crop an image](./images/blazor-image-editor-original-size.webp)
 
 ## SelectionResize events
 
@@ -216,7 +216,7 @@ During cropping, selection handles are available at corners and edges for resizi
 }
 ```
 
-![Blazor Image Editor with Crop an image](./images/blazor-image-editor-lock-selection-area.jpg)
+![Blazor Image Editor with Crop an image](./images/blazor-image-editor-lock-selection-area.webp)
 
 ### Cropping with custom ratio selection
 
@@ -255,7 +255,7 @@ Here is an example of cropping with a custom ratio selection using the `OnSelect
 }
 ```
 
-![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.jpg)
+![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.webp)
 
 ## See Also
 

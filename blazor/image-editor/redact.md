@@ -104,4 +104,4 @@ The following example demonstrates how to draw, select, delete, update, and get 
 }
 ```
 
-![Blazor Image Editor with Redaction](./images/blazor-image-editor-redact.jpg)
+![Blazor Image Editor with Redaction](./images/blazor-image-editor-redact.webp)

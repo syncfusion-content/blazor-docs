@@ -25,7 +25,7 @@ Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sf
 
 ```
 
-![Blazor OTP input component with number type](images/blazor-otp-number.png)
+![Blazor OTP input component with number type](images/blazor-otp-number.webp)
 
 ### Text type
 
@@ -39,7 +39,7 @@ Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sf
 
 ```
 
-![Blazor OTP input component with text type](images/blazor-otp-text.png)
+![Blazor OTP input component with text type](images/blazor-otp-text.webp)
 
 ### Password type
 
@@ -53,7 +53,7 @@ Set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sf
 
 ```
 
-![Blazor OTP input component with password type](images/blazor-otp-password.png)
+![Blazor OTP input component with password type](images/blazor-otp-password.webp)
 
 ## Value
 
@@ -67,4 +67,4 @@ Specify the initial OTP value by using the [Value](https://help.syncfusion.com/c
 
 ```
 
-![Blazor OTP input component with value](images/blazor-otp-number.png)
+![Blazor OTP input component with value](images/blazor-otp-number.webp)

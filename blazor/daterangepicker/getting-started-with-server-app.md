@@ -170,7 +170,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DateRangePicker component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhTZCBOqWgwMmva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhTZCBOqWgwMmva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.webp)" %}
 
 ## Setting the Min and Max
 
@@ -191,7 +191,7 @@ The minimum and maximum date range can be defined with the help of [Min](https:/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrztiraUCJLpmHG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrztiraUCJLpmHG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DateRangePicker).
 

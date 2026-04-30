@@ -47,7 +47,7 @@ Use `RenderTreeBuilder` to construct a component tree programmatically. In the f
 
 ```
 
-![Blazor TextBox with Render TreeBuilder](../images/blazor-textbox-render-fragment.png)
+![Blazor TextBox with Render TreeBuilder](../images/blazor-textbox-render-fragment.webp)
 
 ## Dynamic rendering using RenderFragment
 
@@ -89,4 +89,4 @@ Use a `RenderFragment` when you want to reuse a templated block and update param
 ```
 
 
-![Blazor TextBox updated with RenderFragment](../images/blazor-textbox-render-fragment.png)
+![Blazor TextBox updated with RenderFragment](../images/blazor-textbox-render-fragment.webp)

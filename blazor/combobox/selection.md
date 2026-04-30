@@ -37,7 +37,7 @@ Bind the preselected value to the ComboBox component using the [@bind-Value](htt
 
 {% endhighlight %}
 
-![Blazor ComboBox with preselect value](./images/selection/blazor_combobox_preselect-value.png)
+![Blazor ComboBox with preselect value](./images/selection/blazor_combobox_preselect-value.webp)
 
 ## Programmatically change the selected value
 
@@ -85,7 +85,7 @@ The following sample shows how to bind the index on initial rendering.
 
 {% endhighlight %}
 
-![Blazor ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.png)
+![Blazor ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.webp)
 
 ## Autofill the selected value
 

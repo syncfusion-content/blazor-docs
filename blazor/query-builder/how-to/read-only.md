@@ -43,4 +43,4 @@ The Readonly property disables user interactions in the QueryBuilder, preventing
 
 ```
 
-![Readonly mode in Blazor QueryBuilder](./../images/blazor-querybuilder-readonly.png)
+![Readonly mode in Blazor QueryBuilder](./../images/blazor-querybuilder-readonly.webp)

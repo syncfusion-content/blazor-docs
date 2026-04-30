@@ -170,7 +170,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox component in Blazor Server](./images/blazor-textbox.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox component in Blazor Server](./images/blazor-textbox.webp)" %}
 
 ## Adding icons to the Blazor TextBox
 
@@ -206,7 +206,7 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryXaVqqmBfrsXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with icon in Blazor Server](./images/blazor-textbox-icons.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryXaVqqmBfrsXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with icon in Blazor Server](./images/blazor-textbox-icons.webp)" %}
 
 ## Floating label
 
@@ -222,7 +222,7 @@ The floating label moves above the input when the TextBox is focused or contains
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with floating label in Blazor Server](./images/blazor-textbox-float-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with floating label in Blazor Server](./images/blazor-textbox-float-label.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextBox).
 

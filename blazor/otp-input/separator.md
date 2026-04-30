@@ -19,4 +19,4 @@ The separator in the OTP input component is the character or string rendered bet
 
 ```
 
-![Blazor OTP Input Component with Separator](images/blazor-otp-separator.png)
+![Blazor OTP Input Component with Separator](images/blazor-otp-separator.webp)
