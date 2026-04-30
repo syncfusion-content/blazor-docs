@@ -31,7 +31,7 @@ N> The multiline TextBox allows resizing in the vertical direction only by defau
 </style>
 ```
 
-![Blazor Multiline TextBox](./images/blazor-multiline-textbox.png)
+![Blazor Multiline TextBox](./images/blazor-multiline-textbox.webp)
 
 ## Implementing floating label
 
@@ -63,7 +63,7 @@ Floating label behavior can be applied to a multiline TextBox by setting [FloatL
 </style>
 ```
 
-![Blazor Multiline TextBox with Floating Label](./images/blazor-textbox-multiline-float-label.png)
+![Blazor Multiline TextBox with Floating Label](./images/blazor-textbox-multiline-float-label.webp)
 
 ## Disable resizing
 
@@ -86,4 +86,4 @@ textarea.e-input,
 <SfTextBox Multiline=true FloatLabelType="@FloatLabelType.Auto" Placeholder="Enter your address"></SfTextBox>
 ```
 
-![Disable Resizing in Blazor TextBox](./images/blazor-textbox-disable-resizing.png)
+![Disable Resizing in Blazor TextBox](./images/blazor-textbox-disable-resizing.webp)

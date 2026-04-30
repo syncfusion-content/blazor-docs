@@ -32,4 +32,4 @@ Small | Apply the e-small CSS class to the component using the CssClass property
 <SfTextBox Placeholder="Focus the input" CssClass="e-small" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![Changing Blazor TextBox size](./images/blazor-textbox-change-size.png)
+![Changing Blazor TextBox size](./images/blazor-textbox-change-size.webp)

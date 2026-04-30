@@ -71,7 +71,7 @@ You can customize the background color of the container element for the DatePick
 {% endhighlight %}
 {% endtabs %}
 
-![DatePicker with background color](./images/blazor-datepicker-background_color.png)
+![DatePicker with background color](./images/blazor-datepicker-background_color.webp)
 
 ## Full screen mode support in mobiles and tablets
 

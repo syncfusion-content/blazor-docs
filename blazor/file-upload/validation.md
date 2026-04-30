@@ -26,7 +26,7 @@ Allow only specific file types by setting the [AllowedExtensions](https://help.s
 </SfUploader>
 ```
 
-![Validation in Blazor FileUpload](./images/blazor-fileupload-validation.png)
+![Validation in Blazor FileUpload](./images/blazor-fileupload-validation.webp)
 
 ## File size
 
@@ -43,7 +43,7 @@ Validate files based on size (in bytes) to prevent empty or very large uploads. 
 </SfUploader>
 ```
 
-![Validating File Size in Blazor FileUpload](./images/blazor-fileupload-size-validation.png)
+![Validating File Size in Blazor FileUpload](./images/blazor-fileupload-size-validation.webp)
 
 ## File Validation within Edit Form
 

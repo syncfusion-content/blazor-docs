@@ -32,7 +32,7 @@ The following table lists the default font name and width of the `FontName` drop
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.png)
+![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.webp)
 
 ### Custom font family
 
@@ -47,7 +47,7 @@ If you want to add additional font names and font sizes to the font drop-down, p
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with custom fonts family](../images/blazor-richtexteditor-custom-font.png)
+![Blazor RichTextEditor with custom fonts family](../images/blazor-richtexteditor-custom-font.webp)
 
 ### Google font support
 
@@ -104,7 +104,7 @@ For Blazor WebAssembly App, refer style in the `<head>` of the **~/index.html** 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Google font](../images/blazor-richtexteditor-google-font.png)
+![Blazor RichTextEditor with Google font](../images/blazor-richtexteditor-google-font.webp)
 
 ## Font size
 
@@ -129,7 +129,7 @@ The following table lists the default font size and width of the [FontSize](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.png)
+![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.webp)
 
 ### Custom font size
 
@@ -143,7 +143,7 @@ The Rich Text Editor provides support for customizing the font size with the exi
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.png)
+![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.webp)
 
 ## Font and background color
 
@@ -157,7 +157,7 @@ You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
+![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.webp)
 
 ### Custom font and background colors
 
@@ -175,7 +175,7 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-custom-background-color.png)
+![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-custom-background-color.webp)
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
@@ -447,7 +447,7 @@ This feature allows users to change the appearance of the numbered and bulleted 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.png)
+![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.webp)
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
@@ -465,4 +465,4 @@ The following code will configure the InsertCode button in the toolbar and set t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor format code block](../images/blazor-richtexteditor-format-code-block.png)
+![Blazor RichTextEditor format code block](../images/blazor-richtexteditor-format-code-block.webp)

@@ -105,4 +105,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor c
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in your default web browser.
 
-![Blazor RichTextEditor Component](../images/blazor-richtexteditor-component.png)
+![Blazor RichTextEditor Component](../images/blazor-richtexteditor-component.webp)

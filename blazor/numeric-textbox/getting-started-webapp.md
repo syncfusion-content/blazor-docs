@@ -174,7 +174,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NumericTextBox component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLzXCKXVVvZqDCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLzXCKXVVvZqDCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/NumericTextBox).
 
@@ -190,7 +190,7 @@ Set the minimum and maximum allowed values using the [Min](https://help.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzjMgNLBEbgCZT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzjMgNLBEbgCZT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.webp)" %}
 
 ## Formatting the value
 
@@ -204,7 +204,7 @@ Set the display format using the [Format](https://help.syncfusion.com/cr/blazor/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBzjCUtBgMxHgbo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBzjCUtBgMxHgbo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.webp)" %}
 
 ## Precision of numbers
 
@@ -222,7 +222,7 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrpDsqNBqKqBEud?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrpDsqNBqKqBEud?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.webp)" %}
 
 ## See also
 

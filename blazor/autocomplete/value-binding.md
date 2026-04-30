@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
+title: Value Binding in Blazor AutoComplete Component | Syncfusion
+description: Learn how to bind and manage selected values in the Syncfusion Blazor AutoComplete component
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -26,7 +26,7 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Bind Value](./images/value-binding/blazor-autocomplete-bind-value.png)
+![Blazor AutoComplete with Bind Value](./images/value-binding/blazor-autocomplete-bind-value.webp)
 
 ## Index value binding
 
@@ -38,7 +38,7 @@ Bind the selected item by index using the [@bind-Index](https://help.syncfusion.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Index Value](./images/value-binding/blazor-autocomplete-index-value.png)
+![Blazor AutoComplete with Index Value](./images/value-binding/blazor-autocomplete-index-value.webp)
 
 ## Value field
 
@@ -50,7 +50,7 @@ The [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Value](./images/value-binding/blazor-autocomplete-value.png)
+![Blazor AutoComplete with Value](./images/value-binding/blazor-autocomplete-value.webp)
 
 ## Primitive type binding
 
@@ -64,7 +64,7 @@ The following code demonstrates an array of strings as the data source.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Primitive Type as string](./images/value-binding/blazor-autocomplete-primitive-type-string.png)
+![Blazor AutoComplete with Primitive Type as string](./images/value-binding/blazor-autocomplete-primitive-type-string.webp)
 
 The following code demonstrates an array of integers as the data source.
 
@@ -74,7 +74,7 @@ The following code demonstrates an array of integers as the data source.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Primitive Type as int](./images/value-binding/blazor-autocomplete-primitive-type-int.png)
+![Blazor AutoComplete with Primitive Type as int](./images/value-binding/blazor-autocomplete-primitive-type-int.webp)
 
 ## Object binding
 
@@ -88,7 +88,7 @@ In the following example, the `Name` field is mapped to [AutoCompleteFieldSettin
 
 {% endhighlight %}
 
-![Blazor AutoComplete with object values](./images/value-binding/blazor-autocomplete-object-binding.png)
+![Blazor AutoComplete with object values](./images/value-binding/blazor-autocomplete-object-binding.webp)
 
 ## Enum binding
 
@@ -100,7 +100,7 @@ Bind enum data to the AutoComplete with [@bind-Value](https://help.syncfusion.co
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Enum Data](./images/value-binding/blazor-autocomplete-enum-binding.png)
+![Blazor AutoComplete with Enum Data](./images/value-binding/blazor-autocomplete-enum-binding.webp)
 
 ## Show or hide clear button
 
@@ -116,7 +116,7 @@ The following sample demonstrates the `string` used as `TValue`. So, clear the v
 
 {% endhighlight %}
 
-![Blazor AutoComplete with clear button](./images/value-binding/blazor-autocomplete-show-hide-clear-button.png)
+![Blazor AutoComplete with clear button](./images/value-binding/blazor-autocomplete-show-hide-clear-button.webp)
 
 ## Dynamically change TItem
 
@@ -225,7 +225,7 @@ Two-way is having a bi-directional data flow, i.e., passing the value from the p
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Two way binding](./images/value-binding/blazor-autocomplete-two-way-binding.png)
+![Blazor AutoComplete with Two way binding](./images/value-binding/blazor-autocomplete-two-way-binding.webp)
 
 ## Programmatically clearing value
 

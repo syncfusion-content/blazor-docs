@@ -23,6 +23,6 @@ DateRangePicker can be deactivated on a page. Setting [Enabled](https://help.syn
 ```
 
 
-![Disable State in Blazor DateRangePicker](../images/blazor-daterangepicker-disable-state.png)
+![Disable State in Blazor DateRangePicker](../images/blazor-daterangepicker-disable-state.webp)
 
 N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.

@@ -161,7 +161,7 @@ The most basic way to render the File Upload component is by adding the `<SfUplo
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor FileUpload Component](./images/blazor-fileupload-maui-app.png)
+![Blazor FileUpload Component](./images/blazor-fileupload-maui-app.webp)
 
 ### How to Run the Sample on Android
 
@@ -174,7 +174,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Upload component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.webp)" %}
 
 ## Use ValueChange Event
 
