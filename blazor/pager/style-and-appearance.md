@@ -57,17 +57,64 @@ Properties such as **font-family**, **background-color**, **padding**, and **bor
 <style>
     .e-pager {
         font-family: 'Segoe UI', sans-serif;
-        padding: 12px;
-        border-radius: 4px;
-        border: 1px solid #e0e0e0;
+        padding: 18px 24px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #00d4ff 0%, #20c997 100%);
+        box-shadow: 0 8px 24px rgba(0, 212, 255, 0.35);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        align-items: center;
+        gap: 12px;
+        display: flex;
     }
-    .e-pager, .e-pager .e-pagercontainer{
-        background-color: #f9f9f9;
+    .e-pager:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(0, 212, 255, 0.45);
+    }
+    .e-pager .e-pagercontainer {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        padding: 8px;
+    }
+    .e-pager .e-numericitem, .e-pager .e-pager-default {
+        background-color: #ffffff;
+        color: #00d4ff;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 12px;
+        margin: 0 4px;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
+        transition: all 0.2s ease;
+    }
+
+    .e-pager div.e-icons.e-pager-default{
+       color: #00d4ff;
+    }
+    .e-pager .e-parentmsgbar{
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    .e-pager .e-numericitem:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 212, 255, 0.35);
+    }
+
+    .e-pager .e-currentitem.e-numericitem {
+        background: linear-gradient(135deg, #00d4ff 0%, #20c997 100%);
+        color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 212, 255, 0.4);
+        font-weight: bold;
+    }
+
+    .e-pager .e-currentitem.e-numericitem.e-focused {
+        background: #00d4ff;
+        box-shadow: 0 0 0 1px #00d4ff inset;
     }
 </style>
 ```
 
-![Pager root](./images/blazor-pager-root.png)
+![Pager root](./images/blazor-pager-root.webp)
 
 ## Customize numeric items
 
@@ -92,37 +139,48 @@ Properties such as **background-color**, **border**, **padding**, and **border-r
 <SfPager TotalItemsCount="50" PageSize="5" NumericItemsCount="5">
 </SfPager>
 
-<style>
+style>
     .e-pager .e-numericitem {
         background-color: #ffffff;
         color: #333;
-        border: 1px solid #ddd;
-        margin: 0 4px;
-        padding: 6px 10px;
-        border-radius: 3px;
-        font-weight: 500;
+        border: 2px solid #ddd;
+        margin: 0 6px;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
     .e-pager .e-numericitem:hover {
         background-color: #e8f4f8;
         border-color: #2bbbad;
+        border-radius: 20px;
+        padding: 8px 14px;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.2);
     }
 
     .e-pager .e-currentitem.e-numericitem {
         background-color: #2bbbad;
-        color: #fff;
+        color: #ffffff;
         border-color: #2bbbad;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.35);
+    }
+
+    .e-pager .e-currentitem.e-numericitem:hover {
+        background-color: #20a399;
+        border-color: #20a399;
+        box-shadow: 0 6px 16px rgba(43, 187, 173, 0.4);
     }
 
     .e-pager .e-currentitem.e-numericitem.e-focused {
-        outline: 2px solid #005a9e;
-        outline-offset: -2px;
         color: #2bbbad;
     }
 </style>
 ```
 
-![Pager Numeric Item](./images/blazor-pager-numericitem.png)
+![Pager Numeric Item](./images/blazor-pager-numericitem.webp)
 
 ## Customize navigation buttons
 
@@ -148,36 +206,55 @@ Adjust properties such as **background-color**, **padding**, and **border** to m
 </SfPager>
 
 <style>
-    .e-pager .e-icons {
-        background-color: #ffffff;
-        color: #333;
-        border: 1px solid #ddd;
-        padding: 6px 12px;
-        margin: 0 2px;
-        border-radius: 3px;
-        font-weight: 500;
+    .e-pager .e-numericitem {
+        background-color: #2bbbad;
+        color: #ffffff;
+        border: 2px solid transparent;
+        margin: 0 -6px;
+        padding: 8px 14px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 0;
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     }
-    .e-pager .e-icons:hover {
-        background-color: #e8f4f8;
-        border-color: #2bbbad;
+    .e-pager .e-icons{
+        border-radius: 0;
+        margin: 0 -6px;
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        background-color: #f7f6f6;
+        box-shadow: none;
+        padding: 8px 14px;
+    }
+    .e-pager .e-icon-first{
+        border-radius: 0;
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+    }
+    .e-pager.sf-pager .e-next.e-icons.e-icon-next.e-nextpage.e-pager-default{
+        margin-left: 5px;
+    }
+    .e-pager .e-numericitem:hover {
+        background-color: #20a399;
+        padding: 8px 14px;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.3);
+    }
+    .e-pager .e-currentitem.e-numericitem {
+        background-color: #ffebeb;
         color: #2bbbad;
+        box-shadow: 0 4px 12px rgba(43, 187, 173, 0.2);
     }
-
-    .e-pager .e-icons.e-disable {
-        background-color: #f5f5f5;
-        color: #999;
-        border-color: #ddd;
-        cursor: not-allowed;
-        opacity: 0.6;
+    .e-pager .e-currentitem.e-numericitem:hover {
+        background-color: #f0f9f7;
+        box-shadow: 0 6px 16px rgba(43, 187, 173, 0.25);
     }
-    .e-pager .e-disable {
-        pointer-events: none;
-        cursor: not-allowed;
+    .e-pager .e-currentitem.e-numericitem.e-focused {
+        color: #2bbbad;
     }
 </style>
 ```
 
-![Pager Navigation Button](./images/blazor-pager-navigationbutton.png)
+![Pager Navigation Button](./images/blazor-pager-navigationbutton.webp)
 
 
 ## Customize page size dropdown
@@ -214,39 +291,126 @@ The dropdown component renders outside the `.e-pager` container, therefore dropd
 <SfPager TotalItemsCount="100" PageSize="10" PageSizes="@pageSizes" NumericItemsCount="3" ShowAllInPageSizes="true">
 </SfPager>
 
+
 <style>
     .e-pager {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 12px;
-        background-color: #f9f9f9;
-        border: 1px solid #e0e0e0;
+        padding: 16px 20px;
+        background-color: #ffffff;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .e-pager .e-icons {
+        background-color: transparent;
+        border: none;
+        color: #666;
+        padding: 6px 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
         border-radius: 4px;
     }
 
-    .e-pager .e-input-focus {
-        border-color: #25decc !important;
-        box-shadow: 0 0 0 1px #25decc !important;
+    .e-pager .e-icons:hover:not(.e-disable) {
+        color: #2bbbad;
+        background-color: rgba(43, 187, 173, 0.1);
+    }
+
+    .e-pager .e-icons.e-disable {
+        color: #ccc;
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    .e-pager .e-numericitem {
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid transparent;
+        color: #666;
+        margin: 0 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .e-pager .e-numericitem:hover {
+        color: #2bbbad;
+        padding: 4px 8px;
     }
 
     .e-pager .e-currentitem {
-        border-bottom: 2px solid #2bbbad;
+        border-bottom: 3px solid #2bbbad;
         color: #2bbbad;
+        font-weight: 700;
+        padding: 4px 8px;
     }
 
-    .e-dropdownbase .e-list-item.e-item-focus,
-    .e-dropdownbase .e-list-item.e-active,
-    .e-dropdownbase .e-list-item.e-active.e-hover,
+    .e-pager .e-ddl.e-input-group {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .e-pager .e-ddl.e-input-group .e-input-focus {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .e-pager .e-input-focus {
+        border-color: #2bbbad !important;
+        box-shadow: 0 0 0 2px rgba(43, 187, 173, 0.15) !important;
+    }
+
+    .e-ddl.e-popup {
+        border: none !important;
+        border-radius: 8px !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+        overflow: hidden;
+    }
+
+    .e-content.e-dropdownbase {
+        border: none;
+        background-color: #ffffff;
+        padding: 4px 0;
+    }
+
+    .e-list-parent.e-ul {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .e-dropdownbase .e-list-item {
+        padding: 10px 16px;
+        border: none;
+        color: #666;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background-color: transparent;
+    }
+
     .e-dropdownbase .e-list-item.e-hover {
-        background-color: #e8f4f8;
+        background-color: rgba(43, 187, 173, 0.08);
         color: #2bbbad;
     }
 
-    .e-pager .e-pagercontainer {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+    .e-dropdownbase .e-list-item.e-active {
+        background-color: rgba(43, 187, 173, 0.15);
+        color: #2bbbad;
+        font-weight: 600;
+    }
+
+    .e-dropdownbase .e-list-item.e-item-focus {
+        background-color: rgba(43, 187, 173, 0.12);
+        color: #2bbbad;
+        outline: none;
+    }
+
+    .e-dropdownbase .e-list-item.e-active.e-hover {
+        background-color: rgba(43, 187, 173, 0.2);
     }
 </style>
 
@@ -255,7 +419,7 @@ The dropdown component renders outside the `.e-pager` container, therefore dropd
 }
 ```
 
-![Pager Dropdown](./images/blazor-pager-dropdown.png)
+![Pager Dropdown](./images/blazor-pager-dropdown.webp)
 
 
 ## Customize focus and disabled states
@@ -295,49 +459,57 @@ Properties such as **outline**, **outline-offset**, **opacity**, and **cursor** 
     }
 
     .e-pager .e-numericitem {
-        background-color: #ffffff;
         color: #333;
-        border: 1px solid #ddd;
-        margin: 0 3px;
-        padding: 6px 10px;
-        border-radius: 3px;
-        transition: all 0.2s ease;
+        border-color: rgba(43, 187, 173, 0.3);
+        box-shadow: 0 4px 12px rgba(43,187,173,0.3);
+        padding: 8px 12px;
+        transition: 0.25s ease;
     }
 
-    .e-pager .e-icons.e-focused {
-        outline: 2px solid #005a9e;
-        outline-offset: -2px;
-        box-shadow: inset 0 0 0 1px #005a9e;
-    }
-
-    .e-pager .e-icons:hover:not(.e-disable) {
-        background-color: #e8f4f8;
+    .e-pager .e-numericitem:hover:not(.e-disable) {
+        background: #2bbbad;
+        color: #333;
         border-color: #2bbbad;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(43,187,173,0.3);
     }
 
-    .e-pager .e-icons.e-disable {
-        background-color: #f5f5f5;
+    .e-pager .e-numericitem.e-focused {
+        background: #005a9e;
+        color: #fff;
+        border: 2px solid #003d7a;
+        box-shadow: 0 0 12px rgba(0,90,158,0.4), inset 0 0 0 1px rgba(255,255,255,0.2);
+        font-weight: 600;
+    }
+
+    .e-pager .e-currentitem {
+        background: #b5e5ed;
+        color: #fff;
+        border-color: #2bbbad;
+        font-weight: 600;
+    }
+
+    .e-pager .e-disable {
+        background: linear-gradient(135deg, #fafafa 25%, #fafafa 25%, #efc7c7 50%, #fafafa 50%, #fafafa 75%, #fafafa 75%, #fafafa);
+        background-size: 6px 6px;
         color: #999;
-        border-color: #ddd;
+        border: 2px dashed #ddd;
         opacity: 0.6;
         cursor: not-allowed;
     }
-
-    .e-pager .e-currentitem.e-numericitem {
-        background-color: #2bbbad;
-        color: #ffffff;
-        border-color: #2bbbad;
-        font-weight: bold;
+    .e-pager .e-currentitem.e-numericitem.e-focused, .e-pager .e-numericitem.e-focused {
+        background: #2bbbad;
+        box-shadow: 0 0 0 1px #2bbbad inset;
+        border: 1px solid #2bbbad;
     }
 
-    .e-pager .e-currentitem.e-numericitem.e-focused {
-        outline: 2px solid #005a9e;
-        outline-offset: 2px;
-        color: #2bbbad;
+    .e-pager .e-pagercontainer, .e-pager div.e-icons.e-pager-default {
+        background: #2bbbad;
+        color: #333;
     }
 </style>
 ```
-![Pager Focus And Disable](./images/blazor-pager-focus-disable.png)
+![Pager Focus And Disable](./images/blazor-pager-focus-disable.webp)
 
 ## Apply custom CSS class
 
@@ -370,9 +542,13 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
         color: #667eea;
         font-weight: bold;
     }
+
+    .e-pager.custom-pager .e-parentmsgbar{
+        color: #ffffff;
+    }
 </style>
 ```
 
 This approach allows creating multiple pager variants with different visual themes within the same application, maintaining design consistency while providing flexibility for specific use cases.
 
-![Pager Custom CssClass](./images/blazor-pager-customcssclass.png)
+![Pager Custom CssClass](./images/blazor-pager-customcssclass.webp)
