@@ -142,7 +142,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Rich Text Editor Component](./images/blazor-richtexteditor-maui-app.png)
+![Blazor Rich Text Editor Component](./images/blazor-richtexteditor-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -152,7 +152,7 @@ Refer to the [Android Device Manager](https://learn.microsoft.com/en-us/dotnet/m
 
 N> If you encounter any errors while using the Android Emulator, refer to the [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for guidance.
 
-![Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)
+![Blazor Rich Text Editor Component](./images/blazor-richtexteditor.webp)
 
 ## Configure the Toolbar
 
@@ -221,7 +221,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)
+![Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.webp)
 
 ## Insert images and links
 
@@ -286,7 +286,7 @@ Specify quick toolbar items for target elements such as images, links, and table
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-image.png)
+![Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-image.webp)
 
 ## Retrieve the formatted content
 

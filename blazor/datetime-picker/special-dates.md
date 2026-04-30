@@ -88,4 +88,4 @@ Customize specific dates in the DateTimePicker using the [OnRenderDayCell](https
 
 ```
 
-![Blazor DateTimePicker highlighting special dates for personal and official appointments](./images/blazor_datetimepicker_special_dates.png)
+![Blazor DateTimePicker highlighting special dates for personal and official appointments](./images/blazor_datetimepicker_special_dates.webp)

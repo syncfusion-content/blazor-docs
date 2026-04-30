@@ -70,7 +70,7 @@ The following table shows shortcut keys and their corresponding actions.
 <SfNumericTextBox TValue="int?" Value=10></SfNumericTextBox>
 ```
 
-![Accessibility in Blazor NumericTextBox](./images/blazor-numerictextbox-component.png)
+![Accessibility in Blazor NumericTextBox](./images/blazor-numerictextbox-component.webp)
 
 ## Ensuring accessibility
 

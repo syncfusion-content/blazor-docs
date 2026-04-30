@@ -30,7 +30,7 @@ The following code demonstrates the DateTimePicker with StrictMode `true`.
 }
 ```
 
-![Strict Mode in Blazor DateTimePicker](./images/blazor-datetimepicker-strictmode.png)
+![Strict Mode in Blazor DateTimePicker](./images/blazor-datetimepicker-strictmode.webp)
 
 By default, `StrictMode` is `false`. In this state, the textbox allows invalid or out-of-range date and time values to be entered.
 
@@ -51,6 +51,6 @@ The following code demonstrates `StrictMode` as `false`. In this mode, valid and
 }
 ```
 
-![Blazor DateTimePicker without StrictMode](./images/blazor-datetimepicker-without-strictmode.png)
+![Blazor DateTimePicker without StrictMode](./images/blazor-datetimepicker-without-strictmode.webp)
 
 N> If the values of `Min` or `Max` are changed through code-behind, update the `Value` property to ensure it remains within the defined range. Calendar/time list selection always respects `Min` and `Max`; disabled dates and times cannot be selected from the popup.

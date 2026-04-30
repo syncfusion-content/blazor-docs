@@ -157,7 +157,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ProgressButton c
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ProgressButton component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLzDiqDgZzSLSvX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ProgressButton Component](./images/blazor-progressbutton-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLzDiqDgZzSLSvX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ProgressButton Component](./images/blazor-progressbutton-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressButton).
 

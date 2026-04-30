@@ -21,7 +21,7 @@ Set the placeholder text by using the [Placeholder](https://help.syncfusion.com/
 
 ```
 
-![Blazor OTP Input Component with Placeholder](images/blazor-otp-char.png)
+![Blazor OTP Input Component with Placeholder](images/blazor-otp-char.webp)
 
 When a placeholder string with multiple characters is provided, characters are assigned to input fields from left to right up to the configured OTP length. If the placeholder string contains more characters than the OTP length, extra characters are ignored; if it contains fewer, only those positions display placeholder characters.
 
@@ -33,4 +33,4 @@ When a placeholder string with multiple characters is provided, characters are a
 
 ```
 
-![Blazor OTP input component with placeholder as string](images/blazor-otp-string.png)
+![Blazor OTP input component with placeholder as string](images/blazor-otp-string.webp)

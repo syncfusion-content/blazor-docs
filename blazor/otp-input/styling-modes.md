@@ -23,7 +23,7 @@ Use the outline style by setting the [StylingMode](https://help.syncfusion.com/c
 
 ```
 
-![Blazor OTP input component with outlined mode](images/blazor-otp-outlined.png)
+![Blazor OTP input component with outlined mode](images/blazor-otp-outlined.webp)
 
 ## Filled mode
 
@@ -37,7 +37,7 @@ Use the filled style by setting the [StylingMode](https://help.syncfusion.com/cr
 
 ```
 
-![Blazor OTP input component with filled mode](images/blazor-otp-filled.png)
+![Blazor OTP input component with filled mode](images/blazor-otp-filled.webp)
 
 ## Underline mode
 
@@ -51,4 +51,4 @@ Use the underline style by setting the [StylingMode](https://help.syncfusion.com
 
 ```
 
-![Blazor OTP input component with underlined mode](images/blazor-otp-underlined.png)
+![Blazor OTP input component with underlined mode](images/blazor-otp-underlined.webp)
