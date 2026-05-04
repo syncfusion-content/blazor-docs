@@ -27,7 +27,7 @@ N> The **pre** tag will be inserted when code format is applied. If the editor c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor Enter key configuration](./images/blazor-richtexteditor-enter-key.png)
+![Blazor Rich Text Editor Enter key configuration](./images/blazor-richtexteditor-enter-key.webp)
 
 N> [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/enterkeyconfiguration)
 
@@ -46,4 +46,4 @@ When configured, pressing <kbd>Shift</kbd> + <kbd>Enter</kbd> inserts the specif
 {% endtabs %}
 
 
-![Blazor Rich Text Editor Shift+Enter key configuration](./images/blazor-richtexteditor-shift-enter-key.png)
+![Blazor Rich Text Editor Shift+Enter key configuration](./images/blazor-richtexteditor-shift-enter-key.webp)

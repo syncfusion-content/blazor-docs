@@ -177,7 +177,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLTjdsAsprhYodH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea Component](./images/blazor-textarea.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLTjdsAsprhYodH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea Component](./images/blazor-textarea.webp)" %}
 
 ## Floating label
 
@@ -191,7 +191,7 @@ The floating label displays the placeholder as a label above the TextArea when f
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTjdiKszhkOkia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTjdiKszhkOkia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.webp)" %}
 
 ## See also
 
