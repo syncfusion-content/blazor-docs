@@ -158,10 +158,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports th
 
 **1. Auto**
 
-The column width is automatically calculated based on the content within its cells. If the content exceeds the `Width` setting, it is truncated with an ellipsis (...).
+The column width is automatically calculated based on the content within the column cells. If the content exceeds the specified width in the `GridColumn`, it is truncated with an ellipsis (…) at the end. To allow a column to adjust its width dynamically based on content, set the Width property of the `GridColumn` to "auto".
+
+A Grid can combine both flexible and fixed-width columns to create a balanced layout. For example, consider three columns: "Order ID", "Customer Name", and "Freight". The "Customer Name" column automatically adjusts its width based on the length of the names, while the "Order ID" and "Freight" columns remain fixed. This ensures that numeric fields stay consistent while text fields expand as needed.
 
 ```cshtml
- <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="auto"></GridColumn>
+<GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" TextAlign="TextAlign.Right" />
+<GridColumn Field="@nameof(Order.CustomerName)" HeaderText="Customer Name" Width="auto" />
+<GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Width="100" Format="C2" TextAlign="TextAlign.Right" />
 ```
 
 **2. Percentage**
