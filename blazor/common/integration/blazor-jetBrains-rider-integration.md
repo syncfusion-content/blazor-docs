@@ -155,3 +155,4 @@ The app launches and renders the **[Syncfusion® Blazor DataGrid](https://www.sy
 - [Getting started with Syncfusion® Blazor DataGrid in WASM App](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 - [Integrating Syncfusion® Blazor Components with Azure Functions](https://blazor.syncfusion.com/documentation/common/integration/blazor-azure-functions)
 
+
