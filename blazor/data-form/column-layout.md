@@ -40,4 +40,4 @@ In the following example, the DataForm is divided into six equal columns. Each e
 
 ## See Also
 
-* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout?theme=fluent)
+* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout)
