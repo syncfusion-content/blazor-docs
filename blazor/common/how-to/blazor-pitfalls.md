@@ -475,7 +475,7 @@ Project 'YourApp' has the following package references
    [net8.0]:
    Top-level Package                    Requested   Resolved
    > Syncfusion.Blazor.Grid             33.2.3      33.2.3
-   > Syncfusion.Blazor.Calendars        32.1.19     32.1.19    Version mismatch
+   > Syncfusion.Blazor.Calendars        32.1.19     32.1.19    # Version mismatch
    > Syncfusion.Blazor.Charts           33.2.3      33.2.3
 
 {% endhighlight %}
@@ -516,9 +516,9 @@ All Syncfusion packages should now show the same version:
 Project 'YourApp' has the following package references
    [net8.0]:
    Top-level Package                    Requested   Resolved
-   > Syncfusion.Blazor.Grid             33.2.3     33.2.3
-   > Syncfusion.Blazor.Calendars        33.2.3     33.2.3
-   > Syncfusion.Blazor.Charts           33.2.3     33.2.3
+   > Syncfusion.Blazor.Grid             33.2.3      33.2.3
+   > Syncfusion.Blazor.Calendars        33.2.3      33.2.3
+   > Syncfusion.Blazor.Charts           33.2.3      33.2.3
 
 {% endhighlight %}
 {% endtabs %}
@@ -633,7 +633,7 @@ Some Syncfusion components require component-specific scripts in addition to the
 3. Check the **Network** tab to verify scripts load successfully (200 status)
 4. Verify script loading order in the **Sources** tab
 
-N> If you encounter "Failed to load resource" errors, verify that the [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) NuGet package is installed and the project has been built successfully.
+N> If you encounter "Failed to load resource" errors for `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, verify that the `Syncfusion.Blazor.Core` package is available in the project, the script path is correct, and the project has been built or published successfully.
 
 ### Pitfall 7: Missing service registration
 
@@ -751,7 +751,7 @@ var app = builder.Build();
 **For File Manager component:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="5" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="5 6" %}
 
 using Syncfusion.Blazor;
 
@@ -940,10 +940,10 @@ N> For production deployments, always balance functionality requirements with se
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.JSInterop
 
-@* Add Syncfusion core namespace *@
+<!-- Add Syncfusion core namespace -->
 @using Syncfusion.Blazor
 
-@* Add component-specific namespaces as needed *@
+<!-- Add component-specific namespaces as needed -->
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Charts
@@ -952,7 +952,7 @@ N> For production deployments, always balance functionality requirements with se
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-@* Add your application namespaces (replace with your actual project namespace) *@
+<!-- Add your application namespaces (replace with your actual project namespace) -->
 @using YourApp
 @using YourApp.Components
 
@@ -1025,7 +1025,7 @@ N> The `_Imports.razor` file provides namespace imports to all Razor components 
 
 **Step 1: Match `TValue` to the bound value type**
 
-Use the same type for `TValue` as the selected value stored in the component.
+In `SfDropDownList`, use the same type for `TValue` as the selected value stored in the component.
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Mapping" %}
@@ -1091,9 +1091,9 @@ Use the same type for `TValue` as the selected value stored in the component.
 
 Here, `Value="OrderCode"` does not match any property in the data model, so the dropdown cannot resolve the selected value correctly.
 
-**Step 2: Map grid columns to real model properties**
+**Step 2: Map columns to real model properties**
 
-For `SfGrid`, each `GridColumn Field` value must match a public property on the model.
+In `SfGrid`, each `GridColumn Field` value must match a public property on the model.
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Grid Mapping" %}
@@ -1132,9 +1132,9 @@ For `SfGrid`, each `GridColumn Field` value must match a public property on the 
 * Typing the wrong casing, such as `Customername` instead of `CustomerName`
 * Binding nested data without flattening the model first
 
-**Step 3: Use the correct value type for numeric and date components**
+**Step 3: Use the correct value type for numeric and date inputs**
 
-For numeric and date-based components, the bound property type must match the component type.
+For `SfNumericTextBox` and `SfDatePicker`, the bound property type must match the component type.
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Input Mapping" %}
@@ -1154,9 +1154,9 @@ For numeric and date-based components, the bound property type must match the co
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4: Use the correct field names for multi-value dropdowns**
+**Step 4: Use the correct field names and value collection type**
 
-For `SfMultiSelect`, the selected value collection type must match the item value type.
+In `SfMultiSelect`, the selected value collection type must match the item value type.
 
 {% tabs %}
 {% highlight razor tabtitle="MultiSelect Mapping" %}
@@ -1347,7 +1347,7 @@ N> This issue is usually a data-model mismatch, not a Syncfusion defect. In most
 * Use virtual scrolling for datasets larger than 1,000 records
 * Implement pagination for better UX and performance
 * Load data on-demand from server APIs instead of loading all records
-* Use `GridPageSettings` to control page size and visible page count
+* Use [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) to control page size and visible page count
 * Consider data caching strategies for frequently accessed data
 * Implement search and filtering on the server side
 * Use lazy loading for related data

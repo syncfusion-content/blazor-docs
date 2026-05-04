@@ -126,4 +126,4 @@ The background and border color of the radio button can be customized using cust
 
 ```
 
-![Customizing Blazor RadioButton Appearance](./../images/blazor-radiobutton-customization.png)
+![Customizing Blazor RadioButton Appearance](./../images/blazor-radiobutton-customization.webp)
