@@ -24,4 +24,4 @@ The RadioButton component can be enabled/disabled by setting [Disabled](https://
 
 ```
 
-![Blazor RadioButton in disabled state](./../images/blazor-radiobutton-disable-state.png)
+![Blazor RadioButton in disabled state](./../images/blazor-radiobutton-disable-state.webp)
