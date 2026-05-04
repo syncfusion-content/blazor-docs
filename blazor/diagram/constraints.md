@@ -177,7 +177,7 @@ The following example shows how to disable the `Rotate` constraint from the defa
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/NodeConstraintsSample.razor)
 
-![Node Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
+![Node Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.webp)
 
 The following example shows how to add the `Shadow` constraint to the default constraints of a node.
 
@@ -526,7 +526,7 @@ The following code shows how to hide the rotator.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/SelectorConstraintsSample.razor)
 
-![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
+![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.webp)
 
 The following code illustrates how to show or hide the tooltip for drag, resize, and rotate operations on nodes.
 
@@ -585,7 +585,7 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/SelectorDisableEnable.razor)
 
-|![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.gif) | 
+|![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.webp) | 
 
 N> Element should be in a selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 

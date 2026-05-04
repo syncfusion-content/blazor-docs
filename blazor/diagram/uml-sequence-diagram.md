@@ -76,7 +76,7 @@ The following code example explains how to create participants in sequence diagr
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLSequenceDiagram/CreateParticipant.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheWXZlzknCroPu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheWXZlzknCroPu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.webp)" %}
 
 #### UmlSequenceParticipant Properties
 
@@ -110,9 +110,9 @@ The [UmlSequenceMessageType](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 | [Synchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Synchronous) | The sender waits for a response | ![Synchronous Message](images/UmlSequenceDiagram/SynchronousMessage.png) |
 | [Asynchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Asynchronous) | The sender continues without waiting | ![Asynchronous Message](images/UmlSequenceDiagram/AsyncronousMessage.png) |
 | [Reply](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Reply) | A response to a previous message | ![Reply Message](images/UmlSequenceDiagram/ReplyMessage.png) |
-| [Create](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Create) | Creates a new participant | ![Create Message](images/UmlSequenceDiagram/CreateMessage.png) |
+| [Create](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Create) | Creates a new participant | ![Create Message](images/UmlSequenceDiagram/CreateMessage.webp) |
 | [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Delete) | Terminates a participant | ![Delete Message](images/UmlSequenceDiagram/DeleteMessage.png) |
-| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Self) | A message from a participant to itself | ![Self Message](images/UmlSequenceDiagram/SelfMessage.png) |
+| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Self) | A message from a participant to itself | ![Self Message](images/UmlSequenceDiagram/SelfMessage.webp) |
 
 
 The following code example explains how to create messages in sequence diagram.
@@ -225,7 +225,7 @@ The following code example explains how to create messages in sequence diagram.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLSequenceDiagram/CreateMessage.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Message Example](./images/UmlSequenceDiagram/MessageExample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Message Example](./images/UmlSequenceDiagram/MessageExample.webp)" %}
 
 #### UmlSequenceMessage Properties
 
@@ -318,7 +318,7 @@ The following code example explains how to create activation boxes in sequence d
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLSequenceDiagram/CreateActivationBox.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCjDFpkHYndWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCjDFpkHYndWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Activations Example](./images/UmlSequenceDiagram/ActivationsExample.webp)" %}
 
 #### UmlSequenceActivationBox Properties
 
@@ -344,9 +344,9 @@ The [UmlSequenceFragmentType](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
-| [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Optional)  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/UmlSequenceDiagram/OptFragment.png) |  
-| [Alternative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Alternative) | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/UmlSequenceDiagram/AltFragment.png) |  
-| [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Loop) | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/UmlSequenceDiagram/LoopFragment.png) |  
+| [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Optional)  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/UmlSequenceDiagram/OptFragment.webp) |  
+| [Alternative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Alternative) | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/UmlSequenceDiagram/AltFragment.webp) |  
+| [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Loop) | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/UmlSequenceDiagram/LoopFragment.webp) |  
 
 #### Creating Fragments
 
@@ -449,7 +449,7 @@ Create fragments in the sequence diagram, need to use the `UmlSequenceFragment` 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLSequenceDiagram/CreateFragments.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSCNZbzkGgSlhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSCNZbzkGgSlhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Fragment Example](images/UmlSequenceDiagram/FragmentExample.webp)" %}
 
 #### UmlSequenceFragment Properties
 

@@ -1042,7 +1042,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The following gif illustrates how to perform z-order commands.
 
-![Z-order Commands](./images/Z-Order-Commands.gif)
+![Z-order Commands](./images/Z-Order-Commands.webp)
 
 ## How to Use the Zoom command
 
@@ -1408,7 +1408,7 @@ The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 |FitToHeight | It is used to enable the fit to page behavior only with respect to height.       |
 |Both  | It is used to enable the fit to page behavior with respect to both the height and width of the diagram. |
 
-![Fit to page Command](./images/FitToPage.gif)
+![Fit to page Command](./images/FitToPage.webp)
 
 #### Region
 
@@ -1419,7 +1419,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Dia
 |[PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html#Syncfusion_Blazor_Diagram_DiagramRegion_PageSettings)   | Fits the diagram based on the page settings' width and height. |
 |[Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html#Syncfusion_Blazor_Diagram_DiagramRegion_Content)   | Fits the diagram based on its content area only. |
 
-![Region](./images/Region.gif)
+![Region](./images/Region.webp)
 
 ## How to Enable Zoom in Behavior
 
@@ -1544,7 +1544,7 @@ The following code illustrates how to execute the CanZoomIn command.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/CanZoomIn.razor)
 
-![CanZoomIn to bring the small diagram into view](images/CanZoomIn.png)
+![CanZoomIn to bring the small diagram into view](images/CanZoomIn.webp)
 
 ## Command Manager
 
