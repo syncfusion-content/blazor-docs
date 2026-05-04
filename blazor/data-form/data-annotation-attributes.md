@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data annotation attributes in Blazor DataForm | Syncfusion
-description: Checkout and learn here about how Data Annotation attributes work with Blazor DataForm.
+description: Checkout and learn here about how .NET Data Annotation attributes work with the Blazor DataForm to manage labels, editors, validation, and field behavior.
 platform: Blazor
 control: DataForm
 documentation: ug
