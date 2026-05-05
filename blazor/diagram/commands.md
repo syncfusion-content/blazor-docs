@@ -1133,7 +1133,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The corresponding arrow keys are used to move the selected elements towards the up, down, left, or right direction by 1 pixel.
 
-![Nudge Command in Blazor Diagram](images/blazor-diagram-nudge-command.png)
+![Nudge Command in Blazor Diagram](images/blazor-diagram-nudge-command.webp)
 
 Nudge commands are particularly useful for accurate placement of elements.
 

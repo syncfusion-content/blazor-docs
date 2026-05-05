@@ -107,11 +107,11 @@ The [UmlSequenceMessageType](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 | Message Type | Description | Example |
 |---|---|---|
-| [Synchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Synchronous) | The sender waits for a response | ![Synchronous Message](images/UmlSequenceDiagram/SynchronousMessage.png) |
-| [Asynchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Asynchronous) | The sender continues without waiting | ![Asynchronous Message](images/UmlSequenceDiagram/AsyncronousMessage.png) |
-| [Reply](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Reply) | A response to a previous message | ![Reply Message](images/UmlSequenceDiagram/ReplyMessage.png) |
+| [Synchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Synchronous) | The sender waits for a response | ![Synchronous Message](images/UmlSequenceDiagram/SynchronousMessage.webp) |
+| [Asynchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Asynchronous) | The sender continues without waiting | ![Asynchronous Message](images/UmlSequenceDiagram/AsyncronousMessage.webp) |
+| [Reply](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Reply) | A response to a previous message | ![Reply Message](images/UmlSequenceDiagram/ReplyMessage.webp) |
 | [Create](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Create) | Creates a new participant | ![Create Message](images/UmlSequenceDiagram/CreateMessage.webp) |
-| [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Delete) | Terminates a participant | ![Delete Message](images/UmlSequenceDiagram/DeleteMessage.png) |
+| [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Delete) | Terminates a participant | ![Delete Message](images/UmlSequenceDiagram/DeleteMessage.webp) |
 | [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Self) | A message from a participant to itself | ![Self Message](images/UmlSequenceDiagram/SelfMessage.webp) |
 
 
