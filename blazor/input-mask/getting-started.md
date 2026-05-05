@@ -155,7 +155,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MaskedTextBox co
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MaskedTextBox component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrzXsLuJBRJNWJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrzXsLuJBRJNWJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.webp)" %}
 
 ## Set the mask
 
@@ -171,7 +171,7 @@ The following example demonstrates the mask element `0`, which allows any single
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLJtsLEzVdPzZtq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLJtsLEzVdPzZtq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MaskedTextBox).
 

@@ -45,4 +45,4 @@ In this sample, selecting Female triggers a validation error message below the r
 
 ```
 
-![Data Binding in Blazor RadioButton](./../images/blazor-radiobutton-data-binding.png)
+![Data Binding in Blazor RadioButton](./../images/blazor-radiobutton-data-binding.webp)
