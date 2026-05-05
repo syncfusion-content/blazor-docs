@@ -19,7 +19,7 @@ The Blazor Rating component supports tooltips that display additional informatio
 
 ```
 
-![Blazor Rating component with tooltip](./images/blazor-rating-tooltip.png)
+![Blazor Rating component with tooltip](./images/blazor-rating-tooltip.webp)
 
 ## Tooltip template
 
@@ -37,7 +37,7 @@ Use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Blazor Rating component with tooltip template](./images/blazor-rating-tooltip-template.png)
+![Blazor Rating component with tooltip template](./images/blazor-rating-tooltip-template.webp)
 
 ## Tooltip customization
 
@@ -82,4 +82,4 @@ N> For more details on styling options, refer to the [tooltip customization](htt
 
 ```
 
-![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.png)
+![Blazor Rating component with tooltip customization](./images/blazor-rating-custom-tooltip.webp)

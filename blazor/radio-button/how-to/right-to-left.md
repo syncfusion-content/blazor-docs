@@ -24,4 +24,4 @@ The following example illustrates enabling right-to-left support in the RadioBut
 
 ```
 
-![Right to left in Blazor RadioButton](./../images/blazor-radiobutton-right-to-left.png)
+![Right to left in Blazor RadioButton](./../images/blazor-radiobutton-right-to-left.webp)

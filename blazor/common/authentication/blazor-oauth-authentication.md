@@ -27,18 +27,29 @@ This section explains how to secure the Syncfusion® Blazor DataGrid using OAuth
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the Syncfusion getting started guides [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+Otherwise, create a new Blazor application by following the [Syncfusion getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for **Blazor Web App (Interactive Server)**.
 
 Ensure that **HTTPS is enabled** during project creation, as GitHub OAuth based authorization requires secure communication.
 
 ### Install required packages
 
-Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
+Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid** and enable authentication with **GitHub OAuth**.
 
 **Syncfusion packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+You can install the required packages by using the following .NET CLI commands.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Syncfusion® namespaces
 
@@ -406,6 +417,18 @@ This section demonstrates how to dynamically render UI content based on the user
         </NotAuthorized>
     </AuthorizeView>
 </div>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Run the application
+
+Run the application using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
 
 {% endhighlight %}
 {% endtabs %}

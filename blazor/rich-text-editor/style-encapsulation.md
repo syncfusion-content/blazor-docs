@@ -41,4 +41,4 @@ Below is a sample implementation of both **encapsulated** and **non-encapsulated
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor With style encapsulation](./images/blazor-richtexteditor-style-encapsulation.png)
+![Blazor RichTextEditor With style encapsulation](./images/blazor-richtexteditor-style-encapsulation.webp)

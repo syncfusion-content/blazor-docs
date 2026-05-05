@@ -168,7 +168,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ColorPicker component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrztMhkhMtJdbVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker Component](./images/blazor-colorpicker-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrztMhkhMtJdbVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker Component](./images/blazor-colorpicker-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ColorPicker).
 

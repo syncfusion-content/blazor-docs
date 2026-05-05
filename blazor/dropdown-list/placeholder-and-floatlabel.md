@@ -19,7 +19,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor DropDownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder.png)
+![Blazor DropDownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder.webp)
 
 ## Color of the placeholder text
 
@@ -31,7 +31,7 @@ Change the placeholder color by targeting the placeholder selector (for example,
 
 {% endhighlight %}
 
-![Blazor DropDownList with colored placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-color.png)
+![Blazor DropDownList with colored placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-color.webp)
 
 ## Add mandatory indicator using placeholder
 
@@ -43,7 +43,7 @@ Add a visual required indicator (such as `*`) to the floating label by targeting
 
 {% endhighlight %}
 
-![Blazor DropDownList with mandatory indicator in placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-mandatory.png)
+![Blazor DropDownList with mandatory indicator in placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-mandatory.webp)
 
 ## FloatLabel
 
@@ -77,4 +77,4 @@ Customize the floating label color on focus by targeting `.e-input-focus .e-floa
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized floating label focus color](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel-focusing-color.png)
+![Blazor DropDownList with customized floating label focus color](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel-focusing-color.webp)
