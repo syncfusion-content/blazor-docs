@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Components in JetBrains Rider
+title: Getting Started with Syncfusion® Blazor Components in JetBrains Rider
 description: Step-by-step guide to integrate Syncfusion® Blazor DataGrid in Blazor applications using JetBrains Rider.
 platform: Blazor
 control: common
 documentation: ug
 ---
 
-# JetBrains Rider Integration with Syncfusion Blazor Components
+# JetBrains Rider Integration with Syncfusion® Blazor Components
 
 [JetBrains Rider](https://www.jetbrains.com/rider/) is a powerful, cross‑platform integrated development environment (IDE) designed for .NET developers. It provides excellent support for building Blazor applications.
 
-[Syncfusion Blazor components](https://www.syncfusion.com/blazor-components) offer a wide collection of ready‑to‑use UI controls that help you create modern, interactive, and visually rich web applications using Blazor.
+[Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) offer a wide collection of ready‑to‑use UI controls that help you create modern, interactive, and visually rich web applications using Blazor.
 
 - Set up JetBrains Rider for Blazor development
-- Install and configure Syncfusion Blazor packages
+- Install and configure Syncfusion® Blazor packages
 - Create and run a Blazor application
-- Work efficiently with Syncfusion Blazor components inside Rider
+- Work efficiently with Syncfusion® Blazor components inside Rider
 
 To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfusion, review the following video.
 
@@ -34,7 +34,7 @@ Before you start developing a Blazor application, you need to install JetBrains 
 - Run the installer and follow the on‑screen instructions to complete the installation.
 - Once the installation is complete, launch JetBrains Rider to begin your Blazor development.
 
-After launching Rider, you can create or open a Blazor project and start integrating Syncfusion Blazor components.
+After launching Rider, you can create or open a Blazor project and start integrating Syncfusion® Blazor components.
 
 ## Creating a Blazor application
 
@@ -51,9 +51,9 @@ Follow these steps to create a Blazor application in Rider:
 
 Once the project is created, Rider opens the solution and restores the required dependencies automatically.
 
-## Adding Syncfusion Blazor NuGet packages
+## Adding Syncfusion® Blazor NuGet packages
 
-After creating the Blazor project, you must install the required Syncfusion Blazor NuGet packages to use Syncfusion UI components.
+After creating the Blazor project, you must install the required Syncfusion® Blazor NuGet packages to use Syncfusion UI components.
 
 **Install required Syncfusion NuGet packages**
 
@@ -63,7 +63,7 @@ After creating the Blazor project, you must install the required Syncfusion Blaz
     - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-Once the installation is complete, the Syncfusion Blazor components are ready to be used in your application.
+Once the installation is complete, the Syncfusion® Blazor components are ready to be used in your application.
 
 ## Register the Syncfusion services
 
