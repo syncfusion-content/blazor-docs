@@ -31,4 +31,4 @@ The following example demonstrates how to enable image insertion in the Syncfusi
 {% endhighlight %}
 {% endtabs %}
 
-![Image insertion using Blazor Markdown Editor toolbar](./images/blazor-markdowneditor-markdown-image.png)
+![Image insertion using Blazor Markdown Editor toolbar](./images/blazor-markdowneditor-markdown-image.webp)
