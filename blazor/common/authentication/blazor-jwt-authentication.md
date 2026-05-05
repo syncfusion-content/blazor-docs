@@ -13,7 +13,7 @@ This guide shows how to secure the [Syncfusion® Blazor DataGrid](https://www.sy
 
 ## What is JWT (JSON Web Token)?
 
-A JSON Web Token (JWT) is a compact, digitally signed string that identifies a user and authorizes API calls. It has three parts:
+A **JSON Web Token (JWT)** is a compact, digitally signed string that identifies a user and authorizes API calls. It has three parts:
 
 - **Header** – specifies the token type and the signing algorithm used.
 - **Payload** – contains claims (e.g., `sub`, `name`, `role`, `exp`).
@@ -35,13 +35,13 @@ Configure JWT based authorization to secure backend APIs used by the Syncfusion�
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the Syncfusion getting started guides [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+Otherwise, create a new Blazor application by following the [Syncfusion getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for **Blazor Web App (Interactive Server)**.
 
 Ensure that **HTTPS is enabled** during project creation, as JWT based authorization requires secure communication.
 
 ### Install required packages
 
-Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
+Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid** and enable **JWT authentication**.
 
 **Syncfusion packages:**
 
@@ -51,6 +51,18 @@ Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package M
 **JWT package:**
 
 - [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer)
+
+You can install the required packages by using the following .NET CLI commands.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Syncfusion® namespaces
 
@@ -374,8 +386,6 @@ This example demonstrates how a JWT token is retrieved from the server and attac
             var json = await tokenRes.Content.ReadFromJsonAsync<Dictionary<string, string>>();
             jwt = json!["token"];
             isDataManagerEnabled = true;
-            StateHasChanged();
-            await Task.Yield();
             if (grid is not null)
             {
                 await grid.Refresh(); // Triggers the first data request using the DataManager and headers.
@@ -392,7 +402,19 @@ This example demonstrates how a JWT token is retrieved from the server and attac
 {% endhighlight %}
 {% endtabs %}
 
-When the Load GridData button is clicked, the application first authenticates the request using JWT. After successful authentication, the secured API is accessed and the DataGrid data is loaded.
+### Run the application
+
+Run the application using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+After the application starts, click the **Load GridData** button to initiate authentication. The application requests a JWT token, attaches it to the DataManager request, and then securely loads data from the authorized API endpoint into the Syncfusion® Blazor DataGrid.
 
 ![Blazor DataGrid with JWT](images/jwt-authentication.webp)
 
