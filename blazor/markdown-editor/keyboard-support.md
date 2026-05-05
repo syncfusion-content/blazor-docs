@@ -107,4 +107,4 @@ These shortcuts provide additional functionalities like fullscreen mode.
 }
 ```
 
-![Blazor RichTextEditor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
+![Blazor RichTextEditor with Key Configuration](./images/blazor-richtexteditor-key-configuration.webp)
