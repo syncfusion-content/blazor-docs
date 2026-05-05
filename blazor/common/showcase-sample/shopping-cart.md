@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a Shopping Cart in Blazor with Syncfusion components
-description: Improved step-by-step guide for building a shopping cart in a Blazor application, covering product listing, cart management, and checkout using Syncfusion components.
+description: Step-by-step guide to build a shopping cart in a Blazor app, covering product listings, cart management, and checkout with Syncfusion components demo.
 platform: Blazor
 control: Common
 documentation: ug
@@ -30,7 +30,7 @@ To add the Blazor components to the app, open the NuGet Package Manager in Visua
 
 * [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
 * [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards)
-* [Syncfusion.Blazor.Dropdowns](https://www.nuget.org/packages/Syncfusion.Blazor.Dropdowns)
+* [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns)
 * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 * [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs)
 * [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner)
@@ -276,12 +276,14 @@ namespace ShoppingCart.Data
             new() { Id = 20, Name = "Backpack Cover", Description = "Waterproof backpack cover", Price = 14.99m, Category = "Accessories", ImageUrl = "images/product4.svg", Rating = 4.0, ReviewCount = 12, IsInStock = true },
         };
 
-        public static List<string> Categories => Products
-            .Select(p => p.Category)
-            .Distinct()
-            .OrderBy(c => c)
-            .ToList();
-    }
+        private static List<string>? _categories;
+        public static List<string> Categories => 
+            _categories ??= Products
+                .Select(p => p.Category)
+                .Distinct()
+                .OrderBy(c => c)
+                .ToList();
+            }
 }
 
 {% endhighlight %}
@@ -537,7 +539,7 @@ The service supports product listing, category filtering, and product lookup usi
 
 ### Wishlist service interface
 
-This interface defines operations for managing wishlist items.
+This interface defines operations for managing wish-list items.
 
 
 {% tabs %}
@@ -564,11 +566,11 @@ namespace ShoppingCart.Services
 {% endhighlight %}
 {% endtabs %}
 
-It exposes methods to add, remove, and query wishlist items while notifying components of changes.
+It exposes methods to add, remove, and query wish-list items while notifying components of changes.
 
 ### Wishlist service implementation
 
-This class maintains the wishlist state for the current session.
+This class maintains the wish-list state for the current session.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/WishlistService.cs"  %}
@@ -610,7 +612,7 @@ namespace ShoppingCart.Services
 {% endhighlight %}
 {% endtabs %}
 
-The service tracks wishlist items in memory and notifies subscribed components whenever changes occur.
+The service tracks wish-list items in memory and notifies subscribed components whenever changes occur.
 
 ## Register services
 
@@ -636,7 +638,7 @@ var app = builder.Build();
 
 ### Create the ProductCard component
 
-This reusable component displays individual product details and provides actions to add items to the cart or toggle wishlist status.
+This reusable component displays individual product details and provides actions to add items to the cart or toggle wish-list status.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/ProductCard.razor"  %}
@@ -767,7 +769,7 @@ This reusable component displays individual product details and provides actions
 {% endhighlight %}
 {% endtabs %}
 
-This component receives product data through parameters and uses Syncfusion UI components to render a consistent product card layout. It communicates user actions to parent components through callbacks and uses the wishlist service to manage and reflect wishlist state.
+This component receives product data through parameters and uses Syncfusion UI components to render a consistent product card layout. It communicates user actions to parent components through callbacks and uses the wish-list service to manage and reflect wish-list state.
 
 ### Create the CartBadge component
 
@@ -788,15 +790,18 @@ This component displays a cart icon with a badge that shows the total number of 
 
 @code {
     [Inject] ICartService CartService { get; set; } = null!;
+    [Inject] NavigationManager NavigationManager { get; set; } = null!;
 
     protected override void OnInitialized()
     {
-        CartService.OnCartChanged += StateHasChanged;
+        CartService.OnCartChanged += OnCartChanged;
     }
+
+    private void OnCartChanged() => StateHasChanged();
 
     public void Dispose()
     {
-        CartService.OnCartChanged -= StateHasChanged;
+        CartService.OnCartChanged -= OnCartChanged;
     }
 }
 
@@ -923,7 +928,7 @@ This page serves as the landing page and provides quick navigation to key areas 
 {% endhighlight %}
 {% endtabs %}
 
-The home page uses Syncfusion card components to present a simple hero section and navigation cards. It helps users quickly access the product catalog and wishlist.
+The home page uses Syncfusion card components to present a simple hero section and navigation cards. It helps users quickly access the product catalog and wish-list.
 
 ### Create the product catalog page
 
@@ -1050,8 +1055,11 @@ This page displays the items added to the shopping cart and allows users to modi
 
 @page "/cart"
 @using ShoppingCart.Models
+@using ShoppingCart.Services
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Cards
 @implements IDisposable
 @inject ICartService CartService
 @inject NavigationManager NavigationManager
@@ -1755,7 +1763,7 @@ else
 {% endhighlight %}
 {% endtabs %}
 
-This page uses the wishlist service to retrieve saved items and conditionally displays either an empty state or a list of products. Users can remove items from the wishlist or navigate back to the catalog.
+This page uses the wish-list service to retrieve saved items and conditionally displays either an empty state or a list of products. Users can remove items from the wish-list or navigate back to the catalog.
 
 ## Run the application
 
@@ -1763,12 +1771,12 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 **Expected behavior**
 
-* The application launches successfully and displays the home page with navigation links to the product catalog and wishlist.
+* The application launches successfully and displays the home page with navigation links to the product catalog and wish-list.
 * The product catalog lists available products using Syncfusion Blazor components, and adding items updates the cart badge immediately.
 * The shopping cart page shows selected items, supports quantity updates and removal actions, and recalculates totals in real time.
 * The checkout process allows users to enter shipping and payment details, place an order, and clear the cart upon completion.
 * After checkout, the order confirmation and order history pages display the appropriate order details and status.
-* The wishlist page allows users to save and remove products, and the saved items remain available while navigating across pages.
+* The wish-list page allows users to save and remove products, and the saved items remain available while navigating across pages.
 
 ## See also
 
