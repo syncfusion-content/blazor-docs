@@ -621,6 +621,8 @@ Register the application services in `Program.cs` so they can be accessed throug
 {% tabs %}
 {% highlight cs tabtitle="Program.cs"  %}
 
+using ShoppingCart.Services;
+...
  builder = WebApplication.CreateBuilder(args);
 ...
 // Application services
@@ -1053,6 +1055,7 @@ This page displays the items added to the shopping cart and allows users to modi
 {% tabs %}
 {% highlight razor tabtitle="Cart.razor"  %}
 
+
 @page "/cart"
 @using ShoppingCart.Models
 @using ShoppingCart.Services
@@ -1447,7 +1450,7 @@ This page collects shipping and payment details, displays an order summary, and 
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">CVV *</label>
-                                <SfMaskedTextBox Mask="000" Placeholder="123" @bind-Value="order.Payment.CVV" HtmlAttributes="@(new Dictionary<string, object>{{\"type\",\"password\"}})" />
+                                <SfMaskedTextBox Mask="000" Placeholder="123" @bind-Value="order.Payment.CVV" HtmlAttributes="@cvvAttributes" />
                             </div>
                         </div>
                     </div>
@@ -1494,6 +1497,7 @@ This page collects shipping and payment details, displays an order summary, and 
 
 @code {
     private Order order = new();
+    private readonly Dictionary<string, object> cvvAttributes = new Dictionary<string, object> { { "type", "password" } };
 
     private async Task ProcessOrder()
     {
@@ -1614,6 +1618,7 @@ This page displays a list of previously placed orders and allows users to review
 @page "/orders"
 @using ShoppingCart.Services
 @inject IOrderService OrderService
+@inject NavigationManager NavigationManager
 
 <PageTitle>Order History</PageTitle>
 
