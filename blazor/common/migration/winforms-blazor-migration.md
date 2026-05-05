@@ -98,9 +98,9 @@ dotnet add package Syncfusion.WinForms.DataGrid
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion Blazor: Package installation
+### Syncfusion Blazor application: Package installation
 
-In Blazor applications, Syncfusion® components are delivered as web‑based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
+In Blazor applications, Syncfusion® Blazor components are delivered as web‑based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
 
 Syncfusion® Blazor packages are grouped into the following categories
 
@@ -108,7 +108,7 @@ Syncfusion® Blazor packages are grouped into the following categories
 - Theme packages (CSS‑based)
 - Shared runtime JavaScript
 
-To use Syncfusion® components in a Blazor application, install the base component package and the theme package.
+To use Syncfusion® Blazor components in a Blazor application, install the base component package and the theme package.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -145,7 +145,7 @@ SfSkinManager.SetVisualStyle(this, VisualStyles.FluentLight);
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion Blazor: Theme configuration
+### Syncfusion Blazor application: Theme configuration
 
 In Blazor applications, UI styling is separated from application logic and handled using web standards. Instead of theme managers, styles are applied through CSS files and supporting JavaScript.
 
@@ -176,14 +176,11 @@ To apply Syncfusion® styles and enable required features, reference the theme C
 
 ## Service registration
 
-In Blazor applications, Syncfusion® components must be registered with the built‑in dependency injection system. This registration enables component rendering, state management, and required runtime behavior.
+In Blazor applications, Syncfusion® Blazor components must be registered with the built‑in dependency injection system. This registration enables component rendering, state management, and required runtime behavior.
 
 This step is required only for Blazor applications and replaces the implicit component initialization mechanism used in WinForms.
 
-**Blazor requirement:**
-
-To enable Syncfusion® Blazor components, register the Syncfusion® service in the `Program.cs` file.
-This step makes the Syncfusion® components available throughout the application.
+To enable Syncfusion® Blazor components, register the Syncfusion® Blazor service in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -196,6 +193,8 @@ builder.Services.AddSyncfusionBlazor();
 {% endtabs %}
 
 In Blazor, namespaces are commonly imported globally using the `_Imports.razor` file.
+
+This step makes the Syncfusion® Blazor components available throughout the application.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -210,7 +209,7 @@ In Blazor, namespaces are commonly imported globally using the `_Imports.razor` 
 
 This section explains how user interface elements are rendered in WinForms and Syncfusion Blazor applications. It demonstrates the transition from control‑based rendering in desktop applications to state‑driven component rendering in Blazor.
 
-### WinForms Component rendering
+### WinForms component rendering
 
 In WinForms, user interface elements are created as controls and rendered immediately when they are added to a form. The Windows runtime manages rendering through the message loop, and control state is maintained automatically.
 
@@ -250,7 +249,7 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion Blazor: Component rendering
+### Syncfusion Blazor application: Component rendering
 
 In Blazor, the UI is rendered using Razor components. Components are declared declaratively in markup, and rendering is handled by the Blazor rendering engine.
 Instead of rendering immediately, Blazor renders components based on state changes. Whenever the component state changes, the framework updates only the required parts of the UI.
@@ -304,7 +303,7 @@ this.Controls.Add(chart);
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion Blazor component
+### Syncfusion® Blazor component
 
 In Blazor, multiple components are rendered declaratively using Razor markup. Components are displayed in the order they appear in the markup and are arranged using standard web layout rules.
 
@@ -318,14 +317,14 @@ In Blazor, multiple components are rendered declaratively using Razor markup. Co
 {% endhighlight %}
 {% endtabs %}
 
-## WinForms to Blazor Component Mapping
+## WinForms to Blazor component mapping
 
 This document provides a **comprehensive reference table** that maps **Syncfusion® WinForms controls** to their **Syncfusion® Blazor equivalents**.  
 It is intended to help developers **plan, assess, and execute** WinForms → Blazor migrations efficiently.
 
 ### Data Management and Grids
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfDataGrid` | `SfGrid` | Supports sorting, filtering, grouping, paging, editing |
 | `SfTreeGrid` | `SfTreeGrid` | Uses `IdMapping` and `ParentIdMapping` |
@@ -334,7 +333,7 @@ It is intended to help developers **plan, assess, and execute** WinForms → Bla
 
 ### Charts and Data Visualization
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfChart` | `SfChart` | Supports column, line, bar, pie, area charts |
 | `SfSparkline` | `SfSparkline` | Lightweight inline charts |
@@ -343,23 +342,23 @@ It is intended to help developers **plan, assess, and execute** WinForms → Bla
 
 ### Scheduling and Time Management
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfScheduler` | `SfSchedule<TValue>` | Uses custom POCO model |
 | `ScheduleAppointment` | Custom Event Model | Mapping via `ScheduleEventSettings` |
 
-### Navigation and Layout Controls
+### Navigation and Layout controls
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfTabControl` | `SfTab` | Tab navigation via Razor |
 | `SfAccordion` | `SfAccordion` | Expand/collapse panels |
 | `SfDockingManager` | CSS Layout + Components | Requires layout redesign |
 | `SfSplitContainer` | `SfSplitter` | Horizontal/vertical splitting |
 
-### Editors and Input Controls
+### Editors and Input controls
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfTextBoxExt` | `SfTextBox` | Two‑way binding via `@bind-Value` |
 | `SfMaskedEdit` | `SfMaskedTextBox` | Web input masking |
@@ -371,7 +370,7 @@ It is intended to help developers **plan, assess, and execute** WinForms → Bla
 
 ### Buttons and Commands
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfButton` | `SfButton` | Uses `OnClick` callback |
 | `SfSplitButton` | `SfSplitButton` | Dropdown actions |
@@ -379,16 +378,16 @@ It is intended to help developers **plan, assess, and execute** WinForms → Bla
 
 ### Dialogs and Notifications
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfDialog` | `SfDialog` | Async open/close |
 | `SfMessageBox` | `SfDialog` | Replaces modal dialogs |
 | `SfProgressBar` | `SfProgressBar` | CSS animation |
 | `SfToast` | `SfToast` | Notifications |
 
-## File, Document, and Spreadsheet Controls
+## File, Document, and Spreadsheet controls
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfRichTextBoxAdv` | `SfRichTextEditor` | HTML‑based editor (not DOCX‑native) |
 | `PdfViewerControl` | `SfPdfViewer` | Browser‑based PDF viewer |
@@ -399,15 +398,15 @@ N > `SfRichTextBoxAdv` uses a DOCX object model, while Blazor `SfRichTextEditor`
 
 ### Diagram and Visual Modeling
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfDiagram` | `SfDiagramComponent` | Nodes and connectors defined in code |
 | `NodeViewModel` | `Node` | Programmatic configuration |
 | `ConnectorViewModel` | `Connector` | Async APIs supported |
 
-### Lists and Tree Controls
+### Lists and Tree controls
 
-| WinForms Control | Syncfusion Blazor Component | Notes |
+| WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | `SfTreeView` | `SfTreeView` | Hierarchical navigation |
 | `SfListView` | `SfListView<T>` | Virtualized lists |

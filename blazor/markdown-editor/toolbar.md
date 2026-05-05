@@ -41,7 +41,7 @@ The expand toolbar allows to hide the overflowing items in the next line by usin
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor expand toolbar](./images/blazor-markdowneditor-expand-toolbar.png)
+![Blazor Markdown Editor expand toolbar](./images/blazor-markdowneditor-expand-toolbar.webp)
 
 ### Multi-row Toolbar Setup
 
@@ -55,7 +55,7 @@ You can display the toolbar items in a row-wise format by using the [ToolbarType
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor multirow toolbar](./images/blazor-markdowneditor-multirow-toolbar.png)
+![Blazor Markdown Editor multirow toolbar](./images/blazor-markdowneditor-multirow-toolbar.webp)
 
 ### Scrollable Toolbar Implementation
 
@@ -69,7 +69,7 @@ You can display the toolbar items in a single line with horizontal scrolling by 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor multirow toolbar](./images/blazor-markdowneditor-scrollable-toolbar.png)
+![Blazor Markdown Editor multirow toolbar](./images/blazor-markdowneditor-scrollable-toolbar.webp)
 
 ### Sticky Toolbar Behavior
 
@@ -85,7 +85,7 @@ You can enable or disable the floating toolbar using [RichTextEditorToolbarSetti
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor Sticky toolbar](./images/blazor-markdowneditor-sticky-toolbar.png)
+![Blazor Markdown Editor Sticky toolbar](./images/blazor-markdowneditor-sticky-toolbar.webp)
 
 ## Adding Custom Toolbar Items
 
@@ -137,4 +137,4 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor customize toolbar](./images/blazor-markdowneditor-custom-tool.png)
+![Blazor Markdown Editor customize toolbar](./images/blazor-markdowneditor-custom-tool.webp)
