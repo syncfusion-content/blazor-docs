@@ -80,4 +80,4 @@ To enable RTL mode in the Kanban component, set the [EnableRtl](https://help.syn
 
 ```
 
-![Right to Left in Blazor Kanban](./images/blazor-kanban-right-to-left.png)
+![Right to Left in Blazor Kanban](./images/blazor-kanban-right-to-left.webp)

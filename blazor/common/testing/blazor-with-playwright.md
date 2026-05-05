@@ -11,24 +11,35 @@ documentation: ug
 
 This guide demonstrates how to integrate Syncfusion® UI components into a Blazor WebAssembly application and validate them through end‑to‑end tests using Microsoft Playwright. It provides a clear, step‑by‑step approach for building reliable and maintainable UI automation for Syncfusion® components in Blazor applications.
 
-## Why Playwright with Syncfusion® Blazor?
+## Why Playwright with Syncfusion® Blazor applications?
 
-- **Syncfusion® Blazor** provides rich UI components such as Buttons, Grids, and Charts for building modern web applications.
+- **Syncfusion® Blazor applications** provides rich UI components such as Buttons, Grids, and Charts for building modern web applications.
 - **Playwright** enables reliable cross‑browser UI testing across Chromium, Firefox, and WebKit.
-- Using Syncfusion® Blazor with Playwright, you can validate real user interactions, test complete end‑to‑end user flows, and catch UI regressions early.
+- Using **Syncfusion® Blazor applications with Playwright**, you can validate real user interactions, test complete end‑to‑end user flows, and catch UI regressions early.
 
 ## Create a Blazor project
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the Syncfusion® getting started guides [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+Otherwise, create a new Blazor application by following the [Syncfusion® getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for **Blazor WebAssembly Standalone App**.
 
 ## Install required packages
 
-Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
+Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid**.
 
 - [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+You can install the required packages by using the following .NET CLI commands.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion® namespaces
 
@@ -84,7 +95,7 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
 
-This page contains a **Syncfusion® Button**, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+This page contains a **Syncfusion® Blazor Button**, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
 
 {% tabs %}
 {% highlight razor %}
@@ -138,6 +149,20 @@ Install the following NuGet packages into the E2E.Tests project to enable Playwr
 - [NUnit](https://www.nuget.org/packages/nunit/)
 - [NUnit3TestAdapter](https://www.nuget.org/packages/NUnit3TestAdapter)
 - [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk)
+
+You can install the required packages by using the following .NET CLI commands.
+
+{% tabs %}
+{% highlight bash tabtitle=" Terminal " %}
+
+dotnet add package Microsoft.Playwright
+dotnet add package NUnit
+dotnet add package NUnit3TestAdapter
+dotnet add package Microsoft.NET.Test.Sdk
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Install the Playwright CLI
 

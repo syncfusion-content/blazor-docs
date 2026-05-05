@@ -27,13 +27,13 @@ This section explains how to connect **Microsoft Entra ID login** to a Blazor We
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the Syncfusion getting started guides [Blazor Web App (Interactive Server)](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+Otherwise, create a new Blazor application by following the [Syncfusion getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for **Blazor Web App (Interactive Server)**.
 
 Ensure that **HTTPS is enabled** during project creation, as Microsoft Entra ID based authorization requires secure communication.
 
 ### Install required packages
 
-Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and install the required package.
+Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid** and enable authentication with **Microsoft Entra ID**.
 
 **Syncfusion packages:**
 
@@ -44,6 +44,19 @@ Open the NuGet Package Manager in Visual Studio from (*Tools → NuGet Package M
 
 - [Microsoft.Identity.Web](https://www.nuget.org/packages/Microsoft.Identity.Web)
 - [Microsoft.Identity.Web.UI](https://www.nuget.org/packages/Microsoft.Identity.Web.UI)
+
+You can install the required packages by using the following .NET CLI commands.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Microsoft.Identity.Web
+dotnet add package Microsoft.Identity.Web.UI 
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Syncfusion® namespaces
 
@@ -264,7 +277,19 @@ Create a protected page that displays the Syncfusion® **DataGrid** only after t
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates how to integrate Microsoft Entra ID authentication into a Blazor Web App using the Microsoft Identity platform. 
+### Run the application
+
+Run the application using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+This example demonstrates how to integrate Microsoft Entra ID authentication into a Blazor Web App using the Microsoft Identity platform.
 
 ![Blazor DataGrid with Microsoft Enta ID login page](images/microsoft-authentication.webp)
 
