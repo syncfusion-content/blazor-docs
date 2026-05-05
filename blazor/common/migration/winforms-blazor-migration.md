@@ -383,14 +383,12 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started) | Async open/close |
 | [ProgressBarAdv](https://help.syncfusion.com/windowsforms/progress-bar/creating-progressbaradv) | [SfProgressBar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started) | Progress indicator |
 
-
 ## File, Document, and Spreadsheet controls
 
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | [PdfViewerControl](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/getting-started) | [SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/web-assembly-application) | PDF viewer |
 | [Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started) | [SfSpreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started) | Excel‑like UI |
-
 
 ### Diagram and Visual Modeling
 
@@ -410,5 +408,5 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 - [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 - [Getting started with Syncfusion® Blazor Components](https://blazor.syncfusion.com/documentation/introduction)
-- [Getting started with Syncfusion® Essential® Windows Forms](https://help.syncfusion.com/windowsforms/listview/gettingstarted)
+- [Getting started with Syncfusion® Essential® Windows Forms](https://help.syncfusion.com/windowsforms/overview)
 
