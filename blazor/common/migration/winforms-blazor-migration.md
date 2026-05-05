@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Migrating from WinForms to Blazor
+# Migrating from Windows Forms to Blazor
 
 This guide provides a step‑by‑step approach to migrating a Windows Forms (WinForms) application to Syncfusion® Blazor. It is designed to help developers modernize existing desktop applications by moving to a web‑based architecture while continuing to use familiar .NET and C# skills.
 
