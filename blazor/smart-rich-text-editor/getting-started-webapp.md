@@ -296,7 +296,7 @@ N> Notice the `@rendermode InteractiveServer` directive on the page. This is req
 
 * Use <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog for content improvement.
 
-![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.gif)
+![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
