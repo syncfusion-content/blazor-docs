@@ -9,14 +9,19 @@ documentation: ug
 
 # JetBrains Rider Integration with Syncfusion Blazor Components
 
-JetBrains Rider is a powerful, cross‑platform integrated development environment (IDE) designed for .NET developers. It provides excellent support for building Blazor applications.
+[JetBrains Rider](https://www.jetbrains.com/rider/) is a powerful, cross‑platform integrated development environment (IDE) designed for .NET developers. It provides excellent support for building Blazor applications.
 
-Syncfusion Blazor components offer a wide collection of ready‑to‑use UI controls that help you create modern, interactive, and visually rich web applications using Blazor.
+[Syncfusion Blazor components](https://www.syncfusion.com/blazor-components) offer a wide collection of ready‑to‑use UI controls that help you create modern, interactive, and visually rich web applications using Blazor.
 
 - Set up JetBrains Rider for Blazor development
 - Install and configure Syncfusion Blazor packages
 - Create and run a Blazor application
 - Work efficiently with Syncfusion Blazor components inside Rider
+
+To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfusion, review the following video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
 
 ## Setting up JetBrains Rider for Blazor
 
@@ -89,13 +94,17 @@ To apply styles and enable Syncfusion® features, reference the theme CSS and sc
 {% highlight html  %}
 
 <head>
+    ....
     <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ....
 </head>
 
 <body>
+    ....
     <!-- Syncfusion Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    ....
 </body>
 
 {% endhighlight %}
@@ -103,7 +112,7 @@ To apply styles and enable Syncfusion® features, reference the theme CSS and sc
 
 ## Connect the Syncfusion® Blazor DataGrid
 
-Add the Syncfusion® Blazor **DataGrid** components to a `.razor` file within your app. 
+Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** components to a `.razor` file within your app. 
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor"  %}
@@ -152,4 +161,4 @@ The app launches and renders the **[Syncfusion® Blazor DataGrid](https://www.sy
 
 - [Getting started with Syncfusion® Blazor DataGrid in WASM App](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 - [Integrating Syncfusion® Blazor Components with Azure Functions](https://blazor.syncfusion.com/documentation/common/integration/blazor-azure-functions)
-
+- [Blazor WebAssembly with JetBrains Rider and Syncfusion®](https://www.syncfusion.com/webinars/blazor-webassembly-with-jetbrains-rider-and-syncfusion)
