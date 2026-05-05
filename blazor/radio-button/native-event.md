@@ -48,4 +48,4 @@ Use the `onchange` attribute to bind the change event for a radio button. The fo
 
 ```
 
-![Blazor RadioButton with Native Event](./images/blazor-radiobutton-native-event.png)
+![Blazor RadioButton with Native Event](./images/blazor-radiobutton-native-event.webp)

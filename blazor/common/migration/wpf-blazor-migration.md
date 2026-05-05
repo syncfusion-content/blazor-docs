@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a **structured, step-by-step migration path** for **[Syncfusion WPF components](https://www.syncfusion.com/wpf-controls)** to their **[Syncfusion Blazor equivalents](https://www.syncfusion.com/blazor-components)**, developed using [Visual Studio](https://visualstudio.microsoft.com/vs/) or **[Visual Studio Code](https://code.visualstudio.com/)**.
+Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a **structured, step-by-step migration path** for **[Syncfusion WPF components](https://www.syncfusion.com/wpf-controls)** to their **[Syncfusion Blazor equivalents](https://www.syncfusion.com/blazor-components)**, developed using **[Visual Studio](https://visualstudio.microsoft.com/vs/)** or **[Visual Studio Code](https://code.visualstudio.com/)**.
 
 This document covers:
 * Architectural differences between WPF and Blazor
@@ -20,7 +20,7 @@ This document covers:
 
 ### Why migrate from WPF to Blazor?
 
-N For WPF-like UI responsiveness and centralized state, Blazor Server is usually the closest architectural match.
+N> For WPF-like UI responsiveness and centrally managed state, **Blazor Server** is often the closest architectural fit.
 
 | Dimension | WPF | Blazor |
 |---|---|---|
@@ -44,8 +44,7 @@ N For WPF-like UI responsiveness and centralized state, Blazor Server is usually
 | **State management** | ViewModel + `INotifyPropertyChanged` | Component state + `StateHasChanged()`; in Blazor Server the state is stored per server circuit (per connection) |
 | **Dependency injection** | Typically third‑party containers (Unity, Prism, MEF, etc.) | Built‑in `IServiceCollection` / DI container |
 | **Navigation** | WPF `Frame` / Prism `RegionManager` | `NavigationManager` + `@page` routing |
-| **Render mode** | Native rendering pipeline | Use interactive render modes (for example, `@rendermode InteractiveServer`) in .NET 8+.
-Blazor WebAssembly uses client-side rendering |
+| **Render mode** | Native rendering pipeline | Use interactive render modes (for example, `@rendermode InteractiveServer`) in .NET 8+. Blazor WebAssembly uses client-side rendering |
 
 ## Development environment setup
 
@@ -70,21 +69,23 @@ dotnet new list blazor   # List available/installed Blazor project templates
 
 ## Project structure comparison
 
-### One-to-one structural mapping
+### Closest WPF-to-Blazor equivalents
+
+WPF and Blazor use different application models. The table below shows the  **closest functional equivalents**, not a strict one‑to‑one mapping.
 
 | WPF artifact | Blazor equivalent | Notes |
 |---|---|---|
-| `App.xaml` | `App.razor` | Root app file (typically at project root; not necessarily in a `Components` folder). |
-| `App.xaml.cs` | `Program.cs` | Startup, DI and host configuration. |
-| `MainWindow.xaml` | `MainLayout.razor` | Layout/shell component (commonly under `Shared` or `Layouts`). |
-| `Views/*.xaml` | `Pages/*.razor` | Page components use `@page` routing. |
-| `ViewModels/*.cs` | `*.razor.cs` / services / ViewModel classes | MVVM can be preserved, but Blazor favors component code-behind (`.razor.cs`) or injected services; ViewModels still valid. |
-| `Models/*.cs` | `Models/*.cs` | Typically unchanged; validation attributes work with `EditForm`. |
-| `Services/*.cs` | `Services/*.cs` | Register via `builder.Services` (`IServiceCollection`). |
-| `ResourceDictionary` | `wwwroot/css/*.css` (+ `_content/*` static assets) | Map XAML resources to CSS, CSS isolation, and theme CSS/JS files. |
-| `UserControl` | Razor component (`.razor`) | Reusable UI component. |
-| `ICommand` / `RelayCommand` | C# methods + `EventCallback` / injected services | Use EventCallback / async methods; ICommand can be used but is not the primary pattern. |
-| `INotifyPropertyChanged` | Component state + `StateHasChanged()` (or subscribe `CollectionChanged`) | Blazor re-renders via lifecycle and StateHasChanged; for ObservableCollection subscribe and call InvokeAsync(StateHasChanged). |
+| `App.xaml` | `Program.cs` + `App.razor` | Blazor startup is split between host configuration and root rendering. |
+| `App.xaml.cs` | `Program.cs` | Handles service registration and host setup. |
+| `MainWindow.xaml` | `App.razor` + `MainLayout.razor` + `Routes.razor` | Blazor uses a layout and routing shell instead of a desktop window. |
+| `Views/*.xaml` | `Pages/*.razor` | Page components participate in routing through the `@page` directive. |
+| `ViewModels/*.cs` | Services, component state, or `.razor.cs` | ViewModel classes can often be reused or adapted; MVVM is optional in Blazor. |
+| `Models/*.cs` | `Models/*.cs` | Domain and data models are usually unchanged. |
+| `Services/*.cs` | `Services/*.cs` | Registered through dependency injection during startup. |
+| `ResourceDictionary` | CSS, CSS isolation, and static assets | Styling and resources are handled through web assets rather than XAML resources. |
+| `UserControl` | Razor component (`.razor`) | Reusable UI component composed with Razor and parameters. |
+| `ICommand` / `RelayCommand` | Event handlers, `EventCallback`, or injected services | Command patterns can still exist in supporting code, but callbacks and async handlers are more common. |
+| `INotifyPropertyChanged` | Component state and re-rendering | Blazor re-renders when component state changes; `StateHasChanged()` can be used when needed. |
 
 ## Getting started: project creation
 
@@ -101,7 +102,7 @@ dotnet watch   # Hot reload during development
 {% endhighlight %}
 {% endtabs %}
 
-> N> The `--interactivity Server` flag configures SignalR-based interactivity and provides behavior similar to WPF's immediate UI update model, but over the network.
+N> The `--interactivity Server` flag configures SignalR-based interactivity and provides behavior similar to WPF's immediate UI update model, but over the network.
 
 ## Migrating key Syncfusion components from WPF to Blazor
 
@@ -122,7 +123,7 @@ For detailed explanation, refer to the [WPF DataGrid getting started guide](http
 
 #### Migration overview
 
-| Aspect | WPF (SfDataGrid) | Blazor (SfGrid / SfGrid<TValue>) |
+| Aspect | WPF (SfDataGrid) | Blazor (SfGrid) |
 |---|---|---|
 | Package (NuGet) | `Syncfusion.SfGrid.WPF` | `Syncfusion.Blazor.Grid` |
 | Namespace | XAML: `xmlns:syncfusion="..."` | Razor: `@using Syncfusion.Blazor.Grids` |
@@ -130,8 +131,8 @@ For detailed explanation, refer to the [WPF DataGrid getting started guide](http
 | Data binding | `ItemsSource` / DataContext / `INotifyPropertyChanged` | `DataSource="@..."` + component state (`OnInitialized[Async]`, `StateHasChanged()`) |
 | Collection type | `ObservableCollection<T>` (raises collection-change notifications; items should implement `INotifyPropertyChanged` for property updates) | `List<T>` / `IEnumerable<T>` (call `StateHasChanged()` after mutations); `ObservableCollection<T>` requires manual `CollectionChanged` subscription |
 | Columns | Typed columns (e.g. `GridTextColumn`, `GridNumericColumn`, `GridTemplateColumn`) | `GridColumn` with `Field="@nameof(...)"`, `Format`, `EditType` |
-| Templates | XAML `DataTemplate` | Razor `<Template>` / `RenderFragment<T>` sections |
-| Editing & API | XAML properties, code‑behind events, `x:Name` refs | `GridEditSettings`, `GridEvents`, `EventCallback<T>`, `@ref` async APIs |
+| Templates | XAML `DataTemplate` | Razor `<Template>` sections |
+| Editing & API | XAML properties, code‑behind events, `x:Name` refs | `GridEditSettings`, `GridEvents`, `@ref` async APIs |
 | Events & commands | CLR events / `ICommand` | EventCallback-based handlers (async) |
 | Theming & assets | `ResourceDictionary` / `SfSkinManager` | CSS theme files + Syncfusion JS; register `AddSyncfusionBlazor()` |
 | Paging / virtualization | `SfDataPager` / native virtualization | `GridPageSettings`, `EnableVirtualization`, `SfDataManager` for remote operations |
@@ -139,10 +140,13 @@ For detailed explanation, refer to the [WPF DataGrid getting started guide](http
 
 #### Step-by-step migration
 
-##### Step 1: Package installation
+#### Step 1: Package installation
 
 Install the required Syncfusion NuGet packages to enable DataGrid functionality in your application.
-In WPF, the [DataGrid control](https://www.syncfusion.com/wpf-controls/datagrid) is available through a single package. In Blazor, the [DataGrid component](https://www.syncfusion.com/blazor-components/blazor-datagrid) and its theme styles are provided as separate packages, and both need to be installed.
+
+In WPF, the [DataGrid control](https://www.syncfusion.com/wpf-controls/datagrid) is available through a single package. 
+
+In Blazor, the [DataGrid component](https://www.syncfusion.com/blazor-components/blazor-datagrid) and its theme styles are provided as separate packages, and both need to be installed.
 
 **WPF approach:**
 
@@ -165,9 +169,10 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 2: Theme 
+#### Step 2: Theme 
 
 Configure the visual theme to ensure that the DataGrid follows a consistent and modern appearance across the application.
+
 In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager), while Blazor applications apply themes by referencing the required Syncfusion CSS files during application startup.
 
 **WPF approach (MainWindow.xaml):**
@@ -197,7 +202,7 @@ In WPF, themes are applied at the window level using the [SfSkinManager](https:/
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 3: Service registration (Blazor-specific)
+#### Step 3: Service registration (Blazor-specific)
 
 Register the Syncfusion services in the Blazor dependency injection container to activate component rendering and runtime behavior.
 This step is required only for Blazor applications and replaces the implicit component initialization mechanism used in WPF.
@@ -225,10 +230,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 4: Component rendering
+#### Step 4: Component rendering
 
 Render the DataGrid and configure the required columns.
-In WPF, the DataGrid control is defined in XAML and the data collection is assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ItemsSource) property. In Blazor, the DataGrid component is declared in Razor markup and receives its data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
+
+In WPF, the DataGrid control is defined in XAML and the data collection is assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ItemsSource) property. 
+
+In Blazor, the DataGrid component is declared in Razor markup and receives its data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -348,7 +356,7 @@ namespace WpfDataGridApp
 
 ### 2. TreeGrid
 
-For detailed explanation, refer to the [WPF TreeGrid getting started guide](https://help.syncfusion.com/wpf/treegrid/getting-started) and [Blazor TreeGrid getting started guide](https://blazor.syncfusion.com/documentation/treegrid/getting-started).
+For detailed explanation, refer to the [WPF TreeGrid getting started guide](https://help.syncfusion.com/wpf/treegrid/getting-started) and [Blazor TreeGrid getting started guide](https://blazor.syncfusion.com/documentation/treegrid/getting-started-with-server-app).
 
 #### Migration overview
 
@@ -366,10 +374,13 @@ For detailed explanation, refer to the [WPF TreeGrid getting started guide](http
 
 #### Step-by-step migration
 
-##### Step 1: Package installation
+#### Step 1: Package installation
 
 Install the required Syncfusion NuGet packages to enable TreeGrid functionality for displaying hierarchical data in a grid format.
-In WPF, the [TreeGrid control](https://www.syncfusion.com/wpf-controls/treegrid) is included as part of the Syncfusion Grid package. In Blazor, the [TreeGrid component](https://www.syncfusion.com/blazor-components/blazor-tree-grid) and its theme styles are available as separate packages, and both need to be installed.
+
+In WPF, the [TreeGrid control](https://www.syncfusion.com/wpf-controls/treegrid) is included as part of the Syncfusion Grid package. 
+
+In Blazor, the [TreeGrid component](https://www.syncfusion.com/blazor-components/blazor-tree-grid) and its theme styles are available as separate packages, and both need to be installed.
 
 **WPF approach:**
 
@@ -392,10 +403,13 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 2: Theme configuration
+#### Step 2: Theme configuration
 
 Configure the visual theme to ensure that the TreeGrid follows a consistent and modern appearance across the application.
-In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). In Blazor, themes are applied by referencing the appropriate Syncfusion CSS files during application startup.
+
+In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). 
+
+In Blazor, themes are applied by referencing the appropriate Syncfusion CSS files during application startup.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -424,7 +438,7 @@ In WPF, themes are applied at the window level using the [SfSkinManager](https:/
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 3: Service registration (Blazor-specific)
+#### Step 3: Service registration (Blazor-specific)
 
 Register the Syncfusion services in the Blazor dependency injection container to enable TreeGrid component initialization and runtime functionality.
 This step is required only for Blazor applications and replaces the implicit component setup used in WPF.
@@ -452,10 +466,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 4: Component rendering
+#### Step 4: Component rendering
 
 Render the TreeGrid and configure the required columns to display hierarchical data using a self‑referencing data structure.
-In WPF, the TreeGrid control is defined in XAML, and the hierarchical data collection is assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_ItemsSource) property along with parent‑child mapping properties. In Blazor, the TreeGrid component is declared in Razor markup and receives its hierarchical data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) parameter, using [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ParentIdMapping) to establish relationships.
+
+In WPF, the TreeGrid control is defined in XAML, and the hierarchical data collection is assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_ItemsSource) property along with parent‑child mapping properties. 
+
+In Blazor, the TreeGrid component is declared in Razor markup and receives its hierarchical data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) parameter, using [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ParentIdMapping) to establish relationships.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -601,10 +618,13 @@ For detailed explanation, refer to the [WPF Charts getting started guide](https:
 
 #### Step-by-step migration
 
-##### Step 1: Package installation
+#### Step 1: Package installation
 
 Install the required Syncfusion NuGet packages to enable charting and data visualization capabilities in your application.
-In WPF, the [Chart control](https://www.syncfusion.com/wpf-controls/charts) is available through a single package. In Blazor, the [Chart component](https://www.syncfusion.com/blazor-components/blazor-charts) and its theme styles are provided as separate packages.
+
+In WPF, the [Chart control](https://www.syncfusion.com/wpf-controls/charts) is available through a single package. 
+
+In Blazor, the [Chart component](https://www.syncfusion.com/blazor-components/blazor-charts) and its theme styles are provided as separate packages.
 
 **WPF approach:**
 
@@ -627,10 +647,13 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 2: Theme configuration
+#### Step 2: Theme configuration
 
 Configure the visual theme to ensure that the charts follow a consistent and modern appearance across the application.
-In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
+
+In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). 
+
+In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -659,7 +682,7 @@ In WPF, themes are applied at the window level using the [SfSkinManager](https:/
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 3: Service registration (Blazor-specific)
+#### Step 3: Service registration (Blazor-specific)
 
 Register the Syncfusion services in the Blazor dependency injection container to enable chart component initialization and interactive features.
 This step is required only for Blazor applications and replaces the implicit component setup used in WPF.
@@ -687,10 +710,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 4: Component rendering
+#### Step 4: Component rendering
 
 Render the chart and configure the required axes, series, and visualization settings.
-In WPF, the Chart control is defined using nested XAML elements, and data is assigned through the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) property using binding paths for the X and Y values. In Blazor, the Chart component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
+
+In WPF, the Chart control is defined using nested XAML elements, and data is assigned through the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) property using binding paths for the X and Y values. 
+
+In Blazor, the Chart component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -842,10 +868,13 @@ For detailed explanation, refer to the [WPF Scheduler getting started guide](htt
 
 #### Step-by-step migration
 
-##### Step 1: Package installation
+#### Step 1: Package installation
 
 Install the required Syncfusion NuGet packages to enable calendar and appointment scheduling functionality in your application.
-In WPF, the [Scheduler control](https://www.syncfusion.com/wpf-controls/scheduler) is available through a single package. In Blazor, the [Scheduler component](https://www.syncfusion.com/blazor-components/blazor-scheduler) and its theme styles are provided as separate packages, and both need to be installed.
+
+In WPF, the [Scheduler control](https://www.syncfusion.com/wpf-controls/scheduler) is available through a single package. 
+
+In Blazor, the [Scheduler component](https://www.syncfusion.com/blazor-components/blazor-scheduler) and its theme styles are provided as separate packages, and both need to be installed.
 
 **WPF approach:**
 
@@ -868,10 +897,13 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 2: Theme configuration
+#### Step 2: Theme configuration
 
 Configure the visual theme to ensure that the Scheduler follows a consistent and modern appearance across the application.
-In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
+
+In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). 
+
+In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -900,7 +932,7 @@ In WPF, themes are applied at the window level using the [SfSkinManager](https:/
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 3: Service registration (Blazor-specific)
+#### Step 3: Service registration (Blazor-specific)
 
 Register the Syncfusion services in the Blazor dependency injection container to enable Scheduler component initialization and interactive features.
 This step is required only for Blazor applications and replaces the implicit component setup used in WPF.
@@ -928,10 +960,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 4: Component rendering
+#### Step 4: Component rendering
 
 Render the Scheduler and configure the required views, date settings, and appointment data.
-In WPF, the Scheduler control is defined in XAML, with the active view and display date configured through properties, and appointments assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ItemsSource) property. In Blazor, the Scheduler component is declared in Razor markup, views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
+
+In WPF, the Scheduler control is defined in XAML, with the active view and display date configured through properties, and appointments assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ItemsSource) property. 
+
+In Blazor, the Scheduler component is declared in Razor markup, views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -1070,10 +1105,13 @@ For detailed explanation, refer to the [WPF Diagram getting started guide](https
 
 #### Step-by-step migration
 
-##### Step 1: Package installation
+#### Step 1: Package installation
 
 Install the required Syncfusion NuGet packages to enable diagramming and visual flowchart creation in your application.
-In WPF, the [Diagram control](https://www.syncfusion.com/wpf-controls/diagram) is available through a single package. In Blazor, the [Diagram component](https://www.syncfusion.com/blazor-components/blazor-diagram) and its theme styles are provided as separate packages, and both need to be installed.
+
+In WPF, the [Diagram control](https://www.syncfusion.com/wpf-controls/diagram) is available through a single package. 
+
+In Blazor, the [Diagram component](https://www.syncfusion.com/blazor-components/blazor-diagram) and its theme styles are provided as separate packages, and both need to be installed.
 
 **WPF approach:**
 
@@ -1096,10 +1134,13 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 2: Theme configuration
+#### Step 2: Theme configuration
 
 Configure the visual theme to ensure that the Diagram follows a consistent and modern appearance across the application.
-In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
+
+In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). 
+
+In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -1128,7 +1169,7 @@ In WPF, themes are applied at the window level using the [SfSkinManager](https:/
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 3: Service registration (Blazor-specific)
+#### Step 3: Service registration (Blazor-specific)
 
 Register the Syncfusion services in the Blazor dependency injection container to enable Diagram component initialization and interactive features.
 This step is required only for Blazor applications and replaces the implicit component setup used in WPF.
@@ -1156,10 +1197,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 4: Component rendering
+#### Step 4: Component rendering
 
 Render the Diagram component and define its visual elements, such as nodes and connectors.
-In WPF, the Diagram control is declared in XAML, with nodes and connectors defined using nested collections. In Blazor, the Diagram component is declared in Razor markup, and nodes and connectors are created programmatically and supplied through component parameters.
+
+In WPF, the Diagram control is declared in XAML, with nodes and connectors defined using nested collections. 
+
+In Blazor, the Diagram component is declared in Razor markup, and nodes and connectors are created programmatically and supplied through component parameters.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -1293,10 +1337,13 @@ For detailed explanation, refer to the [WPF RichTextBox getting started guide](h
 
 #### Step-by-step migration
 
-##### Step 1: Package installation
+#### Step 1: Package installation
 
 Install the required Syncfusion NuGet packages to enable rich text editing with formatting and content authoring capabilities in your application.
-In WPF, the [RichTextEditor control](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) is available through a single package. In Blazor, the [RichTextEditor component](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) and its theme styles are provided as separate packages, and both need to be installed.
+
+In WPF, the [RichTextEditor control](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) is available through a single package. 
+
+In Blazor, the [RichTextEditor component](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) and its theme styles are provided as separate packages, and both need to be installed.
 
 **WPF approach:**
 
@@ -1319,10 +1366,13 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 2: Theme configuration
+#### Step 2: Theme configuration
 
 Configure the visual theme to ensure that the RichTextEditor follows a consistent and modern appearance across the application.
-In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
+
+In WPF, themes are applied at the window level using the [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager). 
+
+In Blazor, themes are applied by referencing the required Syncfusion CSS files during application startup.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -1351,7 +1401,7 @@ In WPF, themes are applied at the window level using the [SfSkinManager](https:/
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 3: Service registration (Blazor-specific)
+#### Step 3: Service registration (Blazor-specific)
 
 Register the Syncfusion services in the Blazor dependency injection container to enable RichTextEditor component initialization and interactive features.
 This step is required only for Blazor applications and replaces the implicit component setup used in WPF.
@@ -1379,10 +1429,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 4: Component rendering
+#### Step 4: Component rendering
 
 Render the RichTextEditor and configure its editing surface for rich text content.
-In WPF, the RichTextEditor control is declared directly in XAML, and the initial content is loaded programmatically using a stream. In Blazor, the RichTextEditor component is declared in Razor markup, and the editor content is initialized and synchronized using two‑way binding with the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property.
+
+In WPF, the RichTextEditor control is declared directly in XAML, and the initial content is loaded programmatically using a stream. 
+
+In Blazor, the RichTextEditor component is declared in Razor markup, and the editor content is initialized and synchronized using two‑way binding with the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property.
 
 **WPF approach (MainWindow.xaml):**
 
@@ -1543,7 +1596,6 @@ public class OrderViewModel : INotifyPropertyChanged
 - `ObservableCollection<T>` → `List<T>` / `IEnumerable<T>` for typical Blazor components. If you keep `ObservableCollection<T>`, subscribe to `CollectionChanged` and call `InvokeAsync(StateHasChanged)` to force re-render.
 - `INotifyPropertyChanged` (ViewModel reactivity) → component state and lifecycle methods; call `StateHasChanged()` when component state changes.
 - `MappingName` → `Field="@nameof(...)"` on `GridColumn`.
-- Load and initialize data in `OnInitialized` / `OnInitializedAsync` rather than constructors or WPF `Loaded` handlers.
 
 ### Column types and formatting
 
@@ -1589,7 +1641,6 @@ public class OrderViewModel : INotifyPropertyChanged
 - `GridCurrencyColumn` → `GridColumn` with `Format="C2"`.
 - `GridDateTimeColumn` → `GridColumn` with `Type="ColumnType.Date"` and an appropriate `Format`.
 - `GridCheckBoxColumn` → `GridColumn` with `Type="ColumnType.Boolean"`.
-- Use `Width`, `TextAlign`, `CustomAttributes`, and `<Template>` to control layout and rendering in Razor.
 
 ### Template columns
 
@@ -1636,7 +1687,6 @@ public class OrderViewModel : INotifyPropertyChanged
 
 - XAML `<DataTemplate>` → Razor `<Template>` / `RenderFragment<T>` (row object accessible as `context`).
 - Replace WPF controls with HTML/CSS and Blazor components; images use `wwwroot` paths (for example, `/images/...`).
-- Move complex UI logic from XAML to component code (`@code` / `.razor.cs`).
 
 ### Editing
 
@@ -1699,42 +1749,14 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid TValue="Order"
-        @ref="OrdersGrid"
-        DataSource="@Orders">
-
-    <GridEditSettings AllowEditing="true"
-                      AllowAdding="true"
-                      AllowDeleting="true"
-                      Mode="EditMode.Normal">
-    </GridEditSettings>
-
-    <GridEvents TValue="Order"
-                OnRecordClick="RecordClickHandler"
-                OnRecordDoubleClick="RecordDoubleClickHandler"
-                OnCellEdit="CellEditHandler"
-                OnCellSave="CellSaveHandler"
-                CellSaved="CellSavedHandler">
-    </GridEvents>
-
+<SfGrid TValue="Order" @ref="OrdersGrid" DataSource="@Orders">
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents TValue="Order" OnRecordClick="RecordClickHandler" OnRecordDoubleClick="RecordDoubleClickHandler" OnCellEdit="CellEditHandler" OnCellSave="CellSaveHandler" CellSaved="CellSavedHandler"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)"
-                    HeaderText="Order ID"
-                    IsPrimaryKey="true"
-                    AllowEditing="false"
-                    Width="120" />
-
-        <GridColumn Field="@nameof(Order.CustomerID)"
-                    HeaderText="Customer"
-                    Width="150" />
-
-        <GridColumn Field="@nameof(Order.Freight)"
-                    HeaderText="Freight"
-                    EditType="EditType.NumericEdit"
-                    TextAlign="TextAlign.Right"
-                    Width="120" />
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" AllowEditing="false" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" EditType="EditType.NumericEdit" TextAlign="TextAlign.Right" Width="120" />
     </GridColumns>
-
 </SfGrid>
 
 @code {
@@ -1743,12 +1765,12 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 
     private void RecordClickHandler(RecordClickEventArgs<Order> args)
     {
-        // Use args.RowData and args.RowIndex to handle single‑click record interactions.
+        // Use args.RowData and args.RowIndex to handle single-click record interactions.
     }
 
     private void RecordDoubleClickHandler(RecordDoubleClickEventArgs<Order> args)
     {
-        // Use args.RowData and args.RowIndex to initiate editing or perform record‑level actions.
+        // Use args.RowData and args.RowIndex to initiate editing or perform record-level actions.
     }
 
     private void CellEditHandler(CellEditArgs<Order> args)
@@ -1774,7 +1796,6 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
     }
 }
 
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -1783,7 +1804,6 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 - WPF edit events (`CurrentCellBeginEdit`, `CurrentCellEndEdit`, `CurrentCellValueChanged`) → Blazor Grid events via `GridEvents`, such as `OnCellEdit`, `OnCellSave`, `CellSaved`.
 - Row/record interactions (`CellTapped`, `CellDoubleTapped`) → `OnRecordClick`, `OnRecordDoubleClick`.
 - Validation: `IDataErrorInfo` / `INotifyDataErrorInfo` → `EditForm` + DataAnnotations or grid-level validation using `OnActionBegin` / `OnActionComplete`.
-- Use component `@ref` and async APIs (for example, `await Grid.BeginEditAsync(...)`, `await Grid.SaveRowAsync()`) for programmatic editing.
 
 ### Sorting and filtering
 
@@ -1814,10 +1834,7 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid TValue="Order" DataSource="@Orders"
-        AllowSorting="true"
-        AllowMultiSorting="true"
-        AllowFiltering="true">
+<SfGrid TValue="Order" DataSource="@Orders" AllowSorting="true" AllowMultiSorting="true" AllowFiltering="true">
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel" />
     <GridSortSettings>
         <GridSortColumns>
@@ -1837,9 +1854,8 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 
 **Key migration changes:**
 - `SortColumnDescriptions` → `GridSortSettings` / `<GridSortColumn Field="..." Direction="SortDirection.*" />`.
-- `AllowSorting` / `ShowSortNumbers` → `AllowSorting="true"`, `AllowMultiSorting="true"`, and `GridSortSettings`.
+- `AllowSorting="True"` / `ShowSortNumbers="True"` → `AllowSorting="true"`, `AllowMultiSorting="true"`, and `GridSortSettings`.
 - Filter UI differences: WPF `FilterRowPosition` / `FilterPopupStyle` → `GridFilterSettings` (`Type="FilterType.Excel|Menu|Checkbox|Row"`) and filter-specific settings.
-- For remote sorting/filtering, use `SfDataManager` with `WebApiAdaptor`, `ODataV4Adaptor`, or `UrlAdaptor`, or handle server requests in `OnActionBegin`.
 
 ### Grouping
 
@@ -1866,9 +1882,7 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 {% highlight razor tabtitle="Orders.razor" %}
 
 <SfGrid TValue="Order" DataSource="@Orders" AllowGrouping="true" Height="450px">
-    <GridGroupSettings ShowDropArea="true"
-                       ShowGroupedColumn="true"
-                       Columns="@Initial" />
+    <GridGroupSettings ShowDropArea="true" ShowGroupedColumn="true" Columns="@Initial" />
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
@@ -1891,9 +1905,8 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 
 **Key migration changes:**
 
-- `AllowGrouping` / `ShowGroupDropArea` → `AllowGrouping="true"` and `GridGroupSettings.ShowDropArea="true"`.
+- `AllowGrouping="True"` / `ShowGroupDropArea="True"` → `AllowGrouping="true"` and `GridGroupSettings.ShowDropArea="true"`.
 - `GroupColumnDescription` → `GridGroupSettings.Columns` or programmatic grouping through the grid API.
-- Aggregates and group summaries: client-side aggregation via grid settings; for server-side grouping use `SfDataManager` or server aggregation endpoints.
 
 ### Selection
 
@@ -2001,10 +2014,8 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
         <RowDefinition Height="*" />
         <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
-
     <syncfusion:SfDataGrid Grid.Row="0" 
                            ItemsSource="{Binding ElementName=dataPager, Path=PagedSource}" />
-    
     <syncfusion:SfDataPager Grid.Row="1"
                             x:Name="dataPager"
                             PageSize="20"
@@ -2033,7 +2044,6 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
 
 **Key migration changes:**
 - External `SfDataPager` (WPF) → built-in `GridPageSettings` (`PageSize`, `PageSizes`, `AllowPaging`) on `<SfGrid>`.
-- For server paging use `SfDataManager` or handle paging requests by intercepting `ActionBegin` and fetching pages from the server.
 
 ### Virtualization
 
@@ -2054,10 +2064,7 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid TValue="Order" DataSource="@LargeOrders"
-        EnableVirtualization="true"
-        EnableColumnVirtualization="true"
-        Height="600px">
+<SfGrid TValue="Order" DataSource="@LargeOrders" EnableVirtualization="true" EnableColumnVirtualization="true" Height="600px">
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
@@ -2068,13 +2075,12 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
 {% endhighlight %}
 {% endtabs %}
 
-> N> When using `EnableVirtualization="true"`, you must set an explicit `Height` on the grid (e.g., `Height="500px"`). 
+N> When using `EnableVirtualization="true"`, you must set an explicit `Height` on the grid (e.g., `Height="500px"`). 
 
 **Key migration changes:**
 
-- `EnableDataVirtualization` → `EnableVirtualization="true"` and `EnableColumnVirtualization="true"` on `<SfGrid>`.
+- `EnableDataVirtualization="True"` → `EnableVirtualization="true"` and `EnableColumnVirtualization="true"` on `<SfGrid>`.
 - Virtualization requires explicit `Height` (or container sizing) to work in browsers.
-- For very large datasets, prefer server virtual scrolling via `SfDataManager` / remote adaptor; virtual DOM recycling means DOM-dependent assumptions (for example, querying rows by index) may not hold.
 
 ### Styling - Cell level
 
@@ -2179,8 +2185,6 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
 **Key migration changes:**
 
 - WPF `CellStyle` / `RowStyle` / triggers → use `CustomAttributes` on `GridColumn`, `QueryCellInfo` / `RowDataBound` callbacks to add CSS classes or attributes.
-- Apply visual rules in CSS (in `wwwroot/css`) and add classes from `QueryCellInfo` / `OnRowDataBound` using `args.Cell.AddClass(...)` / `args.Row.AddClass(...)`.
-- Alternate row styling: use CSS selectors (`tr:nth-child(odd)`) or add classes in `RowDataBound`.
 
 ### Performance - Frozen columns
 
@@ -2227,7 +2231,7 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
 - [Blazor DataGrid Demos](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2)
 - [Blazor TreeGrid Demos](https://blazor.syncfusion.com/demos/tree-grid/overview?theme=fluent2)
 - [Blazor Chart Demos](https://blazor.syncfusion.com/demos/chart/overview?theme=fluent2)
-- [Blazor Scheduler Demos](https://blazor.syncfusion.com/demos/scheduler/default-functionalities?theme=fluent2)
+- [Blazor Scheduler Demos](https://blazor.syncfusion.com/demos/scheduler/overview?theme=fluent2)
 - [Blazor RichTextEditor Demos](https://blazor.syncfusion.com/demos/rich-text-editor/overview)
 - [Blazor Diagram Demos](https://blazor.syncfusion.com/demos/diagram/flowchart)
  
