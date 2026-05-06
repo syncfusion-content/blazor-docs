@@ -30,11 +30,11 @@ To add the Blazor components to the app, open the NuGet Package Manager in Visua
 
 | Components Name | Packages |
 |----------------|---------|
-| Button, CheckBox, Chips, Radio Button, Toggle Switch, Floating Action Button, and Speed Dial        | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
+| Button     | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
 | Card           | [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards) |
-| DropDownList, MultiSelect Dropdown, ListBox, ComboBox, AutoComplete, and Mention     | [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) |
+| ComboBox    | [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) |
 | DataGrid       | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
-| TextBox, TextArea, MaskedTextBox, NumericTextBox, Color Picker, File Upload, Slider, Rating, Signature, OTP Input, and SpeechToText      | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
+| TextBox, MaskedTextBox, Rating    | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
 | Spinner        | [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner) |
 | Themes         | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
