@@ -13,11 +13,11 @@ This section explains how to create and run a **.NET MAUI Blazor Hybrid App** to
 
 ## What is .NET MAUI Blazor Hybrid and Web App?
 
-The **.NET MAUI Blazor Hybrid and Web App** template creates a solution that consists of three projects, including a .NET MAUI Blazor Hybrid App (native), a Blazor Web App (server or WebAssembly), and a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used across the native MAUI app and the web app, making it easy to build one UI and deploy it across mobile, desktop, and web platforms.
+The **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app)**  template creates a solution that consists of three projects, including a .NET MAUI Blazor Hybrid App (native), a Blazor Web App (server or WebAssembly), and a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used across the native MAUI app and the web app, making it easy to build one UI and deploy it across mobile, desktop, and web platforms.
 
 By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
 
-Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app)** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution.
+Visual Studio includes the **.NET MAUI Blazor Hybrid and Web App** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution.
 
 ## Create a new .NET MAUI Blazor Hybrid and Blazor Web App in Visual Studio
 
@@ -136,7 +136,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion® Blazor DataGrid component
 
-Include the Syncfusion® Blazor **DataGrid** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
+Include the **Syncfusion® Blazor DataGrid** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
 
 {% tabs %}
 {% highlight razor %}

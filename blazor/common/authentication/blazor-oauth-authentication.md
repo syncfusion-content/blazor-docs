@@ -21,7 +21,7 @@ OAuth enables secure user authentication by allowing sign‑in through trusted e
 
 ## Implementing OAuth 2.0 Authentication for Syncfusion® Blazor DataGrid
 
-This section explains how to secure the Syncfusion® Blazor DataGrid using OAuth 2.0 authentication in a Blazor Web App. It demonstrates integrating GitHub as an OAuth provider to authenticate users, restrict access to protected pages, and render the DataGrid only for authorized users.
+This section explains how to secure the **Syncfusion® Blazor DataGrid** using **OAuth 2.0 authentication** in a **Blazor Web App**. It demonstrates integrating GitHub as an OAuth provider to authenticate users, restrict access to protected pages, and render the DataGrid only for authorized users.
 
 ### Create a Blazor project
 
@@ -72,13 +72,17 @@ Include the theme stylesheet and script references in the `App.razor` file.
 {% highlight razor tabtitle="App.razor" %}
 
 <head>
+    ....
     <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ....
 </head>
 
 <body>
-    <!-- Syncfusion Blazor DataGrid component's script reference -->
+    ....
+    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    ....
 </body>
 
 {% endhighlight %}
@@ -89,7 +93,8 @@ Include the theme stylesheet and script references in the `App.razor` file.
 1. Go to [GitHub Developer Settings](https://github.com/settings/developers).
 2. Click **OAuth Apps → New OAuth App**.
 3. Configure the application:
-    - **Homepage URL:** `https://localhost:5001/` *(Replace `5001` with your application's actual HTTPS port number from `launchSettings.json` if different)*.
+
+    - **Homepage URL:** `https://localhost:5001/` *(Replace **5001** with your application's actual HTTPS port number from `launchSettings.json` if different)*.
     - **Authorization callback URL:** `https://localhost:5001/signin-github`.
 4. Copy the generated **Client ID** and **Client Secret**.
 5. In your Blazor project, open **appsettings.json** and add the following configuration.
@@ -336,7 +341,7 @@ To allow components to receive authentication state, wrap the router inside **Ca
 
 ### Connect Syncfusion® Blazor DataGrid 
 
-Create `SecureGrid.razor` page and render the Syncfusion® Blazor DataGrid on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
+Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/SecureGrid.razor"  %}
@@ -433,11 +438,11 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates how to integrate **GitHub OAuth** into a Blazor Web App and authenticate users using secure cookie based sign‑in.
+This example demonstrates how to integrate **GitHub OAuth** into a **Blazor Web App** and authenticate users using secure cookie based sign‑in.
 
 ![Blazor DataGrid with GitHub OAuth loginpage](images/oauth-authentication.webp)
 
-After authentication, the user can access protected pages and view the Syncfusion® Blazor **DataGrid**.
+After successfully signing in, authenticated users can access protected pages and interact with the **Syncfusion® Blazor DataGrid** component. 
 
 ![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-datagrid.webp)
 
@@ -445,3 +450,4 @@ After authentication, the user can access protected pages and view the Syncfusio
 
 - [OAuth 2.0 and OIDC authentication in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols)
 - [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+

@@ -86,15 +86,19 @@ Include the Syncfusion® theme stylesheet, required script references, and confi
 {% highlight razor tabtitle="App.razor" %}
 
 <head>
+    ....
     <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ....
 </head>
 
 <body>
+    ....
     <!-- Enable Interactive Server rendering -->
     <Routes @rendermode="InteractiveServer" />
-    <!-- Syncfusion Blazor DataGrid component's script reference -->
+    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    ....
 </body>
 
 {% endhighlight %}
@@ -175,7 +179,7 @@ namespace YourProjectName.Services
 
 ### Getting the token
 
-This section describes how the application issues a JSON Web Token (JWT) for authenticated access. The **AuthController** class provides an API endpoint that generates and returns a JWT for the requesting user.
+This section describes how the application issues a **JSON Web Token (JWT)** for authenticated access. The **AuthController** class provides an API endpoint that generates and returns a JWT for the requesting user.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Controllers/AuthController.cs"  %}
@@ -334,7 +338,7 @@ public class GridController : ControllerBase
 
 ### Adding JWT to Syncfusion® Blazor DataManager headers
 
-This example demonstrates how a JWT token is retrieved from the server and attached to the Syncfusion® Blazor DataManager as an HTTP Authorization header. This ensures that the DataGrid loads data only from a secured API after the user has been authenticated.
+This example demonstrates how a **JWT** token is retrieved from the server and attached to the **Syncfusion® Blazor DataManager** as an HTTP Authorization header. This ensures that the **DataGrid** loads data only from a secured API after the user has been authenticated.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -422,3 +426,4 @@ After the application starts, click the **Load GridData** button to initiate aut
 
 - [Configure JWT bearer authentication in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/configure-jwt-bearer-authentication?view=aspnetcore-10.0)
 - [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+
