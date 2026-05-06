@@ -284,7 +284,7 @@ The following example demonstrates how to render the Editor components in the In
 ```
 
 
-![Blazor In-place Editor with Different Components](./images/blazor-inplace-editor-with-different-components.png)
+![Blazor In-place Editor with Different Components](./images/blazor-inplace-editor-with-different-components.webp)
 
 ## See Also
 

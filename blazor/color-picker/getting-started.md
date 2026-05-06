@@ -157,7 +157,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Color Picker com
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Color Picker component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrztMhkhMtJdbVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Color Picker component](./images/blazor-colorpicker-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrztMhkhMtJdbVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Color Picker component](./images/blazor-colorpicker-component.webp)" %}
 
 ## See also
 

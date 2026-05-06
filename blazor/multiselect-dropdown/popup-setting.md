@@ -31,7 +31,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
+![Blazor MultiSelect Dropdown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.webp)
 
 ## Change the PopupWidth
 
@@ -43,7 +43,7 @@ To customize only the popup width, use the [PopupWidth](https://help.syncfusion.
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.png)
+![Blazor MultiSelect Dropdown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.webp)
 
 ## Change the popup z-index
 
@@ -69,7 +69,7 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 {% endhighlight %}
 
-![Blazor MultiSelect with preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.png)
+![Blazor MultiSelect with preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.webp)
 
 The following events are raised when opening and closing the popup.
 
