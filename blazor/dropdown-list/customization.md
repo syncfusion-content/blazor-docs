@@ -43,4 +43,4 @@ Automatically open the dropdown by using [ShowPopupAsync()](https://help.syncfus
 }
 ```
 
-![Blazor Dropdown List Customization](./images/blazor-dropdownlist-customization.png)
+![Blazor Dropdown List Customization](./images/blazor-dropdownlist-customization.webp)

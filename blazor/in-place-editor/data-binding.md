@@ -59,4 +59,4 @@ To bind local data to the Razor components, you can assign an array of object or
 ```
 
 
-![Data Binding in Blazor In-place Editor](./images/blazor-inplace-editor-data-binding.png)
+![Data Binding in Blazor In-place Editor](./images/blazor-inplace-editor-data-binding.webp)
