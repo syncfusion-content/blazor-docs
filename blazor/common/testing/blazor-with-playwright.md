@@ -82,6 +82,7 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 {% highlight html  %}
 
 <head>
+    ....
     <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <!-- Syncfusion Blazor component's script reference -->

@@ -270,3 +270,4 @@ By following these principles, Syncfusion® Blazor components enable developers 
 
 * [Handling Large Data Sets Efficiently in Syncfusion® Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
 * [Performance Optimization for Syncfusion® Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
+

@@ -146,7 +146,7 @@ Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-compo
 {% endhighlight %}
 {% endtabs %}
 
-## Running the Application
+## Run the application
 
 - In JetBrains Rider, click the **Run** button on the toolbar.
 - Rider builds the project and starts the built‑in development server automatically.
@@ -162,3 +162,4 @@ The app launches and renders the **[Syncfusion® Blazor DataGrid](https://www.sy
 - [Getting started with Syncfusion® Blazor DataGrid in WASM App](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 - [Integrating Syncfusion® Blazor Components with Azure Functions](https://blazor.syncfusion.com/documentation/common/integration/blazor-azure-functions)
 - [Blazor WebAssembly with JetBrains Rider and Syncfusion®](https://www.syncfusion.com/webinars/blazor-webassembly-with-jetbrains-rider-and-syncfusion)
+
