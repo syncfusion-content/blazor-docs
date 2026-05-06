@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a Shopping Cart in Blazor with Syncfusion components
-description: Step-by-step guide to build a shopping cart in a Blazor app, covering product listings, cart management, and checkout with Syncfusion components demo.
+description: Step-by-step guide to build a shopping cart in a Blazor app, covering product listings, cart management, and checkout with Syncfusion components.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-This guide explains how to create a shopping cart workflow(product browsing → cart → checkout → order confirmation) in a Blazor Server application using Syncfusion Blazor components. The walkthrough covers the essential building blocks required for a typical e-commerce scenario, including defining data models, managing cart state using dependency-injected services, and implementing pages for product listing, shopping cart management, and checkout.
+This guide explains how to create a shopping cart workflow (product browsing → cart → checkout → order confirmation) in a Blazor Server application using Syncfusion Blazor components. The walkthrough covers the essential building blocks required for a typical e-commerce scenario, including defining data models, managing cart state using dependency-injected services, and implementing pages for product listing, shopping cart management, and checkout.
 
 ## Prerequisites
 
@@ -36,9 +36,11 @@ To add the Blazor components to the app, open the NuGet Package Manager in Visua
 * [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
+N> The above NuGet packages are organized by functional areas and contain related Syncfusion Blazor UI components. This modular structure allows developers to include only the required libraries in their application. The `Syncfusion.Blazor.Inputs` package provides input and form controls such as TextBox, NumericTextBox, Slider, Upload, and Rating (SfRating).
+
 ## Add required namespaces
 
-Open the `Components/_Imports.razor` file and import the following Syncfusion components namespaces.
+Open the `Components/_Imports.razor` file and import the following Syncfusion components, shopping cart models and services namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -55,6 +57,8 @@ Open the `Components/_Imports.razor` file and import the following Syncfusion co
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The required namespaces are typically defined in the `_Imports.razor` file, so they do not need to be included in each component individually. If not already added, ensure the necessary namespaces are imported in `_Imports.razor`.
 
 ## Register Syncfusion® Blazor service
 
@@ -79,13 +83,12 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 {% highlight html tabtitle="App.razor"  %}
 
 <head>
-     <!-- Syncfusion theme style sheet -->
+     ...
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor script reference -->
+    ...
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-
 </body>
 
 {% endhighlight %}
@@ -163,7 +166,6 @@ namespace ShoppingCart.Models
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }
         public string ImageUrl { get; set; } = string.Empty;
-        
         public decimal Subtotal => UnitPrice * Quantity;
     }
 }
@@ -177,7 +179,9 @@ Defines the data models used to represent an order, including order details, shi
 
 {% tabs %}
 {% highlight cs tabtitle="Models/Order.cs"  %}
+
 using System.ComponentModel.DataAnnotations;
+
 namespace ShoppingCart.Models
 {
     public class Order
@@ -283,7 +287,7 @@ namespace ShoppingCart.Data
                 .Distinct()
                 .OrderBy(c => c)
                 .ToList();
-            }
+    }
 }
 
 {% endhighlight %}
@@ -341,13 +345,9 @@ namespace ShoppingCart.Services
     public class CartService : ICartService
     {
         private List<CartItem> _items = new();
-        
         public event Action? OnCartChanged;
-        
         public List<CartItem> Items => _items;
-        
         public int ItemCount => _items.Sum(i => i.Quantity);
-        
         public decimal Total => _items.Sum(i => i.Subtotal);
 
         public void AddItem(Product product)
@@ -369,7 +369,6 @@ namespace ShoppingCart.Services
                     ImageUrl = product.ImageUrl
                 });
             }
-            
             OnCartChanged?.Invoke();
         }
 
@@ -582,7 +581,6 @@ namespace ShoppingCart.Services
     public class WishlistService : IWishlistService
     {
         private readonly List<Product> _items = new();
-
         public event Action? OnChange;
 
         public void Toggle(Product product)
@@ -623,14 +621,15 @@ Register the application services in `Program.cs` so they can be accessed throug
 
 using ShoppingCart.Services;
 ...
- builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
+//Syncfusion blazor service
+builder.Services.AddSyncfusionBlazor();
 ...
 // Application services
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IWishlistService, WishlistService>();
-var app = builder.Build();
 ...
 
 {% endhighlight %}
@@ -701,71 +700,69 @@ This reusable component displays individual product details and provides actions
 }
 <style>
     .product-card {
-    border-radius: 10px;
-    transition: box-shadow 0.2s ease;
+        border-radius: 10px;
+        transition: box-shadow 0.2s ease;
         width: 100%;
         min-height: 360px;
         box-sizing: border-box;
-       
-}
+    }
 
-.product-card:hover {
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
-
-.product-image {
-    height: 150px;
-    background: #f4f6f8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-@@media (max-width: 576px) {
-    .product-card {
-        border-radius: 8px;
-        padding: 10px;
+    .product-card:hover {
+        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
 
     .product-image {
-        height: 120px;
+        height: 150px;
+        background: #f4f6f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    @@media (max-width: 576px) {
+        .product-card {
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .product-image {
+            height: 120px;
+        }
+
+        .price {
+            font-size: 0.95rem;
+        }
+
+        .wishlist-btn {
+            font-size: 20px;
+        }
+    }
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-actions {
+        display: flex;
+        gap: 6px;
     }
 
     .price {
-        font-size: 0.95rem;
+        font-weight: 700;
     }
 
     .wishlist-btn {
-        font-size: 20px;
+        font-size: 25px;
+        color: crimson;
     }
-}
-
-
-.footer-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-actions {
-    display: flex;
-    gap: 6px;
-}
-
-.price {
-    font-weight: 700;
-}
-
-.wishlist-btn {
-    font-size: 25px;
-    color: crimson;
-}
 </style>
 
 {% endhighlight %}
@@ -824,21 +821,17 @@ This page serves as the landing page and provides quick navigation to key areas 
 @page "/"
 
 @using Syncfusion.Blazor.Cards
-
 @inject NavigationManager Nav
 
 <div class="home-container">
 
     <!-- HERO SECTION -->
     <SfCard CssClass="hero-card">
-        
-
         <CardContent>
             <h2>Welcome to Syncfusion Blazor Shopping Cart</h2>
             <p>Discover amazing products, add to wishlist, and shop smarter.</p>
-           <img src="images/banner.png" />
+           <img src="images/banner.png" alt="Shopping cart banner showcasing products" />
         </CardContent>
-        
     </SfCard>
 
     <!-- NAVIGATION CARDS -->
@@ -848,7 +841,7 @@ This page serves as the landing page and provides quick navigation to key areas 
         <SfCard CssClass="nav-card" 
                 @onclick="@(() => Nav.NavigateTo("/catalog"))">
             <CardContent>
-                <img src="images/catalog.png" />
+                <img src="images/catalog.png" alt="Catalog navigation card image" />
             </CardContent>
         </SfCard>
 
@@ -856,7 +849,7 @@ This page serves as the landing page and provides quick navigation to key areas 
         <SfCard CssClass="nav-card"
                 @onclick="@(() => Nav.NavigateTo("/wishlist"))">
             <CardContent>
-                <img src="images/wishlist.png" />
+                <img src="images/wishlist.png" alt="Wishlist navigation card image"/>
             </CardContent>
         </SfCard>
 
@@ -865,65 +858,65 @@ This page serves as the landing page and provides quick navigation to key areas 
 
 <style>
     /* PAGE LAYOUT */
-.home-container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px;
-}
+    .home-container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 30px;
+    }
 
-/* HERO CARD */
-.hero-card {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-    margin-bottom: 40px;
-}
-.content {
-    text-align: center;
-}
-.hero-image {
-    width: 100%;
-    height: auto;
-   
-}
+    /* HERO CARD */
+    .hero-card {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        margin-bottom: 40px;
+    }
+    .content {
+        text-align: center;
+    }
+    .hero-image {
+        width: 100%;
+        height: auto;
+    
+    }
 
-.hero-card h2 {
-    margin-top: 15px;
-    font-size: 26px;
-    text-align: center;
-}
+    .hero-card h2 {
+        margin-top: 15px;
+        font-size: 26px;
+        text-align: center;
+    }
 
-.hero-card p {
-    color: #666;
-    font-size: 16px;
-    text-align: center;
-}
+    .hero-card p {
+        color: #666;
+        font-size: 16px;
+        text-align: center;
+    }
 
-/* NAV CARDS */
-.nav-card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-}
+    /* NAV CARDS */
+    .nav-card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+    }
 
-.nav-card {
-    cursor: pointer;
-    text-align: center;
-}
+    .nav-card {
+        cursor: pointer;
+        text-align: center;
+    }
 
-.nav-card img {
-    width: 130px;
-    margin-bottom: 15px;
-}
+    .nav-card img {
+        width: 130px;
+        margin-bottom: 15px;
+    }
 
-.nav-card h3 {
-    margin-bottom: 5px;
-}
+    .nav-card h3 {
+        margin-bottom: 5px;
+    }
 
-.nav-card p {
-    color: #666;
-    font-size: 14px;
-}
+    .nav-card p {
+        color: #666;
+        font-size: 14px;
+    }
 
 </style>
 
@@ -1055,14 +1048,8 @@ This page displays the items added to the shopping cart and allows users to modi
 {% tabs %}
 {% highlight razor tabtitle="Cart.razor"  %}
 
-
 @page "/cart"
-@using ShoppingCart.Models
-@using ShoppingCart.Services
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Cards
+
 @implements IDisposable
 @inject ICartService CartService
 @inject NavigationManager NavigationManager
@@ -1105,7 +1092,6 @@ This page displays the items added to the shopping cart and allows users to modi
                     >
 
                     <GridColumns>
-
                         <!-- Product -->
                         <GridColumn HeaderText="Item" Width="250px">
                             <Template Context="context">
@@ -1114,7 +1100,7 @@ This page displays the items added to the shopping cart and allows users to modi
                                 }
                                 <div style="display:flex;align-items:center;gap:10px">
                                     <img src="@item.ImageUrl"
-                                         style="height:50px;width:50px;object-fit:cover" />
+                                         style="height:50px;width:50px;object-fit:cover" alt="@item.ProductName" />
                                     <span>@item.ProductName</span>
                                 </div>
                             </Template>
@@ -1174,7 +1160,7 @@ This page displays the items added to the shopping cart and allows users to modi
 
                     </GridColumns>
                 </SfGrid>
-                    </div>
+            </div>
             }
         </div>
 
@@ -1202,7 +1188,7 @@ This page displays the items added to the shopping cart and allows users to modi
                             @foreach (var item in CartService.Items)
                             {
                                 <div class="summary-item d-flex align-items-center mb-2">
-                                    <img src="@item.ImageUrl" alt="" class="summary-thumb me-2" />
+                                    <img src="@item.ImageUrl" alt="Images" class="summary-thumb me-2" />
                                     <div>
                                         <div class="fw-semibold">@item.ProductName</div>
                                         <div class="text-muted small">@item.Quantity x @item.UnitPrice.ToString("C")</div>
@@ -1256,7 +1242,6 @@ This page displays the items added to the shopping cart and allows users to modi
                     // If Refresh isn't available for some reason, fall back to re-render
                 }
             }
-
             StateHasChanged();
         });
     }
@@ -1271,7 +1256,6 @@ This page displays the items added to the shopping cart and allows users to modi
     private void NavigateToWishlist() => NavigationManager.NavigateTo("/wishlist");
 
     private void NavigateToCheckout() => NavigationManager.NavigateTo("/checkout");
-
 }
 
 <style>
@@ -1307,7 +1291,6 @@ This page displays the items added to the shopping cart and allows users to modi
         .empty-cart-card { padding: 1rem; }
         .empty-icon { width: 64px; height:64px; font-size:36px; }
     }
-
 
     /* Order summary styles */
     .order-summary-card { border-radius: 12px; overflow: hidden; }
@@ -1363,8 +1346,6 @@ This page collects shipping and payment details, displays an order summary, and 
 {% highlight razor tabtitle="Checkout.razor"  %}
 
 @page "/checkout"
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Buttons
 @inject ICartService CartService
 @inject IOrderService OrderService
 @inject NavigationManager NavigationManager
@@ -1385,7 +1366,6 @@ This page collects shipping and payment details, displays an order summary, and 
     <EditForm Model="@order" OnValidSubmit="ProcessOrder">
         <DataAnnotationsValidator />
         <ValidationSummary />
-
         <div class="row">
             <div class="col-md-7">
                 <!-- Shipping Information -->
@@ -1599,7 +1579,7 @@ This page displays the order confirmation details after a successful checkout an
         order = await OrderService.GetOrderByIdAsync(OrderId);
     }
     
-  private void NavigateToCatalog() =>
+    private void NavigateToCatalog() =>
         NavigationManager.NavigateTo("/catalog");
 }
 
@@ -1616,7 +1596,6 @@ This page displays a list of previously placed orders and allows users to review
 {% highlight razor tabtitle="OrderHistory.razor"  %}
 
 @page "/orders"
-@using ShoppingCart.Services
 @inject IOrderService OrderService
 @inject NavigationManager NavigationManager
 
@@ -1695,7 +1674,6 @@ This page allows users to view and manage products they have saved for future re
 {% highlight razor tabtitle="Wishlist.razor"  %}
 
 @page "/wishlist"
-@using Syncfusion.Blazor.Buttons
 @inject IWishlistService WishlistService
 @inject NavigationManager NavigationManager
 
@@ -1782,6 +1760,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 * The checkout process allows users to enter shipping and payment details, place an order, and clear the cart upon completion.
 * After checkout, the order confirmation and order history pages display the appropriate order details and status.
 * The wish-list page allows users to save and remove products, and the saved items remain available while navigating across pages.
+
+**Output**
+
+![Blazor Shopping cart sample](./scart.webp)
 
 ## See also
 
