@@ -28,15 +28,15 @@ To create a Blazor application, follow the [Blazor getting started guide](https:
 
 To add the Blazor components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
 
-* [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
-* [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards)
-* [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns)
-* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
-* [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs)
-* [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-
-N> The above NuGet packages are organized by functional areas and contain related Syncfusion Blazor UI components. This modular structure allows developers to include only the required libraries in their application. The `Syncfusion.Blazor.Inputs` package provides input and form controls such as TextBox, NumericTextBox, Slider, Upload, and Rating (SfRating).
+| Components Name | Packages |
+|----------------|---------|
+| Button, CheckBox, Chips, Radio Button, Toggle Switch, Floating Action Button, and Speed Dial        | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
+| Card           | [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards) |
+| DropDownList, MultiSelect Dropdown, ListBox, ComboBox, AutoComplete, and Mention     | [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) |
+| DataGrid       | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
+| TextBox, TextArea, MaskedTextBox, NumericTextBox, Color Picker, File Upload, Slider, Rating, Signature, OTP Input, and SpeechToText      | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
+| Spinner        | [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner) |
+| Themes         | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
 ## Add required namespaces
 
