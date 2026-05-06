@@ -9,12 +9,12 @@ documentation: ug
 
 # Testing Syncfusion® Blazor applications with Playwright
 
-This guide demonstrates how to integrate Syncfusion® UI components into a Blazor WebAssembly application and validate them through end‑to‑end tests using Microsoft Playwright. It provides a clear, step‑by‑step approach for building reliable and maintainable UI automation for Syncfusion® components in Blazor applications.
+This guide demonstrates how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a Blazor WebAssembly application and validate them through end‑to‑end tests using [Microsoft Playwright](https://azure.microsoft.com/en-us/products/playwright-testing). It provides a clear, step‑by‑step approach for building reliable and maintainable UI automation for Syncfusion® components in Blazor applications.
 
 ## Why Playwright with Syncfusion® Blazor applications?
 
-- **Syncfusion® Blazor applications** provides rich UI components such as Buttons, Grids, and Charts for building modern web applications.
-- **Playwright** enables reliable cross‑browser UI testing across Chromium, Firefox, and WebKit.
+- [Syncfusion® Blazor applications](https://www.syncfusion.com/blazor-components) provides rich UI components such as Buttons, Grids, and Charts for building modern web applications.
+- [Playwright](https://azure.microsoft.com/en-us/products/playwright-testing) enables reliable cross‑browser UI testing across Chromium, Firefox, and WebKit.
 - Using **Syncfusion® Blazor applications with Playwright**, you can validate real user interactions, test complete end‑to‑end user flows, and catch UI regressions early.
 
 ## Create a Blazor project
@@ -25,7 +25,7 @@ Otherwise, create a new Blazor application by following the [Syncfusion® gettin
 
 ## Install required packages
 
-Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid**.
+Install the following NuGet packages to use the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
 - [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -56,10 +56,10 @@ Open the `_Imports.razor` file at the root of your project and import the Syncfu
 
 ## Register Syncfusion® Blazor service
 
-Add the Syncfusion® Blazor service to the `Program.cs` file to enable Syncfusion® components in the application.
+Add the Syncfusion® Blazor service to the `Program.cs` file to enable Syncfusion® Blazor components in the application.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="1 8" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="1 7" %}
 
 using Syncfusion.Blazor;
 
@@ -96,7 +96,7 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
 
-This page contains a **Syncfusion® Blazor Button**, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+This page contains a [Syncfusion® Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), allowing you to verify user interaction and UI behavior during end‑to‑end testing.
 
 {% tabs %}
 {% highlight razor %}
@@ -144,7 +144,7 @@ This command creates an NUnit test project named **E2E.Tests** under the tests f
 
 **Install required packages**
 
-Install the following NuGet packages into the E2E.Tests project to enable Playwright‑based end‑to‑end testing in the test project.
+Install the following NuGet packages into the **E2E.Tests** project to enable Playwright based end‑to‑end testing in the test project.
 
 - [Microsoft.Playwright](https://www.nuget.org/packages/microsoft.playwright)
 - [NUnit](https://www.nuget.org/packages/nunit/)
@@ -323,7 +323,7 @@ _browser = await _playwright.Chromium.LaunchAsync(
 {% endhighlight %}
 {% endtabs %}
 
-This approach ensures reliable validation of Syncfusion® Blazor UI components and enables early detection of UI regressions through automated end‑to‑end testing.
+This approach ensures reliable validation of **Syncfusion® Blazor UI components** and enables early detection of UI regressions through automated end‑to‑end testing.
 
 ## See also
 
