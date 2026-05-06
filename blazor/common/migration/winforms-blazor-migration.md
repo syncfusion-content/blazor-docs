@@ -187,11 +187,12 @@ To enable Syncfusion® Blazor components, register the Syncfusion® Blazor servi
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
-....
+
 using Syncfusion.Blazor;
 ....
 builder.Services.AddSyncfusionBlazor();
 ....
+
 {% endhighlight %}
 {% endtabs %}
 
