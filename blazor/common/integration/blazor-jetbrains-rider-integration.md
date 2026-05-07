@@ -9,7 +9,7 @@ documentation: ug
 
 # JetBrains Rider Integration with Syncfusion® Blazor Components
 
-This guide explain how to use [JetBrains Rider](https://www.jetbrains.com/rider/) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to build and manage Blazor applications efficiently.
+This guide explains how to use [JetBrains Rider](https://www.jetbrains.com/rider/) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to build and manage Blazor applications efficiently.
 
 To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfusion®, review the following video.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Securing Syncfusion® Blazor DataGrid with GitHub OAuth 2.0
 
-This guide shows how to secure the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [GitHub OAuth 2.0](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps) authentication.
+This guide explains how to secure the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [GitHub OAuth 2.0](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps) authentication.
 
 ## Create a Blazor project
 
