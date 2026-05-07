@@ -19,7 +19,7 @@ The [Blazor QR Code](https://www.syncfusion.com/blazor-components/blazor-barcode
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBqsLMJfZxnCqnf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[QR Code in Blazor Barcode Component](images/blazor-barcode-with-qrcode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBqsLMJfZxnCqnf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[QR Code in Blazor Barcode Component](images/blazor-barcode-with-qrcode.webp)" %}
 
 ## Customizing the Barcode color
 
@@ -31,7 +31,7 @@ A page or printed media containing a barcode often appears colorful in the backg
 <SfQRCodeGenerator Width="200px" Height="150px" ForeColor="red" Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBUiVMzfXduXXET?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing QR Code Color in Blazor Barcode](images/blazor-barcode-qrcode-color-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBUiVMzfXduXXET?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing QR Code Color in Blazor Barcode](images/blazor-barcode-qrcode-color-customization.webp)" %}
 
 ## Customizing the Barcode dimension
 
@@ -57,7 +57,7 @@ In barcode generators, customize the barcode text by using the display [Text](ht
 </SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKMVCTTXGflLco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKMVCTTXGflLco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.webp)" %}
 
 ## Error Correction Level
 
@@ -105,7 +105,7 @@ The following code example demonstrates how to generate a QR barcode with a logo
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLSiDXvrxgTOVrH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![QR barcode with logo in Blazor Barcode](images/blazor-barcode-qrcode-with-logo.png)
+![QR barcode with logo in Blazor Barcode](images/blazor-barcode-qrcode-with-logo.webp)
 
 >**Note:** The [Error correction level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html) is not taken into account when rendering the logo image inside the QR code.
 
