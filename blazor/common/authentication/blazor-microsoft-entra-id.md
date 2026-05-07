@@ -15,7 +15,7 @@ This document explains how to build a **Blazor Web App (Interactive Server)** th
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the [Syncfusion getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for **Blazor Web App (Interactive Server)**.
+Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
 Ensure that **HTTPS is enabled** during project creation, as Microsoft Entra ID based authorization requires secure communication.
 
@@ -23,7 +23,7 @@ Ensure that **HTTPS is enabled** during project creation, as Microsoft Entra ID 
 
 Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid** and enable authentication with **Microsoft Entra ID**.
 
-**Syncfusion packages:**
+**Syncfusion® packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -68,14 +68,14 @@ Include the theme stylesheet and script references in the `App.razor` file.
 
 <head>
 	....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 	....
 </head>
 
 <body>
 	....
-    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
+    <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 	....
 </body>
@@ -92,9 +92,9 @@ This step registers the Blazor application in Azure so Microsoft Entra ID can au
 3. Click **New registration**.
 4. Enter **App name** and under **Supported account types**, select:
 
-   - **Single tenant** - if the app is for users in your organization only.
-   - **Multi tenant** - if the app should support users from any Microsoft Entra organization.
-   - **Multi tenant and personal Microsoft accounts** - for the broadest access.
+   - **Single tenant** - If the app is intended only for users within your organization.
+   - **Multi tenant** -  If the app needs to support users from any Microsoft Entra organization.
+   - **Multi tenant and personal Microsoft accounts** - For the broadest access, including both organizational and personal users.
    For this tutorial, select **Single tenant**.
 5. Click **Register**.
 
@@ -106,7 +106,7 @@ These values are required in the application configuration.
 
 ## Configure redirect URLs
 
-Redirect URLs specify where Microsoft Entra ID should return the user after a successful login.
+Redirect URLs specify where **Microsoft Entra ID** should return the user after a successful login.
 
 1. Open the registered application in Azure Portal.
 2. Navigate to **Authentication**.
@@ -135,7 +135,7 @@ After copying the **Tenant ID** and **Client ID**, update the `appsettings.json`
 
 ## Configure Microsoft Entra ID authentication in Blazor
 
-This step enables OpenID Connect authentication in the Blazor application by configuring Microsoft Entra ID settings in the `Program.cs` file.
+This step enables OpenID Connect authentication in the Blazor application by configuring **Microsoft Entra ID** settings in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -226,7 +226,7 @@ Create a protected page that displays the **Syncfusion® Blazor DataGrid** only 
 			<h1>Welcome!</h1>
 			<p>
 				Click the Login button below to sign in with Microsoft Entra ID.
-				Once you’re logged in, the Syncfusion Blazor DataGrid will be displayed below.
+				Once you’re logged in, the Syncfusion® Blazor DataGrid will be displayed below.
 			</p>
 			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn">Login with Microsoft</a>
 		</div>
@@ -282,11 +282,11 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-This example demonstrates how to integrate **Microsoft Entra ID authentication** into a **Blazor Web App** using the Microsoft Identity platform.
+This example demonstrates how to integrate **Microsoft Entra ID** authentication into a **Blazor Web App** using the Microsoft Identity platform.
 
 ![Blazor DataGrid with Microsoft Enta ID login page](images/microsoft-authentication.webp)
 
-The application securely signs users in through Entra ID and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the **Syncfusion® Blazor DataGrid** component. 
+The application securely signs users in through **Microsoft Entra ID** and manages the authentication lifecycle using OpenID Connect. After successfully signing in, authenticated users can access protected pages and interact with the **Syncfusion® Blazor DataGrid** component. 
 
 ![Blazor DataGrid with Microsoft Enta ID](images/blazor-datagrid-microsoftentraid.webp)
 

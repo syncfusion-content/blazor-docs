@@ -15,7 +15,7 @@ This guide shows how to secure the [Syncfusion® Blazor DataGrid](https://www.sy
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the [Syncfusion getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for **Blazor Web App (Interactive Server)**.
+Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
 Ensure that **HTTPS is enabled** during project creation, as JWT based authorization requires secure communication.
 
@@ -23,7 +23,7 @@ Ensure that **HTTPS is enabled** during project creation, as JWT based authoriza
 
 Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid** and enable **JWT** authentication.
 
-**Syncfusion packages:**
+**Syncfusion® packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -67,7 +67,7 @@ Include the Syncfusion® theme stylesheet, required script references, and confi
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ....
 </head>
@@ -76,7 +76,7 @@ Include the Syncfusion® theme stylesheet, required script references, and confi
     ....
     <!-- Enable Interactive Server rendering -->
     <Routes @rendermode="InteractiveServer" />
-    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
+    <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ....
 </body>
@@ -189,7 +189,7 @@ public class AuthController : ControllerBase
 
 ## Adding JWT middleware
 
-Register JWT authentication and authorization middleware to validate incoming API requests. Add these configurations in `Program.cs`.
+Register **JWT** authentication and authorization middleware to validate incoming API requests. Add these configurations in `Program.cs`.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
