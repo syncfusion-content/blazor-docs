@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Windows Forms to Blazor
 
-This guide provides a step‑by‑step approach to migrating a Windows Forms (WinForms) application to Syncfusion® Blazor. It is designed to help developers modernize existing desktop applications by moving to a web‑based architecture while continuing to use familiar .NET and C# skills.
+This guide provides a step‑by‑step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to [Syncfusion® Blazor](https://www.syncfusion.com/blazor-components) application. It is designed to help developers modernize existing desktop applications by moving to a web‑based architecture while continuing to use familiar .NET and C# skills.
 
 It explains key architectural differences, project structure changes, and shows practical examples of converting common WinForms controls to their Syncfusion® Blazor equivalents, making the migration process easy to understand.
 
@@ -31,7 +31,7 @@ It explains key architectural differences, project structure changes, and shows 
 
 ## Key Architectural Differences
 
-Understanding the architectural differences between WinForms and Syncfusion® Blazor is essential before starting the migration. WinForms follows a traditional desktop‑based, event‑driven architecture, while Blazor uses a modern, component‑based web architecture designed for scalability and maintainability.
+Understanding the architectural differences between **WinForms architectural** and **Syncfusion® Blazor architectural** is essential before starting the migration. WinForms follows a traditional desktop‑based, event‑driven architecture, while Blazor uses a modern, component‑based web architecture designed for scalability and maintainability.
 
 | Area | WinForms Architecture | Syncfusion® Blazor Architecture |
 |-----|----------------------|--------------------------------|
@@ -48,7 +48,6 @@ Understanding the architectural differences between WinForms and Syncfusion® Bl
 ## Project structure comparison
 
 When migrating from WinForms to Blazor, one of the first changes you will notice is the project structure. WinForms applications are designed for desktop environments, whereas Blazor applications follow a component‑based web architecture. Understanding how files and responsibilities map between the two frameworks helps simplify the migration process.
-
 
 | **WinForms** | **Blazor** | **Description** |
 |---|---|---|
@@ -349,13 +348,13 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
-| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfSchedule<TValue>](https://blazor.syncfusion.com/documentation/scheduler/getting-started) | Appointment‑based scheduling |
+| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfSchedule](https://blazor.syncfusion.com/documentation/scheduler/getting-started) | Appointment‑based scheduling |
 
 ### Navigation and Layout controls
 
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
-| [TabControlAdv](https://help.syncfusion.com/windowsforms/tabcontrol/getting-started) | [SfTab](https://blazor.syncfusion.com/documentation/tabs/getting-started) | Tab navigation via Razor |
+| [TabControlAdv](https://help.syncfusion.com/windowsforms/tabcontrol/getting-started) | [SfTab](https://blazor.syncfusion.com/documentation/tabs/getting-started) | Tab navigation |
 | [DockingManager](https://help.syncfusion.com/windowsforms/docking-manager/getting-started) | CSS Layout + Components | Requires layout redesign |
 | [SplitContainerAdv](https://help.syncfusion.com/windowsforms/splitcontainer/creating-splitcontaineradv) | [SfSplitter](https://blazor.syncfusion.com/documentation/splitter/getting-started) | Horizontal/vertical splitting |
 
@@ -384,7 +383,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started) | Async open/close |
 | [ProgressBarAdv](https://help.syncfusion.com/windowsforms/progress-bar/creating-progressbaradv) | [SfProgressBar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started) | Progress indicator |
 
-## File, Document, and Spreadsheet controls
+### File, Document, and Spreadsheet controls
 
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
@@ -402,7 +401,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | [TreeViewAdv](https://help.syncfusion.com/windowsforms/treeview/getting-started) | [SfTreeView](https://blazor.syncfusion.com/documentation/treeview/getting-started) | Hierarchical navigation |
-| [SfListView](https://help.syncfusion.com/windowsforms/listview/gettingstarted) | [SfListView<T>](https://blazor.syncfusion.com/documentation/listview/getting-started) | Virtualized lists |
+| [SfListView](https://help.syncfusion.com/windowsforms/listview/gettingstarted) | [SfListView](https://blazor.syncfusion.com/documentation/listview/getting-started) | Virtualized lists |
 | [Menu](https://help.syncfusion.com/windowsforms/menu/getting-started) | [SfMenu](https://blazor.syncfusion.com/documentation/menu-bar/getting-started) | Menu navigation |
 
 ## See also
