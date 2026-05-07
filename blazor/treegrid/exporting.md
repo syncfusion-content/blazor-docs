@@ -673,13 +673,14 @@ By default, the TreeGrid PDF export supports only a limited set of fonts. Due to
 
 To export such characters properly, you must use a TrueType Font (TTF) and provide it as a Base64-encoded string. The TreeGrid component supports TrueType fonts through the `ExportToPdfAsync()` method, which enables globalization support during PDF export.
 
+
 ---
 
 ### When to Use Custom TTF Fonts
 
 Use a custom TrueType font when:
 
-- Exporting Chinese or other Unicode language text  
+- Exporting Unicode languages such as Chinese, Japanese, and other multi‑byte characters.  
 - Using custom fonts that are not supported by default  
 - Ensuring proper text rendering in PDF headers and records  
 
@@ -687,9 +688,9 @@ Use a custom TrueType font when:
 
 ### Applying a TrueType Font in PDF Export
 
-To apply a custom TTF font, assign the Base64-encoded string of the font file to the `FontFamily` property and set `IsTrueType` to `true` in the `PdfGridFont`.
+`PdfGridFont` represents the font settings used by the TreeGrid PDF export to control text rendering, including the font family, encoding, and support for Unicode characters in the exported document.To apply a custom TTF font, assign the Base64-encoded string of the font file to the `FontFamily` property and set `IsTrueType` to `true` in the `PdfGridFont`.
 
-Use the `ExportToPdfAsync()` method for exporting. Enable PDF export in the TreeGrid by setting the `AllowPdfExport` property to true.
+Use the `ExportToPdfAsync()` method for exporting.The custom font will be applied to TreeGrid headers, records, and aggregated values in the PDF.
 
 ---
 
