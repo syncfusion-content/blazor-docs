@@ -177,7 +177,7 @@ Row virtualization improves performance by rendering only the rows that are visi
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="TaskDetails.cs" %}
+{% highlight c# tabtitle="TaskDetails.cs" %}
 
 public class TaskDetails
 {
@@ -277,7 +277,7 @@ Column virtualization improves performance when the DataGrid has many columns. O
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="VirtualData.cs" %}
+{% highlight c# tabtitle="VirtualData.cs" %}
 
 public class VirtualData
 {
@@ -447,7 +447,7 @@ Overscan makes scrolling smoother by rendering a few extra rows above and below 
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="OrderDetails.cs" %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -540,7 +540,7 @@ When `VirtualMaskRow` is enabled, the grid reuses existing DOM elements and disp
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="OrderDetails.cs" %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -635,7 +635,7 @@ Frozen columns remain fixed on the left or right side of the grid while the rest
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="VirtualData.cs" %}
+{% highlight c# tabtitle="VirtualData.cs" %}
 
 public class VirtualData
 {
@@ -801,7 +801,7 @@ Infinite scrolling loads additional data automatically as you scroll down. Inste
 }
 {% endhighlight %}
 
-{% highlight cs tabtitle="TaskDetails.cs" %}
+{% highlight c# tabtitle="TaskDetails.cs" %}
 public class TaskDetails
 {
     public static List<TaskDetails> GenerateData(int count)
