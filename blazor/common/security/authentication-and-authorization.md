@@ -125,7 +125,7 @@ N> This example uses Blazor Server with ASP.NET Core Identity. For WebAssembly a
 
 ## Authentication with Syncfusion® components
 
-This section explains how to implement **UI-level** and **data-level authentication** in Syncfusion® components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview). UI-level authentication is demonstrated across all components using `<AuthorizeView>` to control the visibility of UI elements based on the user’s authentication state.
+This section explains how to implement **UI-level** and **data-level authentication** in [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview). UI-level authentication is demonstrated across all components using `<AuthorizeView>` to control the visibility of UI elements based on the user’s authentication state.
 
 For data-level security, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is configured to include **Bearer tokens** in API requests, enabling secure access to protected backend endpoints for components such as **DataGrid** and **Scheduler**. In this example, the **TreeView** component uses local data and focuses only on UI-level authentication.
 
