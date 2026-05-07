@@ -162,7 +162,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services
     .AddDefaultIdentity<IdentityUser>(options =>
     {
-        // Email confirmation is disabled for demo purposes; enable and configure an email sender in production.
+        // Email confirmation is disabled for demo purposes. Enable and configure an email sender in production.
         options.SignIn.RequireConfirmedAccount = false;
     })
     .AddEntityFrameworkStores<ApplicationDbContext>();
