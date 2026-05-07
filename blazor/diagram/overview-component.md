@@ -123,7 +123,7 @@ These interactions provide a seamless way to explore and navigate complex diagra
 
 The following image shows how the diagram is zoomed or panned with an overview.
 
-![Overview Interaction](images/Overview.gif)
+![Overview Interaction](images/Overview.webp)
 
 ## How to Enable or Disable Overview Functionalities Using Constraints
 
