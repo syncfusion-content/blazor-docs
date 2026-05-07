@@ -15,32 +15,6 @@ documentation: ug
 
 This guide explains how to protect [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components) from XSS attacks. It covers built-in client-side sanitization, required server-side validation, and safe usage guidelines for components that handle user-generated content.
 
-### Types of XSS attacks
-
-1. **Stored XSS** – Malicious scripts are saved in the application and executed in the user’s browser when the content is loaded.
-2. **Reflected XSS** – Malicious input is returned in the server response and executed in the browser.
-3. **DOM-based XSS** – Client-side scripts read untrusted data and write it directly into the page.
-
-## Why XSS matters in Blazor applications?
-
-Blazor Server and Blazor WebAssembly have different XSS risks due to their execution models.
-
-### Blazor Server
-
-- XSS can occur if unsafe content is rendered without proper sanitization.
-- A successful XSS attack could potentially interfere with the SignalR connection used by Blazor Server.
-- User session state and backend resources may be exposed or misused.
-
-### Blazor WebAssembly
-
-- The application runs entirely in the user’s browser, so injected scripts execute locally and can manipulate the UI or access user data.
-- Client-side code and files are publicly accessible, making client-only protections easier to inspect or bypass.
-- Relying only on client-side validation and sanitization increases XSS risk, as attackers can bypass these mechanisms and allow malicious payloads to reach backend services when server-side validation is missing.
-
-## XSS threat model and attack vectors
-
-XSS vulnerabilities can be introduced through user input, API responses, uploaded files, copied content, or stored database values that are not properly validated or sanitized.
-
 ## How to prevent XSS attacks?
 
 Protecting your application from XSS requires using several layers of defense.
@@ -122,9 +96,9 @@ public sealed class SafeContentAttribute : ValidationAttribute
 
 ### 3. HTML sanitization
 
-If your app allows users to enter rich HTML, such as through a rich text editor, you must sanitize it. Sanitization removes harmful or unsafe HTML while preserving safe formatting tags like `<p>`, `<b>`, and `<br>`.
+HTML sanitization is required when an application allows rich HTML content to be submitted, such as through a rich text editor. Sanitization removes unsafe elements and attributes while preserving a limited set of explicitly allowed formatting tags (for example, `<p>`, `<b>`, `<br>`). Any tag or attribute not in the allowlist is removed to prevent script execution. 
 
-Only the HTML tags you explicitly allow are kept. Always sanitize content before saving it to the database and again before displaying it. This defense-in-depth approach applies to all content, including data from external sources.
+Sanitize all HTML before storing it in the database and again before rendering it. This defense‑in‑depth approach ensures consistent protection even if rendering logic, usage scenarios, or content sources change, and it applies equally to application input and external data sources.
 
 #### Built-in sanitization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 
