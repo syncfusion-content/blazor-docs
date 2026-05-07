@@ -180,7 +180,7 @@ The auto-scrolling region is limited using [ScrollLimit](https://help.syncfusion
 
 [OnAutoScrollChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_OnAutoScrollChange) is raised when auto-scroll (scrollbars) is changed; for more information, see [OnAutoScrollChange](events#onautoscrollchange-event) page for more details about OnAutoScrollChange.
 
-|![AutoScroll support for node](images/AutoScroll.gif) | 
+|![AutoScroll support for node](images/Autoscroll.webp) | 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/AutoScroll.razor)
 
@@ -265,8 +265,8 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 
 | ScrollLimit | Output |
 |-------------|--------|
-|   Diagram   | ![ScrollLimitMode as Diagram](./images/ScrollLimitDiagram.gif)|   
-|   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.gif)|
+|   Diagram   | ![ScrollLimitMode as Diagram](./images/ScrollLimitDiagram.webp)|   
+|   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.webp)|
 
 ## How to Set Scroll Padding
 The [ScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollPadding) property in the scroll settings allows you to extend the scrollable region based on the [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit), when an element is interacted with at the edges of the viewport. It defines the maximum distance between the object and the edge of the diagram area, ensuring smoother navigation and interaction. This behavior enhances the user experience, particularly in large diagrams where users may need to move or extend elements across different sections of the canvas.
@@ -312,7 +312,7 @@ The following example illustrates how to sets scroll padding.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollPadding.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scroll Padding support for node](images/ScrollPadding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scroll Padding support for node](images/ScrollPadding.webp)" %}
 
 ## How to Restrict Scrollable Area
 Scrolling beyond any particular rectangular area can be restricted using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as “limited.” The following code example illustrates how to customize the scrollable area.

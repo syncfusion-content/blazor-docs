@@ -60,6 +60,7 @@ After creating the Blazor project, you must install the required Syncfusion® Bl
 - In the **Solution Explorer**, right‑click the project name.
 - Select **Manage NuGet Packages** from the context menu.
 - In the Browse tab, search for and install the following packages:
+
     - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
@@ -102,7 +103,7 @@ To apply styles and enable Syncfusion® features, reference the theme CSS and sc
 
 <body>
     ....
-    <!-- Syncfusion Blazor DataGrid component's script reference -->
+    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ....
 </body>

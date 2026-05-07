@@ -228,7 +228,7 @@ The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/Clear.razor)
 
-![Blazor Diagram clear](images/blazor-diagram-clear.gif)
+![Blazor Diagram clear](images/blazor-diagram-clear.webp)
 
 ## How to Delete Diagram Elements
 
@@ -440,7 +440,7 @@ The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ResetZoom.razor)
 
-![Blazor Diagram reset zoom methos](images/blazor-diagram-reset-zoom-method.gif)
+![Blazor Diagram reset zoom methos](images/blazor-diagram-reset-zoom-method.webp)
 
 ## How to Clear Selected Items
 The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) method deselects all currently selected nodes and connectors in the diagram. This method provides a quick way to reset the selection state of the diagram, allowing for a clean slate before performing new operations or updates.
