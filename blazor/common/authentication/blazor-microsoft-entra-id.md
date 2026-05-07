@@ -9,7 +9,7 @@ documentation: ug
 
 # Securing Syncfusion® Blazor DataGrid with Microsoft Entra ID
 
-This document explains how to build a **Blazor Web App (Interactive Server)** that uses [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id) (formerly Azure Active Directory) for user authentication. Once users log in with their Microsoft account, they will be able to access a protected page that includes the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
+This guide shows how to secure the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id) (formerly Azure Active Directory) authentication.
 
 ## Create a Blazor project
 
