@@ -9,15 +9,7 @@ documentation: ug
 
 # Integrating Blazor with .NET MAUI Blazor Hybrid and Web App
 
-This section explains how to create and run a **.NET MAUI Blazor Hybrid App** together with a **Blazor Web App** using [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
-
-## What is .NET MAUI Blazor Hybrid and Web App?
-
-The **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app)**  template creates a solution that consists of three projects, including a .NET MAUI Blazor Hybrid App (native), a Blazor Web App (server or WebAssembly), and a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used across the native MAUI app and the web app, making it easy to build one UI and deploy it across mobile, desktop, and web platforms.
-
-By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
-
-Visual Studio includes the **.NET MAUI Blazor Hybrid and Web App** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution.
+This section explains how to create and run a [.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app) together with a **Blazor Web App** using [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
 
 ## Create a new .NET MAUI Blazor Hybrid and Blazor Web App in Visual Studio
 
