@@ -210,7 +210,7 @@ The following code example illustrates how to change the preview size of a palet
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SymbolPreview.razor).
 
-![SymbolPreview in Blazor Diagram](../images/blazor-diagram-symbol-preview.gif)
+![SymbolPreview in Blazor Diagram](../images/blazor-diagram-symbol-preview.webp)
 
 ## How to Restrict Symbol Dragging in a Palette
 
@@ -801,7 +801,7 @@ The following code example demonstrates how to enable or disable the default too
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/ShowToolTip.razor).
 
-![EnableDisableTooltip](../images/defaultShowToolTiptooltip.gif)
+![EnableDisableTooltip](../images/defaultShowToolTiptooltip.webp)
 
 >**Note:** The `ShowToolTip` property is effective only when tooltip constraints are disabled for the symbol palette element.
 
@@ -981,7 +981,7 @@ When a custom tooltip is defined for a symbol, the same tooltip is applied to th
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SymbolPaletteTooltip.razor)
 
-![Tooltip in symbol palette](../images/differenttooltip.gif)
+![Tooltip in symbol palette](../images/differenttooltip.webp)
 
 ### How to Provide Tooltip Template for Symbols
 
@@ -1078,7 +1078,7 @@ For more information about events, refer to the [Events](../events).
 
 The diagram supports canceling a node drop from the symbol palette by pressing the Esc key during drag-and-drop.
 
-![Escape key in symbol palette](../images/blazor-diagram-palette-escape-key.gif)
+![Escape key in symbol palette](../images/blazor-diagram-palette-escape-key.webp)
 
 ## How to Enable the Chunk Message
 
