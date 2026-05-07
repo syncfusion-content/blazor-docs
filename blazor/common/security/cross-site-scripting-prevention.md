@@ -96,7 +96,7 @@ public sealed class SafeContentAttribute : ValidationAttribute
 
 ### 3. HTML sanitization
 
-HTML sanitization is required when an application allows rich HTML content to be submitted, such as through a rich text editor. Sanitization removes unsafe elements and attributes while preserving a limited set of explicitly allowed formatting tags (for example, `<p>`, `<b>`, `<br>`). Any tag or attribute not in the allowlist is removed to prevent script execution. 
+HTML sanitization is required when an application allows rich HTML content to be submitted, such as through a rich text editor. Sanitization removes unsafe elements and attributes while preserving a limited set of explicitly allowed formatting tags (for example, `<p>`, `<b>`, `<br>`). Any tag or attribute not in the allow list is removed to prevent script execution. 
 
 Sanitize all HTML before storing it in the database and again before rendering it. This defense‑in‑depth approach ensures consistent protection even if rendering logic, usage scenarios, or content sources change, and it applies equally to application input and external data sources.
 
