@@ -117,8 +117,7 @@ Redirect URLs specify where **Microsoft Entra ID** should return the user after 
 
 ## Configure Azure AD settings in appsettings.json
 
-This step stores Microsoft Entra ID configuration values so the Blazor App can read them at runtime.
-After copying the **Tenant ID** and **Client ID**, update the `appsettings.json` file as shown below.
+This step stores **Microsoft Entra ID** configuration values so the Blazor App can read them at runtime. After copying the **Tenant ID** and **Client ID**, update the `appsettings.json` file as shown below.
 
 {% tabs %}
 {% highlight json tabtitle="appsettings.json" %}

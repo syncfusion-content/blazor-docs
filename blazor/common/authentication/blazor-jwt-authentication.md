@@ -86,7 +86,7 @@ Include the Syncfusion® theme stylesheet, required script references, and confi
 
 ## Configuring JWT in appsettings.json
 
-The JWT configuration specifies how the server signs and validates authentication tokens.
+The **JWT** configuration specifies how the server signs and validates authentication tokens.
 
 {% tabs %}
 {% highlight json tabtitle="appsettings.json" %}
@@ -106,7 +106,7 @@ N> For production environments, do not store secrets directly in `appsettings.js
 
 ## Generating a JWT token
 
-This section demonstrates how to generate a JWT token on the server by using a custom **TokenService** class.
+This section demonstrates how to generate a **JWT** token on the server by using a custom `TokenService` class.
 
 {% tabs %}
 {% highlight c# tabtitle="Services/TokenService.cs"  %}
@@ -159,7 +159,7 @@ namespace YourProjectName.Services
 
 ## Getting the token
 
-This section describes how the application issues a **JSON Web Token (JWT)** for authenticated access. The **AuthController** class provides an API endpoint that generates and returns a JWT for the requesting user.
+This section describes how the application issues a **JSON Web Token (JWT)** for authenticated access. The `AuthController` class provides an API endpoint that generates and returns a JWT for the requesting user.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Controllers/AuthController.cs"  %}
@@ -285,7 +285,7 @@ public class OrdersDetails
 
 ## Protecting the Syncfusion® Blazor DataGrid API
 
-This section explains how the **Syncfusion® Blazor DataGrid** API endpoint is secured to allow access only to authenticated requests. The `Authorize` attribute enforces token based access to Grid data.
+This section explains how the **Syncfusion® Blazor DataGrid** API endpoint is secured to allow access only to authenticated requests. The `Authorize` attribute enforces token based access to DataGrid data.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Controllers/GridController.cs"  %}
