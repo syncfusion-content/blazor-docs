@@ -937,3 +937,4 @@ For detailed explanations and additional configuration options, refer to the fol
 * [Infinite Scrolling in Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
 * [Virtualization in Syncfusion Blazor ListView](https://blazor.syncfusion.com/documentation/listview/virtualization)
 * [Virtualization in Syncfusion Blazor File Manager](https://blazor.syncfusion.com/documentation/file-manager/virtualization)
+ 
