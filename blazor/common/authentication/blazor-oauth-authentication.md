@@ -234,7 +234,7 @@ Create a new Razor file named `LoginDisplay.razor` under the `Shared` folder ins
 
 **Add LoginDisplay to MainLayout**
 
-To make the login and logout actions available throughout the application, add the LoginDisplay UI to the main layout. Open `MainLayout.razor` and add **<LoginDisplay />** to the top navigation area.
+To make the login and logout actions available throughout the application, add the **LoginDisplay** UI to the main layout. Open `MainLayout.razor` and include it in the top navigation area.
 
 {% tabs %}
 {% highlight razor tabtitle="Layout/MainLayout.razor" hl_lines="8" %}
@@ -343,12 +343,13 @@ Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** o
 
 <PageTitle>Secure Data Grid</PageTitle>
 
-            <SfGrid DataSource="@Orders" AllowPaging="true">
-                <GridColumns>
-                    <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
-                    <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="150" />
-                </GridColumns>
-            </SfGrid>
+<SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="150" />
+    </GridColumns>
+</SfGrid>
+
 @code {
     public List<Order> Orders { get; set; } = new();
 

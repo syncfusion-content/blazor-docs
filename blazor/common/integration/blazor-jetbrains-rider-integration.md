@@ -133,7 +133,6 @@ Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-compo
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-
     }
 }
 

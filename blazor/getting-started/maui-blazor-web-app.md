@@ -85,18 +85,18 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  ....
-  <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
+ <head>
+    <meta charset="utf-8" />
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+ </head>
 
-<body>
-  ....
-  <div id="app">Loading...</div>
-  <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-  <script src="_framework/blazor.webview.js" autostart="false"></script>
-</body>
+ <body>
+    ....
+    <div id="app">Loading...</div>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_framework/blazor.webview.js" autostart="false"></script>
+ </body>
 
 </html>
 
@@ -105,19 +105,18 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+ <head>
     <meta charset="utf-8" />
     ....
-	<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <HeadOutlet />
-</head>
+ </head>
 
-<body>
+ <body>
     <Routes />
-	<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     <script src="_framework/blazor.web.js"></script>
-</body>
+ </body>
 
 </html>
 
@@ -173,5 +172,5 @@ N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Bl
 ## See also
 
 * [How to create Diagram Builder in MAUI platform?](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)
+* [View the MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
 
-N> [View MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
