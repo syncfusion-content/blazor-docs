@@ -100,7 +100,7 @@ Install-Package Azure.AI.OpenAI
 - Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="8 9 10 11 12 13 14" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="8 9 10 11 12 13 14" %}
 
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
@@ -147,7 +147,7 @@ Install-Package OllamaSharp
 - Add the following to the **~/Program.cs** file in the Blazor Web App:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 10" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="7 8 9 10" %}
 
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -201,43 +201,48 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Configure render mode (Server)
+## Configure render mode
 
-For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~/Pages/*.razor` file that requires interactive Server components.
-
-**Per‑page directive (Server)**
+If your app's interactivity location is set to **Per page/component**, add the required render mode directive at the top of each `~/Pages/*.razor` file that uses interactive components.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Server" %}
 
-@* Define the desired render mode here *@
 @rendermode InteractiveServer
+
+{% endhighlight %}
+{% highlight razor tabtitle="WebAssembly" %}
+
+@rendermode InteractiveWebAssembly
+
+{% endhighlight %}
+{% highlight razor tabtitle="Auto" %}
+
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}
 
-N> If the `interactivity location` is set to `Global` and the app is configured for Server render mode, no per‑page directive is required.
+N> If the interactivity location is set to **Global**, no per-page directive is required.
 
-## AI-powered DataGrid in Blazor
+## How AI models integrate with Blazor DataGrid
 
-This section explains how to integrate AI with the **Syncfusion® Blazor DataGrid** to analyze sales orders and generate business insights. The implementation uses Azure OpenAI or Ollama to return structured JSON with an executive summary, key trends, recommendations, and flagged order IDs. It also shows a loading spinner while the request is processing and highlights the rows identified by the AI in the grid.
+This sample demonstrates how to use the **Syncfusion® Blazor DataGrid** to analyze sales order data and generate business insights with AI models. The AI service returns structured JSON that includes an executive summary, key trends, recommendations, and flagged order IDs. While the request is being processed, a loading spinner is displayed, and the grid highlights the rows identified by the AI.
 
-### How the AI Integration Works
+The sample loads sales order data in `Home.razor.cs` and sends it to the AI service when the user selects **Generate AI Insights**.
 
-The sample loads sales order data in `Home.razor.cs` and sends it to the AI service when the user clicks **Generate AI Insights**.
+### Workflow
 
-Inside the workflow:
-
-- **Sample Data**: A list of `SalesOrder` records is created with fields such as `OrderId`, `Customer`, `Region`, `Category`, `Sales`, `Profit`, and `OrderDate`.
-- **AI Request**: The grid data is serialized to JSON and passed to `IChatInferenceService`.
-- **Structured Response**: The prompt asks the model to return JSON only with:
+- **Sample data**: A list of `SalesOrder` records is created with fields such as `OrderId`, `Customer`, `Region`, `Category`, `Sales`, `Profit`, and `OrderDate`.
+- **AI request**: The grid data is serialized to JSON and passed to `IChatInferenceService`.
+- **Structured response**: The prompt instructs the model to return JSON only with the following properties:
   - `summary`
   - `keyTrends`
   - `recommendations`
   - `flaggedOrderIds`
-- **Response Handling**: The returned text is cleaned, deserialized, and stored in the `AiInsights` model.
-- **Row Highlighting**: The `OnQueryCellInfo` event checks each row’s `OrderId` and applies a highlight style for flagged records.
-- **Insight Display**: The summary, trends, and recommendations are shown below the grid, and errors are displayed if the AI request fails.
+- **Response handling**: The returned text is cleaned, deserialized, and stored in the `AiInsights` model.
+- **Row highlighting**: The `OnQueryCellInfo` event checks each row’s `OrderId` and applies a highlight style to the flagged records.
+- **Insight display**: The summary, trends, and recommendations are displayed below the grid, and any errors are shown if the AI request fails.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -477,22 +482,23 @@ public partial class Home
 {% endhighlight %}
 {% endtabs %}
 
-## Error handling and troubleshooting
+## Error handling and reliability in AI-powered DataGrids
 
-If the AI service fails to return a valid response, the DataGrid displays an error message. Common issues include:
+If the AI service fails to return a valid response, the Blazor DataGrid displays an appropriate error message to inform the user. To ensure reliability and a smooth user experience, consider handling the following common scenarios:
 
-- **Invalid API key or endpoint**: Verify that `azureOpenAIKey` or the Ollama `Endpoint` is correct and the service is accessible.
+- **Invalid configuration**: Ensure the API key, endpoint, and model name are valid and accessible.
 - **Model unavailable**: Ensure the specified `azureOpenAIModel` or `ModelName` is deployed and supported.
-- **Network issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
-- **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
+- **Network or service issues**: Verify connectivity to the AI service, including self‑hosted endpoints.
+- **Timeouts and large datasets**: Large requests may cause delays or timeouts; consider batching data or optimizing prompts.
+- **Invalid AI responses**: Validate AI output before applying results to the DataGrid.
+- **Rate limits**: Handle throttling gracefully by retrying or informing the user.
+- **Fallback behavior**: Allow the DataGrid to continue displaying data if AI processing fails.
+
+N> In addition to standard errors, applications should **validate AI responses**, **handle rate limits**, and provide graceful fallback behavior to **ensure a reliable user experience**.
 
 ## Performance considerations
 
 When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
-
-## Final output
-
-The following output shows the AI-generated insights in the DataGrid, including the executive summary, key trends, recommendations, and highlighted low-profit or loss-making order records.
 
 ![AI-powered DataGrid in Blazor](../images/ai-powered-blazor-datagrid.webp)
 

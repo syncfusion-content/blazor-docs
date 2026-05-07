@@ -11,9 +11,9 @@ documentation: ug
 
 Handling large datasets efficiently is a critical requirement for modern Blazor applications. With the right data-handling strategies, applications can reliably display and interact with thousands of records while maintaining a fast and responsive user interface.
 
-Syncfusion® Blazor components are built to ensure responsive rendering, smooth scrolling, and efficient memory usage, even when working with large volumes of data. By leveraging capabilities such as data virtualization, server side data operations, lazy loading, and optimized rendering pipelines, these components minimize UI overhead and deliver consistent performance.
+[Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) are built to ensure responsive rendering, smooth scrolling, and efficient memory usage, even when working with large volumes of data. By leveraging capabilities such as data virtualization, server side data operations, lazy loading, and optimized rendering pipelines, these components minimize UI overhead and deliver consistent performance.
 
-This document provides guidance on how to load and interact with large datasets effectively in Blazor applications using Syncfusion® Blazor components, enabling scalable data experiences without compromising usability or performance.
+This document provides guidance on how to load and interact with large datasets effectively in Blazor applications using **Syncfusion® Blazor components**, enabling scalable data experiences without compromising usability or performance.
  
 ## Understanding data size and processing location
  
@@ -213,7 +213,7 @@ The following measured values may vary based on browser, device, hosting model(B
 
 N> Without virtualization, render time increases as record count grows because all rows are rendered in the DOM. With virtualization enabled, render time remains nearly constant by limiting the DOM rows to those visible in the viewport, ensuring smooth UI performance for larger datasets.
 
-For more information, refer to the Syncfusion® Blazor DataGrid documentation for [Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) and [Infinite scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
+For more information, refer to the **Syncfusion® Blazor DataGrid** documentation for [Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) and [Infinite scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling).
 
 ## Handle streaming data in Blazor Server
 
@@ -254,7 +254,7 @@ Lazy loading improves perceived performance by reducing initial load time and al
 
 For an example of implementing the **LoadChildOnDemand** pattern in hierarchical components, refer to the [Gantt data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
 
-## How Syncfusion® Approaches Large Data Handling
+## How Syncfusion® approaches large data handling
 
 Syncfusion® Blazor components are built with large‑data scenarios and follow these core principles:
 
@@ -270,3 +270,4 @@ By following these principles, Syncfusion® Blazor components enable developers 
 
 * [Handling Large Data Sets Efficiently in Syncfusion® Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
 * [Performance Optimization for Syncfusion® Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
+

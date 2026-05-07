@@ -27,4 +27,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor DropDownList rendered in RTL mode](./images/localization/blazor_dropdown_enableRtl.png)
+![Blazor DropDownList rendered in RTL mode](./images/localization/blazor_dropdown_enableRtl.webp)
