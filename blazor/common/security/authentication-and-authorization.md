@@ -18,12 +18,12 @@ This guide explains how to secure [Syncfusion® Blazor components](https://www.s
 
 If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using Syncfusion’s Blazor getting started guides.
 
-* [WebAssembly getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Server getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ## Install required packages
 
-Use NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) and install the following packages:
+Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package), or the .NET CLI.
 
 **Microsoft packages:**
 
@@ -42,7 +42,7 @@ Use NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Pac
 Open the `~/_Imports.razor` file and add the required Syncfusion namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight c# tabtitle="~/_Imports.razor" %}
 
 @using Microsoft.AspNetCore.Components.Authorization
 @using Syncfusion.Blazor
@@ -54,7 +54,7 @@ Open the `~/_Imports.razor` file and add the required Syncfusion namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-### Add stylesheet and script resources
+## Add stylesheet and script resources
 
 Add the Syncfusion theme CSS and required scripts to the `/App.razor` file.
 
@@ -62,10 +62,14 @@ Add the Syncfusion theme CSS and required scripts to the `/App.razor` file.
 {% highlight html tabtitle="App.razor"  %}
 
 <head>
+    ...
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ...
 </head>
 <body>
+    ...
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    ...
 </body>
 
 {% endhighlight %}
@@ -99,7 +103,7 @@ Inject the authentication provider in components that need to access the authent
 **Step 3. Register authentication and Syncfusion® services in `Program.cs`**
 
 {% tabs %}
-{% highlight cs tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Identity;
