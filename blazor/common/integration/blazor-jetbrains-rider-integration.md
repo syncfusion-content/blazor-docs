@@ -9,27 +9,20 @@ documentation: ug
 
 # JetBrains Rider Integration with Syncfusion® Blazor Components
 
-[JetBrains Rider](https://www.jetbrains.com/rider/) is a powerful, cross‑platform integrated development environment (IDE) designed for .NET developers. It provides excellent support for building Blazor applications.
+This guide explains how to use [JetBrains Rider](https://www.jetbrains.com/rider/) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to build and manage Blazor applications efficiently.
 
-[Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) offer a wide collection of ready‑to‑use UI controls that help you create modern, interactive, and visually rich web applications using Blazor.
-
-- Set up JetBrains Rider for Blazor development
-- Install and configure Syncfusion® Blazor packages
-- Create and run a Blazor application
-- Work efficiently with Syncfusion® Blazor components inside Rider
-
-To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfusion, review the following video.
+To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfusion®, review the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
 
 ## Setting up JetBrains Rider for Blazor
 
-Before you start developing a Blazor application, you need to install JetBrains Rider on your system.
+Before you start developing a Blazor application, you need to install **JetBrains Rider** on your system.
 
 **Install JetBrains Rider**
 
-- Go to the official [JetBrains](https://www.jetbrains.com/rider/) website.
+- Go to the official [JetBrains Rider](https://www.jetbrains.com/rider/) website.
 - Download the installer suitable for your operating system.
 - Run the installer and follow the on‑screen instructions to complete the installation.
 - Once the installation is complete, launch JetBrains Rider to begin your Blazor development.
@@ -38,7 +31,7 @@ After launching Rider, you can create or open a Blazor project and start integra
 
 ## Creating a Blazor application
 
-This section explains how to create a new Blazor WebAssembly application using JetBrains Rider.
+This section explains how to create a new **Blazor WebAssembly Standalone App** using **JetBrains Rider**.
 
 Follow these steps to create a Blazor application in Rider:
 
@@ -53,9 +46,9 @@ Once the project is created, Rider opens the solution and restores the required 
 
 ## Adding Syncfusion® Blazor NuGet packages
 
-After creating the Blazor project, you must install the required Syncfusion® Blazor NuGet packages to use Syncfusion UI components.
+After creating the Blazor project, you must install the required Syncfusion® Blazor NuGet packages to use Syncfusion® UI components.
 
-**Install required Syncfusion NuGet packages**
+**Install required Syncfusion® NuGet packages**
 
 - In the **Solution Explorer**, right‑click the project name.
 - Select **Manage NuGet Packages** from the context menu.
@@ -66,7 +59,7 @@ After creating the Blazor project, you must install the required Syncfusion® Bl
 
 Once the installation is complete, the Syncfusion® Blazor components are ready to be used in your application.
 
-## Register the Syncfusion services
+## Register the Syncfusion® services
 
 Add the Syncfusion® Blazor service to the `Program.cs` file to enable Syncfusion® components in the application.
 
@@ -96,14 +89,14 @@ To apply styles and enable Syncfusion® features, reference the theme CSS and sc
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ....
 </head>
 
 <body>
     ....
-    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
+    <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ....
 </body>
@@ -140,7 +133,6 @@ Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-compo
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-
     }
 }
 
