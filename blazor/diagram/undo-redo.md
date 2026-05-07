@@ -127,7 +127,7 @@ The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/StackLimit.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDryiZDPpEbHJxhw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[StackLimit in Blazor Diagram](images/stackLimitGIF.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDryiZDPpEbHJxhw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[StackLimit in Blazor Diagram](images/stackLimitGIF.webp)" %}
 
 ## Current entry
 We can also get the current history entry from the [CurrentEntry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_CurrentEntry) property of the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) that allows to track changes occurring during the undo or redo process.
