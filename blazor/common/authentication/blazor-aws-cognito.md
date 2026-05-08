@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Authentication with AWS Cognito using Syncfusion® Components
 
-This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components).
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components).
 
 ## Prerequisites
 
@@ -21,11 +21,14 @@ This guide demonstrates how to integrate [AWS Cognito authentication](https://do
 
 ### Create a Blazor project
 
-If you already have a Blazor project, proceed to the **Install required packages** section. Otherwise, create one using Syncfusion getting started guides for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
+If you already have a Blazor project, proceed to the **Install required packages** section. Otherwise, create one using Syncfusion’s Blazor getting started guides.
+
+* [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 ### Install required packages
 
-To enable authentication and use Syncfusion Blazor components, install the required packages through NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package), or the .NET CLI.
+To enable authentication and use Syncfusion Blazor components, install the required packages through NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 **Syncfusion packages**
 
@@ -71,19 +74,19 @@ Before building the Blazor app, set up an AWS Cognito user pool:
 
 1. Go to **AWS Management Console** > **Amazon Cognito**.
 2. Click **Create user pool**.
-3. Choose application type as **Traditional Web Application** (even though this is a Blazor app, Cognito categorizes web-based apps here).
+3. Choose the application type as **Traditional Web Application** (even though this is a Blazor app, Cognito categorizes web-based apps here).
 4. Set your application name.
 5. Choose authentication method: **Email** or **Phone number** (or both).
-6. Continue through the setup wizard and confirm your settings. Once ready, click the button to **Create User Directory**.
+6. Continue through the setup wizard and confirm your settings. Once ready, click **Create User Directory**.
 7. Go to **Amazon Cognito** > **User pools**. Note the **User pool ID** and **User pool name**.
 8. Go to **App integration** > **App clients**.
 9. Click **Create app client**:
    - **App type:** Choose **Public client** (for PKCE without a secret).
    - **Client name:** (for example, `MyBlazorServer`).
-   - **Authentication flows:** Ensure **Authorization code flow** is selected.
+   - **Authentication flows:** Ensure the **Authorization code flow** is selected.
    - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
    - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
-10. Verify that in **App integration** → **hosted UI**:
+10. Verify that in **App integration** → **Hosted UI**:
    - "Hosted UI" is **enabled**
    - "Callback URLs" includes your app redirect URI
 
@@ -91,7 +94,7 @@ You now have the values to add to `appsettings.json`.
 
 ### Update `appsettings.json` file
 
-This stores your Cognito hosted UI domain and app client ID so the app can read them at startup. The `Authority` is the base URL of your Cognito user pool domain, and `ClientId` identifies your web app in Cognito. Keep these out of code to simplify environment changes. Replace the placeholders with your actual Cognito values.
+This stores your Cognito Hosted UI domain and app client ID so the app can read them at startup. The `Authority` is the base URL of your Cognito user pool domain, and `ClientId` identifies your web app in Cognito. Keep these out of code to simplify environment changes. Replace the placeholders with your actual Cognito values.
 
 {% tabs %}
 {% highlight json tabtitle="appsettings.json" %}
@@ -113,7 +116,7 @@ N> This sample uses Authorization Code + PKCE with a public client (no client se
 
 ### Configure OIDC and Cookie authentication
 
-This wires OpenID Connect against Cognito’s hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. `SaveTokens = true` keeps ID/Access tokens available for downstream API calls. `RoleClaimType = "cognito:groups"` turns Cognito groups into ASP.NET Core roles.
+This wires OpenID Connect against Cognito’s Hosted UI using the Authorization Code flow (PKCE) and uses cookies for the authenticated session. `SaveTokens = true` keeps ID/Access tokens available for downstream API calls. `RoleClaimType = "cognito:groups"` turns Cognito groups into ASP.NET Core roles.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
@@ -182,7 +185,7 @@ if (useOidc)
     .AddCookie()
     .AddOpenIdConnect(options =>
     {
-        options.Authority = cognitoAuthority!;          // Cognito hosted UI domain
+        options.Authority = cognitoAuthority!;          // Cognito Hosted UI domain
         options.ClientId = cognitoClientId!;                // App client ID
         options.ResponseType = "code";              // Authorization Code + PKCE
         options.SaveTokens = true;                  // Persist ID/Access tokens in session for use in API calls or as Bearer tokens
@@ -220,7 +223,7 @@ if (!builder.Environment.IsDevelopment())
     if (!TryGetAuthorityUri(cognitoAuthority, out var prodUri) || prodUri!.Scheme != Uri.UriSchemeHttps || string.IsNullOrWhiteSpace(cognitoClientId) || cognitoClientId.Contains("YOUR_APP_CLIENT_ID"))
     {
         throw new InvalidOperationException(
-            "Cognito configuration is invalid. Set 'Cognito:Authority' to your Cognito hosted UI domain (https://<your-domain>.auth.<region>.amazoncognito.com) and 'Cognito:ClientId' to your app client id.");
+            "Cognito configuration is invalid. Set 'Cognito:Authority' to your Cognito Hosted UI domain (https://<your-domain>.auth.<region>.amazoncognito.com) and 'Cognito:ClientId' to your app client ID.");
     }
 }
 
@@ -294,10 +297,12 @@ Add the Syncfusion Blazor theme CSS and script references to your application's 
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ...
 </head>
 <body>
     ...
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    ...
 </body>
 
 {% endhighlight %}
@@ -378,11 +383,11 @@ N> By default, the app runs on `https://localhost:7000` (or similar port defined
 
 **Expected behavior**
 
-* Unauthenticated users see the sign-in prompt.
-* Clicking **Sign in with AWS Cognito** redirects to the Cognito hosted UI.
+* Unauthenticated users see the **sign in** prompt.
+* Clicking **Sign in with AWS Cognito** redirects to the Cognito Hosted UI.
 * After entering credentials, the user is redirected back to the app.
 * The Syncfusion DataGrid appears with sample data.
-* Clicking **Sign out** clears the session and returns to the sign in page.
+* Clicking **Sign out** clears the session and returns to the **sign in** page.
 
 **Output:**
 
@@ -390,7 +395,6 @@ N> By default, the app runs on `https://localhost:7000` (or similar port defined
 
 ## See also
 
-* [Syncfusion Blazor Server getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [AWS Cognito user pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools.html)
 * [ASP.NET Core authentication overview](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/)
 
