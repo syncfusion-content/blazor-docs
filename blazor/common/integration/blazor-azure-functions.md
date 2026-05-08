@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor WebAssembly with Azure Functions | Syncfusion
+title: Syncfusion® Blazor components with Azure Functions | Syncfusion
 description: Step-by-step guide to integrate Azure Functions as a serverless backend for Blazor WebAssembly with Syncfusion components (Grid, Scheduler, DatePicker).
 platform: Blazor
 control: Common
@@ -9,9 +9,7 @@ documentation: ug
 
 # Integrating Syncfusion® Blazor Components with Azure Functions
 
-This guide explains how to build a Blazor WebAssembly application that uses [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend and integrates [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker).
-
-It covers setting up local development, configuring security options such as Function keys, calling Azure Functions from Blazor, enabling CORS, handling errors, and building a complete working example with an orders list and a scheduler view.
+This guide explains how to integrate [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) with [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend in a Blazor WebAssembly application.
 
 ## Prerequisites
 
@@ -59,7 +57,7 @@ func new --name OrdersApi --template "HTTP trigger" --authlevel function
 
 ## Install required NuGet packages
 
-Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package), or the .NET CLI.
+Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 **Syncfusion® packages:**
 
@@ -119,11 +117,13 @@ Add the Syncfusion theme CSS and required scripts to the `wwwroot/index.html` fi
 
 <head>
     ...
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 <body>
     ...
+    <!-- Syncfusion® Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -135,7 +135,7 @@ Add the Syncfusion theme CSS and required scripts to the `wwwroot/index.html` fi
 
 This example shows two minimal HTTP triggered functions. The GET `/api/orders` returns demo orders filtered by optional from and to query parameters (format yyyy‑MM‑dd), and POST `/api/orders` accepts and echoes a JSON payload. These functions include development-only CORS handling and basic logging. Configure CORS and authentication in Azure for production.
 
-Add the following file to your Azure Functions project (e.g., `OrdersApi.cs`):
+Add the following file to your Azure Functions project (e.g., `OrdersApi.cs`).
 
 {% tabs %}
 {% highlight cs tabtitle="OrdersApi.cs" %}
@@ -176,8 +176,7 @@ public static class OrdersApi
 
         // Parse optional query parameters (expected yyyy-MM-dd)
         DateTime? from = null; DateTime? to = null;
-        try
-        {
+        try {
             var query = (req.Url.Query ?? string.Empty).TrimStart('?');
             if (!string.IsNullOrEmpty(query))
             {
@@ -194,9 +193,7 @@ public static class OrdersApi
                         to = t.Date;
                 }
             }
-        }
-        catch
-        {
+        } catch {
             // Ignore parse errors and return unfiltered results
         }
 
@@ -204,13 +201,10 @@ public static class OrdersApi
             (!from.HasValue || o.Date.Date >= from.Value) &&
             (!to.HasValue || o.Date.Date <= to.Value)).ToArray();
 
-        try
-        {
+        try {
             var logger = ctx.GetLogger("GetOrders");
             logger.LogInformation($"Returning {orders.Length} orders (from={from?.ToString("yyyy-MM-dd") ?? ""}, to={to?.ToString("yyyy-MM-dd") ?? ""})");
-        }
-        catch
-        {
+        } catch {
             // Ignore logging failures
         }
 
@@ -237,23 +231,11 @@ public static class OrdersApi
 
         var body = await new StreamReader(req.Body).ReadToEndAsync();
         object? order = null;
-        try
-        {
+        try {
             order = JsonSerializer.Deserialize<object>(body);
-        }
-        catch
-        {
+        } catch {
             // Keep behavior: if deserialization fails, return the raw body as a string
             order = body;
-        }
-
-        try
-        {
-            var logger = ctx.GetLogger("PostOrder");
-            logger.LogInformation("Received PostOrder request");
-        }
-        catch
-        {
         }
 
         var resp = req.CreateResponse(HttpStatusCode.Created);
@@ -276,7 +258,7 @@ public static class OrdersApi
 
 N> The above code example uses `Access-Control-Allow- : *` for development convenience only. In production, replace `"*"` with your Blazor client's origin (e.g., `https://myapp.azurewebsites.net`) in *Azure Portal → Function App → API → CORS*. Never use wildcards in production.
 
-## Create the Blazor page using Syncfusion® components
+## Integrating Syncfusion® components in the application
 
 This example demonstrates the use of components, including a [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) to select a date range, a [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display orders, and a [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) to present events.
 
@@ -326,8 +308,7 @@ Add the following Razor page to your Blazor WebAssembly project.
 
   private async Task Load()
   {
-    try
-    {
+    try {
       // For local development: AuthorizationLevel.Function requires only a function key.
       // For production with Microsoft Entra ID, add: Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
       Http.DefaultRequestHeaders.Authorization = null;
@@ -340,8 +321,7 @@ Add the following Razor page to your Blazor WebAssembly project.
       {
         // This port is for testing only. In production, use HttpClient BaseAddress from configuration.
         var tryUrl = $"http://localhost:{port}/api/orders?from={From:yyyy-MM-dd}&to={To:yyyy-MM-dd}";
-        try 
-        {
+        try {
           resp = await Http.GetAsync(tryUrl);
           body = await resp.Content.ReadAsStringAsync();
           if (resp.IsSuccessStatusCode)
@@ -350,21 +330,16 @@ Add the following Razor page to your Blazor WebAssembly project.
             if (trimmed.StartsWith("[") || trimmed.StartsWith("{"))
             {
               // Valid JSON response
-              try
-              {
+              try {
                 OrdersList = System.Text.Json.JsonSerializer.Deserialize<List<Order>>(trimmed) ?? new List<Order>();
                 found = true;
                 break;
-              }
-              catch (Exception jex)
-              {
+              } catch (Exception jex) {
                 Console.WriteLine($"JSON parse failed from {tryUrl}: {jex}");
               }
             }
           }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
           Console.WriteLine($"Request to {tryUrl} failed: {e.Message}");
         }
       }
@@ -375,9 +350,7 @@ Add the following Razor page to your Blazor WebAssembly project.
       }
       EventItems = OrdersList.Select(o => new EventItem { StartTime = o.Date, EndTime = o.Date.AddHours(1), Subject = $"{o.Customer} ({o.Total:C2})" }).ToList();
       StateHasChanged();
-    }
-    catch (Exception ex)
-    {
+    } catch (Exception ex) {
       Console.WriteLine($"Load failed: {ex}");
     }
   }
