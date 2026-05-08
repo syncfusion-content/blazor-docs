@@ -23,21 +23,11 @@ Blazor development involves choosing the right rendering model, managing depende
 * Performance optimization
 * Security and deployment
 
-The following sections highlight common pitfalls and recommended best practices when developing Blazor applications with Syncfusion<sup style="font-size:70%">®</sup> components.
-
-## Prerequisites
-
-Before you begin, make sure you have:
-
-* A basic understanding of Blazor application structure and component lifecycle
-* Familiarity with Blazor Server, Blazor WebAssembly, or Blazor Web App hosting models
-* Visual Studio 2022 (17.8 or later) or [Visual Studio Code](https://code.visualstudio.com/) with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later installed
-* Access to [Syncfusion Blazor NuGet packages](https://www.nuget.org/packages?q=syncfusion.blazor)
+The following sections highlight common pitfalls and recommended best practices when developing Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blazor components version 33.2.3 or later. Some details may differ in earlier versions.
 
-## Common pitfalls in Blazor applications
+## Setup and Initialization Pitfalls
 
 ### Pitfall 1: Components rendering without styles
 
