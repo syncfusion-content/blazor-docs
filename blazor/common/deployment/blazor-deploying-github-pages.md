@@ -9,7 +9,7 @@ documentation: ug
 
 # Deploying Syncfusion® Blazor Components to GitHub Pages
 
-This guide demonstrates how to deploy [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to [GitHub Pages](https://github.com) in a Blazor WebAssembly application. It includes steps for publishing the application, configuring client-side routing, and hosting the application.
+This guide demonstrates how to deploy [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) in a Blazor WebAssembly application. It includes steps for publishing the application, configuring client-side routing, and hosting the application.
 
 ## Prerequisites
 
