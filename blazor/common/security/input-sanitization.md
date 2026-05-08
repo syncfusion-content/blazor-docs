@@ -9,6 +9,8 @@ documentation: ug
 
 # Input Sanitization in Syncfusion® Blazor Components
 
+This documentation explains how to protect [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) from unsafe or malicious user input using **input sanitization** techniques. It highlights built‑in sanitization support in components such as the [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) and [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor), along with best practices like HTML encoding to ensure safe rendering of user content.
+
 ## What is input sanitization?
 
 **Input sanitization** is the process of filtering and cleaning HTML content from untrusted sources. It removes unsafe tags (like `<script>`), inline scripts (JavaScript code embedded directly in HTML attributes), event handlers (such as `onclick`), and dangerous URLs (malicious JavaScript links). Only safe and valid markup is preserved.
@@ -30,12 +32,12 @@ Sanitizing user input ensures that only safe and expected values are stored or d
 
 | Attacks | Description | Prevention |
 |--------|-------------|------------|
-| Cross-Site Scripting (XSS) | Malicious scripts are injected and execute in the user’s browser. <br> Example: `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components such as the RTE. For plain text inputs, use HTML encoding. <br>Example: `HtmlEncoder.Default.Encode()`.|
-| HTML Injection | Unwanted markup can change layout or behavior by introducing unexpected HTML elements, styles, or attributes.<br> Example: Injecting unexpected `<div>`, `<style>`, `<iframe>` or risky attributes. | The built‑in sanitizer removes unsafe tags and attributes and helps avoid rendering raw HTML from untrusted sources. |
+| Cross-Site Scripting (XSS) | Malicious scripts are injected and execute in the user’s browser, which may lead to unauthorized actions or data exposure. <br> **Example:** `<script>alert('XSS');</script>` | HTML sanitization is enabled by default in Syncfusion components such as the RTE. For plain text inputs, use HTML encoding. **<br>Example:** `HtmlEncoder.Default.Encode()`.|
+| HTML Injection | Unwanted markup can change layout or behavior by introducing unexpected HTML elements, styles, or attributes, which affect how content is rendered in the UI.<br> **Example:** Injecting unexpected `<div>`, `<style>`, `<iframe>` or risky attributes. | The built-in `EnableHtmlSanitizer` property in supported Syncfusion components removes unsafe tags and attributes and prevents rendering raw HTML from untrusted sources. <br> **Example:** `<script>` and `<iframe>` elements, unsafe attributes such as `onclick`. |
 
 ## Built-in sanitization features
 
-Several [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components) include HTML sanitization capabilities to prevent harmful scripts or unsafe markup from being rendered. Components that accept or display HTML content such as the [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.
+Several [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) include HTML sanitization capabilities to prevent harmful scripts or unsafe markup from being rendered. Components that accept or display HTML content such as the [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.
 
 Components such as [Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip), [Toast](https://www.syncfusion.com/blazor-components/blazor-toast), and [Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) apply sanitization when rendering HTML content in templates. For [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), HTML encoding should be applied explicitly when rendering user-provided content. This ensures that any user provided HTML is safe.
 
