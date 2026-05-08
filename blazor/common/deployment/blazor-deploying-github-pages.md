@@ -254,7 +254,7 @@ This produces an optimized `publish/wwwroot` directory ready for deployment. The
 
 ### Deploy to GitHub pages branch
 
-Navigate to the published `wwwroot` directory and push the output files to the branch (e.g., `gh-pages`) to deploy the application on GitHub Pages.
+Navigate to the published `wwwroot` directory and push the output files to the branch (e.g., `github-pages`) to deploy the application on GitHub Pages.
 
 {% tabs %}
 {% highlight cs tabtitle="Git CLI" %}
@@ -262,7 +262,7 @@ Navigate to the published `wwwroot` directory and push the output files to the b
 cd publish\wwwroot
 New-Item -ItemType File -Path .nojekyll -Force
 git init
-git checkout -b gh-pages
+git checkout -b github-pages
 git add .
 git commit -m "Deploy Blazor WASM to GitHub Pages"
 git remote add origin https://github.com/<username>/<repository-name>.git
@@ -271,7 +271,7 @@ git push -f origin gh-pages
 {% endhighlight %}
 {% endtabs %}
 
-The above commands navigate to the published output directory and create a `.nojekyll` file to ensure that Blazor framework files are served correctly. They then initialize a Git repository and create a `gh-pages` branch. All generated files are added and committed, and the repository is linked to GitHub. Finally, the content is pushed to the `gh-pages` branch to deploy the application on GitHub Pages.
+The above commands navigate to the published output directory and create a file to ensure that Blazor framework files are served correctly. They then initialize a Git repository and create a `github-pages` branch. All generated files are added and committed, and the repository is linked to GitHub. Finally, the content is pushed to the `github-pages` branch to deploy the application on GitHub Pages.
 
 ### Enable GitHub Pages
 
