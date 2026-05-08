@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Authentication with AWS Cognito using Syncfusion® Components
 
-This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components).
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Syncfusion components based on user identity, and protect application data. 
 
 ## Prerequisites
 
@@ -323,9 +323,9 @@ Add the Syncfusion Blazor theme CSS and script references to your application's 
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion® DataGrid on an authenticated page
+### Syncfusion® Blazor DataGrid on an authenticated page
 
-This page demonstrates how to protect a [Syncfusion DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
+This page demonstrates how to protect a [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
