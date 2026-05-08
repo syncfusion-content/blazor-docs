@@ -13,7 +13,7 @@ This guide explains how to secure the [Syncfusion® Blazor DataGrid](https://www
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](./blazor-oauth-authentication/#install-required-packages).
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](./blazor-oauth-authentication#install-required-packages).
 
 Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
