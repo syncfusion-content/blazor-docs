@@ -19,7 +19,7 @@ Otherwise, create a new Blazor application by following the [Syncfusion® gettin
 
 ## Install required packages
 
-Install the following NuGet packages to use the [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components).
+Install the following NuGet packages to use the **Syncfusion® Blazor components**.
 
 - [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -134,7 +134,7 @@ cd tests/E2E.Tests
 {% endhighlight %}
 {% endtabs %}
 
-This command creates an NUnit test project named **E2E.Tests** under the `tests` folder, which will host all Playwright‑based UI tests.
+This command creates an NUnit test project named **E2E.Tests** under the `tests` folder, which will host all Playwright based UI tests.
 
 **Install required packages**
 
@@ -248,7 +248,7 @@ namespace E2E.Tests
                 }
                 catch
                 {
-                    // Ignore connection errors while waiting for app to start
+                    // Ignore connection errors while waiting for app to start.
                 }
                 await Task.Delay(1000);
             }
