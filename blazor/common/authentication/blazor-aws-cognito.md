@@ -42,7 +42,7 @@ To enable authentication and use Syncfusion Blazor components, install the requi
 You can install the required packages by using the following .NET CLI commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
