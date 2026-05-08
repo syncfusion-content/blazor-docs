@@ -60,7 +60,7 @@ N> The Pivot Table component can be exported to Excel format using options avail
 }
 ```
 
-![Excel Exporting in Blazor PivotTable](images/blazor-pivottable-excel-export.png)
+![Excel Exporting in Blazor PivotTable](images/blazor-pivottable-excel-export.webp)
 
 ## Changing the Pivot Table style while exporting
 
@@ -118,7 +118,7 @@ N> By default, material theme is applied to exported Excel document.
 }
 ```
 
-![Changing Blazor PivotTable Style while Exporting](images/blazor-pivottable-style-format-in-excel.png)
+![Changing Blazor PivotTable Style while Exporting](images/blazor-pivottable-style-format-in-excel.webp)
 
 ## Add header and footer while exporting
 
@@ -191,7 +191,7 @@ The Excel export provides an option to include header and footer content for the
 }
 ```
 
-![Add Header and Footer while exporting in Blazor PivotTable](images/blazor-pivottable-header-and-footer-in-excel.png)
+![Add Header and Footer while exporting in Blazor PivotTable](images/blazor-pivottable-header-and-footer-in-excel.webp)
 
 ## Changing the file name while exporting
 
@@ -241,7 +241,7 @@ This option provides flexibility to specify a custom file name for your exported
 }
 ```
 
-![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-excel-file-name.png)
+![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-excel-file-name.webp)
 
 ## Limitation when exporting millions of records to Excel format
 
@@ -302,7 +302,7 @@ N> The Pivot Table component can be exported to CSV format using options availab
 }
 ```
 
-![CSV Exporting in Blazor PivotTable](images/blazor-pivottable-csv-export.png)
+![CSV Exporting in Blazor PivotTable](images/blazor-pivottable-csv-export.webp)
 
 ## Export all pages
 
@@ -586,6 +586,6 @@ The [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 ```
 
-![Customizing the Blazor Pivot Table cell values and styles while exporting](images/blazor-pivottable-excelexportevents.png)
+![Customizing the Blazor Pivot Table cell values and styles while exporting](images/blazor-pivottable-excelexportevents.webp)
 
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

@@ -9,146 +9,91 @@ documentation: ug
 
 # Create a Syncfusion® Blazor application
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides the Blazor Template Studio for Visual Studio Code, which scaffolds a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application preconfigured with Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages, namespaces, themes, and component render code. The Template Studio offers a guided wizard to create an application with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+The Syncfusion® Blazor Template Studio for Visual Studio Code scaffolds a Blazor application preconfigured with Syncfusion® NuGet packages, namespaces, themes, and sample component render code. Use the guided wizard to quickly create an application tailored to your platform and selected controls.
 
-N> Blazor project templates from version `v17.4.0.39` and later are supported by the Syncfusion Visual Studio Code project template.
+N> Blazor project templates from version `v17.4.0.39` and later are supported by the Syncfusion® Visual Studio Code project template.
 
 Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications in Visual Studio Code:
 
-1. To create a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application in Visual Studio Code, open the Command Palette with **Ctrl+Shift+P**. Search for the word **Syncfusion<sup style="font-size:70%">&reg;</sup>** in the Visual Studio Code palette to get the templates provided by Syncfusion<sup style="font-size:70%">&reg;</sup>.
+1. Open the Command Palette (`Ctrl+Shift+P`) and search for "Syncfusion" to list available commands.
 
     ![Command Palette showing Syncfusion commands](images/createblazorprojectpalette.webp)
 
-2. Select **Syncfusion Blazor Template Studio: Launch**, and press **Enter**. The Template Studio wizard opens to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor app. Enter the project name and project path.
+2. Choose **Syncfusion Blazor Template Studio: Launch** and provide the project name and path in the wizard.
 
     ![Template Studio wizard with Project name and Project path fields](images/projectlocationname1.webp)
 
-    N> For supported .NET SDK versions, see the .NET SDK support for Syncfusion Blazor components in the system requirements [documentation](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
+3. On the **Project type** tab, select the application type that matches your installed .NET SDK.
 
-3. Select **Next** or the **Project type** tab. The available Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor project types are displayed. Choose one based on the .NET SDK version in use.
+    Supported .NET SDKs and Syncfusion® application types:
 
-    | .NET SDK version | Supported Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Application Type |
-    | ---------------- | -------------------------------------------- |
-    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
-    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
-    
-    In the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App** application type, the following options are available:
+    | .NET SDK version | Application type |
+    | --- | --- |
+    | .NET 10.0, 9.0, 8.0 | Syncfusion Blazor Web App |
+    | .NET 10.0, 9.0, 8.0 | Syncfusion Blazor WebAssembly App |
 
-    <table>
-    <tbody>
-    <tr>
-    <td>
-    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes">Interactivity type</a>
-    </td>
-    <td>
-    Server, WebAssembly, Auto (Server and WebAssembly)
-    </td>
-    </tr>
-    <tr>
-    <td>
-    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows">Interactivity location</a>
-    </td>
-    <td>
-    Global, Per page/component
-    </td>
-    </tr>
-    </tbody>
-    </table>
+    In the Blazor Web App type you can choose interactivity (Server, WebAssembly, Auto) and interactivity location (global or per page/component).
 
     ![Project type selection showing Blazor Web App options](images/webapptype1.webp)
 
-     In the **Syncfusion Blazor WebAssembly App** project type, choose Progressive Web Application (PWA).
+    For WebAssembly projects, you can opt into Progressive Web Application (PWA) support.
 
-     ![Project type selection showing Blazor WebAssembly and PWA option](images/projecttypedetails1.webp)
+    ![Project type selection showing Blazor WebAssembly and PWA option](images/projecttypedetails1.webp)
 
-4. Select **Next** or the **Controls** tab, and then choose the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to include in the application.
+4. On the **Controls** tab, pick the Syncfusion® components to include in the project by selecting their tiles.
 
-     ![Controls tab listing Syncfusion Blazor components](images/controlssection.webp)
+    ![Controls tab listing Syncfusion Blazor components](images/controlssection.webp)
 
-     Choose the required control(s) by selecting the corresponding control tiles.
+    N> Select at least one control to enable the **Features** and **Configuration** tabs.
 
-     To unselect added control(s), use one of the following options:
-
-     **Option 1:** Click the corresponding selected control box.
-
-     **Option 2:** In **Project Details**, click the ‘x’ next to the corresponding control in the selected controls list.
-
-     N> Choose at least one control to enable the Features and Configuration tabs.
-
-5. Select **Next** or the **Features** tab to view the available features for the selected controls, and choose the required options.
+5. On the **Features** tab, choose per-control features you want included in the scaffolded pages.
 
     ![FeaturesSection](images/featuressection.webp)
 
-6. Select **Next** or the **Configuration** tab to open the Configuration section. Configure the target .NET version (.NET 10.0, .NET 9.0 or .NET 8.0), theme, HTTPS configuration, localization, authentication type, and options specific to Blazor Web App or Blazor WebAssembly App types.
+6. On the **Configuration** tab, set .NET target version, theme, HTTPS, localization, authentication type, and other app-specific options.
 
-     Depending on the selected Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application type, the following authentication options are supported:
+    Authentication options vary by application type:
 
-     | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Application Type | Supported Authentication Types |
-     | ------------- | ------------- |
-     | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App | None, Individual Accounts |
-     | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App | None, Individual Accounts, Microsoft Identity Platform |
+    | Application type | Authentication |
+    | --- | --- |
+    | Blazor Web App | None, Individual Accounts |
+    | Blazor WebAssembly App | None, Individual Accounts, Microsoft Identity Platform |
 
-     For the **Blazor Web App** application type, Interactivity type and Interactivity location can be customized.
+    Configure interactivity options for Blazor Web App and PWA settings for WebAssembly as needed.
 
-     ![Configuration panel showing interactivity options for Blazor Web App](images/webapp.webp)
+    ![Configuration panel showing interactivity options for Blazor Web App](images/webapp.webp)
 
-     For the **Blazor WebAssembly App** application type, the Progressive Web Application option can be enabled or disabled.
+    ![Configuration panel showing PWA option for Blazor WebAssembly](images/webassembly.webp)
 
-     ![Configuration panel showing PWA option for Blazor WebAssembly](images/webassembly.webp)
-
-     **Project details section**
-
-     Use the Project Details section to change the application type, remove selected control(s), or update configuration options.
+    Use the **Project details** panel to review selections, remove controls, or change the app configuration before creating the project.
 
     ![Project Details panel showing selected controls and configuration summary](images/projectdetailsrightside.webp)
 
-7. Click **Create**. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application is created with the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages, styles, and the render code for the selected Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+7. Click **Create**. The Template Studio generates the project with the selected Syncfusion® NuGet packages, theme references, namespaces, and component render code.
 
-    
-8. Run the application to view the Syncfusion<sup style="font-size:70%">&reg;</sup> components. Press **F5** or select **Run > Start Debugging**.
+8. Run the project (F5 or Run > Start Debugging) to view the included Syncfusion® components.
 
-     ![Running the generated Syncfusion Blazor project in Visual Studio Code](images/runproject.webp)
+    ![Running the generated Syncfusion Blazor project in Visual Studio Code](images/runproject.webp)
 
-9. The Syncfusion® Blazor application configures with most recent Syncfusion® Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion® components.
+## What Template Studio configures for you
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+- NuGet: Adds the `Syncfusion.Blazor` package (and individual packages when applicable).
 
-## Syncfusion<sup style="font-size:70%">&reg;</sup> integration
+    ![NuGetPackage](images/nugetpackage.webp)
 
-The Syncfusion® Blazor application configures with latest Syncfusion® Blazor NuGet packages, styles, namespaces, and component render code for Syncfusion® components are added in the created application.
+- Theme: Adds the chosen theme reference to the appropriate location (`~/Components/App.razor` for Blazor Web App, or `wwwroot/index.html` for WebAssembly projects).
 
-### NuGet packages
+    ![Theme reference location examples](images/cdnlink.webp)
 
-The `Syncfusion.Blazor` package is added as a dependency for all project types.
+- Namespaces: Inserts Syncfusion® namespaces into `_imports.razor`.
 
-![NuGetPackage](images/nugetpackage.webp)
+    ![Imports file showing Syncfusion namespaces](images/namespace.webp)
 
-### Style
+- Component render code: Adds sample usage (Calendar, Button, DataGrid) into the Pages folder (Index/Counter/FetchData).
 
-The selected theme is added from the Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet package and referenced at the following locations.
+    ![Index page updated with Syncfusion components](images/indexfilechange.webp)
 
-| Application type  | File location  |
-|---|---|
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App | ~/Components/App.razor |
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (ASP.NET Core hosted) <br/> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App (Progressive Web Application) | {Client Project location}/wwwroot/index.html  |
-| Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
+If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
 
-![Theme reference location examples](images/cdnlink.webp)
-
-### Namespaces
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor namespaces are added in the **`_imports.razor`** file.
-
-![Imports file showing Syncfusion namespaces](images/namespace.webp)
-
-### Component render code
-
-The Syncfusion Blazor Calendar, Button, and DataGrid component render code is added to the Razor files in the Pages folder.
-
-| File name  | Code snippet added |
-|---|---|
-| `~/Pages/Home.razor or Index.razor`  | ![Index page updated with Syncfusion components](images/indexfilechange.webp) |
-| `~/Pages/Counter.razor` | ![Counter page updated with Syncfusion components](images/counterpagechange.webp) |
-| `~/Pages/FetchData.razor`  | ![FetchData page updated with Syncfusion DataGrid](images/fetchdatapagechange.webp) |
 
 

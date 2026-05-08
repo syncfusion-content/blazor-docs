@@ -37,4 +37,4 @@ N> Default and MinRange both select a single value. MinRange visually fills the 
 }
 ```
 
-![Displaying different Blazor Range Sliders](images/blazor-rangeslider-types.png)
+![Displaying different Blazor Range Sliders](images/blazor-rangeslider-types.webp)

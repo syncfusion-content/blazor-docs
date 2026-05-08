@@ -27,7 +27,7 @@ Set the Maps width and height by using the [Width](https://help.syncfusion.com/c
 
 ```
 
-![Blazor Maps with Custom Size](./images/Customization/blazor-maps-custom-size.PNG)
+![Blazor Maps with Custom Size](./images/Customization/blazor-maps-custom-size.webp)
 
 ## Maps title
 
@@ -57,7 +57,7 @@ Configure the title using [MapsTitleSettings](https://help.syncfusion.com/cr/bla
 
 ```
 
-![Customizing Blazor Maps Title](./images/Customization/blazor-maps-title-customization.PNG)
+![Customizing Blazor Maps Title](./images/Customization/blazor-maps-title-customization.webp)
 
 ## Setting theme
 
@@ -90,7 +90,7 @@ By default, Maps renders with the **Material** theme. Change the theme by using 
 
 ```
 
-![Applying Theme in Blazor Maps](./images/Customization/blazor-maps-theme.PNG)
+![Applying Theme in Blazor Maps](./images/Customization/blazor-maps-theme.webp)
 
 ## Customizing Maps container
 
@@ -116,7 +116,7 @@ Use the following to customize the Maps container:
 
 ```
 
-![Customizing Blazor Maps Container](./images/Customization/blazor-maps-container-customization.PNG)
+![Customizing Blazor Maps Container](./images/Customization/blazor-maps-container-customization.webp)
 
 ## Customizing Maps area
 
@@ -140,7 +140,7 @@ The shape map background color is **white** by default. Modify the background co
 
 ```
 
-![Customizing Blazor Maps Area](./images/Customization/blazor-maps-area-customization.PNG)
+![Customizing Blazor Maps Area](./images/Customization/blazor-maps-area-customization.webp)
 
 ## Customizing the shapes
 
@@ -170,7 +170,7 @@ The following properties and class in [MapsShapeSettings](https://help.syncfusio
 
 ```
 
-![Blazor Maps with Custom Shape](./images/Customization/blazor-maps-custom-shape.png)
+![Blazor Maps with Custom Shape](./images/Customization/blazor-maps-custom-shape.webp)
 
 ## Setting color to the shapes from the data source
 
@@ -206,7 +206,7 @@ Set a shape color from data by using the [ColorValuePath](https://help.syncfusio
 }
 ```
 
-![Blazor Maps with Custom Shape Color](./images/Customization/blazor-maps-custom-shape-color.PNG)
+![Blazor Maps with Custom Shape Color](./images/Customization/blazor-maps-custom-shape-color.webp)
 
 ## Applying border to individual shapes
 
@@ -245,7 +245,7 @@ Customize the border of each shape by using [BorderColorValuePath](https://help.
 
 ```
 
-![Blazor Maps with Custom Border Color and Width](./images/Customization/blazor-maps-custom-border-color-and-width.PNG)
+![Blazor Maps with Custom Border Color and Width](./images/Customization/blazor-maps-custom-border-color-and-width.webp)
 
 ## Projection type
 
@@ -276,4 +276,4 @@ By default, Maps renders with the **Mercator** projection, which draws shapes ba
 
 ```
 
-![Blazor Maps with Miller Projection](./images/Customization/blazor-maps-miller-projection.png)
+![Blazor Maps with Miller Projection](./images/Customization/blazor-maps-miller-projection.webp)

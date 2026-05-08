@@ -790,7 +790,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The IT Asset Management application is now running and ready to use.
 
-![Basic DataGrid displaying asstes from the SQLite Server database](../images/blazor-datagrid-sqlite.png)
+![Basic DataGrid displaying asstes from the SQLite Server database](../images/blazor-datagrid-sqlite.webp)
 
 ### Step 6: Implement Paging Feature
 

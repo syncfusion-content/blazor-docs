@@ -15,8 +15,8 @@ The intermediate points between adjacent Bezier segments can be edited interacti
 
 | SegmentEditOrientation value | Description | Output |
 |-------- | -------- | -------- |
-| [Bidirectional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegmentEditOrientation.html#Syncfusion_Blazor_Diagram_BezierSegmentEditOrientation_Bidirectional) | Allows intermediate points to be dragged in either the vertical or horizontal direction. | ![Bidirectional](../../../../images/Bidirectional.gif) |
-| [Freeform](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegmentEditOrientation.html#Syncfusion_Blazor_Diagram_BezierSegmentEditOrientation_FreeForm) | Allows intermediate points to be dragged freely in any direction. | ![Freeform](../../../../images/Freeform.gif) |
+| [Bidirectional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegmentEditOrientation.html#Syncfusion_Blazor_Diagram_BezierSegmentEditOrientation_Bidirectional) | Allows intermediate points to be dragged in either the vertical or horizontal direction. | ![Bidirectional](../../../../images/Bidirectional.webp) |
+| [Freeform](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegmentEditOrientation.html#Syncfusion_Blazor_Diagram_BezierSegmentEditOrientation_FreeForm) | Allows intermediate points to be dragged freely in any direction. | ![Freeform](../../../../images/Freeform.webp) |
 
 The following code illustrates how to interact with Bezier efficiently by using the [BezierConnectorSettings.Smoothness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_Smoothness) and [BezierConnectorSettings.SegmentEditOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_SegmentEditOrientation) properties.
 

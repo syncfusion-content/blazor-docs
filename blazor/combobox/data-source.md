@@ -72,7 +72,7 @@ In the following example, the Name property is mapped to the Text field and the 
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBKsLLcKnxcdvLv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Blazor ComboBox Items](./images/blazor-combobox-binding-items.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBKsLLcKnxcdvLv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Blazor ComboBox Items](./images/blazor-combobox-binding-items.webp)" %}
 
 ### Array of complex data
 
@@ -119,7 +119,7 @@ public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrqiLVwKHwhTfxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Complex Items with Blazor ComboBox](./images/blazor-combobox-complex-data.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrqiLVwKHwhTfxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Complex Items with Blazor ComboBox](./images/blazor-combobox-complex-data.webp)" %}
 
 ## Binding remote data
 
@@ -155,7 +155,7 @@ In the following sample, the first six records are retrieved from the Orders ent
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthUChrmAnbDTsys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Data Binding](./images/blazor-combobox-binding-data.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthUChrmAnbDTsys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Data Binding](./images/blazor-combobox-binding-data.webp)" %}
 
 ### Web API Adaptor
 
@@ -182,7 +182,7 @@ Use the WebApiAdaptor to bind the ComboBox to a Web API endpoint (including serv
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBgiVLwKnloDWBQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBgiVLwKnloDWBQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.webp)" %}
 
 ### Custom adaptor
 
@@ -294,7 +294,7 @@ The following example demonstrates remote data binding with offline mode enabled
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBACrBQKGCrmiJb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBACrBQKGCrmiJb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.webp)" %}
 
 ### ValueTuple data binding
 
@@ -310,7 +310,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 </SfComboBox>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKihrcgcMdJUXG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKihrcgcMdJUXG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.webp)" %}
 
 ## Binding ExpandoObject
 
@@ -341,7 +341,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor ComboBox with expando object data binding](./images/blazor_combobox_expando-object.png)
+![Blazor ComboBox with expando object data binding](./images/blazor_combobox_expando-object.webp)
 
 ## Binding DynamicObject
 
@@ -391,7 +391,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor ComboBox bound to DynamicObject data](./images/blazor_combobox_dynamic-object.png)
+![Blazor ComboBox bound to DynamicObject data](./images/blazor_combobox_dynamic-object.webp)
 
 ## Binding ObservableCollection
 
@@ -433,7 +433,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgCBVcAmhLLFOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgCBVcAmhLLFOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.webp)" %}
 
 ## Entity Framework
 

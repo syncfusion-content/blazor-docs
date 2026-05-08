@@ -738,7 +738,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The project management application is now running and ready to use.
 
-![Basic DataGrid displaying projects from the MongoDB Server](../images/blazor-datagrid-mongodb.png)
+![Basic DataGrid displaying projects from the MongoDB Server](../images/blazor-datagrid-mongodb.webp)
 
 ---
 

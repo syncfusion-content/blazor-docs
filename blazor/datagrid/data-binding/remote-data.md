@@ -144,7 +144,7 @@ To implement this behavior:
 {% endhighlight %}
 {% endtabs %}
 
-![Dynamically Rendering Data Manager in Blazor DataGrid](../images/blazor-datagrid-dynamic-render-data-manager.gif)
+![Dynamically Rendering Data Manager in Blazor DataGrid](../images/blazor-datagrid-dynamic-render-data-manager.webp)
 
 ## Configuring HttpClient
 
@@ -235,7 +235,7 @@ To achieve this, configure the [Headers](https://help.syncfusion.com/cr/blazor/S
 {% endhighlight %}
 {% endtabs %}
 
-![Setting Custom Headers](../images/remote-data-custom-headers.png)
+![Setting Custom Headers](../images/remote-data-custom-headers.webp)
 
 ## Dynamically change query parameter values
 
@@ -279,7 +279,7 @@ The example demonstrates modifying the query parameter dynamically. Initially, t
 }
 ```
 
-![Changing Query Dynamically in the Grid](./images/blazor-datagrid-query-update.gif)
+![Changing Query Dynamically in the Grid](./images/blazor-datagrid-query-update.webp)
 
 ## Offline mode
 
@@ -414,6 +414,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be popu
 {% endhighlight %}
 {% endtabs %}
 
-![Fetch result using query](../images/fetch-query.png)
+![Fetch result using query](../images/fetch-query.webp)
 
 A complete sample is available on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Fetch-result-from-the-DataManager-query).

@@ -30,7 +30,7 @@ N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/lega
 
 ```
 
-![Blazor Azure Maps](../images/MapProviders/blazor-azure-map.png)
+![Blazor Azure Maps](../images/MapProviders/blazor-azure-map.webp)
 
 ## Enable zooming and panning
 
@@ -56,7 +56,7 @@ The Azure Maps layer supports zooming and panning. Zooming provides a closer vie
 
 ```
 
-![Blazor Azure Maps with zooming and panning](../images/MapProviders/blazor-azure-map-zooming.png)
+![Blazor Azure Maps with zooming and panning](../images/MapProviders/blazor-azure-map-zooming.webp)
 
 ## Adding markers and navigation line
 
@@ -102,7 +102,7 @@ Markers can be added to Azure Maps layers by providing latitude and longitude co
 
 ```
 
-![Blazor Azure Maps with markers and navigation line](../images/MapProviders/blazor-azure-map-marker-and-line.png)
+![Blazor Azure Maps with markers and navigation line](../images/MapProviders/blazor-azure-map-marker-and-line.webp)
 
 ## Adding sublayer
 
@@ -126,7 +126,7 @@ Any GeoJSON shape can be rendered as a sublayer over the Azure Maps layer to hig
 
 ```
 
-![Blazor Azure Maps with sublayer](../images/MapProviders/blazor-azure-map-sublayer.png)
+![Blazor Azure Maps with sublayer](../images/MapProviders/blazor-azure-map-sublayer.webp)
 
 ## Enable legend
 
@@ -187,4 +187,4 @@ A legend can be added to Azure Maps by setting the [Visible](https://help.syncfu
 
 ```
 
-![Blazor Azure Maps with legend](../images/MapProviders/blazor-azure-map-legend.png)
+![Blazor Azure Maps with legend](../images/MapProviders/blazor-azure-map-legend.webp)

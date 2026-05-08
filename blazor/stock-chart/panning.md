@@ -64,6 +64,6 @@ else
 
 ```
 
-![Blazor Stock Chart with Panning](images/panning.gif)
+![Blazor Stock Chart with Panning](images/panning.webp)
 
 N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature representations and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to see various stock chart types and time-dependent data rendered at equal intervals.

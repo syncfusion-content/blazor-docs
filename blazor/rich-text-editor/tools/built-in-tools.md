@@ -27,16 +27,16 @@ It provides tools for applying text styles such as bold, italic, underline, stri
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Bold  | ![Bold icon](../images/bold.png) | Text that is thicker and darker than usual. |
-| Italic | ![Italic icon](../images/italic.png) | Shows a text that is leaned to the right. | 
-| Underline | ![Underline icon](../images/under-line.png) | The underline is added to the selected text. | 
-| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.png) | Apply double line strike through formatting for the selected text. |
-| ClearFormat | ![ClearFormat icon](../images/clear-format.png) | The clear format tool is useful to remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. As a result, all the text formatting will be cleared and return to its default formatting styles.|
-| Blockquote | ![Blockquote icon](../images/blockquote.png) | Blockquotes visually highlight important text within an editor, emphasizing key information or quotations. |
-| SubScript | ![SubScript icon](../images/sub-script.png) | Makes the selected text as subscript (lower).|
-| SuperScript | ![SuperScript icon](../images/super-script.png) | Makes the selected text as superscript (higher).|
-| LowerCase | ![LowerCase icon](../images/lower-case.png) | Change the case of selected text to lower in the content. |
-| UpperCase | ![UpperCase icon](../images/upper-case.png) | Change the case of selected text to upper  in the content.|
+| Bold  | ![Bold icon](../images/bold.webp) | Text that is thicker and darker than usual. |
+| Italic | ![Italic icon](../images/italic.webp) | Shows a text that is leaned to the right. | 
+| Underline | ![Underline icon](../images/under-line.webp) | The underline is added to the selected text. | 
+| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.webp) | Apply double line strike through formatting for the selected text. |
+| ClearFormat | ![ClearFormat icon](../images/clear-format.webp) | The clear format tool is useful to remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. As a result, all the text formatting will be cleared and return to its default formatting styles.|
+| Blockquote | ![Blockquote icon](../images/blockquote.webp) | Blockquotes visually highlight important text within an editor, emphasizing key information or quotations. |
+| SubScript | ![SubScript icon](../images/sub-script.webp) | Makes the selected text as subscript (lower).|
+| SuperScript | ![SuperScript icon](../images/super-script.webp) | Makes the selected text as superscript (higher).|
+| LowerCase | ![LowerCase icon](../images/lower-case.webp) | Change the case of selected text to lower in the content. |
+| UpperCase | ![UpperCase icon](../images/upper-case.webp) | Change the case of selected text to upper  in the content.|
 
 ### Font & styling
 
@@ -44,11 +44,11 @@ Tools in this section allow users to customize font properties such as font fami
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| FontName | ![FontName icon](../images/font-name.png) | Defines the fonts that appear under the Font Family DropDownList from the Rich Text Editor's toolbar. |
-| FontSize | ![FontSize icon](../images/font-size.png) | Defines the font sizes that appear under the Font Size DropDownList from the Rich Text Editor's toolbar.|
-| FontColor | ![FontColor icon](../images/font-color.png) | Specifies an array of colors can be used in the colors popup for font color.|
-| BackgroundColor | ![BackgroundColor icon](../images/background-color.png) | Specifies an array of colors can be used in the colors popup for background color.|
-| Formats (Paragraph, Headings) | ![Format icon](../images/formats.png) | An Object with the options that will appear in the Paragraph Format dropdown from the toolbar. |
+| FontName | ![FontName icon](../images/font-name.webp) | Defines the fonts that appear under the Font Family DropDownList from the Rich Text Editor's toolbar. |
+| FontSize | ![FontSize icon](../images/font-size.webp) | Defines the font sizes that appear under the Font Size DropDownList from the Rich Text Editor's toolbar.|
+| FontColor | ![FontColor icon](../images/font-color.webp) | Specifies an array of colors can be used in the colors popup for font color.|
+| BackgroundColor | ![BackgroundColor icon](../images/background-color.webp) | Specifies an array of colors can be used in the colors popup for background color.|
+| Formats (Paragraph, Headings) | ![Format icon](../images/formats.webp) | An Object with the options that will appear in the Paragraph Format dropdown from the toolbar. |
 
 ### Alignment
 
@@ -56,11 +56,11 @@ This section provides alignment options for the text or content, allowing users 
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Alignment | ![Alignment icon](../images/alignments.png) | Align the content with left, center, and right margin.|
-| JustifyLeft | ![JustifyLeft icon](../images/align-left.png) | Allows each line to begin at the same distance from the editor’s left-hand side. | 
-| JustifyCenter | ![JustifyCenter icon](../images/align-center.png) | There is an even space on each side of each line since the text is not aligned to the left or right margins. |
-| JustifyRight | ![JustifyRight icon](../images/align-right.png) | Allows each line to end at the same distance from the editor’s right-hand side. | 
-| JustifyFull | ![JustifyFull icon](../images/align-justify.png) | The text is aligned with both right and left margins. | 
+| Alignment | ![Alignment icon](../images/alignments.webp) | Align the content with left, center, and right margin.|
+| JustifyLeft | ![JustifyLeft icon](../images/align-left.webp) | Allows each line to begin at the same distance from the editor’s left-hand side. | 
+| JustifyCenter | ![JustifyCenter icon](../images/align-center.webp) | There is an even space on each side of each line since the text is not aligned to the left or right margins. |
+| JustifyRight | ![JustifyRight icon](../images/align-right.webp) | Allows each line to end at the same distance from the editor’s right-hand side. | 
+| JustifyFull | ![JustifyFull icon](../images/align-justify.webp) | The text is aligned with both right and left margins. | 
 
 ### Lists & indentation
 
@@ -68,12 +68,12 @@ Tools here allow users to create ordered and unordered lists, change the list st
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| OrderedList | ![OrderedList icon](../images/order-list.png) | Create a new list item(numbered). |
-| UnorderedList | ![UnorderedList icon](../images/unorder-list.png) | Create a new list item(bulleted). |
-| NumberFormatList | ![NumberFormatList icon](../images/number-format.png) | Allows to create list items with various list style types(numbered).|
-| BulletFormatList | ![BulletFormatList icon](../images/bullet-format.png) | Allows to create list items with various list style types(bulleted).|
-| Indent | ![Indent icon](../images/increase-indent.png) | Allows to increase the indent level of the content.|
-| Outdent | ![Outdent icon](../images/decrease-indent.png) | Allows to decrease the indent level of the content.|
+| OrderedList | ![OrderedList icon](../images/order-list.webp) | Create a new list item(numbered). |
+| UnorderedList | ![UnorderedList icon](../images/unorder-list.webp) | Create a new list item(bulleted). |
+| NumberFormatList | ![NumberFormatList icon](../images/number-format.webp) | Allows to create list items with various list style types(numbered).|
+| BulletFormatList | ![BulletFormatList icon](../images/bullet-format.webp) | Allows to create list items with various list style types(bulleted).|
+| Indent | ![Indent icon](../images/increase-indent.webp) | Allows to increase the indent level of the content.|
+| Outdent | ![Outdent icon](../images/decrease-indent.webp) | Allows to decrease the indent level of the content.|
 
 ### Hyperlinks
 
@@ -81,8 +81,8 @@ This section provides tools for inserting and managing hyperlinks within the con
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Hyperlink | ![Hyperlink icon](../images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.|
-| InsertLink | ![InsertLink icon](../images/create-link.png) |Allows users to add a link to a particular item. |
+| Hyperlink | ![Hyperlink icon](../images/create-link.webp) | Creates a hyperlink to a text or image to a specific location in the content.|
+| InsertLink | ![InsertLink icon](../images/create-link.webp) |Allows users to add a link to a particular item. |
 
 #### Link quicktoolbar items
 
@@ -90,9 +90,9 @@ The link quicktoolbar provides tools to manage hyperlinks in the Rich Text Edito
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| OpenLink | ![OpenLink icon](../images/open-link.png) | To open the URL link that is  attached to the selected text. |
-| EditLink | ![EditLink icon](../images/edit-link.png) | Allows you to change the URL that has been attached to a specific item. | 
-| RemoveLink | ![RemoveLink icon](../images/remove-link.png) | Allows you to remove the applied link from the selected item. |
+| OpenLink | ![OpenLink icon](../images/open-link.webp) | To open the URL link that is  attached to the selected text. |
+| EditLink | ![EditLink icon](../images/edit-link.webp) | Allows you to change the URL that has been attached to a specific item. | 
+| RemoveLink | ![RemoveLink icon](../images/remove-link.webp) | Allows you to remove the applied link from the selected item. |
 
 ### Images
 
@@ -100,7 +100,7 @@ This section contains the primary tool for inserting images into the editor.
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Insert Image | ![Images icon](../images/insert-image.png) | Inserts an image from an online source or local computer. |
+| Insert Image | ![Images icon](../images/insert-image.webp) | Inserts an image from an online source or local computer. |
 
 #### Image quicktoolbar items
 
@@ -108,15 +108,15 @@ The image quicktoolbar offers a set of tools to edit images inserted in the Rich
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Replace Image  | ![Replace icon](../images/image-replace.png) | Replace the selected image with another image. | 
-| Align Image | ![Alignment icon](../images/alignments.png) | The image can be aligned to the right, left, or center. | 
-| Remove Image | ![Remove icon](../images/table-remove.png) | Allows to remove the selected image from the editor. | 
-| OpenImageLink | ![OpenImageLink icon](../images/open-link.png) | Opens the link that is attached to the selected image. | 
-| EditImageLink | ![EditImageLink icon](../images/edit-link.png) | Allows to edit the link that is attached to the selected image. |
-| RemoveImageLink | ![RemoveImageLink icon](../images/remove-link.png) | Removes the link that is attached to the selected image. | 
-| Display | ![Display icon](../images/display.png) | Allows you to choose whether an image should be shown inline or as a block. | 
-| AltText | ![AltText icon](../images/alt-text.png) | To display image description when an image on a Web page cannot be displayed. | 
-| Dimension | ![Dimension icon](../images/dimension.png) | Allows you to customize the image’s height and width. |
+| Replace Image  | ![Replace icon](../images/image-replace.webp) | Replace the selected image with another image. | 
+| Align Image | ![Alignment icon](../images/alignments.webp) | The image can be aligned to the right, left, or center. | 
+| Remove Image | ![Remove icon](../images/table-remove.webp) | Allows to remove the selected image from the editor. | 
+| OpenImageLink | ![OpenImageLink icon](../images/open-link.webp) | Opens the link that is attached to the selected image. | 
+| EditImageLink | ![EditImageLink icon](../images/edit-link.webp) | Allows to edit the link that is attached to the selected image. |
+| RemoveImageLink | ![RemoveImageLink icon](../images/remove-link.webp) | Removes the link that is attached to the selected image. | 
+| Display | ![Display icon](../images/display.webp) | Allows you to choose whether an image should be shown inline or as a block. | 
+| AltText | ![AltText icon](../images/alt-text.webp) | To display image description when an image on a Web page cannot be displayed. | 
+| Dimension | ![Dimension icon](../images/dimension.webp) | Allows you to customize the image’s height and width. |
 
 ### Tables
 
@@ -124,7 +124,7 @@ This section offers the main tool for creating tables within the content.
 
 | Name | Icons | Summary |
 |----------------|---------|---------|
-| CreateTable | ![CreateTable icon](../images/create-table.png) | Create a table with defined columns and rows. |
+| CreateTable | ![CreateTable icon](../images/create-table.webp) | Create a table with defined columns and rows. |
 
 #### Table quicktoolbar items
 
@@ -132,13 +132,13 @@ The table quicktoolbar provides options for table editing within the Rich Text E
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| RemoveTable | ![RemoveTable icon](../images/table-remove.png) | Removes the selected table and its contents. | 
-| TableHeader | ![TableHeader icon](../images/table-headers.png) | Allows you to add a table header. |
-| TableColumns | ![TableColumns icon](../images/table-columns.png) | Shows the dropdown to insert a column or delete the selected column. |
-| TableRows | ![TableRows icon](../images/table-row.png) | Shows the dropdown to insert a row ors delete the selected row. | 
-| TableCellHorizontalAAlignmentslign | ![TableCellHorizontalAlign icon](../images/alignments.png) | Allows the table cell content to be aligned horizontally. | 
-| TableCellVerticalAlign | ![TableCellVerticalAlign icon](../images/vertical-align.png) | Allows the table cell content to be aligned vertically. | 
-| TableEditProperties | ![TableEditProperties icon](../images/table-edit.png) | Allows you to change the table width, padding, and cell spacing styles. |
+| RemoveTable | ![RemoveTable icon](../images/table-remove.webp) | Removes the selected table and its contents. | 
+| TableHeader | ![TableHeader icon](../images/table-headers.webp) | Allows you to add a table header. |
+| TableColumns | ![TableColumns icon](../images/table-columns.webp) | Shows the dropdown to insert a column or delete the selected column. |
+| TableRows | ![TableRows icon](../images/table-row.webp) | Shows the dropdown to insert a row ors delete the selected row. | 
+| TableCellHorizontalAAlignmentslign | ![TableCellHorizontalAlign icon](../images/alignments.webp) | Allows the table cell content to be aligned horizontally. | 
+| TableCellVerticalAlign | ![TableCellVerticalAlign icon](../images/vertical-align.webp) | Allows the table cell content to be aligned vertically. | 
+| TableEditProperties | ![TableEditProperties icon](../images/table-edit.webp) | Allows you to change the table width, padding, and cell spacing styles. |
 
 ### Horizontal Line
 
@@ -146,7 +146,7 @@ Horizontal lines visually separate sections of content in the editor, enhancing 
 
 | Name | Icons | Summary |
 |----------------|---------|---------|
-| Horizontal Line | ![HorizontalLine icon](../images/horizontal-icon.png) | Allows you to insert horizontal line.|
+| Horizontal Line | ![HorizontalLine icon](../images/horizontal-icon.webp) | Allows you to insert horizontal line.|
 
 ### Undo & redo
 
@@ -154,8 +154,8 @@ These tools allow users to easily undo or redo any changes made within the edito
 
 | Name | Icons | Summary |
 |----------------|---------|---------|
-| Undo | ![Undo icon](../images/undo.png) | Allows to undo the actions.|toolbarSettings: { items: ['Undo']} |
-| Redo | ![Redo icon](../images/redo.png) | Allows to redo the actions.|toolbarSettings: { items: ['Redo']}|
+| Undo | ![Undo icon](../images/undo.webp) | Allows to undo the actions.|toolbarSettings: { items: ['Undo']} |
+| Redo | ![Redo icon](../images/redo.webp) | Allows to redo the actions.|toolbarSettings: { items: ['Redo']}|
 
 ### Other tools
 
@@ -163,13 +163,13 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| FullScreen | ![FullScreen icon](../images/maximize.png) | Stretches the editor to the maximum width and height of the browser window.|
-| Minimize | ![Minimize icon](../images/minimize.png) | Shrinks the editor to the default width and height. | 
-| Preview | ![Preview icon](../images/preview.png) | Allows to see how the editor’s content looks in a browser. | 
-| InsertCode | ![InsertCode icon](../images/insert-code.png) | Represents preformatted text which is to be presented exactly as written in the HTML file. | 
-| Print | ![Print icon](../images/print.png) | Allows to print the editor content. |
-| ClearAll | ![ClearAll icon](../images/clear-all.png) | Removes all styles that have been applied to the selected text.| 
-| SourceCode | ![SourceCode icon](../images/code-view.png)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|
+| FullScreen | ![FullScreen icon](../images/maximize.webp) | Stretches the editor to the maximum width and height of the browser window.|
+| Minimize | ![Minimize icon](../images/minimize.webp) | Shrinks the editor to the default width and height. | 
+| Preview | ![Preview icon](../images/preview.webp) | Allows to see how the editor’s content looks in a browser. | 
+| InsertCode | ![InsertCode icon](../images/insert-code.webp) | Represents preformatted text which is to be presented exactly as written in the HTML file. | 
+| Print | ![Print icon](../images/print.webp) | Allows to print the editor content. |
+| ClearAll | ![ClearAll icon](../images/clear-all.webp) | Removes all styles that have been applied to the selected text.| 
+| SourceCode | ![SourceCode icon](../images/code-view.webp)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|
 
 ## Removing built-in tool from toolbar
 
@@ -201,4 +201,4 @@ Remove the built-in tools from the toolbar by using the [RichTextEditorToolbarSe
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor removed default toolbar items](../images/blazor-richtexteditor-removed-default-toolbar-items.png)
+![Blazor RichTextEditor removed default toolbar items](../images/blazor-richtexteditor-removed-default-toolbar-items.webp)

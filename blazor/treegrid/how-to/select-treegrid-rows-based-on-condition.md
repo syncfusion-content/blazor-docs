@@ -108,4 +108,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Selection in Blazor TreeGrid](../images/blazor-treegrid-row-selection.PNG)
+![Selection in Blazor TreeGrid](../images/blazor-treegrid-row-selection.webp)

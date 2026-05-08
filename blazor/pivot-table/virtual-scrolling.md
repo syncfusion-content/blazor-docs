@@ -89,7 +89,7 @@ N> The Virtualization and [Paging](./paging) features in the Pivot Table should 
 
 ```
 
-![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scroll.png)
+![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scroll.webp)
 
 ## Virtual Scrolling with Single Page Mode
 

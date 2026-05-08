@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data and perform CRUD action with ODataV4Adaptor in Syncfusion Blazor DataGrid
+title: Blazor DataGrid with ODataV4Adaptor| Syncfusion.
 description: Learn about bind data and performing CRUD operations using ODataV4Adaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
@@ -8,7 +8,7 @@ keywords: adaptors, ODataV4adaptor, ODataV4 adaptor, remotedata
 documentation: ug
 ---
 
-# ODataV4Adaptor in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid
+# OData Remote Data Binding in Syncfusion Blazor DataGrid
 
 The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables seamless integration of the Grid with OData V4 services, facilitating efficient data fetching and manipulation. This guide provides detailed instructions for binding data and performing CRUD (Create, Read, Update, and Delete) actions using the `ODataV4Adaptor` in your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
 
@@ -153,7 +153,7 @@ Run the application in Visual Studio. It will be hosted at the URL **https://loc
 
 After running the application, you can verify that the server-side API controller successfully returns the order data at the URL **https://localhost:xxxx/odata/grid** (where **xxxx** represents the port number).
 
-![ODataV4Adaptor Data](../images/odatav4-adaptors-data.png)
+![ODataV4Adaptor Data](../images/odatav4-adaptors-data.webp)
 
 ## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid to an OData V4 Service
 
@@ -213,9 +213,9 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 To connect the Blazor DataGrid to an OData V4 service, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to `Adaptors.ODataV4Adaptor`. Update the **Index.razor** file as follows.
 
 The `SfDataManager` offer multiple adaptor options to connect with remote databases based on an API service. Below is an example of the [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), which works with an OData V4 API that returns data in the expected `value` and `@odata.context` format.
-
+ 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -270,7 +270,7 @@ namespace ODataV4Adaptor.Controllers
  
 When you run the application, the Blazor DataGrid will display data fetched from the OData V4 service.
 
-![ODataV4Adaptor Data](../images/blazor-odatav4-adaptors.gif)
+![ODataV4Adaptor Data](../images/blazor-odatav4-adaptors.webp)
 
 > Replace `https://localhost:xxxx/odata/` with the actual URL of your OData V4 service.
 
@@ -305,7 +305,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -337,7 +337,7 @@ builder.Services.AddControllers().AddOData(
 {% endhighlight %}
 {% endtabs %}
 
-![ODataV4Adaptor - Searching](../images/odatav4-adaptor-searching.png)
+![ODataV4Adaptor - Searching](../images/odatav4-adaptor-searching.webp)
 
 ## Handling filtering operation
 
@@ -367,7 +367,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -387,10 +387,10 @@ builder.Services.AddControllers().AddOData(
 {% endtabs %}
 
 **Single column filtering**
-![Single column filtering](../images/odatav4-adaptor-filtering.png)
+![Single column filtering](../images/odatav4-adaptor-filtering.webp)
 
 **Multi column filtering**
-![Multi column filtering](../images/odatav4-adaptor-multi-filtering.png)
+![Multi column filtering](../images/odatav4-adaptor-multi-filtering.webp)
 
 ## Handling sorting operation
 
@@ -421,7 +421,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -441,10 +441,10 @@ builder.Services.AddControllers().AddOData(
 {% endtabs %}
 
 **Single column sorting**
-![Single column sorting](../images/odatav4-adaptor-sorting.png)
+![Single column sorting](../images/odatav4-adaptor-sorting.webp)
 
 **Multi column sorting**
-![Multi column sorting](../images/odatav4-adaptor-multi-sorting.png)
+![Multi column sorting](../images/odatav4-adaptor-multi-sorting.webp)
 
 ## Handling paging operation
 
@@ -480,7 +480,7 @@ builder.Services.AddControllers().AddOData(
 );
 
 {% endhighlight %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -499,7 +499,7 @@ builder.Services.AddControllers().AddOData(
 {% endhighlight %}
 {% endtabs %}
 
-![ODataV4Adaptor - Paging](../images/odatav4-adaptor-paging.png)
+![ODataV4Adaptor - Paging](../images/odatav4-adaptor-paging.webp)
 
 ## Handling CRUD operations
 
@@ -562,7 +562,7 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 {% endhighlight %}
 {% endtabs %}
 
-![Insert Record](../images/odatav4-adaptor-insert-record.png)
+![Insert Record](../images/odatav4-adaptor-insert-record.webp)
 
 **Update Record:**
 
@@ -605,7 +605,7 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 {% endhighlight %}
 {% endtabs %}
 
-![Update Record](../images/odatav4-adaptor-update-record.png)
+![Update Record](../images/odatav4-adaptor-update-record.webp)
 
 **Delete Record:**
 
@@ -639,6 +639,6 @@ public IActionResult Delete(int key)
 {% endhighlight %}
 {% endtabs %}
 
-![Delete Record](../images/odatav4-adaptor-delete-record.png)
+![Delete Record](../images/odatav4-adaptor-delete-record.webp)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/ODataV4Adaptor).

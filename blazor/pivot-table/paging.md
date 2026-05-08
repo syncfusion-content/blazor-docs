@@ -65,7 +65,7 @@ You can also change the position, visibility, compact view, and template of the 
 
 ```
 
-![Normal mode of Pager UI in Blazor PivotTable](images/blazor-pivottable-paging-UI.png)
+![Normal mode of Pager UI in Blazor PivotTable](images/blazor-pivottable-paging-UI.webp)
 
 ### Show pager UI at top or bottom
 
@@ -112,7 +112,7 @@ The following code demonstrates how to configure the pager UI to appear at the t
 
 ```
 
-![Pager UI at Top position in Blazor PivotTable](images/blazor-pivottable-pagerposition.png)
+![Pager UI at Top position in Blazor PivotTable](images/blazor-pivottable-pagerposition.webp)
 
 ### Inverse pager
 
@@ -157,7 +157,7 @@ The Pivot Table allows you to toggle the positions of the row and column pagers 
 
 ```
 
-![Inverse pager UI in Blazor PivotTable](images/blazor-pivottable-pagerInverse.png)
+![Inverse pager UI in Blazor PivotTable](images/blazor-pivottable-pagerInverse.webp)
 
 ### Compact view
 
@@ -202,7 +202,7 @@ The Pivot Table provides a compact view for the pager UI, displaying only the pr
 
 ```
 
-![Compact view of pager UI in Blazor PivotTable](images/blazor-pivottable-pagercompactView.png)
+![Compact view of pager UI in Blazor PivotTable](images/blazor-pivottable-pagercompactView.webp)
 
 ### Show or hide paging option
 
@@ -249,7 +249,7 @@ The following code demonstrates how to hide the row pager by setting the [ShowRo
 
 ```
 
-![Hided Row paging option in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerHide.png)
+![Hided Row paging option in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerHide.webp)
 
 ### Show or hide page size
 
@@ -294,7 +294,7 @@ The Pivot Table allows you to control the visibility of the "Rows per page" and 
 
 ```
 
-![Hided Row and Column Page sizes in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerSizeHide.png)
+![Hided Row and Column Page sizes in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerSizeHide.webp)
 
 ### Customize page size
 
@@ -341,7 +341,7 @@ The following example sets the "Rows per page" dropdown with page sizes of 10, 2
 
 ```
 
-![Customizing page size in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerSize.png)
+![Customizing page size in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerSize.webp)
 
 ### Template
 
@@ -417,4 +417,4 @@ This following example shows how to create a custom template for both row and co
 
 ```
 
-![Pager UI customized by Template property in Blazor PivotTable](images/blazor-pivottable-pagerTemplate.png)
+![Pager UI customized by Template property in Blazor PivotTable](images/blazor-pivottable-pagerTemplate.webp)

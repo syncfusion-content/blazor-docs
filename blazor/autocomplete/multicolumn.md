@@ -25,7 +25,7 @@ Display custom text alignment within each column using the following built-in ut
 
 {% endhighlight %}
 
-![Blazor AutoComplete popup with multiple columns using ItemTemplate](./images/multicolumn/blazor_autocomplete_multicolumn.png)
+![Blazor AutoComplete popup with multiple columns using ItemTemplate](./images/multicolumn/blazor_autocomplete_multicolumn.webp)
 
 ## Limitation of multicolumn autocomplete
 

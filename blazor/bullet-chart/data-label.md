@@ -65,4 +65,4 @@ Data Labels color, opacity, font size, font family, font weight, and font style 
 
 N> Refer to the [code block](#data-labels-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
-![Blazor Bullet Chart with Data Labels](images/blazor-bullet-chart-data-label.png)
+![Blazor Bullet Chart with Data Labels](images/blazor-bullet-chart-data-label.webp)

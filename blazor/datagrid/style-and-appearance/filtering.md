@@ -30,7 +30,7 @@ The **.e-filterbarcell** class styles the filter bar cells in the header row. Us
 
 Properties like **background-color**, **padding**, and **border** can be changed to visually distinguish the filter row from header cells.
 
-![Filter bar cell with custom background](../images/style-and-appearance/filter-bar-cell-element.png)
+![Filter bar cell with custom background](../images/style-and-appearance/filter-bar-cell-element.webp)
 
 ## Customize the filter bar input element
 
@@ -43,7 +43,7 @@ The **.e-input** class inside **.e-filterbarcell** styles the input field in the
 
 Adjust properties such as **font-family**, **font-size**, and **border** can be adjusted to improve readability and match the grid design.
 
-![Filter bar input with custom font](../images/style-and-appearance/filter-bar-input-element.png)
+![Filter bar input with custom font](../images/style-and-appearance/filter-bar-input-element.webp)
 
 ## Customize the input focus
 
@@ -57,7 +57,7 @@ The **.e-input-focus** class styles the filter bar input group when focused. App
 
 Change properties like **background-color** and **border** to enhance focus visibility and support keyboard navigation.
 
-![Filter bar input focus](../images/style-and-appearance/filter-bar-input-element-focus.png)
+![Filter bar input focus](../images/style-and-appearance/filter-bar-input-element-focus.webp)
 
 ## Customize the filter bar input clear icon
 
@@ -71,7 +71,7 @@ The **.e-clear-icon::before** class defines the clear icon in the filter bar inp
 
 The `content` property can be updated to use a different glyph from the icon set.
 
-![Filter bar input with customized clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.png)
+![Filter bar input with customized clear icon](../images/style-and-appearance/filter-bar-input-clear-icon.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -185,7 +185,7 @@ The **.e-icon-filter::before** class styles the filter icon in column headers. A
 
 Update the `content` value to match the desired icon glyph.
 
-![Header filter icon](../images/style-and-appearance/grid-filtering-icon.png)
+![Header filter icon](../images/style-and-appearance/grid-filtering-icon.webp)
 
 ## Customize the filter dialog content
 
@@ -199,7 +199,7 @@ The **.e-filter-popup .e-dlg-content** class styles the content area of the filt
 
 Modify properties such as **background-color**, **padding**, and **border** to match the application theme.
 
-![Filter dialog content](../images/style-and-appearance/filter-dialog-content.png)
+![Filter dialog content](../images/style-and-appearance/filter-dialog-content.webp)
 
 ## Customize the filter dialog footer
 
@@ -213,7 +213,7 @@ The **.e-filter-popup .e-footer-content** class styles the footer section of the
 
 Properties like **background-color**, **text-align**, and **border** can be changed to align with the layout design.
 
-![Filter dialog footer](../images/style-and-appearance/filter-dialog-footer.png)
+![Filter dialog footer](../images/style-and-appearance/filter-dialog-footer.webp)
 
 ## Customize the filter dialog input field
 
@@ -227,7 +227,7 @@ The **.e-input** class inside **.e-filter-popup** targets input fields in the fi
 
 Adjust properties such as **font-family**, **color**, and **border** to improve clarity and consistency.
 
-![Filter dialog input](../images/style-and-appearance/filter-dialog-input-element.png)
+![Filter dialog input](../images/style-and-appearance/filter-dialog-input-element.webp)
 
 ## Customize the filter dialog button element
 
@@ -241,7 +241,7 @@ The **.e-filter-popup .e-btn** class styles buttons inside the filter dialog. Ap
 
 Change properties like **font-family**, **background-color**, and **border** to match the design.
 
-![Filter dialog buttons](../images/style-and-appearance/filter-dialog-button-element.png)
+![Filter dialog buttons](../images/style-and-appearance/filter-dialog-button-element.webp)
 
 ## Customize the Excel-style number filter menu
 
@@ -255,7 +255,7 @@ The **.e-contextmenu-container ul** class inside **.e-filter-popup** styles the 
 
 Properties such as **background-color**, **color**, and **text-align** can be adjusted to match the required design.
 
-![Excel-style filter menu](../images/style-and-appearance/excel-filter-dialog-number-filters-element.png)
+![Excel-style filter menu](../images/style-and-appearance/excel-filter-dialog-number-filters-element.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

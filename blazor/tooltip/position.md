@@ -130,6 +130,6 @@ You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Tooltip with Window Collision](images/blazor-tooltip-window-collision.png)
+![Blazor Tooltip with Window Collision](images/blazor-tooltip-window-collision.webp)
 
 N>[View Sample in GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip).

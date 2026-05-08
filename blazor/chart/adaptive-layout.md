@@ -76,7 +76,7 @@ Adaptive layout in Blazor Charts ensures optimal display of chart elements on mo
 
 ```
 
-![Adaptive Layout in Blazor Chart](images/adaptive-layout/blazor-chart-adaptive-layout.png)
+![Adaptive Layout in Blazor Chart](images/adaptive-layout/blazor-chart-adaptive-layout.webp)
 
 The table below outlines the behavior of chart elements based on chart height and width:
 

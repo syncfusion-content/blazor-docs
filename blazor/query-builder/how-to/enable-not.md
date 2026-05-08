@@ -46,4 +46,4 @@ N> The `EnableNotCondition` property is false by default.
 
 ```
 
-![Displaying Not Operator in Blazor QueryBuilder](./../images/blazor-querybuilder-not-operator.png)
+![Displaying Not Operator in Blazor QueryBuilder](./../images/blazor-querybuilder-not-operator.webp)

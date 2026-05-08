@@ -363,7 +363,7 @@ The following example shows interactive and normal display modes.
 
 ```
 
-![Blazor In-place Editor text with underline](./images/blazor-inplace-editor-text-with-under-line.png)
+![Blazor In-place Editor text with underline](./images/blazor-inplace-editor-text-with-under-line.webp)
 
 ## See Also
 

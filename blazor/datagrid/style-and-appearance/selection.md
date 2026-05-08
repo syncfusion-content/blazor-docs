@@ -26,7 +26,7 @@ The **.e-selectionbackground** class styles the background of selected rows in t
 
 Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the grid’s design.
 
-![Row selection](../images/style-and-appearance/row-selection.png)
+![Row selection](../images/style-and-appearance/row-selection.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -118,7 +118,7 @@ The **.e-cellselectionbackground** class styles the background of selected cells
 
 Modify visual properties to align with the overall layout and improve clarity.
 
-![Cell selection](../images/style-and-appearance/cell-selection.png)
+![Cell selection](../images/style-and-appearance/cell-selection.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

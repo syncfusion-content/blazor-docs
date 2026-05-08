@@ -607,7 +607,7 @@ namespace LocalizationSample.Client
 {% endhighlight %}
 {% endtabs %}
 
-![Format the date column based on localization](./images/blazor-datagrid-format-localization.png)
+![Format the date column based on localization](./images/blazor-datagrid-format-localization.webp)
 
 > [Syncfusion<sup style="font-size:70%">&reg;</sup> GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
 
@@ -1040,7 +1040,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides mu
 1. AutoFit on double-click
 2. AutoFit via Programmatically
 3. AutoFit with Empty Space
-4. AutoFit on Column Visibility Change
+<!-- 4. AutoFit on Column Visibility Change -->
 
 ### AutoFit on double-click
 
@@ -1384,7 +1384,7 @@ public class OrderDetails
 
 > If any column width is undefined, that column automatically adjusts to fill the remaining grid width, even when `AutoFit` is enabled.
 
-### AutoFit on Column Visibility Change
+<!-- ### AutoFit on Column Visibility Change
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can automatically adjust column widths when column visibility changes through the column chooser. This behavior is implemented by invoking [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) from the [ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) event, which is raised after the column chooser applies visibility updates. The [ColumnVisibilityChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnVisibilityChangedEventArgs.html) class provides context for the columns that became visible or hidden.
 
@@ -1467,7 +1467,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLICrNzRDbCTmVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLICrNzRDbCTmVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Fixed columns
 

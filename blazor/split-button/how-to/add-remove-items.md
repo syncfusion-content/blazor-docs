@@ -56,4 +56,4 @@ The SplitButton component supports dynamically adding or removing dropdown menu 
   
 ```
 
-![Adding or removing menu items in the Blazor SplitButton](./../images/blazor-splitbutton-add-remove-items.png)
+![Adding or removing menu items in the Blazor SplitButton](./../images/blazor-splitbutton-add-remove-items.webp)

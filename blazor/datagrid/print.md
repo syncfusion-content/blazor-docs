@@ -364,7 +364,7 @@ To include more columns in the printable area:
 
 These adjustments ensure visibility of all columns for wide grids.
 
-![Printing large number of columns in Syncfusion Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.png)
+![Printing large number of columns in Syncfusion Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.webp)
 
 <!-- Show or hide columns while Printing
 

@@ -463,7 +463,6 @@ IsNull |Returns the values that are null. |String &#124; Number &#124; Date
 IsNotNull |Returns the values that are not null. |String &#124; Number &#124; Date
 IsEmpty |Returns the values that are empty. |String
 IsNotEmpty |Returns the values that are not empty. |String
-Between |Filter the values based on the range between the start and end specified values. |Number &#124; Date
 
 > By default, the **Operator** value is **Equal** in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of `GridFilterSettings`.
 
@@ -485,7 +484,7 @@ a* | Matches values that start with “a”.
 a | Matches values that contain “a”.
 ab* | Matches values that contain “a”, followed by any characters, then “b”, followed by any characters.
 
-![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
+![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.webp)
 
 ### Like filtering
 
@@ -503,7 +502,7 @@ The **Like** filter processes single search patterns using the <b>%</b> symbol t
 | ab% | Matches values that end with “ab”. |
 | %ab | Matches values that start with “ab”. |
 
-![Blazor DataGrid with like operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
+![Blazor DataGrid with like operator filtering](./images/blazor-datagrid-like-operator-filtering.webp)
 
 ## Filtering with case sensitivity
 

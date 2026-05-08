@@ -80,7 +80,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBzNOsLpWPFqTrE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Line Chart](../images/chart-types-images/blazor-stacked-line-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBzNOsLpWPFqTrE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Line Chart](../images/chart-types-images/blazor-stacked-line-chart.webp)" %}
 
 N> Refer to the [Blazor Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-line?theme=bootstrap5) to know how to render and configure the Stacked Line type chart.
 

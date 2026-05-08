@@ -28,7 +28,7 @@ The **.e-groupdroparea** class styles the group header area in the Blazor DataGr
 
 Properties like **background-color**, **padding**, **border**, and **font** can be changed to fit the grid layout design.
 
-![Group header](../images/style-and-appearance/group-header.png)
+![Group header](../images/style-and-appearance/group-header.webp)
 
 ## Customize the expand and collapse icons
 
@@ -46,7 +46,7 @@ The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand
 
 Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [Syncfusion icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
 
-![Expand and collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.png)
+![Expand and collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.webp)
 
 ## Customize the group caption row
 
@@ -65,7 +65,7 @@ The **.e-groupcaption** class styles the caption row, and **.e-recordplusexpand*
 
 Adjust properties such as **background-color**, **padding**, **border**, and **font** to maintain consistency with the rest of the grid.
 
-![Group caption row](../images/style-and-appearance/group-caption-row.png)
+![Group caption row](../images/style-and-appearance/group-caption-row.webp)
 
 ## Customize the grouping indent cell
 
@@ -79,7 +79,7 @@ The **.e-indentcell** class styles the indent cell used in grouped rows. Apply C
 
 Modify properties such as **background-color**, **padding**, and **border** to match the overall layout and maintain consistency.
 
-![Indent cell](../images/style-and-appearance/indent-cell.png)
+![Indent cell](../images/style-and-appearance/indent-cell.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Block Editor Component | Syncfusion
-description: Learn to configure appearance properties, dimensions, read-only mode, and custom styling in Syncfusion Blazor Block Editor.
+title: Style and Appearance in Blazor Block Editor Component | Syncfusion
+description: Learn to configure Style and Appearance properties, dimensions, read-only mode, and custom styling in Syncfusion Blazor Block Editor.
 platform: Blazor
 control: BlockEditor
 documentation: ug
 ---
 
-# Appearance in Blazor Block Editor Component
+# Style and Appearance in Blazor Block Editor Component
 
 The Block Editor component provides several properties to customize its visual appearance, allowing control over dimensions, styling, and behavior.
 

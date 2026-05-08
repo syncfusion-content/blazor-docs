@@ -56,7 +56,7 @@ The default color of series or points can be customized by providing a custom co
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVfXxCBqRuWmxlT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVfXxCBqRuWmxlT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.webp)" %}
 
 <!-- markdownlint-disable MD036 -->
 
@@ -98,7 +98,7 @@ The color for the points can be bound from the `DataSource` for the series by ut
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrfDxMrKwXpXlgX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with PointColorMapping](images/appearance/blazor-column-chart-with-point-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrfDxMrKwXpXlgX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with PointColorMapping](images/appearance/blazor-column-chart-with-point-color.webp)" %}
 
 ## Point level customization
 
@@ -160,7 +160,7 @@ The data label and fill color of each data point can be customized using the `Po
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzXdsrUGMqoJpK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Point level customization](images/appearance/blazor-column-chart-point-level-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzXdsrUGMqoJpK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Point level customization](images/appearance/blazor-column-chart-point-level-customization.webp)" %}
 
 ## Chart area customization
 
@@ -206,7 +206,7 @@ The background color and border of the 3D chart can be customized using the `Bac
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhptRCLgGMkWnGY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhptRCLgGMkWnGY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.webp)" %}
 
 **Chart margin**
 
@@ -249,7 +249,7 @@ The 3D chart's margin can be set from its container using the `Chart3DMargin` pr
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLftnshAmBJsYEA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLftnshAmBJsYEA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.webp)" %}
 
 ## Animation
 
@@ -377,7 +377,7 @@ The 3D chart can be given a title by using `Title` property, to show the informa
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrJZRihUwKPsGvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Title](images/appearance/blazor-column-chart-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrJZRihUwKPsGvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Title](images/appearance/blazor-column-chart-title.webp)" %}
 
 ### Title position
 
@@ -419,7 +419,7 @@ By using the `Position`property in `TitleStyle`, the `Title` can be positioned 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhTDnsBKczVydKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Title](images/appearance/blazor-column-chart-title-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhTDnsBKczVydKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Title](images/appearance/blazor-column-chart-title-position.webp)" %}
 
 The custom option is used to position the title anywhere in the 3D chart using `X` and `Y` coordinates.
 
@@ -459,7 +459,7 @@ The custom option is used to position the title anywhere in the 3D chart using `
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBftnWBgwTPesmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Title](images/appearance/blazor-column-chart-title-custom.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBftnWBgwTPesmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Title](images/appearance/blazor-column-chart-title-custom.webp)" %}
 
 ## Title alignment
 
@@ -501,7 +501,7 @@ The title can be aligned to the near, far, or center of the 3D chart by using th
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVzXdiBKwdsnLib?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Title with Text Alignment](images/appearance/blazor-column-chart-title-alignment.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVzXdiBKwdsnLib?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Title with Text Alignment](images/appearance/blazor-column-chart-title-alignment.webp)" %}
 
 ### Title customization
 
@@ -544,7 +544,7 @@ The `TitleStyle` property of the 3D chart provides options to customize the titl
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBzDHirqQwNwVvM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Title with Customization](images/appearance/blazor-column-chart-title-with-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBzDHirqQwNwVvM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart Title with Customization](images/appearance/blazor-column-chart-title-with-customization.webp)" %}
 
 N> The chart components do not use any CSS style for customization; chart elements like axis labels, datalabel, background, series palette, legend text, and tooltip text can be customized by using the `Chart3DAxisLabelStyle`, `Chart3DDataLabelFont`, `BackGround`, `Palettes`, `Chart3DLegendTextStyle`, and `Chart3DTooltipTextStyle`, respectively.
 

@@ -73,7 +73,7 @@ The following code example demonstrates how to create an annotation for a node a
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/CreateAnnotation.razor)
 
-![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
+![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.webp)
 
 N>* Each annotation's [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) should be unique. It can be used to find and customize the annotation at runtime.
 <br/>* By default, a node's annotation is positioned at the center of the shape.
@@ -142,7 +142,7 @@ public async void AddLabelAsync()
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AddAsync.razor)
 
-![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
+![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.webp)
 
 ## How to Remove an Annotation at Runtime
 

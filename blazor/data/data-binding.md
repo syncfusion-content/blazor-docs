@@ -73,7 +73,7 @@ To configure local data binding, assign the in-memory collection to the [Json](h
 }
 ```
 
-![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-binding.png)
+![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-binding.webp)
 
 ## Remote data binding
 
@@ -113,4 +113,4 @@ To configure remote data binding in the [DataGrid](https://help.syncfusion.com/c
 }
 ```
 
-![Remote Data Binding in Blazor DataManager](./images/blazor-datamanager-remote-binding.png)
+![Remote Data Binding in Blazor DataManager](./images/blazor-datamanager-remote-binding.webp)

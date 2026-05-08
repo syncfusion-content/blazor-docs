@@ -115,9 +115,9 @@ The CSS selectors target the following Pivot Table elements:
 - `.e-field-list-columns`: Hides the column axis in the Field List dialog.
 - `.e-field-list-values`: Adjusts the layout of the values axis when the column section is hidden in the Field List dialog.
 
-![Hiding Columns in Blazor PivotTable GroupingBar](images/blazor-pivottable-hide-columns-in-groupbar.png)
+![Hiding Columns in Blazor PivotTable GroupingBar](images/blazor-pivottable-hide-columns-in-groupbar.webp)
 
-![Hiding Columns in Blazor PivotTable Field List](images/blazor-pivottable-hide-columns-in-fieldlist.png)
+![Hiding Columns in Blazor PivotTable Field List](images/blazor-pivottable-hide-columns-in-fieldlist.webp)
 
 ## Text Alignment
 
@@ -180,7 +180,7 @@ The alignment of text inside row headers, column headers, value cells, and summa
 }
 ```
 
-![Text Alignment in Blazor PivotGrid](images/blazor-pivotgrid-text-alignment.png)
+![Text Alignment in Blazor PivotGrid](images/blazor-pivotgrid-text-alignment.webp)
 
 ## Customize header, value and summary cell styles
 
@@ -246,6 +246,6 @@ The CSS classes target the following Pivot Table elements:
 - `.e-summary:not(.e-gtot)`: Styles subtotal summary cells (excluding grand totals)
 - `.e-gtot`: Styles grand total cells
 
-![Blazor PivotGrid with Custom Styles](images/blazor-pivotgrid-custom-styles.png)
+![Blazor PivotGrid with Custom Styles](images/blazor-pivotgrid-custom-styles.webp)
 
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

@@ -178,7 +178,7 @@ You can design your taskbars to view the tasks in Gantt Chart by using [GanttTem
 </style>
 ```
 
-![Blazor Gantt Chart with Taskbar Template](images/blazor-gantt-chart-taskbar-template.png)
+![Blazor Gantt Chart with Taskbar Template](images/blazor-gantt-chart-taskbar-template.webp)
 
 
 ## Taskbar customization
@@ -231,7 +231,7 @@ Height of child taskbars and parent taskbars can be customized by using [Taskbar
 }
 ```
 
-![Customizing Taskbar Height in Blazor Gantt Chart](images/blazor-gantt-chart-taskbar-height.png)
+![Customizing Taskbar Height in Blazor Gantt Chart](images/blazor-gantt-chart-taskbar-height.webp)
 
 N> The `TaskbarHeight` property accepts only pixel value.
 
@@ -308,7 +308,7 @@ In the Gantt Chart component, the appearance can be customized based on the Hier
 </style>
 ```
 
-![Changing Taskbar Background in Blazor Gantt Chart](images/blazor-gantt-chart-taskbar-background.png)
+![Changing Taskbar Background in Blazor Gantt Chart](images/blazor-gantt-chart-taskbar-background.webp)
 
 
 
@@ -362,7 +362,7 @@ The width and background color of connector lines in Gantt Chart can be customiz
 }
 ```
 
-![Customizing Connector Lines in Blazor Gantt Chart](images/blazor-gantt-chart-connector-line-customization.png)
+![Customizing Connector Lines in Blazor Gantt Chart](images/blazor-gantt-chart-connector-line-customization.webp)
 
 ## Tooltip
 
@@ -430,7 +430,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 </style>
 ```
 
-![Blazor Gantt Chart displays Event Marker Tooltip](images/blazor-gantt-chart-event-marker-tooltip.png)
+![Blazor Gantt Chart displays Event Marker Tooltip](images/blazor-gantt-chart-event-marker-tooltip.webp)
 
 N> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
@@ -493,7 +493,7 @@ The default tooltip in the Gantt Chart component can be customized using the [Ga
 
 The below screenshot shows the output of above code example.
 
-![Blazor Gantt Chart displays Taskbar Tooltip](images/blazor-gantt-chart-with-taskbar-tooltip.png)
+![Blazor Gantt Chart displays Taskbar Tooltip](images/blazor-gantt-chart-with-taskbar-tooltip.webp)
 
 ### Baseline tooltip
 
@@ -554,7 +554,7 @@ A baseline tooltip can be customized using the [GanttTooltipSettings.BaselineTem
 
 The following screenshot shows the template for baseline in Gantt Chart.
 
-![Customizing Baseline Tooltip in Blazor Gantt Chart](images/blazor-gantt-chart-baseline-tooltip-customization.png)
+![Customizing Baseline Tooltip in Blazor Gantt Chart](images/blazor-gantt-chart-baseline-tooltip-customization.webp)
 
 ### Manual taskbar tooltip
 
@@ -615,7 +615,7 @@ A manual taskbar tooltip can be customized using the [GanttTooltipSettings.Manua
 }
 ```
 
-![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/blazor-gantt-chart-manual-taskbar-tooltip.png)
+![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/blazor-gantt-chart-manual-taskbar-tooltip.webp)
 
 ### Indicator tooltip
 
@@ -687,7 +687,7 @@ Customizing the indicator tooltip in a Gantt Chart using [GanttTooltipSettings.I
 </style>
 ```
 
-![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/Indicator_Tolltip.png)
+![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/Indicator_Tolltip.webp)
 
 
 
