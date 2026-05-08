@@ -9,7 +9,9 @@ documentation: ug
 
 # Testing Syncfusion® Blazor applications with Playwright
 
-This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a Blazor WebAssembly application and validate them through end‑to‑end tests using [Microsoft Playwright](https://azure.microsoft.com/en-us/products/playwright-testing).
+This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a Blazor WebAssembly application and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
+
+Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Syncfusion® Blazor components behave as expected.
 
 ## Create a Blazor project
 
