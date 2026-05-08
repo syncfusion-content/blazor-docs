@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Generate AI insights with Blazor DataGrid and AI models | Syncfusion
-description: Learn how to use Syncfusion Blazor DataGrid with Azure OpenAI, or Ollama to analyze sales orders, generate AI insights, and highlight flagged records.
+description: Learn how to use Syncfusion Blazor DataGrid with Azure OpenAI or Ollama to analyze sales orders, generate AI insights, and highlight flagged records.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -10,13 +10,13 @@ keywords: Blazor DataGrid, AI insights, sales order analysis, Syncfusion Blazor 
 
 # Generate AI insights with Blazor DataGrid and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to analyze sales order data and generate AI-powered business insights in a **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables seamless integration with AI models to process and summarize data, while Azure OpenAI or Ollama can be used to generate structured, JSON‑based insights such as an executive summary, key trends, recommendations, and flagged order IDs. In the following example, the application analyzes sales orders, highlights flagged records, and presents actionable business insights.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to analyze sales order data and generate AI-powered business insights in the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables seamless integration with AI models to process and summarize data, while Azure OpenAI or Ollama can be used to generate structured, JSON‑based insights such as an executive summary, key trends, recommendations, and flagged order IDs. In the following example, the application analyzes sales orders, highlights flagged records, and presents actionable business insights.
 
 If you have not created a Blazor application yet, refer to the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
 ## Prerequisites
 
-Ensure that the required NuGet packages are installed based on the AI service you choose.
+Install the required Syncfusion and AI service NuGet packages based on the selected AI service.
 
 ### For Azure OpenAI
 
@@ -24,14 +24,31 @@ Ensure that the required NuGet packages are installed based on the AI service yo
 - [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
 - [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Microsoft.Extensions.AI
+Install-Package Microsoft.Extensions.AI.OpenAI
+Install-Package Azure.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
+
 ### For Ollama
 
 - [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
 - [OllamaSharp](https://www.nuget.org/packages/OllamaSharp)
 
-### Syncfusion packages
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
 
-In addition to the AI-related packages, the following Syncfusion packages are required to render the Blazor DataGrid and apply themes.
+Install-Package Microsoft.Extensions.AI
+Install-Package OllamaSharp
+
+{% endhighlight %}
+{% endtabs %}
+
+### Syncfusion packages
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -43,10 +60,6 @@ In addition to the AI-related packages, the following Syncfusion packages are re
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI  # For Azure OpenAI
-Install-Package Azure.AI.OpenAI  # For Azure OpenAI
-Install-Package OllamaSharp  # For Ollama
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,9 +75,14 @@ Include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme styles
 {% highlight html tabtitle="App.razor" %}
 
 <head>
+    ....
+    <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
+
 <body>
+    ....
+    <!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
@@ -75,7 +93,7 @@ N> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appea
 
 ## Configure AI service
 
-Choose one of the following AI services (Azure OpenAI or Ollama) based on requirements:
+Choose one of the following AI services based on your requirements:
 - **Azure OpenAI**: Enterprise-grade deployment with enhanced security and scalability.
 - **Ollama**: Self-hosted, privacy-focused AI models.
 
@@ -85,19 +103,7 @@ Follow the instructions for the selected service to register the AI model in the
 
 Deploy an Azure OpenAI Service resource and model as described in [Microsoft's documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
 
-- Install the required NuGet packages:
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI
-Install-Package Azure.AI.OpenAI
-
-{% endhighlight %}
-{% endtabs %}
-
-- Add the following to the **~/Program.cs** file in the Blazor Web App:
+Add the following to the **~/Program.cs** file in the Blazor Web App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="8 9 10 11 12 13 14" %}
@@ -129,22 +135,11 @@ var app = builder.Build();
 
 To use Ollama for self-hosted AI models:
 
-1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com) and install the application for the operating system.
+1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com) and install the application for your operating system.
 2. **Install a model**: Choose a model from the [Ollama Library](https://ollama.com/library) (for example, `llama2:13b`, `mistral:7b`).
-3. **Configure the application**: Provide the `Endpoint` URL (for example, `http://localhost:11434`) and `ModelName` (for example, `llama2:13b`).
+3. **Configure the application**: Provide the `Endpoint` URL (for example, `http://localhost:11434`) and `modelName` (for example, `llama2:13b`).
 
-- Install the required NuGet packages:
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.Extensions.AI
-Install-Package OllamaSharp
-
-{% endhighlight %}
-{% endtabs %}
-
-- Add the following to the **~/Program.cs** file in the Blazor Web App:
+Add the following to the **~/Program.cs** file in the Blazor Web App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="7 8 9 10" %}
@@ -155,8 +150,8 @@ using OllamaSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string ModelName = "MODEL_NAME";
-IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
+string modelName = "MODEL_NAME";
+IChatClient chatClient = new OllamaApiClient("http://localhost:11434", modelName);
 builder.Services.AddChatClient(chatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
@@ -165,7 +160,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-- **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
+N> Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
@@ -241,7 +236,7 @@ The sample loads sales order data in `Home.razor.cs` and sends it to the AI serv
   - `recommendations`
   - `flaggedOrderIds`
 - **Response handling**: The returned text is cleaned, deserialized, and stored in the `AiInsights` model.
-- **Row highlighting**: The `OnQueryCellInfo` event checks each row’s `OrderId` and applies a highlight style to the flagged records.
+- **Row highlighting**: The `OnQueryCellInfo` event checks each row's `OrderId` and applies a highlight style to the flagged records.
 - **Insight display**: The summary, trends, and recommendations are displayed below the grid, and any errors are shown if the AI request fails.
 
 {% tabs %}
@@ -487,9 +482,9 @@ public partial class Home
 If the AI service fails to return a valid response, the Blazor DataGrid displays an appropriate error message to inform the user. To ensure reliability and a smooth user experience, consider handling the following common scenarios:
 
 - **Invalid configuration**: Ensure the API key, endpoint, and model name are valid and accessible.
-- **Model unavailable**: Ensure the specified `azureOpenAIModel` or `ModelName` is deployed and supported.
+- **Model unavailable**: Ensure the specified `azureOpenAIModel` or `modelName` is deployed and supported.
 - **Network or service issues**: Verify connectivity to the AI service, including self‑hosted endpoints.
-- **Timeouts and large datasets**: Large requests may cause delays or timeouts; consider batching data or optimizing prompts.
+- **Timeouts and large datasets**: Large requests may cause delays or timeouts, so consider batching data or optimizing prompts.
 - **Invalid AI responses**: Validate AI output before applying results to the DataGrid.
 - **Rate limits**: Handle throttling gracefully by retrying or informing the user.
 - **Fallback behavior**: Allow the DataGrid to continue displaying data if AI processing fails.
@@ -501,4 +496,3 @@ N> In addition to standard errors, applications should **validate AI responses**
 When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
 
 ![AI-powered DataGrid in Blazor](../images/ai-powered-blazor-datagrid.webp)
-
