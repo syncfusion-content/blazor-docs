@@ -1,0 +1,73 @@
+@using Syncfusion.Blazor.MarkdownConverter
+@using Syncfusion.Blazor.RichTextEditor
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Markdown Input</h3>
+            <SfRichTextEditor @bind-Value="markdownText" Height="300px" EditorMode="EditorMode.Markdown">
+            </SfRichTextEditor>
+        </div>
+        <div class="col-md-6">
+            <h3>HTML Output</h3>
+            <div class="preview-panel border p-3">
+                @if (!string.IsNullOrEmpty(htmlOutput))
+                {
+                    <div>@((MarkupString)htmlOutput)</div>
+                }
+                else
+                {
+                    <p class="text-muted">HTML preview will appear here...</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// The markdown content to be converted to HTML.
+    /// </summary>
+    private string markdownText = @"# Hello World
+
+This is **Markdown** text.";
+    
+    /// <summary>
+    /// The HTML output after conversion.
+    /// </summary>
+    private string htmlOutput = string.Empty;
+
+    /// <summary>
+    /// Initializes the component and performs initial conversion.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        ConvertMarkdown();
+    }
+
+    /// <summary>
+    /// Converts markdown text to HTML with error handling and validation.
+    /// </summary>
+    private void ConvertMarkdown()
+    {
+        try
+        {
+            // Input validation
+            if (string.IsNullOrWhiteSpace(markdownText))
+            {
+                htmlOutput = string.Empty;
+                return;
+            }
+
+            // Convert markdown to HTML
+            htmlOutput = SfMarkdownConverter.ToHtml(markdownText);
+        }
+        catch (Exception ex)
+        {
+            // Log error (in production, use proper logging)
+            Console.Error.WriteLine($"Markdown conversion error: {ex.Message}");
+            htmlOutput = $"<p class='alert alert-danger'>Error converting markdown: {System.Net.WebUtility.HtmlEncode(ex.Message)}</p>";
+        }
+    }
+}

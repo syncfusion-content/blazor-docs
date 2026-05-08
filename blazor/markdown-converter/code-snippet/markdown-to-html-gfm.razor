@@ -1,0 +1,127 @@
+@using Syncfusion.Blazor.MarkdownConverter
+@using Syncfusion.Blazor.RichTextEditor
+
+<div class="container">
+    <h3>GitHub Flavored Markdown Features</h3>
+    
+    <SfRichTextEditor @bind-Value="markdownContent" 
+                     Height="300px" 
+                     EditorMode="EditorMode.Markdown">
+    </SfRichTextEditor>
+    
+    <button @onclick="ConvertWithGfm" class="btn btn-primary mt-2" disabled="@isConverting">
+        @if (isConverting)
+        {
+            <span>Converting...</span>
+        }
+        else
+        {
+            <span>Convert with GFM</span>
+        }
+    </button>
+
+    <div class="preview-panel border p-3 mt-3">
+        @if (isConverting)
+        {
+            <p class="text-info">Converting...</p>
+        }
+        else if (conversionError)
+        {
+            <p class="text-danger">@errorMessage</p>
+        }
+        else if (!string.IsNullOrEmpty(htmlOutput))
+        {
+            <div>@((MarkupString)htmlOutput)</div>
+        }
+        else
+        {
+            <p class="text-muted">Click "Convert with GFM" to see the preview...</p>
+        }
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// The markdown content showcasing GFM features.
+    /// </summary>
+    private string markdownContent = @"# GFM Features Demo
+
+## Tables
+| Feature | Status |
+|---------|--------|
+| Tables | ✓ |
+| Task Lists | ✓ |
+
+## Task Lists
+- [x] Completed task
+- [ ] Incomplete task
+
+## Strikethrough
+This is ~~strikethrough~~ text.
+
+## Autolinks
+https://www.syncfusion.com
+user@example.com";
+    
+    /// <summary>
+    /// The HTML output after conversion with GFM enabled.
+    /// </summary>
+    private string htmlOutput = string.Empty;
+    
+    /// <summary>
+    /// Flag indicating if conversion is in progress.
+    /// </summary>
+    private bool isConverting = false;
+    
+    /// <summary>
+    /// Flag indicating if conversion error occurred.
+    /// </summary>
+    private bool conversionError = false;
+    
+    /// <summary>
+    /// Error message if conversion failed.
+    /// </summary>
+    private string errorMessage = string.Empty;
+
+    /// <summary>
+    /// Converts markdown with GitHub Flavored Markdown features enabled.
+    /// </summary>
+    private void ConvertWithGfm()
+    {
+        try
+        {
+            isConverting = true;
+            conversionError = false;
+            errorMessage = string.Empty;
+
+            // Input validation
+            if (string.IsNullOrWhiteSpace(markdownContent))
+            {
+                htmlOutput = string.Empty;
+                return;
+            }
+
+            // Create options with GFM enabled
+            var options = new MarkdownConverterOptions 
+            { 
+                Gfm = true,
+                LineBreak = true,
+                Silent = false
+            };
+
+            // Convert markdown to HTML
+            htmlOutput = SfMarkdownConverter.ToHtml(markdownContent, options);
+        }
+        catch (Exception ex)
+        {
+            conversionError = true;
+            errorMessage = $"Error converting markdown: {System.Net.WebUtility.HtmlEncode(ex.Message)}";
+            Console.Error.WriteLine($"GFM conversion error: {ex.Message}");
+            htmlOutput = string.Empty;
+        }
+        finally
+        {
+            isConverting = false;
+        }
+    }
+}
