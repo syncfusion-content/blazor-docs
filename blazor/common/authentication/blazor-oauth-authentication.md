@@ -329,7 +329,7 @@ To allow components to receive authentication state, wrap the router inside **Ca
 
 ## Connect Syncfusion® Blazor DataGrid 
 
-Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** on a secured Blazor page using the **[Authorize]** attribute, allowing access only to authenticated users.
+Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/SecureGrid.razor"  %}
@@ -374,7 +374,7 @@ Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** o
 
 ## Display content based on authentication status
 
-This section demonstrates how to dynamically render UI content based on the user’s authentication state. The `Home.razor` page uses the **<AuthorizeView>** component to show different content for authenticated and unauthenticated users.
+This section demonstrates how to dynamically render UI content based on the user’s authentication state. The `Home.razor` page uses the `<AuthorizeView>` component to show different content for authenticated and unauthenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor"  %}
