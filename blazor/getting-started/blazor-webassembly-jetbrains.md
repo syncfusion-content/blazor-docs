@@ -20,12 +20,12 @@ To quickly get started with Blazor WebAssembly application using JetBrains Rider
 
 Before you start developing a Blazor application, you need to install **JetBrains Rider** on your system.
 
-**Step to install JetBrains Rider**
+**Steps to install JetBrains Rider**
 
 - Go to the official [JetBrains Rider](https://www.jetbrains.com/rider/) website.
 - Download the installer suitable for your operating system.
 - Run the installer and follow the on‑screen instructions to complete the installation.
-- Once the installation is complete, launch JetBrains Rider to begin your Blazor development.
+- After installation finishes, launch JetBrains Rider to verify the setup and begin your Blazor development.
 
 After launching Rider, you can create or open a Blazor project and start integrating Syncfusion® Blazor components.
 
@@ -38,7 +38,7 @@ Follow these steps to create a Blazor application in Rider:
 - Open **JetBrains Rider**.
 - On the welcome screen, click **New Solution**.
 - Select the **.NET SDK version** that you want to use.
-- From the available project templates, choose **Blazor WebAssembly Standalone App**.
+- From the available project templates, select **Blazor WebAssembly Standalone App**.
 - Enter your project name.
 - Click **Create** to generate the project.
 
