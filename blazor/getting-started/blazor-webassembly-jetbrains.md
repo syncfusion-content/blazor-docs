@@ -7,11 +7,11 @@ control: common
 documentation: ug
 ---
 
-# JetBrains Rider Integration with Syncfusion® Blazor Components
+# Getting Started with JetBrains Rider and Syncfusion® Blazor Components
 
-This guide explains how to use [JetBrains Rider](https://www.jetbrains.com/rider/) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to build and manage Blazor applications efficiently.
+This section explains how to use [JetBrains Rider](https://www.jetbrains.com/rider/) which is a cross-platform IDE to develop Blazor applications with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components).
 
-To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfusion®, review the following video.
+To quickly get started with Blazor WebAssembly application using JetBrains Rider and Syncfusion® Blazor components, watch the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
@@ -20,7 +20,7 @@ To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfu
 
 Before you start developing a Blazor application, you need to install **JetBrains Rider** on your system.
 
-**Install JetBrains Rider**
+**Step to install JetBrains Rider**
 
 - Go to the official [JetBrains Rider](https://www.jetbrains.com/rider/) website.
 - Download the installer suitable for your operating system.
@@ -115,24 +115,34 @@ Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-compo
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" />
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100" />
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+    </GridColumns>
+</SfGrid>
 
 @code{
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order()
-        {
-            OrderID = x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+        Orders = Enumerable.Range(1, 12).Select(i => new Order {
+            OrderID = 1000 + i,
+            CustomerID = new[] { "ALFKI","ANATR","ANTON","BLONP","BOLID" }[Random.Shared.Next(5)],
+            OrderDate = DateTime.Today.AddDays(-i),
+            Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
         }).ToList();
     }
 
     public class Order
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public int OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
     }
 }
 
