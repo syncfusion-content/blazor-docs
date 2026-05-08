@@ -62,17 +62,17 @@ WPF and Blazor use different application models. The table below shows the close
 
 | WPF artifact | Blazor equivalent | Description |
 |---|---|---|
-| `App.xaml` | `Program.cs` and `App.razor` | Defines startup and root rendering. |
-| `App.xaml.cs` | `Program.cs` | Configures services and host setup. |
-| `MainWindow.xaml` | `App.razor`, `MainLayout.razor`, and `Routes.razor` | Represents the application shell and routing structure. |
-| `Views/*.xaml` | `Pages/*.razor` | Defines routable UI pages. |
-| `ViewModels/*.cs` | Services, component state, or `.razor.cs` | Contains UI logic and state. |
-| `Models/*.cs` | `Models/*.cs` | Usually reusable without changes. |
-| `Services/*.cs` | `Services/*.cs` | Handles shared application logic through dependency injection. |
-| `ResourceDictionary` | CSS, CSS isolation, and static assets | Manages styling and static resources. |
-| `UserControl` | Razor component (`.razor`) | Reusable UI component. |
-| `ICommand` and `RelayCommand` | Event handlers, `EventCallback`, or injected services | Handles user actions and command logic. |
-| `INotifyPropertyChanged` | Component state and re-rendering | Updates the UI when state changes. |
+| `App.xaml` | `Program.cs` and `App.razor` | Defines startup and root rendering |
+| `App.xaml.cs` | `Program.cs` | Configures services and host setup |
+| `MainWindow.xaml` | `App.razor`, `MainLayout.razor`, and `Routes.razor` | Represents the application shell and routing structure |
+| `Views/*.xaml` | `Pages/*.razor` | Defines route-enabled UI pages |
+| `ViewModels/*.cs` | Services, component state, or `.razor.cs` | Contains UI logic and state |
+| `Models/*.cs` | `Models/*.cs` | Usually reusable without changes |
+| `Services/*.cs` | `Services/*.cs` | Handles shared application logic through dependency injection |
+| `ResourceDictionary` | CSS, CSS isolation, and static assets | Manages styling and static resources |
+| `UserControl` | Razor component (`.razor`) | Reusable UI component |
+| `ICommand` and `RelayCommand` | Event handlers, `EventCallback`, or injected services | Handles user actions and command logic |
+| `INotifyPropertyChanged` | Component state and re-rendering | Updates the UI when state changes |
 
 ## Getting started: project creation
 
@@ -81,7 +81,7 @@ WPF and Blazor use different application models. The table below shows the close
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet new blazor -n MyBlazorApp --interactivity Server 
+dotnet new blazor -n MyBlazorApp --interactivity Server
 cd MyBlazorApp
 code .
 dotnet watch   # Hot reload during development
@@ -93,7 +93,7 @@ N> The `--interactivity Server` flag configures SignalR-based interactivity and 
 
 ## Migrating key Syncfusion components from WPF to Blazor
 
-This section provides **step-by-step migration guidance** for the following six Syncfusion components, with side-by-side WPF and Blazor code examples:
+This section provides **step-by-step migration guidance** for six Syncfusion components, with side-by-side WPF and Blazor code examples:
 
 1. **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** - Tabular data display with sorting, filtering, editing, and grouping
 2. **[TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid)** - Hierarchical data display in a grid format
@@ -154,7 +154,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-#### Step 2: Theme 
+#### Step 2: Theme configuration
 
 Configure the visual theme to ensure that the DataGrid follows a consistent and modern appearance across the application.
 
@@ -189,7 +189,7 @@ In WPF, themes are applied at the window level using the [SfSkinManager](https:/
 
 #### Step 3: Service registration (Blazor-specific)
 
-Register the Syncfusion services in the Blazor dependency injection container to activate component rendering and runtime behavior.
+Register the Syncfusion services in the Blazor dependency injection container to enable component rendering and runtime behavior.
 This step is required only for Blazor applications and replaces the implicit component initialization mechanism used in WPF.
 
 **Blazor requirement:**
@@ -1166,11 +1166,13 @@ This step is required only for Blazor applications and replaces the implicit com
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
+
 ....
 using Syncfusion.Blazor;
 ....
 builder.Services.AddSyncfusionBlazor();
 ....
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1681,7 +1683,7 @@ public class OrderViewModel : INotifyPropertyChanged
 
 **Key migration changes:**
 
-- XAML `DataTemplate` in WPF maps to Razor `<Template>` in Blazor.
+- XAML `DataTemplate` maps to Razor `<Template>` in Blazor.
 - The current row data is available through `context` in the template.
 - WPF visual controls inside the template are replaced by HTML elements in Blazor.
 - Styling in Blazor is handled by CSS classes and inline styles.
@@ -1914,8 +1916,8 @@ private void OrdersGrid_CellDoubleTapped(object sender, GridCellDoubleTappedEven
 - WPF grouping settings map to `AllowGrouping` in Blazor.
 - WPF `ShowGroupDropArea` maps to `GridGroupSettings.ShowDropArea` in Blazor.
 - WPF group column descriptions map to `GridGroupSettings.Columns` in Blazor.
-- Blazor also supports grouped column display through `GridGroupSettings.ShowGroupedColumn`.
-- Grouping can also be applied programmatically by using the grid API.
+- Blazor supports grouped column display using `GridGroupSettings.ShowGroupedColumn`.
+- Grouping can also be applied programmatically using the grid API.
 
 ### Selection
 
@@ -2091,7 +2093,7 @@ private void DataGrid_SelectionChanged(object sender, GridSelectionChangedEventA
 {% endhighlight %}
 {% endtabs %}
 
-N> When using `EnableVirtualization="true"`, you must set an explicit `Height` on the grid (e.g., `Height="500px"`). 
+N> When using `EnableVirtualization="true"`, set an explicit `Height` on the grid (for example, `Height="500px"`).
 
 **Key migration changes:**
 
@@ -2254,7 +2256,7 @@ N> When using `EnableVirtualization="true"`, you must set an explicit `Height` o
 - Frozen columns are configured at the column level in Blazor.
 - Frozen columns work best with explicit column widths.
 - Virtualization can be enabled to improve performance with large data sets.
-- Fixed grid height helps maintain smooth scrolling behavior.
+- Set a fixed grid height to maintain smooth scrolling behavior.
 
 ## See also
 
