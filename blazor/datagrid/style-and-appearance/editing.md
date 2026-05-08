@@ -28,8 +28,8 @@ The **.e-editedrow** and **.e-addedrow** classes style edited and newly added ro
 
 Adjust properties such as **background-color** or **border** styles to highlight rows that are in edit mode.
 
-![Edited and added rows](../images/style-and-appearance/edited-added-row-element.png) 
-![Edited row styling](../images/style-and-appearance/edited-added-row-element-2.png)
+![Edited and added rows](../images/style-and-appearance/edited-added-row-element.webp) 
+![Edited row styling](../images/style-and-appearance/edited-added-row-element-2.webp)
 
 ## Customize edited row input elements
 
@@ -46,7 +46,7 @@ The **.e-gridform** and **.e-input** classes style inputs inside the inline edit
 
 Modify properties such as **font-family**, **color**, or **padding** to improve readability.
 
-![Edited row inputs with custom font and text color](../images/style-and-appearance/edited-row-input-element.png)
+![Edited row inputs with custom font and text color](../images/style-and-appearance/edited-row-input-element.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -148,7 +148,7 @@ The **.e-edit-dialog** and **.e-dlg-header-content** classes style the dialog he
 
 Change properties such as **background-color** to visually separate the header from the rest of the dialog content.
 
-![Edit dialog header with custom background color](../images/style-and-appearance/edit-dialog-header-element.png)
+![Edit dialog header with custom background color](../images/style-and-appearance/edit-dialog-header-element.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -251,8 +251,8 @@ The **.e-edit**, **.e-delete**, **.e-update**, and **.e-cancel-icon** classes st
 
 Style properties like **color**, **font-size**, and **font-weight** can be adjusted to differentiate action icons and enhance visibility during interaction.
 
-![Command buttons with custom delete and cancel icon colors](../images/style-and-appearance/commandbutton-1.png)
-![Command buttons with custom edit and save icon colors](../images/style-and-appearance/commandbutton-2.png)
+![Command buttons with custom delete and cancel icon colors](../images/style-and-appearance/commandbutton-1.webp)
+![Command buttons with custom edit and save icon colors](../images/style-and-appearance/commandbutton-2.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

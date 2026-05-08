@@ -201,7 +201,7 @@ In the [MessageSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Int
 * Run the project using `dotnet run` or Visual Studio. 
 * Open your app in the browser (e.g., `http://localhost:port`) to chat with your dialogflow-powered bot.
 
-![ChatUI with Dialogflow](../images/dialogflow.png)
+![ChatUI with Dialogflow](../images/dialogflow.webp)
 
 ## Troubleshooting:
 

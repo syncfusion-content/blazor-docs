@@ -68,7 +68,7 @@ The stock chart supports three zooming interactions:
 
 ```
 
-![Zooming in Blazor Stock Chart](images/zooming/stock-chart-zoom.PNG)
+![Zooming in Blazor Stock Chart](images/zooming/stock-chart-zoom.webp)
 
 After zooming, the toolbar appears with options for **Zoom**, **Zoom In**, **Zoom Out**, **Pan**, and **Reset**. Pan enables panning of the chart, and Reset restores the original view.
 
@@ -132,7 +132,7 @@ There are three modes:
 
 ```
 
-![Horizontal Zooming in Blazor Stock Chart](images/zooming/stock-chart-zoom.PNG)
+![Horizontal Zooming in Blazor Stock Chart](images/zooming/stock-chart-zoom.webp)
 
 ## Toolbar
 
@@ -190,7 +190,7 @@ By default, Zoom In, Zoom Out, Pan, and Reset buttons appear in the toolbar afte
 
 ```
 
-![Zooming Option in Blazor Stock Chart Toolbar](images/zooming/stock-chart-zoom.PNG)
+![Zooming Option in Blazor Stock Chart Toolbar](images/zooming/stock-chart-zoom.webp)
 
 ## Enable pan
 
@@ -246,7 +246,7 @@ Use the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ```
 
-![Zooming with Pan in Blazor Stock Chart Toolbar](images/zooming/stock-chart-pan.PNG)
+![Zooming with Pan in Blazor Stock Chart Toolbar](images/zooming/stock-chart-pan.webp)
 
 ## Enable scrollbar
 
@@ -303,7 +303,7 @@ Use the [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Zooming with Scrollbar in Blazor Stock Chart](images/zooming/stock-chart-scrollbar.PNG)
+![Zooming with Scrollbar in Blazor Stock Chart](images/zooming/stock-chart-scrollbar.webp)
 
 ## Auto interval on zooming
 
@@ -360,6 +360,6 @@ Set [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Auto Interval on Zooming in Blazor Area Chart](images/zooming/stock-chart-autointerval.PNG)
+![Auto Interval on Zooming in Blazor Area Chart](images/zooming/stock-chart-autointerval.webp)
 
 N> Refer to the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for feature overviews and the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to explore chart types and time based data representation.

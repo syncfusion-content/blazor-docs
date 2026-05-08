@@ -343,7 +343,7 @@ To resize a column:
 2. A floating handler appears over the column’s right border.
 3. Tap and drag the handler to adjust the column width.
 
-![Blazor DataGrid column resizing in touch interaction.](./images/blazor-datagrid-column-resizing.jpg)
+![Blazor DataGrid column resizing in touch interaction.](./images/blazor-datagrid-column-resizing.webp)
 
 ## Resize columns via programmatically
 

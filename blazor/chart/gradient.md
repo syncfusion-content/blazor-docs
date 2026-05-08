@@ -93,7 +93,7 @@ Apply a linear gradient to a series by adding [ChartLinearGradient](https://help
 }
 
 ```
-![Blazor Column Chart with Linear Gradient](images/gradient/blazor-column-chart-linear-gradient.png)
+![Blazor Column Chart with Linear Gradient](images/gradient/blazor-column-chart-linear-gradient.webp)
 
 ### Trendlines
 
@@ -158,7 +158,7 @@ Apply a linear gradient to a trendline by adding [ChartLinearGradient](https://h
 }
 
 ```
-![Trendlines in Blazor Spline Chart with Linear Gradient](images/gradient/blazor-spline-chart-linear-trendlines-linear-gradient.png)
+![Trendlines in Blazor Spline Chart with Linear Gradient](images/gradient/blazor-spline-chart-linear-trendlines-linear-gradient.webp)
 
 ### Technical Indicators
 
@@ -227,7 +227,7 @@ Apply a linear gradient to a technical indicator by adding [ChartLinearGradient]
 }
 
 ```
-![Exponential Moving Average in Blazor Candle Chart with Linear Gradient](images/gradient/blazor-candle-chart-exponential-moving-average-linear-gradient.png)
+![Exponential Moving Average in Blazor Candle Chart with Linear Gradient](images/gradient/blazor-candle-chart-exponential-moving-average-linear-gradient.webp)
 
 ## Radial gradient
 
@@ -303,7 +303,7 @@ Apply a radial gradient to a series by adding [ChartRadialGradient](https://help
 }
 
 ```
-![Blazor Column Chart with Radial Gradient](images/gradient/blazor-column-chart-radial-gradient.png)
+![Blazor Column Chart with Radial Gradient](images/gradient/blazor-column-chart-radial-gradient.webp)
 
 N> Radial gradients can also be applied to Trendlines and Technical Indicators in the same way by placing a [ChartRadialGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRadialGradient.html) with color stops inside the target `ChartTrendline` or `ChartIndicator`.
 

@@ -40,7 +40,7 @@ You can use the [UpdateMessageAsync](https://help.syncfusion.com/cr/blazor/Syn
 
 ```
 
-![Blazor Chat UI UpdateMessage](./images/update-msg.png)
+![Blazor Chat UI UpdateMessage](./images/update-msg.webp)
 
 ## Scroll to bottom
 
@@ -78,4 +78,4 @@ You can use [ScrollToBottomAsync](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Chat UI ScrollToBottom](./images/scroll-bottom.png)
+![Blazor Chat UI ScrollToBottom](./images/scroll-bottom.webp)

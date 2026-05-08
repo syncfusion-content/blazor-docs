@@ -41,4 +41,4 @@ Here is an example of adding a custom toolbar item to the quick access toolbar.
 }
 ```
 
-![Blazor Image Editor with Quick Access Toolbar](./images/blazor-image-editor-quick-access-toolbar.jpg)
+![Blazor Image Editor with Quick Access Toolbar](./images/blazor-image-editor-quick-access-toolbar.webp)

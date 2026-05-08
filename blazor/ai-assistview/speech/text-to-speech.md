@@ -248,7 +248,7 @@ function cancel() {
 
 {% endtabs %}
 
-![Integrating Text-to-Speech with AI AssistView](../images/assist-tts.png)
+![Integrating Text-to-Speech with AI AssistView](../images/assist-tts.webp)
 
 ## See Also
 

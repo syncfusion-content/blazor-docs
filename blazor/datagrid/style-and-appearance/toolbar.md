@@ -25,7 +25,7 @@ The **.e-toolbar-items** class styles the toolbar root container in the Blazor D
 ```
 Properties such as **background-color**, **padding**, **border**, and **box-shadow** can be modified to suit the layout design.
 
-![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.png)
+![Grid toolbar root element](../images/style-and-appearance/grid-toolbar-root-element.webp)
 
 ## Customize the toolbar button elements
 
@@ -37,7 +37,7 @@ The **.e-btn** class inside **.e-toolbar** defines the appearance of toolbar but
 ```
 Properties such as **background-color**, **color**, **border**, **font-size**, and **padding** can be adjusted to align with the design. Ensure that customized colors meet WCAG contrast guidelines and that focus indicators remain visible for keyboard navigation.
 
-![Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.png)
+![Grid toolbar button element](../images/style-and-appearance/grid-toolbar-button-element.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

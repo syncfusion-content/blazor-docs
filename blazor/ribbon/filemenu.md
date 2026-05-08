@@ -91,7 +91,7 @@ Menu items can be added to the file menu by binding a collection of menu items t
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Filemenu Items](./images/filemenu/filemenu_items.png)
+![Ribbon Filemenu Items](./images/filemenu/filemenu_items.webp)
 
 ## Open submenu on click
 
@@ -245,7 +245,7 @@ You can define custom header text for the file menu by using the [Text](https://
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Filemenu Items](./images/filemenu/filemenu_customheader.png)
+![Ribbon Filemenu Items](./images/filemenu/filemenu_customheader.webp)
 
 ## Events
 

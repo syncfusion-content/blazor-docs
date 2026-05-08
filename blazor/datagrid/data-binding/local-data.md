@@ -314,7 +314,7 @@ In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested
 
 > The DataGrid supports data operations and full CRUD functionality even when working with complex fields in `ExpandoObject` bindings.
 
-![Binding ExpandoObject with complex data in Blazor DataGrid](../images/blazor-datagrid-expand-complex-data.png)
+![Binding ExpandoObject with complex data in Blazor DataGrid](../images/blazor-datagrid-expand-complex-data.webp)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/blob/master/ListBinding/ListBinding/Components/Pages/ExpandoObjectComplexBinding.razor).
 
@@ -495,7 +495,7 @@ In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested
 
 > The DataGrid supports data operations and full CRUD functionality even when working with complex fields in `DynamicObject` bindings.
 
-![Binding DynamicObject with complex data in Blazor DataGrid](../images/blazor-datagrid-dynamic-complex-data.png)
+![Binding DynamicObject with complex data in Blazor DataGrid](../images/blazor-datagrid-dynamic-complex-data.webp)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/blob/master/ListBinding/ListBinding/Components/Pages/DynamicObjectComplexBinding.razor).
 
@@ -1210,7 +1210,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVICCDxpINPCgRu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Changing datasource dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)
+![Changing datasource dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.webp)
 
 ## Data binding with SignalR 
 
@@ -1424,7 +1424,7 @@ To include the **OrderService** reference, update the following line in your **P
 ```csharp
 builder.Services.AddSingleton<OrderDetails>();
 ```
-![SignalR real-time data updates in Blazor DataGrid](../images/signalR.gif)
+![SignalR real-time data updates in Blazor DataGrid](../images/signalR.webp)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/SignalRDataGrid).
 
@@ -1743,7 +1743,7 @@ To achieve this, use the [ObservableCollection](https://learn.microsoft.com/en-u
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataGrid with ObservableCollection](../images/blazor-datagrid-observable.gif)
+![Blazor DataGrid with ObservableCollection](../images/blazor-datagrid-observable.webp)
 
 N> * The Grid automatically reflects changes when records are added, removed, or updated.
 * When updating the collection using external triggers (e.g., timers, events), call **StateHasChanged()** to refresh the UI.

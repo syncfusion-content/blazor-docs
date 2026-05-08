@@ -37,7 +37,7 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interacti
 
 ```
 
-![Blazor Chat UI Text](./images/width.png)
+![Blazor Chat UI Text](./images/width.webp)
 
 ### Defining the Current User
 
@@ -67,7 +67,7 @@ The [Author](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interactive
 
 ```
 
-![Blazor Chat UI User](./images/width.png)
+![Blazor Chat UI User](./images/width.webp)
 
 #### Setting the Avatar URL
 
@@ -94,7 +94,7 @@ The [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interact
 
 ```
 
-![Blazor Chat UI AvatarUrl](./images/avatarurl.png)
+![Blazor Chat UI AvatarUrl](./images/avatarurl.webp)
 
 #### Customizing the Avatar Background Color
 
@@ -121,7 +121,7 @@ The [AvatarBgColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inte
 
 ```
 
-![Blazor Chat UI AvatarUrl](./images/avatarbgcolor.png)
+![Blazor Chat UI AvatarUrl](./images/avatarbgcolor.webp)
 
 #### Applying a Custom CSS Class
 
@@ -157,7 +157,7 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interacti
 
 ```
 
-![Blazor Chat UI CssClass](./images/avatarcss.png)
+![Blazor Chat UI CssClass](./images/avatarcss.webp)
 
 #### Setting status icon css
 
@@ -193,7 +193,7 @@ The following are the predefined status styles that can be defined using the `St
 
 ```
 
-![Blazor Chat UI StatusIconCss](./images/message-statusicon.png)
+![Blazor Chat UI StatusIconCss](./images/message-statusicon.webp)
 
 ### Configuring the Timestamp
 
@@ -221,7 +221,7 @@ The [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interact
 
 ```
 
-![Blazor Chat UI Timestamp](./images/timestamp.png)
+![Blazor Chat UI Timestamp](./images/timestamp.webp)
 
 #### Setting the Timestamp Format
 
@@ -249,7 +249,7 @@ The [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 ```
 
-![Blazor Chat UI TimestampFormat](./images/timestamp-format.png)
+![Blazor Chat UI TimestampFormat](./images/timestamp-format.webp)
 
 ### Defining Message Status
 
@@ -287,7 +287,7 @@ The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interactiv
 
 ```
 
-![Blazor Chat UI IconCss](./images/status-icon.png)
+![Blazor Chat UI IconCss](./images/status-icon.webp)
 
 #### Setting the text
 
@@ -321,7 +321,7 @@ The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveCh
 
 ```
 
-![Blazor Chat UI Text](./images/status-text.png)
+![Blazor Chat UI Text](./images/status-text.webp)
 
 #### Setting the tooltip
 
@@ -382,7 +382,7 @@ Set the [IsPinned](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inter
 
 ```
 
-![Blazor Chat UI IsPinned](./images/isPinned.png)
+![Blazor Chat UI IsPinned](./images/isPinned.webp)
 
 ### Replying to a Message
 
@@ -420,7 +420,7 @@ The [RepliedTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interact
 
 ```
 
-![Blazor Chat UI RepliedTo](./images/repliedTo.png)
+![Blazor Chat UI RepliedTo](./images/repliedTo.webp)
 
 ### Forwarding a Message
 
@@ -448,7 +448,7 @@ The [IsForwarded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 ```
 
-![Blazor Chat UI IsForwarded](./images/isForwarded.png)
+![Blazor Chat UI IsForwarded](./images/isForwarded.webp)
 
 ### Enabling Auto-Scroll
 
@@ -481,7 +481,7 @@ The [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Chat UI AutoScrollToBottom](./images/auto-scroll-bottom.png)
+![Blazor Chat UI AutoScrollToBottom](./images/auto-scroll-bottom.webp)
 
 ### Adding Reply Suggestions
 
@@ -509,7 +509,7 @@ The [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Intera
 
 ```
 
-![Blazor Chat UI Suggestions](./images/suggestions.png)
+![Blazor Chat UI Suggestions](./images/suggestions.webp)
 
 ## Enabling Compact Mode
 
@@ -537,7 +537,7 @@ Setting the `EnableCompactMode` property to `true` aligns all messages to the le
 
 ```
 
-![Blazor Chat UI EnableCompactMode](./images/enableCompactMode.png)
+![Blazor Chat UI EnableCompactMode](./images/enableCompactMode.webp)
 
 ## Configuring Message Options
 
@@ -618,7 +618,7 @@ Define custom toolbar actions using the `MessageToolbarItem` tag directive withi
 
 ```
 
-![Blazor Chat UI MessageToolbarItem](./images/messageToolbarItems.png)
+![Blazor Chat UI MessageToolbarItem](./images/messageToolbarItems.webp)
 
 ### Handling Toolbar Item Clicks
 
@@ -819,4 +819,4 @@ By integrating the [Markdig](https://www.nuget.org/packages/Markdig) library, yo
 
 ```
 
-![Blazor Chat UI Markdown](./images/markdown.png)
+![Blazor Chat UI Markdown](./images/markdown.webp)

@@ -21,7 +21,7 @@ This article describes the most common installation errors, as well as the cause
 
 **Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor installer.
 
-![Unlock key error when using a trial key with the licensed installer](images/installation-error-1.png)
+![Unlock key error when using a trial key with the licensed installer](images/installation-error-1.webp)
 
 **Reason:** <br/> A trial unlock key is being used with the licensed installer.
 
@@ -33,7 +33,7 @@ This article describes the most common installation errors, as well as the cause
 
 ***Online installer***
 
-![License expired message in the web installer](images/installation-error-2.png)
+![License expired message in the web installer](images/installation-error-2.webp)
 
 **Reason:** This error message will appear if your license has expired.
 
@@ -50,11 +50,11 @@ This article describes the most common installation errors, as well as the cause
 
 ***Offline installer***
 
-![Account has no valid license or trial in the offline installer](images/installation-error-3.png)
+![Account has no valid license or trial in the offline installer](images/installation-error-3.webp)
 
 ***Online installer***
 
-![Account has no valid license or trial in the web installer](images/installation-error-4.png)
+![Account has no valid license or trial in the web installer](images/installation-error-4.webp)
 
 **Reason:** One of the following is true:
 
@@ -73,7 +73,7 @@ This article describes the most common installation errors, as well as the cause
 
 **Error Message:** Another installation is in progress. You cannot start this installation without completing all other currently active installations. Click cancel to end this installer or retry to attempt after currently active installation completed to install again.
 
-![Another installation in progress error dialog](images/installation-error-5.png)
+![Another installation in progress error dialog](images/installation-error-5.webp)
 
 **Reason:** You are trying to install when another installation is already running in your machine.
 
@@ -83,7 +83,7 @@ This article describes the most common installation errors, as well as the cause
 2. Browse the Details tab.
 3. Select the msiexec.exe and click **End task**.
 
-![Windows Task Manager showing msiexec.exe to end task](images/installation-error-6.png)
+![Windows Task Manager showing msiexec.exe to end task](images/installation-error-6.webp)
 
 ## Unable to install due to controlled folder access
 
@@ -91,13 +91,13 @@ This article describes the most common installation errors, as well as the cause
 
 **Error Message:** Controlled folder access seems to be enabled on this machine. The provided install or samples location (for example, Public Documents) is protected by controlled folder access settings.
 
-![Offline installer controlled folder access warning](images/installation-error-7.png)
+![Offline installer controlled folder access warning](images/installation-error-7.webp)
 
 ***Online***
 
 **Error Message:** Controlled folder access seems to be enabled on this machine. The provided install, samples, or download location (for example, Public Documents) is protected by controlled folder access settings.
 
-![Web installer controlled folder access warning](images/installation-error-8.png)
+![Web installer controlled folder access warning](images/installation-error-8.webp)
 
 **Reason:** You have enabled controlled folder access settings on your computer.
 

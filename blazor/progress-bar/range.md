@@ -18,4 +18,4 @@ The range represents the entire span of the Progress Bar and it can be defined u
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Range](images/blazor-determinate-progressbar.png)
+![Blazor ProgressBar with Range](images/blazor-determinate-progressbar.webp)

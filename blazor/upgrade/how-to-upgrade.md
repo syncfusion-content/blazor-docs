@@ -19,7 +19,7 @@ See the Blazor [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-
 
 The most recent version of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor can be downloaded and installed by selecting the “Latest Version: {Version}” link at the top of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Control Panel.
 
-![Syncfusion Blazor Control Panel showing Latest Version link](images/installer-upgrade.png)
+![Syncfusion Blazor Control Panel showing Latest Version link](images/installer-upgrade.webp)
 
 You can also upgrade by downloading and installing the required products directly from the Latest version downloads [page](https://www.syncfusion.com/downloads/latest-version). Uninstalling existing versions is not required.
 

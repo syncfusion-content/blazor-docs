@@ -35,7 +35,7 @@ You can use [ShowFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Chat UI ShowFooter](./images/show-footer.png)
+![Blazor Chat UI ShowFooter](./images/show-footer.webp)
 
 ## Footer template 
 

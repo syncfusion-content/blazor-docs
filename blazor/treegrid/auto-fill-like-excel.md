@@ -96,7 +96,7 @@ N> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 <br/> * It requires the selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to be `Cell`,  [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode) to be `Box` and also Batch Editing should be enabled.
 
 The following GIF represent a tree grid with auto fill feature.
-![Auto FIll in Blazor TreeGrid](./images/blazor-treegrid-auto-fill.gif)
+![Auto FIll in Blazor TreeGrid](./images/blazor-treegrid-auto-fill.webp)
 
 
 ## Limitations of AutoFill

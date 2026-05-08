@@ -17,11 +17,11 @@ N> Prerequisites: Supported Linux distribution, .NET SDK installed, unzip tool, 
 
 1. Extract the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux installer ZIP to a folder.
 
-   ![Extract the Syncfusion Blazor Linux installer ZIP to a folder](images/Linux_Installer1.png)
+   ![Extract the Syncfusion Blazor Linux installer ZIP to a folder](images/linux_installer1.webp)
 
 2. Review the extracted contents. The package includes demo source, offline NuGet packages, and supporting files.
 
-   ![Extracted contents of the Blazor Linux offline installer](images/Linux_Installer2.png)
+   ![Extracted contents of the Blazor Linux offline installer](images/linux_installer2.webp)
 
 N> An unlock key is not required to install or use the Blazor Linux offline installer.
 

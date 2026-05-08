@@ -20,13 +20,13 @@ Follow the steps below to get started with Essential UI Kit for Blazor. You can 
 
 Download the app from the GitHub [link](https://github.com/syncfusion/essential-ui-kit-for-blazor), and then open the same in Visual Studio Code to start working with it.
 
-![Launching the downloaded app](images/launching-the-downloaded-app.png)
+![Launching the downloaded app](images/launching-the-downloaded-app.webp)
 
 ### Step 2: Open a New Terminal
 
 In Visual Studio Code, go to the **Terminal** menu and select **New Terminal** to open the integrated terminal.
 
-![Opening a new terminal](images/opening-a-new-terminal.png)
+![Opening a new terminal](images/opening-a-new-terminal.webp)
 
 ### Step 3: Install Dependencies and Run the App
 Run the following commands one after the other in the terminal:
@@ -49,7 +49,7 @@ Run the following commands one after the other in the terminal:
 
     This command will start the local development server, and you'll see an output in the terminal indicating the app is running. Typically, it will display a local host URL like this:
 
-    ![Local development server running](images/local-development-server-running.png)
+    ![Local development server running](images/local-development-server-running.webp)
 
     To view the app in your browser, simply **Ctrl + Click** (or **Cmd + Click** on macOS) on the local host URL displayed in the terminal. This will open the app in your default browser, allowing you to interact with the blocks.
 

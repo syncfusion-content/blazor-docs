@@ -277,7 +277,7 @@ function updateContentEditableDiv(element, value) {
 
 {% endtabs %}
 
-![Integrating Speech-to-Text with AI AssistView](../images/assist-stt.png)
+![Integrating Speech-to-Text with AI AssistView](../images/assist-stt.webp)
 
 ## Error Handling
 

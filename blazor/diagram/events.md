@@ -464,7 +464,7 @@ These properties allow for fine-tuned control over the auto-scrolling behavior i
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrosjtcpGFlAEMJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Speed Limit control in autoScroll support for node](images/SpeedLimitNodeConnector.gif) 
+![Speed Limit control in autoScroll support for node](images/SpeedLimitNodeConnector.webp) 
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Events/OnAutoScrollChange.razor)
 

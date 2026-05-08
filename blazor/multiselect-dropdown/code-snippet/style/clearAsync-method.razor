@@ -31,12 +31,10 @@
 
     public string[] GameValue { get; set; } = { "Game5"};
 
-     public async Task ClearAll ()
+     public async void ClearAll()
     {
-        if (MultiSelectObj is not null)
-        {
-            await MultiSelectObj.ClearAsync();
-        }
+        await this.MultiSelectObj.ClearAsync();
+        StateHasChanged();
     }
 
 }

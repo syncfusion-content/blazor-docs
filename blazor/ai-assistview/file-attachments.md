@@ -39,7 +39,7 @@ You can use the `Enable` property to enable the attachment in the AI AssistView.
     }
 }
 ```
-![Blazor AI AssistView Attachment Enable](./images/enableAttachment.png)
+![Blazor AI AssistView Attachment Enable](./images/enableAttachment.webp)
 
 ### Setting SaveUrl and RemoveUrl
 
@@ -67,7 +67,7 @@ You can use the `SaveUrl` and `RemoveUrl` property to add the save and remove th
     }
 }
 ```
-![Blazor AI AssistView Attachment Enable](./images/attachment.png)
+![Blazor AI AssistView Attachment Enable](./images/attachment.webp)
 
 ### Setting file type
 
@@ -86,7 +86,7 @@ You can use the `AllowedFileTypes` property to upload the specific file types in
         Enable = true,
         SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
         RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove",
-        AllowedFileTypes = ".png",
+        AllowedFileTypes = ".webp",
     };
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
@@ -96,7 +96,7 @@ You can use the `AllowedFileTypes` property to upload the specific file types in
     }
 }
 ```
-![Blazor AI AssistView Attachment Enable](./images/fileType.png)
+![Blazor AI AssistView Attachment Enable](./images/fileType.webp)
 
 ### Setting file size
 
@@ -126,7 +126,7 @@ You can use the `MaxFileSize` property to allow the maximum file size of the upl
 }
 ```
 
-![Blazor AI AssistView Attachment Enable](./images/fileSizeFailure.png)
+![Blazor AI AssistView Attachment Enable](./images/fileSizeFailure.webp)
 
 ### Setting maximum count
 
@@ -160,4 +160,4 @@ Restrict how many files can be attached at once using `MaximumCount` property. T
 }
 ```
 
-![Blazor AI AssistView Attachment Enable](./images/maximum-count.png)
+![Blazor AI AssistView Attachment Enable](./images/maximum-count.webp)

@@ -39,7 +39,7 @@ To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/
 
 ```
 
-![Blazor RichTextEditor with HTML Editor](./images/blazor-richtexteditor-with-html-editor.png)
+![Blazor RichTextEditor with HTML Editor](./images/blazor-richtexteditor-with-html-editor.webp)
 
 ## IFrame editor
 
@@ -80,7 +80,7 @@ To enable Markdown editing, set the [EditorMode](https://help.syncfusion.com/cr/
 
 ```
 
-![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.png)
+![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.webp)
 
 For further details on Markdown editing, refer to the [Markdown](./markdown) section.
 

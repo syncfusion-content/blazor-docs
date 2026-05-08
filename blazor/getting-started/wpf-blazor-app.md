@@ -18,7 +18,7 @@ To get started quickly with a WPF Blazor app, watch the following video.
 
 ## What is WPF Blazor App?
 
-A WPF Blazor App hosts a `Blazor Web App` inside a WPF Application using the `BlazorWebView` control. This enables the Blazor Web App to integrate with desktop platform features and WPF UI. The `BlazorWebView` can be added on any WPF page and pointed to the Blazor app's root component. Blazor components executes in the .NET process and render their web UI into the embedded web-view control. WPF Blazor Apps run on platforms supported by WPF.
+A WPF Blazor App hosts a `Blazor Web App` inside a WPF Application using the `BlazorWebView` control. This enables the Blazor Web App to integrate with desktop platform features and WPF UI. The `BlazorWebView` can be added on any WPF page and pointed to the Blazor app's root component. Blazor components execute in the .NET process and render their web UI into the embedded web-view control. WPF Blazor Apps run on platforms supported by WPF.
 
 Visual Studio provides the **WPF Application** template to create WPF Blazor Apps.
 
@@ -52,7 +52,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Import Namespaces
 
-Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -80,7 +80,7 @@ serviceCollection.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the <head> and the script at the end of the <body> in the **~wwwroot/index.html** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet in the `<head>` and the script at the end of the `<body>` in the **~wwwroot/index.html** file as shown below:
 
 ```html
 <head>
@@ -94,7 +94,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </body>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
 ## Add Syncfusion Blazor component
 
@@ -112,8 +112,10 @@ Add a Syncfusion Blazor component to any Razor file in the Blazor project. The e
     {
         Orders = Enumerable.Range(1, 5).Select(x => new Order()
         {
-            OrderID = 0 + x,
+            OrderID = 1000 + x,
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
 
@@ -121,7 +123,8 @@ Add a Syncfusion Blazor component to any Razor file in the Blazor project. The e
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 

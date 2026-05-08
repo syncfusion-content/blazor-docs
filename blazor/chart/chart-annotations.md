@@ -63,7 +63,7 @@ A detailed walkthrough demonstrating how to add and customize annotations in the
 
 ```
 
-![Annotation in Blazor Column chart](images/annotation/blazor-column-chart-annotation.png)
+![Annotation in Blazor Column chart](images/annotation/blazor-column-chart-annotation.webp)
 
 ## Region
 
@@ -115,7 +115,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 ```
 
-![Inserting Annotations using Region in Blazor Column Chart](images/annotation/blazor-column-chart-annotation-using-region.png)
+![Inserting Annotations using Region in Blazor Column Chart](images/annotation/blazor-column-chart-annotation-using-region.webp)
 
 ## Co-ordinate units
 
@@ -165,7 +165,7 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Inserting Annotation using Coordinate in Blazor Column Chart](images/annotation/blazor-column-chart-coordinate-annotation.png)
+![Inserting Annotation using Coordinate in Blazor Column Chart](images/annotation/blazor-column-chart-coordinate-annotation.webp)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

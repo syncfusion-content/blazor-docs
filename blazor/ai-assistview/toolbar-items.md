@@ -39,7 +39,7 @@ In the following example, AI AssistView component rendered with footer toolbar i
     }
 }
 ```
-![Blazor AI AssistView Attachment Enable](./images/enableAttachment.png)
+![Blazor AI AssistView Attachment Enable](./images/enableAttachment.webp)
 
 ### Toolbar positioning
 
@@ -86,7 +86,7 @@ By setting ToolbarPosition as `Bottom`, footer items will be rendered at the bot
 
 ```
 
-![Blazor AI AssistView Footer Toolbar Position](./images/footer-toolbar-position.png)
+![Blazor AI AssistView Footer Toolbar Position](./images/footer-toolbar-position.webp)
 
 ### Adding custom items
 
@@ -122,7 +122,7 @@ You can use the [AssistViewFooterToolbarItem](https://help.syncfusion.com/cr/bla
 
 ```
 
-![Blazor AI AssistView Footer Toolbar custom item](./images/footer-toolbar-item.png)
+![Blazor AI AssistView Footer Toolbar custom item](./images/footer-toolbar-item.webp)
 
 ### Item click
 The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html#Syncfusion_Blazor_InteractiveChat_AssistViewFooterToolbar_ItemClick) event is triggered when the footer toolbar item is clicked.
@@ -194,7 +194,7 @@ You can customize the toolbar icons by using the [IconCss](https://help.syncfusi
 
 ```
 
-![Blazor AI AssistView toolbar iconCss](./images/header-toolbar-item-type.png)
+![Blazor AI AssistView toolbar iconCss](./images/header-toolbar-item-type.webp)
 
 #### Setting item type
 
@@ -228,7 +228,7 @@ In the following example, toolbar item type is set as `Button`.
 
 ```
 
-![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.png)
+![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.)
 
 #### Setting text
 
@@ -259,7 +259,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor AI AssistView toolbar item Text](./images/assistview-toolbar-item-text.png)
+![Blazor AI AssistView toolbar item Text](./images/assistview-toolbar-item-text.webp)
 
 #### Show or hide toolbar item
 
@@ -291,7 +291,7 @@ You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Blazor AI AssistView toolbar item Visible](./images/assistview-toolbar-item-visible.png)
+![Blazor AI AssistView toolbar item Visible](./images/assistview-toolbar-item-visible.webp)
 
 #### Setting disabled
 
@@ -324,7 +324,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar item Disabled](./images/assistview-toolbar-item-disable.png)
+![Blazor AI AssistView toolbar item Disabled](./images/assistview-toolbar-item-disable.webp)
 
 #### Setting tooltip text
 
@@ -394,7 +394,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar item CssClass](./images/assistview-toolbar-item-css.png)
+![Blazor AI AssistView toolbar item CssClass](./images/assistview-toolbar-item-css.webp)
 
 #### Enabling tab key navigation in toolbar
 
@@ -485,7 +485,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar ItemTemplate](./images/assistview-toolbar-item-template.png)
+![Blazor AI AssistView toolbar ItemTemplate](./images/assistview-toolbar-item-template.webp)
 
 ### Item clicked
 
@@ -551,7 +551,7 @@ In the following example, AI AssistView component rendered with built-in toolbar
 
 ```
 
-![Blazor AI AssistView Prompts](./images/ai-assistview-prompt-built-icon.png)
+![Blazor AI AssistView Prompts](./images/ai-assistview-prompt-built-icon.webp)
 
 #### Setting width
 
@@ -647,7 +647,7 @@ In the following example, AI AssistView renders with built-in toolbar items.
 
 ```
 
-![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.webp)
 
 #### Setting width
 
@@ -751,7 +751,7 @@ You can use the [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor AI AssistView PromptToolbarItem](./images/assistview-prompt-toolbar-item.png)
+![Blazor AI AssistView PromptToolbarItem](./images/assistview-prompt-toolbar-item.webp)
 
 ### Response
 
@@ -790,7 +790,7 @@ You can use the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Sync
 
 ```
 
-![Blazor AI AssistView ResponseToolbarItem](./images/assistview-response-toolbar-item.png)
+![Blazor AI AssistView ResponseToolbarItem](./images/assistview-response-toolbar-item.webp)
 
 #### Item clicked
 

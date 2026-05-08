@@ -62,7 +62,7 @@ You can use the [BannerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-![Blazor AI AssistView banner template](./images/ai-assistview-banner-template.png)
+![Blazor AI AssistView banner template](./images/ai-assistview-banner-template.webp)
 
 ## Prompt item template
 
@@ -132,7 +132,7 @@ You can use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncf
 </style>
 ```
 
-![Blazor AI AssistView PromptItemTemplate](./images/ai-assistview-prompt-item-template.png)
+![Blazor AI AssistView PromptItemTemplate](./images/ai-assistview-prompt-item-template.webp)
 
 ## Response item template
 
@@ -203,7 +203,7 @@ You can use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syn
 
 ```
 
-![Blazor AI AssistView ResponseItemTemplate](./images/ai-assistview-response-item-template.png)
+![Blazor AI AssistView ResponseItemTemplate](./images/ai-assistview-response-item-template.webp)
 
 ## Prompt suggestion item template
 
@@ -265,7 +265,7 @@ You can use the [PromptSuggestionItemTemplate](https://help.syncfusion.com/cr/bl
 </style>
 ```
 
-![Blazor AI AssistView SuggestionItemTemplate](./images/suggestion-item-template.png)
+![Blazor AI AssistView SuggestionItemTemplate](./images/suggestion-item-template.webp)
 
 ## Footer template
 
@@ -330,4 +330,4 @@ You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusio
 </style>
 ```
 
-![Blazor AI AssistView FooterTemplate](./images/assistview-footer-template.png)
+![Blazor AI AssistView FooterTemplate](./images/assistview-footer-template.webp)

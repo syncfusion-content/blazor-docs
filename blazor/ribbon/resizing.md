@@ -49,7 +49,7 @@ You can use the [AllowedSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Item AllowedSizes](./images/ribbon_allowedSizes.png)
+![Ribbon Item AllowedSizes](./images/ribbon_allowedSizes.webp)
 
 ## Defining items active size
 

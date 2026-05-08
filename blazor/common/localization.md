@@ -25,13 +25,13 @@ N> Download default and culture-based resource files from [GitHub](https://githu
 
 Copy the default `.resx` file (`SfResources.resx`) and any required culture-specific `.resx` files to the **Resources** folder. For a .NET MAUI Blazor app, create a **LocalizationResources** folder and add them there.
 
-![Adding Resource Files in Blazor](images/localization-resource.png)
+![Adding Resource Files in Blazor](images/localization-resource.webp)
 
 N> Update the localization files whenever upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages to prevent mismatches in localization strings.
 
 After adding the resource files, open the default resource file (`SfResources.resx`) in the **Resource Editor** and set **Access Modifier** to **Public**.
 
-![Changing Access Modifier](images/localization-resource-file.png)
+![Changing Access Modifier](images/localization-resource-file.webp)
 
 ### Create and register localization service
 
@@ -200,7 +200,7 @@ CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
 
 {% endtabs %}
 
-![Localization of Blazor Component](images/blazor-localization.png)
+![Localization of Blazor Component](images/blazor-localization.webp)
 
 ## Dynamically set the culture
 
@@ -663,7 +663,7 @@ Add the `CultureSwitcher` component to `Layout/MainLayout.razor` to enable the c
 
 {% endtabs %}
 
-![Dynamically set the culture in Blazor](images/blazor-localization-dynamic-change.png)
+![Dynamically set the culture in Blazor](images/blazor-localization-dynamic-change.webp)
 
 N> [View sample on GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 

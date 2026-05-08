@@ -115,7 +115,7 @@ You can utilize the `RibbonContextualTabs` tag directive to define contextual ta
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Contextual Tabs](./images/contextual-tabs/contextual-tabs.png)
+![Ribbon Contextual Tabs](./images/contextual-tabs/contextual-tabs.webp)
 
 ## Selected tabs
 
@@ -190,7 +190,7 @@ By using the `IsSelected` property you can control the selected state of each co
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Selected Tabs](./images/contextual-tabs/selected-tabs.png)
+![Ribbon Selected Tabs](./images/contextual-tabs/selected-tabs.webp)
 
 ## Methods
 
@@ -283,4 +283,4 @@ You can use the `HideTabAsync` method allows you to hide the specific contextual
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Show Hide Tabs](./images/contextual-tabs/show-hide-tabs.png)
+![Ribbon Show Hide Tabs](./images/contextual-tabs/show-hide-tabs.webp)

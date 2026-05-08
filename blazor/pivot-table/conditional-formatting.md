@@ -55,16 +55,16 @@ The conditional formatting can be applied at runtime through the built-in dialog
 
 ```
 
-![Displaying Conditional Format Icon in Blazor Pivot Table Toolbar](images/blazor-pivottable-conditional-format-in-toolbar.png)
+![Displaying Conditional Format Icon in Blazor Pivot Table Toolbar](images/blazor-pivottable-conditional-format-in-toolbar.webp)
 <br/>
 <br/>
-![Adding New Conditional Format in Blazor Pivot Table](images/blazor-pivottable-add-new-conditonal-format.png)
+![Adding New Conditional Format in Blazor Pivot Table](images/blazor-pivottable-add-new-conditonal-format.webp)
 <br/>
 <br/>
-![Changing Conditional Format Criteria in Blazor Pivot Table](images/blazor-pivottable-change-conditional-format-criteria.png)
+![Changing Conditional Format Criteria in Blazor Pivot Table](images/blazor-pivottable-change-conditional-format-criteria.webp)
 <br/>
 <br/>
-![Displaying Conditional Format in Blazor Pivot Table](images/blazor-pivotgrid-with-conditional-format.png)
+![Displaying Conditional Format in Blazor Pivot Table](images/blazor-pivotgrid-with-conditional-format.webp)
 
 ## Configure conditional formatting through code-behind
 
@@ -143,9 +143,9 @@ Users can also access the conditional formatting dialog through external UI elem
 
 ```
 
-![Displaying Conditional Format Button in Blazor Pivot Table](images/blazor-pivottable-conditional-format-button.png)
+![Displaying Conditional Format Button in Blazor Pivot Table](images/blazor-pivottable-conditional-format-button.webp)
 
-![Applying Conditional Format in Blazor Pivot Table](images/blazor-pivottable-apply-conditional-format.png)
+![Applying Conditional Format in Blazor Pivot Table](images/blazor-pivottable-apply-conditional-format.webp)
 
 ## Conditional formatting for all fields
 
@@ -196,7 +196,7 @@ To format all value fields together, use the [PivotViewConditionalFormatSetting]
 
 ```
 
-![Applying Conditional Format to Value Field in Blazor Pivot Table](images/blazor-pivottable-conditional-format.png)
+![Applying Conditional Format to Value Field in Blazor Pivot Table](images/blazor-pivottable-conditional-format.webp)
 
 ## Conditional formatting for specific value field
 
@@ -245,12 +245,12 @@ To apply conditional formatting exclusively to a particular value field, set the
 
 ```
 
-![Applying Conditional Format to Specific Field in Blazor Pivot Table](images/blazor-pivottable-conditional-format-for-specific-field.png)
+![Applying Conditional Format to Specific Field in Blazor Pivot Table](images/blazor-pivottable-conditional-format-for-specific-field.webp)
 
 ## Editing and removing existing conditional format
 
 Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the "Value", "Condition" and "Format" options based on user requirement and click "OK". To remove a conditional format, click the "Delete" icon besides the respective condition.
 
-![Editing Existed Conditional Format in Blazor Pivot Table](images/blazor-pivottable-edit-conditional-format.png)
+![Editing Existed Conditional Format in Blazor Pivot Table](images/blazor-pivottable-edit-conditional-format.webp)
 
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

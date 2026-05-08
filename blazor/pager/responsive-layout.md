@@ -15,4 +15,4 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component incl
 
 When the browser window is resized or when the page loads on a device with a different resolution, the component recalculates and adjusts element sizes to maintain a balanced layout.
 
-![Blazor Pager with Responsive](./images/blazor-pager-responsive-layout.png)
+![Blazor Pager with Responsive](./images/blazor-pager-responsive-layout.webp)

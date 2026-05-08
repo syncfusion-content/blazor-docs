@@ -29,55 +29,11 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available
 </tr>
 
 <tr>
-<td><p>All components except PDF Viewer (Classic), PDF Viewer & Document Editor</p></td>
+<td><p>All Blazor UI Components</p></td>
 <td>
 
 {% highlight cshtml %}
 https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<td><p>PDF Viewer (Classic)</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<td><p>Document Editor</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<td><p>PDF Viewer</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfpdfviewer.min.js
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<td><p>Smart PDF Viewer</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfsmartpdfviewer.min.js
 {% endhighlight %}
 
 </td>
@@ -91,32 +47,11 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfs
 </head>
 ```
 
-If you are using `PDF Viewer (Classic)`,`PDF Viewer`, `Smart PDF Viewer` or `DocumentEditor`, ensure to add additional script references as follows,
-
-```html
-<head>
-    ....
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
-</head>
-```
-
 Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
 
 | Component | CDN Script Reference |
 | --- | --- |
-|  All components except PDF Viewer (Classic), PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
-| PDF Viewer (Classic)| https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
-| Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
-| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
-| Smart PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfsmartpdfviewer.min.js |
-
-
-N> To add custom PDF Viewer script file in your application, refer [How to refer SfPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/how-to/refer-sfpdfviewer-script-in-application).
-
-N> To add custom Smart PDF Viewer script file in your application, refer [How to refer SfSmartPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/how-to/refer-sfsmartpdfviewer-script-in-application).
+|  All Blazor UI Components | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
 
 ## Static web assets
 
@@ -138,20 +73,6 @@ N> For a **Blazor Web App** (interaction mode: Auto) and **Blazor WebAssembly Ap
         <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>
     </head>
     ```
-
-* If using the **PDF Viewer (Classic)**, **PDF Viewer**, **Smart PDF Viewer**, or **Document Editor** components, use the code below to reference scripts from static web assets.
-
-    ```html
-    <head>
-        ...
-       <script  src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
-       <script  src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
-       <script  src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js"  type="text/javascript"></script>
-       <script  src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
-    </head>
-    ```
-
-    N> The PDF Viewer and Document Editor component scripts are available in static web assets starting from version 19.3.*.
 
 ## Individual component script references
 
@@ -452,16 +373,8 @@ The following table lists components and their script file names.
         <td>sf-gantt.min.js</td>
     </tr>
     <tr>
-        <td>PdfViewer</td>
-        <td>sf-pdfviewer.min.js</td>
-    </tr>
-    <tr>
         <td>ImageEditor</td>
         <td>sf-image-editor.min.js</td>
-    </tr>
-    <tr>
-        <td>DocumentEditor</td>
-        <td>sf-documenteditor.min.js</td>
     </tr>
     <tr>
         <td>Pager</td>

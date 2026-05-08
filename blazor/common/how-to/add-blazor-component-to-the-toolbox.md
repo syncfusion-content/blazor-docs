@@ -15,18 +15,18 @@ To include Syncfusion<sup style="font-size:70%">&reg;</sup> components for Blazo
 
 1. Right-click anywhere within the Visual Studio Toolbox, select **Add Tab**, then name the tab (for example, "Syncfusion Blazor Components") and press Enter.
 
-![Add new tab in toolbox](images/new-tab-toolbox.png)
+![Add new tab in toolbox](images/new-tab-toolbox.webp)
 
 2. In the code editor, write or paste a Blazor component snippet (for example, the Syncfusion<sup style="font-size:70%">&reg;</sup> `SfCalendar`). Select the entire snippet, then drag and drop it into the new tab in the Toolbox.
 
-![Add code snippet to toolbox](images/add-snippet.gif)
+![Add code snippet to toolbox](images/add-snippet.webp)
 
 3. After the snippet is added, the Toolbox assigns a default name. Right-click the item, select **Rename**, and enter a descriptive name (for example, "SfCalendar").
 
-![Update name](images/update-name.png)
+![Update name](images/update-name.webp)
 
 4. Drag the component from the Toolbox into the code editor to insert the snippet into your Blazor project.
 
 N> Dragging a Toolbox item inserts code into the editor. Ensure required namespaces and services are present in the project (for example, `@using Syncfusion.Blazor` and registering Syncfusion services in Program.cs).
 
-![Drag component to editor](images/drag-component.gif)
+![Drag component to editor](images/drag-component.webp)

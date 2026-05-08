@@ -69,7 +69,7 @@ The Classic layout organizes Ribbon items and groups in a traditional format. Yo
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Classic Layout](./images/layouts/ribbon_classic.png)
+![Ribbon Classic Layout](./images/layouts/ribbon_classic.webp)
 
 ### Defining items size
 
@@ -135,7 +135,7 @@ When resizing to smaller screen, the item sizes adjust based on the available ta
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Item AllowedSizes](./images/layouts/ribbon_allowedSizes.png)
+![Ribbon Item AllowedSizes](./images/layouts/ribbon_allowedSizes.webp)
 
 ### Defining items orientation
 
@@ -257,7 +257,7 @@ Column: A group can have any number of collections, with each collection contain
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Group Orientation](./images/layouts/ribbon_orientation.png)
+![Ribbon Group Orientation](./images/layouts/ribbon_orientation.webp)
 
 ### Defining group properties
 
@@ -384,7 +384,7 @@ You can customize the appearance and functionalities of Ribbon groups by using p
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Group Properties](./images/layouts/ribbon_group_properties.png)
+![Ribbon Group Properties](./images/layouts/ribbon_group_properties.webp)
 
 ## Simplified layout
 
@@ -444,7 +444,7 @@ In simplified layout, the Ribbon component organizes the items and groups into a
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Simplified Layout](./images/layouts/ribbon_simplified.png)
+![Ribbon Simplified Layout](./images/layouts/ribbon_simplified.webp)
 
 ### Enabling group overflow popup
 
@@ -566,7 +566,7 @@ You can control how overflow items appear in the group while resizing using the 
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Group Overflow](./images/layouts/ribbon_groupoverflow.png)
+![Ribbon Group Overflow](./images/layouts/ribbon_groupoverflow.webp)
 
 ## Minimized state
 
@@ -628,7 +628,7 @@ Also, you can programmatically control the minimized state of Ribbon using the [
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Minimized](./images/layouts/ribbon_minimized.png)
+![Ribbon Minimized](./images/layouts/ribbon_minimized.webp)
 
 ## Show or hide the layout switcher
 
@@ -688,4 +688,4 @@ You can use the [HideLayoutSwitcher](https://help.syncfusion.com/cr/blazor/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Layout Switcher](./images/layouts/ribbon_layoutswitcher.png)
+![Ribbon Layout Switcher](./images/layouts/ribbon_layoutswitcher.webp)

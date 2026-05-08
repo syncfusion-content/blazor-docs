@@ -22,3 +22,5 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension provides t
 [Convert project](convert-project): Converts an existing Blazor Web Application to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Application by adding the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and theme.
 
 [Upgrade project](upgrade-project): Upgrades an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Application from one Essential Studio version to another.
+
+[Scaffolding](scaffolding): Simplifies the process of adding views and controller action methods for Syncfusion® Blazor controls in Blazor applications. 

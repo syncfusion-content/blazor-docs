@@ -590,7 +590,7 @@ The application will start, and the console will display the local URL (typicall
 2. Navigate to the URL displayed in the console.
 3. The DataGrid application is now running and ready to use.
 
-![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.png)
+![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.webp)
 
 
 ### Step 5: Implement Paging Feature

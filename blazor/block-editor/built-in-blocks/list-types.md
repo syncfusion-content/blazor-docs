@@ -130,7 +130,7 @@ By default, the [IsChecked](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Block Editor Block IsChecked](./../images/is-checked.png)
+![Blazor Block Editor Block IsChecked](./../images/is-checked.webp)
 
 ### Configure placeholder
 
@@ -188,4 +188,4 @@ The following example demonstrates how to render the different types of list blo
 
 ```
 
-![Blazor Block Editor List Blocks](./../images/list-blocks.png)
+![Blazor Block Editor List Blocks](./../images/list-blocks.webp)

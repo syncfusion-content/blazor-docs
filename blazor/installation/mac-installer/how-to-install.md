@@ -15,14 +15,14 @@ The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer 
 
    When running the installer on macOS Catalina or later, a Gatekeeper alert may appear.
 
-   ![macOS Gatekeeper alert for the Syncfusion DMG](images/Mac_Catalina_MacOS_Alert1.png)  
+   ![macOS Gatekeeper alert for the Syncfusion DMG](images/Mac_Catalina_MacOS_Alert1.webp)  
      
    If this appears, follow these steps:
 
    1. Right‑click the downloaded DMG file.
    2. Select Open option and choose **DiskImageMounter (Default)**. The following prompt appears.
 
-      ![macOS prompt to open the DMG with DiskImageMounter](images/Mac_Catalina_MacOS_Alert2.png)
+      ![macOS prompt to open the DMG with DiskImageMounter](images/Mac_Catalina_MacOS_Alert2.webp)
 
    3. Select Open to mount the DMG and continue.
 
@@ -32,29 +32,29 @@ Follow these steps to install the Essential Studio<sup style="font-size:70%">&re
 
 1. Locate the downloaded DMG file and double‑click it to open.
 
-   ![Open the downloaded Syncfusion Blazor DMG](images/Mac_Installer1.png)
+   ![Open the downloaded Syncfusion Blazor DMG](images/Mac_Installer1.webp)
 
 2. The disk image mounts and a virtual drive appears on the desktop or in the Finder sidebar.
 
-   ![Mounted DMG drive visible in Finder](images/Mac_Installer2.png)
+   ![Mounted DMG drive visible in Finder](images/Mac_Installer2.webp)
 
 3. Copy the mounted disk file.
 
-   ![Drag the Syncfusion app to Applications](images/Mac_Installer3.png)
+   ![Drag the Syncfusion app to Applications](images/Mac_Installer3.webp)
 
    N> An unlock key is not required to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
 
 4. And paste it in “Applications” folder.
 
-   ![Copying the app into the Applications folder](images/Mac_Installer4.png)
+   ![Copying the app into the Applications folder](images/Mac_Installer4.webp)
 
 5. Open the Applications folder and launch the Syncfusion installer app.
 
-   ![Launch the Syncfusion Blazor installer app from Applications](images/Mac_Installer5.png)
+   ![Launch the Syncfusion Blazor installer app from Applications](images/Mac_Installer5.webp)
 
 6. To remove the DMG, right‑click the virtual drive (desktop or Finder sidebar) and select Eject. Also delete the folder from the Applications.
 
-   ![Eject the mounted DMG from Finder](images/Mac_Installer6.png)
+   ![Eject the mounted DMG from Finder](images/Mac_Installer6.webp)
 
 
 ## Register the license key in sample projects

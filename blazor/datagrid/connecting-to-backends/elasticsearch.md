@@ -40,7 +40,7 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | 10.0 or compatible | Runtime and build tools |
 | Elasticsearch | 9.3.0 or later | Search and analytics engine |
-| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Elastic.Clients.Elasticsearch | 9.3.0 or later | Official C# client for Elasticsearch |
 
@@ -758,7 +758,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid for 
 
 **Instructions:**
 
-* The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous section.
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous section.
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp

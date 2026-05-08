@@ -83,22 +83,6 @@ documentation: ug
 
 ## Compile-time errors
 
-* **error CS0121: The call is ambiguous between the following methods or properties: 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)' and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)'**
-
-    You may see the below compile-time exception while running the application.
-
-    E> The call is ambiguous between the following methods or properties 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)'
-
-    **Cause:**
-
-    1. You may used `SfPdfViewer` or `SfDocumentEditor` components along with other Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in your application.
-    2. You may installed both [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) in the same application.
-
-    **Solution**
-
-    1. Starts with Volume 4, 2020 (v18.4.0.30) release, The `SfPdfViewer` and `SfDocumentEditor` components changed its dependency structure.
-    2. We suggest you to use the [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) to resolve this issue.
-
 * **The type or namespace name 'EJ2' does not exist in the namespace 'Syncfusion' (are you missing an assembly reference?)**
 
     You may see the below compile-time exception while running the application.

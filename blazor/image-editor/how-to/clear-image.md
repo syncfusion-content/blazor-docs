@@ -37,4 +37,4 @@ The [ClearImageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 }
 ```
 
-![Blazor Image Editor clearing the image](../images/blazor-image-editor-clear-image.jpg)
+![Blazor Image Editor clearing the image](../images/blazor-image-editor-clear-image.webp)

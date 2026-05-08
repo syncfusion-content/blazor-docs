@@ -35,7 +35,7 @@ component for TimeOnly data type.
 You can customize the behavior of the editor component through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
 N> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Find the list of properties that can be customized the below topics.
-<br/> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
+<br/> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
 
 ### DefaultEdit
 
@@ -432,7 +432,7 @@ The following sample code demonstrates the customization applied to TimePicker c
 
 ## Custom editors using template/Cell edit template
 
-N> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+N> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates#templates) section topic to configure the template.
 
 The cell edit template is used to add a custom component for a particular column. You can use the **EditTemplate** of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to add the custom component. You can access the parameters passed to the templates using implicit parameter named **context**.
 
@@ -489,7 +489,7 @@ You can able to render SfAutoComplete component in EditTemplate. In the below sa
 
 In the following image, **Autocomplete** component is rendered with **EditTemplate** in Customer ID column
 
-![Blazor DataGrid with CellEdit Template](./images/blazor-datagrid-celledit-template.png)
+![Blazor DataGrid with CellEdit Template](./images/blazor-datagrid-celledit-template.webp)
 
 ### Using DropDownList in EditTemplate
 
@@ -555,7 +555,7 @@ You can able to render SfDropDownList component in EditTemplate. In the below sa
 
 In the following image, **SfDropDownList** component is rendered with **EditTemplate** in ShipCountry column
 
-![Blazor DataGrid with Editing in Custom DropDownList](./images/blazor-datagrid-editing-in-custom-dropdownlist.png)
+![Blazor DataGrid with Editing in Custom DropDownList](./images/blazor-datagrid-editing-in-custom-dropdownlist.webp)
 
 ### Using ComboBox in EditTemplate
 
@@ -720,7 +720,7 @@ You can able to render SfTimePicker component in EditTemplate. In the below samp
 
 In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
 
-![Blazor DataGrid with Editing in Custom TimePicker](./images/blazor-datagrid-editing-in-custom-timepicker.png)
+![Blazor DataGrid with Editing in Custom TimePicker](./images/blazor-datagrid-editing-in-custom-timepicker.webp)
 
 ### Using MultiSelect Dropdown in EditTemplate
 
@@ -797,7 +797,7 @@ You can able to render SfMultiSelect component in EditTemplate. In the below sam
 
 In the following image, **SfMultiSelect** component is rendered with **EditTemplate** in ChosenItems column
 
-![Blazor DataGrid with Editing in Custom MultiSelect](./images/blazor-datagrid-editing-in-custom-multiselect.png)
+![Blazor DataGrid with Editing in Custom MultiSelect](./images/blazor-datagrid-editing-in-custom-multiselect.webp)
 
 ### Using RichTextEditor in EditTemplate
 
@@ -861,7 +861,7 @@ You can render the **SfRichTextEditor** component in [EditTemplate](https://help
 
 In the following image, **SfRichTextEditor** component is rendered with **EditTemplate** in Customer ID column
 
-![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.png)
+![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.webp)
 
 ### DynamicObject data binding with edit template feature
 

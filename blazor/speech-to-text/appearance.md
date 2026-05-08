@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor SpeechToText Component | Syncfusion
-description: Checkout and learn about Appearance in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Style and Appearance in Blazor SpeechToText Component | Syncfusion
+description: Checkout and learn about Style and Appearance in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Appearance in Blazor SpeechToText component
+# Style and Appearance in Blazor SpeechToText component
 
 ## Customizing the button
 
@@ -21,11 +21,11 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 You can use the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property to define text content for the listening stop state in the SpeechToText button.
 
-### Setting iconcss
+### Setting icon css
 
 You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IconCss) property to apply a CSS class to customize the icon appearance for the listening start state.
 
-### Setting stop iconcss
+### Setting stop icon css
 
 You can use the [StopIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopIconCss) property to apply a CSS class to customize the icon appearance for the listening stop state.
 
@@ -76,8 +76,8 @@ Below code sample demonstrates how to configure the button with above mentioned 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Button Idle state](images/customize-btn-idle-state.png)
-![Blazor SpeechToText Button Listening state](images/customize-btn-listening-state.png)
+![Blazor SpeechToText Button Idle state](images/customize-btn-idle-state.webp)
+![Blazor SpeechToText Button Listening state](images/customize-btn-listening-state.webp)
 
 ## Customizing the tooltips
 
@@ -131,7 +131,7 @@ Below code sample demonstrates how to configure the tooltip settings with above 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Tooltip](images/speechtotext-tooltip.png)
+![Blazor SpeechToText Tooltip](images/speechtotext-tooltip.webp)
 
 ## Setting button styles
 
@@ -146,7 +146,7 @@ The SpeechToText component supports the following predefined styles that can be 
 | `e-warning` | Used to represent an action with caution. | 
 | `e-danger` | Used to represent a negative action. |
 
-## Setting cssclass
+## Customization using CSS class
 
 You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property to customize the appearance of the SpeechToText component.
 
@@ -190,4 +190,4 @@ Below code sample demonstrates how to configure cssclass and customize the butto
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Tooltip](images/speechtotext-cssClass.png)
+![Blazor SpeechToText Tooltip](images/speechtotext-cssClass.webp)

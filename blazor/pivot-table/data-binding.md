@@ -50,7 +50,7 @@ You can bind local JSON data to the Pivot Table by assigning a local variable co
 }
 ```
 
-![Blazor PivotTable with DataBinding](images/blazor-pivottable-data-binding.png)
+![Blazor PivotTable with DataBinding](images/blazor-pivottable-data-binding.webp)
 
 You can also bind JSON data using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) with `JsonAdaptor`. In this approach, assign the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) instance containing JSON data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). Using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is optional for local JSON data binding.
 
@@ -90,7 +90,7 @@ You can also bind JSON data using the [SfDataManager](https://help.syncfusion.co
 }
 ```
 
-![Blazor PivotTable with Local Data Binding](images/blazor-pivottable-data-binding.png)
+![Blazor PivotTable with Local Data Binding](images/blazor-pivottable-data-binding.webp)
 
 You can also load JSON data from a local *.json file to the Pivot Table. The file can be read using the **StreamReader**, which outputs the data as a string. This string must then be converted to JSON format and assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
@@ -148,7 +148,7 @@ You can also load JSON data from a local *.json file to the Pivot Table. The fil
 }
 ```
 
-![Blazor PivotTable with JSON Data Binding](images/blazor-pivottable-json-data-binding.png)
+![Blazor PivotTable with JSON Data Binding](images/blazor-pivottable-json-data-binding.webp)
 
 ### Binding JSON data via remote
 
@@ -188,7 +188,7 @@ To bind remote JSON data to the Pivot Table, set the endpoint [Url](https://help
 }
 ```
 
-![Blazor PivotTable with Remote JSON Data Binding](images/blazor-pivottable-json-data-binding.png)
+![Blazor PivotTable with Remote JSON Data Binding](images/blazor-pivottable-json-data-binding.webp)
 
 ## CSV
 
@@ -254,7 +254,7 @@ To bind local CSV data to the Pivot Table, convert the data into a string array 
 }
 ```
 
-![Blazor PivotTable with CSV Data Binding](images/blazor-pivottable-csv-data-binding.png)
+![Blazor PivotTable with CSV Data Binding](images/blazor-pivottable-csv-data-binding.webp)
 
 You can also connect CSV data from a local *.csv file to the Pivot Table. The file can be read using the **StreamReader**, which outputs the data as a string. This string must then be converted to a string array and assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
@@ -321,7 +321,7 @@ You can also connect CSV data from a local *.csv file to the Pivot Table. The fi
 }
 ```
 
-![Blazor PivotTable with Local CSV Data Binding](images/blazor-pivottable-csv-data-binding.png)
+![Blazor PivotTable with Local CSV Data Binding](images/blazor-pivottable-csv-data-binding.webp)
 
 ### Binding CSV data via remote
 
@@ -368,7 +368,7 @@ To bind remote CSV data, set the [Url](https://help.syncfusion.com/cr/blazor/Syn
 }
 ```
 
-![Blazor PivotTable with Remote CSV Data Binding](images/blazor-pivottable-csv-data-binding.png)
+![Blazor PivotTable with Remote CSV Data Binding](images/blazor-pivottable-csv-data-binding.webp)
 
 ## Remote Data Binding
 
@@ -546,7 +546,7 @@ To have a quick glance on how to bind data to the Blazor Pivot Table using **Exp
 
 ```
 
-![Blazor PivotTable with Expando List Binding](images/blazor-pivottable-expando-list-binding.png)
+![Blazor PivotTable with Expando List Binding](images/blazor-pivottable-expando-list-binding.webp)
 
 ### DynamicObject
 
@@ -615,7 +615,7 @@ To have a quick glance on how to bind data to the Blazor Pivot Table using **Dyn
 
 ```
 
-![Blazor PivotTable with Dynamic List Binding](images/blazor-pivottable-dynamic-list-binding.png)
+![Blazor PivotTable with Dynamic List Binding](images/blazor-pivottable-dynamic-list-binding.webp)
 
 ## Observable collection
 
@@ -726,7 +726,7 @@ Here, **ProductDetails** class implements the interface of **INotifyPropertyChan
 
 ```
 
-![Blazor PivotTable with Observable Collection](images/blazor-pivottable-observable-collection.png)
+![Blazor PivotTable with Observable Collection](images/blazor-pivottable-observable-collection.webp)
 
 ## Mapping
 
@@ -808,7 +808,7 @@ The following code sample demonstrates how to configure the visibility of field 
 }
 ```
 
-![Blazor PivotTable with Mapping](images/blazor-pivottable-mapping.png)
+![Blazor PivotTable with Mapping](images/blazor-pivottable-mapping.webp)
 
 ## Entity Framework
 
@@ -1061,7 +1061,7 @@ You can display value fields in the row axis of the Pivot Table to make your dat
 }
 ```
 
-![Blazor PivotTable with Value in Row Axis](images/blazor-pivottable-value-in-row-axis.png)
+![Blazor PivotTable with Value in Row Axis](images/blazor-pivottable-value-in-row-axis.webp)
 
 ## Show 'no data' items
 
@@ -1102,7 +1102,7 @@ In the following example, the "Country" and "Products" field rows are displayed 
 }
 ```
 
-![Blazor PivotTable without Data](images/blazor-pivottable-without-data.png)
+![Blazor PivotTable without Data](images/blazor-pivottable-without-data.webp)
 
 ## Show value headers always
 
@@ -1140,7 +1140,7 @@ Ensure value headers remain visible in your Pivot Table at all times, providing 
 }
 ```
 
-![Blazor PivotTable with Values Header](images/blazor-pivottable-values-header.png)
+![Blazor PivotTable with Values Header](images/blazor-pivottable-values-header.webp)
 
 ## Customize empty value cells
 
@@ -1176,7 +1176,7 @@ Show custom text in cells that contain no data to make your Pivot Table more inf
 }
 ```
 
-![Empty Values in Blazor PivotTable](images/blazor-pivottable-empty-values.png)
+![Empty Values in Blazor PivotTable](images/blazor-pivottable-empty-values.webp)
 
 ## Dynamically update the report configuration
 
@@ -1320,7 +1320,7 @@ The load event provides the following parameters:
 }
 ```
 
-![Loading Event in Blazor PivotTable](images/blazor-pivottable-load-event.png)
+![Loading Event in Blazor PivotTable](images/blazor-pivottable-load-event.webp)
 
 ## See also
 

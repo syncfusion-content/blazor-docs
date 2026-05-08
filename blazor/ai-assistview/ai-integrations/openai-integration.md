@@ -253,4 +253,4 @@ var deploymentName = "gpt-4o-mini";
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AI AssistView Azure OpenAI Integration](../images/openai-integration.png)
+![Blazor AI AssistView Azure OpenAI Integration](../images/openai-integration.webp)

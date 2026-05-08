@@ -11,7 +11,7 @@ documentation: ug
 
 **Step 1:** Update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
 
-![Updating Blazor NuGet Package](../images/blazor-datagrid-update-nuget-package.PNG)
+![Updating Blazor NuGet Package](../images/blazor-datagrid-update-nuget-package.webp)
 
 ## Compatible .NET version
 

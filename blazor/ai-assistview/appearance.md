@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Appearance with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Style and Appearance in Blazor AI AssistView Component | Syncfusion
+description: Checkout and learn here all about Style and Appearance with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Appearance in Blazor AI AssistView component
+# Style and Appearance in Blazor AI AssistView component
 
 ## Setting width
 
@@ -32,7 +32,7 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor AI AssistView Width](./images/ai-assistview-width.png)
+![Blazor AI AssistView Width](./images/ai-assistview-width.webp)
 
 ## Setting height
 
@@ -57,7 +57,7 @@ You can use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor AI AssistView Height](./images/ai-assistview-height.png)
+![Blazor AI AssistView Height](./images/ai-assistview-height.webp)
 
 ## CssClass
 
@@ -98,4 +98,4 @@ You can customize the appearance of the AI AssistView component by using the [Cs
 
 ```
 
-![Blazor AI AssistView Custom Class](./images/ai-assistview-custom-class.png)
+![Blazor AI AssistView Custom Class](./images/ai-assistview-custom-class.webp)

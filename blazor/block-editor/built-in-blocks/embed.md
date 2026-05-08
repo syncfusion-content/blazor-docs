@@ -74,4 +74,10 @@ The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.
 
 ```
 
-![Blazor Block Editor Image Block](./../images/image-block.png)
+![Blazor Block Editor Image Block](./../images/image-block.webp)
+
+## Image resizing
+
+Block Editor has a built-in image inserting support.  The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
+
+![Blazor Block Editor image resize](./../images/image-resize.webp)

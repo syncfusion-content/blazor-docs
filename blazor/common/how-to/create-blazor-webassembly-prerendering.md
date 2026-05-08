@@ -29,7 +29,7 @@ Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) (7.0 or late
 
 4. Add `~/Pages/_Host.cshtml` file in the Server project.
 
-![Add the _Host.cshtml file to the Server App](images/wasm-prerender-host-file.png)
+![Add the _Host.cshtml file to the Server App](images/wasm-prerender-host-file.webp)
 
 5. Copy and paste the below code content in the `~/Server/Pages/_Host.cshtml` file.
 
