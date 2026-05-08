@@ -9,8 +9,6 @@ documentation: ug
 
 # Virtualization in Syncfusion® Blazor Components
 
-## Overview
-
 Virtualization improves the performance of [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) by rendering only the items visible in the viewport and recycling DOM elements as the user scrolls. This reduces initial load time, lowers memory usage, and keeps the DOM size small, which results in smoother scrolling and more responsive interactions.
 
 With virtualization enabled, working with large datasets becomes easier and faster, even when they contain thousands of records.
