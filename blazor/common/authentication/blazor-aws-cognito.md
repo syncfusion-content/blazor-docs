@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Authentication with AWS Cognito using Syncfusion® Components
 
-This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Syncfusion components based on user identity, and protect application data. 
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Syncfusion Blazor components based on user identity, and protect application data. 
 
 ## Prerequisites
 
