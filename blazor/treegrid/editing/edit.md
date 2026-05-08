@@ -925,6 +925,89 @@ public class TreeData
 The following GIF shows the TreeGrid with a custom external form for editing.
 ![Blazor TreeGrid with Custom External form Editing](../images/blazor-treegrid-custom-form-editing.webp)
 
+## Update boolean column value with a single click
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports updating boolean column values with a single click in normal editing mode. This feature streamlines the process of toggling boolean values directly within the TreeGrid, improving interaction efficiency.
+
+This behavior can be achieved using the [column template](https://blazor.syncfusion.com/documentation/treegrid/columns/column-template) feature. The column template allows custom UI elements, such as checkboxes, to be rendered for specific columns. By configuring the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property, a checkbox can be rendered in the desired column, and its change event can be handled to update the value with a single click.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid DataSource="@TreeGridData"
+            IdMapping="TaskId"
+            ParentIdMapping="ParentId"
+            TreeColumnIndex="1"
+            >
+    <TreeGridEditSettings AllowEditing="true"></TreeGridEditSettings>
+
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" IsPrimaryKey="true" ></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160" >   </TreeGridColumn>
+       
+<TreeGridColumn Field="Approved"
+                        HeaderText="Approved"
+                        Width="100">
+            <Template>
+                @{
+                    var item = (context as TreeData.BusinessObject);
+                    <SfCheckBox @bind-Checked="item.Approved"></SfCheckBox>
+                }
+            </Template>
+        </TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+
+    public List<TreeData.BusinessObject> TreeGridData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="BusinessObject.cs" %}
+
+    public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set; }
+            public string TaskName { get; set; }
+            public int? Duration { get; set; }
+            public int? Progress { get; set; }
+            public bool Approved { get; set; }
+            public int? ParentId { get; set; }
+            public string Priority { get; set; }
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null, Approved = true });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 10, Progress = 80, Priority = "Low", ParentId = 1, Approved = false });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2, Approved = false });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3, Approved = true});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null, Approved = true });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5, Approved = false });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5, Approved = true });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5, Approved = false });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5, Approved = true });
+            return BusinessObjectCollection;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLRZIXlqbyFAgDQ?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
+
 ## Edit enum column
 
 Edit enum type data in a TreeGrid column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
