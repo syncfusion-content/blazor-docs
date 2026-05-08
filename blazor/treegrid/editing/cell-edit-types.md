@@ -457,6 +457,123 @@ public class TreeData
 
 ![Blazor Tree Grid with NumericTextBox Edit Template](../images/blazor-treegrid-numerictextbox-edit-template.webp)
 
+### Render TextArea in EditTemplate 
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports rendering a [SfTextArea](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp) within the TreeGrid's edit form for specific columns. This functionality is useful for editing and displaying multi-line text content, providing an efficient way to manage extensive text data within TreeGrid cells.
+
+To render a `SfTextArea` in the edit form, define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) in the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). The `EditTemplate` property specifies the cell edit template used as an editor for the column and accepts either a template string or an HTML element ID.
+
+> When using a `SfTextArea`, press **Shift+Enter** to insert a new line. By default, pressing **Enter** triggers a record update while in edit mode.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+
+<SfTreeGrid DataSource="@TreeGridData"
+            IdMapping="TaskId"
+            ParentIdMapping="ParentId"
+            TreeColumnIndex="1"
+            Height="350px">
+
+    <TreeGridEditSettings AllowEditing="true"></TreeGridEditSettings>
+
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId"
+                        HeaderText="Task ID"
+                        IsPrimaryKey="true"
+                        Width="90"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn>
+
+        <TreeGridColumn Field="TaskName"
+                        HeaderText="Task Name"
+                        Width="150">
+        </TreeGridColumn>
+
+        <!-- TextArea column (same as Grid sample) -->
+        <TreeGridColumn Field="Description"
+                        HeaderText="Description"
+                        Width="220">
+            <EditTemplate>
+                <SfTextArea @bind-Value="@((context as TreeItem).Description)"
+                            Placeholder="Enter description">
+                </SfTextArea>
+            </EditTemplate>
+
+            <Template>
+                <div style="white-space: pre-wrap;">
+                    @((context as TreeItem).Description)
+                </div>
+            </Template>
+        </TreeGridColumn>
+
+        <!-- Boolean checkbox column -->
+        <TreeGridColumn Field="Approved"
+                        HeaderText="Approved"
+                        Width="100">
+            <Template>
+                @{
+                    var item = context as TreeItem;
+                    <SfCheckBox @bind-Checked="item.Approved"></SfCheckBox>
+                }
+            </Template>
+        </TreeGridColumn>
+
+    </TreeGridColumns>
+</SfTreeGrid>
+@code {
+
+    public class TreeItem
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public string Description { get; set; }
+        public bool Approved { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public List<TreeItem> TreeGridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TreeGridData = new List<TreeItem>
+        {
+            new TreeItem
+            {
+                TaskId = 1,
+                TaskName = "Parent Task 1",
+                Description = "This is a parent task.\nMultiline text supported.",
+                Approved = true,
+                ParentId = null
+            },
+            new TreeItem
+            {
+                TaskId = 2,
+                TaskName = "Child Task 1",
+                Description = "Child task description",
+                Approved = false,
+                ParentId = 1
+            },
+            new TreeItem
+            {
+                TaskId = 3,
+                TaskName = "Child Task 2",
+                Description = "Another child task",
+                Approved = true,
+                ParentId = 1
+            }
+        };
+    }
+}
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdteZPTqGFpSWM?appbar=true&editor=true&result=true&errorlist=false&theme=fluent2" %}
+
+
 ### Using TimePicker in EditTemplate
 
 Render the [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) component for the edit form field in tree grid using [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). In the following sample,  `SfTimePicker` component is rendered in the `EditTemplate` for the **StartDate** column.
