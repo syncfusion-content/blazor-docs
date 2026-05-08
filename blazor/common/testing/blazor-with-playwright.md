@@ -9,23 +9,17 @@ documentation: ug
 
 # Testing Syncfusion® Blazor applications with Playwright
 
-This guide demonstrates how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a Blazor WebAssembly application and validate them through end‑to‑end tests using [Microsoft Playwright](https://azure.microsoft.com/en-us/products/playwright-testing). It provides a clear, step‑by‑step approach for building reliable and maintainable UI automation for Syncfusion® components in Blazor applications.
-
-## Why Playwright with Syncfusion® Blazor applications?
-
-- [Syncfusion® Blazor applications](https://www.syncfusion.com/blazor-components) provides rich UI components such as Buttons, Grids, and Charts for building modern web applications.
-- [Playwright](https://azure.microsoft.com/en-us/products/playwright-testing) enables reliable cross‑browser UI testing across Chromium, Firefox, and WebKit.
-- Using **Syncfusion® Blazor applications with Playwright**, you can validate real user interactions, test complete end‑to‑end user flows, and catch UI regressions early.
+This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a Blazor WebAssembly application and validate them through end‑to‑end tests using [Microsoft Playwright](https://azure.microsoft.com/en-us/products/playwright-testing).
 
 ## Create a Blazor project
 
 If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
 
-Otherwise, create a new Blazor application by following the [Syncfusion® getting started guides](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for **Blazor WebAssembly Standalone App**.
+Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for a **Blazor WebAssembly Standalone App**.
 
 ## Install required packages
 
-Install the following NuGet packages to use the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
+Install the following NuGet packages to use the [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components).
 
 - [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -35,7 +29,7 @@ You can install the required packages by using the following .NET CLI commands.
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -83,9 +77,9 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor component's script reference -->
+    <!-- Syncfusion® Blazor core component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 
@@ -140,7 +134,7 @@ cd tests/E2E.Tests
 {% endhighlight %}
 {% endtabs %}
 
-This command creates an NUnit test project named **E2E.Tests** under the tests folder, which will host all Playwright‑based UI tests.
+This command creates an NUnit test project named **E2E.Tests** under the `tests` folder, which will host all Playwright‑based UI tests.
 
 **Install required packages**
 
@@ -201,7 +195,7 @@ playwright install
 
 ## Create Playwright test class
 
-Create a new C# file named `BlazorPlaywrightTests.cs` in the Playwright test project (E2E.Tests). This file contains the end‑to‑end test logic and manages the Playwright browser lifecycle.
+Create a new C# file named `BlazorPlaywrightTests.cs` in the Playwright test project **E2E.Tests**. This file contains the end‑to‑end test logic and manages the Playwright browser lifecycle.
 
 {% tabs %}
 {% highlight C# tabtitle="BlazorPlaywrightTests.cs" %}
