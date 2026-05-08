@@ -669,7 +669,7 @@ N> By default, material theme is applied to exported PDF document.
 
 ### Overview
 
-> To enable PDF exporting in the Blazor **TreeGrid**, you must explicitly set the **`AllowPdfExport`** property to **`true`**.
+To enable PDF exporting in the Blazor **TreeGrid**, you must explicitly set the **`AllowPdfExport`** property to **`true`**.
 
 The Blazor TreeGrid supports exporting data to PDF format when PDF export is enabled. By default, the TreeGrid PDF exporter supports only a limited set of built‑in fonts. Because of this limitation, non‑English languages—such as Chinese, Japanese, Arabic, or other Unicode‑based characters—may not render correctly in the exported PDF.
 
