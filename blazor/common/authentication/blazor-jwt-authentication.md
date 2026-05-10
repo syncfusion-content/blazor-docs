@@ -13,7 +13,7 @@ This guide shows how to secure the [Syncfusion® Blazor DataGrid](https://www.sy
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](./blazor-jwt-authentication#install-required-packages).
 
 Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
@@ -93,6 +93,7 @@ The **JWT** configuration specifies how the server signs and validates authentic
 
 {
   "Jwt": {
+    // Secret key used to create and validate JWT tokens; you can set your own random string with at least 32 characters.
     "Key": "REPLACE_WITH_A_LONG_RANDOM_SECRET_32+_CHARS", 
     "Issuer": "BlazorJWT",
     "Audience": "BlazorJWTClient"
@@ -272,8 +273,8 @@ public class OrdersDetails
             {
                 OrderID = i,
                 CustomerID = $"CUST-{i:000}",
-                ShipCity = i % 2 == 0 ? "Chennai" : "Bengaluru",
-                ShipCountry = "India"
+                ShipCity = i % 2 == 0 ? "New York" : "Los Angeles",
+                ShipCountry = "USA"
             }).ToList();
         }
         return _data;
