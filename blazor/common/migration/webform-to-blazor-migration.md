@@ -1,23 +1,15 @@
 ---
 layout: post
-title: Migrating from ASP.NET Web Forms to Blazor | Syncfusion
-description: Guide to migrating Syncfusion ASP.NET Web Forms applications to Blazor, covering key components and detailed DataGrid migration.
+title: Migrating Syncfusion ASP.NET Web Forms to Blazor | Syncfusion
+description: Learn how to migrate Syncfusion ASP.NET Web Forms controls to Blazor components, including key concepts and a detailed migration approach.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Migrating from ASP.NET Web Forms to Blazor
+# Migrating Syncfusion® ASP.NET Web Forms Controls to Blazor Components
 
-## Overview
-
-Migrating enterprise applications from **ASP.NET Web Forms** to **Blazor** represents a significant architectural shift from a page-centric, postback-based framework to a modern, component-driven web framework built on .NET. This guide provides a **structured, step-by-step migration path** for [Syncfusion Web Forms components](https://help.syncfusion.com/aspnet/overview) to their [Syncfusion Blazor equivalents](https://blazor.syncfusion.com/documentation/introduction).
-
-This document covers:
-
-* Architectural differences between Web Forms and Blazor
-* Development environment and project structure mapping
-* Step-by-step migration of Syncfusion components: **DataGrid, Scheduler, and Rich Text Editor**`
+Migrating enterprise applications from **ASP.NET Web Forms** to **Blazor** represents a significant architectural shift from a page centric, postback based framework to a modern, component driven framework built on .NET. This guide provides a **structured, step-by-step migration approach** for [Syncfusion® ASP.NET Web Forms controls](https://help.syncfusion.com/aspnet/overview) to their corresponding [Syncfusion® Blazor components](https://blazor.syncfusion.com/documentation/introduction).
 
 ## Why migrate from Web Forms to Blazor?
 
@@ -25,28 +17,23 @@ ASP.NET Web Forms relies heavily on **ViewState, server postback**, and a tightl
 
 Blazor replaces postback with **event-driven UI updates**, supports **reusable components**, and aligns with modern .NET development practices, making it the recommended migration path for long-term investment.
 
-| Dimension | Web Forms | Blazor |
+The following table summarizes the key architectural and functional differences between ASP.NET Web Forms and Blazor.
+
+| Aspect | Web Forms | Blazor |
 | --- | --- | --- |
-| **Execution model** | Server-centric (page postback) | Blazor Server (SignalR) or Blazor WebAssembly |
+| **Execution model** | Server centric (page postback) | Blazor Server (SignalR) or Blazor WebAssembly |
 | **Hosting & deployment** | IIS-hosted only | Cloud, containers, IIS, or static hosting |
-| **UI technology** | ASPX pages with server controls | Razor components (HTML + C#) |
-| **State management** | ViewState (page-level, hidden fields) | Component-based state (in-memory) |
-| **User interaction** | Full or partial postback (page reload) | Event-driven UI updates (Blazor Server: real-time via SignalR) |
-| **Tooling & IDE support** | Visual Studio | Visual Studio / VS Code |
-| **Scalability** | Limited by server resources | Cloud-native and horizontally scalable |
-| **Application updates** | Requires app restart for assembly changes | Blazor Server: Immediate; Blazor WebAssembly: cached (requires versioning) |
-
-## Key architectural differences
-
-| Concept | Web Forms | Blazor |
-| --- | --- | --- |
-| **UI definition** | `.aspx` files | `.razor` component files |
-| **Code-behind pattern** | `.aspx.cs` | `@code {}` block or `.razor.cs` file |
-| **Lifecycle model** | `Page_Load`, postback events, `Page_Unload` | Component lifecycle methods: `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}`, `Dispose` |
-| **State handling** | Hidden ViewState fields (serialized) | In-memory component state (persisted per connection for Blazor Server) |
-| **Event handling** | Server callbacks (AutoPostBack) | `EventCallback{T}` / delegates |
-| **Dependency injection** | Limited / manual | Built-in `IServiceCollection` and first-class support |
-| **Navigation model** | Page-based navigation (.aspx files) | SPA-style routing using `@page` directive |
+| **UI technology** | `.aspx` pages with server controls | Razor components (`.razor`, HTML + C#) |
+| **UI definition** | Separate markup and code-behind (`.aspx`, `.aspx.cs`) | Component-based (`.razor` with optional `.razor.cs`) |
+| **Lifecycle model** | `Page_Load`, postback events, `Page_Unload` | `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}`, `Dispose` |
+| **State management** | ViewState (hidden fields, page level) | Component state (in-memory; persisted per connection in Blazor Server) |
+| **User interaction** | Full or partial postback (page reload) | Event-driven UI updates (real-time in Blazor Server via SignalR) |
+| **Event handling** | Server callbacks (AutoPostBack) | `EventCallback<T>` and delegates |
+| **Dependency injection** | Limited or manual | Built-in with `IServiceCollection` |
+| **Navigation model** | Page based navigation (`.aspx`) | SPA style routing using `@page` |
+| **Tooling support** | Visual Studio | Visual Studio and Visual Studio Code |
+| **Scalability** | Limited by server resources | Cloud native and horizontally scalable |
+| **Application updates** | Requires restart for assembly changes | Blazor Server: immediate; WebAssembly: versioned deployment |
 
 ## Development environment setup
 
@@ -66,96 +53,62 @@ dotnet --info
 {% endhighlight %}
 {% endtabs %}
 
-## Project structure comparison
+## Project Structure Comparison
 
-The following table maps common Web Forms application artifacts to their Blazor equivalents.
+ASP.NET Web Forms and Blazor Web Apps follow different application architectures. The following table shows the closest functional equivalents between Web Forms artifacts and Blazor, along with their roles in a Blazor Web App.
 
-| Concept | Web Forms artifact | Blazor equivalent |
+| Web Forms Artifact | Blazor Web App Equivalent | Description |
 | --- | --- | --- |
-| **UI definition** | `Default.aspx` | `Components/Pages/Home.razor` |
-| **Code-behind** | `Default.aspx.cs` | `@code {}` block or `.razor.cs` file |
-| **Application startup** | `Global.asax` | `Program.cs` |
-| **Configuration** | `web.config` | `appsettings.json` |
-| **Reusable UI** | `UserControl.ascx` | Razor component (`.razor` file) |
-| **State storage** | ViewState (serialized in HTML) | Component fields and properties (in-memory) |
+| `Default.aspx` | `Components/Pages/Home.razor` | Represents the UI page and route entry point |
+| `Default.aspx.cs` | `@code {}` block or `.razor.cs` file | Contains UI logic and event handling |
+| `Global.asax` | `Program.cs` | Configures application startup, services, and middleware |
+| `web.config` | `appsettings.json` | Stores configuration and environment settings |
+| Master Page (`Site.Master`) | `MainLayout.razor` | Defines shared layout and structure across pages |
+| `UserControl.ascx` | Razor component (`.razor`) | Defines reusable UI components |
+| ViewState | Component state (fields/properties) | Maintains UI state in memory instead of hidden fields |
+| CSS references (`<link>`) | `wwwroot/css`, `App.razor` or layout files | Defines global styles and static assets |
+| Script references (`<script>`) | `wwwroot/js`, `App.razor` or layout files | Includes JavaScript files and interop scripts |
+| Routing (`*.aspx`) | `@page` directive in `.razor` files | Enables route-based navigation |
+| Navigation controls | `NavLink` and routing system | Handles navigation between components |
+| Session / Application state | Scoped / Singleton services | Manages shared application state |
 
 ## Creating a Blazor project
 
 ### Creating a Blazor Web App with Interactive Server
 
-For Web Forms migrations, create a **Blazor Web App with Interactive Server** option, which runs server-side and preserves the familiar server-hosted execution model with real-time interactivity via SignalR:
+For Web Forms migrations, create a **Blazor Web App with Interactive Server** option, which runs server-side and preserves the familiar server hosted execution model with real-time interactivity via SignalR:
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -n MyBlazorApp --interactivity Server
 cd MyBlazorApp
-dotnet watch   # Hot reload during development
 
 {% endhighlight %}
 {% endtabs %}
 
-> N> The `--interactivity Server` flag configures SignalR-based interactivity, providing immediate UI updates similar to Web Forms postback behavior, but over a persistent connection instead of full page reloads.
+> N> The `--interactivity Server` flag configures SignalR based interactivity, providing immediate UI updates similar to Web Forms postback behavior, but over a persistent connection instead of full page reloads.
 
-## Migrating Syncfusion Components from Web Forms to Blazor
+## Migrating Syncfusion® Components from Web Forms to Blazor
 
-This section provides **step-by-step migration guidance** for the following Syncfusion components:
+The following shared setup applies to all three Syncfusion components and covers the common configuration required before moving on to the [component specific migration steps](#add-syncfusion-datagrid-component).
 
-*   **DataGrid**
-*   **Scheduler**
-*   **Rich Text Editor**
+### Package installation
 
-Each component includes package installation, configuration, and side-by-side comparisons.
+Use the following commands to install the required packages for each component.
 
-### DataGrid
+| Component | Web Forms package command | Blazor package command |
+|---|---|---|
+| DataGrid | `dotnet add package Syncfusion.AspNet` | `dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}` |
+| Scheduler | `dotnet add package Syncfusion.AspNet` | `dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}` |
+| RichTextEditor | `dotnet add package Syncfusion.AspNet` | `dotnet add package Syncfusion.Blazor.RichTextEditor -v {{ site.releaseversion }}` |
+| Themes | — | `dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}` |
 
-#### Migration overview
+N> Install `Syncfusion.Blazor.Themes` once at the application level. This package is required for the Blazor components used in this migration guide.
 
-In Web Forms, most [DataGrid](https://help.syncfusion.com/aspnet/grid/overview) features such as paging, sorting, filtering, and grouping are executed on the server and rely on ViewState to preserve UI state across postbacks.
+### Service registration
 
-In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), the same features are implemented through component configuration and executed at runtime within the grid itself. This removes the dependency on postbacks and reduces payload size. The grid provides significantly better responsiveness while still supporting remote data operations through `SfDataManager` when required.
-
-
-| Aspect   | Web Forms (`ej:Grid`)   | Blazor (`SfGrid / SfGrid<TValue>`)                               |
-| --- | --- | ---|
-| **Package (NuGet)** | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  |
-| **Namespace**               | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>`   | Razor: `@using Syncfusion.Blazor.Grids`  |
-| **Component declaration**   | `<ej:Grid runat="server">` (ASPX)  | `<SfGrid>` / `<SfGrid TValue="T">` (Razor)   |
-| **Data binding**   | `DataSource` property set in `Page_Load` or callbacks  | `DataSource="@..."` bound during component initialization  |
-| **Collection type**  | `DataTable`, `IEnumerable`, server-managed collections | `List<T>` / `IEnumerable<T>`; UI updated via `StateHasChanged()` |
-| **Columns** | `<ej:Column Field="..." HeaderText="..." />` | `<GridColumn Field="..." HeaderText="..." Format="..." />`  |
-| **Editing & API** | [EditSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_EditSettings) | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), `@ref` async APIs  |
-| **Events & commands**   | Server events (postback / AJAX callbacks)   | `EventCallback<T>`-based async handlers   |
-| **Theming & assets**   | CSS/JS referenced in `.aspx` or Master Page  | CSS theme files + Syncfusion JS; `AddSyncfusionBlazor()`         |
-| **Paging / virtualization** |  [AllowPaging](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowPaging), [ScrollSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_ScrollSettings) | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html), [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) |
-| **Filtering** | [AllowFiltering](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowFiltering) | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) |
-| **Grouping** | [AllowGrouping](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowGrouping)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)|
-| **Lifecycle & refs**        | `Page_Load`, control IDs (`ID`)                        | `OnInitialized[Async]`, DI, `@ref` and async methods     
-
-This mapping demonstrates that all commonly used Web Forms DataGrid features are fully supported in Blazor, while delivering measurable improvements in performance, responsiveness, and long-term maintainability.
-
-#### Step-by-step migration
-
-##### Step 1: Package installation
-
-In Web Forms, Syncfusion controls are installed as single server-side assemblies, which are compiled into the web application and rendered through ASP.NET server controls. These packages are referenced once and shared across all pages.
-
-In Blazor, Syncfusion components are delivered as modular NuGet packages containing Razor components, CSS themes, static assets, and JavaScript interop libraries. Each component package is separately installed and included in the build process.
-
-**Web Forms approach:**
-
-* [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet)
-
-**Blazor equivalent:**
-
-* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-
-N> The `Syncfusion.Blazor.Themes` package provides pre-built CSS themes (Fluent2, Bootstrap, Material, etc.). You only need to install it once for the entire application, not for each component.
-
-##### Step 2: Service registration
-
-ASP.NET Web Forms initializes controls implicitly as part of the page lifecycle. There is no explicit service registration model; controls are automatically available through the runtime.
+ASP.NET Web Forms initializes controls implicitly as part of the page lifecycle. There is no explicit service registration model, controls are automatically available through the runtime.
 
 Blazor uses dependency injection (DI) from the ground up. Syncfusion components must be registered in the service container so the framework can resolve rendering engines, localization providers, and JavaScript interop services required for each component to function correctly.
 
@@ -176,22 +129,17 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-##### Step 3: Add import namespaces
+### Add import namespaces
 
-After packages are installed and services are registered, import the required Syncfusion namespaces in the `/_Imports.razor` file. This makes DataGrid components and related types available throughout your Razor files without repetitive `@using` statements on each page.
+After packages are installed and services are registered, import the required Syncfusion namespaces in the `/_Imports.razor` file.
 
-{% tabs %}
-{% highlight razor tabtitle="_Imports.razor" %}
+| Component | Required namespaces |
+|---|---|
+| DataGrid | `@using Syncfusion.Blazor`<br>`@using Syncfusion.Blazor.Grids` |
+| Scheduler | `@using Syncfusion.Blazor`<br>`@using Syncfusion.Blazor.Schedule` |
+| RichTextEditor | `@using Syncfusion.Blazor`<br>`@using Syncfusion.Blazor.RichTextEditor` |
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-
-{% endhighlight %}
-{% endtabs %}
-
-This approach is consistent with standard Blazor practices and eliminates namespace imports on individual component files.
-
-##### Step 4: Theme and script configuration
+### Theme and script configuration
 
 In Web Forms, Syncfusion scripts and styles are manually referenced in individual `.aspx` pages or `master pages`. The developer explicitly controls script load order and dependency resolution.
 
@@ -224,7 +172,33 @@ In Blazor, scripts and styles are served as static web assets from the NuGet pac
 
 N> The `_content` prefix in URLs is a Blazor convention for accessing static assets from NuGet packages. Available theme options include: `fluent2`, `bootstrap5`, `material3`, `tailwind`, `highcontrast`, and others.
 
-##### Step 5: Component rendering
+### Add Syncfusion® DataGrid component
+
+**Migration overview**
+
+In Web Forms, most [DataGrid](https://help.syncfusion.com/aspnet/grid/overview) features such as paging, sorting, filtering, and grouping are executed on the server and rely on ViewState to preserve UI state across postbacks.
+
+In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), the same features are implemented through component configuration and executed at runtime within the grid itself. This removes the dependency on postbacks and reduces payload size. The grid provides significantly better responsiveness while still supporting remote data operations through `SfDataManager` when required.
+
+| Aspect   | Web Forms (`ej:Grid`)   | Blazor (`SfGrid / SfGrid<TValue>`)                               |
+| --- | --- | ---|
+| **Package (NuGet)** | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  |
+| **Namespace**               | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>`   | Razor: `@using Syncfusion.Blazor.Grids`  |
+| **Component declaration**   | `<ej:Grid runat="server">` (ASPX)  | `<SfGrid>` / `<SfGrid TValue="T">` (Razor)   |
+| **Data binding**   | `DataSource` property set in `Page_Load` or callbacks  | `DataSource="@..."` bound during component initialization  |
+| **Collection type**  | `DataTable`, `IEnumerable`, server-managed collections | `List<T>` / `IEnumerable<T>`; UI updated via `StateHasChanged()` |
+| **Columns** | `<ej:Column Field="..." HeaderText="..." />` | `<GridColumn Field="..." HeaderText="..." Format="..." />`  |
+| **Editing & API** | [EditSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_EditSettings) | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), `@ref` async APIs  |
+| **Events & commands**   | Server events (postback / AJAX callbacks)   | `EventCallback<T>`-based async handlers   |
+| **Theming & assets**   | CSS/JS referenced in `.aspx` or Master Page  | CSS theme files + Syncfusion JS; `AddSyncfusionBlazor()`         |
+| **Paging / virtualization** |  [AllowPaging](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowPaging), [ScrollSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_ScrollSettings) | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html), [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) |
+| **Filtering** | [AllowFiltering](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowFiltering) | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) |
+| **Grouping** | [AllowGrouping](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowGrouping)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)|
+| **Lifecycle & refs**        | `Page_Load`, control IDs (`ID`)                        | `OnInitialized[Async]`, DI, `@ref` and async methods
+
+This mapping demonstrates that all commonly used Web Forms DataGrid features are fully supported in Blazor, while delivering measurable improvements in performance, responsiveness, and long-term maintainability.
+
+**Component rendering**
 
 In Web Forms, the DataGrid is a server control declared in markup with data assigned in the code-behind during the page lifecycle. In Blazor, the DataGrid is a Razor component bound to in-memory data, with no server postback required.
 
@@ -233,12 +207,12 @@ In Web Forms, the DataGrid is a server control declared in markup with data assi
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
 
-<ej:Grid runat="server" ID="Grid">                        
+<ej:Grid runat="server" ID="Grid">
     <Columns>
         <ej:Column Field="FirstName" HeaderText="First Name"></ej:Column>
         <ej:Column Field="LastName" HeaderText="Last Name"></ej:Column>
         <ej:Column Field="Email" HeaderText="Email"></ej:Column>
-    </Columns>          
+    </Columns>
 </ej:Grid>
 
 {% endhighlight %}
@@ -251,7 +225,7 @@ using System.Web.UI;
 namespace WebFormsGrid
 {
     public partial class _Default : Page
-    { 
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
             // Data is assigned on each page load/postback
@@ -316,9 +290,9 @@ namespace WebFormsGrid
 
 Web Forms grids depend on postback and ViewState to persist UI state. Blazor grids receive data through component parameters such as DataSource and maintain both data and UI state in memory within the component instance. When this state changes, Blazor automatically re-renders the grid without postback, avoiding page refreshes and minimizing payload size.
 
-### Scheduler
+### Add Syncfusion® Scheduler component
 
-#### Migration overview
+**Migration overview**
 
 In Web Forms, the [Scheduler](https://help.syncfusion.com/aspnet/schedule/overview) control relies on server-side rendering, callbacks, and page lifecycle events to manage views, navigation, and appointment data. Appointment state is preserved across postback and refreshed whenever the view or date range changes.
 
@@ -333,100 +307,11 @@ In Web Forms, the [Scheduler](https://help.syncfusion.com/aspnet/schedule/overvi
 | **Theming & assets**  | CSS/JS referenced in ASPX or Master Page  | CSS theme files + Syncfusion JS; `AddSyncfusionBlazor()` |
 | **Lifecycle & refs**      | `Page_Load`, control `ID`  | `OnInitialized[Async]`, DI, `@ref` async APIs   |
 
-#### Step-by-step migration
-
-##### Step 1: Package installation
-
-In Web Forms, the Scheduler is included as part of the Syncfusion Web Forms control set and loaded as a server-side assembly. The control is rendered and managed through IIS and ASP.NET runtime services.
-
-In Blazor, the Scheduler is delivered as a NuGet package that provides Razor components, styles, and client-side logic required for rendering and interaction.
-
-**Web Forms**
-
-* [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet)
-
-**Blazor**
-
-* [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-
-After migration, the Scheduler becomes part of the Blazor application build process and no longer depends on IIS-specific control loading.
-
-##### Step 2: Service registration
-
-ASP.NET Web Forms initializes Scheduler functionality automatically during page execution. There is no explicit service registration or dependency injection configuration.
-
-Blazor uses dependency injection to initialize Syncfusion services required for Scheduler rendering, localization, and JavaScript interop.
-
-In the `Program.cs` file, add the Syncfusion namespace and register services:
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-...
-using Syncfusion.Blazor;
-...
-builder.Services.AddSyncfusionBlazor();
-...
-
-{% endhighlight %}
-{% endtabs %}
-
-Without this registration, the Scheduler component cannot function correctly in a Blazor application.
-
-##### Step 3: Add import namespaces
-
-In Web Forms, namespaces are inferred from server control registration in the page or `web.config`. In Blazor, required namespaces are added to the `/_Imports.razor` file.
-
-{% tabs %}
-{% highlight razor tabtitle="_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Schedule
-
-{% endhighlight %}
-{% endtabs %}
-
-This ensures Scheduler components and related types are available across Razor files.
-
-##### Step 4: Theme and script configuration
-
-In Web Forms, Scheduler styles and scripts are referenced explicitly in `.aspx` or master pages, and the correct order of script loading must be maintained to avoid runtime issues.
-
-In Blazor, Scheduler styles are referenced once at the application level, and JavaScript interop dependencies are resolved automatically by the framework.
-
-**Web Forms**
-
-{% tabs %}
-{% highlight html tabtitle=".aspx" %}
-
-<link href="Content/ej/web/default-theme/ej.web.all.min.css" rel="stylesheet" />
-<script src='<%= Page.ResolveClientUrl("~/Scripts/jquery-3.3.1.min.js")%>' type="text/javascript"></script>
-<script src='<%= Page.ResolveClientUrl("~/Scripts/jsrender.min.js")%>' type="text/javascript"></script>
-<script src='<%= Page.ResolveClientUrl("~/Scripts/ej/ej.web.all.min.js")%>' type="text/javascript"></script>
-<script src='<%= Page.ResolveClientUrl("~/Scripts/ej/ej.webform.min.js")%>' type="text/javascript"></script>
-
-{% endhighlight %}
-{% endtabs %}
-
-**Blazor**
-
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
-
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-{% endhighlight %}
-{% endtabs %}
-
-This change removes per-page script management and ensures consistent Scheduler behavior throughout the application.
-
-##### Step 5: Component rendering
+**Component rendering**
 
 In Web Forms, the Scheduler is defined as a server control and configured using properties such as `CurrentView` and server-side appointment objects. Data is refreshed during postbacks when navigating dates or views.
 
-**Web Forms**
+**Web Forms approach**
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -473,7 +358,7 @@ namespace WebFormsScheduler
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor**
+**Blazor equivalent:**
 
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
@@ -522,9 +407,9 @@ N> The event class (`Meeting` in this example) property names match the Schedule
 
 Web Forms Scheduler depends on postbacks and server callbacks to update views and appointments. Blazor Scheduler relies on component parameters, in-memory data, and automatic re-rendering, providing smoother navigation and improved scalability.
 
-### Rich Text Editor
+### Add Syncfusion® Rich Text Editor component
 
-#### Migration overview
+**Migration overview**
 
 In Web Forms, the [Rich Text Editor](https://help.syncfusion.com/aspnet/richtexteditor/overview) is rendered as a server control and relies on server callbacks and postbacks to load, edit, and persist content. The editor content is typically processed on the server, and UI state is restored on every page lifecycle execution.
 
@@ -538,100 +423,11 @@ In Web Forms, the [Rich Text Editor](https://help.syncfusion.com/aspnet/richtext
 | **Theming & assets**      | CSS/JS referenced per page | CSS theme files + Syncfusion JS; `AddSyncfusionBlazor()` |
 | **Lifecycle & refs**      | `Page_Load`, control `ID` | `OnInitialized[Async]`, DI, `@ref` async APIs  |
 
-#### Step-by-step migration
-
-**Step 1: Package installation**
-
-In Web Forms, the Rich Text Editor is included as part of the Syncfusion Web Forms control suite and loaded as a server-side assembly. The editor is initialized and rendered by the ASP.NET runtime during page execution.
-
-In Blazor, the Rich Text Editor is provided as a NuGet package that supplies Razor components, styles, and client-side logic required for editing and formatting operations.
-
-**Web Forms**
-
-* [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet)
-
-**Blazor**
-
-* [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
-
-After migration, the editor becomes part of the Blazor application build process and no longer relies on IIS-specific server control execution.
-
-##### Step 2: Service registration
-
-ASP.NET Web Forms initializes the Rich Text Editor implicitly as part of the page lifecycle. There is no explicit service registration mechanism.
-
-Blazor requires registering Syncfusion services so the editor can resolve runtime services such as rendering and JavaScript interop.
-
-In the `Program.cs` file, add the Syncfusion namespace and register services:
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-...
-using Syncfusion.Blazor;
-...
-builder.Services.AddSyncfusionBlazor();
-...
-
-{% endhighlight %}
-{% endtabs %}
-
-This step is mandatory for all Syncfusion Blazor components, including the Rich Text Editor.
-
-##### Step 3: Add import namespaces
-
-In Web Forms, namespaces are resolved automatically through the server control configuration. In Blazor, required namespaces are added to the `/_Imports.razor` file.
-
-{% tabs %}
-{% highlight razor tabtitle="_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.RichTextEditor
-
-{% endhighlight %}
-{% endtabs %}
-
-This ensures Rich Text Editor components and related APIs are available across Razor files.
-
-##### Step 4: Theme and script configuration
-
-In Web Forms, Rich Text Editor styles and scripts are manually referenced in `.aspx` or master pages, and correct script ordering is required for toolbar and formatting features to function correctly.
-
-In Blazor, the required styles and scripts are referenced once at the application level, and JavaScript interop dependencies are resolved automatically.
-
-**Web Forms**
-
-{% tabs %}
-{% highlight html tabtitle=".aspx" %}
-
-<link href="Content/ej/web/default-theme/ej.web.all.min.css" rel="stylesheet" />
-<script src='<%= Page.ResolveClientUrl("~/Scripts/jquery-3.3.1.min.js")%>' type="text/javascript"></script>
-<script src='<%= Page.ResolveClientUrl("~/Scripts/jsrender.min.js")%>' type="text/javascript"></script>
-<script src='<%= Page.ResolveClientUrl("~/Scripts/ej/ej.web.all.min.js")%>' type="text/javascript"></script>
-<script src='<%= Page.ResolveClientUrl("~/Scripts/ej/ej.webform.min.js")%>' type="text/javascript"></script>
-
-{% endhighlight %}
-{% endtabs %}
-
-**Blazor**
-
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
-
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-{% endhighlight %}
-{% endtabs %}
-
-This change removes repetitive script references and ensures consistent Rich Text Editor behavior across all pages.
-
-##### Step 5: Component rendering
+**Component rendering**
 
 In Web Forms, the Rich Text Editor is declared as a server control and content is typically processed on the server during postback. Any change to the content triggers a round trip to persist or restore state.
 
-**Web Forms**
+**Web Forms approach**
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -653,7 +449,7 @@ protected void Page_Load(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor**
+**Blazor equivalent:**
 
 {% tabs %}
 {% highlight razor tabtitle="Editor.razor" %}
@@ -675,9 +471,7 @@ Web Forms Rich Text Editors depend on postback and ViewState to persist content.
 
 ## See also
 
-* [Blazor Server – Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [DataGrid – Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-* [Scheduler – Getting Started](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
-* [Rich Text Editor – Getting Started](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app)
-
-
+* [Getting started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
+* [Getting started with Blazor Rich Text Editor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app)
