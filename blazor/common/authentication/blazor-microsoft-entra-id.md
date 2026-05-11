@@ -13,7 +13,7 @@ This guide shows how to secure the [Syncfusion® Blazor DataGrid](https://www.sy
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](../authentication/blazor-microsoft-entra-id#install-required-packages).
 
 Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
@@ -67,17 +67,17 @@ Include the theme stylesheet and script references in the `App.razor` file.
 {% highlight razor tabtitle="App.razor" %}
 
 <head>
-	....
+    ....
     <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-	....
+    ....
 </head>
 
 <body>
-	....
+    ....
     <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-	....
+    ....
 </body>
 
 {% endhighlight %}
@@ -147,7 +147,7 @@ using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure authentication with Microsoft Entra ID (Azure AD)
+// Configure authentication with Microsoft Entra ID (Azure AD).
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
   .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
@@ -156,10 +156,10 @@ builder.Services.AddAuthorization();
 builder.Services.AddRazorComponents()
   .AddInteractiveServerComponents();
 
-// Register the Syncfusion® Blazor service  
+// Register the Syncfusion® Blazor service.
 builder.Services.AddSyncfusionBlazor();
 
-// Add controllers with UI endpoints for Microsoft Identity (SignIn/SignOut)
+// Add controllers with UI endpoints for Microsoft Identity (SignIn/SignOut).
 builder.Services.AddControllersWithViews().AddMicrosoftIdentityUI();
 
 var app = builder.Build();
@@ -236,24 +236,25 @@ Create a protected page that displays the **Syncfusion® Blazor DataGrid** only 
 			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut">Logout</a>
 		</div>
 
-		<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true">
+		<SfGrid DataSource="@Orders">
 			<GridColumns>
-				<GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" IsPrimaryKey="true">
-				</GridColumn>
-				<GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="150"></GridColumn>
+				<GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+				<GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+				<GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100" />
+				<GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
 			</GridColumns>
 		</SfGrid>
 
-		@code {
-			public List<Order> Orders { get; set; } = new List<Order>();
+		@code{
+			public List<Order> Orders { get; set; }
 
 			protected override void OnInitialized()
 			{
-				var customerIds = new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" };
-				Orders = Enumerable.Range(1, 5).Select(x => new Order
-				{
-					OrderID = x,
-					CustomerID = customerIds[Random.Shared.Next(5)]
+				Orders = Enumerable.Range(1, 12).Select(i => new Order {
+					OrderID = 1000 + i,
+					CustomerID = new[] { "ALFKI","ANATR","ANTON","BLONP","BOLID" }[Random.Shared.Next(5)],
+					OrderDate = DateTime.Today.AddDays(-i),
+					Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
 				}).ToList();
 			}
 
@@ -261,6 +262,8 @@ Create a protected page that displays the **Syncfusion® Blazor DataGrid** only 
 			{
 				public int OrderID { get; set; }
 				public string? CustomerID { get; set; }
+				public DateTime OrderDate { get; set; }
+				public double Freight { get; set; }
 			}
 		}
 	</Authorized>

@@ -1,44 +1,38 @@
 ---
 layout: post
-title: Getting Started with Syncfusion® Blazor Components in JetBrains Rider
-description: Step-by-step guide to integrate Syncfusion® Blazor DataGrid in Blazor applications using JetBrains Rider.
+title: Getting Started with Syncfusion® Blazor WASM App in JetBrains Rider
+description: Step-by-step guide to integrate Syncfusion® Blazor DataGrid in Blazor WASM applications in JetBrains Rider.
 platform: Blazor
 control: common
 documentation: ug
 ---
 
-# JetBrains Rider Integration with Syncfusion® Blazor Components
+# Getting Started with Blazor WASM App in JetBrains Rider 
 
-This guide explains how to use [JetBrains Rider](https://www.jetbrains.com/rider/) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to build and manage Blazor applications efficiently.
+This guide explains how to create a Blazor WebAssembly application and integrate [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) in [JetBrains Rider](https://www.jetbrains.com/rider/).
 
-To get started quickly with a Blazor WebAssembly with JetBrains Rider and Syncfusion®, review the following video.
+To quickly get started with a Blazor WebAssembly application in JetBrains Rider with Syncfusion® Blazor components, watch the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
 
-## Setting up JetBrains Rider for Blazor
-
-Before you start developing a Blazor application, you need to install **JetBrains Rider** on your system.
-
-**Install JetBrains Rider**
+## Install JetBrains Rider
 
 - Go to the official [JetBrains Rider](https://www.jetbrains.com/rider/) website.
 - Download the installer suitable for your operating system.
 - Run the installer and follow the on‑screen instructions to complete the installation.
-- Once the installation is complete, launch JetBrains Rider to begin your Blazor development.
-
-After launching Rider, you can create or open a Blazor project and start integrating Syncfusion® Blazor components.
+- After installation finishes, launch JetBrains Rider to verify the setup and begin your Blazor development.
 
 ## Creating a Blazor application
 
-This section explains how to create a new **Blazor WebAssembly Standalone App** using **JetBrains Rider**.
+This section explains how to create a new **Blazor WebAssembly Standalone App** in **JetBrains Rider**.
 
 Follow these steps to create a Blazor application in Rider:
 
 - Open **JetBrains Rider**.
 - On the welcome screen, click **New Solution**.
 - Select the **.NET SDK version** that you want to use.
-- From the available project templates, choose **Blazor WebAssembly Standalone App**.
+- From the available project templates, select **Blazor WebAssembly Standalone App**.
 - Enter your project name.
 - Click **Create** to generate the project.
 
@@ -115,24 +109,34 @@ Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-compo
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" />
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100" />
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+    </GridColumns>
+</SfGrid>
 
 @code{
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order()
-        {
-            OrderID = x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+        Orders = Enumerable.Range(1, 12).Select(i => new Order {
+            OrderID = 1000 + i,
+            CustomerID = new[] { "ALFKI","ANATR","ANTON","BLONP","BOLID" }[Random.Shared.Next(5)],
+            OrderDate = DateTime.Today.AddDays(-i),
+            Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
         }).ToList();
     }
 
     public class Order
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public int OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
     }
 }
 
