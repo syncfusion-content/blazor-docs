@@ -9,7 +9,7 @@ documentation: ug
 
 # Deploying Syncfusion® Blazor Components to GitHub Pages
 
-This guide demonstrates how to deploy a Blazor WebAssembly application with [Syncfusion components](https://www.syncfusion.com/blazor-components) to GitHub Pages.
+This guide demonstrates how to deploy [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) in a Blazor WebAssembly application. It includes steps for publishing the application, configuring client-side routing, and hosting the application.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ This guide demonstrates how to deploy a Blazor WebAssembly application with [Syn
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * [GitHub account](https://github.com/)
 
-If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) to create a Blazor WebAssembly project. 
+If you haven't created your Blazor app yet, follow the [Syncfusion® Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) to create a Blazor WebAssembly project.
 
 ## Create GitHub repository
 
@@ -31,14 +31,26 @@ Follow the below steps to create GitHub repository for deploying Blazor applicat
 * Select **Public** visibility.
 * Click **Create Repository** button to create the repository.
 
-## Configure Syncfusion® DataGrid component
+## Configure Syncfusion® Blazor DataGrid component
 
 ### Install required packages
 
-To add the Blazor DataGrid component, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install the NuGet package listed below.
+To add the Blazor DataGrid component, install the required packages through NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+You can install the required packages by using the following .NET CLI commands.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Add required namespaces
 
@@ -55,8 +67,7 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion
 
 ### Register Syncfusion® Blazor service
 
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components into the application.
-
+Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 
 {% tabs %}
 {% highlight cs tabtitle="~/Program.cs" %}
@@ -78,11 +89,11 @@ Add the Syncfusion theme CSS and required scripts to the `~/wwwroot/index.html` 
 {% highlight html tabtitle="index.html" %}
 
 <head>
-     <!-- Syncfusion theme style sheet -->
+    <!-- Syncfusion theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor script reference -->
+    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     <!-- Blazor WebAssembly script reference -->
   <script src="_framework/blazor.webassembly.js"></script>
@@ -91,11 +102,9 @@ Add the Syncfusion theme CSS and required scripts to the `~/wwwroot/index.html` 
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
-
 ### DataGrid component example
 
-This sample demonstrates the [Syncfusion DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to deploy.
+This sample demonstrates how to use the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to display a list of orders. It also helps confirm that the DataGrid is correctly integrated and functioning as expected for deployment scenarios.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -108,7 +117,7 @@ This sample demonstrates the [Syncfusion DataGrid](https://www.syncfusion.com/bl
   <GridColumns>
       <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID"></GridColumn>
       <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-      <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d"></GridColumn>
+      <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d"></GridColumn>
       <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"></GridColumn>
   </GridColumns>
 </SfGrid>
@@ -142,7 +151,7 @@ This sample demonstrates the [Syncfusion DataGrid](https://www.syncfusion.com/bl
 
 ### Disable fingerprinting and compression
 
-Edit `.csproj` and add the following properties to the first `<PropertyGroup>` element:
+Edit `.csproj` and add the following properties to the first `<PropertyGroup>` element.
 
 {% tabs %}
 {% highlight xml tabtitle=".csproj" %}
@@ -158,11 +167,9 @@ Edit `.csproj` and add the following properties to the first `<PropertyGroup>` e
 {% endhighlight %}
 {% endtabs %}
 
-N> These settings are **required** for GitHub Pages deployment. Fingerprinting creates unpredictable file names, and compression creates variants that GitHub Pages cannot serve correctly. Disabling these ensures stable asset paths and predictable client-side references.
-
 ### Update base path for relative routing
 
-GitHub Pages hosts applications as subfolders under a user or organization domain. Update `wwwroot/index.html` to use relative paths:
+GitHub Pages hosts applications as subfolders under a user or organization domain. Update `wwwroot/index.html` to use relative paths.
 
 {% tabs %}
 {% highlight razor tabtitle="index.html" %}
@@ -176,13 +183,13 @@ GitHub Pages hosts applications as subfolders under a user or organization domai
 {% endhighlight %}
 {% endtabs %}
 
-This change ensures that all relative paths work correctly when the app is served from a GitHub Pages.
+This change ensures that all relative paths work correctly when the app is served from GitHub Pages.
 
-## Create `404.html` for SPA route fallback
+### Create `404.html` for SPA route fallback
 
-GitHub Pages does not understand client-side Blazor routes. When a user navigates directly to a Blazor route (e.g., `/counter`), GitHub Pages cannot find a matching file and returns a 404 error. The `404.html` file below redirects this request back to `index.html`, allowing Blazor's client-side router to handle the navigation.
+GitHub Pages does not understand client-side Blazor routes. When a user navigates directly to a Blazor route (e.g., `/counter`), GitHub Pages cannot find a matching file and returns a 404 error. The `404.html` file below redirects such requests to `index.html`, allowing Blazor's client-side router to handle the navigation.
 
-Create `wwwroot/404.html`:
+Create `wwwroot/404.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="404.html" %}
@@ -198,7 +205,7 @@ Create `wwwroot/404.html`:
 {% endhighlight %}
 {% endtabs %}
 
-**How it works:** The meta refresh redirects all 404s to `index.html`. When `index.html` loads, Blazor's WebAssembly runtime initializes and evaluates the current URL (e.g., `/counter`) using its client-side router, which displays the appropriate component.
+**How it works:** The meta refresh redirects all 404s to `index.html`, allowing the Blazor WebAssembly router to handle navigation based on the current URL.
 
 ## Deployment workflow
 
@@ -214,7 +221,7 @@ Before deployment, test the application locally to ensure all components render 
 
 ### Commit to GitHub
 
-Initialize a git repository and commit your source code to the main branch:
+Initialize a git repository and commit your source code to the **main branch**.
 
 {% tabs %}
 {% highlight cs tabtitle="Git CLI" %}
@@ -233,7 +240,7 @@ These commands create a local repository, commit your code, add the remote URL, 
 
 ### Publish for GitHub Pages
 
-Publish the application in Release mode with fingerprinting and compression disabled:
+Publish the application in Release mode with fingerprinting and compression disabled.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -247,7 +254,7 @@ This produces an optimized `publish/wwwroot` directory ready for deployment. The
 
 ### Deploy to GitHub pages branch
 
-Navigate to the published wwwroot directory and push to the branch.
+Navigate to the published `wwwroot` directory and push the output files to the branch (e.g., `github-pages`) to deploy the application on GitHub Pages.
 
 {% tabs %}
 {% highlight cs tabtitle="Git CLI" %}
@@ -255,7 +262,7 @@ Navigate to the published wwwroot directory and push to the branch.
 cd publish\wwwroot
 New-Item -ItemType File -Path .nojekyll -Force
 git init
-git checkout -b gh-pages
+git checkout -b github-pages
 git add .
 git commit -m "Deploy Blazor WASM to GitHub Pages"
 git remote add origin https://github.com/<username>/<repository-name>.git
@@ -264,9 +271,11 @@ git push -f origin gh-pages
 {% endhighlight %}
 {% endtabs %}
 
+The above commands navigate to the published output directory and create a file to ensure that Blazor framework files are served correctly. They then initialize a Git repository and create a `github-pages` branch. All generated files are added and committed, and the repository is linked to GitHub. Finally, the content is pushed to the `github-pages` branch to deploy the application on GitHub Pages.
+
 ### Enable GitHub Pages
 
-Configure your repository to serve the branch:
+Configure your repository to serve the branch by following the steps below.
 
 1. Go to your repository on GitHub.
 2. Navigate to **Settings** → **Pages**.
