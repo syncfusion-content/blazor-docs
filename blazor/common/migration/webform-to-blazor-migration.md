@@ -13,7 +13,7 @@ Migrating enterprise applications from **ASP.NET Web Forms** to **Blazor** repre
 
 ## Why migrate from Web Forms to Blazor?
 
-ASP.NET Web Forms relies heavily on **ViewState, server postback**, and a tightly coupled page lifecycle. While this model simplified early web development, it becomes increasingly difficult to scale, test, and maintain in modern applications.
+ASP.NET Web Forms relies heavily on **ViewState**, **server postback**, and a tightly coupled page lifecycle. While this model simplified early web development, it becomes increasingly difficult to scale, test, and maintain in modern applications.
 
 Blazor replaces postback with **event-driven UI updates**, supports **reusable components**, and aligns with modern .NET development practices, making it the recommended migration path for long-term investment.
 
@@ -55,7 +55,7 @@ dotnet --info
 
 ## Project Structure Comparison
 
-ASP.NET Web Forms and Blazor Web Apps follow different application architectures. The following table shows the closest functional equivalents between Web Forms artifacts and Blazor, along with their roles in a Blazor Web App.
+ASP.NET Web Forms and Blazor Web Apps follow different application architectures. The following table shows the functional equivalents between Web Forms artifacts and Blazor, along with their roles in a Blazor Web App.
 
 | Web Forms Artifact | Blazor Web App Equivalent | Description |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ cd MyBlazorApp
 
 ## Migrating Syncfusion® Components from Web Forms to Blazor
 
-The following shared setup applies to all three Syncfusion components and covers the common configuration required before moving on to the [component specific migration steps](#add-syncfusion-datagrid-component).
+The following shared setup applies to all three Syncfusion components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
 
 ### Package installation
 
@@ -170,13 +170,11 @@ In Blazor, scripts and styles are served as static web assets from the NuGet pac
 {% endhighlight %}
 {% endtabs %}
 
-N> The `_content` prefix in URLs is a Blazor convention for accessing static assets from NuGet packages. Available theme options include: `fluent2`, `bootstrap5`, `material3`, `tailwind`, `highcontrast`, and others.
-
 ### Add Syncfusion® DataGrid component
 
 **Migration overview**
 
-In Web Forms, most [DataGrid](https://help.syncfusion.com/aspnet/grid/overview) features such as paging, sorting, filtering, and grouping are executed on the server and rely on ViewState to preserve UI state across postbacks.
+In Web Forms, most [DataGrid](https://help.syncfusion.com/aspnet/grid/overview) features such as paging, sorting, filtering, and grouping are executed on the server and rely on ViewState to preserve UI state across postback.
 
 In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), the same features are implemented through component configuration and executed at runtime within the grid itself. This removes the dependency on postbacks and reduces payload size. The grid provides significantly better responsiveness while still supporting remote data operations through `SfDataManager` when required.
 
@@ -309,9 +307,9 @@ In Web Forms, the [Scheduler](https://help.syncfusion.com/aspnet/schedule/overvi
 
 **Component rendering**
 
-In Web Forms, the Scheduler is defined as a server control and configured using properties such as `CurrentView` and server-side appointment objects. Data is refreshed during postbacks when navigating dates or views.
+In Web Forms, the Scheduler is defined as a server control and configured using properties such as `CurrentView` and server-side appointment objects. Data is refreshed during postbacks when navigating between dates or views.
 
-**Web Forms approach**
+**Web Forms approach:**
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -401,7 +399,7 @@ namespace WebFormsScheduler
 {% endhighlight %}
 {% endtabs %}
 
-N> The event class (`Meeting` in this example) property names match the Scheduler's default field mappings. Alternatively, add an explicit `Fields` configuration in `ScheduleEventSettings` to map custom property names.
+N> The event class (`Meeting` in this example) property names match the Scheduler's default field mappings. Alternatively, you can add an explicit `Fields` configuration in `ScheduleEventSettings` to map custom property names.
 
 **Key differences:**
 
@@ -411,7 +409,7 @@ Web Forms Scheduler depends on postbacks and server callbacks to update views an
 
 **Migration overview**
 
-In Web Forms, the [Rich Text Editor](https://help.syncfusion.com/aspnet/richtexteditor/overview) is rendered as a server control and relies on server callbacks and postbacks to load, edit, and persist content. The editor content is typically processed on the server, and UI state is restored on every page lifecycle execution.
+In Web Forms, the [Rich Text Editor](https://help.syncfusion.com/aspnet/richtexteditor/overview) is rendered as a server control and relies on server callbacks and postbacks to load, edit, and persist content. The editor content is typically processed on the server, and UI state is restored on each page lifecycle execution.
 
 | Aspect  | Web Forms (`ej:RTE`)  | Blazor (`SfRichTextEditor`)   |
 | --- | --- | ---|
@@ -427,7 +425,7 @@ In Web Forms, the [Rich Text Editor](https://help.syncfusion.com/aspnet/richtext
 
 In Web Forms, the Rich Text Editor is declared as a server control and content is typically processed on the server during postback. Any change to the content triggers a round trip to persist or restore state.
 
-**Web Forms approach**
+**Web Forms approach:**
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -467,7 +465,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 **Key differences:**
 
-Web Forms Rich Text Editors depend on postback and ViewState to persist content. Blazor Rich Text Editors rely on component parameters, in-memory state, and automatic UI re-rendering, providing smoother editing and improved performance.
+Web Forms Rich Text Editors depend on postback and ViewState to persist content. Blazor Rich Text Editors rely on component parameters, in-memory state, and automatic UI re-rendering, providing smoother editing experience and improved performance.
 
 ## See also
 
