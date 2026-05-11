@@ -467,6 +467,20 @@ protected void Page_Load(object sender, EventArgs e)
 
 Web Forms Rich Text Editors depend on postback and ViewState to persist content. Blazor Rich Text Editors rely on component parameters, in-memory state, and automatic UI re-rendering, providing smoother editing experience and improved performance.
 
+### Run the application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
+
+Alternatively, run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 * [Getting started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
