@@ -227,7 +227,7 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
 
 **Visual Studio Code or .NET CLI**:
 
-1. Open the terminal or powershell and navigate to the `Client` project folder.
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
 2. Run the following command:
 
     ```
