@@ -13,7 +13,7 @@ This guide explains how to secure the [Syncfusion® Blazor DataGrid](https://www
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](./blazor-oauth-authentication#install-required-packages).
 
 Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
@@ -329,7 +329,7 @@ To allow components to receive authentication state, wrap the router inside **Ca
 
 ## Connect Syncfusion® Blazor DataGrid 
 
-Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** on a secured Blazor page using the **[Authorize]** attribute, allowing access only to authenticated users.
+Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/SecureGrid.razor"  %}
@@ -343,29 +343,34 @@ Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** o
 
 <PageTitle>Secure Data Grid</PageTitle>
 
-<SfGrid DataSource="@Orders" AllowPaging="true">
+<SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="150" />
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100" />
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
     </GridColumns>
 </SfGrid>
 
-@code {
-    public List<Order> Orders { get; set; } = new();
+@code{
+    public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order()
-        {
-            OrderID = x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+        Orders = Enumerable.Range(1, 12).Select(i => new Order {
+            OrderID = 1000 + i,
+            CustomerID = new[] { "ALFKI","ANATR","ANTON","BLONP","BOLID" }[Random.Shared.Next(5)],
+            OrderDate = DateTime.Today.AddDays(-i),
+            Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
         }).ToList();
     }
 
     public class Order
     {
-        public int? OrderID { get; set; }
+        public int OrderID { get; set; }
         public string? CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
     }
 }
 
@@ -374,7 +379,7 @@ Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** o
 
 ## Display content based on authentication status
 
-This section demonstrates how to dynamically render UI content based on the user’s authentication state. The `Home.razor` page uses the **<AuthorizeView>** component to show different content for authenticated and unauthenticated users.
+This section demonstrates how to dynamically render UI content based on the user’s authentication state. The `Home.razor` page uses the `<AuthorizeView>` component to show different content for authenticated and unauthenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor"  %}
