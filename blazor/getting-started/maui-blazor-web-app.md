@@ -101,7 +101,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </html>
 
 {% endhighlight %}
-{% highlight razor tabtitle="App.razor" hl_lines="6 13" %}
+{% highlight razor tabtitle="App.razor" hl_lines="6 12" %}
 
 <!DOCTYPE html>
 <html lang="en">
