@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating Syncfusion WPF Components to Blazor
-description: Comprehensive user guide for migrating Syncfusion WPF controls to Syncfusion Blazor components on .NET 8+, including setup, configuration, and component examples.
+description: Guide to migrate Syncfusion WPF controls to Syncfusion Blazor components on .NET 8+, with setup, config, and examples.
 platform: Blazor
 component: Common
 documentation: ug
