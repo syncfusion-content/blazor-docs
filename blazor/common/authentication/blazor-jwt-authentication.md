@@ -347,6 +347,13 @@ This example demonstrates how a **JWT** token is retrieved from the server and a
 
 <button class="btn btn-primary" style="margin-bottom: 15px" @onclick="LoadGridWithToken">Load GridData</button>
 
+@if (!string.IsNullOrEmpty(error))
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Error:</strong> @error
+    </div>
+}
+
 <SfGrid TValue="OrdersDetails" @ref="grid" AllowPaging="true" AllowSorting="true" Width="100%">
     @* Only render the DataManager after the token is fetched. *@
     @if (isDataManagerEnabled)
