@@ -18,7 +18,7 @@ To get started quickly with a Blazor Web App, watch the following video.
 
 ## Using Playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
+[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package is included in this.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
@@ -108,15 +108,22 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+**Visual Studio (NuGet Package Manager)**:
+
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes`) and install it.
+
+**Visual Studio Code or .NET CLI**:
+
+Open the terminal or command prompt and run the following commands:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -172,21 +179,16 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+* Open a Razor file in the **~/Components/Pages** folder (For example, **Home.razor**).
+* Add the Syncfusion Blazor DataGrid component to the file.
+* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Grids
 
@@ -217,6 +219,21 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the default web browser.
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open the terminal or powershell and navigate to the `Client` project folder.
+2. Run the following command:
+
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
+
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVesWjwqtDJZluz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.webp)" %}
