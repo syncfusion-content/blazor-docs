@@ -7,31 +7,25 @@ control: common
 documentation: ug
 ---
 
-# Getting Started with JetBrains Rider and Syncfusion® Blazor Components
+#  Getting Started with Syncfusion® Blazor Components in JetBrains Rider
 
-This section explains how to use [JetBrains Rider](https://www.jetbrains.com/rider/) which is a cross-platform IDE to develop Blazor applications with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components).
+This guide explains how to create a Blazor WebAssembly application and integrate [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) in [JetBrains Rider](https://www.jetbrains.com/rider/).
 
-To quickly get started with Blazor WebAssembly application using JetBrains Rider and Syncfusion® Blazor components, watch the following video:
+To quickly get started with a Blazor WebAssembly application in JetBrains Rider with Syncfusion® Blazor components, watch the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
 
-## Setting up JetBrains Rider for Blazor
-
-Before you start developing a Blazor application, you need to install **JetBrains Rider** on your system.
-
-**Steps to install JetBrains Rider**
+## Install JetBrains Rider
 
 - Go to the official [JetBrains Rider](https://www.jetbrains.com/rider/) website.
 - Download the installer suitable for your operating system.
 - Run the installer and follow the on‑screen instructions to complete the installation.
 - After installation finishes, launch JetBrains Rider to verify the setup and begin your Blazor development.
 
-After launching Rider, you can create or open a Blazor project and start integrating Syncfusion® Blazor components.
-
 ## Creating a Blazor application
 
-This section explains how to create a new **Blazor WebAssembly Standalone App** using **JetBrains Rider**.
+This section explains how to create a new **Blazor WebAssembly Standalone App** in **JetBrains Rider**.
 
 Follow these steps to create a Blazor application in Rider:
 
