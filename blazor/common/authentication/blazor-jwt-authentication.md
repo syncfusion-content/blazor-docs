@@ -177,6 +177,10 @@ public class AuthController : ControllerBase
     private readonly TokenService _tokenService;
     public AuthController(TokenService tokenService) => _tokenService = tokenService;
 
+
+    // This endpoint is intended for demonstration purposes only. 
+    // For production, you can use validation mechanisms such as verifying user credentials before issuing tokens.
+
     [HttpPost("token")]
     public IActionResult Token([FromQuery] string user = "user123")
     {
@@ -193,7 +197,7 @@ public class AuthController : ControllerBase
 Register **JWT** authentication and authorization middleware to validate incoming API requests. Add these configurations in `Program.cs`.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" %}
+{% highlight csharp tabtitle="~/Program.cs" %}
 
 using System.Text;
 using YourProjectName.Components;
@@ -213,6 +217,13 @@ builder.Services.AddHttpClient();
 builder.Services.AddSyncfusionBlazor();
 
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("Jwt:Key missing");
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? throw new InvalidOperationException("Jwt:Issuer missing");
+var jwtAudience = builder.Configuration["Jwt:Audience"] ?? throw new InvalidOperationException("Jwt:Audience missing");
+
+if (jwtKey.Length < 32)
+{
+    throw new InvalidOperationException("Jwt:Key must be at least 32 characters for HS256 algorithm");
+}
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -225,8 +236,8 @@ builder.Services
             ValidateIssuerSigningKey = true,
             ValidateLifetime = true,
             ClockSkew = TimeSpan.FromMinutes(5),
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidAudience = builder.Configuration["Jwt:Audience"],
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtAudience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
     });
