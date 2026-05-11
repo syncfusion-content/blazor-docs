@@ -177,10 +177,8 @@ public class AuthController : ControllerBase
     private readonly TokenService _tokenService;
     public AuthController(TokenService tokenService) => _tokenService = tokenService;
 
-
     // This endpoint is intended for demonstration purposes only. 
     // For production, you can use validation mechanisms such as verifying user credentials before issuing tokens.
-
     [HttpPost("token")]
     public IActionResult Token([FromQuery] string user = "user123")
     {
