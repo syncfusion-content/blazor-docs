@@ -213,6 +213,16 @@ Create `wwwroot/404.html` file.
 
 Before deployment, test the application locally to ensure all components render correctly. Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
+Alternatively, run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
 **Expected behavior:**
 - The application loads without errors.
 - Syncfusion components render with correct styles and fonts.

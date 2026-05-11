@@ -326,6 +326,16 @@ The following example demonstrates UI-level authorization using `<AuthorizeView>
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
+Alternatively, run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
 **Expected behavior**
 * Syncfusion components should render **only for authorized users**.
 * If the user is not authenticated, the application should display **Register or Log in** options instead of the Syncfusion components.

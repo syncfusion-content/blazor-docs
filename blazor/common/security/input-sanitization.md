@@ -64,10 +64,7 @@ The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-
 <SfRichTextEditor EnableHtmlSanitizer="true" @bind-Value="Content"></SfRichTextEditor>
 
 @code {
-
- private string Content { get; set; } =
-        "<p>Welcome</p><img src=x onerror=\"alert('xss')\"><script>alert('XSS')</script>";
-
+    private string Content { get; set; } = "<p>Welcome</p><img src=x onerror=\"alert('xss')\"><script>alert('XSS')</script>";
 }
 
 {% endhighlight %}
