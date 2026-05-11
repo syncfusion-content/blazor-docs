@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Syncfusion Blazor Components
-description: Learn how Syncfusion Blazor components use row and column virtualization, overscan, virtual placeholders, frozen columns, and infinite scrolling.
+description: Learn how Syncfusion Blazor components use row and column virtualization, overscan count, virtual placeholders, frozen columns, and infinite scrolling.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,112 +9,9 @@ documentation: ug
 
 # Virtualization in Syncfusion® Blazor Components
 
-## Overview
-
 Virtualization improves the performance of [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) by rendering only the items visible in the viewport and recycling DOM elements as the user scrolls. This reduces initial load time, lowers memory usage, and keeps the DOM size small, which results in smoother scrolling and more responsive interactions.
 
 With virtualization enabled, working with large datasets becomes easier and faster, even when they contain thousands of records.
-
-## Prerequisites and setup
-
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
-* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-### Create a Blazor Web App with Interactive Server
-
-Run the following commands in the **command-line interface (CLI)**.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp -int Server
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-### Install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages
-
-Run the following commands to install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages:
-* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) 
-* [Syncfusion.Blazor.Lists](https://www.nuget.org/packages/Syncfusion.Blazor.Lists/)
-* [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) 
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-   
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Lists -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.FileManager -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-{% endtabs %}
-
-### Add required namespaces
-
-Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor namespaces in the `~/_Imports.razor` file.
-
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Lists
-@using Syncfusion.Blazor.FileManager
-
-{% endhighlight %}
-{% endtabs %}
-    
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
-
-Add the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Program.cs` file.
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 4" %}
-...
-using Syncfusion.Blazor;
-...
-builder.Services.AddSyncfusionBlazor();
-....
-{% endhighlight %}
-{% endtabs %}
-
-### Add stylesheet and script resources
-
-Before adding the stylesheet, ensure that no other Syncfusion<sup style="font-size:70%">&reg;</sup> theme CSS (for example, bootstrap5.css, material.css) is already referenced to avoid conflicts.
-
-Add the following stylesheet and script references in the `~/App.razor` file. 
-
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
-
-<!-- Syncfusion theme stylesheet -->
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-
-<!-- Syncfusion Blazor core script -->
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Configure render mode
-
-For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~/Pages/*.razor` file that requires interactive Server components.
-
-**Per-page directive (Server)**
-
-{% tabs %}
-{% highlight razor %}
-
-@* Define the desired render mode here *@
-@rendermode InteractiveServer
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Components supporting virtualization
 
@@ -407,11 +304,11 @@ public class VirtualData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLoZWBlzonBSEEX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Overscan (buffered rendering)
+### Overscan count (buffered rendering)
 
-Overscan makes scrolling smoother by rendering a few extra rows above and below the visible area of the grid. These extra rows act as a buffer so the grid does not need to frequently update the DOM while you scroll. This reduces flickering and helps the grid feel more responsive.
+Overscan count makes scrolling smoother by rendering a few extra rows above and below the visible area of the grid. These extra rows act as a buffer so the grid does not need to frequently update the DOM while you scroll. This reduces flickering and helps the grid feel more responsive.
 
-#### Configure Overscan
+#### Configure Overscan count
 
 * Set the [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) to control how many extra rows should be rendered above and below the visible area.
 * Use a higher value (for example, 5–10) for smoother scrolling during fast scroll actions.
