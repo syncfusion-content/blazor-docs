@@ -570,6 +570,7 @@ To render a `SfTextArea` in the edit form, define an [EditTemplate](https://help
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdteZPTqGFpSWM?appbar=true&editor=true&result=true&errorlist=false&theme=fluent2" %}
 
