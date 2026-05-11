@@ -7,7 +7,7 @@ control: common
 documentation: ug
 ---
 
-#  Getting Started with Syncfusion® Blazor Components in JetBrains Rider
+# Getting Started with Syncfusion® Blazor Components in JetBrains Rider
 
 This guide explains how to create a Blazor WebAssembly application and integrate [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) in [JetBrains Rider](https://www.jetbrains.com/rider/).
 
