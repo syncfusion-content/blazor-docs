@@ -64,12 +64,10 @@ ASP.NET Web Forms and Blazor Web Apps follow different application architectures
 | `Global.asax` | `Program.cs` | Configures application startup, services, and middleware |
 | `web.config` | `appsettings.json` | Stores configuration and environment settings |
 | Master Page (`Site.Master`) | `MainLayout.razor` | Defines shared layout and structure across pages |
-| `UserControl.ascx` | Razor component (`.razor`) | Defines reusable UI components |
 | ViewState | Component state (fields/properties) | Maintains UI state in memory instead of hidden fields |
 | CSS references (`<link>`) | `wwwroot/css`, `App.razor` or layout files | Defines global styles and static assets |
 | Script references (`<script>`) | `wwwroot/js`, `App.razor` or layout files | Includes JavaScript files and interop scripts |
 | Routing (`*.aspx`) | `@page` directive in `.razor` files | Enables route-based navigation |
-| Navigation controls | `NavLink` and routing system | Handles navigation between components |
 | Session / Application state | Scoped / Singleton services | Manages shared application state |
 
 ## Creating a Blazor project
@@ -176,7 +174,7 @@ In Blazor, scripts and styles are served as static web assets from the NuGet pac
 
 In Web Forms, most [DataGrid](https://help.syncfusion.com/aspnet/grid/overview) features such as paging, sorting, filtering, and grouping are executed on the server and rely on ViewState to preserve UI state across postback.
 
-In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), the same features are implemented through component configuration and executed at runtime within the grid itself. This removes the dependency on postbacks and reduces payload size. The grid provides significantly better responsiveness while still supporting remote data operations through `SfDataManager` when required.
+In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), the same features are implemented through component configuration and executed at runtime within the grid itself. This removes the dependency on postback and reduces payload size. The grid provides significantly better responsiveness while still supporting remote data operations through `SfDataManager` when required.
 
 | Aspect   | Web Forms (`ej:Grid`)   | Blazor (`SfGrid / SfGrid<TValue>`)                               |
 | --- | --- | ---|
@@ -307,7 +305,7 @@ In Web Forms, the [Scheduler](https://help.syncfusion.com/aspnet/schedule/overvi
 
 **Component rendering**
 
-In Web Forms, the Scheduler is defined as a server control and configured using properties such as `CurrentView` and server-side appointment objects. Data is refreshed during postbacks when navigating between dates or views.
+In Web Forms, the Scheduler is defined as a server control and configured using properties such as `CurrentView` and server-side appointment objects. Data is refreshed during postback when navigating between dates or views.
 
 **Web Forms approach:**
 
@@ -403,13 +401,13 @@ N> The event class (`Meeting` in this example) property names match the Schedule
 
 **Key differences:**
 
-Web Forms Scheduler depends on postbacks and server callbacks to update views and appointments. Blazor Scheduler relies on component parameters, in-memory data, and automatic re-rendering, providing smoother navigation and improved scalability.
+Web Forms Scheduler depends on postback and server callbacks to update views and appointments. Blazor Scheduler relies on component parameters, in-memory data, and automatic re-rendering, providing smoother navigation and improved scalability.
 
 ### Add Syncfusion® Rich Text Editor component
 
 **Migration overview**
 
-In Web Forms, the [Rich Text Editor](https://help.syncfusion.com/aspnet/richtexteditor/overview) is rendered as a server control and relies on server callbacks and postbacks to load, edit, and persist content. The editor content is typically processed on the server, and UI state is restored on each page lifecycle execution.
+In Web Forms, the [Rich Text Editor](https://help.syncfusion.com/aspnet/richtexteditor/overview) is rendered as a server control and relies on server callbacks and postback to load, edit, and persist content. The editor content is typically processed on the server, and UI state is restored on each page lifecycle execution.
 
 | Aspect  | Web Forms (`ej:RTE`)  | Blazor (`SfRichTextEditor`)   |
 | --- | --- | ---|
