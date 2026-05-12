@@ -366,6 +366,7 @@ namespace WebFormsScheduler
 {% highlight razor tabtitle="Schedule.razor" %}
 
 @page '/schedule'
+@rendermode InteractiveServer
 
 <SfSchedule TValue="Meeting" Height="650px">
     <ScheduleViews>
@@ -455,6 +456,7 @@ protected void Page_Load(object sender, EventArgs e)
 {% highlight razor tabtitle="Editor.razor" %}
 
 @page '/rte'
+@rendermode InteractiveServer
 
 <SfRichTextEditor @bind-Value="Content" Height="400px"></SfRichTextEditor>
 
