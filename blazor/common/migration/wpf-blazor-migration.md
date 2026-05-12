@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migrating Syncfusion WPF Components to Blazor
+title: Migrating Syncfusion WPF Controls to Blazor
 description: Guide to migrate Syncfusion WPF controls to Syncfusion Blazor components on .NET 8+, with setup, config, and examples.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Migrating Syncfusion® WPF Components to Blazor
+# Migrating Syncfusion® WPF Controls to Blazor
 
-Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a structured, step-by-step migration path for **[Syncfusion WPF components](https://www.syncfusion.com/wpf-controls)** to their **[Syncfusion Blazor equivalents](https://www.syncfusion.com/blazor-components)** using **[Visual Studio](https://visualstudio.microsoft.com/vs/)** or **[Visual Studio Code](https://code.visualstudio.com/)**.
+Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a structured, step-by-step migration path for **[Syncfusion WPF Controls](https://www.syncfusion.com/wpf-controls)** to their **[Syncfusion Blazor equivalents](https://www.syncfusion.com/blazor-components)** using **[Visual Studio](https://visualstudio.microsoft.com/vs/)** or **[Visual Studio Code](https://code.visualstudio.com/)**.
 
 It focuses on key architectural differences and demonstrates the essential setup and rendering patterns required to successfully migrate major Syncfusion UI components from WPF to Blazor.
 
@@ -87,20 +87,20 @@ N> The `--interactivity Server` flag configures SignalR-based interactivity and 
 ## Migrating key Syncfusion components from WPF to Blazor
 
 The following shared setup applies to all six Syncfusion components and covers the common configuration required before moving on to the [component-specific migration steps](./wpf-blazor-migration#1-datagrid).
- 
-### Common package installation
 
-Use the following commands to install the required packages for each component.
+### Common NuGet packages
 
-| Component | WPF package command | Blazor package command |
+Use the following NuGet packages for each component.
+
+| Component | WPF package (NuGet) | Blazor package (NuGet) |
 |---|---|---|
-| DataGrid | `dotnet add package Syncfusion.SfGrid.WPF` | `dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}` |
-| TreeGrid | `dotnet add package Syncfusion.SfGrid.WPF` | `dotnet add package Syncfusion.Blazor.TreeGrid -v {{ site.releaseversion }}` |
-| Charts | `dotnet add package Syncfusion.SfChart.WPF` | `dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}` |
-| Scheduler | `dotnet add package Syncfusion.SfScheduler.WPF` | `dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}` |
-| Diagram | `dotnet add package Syncfusion.SfDiagram.WPF` | `dotnet add package Syncfusion.Blazor.Diagram -v {{ site.releaseversion }}` |
-| RichTextEditor | `dotnet add package Syncfusion.SfRichTextBoxAdv.WPF` | `dotnet add package Syncfusion.Blazor.RichTextEditor -v {{ site.releaseversion }}` |
-| Themes | — | `dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}` |
+| DataGrid | [Syncfusion.SfGrid.WPF](https://www.nuget.org/packages/Syncfusion.SfGrid.WPF) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
+| TreeGrid | [Syncfusion.SfGrid.WPF](https://www.nuget.org/packages/Syncfusion.SfGrid.WPF) | [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) |
+| Charts | [Syncfusion.SfChart.WPF](https://www.nuget.org/packages/Syncfusion.SfChart.WPF) | [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts) |
+| Scheduler | [Syncfusion.SfScheduler.WPF](https://www.nuget.org/packages/Syncfusion.SfScheduler.WPF) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
+| Diagram | [Syncfusion.SfDiagram.WPF](https://www.nuget.org/packages/Syncfusion.SfDiagram.WPF) | [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) |
+| RichTextEditor | [Syncfusion.SfRichTextBoxAdv.WPF](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) | [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) |
+| Themes | — | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
 N> Install `Syncfusion.Blazor.Themes` once at the application level. This package is required for the Blazor components used in this migration guide.
 
