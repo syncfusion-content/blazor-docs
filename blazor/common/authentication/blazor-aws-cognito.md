@@ -9,36 +9,7 @@ documentation: ug
 
 # Blazor Authentication with AWS Cognito using Syncfusion® Components
 
-This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components).
-
-## What is AWS?
-
-[Amazon Web Services (AWS)](https://aws.amazon.com/what-is-aws/) is a cloud platform providing compute, storage, and identity services. For Blazor developers, its key identity service is Amazon Cognito, which handles sign-up, sign-in, Multi-Factor Authentication (MFA), token issuance, and issuing temporary AWS credentials through AWS Identity and Access Management (IAM). Cognito also exposes a managed login interface (Hosted UI) and standard OpenID Connect (OIDC) endpoints.
-
-## Why Amazon Cognito for Blazor?
-
-* Standard OIDC integrates directly with ASP.NET Core's built-in OpenID Connect middleware for Blazor Server. This is the Microsoft recommended approach and requires no third-party authentication libraries.
-* Supports login with MFA and password policies, reducing custom auth UI work.
-* Emits `cognito:groups` in tokens for role-based authorization in your app and API.
-* Identity pools can exchange a user's ID token for time limited AWS credentials to call S3, DynamoDB, etc.
-
-## Cognito building blocks
-
-* **User pools:** Managed user directory + OIDC authorization server (tokens, hosted UI, MFA, groups). Use this to authenticate users and obtain ID/Access tokens for your app and APIs.
-* **Identity pools (Federated Identities):** Optional service that exchanges a trusted identity for example user pool ID token for temporary AWS credentials through IAM roles. Use this when the server must call AWS services (such as Amazon S3 and Amazon DynamoDB) on behalf of the user.
-
-## Password policies
-
-In **user pool → sign-in experience**:
-* Configure **password policy** (length, complexity, expiration).
-* Set MFA to Off, Optional, or Required. Choose **SMS** or **TOTP** enrollment.
-* Hosted UI prompts users according to your policy.
-
-## Role-based authorization with Cognito groups
-
-* Create groups (e.g., `Admin`) in **user pool → Groups** and add users.
-* Ensure **Group membership** is included in tokens.
-* Map roles using `RoleClaimType = "cognito:groups"` and protect pages/endpoints with `[Authorize(Roles="Admin")]`.
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with a [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Syncfusion Blazor components based on user identity, and protect application data. 
 
 ## Prerequisites
 
@@ -50,11 +21,14 @@ In **user pool → sign-in experience**:
 
 ### Create a Blazor project
 
-If you already have a Blazor project, proceed to the **Install required packages** section. Otherwise, create one using Syncfusion getting started guides for [Blazor Server](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) or [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
+If you already have a Blazor project, proceed to the [Install required packages](#install-required-packages) section. Otherwise, create one using Syncfusion’s Blazor getting started guides.
+
+* [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 ### Install required packages
 
-To enable authentication and use Syncfusion Blazor components, install the required packages through NuGet Package Manager (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
+To enable authentication and use Syncfusion Blazor components, install the required packages through NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 **Syncfusion packages**
 
@@ -65,14 +39,15 @@ To enable authentication and use Syncfusion Blazor components, install the requi
 
 * [Microsoft.AspNetCore.Authentication.OpenIdConnect](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.OpenIdConnect)
 
-Alternatively, you can install the required packages by using the following .NET CLI commands.
+You can install the required packages by using the following .NET CLI commands.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
+dotnet restore
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +65,7 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Syncfusion® Blazor service
 
 Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 
@@ -334,21 +309,23 @@ Add the Syncfusion Blazor theme CSS and script references to your application's 
 
 <head>
     ...
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ...
 </head>
 <body>
     ...
+    <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    ...
 </body>
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+### Syncfusion® Blazor DataGrid on an authenticated page
 
-### Syncfusion® DataGrid on an authenticated page
-
-This page demonstrates how to protect a [Syncfusion DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
+This page demonstrates how to protect a [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -413,25 +390,17 @@ N> In this example, sample data is defined inline for demonstration purposes. In
 
 ### Run the application
 
-Run the application using the following command:
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
 N> By default, the app runs on `https://localhost:7000` (or similar port defined in `Properties/launchSettings.json`). Older project templates may use `https://localhost:5001`. Ensure your Cognito app client **Allowed redirect URIs** match your actual localhost URL.
 
 **Expected behavior**
 
-* Unauthenticated users see the sign-in prompt.
-* Clicking "Sign in with AWS Cognito" redirects to the Cognito hosted UI.
+* Unauthenticated users see the **sign in** prompt.
+* Clicking **Sign in with AWS Cognito** redirects to the Cognito hosted UI.
 * After entering credentials, the user is redirected back to the app.
 * The Syncfusion DataGrid appears with sample data.
-* Clicking "Sign out" clears the session and returns to the sign in page.
+* Clicking **Sign out** clears the session and returns to the **sign in** page.
 
 **Output:**
 
@@ -439,9 +408,5 @@ N> By default, the app runs on `https://localhost:7000` (or similar port defined
 
 ## See also
 
-* [Blazor with JWT authentication](https://blazor.syncfusion.com/documentation/common/authentication/blazor-jwt-authentication)
-* [Blazor with GitHub OAuth 2.0](https://blazor.syncfusion.com/documentation/common/authentication/blazor-oauth-authentication)
 * [AWS Cognito user pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools.html)
 * [ASP.NET Core authentication overview](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/)
-* [Syncfusion Blazor Server getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-
