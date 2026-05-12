@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from WinForms to Blazor | Syncfusion®
-description: Step-by-step guide to migrate Syncfusion® WinForms apps to Syncfusion® Blazor, with detailed DataGrid migration.
+description: Step-by-step guide to migrate Syncfusion® WinForms application to Blazor, with a detailed DataGrid migration.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Windows Forms to Blazor
 
-This guide provides a step‑by‑step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to [Syncfusion® Blazor](https://www.syncfusion.com/blazor-components) application. It is designed to help developers modernize existing desktop applications by moving to a web‑based architecture while continuing to use familiar .NET and C# skills.
+This guide provides a step‑by‑step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to [Syncfusion® Blazor](https://www.syncfusion.com/blazor-components) application. It is designed to help developers modernize existing desktop applications by moving to a web based architecture while continuing to use familiar .NET and C# skills.
 
 It explains key architectural differences, project structure changes, and shows practical examples of converting common WinForms controls to their Syncfusion® Blazor equivalents, making the migration process easy to understand.
 
@@ -18,32 +18,32 @@ It explains key architectural differences, project structure changes, and shows 
 | Aspect | WinForms | Syncfusion® Blazor | Benefit of Migration |
 |------|----------|------------------|----------------------|
 | Platform Support | Windows only | Web, Desktop, Cloud, Cross‑platform | Application accessible from any browser or device |
-| UI Technology | Legacy desktop UI | Modern web‑based UI | Improved look and user experience |
-| Architecture | Form‑centric, tightly coupled | Component‑based, modular | Better maintainability and scalability |
+| UI Technology | Legacy desktop UI | Modern web based UI | Improved look and user experience |
+| Architecture | Form‑centric, tightly coupled | Component based, modular | Better maintainability and scalability |
 | Accessibility | Requires local installation | Runs in a web browser | No client‑side installation required |
 | Development Model | Event‑driven programming | Data binding and reactive UI | Cleaner and more readable code |
 | UI Controls | Limited built‑in controls | 80+ Syncfusion® UI components | Rich enterprise‑ready UI features |
 | Responsiveness | Fixed desktop layouts | Responsive web layouts | Works across different screen sizes |
-| Maintenance | Hard to extend and update | Easy to maintain and enhance | Lower long‑term maintenance effort |
+| Maintenance | Hard to extend and update | Easy to maintain and enhance | Lower long term maintenance effort |
 | Cloud Readiness | Minimal support | Designed for cloud deployment | Enables modern hosting scenarios |
 | Code Reusability | Low reusability | High reusability via components and services | Faster development and testing |
-| Future Support | Legacy technology | Actively developed framework | Long‑term application sustainability |
+| Future Support | Limited continued development | Actively developed framework | Long‑term application sustainability |
 
 ## Key Architectural Differences
 
-Understanding the architectural differences between **WinForms architectural** and **Syncfusion® Blazor architectural** is essential before starting the migration. WinForms follows a traditional desktop‑based, event‑driven architecture, while Blazor uses a modern, component‑based web architecture designed for scalability and maintainability.
+Understanding the architectural differences between **WinForms** and **Syncfusion® Blazor** is essential before starting the migration. WinForms follows a traditional desktop‑based, event‑driven architecture, while Blazor uses a modern, component‑based web architecture designed for scalability and maintainability.
 
 | Area | WinForms Architecture | Syncfusion® Blazor Architecture |
 |-----|----------------------|--------------------------------|
 | Application Type | Desktop application | Web application |
-| UI Model | Form‑based controls | Component‑based UI |
+| UI Model | Form‑based controls | Component based UI |
 | Platform Dependency | Windows only | Cross‑platform |
 | Code Organization | UI and business logic often tightly coupled | Clear separation of UI, services, and models |
 | Rendering Engine | OS‑based rendering (GDI+/Windows) | Browser‑based rendering (HTML/CSS) |
 | State Management | Control state managed automatically | State‑driven UI with data binding |
 | Event Handling | Traditional event handlers | Declarative event binding |
-| Layout System | Fixed, pixel‑based layout | Responsive, CSS‑based layout |
-| Navigation | Open and close forms | URL‑based routing |
+| Layout System | Fixed, pixel‑based layout | Responsive, CSS based layout |
+| Navigation | Open and close forms | URL based routing |
 
 ## Project structure comparison
 
@@ -66,7 +66,7 @@ You can create a new Blazor project using the .NET Command Line Interface (CLI).
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet new blazor -n WinFormsToBlazor
+dotnet new blazor -n WinFormsToBlazor --interactivity Server
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,9 +75,9 @@ dotnet new blazor -n WinFormsToBlazor
 
 This section explains how Syncfusion® packages are referenced in WinForms and Blazor applications, and highlights the key differences in how components, themes, and runtime dependencies are delivered in each framework.
 
-### WinForms: Package installation
+**WinForms**
 
-In WinForms applications, Syncfusion® controls are installed as platform‑specific NuGet packages. Typically, each control (or a group of related controls) is provided as a separate package.
+In WinForms applications, Syncfusion® controls are installed as platform specific NuGet packages. Typically, each control (or a group of related controls) is provided as a separate package.
 
 These WinForms packages include the following:
 
@@ -87,8 +87,6 @@ These WinForms packages include the following:
 
 Because WinForms applications run only on Windows, the packages are tightly coupled with the Windows desktop environment.
 
-**Example:**
-
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
@@ -97,7 +95,7 @@ dotnet add package Syncfusion.WinForms.DataGrid
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion Blazor application: Package installation
+**Syncfusion® Blazor application**
 
 In Blazor applications, Syncfusion® Blazor components are delivered as web‑based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
 
@@ -119,9 +117,9 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Theme 
 
-This section explains how themes are applied and managed in WinForms and Syncfusion® Blazor applications. It also highlights the key conceptual shift from desktop‑based theme managers to CSS‑based theming used in web applications.
+This section explains how themes are applied and managed in WinForms and Syncfusion® Blazor applications. It also highlights the key conceptual shift from desktop based theme managers to CSS based theming used in web applications.
 
-### WinForms: Theme configuration
+**WinForms**
 
 In WinForms applications, Syncfusion® themes are applied using theme managers or control properties. All styling logic is handled inside the desktop runtime and tightly integrated with the Windows rendering system.
 
@@ -130,8 +128,6 @@ Key characteristics of WinForms theming include
 - Themes are applied at the form level or the application level
 - UI rendering is handled by Windows graphics
 - No external CSS or JavaScript files are required
-
-**Example of applying a Syncfusion® theme in WinForms**
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
@@ -143,7 +139,7 @@ SfSkinManager.SetVisualStyle(this, VisualStyles.FluentLight);
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion Blazor application: Theme configuration
+**Syncfusion® Blazor application**
 
 In Blazor applications, UI styling is separated from application logic and handled using web standards. Instead of theme managers, styles are applied through CSS files and supporting JavaScript.
 
@@ -161,14 +157,14 @@ To apply Syncfusion® styles and enable required features, reference the theme C
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ....
 </head>
 
 <body>
     ....
-    <!-- Syncfusion Blazor component's script reference -->
+    <!-- Syncfusion® Blazor core component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ....
 </body>
@@ -210,14 +206,18 @@ This step makes the Syncfusion® Blazor components available throughout the appl
 
 ## Component rendering
 
-This section explains how user interface elements are rendered in WinForms and Syncfusion Blazor applications. It demonstrates the transition from control‑based rendering in desktop applications to state‑driven component rendering in Blazor.
+This section explains how user interface elements are rendered in WinForms and Syncfusion® Blazor applications. It demonstrates the transition from control‑based rendering in desktop applications to state‑driven component rendering in Blazor.
 
-### WinForms component rendering
+**WinForms: Component rendering**
 
 In WinForms, user interface elements are created as controls and rendered immediately when they are added to a form. The Windows runtime manages rendering through the message loop, and control state is maintained automatically.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
+
+using Syncfusion.WinForms.DataGrid;
+using System.Collections.Generic;
+
 
 public partial class MainForm
 {
@@ -252,7 +252,7 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion Blazor application: Component rendering
+**Syncfusion® Blazor application: Component rendering**
 
 In Blazor, the UI is rendered using Razor components. Components are declared declaratively in markup, and rendering is handled by the Blazor rendering engine.
 
@@ -268,6 +268,7 @@ Key characteristics of Blazor rendering include
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/orders"
+@rendermode InteractiveServer
 
 <h3>Orders</h3>
 
@@ -294,7 +295,7 @@ Key characteristics of Blazor rendering include
 
 This section explains how multiple components are added and rendered in WinForms and Syncfusion® Blazor applications. 
 
-### WinForms
+**WinForms: Rendering multiple components**
 
 In WinForms, multiple controls are added to a form programmatically. Each control is placed into the form’s control collection, and the rendering order depends on the sequence in which controls are added.
 
@@ -307,7 +308,7 @@ this.Controls.Add(chart);
 {% endhighlight %}
 {% endtabs %}
 
-### Syncfusion® Blazor component
+**Syncfusion® Blazor component: Rendering multiple components**
 
 In Blazor, multiple components are rendered declaratively using Razor markup. Components are displayed in the order they appear in the markup and are arranged using standard web layout rules.
 
@@ -321,9 +322,9 @@ In Blazor, multiple components are rendered declaratively using Razor markup. Co
 {% endhighlight %}
 {% endtabs %}
 
-## WinForms to Blazor component mapping
+## Migrating key Syncfusion® components from WinForms to Blazor component mapping
 
-This document provides a **comprehensive reference table** that maps **Syncfusion® WinForms controls** to their **Syncfusion® Blazor equivalents**.  
+This document provides a comprehensive reference table that maps **Syncfusion® WinForms controls** to their **Syncfusion® Blazor equivalents**.  
 
 It is intended to help developers **plan, assess, and execute** WinForms to Blazor migrations efficiently.
 
@@ -332,8 +333,8 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
 | [SfDataGrid](https://help.syncfusion.com/windowsforms/datagrid/gettingstarted) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) | Supports sorting, filtering, grouping, paging, editing |
-| [SfDataPager](https://help.syncfusion.com/windowsforms/datagrid/paging) | Built‑in Grid [Paging](https://blazor.syncfusion.com/documentation/datagrid/paging) | Paging via `GridPageSettings` |
-| [Virtual Grid](https://help.syncfusion.com/windowsforms/grid-control/virtual-grid) | [SfGrid(Virtualization)](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) | Virtual scrolling enabled via grid settings |
+| [SfDataPager](https://help.syncfusion.com/windowsforms/datagrid/paging) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/paging) | Paging is handled using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) |
+| [Virtual Grid](https://help.syncfusion.com/windowsforms/grid-control/virtual-grid) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) | Virtual scrolling can be enabled by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true**. |
 
 ### Charts and Data Visualization
 
@@ -348,7 +349,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
-| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfSchedule](https://blazor.syncfusion.com/documentation/scheduler/getting-started) | Appointment‑based scheduling |
+| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfSchedule](https://blazor.syncfusion.com/documentation/scheduler/getting-started) | Appointment based scheduling |
 
 ### Navigation and Layout controls
 
@@ -366,7 +367,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | [SfNumericTextBox](https://help.syncfusion.com/windowsforms/numeric-textbox/gettingstarted) | [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) | Numeric input |
 | [SfDateTimeEdit](https://help.syncfusion.com/windowsforms/datetimepicker/getting-started) | [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) | Date and time picker |
 | [SfComboBox](https://help.syncfusion.com/windowsforms/combobox/gettingstarted) | [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started) | Virtualized dropdown |
-| [AutoComplete](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) | [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) | Input suggestions |
+| [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) | [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) | Input suggestions |
 
 ### Buttons and Commands
 
@@ -387,7 +388,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Syncfusion® Blazor component | Notes |
 |---|---|---|
-| [PdfViewerControl](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/getting-started) | [SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor-classic/getting-started/web-assembly-application) | PDF viewer |
+| [PdfViewerControl](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/getting-started) | [SfPdfViewer2](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application) | PDF viewer |
 | [Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started) | [SfSpreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started) | Excel‑like UI |
 
 ### Diagram and Visual Modeling
