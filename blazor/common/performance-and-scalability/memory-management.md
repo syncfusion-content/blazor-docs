@@ -9,11 +9,11 @@ documentation: ug
 
 # Memory Management with Syncfusion® Blazor Components
 
-This guide explains best practices for [managing memory](https://learn.microsoft.com/en-us/aspnet/core/performance/memory) in Blazor applications using [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). It covers efficient component lifecycle management, proper resource cleanup, and techniques such as `IDisposable` to prevent memory leaks and improve application performance.
+This guide explains best practices for [managing memory](https://learn.microsoft.com/en-us/aspnet/core/performance/memory) in Blazor applications using [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). It covers efficient component lifecycle management, proper resource cleanup, and techniques such as `IDisposable` to prevent memory leaks and optimize application performance.
 
 ## Preventing memory leaks with Syncfusion® Blazor components
 
-[Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references should be cleared explicitly.
+Syncfusion Blazor components are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references should be cleared explicitly.
 
 In Blazor WebAssembly, releasing these references allows the browser runtime to reclaim memory. In Blazor Server, proper cleanup prevents memory retention across active user circuits, which is essential for maintaining scalability.
 
@@ -40,7 +40,7 @@ The following example demonstrates how to release data collections used by the D
 </SfGrid>
 
 @code {
-    private List<Order> Orders = new();
+    private List<Order>? Orders;
 
     protected override void OnInitialized()
     {
@@ -140,7 +140,7 @@ This example demonstrates how to manage event subscriptions in a component that 
 
 **Add service file:**
 
-Create the service folder in the project root. Then create a service file (e.g., `AppState.cs`) under the service folder and add the following code:
+Create a `Services` folder in your project root. Then add a service file named `AppState.cs` with the following code.
 
 {% tabs %}
 {% highlight cs tabtitle="AppState.cs" %}
@@ -175,8 +175,9 @@ Register this service into the `Program.cs` file:
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
 
-....
+...
 builder.Services.AddScoped<AppState>();
+...
 
 {% endhighlight %}
 {% endtabs %}
@@ -274,7 +275,7 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
 </div>
 
 @code {
-    private List<Item>? Items = new();
+    private List<Item>? Items;
 
     protected override void OnInitialized()
     {
@@ -336,5 +337,5 @@ This guidance applies to the Blazor Server hosting model and to Blazor Web App p
 
 * [Blazor Component Lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
 * [Blazor Dependency Injection](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-10.0)
-* [Syncfusion® DataGrid Virtualization  ](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [Syncfusion® DataGrid Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
 * [Syncfusion® Blazor Performance Guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
