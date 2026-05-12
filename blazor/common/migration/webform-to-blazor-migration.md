@@ -97,10 +97,10 @@ Use the following commands to install the required packages for each component.
 
 | Component | Web Forms package command | Blazor package command |
 |---|---|---|
-| DataGrid | `dotnet add package Syncfusion.AspNet` | `dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}` |
-| Scheduler | `dotnet add package Syncfusion.AspNet` | `dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}` |
-| RichTextEditor | `dotnet add package Syncfusion.AspNet` | `dotnet add package Syncfusion.Blazor.RichTextEditor -v {{ site.releaseversion }}` |
-| Themes | — | `dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}` |
+| DataGrid | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
+| Scheduler | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
+| RichTextEditor | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) |
+| Themes | — | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
 N> Install `Syncfusion.Blazor.Themes` once at the application level. This package is required for the Blazor components used in this migration guide.
 
