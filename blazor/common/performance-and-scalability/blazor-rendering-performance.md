@@ -9,52 +9,11 @@ documentation: ug
 
 # Syncfusion® Blazor Rendering and Performance Optimization
 
-This section explains how rendering works in Blazor and shows practical ways to optimize rendering efficiency, reducing unnecessary re-renders, diffing overhead, and UI update latency when authoring components with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). The focus is on writing components that remain efficient as data volume, user interaction, and layout complexity increase.
+This guide explains how rendering works in Blazor and provides practical techniques to optimize rendering performance when using [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
 
-## What is rendering in Blazor?
+## Syncfusion® Blazor DataGrid example with stable data binding
 
-[Rendering in Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0) is the process of generating UI output from a component’s current state. Instead of directly updating HTML elements, Blazor builds an internal representation of the UI called a render tree and compares it with the previous version to determine what changed.
-
-This model helps Blazor update only the necessary parts of the interface. For Syncfusion components, this means rendering remains efficient when parameters are stable and state updates are intentional.
-
-## Why rendering optimization matters?
-
-Most commonly used Syncfusion components are interactive and operate based on data. A [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) may respond to paging, sorting, filtering, and editing, while a [Chart](https://www.syncfusion.com/blazor-components/blazor-charts) may refresh when a dashboard filter changes or when live data arrives.
-
-If component state changes more frequently than necessary or if child components receive new object references unnecessarily, Blazor performs more rendering work than required. Over time, this leads to slower interactions, increased CPU usage, and reduced UI smoothness.
-
-N> Rendering issues often remain unnoticed in small samples and become visible only when the application starts handling larger datasets and real user interaction patterns.
-
-## How rendering works in Blazor?
-
-Blazor represents the UI as a **render tree**, which is an internal structure describing elements, attributes, child content, and nested components. Every time a component renders, Blazor creates a new render tree for that component.
-
-It then performs **diffing**, which means it compares the new render tree with the previous one and identifies the exact differences. These differences are grouped into a **batch** and applied efficiently to the UI, which avoids rebuilding the entire page and limits updates to only the affected components.
-
-N> Blazor rendering is scoped to individual components. When state changes in a component, Blazor re-renders only that component and its descendants. The framework does not refresh the entire page unless the change affects the root component or alters the parent component hierarchy.
-
-## Measuring rendering overhead
-
-Rendering overhead becomes noticeable when actions such as scrolling, filtering, resizing, or refreshing data begin to feel less responsive. The most practical way to identify rendering overhead is to use browser DevTools:
-
-1. Open browser DevTools (F12 on most browsers).
-2. Go to the Performance or Profiler tab.
-3. Start recording user interactions (scroll, filter, resize).
-4. Stop recording and inspect the results for long tasks, layout recalculations, and paint events.
-
-For Blazor Server or ASP.NET Core hosting environments, also consider using [dotnet-trace](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-trace) for server-side performance analysis.
-
-When analyzing a page that contains a Syncfusion Grid or Chart, focus on how often the UI updates and whether updates are triggered by real data changes or by repeated object creation. In many cases, performance improvements come not from changing the component itself, but from reducing how often the parent component causes it to re-render.
-
-## Render tree stability and parameter changes
-
-Blazor determines whether child components should update based on state and parameter changes. If a parent component creates new objects or collections during every render, the child component receives those values as changed parameters, even if the content is logically identical.
-
-Keeping parameter values stable reduces unnecessary diffing and avoids render work in Syncfusion components. This is especially important for grids, charts, and dropdown controls that often receive collections and configuration objects.
-
-## Syncfusion® DataGrid example with stable data binding
-
-The following example shows a simple [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
+The following example demonstrates a [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -98,7 +57,7 @@ The following example shows a simple [DataGrid](https://www.syncfusion.com/blazo
 
 In this pattern, the grid receives the same `Orders` reference unless the data actually changes. This allows Blazor to avoid treating the parameter as new on every render, which reduces the amount of diffing and internal component work.
 
-N> Reassigning a new list instance with the same items still counts as a parameter change and may trigger unnecessary re-rendering.
+N>  Reassigning a new list instance with the same items still counts as a parameter change and will cause the component to re-render unnecessarily.
 
 ## Managing re-renders with ShouldRender
 
@@ -116,11 +75,11 @@ protected override bool ShouldRender()
 
 private async Task OnDataRefreshAsync()
 {
-    isUiUpdateRequired = true;
-    StateHasChanged();
+    isUiUpdateRequired = true; 
+    StateHasChanged(); // Trigger render with isUiUpdateRequired = true
     await RefreshDataAsync();
-    isUiUpdateRequired = false; // Reset for next cycle
-    StateHasChanged();
+    isUiUpdateRequired = false; 
+    StateHasChanged(); // Trigger render with isUiUpdateRequired = false (no render occurs)
 }
 
 ```
@@ -196,9 +155,9 @@ Here, the data source changes only when new data is intentionally assigned. This
 
 ## Component splitting and child component patterns
 
-As pages become larger, it is useful to split them into focused child components rather than keeping all UI sections in one file. A page that contains a grid, chart, filter panel, and summary cards performs better when each section manages its own render tree.
+As Razor components grow larger, it is recommended to split them into focused child components instead of placing all UI sections in a single `.razor` file. For example, a Razor component that contains a DataGrid, Chart, filter panel, and summary cards performs better when each section is implemented as an independent component.
 
-This improves render isolation. If a chart filter changes, only the chart section needs to update, while the grid and other sections can remain unchanged.
+This improves render isolation. If a chart filter changes, only the chart component is updated, while the DataGrid and other UI sections remain unchanged.
 
 ### Parent component
 
@@ -283,9 +242,9 @@ protected override void OnInitialized()
 
 This keeps the render path simple and avoids repeated computation during every UI update.
 
-## Syncfusion® Chart example with render-efficient updates
+## Syncfusion® Blazor Chart example with render-efficient updates
 
-[Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
+[Syncfusion® Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
 
 {% tabs %}
 {% highlight razor tabtitle="Charts.razor" %}
@@ -386,7 +345,7 @@ This difference is not about code style and directly impacts rendering efficienc
 * [Razor component rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0)
 * [Razor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
 * [Blazor rendering performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0)
-* [DataGrid getting started](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-* [Chart getting started](https://blazor.syncfusion.com/documentation/chart/getting-started)
-* [DropDownList getting started](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
+* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Getting started with Syncfusion Blazor Chart](https://blazor.syncfusion.com/documentation/chart/getting-started)
+* [Getting started with Syncfusion Blazor DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
 
