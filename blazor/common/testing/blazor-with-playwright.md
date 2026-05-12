@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Testing Blazor Applications with Playwright | Syncfusion®
-description: Learn how to perform end-to-end UI testing for Syncfusion® Blazor applications using Microsoft Playwright, including testing complete workflows.
+description: Learn how to perform automate end-to-end UI testing for Syncfusion® Blazor applications using Microsoft Playwright.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Testing Syncfusion® Blazor applications with Playwright
+# Testing Syncfusion® Blazor components with Playwright
 
 This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a Blazor WebAssembly application and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
@@ -15,7 +15,7 @@ Playwright enables automated end‑to‑end (E2E) testing by simulating real use
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](./blazor-with-playwright#install-required-packages).
 
 Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for a **Blazor WebAssembly Standalone App**.
 
@@ -23,7 +23,7 @@ Otherwise, create a new Blazor application by following the [Syncfusion® gettin
 
 Install the following NuGet packages to use the **Syncfusion® Blazor components**.
 
-- [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)
+- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 You can install the required packages by using the following .NET CLI commands.
@@ -31,7 +31,7 @@ You can install the required packages by using the following .NET CLI commands.
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -45,7 +45,7 @@ Open the `_Imports.razor` file at the root of your project and import the Syncfu
 {% highlight razor tabtitle="_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,29 +92,46 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
 
-This page contains a [Syncfusion® Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+This page contains a [Syncfusion® Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-button) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
 
 {% tabs %}
 {% highlight razor %}
 
 @page "/"
+@using Syncfusion.Blazor.Grids
 
-@using Syncfusion.Blazor.Buttons
-
-<PageTitle>Syncfusion Demo</PageTitle>
-
-<h1>Syncfusion Demo</h1>
-
-<SfButton Content="Click Sync" OnClick="@OnSyncClick"></SfButton>
-
-<p id="sync-result">@result</p>
+<SfGrid DataSource="@Orders" AllowPaging="true" PageSize="12">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Width="130" Format="d" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Width="120" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
 @code {
-    private string result = "Not clicked";
-
-    private void OnSyncClick(MouseEventArgs args)
+    public List<Order> Orders { get; set; } = new List<Order>();
+    
+    protected override void OnInitialized()
     {
-        result = "Clicked";
+        Orders = Enumerable.Range(1, 20).Select(i => new Order
+        {
+            OrderID = 1000 + i,
+            CustomerID = (new[] { "Maria", "Ana", "Antonio", "Thomas", "Peter", "Anne", "Bergl", "Fin" })[i % 8] ?? "",
+            OrderDate = DateTime.Now.AddDays(-i),
+            Freight = i * 50.5m,
+            ShipCountry = (new[] { "USA", "Germany", "Brazil", "France", "UK", "Spain", "Italy", "Argentina" })[i % 8] ?? ""
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; } = "";
+        public DateTime OrderDate { get; set; }
+        public decimal Freight { get; set; }
+        public string ShipCountry { get; set; } = "";
     }
 }
 
@@ -273,14 +290,24 @@ namespace E2E.Tests
         }
 
         [Test]
-        public async Task SyncfusionButton_Works()
+        public async Task GridPaging_Works()
         {
             var page = await _browser!.NewPageAsync();
             await page.GotoAsync(_url + "/");
-            await page.ClickAsync("text=Click Sync");
 
-            var result = await page.InnerTextAsync("#sync-result");
-            Assert.That(result, Is.EqualTo("Clicked"));
+            // Wait for grid to load
+            await page.WaitForSelectorAsync(".e-grid");
+
+            // Get first order ID on page 1
+            var firstOrderOnPage1 = await page.InnerTextAsync(".e-grid tbody tr:first-child td:first-child");
+
+            // Click on next page button
+            await page.Locator(".e-pager .e-next").ClickAsync();
+            await page.WaitForTimeoutAsync(1000);
+
+            // Verify first row changed (pagination worked)
+            var firstOrderOnPage2 = await page.InnerTextAsync(".e-grid tbody tr:first-child td:first-child");
+            Assert.That(firstOrderOnPage2, Is.Not.EqualTo(firstOrderOnPage1));
         }
     }
 }
