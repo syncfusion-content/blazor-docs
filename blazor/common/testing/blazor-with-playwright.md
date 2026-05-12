@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Testing Blazor Applications with Playwright | Syncfusion®
-description: Learn how to automate end‑to‑end UI testing for Syncfusion® Blazor applications using Microsoft Playwright.
+description: Learn how to automate end‑to‑end (E2E) UI testing for Syncfusion® Blazor applications using Microsoft Playwright
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Testing Syncfusion® Blazor components with Playwright
 
-This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a ***Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
+This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
 Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Syncfusion® Blazor components behave as expected.
 
@@ -100,7 +100,8 @@ This page contains a [Syncfusion® Blazor Grid](https://www.syncfusion.com/blazo
 @page "/"
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowPaging="true" PageSize="12">
+<SfGrid DataSource="@Orders" AllowPaging="true">
+<GridPageSettings PageSizes="true" PageSize="12"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120" TextAlign="TextAlign.Right"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -350,6 +351,6 @@ This approach ensures reliable validation of **Syncfusion® Blazor UI components
 
 ## See also
 
-- [Getting started with Syncfusion® Blazor Button in WASM app](https://blazor.syncfusion.com/documentation/button/getting-started)
+- [Getting started with Syncfusion® Blazor Grid in WASM app](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 - [Guide for installing Playwright Browsers (CLI)](https://playwright.dev/dotnet/docs/intro)
 
