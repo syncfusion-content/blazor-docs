@@ -11,7 +11,11 @@ documentation: ug
 
 This guide provides a step‑by‑step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to [Syncfusion® Blazor](https://www.syncfusion.com/blazor-components) application. It is designed to help developers modernize existing desktop applications by moving to a web based architecture while continuing to use familiar .NET and C# skills.
 
-It explains key architectural differences, project structure changes, and shows practical examples of converting common WinForms controls to their Syncfusion® Blazor equivalents, making the migration process easy to understand.
+**This document covers:**
+
+* Architectural differences between Windows Forms and Blazor
+* Project structure mapping
+* Step-by-step migration of Syncfusion® components.
 
 ## Why Migrate from WinForms to Syncfusion® Blazor?
 
