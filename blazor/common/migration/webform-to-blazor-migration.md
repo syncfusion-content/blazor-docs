@@ -162,8 +162,18 @@ In Blazor, scripts and styles are served as static web assets from the NuGet pac
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<head>
+    ...
+    <!-- Syncfusion® theme stylesheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ...
+</head>
+<body>
+    ...
+    <!-- Syncfusion® Blazor core script (required for UI components) -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    ...
+</body>
 
 {% endhighlight %}
 {% endtabs %}
