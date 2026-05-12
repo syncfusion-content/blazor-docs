@@ -74,7 +74,7 @@ ASP.NET Web Forms and Blazor Web Apps follow different application architectures
 
 ### Creating a Blazor Web App with Interactive Server
 
-For Web Forms migrations, create a **Blazor Web App with Interactive Server** option, which runs server-side and preserves the familiar server hosted execution model with real-time interactivity via SignalR:
+For Web Forms migrations, create a **Blazor Web App with Interactive Server** option, which runs server-side and preserves the familiar server hosted execution model with real-time interactivity via SignalR.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -110,7 +110,7 @@ ASP.NET Web Forms initializes controls implicitly as part of the page lifecycle.
 
 Blazor uses dependency injection (DI) from the ground up. Syncfusion components must be registered in the service container so the framework can resolve rendering engines, localization providers, and JavaScript interop services required for each component to function correctly.
 
-In the `Program.cs` file, add the Syncfusion namespace and register services:
+In the `Program.cs` file, add the Syncfusion namespace and register services.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
