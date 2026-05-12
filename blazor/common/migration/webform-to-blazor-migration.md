@@ -222,9 +222,7 @@ In Web Forms, the DataGrid is a server control declared in markup with data assi
 </ej:Grid>
 
 {% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
 {% highlight c# tabtitle="Default.aspx.cs" %}
 
 using System.Web.UI;
@@ -326,9 +324,7 @@ In Web Forms, the Scheduler is defined as a server control and configured using 
 </ej:Schedule>
 
 {% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
 {% highlight c# tabtitle="Default.aspx.cs" %}
 
 using System;
@@ -442,9 +438,7 @@ In Web Forms, the Rich Text Editor is declared as a server control and content i
 </ej:RTE>
 
 {% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
 {% highlight c# tabtitle="Default.aspx.cs" %}
 
 protected void Page_Load(object sender, EventArgs e)
