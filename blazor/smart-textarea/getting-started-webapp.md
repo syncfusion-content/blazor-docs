@@ -362,7 +362,7 @@ Here,
 
 * Type 'To investigate' to experience instant sentence autocompletion.
 
-![Syncfusion Smart TextArea - Output](images/smart-textarea-userphrases.gif)
+![Syncfusion Smart TextArea - Output](images/smart-textarea-userphrases.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
