@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Testing Blazor Applications with Playwright | Syncfusion®
-description: Learn how to perform automate end-to-end UI testing for Syncfusion® Blazor applications using Microsoft Playwright.
+description: Learn how to automate end‑to‑end UI testing for Syncfusion® Blazor applications using Microsoft Playwright.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Testing Syncfusion® Blazor components with Playwright
 
-This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a Blazor WebAssembly application and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
+This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a ***Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
 Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Syncfusion® Blazor components behave as expected.
 
@@ -92,7 +92,7 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
 
-This page contains a [Syncfusion® Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-button) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+This page contains a [Syncfusion® Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
 
 {% tabs %}
 {% highlight razor %}
@@ -167,7 +167,7 @@ Install the following NuGet packages into the **E2E.Tests** project to enable Pl
 You can install the required packages by using the following .NET CLI commands.
 
 {% tabs %}
-{% highlight bash tabtitle=" Terminal " %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet add package Microsoft.Playwright
 dotnet add package NUnit
@@ -188,7 +188,7 @@ Playwright provides a global .NET CLI tool for managing browser installations.
 Run the following command in a Terminal.
 
 {% tabs %}
-{% highlight bash tabtitle=" Terminal " %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet tool install --global Microsoft.Playwright.CLI
 
@@ -205,7 +205,7 @@ If the tool is already installed, this command can be safely skipped.
 After the CLI is available, install the required browsers by running:
 
 {% tabs %}
-{% highlight bash tabtitle=" Terminal " %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 playwright install
 
@@ -295,17 +295,17 @@ namespace E2E.Tests
             var page = await _browser!.NewPageAsync();
             await page.GotoAsync(_url + "/");
 
-            // Wait for grid to load
+            // Wait for grid to load.
             await page.WaitForSelectorAsync(".e-grid");
 
-            // Get first order ID on page 1
+            // Get first order ID on page 1.
             var firstOrderOnPage1 = await page.InnerTextAsync(".e-grid tbody tr:first-child td:first-child");
 
-            // Click on next page button
+            // Click on next page button.
             await page.Locator(".e-pager .e-next").ClickAsync();
             await page.WaitForTimeoutAsync(1000);
 
-            // Verify first row changed (pagination worked)
+            // Verify first row changed (pagination worked).
             var firstOrderOnPage2 = await page.InnerTextAsync(".e-grid tbody tr:first-child td:first-child");
             Assert.That(firstOrderOnPage2, Is.Not.EqualTo(firstOrderOnPage1));
         }
@@ -322,7 +322,7 @@ You can execute the Playwright end‑to‑end tests to validate the behavior of 
 From the solution root directory, run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet test tests/E2E.Tests
 
