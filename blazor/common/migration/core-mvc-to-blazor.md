@@ -15,7 +15,7 @@ Migrating enterprise applications from **ASP.NET Core MVC** to **Blazor** repres
 
 ASP.NET Core MVC applications rely on **server-side request handling**, **partial views**, and **AJAX callbacks** to update UI content. While this architecture is robust and well established, it can become increasingly complex to manage as applications grow more interactive and UI logic becomes distributed across controllers, views, and client scripts.
 
-Blazor replaces the traditional request response interaction model with **event driven UI updates**, enables **reusable and composable components**, and aligns closely with modern .NET development practices. Blazor provides a modern alternative for applications that require rich interactivity and component driven UI patterns, making it a strong choice for long term application modernization.
+Blazor replaces the traditional request response interaction model with **event driven UI updates**, enables **reusable components**, and aligns closely with modern .NET development practices. Blazor provides a modern alternative for applications that require rich interactivity and component driven UI patterns, making it a strong choice for long term application modernization.
 
 | Aspect | ASP.NET Core MVC | Blazor |
 | --- | --- | --- |
@@ -544,7 +544,7 @@ The Blazor Scheduler operates as a **self-contained component**, where data, sta
 
 In ASP.NET Core MVC, the [Rich Text Editor](https://www.syncfusion.com/aspnet-mvc-ui-controls/wysiwyg-rich-text-editor) is rendered using EJ2 JavaScript based components. After initialization, editing operations and UI interactions are handled entirely on the client-side. Content can be submitted to the server via form post or AJAX when needed.
 
-In Blazor, the [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editors) is implemented as a **stateful Razor component**. Content binding, editing, and UI updates are handled directly within the component using in-memory state and event handling, eliminating the need for explicit postbacks or AJAX calls.
+In Blazor, the [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editors) is implemented as a **stateful Razor component**. Content binding, editing, and UI updates are handled directly within the component using in-memory state and event handling, eliminating the need for explicit postback or AJAX calls.
 
 | Aspect                    | MVC (`RichTextEditor` – ASP.NET Core wrappers) | Blazor (`SfRichTextEditor`)                                    |
 | ------------------------- | ---------------------------------------------- | -------------------------------------------------------------- |
