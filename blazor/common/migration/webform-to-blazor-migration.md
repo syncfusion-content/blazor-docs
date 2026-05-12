@@ -95,7 +95,7 @@ The following shared setup applies to all three Syncfusion components and covers
 
 Use the following commands to install the required packages for each component.
 
-| Component | Web Forms package command | Blazor package command |
+| Component | Web Forms packages | Blazor packages |
 |---|---|---|
 | DataGrid | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
 | Scheduler | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
