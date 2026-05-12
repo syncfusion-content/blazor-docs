@@ -864,3 +864,5 @@ public class Order
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLIjphYJvURjaoU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> If you wish to use the SfMention component inside the column chooser template we recommed using the `e-ccdlg-mention` class inside the CSSClass property of the SfMention component to get the column chooser functionality to work more effectively.
