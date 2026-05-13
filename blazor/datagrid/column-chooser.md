@@ -418,6 +418,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows cust
 
 The parameters passed to the templates can be accessed using the implicit **context** parameter.
 
+> If you wish to use the SfMention component inside the column chooser template, we recommend using the `e-ccdlg-mention` class in the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property of the SfMention component to ensure the column chooser functionality works effectively.
+
 ### Customize the content of column chooser
 
 The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) is used to customize the content of the column chooser dialog. The **context** parameter can be typecast to [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to access the list of columns within the template.
@@ -709,8 +711,6 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhUiMtVWQPZQjGs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-> If you wish to use the SfMention component inside the column chooser template, we recommend using the `e-ccdlg-mention` class in the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property of the SfMention component to ensure the column chooser functionality works effectively.
 
 ## Group column chooser items in Blazor DataGrid
 
