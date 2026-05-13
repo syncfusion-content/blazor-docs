@@ -710,6 +710,8 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhUiMtVWQPZQjGs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> If you wish to use the SfMention component inside the column chooser template, we recommend using the `e-ccdlg-mention` class in the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property of the SfMention component to ensure the column chooser functionality works effectively.
+
 ## Group column chooser items in Blazor DataGrid
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports grouping items in the column chooser dialog using the [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html) component. This improves usability by organizing columns into logical sections. 
@@ -864,5 +866,3 @@ public class Order
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLIjphYJvURjaoU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-> If you wish to use the SfMention component inside the column chooser template we recommed using the `e-ccdlg-mention` class inside the CSSClass property of the SfMention component to get the column chooser functionality to work more effectively.
