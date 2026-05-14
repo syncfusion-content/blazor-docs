@@ -100,8 +100,8 @@ Before building the Blazor app, set up an AWS Cognito user pool:
    - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
    - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
 10. Verify that in **App integration** → **hosted UI**:
-   - "Hosted UI" is **enabled**
-   - "Callback URLs" includes your app redirect URI
+   - "Hosted UI" is **enabled**.
+   - "Callback URLs" includes your app redirect URI.
 
 You now have the values to add to `appsettings.json`.
 
@@ -325,7 +325,7 @@ Add the Syncfusion Blazor theme CSS and script references to your application's 
 
 ### Syncfusion® Blazor DataGrid on an authenticated page
 
-This page demonstrates how to protect a [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
+This page demonstrates how to protect a [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -391,6 +391,16 @@ N> In this example, sample data is defined inline for demonstration purposes. In
 ### Run the application
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
+
+Alternatively, run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
 
 N> By default, the app runs on `https://localhost:7000` (or similar port defined in `Properties/launchSettings.json`). Older project templates may use `https://localhost:5001`. Ensure your Cognito app client **Allowed redirect URIs** match your actual localhost URL.
 
