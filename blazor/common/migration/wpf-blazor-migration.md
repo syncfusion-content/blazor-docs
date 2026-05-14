@@ -69,15 +69,13 @@ WPF and Blazor use different application models. The table below shows the close
 | `ICommand` and `RelayCommand` | Event handlers, `EventCallback`, or injected services | Handles user actions and command logic |
 | `INotifyPropertyChanged` | Component state and re-rendering | Updates the UI when state changes |
 
-## Creating a Blazor Web App with Interactive Server in Visual Studio Code
+## Creating a Blazor Web App with Interactive Server
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
 dotnet new blazor -n MyBlazorApp --interactivity Server
 cd MyBlazorApp
-code .
-dotnet watch   # Hot reload during development
 
 {% endhighlight %}
 {% endtabs %}
@@ -86,11 +84,11 @@ N> The `--interactivity Server` flag configures SignalR-based interactivity and 
 
 ## Migrating key Syncfusion components from WPF to Blazor
 
-The following shared setup applies to all six Syncfusion components and covers the common configuration required before moving on to the [component-specific migration steps](./wpf-blazor-migration#1-datagrid).
+The following shared setup applies to all Syncfusion components and covers the common configuration required before moving on to the [component-specific migration steps](./wpf-blazor-migration#1-datagrid).
 
 ### Common NuGet packages
 
-Use the following NuGet packages for each component.
+Install the required NuGet packages for each component based on your migration needs.
 
 | Component | WPF package (NuGet) | Blazor package (NuGet) |
 |---|---|---|
@@ -129,7 +127,7 @@ Use the same Blazor theme and script setup for all migrated components.
 
 ### Blazor service registration
 
-Register Syncfusion services once for all six components.
+Register Syncfusion services once for all components.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -143,7 +141,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Namespace imports
 
-Add the following namespaces to `_Imports.razor` so the Syncfusion Blazor components are available throughout the application.
+Add the following namespaces to `_Imports.razor` to make the Syncfusion Blazor components available across the application.
 
 | Component | Required namespaces |
 |---|---|
@@ -162,7 +160,6 @@ For detailed explanation, refer to the [WPF DataGrid getting started guide](http
 
 | Aspect | WPF (SfDataGrid) | Blazor (SfGrid) |
 |---|---|---|
-| Namespace | `Syncfusion.UI.Xaml.Grid` | `Syncfusion.Blazor.Grids` |
 | Component declaration | `<syncfusion:SfDataGrid>` | `<SfGrid>` |
 | Data binding | `ItemsSource` with `DataContext` or a view model | `DataSource` with component state |
 | Collection type | `ObservableCollection<T>` is commonly used | `List<T>` or `IEnumerable<T>` is commonly used |
@@ -302,7 +299,6 @@ For detailed explanation, refer to the [WPF TreeGrid getting started guide](http
 
 | Aspect | WPF (SfTreeGrid) | Blazor (SfTreeGrid) |
 |---|---|---|
-| Namespace | `Syncfusion.UI.Xaml.TreeGrid` | `Syncfusion.Blazor.TreeGrid` |
 | Component declaration | `<syncfusion:SfTreeGrid>` | `<SfTreeGrid>` |
 | Data structure | Nested collections or self-referencing flat data | Self-referencing flat data is the common approach |
 | Hierarchy mapping | `ChildPropertyName`, `ParentPropertyName`, and `SelfRelationRootValue` | `IdMapping` and `ParentIdMapping` |
@@ -450,7 +446,6 @@ For detailed explanation, refer to the [WPF Charts getting started guide](https:
 
 | Aspect | WPF (SfChart) | Blazor (SfChart) |
 |---|---|---|
-| Namespace | `Syncfusion.UI.Xaml.Charts` | `Syncfusion.Blazor.Charts` |
 | Component declaration | `<syncfusion:SfChart>` | `<SfChart>` |
 | Data binding | `ItemsSource` with `XBindingPath` and `YBindingPath` | `DataSource` with `XName` and `YName` |
 | Axis and series | Nested axis and series elements | `ChartPrimaryXAxis`, `ChartPrimaryYAxis`, and `ChartSeriesCollection` |
@@ -604,7 +599,6 @@ For detailed explanation, refer to the [WPF Scheduler getting started guide](htt
 
 | Aspect | WPF (SfScheduler) | Blazor (SfSchedule<TValue>) |
 |---|---|---|
-| Namespace | `Syncfusion.UI.Xaml.Scheduler` | `Syncfusion.Blazor.Schedule` |
 | Component declaration | `<syncfusion:SfScheduler>` | `<SfSchedule TValue="TModel">` |
 | Appointment model | Built-in `ScheduleAppointment` | Custom model mapped with `ScheduleEventSettings` |
 | View configuration | `ViewType` | `ScheduleViews` and `ScheduleView` |
@@ -744,7 +738,6 @@ For detailed explanation, refer to the [WPF Diagram getting started guide](https
 
 | Aspect | WPF (SfDiagram) | Blazor (SfDiagramComponent) |
 |---|---|---|
-| Namespace | `Syncfusion.UI.Xaml.Diagram` | `Syncfusion.Blazor.Diagram` |
 | Component declaration | `<syncfusion:SfDiagram>` | `<SfDiagramComponent>` |
 | Element model | `NodeCollection` and `ConnectorCollection` | `DiagramObjectCollection<Node>` and `DiagramObjectCollection<Connector>` |
 | Positioning | `OffsetX`, `OffsetY`, `UnitWidth`, and `UnitHeight` | `OffsetX`, `OffsetY`, `Width`, and `Height` |
@@ -880,7 +873,6 @@ For detailed explanation, refer to the [WPF RichTextBox getting started guide](h
 
 | Aspect | WPF (SfRichTextBoxAdv) | Blazor (SfRichTextEditor) |
 |---|---|---|
-| Namespace | `Syncfusion.Windows.Controls.RichTextBoxAdv` | `Syncfusion.Blazor.RichTextEditor` |
 | Component declaration | `<syncfusion:SfRichTextBoxAdv>` | `<SfRichTextEditor>` |
 | Content model | Document-based content | HTML string content |
 | Data binding | Stream-based load and save | `Value` and `@bind-Value` |
@@ -971,10 +963,11 @@ namespace WpfRichTextEditor
 
 ## See also
 
-- [Blazor DataGrid Demos](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2)
-- [Blazor TreeGrid Demos](https://blazor.syncfusion.com/demos/tree-grid/overview?theme=fluent2)
-- [Blazor Chart Demos](https://blazor.syncfusion.com/demos/chart/overview?theme=fluent2)
-- [Blazor Scheduler Demos](https://blazor.syncfusion.com/demos/scheduler/overview?theme=fluent2)
-- [Blazor RichTextEditor Demos](https://blazor.syncfusion.com/demos/rich-text-editor/overview)
-- [Blazor Diagram Demos](https://blazor.syncfusion.com/demos/diagram/flowchart)
+- [Getting started with Syncfusion® Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+- [Getting started with Syncfusion® Blazor TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/getting-started-with-server-app)
+- [Getting started with Syncfusion® Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started)
+- [Getting started with Syncfusion® Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
+- [Getting started with Syncfusion® Blazor Diagram](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+- [Getting started with Syncfusion® Blazor RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app)
+
  
