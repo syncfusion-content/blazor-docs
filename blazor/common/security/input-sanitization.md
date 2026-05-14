@@ -64,11 +64,13 @@ The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-
 <SfRichTextEditor EnableHtmlSanitizer="true" @bind-Value="Content"></SfRichTextEditor>
 
 @code {
-    private string Content { get; set; } = "<p>Welcome</p><img src=x onerror=\"alert('xss')\"><script>alert('XSS')</script>";
+    private string Content { get; set; } = "<p>Welcome</p><img src=x onerror="alert('xss')"><script>alert('XSS')</script>";
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthxtICproYoScRe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
 When the `EnableHtmlSanitizer` property is enabled, the Rich Text Editor automatically removes unsafe tags and attributes before rendering the content.
 
@@ -104,6 +106,8 @@ The [Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-edi
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBRtoMfVqyWhUfy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
 When the `EnableHtmlSanitizer` property is enabled, the Block Editor automatically removes unsafe tags and attributes before rendering content. This includes unsafe tags such as `<script>`, unsafe attributes such as `onload` and `onclick`, as well as JavaScript URLs and other potentially harmful markup. This ensures that only clean and trusted HTML remains in the editor output.
 
