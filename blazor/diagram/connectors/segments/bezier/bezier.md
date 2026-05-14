@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bezier Segments in Blazor Diagram Component | Syncfusion
-description: Check out and learn about Bezier Segments in Syncfusion Blazor Diagram component and much more details.
+title: Bezier Segment in Blazor Diagram Component | Syncfusion
+description: Check out and learn about Bezier Connector Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Bezier Segments in Blazor Diagram Component
+# Bezier Segments in Diagram Component
 
 ## How to Create a Bezier Segment
 
@@ -279,18 +279,18 @@ The following predefined shapes are provided:
 
 | Shape name | Shape |
 |-------- | -------- |
-|[Rhombus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow)| ![Rhombus](../../images/RhombusBezier.webp) |
-| [Square](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow) | ![Square](../../images/SquareBezier.webp) |
-| [Rectangle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow) | ![Rectangle](../../images/RectangleBezier.webp) |
-| [Ellipse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow) |![Ellipse](../../images/EllipseBezier.webp) |
-| [Circle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Circle) |![Circle](../../images/CircleBezier.webp) |
-|[Arrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow)| ![Arrow](../../images/ArrowBezier.webp) |
-| [OpenArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenArrow) | ![OpenArrow](../../images/OpenArrowBezier.webp) |
-| [Fletch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Fletch)|![Fletch](../../images/FletchBezier.webp) |
-|[OpenFetch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenFetch)| ![OpenFetch](../../images/OpenFetchBezier.webp) |
-| [IndentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_IndentedArrow) | ![IndentedArrow](../../images/IndentedBezier.webp) |
-| [OutdentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OutdentedArrow) | ![OutdentedArrow](../../images/OutdentedBezier.webp) |
-| [DoubleArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_DoubleArrow) |![DoubleArrow](../../images/DoubleArrowBezier.webp) |
+|[Rhombus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow)| ![Rhombus](../../../images/RhombusBezier.webp) |
+| [Square](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow) | ![Square](../../../images/SquareBezier.webp) |
+| [Rectangle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow) | ![Rectangle](../../../images/RectangleBezier.webp) |
+| [Ellipse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow) |![Ellipse](../../../images/EllipseBezier.webp) |
+| [Circle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Circle) |![Circle](../../../images/CircleBezier.webp) |
+|[Arrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow)| ![Arrow](../../../images/ArrowBezier.webp) |
+| [OpenArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenArrow) | ![OpenArrow](../../../images/OpenArrowBezier.webp) |
+| [Fletch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Fletch)|![Fletch](../../../images/FletchBezier.webp) |
+|[OpenFetch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenFetch)| ![OpenFetch](../../../images/OpenFetchBezier.webp) |
+| [IndentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_IndentedArrow) | ![IndentedArrow](../../../images/IndentedBezier.webp) |
+| [OutdentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OutdentedArrow) | ![OutdentedArrow](../../../images/OutdentedBezier.webp) |
+| [DoubleArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_DoubleArrow) |![DoubleArrow](../../../images/DoubleArrowBezier.webp) |
 
 The following code example illustrates how to create a customized bezier segment thumb shape using the `InheritSegmentThumbShape` constraints.
 

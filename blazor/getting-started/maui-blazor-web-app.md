@@ -24,7 +24,7 @@ The template generates the shared RCL, .NET MAUI Blazor Hybrid App, and Blazor W
 
 ## Install Syncfusion® Blazor DataGrid and Themes NuGet in the app
 
-Open the NuGet Package Manager in Visual Studio by selecting (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and then install the following Syncfusion® NuGet packages.
+Open the NuGet Package Manager in Visual Studio by selecting **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**, and then install the following Syncfusion® NuGet packages.
 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -101,7 +101,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </html>
 
 {% endhighlight %}
-{% highlight razor tabtitle="App.razor" hl_lines="7 13" %}
+{% highlight razor tabtitle="App.razor" hl_lines="6 12" %}
 
 <!DOCTYPE html>
 <html lang="en">

@@ -381,7 +381,7 @@ N> In this example, [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dat
 
 * Copy the `Sample Content` and click on `Smart Paste` to see how the form is instantly filled.
 
-![Syncfusion Smart Paste Button - Output](images/smart-paste.gif)
+![Syncfusion Smart Paste Button - Output](images/smart-paste.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
