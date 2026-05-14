@@ -3,7 +3,7 @@ layout: post
 title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion
 description: Learn how to enable and configure filtering in Syncfusion Blazor MultiSelect component for search-based item selection.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
