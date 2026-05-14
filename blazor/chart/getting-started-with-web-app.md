@@ -248,7 +248,6 @@ You can add data labels to improve the readability of the chart. This can be ach
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
@@ -273,7 +272,6 @@ When space constraints prevent you from displaying information using data labels
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
@@ -296,7 +294,6 @@ You can use legend for the chart by setting the [Visible](https://help.syncfusio
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>

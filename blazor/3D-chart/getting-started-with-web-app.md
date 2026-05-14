@@ -170,6 +170,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveAuto
 <SfChart3D>
 
 </SfChart3D>
@@ -196,8 +197,6 @@ To bind data for the 3D chart component, you can assign a IEnumerable object to 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-
-@rendermode InteractiveAuto
 
 public class SalesInfo
 {

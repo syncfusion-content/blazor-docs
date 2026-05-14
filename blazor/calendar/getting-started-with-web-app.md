@@ -199,7 +199,6 @@ Here, the Calendar allows selecting a date from the 5th to the 27th of the curre
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime" Min='@MinDate' Value='@DateValue' Max='@MaxDate'></SfCalendar>

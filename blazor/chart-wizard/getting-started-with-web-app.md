@@ -233,7 +233,6 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 <div class="control-section">
     <SfChartWizard>
         <ChartSettings DataSource="@OlympicsDataSource"

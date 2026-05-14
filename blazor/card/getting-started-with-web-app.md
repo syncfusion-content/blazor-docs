@@ -193,7 +193,6 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 <div class="control-section">
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">

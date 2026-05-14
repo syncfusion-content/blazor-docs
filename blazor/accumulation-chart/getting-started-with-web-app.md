@@ -225,7 +225,6 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
@@ -265,8 +264,6 @@ The data labels are added to improve the readability of the accumulation chart. 
 {% tabs %}
 {% highlight razor %}
 
-@rendermode InteractiveAuto
-
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
@@ -287,8 +284,6 @@ When space constraints prevent from displaying the information using data labels
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
@@ -308,8 +303,6 @@ Legend is used for the accumulation chart by setting the [Visible](https://help.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
