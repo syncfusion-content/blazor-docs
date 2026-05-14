@@ -84,7 +84,7 @@ N> The `--interactivity Server` flag configures SignalR-based interactivity and 
 
 ## Migrating key Syncfusion components from WPF to Blazor
 
-The following shared setup applies to the listed Syncfusion components and covers the common configuration required before moving on to the [component-specific migration steps](./wpf-blazor-migration#1-datagrid).
+The following shared setup applies to all Syncfusion components and covers the common configuration required before moving on to the [component-specific migration steps](./wpf-blazor-migration#1-datagrid).
 
 ### Common NuGet packages
 
@@ -127,7 +127,7 @@ Use the same Blazor theme and script setup for all migrated components.
 
 ### Blazor service registration
 
-Register Syncfusion services once for all listed components.
+Register Syncfusion services once for all components.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
