@@ -224,8 +224,6 @@ The following code explains how to initialize tab content using `ContentTemplate
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Navigations
 
 <SfTab>
@@ -268,8 +266,6 @@ The property [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Navigations

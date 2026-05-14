@@ -230,8 +230,6 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Inputs
 
 <div class="speechtext-container">

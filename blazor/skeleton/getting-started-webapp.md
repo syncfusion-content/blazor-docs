@@ -194,8 +194,6 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Notifications
 
 <div style="width: 200px">

@@ -195,8 +195,6 @@ On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Buttons
 
 <SfSwitch @bind-Checked="isChecked" OnLabel="On" OffLabel="Off"></SfSwitch>

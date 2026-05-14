@@ -232,8 +232,6 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -280,8 +278,6 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Schedule
 
@@ -334,8 +330,6 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView">
@@ -373,8 +367,6 @@ Each individual Scheduler views can be customized with its own options such as s
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Schedule
 

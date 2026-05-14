@@ -235,8 +235,6 @@ Let’s check the properties used here:
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
@@ -291,8 +289,6 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowPaging="true">
@@ -343,8 +339,6 @@ The sorting feature enables to order the records. It can be enabled by setting t
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.TreeGrid
 
@@ -417,8 +411,6 @@ The following code example shows how to use the [OnActionFailure](https://help.s
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;

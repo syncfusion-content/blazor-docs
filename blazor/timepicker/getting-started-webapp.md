@@ -198,8 +198,6 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" Value="@TimeValue" Step=60 Format="HH:mm"></SfTimePicker>

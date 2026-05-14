@@ -190,8 +190,6 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -275,8 +273,6 @@ Title can be added to the Smith Chart to provide a quick information to the user
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -307,8 +303,6 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Charts
 
@@ -341,8 +335,6 @@ To display data label for particular marker series, set the [Visible](https://he
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Charts
 
@@ -378,8 +370,6 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -413,8 +403,6 @@ When space constraints prevents from displaying information using data labels, t
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Charts
 

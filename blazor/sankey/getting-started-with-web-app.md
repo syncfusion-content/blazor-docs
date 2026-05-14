@@ -255,8 +255,6 @@ To bind data for the sankey diagram, you can assign an IEnumerable object to the
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Sankey
 
 <SfSankey Nodes=@Nodes Links=@Links>
@@ -315,8 +313,6 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
@@ -333,8 +329,6 @@ You can add data labels to improve the readability of the sankey diagram. This c
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Sankey
 
@@ -354,8 +348,6 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Sankey
 
 <SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
@@ -373,8 +365,6 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Sankey
 

@@ -202,8 +202,6 @@ Add an icon to the TextBox using the [AddIconAsync](https://help.syncfusion.com/
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Inputs
 
 <div id="sample" style="margin:130px auto;width:300px">
@@ -239,8 +237,6 @@ The floating label moves the label above the TextBox when the control is focused
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Inputs
 

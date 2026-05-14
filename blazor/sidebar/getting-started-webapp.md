@@ -222,8 +222,6 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
@@ -279,8 +277,6 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
@@ -335,8 +331,6 @@ In the following example, the Sidebar is rendered with Accordion component in it
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
