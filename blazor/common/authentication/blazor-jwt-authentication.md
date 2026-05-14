@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor with JWT Authentication | Syncfusion®
+title: Securing Blazor DataGrid with JWT Authentication | Syncfusion®
 description: Guide to setting up JWT authentication for Syncfusion® Blazor DataGrid with secure API access and token handling.
 platform: Blazor
 control: Common
@@ -84,9 +84,9 @@ Include the Syncfusion® theme stylesheet, required script references, and confi
 {% endhighlight %}
 {% endtabs %}
 
-## Configuring JWT in appsettings.json
+## Setting Up JWT Configuration
 
-The **JWT** configuration specifies how the server signs and validates authentication tokens.
+The **JWT** configuration specifies how the server signs and validates authentication tokens in the `appsettings.json` file.
 
 {% tabs %}
 {% highlight json tabtitle="appsettings.json" %}
