@@ -190,7 +190,7 @@ Removing event subscriptions ensures the component is not retained in memory aft
 
 Rendering large datasets increases memory allocation and DOM size. [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) support [virtualization](https://blazor.syncfusion.com/documentation/common/performance-and-scalability/virtualization#components-supporting-virtualization) to improve performance.
 
-In [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), to configure row virtualization, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** and define a fixed content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property. The number of rendered records is implicitly determined by the content height.
+In [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), to configure row virtualization, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** and define a fixed content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property. The number of rendered records is implicitly determined by the content height.
 
 The following example demonstrates how to use built‑in virtualization in the Syncfusion DataGrid component to efficiently render large data collections.
 
