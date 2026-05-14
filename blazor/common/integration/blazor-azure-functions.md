@@ -181,16 +181,16 @@ public static class OrdersApi
             if (!string.IsNullOrEmpty(query))
             {
                 var pairs = query.Split('&', StringSplitOptions.RemoveEmptyEntries);
-                foreach (var p in pairs)
+                foreach (var pair in pairs)
                 {
-                    var kv = p.Split('=', 2);
-                    if (kv.Length == 0) continue;
-                    var key = WebUtility.UrlDecode(kv[0]).Trim();
-                    var val = kv.Length > 1 ? WebUtility.UrlDecode(kv[1]).Trim() : string.Empty;
-                    if (string.Equals(key, "from", StringComparison.OrdinalIgnoreCase) && DateTime.TryParseExact(val, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var f))
-                        from = f.Date;
-                    if (string.Equals(key, "to", StringComparison.OrdinalIgnoreCase) && DateTime.TryParseExact(val, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var t))
-                        to = t.Date;
+                    var pair_value = pair.Split('=', 2);
+                    if (pair_value.Length == 0) continue;
+                    var key = WebUtility.UrlDecode(pair_value[0]).Trim();
+                    var val = pair_value.Length > 1 ? WebUtility.UrlDecode(pair_value[1]).Trim() : string.Empty;
+                    if (string.Equals(key, "from", StringComparison.OrdinalIgnoreCase) && DateTime.TryParseExact(val, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var from_date))
+                        from = from_date.Date;
+                    if (string.Equals(key, "to", StringComparison.OrdinalIgnoreCase) && DateTime.TryParseExact(val, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var to_date))
+                        to = to_date.Date;
                 }
             }
         } catch {
