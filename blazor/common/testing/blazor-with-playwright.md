@@ -304,7 +304,6 @@ namespace E2E.Tests
 
             // Click on next page button.
             await page.Locator(".e-pager .e-next").ClickAsync();
-            await page.WaitForTimeoutAsync(1000);
 
             // Verify first row changed (pagination worked).
             var firstOrderOnPage2 = await page.InnerTextAsync(".e-grid tbody tr:first-child td:first-child");
