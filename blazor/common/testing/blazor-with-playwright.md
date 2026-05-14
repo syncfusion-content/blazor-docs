@@ -224,6 +224,9 @@ using Microsoft.Playwright;
 using NUnit.Framework;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Threading.Tasks;
+using System.IO;
+using System;
 
 namespace E2E.Tests
 {
@@ -239,10 +242,7 @@ namespace E2E.Tests
         public async Task OneTimeSetup()
         {
             var projectPath = @"<Absolute path to your Blazor application's .csproj file>"; // Example: @"C:\\Users\\MyBlazorApp\\MyBlazorApp.csproj";
-
-            var psi = new ProcessStartInfo(
-                "dotnet",
-                $"run --project \"{projectPath}\" --urls {_url}")
+            var psi = new ProcessStartInfo("dotnet", $"run --project \"{projectPath}\" --urls {_url}")
             {
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
@@ -285,12 +285,13 @@ namespace E2E.Tests
         }
 
         [OneTimeTearDown]
-        public void TearDown()
+        public void OneTimeTearDown()
         {
             _browser?.CloseAsync().GetAwaiter().GetResult();
             _playwright?.Dispose();
             if (_serverProcess is { HasExited: false })
                 _serverProcess.Kill(true);
+            _serverProcess?.Dispose();    
         }
 
         [Test]
