@@ -163,21 +163,17 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea component
 
-Add the Syncfusion Blazor TextArea component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Syncfusion Blazor TextArea component inside the razor file.
+* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
+N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@rendermode InteractiveAuto
+
+@using Syncfusion.Blazor.Inputs
 
 <SfTextArea Placeholder='Add your Comments'></SfTextArea>
 
@@ -197,6 +193,22 @@ The floating label displays the placeholder as a label above the TextArea when f
 
 {% endhighlight %}
 {% endtabs %}
+
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
+2. Run the following command:
+
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTjdiKszhkOkia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.webp)" %}
 
