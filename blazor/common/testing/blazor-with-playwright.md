@@ -193,7 +193,7 @@ Run the following command in a Terminal.
 
 dotnet tool install --global Microsoft.Playwright.CLI
 
-// Restore the test project
+# Restore the test project
 dotnet restore tests/E2E.Tests
 
 {% endhighlight %}
@@ -272,6 +272,9 @@ namespace E2E.Tests
                 }
                 await Task.Delay(1000);
             }
+
+            if (!started)
+                throw new InvalidOperationException($"The Blazor application did not start at {_url}.");
 
             _playwright = await Playwright.CreateAsync();
             _browser = await _playwright.Chromium.LaunchAsync(
