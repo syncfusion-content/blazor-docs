@@ -13,7 +13,7 @@ This guide shows how to secure the [Syncfusion® Blazor DataGrid](https://www.sy
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](./blazor-jwt-authentication#install-required-packages).
 
 Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
@@ -93,6 +93,7 @@ The **JWT** configuration specifies how the server signs and validates authentic
 
 {
   "Jwt": {
+    // Secret key used to create and validate JWT tokens; you can set your own random string with at least 32 characters.
     "Key": "REPLACE_WITH_A_LONG_RANDOM_SECRET_32+_CHARS", 
     "Issuer": "BlazorJWT",
     "Audience": "BlazorJWTClient"
@@ -176,6 +177,8 @@ public class AuthController : ControllerBase
     private readonly TokenService _tokenService;
     public AuthController(TokenService tokenService) => _tokenService = tokenService;
 
+    // This endpoint is intended for demonstration purposes only. 
+    // For production, you can use validation mechanisms such as verifying user credentials before issuing tokens.
     [HttpPost("token")]
     public IActionResult Token([FromQuery] string user = "user123")
     {
@@ -192,7 +195,7 @@ public class AuthController : ControllerBase
 Register **JWT** authentication and authorization middleware to validate incoming API requests. Add these configurations in `Program.cs`.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Program.cs" %}
+{% highlight csharp tabtitle="~/Program.cs" %}
 
 using System.Text;
 using YourProjectName.Components;
@@ -212,6 +215,13 @@ builder.Services.AddHttpClient();
 builder.Services.AddSyncfusionBlazor();
 
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("Jwt:Key missing");
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? throw new InvalidOperationException("Jwt:Issuer missing");
+var jwtAudience = builder.Configuration["Jwt:Audience"] ?? throw new InvalidOperationException("Jwt:Audience missing");
+
+if (jwtKey.Length < 32)
+{
+    throw new InvalidOperationException("Jwt:Key must be at least 32 characters for HS256 algorithm");
+}
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -224,8 +234,8 @@ builder.Services
             ValidateIssuerSigningKey = true,
             ValidateLifetime = true,
             ClockSkew = TimeSpan.FromMinutes(5),
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidAudience = builder.Configuration["Jwt:Audience"],
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtAudience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
     });
@@ -272,8 +282,8 @@ public class OrdersDetails
             {
                 OrderID = i,
                 CustomerID = $"CUST-{i:000}",
-                ShipCity = i % 2 == 0 ? "Chennai" : "Bengaluru",
-                ShipCountry = "India"
+                ShipCity = i % 2 == 0 ? "New York" : "Los Angeles",
+                ShipCountry = "USA"
             }).ToList();
         }
         return _data;
@@ -334,6 +344,13 @@ This example demonstrates how a **JWT** token is retrieved from the server and a
 <h3>JWT‑Secured Syncfusion® Blazor DataGrid</h3>
 
 <button class="btn btn-primary" style="margin-bottom: 15px" @onclick="LoadGridWithToken">Load GridData</button>
+
+@if (!string.IsNullOrEmpty(error))
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Error:</strong> @error
+    </div>
+}
 
 <SfGrid TValue="OrdersDetails" @ref="grid" AllowPaging="true" AllowSorting="true" Width="100%">
     @* Only render the DataManager after the token is fetched. *@

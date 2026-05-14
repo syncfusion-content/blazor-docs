@@ -23,7 +23,7 @@ If you already have a Blazor project, proceed to the package installation sectio
 
 ## Install required packages
 
-Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package), or the .NET CLI.
+Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 **Microsoft packages:**
 
@@ -63,11 +63,13 @@ Add the Syncfusion theme CSS and required scripts to the `/App.razor` file.
 
 <head>
     ...
+    <!-- Syncfusion® theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 <body>
     ...
+    <!-- Syncfusion® Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -133,9 +135,7 @@ For data-level security, [SfDataManager](https://help.syncfusion.com/cr/blazor/S
 
 To securely access protected APIs, include a **Bearer token** in the request headers using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-N>
-* For testing only, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control.
-* For production, retrieve the token dynamically from the authenticated user's claims using `AuthenticationStateProvider` instead of static configuration.
+N> For testing only, add a Bearer token to `appsettings.json` under the section `ExternalApi:BearerToken`. Never commit tokens to source control. For production, retrieve the token dynamically from the authenticated user's claims using `AuthenticationStateProvider` instead of static configuration.
 
 {% tabs %}
 {% highlight json tabtitle="appsettings.json" %}
@@ -165,7 +165,7 @@ The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can
 <AuthorizeView>
     <Authorized Context="authContext">
         <SfGrid TValue="Order" AllowPaging="true">
-        <!-- Replace with your actual protected API endpoint -->
+            @* Replace with your actual protected API endpoint *@
             <SfDataManager Url="https://your-api.com/api/orders/" Adaptor="Adaptors.WebApiAdaptor" Headers="@HeaderData"></SfDataManager>
             <GridPageSettings PageSize="10"></GridPageSettings>
             <GridColumns>
@@ -188,7 +188,7 @@ The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can
 
     protected override async Task OnInitializedAsync()
     {
-        // Retrieve Bearer token from configuration (for testing only)
+        @* Retrieve Bearer token from configuration (for testing only) *@
         var token = Configuration["ExternalApi:BearerToken"];
         if (!string.IsNullOrEmpty(token)) HeaderData["Authorization"] = $"Bearer {token}";
         await base.OnInitializedAsync();
@@ -221,7 +221,7 @@ The [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) u
     <Authorized>
         <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@currentDate">
             <ScheduleEventSettings TValue="AppointmentData">
-                <!-- Replace with your actual protected API endpoint -->
+                @* Replace with your actual protected API endpoint *@
                 <SfDataManager Url="https://your-api.com/api/schedule" Headers="@HeaderData" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
             </ScheduleEventSettings>
             <ScheduleViews>
@@ -305,7 +305,7 @@ The following example demonstrates UI-level authorization using `<AuthorizeView>
 
    protected override void OnInitialized()
    {
-        // Load hierarchical folder data
+        @* Load hierarchical folder data *@
         LoadFolderData();
    }
 
@@ -326,6 +326,16 @@ The following example demonstrates UI-level authorization using `<AuthorizeView>
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
+Alternatively, run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
 **Expected behavior**
 * Syncfusion components should render **only for authorized users**.
 * If the user is not authenticated, the application should display **Register or Log in** options instead of the Syncfusion components.
@@ -340,4 +350,3 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 * [Getting started with Syncfusion Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
 * [Getting started with Syncfusion TreeView](https://blazor.syncfusion.com/documentation/treeview/getting-started-with-server-app)
 * [Blazor Server app with authentication](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-10.0&tabs=visual-studio)
-
