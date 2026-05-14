@@ -84,7 +84,7 @@ Include the Syncfusion® theme stylesheet, required script references, and confi
 {% endhighlight %}
 {% endtabs %}
 
-## Setting Up JWT Configuration
+## Setting up JWT configuration
 
 The **JWT** configuration specifies how the server signs and validates authentication tokens in the `appsettings.json` file.
 
