@@ -17,7 +17,7 @@ ASP.NET Core Razor Pages simplify the MVC pattern by combining UI and logic at t
 
 Blazor provides a modern approach by enabling **component based UI development in C#**, along with built-in **state management** and **event driven updates**. This reduces dependency on external JavaScript frameworks and improves maintainability, scalability, and developer productivity.
 
-The following table highlights the key architectural and functional differences between Razor Pages and Blazor:
+The following table highlights the key architectural and functional differences between Razor Pages and Blazor.
 
 | Aspect     | Razor Pages      | Blazor         |
 | --- | ---| --- |
@@ -225,7 +225,6 @@ For detailed explanation, refer to the [ASP.NET Core Razor DataGrid getting star
 | **Data binding**   | Data passed via `PageModel` (`OnGet`) or `dataSource` property  | `DataSource="@..."` bound in component   |
 | **Collection type**   | `IEnumerable<T>` / server-side model  | `List<T>` / `IEnumerable<T>`  |
 | **Columns**   | Column builder API   | `<GridColumn>` elements   |
-| **Events & API**    | Server-side handlers    | `EventCallback<T>`    |
 | **Paging**   | [AllowPaging](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_PageSettings)   | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings)    |
 | **Filtering**    | [AllowFiltering](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowFiltering)   | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)                      |
 | **Grouping**   | [AllowGrouping](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowGrouping)      | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)          |
@@ -426,9 +425,7 @@ namespace GridSample.Pages
 
 **Key differences**
 
-The key difference is that Razor Pages follows a request based model. Data is passed from the PageModel and rendered on each request.
-
-In contrast, Blazor uses a stateful, component driven approach. Data is stored within the component, and the UI updates automatically without requiring full page reloads.
+The key difference is that Razor Pages follows a request based model. In contrast, Blazor uses a stateful, component driven approach. Data is stored within the component, and the UI updates automatically without requiring full page reloads.
 
 ### Add Syncfusion® Scheduler component
 
@@ -592,9 +589,7 @@ namespace ScheduleSample.Pages
 
 **Key differences**
 
-The key difference is that Razor Pages uses a request based model. The component is rendered each time the page is requested with data from the server.
-
-In contrast, Blazor uses a stateful model. Data persists in memory, and the UI updates automatically without full page reloads.
+The key difference is that Razor Pages uses a request based model. In contrast, Blazor uses a stateful model. Data persists in memory, and the UI updates automatically without full page reloads.
 
 ### Add Syncfusion® Rich Text Editor component
 
@@ -792,9 +787,7 @@ namespace RichTextEditorSample.Pages
 
 **Key differences**
 
-The key difference is that Razor Pages relies on a request based model. The editor content is passed from the server and rendered on each request. Updates require form submission or server interaction.
-
-In contrast, Blazor uses a stateful, data binding approach. The content persists in memory and updates automatically without requiring full page reloads.
+The key difference is that Razor Pages relies on a request based model. In contrast, Blazor uses a stateful, data binding approach. The content persists in memory and updates automatically without requiring full page reloads.
 
 ## Run the application
 
