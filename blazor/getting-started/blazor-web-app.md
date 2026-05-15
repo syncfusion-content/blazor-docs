@@ -234,5 +234,4 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
     ```
 3. The application will start and display in your default web browser.
 
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVesWjwqtDJZluz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.webp)" %}
