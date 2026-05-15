@@ -199,6 +199,48 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 N> The "world-map.json" file contains the World map GeoJSON data.
 
+## Bind data source
+
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property is used to represent statistical data in the Maps component. We can define a list of objects as a data source to the Maps component. This data source will be further used to color the map, display data labels, display tooltips, and more. Assign the below list **SecurityCouncilDetails** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@code {
+    public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
+         new UNCouncilCountry { Name= "China", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "France", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Russia", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "United States", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent"}
+    };
+
+    public class UNCouncilCountry
+    {
+        public string Name { get; set; }
+        public string Membership { get; set; }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The United Nations Security Council data is referred from [source](https://en.wikipedia.org/wiki/List_of_members_of_the_United_Nations_Security_Council).
+
+You should also specify the field names in the shape data and data source to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) properties, respectively. These are used to identify the appropriate shapes and match the specific data source values to them.
+
+N> Please [refer to the section](populate-data#data-binding) for more information on data binding.
+
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 
 ## See also
