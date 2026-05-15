@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Testing Blazor Applications with Playwright | Syncfusion®
-description: Learn how to automate end‑to‑end (E2E) UI testing for Syncfusion® Blazor applications using Microsoft Playwright
+title: Testing Blazor Components with Playwright | Syncfusion®
+description: Learn how to integrate Syncfusion® Blazor UI components into a Blazor WebAssembly Standalone App and validate them through end‑to‑end tests using Microsoft Playwright.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Testing Syncfusion® Blazor components with Playwright
+# Testing Syncfusion® Blazor Components with Playwright
 
 This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
@@ -15,7 +15,7 @@ Playwright enables automated end‑to‑end (E2E) testing by simulating real use
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](./blazor-with-playwright#install-required-packages).
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](#install-required-packages).
 
 Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for a **Blazor WebAssembly Standalone App**.
 
@@ -75,7 +75,7 @@ await builder.Build().RunAsync();
 Include the theme stylesheet and script references in the `wwwroot/index.html` file.
 
 {% tabs %}
-{% highlight html  %}
+{% highlight html %}
 
 <head>
     ....
@@ -92,16 +92,15 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
 
-This page contains a [Syncfusion® Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+This page contains a [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Pages/Home.razor" %}
 
 @page "/"
-@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
-<GridPageSettings PageSizes="true" PageSize="12"></GridPageSettings>
+    <GridPageSettings PageSize="12"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120" TextAlign="TextAlign.Right"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -113,16 +112,16 @@ This page contains a [Syncfusion® Blazor Grid](https://www.syncfusion.com/blazo
 
 @code {
     public List<Order> Orders { get; set; } = new List<Order>();
-    
+
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 20).Select(i => new Order
+        Orders = Enumerable.Range(1, 75).Select(i => new Order
         {
             OrderID = 1000 + i,
-            CustomerID = (new[] { "Maria", "Ana", "Antonio", "Thomas", "Peter", "Anne", "Bergl", "Fin" })[i % 8] ?? "",
+            CustomerID = (new[] { "Maria", "Ana", "Antonio", "Thomas", "Peter", "Anne", "Berglund", "Fin" })[i % 8],
             OrderDate = DateTime.Now.AddDays(-i),
             Freight = i * 50.5m,
-            ShipCountry = (new[] { "USA", "Germany", "Brazil", "France", "UK", "Spain", "Italy", "Argentina" })[i % 8] ?? ""
+            ShipCountry = (new[] { "USA", "Germany", "Brazil", "France", "UK", "Spain", "Italy", "Argentina" })[i % 8]
         }).ToList();
     }
 
@@ -139,6 +138,22 @@ This page contains a [Syncfusion® Blazor Grid](https://www.syncfusion.com/blazo
 {% endhighlight %}
 {% endtabs %}
 
+## Exclude the test project from the Blazor app build
+
+If your Playwright test project is located inside the main Blazor project directory, you must exclude it from the main project’s build process.
+
+To do this, add the following configuration to your `<yourProjectName>.csproj` file:
+
+{% tabs %}
+{% highlight xml tabtitle=".csproj" %}
+
+  <ItemGroup>
+    <Compile Remove="tests\**" />
+  </ItemGroup>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create a Playwright test project
 
 In this step, you create a separate test project to write and manage Playwright end‑to‑end tests for your Syncfusion® Blazor application.
@@ -148,7 +163,10 @@ From the solution root directory, run the following commands to create a new tes
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet new nunit -o tests/E2E.Tests   
+# Create the NUnit test project
+dotnet new nunit -o tests/E2E.Tests
+
+# Move into the test project directory
 cd tests/E2E.Tests
 
 {% endhighlight %}
@@ -160,9 +178,7 @@ This command creates an NUnit test project named **E2E.Tests** under the `tests`
 
 Install the following NuGet packages into the **E2E.Tests** project to enable Playwright based end‑to‑end testing in the test project.
 
-- [Microsoft.Playwright](https://www.nuget.org/packages/microsoft.playwright)
-- [NUnit](https://www.nuget.org/packages/nunit/)
-- [NUnit3TestAdapter](https://www.nuget.org/packages/NUnit3TestAdapter)
+- [Microsoft.Playwright.NUnit](https://www.nuget.org/packages/Microsoft.Playwright.NUnit)
 - [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk)
 
 You can install the required packages by using the following .NET CLI commands.
@@ -170,78 +186,82 @@ You can install the required packages by using the following .NET CLI commands.
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Microsoft.Playwright
-dotnet add package NUnit
-dotnet add package NUnit3TestAdapter
+dotnet add package Microsoft.Playwright.NUnit
 dotnet add package Microsoft.NET.Test.Sdk
 
 {% endhighlight %}
 {% endtabs %}
 
 
-## Install the Playwright CLI
+## Install the Playwright browsers
 
-Playwright requires browser binaries (Chromium, Firefox, and WebKit) to run UI tests. These browsers must be installed separately after the test project is restored and built.
+Run the following commands from the **test project directory**.
 
-**Step 1: Install the Playwright CLI (if not already installed)**
+**Step 1: Build the test project**
 
-Playwright provides a global .NET CLI tool for managing browser installations. 
-Run the following command in a Terminal.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet tool install --global Microsoft.Playwright.CLI
-
-# Restore the test project
-dotnet restore tests/E2E.Tests
-
-{% endhighlight %}
-{% endtabs %}
-
-If the tool is already installed, this command can be safely skipped.
-
-**Step 2: Install Playwright browsers**
-
-After the CLI is available, install the required browsers by running:
+First, build the test project. This step generates the required Playwright installation script (`playwright.ps1`) inside the `bin` folder.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-playwright install
+dotnet build
 
 {% endhighlight %}
 {% endtabs %}
+
+**Step 2: Install required browsers**
+
+Next, install the Playwright browsers (Chromium, Firefox, and WebKit) by running the generated script.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+pwsh bin/Debug/net10.0/playwright.ps1 install
+
+{% endhighlight %}
+{% endtabs %}
+
+N> This example uses `net10.0`. If your project targets a different .NET version, update the path accordingly (for example, `net8.0` or `net9.0`).
+
+If pwsh is not available, you can install it from the [official PowerShell site](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell)
+
+Or use Windows PowerShell (`powershell.exe`) as an alternative:
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+powershell -ExecutionPolicy Bypass -File "bin\Debug\net10.0\playwright.ps1" install
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The `-ExecutionPolicy Bypass` option allows the script to run without being blocked by system security settings.
 
 ## Create Playwright test class
 
 Create a new C# file named `BlazorPlaywrightTests.cs` in the Playwright test project **E2E.Tests**. This file contains the end‑to‑end test logic and manages the Playwright browser lifecycle.
 
 {% tabs %}
-{% highlight C# tabtitle="BlazorPlaywrightTests.cs" %}
+{% highlight c# tabtitle="BlazorPlaywrightTests.cs" %}
 
-using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
 using NUnit.Framework;
 using System.Diagnostics;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.IO;
-using System;
 
 namespace E2E.Tests
 {
-    public class BlazorPlaywrightTests
+    [TestFixture]
+    public class BlazorPlaywrightTests : PageTest
     {
         private Process? _serverProcess;
-        private IPlaywright? _playwright;
-        private IBrowser? _browser;
-        // Replace with your app URL and port from Properties/launchSettings.json in your Blazor project (look for the "applicationUrl" value).
-        private readonly string _url = "http://localhost:5002";
+        // This URL matches the applicationUrl in Properties/launchSettings.json (http profile).
+        private readonly string _url = "http://localhost:5228";
 
         [OneTimeSetUp]
-        public async Task OneTimeSetup()
+        public async Task StartBlazorApp()
         {
-            var projectPath = @"<Absolute path to your Blazor application's .csproj file>"; // Example: @"C:\\Users\\MyBlazorApp\\MyBlazorApp.csproj";
+            var projectPath = @"<Absolute path to your Blazor application's .csproj file>"; // Example: @"C:\Users\MyBlazorApp\MyBlazorApp.csproj";
+
             var psi = new ProcessStartInfo("dotnet", $"run --project \"{projectPath}\" --urls {_url}")
             {
                 RedirectStandardOutput = true,
@@ -252,10 +272,10 @@ namespace E2E.Tests
 
             _serverProcess = Process.Start(psi);
 
-            // wait for server to respond
+            // Wait for the app to respond before running tests.
             using var client = new HttpClient();
             var started = false;
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 90; i++)
             {
                 try
                 {
@@ -268,51 +288,41 @@ namespace E2E.Tests
                 }
                 catch
                 {
-                    // Ignore connection errors while waiting for app to start.
+                    // Ignore connection errors while the app is starting up.
                 }
                 await Task.Delay(1000);
             }
 
             if (!started)
                 throw new InvalidOperationException($"The Blazor application did not start at {_url}.");
-
-            _playwright = await Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(
-                new BrowserTypeLaunchOptions
-                {
-                    Headless = true
-                });
         }
 
         [OneTimeTearDown]
-        public void OneTimeTearDown()
+        public void StopBlazorApp()
         {
-            _browser?.CloseAsync().GetAwaiter().GetResult();
-            _playwright?.Dispose();
             if (_serverProcess is { HasExited: false })
                 _serverProcess.Kill(true);
-            _serverProcess?.Dispose();    
+            _serverProcess?.Dispose();
         }
 
         [Test]
         public async Task GridPaging_Works()
         {
-            var page = await _browser!.NewPageAsync();
-            await page.GotoAsync(_url + "/");
+            await Page.GotoAsync(_url + "/");
 
-            // Wait for grid to load.
-            await page.WaitForSelectorAsync(".e-grid");
+            // Wait for the Syncfusion® Grid to render.
+            await Expect(Page.Locator(".e-grid")).ToBeVisibleAsync();
 
-            // Get first order ID on page 1.
-            var firstOrderOnPage1 = await page.InnerTextAsync(".e-grid tbody tr:first-child td:first-child");
+            // Get the first Order ID on page 1.
+            var firstOrderOnPage1 = await Page.Locator(".e-grid tbody tr:first-child td:first-child").InnerTextAsync();
 
-            // Click on next page button.
-            await page.Locator(".e-pager .e-next").ClickAsync();
+            // Click the next page button.
+            await Page.Locator(".e-pager .e-next").ClickAsync();
 
-            // Verify first row changed (pagination worked).
-            var firstOrderOnPage2 = await page.InnerTextAsync(".e-grid tbody tr:first-child td:first-child");
+            // Verify the first row has changed, confirming that pagination works.
+            var firstOrderOnPage2 = await Page.Locator(".e-grid tbody tr:first-child td:first-child").InnerTextAsync();
             Assert.That(firstOrderOnPage2, Is.Not.EqualTo(firstOrderOnPage1));
-        }
+        }    
     }
 }
 
@@ -323,32 +333,19 @@ namespace E2E.Tests
 
 You can execute the Playwright end‑to‑end tests to validate the behavior of your Syncfusion® Blazor application.
 
-From the solution root directory, run the following command.
+From the **test project directory**, run the following command to execute all tests.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet test tests/E2E.Tests
+dotnet test --logger "console;verbosity=detailed"
 
 {% endhighlight %}
 {% endtabs %}
 
-This command builds the test project, launches the Blazor application, and runs all Playwright tests defined in the `BlazorPlaywrightTests.cs` file.
+This command builds and runs the test project. The **StartBlazorApp** method in `BlazorPlaywrightTests.cs` automatically starts the Blazor application before the tests execute.
 
-To visually observe the test execution, run the browser in non‑headless mode by setting `Headless = false` in the Playwright browser launch options.
-
-{% tabs %}
-{% highlight cs tabtitle="BlazorPlaywrightTests.cs" %}
-
-_browser = await _playwright.Chromium.LaunchAsync(
-    new BrowserTypeLaunchOptions
-    {
-        Headless = false,
-        SlowMo = 50
-    });
-
-{% endhighlight %}
-{% endtabs %}
+N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
 This approach ensures reliable validation of **Syncfusion® Blazor UI components** and enables early detection of UI regressions through automated end‑to‑end testing.
 
