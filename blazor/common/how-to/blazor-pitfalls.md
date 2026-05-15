@@ -9,11 +9,11 @@ documentation: ug
 
 # Common Pitfalls and Solutions in Blazor Applications
 
-This guide covers common issues encountered when building Blazor applications with **[Syncfusion<sup style="font-size:70%">®</sup> Blazor components](https://www.syncfusion.com/blazor-components)**. It explains the cause of each issue, the impact it can have, and the recommended way to resolve it in real-world projects.
+This guide covers common issues encountered when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. It explains the cause of each issue, the impact it can have, and the recommended way to resolve it in real-world projects.
 
 ## Overview
 
-Blazor development involves choosing the right rendering model, managing dependencies, configuring interactivity, and integrating Syncfusion Blazor component libraries. Common issues often relate to:
+Blazor development involves choosing the right rendering model, managing dependencies, configuring interactivity, and integrating Blazor component libraries. Common issues often relate to:
 
 * Component rendering and styling
 * Render mode configuration and interactivity
@@ -354,14 +354,14 @@ Check your `.csproj` file for duplicate entries.
 
 **Step 3: Consolidate versions**
 
-Remove duplicate entries and ensure all Syncfusion Blazor packages use the same version.
+Remove duplicate entries and ensure all Blazor packages use the same version.
 
 {% tabs %}
 {% highlight xml tabtitle="YourApp.csproj" %}
 
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
-    <!-- All Syncfusion packages should use the same version -->
+    <!-- All packages should use the same version -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Calendars" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Charts" Version="33.2.3" />
@@ -575,11 +575,9 @@ Some Syncfusion components require component-specific scripts in addition to the
 
 <body>
     ...
-    <!-- Core Blazor script -->
-    <script src="_framework/blazor.web.js"></script>
-    <!-- Syncfusion core script (required for all components) -->
+    <!-- Blazor core script (required for all components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!-- PDF Viewer component-specific script -->
+    <!-- Blazor PDF Viewer component-specific script -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
@@ -1466,7 +1464,7 @@ var app = builder.Build();
 
 ### Systematic troubleshooting approach
 
-When encountering issues with Syncfusion Blazor components, follow this systematic approach:
+When encountering issues with Blazor components, follow this systematic approach:
 
 **Step 1: Verify prerequisites**
 

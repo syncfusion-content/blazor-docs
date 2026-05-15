@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrating Syncfusion WPF Controls to Blazor
-description: Guide to migrate Syncfusion WPF controls to Syncfusion Blazor components on .NET 8+, with setup, config, and examples.
+description: Guide to migrate WPF controls to Blazor components on .NET 8+, with setup, config, and examples.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Migrating Syncfusion® WPF Controls to Blazor
+# Migrating WPF Controls to Blazor
 
-Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a structured, step-by-step migration path for **[Syncfusion WPF Controls](https://www.syncfusion.com/wpf-controls)** to their **[Syncfusion Blazor equivalents](https://www.syncfusion.com/blazor-components)** using **[Visual Studio](https://visualstudio.microsoft.com/vs/)** or **[Visual Studio Code](https://code.visualstudio.com/)**.
+Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a structured, step-by-step migration path for **[WPF Controls](https://www.syncfusion.com/wpf-controls)** to their **[Blazor equivalents](https://www.syncfusion.com/blazor-components)** using **[Visual Studio](https://visualstudio.microsoft.com/vs/)** or **[Visual Studio Code](https://code.visualstudio.com/)**.
 
 It focuses on key architectural differences and demonstrates the essential setup and rendering patterns required to successfully migrate major Syncfusion UI components from WPF to Blazor.
 
@@ -141,7 +141,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Namespace imports
 
-Add the following namespaces to `_Imports.razor` to make the Syncfusion Blazor components available across the application.
+Add the following namespaces to `_Imports.razor` to make the Blazor components available across the application.
 
 | Component | Required namespaces |
 |---|---|
@@ -963,11 +963,11 @@ namespace WpfRichTextEditor
 
 ## See also
 
-- [Getting started with Syncfusion® Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-- [Getting started with Syncfusion® Blazor TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/getting-started-with-server-app)
-- [Getting started with Syncfusion® Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started)
-- [Getting started with Syncfusion® Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
-- [Getting started with Syncfusion® Blazor Diagram](https://blazor.syncfusion.com/documentation/diagram/getting-started)
-- [Getting started with Syncfusion® Blazor RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app)
+- [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+- [Getting started with Blazor TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/getting-started-with-server-app)
+- [Getting started with Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started)
+- [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app)
+- [Getting started with Blazor Diagram](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+- [Getting started with Blazor RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app)
 
  
