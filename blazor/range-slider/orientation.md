@@ -22,4 +22,4 @@ The slider can be displayed in either horizontal or vertical orientation using t
 </style>
 ```
 
-![Blazor Range Slider with Vertical Orientation](images/blazor-rangeslider-vertical-orientation.png)
+![Blazor Range Slider with Vertical Orientation](images/blazor-rangeslider-vertical-orientation.webp)

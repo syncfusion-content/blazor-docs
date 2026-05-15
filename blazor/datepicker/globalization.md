@@ -35,4 +35,4 @@ The following code example initializes the DatePicker component in `Arabic` cult
 
 
 
-![Right to Left in Blazor DatePicker with Arabic Culture](./images/blazor-datepicker-right-to-left.png)
+![Right to Left in Blazor DatePicker with Arabic Culture](./images/blazor-datepicker-right-to-left.webp)

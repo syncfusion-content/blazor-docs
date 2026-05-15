@@ -29,4 +29,4 @@ Click the fullscreen icon in the toolbar to toggle fullscreen mode. When enabled
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor fullscreen](../images/blazor-richtexteditor-fullscreen.png)
+![Blazor RichTextEditor fullscreen](../images/blazor-richtexteditor-fullscreen.webp)

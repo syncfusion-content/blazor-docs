@@ -19,7 +19,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor MultiSelect with placeholder](./images/placeholder-and-floatlabel/blazor_MultiSelect_placeholder.png)
+![Blazor MultiSelect with placeholder](./images/placeholder-and-floatlabel/blazor_MultiSelect_placeholder.webp)
 
 ## Color of the placeholder text
 
@@ -31,7 +31,7 @@ Change the color of the placeholder by targeting its CSS class `input.e-multisel
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with color placeholder](./images/style/blazor_multiselect_placeholder-color.png)
+![Blazor MultiSelect Dropdown with color placeholder](./images/style/blazor_multiselect_placeholder-color.webp)
 
 ## Add mandatory indicator using placeholder
 
@@ -43,7 +43,7 @@ Add a mandatory indicator “*” to the floating label by targeting the `.e-flo
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with mandatory indicator placeholder](./images/style/blazor_multiselect_placeholder-with-mandatory.png)
+![Blazor MultiSelect Dropdown with mandatory indicator placeholder](./images/style/blazor_multiselect_placeholder-with-mandatory.webp)
 
 ## FloatLabel
 
@@ -77,6 +77,6 @@ Customize the component color when it is focused by targeting its CSS class `.e-
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown focus color](./images/style/blazor_multiselect_focus-color.png)
+![Blazor MultiSelect Dropdown focus color](./images/style/blazor_multiselect_focus-color.webp)
 
 N> The above example works correctly with the Material3 theme. If you use a different theme, you may need to adjust the CSS classes accordingly.

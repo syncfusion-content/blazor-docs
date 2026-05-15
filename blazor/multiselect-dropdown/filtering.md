@@ -1,117 +1,380 @@
 ---
 layout: post
 title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about filtering in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Learn how to enable and configure filtering in Syncfusion Blazor MultiSelect component for search-based item selection.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Filtering in Blazor MultiSelect Dropdown Component
+# AllowFiltering in MultiSelect Dropdown
 
-The MultiSelect provides built-in filtering when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. Filtering begins as the user types in the search box. The default value of AllowFiltering is `false`.
+The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) feature in the Syncfusion Blazor MultiSelect component enables real-time search capability within the dropdown popup. Users can filter the list of items dynamically based on their input, supporting both simple text searches and complex filtered queries.
 
-## Local data
+## Getting Started with AllowFiltering
 
-The following example demonstrates filtering with local data in the MultiSelect component.
+The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) property enables or disables the search functionality in the MultiSelect component. When enabled, users can type in the dropdown to filter items that match the search criteria.
 
-{% highlight cshtml %}
+### Basic Usage
 
-{% include_relative code-snippet/filtering/local-data.razor %}
+To enable filtering, set the `AllowFiltering` property to `true`. By default, this property is set to `false`.
 
-{% endhighlight %}
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" DataSource="@countries" Placeholder="Select a country">
+    <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
-![Filtering in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-filtering.png)
+@code {
+    private string[] countries = new string[] { "Apple", "Banana", "Cherry", "Date", "Grape", "Orange" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLntoDxfhqAYVys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Remote data
+In this example, the MultiSelect component displays a list of countries with filtering enabled. When the user types in the search box, the list filters in real-time to show only matching items.
 
-For remote data, each keystroke triggers a server query for filtering (subject to debounce settings). Use an adaptor such as [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) along with the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property to perform server-side filtering. For best performance, combine remote filtering with debounce or a minimum character length.
+> **Note:** The filtering feature works with both primitive data types (strings, integers) and complex object types when configured with [FilterType](#configuring-filter-types).
 
-The following example demonstrates remote filtering using OData.
+## Filtering in Different Visual Modes
 
-{% highlight cshtml %}
+The behavior of the filtering feature varies depending on the [VisualMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.VisualMode.html) property setting.
 
-{% include_relative code-snippet/filtering/remote-data.razor %}
+### CheckBox Mode
 
-{% endhighlight %}
+In **CheckBox** mode, the filter input appears as a dedicated search bar at the top of the popup dropdown. This provides a clear separation between the search functionality and the selection interface.
 
-## Debounce delay
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" Mode="VisualMode.CheckBox" DataSource="@fruits" Placeholder="Search fruits">
+</SfMultiSelect>
 
-Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_DebounceDelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. To disable this feature entirely, can set it to 0ms.
+@code {
+    private string[] fruits = new string[] { "Apple", "Banana", "Cherry", "Mango", "Orange", "Papaya", "Peach" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBnZyNxJUCQLNrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+The filter bar includes the following features when used in CheckBox mode:
 
-{% highlight cshtml %}
+* **Placeholder Text**: Customizable using the [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FilterBarPlaceholder) property
+* **Clear Button**: Automatically appears when text is entered in the filter input
+* **Mobile Back Button**: Displayed on mobile devices when [`PopupDisplayMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupDisplayMode) is set to `FullScreen`
 
-{% include_relative code-snippet/filtering/debounce-delay.razor %}
+### Box, Default, and Delimiter Modes
 
-{% endhighlight %}
+In **Box**, **Default**, and **Delimiter** modes, the filter functionality integrates directly into the main search input where the selected items are displayed as chips or delimiter-separated values.
 
-![Blazor MultiSelect Dropdown with DebounceDelay in filtering](./images/filtering/blazor_multiselect_debounce-delay.gif)
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" Mode="VisualMode.Box" DataSource="@colors" Placeholder="Select colors">
+</SfMultiSelect>
 
-## Filter type
+@code {
+    private string[] colors = new string[] { "Red", "Green", "Blue", "Yellow", "Orange", "Purple" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxjyDnfAJHWEyb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Use the [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify how search text is matched against item text.
+> **Note:** In these modes, the user must manually clear the input to see the unfiltered list again, as there is no dedicated filter UI element.
 
-FilterType     | Description
------------- | -------------
-[StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith) | Checks whether the value starts with the specified text.
-[EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith) | Checks whether the value ends with the specified text.
-[Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains) | Checks whether the value contains the specified text.
+## Configuring Filter Types
 
-In the following example, the `EndsWith` filter type is configured using the `FilterType` property.
+The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property controls how the filtering algorithm matches text. The available filter types are:
 
-{% highlight cshtml %}
+| FilterType | Description | Example Match |
+|-----------|-------------|---------------|
+| [**StartsWith**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith) | Matches items that begin with the search text | "App" matches "Apple" |
+| [**Contains**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith) | Matches items that contain the search text anywhere | "pp" matches "Apple" |
+| [**EndsWith**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains) | Matches items that end with the search text | "ple" matches "Apple" |
 
-{% include_relative code-snippet/filtering/filter-type.razor %}
+### Filter Type Example
 
-{% endhighlight %}
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" FilterType="FilterType.Contains" DataSource="@vegetables" Placeholder="Contains...">
+</SfMultiSelect>
 
-![Blazor MultiSelect with filter type](./images/filtering/blazor_MultiSelect_filter-type.png)
+@code {
+    private string[] vegetables = new string[] { "Carrot", "Cabbage", "Broccoli", "Spinach", "Potato" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxDIDnTqlYHKSk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Case sensitive filtering
+The default filter type is **StartsWith**, which provides an autocomplete-style filtering experience. The **Contains** filter type is most commonly used for flexible search scenarios.
 
-Data items can be filtered with or without case sensitivity using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Specify the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) option in the [Where](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Where_Syncfusion_Blazor_Data_WhereFilter_) clause to control case sensitivity.
+## Case Sensitivity and Accent Handling
 
-The following example shows case-sensitive filtering.
+The MultiSelect filtering feature supports case-insensitive and accent-insensitive filtering through dedicated properties.
 
-{% highlight cshtml %}
+### Case-Insensitive Filtering
 
-{% include_relative code-snippet/filtering/case-sentitive.razor %}
+The [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) property controls whether the filter operation is case-sensitive.
 
-{% endhighlight %}
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" IgnoreCase="true" DataSource="@countries" Placeholder="Search (case-insensitive)">
+</SfMultiSelect>
 
-## Filter text box placeholder 
+@code {
+    private string[] countries = new string[] { "Apple", "Banana", "Cherry", "America", "Australia" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnXSZdJzWeXYri?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Display watermark text in the filter bar by using the [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FilterBarPlaceholder) property. This applies when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_AllowFiltering) is set to `true` in CheckBox mode.`FilterBarPlaceholder` is depends on `AllowFiltering` in checkbox mode.
+With `IgnoreCase="true"`, typing "apple" matches "Apple", "APPLE", and "apple". When set to `false`, only exact case matches are returned.
 
-{% highlight Razor %}
+### Accent-Insensitive Filtering
 
-{% include_relative code-snippet/filtering/filterBarPlaceholder-property.razor %}
+The [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreAccent) property enables filtering that ignores diacritical marks (accents).
 
-{% endhighlight %} 
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" IgnoreAccent="true" DataSource="@names" Placeholder="Search names">
+</SfMultiSelect>
 
-![Blazor MultiSelect Dropdown with FilterBarPlaceholder property](./images/filtering/blazor_multiselect_filterBarPlaceholder-property.png)
+@code {
+    private string[] names = new string[] { "Jose", "José", "Mänge", "Mange", "Zoë", "Zoe" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVdDyZHJTptxWPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Custom Filtering
+With `IgnoreAccent="true"`, typing "Jose" matches both "Jose" and "José". This is particularly useful when working with international data or names with special characters.
 
-The MultiSelect filtering query can be customized through the Filtering event. Custom filter libraries (for example, fuzzy search) can also be integrated.
+## Debounce Delay Configuration
 
-{% highlight cshtml %}
+The [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_DebounceDelay) property specifies the delay in milliseconds before the filter executes after the user stops typing. This prevents excessive filtering operations during rapid typing.
 
-{% include_relative code-snippet/filtering/custom-filtering.razor %}
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" DebounceDelay="500" DataSource="@cities" Placeholder="Search cities (500ms delay)">
+</SfMultiSelect>
 
-{% endhighlight %}
+@code {
+    private string[] cities = new string[] { "New York", "New Delhi", "Newcastle", "Newton", "New Orleans" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHjoXdzpmqdWon?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Minimum filter length
+The default debounce delay is **300 milliseconds**. Setting this value to **0** causes filtering to occur on every keystroke, which may impact performance with large datasets or remote data sources.
 
-To control when remote filtering occurs, validate the minimum number of characters before sending a query by using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilteringEventArgs.html#Syncfusion_Blazor_DropDowns_FilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Filtering) event handler.
+> **Note:** The `DebounceDelay` property only takes effect when the `AllowFiltering` property is set to `true`.
 
-In the following example, a remote request is not made until the search text contains at least three characters.
+## Filtering with Complex Data
 
-{% highlight cshtml %}
+When working with complex object types, you must configure which fields to use for filtering and display using the [MultiSelectFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#properties) component.
 
-{% include_relative code-snippet/filtering/minimum-filter-length.razor %}
+### Complex Data Example
 
-{% endhighlight %}
+```cshtml
+<SfMultiSelect TItem="Employee" TValue="string[]" AllowFiltering="true" DataSource="@employees" Placeholder="Select employee">
+    <MultiSelectFieldSettings Text="Name" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
-![Blazor MultiSelect with minimum filter length](./images/filtering/blazor_MultiSelect_minimum-filter-length.gif)
+@code {
+    private List<Employee> employees = new List<Employee>
+    {
+        new Employee { ID = "1", Name = "John Smith", Department = "Engineering" },
+        new Employee { ID = "2", Name = "James Wilson", Department = "Marketing" },
+        new Employee { ID = "3", Name = "Mary Johnson", Department = "Engineering" },
+        new Employee { ID = "4", Name = "Michael Brown", Department = "Sales" },
+        new Employee { ID = "5", Name = "Jennifer Davis", Department = "HR" }
+    };
+
+    public class Employee
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Department { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrxtSXdfpYSzibJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+In this example, filtering occurs based on the `Name` property as configured in [`MultiSelectFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#properties). When the user types "John", the list filters to show only employees with "John" in their name.
+
+## Virtualization with Filtering
+
+The filtering feature works seamlessly with [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableVirtualization) for large datasets. When both features are enabled, only the visible items are rendered to the DOM, ensuring optimal performance.
+
+### Virtualized Filtering Setup
+
+```cshtml
+<SfMultiSelect TItem="Product" TValue="string[]" AllowFiltering="true" EnableVirtualization="true" DataSource="@products" Placeholder="Search products">
+    <MultiSelectFieldSettings Text="ProductName" Value="ProductID"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+    private List<Product> products;
+
+    protected override void OnInitialized()
+    {
+        products = GenerateProducts(10000);
+    }
+
+    private List<Product> GenerateProducts(int count)
+    {
+        var productList = new List<Product>();
+        for (int i = 1; i <= count; i++)
+        {
+            productList.Add(new Product 
+            { 
+                ProductID = i.ToString(), 
+                ProductName = $"Product {i}" 
+            });
+        }
+        return productList;
+    }
+
+public class Product
+{
+    public string ProductID { get; set; }
+    public string ProductName { get; set; }
+}
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRXoZHzyVvCEeT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+When virtualization is enabled with filtering:
+
+1. The component clones the existing query and adds filter conditions
+2. Virtual indices are maintained to track visible items
+3. Skeleton loaders appear while filtered data loads
+4. The `GeneratedData` dictionary caches results to avoid re-querying
+
+> **Note:** The `TotalCount` value adjusts during filtering to reflect only the filtered result count rather than the total dataset size.
+
+## Filtering with HideSelectedItem
+
+The [HideSelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_HideSelectedItem) property removes already-selected items from the filtered list. This behavior differs between modes.
+
+### HideSelectedItem in Action
+
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" HideSelectedItem="true" DataSource="@languages" Placeholder="Select language">
+</SfMultiSelect>
+
+@code {
+    private string[] languages = new string[] { "CSharp", "JavaScript", "Python", "Java", "TypeScript", "Go" };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhHXeXdfyorhvoq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+In **Box**, **Default**, and **Delimiter** modes, selected items are hidden from the dropdown list when filtering. In **CheckBox** mode, selected items remain visible with checkmarks.
+
+> **Note:** The [`HideSelectedItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_HideSelectedItem) property is ignored in CheckBox mode, where selected items are always displayed with their selection state.
+
+## Custom Query Filtering
+
+You can provide a custom base query that filtering will be applied on top of. The component merges the user's query with filter conditions while preserving the original query settings.
+
+### Query with Filtering
+
+```cshtml
+<SfMultiSelect TItem="Order" TValue="string[]" AllowFiltering="true" Query="@customQuery" DataSource="@orders" Placeholder="Search orders">
+    <MultiSelectFieldSettings Text="OrderName" Value="OrderID"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+    private Query customQuery = new Query().Where("Status", "equal", "Active").Take(100);
+    
+    private List<Order> orders = new List<Order>
+    {
+        new Order { OrderID = "1", OrderName = "Order A", Status = "Active" },
+        new Order { OrderID = "2", OrderName = "Order B", Status = "Inactive" },
+        new Order { OrderID = "3", OrderName = "Order C", Status = "Active" }
+    };
+
+    public class Order
+    {
+        public string OrderID { get; set; }
+        public string OrderName { get; set; }
+        public string Status { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBxNyNdTeGhgMSc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+When filtering is applied with a custom query:
+
+1. The base query is cloned to preserve original settings
+2. Filter conditions are added without modifying the original query
+3. The `Take()` method from the user's query is preserved
+4. Both conditions are applied together in the final query
+
+## Filtering Events
+
+The MultiSelect component provides several events for handling filtering operations at different stages.
+
+### Filtering Event
+
+The [Filtering](https://blazor.syncfusion.com/documentation/multiselect-dropdown/events#filtering-event) event fires before the filtering action executes, allowing you to modify or cancel the default filtering behavior.
+
+```cshtml
+<SfMultiSelect @ref="MultiSelectRef" TItem="string" TValue="string[]" AllowFiltering="true" DataSource="@items" Filtering="@OnFiltering" Placeholder="Search with custom logic">
+</SfMultiSelect>
+
+@code {
+    private string[] items = new string[] { "Apple", "Apricot", "Banana", "Cherry", "Avocado" };
+    private SfMultiSelect<string[], string> MultiSelectRef;
+    private async void OnFiltering(Syncfusion.Blazor.DropDowns.FilteringEventArgs args)
+    {
+        // Prevent default filtering and apply custom logic
+        args.PreventDefaultAction = true;
+        // Custom filter: match items that contain the typed text OR start with "A"
+        var filtered = items.Where(x => x.Contains(args.Text) || x.StartsWith("A")).ToList();
+        await MultiSelectRef.FilterAsync(filtered);
+    }
+}
+```
+{% previewsample "{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRXoZHzyVvCEeT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}" %}
+
+## Custom Value Creation with Filtering
+
+When [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_AllowCustomValue) is enabled, users can add custom values that do not match any existing items. This is particularly useful when no filter matches are found.
+
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" AllowCustomValue="true" DataSource="@colors" Placeholder="Select or add color">
+</SfMultiSelect>
+
+@code {
+    private string[] colors = new string[] { "Red", "Green", "Blue", "Yellow", "Orange" };
+}
+```
+
+With both properties enabled, users can type a custom value (such as "Purple") that does not exist in the list and add it as a new selection.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHjejdJHmrOLoY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## No Records Found Behavior
+
+When filtering produces no matching items, the MultiSelect component displays a "No Records" message by default. You can customize this using the `NoRecordsTemplate`.
+
+### Custom No Records Template
+
+```cshtml
+<SfMultiSelect TItem="string" TValue="string[]" AllowFiltering="true" DataSource="@countries" Placeholder="Search countries">
+    <NoRecordsTemplate>
+        <div class="no-records">
+            <span>No matching records found</span>
+            <button @onclick="ClearFilter">Clear Filter</button>
+        </div>
+    </NoRecordsTemplate>
+</SfMultiSelect>
+
+@code {
+    private string[] countries = new string[] { "USA", "UK", "India", "Canada", "Australia" };
+    
+    private async Task ClearFilter()
+    {
+        // Clear the filter and show all items
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVHtSXxznverDnx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Keyboard Navigation During Filtering
+
+The filtering feature supports comprehensive keyboard navigation for accessibility.
+
+| Key | Behavior During Filtering |
+|-----|--------------------------|
+| **Typing (a-z, 0-9)** | Adds character to filter input and triggers search |
+| **Backspace** | Removes character from filter and updates results |
+| **ArrowDown** | Moves focus to next visible item in filtered list |
+| **ArrowUp** | Moves focus to previous visible item in filtered list |
+| **Enter/Space** | Selects the focused filtered item |
+| **Tab** | Moves focus out of filter input and closes popup |
+| **Escape** | Clears filter input and closes popup |

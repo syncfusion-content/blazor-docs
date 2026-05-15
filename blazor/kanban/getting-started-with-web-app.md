@@ -195,7 +195,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBpZMLOpgSSDQVm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban Component](./images/blazor-kanban-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBpZMLOpgSSDQVm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban Component](./images/blazor-kanban-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
 
@@ -243,7 +243,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTtChkTKoFctAY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTtChkTKoFctAY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.webp)" %}
 
 ## Enable swimlane functionality
 
@@ -310,7 +310,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrfNCraJAdqIiOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrfNCraJAdqIiOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.webp)" %}
 
 N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 

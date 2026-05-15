@@ -37,7 +37,7 @@ Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https:/
 
 {% endhighlight %}
 
-![Blazor DropDownList with preselected value](./images/selection/blazor_dropdown_preselect-value.png)
+![Blazor DropDownList with preselected value](./images/selection/blazor_dropdown_preselect-value.webp)
 
 ## Programmatically change the selected value
 
@@ -87,7 +87,7 @@ The following sample binds the index during initial rendering.
 
 {% endhighlight %}
 
-![Blazor DropDownList with index-based preselection](./images/selection/blazor_dropdown_preselect-value-index.png)
+![Blazor DropDownList with index-based preselection](./images/selection/blazor_dropdown_preselect-value-index.webp)
 
 ## Get selected item by value
 

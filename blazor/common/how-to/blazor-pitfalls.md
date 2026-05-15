@@ -9,11 +9,11 @@ documentation: ug
 
 # Common Pitfalls and Solutions in Blazor Applications
 
-This guide covers common issues encountered when building Blazor applications with **[Syncfusion<sup style="font-size:70%">®</sup> Blazor components](https://www.syncfusion.com/blazor-components)**. It explains the cause of each issue, the impact it can have, and the recommended way to resolve it in real-world projects.
+This guide covers common issues encountered when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. It explains the cause of each issue, the impact it can have, and the recommended way to resolve it in real-world projects.
 
 ## Overview
 
-Blazor development involves choosing the right rendering model, managing dependencies, configuring interactivity, and integrating third-party component libraries. Common issues often relate to:
+Blazor development involves choosing the right rendering model, managing dependencies, configuring interactivity, and integrating Blazor component libraries. Common issues often relate to:
 
 * Component rendering and styling
 * Render mode configuration and interactivity
@@ -23,21 +23,11 @@ Blazor development involves choosing the right rendering model, managing depende
 * Performance optimization
 * Security and deployment
 
-The sections below provide practical guidance to help you build reliable, production-ready Blazor applications with Syncfusion<sup style="font-size:70%">®</sup> components.
-
-## Prerequisites
-
-Before you begin, make sure you have:
-
-* A basic understanding of Blazor application structure and component lifecycle
-* Familiarity with Blazor Server, Blazor WebAssembly, or Blazor Web App hosting models
-* Visual Studio 2022 (17.8 or later) or [Visual Studio Code](https://code.visualstudio.com/) with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later installed
-* Access to [Syncfusion Blazor NuGet packages](https://www.nuget.org/packages?q=syncfusion.blazor)
+The following sections highlight common pitfalls and recommended best practices when developing Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blazor components version 33.2.3 or later. Some details may differ in earlier versions.
 
-## Common pitfalls in Blazor applications
+## Setup and Initialization Pitfalls
 
 ### Pitfall 1: Components rendering without styles
 
@@ -47,7 +37,7 @@ N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blaz
 
 **Impact**: Components are functional but visually broken, creating a poor user experience and potentially affecting usability.
 
-**Solution**: Ensure the Syncfusion theme stylesheet is correctly referenced in `~/Components/App.razor` within the `<head>` section:
+**Solution**: Ensure the Syncfusion theme stylesheet is correctly referenced in `~/Components/App.razor` within the `<head>` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -61,23 +51,15 @@ N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blaz
 {% endhighlight %}
 {% endtabs %}
 
-**Available themes**: Choose from multiple built-in themes:
-
-* `bootstrap5.css` - Bootstrap 5 theme
-* `material.css` - Material Design theme
-* `material3.css` - Material Design 3 theme
-* `fabric.css` - Microsoft Fabric theme
-* `tailwind.css` - Tailwind CSS theme
-* `fluent.css` - Microsoft Fluent theme
-* `fluent2.css` - Microsoft Fluent 2 theme
+**Available themes**: For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 **Best practices**:
 
 * Reference only **one** theme stylesheet to avoid style conflicts
 * Place the theme reference **before** custom stylesheets to allow overrides
-* For Blazor WebAssembly, reference the theme in `wwwroot/index.html`
-* For Blazor Server (.NET 6/7), reference in `~/Pages/_Host.cshtml` or `~/Pages/_Layout.cshtml`
-* Verify the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package is installed
+* For standalone Blazor WebAssembly apps, reference the theme stylesheet in `wwwroot/index.html`
+* For Blazor Web Apps using the WebAssembly render mode, reference the theme stylesheet in `~/Components/App.razor`
+* Verify that the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package is installed
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -101,10 +83,10 @@ N> If you switch themes during development, clear your browser cache (Ctrl+F5 or
 
 **For Blazor Web App (Per page/component interactivity):**
 
-Add the render mode directive at the top of your `.razor` page:
+Add the render mode directive at the top of your `.razor` page.
 
 {% tabs %}
-{% highlight razor tabtitle="Counter.razor" %}
+{% highlight razor tabtitle="Counter.razor"  hl_lines="2" %}
 
 @page "/counter"
 @rendermode InteractiveServer
@@ -131,15 +113,17 @@ Add the render mode directive at the top of your `.razor` page:
 
 **Available render modes**:
 
-| Render Mode | Usage | When to Use |
-|------------|-------|-------------|
-| `@rendermode InteractiveServer` | Server-side interactivity with SignalR | Real-time applications, small to medium user base |
-| `@rendermode InteractiveWebAssembly` | Client-side execution in browser | Offline capability, rich client interactions |
-| `@rendermode InteractiveAuto` | Automatic selection (WebAssembly with Server fallback) | Progressive enhancement scenarios |
+| Render Mode | Use | Typical Hosting |
+|------------|-----|-----------------|
+| `@rendermode InteractiveServer` | Server-side interactivity (SignalR) | Blazor Web App (server) |
+| `@rendermode InteractiveWebAssembly` | Client-side execution (WebAssembly) | Blazor Web App (WebAssembly) |
+| `@rendermode InteractiveAuto` | Prefer WebAssembly and fall back to server | Blazor Web App (progressive enhancement) |
+
+N> Blazor Server applications (.NET 6/7) are interactive by default and do not require explicit render mode directives.
 
 **For Global Interactivity configuration:**
 
-In `~/Program.cs`, configure global render mode:
+In `~/Program.cs`, configure global render mode.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -162,9 +146,9 @@ app.MapRazorComponents<App>()
 {% endhighlight %}
 {% endtabs %}
 
-**For Syncfusion<sup style="font-size:70%">®</sup> components:**
+**For Syncfusion<sup style="font-size:70%">®</sup> Blazor components:**
 
-Syncfusion components require interactive rendering. Apply the render mode to pages or components containing Syncfusion controls:
+Apply an appropriate render mode to pages or components that use Syncfusion Blazor components.
 
 {% tabs %}
 {% highlight razor tabtitle="DataGridPage.razor" %}
@@ -212,11 +196,9 @@ Syncfusion components require interactive rendering. Apply the render mode to pa
 * Test render mode behavior in both development and production environments
 * Monitor SignalR connection limits when using Server render mode
 
-N> Blazor Server applications (.NET 6/7) are interactive by default and do not require explicit render mode directives.
-
 ### Pitfall 3: Installing redundant NuGet packages  
 
-**Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling Syncfusion APIs, e.g.:
+**Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling Syncfusion APIs, for example:
 
 {% tabs %}
 {% highlight text tabtitle="Error Message" %}
@@ -228,7 +210,7 @@ and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-**Root cause**: The project references both the comprehensive package (Syncfusion.Blazor) and individual component packages (or Syncfusion.Blazor.Core). These packages contain overlapping assemblies with duplicate type definitions (identical public APIs), which causes the compiler to encounter ambiguous references and assembly version conflicts.
+**Root cause**: The project references both the all‑in‑one package (`Syncfusion.Blazor`) and one or more individual component packages (for example, `Syncfusion.Blazor.Grid` or `Syncfusion.Blazor.Core`). These packages expose the same public types from different assemblies, producing duplicate type definitions and ambiguous method overloads. The compiler therefore reports ambiguous-call or duplicate-type errors.
 
 **Impact**: Compile-time errors that block builds, longer restore times, bigger deployment footprint, and hard-to-diagnose dependency problems.
 
@@ -236,7 +218,7 @@ and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfu
 
 **Option 1: Install individual component packages (Recommended for most projects)**
 
-Install only the specific component packages your application uses:
+Install only the specific component packages your application uses.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -257,7 +239,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 **Option 2: Install comprehensive package (For applications using many components)**
 
-Install the all-in-one package that includes all Syncfusion<sup style="font-size:70%">®</sup> Blazor components:
+Install the all-in-one package that includes all Syncfusion<sup style="font-size:70%">®</sup> Blazor components.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -271,18 +253,18 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 * Simplified package management
 * Single version number to track
 * Easier upgrades across all components
-* Suitable for applications using 5+ different component types
+* Suitable for applications using 5 or more different component types
 
 **Best practices**:
 
 * Never mix Syncfusion.Blazor (comprehensive) with individual Syncfusion component packages in the same project.
 * Audit your `.csproj` file regularly to identify redundant packages
-* Use individual packages unless you're using 5 or more component types
+* Use individual packages unless you are using 5 or more component types
 * Document your package strategy in team guidelines
 
 **How to check for redundancy:**
 
-Review your project file (`*.csproj`):
+To check for redundant packages, inspect your project's `.csproj` file for duplicate or overlapping `<PackageReference>` entries.
 
 {% tabs %}
 {% highlight xml tabtitle="YourApp.csproj" %}
@@ -327,7 +309,7 @@ N> The `Syncfusion.Blazor.Themes` package should always be installed separately,
 
 ### Pitfall 4: Duplicate package references
 
-**Symptom**: Build warnings such as "Detected package downgrade" or "Duplicate 'PackageReference' items found" or "Version conflict detected" or unpredictable runtime behavior where component features work inconsistently.
+**Symptom**: Build warnings such as "Detected package downgrade", "Duplicate 'PackageReference' items found" or "Version conflict detected" or unpredictable runtime behavior where component features work inconsistently.
 
 **Root cause**: The same NuGet package is referenced multiple times with different versions, either directly in the project file or transitively through dependencies.
 
@@ -337,7 +319,7 @@ N> The `Syncfusion.Blazor.Themes` package should always be installed separately,
 
 **Step 1: Identify duplicate references**
 
-Run the following command to analyze your project dependencies:
+Run the following command to analyze your project dependencies.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -351,7 +333,7 @@ This command shows all packages, including transitive dependencies, helping you 
 
 **Step 2: Inspect project file**
 
-Check your `.csproj` file for duplicate entries:
+Check your `.csproj` file for duplicate entries.
 
 {% tabs %}
 {% highlight xml tabtitle="YourApp.csproj" %}
@@ -372,14 +354,14 @@ Check your `.csproj` file for duplicate entries:
 
 **Step 3: Consolidate versions**
 
-Remove duplicate entries and ensure all Syncfusion packages use the same version:
+Remove duplicate entries and ensure all Blazor packages use the same version.
 
 {% tabs %}
 {% highlight xml tabtitle="YourApp.csproj" %}
 
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
-    <!-- All Syncfusion packages should use the same version -->
+    <!-- All Blazor packages should use the same version -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Calendars" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Charts" Version="33.2.3" />
@@ -392,9 +374,9 @@ Remove duplicate entries and ensure all Syncfusion packages use the same version
 
 **Step 4: Use Central Package Management (Recommended for solutions with multiple projects)**
 
-For solution-wide version consistency, use Central Package Management (CPM):
+For solution-wide version consistency, use Central Package Management (CPM).
 
-Create a `Directory.Packages.props` file in your solution root:
+Create a `Directory.Packages.props` file in your solution root.
 
 {% tabs %}
 {% highlight xml tabtitle="Directory.Packages.props" %}
@@ -416,7 +398,7 @@ Create a `Directory.Packages.props` file in your solution root:
 {% endhighlight %}
 {% endtabs %}
 
-Then update your project files to reference packages without versions:
+Then update your project files to reference packages without versions.
 
 {% tabs %}
 {% highlight xml tabtitle="YourApp.csproj" %}
@@ -442,7 +424,7 @@ N> Central Package Management is recommended for solutions with multiple project
 * Document your upgrade strategy and version policies
 * Test thoroughly after consolidating package versions
 
-N> When upgrading Syncfusion packages, update **all** Syncfusion packages in your solution simultaneously to maintain version consistency.
+N> When upgrading Syncfusion packages, update **all Syncfusion packages** in your solution simultaneously to maintain version consistency.
 
 ### Pitfall 5: Version mismatches across packages
 
@@ -466,16 +448,16 @@ dotnet list package
 {% endhighlight %}
 {% endtabs %}
 
-Look for version discrepancies in the output:
+Look for version discrepancies in the output.
 
 {% tabs %}
 {% highlight bash tabtitle="Output" %}
 
 Project 'YourApp' has the following package references
-   [net8.0]:
+   
    Top-level Package                    Requested   Resolved
    > Syncfusion.Blazor.Grid             33.2.3      33.2.3
-   > Syncfusion.Blazor.Calendars        32.1.19     32.1.19    Version mismatch
+   > Syncfusion.Blazor.Calendars        32.1.19     32.1.19    # Version mismatch
    > Syncfusion.Blazor.Charts           33.2.3      33.2.3
 
 {% endhighlight %}
@@ -508,17 +490,17 @@ dotnet list package
 {% endhighlight %}
 {% endtabs %}
 
-All Syncfusion packages should now show the same version:
+All Syncfusion packages should now show the same version.
 
 {% tabs %}
 {% highlight bash tabtitle="Output" %}
 
 Project 'YourApp' has the following package references
-   [net8.0]:
+   
    Top-level Package                    Requested   Resolved
-   > Syncfusion.Blazor.Grid             33.2.3     33.2.3
-   > Syncfusion.Blazor.Calendars        33.2.3     33.2.3
-   > Syncfusion.Blazor.Charts           33.2.3     33.2.3
+   > Syncfusion.Blazor.Grid             33.2.3      33.2.3
+   > Syncfusion.Blazor.Calendars        33.2.3      33.2.3
+   > Syncfusion.Blazor.Charts           33.2.3      33.2.3
 
 {% endhighlight %}
 {% endtabs %}
@@ -546,13 +528,13 @@ N> Version mismatches are a leading cause of production issues. Implement CI/CD 
 
 **Root cause**: Required Syncfusion JavaScript files are either missing, referenced in the wrong order, or placed in incorrect locations within the HTML structure.
 
-**Impact**: Complete component failure, loss of interactive functionality, and poor user experience. Some components may render partially while others fail entirely.
+**Impact**: Component failure, loss of interactive functionality, and poor user experience. Some components may render partially while others fail entirely.
 
 **Solution**: Ensure proper script references in the correct order and location.
 
 **For Blazor Web App (.NET 8+):**
 
-Add scripts to `~/Components/App.razor` before the closing `</body>` tag:
+Add scripts to `~/Components/App.razor` before the closing `</body>` tag.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -569,7 +551,7 @@ Add scripts to `~/Components/App.razor` before the closing `</body>` tag:
 
 **For Blazor WebAssembly:**
 
-Add scripts to `wwwroot/index.html`:
+Add scripts to `wwwroot/index.html`.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -584,20 +566,18 @@ Add scripts to `wwwroot/index.html`:
 {% endhighlight %}
 {% endtabs %}
 
-**For components requiring additional scripts (e.g., PDF Viewer):**
+**For components requiring additional scripts (for example, PDF Viewer):**
 
-Some Syncfusion components require component-specific scripts in addition to the core script:
+Some Syncfusion components require component-specific scripts in addition to the core script.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
 <body>
     ...
-    <!-- Core Blazor script -->
-    <script src="_framework/blazor.web.js"></script>
-    <!-- Syncfusion core script (required for all components) -->
+    <!-- Blazor core script (required for all components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!-- PDF Viewer component-specific script -->
+    <!-- Blazor PDF Viewer component-specific script -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </body>
 
@@ -608,32 +588,32 @@ Some Syncfusion components require component-specific scripts in addition to the
 
 1. **Blazor framework script** (`blazor.web.js` or `blazor.webassembly.js`) - Always load first
 2. **Syncfusion core script** (`syncfusion-blazor.min.js`) - Load second, after Blazor framework
-3. **Component-specific scripts** (if required) - Load after core script
+3. **Component-specific scripts** (if required) - Load after the core script
 
 **Best practices**:
 
 * Always place scripts at the end of the `<body>` tag, not in `<head>`
 * Verify script paths match your installed package versions
-* Check browser developer console for 404 errors indicating missing scripts
+* Check the browser developer console for 404 errors indicating missing scripts
 * Use `type="text/javascript"` attribute for Syncfusion scripts to ensure proper MIME type
-* Avoid using CDN script references in production; use NuGet package scripts for version consistency
+* Avoid using CDN script references in production. Instead, use NuGet package scripts for version consistency
 
 **Common script reference mistakes**:
 
-* Placing scripts in `<head>` instead of end of `<body>`
-* Incorrect script paths (e.g., using old paths from .NET 6 documentation)
-* Missing component-specific scripts for components like PDF Viewer, Spreadsheet, or Rich Text Editor
-* Loading Syncfusion script before Blazor framework script
+* Placing scripts in `<head>` instead of at the end of `<body>`
+* Incorrect script paths (for example, using old paths from .NET 6 documentation)
+* Missing component-specific scripts for Syncfusion components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)
+* Loading the Syncfusion script before the Blazor framework script
 * Using outdated script references from previous Syncfusion versions
 
 **Verification steps**:
 
 1. Open browser developer tools (F12)
-2. Check the **Console** tab for JavaScript errors
-3. Check the **Network** tab to verify scripts load successfully (200 status)
-4. Verify script loading order in the **Sources** tab
+2. Check the **Console tab** for JavaScript errors
+3. Check the **Network tab** to verify scripts load successfully (200 status)
+4. Verify script loading order in the **Sources tab**
 
-N> If you encounter "Failed to load resource" errors, verify that the [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) NuGet package is installed and the project has been built successfully.
+N> If you encounter "Failed to load resource" errors for `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, verify that the `Syncfusion.Blazor.Core` package is available in the project, the script path is correct, and the project has been built or published successfully.
 
 ### Pitfall 7: Missing service registration
 
@@ -657,10 +637,8 @@ System.InvalidOperationException: Cannot provide a value for property 'Localizer
 
 **Solution**: Register the Syncfusion Blazor service in `~/Program.cs`.
 
-**For Blazor Web App (.NET 8+):**
-
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Blazor Web App (.NET 8+)" hl_lines="2 11" %}
 ....
 using Syncfusion.Blazor;
 
@@ -677,15 +655,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% endtabs %}
-
-**For Blazor WebAssembly:**
-
-Register the service in the client project's `Program.cs`:
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
+{% highlight c# tabtitle="Blazor WebAssembly" hl_lines="2 7" %}
 ....
 using Syncfusion.Blazor;
 
@@ -695,14 +665,10 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddSyncfusionBlazor();
 
 await builder.Build().RunAsync();
+....
 
 {% endhighlight %}
-{% endtabs %}
-
-**For Blazor Server (.NET 6/7):**
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Blazor Server (.NET 6/7)" hl_lines="2 10" %}
 ....
 using Syncfusion.Blazor;
 
@@ -722,12 +688,12 @@ var app = builder.Build();
 
 **Additional service registrations for specific components:**
 
-Some components require additional service configurations:
+Some components require additional service configurations.
 
 **For PDF Viewer component:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="5 6 9" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="6 9" %}
 
 using Syncfusion.Blazor;
 
@@ -735,6 +701,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Configure SignalR for large file transfers
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
+
 // Add memory cache for PDF Viewer
 builder.Services.AddMemoryCache();
 
@@ -751,13 +718,13 @@ var app = builder.Build();
 **For File Manager component:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="5" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="6" %}
 
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add HttpClient for File Manager
+// Add HttpClient only if the File Manager uses remote REST APIs or cloud-based services
 builder.Services.AddHttpClient();
 
 builder.Services.AddRazorComponents()
@@ -781,18 +748,16 @@ N> The `AddSyncfusionBlazor()` service registration is mandatory for all Syncfus
 
 ### Pitfall 8: Incorrect SignalR configuration for large data
 
-**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. Browser console shows errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
+**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. The browser console may show errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
 
 **Root cause**: Default SignalR message size limits are too small for large data transfers. The default limit is 32KB, which is insufficient for components handling large files, images, or datasets.
 
 **Impact**: Data loading failures, connection drops, poor user experience, and limited functionality for data-intensive components. Users may experience frequent disconnections when working with large documents or datasets.
 
-**Solution**: Configure SignalR with appropriate message size limits and hub options.
-
-**For Blazor Web App (.NET 8+) with Server render mode:**
+**Solution**: Configure SignalR with appropriate message size limits and hub options in `~/Program.cs`.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Blazor Web App (.NET 8+) - Server" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -817,12 +782,7 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 
 {% endhighlight %}
-{% endtabs %}
-
-**For Blazor Server (.NET 6/7):**
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Blazor Server (.NET 6/7)" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -940,10 +900,10 @@ N> For production deployments, always balance functionality requirements with se
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.JSInterop
 
-@* Add Syncfusion core namespace *@
+// Add Syncfusion core namespace
 @using Syncfusion.Blazor
 
-@* Add component-specific namespaces as needed *@
+// Add component-specific namespaces as needed
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Charts
@@ -952,7 +912,7 @@ N> For production deployments, always balance functionality requirements with se
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-@* Add your application namespaces (replace with your actual project namespace) *@
+// Add your application namespaces (replace with your actual project namespace)
 @using YourApp
 @using YourApp.Components
 
@@ -961,7 +921,7 @@ N> For production deployments, always balance functionality requirements with se
 
 **Component-specific namespace import:**
 
-If you prefer to import namespaces only where needed:
+If you prefer to import namespaces only where needed.
 
 {% tabs %}
 {% highlight razor tabtitle="DataGridPage.razor" %}
@@ -1025,7 +985,9 @@ N> The `_Imports.razor` file provides namespace imports to all Razor components 
 
 **Step 1: Match `TValue` to the bound value type**
 
-Use the same type for `TValue` as the selected value stored in the component.
+In `SfDropDownList`, use the same type for `TValue` as the selected value stored in the component.
+
+**Correct Mapping**:
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Mapping" %}
@@ -1057,7 +1019,7 @@ Use the same type for `TValue` as the selected value stored in the component.
 {% endhighlight %}
 {% endtabs %}
 
-**Incorrect example**:
+**Incorrect Mapping**:
 
 {% tabs %}
 {% highlight razor tabtitle="Incorrect Mapping" %}
@@ -1091,9 +1053,9 @@ Use the same type for `TValue` as the selected value stored in the component.
 
 Here, `Value="OrderCode"` does not match any property in the data model, so the dropdown cannot resolve the selected value correctly.
 
-**Step 2: Map grid columns to real model properties**
+**Step 2: Map columns to real model properties**
 
-For `SfGrid`, each `GridColumn Field` value must match a public property on the model.
+In `SfGrid`, each `GridColumn Field` value must match a public property on the model.
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Grid Mapping" %}
@@ -1132,9 +1094,9 @@ For `SfGrid`, each `GridColumn Field` value must match a public property on the 
 * Typing the wrong casing, such as `Customername` instead of `CustomerName`
 * Binding nested data without flattening the model first
 
-**Step 3: Use the correct value type for numeric and date components**
+**Step 3: Use the correct value type for numeric and date inputs**
 
-For numeric and date-based components, the bound property type must match the component type.
+For `SfNumericTextBox` and `SfDatePicker`, the bound property type must match the component type.
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Input Mapping" %}
@@ -1154,9 +1116,9 @@ For numeric and date-based components, the bound property type must match the co
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4: Use the correct field names for multi-value dropdowns**
+**Step 4: Use the correct field names and value collection type**
 
-For `SfMultiSelect`, the selected value collection type must match the item value type.
+In `SfMultiSelect`, the selected value collection type must match the item value type.
 
 {% tabs %}
 {% highlight razor tabtitle="MultiSelect Mapping" %}
@@ -1347,7 +1309,7 @@ N> This issue is usually a data-model mismatch, not a Syncfusion defect. In most
 * Use virtual scrolling for datasets larger than 1,000 records
 * Implement pagination for better UX and performance
 * Load data on-demand from server APIs instead of loading all records
-* Use `GridPageSettings` to control page size and visible page count
+* Use [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) to control page size and visible page count
 * Consider data caching strategies for frequently accessed data
 * Implement search and filtering on the server side
 * Use lazy loading for related data
@@ -1483,17 +1445,16 @@ var app = builder.Build();
 {% highlight json tabtitle="appsettings.json" %}
 
 {
-"Logging": {
-"LogLevel": {
-"Default": "Information",
-"Microsoft.AspNetCore": "Warning"
-}
-},
-"AllowedHosts": "*",
-
-"KeyVault": {
-"Url": "https://your-keyvault.vault.azure.net/"
-}
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "KeyVault": {
+    "Url": "https://your-keyvault.vault.azure.net/"
+  }
 }
 
 {% endhighlight %}
@@ -1503,7 +1464,7 @@ var app = builder.Build();
 
 ### Systematic troubleshooting approach
 
-When encountering issues with Syncfusion Blazor components, follow this systematic approach:
+When encountering issues with Blazor components, follow this systematic approach:
 
 **Step 1: Verify prerequisites**
 
@@ -1534,10 +1495,10 @@ dotnet list package --outdated
 
 Use browser developer tools (F12) to identify client-side issues:
 
-* **Console Tab**: Check for JavaScript errors, missing script references
-* **Network Tab**: Verify script files load successfully (200 status)
-* **Application Tab**: Inspect SignalR connections (for Server render mode)
-* **Performance Tab**: Identify rendering bottlenecks
+* **Console tab**: Check for JavaScript errors and missing script references
+* **Network tab**: Verify script files load successfully (200 status)
+* **Application tab**: Inspect SignalR connections (for Server render mode)
+* **Performance tab**: Identify rendering bottlenecks
 
 **Step 3: Server logs**
 
@@ -1574,7 +1535,7 @@ var app = builder.Build();
 | "The type or namespace name 'Syncfusion' could not be found" | Missing namespace import | Add `@using Syncfusion.Blazor` to _Imports.razor |
 | "Component is not interactive" | Missing render mode | Add `@rendermode InteractiveServer` to page |
 | "Connection disconnected with error" | SignalR message size limit | Increase `MaximumReceiveMessageSize` |
-| "Package version conflict" | Version mismatch | Ensure all Syncfusion packages use same version |
+| "Package version conflict" | Version mismatch | Ensure all Syncfusion packages use the same version |
 
 **Step 5: Clean and rebuild**
 
@@ -1629,9 +1590,9 @@ Create a diagnostic component to verify Syncfusion configuration:
 <div class="alert alert-success">
     <h5>Configuration Status</h5>
     <ul>
-        <li> Syncfusion service registered</li>
-        <li> Render mode configured</li>
-        <li> Component rendering successfully</li>
+        <li>Syncfusion service registered</li>
+        <li>Render mode configured</li>
+        <li>Component rendering successfully</li>
     </ul>
 </div>
 
