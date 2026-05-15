@@ -297,7 +297,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBSiDWnrSSbAdxE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVxNyWoJBAoNKsc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Hide the Blazor DataGrid header
 
