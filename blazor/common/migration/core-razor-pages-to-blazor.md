@@ -55,7 +55,7 @@ dotnet --info
 {% endhighlight %}
 {% endtabs %}
 
-## Project Structure Comparison
+## Project structure comparison
 
 ASP.NET Core Razor Pages and Blazor Web Apps follow different architectural patterns. The following table shows the functional equivalents between Razor Pages artifacts and Blazor, along with their roles in a Blazor Web App.
 
@@ -91,7 +91,7 @@ cd MyBlazorApp
 
 N> The `--interactivity Server` flag configures SignalR based interactivity providing immediate UI updates.
 
-## Migrating Syncfusion® Components from ASP.NET Core Razor pages to Blazor
+## Migrating Syncfusion® Components from ASP.NET Core Razor Pages to Blazor
 
 The following shared setup applies to all Syncfusion components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
 
@@ -234,11 +234,11 @@ For detailed explanation, refer to the [ASP.NET Core Razor DataGrid getting star
 
 **Component rendering**
 
-In the Razor Pages approach, the DataGrid is defined using an HTML helper in the `.cshtml` page. The data is provided from the `PageModel` using handler methods like `OnGet`, and it is rendered during the request.
+In the Razor Pages approach, the DataGrid is defined using an HTML helper in the `.cshtml` page. 
 
 In the Blazor approach, the DataGrid is defined as a Razor component and bound to an in-memory data source. The data is maintained within the component and updated dynamically during user interaction.
 
-**Razor page approach**
+**Razor pages approach**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
@@ -342,6 +342,7 @@ namespace GridSample.Pages
 
 @page "/"
 @using Syncfusion.Blazor.Grids
+@rendermode InteractiveServer
 
 <h3>Orders Grid</h3>
 
@@ -349,7 +350,7 @@ namespace GridSample.Pages
         AllowPaging="true"
         AllowSorting="true"
         AllowFiltering="true"
-        AllowGrouping="true">
+        AllowGrouping="true" TValue="OrdersDetails">
 
     <GridPageSettings PageSize="5"></GridPageSettings>
 
@@ -376,9 +377,9 @@ namespace GridSample.Pages
             {
                 Orders.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
                 Orders.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-                Orders.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52"));
+                Orders.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolivar #65-98 Llano Largo"));
                 Orders.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
-                Orders.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave"));
+                Orders.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
 
                 code += 5;
             }
@@ -518,12 +519,13 @@ namespace ScheduleSample.Pages
 
 @page "/"
 @using Syncfusion.Blazor.Schedule
+@rendermode InteractiveServer
 
 <h3>Schedule</h3>
 
 <SfSchedule TValue="AppointmentData"
             Height="550px"
-            SelectedDate="new DateTime(2022, 2, 15)">
+            SelectedDate="@(new DateTime(2022, 2, 15))">
 
     <ScheduleEventSettings DataSource="@Appointments"></ScheduleEventSettings>
 
@@ -699,6 +701,7 @@ namespace RichTextEditorSample.Pages
 
 @page "/"
 @using Syncfusion.Blazor.RichTextEditor
+@rendermode InteractiveServer
 
 <h3>Rich Text Editor</h3>
 
@@ -758,7 +761,6 @@ namespace RichTextEditorSample.Pages
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Remove },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.InsertLink },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.OpenImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Separator },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.EditImageLink },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.RemoveImageLink },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Display },
@@ -791,7 +793,7 @@ The key difference is that Razor Pages relies on a request based model. In contr
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
+Press <kbd>Ctrl</kbd> + <kbd>F5</kbd> (Windows) or <kbd>⌘</kbd> + <kbd>F5</kbd> (macOS) to launch the application.
 
 Alternatively, run the application using the following .NET CLI command from the project root directory.
 
