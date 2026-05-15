@@ -59,7 +59,7 @@ The following table maps common **ASP.NET Core MVC application artifacts** to th
 | **UI definition**       | Razor Views (`Views/*.cshtml`) | Razor components (`Pages/*.razor`)         |
 | **Controller logic**    | `Controllers/*.cs`             | Component code (`@code {}` or `.razor.cs`) |
 | **Application startup** | `Program.cs` (MVC middleware)  | `Program.cs` (Razor components)            |
-| **Layout**              | `_Layout.cshtml`               | `App.razor`      |
+| **Layout**              | `_Layout.cshtml`               | `MainLayout.razor`      |
 | **Reusable UI**         | Partial Views                  | Razor child components                     |
 | **Static assets**       | `wwwroot`                      | `wwwroot`          |
 | **State handling**      | TempData / ViewData / Session  | Component fields and injected services     |
@@ -224,7 +224,7 @@ For detailed explanation, refer to the [ASP.NET Core MVC DataGrid getting starte
 | **Collection type**       | Server-side models (`IEnumerable`, ViewModel)              | `List<>` / `IEnumerable<>`                |
 | **Events & interactions** | Client-side events     | `EventCallback<>` based handlers                 |
 | **UI refresh**            | Client-side rendering       | Automatic (component re-rendering)                      |
-| **Columns** | Defined using (`Columns(...)`) | `<GridColumn Field="..." HeaderText="..." />` |
+| **Columns** | Defined using (`.Columns(col => { ... })`) | `<GridColumn Field="..." HeaderText="..." />` |
 | **Editing & API** | [EditSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_EditSettings) | [EditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditSettings), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), `@ref` async APIs |
 | **Theming & assets** | Scripts and styles in `_Layout.cshtml` | Static web assets via `_content`, service registration (`AddSyncfusionBlazor`) |
 | **Paging / virtualization** |[AllowPaging](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_PageSettings), [EnableVirtualization](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_EnableVirtualization) | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) |
@@ -345,24 +345,7 @@ public class OrdersDetails
     public class OrdersDetails
     {
         public static List<OrdersDetails> order = new List<OrdersDetails>();
-        public OrdersDetails()
-        {
-
-        }
-        public OrdersDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, DateTime ShippedDate, string ShipAddress)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerId;
-            this.EmployeeID = EmployeeId;
-            this.Freight = Freight;
-            this.ShipCity = ShipCity;
-            this.Verified = Verified;
-            this.OrderDate = OrderDate;
-            this.ShipName = ShipName;
-            this.ShipCountry = ShipCountry;
-            this.ShippedDate = ShippedDate;
-            this.ShipAddress = ShipAddress;
-        }
+        
         public static List<OrdersDetails> GetAllRecords()
         {
             if (order.Count == 0)
@@ -489,7 +472,7 @@ public class Meeting
 @using Syncfusion.Blazor.Schedule
 @rendermode InteractiveServer
 
-<SfSchedule TValue="Meeting" Height="650px">
+<SfSchedule TValue="Meeting" Height="650px" CurrentView="View.Week">
     <ScheduleViews>
         <ScheduleView Option="View.Day" />
         <ScheduleView Option="View.Week" />
