@@ -218,9 +218,8 @@ Open `App.razor` and include the Syncfusion theme stylesheet and required script
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-    ....
 </head>
 
 <body>

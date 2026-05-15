@@ -361,7 +361,7 @@ Remove duplicate entries and ensure all Blazor packages use the same version.
 
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
-    <!-- All packages should use the same version -->
+    <!-- All Blazor packages should use the same version -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Calendars" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Charts" Version="33.2.3" />

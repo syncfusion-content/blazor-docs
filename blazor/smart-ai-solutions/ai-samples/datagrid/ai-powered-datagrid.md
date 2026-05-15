@@ -76,13 +76,13 @@ Include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme styles
 
 <head>
     ....
-    <!-- Syncfusion Blazor theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
     ....
-    <!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
+    <!-- Blazor core script (required for most components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
