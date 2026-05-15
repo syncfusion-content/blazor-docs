@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion® Blazor Rendering and Performance Optimization
 
-This guide explains how rendering works in Blazor and provides practical techniques to optimize rendering performance when using [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
+This guide explains how rendering works in Blazor and provides practical techniques to optimize rendering performance when using [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
 
 ## Syncfusion® Blazor DataGrid example with stable data binding
 
