@@ -197,9 +197,9 @@ public static class OrdersApi
             // Ignore parse errors and return unfiltered results
         }
 
-        var orders = allOrders.Where(o =>
-            (!from.HasValue || o.Date.Date >= from.Value) &&
-            (!to.HasValue || o.Date.Date <= to.Value)).ToArray();
+        var orders = allOrders.Where(order =>
+            (!from.HasValue || order.Date.Date >= from.Value) &&
+            (!to.HasValue || order.Date.Date <= to.Value)).ToArray();
 
         try {
             var logger = ctx.GetLogger("GetOrders");
@@ -348,7 +348,7 @@ Add the following Razor page to your Blazor WebAssembly project.
       {
         OrdersList = new List<Order>();
       }
-      EventItems = OrdersList.Select(o => new EventItem { StartTime = o.Date, EndTime = o.Date.AddHours(1), Subject = $"{o.Customer} ({o.Total:C2})" }).ToList();
+      EventItems = OrdersList.Select(order => new EventItem { StartTime = order.Date, EndTime = order.Date.AddHours(1), Subject = $"{order.Customer} ({order.Total:C2})" }).ToList();
       StateHasChanged();
     } catch (Exception ex) {
       Console.WriteLine($"Load failed: {ex}");
