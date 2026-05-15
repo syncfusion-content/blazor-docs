@@ -91,7 +91,7 @@ cd MyBlazorApp
 
 N> The `--interactivity Server` flag configures SignalR based interactivity providing immediate UI updates.
 
-## Migrating Syncfusion® Components from ASP.NET Core Razor Pages to Blazor
+## Migrating Syncfusion® components from ASP.NET Core Razor Pages to Blazor
 
 The following shared setup applies to all Syncfusion components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
 
@@ -238,7 +238,7 @@ In the Razor Pages approach, the DataGrid is defined using an HTML helper in the
 
 In the Blazor approach, the DataGrid is defined as a Razor component and bound to an in-memory data source. The data is maintained within the component and updated dynamically during user interaction.
 
-**Razor pages approach**
+**Razor Pages approach**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
@@ -449,7 +449,7 @@ In the Razor Pages approach, the Scheduler is defined using an HTML helper in th
 
 In the Blazor approach, the Scheduler is defined as a Razor component and bound to an in-memory collection. This data is maintained within the component and updated dynamically during user interaction.
 
-**Razor pages approach**
+**Razor Pages approach**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
@@ -614,7 +614,7 @@ In the Razor Pages approach, the Rich Text Editor is defined using an HTML helpe
 
 In the Blazor approach, the Rich Text Editor is defined as a Razor component and its value is bound to a variable. The content is maintained within the component and updated dynamically as part of the page state.
 
-**Razor pages approach**
+**Razor Pages approach**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
