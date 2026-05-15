@@ -13,7 +13,7 @@ This guide covers common issues encountered when building Blazor applications wi
 
 ## Overview
 
-Blazor development involves choosing the right rendering model, managing dependencies, configuring interactivity, and integrating third-party component libraries. Common issues often relate to:
+Blazor development involves choosing the right rendering model, managing dependencies, configuring interactivity, and integrating Syncfusion Blazor component libraries. Common issues often relate to:
 
 * Component rendering and styling
 * Render mode configuration and interactivity
@@ -51,23 +51,15 @@ N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blaz
 {% endhighlight %}
 {% endtabs %}
 
-**Available themes**: Choose from multiple built-in themes:
-
-* `bootstrap5.css` - Bootstrap 5 theme
-* `material.css` - Material Design theme
-* `material3.css` - Material Design 3 theme
-* `fabric.css` - Microsoft Fabric theme
-* `tailwind.css` - Tailwind CSS theme
-* `fluent.css` - Microsoft Fluent theme
-* `fluent2.css` - Microsoft Fluent 2 theme
+**Available themes**: For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 **Best practices**:
 
 * Reference only **one** theme stylesheet to avoid style conflicts
 * Place the theme reference **before** custom stylesheets to allow overrides
-* For Blazor WebAssembly, reference the theme in `wwwroot/index.html`
-* For Blazor Server (.NET 6/7), reference in `~/Pages/_Host.cshtml` or `~/Pages/_Layout.cshtml`
-* Verify the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package is installed
+* For standalone Blazor WebAssembly apps, reference the theme stylesheet in `wwwroot/index.html`
+* For Blazor Web Apps using the WebAssembly render mode, reference the theme stylesheet in `~/Components/App.razor`
+* Verify that the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package is installed
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -121,7 +113,7 @@ Add the render mode directive at the top of your `.razor` page.
 
 **Available render modes**:
 
-| Render Mode | Use | Typical hosting |
+| Render Mode | Use | Typical Hosting |
 |------------|-----|-----------------|
 | `@rendermode InteractiveServer` | Server-side interactivity (SignalR) | Blazor Web App (server) |
 | `@rendermode InteractiveWebAssembly` | Client-side execution (WebAssembly) | Blazor Web App (WebAssembly) |
@@ -261,13 +253,13 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 * Simplified package management
 * Single version number to track
 * Easier upgrades across all components
-* Suitable for applications using 5+ different component types
+* Suitable for applications using 5 or more different component types
 
 **Best practices**:
 
 * Never mix Syncfusion.Blazor (comprehensive) with individual Syncfusion component packages in the same project.
 * Audit your `.csproj` file regularly to identify redundant packages
-* Use individual packages unless you're using 5 or more component types
+* Use individual packages unless you are using 5 or more component types
 * Document your package strategy in team guidelines
 
 **How to check for redundancy:**
@@ -647,10 +639,8 @@ System.InvalidOperationException: Cannot provide a value for property 'Localizer
 
 **Solution**: Register the Syncfusion Blazor service in `~/Program.cs`.
 
-**For Blazor Web App (.NET 8+):**
-
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 11" %}
+{% highlight c# tabtitle="Blazor Web App (.NET 8+)" hl_lines="2 11" %}
 ....
 using Syncfusion.Blazor;
 
@@ -667,15 +657,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% endtabs %}
-
-**For Blazor WebAssembly:**
-
-Register the service in the client project's `Program.cs`:
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 7" %}
-
+{% highlight c# tabtitle="Blazor WebAssembly" hl_lines="2 7" %}
 ....
 using Syncfusion.Blazor;
 
@@ -685,14 +667,10 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddSyncfusionBlazor();
 
 await builder.Build().RunAsync();
+....
 
 {% endhighlight %}
-{% endtabs %}
-
-**For Blazor Server (.NET 6/7):**
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 10" %}
+{% highlight c# tabtitle="Blazor Server (.NET 6/7)" hl_lines="2 10" %}
 ....
 using Syncfusion.Blazor;
 
@@ -772,18 +750,16 @@ N> The `AddSyncfusionBlazor()` service registration is mandatory for all Syncfus
 
 ### Pitfall 8: Incorrect SignalR configuration for large data
 
-**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. The browser console may shows errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
+**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. The browser console may show errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
 
 **Root cause**: Default SignalR message size limits are too small for large data transfers. The default limit is 32KB, which is insufficient for components handling large files, images, or datasets.
 
 **Impact**: Data loading failures, connection drops, poor user experience, and limited functionality for data-intensive components. Users may experience frequent disconnections when working with large documents or datasets.
 
-**Solution**: Configure SignalR with appropriate message size limits and hub options.
-
-**For Blazor Web App (.NET 8+) with Server render mode:**
+**Solution**: Configure SignalR with appropriate message size limits and hub options in `~/Program.cs`.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Blazor Web App (.NET 8+) - Server" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -808,12 +784,7 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 
 {% endhighlight %}
-{% endtabs %}
-
-**For Blazor Server (.NET 6/7):**
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Blazor Server (.NET 6/7)" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
