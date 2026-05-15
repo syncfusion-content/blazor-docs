@@ -92,7 +92,7 @@ Install the [Syncfusion.Blazor.SmithChart](https://www.nuget.org/packages/Syncfu
 **Visual Studio (NuGet Package Manager)**:
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.SmithChart` and `Syncfusion.Blazor.Themes`) and install it.
+2. Search the required NuGet packages (`Syncfusion.Blazor.SmithChart`) and install it.
 
 **Visual Studio Code or .NET CLI**:
 
