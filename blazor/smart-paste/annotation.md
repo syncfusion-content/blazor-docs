@@ -84,7 +84,7 @@ By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor `Smart P
 
 N> In this example, the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields. To get started, ensure you have the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package installed.
 
-![Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart paste button with annotation](images/smart-paste-annotation.webp)
+![Syncfusion Blazor Smart paste button with annotation](images/smart-paste-annotation.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
