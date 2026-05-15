@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Authentication with AWS Cognito using Syncfusion® Components
 
-This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Syncfusion Blazor components based on user identity, and protect application data. 
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Blazor components based on user identity, and protect application data. 
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install required packages
 
-To enable authentication and use Syncfusion Blazor components, install the required packages through NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+To enable authentication and use Blazor components, install the required packages through NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 **Syncfusion packages**
 
@@ -323,7 +323,7 @@ Add the Syncfusion Blazor theme CSS and script references to your application's 
 {% endhighlight %}
 {% endtabs %}
 
-## Syncfusion® Blazor DataGrid on an authenticated page
+## Blazor DataGrid on an authenticated page
 
 This page demonstrates how to protect a [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
 
@@ -420,15 +420,15 @@ N> By default, the app runs on `https://localhost:7000` (or similar port defined
 * Unauthenticated users see the **sign in** prompt.
 * Clicking **Sign in with AWS Cognito** redirects to the Cognito hosted UI.
 * After entering credentials, the user is redirected back to the app.
-* The Syncfusion DataGrid appears with sample data.
+* The Blazor DataGrid appears with sample data.
 * Clicking **Sign out** clears the session and returns to the **sign in** page.
 
 **Output:**
 
-![Syncfusion Blazor DataGrid displaying order data after AWS Cognito authentication](./images/aws-cognito.webp)
+![Blazor DataGrid displaying order data after AWS Cognito authentication](./images/aws-cognito.webp)
 
 ## See also
 
-* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
 * [Getting started with AWS Cognito user pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools.html)
 * [Overview of ASP.NET Core authentication](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/)
