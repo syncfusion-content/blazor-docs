@@ -69,47 +69,32 @@ apm --version
 
 Use the APM CLI to install the Blazor UI Composer skill for your preferred environment:
 
-{% tabs %}
-{% highlight bash tabtitle="Copilot" %}
+{% tabs %} {% highlight bash tabtitle="Copilot" %}
 
-// By default, it installs to the GitHub Copilot target
+apm install syncfusion/blazor-ui-composer -t copilot
 
-apm install syncfusion/blazor-ui-composer
-
-{% endhighlight %}
-{% highlight bash tabtitle="Cursor" %}
+{% endhighlight %} {% highlight bash tabtitle="Cursor" %}
 
 apm install syncfusion/blazor-ui-composer -t cursor
 
-{% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
-
-// For Code Studio, refer to the note below to configure the agent location explicitly to use it in the chat.
-
-apm install syncfusion/blazor-ui-composer
-
-
-{% endhighlight %}
-{% highlight bash tabtitle="Codex" %}
+{% endhighlight %} {% highlight bash tabtitle="Codex" %}
 
 apm install syncfusion/blazor-ui-composer -t codex
 
-{% endhighlight  %}
-{% highlight bash tabtitle="Claude" %}
+{% endhighlight %} {% highlight bash tabtitle="Claude" %}
 
 apm install syncfusion/blazor-ui-composer -t claude
 
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight %} {% endtabs %}
 
 After installation, the following artifacts are added to your project for the GitHub Copilot target:
 
 - `.agent/skills/` – contains the skill files
 - `.github/agents/` – contains the agent configuration
 
-For details on supported deployment targets, refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals).
+Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals) for details about supported deployment targets.
 
-> For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in the chat. Refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
+> For Syncfusion® Code Studio, use the Copilot command above to install the Blazor UI Composer.
 
 ## How the Syncfusion® Blazor UI Composer Skill Works
 
@@ -164,6 +149,14 @@ Create a CMS Admin Dashboard UI featuring a collapsible sidebar with navigation 
 {% endpromptcards %}
 
 Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+
+## Best Practices
+
+Follow these guidelines to get the most out of UI Composer and ensure high-quality production-ready result:
+
+- **Stay consistent** — Maintain consistent file organization, naming conventions, and coding standards throughout your project.
+- **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
+- **Review all content and assets before production** — Replace any placeholder images or icons (e.g., from Unsplash or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
 
 ## Troubleshooting
 
