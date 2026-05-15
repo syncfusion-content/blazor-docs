@@ -109,7 +109,6 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
@@ -183,7 +182,11 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor CheckBox component in the default web browser.
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor CheckBox component will render in your default web browser.
 
 **Visual Studio Code or .NET CLI**:
 
@@ -194,7 +197,6 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
     dotnet run
     ```
 3. The application will start and display in your default web browser.
-
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
 

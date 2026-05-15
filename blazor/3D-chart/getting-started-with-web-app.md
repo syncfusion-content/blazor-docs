@@ -178,7 +178,11 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the default web browser.
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component will render in your default web browser.
 
 **Visual Studio Code or .NET CLI**:
 
@@ -196,7 +200,6 @@ To bind data for the 3D chart component, you can assign a IEnumerable object to 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
 
 public class SalesInfo
 {

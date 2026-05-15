@@ -108,7 +108,6 @@ dotnet add package Syncfusion.Blazor.BulletChart -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
@@ -185,7 +184,11 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bullet Chart component in the default web browser.
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bullet Chart component will render in your default web browser.
 
 **Visual Studio Code or .NET CLI**:
 

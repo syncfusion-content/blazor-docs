@@ -225,7 +225,6 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-
 <SfAccumulationChart Title="Olympic Medal Details">
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
@@ -317,7 +316,21 @@ Legend is used for the accumulation chart by setting the [Visible](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation component in your default web browser.
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
+2. Run the following command:
+
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVzjCVSVyMUwbGm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Legend](images/getting-started/blazor-accumulation-chart-legend.webp)" %}
 

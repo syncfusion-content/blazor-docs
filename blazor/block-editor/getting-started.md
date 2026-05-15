@@ -168,12 +168,17 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveAuto
 <SfBlockEditor></SfBlockEditor>
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component will render in your default web browser.
 
 **Visual Studio Code or .NET CLI**:
 
@@ -194,7 +199,6 @@ The Block Editor uses a block-based content structure where each block represent
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 @using Syncfusion.Blazor.BlockEditor
 
 <SfBlockEditor @bind-Blocks="blockDataOverview">
