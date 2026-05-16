@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Chart Component | Syncfusion
+title: Getting Started with Blazor Chart Component | Syncfusion
 description: Checkout and learn about getting started with Syncfusion Blazor Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: Chart
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Chart Component in Blazor WASM App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -132,7 +132,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~/index.html** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file.
 
 ```html
 
@@ -162,7 +162,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 
 ## Populate Blazor chart with data
 
-To bind data for the chart component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To bind data for the chart component, you can assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -225,95 +225,6 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTNiLezckHqsGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
-
-## Add titles
-
-Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfChart Title="Sales Analysis">
-    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBJjihozcpDsXHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Title](images/getting-started/blazor-chart-title.webp)" %}
-
-## Add data label
-
-You can add data labels to improve the readability of the chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property to **true** in the [ChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html).
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfChart Title="Sales Analysis">
-    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-            <ChartMarker>
-                <ChartDataLabel Visible="true"></ChartDataLabel>
-            </ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVpjMhIzmJRkHwA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with DataLabel](images/getting-started/blazor-chart-data-label.webp)" %}
-
-## Enable Tooltip
-
-When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfChart Title="Sales Analysis">
-    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVTNChepGIwhetf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Tooltip](images/getting-started/blazor-chart-tooltip.webp)" %}
-
-## Enable legend
-
-You can use legend for the chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to **true** in [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html). The legend name can be changed by using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) property in the series.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfChart Title="Sales Analysis">
-    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-    <ChartLegendSettings Visible="true"></ChartLegendSettings>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" Name="Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrTDCLIpQHyGNEq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart)
 
