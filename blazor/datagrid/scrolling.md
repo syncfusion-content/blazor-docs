@@ -9,17 +9,19 @@ documentation: ug
 
 # Scrolling in Blazor DataGrid
 
-The scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables navigation through content that extends beyond the visible area of the Grid. Scrollbars appear automatically when content exceeds the specified **Width** or **Height** of the Grid element. This is useful for large datasets or when the Grid must fit within a constrained layout. The vertical and horizontal scrollbars are displayed based on the following criteria:
+The scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid  enables seamless navigation through content extending beyond the visible DataGrid area. Scrollbars automatically appear when content exceeds the DataGrid dimensions configured via the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties.
 
-* The vertical scrollbar appears when the total height of rows exceeds the Grid element’s height.
-* The horizontal scrollbar appears when the total width of columns exceeds the Grid element’s width.
-* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties define the Grid’s height and width.
+Scrollbar behavior:
 
-> The default values for `Height` and `Width` are **auto**.
+* **Vertical scrollbar**: Appears when total row height exceeds the DataGrid element height.
+* **Horizontal scrollbar**: Appears when total column width exceeds the DataGrid element width.
+* **Default dimensions**: Both `Height` and `Width` default to "auto".
 
 ## Set width and height
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows precise control over the scroller dimensions by setting pixel values for the Grid’s [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height). Specify numeric pixel values to constrain the Grid and automatically show scrollbars when content overflows.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid dimension configuration enables precise control over scrollbar display and DataGrid size. Use pixel values with the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) properties to define exact dimensions.
+
+In the following example, the scrollbar is enabled, and the DataGrid's `Height` is set to "315" pixels, while the `Width` is set to "400" pixels:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -99,9 +101,11 @@ public class OrderDetails
 
 ## Responsive with parent container
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can fill its parent container and automatically adjust to available space. This supports responsive layouts across various screen sizes.
+Responsive DataGrid sizing enables dynamic adjustment to available space. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) properties accept "100%" values to fill the parent container.
 
-To enable this, set the Grid’s [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to 100%. The Grid’s parent element must have an explicit height; otherwise, a vertical scrollbar will not appear.
+Parent element configuration is required when setting `Height` to "100%". The parent container must explicitly define a height value for the DataGrid's responsive layout to function correctly.
+
+In the following example, the parent container has explicit `Height` and `Width` set, and the DataGrid container's `Height` and `Width` are both set to "100%":
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -166,9 +170,9 @@ public class LazyLoadDetails
 
 ## Sticky header
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can keep column headers visible while scrolling. Enable this by setting [EnableStickyHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableStickyHeader) to **true**. Sticky headers depend on a scrollable container with an explicit height.
+Sticky header configuration keeps column headers visible during vertical scrolling. The [EnableStickyHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableStickyHeader) property enables this behavior when set to `true`.
 
-In the demo below, Grid headers remain sticky while scrolling within the Grid’s parent div element.
+The following demo enables sticky header behavior during parent container scrolling.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -243,9 +247,9 @@ public class LazyLoadDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLIZfLlyiVvXGhD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Scroll to selected row
+## Auto-scroll to selected row
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can scroll content to bring a selected row into view. Use [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) by passing a row index (or the appropriate overload parameters) to align the selection in the viewport.
+Auto-scroll functionality automatically displays selected rows in view. Use [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) by passing a row index (or the appropriate overload parameters) to align the selection in the viewport.
 
 The following example demonstrates scrolling to a selected row by passing the selected row index to `ScrollIntoViewAsync`:
 
@@ -357,7 +361,7 @@ public class LazyLoadDetails
 
 ## Customize the appearance of scrollbar
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid uses the native browser scrollbar for horizontal and vertical scrolling when content exceeds the Grid’s visible area. If the default appearance does not match application styling, the scrollbar can be customized using CSS—subject to browser support.
+By default, the DataGrid uses the native browser scrollbar for horizontal and vertical scrolling when content exceeds the DataGrid’s visible area. If the default appearance does not match application styling, the scrollbar can be customized using CSS—subject to browser support.
 
 Refer to this [CSS Tricks](https://css-tricks.com/almanac/properties/s/scrollbar/) article for details on cross-browser scrollbar styling. When customizing, consider accessibility and ensure that keyboard scrolling and focus visuals remain usable.
 
