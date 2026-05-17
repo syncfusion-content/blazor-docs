@@ -11,6 +11,223 @@ documentation: ug
 
 The diagram's core functionalities are implemented through a comprehensive set of methods and properties, enabling robust manipulation and interaction with diagram elements.
 
+## How to Create Blazor Flowchart Diagram
+
+Create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) with specific position, size, label, and shape. Connect two or more nodes using a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html).
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes" />
+
+@code
+{
+    SfDiagramComponent diagram;
+    int connectorCount = 0;
+    //Defines Diagram's nodes collection.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Defines Diagram's connectors collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        InitDiagramModel();
+    }
+
+    private void InitDiagramModel()
+    {
+        CreateNode("Start", 300, 50, NodeFlowShapes.Terminator, "Start");
+        CreateNode("Init", 300, 140, NodeFlowShapes.Process, "var i = 0");
+        CreateNode("Condition", 300, 230, NodeFlowShapes.Decision, "i < 10?");
+        CreateNode("Print", 300, 320, NodeFlowShapes.PreDefinedProcess, "print(\'Hello!!\');");
+        CreateNode("Increment", 300, 410, NodeFlowShapes.Process, "i++;");
+        CreateNode("End", 300, 500, NodeFlowShapes.Terminator, "End");
+        // Creates orthogonal connector.
+        OrthogonalSegment segment1 = new OrthogonalSegment()
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Direction = Direction.Right,
+            Length = 30,
+        };
+        OrthogonalSegment segment2 = new OrthogonalSegment()
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Length = 300,
+            Direction = Direction.Bottom,
+        };
+        OrthogonalSegment segment3 = new OrthogonalSegment()
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Length = 30,
+            Direction = Direction.Left,
+        };
+        OrthogonalSegment segment4 = new OrthogonalSegment()
+        {
+            Type = ConnectorSegmentType.Orthogonal,
+            Length = 200,
+            Direction = Direction.Top,
+        };
+        CreateConnector("Start", "Init");
+        CreateConnector("Init", "Condition");
+        CreateConnector("Condition", "Print");
+        CreateConnector("Condition", "End", "Yes", segment1, segment2);
+        CreateConnector("Print", "Increment", "No");
+        CreateConnector("Increment", "Condition", null, segment3, segment4);
+    }
+
+    // Method to create connector.
+    private void CreateConnector(string sourceId, string targetId, string label = default(string), OrthogonalSegment segment1 = null, OrthogonalSegment segment2 = null)
+    {
+        Connector diagramConnector = new Connector()
+        {
+            // Represents the unique id of the connector.
+            ID = string.Format("connector{0}", ++connectorCount),
+            SourceID = sourceId,
+            TargetID = targetId,
+        };
+        if (label != default(string))
+        {
+            // Represents the annotation of the connector.
+            PathAnnotation annotation = new PathAnnotation()
+            {
+                Content = label,
+                Style = new TextStyle() { Fill = "white" }
+            };
+            diagramConnector.Annotations = new DiagramObjectCollection<PathAnnotation>() { annotation };
+        }
+        if (segment1 != null)
+        {
+            // Represents the segment type of the connector.
+            diagramConnector.Type = ConnectorSegmentType.Orthogonal;
+            diagramConnector.Segments = new DiagramObjectCollection<ConnectorSegment> { segment1, segment2 };
+        }
+        connectors.Add(diagramConnector);
+    }
+
+    // Method to create node.
+    private void CreateNode(string id, double x, double y, NodeFlowShapes shape, string label)
+    {
+        Node diagramNode = new Node()
+        {
+            //Represents the unique id of the node.
+            ID = id,
+            // Defines the position of the node.
+            OffsetX = x,
+            OffsetY = y,
+            // Defines the size of the node.
+            Width = 145,
+            Height = 60,
+            // Defines the style of the node.
+            Style = new ShapeStyle { Fill = "#357BD2", StrokeColor = "White" },
+            // Defines the shape of the node.
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = shape },
+            // Defines the annotation collection of the node.
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>
+            {
+                new ShapeAnnotation
+                {
+                    Content = label,
+                    Style = new TextStyle()
+                    {
+                        Color="White",
+                        Fill = "transparent"
+                    }
+                }
+            }
+        };
+        nodes.Add(diagramNode);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJZWLYqiuRApvY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Component](images/blazor-diagram-component.png)" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
+
+## How to Create Organizational Chart
+
+A built-in automatic layout algorithm is designed specifically for organizational charts, automatically arranging parent and child node positions for optimal structure and clarity.
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <DataSourceSettings ID="Id" ParentID="Team" DataSource="@DataSource"></DataSourceSettings>
+    <SnapSettings>
+        <HorizontalGridLines LineColor="white" LineDashArray="2,2">
+        </HorizontalGridLines>
+        <VerticalGridLines LineColor="white" LineDashArray="2,2">
+        </VerticalGridLines>
+    </SnapSettings>
+    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" GetLayoutInfo="GetLayoutInfo">
+    </Layout>
+</SfDiagramComponent>
+
+@code
+{
+    //Initializing layout.
+    int HorizontalSpacing = 40;
+    int VerticalSpacing = 50;
+
+    //To configure every subtree of the organizational chart.
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
+    {
+        options.AlignmentType = SubTreeAlignmentType.Right;
+        options.Orientation = Orientation.Vertical;
+        return options;
+    }
+
+    //Creates node with some default values.
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.Height = 50;
+        node.Width = 150;
+        node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "Black" };
+    }
+
+    //Creates connectors with some default values.
+    private void OnConnectorCreating(IDiagramObject connector)
+    {
+        Connector connectors = connector as Connector;
+        connectors.Type = ConnectorSegmentType.Orthogonal;
+        connectors.Style = new TextStyle() { StrokeColor = "#6495ED", StrokeWidth = 1 };
+        connectors.TargetDecorator = new DecoratorSettings
+        {
+            Shape = DecoratorShape.None,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED", }
+        };
+    }
+
+    public class OrgChartDataModel
+    {
+        public string Id { get; set; }
+        public string Team { get; set; }
+        public string Role { get; set; }
+    }
+    public object DataSource = new List<object>()
+    {
+        new OrgChartDataModel() { Id= "1", Role= "General Manager" },
+        new OrgChartDataModel() { Id= "2", Role= "Human Resource Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "3", Role= "Design Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "4", Role= "Operation Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "5", Role= "Marketing Manager", Team= "1" }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVTDsrYqBZBcmEv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](images/blazor-diagram-childnode-at-vertical-right.png)" %}
+
 ## How to Add Nodes Using the Add Method
 
 Create a node in a Blazor diagram, define a Node object and add it to the diagram's nodes collection using the `Add` method. It's crucial to call the `Add` method within the `OnInitialized` lifecycle method. This approach ensures that each diagram element is properly measured and rendered individually before the entire diagram is displayed. Attempting to use the `Add` method outside of `OnInitialized` is not recommended, as it may lead to unexpected behavior or rendering issues in the diagram. The following code example shows how to add a node to the diagram.
