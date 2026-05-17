@@ -156,7 +156,7 @@ Follow these guidelines to get the most out of UI Composer and ensure high-quali
 
 - **Stay consistent** — Maintain consistent file organization, naming conventions, and coding standards throughout your project.
 - **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
-- **Review all content and assets before production** — Replace any placeholder images or icons (e.g., from Unsplash or emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
+- **Review all content and assets before production** — Replace any placeholder images or icons (e.g., from emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
 
 ## Troubleshooting
 
