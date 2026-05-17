@@ -10,7 +10,7 @@ keywords: Blazor DataGrid, AI insights, sales order analysis, Syncfusion Blazor 
 
 # Generate AI insights with Blazor DataGrid and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to analyze sales order data and generate AI-powered business insights in the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables seamless integration with AI models to process and summarize data, while Azure OpenAI or Ollama can be used to generate structured, JSON‑based insights such as an executive summary, key trends, recommendations, and flagged order IDs. In the following example, the application analyzes sales orders, highlights flagged records, and presents actionable business insights.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to analyze sales order data and generate AI-powered business insights in the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables seamless integration with AI models to process and summarize data, while Azure OpenAI or Ollama can be used to generate structured, JSON‑based insights such as an executive summary, key trends, recommendations, and flagged order IDs. In the following example, the application analyzes sales orders, highlights flagged records, and presents actionable business insights.
 
 If you have not created a Blazor application yet, refer to the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
@@ -76,13 +76,13 @@ Include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme styles
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
     ....
-    <!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
+    <!-- Blazor core script (required for most components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
@@ -222,7 +222,7 @@ N> If the interactivity location is set to **Global**, no per-page directive is 
 
 ## How AI models integrate with Blazor DataGrid
 
-This sample demonstrates how to use the **Syncfusion® Blazor DataGrid** to analyze sales order data and generate business insights with AI models. The AI service returns structured JSON that includes an executive summary, key trends, recommendations, and flagged order IDs. While the request is being processed, a loading spinner is displayed, and the grid highlights the rows identified by the AI.
+This sample demonstrates how to use the **Blazor DataGrid** to analyze sales order data and generate business insights with AI models. The AI service returns structured JSON that includes an executive summary, key trends, recommendations, and flagged order IDs. While the request is being processed, a loading spinner is displayed, and the grid highlights the rows identified by the AI.
 
 The sample loads sales order data in `Home.razor.cs` and sends it to the AI service when the user selects **Generate AI Insights**.
 
