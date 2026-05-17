@@ -69,23 +69,31 @@ apm --version
 
 Use the APM CLI to install the Blazor UI Composer skill for your preferred environment:
 
-{% tabs %} {% highlight bash tabtitle="Copilot" %}
+{% tabs %}
+{% highlight bash tabtitle="Copilot" %}
 
 apm install syncfusion/blazor-ui-composer -t copilot
 
-{% endhighlight %} {% highlight bash tabtitle="Cursor" %}
+{% endhighlight %} 
+
+{% highlight bash tabtitle="Cursor" %}
 
 apm install syncfusion/blazor-ui-composer -t cursor
 
-{% endhighlight %} {% highlight bash tabtitle="Codex" %}
+{% endhighlight %}
+
+{% highlight bash tabtitle="Codex" %}
 
 apm install syncfusion/blazor-ui-composer -t codex
 
-{% endhighlight %} {% highlight bash tabtitle="Claude" %}
+{% endhighlight %}
+
+{% highlight bash tabtitle="Claude" %}
 
 apm install syncfusion/blazor-ui-composer -t claude
 
-{% endhighlight %} {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 After installation, the following artifacts are added to your project for the GitHub Copilot target:
 
