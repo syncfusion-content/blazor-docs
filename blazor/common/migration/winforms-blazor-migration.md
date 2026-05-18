@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from WinForms to Blazor | Syncfusion®
-description: Step-by-step guide to migrate WinForms application to Blazor, including a detailed DataGrid migration example.
+title: Migrating from Windows Forms (WinForms) to Blazor | Syncfusion®
+description: Step-by-step guide to migrate a Windows Forms (WinForms) application to Blazor, covering architectural differences, project setup, package installation, theming, service registration, component rendering, and a WinForms-to-Blazor component mapping reference.
 platform: Blazor
 component: Common
 documentation: ug
@@ -33,7 +33,7 @@ This guide provides a step‑by‑step approach to migrating a [Windows Forms (W
 | Code Reusability | Low reusability | High reusability via components and services | Faster development and testing |
 | Future Support | Limited continued development | Actively developed framework | Long‑term application sustainability |
 
-## Key Architectural Differences
+## Key architectural differences
 
 Understanding the architectural differences between **WinForms** and **Blazor** is essential before starting the migration. WinForms follows a traditional desktop‑based, event‑driven architecture, while Blazor uses a modern, component‑based web architecture designed for scalability and maintainability.
 
@@ -91,10 +91,12 @@ These WinForms packages include the following:
 
 Because WinForms applications run only on Windows, the packages are tightly coupled with the Windows desktop environment.
 
+- [Syncfusion.SfDataGrid.WinForms](https://www.nuget.org/packages/Syncfusion.SfDataGrid.WinForms)
+
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.WinForms.DataGrid
+dotnet add package Syncfusion.SfDataGrid.WinForms
 
 {% endhighlight %}
 {% endtabs %}
@@ -103,23 +105,26 @@ dotnet add package Syncfusion.WinForms.DataGrid
 
 In Blazor applications, Blazor components are delivered as web‑based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
 
-Blazor packages are grouped into the following categories
+Blazor packages are grouped into the following categories:
 
 - Component packages (Grid, Charts, Scheduler, etc.)
 - Theme packages (CSS‑based)
 
 To use Blazor components in a Blazor application, install the base component package and the theme package.
 
+- [Syncfusion.Blazor.Grids](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grids -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Theme 
+## Applying themes 
 
 This section explains how themes are applied and managed in WinForms and Blazor applications. It also highlights the key conceptual shift from desktop based theme managers to CSS based theming used in web applications.
 
@@ -127,7 +132,7 @@ This section explains how themes are applied and managed in WinForms and Blazor 
 
 In WinForms applications, Syncfusion® themes are applied using theme managers or control properties. All styling logic is handled inside the desktop runtime and tightly integrated with the Windows rendering system.
 
-Key characteristics of WinForms theming include
+Key characteristics of WinForms theming include:
 
 - Themes are applied at the form level or the application level
 - UI rendering is handled by Windows graphics
@@ -161,7 +166,7 @@ To apply styles and enable required features, reference the theme CSS file and s
 
 <head>
     ....
-    <!--Theme stylesheet -->
+    <!-- Theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ....
 </head>
@@ -182,7 +187,7 @@ In Blazor applications, Blazor components must be registered with the built‑in
 
 This step is required only for Blazor applications and replaces the implicit component initialization mechanism used in WinForms.
 
-To enable Blazor components, register the Blazor service in the `Program.cs` file.
+To enable Blazor components, register the Syncfusion® Blazor service in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -249,7 +254,7 @@ public partial class MainForm
 public class Order
 {
     public int OrderID { get; set; }
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
     public double Freight { get; set; }
 }
 
@@ -271,7 +276,7 @@ Key characteristics of Blazor rendering include
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@page "/orders"
+@page "/"
 @rendermode InteractiveServer
 
 <h3>Orders</h3>
@@ -321,7 +326,24 @@ In Blazor, multiple components are rendered declaratively using Razor markup. Co
 
 <SfGrid DataSource="@Orders" />
 <SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
 </SfChart>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the application
+
+Run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
 
 {% endhighlight %}
 {% endtabs %}
@@ -336,7 +358,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [SfDataGrid](https://help.syncfusion.com/windowsforms/datagrid/gettingstarted) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) | Supports sorting, filtering, grouping, paging, editing |
+| [SfDataGrid](https://help.syncfusion.com/windowsforms/datagrid/gettingstarted) | [SfGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | Supports sorting, filtering, grouping, paging, editing |
 | [SfDataPager](https://help.syncfusion.com/windowsforms/datagrid/paging) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/paging) | Paging is handled using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) |
 | [Virtual Grid](https://help.syncfusion.com/windowsforms/grid-control/virtual-grid) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) | Virtual scrolling can be enabled by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true**. |
 
@@ -344,48 +366,48 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [ChartControl](https://help.syncfusion.com/windowsforms/chart/getting-started) | [SfChart](https://blazor.syncfusion.com/documentation/chart/getting-started-wasm) | Supports column, line, bar, pie, area charts |
-| [Sparkline](https://help.syncfusion.com/windowsforms/sparkline/gettingstarted) | [SfSparkline](https://blazor.syncfusion.com/documentation/sparkline/getting-started) | Lightweight inline charts |
-| [Gauge](https://help.syncfusion.com/windowsforms/radial-gauge/overview) | [SfLinearGauge](https://blazor.syncfusion.com/documentation/linear-gauge/getting-started), [SfCircularGauge](https://blazor.syncfusion.com/documentation/circular-gauge/getting-started) | SVG‑based rendering |
-| [Maps](https://help.syncfusion.com/windowsforms/map/getting-started) | [SfMaps](https://blazor.syncfusion.com/documentation/maps/getting-started) | Interactive maps |
+| [ChartControl](https://help.syncfusion.com/windowsforms/chart/getting-started) | [SfChart](https://www.syncfusion.com/blazor-components/blazor-charts) | Supports column, line, bar, pie, area charts |
+| [Sparkline](https://help.syncfusion.com/windowsforms/sparkline/gettingstarted) | [SfSparkline](https://www.syncfusion.com/blazor-components/blazor-sparkline) | Lightweight inline charts |
+| [Gauge](https://help.syncfusion.com/windowsforms/radial-gauge/overview) | [SfLinearGauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [SfCircularGauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) | SVG‑based rendering |
+| [Maps](https://help.syncfusion.com/windowsforms/map/getting-started) | [SfMaps](https://www.syncfusion.com/blazor-components/blazor-maps) | Interactive maps |
 
 ### Scheduling and Time Management
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfSchedule](https://blazor.syncfusion.com/documentation/scheduler/getting-started) | Appointment based scheduling |
+| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfSchedule](https://www.syncfusion.com/blazor-components/blazor-scheduler) | Appointment based scheduling |
 
 ### Navigation and Layout controls
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [TabControlAdv](https://help.syncfusion.com/windowsforms/tabcontrol/getting-started) | [SfTab](https://blazor.syncfusion.com/documentation/tabs/getting-started) | Tab navigation |
+| [TabControlAdv](https://help.syncfusion.com/windowsforms/tabcontrol/getting-started) | [SfTab](https://www.syncfusion.com/blazor-components/blazor-tabs) | Tab navigation |
 | [DockingManager](https://help.syncfusion.com/windowsforms/docking-manager/getting-started) | CSS Layout + Components | Requires layout redesign |
-| [SplitContainerAdv](https://help.syncfusion.com/windowsforms/splitcontainer/creating-splitcontaineradv) | [SfSplitter](https://blazor.syncfusion.com/documentation/splitter/getting-started) | Horizontal/vertical splitting |
+| [SplitContainerAdv](https://help.syncfusion.com/windowsforms/splitcontainer/creating-splitcontaineradv) | [SfSplitter](https://www.syncfusion.com/blazor-components/blazor-splitter) | Horizontal/vertical splitting |
 
 ### Editors and Input controls
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [TextBoxExt](https://help.syncfusion.com/windowsforms/textbox/getting-started) | [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started) | Text input |
-| [SfNumericTextBox](https://help.syncfusion.com/windowsforms/numeric-textbox/gettingstarted) | [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) | Numeric input |
-| [SfDateTimeEdit](https://help.syncfusion.com/windowsforms/datetimepicker/getting-started) | [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) | Date and time picker |
+| [TextBoxExt](https://help.syncfusion.com/windowsforms/textbox/getting-started) | [SfTextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) | Text input |
+| [SfNumericTextBox](https://help.syncfusion.com/windowsforms/numeric-textbox/gettingstarted) | [SfNumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) | Numeric input |
+| [SfDateTimeEdit](https://help.syncfusion.com/windowsforms/datetimepicker/getting-started) | [SfDateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) | Date and time picker |
 | [SfComboBox](https://help.syncfusion.com/windowsforms/combobox/gettingstarted) | [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started) | Virtualized dropdown |
-| [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) | [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) | Input suggestions |
+| [AutoComplete](https://help.syncfusion.com/windowsforms/autocomplete/getting-started) | [SfAutoComplete](https://www.syncfusion.com/blazor-components/blazor-combobox) | Input suggestions |
 
 ### Buttons and Commands
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [SfButton](https://help.syncfusion.com/windowsforms/button/getting-started) | [SfButton](https://blazor.syncfusion.com/documentation/button/getting-started) | Standard button |
-| [SplitButton](https://help.syncfusion.com/windowsforms/split-button/getting-started) | [SfSplitButton](https://blazor.syncfusion.com/documentation/split-button/getting-started) | Button with dropdown actions |
-| [ToggleButton](https://help.syncfusion.com/windowsforms/toggle-button/getting-started) | [SfSwitch](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) | Managed by state in Blazor |
+| [SfButton](https://help.syncfusion.com/windowsforms/button/getting-started) | [SfButton](https://www.syncfusion.com/blazor-components/blazor-button) | Standard button |
+| [SplitButton](https://help.syncfusion.com/windowsforms/split-button/getting-started) | [SfSplitButton](https://www.syncfusion.com/blazor-components/blazor-split-button) | Button with dropdown actions |
+| [ToggleButton](https://help.syncfusion.com/windowsforms/toggle-button/getting-started) | [SfSwitch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) | Managed by state in Blazor |
 
 ### Dialogs and Notifications
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started) | Async open/close |
+| [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://www.syncfusion.com/blazor-components/blazor-diagram) | Async open/close |
 | [ProgressBarAdv](https://help.syncfusion.com/windowsforms/progress-bar/creating-progressbaradv) | [SfProgressBar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started) | Progress indicator |
 
 ### File, Document, and Spreadsheet controls
@@ -405,9 +427,9 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [TreeViewAdv](https://help.syncfusion.com/windowsforms/treeview/getting-started) | [SfTreeView](https://blazor.syncfusion.com/documentation/treeview/getting-started) | Hierarchical navigation |
-| [SfListView](https://help.syncfusion.com/windowsforms/listview/gettingstarted) | [SfListView](https://blazor.syncfusion.com/documentation/listview/getting-started) | Virtualized lists |
-| [Menu](https://help.syncfusion.com/windowsforms/menu/getting-started) | [SfMenu](https://blazor.syncfusion.com/documentation/menu-bar/getting-started) | Menu navigation |
+| [TreeViewAdv](https://help.syncfusion.com/windowsforms/treeview/getting-started) | [SfTreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) | Hierarchical navigation |
+| [SfListView](https://help.syncfusion.com/windowsforms/listview/gettingstarted) | [SfListView](https://www.syncfusion.com/blazor-components/blazor-listview) | Virtualized lists |
+| [Menu](https://help.syncfusion.com/windowsforms/menu/getting-started) | [SfMenu](https://www.syncfusion.com/blazor-components/blazor-menu-bar) | Menu navigation |
 
 ## See also
 
