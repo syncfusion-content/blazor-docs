@@ -161,7 +161,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler compon
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Scheduler Component](images/blazor-scheduler-maui-app.png)
+![Blazor Scheduler Component](images/blazor-scheduler-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -171,7 +171,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Scheduler Component](images/blazor-scheduler.png)
+![Blazor Scheduler Component](images/blazor-scheduler.webp)
 
 ## Populating appointments
 
@@ -218,7 +218,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
+![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.webp)
 
 ## Setting date
 
