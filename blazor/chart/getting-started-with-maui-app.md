@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Chart
+# Getting Started with Blazor Chart Component in Blazor MAUI App
 
 This section explains you through the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -125,6 +125,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+<!-- SfChart is the root container component for the chart -->
 <SfChart>
 
 </SfChart>
@@ -136,7 +137,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Chart Component](images/blazor-chart-maui-app.webp)
+![Blazor Chart Component](images/blazor-chart-maui-app.png)
 
 ### How to run the sample on android
 
@@ -146,7 +147,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Chart Component](images/getting-started/blazor-chart.webp)
+![Blazor Chart Component](images/getting-started/blazor-chart.png)
 
 ## See also
 

@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Maps in Blazor MAUI App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Maps Component in Blazor MAUI App.
 platform: Blazor
-control: Maps
+component: Maps
 documentation: ug
 ---
 
@@ -116,36 +116,20 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component with GeoJSON data
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the **~/Pages/Home.razor** file.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Maps
-
-<SfMaps>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-The Maps will not display any content on the web page while running the application because the properties related to the layer are not initialized in the above code.
-
-## Adding GeoJSON data in Blazor Maps layer
-
-Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vector Graphics) for powerful data visualization of shapes. For example, you can render the World map and make desired customizations on it. You can also add any number of layers in the Maps.
-
-You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to load the GeoJSON shape data into the Maps component.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the **~/Pages/Home.razor** file. Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vector Graphics) for powerful data visualization of shapes. You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to load the GeoJSON shape data into the Maps component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Maps
 
+<!-- SfMaps is the root container component for the maps -->
 <SfMaps>
+    <!-- MapsLayers contains one or more map layers to display on the map -->
     <MapsLayers>
+        <!-- MapsLayer defines a map layer with shape data and configuration -->
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
@@ -160,7 +144,7 @@ N> The "world-map.json" file contains the World map GeoJSON data.
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Maps with GeoJSON Layer](./images/blazor-maps-maui-app.webp)
+![Blazor Maps with GeoJSON Layer](./images/blazor-maps-maui-app.png)
 
 ### How to run the sample on Android
 
@@ -170,7 +154,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Maps with GeoJSON Layer](./images/blazor-map.webp)
+![Blazor Maps with GeoJSON Layer](./images/blazor-map.png)
 
 ## Bind data source
 
@@ -211,6 +195,58 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
 N> The United Nations Security Council data is referred from [source](https://en.wikipedia.org/wiki/List_of_members_of_the_United_Nations_Security_Council).
 
 You should also specify the field names in the shape data and data source to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) properties, respectively. These are used to identify the appropriate shapes and match the specific data source values to them.
+
+The following complete example shows a Maps component with the GeoJSON layer and data source binding:
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                   ShapePropertyPath='new string[] {"name"}'
+                   DataSource="SecurityCouncilDetails"
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
+         new UNCouncilCountry { Name= "China", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "France", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Russia", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "United States", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent"},
+         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent"}
+    };
+
+    public class UNCouncilCountry
+    {
+        public string Name { get; set; }
+        public string Membership { get; set; }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+This example demonstrates the complete setup with:
+- The **ShapeData** pointing to the GeoJSON world map
+- The **ShapePropertyPath** set to `"name"` to match shape names
+- The **DataSource** bound to `SecurityCouncilDetails`
+- The **ShapeDataPath** set to `"Name"` to match data source field
 
 N> Please [refer to the section](populate-data#data-binding) for more information on data binding.
 

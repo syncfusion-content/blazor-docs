@@ -150,8 +150,11 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Cha
 
 @using Syncfusion.Blazor.Charts
 
+<!-- SfAccumulationChart is the root container component for the accumulation chart -->
 <SfAccumulationChart>
+    <!-- AccumulationChartSeriesCollection contains one or more data series to be plotted on the chart -->
     <AccumulationChartSeriesCollection>
+        <!-- AccumulationChartSeries defines a data series with its data source and axis mappings -->
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
@@ -182,7 +185,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Cha
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pie Chart](images/getting-started/blazor-pie-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pie Chart](images/getting-started/blazor-pie-chart.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AccumulationChart).
 
