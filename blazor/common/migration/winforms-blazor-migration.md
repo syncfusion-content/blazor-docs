@@ -280,6 +280,57 @@ The following example uses the [Blazor DataGrid (SfGrid)](https://www.syncfusion
 
 @page "/"
 @rendermode InteractiveServer
+
+<h3>Orders</h3>
+
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2" />
+    </GridColumns>
+</SfGrid>
+
+@code 
+{
+    private List<Order> Orders = new()
+    {
+        new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+        new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Rendering multiple components
+
+This section explains how multiple components are added and rendered in WinForms and Blazor applications. 
+
+**WinForms: Rendering multiple components**
+
+In WinForms, multiple controls are added to a form programmatically. Each control is placed into the form’s control collection, and the rendering order depends on the sequence in which controls are added.
+
+{% tabs %}
+{% highlight c# tabtitle="Form1.cs" %}
+
+this.Controls.Add(dataGrid);
+this.Controls.Add(chart);
+
+{% endhighlight %}
+{% endtabs %}
+
+**Blazor application: Rendering multiple components**
+
+In Blazor, multiple components are rendered declaratively using Razor markup. Components are displayed in the order they appear in the markup and are arranged using standard web layout rules.
+
+The following example renders a [Blazor Charts (SfChart)](https://www.syncfusion.com/blazor-components/blazor-charts) component alongside the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@page "/"
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.Charts
 
 <SfGrid DataSource="@Orders" />
@@ -317,44 +368,6 @@ The following example uses the [Blazor DataGrid (SfGrid)](https://www.syncfusion
         public double SalesValue { get; set; }
     }
 }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Rendering multiple components
-
-This section explains how multiple components are added and rendered in WinForms and Blazor applications. 
-
-**WinForms: Rendering multiple components**
-
-In WinForms, multiple controls are added to a form programmatically. Each control is placed into the form’s control collection, and the rendering order depends on the sequence in which controls are added.
-
-{% tabs %}
-{% highlight c# tabtitle="Form1.cs" %}
-
-this.Controls.Add(dataGrid);
-this.Controls.Add(chart);
-
-{% endhighlight %}
-{% endtabs %}
-
-**Blazor application: Rendering multiple components**
-
-In Blazor, multiple components are rendered declaratively using Razor markup. Components are displayed in the order they appear in the markup and are arranged using standard web layout rules.
-
-The following example renders a [Blazor Charts (SfChart)](https://www.syncfusion.com/blazor-components/blazor-charts) component alongside the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfGrid DataSource="@Orders" />
-<SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
 
 {% endhighlight %}
 {% endtabs %}
