@@ -152,7 +152,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Cha
 
 <!-- SfAccumulationChart is the root container component for the accumulation chart -->
 <SfAccumulationChart>
-    <!-- AccumulationChartSeriesCollection contains one or more data series to be plotted on the chart -->
+    <!-- Container for defining chart series -->
     <AccumulationChartSeriesCollection>
         <!-- AccumulationChartSeries defines a data series with its data source and axis mappings -->
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
