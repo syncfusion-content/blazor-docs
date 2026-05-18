@@ -205,8 +205,6 @@ The argument passed to the `OnActionFailure` event contains the error details re
 
 N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
 
-The following sample code demonstrates notifying user when server-side exception has occurred during data operation:
-
 {% tabs %}
 {% highlight razor %}
 
