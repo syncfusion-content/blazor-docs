@@ -212,7 +212,7 @@ Exceptions occurred during Syncfusion<sup style="font-size:70%">&reg;</sup> Blaz
 
 The argument passed to the `OnActionFailure` event contains the error details returned from the server.
 
-N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
+N> Binding the `OnActionFailure` event during application development helps in identifying exceptions effectively. Exception details can be shared with the support team to obtain solutions at the earliest stage.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
