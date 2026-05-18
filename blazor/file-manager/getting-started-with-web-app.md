@@ -180,21 +180,23 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the default web browser.
+
 ## Create Models
 
 Create a new folder named `Models` in the server project. Add the necessary model files to this folder for handling file operations. Download the `PhysicalFileProvider.cs` and `Base` folder from this [repository](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) and place them in the Models folder.
 
-## Create a new folder controller
+## Create a new folder Controllers
 
-To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder.
+To initialize a local service, create a new folder named `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder.
 
 Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
 
-File Manager's base functions are available in the below namespace.
+File Manager's base functions are available in the following namespace.
 ```cshtml
 using Syncfusion.EJ2.FileManager.Base;
 ````
-File Manager's operations are available in the below namespace.
+File Manager's operations are available in the following namespace.
 ````cshtml
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 ````
