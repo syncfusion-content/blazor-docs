@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Retrieve the number of characters in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn about how to update value in Blazor RichTextEditor component of Syncfusion, and more details.
+title: How to Get Character Count in Blazor RichTextEditor | Syncfusion
+description: Checkout and learn about how to get character count of characters in Blazor RichTextEditor component of Syncfusion, and more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
