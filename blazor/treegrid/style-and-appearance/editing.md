@@ -76,7 +76,7 @@ Modify properties such as **font-family**, **color**, or **padding** to improve 
         TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 }
-
+{% endhighlight %}
 {% highlight c# tabtitle="TreeData.cs" %}
 
 namespace TreeGridComponent.Data
@@ -110,7 +110,7 @@ namespace TreeGridComponent.Data
     }
 }
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxDphpWvpEiDsX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
@@ -159,7 +159,7 @@ Change properties such as **background-color** to visually separate the header f
         TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 }
-
+{% endhighlight %}
 {% highlight c# tabtitle="TreeData.cs" %}
 
 namespace TreeGridComponent.Data
@@ -193,7 +193,7 @@ namespace TreeGridComponent.Data
     }
 }
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 ## Customize command column buttons
@@ -259,7 +259,7 @@ Style properties like **color**, **font-size**, and **font-weight** can be adjus
         TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 }
-
+{% endhighlight %}
 {% highlight c# tabtitle="TreeData.cs" %}
 
 namespace TreeGridComponent.Data
@@ -293,7 +293,7 @@ namespace TreeGridComponent.Data
     }
 }
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZrnjJrTBZixrfzY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
