@@ -25,7 +25,8 @@ This section briefly explains how to include the [Syncfusion<sup style="font-siz
 
 Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App.
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a project.
+<br/> If you use the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), a sample application can be generated automatically.
 
 {% endtabcontent %}
 
@@ -39,7 +40,8 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App.
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a project.
+<br/> If you use the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), a sample application can be generated automatically.
 
 {% endtabcontent %}
 
@@ -72,7 +74,8 @@ cd BlazorWebApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create), [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) and [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode) topics for more details.
+This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location. 
+N> See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create), [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) and [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode) topics for more details.
 
 {% endtabcontent %}
 
@@ -124,7 +127,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -132,6 +135,7 @@ Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in 
 ....
 using Syncfusion.Blazor;
 ....
+var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 ....
 
@@ -157,36 +161,25 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
+## Configure Render Mode
 
-This section explains how to add the Diagram component to the application, create an empty diagram, and build a simple flowchart using nodes and connectors.
-
-* If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, add sample in the **~/Pages/*.razor** file in Client project otherwise add the sample in the **~/Components/Pages/*.razor** file in server project in your Blazor Web App.
-* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+If your create application uses `Per page/component` interactivity, add this at the top of **Pages/Home.razor**:
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
+@* desired render mode define here *@
+@rendermode InteractiveServer
 
 {% endhighlight %}
 {% endtabs %}
 
-N> If the **Interactivity Location** is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the render mode is set to **None**, the diagram will not render.
+<br/> If the `Interactivity Location` is set to **Global**, this step is not required.
 
-### Import the Namespaces
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component
 
-Add the namespace in the sample.
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Diagram
-
-{% endhighlight %}
-{% endtabs %}
-
-### Create an Empty Diagram
-Add the DiagramComponent to render an empty diagram.
+Add the DiagramComponent to create an empty diagram.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -196,109 +189,18 @@ Add the DiagramComponent to render an empty diagram.
 {% endhighlight %}
 {% endtabs %}
 
-### Define Nodes
+## Create your first Diagram with nodes and connectors
 
-A Nodes represent elements in the diagram. Add the following code in the `Home.razor`.:
+This section explains how to create a simple flowchart by adding nodes, customizing their appearance, and connecting them using connectors.
 
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-@code{
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>()
-        {
-            new Node()
-            { 
-                ID= "Start", OffsetX= 300, OffsetY= 120, Width = 145, Height = 60,
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Terminator },
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>
-                {
-                    new ShapeAnnotation
-                    {
-                        Content = "Start",
-                    }
-                }
-            },
-            new Node()
-            { 
-                ID= "Process", OffsetX= 300, OffsetY= 230, Width = 145, Height = 60,
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Process },
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>
-                {
-                    new ShapeAnnotation
-                    {
-                        Content = "Process",
-                    }
-                }
-            },
-            new Node()
-            { 
-                ID= "End", OffsetX= 300, OffsetY: 310, Width = 145, Height = 60,
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Terminator },
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>
-                {
-                    new ShapeAnnotation
-                    {
-                        Content = "End",
-                    }
-                }
-            },
-        };
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Define Connectors
-
-Connectors are used to link nodes together.
+The following example creates a flowchart with four nodes: **Start**, **Process**, **Decision**, and **End**. It also applies common node and connector settings using the `NodeCreating` and `ConnectorCreating` properties.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-@code{
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    protected override void OnInitialized()
-    {
-        connectors = new DiagramObjectCollection<Connector>()
-        {
-            new Connector()
-            {
-                ID = "connector1",
-                SourceID = "Start",
-                TargetID = "Process",
-            },
-            new Connector()
-            {
-                ID = "connector2",
-                SourceID = "Process",
-                TargetID = "End",
-            },
-        };
-    }
-}
-{% endhighlight %}
-{% endtabs %}
 
-### Bind Nodes and Connectors to the Diagram
+<SfDiagramComponent Width="100%" Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@NodeCreating" ConnectorCreating="@ConnectorCreating" />
 
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-<SfDiagramComponent Nodes="@nodes" Connectors="@connectors" />
-{% endhighlight %}
-{% endtabs %}
-
-### Final Code
-
-Copy and paste the following code into the **Home.razor** file and run the application.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Width="100%" Height="600px" Nodes="@nodes" Connectors="@connectors" />
-
-@code{
+@code {
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
@@ -306,73 +208,93 @@ Copy and paste the following code into the **Home.razor** file and run the appli
         nodes = new DiagramObjectCollection<Node>()
         {
             new Node()
-            { 
-                ID= "Start", OffsetX= 300, OffsetY: 120, Width = 145, Height = 60,
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Terminator },
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>
-                {
-                    new ShapeAnnotation
-                    {
-                        Content = "Start",
-                    }
-                }
+            {
+               ID = "node1", OffsetX = 300, OffsetY = 100,
+               Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Terminator },
+               Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+               {
+                  new ShapeAnnotation(){ Content = "Start" }
+               }
+            },
+            new Node()
+            {
+               ID = "node2", OffsetX = 300, OffsetY = 200,
+               Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Process },
+               Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+               {
+                  new ShapeAnnotation(){ Content = "Process" }
+               }
             },
             new Node()
             { 
-                ID= "Process", OffsetX= 300, OffsetY: 230, Width = 145, Height = 60,
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Process },
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>
-                {
-                    new ShapeAnnotation
-                    {
-                        Content = "Process",
-                    }
-                }
+               ID = "node3", OffsetX = 300, OffsetY = 300,
+               Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision },
+               Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+               {
+                  new ShapeAnnotation(){ Content = "Decision?" }
+               }
             },
             new Node()
-            { 
-                ID= "End", OffsetX= 300, OffsetY: 310, Width = 145, Height = 60,
-                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Terminator },
-                Annotations = new DiagramObjectCollection<ShapeAnnotation>
-                {
-                    new ShapeAnnotation
-                    {
-                        Content = "End",
-                    }
-                }
-            },
+            {
+               ID = "node4", OffsetX = 300, OffsetY = 400,
+               Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Terminator },
+               Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+               {
+                  new ShapeAnnotation(){ Content = "End" }
+               }
+            }
         };
         connectors = new DiagramObjectCollection<Connector>()
         {
             new Connector()
             {
                 ID = "connector1",
-                SourceID = "Start",
-                TargetID = "Process",
+                SourceID = "node1",
+                TargetID = "node2",
             },
             new Connector()
             {
                 ID = "connector2",
-                SourceID = "Process",
-                TargetID = "End",
+                SourceID = "node2",
+                TargetID = "node3",
+            },            
+            new Connector()
+            {
+                ID = "connector2",
+                SourceID = "node3",
+                TargetID = "node4",
             },
         };
     }
+
+    private void NodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.Style = new ShapeStyle() { Fill = "#E8F4FF", StrokeColor = "#357BD2" };
+        node.Width = 140;
+        node.Height = 50;
+    }
+
+    private void ConnectorCreating(IDiagramObject obj)
+    {
+        (obj as Connector).Type = ConnectorSegmentType.Orthogonal;
+    }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+In this example:
+
+* [`OffsetX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) define the position of each node.
+* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) defines the node shape configuration, and [`FlowShape.Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#fields) specifies flowchart shapes such as **Terminator**, **Process**, or **Decision**.
+* [`ShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html) adds text inside each node using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property.
+* [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceID) and [`TargetID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetID) connect one node to another.
+* [`NodeCreaing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) applies common width, height, fill color, and stroke color to all nodes.
+* [`ConnectorCreating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) applies common connector settings, such as orthogonal routing.
+
+## Run the application
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application in Visual studio. 
 * Run the application using `dotnet run` command in Command prompt.
 * This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
-
-## See also
-
-1. [How to Create Blazor Flowchart Diagram](./how-to)
-2. [How to Create Organizational Chart](./how-to)
-3. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-4. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-5. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-

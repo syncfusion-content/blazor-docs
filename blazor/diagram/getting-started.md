@@ -72,7 +72,8 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor application and places it in a new directory called `BlazorApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create), [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) and [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode) topics for more details.
+This command creates a new Blazor application and places it in a new directory called `BlazorApp` inside your current location. 
+N> See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create), [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) and [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode) topics for more details.
 
 {% endtabcontent %}
 
@@ -180,8 +181,8 @@ If your create application uses `Per page/component` interactivity, add this at 
 {% endhighlight %}
 {% endtabs %}
 
-N> If the render mode is set to None, the diagram will not render.
-<br/> If the Interactivity Location is set to `Global`, this step is not required.
+N> If the render mode is set to **None**, the diagram will not render.
+<br/> If the `Interactivity Location` is set to **Global**, this step is not required.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component
 
@@ -292,8 +293,6 @@ The following example creates a flowchart with four nodes: **Start**, **Process*
 
 In this example:
 
-
-The example below shows a basic diagram that renders an empty diagram canvas:
 * [`OffsetX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) define the position of each node.
 * [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) defines the node shape configuration, and [`FlowShape.Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#fields) specifies flowchart shapes such as **Terminator**, **Process**, or **Decision**.
 * [`ShapeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html) adds text inside each node using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property.
