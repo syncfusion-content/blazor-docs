@@ -22,11 +22,11 @@ To get started quickly with a Blazor Web App Scheduler, watch the following vide
 
 {% tabcontent Visual Studio %}
 
-### Prerequisites
+## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Create a new Blazor Web App in Visual Studio
+## Create a new Blazor Web App in Visual Studio
 
 Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
@@ -34,11 +34,11 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 {% tabcontent Visual Studio Code %}
 
-### Prerequisites
+## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Create a new Blazor Web App in Visual Studio Code
+## Create a new Blazor Web App in Visual Studio Code
 
 Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
@@ -58,7 +58,7 @@ cd BlazorWebApp.Client
 
 {% tabcontent .NET CLI %}
 
-### Prerequisites
+## Prerequisites
 
 Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
@@ -70,7 +70,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor Web App using .NET CLI
+## Create a Blazor Web App using .NET CLI
 
 Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
 

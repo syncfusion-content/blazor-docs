@@ -17,11 +17,11 @@ This section explains you through the step-by-step process of integrating the [S
 
 {% tabcontent Visual Studio %}
 
-### Prerequisites
+## Prerequisites
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-### Create a new Blazor MAUI App in Visual Studio
+## Create a new Blazor MAUI App in Visual Studio
 
 You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=vswin). For detailed instructions, refer to [this guide](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app). For detailed instructions, refer to [this Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
@@ -29,11 +29,11 @@ You can create a Blazor MAUI App using Visual Studio via [Microsoft Templates](h
 
 {% tabcontent Visual Studio Code %}
 
-### Prerequisites
+## Prerequisites
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-### Create a new Blazor MAUI App in Visual Studio Code
+## Create a new Blazor MAUI App in Visual Studio Code
 
 Create a Blazor MAUI App using Visual Studio Code via [Microsoft templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 

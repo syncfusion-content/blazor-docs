@@ -17,11 +17,11 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 {% tabcontent Visual Studio %}
 
-### Prerequisites
+## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Create a new Blazor App in Visual Studio
+## Create a new Blazor App in Visual Studio
 
 Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
@@ -29,11 +29,11 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 
 {% tabcontent Visual Studio Code %}
 
-### Prerequisites
+## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-### Create a new Blazor App in Visual Studio Code
+## Create a new Blazor App in Visual Studio Code
 
 Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
@@ -54,7 +54,7 @@ cd BlazorApp
 
 {% tabcontent .NET CLI %}
 
-### Prerequisites
+## Prerequisites
 
 Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
 
@@ -66,7 +66,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor Server App using .NET CLI
+## Create a Blazor Server App using .NET CLI
 
 Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
 
