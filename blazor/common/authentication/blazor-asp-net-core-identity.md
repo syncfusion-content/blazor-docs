@@ -1,16 +1,16 @@
 ---
 title: Securing Syncfusion Blazor Components with ASP.NET Core Identity
-description: Guide to configure ASP.NET Core Identity in an Interactive Server Blazor app and protect Syncfusion components (DataGrid, Charts).
+description: Guide to configure ASP.NET Core Identity in an Interactive Server Blazor app and protect Blazor components (DataGrid, Charts).
 platform: blazor
 component: common
 documentation: ug
 ---
 
-# Securing Syncfusion® Blazor Components with ASP.NET Core Identity
+# Securing Blazor Components with ASP.NET Core Identity
 
 [ASP.NET Core Identity](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-10.0&tabs=visual-studio) is the built-in authentication and authorization framework for ASP.NET Core applications. It supports user registration, sign-in, sign-out, password management, roles, and claims, and is commonly used with cookie-based authentication.
 
-This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** to secure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**. It walks you through setting up ASP.NET Core Identity with [SQLite](https://learn.microsoft.com/en-us/ef/core/providers/sqlite/?tabs=dotnet-core-cli) as the data store and adding Syncfusion Blazor components to pages protected by the `[Authorize]` attribute.
+This guide explains how to configure ASP.NET Core Identity in a **Blazor Web App using Interactive Server render mode** to secure Blazor components such as **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**. It walks you through setting up ASP.NET Core Identity with [SQLite](https://learn.microsoft.com/en-us/ef/core/providers/sqlite/?tabs=dotnet-core-cli) as the data store and adding Blazor components to pages protected by the `[Authorize]` attribute.
 
 ## 1. Create a Blazor Web App with Interactive Server
 
@@ -59,9 +59,9 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 {% endhighlight %}
 {% endtabs %}
 
-## 3. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component packages
+## 3. Install Blazor component packages
 
-From the project folder (where the `.csproj` file is located), install the required Syncfusion Blazor packages.
+From the project folder (where the `.csproj` file is located), install the required Blazor packages.
 
 * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 * [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)
@@ -136,7 +136,7 @@ N> **SQLite** is a simple, file-based database that stores all data in one `.db`
 Configure your application by registering essential services and middleware in `Program.cs`. This is the central configuration file where you:
 - Connect to the database.
 - Enable Identity authentication.
-- Register Syncfusion components.
+- Register Blazor components.
 - Configure the request processing pipeline.
 
 Open `Program.cs` and replace its contents with the following snippets where appropriate.
@@ -169,7 +169,7 @@ builder.Services.AddRazorPages();
 // Enable Blazor authentication state support for CascadingAuthenticationState and AuthorizeRouteView.
 builder.Services.AddCascadingAuthenticationState();
 
-// Register Syncfusion Blazor services.
+// Register Blazor services.
 builder.Services.AddSyncfusionBlazor();
 ...
 
@@ -218,14 +218,13 @@ Open `App.razor` and include the Syncfusion theme stylesheet and required script
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-    ....
 </head>
 
 <body>
     ....
-    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid and Charts) -->
+    <!-- Blazor core script (required for UI components, including DataGrid and Charts) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
@@ -383,13 +382,13 @@ N> This example uses Bootstrap classes (`d-flex`, `ms-auto`, `gap-3`). If your p
 {% endhighlight %}
 {% endtabs %}
 
-## 12. Create the secure Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid and Charts pages
+## 12. Create the secure Blazor DataGrid and Charts pages
 
-Create two protected Razor pages named `SecureGrid.razor` and `SecureChart.razor` inside the `Components/Pages` folder. Apply the `[Authorize]` attribute to both pages and use them to display the Syncfusion DataGrid and Charts components respectively.
+Create two protected Razor pages named `SecureGrid.razor` and `SecureChart.razor` inside the `Components/Pages` folder. Apply the `[Authorize]` attribute to both pages and use them to display the Blazor DataGrid and Charts components respectively.
 
-### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
+### Add Blazor DataGrid component
 
-This component displays a sample order list using Syncfusion's DataGrid. The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
+This component displays a sample order list using Blazor DataGrid. The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
 
 {% tabs %}
 {% highlight razor tabtitle="SecureGrid.razor" %}
@@ -435,7 +434,7 @@ This component displays a sample order list using Syncfusion's DataGrid. The `@a
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts component
+### Add Blazor Charts component
 
 This component displays a column chart showing monthly sales data.
 
@@ -551,5 +550,5 @@ dotnet run
 
 ## See also
 
-* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Getting started with Syncfusion Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting started with Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
