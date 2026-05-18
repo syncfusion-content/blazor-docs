@@ -187,6 +187,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid compone
         TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", StartDate = new DateOnly(2021, 10, 12), StartTime = new TimeOnly(16, 00, 00), Duration = 9, Progress = 7, ParentId = 4, Priority = "Normal" });
     }
 }
+{% endhighlight %}
+{% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
 
