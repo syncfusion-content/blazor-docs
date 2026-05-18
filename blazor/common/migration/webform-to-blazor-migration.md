@@ -87,7 +87,7 @@ cd MyBlazorApp
 
 ## Migrating Components from Web Forms to Blazor
 
-The following shared setup applies to all three components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
+The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
 
 ### Package installation
 
