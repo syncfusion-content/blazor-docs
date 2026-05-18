@@ -185,7 +185,7 @@ In the above example, `EventCallback` allows a child component to notify the par
 
 As Razor components grow larger, it is recommended to split them into smaller, focused child components instead of placing all UI logic in a single `.razor` file. For example, a page that contains a [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), and summary UI becomes easier to manage when each part is implemented as a separate component.
 
-This approach improves code readability, reusability, and maintainability. It also helps reduce unnecessary UI updates by isolating different parts of the interface.
+This approach improves code readability, and maintainability. It also helps reduce unnecessary UI updates by isolating different parts of the interface.
 
 **Parent component**
 
