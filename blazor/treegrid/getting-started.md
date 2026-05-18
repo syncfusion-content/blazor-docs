@@ -187,7 +187,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid compone
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBdjSMbVQdpYYAf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid-component.webp)" %}
 
 ## Handling exceptions
 
