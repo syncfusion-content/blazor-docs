@@ -79,6 +79,8 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
+This command creates a new Blazor Server App and places it in a new directory called `BlazorApp` inside the current location. See [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and the [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for more details.
+
 {% endtabcontent %}
 
 {% endtabcontents %}
@@ -149,10 +151,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
 
-N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the **Interactivity Location** is set to `Global` with `Server`, `Auto`, or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @* desired render mode define here *@
 @rendermode InteractiveServer
@@ -162,8 +164,6 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue=AppointmentData>
     <ScheduleViews>
@@ -195,7 +195,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVpjWADUUybFgTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhRjSsPqvtpOwYh?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
 
 ## Populating appointments
 
@@ -203,8 +203,6 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
@@ -251,8 +249,6 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Schedule
-
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
@@ -284,7 +280,11 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 ## Setting view
 
-The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property. The applicable view names are,
+The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property.
+
+### Available Views
+
+The Scheduler supports the following built-in views:
 
 * Day
 * Week
@@ -299,10 +299,10 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 * TimelineYear
 * Year
 
+You can configure only the required views as needed, and include additional views based on your application requirements.
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView">
     <ScheduleViews>
@@ -315,42 +315,6 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 </SfSchedule>
 @code{
     View CurrentView = View.Month;
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Individual view customization
-
-Each individual Scheduler views can be customized with its own options such as setting different start and end hour on Week and Work Week views, whereas hiding the weekend days on Month view alone which can be achieved by defining the `ScheduleView`.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleViews>
-        <ScheduleView Option="View.Week" StartHour="07:00" EndHour="15:00"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek" StartHour="10:00" EndHour="18:00"></ScheduleView>
-        <ScheduleView Option="View.Month" MaxEventsPerRow="2" ShowWeekend="false"></ScheduleView>
-    </ScheduleViews>
-</SfSchedule>
-@code{
-    DateTime CurrentDate = new DateTime(2020, 2, 13);
     public class AppointmentData
     {
         public int Id { get; set; }
