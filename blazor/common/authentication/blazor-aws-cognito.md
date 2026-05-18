@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Blazor with AWS Cognito Authentication | Syncfusion
-description: Authenticate a Blazor Server app with AWS Cognito (OIDC Hosted UI) and secure Syncfusion components.
+description: Authenticate a Blazor Server app with AWS Cognito (OIDC Hosted UI) and secure Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Blazor Authentication with AWS Cognito using Syncfusion® Components
+# Blazor Authentication with AWS Cognito using Blazor Components
 
-This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Blazor components based on user identity, and protect application data. 
+This guide demonstrates how to integrate [AWS Cognito authentication](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-how-to-authenticate.html) with [Blazor components](https://www.syncfusion.com/blazor-components). This enables you to implement secure authentication, control access to Blazor components based on user identity, and protect application data. 
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ This guide demonstrates how to integrate [AWS Cognito authentication](https://do
 
 ## Create a Blazor project
 
-If you already have a Blazor project, proceed to the [Install required packages](#install-required-packages) section. Otherwise, create one using Syncfusion’s Blazor getting started guides.
+If you already have a Blazor project, proceed to the [Install required packages](#install-required-packages) section. Otherwise, create one using below Blazor getting started guides.
 
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
@@ -65,9 +65,9 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion® Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" %}
@@ -300,22 +300,22 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® theme and script references
+## Add theme and script references
 
-Add the Syncfusion Blazor theme CSS and script references to your application's `App.razor` file (or `_Host.cshtml` depending on your project template).
+Add the Blazor theme CSS and script references to your application's `App.razor` file (or `_Host.cshtml` depending on your project template).
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
 <head>
     ...
-    <!-- Syncfusion® theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 <body>
     ...
-    <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
+    <!--  Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>

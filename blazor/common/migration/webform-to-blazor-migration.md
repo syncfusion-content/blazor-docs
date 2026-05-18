@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migrating Syncfusion ASP.NET Web Forms to Blazor | Syncfusion
-description: Learn how to migrate Syncfusion ASP.NET Web Forms controls to Blazor components, including key concepts and a detailed migration approach.
+title: Migrating ASP.NET Web Forms to Blazor | Syncfusion
+description: Learn how to migrate ASP.NET Web Forms controls to Blazor components, including key concepts and a detailed migration approach.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Migrating Syncfusion® ASP.NET Web Forms Controls to Blazor Components
+# Migrating ASP.NET Web Forms Controls to Blazor Components
 
-Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a significant architectural shift from a page centric, postback based framework to a modern, component driven framework built on .NET. This guide provides a **structured, step-by-step migration approach** for [Syncfusion® ASP.NET Web Forms controls](https://help.syncfusion.com/aspnet/overview) to their corresponding [Blazor components](https://blazor.syncfusion.com/documentation/introduction).
+Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a significant architectural shift from a page centric, postback based framework to a modern, component driven framework built on .NET. This guide provides a **structured, step-by-step migration approach** for [ASP.NET Web Forms controls](https://help.syncfusion.com/aspnet/overview) to their corresponding [Blazor components](https://blazor.syncfusion.com/documentation/introduction).
 
 ## Why migrate from Web Forms to Blazor?
 
@@ -85,9 +85,9 @@ cd MyBlazorApp
 
 > N> The `--interactivity Server` flag configures SignalR based interactivity, providing immediate UI updates similar to Web Forms postback behavior, but over a persistent connection instead of full page reloads.
 
-## Migrating Syncfusion® Components from Web Forms to Blazor
+## Migrating Components from Web Forms to Blazor
 
-The following shared setup applies to all Syncfusion components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
+The following shared setup applies to all three components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
 
 ### Package installation
 
@@ -108,7 +108,7 @@ ASP.NET Web Forms initializes controls automatically as part of the page lifecyc
 
 Blazor uses dependency injection (DI), where components must be registered in the service container to enable required functionality such as rendering and interaction.
 
-In the `Program.cs` file, add the Syncfusion namespace and register services.
+In the `Program.cs` file, add the namespace and register services.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -118,7 +118,7 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();  // Register Syncfusion services
+builder.Services.AddSyncfusionBlazor();  // Register Blazor services
 var app = builder.Build();
 ...
 
@@ -127,7 +127,7 @@ var app = builder.Build();
 
 ### Add import namespaces
 
-After packages are installed and services are registered, import the required Syncfusion namespaces in the `/_Imports.razor` file.
+After packages are installed and services are registered, import the required namespaces in the `/_Imports.razor` file.
 
 | Component | Required namespaces |
 |---|---|
@@ -162,13 +162,13 @@ In Blazor, scripts and styles are included once at the application level (such a
 
 <head>
     ...
-    <!-- Syncfusion® theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 <body>
     ...
-    <!-- Syncfusion® Blazor core script (required for UI components) -->
+    <!-- Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -190,7 +190,7 @@ For detailed explanation, refer to the [Blazor DataGrid getting started guide](h
 | Columns | `<ej:Column Field="..." HeaderText="..." />` | `<GridColumn Field="..." HeaderText="..." Format="..." />`  |
 | Editing & API | [EditSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_EditSettings) | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), `@ref` async APIs  |
 | Events & commands   | Server events (postback / AJAX callbacks)   | `EventCallback<T>` based async handlers   |
-| Theming & assets   | CSS/JS referenced in `.aspx` or Master Page  | CSS theme files + Syncfusion JS and `AddSyncfusionBlazor()`         |
+| Theming & assets   | CSS/JS referenced in `.aspx` or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()`         |
 | Paging / virtualization |  [AllowPaging](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowPaging), [ScrollSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_ScrollSettings) | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html), [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) |
 | Filtering | [AllowFiltering](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowFiltering) | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) |
 | Grouping | [AllowGrouping](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowGrouping)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)|
@@ -280,7 +280,7 @@ namespace WebFormsGrid
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion® Scheduler component
+### Add Blazor Scheduler component
 
 For detailed explanation, refer to the [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
 
@@ -292,7 +292,7 @@ For detailed explanation, refer to the [Web Forms Scheduler getting started guid
 | Data binding          | `DataSource` set during `Page_Load` or callbacks     | `DataSource="@..."` via `ScheduleEventSettings`          |
 | Appointment model    | [AppointmentSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_AppointmentSettings)  | [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html)   |
 | Views configuration   | [CurrentView](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_CurrentView) property  | [`<ScheduleViews>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection    |
-| Theming & assets  | CSS/JS referenced in ASPX or Master Page  | CSS theme files + Syncfusion JS and `AddSyncfusionBlazor()` |
+| Theming & assets  | CSS/JS referenced in ASPX or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID`  | `OnInitialized[Async]`, DI, `@ref` async APIs   |
 
 Configure the Scheduler component by defining its views and binding it to the required appointment data.
@@ -392,7 +392,7 @@ namespace WebFormsScheduler
 
 N> The event class (`Meeting` in this example) property names match the Scheduler's default field mappings. Alternatively, you can add an explicit `Fields` configuration in `ScheduleEventSettings` to map custom property names.
 
-### Add Syncfusion® Rich Text Editor component
+### Add Blazor Rich Text Editor component
 
 For detailed explanation, refer to the [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started) and [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
 
@@ -403,7 +403,9 @@ For detailed explanation, refer to the [Web Forms Rich Text Editor getting start
 | Component declaration | `<ej:RTE runat="server">` (ASPX)  | `<SfRichTextEditor>` (Razor)  |
 | Content binding       | `Value` property set during page lifecycle   | `Value` / `@bind-Value` bound to component state  |
 | Toolbar configuration | [ToolsList](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_ToolsList), [Tools](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_Tools)  | [ToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) with predefined/custom items           |
-| Theming & assets      | CSS/JS referenced per page | CSS theme files + Syncfusion JS and `AddSyncfusionBlazor()` |
+| Theming & assets      | CSS/JS referenced per page | CSS theme files \
+
+JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID` | `OnInitialized[Async]`, DI, `@ref` async APIs  |
 
 Set and bind the initial content of the Rich Text Editor.
@@ -419,7 +421,7 @@ In Blazor, the Rich Text Editor is implemented as a Razor component, where conte
 
 <ej:RTE ID="RTE" Height="440" runat="server">
     <RTEContent>
-        <p>Welcome to Syncfusion Rich Text Editor</p>
+        <p>Welcome to Blazor Rich Text Editor</p>
     </RTEContent> 
 </ej:RTE>
 
@@ -437,7 +439,7 @@ In Blazor, the Rich Text Editor is implemented as a Razor component, where conte
 <SfRichTextEditor @bind-Value="Content" Height="400px"></SfRichTextEditor>
 
 @code {
-    private string Content = "<p>Welcome to Syncfusion Rich Text Editor</p>";
+    private string Content = "<p>Welcome to Blazor Rich Text Editor</p>";
 }
 
 {% endhighlight %}
