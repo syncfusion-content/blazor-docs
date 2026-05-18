@@ -149,6 +149,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+<!-- SfChart is the root container component for the chart -->
 <SfChart>
 
 </SfChart>
@@ -164,30 +165,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 
 To bind data for the chart component, you can assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-public class SalesInfo
-{
-    public string Month { get; set; }
-    public double SalesValue { get; set; }
-}
-
-public List<SalesInfo> Sales = new List<SalesInfo>
-{
-    new SalesInfo { Month = "Jan", SalesValue = 35 },
-    new SalesInfo { Month = "Feb", SalesValue = 28 },
-    new SalesInfo { Month = "Mar", SalesValue = 34 },
-    new SalesInfo { Month = "Apr", SalesValue = 32 },
-    new SalesInfo { Month = "May", SalesValue = 40 },
-    new SalesInfo { Month = "Jun", SalesValue = 32 },
-    new SalesInfo { Month = "Jul", SalesValue = 35 }
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-Now, map the data fields  `Month` and `Sales` to the series [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [chart type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
+Map the data fields `Month` and `SalesValue` to the series [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [chart type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -195,8 +173,11 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
+    <!-- ChartPrimaryXAxis configures the X-axis properties such as value type and labels -->
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <!-- ChartSeriesCollection contains one or more data series to be plotted on the chart -->
     <ChartSeriesCollection>
+        <!-- ChartSeries defines a data series with its data source and axis mappings -->
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>

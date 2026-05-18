@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Chart
+# Getting Started with Blazor Chart Component in Blazor MAUI App
 
 This section explains you through the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -125,6 +125,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+<!-- SfChart is the root container component for the chart -->
 <SfChart>
 
 </SfChart>

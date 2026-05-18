@@ -3,7 +3,7 @@ layout: post
 title: Getting started with Syncfusion Stock Chart in Blazor Web App
 description: Check out the documentation for getting started with Syncfusion Blazor Stock Chart Components in Blazor Web App.
 platform: Blazor
-control: Stock Chart
+component: Stock Chart
 documentation: ug
 ---
 
@@ -181,6 +181,12 @@ To bind data for the Stock Chart component, assign a `IEnumerable` object to the
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+<SfStockChart>
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+
 @code{
     public class StockChartData
     {
@@ -209,20 +215,6 @@ To bind data for the Stock Chart component, assign a `IEnumerable` object to the
 {% endhighlight %}
 {% endtabs %}
 
-Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. By default, Stock Chart will be rendered based on the provided `Date` and `High` fields value from the datasource without any mapping.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfStockChart>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" YName="Close" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
-    </StockChartSeriesCollection>
-</SfStockChart>
-
-{% endhighlight %}
-{% endtabs %}
-
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stock Chart component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZWAXpJFtLYFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.png)" %}
@@ -232,6 +224,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor in Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor in Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
