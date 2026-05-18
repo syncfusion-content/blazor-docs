@@ -61,12 +61,12 @@ dotnet --version
 
 Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
 
-For example, in a Blazor Web App with the `Server` interactive render mode, use the following commands:
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet new blazor -o BlazorWebApp -int Server
+dotnet new blazor -o BlazorWebApp -int Auto
 cd BlazorWebApp
 
 {% endhighlight %}
@@ -185,7 +185,7 @@ Add the namespace in the sample.
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Create an Empty Diagram
+### Create an Empty Diagram
 Add the DiagramComponent to render an empty diagram.
 
 {% tabs %}
@@ -196,7 +196,7 @@ Add the DiagramComponent to render an empty diagram.
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Define Nodes
+### Define Nodes
 
 A Nodes represent elements in the diagram. Add the following code in the `Home.razor`.:
 
@@ -249,8 +249,11 @@ A Nodes represent elements in the diagram. Add the following code in the `Home.r
 }
 {% endhighlight %}
 {% endtabs %}
-### Step 4: Define Connectors
+
+### Define Connectors
+
 Connectors are used to link nodes together.
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 @code{
@@ -277,13 +280,14 @@ Connectors are used to link nodes together.
 {% endhighlight %}
 {% endtabs %}
 
-### Step 5: Bind Nodes and Connectors to the Diagram
+### Bind Nodes and Connectors to the Diagram
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 <SfDiagramComponent Nodes="@nodes" Connectors="@connectors" />
 {% endhighlight %}
 {% endtabs %}
+
 ### Final Code
 
 Copy and paste the following code into the **Home.razor** file and run the application.
