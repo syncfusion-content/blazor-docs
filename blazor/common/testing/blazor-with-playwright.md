@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Testing Blazor Components with Playwright | Syncfusion®
-description: Learn how to integrate Syncfusion® Blazor UI components into a Blazor WebAssembly Standalone App and validate them through end‑to‑end tests using Microsoft Playwright.
+description: Learn how to integrate Blazor UI components into a Blazor WebAssembly Standalone App and validate them through end‑to‑end tests using Microsoft Playwright.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Testing Syncfusion® Blazor Components with Playwright
+# Testing Blazor Components with Playwright
 
-This guide explains how to integrate [Syncfusion® Blazor UI components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
+This guide explains how to integrate [Blazor UI components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
-Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Syncfusion® Blazor components behave as expected.
+Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Blazor components behave as expected.
 
 ## Create a Blazor project
 
 If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](#install-required-packages).
 
-Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for a **Blazor WebAssembly Standalone App**.
+Otherwise, create a new Blazor application by following the [Getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for a **Blazor WebAssembly Standalone App**.
 
 ## Install required packages
 
-Install the following NuGet packages to use the **Syncfusion® Blazor components**.
+Install the following NuGet packages to use the **Blazor components**.
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -50,9 +50,9 @@ Open the `_Imports.razor` file at the root of your project and import the Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion® Blazor service
+## Register the Blazor service
 
-Add the Syncfusion® Blazor service to the `Program.cs` file to enable Syncfusion® Blazor components in the application.
+Add the Blazor service to the `Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="1 7" %}
@@ -79,9 +79,9 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 <head>
     ....
-    <!-- Syncfusion® theme stylesheet -->
+    <!-- Theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-    <!-- Syncfusion® Blazor core component's script reference -->
+    <!-- Blazor core component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 
@@ -156,7 +156,7 @@ To do this, add the following configuration to your `<yourProjectName>.csproj` f
 
 ## Create a Playwright test project
 
-In this step, you create a separate test project to write and manage Playwright end‑to‑end tests for your Syncfusion® Blazor application.
+In this step, you create a separate test project to write and manage Playwright end‑to‑end tests for your Blazor application.
 
 From the solution root directory, run the following commands to create a new test project:
 
@@ -310,7 +310,7 @@ namespace E2E.Tests
         {
             await Page.GotoAsync(_url + "/");
 
-            // Wait for the Syncfusion® Grid to render.
+            // Wait for the DataGrid to render.
             await Expect(Page.Locator(".e-grid")).ToBeVisibleAsync();
 
             // Get the first Order ID on page 1.
@@ -331,7 +331,7 @@ namespace E2E.Tests
 
 ## Run the tests
 
-You can execute the Playwright end‑to‑end tests to validate the behavior of your Syncfusion® Blazor application.
+You can execute the Playwright end‑to‑end tests to validate the behavior of your Blazor application.
 
 From the **test project directory**, run the following command to execute all tests.
 
@@ -347,10 +347,10 @@ This command builds and runs the test project. The **StartBlazorApp** method in 
 
 N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
-This approach ensures reliable validation of **Syncfusion® Blazor UI components** and enables early detection of UI regressions through automated end‑to‑end testing.
+This approach ensures reliable validation of **Blazor UI components** and enables early detection of UI regressions through automated end‑to‑end testing.
 
 ## See also
 
-- [Getting started with Syncfusion® Blazor Grid in WASM app](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+- [Getting started with Blazor Grid in WASM app](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 - [Guide for installing Playwright Browsers (CLI)](https://playwright.dev/dotnet/docs/intro)
 
