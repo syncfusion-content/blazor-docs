@@ -68,7 +68,7 @@ cd BlazorApp
 Install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the integrated terminal. Run the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI"" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Gantt --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}

@@ -76,8 +76,8 @@ From the integrated terminal, add the required packages of  [Syncfusion.Blazor.K
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Kanban -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Kanban --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,8 +120,8 @@ Run the following commands to add the packages of  [Syncfusion.Blazor.Kanban](ht
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Kanban -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Kanban --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -325,7 +325,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrfNCraJAdqIiOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.webp)" %}
 
-N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the bullet chart.
+N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the Kanban Board.
 
 ## See also
 
