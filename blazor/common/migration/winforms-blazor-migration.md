@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Windows Forms (WinForms) to Blazor | Syncfusion®
-description: Step-by-step guide to migrate a Windows Forms (WinForms) application to Blazor, covering architectural differences, project setup, package installation, theming, service registration, component rendering, and a WinForms-to-Blazor component mapping reference.
+description: Step-by-step guide to migrate a WinForms app to Blazor, covering architecture, project setup, theming, service registration, and component mapping.
 platform: Blazor
 component: Common
 documentation: ug
@@ -112,13 +112,13 @@ Blazor packages are grouped into the following categories:
 
 To use Blazor components in a Blazor application, install the base component package and the theme package.
 
-- [Syncfusion.Blazor.Grids](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
+- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Grids -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -273,21 +273,23 @@ Key characteristics of Blazor rendering include
 - Rendering is based on component state
 - UI updates occur automatically when data changes
 
+The following example uses the [Blazor DataGrid (SfGrid)](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to render a list of orders.
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @rendermode InteractiveServer
+@using Syncfusion.Blazor.Charts
 
-<h3>Orders</h3>
-
-<SfGrid DataSource="@Orders">
-    <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" />
-        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2" />
-    </GridColumns>
-</SfGrid>
+<SfGrid DataSource="@Orders" />
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
 
 @code {
     private List<Order> Orders = new()
@@ -295,6 +297,25 @@ Key characteristics of Blazor rendering include
         new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
         new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 }
     };
+
+    private List<SalesData> Sales = new()
+    {
+        new SalesData { Month = "Jan", SalesValue = 35 },
+        new SalesData { Month = "Feb", SalesValue = 28 }
+    };
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    public class SalesData
+    {
+        public string Month { get; set; } = string.Empty;
+        public double SalesValue { get; set; }
+    }
 }
 
 {% endhighlight %}
@@ -317,9 +338,11 @@ this.Controls.Add(chart);
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor component: Rendering multiple components**
+**Blazor application: Rendering multiple components**
 
 In Blazor, multiple components are rendered declaratively using Razor markup. Components are displayed in the order they appear in the markup and are arranged using standard web layout rules.
+
+The following example renders a [Blazor Charts (SfChart)](https://www.syncfusion.com/blazor-components/blazor-charts) component alongside the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -348,9 +371,9 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-## Migrating key Syncfusion® components from WinForms to Blazor component mapping
+## WinForms to Blazor component mapping reference
 
-This document provides a comprehensive reference table that maps **WinForms controls** to their **Blazor equivalents**.  
+This section provides a comprehensive reference table that maps **WinForms controls** to their **Blazor equivalents**.  
 
 It is intended to help developers **plan, assess, and execute** WinForms to Blazor migrations efficiently.
 
@@ -392,8 +415,8 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | [TextBoxExt](https://help.syncfusion.com/windowsforms/textbox/getting-started) | [SfTextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) | Text input |
 | [SfNumericTextBox](https://help.syncfusion.com/windowsforms/numeric-textbox/gettingstarted) | [SfNumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) | Numeric input |
 | [SfDateTimeEdit](https://help.syncfusion.com/windowsforms/datetimepicker/getting-started) | [SfDateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) | Date and time picker |
-| [SfComboBox](https://help.syncfusion.com/windowsforms/combobox/gettingstarted) | [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started) | Virtualized dropdown |
-| [AutoComplete](https://help.syncfusion.com/windowsforms/autocomplete/getting-started) | [SfAutoComplete](https://www.syncfusion.com/blazor-components/blazor-combobox) | Input suggestions |
+| [SfComboBox](https://help.syncfusion.com/windowsforms/combobox/gettingstarted) | [SfComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) | Virtualized dropdown |
+| [AutoComplete](https://help.syncfusion.com/windowsforms/autocomplete/getting-started) | [SfAutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) | Input suggestions |
 
 ### Buttons and Commands
 
@@ -407,8 +430,8 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://www.syncfusion.com/blazor-components/blazor-diagram) | Async open/close |
-| [ProgressBarAdv](https://help.syncfusion.com/windowsforms/progress-bar/creating-progressbaradv) | [SfProgressBar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started) | Progress indicator |
+| [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://www.syncfusion.com/blazor-components/blazor-dialog) | Async open/close |
+| [ProgressBarAdv](https://help.syncfusion.com/windowsforms/progress-bar/creating-progressbaradv) | [SfProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) | Progress indicator |
 
 ### File, Document, and Spreadsheet controls
 
