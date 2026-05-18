@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from WinForms to Blazor | Syncfusion®
-description: Step-by-step guide to migrate WinForms application to Blazor, with a detailed DataGrid migration.
+description: Step-by-step guide to migrate WinForms application to Blazor, including a detailed DataGrid migration example.
 platform: Blazor
 component: Common
 documentation: ug
