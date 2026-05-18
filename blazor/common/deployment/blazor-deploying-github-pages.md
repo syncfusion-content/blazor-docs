@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploying Blazor WASM with Blazor Components to GitHub Pages | Syncfusion
+title: Deploy Blazor WASM with Components on GitHub Pages | Syncfusion
 description: A comprehensive guide to deploying Blazor components to GitHub Pages with full configuration steps and practical examples.
 platform: Blazor
 control: Common
