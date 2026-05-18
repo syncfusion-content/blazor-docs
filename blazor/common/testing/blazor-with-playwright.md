@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Testing Blazor Components with Playwright | Syncfusion®
-description: Learn how to integrate Blazor UI components into a Blazor WebAssembly Standalone App and validate them through end‑to‑end tests using Microsoft Playwright.
+title: Blazor Component Testing Automation with Playwright | Syncfusion®
+description: Step-by-step guide to automate testing of Blazor components using Playwright and Nunit, including setup and end‑to‑end testing workflows.
 platform: Blazor
 component: Common
 documentation: ug
