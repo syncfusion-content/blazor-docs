@@ -55,9 +55,20 @@ cd MauiBlazorApp
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+The packages can also be installed using the integrated terminal in Visual Studio Code or the .NET CLI. Run the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>) or command line:
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.PivotTable --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+To install via Package Manager Console, run the following commands:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
