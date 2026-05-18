@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-## Retrieve the number of characters
+# Retrieve the number of characters
 
 To retrieve the number of characters in the Rich Text Editor content, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method.
 
