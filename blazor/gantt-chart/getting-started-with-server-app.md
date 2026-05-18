@@ -25,6 +25,25 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+
+Once the project is created, install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager.
+
+1. Go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for `Syncfusion.Blazor.Gantt` and install the latest version
+3. Search for `Syncfusion.Blazor.Themes` and install the latest version
+
+Alternatively, run the following commands in the Package Manager Console:
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -37,17 +56,30 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 
 Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
-Alternatively, create a Server application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a Server application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
 
 {% tabs %}
-
 {% highlight c# tabtitle="Blazor Server App" %}
 
 dotnet new blazor -o BlazorApp -int Server
 cd BlazorApp
 
 {% endhighlight %}
+{% endtabs %}
 
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+
+Then, install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the integrated terminal.
+
+Run the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+
+{% tabs %}
+{% highlight C# tabtitle="VS Code Terminal" %}
+
+dotnet add package Syncfusion.Blazor.Gantt --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}
@@ -66,7 +98,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor Server App using .NET CLI
+## Create a Blazor Server App
 
 Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
 
@@ -79,26 +111,26 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+
+Then, install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using the .NET CLI.
+
+Run the following commands in your command prompt, terminal, or command shell:
+
+{% tabs %}
+{% highlight C# tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Gantt --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 {% endtabcontent %}
 
 {% endtabcontents %}
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
-
-Install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
-
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -154,7 +186,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% tabs %}
 {% highlight razor %}
 
-@* desired render mode define here *@
+@* Define the desired render mode here *@
 @rendermode InteractiveServer
 
 {% endhighlight %}
@@ -211,7 +243,6 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWNVzLgvAOlvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component in your default web browser.
-
 ## Binding Gantt Chart with Data and mapping task fields
 
 Bind data with the Gantt Chart component by using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property. It accepts the list objects or the DataManager instance. 
