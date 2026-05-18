@@ -100,8 +100,8 @@ Before building the Blazor app, set up an AWS Cognito user pool:
    - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
    - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
 10. Verify that in **App integration** → **hosted UI**:
-   - "Hosted UI" is **enabled**
-   - "Callback URLs" includes your app redirect URI
+   - "Hosted UI" is **enabled**.
+   - "Callback URLs" includes your app redirect URI.
 
 You now have the values to add to `appsettings.json`.
 
@@ -325,7 +325,7 @@ Add the Syncfusion Blazor theme CSS and script references to your application's 
 
 ### Syncfusion® Blazor DataGrid on an authenticated page
 
-This page demonstrates how to protect a [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
+This page demonstrates how to protect a [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using ASP.NET Core authorization. When unauthenticated, a `Sign in` link is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
