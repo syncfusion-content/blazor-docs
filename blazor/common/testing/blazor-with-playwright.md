@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor Component Testing Automation with Playwright | Syncfusion®
-description: Step-by-step guide to automate testing of Blazor components using Playwright and Nunit, including setup and end‑to‑end testing workflows.
+title: Blazor component Test Automation with Playwright | Syncfusion®
+description: Learn to automate end-to-end testing of Syncfusion Blazor components using Playwright and NUnit in a .NET WebAssembly app.
 platform: Blazor
 component: Common
 documentation: ug
