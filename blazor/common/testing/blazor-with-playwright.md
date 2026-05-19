@@ -138,22 +138,6 @@ This page contains a [Blazor DataGrid](https://www.syncfusion.com/blazor-compone
 {% endhighlight %}
 {% endtabs %}
 
-## Exclude the test project from the Blazor app build
-
-If your Playwright test project is located inside the main Blazor project directory, you must exclude it from the main project’s build process.
-
-To do this, add the following configuration to your `<yourProjectName>.csproj` file:
-
-{% tabs %}
-{% highlight xml tabtitle=".csproj" %}
-
-  <ItemGroup>
-    <Compile Remove="tests\**" />
-  </ItemGroup>
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Create a Playwright test project
 
 In this step, you create a separate test project to write and manage Playwright end‑to‑end tests for your Blazor application.
@@ -192,6 +176,21 @@ dotnet add package Microsoft.NET.Test.Sdk
 {% endhighlight %}
 {% endtabs %}
 
+## Exclude the test project from the Blazor app build
+
+If your Playwright test project is located inside the main Blazor project directory, you must exclude it from the main project’s build process.
+
+To do this, add the following configuration to your `<yourProjectName>.csproj` file:
+
+{% tabs %}
+{% highlight xml tabtitle=".csproj" %}
+
+  <ItemGroup>
+    <Compile Remove="tests\**" />
+  </ItemGroup>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Install the Playwright browsers
 
@@ -221,7 +220,7 @@ pwsh bin/Debug/net10.0/playwright.ps1 install
 {% endhighlight %}
 {% endtabs %}
 
-N> This example uses `net10.0`. If your project targets a different .NET version, update the path accordingly (for example, `net8.0` or `net9.0`).
+N> This example uses `net10.0`. Update the path to match your project's target framework.
 
 If pwsh is not available, you can install it from the [official PowerShell site](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell)
 
@@ -352,5 +351,5 @@ This approach ensures reliable validation of [Blazor UI components](https://www.
 ## See also
 
 - [Getting started with Blazor DataGrid in WASM app](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-- [Guide for installing Playwright Browsers (CLI)](https://playwright.dev/dotnet/docs/intro)
+- [Guide for installing Playwright Browsers (CLI)](https://playwright.dev/dotnet/docs/browsers)
 
