@@ -90,7 +90,7 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 ## Connect the Blazor DataGrid component
 
-Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to a `.razor`page in your application to enable interactive UI functionality that can be tested using Playwright.
+Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to a `.razor` page in your application to enable interactive UI functionality that can be tested using Playwright.
 
 The Blazor DataGrid includes paging functionality, enabling you to verify user interactions and UI behavior through end‑to‑end testing.
 
