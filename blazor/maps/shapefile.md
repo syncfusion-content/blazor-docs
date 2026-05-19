@@ -70,7 +70,7 @@ A shapefile can render a vector shape map in the Maps component by providing the
 
 ```
 
-![Shapefile rendered in Blazor Maps](./images/Shapefile/blazor-shapefile.png)
+![Shapefile rendered in Blazor Maps](./images/Shapefile/blazor-shapefile.webp)
 
 ## Multilayer
 
@@ -99,7 +99,7 @@ The following example demonstrates a shapefile map as a sublayer above the GeoJS
 </SfMaps>
 
 ```
-![Multilayer in Blazor Maps](./images/Shapefile/blazor-multilayer.png)
+![Multilayer in Blazor Maps](./images/Shapefile/blazor-multilayer.webp)
 
 ## Customization
 
