@@ -155,7 +155,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table comp
 Use the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) component with the specified data type.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.PivotView
 
