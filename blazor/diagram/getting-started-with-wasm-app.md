@@ -270,3 +270,7 @@ In this example:
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application in Visual Studio. 
 * Run the application using `dotnet run` command in Command prompt.
 * This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
+
+The output will appear as follows:
+
+![Getting Started in Blazor Diagram](images/blazor-diagram-getting-started.webp)
