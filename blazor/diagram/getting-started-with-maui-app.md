@@ -43,8 +43,9 @@ Create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](http
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-{% tabs %}
-{% highlight C# tabtitle="Visual Studio" %}
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution → Select the package -> Install*).
 
@@ -59,14 +60,14 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-{% endhighlight %}
+{% endtabcontent %}
 
-{% highlight C# tabtitle="Visual Studio Code" %}
+{% tabcontent Visual Studio Code %}
 
 Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the C# package management(*Right click the ".csproj" file, -> C# package management -> Add nuget package -> Select nuget package and version*)
 
-{% endhighlight %}
-{% endtabs %}
+{% endtabcontent %}
+{% endtabcontents %}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 

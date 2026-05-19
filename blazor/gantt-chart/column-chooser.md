@@ -406,7 +406,7 @@ public class TaskData
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Gantt Chart with custom column chooser using ListView for grouped columns](images/blazor-gantt-chart-custom-column-chooser.png)
+![Blazor Gantt Chart with custom column chooser using ListView for grouped columns](images/blazor-gantt-chart-custom-column-chooser.webp)
 
 ## See also
 

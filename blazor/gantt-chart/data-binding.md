@@ -1271,7 +1271,7 @@ namespace URLAdaptor.Controllers
 
 {% endtabs %}
 
-![Sending Additional Param](images/sending-additional-param.png)
+![Sending Additional Param](images/sending-additional-param.webp)
 
 ### Handling HTTP error
 

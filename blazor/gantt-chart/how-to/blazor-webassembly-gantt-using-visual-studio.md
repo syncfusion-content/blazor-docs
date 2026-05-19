@@ -463,4 +463,4 @@ You can find the full information regarding Predecessors from [here](https://bla
 
 ## Blazor WASM Gantt Chart Demonstration Video
 
-![Blazor Gantt Chart](../images/blazor-gantt-chart.gif)
+![Blazor Gantt Chart](../images/blazor-gantt-chart.webp)
