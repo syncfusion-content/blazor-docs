@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Memory Management Best Practices for Blazor  Applications | Syncfusion
+title: Memory Management Best Practices for Blazor Applications | Syncfusion
 description: Provides best practices for managing memory efficiently in Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Memory Management Best Practices for Blazor Components
+# Memory Management Best Practices for Blazor Applications
 
 This guide explains best practices for [managing memory](https://learn.microsoft.com/en-us/aspnet/core/performance/memory) in Blazor applications using [Blazor components](https://www.syncfusion.com/blazor-components). It covers efficient component lifecycle management, proper resource cleanup using `IDisposable` and `IAsyncDisposable`, and techniques to prevent memory leaks and optimize application performance.
 
