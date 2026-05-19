@@ -379,7 +379,7 @@ This approach keeps chart rendering predictable. If the chart is part of a large
 
 A common performance issue in Blazor occurs when collections are created during each render cycle. This typically happens when methods are called directly in markup or properties that are evaluated during rendering. In such cases, a new collection instance is generated every time the component renders.
 
-In the following example, the [DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) receives a new data source on every render:
+In the following example, the [DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) receives a new data source on every render.
 
 {% tabs %}
 {% highlight razor tabtitle="Dropdown.razor" %}
@@ -492,8 +492,8 @@ By maintaining a stable collection reference, Blazor can detect that the data ha
 
 ## See also
 
-* [Razor component rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0)
-* [Razor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
+* [Explore the fundamentals of Razor component rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0)
+* [Understand the flow of the Razor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
 * [Blazor rendering performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0)
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 * [Getting started with Blazor Chart](https://blazor.syncfusion.com/documentation/chart/getting-started)
