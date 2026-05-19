@@ -130,6 +130,8 @@ The `content` property can be updated to use a different glyph from the icon set
     }
 }
 
+{% endhighlight %}
+
 {% highlight c# tabtitle="TreeData.cs" %}
 
 namespace TreeGridComponent.Data
@@ -163,7 +165,7 @@ namespace TreeGridComponent.Data
     }
 }
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrnDzrfVMyBtkVY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
@@ -308,6 +310,7 @@ Properties such as **background-color**, **color**, and **text-align** can be ad
     }
 }
 
+{% endhighlight %}
 {% highlight c# tabtitle="TreeData.cs" %}
 
 namespace TreeGridComponent.Data
@@ -341,7 +344,7 @@ namespace TreeGridComponent.Data
     }
 }
 
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLntfVJBBQMQeiU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
