@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Rendering Performance Optimization
 
-This guide explains how rendering works in Blazor and provides practical techniques to [optimize rendering performance](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
+This guide explains how rendering works in Blazor and provides practical techniques to [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
 
 ## Blazor DataGrid example with stable data binding
 
@@ -88,7 +88,7 @@ private async Task OnDataRefreshAsync()
 {
     // Enable rendering before updating UI
     isUiUpdateRequired = true;
-    StateHasChanged(); // Triggers render
+    StateHasChanged();
 
     // Perform background work
     await RefreshDataAsync();
@@ -141,7 +141,6 @@ The following example separates the [Button](https://www.syncfusion.com/blazor-c
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="OrderId" HeaderText="Order ID" Width="120" />
- 
         <GridColumn Field="Customer" HeaderText="Customer" Width="180" />
         <GridColumn Field="Total" HeaderText="Total" Format="C2" Width="150" />
     </GridColumns>
