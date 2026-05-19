@@ -109,7 +109,7 @@ In WPF, controls are created through XAML and code-behind, so explicit dependenc
 Blazor uses built-in dependency injection (DI). Register the Syncfusion Blazor services in `Program.cs` so the framework can resolve the required Syncfusion infrastructure.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="7"%}
+{% highlight C# tabtitle="Program.cs" hl_lines="7" %}
 ...
 using Syncfusion.Blazor;
 ...
