@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migrating Syncfusion ASP.NET Core Razor Pages to Blazor | Syncfusion
-description: Learn how to migrate Syncfusion ASP.NET Core Razor Pages controls to Blazor components, including key concepts and a detailed migration approach.
+title: Migrating ASP.NET Core Razor Pages to Blazor | Syncfusion
+description: Learn how to migrate ASP.NET Core Razor Pages controls to Blazor components, including key concepts and a detailed migration approach.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Migrating Syncfusion® ASP.NET Core Razor Pages Controls to Blazor
+# Migrating ASP.NET Core Razor Pages Controls to Blazor
 
-Migrating applications from **ASP.NET Core Razor Pages** to **Blazor** represents a shift from a page centric, request response model to a modern, component based UI framework built on .NET. This guide explains how to migrate commonly used [Syncfusion® ASP.NET Core Razor page controls](https://www.syncfusion.com/aspnet-core-ui-controls) to their [Syncfusion® Blazor equivalents](https://www.syncfusion.com/blazor-components).
+Migrating applications from [ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-10.0&tabs=visual-studio) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a shift from a page centric, request response model to a modern, component based UI framework built on .NET. This guide explains how to migrate commonly used [ASP.NET Core Razor page controls](https://www.syncfusion.com/aspnet-core-ui-controls) to their [Blazor equivalents](https://www.syncfusion.com/blazor-components).
 
 ## Why migrate from ASP.NET Core Razor Pages to Blazor?
 
@@ -21,21 +21,21 @@ The following table highlights the key architectural and functional differences 
 
 | Aspect     | Razor Pages      | Blazor         |
 | --- | ---| --- |
-| **Execution model**           | Request response (page based)              | Blazor Server (SignalR) or WebAssembly (client-side)                     |
-| **Hosting & deployment**      | IIS, Azure App Service                     | Cloud, containers, IIS, static hosting (WASM)                            |
-| **UI technology**             | `.cshtml` Razor Pages                      | Razor components (`.razor`)                                              |
-| **UI definition**             | Page + PageModel (`.cshtml`, `.cshtml.cs`) | Component based (`.razor` with optional `.razor.cs`)                     |
-| **Lifecycle model**           | `OnGet`, `OnPost`, handler methods         | `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}` |
-| **State management**          | PageModel, TempData, Session               | Component state (in-memory), DI services                                 |
-| **User interaction**          | Page reload or partial updates with JS     | Event driven UI updates without reload                                   |
-| **Event handling**            | Handler methods (`OnPost`, form submit)    | `EventCallback<T>`, C# delegates                                         |
-| **Dependency injection**      | Supported via constructor injection        | Built-in and deeply integrated                                           |
-| **Navigation model**          | File based routing (`Pages/*.cshtml`)      | SPA style routing using `@page`                                          |
-| **Rendering model**           | Server rendered HTML with optional JS      | Interactive rendering (real time or client-side)                         |
-| **Component reuse**           | Limited (partials, tag helpers)            | Strong component reusability                                             |
-| **JavaScript dependency**     | Often required for interactivity           | Minimal (optional via JS interop)                                        |
-| **Testing & maintainability** | Moderate                                   | Improved due to component isolation                                      |
-| **Scalability**               | Depends on server rendering                | Supports modern, scalable architectures                                  |
+| Execution model   | Request response (page based)  | Blazor Server (SignalR) or WebAssembly (client-side)     |
+| Hosting & deployment      | IIS, Azure App Service  | Cloud, containers, IIS, static hosting (WASM)    |
+| UI technology            | `.cshtml` Razor Pages    | Razor components (`.razor`)      |
+| UI definition            | Page + PageModel (`.cshtml`, `.cshtml.cs`) | Component based (`.razor` with optional `.razor.cs`)  |
+| Lifecycle model    | `OnGet`, `OnPost`, handler methods | `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}` |
+| State management          | Razor Pages is stateless per request, state uses helpers    | PageModel + TempData/Session (request based)      |
+| User interaction          | Page reload or partial updates with JS     | Event driven UI updates without reload    |
+| Event handling            | Handler methods (`OnPost`, form submit)    | `EventCallback<T>`, C# delegates   |
+| Dependency injection      | Supported via constructor injection        | Built-in and deeply integrated      |
+| Navigation model          | File based routing (`Pages/*.cshtml`)      | SPA style routing using `@page`       |
+| Rendering model           | Server rendered HTML with optional JS      | Interactive rendering using server or client execution    |
+| Component reuse           | Limited (partials, tag helpers)            | Strong component reusability     |
+| JavaScript dependency     | Often required for interactivity           | Minimal (optional via JS interop)      |
+| Testing & maintainability | Moderate                                   | Improved due to component isolation      |
+| Scalability               | Depends on server rendering                | Depends on hosting model      |
 
 ## Development environment setup
 
@@ -78,7 +78,7 @@ N> Business logic, EF Core models, and services from Razor Pages can be reused d
 
 ### Creating a Blazor Web App with Interactive Server
 
-For ASP.NET Core Razor migrations, create a **Blazor Web App with Interactive Server** option, which runs server-side and preserves the familiar server hosted execution model with real time interactivity via SignalR.
+For ASP.NET Core Razor migrations, create a Blazor Web App with Interactive Server option, which runs server-side and preserves the familiar server hosted execution model with real time interactivity via SignalR.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -91,9 +91,9 @@ cd MyBlazorApp
 
 N> The `--interactivity Server` flag configures SignalR based interactivity providing immediate UI updates.
 
-## Migrating Syncfusion® components from ASP.NET Core Razor Pages to Blazor
+## Migrating components from ASP.NET Core Razor Pages to Blazor
 
-The following shared setup applies to all Syncfusion components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
+The following shared setup applies to all three components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
 
 ### Package installation
 
@@ -110,11 +110,11 @@ N> Install `Syncfusion.Blazor.Themes` once at the application level. This packag
 
 ### Service registration
 
-ASP.NET Core Razor initializes Syncfusion controls as part of the view rendering lifecycle. There is no dependency injection based service registration model for UI components. Instead, controls are made available through script and style references, along with the required `ScriptManager` configuration in the layout.
+ASP.NET Core Razor initializes controls as part of the view rendering lifecycle. There is no dependency injection based service registration model for UI components. Instead, controls are made available through script and style references, along with the required `ScriptManager` configuration in the layout.
 
-Blazor uses dependency injection (DI) from the ground up. Syncfusion components must be registered in the service container so the framework can resolve rendering engines, localization providers, and JavaScript interop services required for each component to function correctly.
+Blazor uses dependency injection (DI) from the ground up. Blazor components must be registered in the service container so the framework can resolve rendering engines, localization providers, and JavaScript interop services required for each component to function correctly.
 
-In the `Program.cs` file, add the Syncfusion namespace and register services.
+In the `Program.cs` file, add the Blazor namespace and register services.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -147,7 +147,7 @@ Add the `Syncfusion.EJ2` TagHelper in `~/_ViewImports.cshtml`.
 
 In Blazor, `~/_Imports.razor` serves a similar purpose but applies to Razor components. It allows components to access namespaces globally without requiring repeated `@using` statements in each `.razor` file.
 
-Import the required Syncfusion namespaces in the `~/_Imports.razor` file.
+Import the required namespaces in the `~/_Imports.razor` file.
 
 | Component | Required namespaces |
 |---|---|
@@ -157,7 +157,7 @@ Import the required Syncfusion namespaces in the `~/_Imports.razor` file.
 
 ### Theme and script configuration
 
-In ASP.NET Core Razor, Syncfusion scripts and styles are manually referenced in the shared layout (`_Layout.cshtml`). In addition, Syncfusion components require the `<ejs-script>` helper, which initializes the required JavaScript components at runtime.
+In ASP.NET Core Razor, scripts and styles are manually referenced in the shared layout (`_Layout.cshtml`). In addition components require the `<ejs-script>` helper, which initializes the required JavaScript components at runtime.
 
 In Blazor, scripts and styles are provided as static web assets from the NuGet package and are typically referenced once at the application level (for example, in `App.razor`). This centralized approach avoids duplication, ensures consistent theming, and simplifies dependency management.
 
@@ -168,9 +168,9 @@ In Blazor, scripts and styles are provided as static web assets from the NuGet p
 
 <head>
     ...
-    <!-- Syncfusion ASP.NET Core controls styles -->
+    <!-- ASP.NET Core controls styles -->
     <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/material.css" />
-    <!-- Syncfusion ASP.NET Core controls scripts -->
+    <!-- ASP.NET Core controls scripts -->
     <script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js"></script>
 </head>
 
@@ -184,7 +184,7 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the `
 
 <body>
     ...
-    <!-- Syncfusion Script Manager -->
+    <!-- Script Manager -->
     <ejs-scripts></ejs-scripts>
 </body>
 
@@ -198,13 +198,13 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the `
 
 <head>
     ...
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 <body>
     ...
-    <!-- Syncfusion Blazor core script (required for UI components) -->
+    <!-- Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -212,7 +212,7 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the `
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion® DataGrid component
+### Add DataGrid component
 
 **Migration overview**
 
@@ -220,17 +220,18 @@ For detailed explanation, refer to the [ASP.NET Core Razor DataGrid getting star
 
 | Aspect         | Razor Pages (`ejs-grid`)        | Blazor (`SfGrid` / `SfGrid<TValue>`)        |
 | --- | --- | --- |
-| **Package (NuGet)**       | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
-| **Component declaration** | `<ejs-grid>` helper in `.cshtml`   | `<SfGrid>` / `<SfGrid TValue="T">`      |
-| **Data binding**   | Data passed via `PageModel` (`OnGet`) or `dataSource` property  | `DataSource="@..."` bound in component   |
-| **Collection type**   | `IEnumerable<T>` / server-side model  | `List<T>` / `IEnumerable<T>`  |
-| **Columns**   | Column builder API   | `<GridColumn>` elements   |
-| **Paging**   | [AllowPaging](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_PageSettings)   | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings)    |
-| **Filtering**    | [AllowFiltering](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowFiltering)   | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)                      |
-| **Grouping**   | [AllowGrouping](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowGrouping)      | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)          |
-| **Lifecycle**    | `OnGet`, `OnPost`  | `OnInitialized() / OnInitializedAsync()`  |
-| **Component Reference**   | Model binding / helpers  | `@ref`    |
-| **Theming & Assets**      | Scripts & CSS in layout   | `AddSyncfusionBlazor()` + theme CSS   |
+| Package (NuGet)       | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
+| Component declaration | `<ejs-grid>` helper in `.cshtml`   | `<SfGrid>` / `<SfGrid TValue="T">`      |
+| Data binding   | Data passed via `PageModel` (`OnGet`) or `dataSource` property  | `DataSource="@..."` bound in component   |
+| Collection type   | `IEnumerable<T>` / server-side model  | `List<T>` / `IEnumerable<T>`  |
+| Columns   | Column builder API   | `<GridColumn>` elements   |
+| Paging   | [AllowPaging](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_PageSettings)   | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings)    |
+| Filtering    | [AllowFiltering](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowFiltering)   | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)                      |
+| Grouping   | [AllowGrouping](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.
+html#Syncfusion_EJ2_Grids_Grid_AllowGrouping)      | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)          |
+| Lifecycle    | `OnGet`, `OnPost`  | `OnInitialized() / OnInitializedAsync()`  |
+| Component Reference   | Model binding / helpers  | `@ref`    |
+| Theming & Assets      | Scripts & CSS in layout   | `AddSyncfusionBlazor()` + theme CSS   |
 
 **Component rendering**
 
@@ -428,7 +429,7 @@ namespace GridSample.Pages
 
 The key difference is that Razor Pages follows a request based model. In contrast, Blazor uses a stateful, component driven approach. Data is stored within the component, and the UI updates automatically without requiring full page reloads.
 
-### Add Syncfusion® Scheduler component
+### Add Scheduler component
 
 For detailed explanation, refer to the [ASP.NET Core Razor Scheduler getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/schedule/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
 
@@ -436,12 +437,12 @@ For detailed explanation, refer to the [ASP.NET Core Razor Scheduler getting sta
 
 | Aspect         | Razor Pages (`<ejs-schedule>`)     | Blazor (`SfSchedule<TValue>`)        |
 | --- | --- | --- |
-| **Package (NuGet)**   | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core)   | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
-| **Component declaration** | `<ejs-schedule>`   | `<SfSchedule TValue="T">`    |
-| **Data binding**   | Data via `PageModel`    | `ScheduleEventSettings DataSource="@..."`   |
-| **Appointment model**  | Model classes mapped in server  | Strongly typed model in component    |
-| **Views configuration**  | [CurrentView](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_CurrentView) property   | [<ScheduleView>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection   |
-| **Lifecycle & refs** | `OnGet`, handlers  | `OnInitialized[Async]`, `@ref` |
+| Package (NuGet)   | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core)   | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
+| Component declaration | `<ejs-schedule>`   | `<SfSchedule TValue="T">`    |
+| Data binding   | Data via `PageModel`    | `ScheduleEventSettings DataSource="@..."`   |
+| Appointment model  | Model classes mapped in server  | Strongly typed model in component    |
+| Views configuration  | [CurrentView](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_CurrentView) property   | [<ScheduleView>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection   |
+| Lifecycle & refs | `OnGet`, handlers  | `OnInitialized[Async]`, `@ref` |
 
 **Component rendering**
 
@@ -593,7 +594,7 @@ namespace ScheduleSample.Pages
 
 The key difference is that Razor Pages uses a request based model. In contrast, Blazor uses a stateful model. Data persists in memory, and the UI updates automatically without full page reloads.
 
-### Add Syncfusion® Rich Text Editor component
+### Add Rich Text Editor component
 
 For detailed explanation, refer to the [ASP.NET Core Razor Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/getting-started) and [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
 
@@ -601,12 +602,12 @@ For detailed explanation, refer to the [ASP.NET Core Razor Rich Text Editor gett
 
 | Aspect   | Razor Pages (`<ejs-richtexteditor>`)  | Blazor (`SfRichTextEditor`)  |
 | --- | --- | --- |
-| **Package (NuGet)**       | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) | [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) |
-| **Component declaration** | `<ejs-richtexteditor>` | `<SfRichTextEditor>` |
-| **Content binding**       | `Value` set via `PageModel` | `@bind-Value`  |
-| **Toolbar configuration** | [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditorToolbarSettings.html)   | [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html)  |
-| **Theming & assets** | Scripts/styles in layout | CSS + `AddSyncfusionBlazor()` |
-| **Lifecycle & refs**  | `OnGet`, handlers     | `OnInitialized[Async]`, `@ref` |
+| Package (NuGet)       | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) | [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) |
+| Component declaration | `<ejs-richtexteditor>` | `<SfRichTextEditor>` |
+| Content binding       | `Value` set via `PageModel` | `@bind-Value`  |
+| Toolbar configuration | [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditorToolbarSettings.html)   | [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html)  |
+| Theming & assets | Scripts/styles in layout | CSS + `AddSyncfusionBlazor()` |
+| Lifecycle & refs  | `OnGet`, handlers     | `OnInitialized[Async]`, `@ref` |
 
 **Component rendering**
 
