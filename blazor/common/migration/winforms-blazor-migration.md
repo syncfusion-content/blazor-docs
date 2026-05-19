@@ -15,7 +15,7 @@ This guide provides a step‑by‑step approach to migrating a [Windows Forms (W
 
 * Architectural differences between Windows Forms and Blazor
 * Project structure mapping
-* Step-by-step migration of Blazor components.
+* Step-by-step migration from WinForms components to Blazor components.
 
 ## Why Migrate from WinForms to Blazor?
 
@@ -24,7 +24,7 @@ This guide provides a step‑by‑step approach to migrating a [Windows Forms (W
 | Platform Support | Windows only | Web, Desktop, Cloud, Cross‑platform | Application accessible from any browser or device |
 | UI Technology | Legacy desktop UI | Modern web based UI | Improved look and user experience |
 | Architecture | Form‑centric, tightly coupled | Component based, modular | Better maintainability and scalability |
-| Accessibility | Requires local installation | Runs in a web browser | No client‑side installation required |
+| Deployment | Requires local installation | Runs in a web browser | No client‑side installation required |
 | Development Model | Event‑driven programming | Data binding and reactive UI | Cleaner and more readable code |
 | UI Controls | Limited built‑in controls | 80+ Syncfusion® UI components | Rich enterprise‑ready UI features |
 | Responsiveness | Fixed desktop layouts | Responsive web layouts | Works across different screen sizes |
@@ -228,7 +228,7 @@ using Syncfusion.WinForms.DataGrid;
 using System.Collections.Generic;
 
 
-public partial class MainForm
+public partial class MainForm : Form
 {
     public MainForm()
     {
@@ -333,7 +333,14 @@ The following example renders a [Blazor Charts (SfChart)](https://www.syncfusion
 @rendermode InteractiveServer
 @using Syncfusion.Blazor.Charts
 
-<SfGrid DataSource="@Orders" />
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2" />
+    </GridColumns>
+</SfGrid>
+
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
@@ -411,7 +418,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfSchedule](https://www.syncfusion.com/blazor-components/blazor-scheduler) | Appointment based scheduling |
+| [ScheduleControl](https://help.syncfusion.com/windowsforms/scheduler/getting-started) | [SfScheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) | Appointment based scheduling |
 
 ### Navigation and Layout controls
 
