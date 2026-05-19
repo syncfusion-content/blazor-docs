@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Memory Management Best Practices for Blazor Components and Applications | Syncfusion
+title: Memory Management Best Practices for Blazor  Applications | Syncfusion
 description: Provides best practices for managing memory efficiently in Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
 platform: Blazor
 control: Common
@@ -17,7 +17,7 @@ This guide explains best practices for [managing memory](https://learn.microsoft
 
 In Blazor WebAssembly, releasing these references allows the browser runtime to reclaim memory. In Blazor Server, proper cleanup prevents memory retention across active user circuits, which is essential for maintaining scalability.
 
-If you haven't created a Blazor application yet, create one using below Blazor getting started guides.
+If you haven't created a Blazor application yet, create one using the following Blazor getting started guides.
 
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
@@ -50,7 +50,7 @@ The following example demonstrates how to release data collections used by the D
         Orders = GetOrders();
     }
 
-    public List<Order> GetOrders()
+    private List<Order> GetOrders()
     {
         return new List<Order>
         {
@@ -69,7 +69,7 @@ The following example demonstrates how to release data collections used by the D
     
     public void Dispose()
     {
-        //  Synchronous cleanup
+        // Synchronous cleanup
         Orders?.Clear();
     }
 
@@ -94,7 +94,7 @@ N> Use `IDisposable` when your cleanup is synchronous (such as clearing collecti
 
 Components or application logic used alongside [Blazor components](https://www.syncfusion.com/blazor-components) may subscribe to shared application events through services or state containers. These subscriptions should be removed during component disposal to prevent memory leaks and avoid retaining unnecessary references.
 
-This example demonstrates how to manage event subscriptions in a component that listens to shared application state and ensures proper cleanup during disposal.
+This example uses the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component to trigger a state update.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -117,7 +117,7 @@ This example demonstrates how to manage event subscriptions in a component that 
 @code {
     protected override void OnInitialized()
     {
-       AppState.OnChange += OnAppStateChanged;
+        AppState.OnChange += OnAppStateChanged;
     }
 
     private void OnClicked()
@@ -183,7 +183,7 @@ builder.Services.AddScoped<AppState>();
 {% endhighlight %}
 {% endtabs %}
 
-The component subscribes to the `OnChange` event in `OnInitialized` and removes the subscription in Dispose.
+The component subscribes to the `OnChange` event in `OnInitialized` and removes the subscription in `Dispose()`.
 
 Removing event subscriptions ensures the component is not retained in memory after removal.
 
@@ -225,7 +225,7 @@ The following example demonstrates how to use built‑in virtualization in the D
         Employees?.Clear();
     }
 
-    public List<Employee> GetLargeEmployeeList()
+    private List<Employee> GetLargeEmployeeList()
     {
         var employees = new List<Employee>();
         for (int i = 1; i <= 10000; i++)
@@ -282,7 +282,7 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
         Items?.Clear();
     }
 
-    public List<Item> GetItems()
+    private List<Item> GetItems()
     {
         return new List<Item>
         {
@@ -327,6 +327,6 @@ This guidance applies to the Blazor Server hosting model and to Blazor Web App p
 
 * [Getting started with Blazor DataGrid Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
 * [Discover best practices in Blazor Performance Guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
-* [Learn about the Blazor Component Lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?)
+* [Learn about the Blazor Component Lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle)
 * [Explore concepts in Blazor Dependency Injection](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection)
 
