@@ -7,7 +7,7 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Getting Started with Blazor AI AssistView Component in Blazor Server App
+# Getting Started with AI AssistView Component in Blazor Server App
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
