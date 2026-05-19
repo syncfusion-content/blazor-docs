@@ -181,8 +181,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can render 
     }
 
 </style>
+
 {% endhighlight %}
-{% highlight c# tabtitle="AdaptiveDetails.cs" %}
+{% highlight cs tabtitle="AdaptiveDetails.cs" %}
 public class AdaptiveDetails
 {
 public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>();
@@ -442,7 +443,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports ve
 
 </style>
 {% endhighlight %}
-{% highlight c# tabtitle="AdaptiveDetails.cs" %}
+
+{% highlight cs tabtitle="AdaptiveDetails.cs" %}
 public class AdaptiveDetails
 {
     public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>();
@@ -692,7 +694,7 @@ By default, the adaptive UI layout is rendered on both mobile devices and deskto
     }
 </style>
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
+{% highlight cs tabtitle="OrderData.cs" %}
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();

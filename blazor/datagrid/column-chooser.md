@@ -524,7 +524,6 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 @using Syncfusion.Blazor.Inputs;
 @using Syncfusion.Blazor.Grids;
 @using BlazorApp.Data
-@using Model
 
 <div class="setMargin">
     <SfTextBox Placeholder="Search" Input="@OnInput"></SfTextBox>
@@ -601,17 +600,24 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
             await Grid.HideColumnAsync(args.Text);
         }
     }
-}
-{% endhighlight %}
-{% highlight c# tabtitle="Model.cs" %}
-namespace Model
-{
-    public class DataModel
+	public class DataModel
     {
         public string Id { get; set; }
         public string Text { get; set; }
         public string Type { get; set; }
     }
+	
+	public class OrderData {
+		 public int? OrderID { get; set; }
+		 public string CustomerID { get; set; }
+		 public DateTime? OrderDate { get; set; }
+		 public double? Freight { get; set; }
+		 public int? EmployeeID { get; set; }
+		 public string FirstName { get; set; }
+		 public string LastName { get; set; }
+		 public string Title { get; set; }
+		 public DateTime? HireDate { get; set; }
+	}
 }
 {% endhighlight %}
 {% endtabs %}
@@ -627,7 +633,7 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
 <SfGrid @ref="grid" TValue="OrderData" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@( new List<string>() { "ColumnChooser"})" AllowPaging="true">
     <GridColumnChooserSettings>

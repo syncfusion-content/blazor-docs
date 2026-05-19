@@ -1682,7 +1682,6 @@ public class EmployeeData
         this.Country = Country;
         this.City = City;
         this.HireDate = HireDate;
-        this.ImageURL = ImageURL;
     }
     public static List<EmployeeData> GetAllRecords()
     {
@@ -1984,7 +1983,7 @@ To use a `SfNumericTextBox` in the edit form, configure the [EditTemplate](https
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns 
+@using Syncfusion.Blazor.Inputs
 
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
