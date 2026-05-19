@@ -89,7 +89,7 @@ A linear gradient may be applied directly at the series level. The same gradient
 }
 
 ```
-![Linear Gradient in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-linear-gradient-series.png)
+![Linear Gradient in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-linear-gradient-series.webp)
 
 ### Apply a gradient per point using the point render event
 
@@ -162,7 +162,7 @@ A diagonal linear gradient can be applied per data point using the `OnPointRende
 }
 
 ```
-![Linear Gradient for each point in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-linear-gradient-points.png)
+![Linear Gradient for each point in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-linear-gradient-points.webp)
 
 ## Radial gradient
 
@@ -240,7 +240,7 @@ A radial gradient can be applied directly at the series level. The same gradient
 }
 
 ```
-![Radial Gradient in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-radial-gradient-series.png)
+![Radial Gradient in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-radial-gradient-series.webp)
 
 ### Apply a radial gradient per point using the point render event
 
@@ -313,7 +313,7 @@ The following example uses a distinct color palette and an off-center radial gra
 }
 
 ```
-![Radial Gradient for each point in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-radial-gradient-points.png)
+![Radial Gradient for each point in Blazor Accumulation Chart](images/gradient/blazor-accumulation-chart-radial-gradient-points.webp)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

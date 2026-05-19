@@ -48,7 +48,7 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
 
 ```
 
-![Blazor Chart - Sorting by y-axis](images/sorting/sorting-yaxis-ascending.png)
+![Blazor Chart - Sorting by y-axis](images/sorting/sorting-yaxis-ascending.webp)
 
 ## Sorting order
 
@@ -90,7 +90,7 @@ By default, sorting is applied in **Ascending** order. The sorting order can be 
 }
 ```
 
-![Blazor Chart - Sort descending by y-axis](images/sorting/sorting-yaxis-descending.png)
+![Blazor Chart - Sort descending by y-axis](images/sorting/sorting-yaxis-descending.webp)
 
 ## Sorting by custom value
 
@@ -133,7 +133,7 @@ Data can also be sorted based on any field in the data source by passing the fie
 
 ```
 
-![Blazor Chart - Sorting by custom value](images/sorting/custom-sorting.png)
+![Blazor Chart - Sorting by custom value](images/sorting/custom-sorting.webp)
 
 ## See also
 
