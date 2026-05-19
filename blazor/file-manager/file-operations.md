@@ -1033,9 +1033,9 @@ namespace FileManager.Data
 {% endhighlight %}
 {% endtabs %}
 
-![custom sorting in large icons view](images/blazor-filemanager-largeicons-custom-sorting.png)
+![custom sorting in large icons view](images/blazor-filemanager-largeicons-custom-sorting.webp)
 
-![custom sorting in details view](images/blazor-filemanager-detailsview-custom-sorting.png)
+![custom sorting in details view](images/blazor-filemanager-detailsview-custom-sorting.webp)
 
 ## Uploading Files
 
@@ -1970,7 +1970,7 @@ Add your required files and folders under the `wwwroot\Files` directory.
 * Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the default web browser.
 
-![Blazor File Manager Component](images/blazor-filemanager-component.png)
+![Blazor File Manager Component](images/blazor-filemanager-component.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
 
@@ -2167,4 +2167,4 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor File Manager with Image Preview](images/blazor-filemanager-image-preview.png)
+![Blazor File Manager with Image Preview](images/blazor-filemanager-image-preview.webp)
