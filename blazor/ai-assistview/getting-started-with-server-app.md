@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Syncfusion Chat UI in Blazor Server App
-description: Check out the documentation for getting started with Syncfusion Blazor Chat UI Components in Blazor Server App.
+title: Getting Started with Syncfusion AI AssistView in Blazor Server App
+description: Check out the documentation for getting started with Syncfusion Blazor AI AssistView Components in Blazor Server App.
 platform: Blazor
-control: Chat UI
+control: AI AssistView
 documentation: ug
 ---
 
-# Getting Started with Blazor Chat UI Component in Blazor Server App
+# Getting Started with AI AssistView Component in Blazor Server App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chat UI](https://www.syncfusion.com/blazor-components/blazor-chat-ui) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -30,8 +30,6 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor App in Visual Studio Code
 
 Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
@@ -115,7 +113,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Server App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -131,7 +129,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
 
 ```html
 
@@ -141,13 +139,15 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chat UI component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chat UI component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file. Use the [User](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_User) property to define the current user.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
 
 N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+
+Use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to generate responses based on the entered prompts.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -157,22 +157,62 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 @using Syncfusion.Blazor.InteractiveChat
 
-<div style="height: 400px; width: 400px;">
-    <SfChatUI User="CurrentUserModel"></SfChatUI>
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptSuggestions="@promptSuggestions"
+                    PromptRequested="@PromptRequest">
+    </SfAIAssistView>
 </div>
 
 @code {
-private static UserModel CurrentUserModel = new UserModel()
-{
-ID = "User1",
-User = "Albert"
-};
+    List<string> promptSuggestions = new List<string>
+    {
+        "How do I prioritize my tasks?",
+        "How can I improve my time management skills?"
+    };
+
+    ```
+    public class AssistModel
+    {
+        public string Prompt { get; set; }
+        public string Response { get; set; }
+    }
+
+    private List<AssistModel> prompts = new List<AssistModel>()
+    {
+        new AssistModel()
+        {
+            Prompt = "How do I prioritize my tasks?",
+            Response = "Prioritize tasks by urgency and impact: tackle high-impact tasks first,     delegate when possible, and break large tasks into smaller steps. For more  assistance, feel free to ask—I’m here to help!"
+        },
+        new AssistModel()
+        {
+            Prompt = "How can I improve my time management skills?",
+            Response = "To improve time management skills, try setting clear goals, using a     planner or digital tools, prioritizing tasks, breaking tasks into smaller steps, and    minimizing distractions. Regularly review and adjust your approach for better  efficiency."
+        }
+    };
+
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(3000);
+
+        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
+        var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
+
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView   component to your preferred AI service, such as OpenAI or Azure Cognitive Services.   Ensure you obtain the necessary API credentials to authenticate and enable seamless   integration.";
+
+        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+    }
+```
+
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor Chat UI component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor AI AssistView component in the default web browser.
 
-{% previewsample "(https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.webp)" %}
+{% previewsample "(https://blazorplayground.syncfusion.com/embed/BjhTCNsCMKFGRhuU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor AI AssistView default prompt](./images/default-prompt.webp)" %}
 
+> **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AIAssistView).
