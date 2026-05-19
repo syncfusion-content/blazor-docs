@@ -1927,7 +1927,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-N> For standalone Blazor WASM applications, the service from this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/) can be used.
+N> For standalone Blazor WASM applications, the service from this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/) can be used. This service is an ASP.NET Core project that acts as the backend API for your File Manager
 
 To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code to configure the service for the controller and map the controller after `app.UseRouting()`. The `app.UseRouting()` middleware should be placed after `app.UseHttpsRedirection()`. The correct ordering is essential to ensure proper request handling and middleware functionality:
 
