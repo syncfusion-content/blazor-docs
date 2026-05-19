@@ -7,26 +7,26 @@ control: Common
 documentation: ug
 ---
 
-# Migrating ASP.NET Core Razor Pages Controls to Blazor
+# Migrating ASP.NET Core Razor Pages to Blazor
 
 Migrating applications from [ASP.NET Core Razor Pages](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-10.0&tabs=visual-studio) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a shift from a page centric, request response model to a modern, component based UI framework built on .NET. This guide explains how to migrate commonly used [ASP.NET Core Razor page controls](https://www.syncfusion.com/aspnet-core-ui-controls) to their [Blazor equivalents](https://www.syncfusion.com/blazor-components).
 
 ## Why migrate from ASP.NET Core Razor Pages to Blazor?
 
-ASP.NET Core Razor Pages simplify the MVC pattern by combining UI and logic at the page level. However, for highly interactive applications, developers often rely on **JavaScript**, **partial rendering**, and additional client-side logic to manage dynamic UI behavior.
+ASP.NET Core Razor Pages simplify the MVC pattern by combining UI and logic at the page level. However, for highly interactive applications, developers often rely on JavaScript, partial rendering, and additional client-side logic to manage dynamic UI behavior.
 
-Blazor provides a modern approach by enabling **component based UI development in C#**, along with built-in **state management** and **event driven updates**. This reduces dependency on external JavaScript frameworks and improves maintainability, scalability, and developer productivity.
+Blazor provides a modern approach by enabling component based UI development in C#, along with built-in state management and event driven updates. This reduces dependency on external JavaScript frameworks and improves maintainability, scalability, and developer productivity.
 
 The following table highlights the key architectural and functional differences between Razor Pages and Blazor.
 
 | Aspect     | Razor Pages      | Blazor         |
 | --- | ---| --- |
 | Execution model   | Request response (page based)  | Blazor Server (SignalR) or WebAssembly (client-side)     |
-| Hosting & deployment      | IIS, Azure App Service  | Cloud, containers, IIS, static hosting (WASM)    |
+| Hosting & deployment      | IIS, Azure App Service  | Cloud, containers, IIS, static hosting (WebAssembly)    |
 | UI technology            | `.cshtml` Razor Pages    | Razor components (`.razor`)      |
 | UI definition            | Page + PageModel (`.cshtml`, `.cshtml.cs`) | Component based (`.razor` with optional `.razor.cs`)  |
 | Lifecycle model    | `OnGet`, `OnPost`, handler methods | `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}` |
-| State management          | Razor Pages is stateless per request, state uses helpers    | PageModel + TempData/Session (request based)      |
+| State management  | Stateless per request. Uses `TempData`, `ViewData`, or `Session`   |  Component scoped fields/properties. Supports cascading values, services, and state containers      |
 | User interaction          | Page reload or partial updates with JS     | Event driven UI updates without reload    |
 | Event handling            | Handler methods (`OnPost`, form submit)    | `EventCallback<T>`, C# delegates   |
 | Dependency injection      | Supported via constructor injection        | Built-in and deeply integrated      |
@@ -59,18 +59,18 @@ dotnet --info
 
 ASP.NET Core Razor Pages and Blazor Web Apps follow different architectural patterns. The following table shows the functional equivalents between Razor Pages artifacts and Blazor, along with their roles in a Blazor Web App.
 
-| Razor Pages Artifact                     | Blazor Web App Equivalent        | Description           |
+| Razor Pages Artifact  | Blazor Web App Equivalent     | Description           |
 | --- | --- | --- |
-| `Pages/*.cshtml`                         | `Components/Pages/*.razor`                             | Defines the UI page and route entry point               |
-| `.cshtml.cs` (PageModel)                 | `@code {}` block or `.razor.cs` file                   | Contains page logic, event handling, and data binding   |
-| `_Layout.cshtml`                         | `MainLayout.razor`                                     | Provides shared layout structure across pages           |
-| Partial Pages                            | Razor components (`.razor`)                            | Enables reusable UI components                          |
-| File based routing                       | `@page` directive                                      | Defines routes directly in components                   |
-| `wwwroot`                                | `wwwroot`                                              | Stores static files like CSS, JS, and images            |
-| PageModel state (`TempData`, `ViewData`) | Component state (fields/properties)                    | Maintains UI state within the component                 |
-| Handler methods (`OnGet`, `OnPost`)      | Lifecycle methods (`OnInitialized`, `OnParametersSet`) | Controls execution flow and data initialization         |
-| JavaScript based updates                 | Event driven UI updates (C#)                           | Handles user interaction without page reload            |
-| Services / Models                        | Reused via DI (Dependency Injection)                   | Shares business logic and data access across components |
+| `Pages/*.cshtml`    | `Components/Pages/*.razor`   | Defines the UI page and route entry point  |
+| `.cshtml.cs` (PageModel)   | Represents component logic using  `@code {}` block or `.razor.cs` file  | Contains page logic, event handling, and data binding   |
+| `_Layout.cshtml`   | `MainLayout.razor`   | Provides shared layout structure across pages           |
+| Partial Pages     | Razor components (`.razor`)   | Enables reusable UI components                          |
+| File based routing   | `@page` directive        | Defines routes directly in components                   |
+| `wwwroot`      | `wwwroot`            | Stores static files like CSS, JS, and images            |
+| PageModel state (`TempData`, `ViewData`) | Component state (fields/properties)   | Maintains UI state within the component |
+| Handler methods (`OnGet`, `OnPost`) | Lifecycle methods (`OnInitialized`, `OnParametersSet`) | Controls execution flow and data initialization  |
+| JavaScript based updates   | Event driven UI updates (C#)  | Handles user interaction without page reload            |
+| Services / Models    | Reused via DI (Dependency Injection) | Shares business logic and data access across components |
 
 N> Business logic, EF Core models, and services from Razor Pages can be reused directly in Blazor without modification.
 
@@ -78,7 +78,7 @@ N> Business logic, EF Core models, and services from Razor Pages can be reused d
 
 ### Creating a Blazor Web App with Interactive Server
 
-For ASP.NET Core Razor migrations, create a Blazor Web App with Interactive Server option, which runs server-side and preserves the familiar server hosted execution model with real time interactivity via SignalR.
+For ASP.NET Core Razor migrations, create a Blazor Web App with Interactive Server option. This runs server-side and preserves the familiar server hosted execution model with real time interactivity via SignalR.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -97,22 +97,21 @@ The following shared setup applies to all three components and covers the common
 
 ### Package installation
 
-Use the following commands to install the required packages for each component.
+In ASP.NET Core Razor Pages, controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
 
-| Component | ASP.NET Core Razor packages | Blazor packages |
-|---|---|---|
-| DataGrid | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  |
-| Scheduler | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
-| RichTextEditor | [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) | [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) |
-| Themes | — | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
+In Blazor applications, components are available as individual NuGet packages as well as a complete package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor). The individual packages are organized based on component usage and namespace, allowing you to install only the components required for your application. The combined `Syncfusion.Blazor` package is also available and remains fully supported. However, for better performance and optimized application size, it is recommended to use individual component packages whenever possible.
+
+To explore the complete list of Blazor component packages, refer to [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+
+Additionally, install the following package for styling support [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes).
 
 N> Install `Syncfusion.Blazor.Themes` once at the application level. This package is required for the Blazor components used in this migration guide.
 
 ### Service registration
 
-ASP.NET Core Razor initializes controls as part of the view rendering lifecycle. There is no dependency injection based service registration model for UI components. Instead, controls are made available through script and style references, along with the required `ScriptManager` configuration in the layout.
+In ASP.NET Core Razor Pages, controls are configured through script and stylesheet references in the layout, rather than through DI service registration
 
-Blazor uses dependency injection (DI) from the ground up. Blazor components must be registered in the service container so the framework can resolve rendering engines, localization providers, and JavaScript interop services required for each component to function correctly.
+Blazor, on the other hand, uses dependency injection by default. Components must be registered in the service container so the framework can provide the required functionality, such as rendering and JavaScript interaction.
 
 In the `Program.cs` file, add the Blazor namespace and register services.
 
@@ -133,7 +132,7 @@ var app = builder.Build();
 
 ### Add import namespaces
 
-In ASP.NET Core Razor, namespaces are imported into Razor views using `~/_ViewImports.cshtml`, primarily to enable Tag Helpers and HTML helper extensions.
+In ASP.NET Core Razor Pages, namespaces are imported into Razor views using `~/_ViewImports.cshtml`, primarily to enable Tag Helpers and HTML helper extensions.
 
 Add the `Syncfusion.EJ2` TagHelper in `~/_ViewImports.cshtml`.
 
@@ -157,20 +156,20 @@ Import the required namespaces in the `~/_Imports.razor` file.
 
 ### Theme and script configuration
 
-In ASP.NET Core Razor, scripts and styles are manually referenced in the shared layout (`_Layout.cshtml`). In addition components require the `<ejs-script>` helper, which initializes the required JavaScript components at runtime.
+In ASP.NET Core Razor, scripts and styles are manually referenced in the shared layout (`_Layout.cshtml`). In addition controls require the `<ejs-script>` helper, which initializes the required JavaScript components at runtime.
 
 In Blazor, scripts and styles are provided as static web assets from the NuGet package and are typically referenced once at the application level (for example, in `App.razor`). This centralized approach avoids duplication, ensures consistent theming, and simplifies dependency management.
 
-**ASP.NET Core Razor approach:**
+**ASP.NET Core Razor approach**
 
 {% tabs %}
 {% highlight html tabtitle="_Layout.cshtml" %}
 
 <head>
     ...
-    <!-- ASP.NET Core controls styles -->
+    <!-- ASP.NET Core control styles -->
     <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/material.css" />
-    <!-- ASP.NET Core controls scripts -->
+    <!-- ASP.NET Core control scripts -->
     <script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js"></script>
 </head>
 
@@ -191,7 +190,7 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the `
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor equivalent:**
+**Blazor equivalent**
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -214,9 +213,7 @@ Also, register the script manager `<ejs-script>` at the end of `<body>` in the `
 
 ### Add DataGrid component
 
-**Migration overview**
-
-For detailed explanation, refer to the [ASP.NET Core Razor DataGrid getting started guide](https://help.syncfusion.com/aspnet/grid/getting-started) and [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app).
+For detailed guidance, refer to the [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) and the [ASP.NET Core Razor DataGrid getting started guide](https://help.syncfusion.com/aspnet/grid/getting-started).
 
 | Aspect         | Razor Pages (`ejs-grid`)        | Blazor (`SfGrid` / `SfGrid<TValue>`)        |
 | --- | --- | --- |
@@ -227,17 +224,14 @@ For detailed explanation, refer to the [ASP.NET Core Razor DataGrid getting star
 | Columns   | Column builder API   | `<GridColumn>` elements   |
 | Paging   | [AllowPaging](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_PageSettings)   | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings)    |
 | Filtering    | [AllowFiltering](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowFiltering)   | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering)                      |
-| Grouping   | [AllowGrouping](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.
-html#Syncfusion_EJ2_Grids_Grid_AllowGrouping)      | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)          |
+| Grouping   | [AllowGrouping](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowGrouping)      | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)          |
 | Lifecycle    | `OnGet`, `OnPost`  | `OnInitialized() / OnInitializedAsync()`  |
 | Component Reference   | Model binding / helpers  | `@ref`    |
 | Theming & Assets      | Scripts & CSS in layout   | `AddSyncfusionBlazor()` + theme CSS   |
 
-**Component rendering**
+The following example, the Razor Pages DataGrid binds a dataset from the `PageModel` and defines [columns](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_Columns) using helper configuration in the view.
 
-In the Razor Pages approach, the DataGrid is defined using an HTML helper in the `.cshtml` page. 
-
-In the Blazor approach, the DataGrid is defined as a Razor component and bound to an in-memory data source. The data is maintained within the component and updated dynamically during user interaction.
+The Blazor version binds to a local collection and declares [columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) with `<GridColumn>` elements, enabling direct control through component state.
 
 **Razor Pages approach**
 
@@ -248,24 +242,10 @@ In the Blazor approach, the DataGrid is defined as a Razor component and bound t
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    List<OrdersDetails> order = new List<OrdersDetails>();
-    if (order.Count() == 0)
-    {
-        int code = 10000;
-        for (int i = 1; i < 5; i++)
-        {
-            order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
-            order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-            order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolivar #65-98 Llano Largo"));
-            order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
-            order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
-            code += 5;
-        }
-    }
 }
 
 <div class="text-center">
-    <ejs-grid id="Grid" dataSource="@order" allowPaging="true" allowSorting="true" allowFiltering="true" allowGrouping="true">
+    <ejs-grid id="Grid" dataSource="@Model.Orders" allowPaging="true" allowSorting="true" allowFiltering="true" allowGrouping="true">
         <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
         <e-grid-columns>
             <e-grid-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-grid-column>
@@ -287,16 +267,22 @@ namespace GridSample.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
+        public List<OrdersDetails> Orders { get; set; } = new();
         public void OnGet()
         {
-
+            if (Orders.Count() == 0)
+            {
+                int code = 10000;
+                for (int i = 1; i < 5; i++)
+                {
+                    Orders.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
+                    Orders.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
+                    Orders.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolivar #65-98 Llano Largo"));
+                    Orders.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
+                    Orders.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
+                    code += 5;
+                }
+            }    
         }
     }
     public class OrdersDetails
@@ -320,16 +306,16 @@ namespace GridSample.Pages
             this.ShipAddress = ShipAddress;
         }
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public int? EmployeeID { get; set; }
         public double? Freight { get; set; }
-        public string ShipCity { get; set; }
+        public string? ShipCity { get; set; }
         public bool Verified { get; set; }
         public DateTime OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
+        public string? ShipName { get; set; }
+        public string? ShipCountry { get; set; }
         public DateTime ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
+        public string? ShipAddress { get; set; }
     }
 }
 
@@ -347,11 +333,11 @@ namespace GridSample.Pages
 
 <h3>Orders Grid</h3>
 
-<SfGrid DataSource="@Orders"
+<SfGrid DataSource="@Orders" TValue="OrdersDetails"
         AllowPaging="true"
         AllowSorting="true"
         AllowFiltering="true"
-        AllowGrouping="true" TValue="OrdersDetails">
+        AllowGrouping="true" >
 
     <GridPageSettings PageSize="5"></GridPageSettings>
 
@@ -409,31 +395,27 @@ namespace GridSample.Pages
         }
 
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public int? EmployeeID { get; set; }
         public double? Freight { get; set; }
-        public string ShipCity { get; set; }
+        public string? ShipCity { get; set; }
         public bool Verified { get; set; }
         public DateTime OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
+        public string? ShipName { get; set; }
+        public string? ShipCountry { get; set; }
         public DateTime ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
+        public string? ShipAddress { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Key differences**
-
-The key difference is that Razor Pages follows a request based model. In contrast, Blazor uses a stateful, component driven approach. Data is stored within the component, and the UI updates automatically without requiring full page reloads.
+N> The `@rendermode InteractiveServer` directive enables interactive server-side rendering via SignalR for the component.
 
 ### Add Scheduler component
 
-For detailed explanation, refer to the [ASP.NET Core Razor Scheduler getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/schedule/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
-
-**Migration overview**
+For detailed guidance, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and the [ASP.NET Core Razor Scheduler getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/schedule/getting-started).
 
 | Aspect         | Razor Pages (`<ejs-schedule>`)     | Blazor (`SfSchedule<TValue>`)        |
 | --- | --- | --- |
@@ -441,14 +423,12 @@ For detailed explanation, refer to the [ASP.NET Core Razor Scheduler getting sta
 | Component declaration | `<ejs-schedule>`   | `<SfSchedule TValue="T">`    |
 | Data binding   | Data via `PageModel`    | `ScheduleEventSettings DataSource="@..."`   |
 | Appointment model  | Model classes mapped in server  | Strongly typed model in component    |
-| Views configuration  | [CurrentView](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_CurrentView) property   | [<ScheduleView>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection   |
-| Lifecycle & refs | `OnGet`, handlers  | `OnInitialized[Async]`, `@ref` |
+| Views configuration  | [CurrentView](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_CurrentView) property   | [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection   |
+| Lifecycle & refs | `OnGet`, handlers  | `OnInitialized` / `OnInitializedAsync`, `@ref` |
 
-**Component rendering**
+The following example, the Razor Pages Scheduler renders appointments supplied from the `PageModel` using schedule [EventSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_EventSettings).
 
-In the Razor Pages approach, the Scheduler is defined using an HTML helper in the `.cshtml` page. The data is provided from the `PageModel` and rendered during the request lifecycle.
-
-In the Blazor approach, the Scheduler is defined as a Razor component and bound to an in-memory collection. This data is maintained within the component and updated dynamically during user interaction.
+The Blazor version uses [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to bind a local event list, allowing the component to handle updates internally.
 
 **Razor Pages approach**
 
@@ -459,22 +439,14 @@ In the Blazor approach, the Scheduler is defined as a Razor component and bound 
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    List<AppointmentData> appData = new List<AppointmentData>();
-    appData.Add(new AppointmentData
-    { Id = 1, Subject = "Explosion of Betelgeuse Star", StartTime = new DateTime(2022, 2, 11, 9, 30, 0), EndTime = new DateTime(2022, 2, 11, 11, 0, 0) });
-    appData.Add(new AppointmentData
-    { Id = 2, Subject = "Thule Air Crash Report", StartTime = new DateTime(2022, 2, 12, 12, 0, 0), EndTime = new DateTime(2022, 2, 12, 14, 0, 0) });
-    appData.Add(new AppointmentData
-    { Id = 3, Subject = "Blue Moon Eclipse", StartTime = new DateTime(2022, 2, 13, 9, 30, 0), EndTime = new DateTime(2022, 2, 13, 11, 0, 0) });
-    appData.Add(new AppointmentData
-    { Id = 4, Subject = "Meteor Showers in 2022", StartTime = new DateTime(2022, 2, 14, 13, 0, 0), EndTime = new DateTime(2022, 2, 14, 14, 30, 0) });
-    appData.Add(new AppointmentData
-    { Id = 5, Subject = "Milky Way as Melting pot", StartTime = new DateTime(2022, 2, 15, 12, 0, 0), EndTime = new DateTime(2022, 2, 15, 14, 0, 0) });
 }
 
 <div class="text-center">
-    <ejs-schedule id="schedule" height="550" selectedDate="@(new DateTime(2022, 2, 15))">
-        <e-schedule-eventsettings dataSource="appData"></e-schedule-eventsettings>
+    <ejs-schedule id="schedule" height="550"
+                  selectedDate="@(new DateTime(2022, 2, 15))">
+        <e-schedule-eventsettings dataSource="@Model.Appointments">
+        </e-schedule-eventsettings>
+
     </ejs-schedule>
 </div>
 
@@ -489,16 +461,18 @@ namespace ScheduleSample.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
+        public List<AppointmentData> Appointments { get; set; } = new();
 
         public void OnGet()
         {
-
+            Appointments = new List<AppointmentData>
+            {
+                new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", StartTime = new DateTime(2022, 2, 11, 9, 30, 0), EndTime = new DateTime(2022, 2, 11, 11, 0, 0) },
+                new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", StartTime = new DateTime(2022, 2, 12, 12, 0, 0), EndTime = new DateTime(2022, 2, 12, 14, 0, 0) },
+                new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", StartTime = new DateTime(2022, 2, 13, 9, 30, 0), EndTime = new DateTime(2022, 2, 13, 11, 0, 0) },
+                new AppointmentData { Id = 4, Subject = "Meteor Showers in 2022", StartTime = new DateTime(2022, 2, 14, 13, 0, 0), EndTime = new DateTime(2022, 2, 14, 14, 30, 0) },
+                new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", StartTime = new DateTime(2022, 2, 15, 12, 0, 0), EndTime = new DateTime(2022, 2, 15, 14, 0, 0) }
+            };
         }
     }
     public class AppointmentData
@@ -527,9 +501,7 @@ namespace ScheduleSample.Pages
 <SfSchedule TValue="AppointmentData"
             Height="550px"
             SelectedDate="@(new DateTime(2022, 2, 15))">
-
     <ScheduleEventSettings DataSource="@Appointments"></ScheduleEventSettings>
-
 </SfSchedule>
 
 @code {
@@ -590,15 +562,9 @@ namespace ScheduleSample.Pages
 {% endhighlight %}
 {% endtabs %}
 
-**Key differences**
-
-The key difference is that Razor Pages uses a request based model. In contrast, Blazor uses a stateful model. Data persists in memory, and the UI updates automatically without full page reloads.
-
 ### Add Rich Text Editor component
 
-For detailed explanation, refer to the [ASP.NET Core Razor Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/getting-started) and [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
-
-**Migration overview**
+For detailed guidance, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and the [ASP.NET Core Razor Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/getting-started).
 
 | Aspect   | Razor Pages (`<ejs-richtexteditor>`)  | Blazor (`SfRichTextEditor`)  |
 | --- | --- | --- |
@@ -609,11 +575,9 @@ For detailed explanation, refer to the [ASP.NET Core Razor Rich Text Editor gett
 | Theming & assets | Scripts/styles in layout | CSS + `AddSyncfusionBlazor()` |
 | Lifecycle & refs  | `OnGet`, handlers     | `OnInitialized[Async]`, `@ref` |
 
-**Component rendering**
+The following example, the Razor Pages Rich Text Editor configures toolbar options and content directly within the view markup.
 
-In the Razor Pages approach, the Rich Text Editor is defined using an HTML helper in the `.cshtml` page. Its content is provided from the `PageModel` and rendered during the request.
-
-In the Blazor approach, the Rich Text Editor is defined as a Razor component and its value is bound to a variable. The content is maintained within the component and updated dynamically as part of the page state.
+The Blazor version binds editor content to a variable and configures tools using component settings for interactive editing.
 
 **Razor Pages approach**
 
@@ -647,7 +611,7 @@ In the Blazor approach, the Rich Text Editor is defined as a Razor component and
                 The Rich Text Editor control is a WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content.
                 Users can format their content using standard toolbar commands.
             </p>
-            <p><b> Key features:</b></p>
+            <p><b>Key features:</b></p>
             <ul>
                 <li><p> Provides &lt; IFRAME &gt; and &lt; DIV &gt; modes </p></li>
                 <li><p> Capable of handling markdown editing.</p></li>
@@ -666,7 +630,7 @@ In the Blazor approach, the Rich Text Editor is defined as a Razor component and
 {% endhighlight %}
 
 {% highlight cs tabtitle="Index.cshtml.cs" %}
-
+ 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -674,21 +638,10 @@ namespace RichTextEditorSample.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
         public void OnGet()
         {
 
         }
-    }
-    public class RichTextEditorValue
-    {
-        public string text { get; set; }
     }
 }
 
@@ -708,68 +661,22 @@ namespace RichTextEditorSample.Pages
 
 <SfRichTextEditor @bind-Value="EditorContent">
     <RichTextEditorToolbarSettings Items="@ToolbarItems"></RichTextEditorToolbarSettings>
-    <RichTextEditorQuickToolbarSettings Image="@ImageToolbarItems"></RichTextEditorQuickToolbarSettings>
 </SfRichTextEditor>
 
 @code {
 
-    public List<ToolbarItemModel> ToolbarItems = new()
+    private object[] ToolbarItems = new object[]
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough },
-
-        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
-        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
-        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
-
-        new ToolbarItemModel() { Command = ToolbarCommand.LowerCase },
-        new ToolbarItemModel() { Command = ToolbarCommand.UpperCase },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
-
-        new ToolbarItemModel() { Command = ToolbarCommand.Outdent },
-        new ToolbarItemModel() { Command = ToolbarCommand.Indent },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-
-        new ToolbarItemModel() { Command = ToolbarCommand.ClearFormat },
-        new ToolbarItemModel() { Command = ToolbarCommand.Print },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+        "Bold", "Italic", "Underline", "StrikeThrough", "|",
+        "FontName", "FontSize", "FontColor", "BackgroundColor", "|",
+        "LowerCase", "UpperCase", "|",
+        "Formats", "Alignments", "OrderedList", "UnorderedList", "|",
+        "Outdent", "Indent", "|",
+        "CreateLink", "Image", "CreateTable", "|",
+        "ClearFormat", "Print", "SourceCode", "FullScreen", "|",
+        "Undo", "Redo"
     };
 
-    // Correct type for image toolbar
-    public List<ImageToolbarItemModel> ImageToolbarItems = new()
-    {
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Replace },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Align },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Caption },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Remove },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.InsertLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.OpenImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.EditImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.RemoveImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Display },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.AltText },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Dimension }
-    };
-
-    // Correct way to set content (NO RichTextEditorValue tag)
     public string EditorContent = @"
         <p>
             The Rich Text Editor control is a WYSIWYG editor that provides the best experience to create content.
@@ -787,10 +694,6 @@ namespace RichTextEditorSample.Pages
 
 {% endhighlight %}
 {% endtabs %}
-
-**Key differences**
-
-The key difference is that Razor Pages relies on a request based model. In contrast, Blazor uses a stateful, data binding approach. The content persists in memory and updates automatically without requiring full page reloads.
 
 ## Run the application
 
