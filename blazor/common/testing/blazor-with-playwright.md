@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor component Test Automation with Playwright | Syncfusion®
+title: End-to-End Test Automation for Blazor Components with Playwright | Syncfusion®
 description: Learn to automate end-to-end testing of Syncfusion Blazor components using Playwright and NUnit in a .NET WebAssembly app.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Testing Blazor Components with Playwright
+# End-to-End Test Automation for Blazor Components with Playwright
 
 This guide explains how to integrate [Blazor UI components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
@@ -37,9 +37,9 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open the `_Imports.razor` file at the root of your project and import the Syncfusion® namespaces.
+Open the `_Imports.razor` file at the root of your project and import the namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -88,11 +88,12 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Syncfusion® page
+## Connect the Blazor DataGrid component
 
-Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
+Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to a `.razor`page in your application to enable interactive UI functionality that can be tested using Playwright.
 
-This page contains a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+The Blazor DataGrid includes paging functionality, enabling you to verify user interactions and UI behavior through end‑to‑end testing.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor" %}
@@ -343,6 +344,8 @@ dotnet test
 {% endtabs %}
 
 This command builds and runs the test project. The **StartBlazorApp** method in `BlazorPlaywrightTests.cs` automatically starts the Blazor application before the tests execute.
+
+After running the tests, the Blazor application starts automatically, the browser opens and loads the app, and the DataGrid is displayed on the page. The test simulates user interaction by navigating between pages and verifies that the data changes correctly, confirming that the paging functionality works as expected. If everything is configured properly, the test execution completes successfully with a **Passed** status in the console, indicating that the UI components behave correctly.
 
 N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
