@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Chart
+# Getting Started with Blazor Chart Component in Blazor MAUI App
 
 This section explains you through the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -108,7 +108,7 @@ public static class MauiProgram
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~/index.html** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file.
 
 ```html
 
@@ -125,6 +125,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+<!-- SfChart is the root container component for the chart -->
 <SfChart>
 
 </SfChart>
@@ -142,7 +143,7 @@ Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
 To run the Blazor Chart in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
-Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
+Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch the Android emulator.
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
