@@ -25,19 +25,19 @@ Task dependencies determine the execution sequence of tasks, forming a structure
 Task relationships are categorized into four types based on start and finish dates:
 - **Start to Start (SS)**: Successor starts with predecessor.
    Example: In event planning, venue decoration (Task B) can start as soon as venue setup (Task A) begins.
-   ![Blazor Gantt Chart displays Start to Start Task Relationship](images/blazor-gantt-chart-start-to-start-relation.png)
+   ![Blazor Gantt Chart displays Start to Start Task Relationship](images/blazor-gantt-chart-start-to-start-relation.webp)
 
 - **Start to Finish (SF)**: Successor finishes when predecessor starts.
     Example: In shift work, the night shift (Task B) can't end until the day shift (Task A) begins.
-   ![Blazor Gantt Chart displays Start to Finish Task Relationship](images/blazor-gantt-chart-start-to-finish-relation.png)
+   ![Blazor Gantt Chart displays Start to Finish Task Relationship](images/blazor-gantt-chart-start-to-finish-relation.webp)
 
 - **Finish to Start (FS)**: Successor starts after predecessor finishes (default).
    Example: In software development, coding (Task B) can only start after the design phase (Task A) is finished.
-   ![Blazor Gantt Chart displays Finish to Start Task Relationship](images/blazor-gantt-chart-finish-to-start-relation.png)
+   ![Blazor Gantt Chart displays Finish to Start Task Relationship](images/blazor-gantt-chart-finish-to-start-relation.webp)
 
 - **Finish to Finish (FF)**: Successor finishes with predecessor.
     Example: In publishing, proof reading (Task B) must finish when or shortly after content writing (Task A) is completed.
-   ![Blazor Gantt Chart displays Finish to Finish Task Relationship](images/blazor-gantt-chart-finish-to-finish-relation.png)
+   ![Blazor Gantt Chart displays Finish to Finish Task Relationship](images/blazor-gantt-chart-finish-to-finish-relation.webp)
 
 ## Implementing task dependencies
 
