@@ -92,7 +92,7 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 Create a Razor page to demonstrate a simple Syncfusion® UI interaction that can be validated using Playwright tests.
 
-This page contains a [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
+This page contains a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component with paging, allowing you to verify user interaction and UI behavior during end‑to‑end testing.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor" %}
@@ -254,7 +254,7 @@ namespace E2E.Tests
     public class BlazorPlaywrightTests : PageTest
     {
         private Process? _serverProcess;
-        // This URL matches the applicationUrl in Properties/launchSettings.json (http profile).
+        // Replace this with your app's URL and port from Properties/launchSettings.json (applicationUrl).
         private readonly string _url = "http://localhost:5228";
 
         [OneTimeSetUp]
@@ -338,7 +338,7 @@ From the **test project directory**, run the following command to execute all te
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-dotnet test --logger "console;verbosity=detailed"
+dotnet test
 
 {% endhighlight %}
 {% endtabs %}
@@ -347,10 +347,10 @@ This command builds and runs the test project. The **StartBlazorApp** method in 
 
 N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
-This approach ensures reliable validation of **Blazor UI components** and enables early detection of UI regressions through automated end‑to‑end testing.
+This approach ensures reliable validation of [Blazor UI components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
 
 ## See also
 
-- [Getting started with Blazor Grid in WASM app](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+- [Getting started with Blazor DataGrid in WASM app](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 - [Guide for installing Playwright Browsers (CLI)](https://playwright.dev/dotnet/docs/intro)
 
