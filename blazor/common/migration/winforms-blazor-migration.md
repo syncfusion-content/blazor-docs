@@ -492,8 +492,8 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://www.syncfusion.com/blazor-components/blazor-dialog) | Async open/close |
-| [ProgressBarAdv](https://help.syncfusion.com/windowsforms/progress-bar/creating-progressbaradv) | [SfProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) | Progress indicator |
+| [MessageBoxAdv](https://help.syncfusion.com/windowsforms/messagebox/getting-started) | [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started) | Async open/close |
+| [ProgressBarAdv](https://help.syncfusion.com/windowsforms/progress-bar/creating-progressbaradv) | [SfProgressBar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started) | Progress indicator |
 
 ### File, Document, and Spreadsheet controls
 

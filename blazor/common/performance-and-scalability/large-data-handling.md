@@ -31,7 +31,7 @@ Client side processing loads the complete dataset into the browser and performs 
  
 ### Server side data handling
 
-Server side processing delegates data operations to the server. The client requests only the required data, and the server applies paging, filtering, or sorting before returning the result.
+server side processing delegates data operations to the server. The client requests only the required data, and the server applies paging, filtering, or sorting before returning the result.
 
 **Use server side processing when:**
 
@@ -73,8 +73,7 @@ Server side processing delegates data operations to the server. The client reque
 
 For more information on configuring server side data operations and remote data binding using Blazor components, see the following documentation:
 
-- [DataManager Overview](https://blazor.syncfusion.com/documentation/data/getting-started)
-- [Remote Data Binding](https://blazor.syncfusion.com/documentation/data/adaptors)
+- [DataManager overview](https://blazor.syncfusion.com/documentation/data/getting-started) and [remote data binding](https://blazor.syncfusion.com/documentation/data/adaptors)
 
 N> Client side processing is generally suitable for small datasets (approximately fewer than 10,000 simple records). For larger datasets, it is recommended to use server side processing combined with paging and virtualization to ensure optimal performance and scalability.
 
@@ -110,7 +109,7 @@ For example, The Blazor TreeGrid supports incremental loading using the **LoadCh
 
 For more information, refer to the [Blazor TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/data-binding?cs-save-lang=1&cs-tab-name=C#loadchildondemand)
 
-N> Incremental loading retrieves additional data blocks as needed, whereas virtualization reduces the number of DOM elements rendered in the UI. These techniques are often used together, where incremental loading handles backend data fetching and virtualization optimizes client side rendering.
+N> Incremental loading retrieves additional data blocks as needed, whereas virtualization reduces the number of DOM elements rendered in the UI. These techniques are often used together, where incremental loading handles backend data fetching and virtualization optimizes Client side rendering.
 
 ## Apply server driven querying
 
@@ -119,12 +118,12 @@ For large datasets, filtering, sorting, grouping, and searching should be handle
 **Why server driven querying is important:**
 
 * Avoids transferring large volumes of data to the client
-* Minimizes client side memory usage and computation
+* Minimizes Client side memory usage and computation
 * Enables better scalability for data-intensive applications
 
 For example, when a user applies a column filter in the DataGrid, the filter criteria are sent to the server. The server then processes the request and returns only the matching records, ensuring efficient data retrieval and optimal performance.
 
-For more information, refer to the documentation [Handling server side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
+For more information, refer to the documentation [handling server side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation).
 
 ## Use virtualization or infinite scrolling
 
@@ -150,8 +149,8 @@ Virtualization and infinite scrolling are supported in several Blazor components
     <GridColumns>
         <GridColumn Field=@nameof(TaskDetails.TaskID) HeaderText="TaskID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(TaskDetails.Engineer) HeaderText="Engineer" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(TaskDetails.Designation) HeaderText="Designation" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(TaskDetails.Estimation) HeaderText="Estimation" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Designation) HeaderText="Designation" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Estimation) HeaderText="Estimation" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(TaskDetails.Status) HeaderText="Status" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -241,7 +240,7 @@ builder.Services.AddSignalR(hubOptions =>
 
 For more details on SignalR configuration, refer to the [official documentation](https://learn.microsoft.com/en-us/aspnet/core/signalr/configuration?view=aspnetcore-9.0&tabs=dotnet#configure-server-options).
 
-## Apply lazy loading for improved user experience
+## Apply lazy-loading for improved user experience
 
 Lazy loading defers data retrieval until it is actually required. Instead of loading all data upfront, fetch data only when the user performs a specific action.
 
@@ -269,6 +268,6 @@ By following these principles, Blazor components enable developers to build appl
 
 ## See also
 
-* [Handling large datasets efficiently in Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
+* [Handling Large Data Sets Efficiently in Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
 * [Performance Optimization for Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
 
