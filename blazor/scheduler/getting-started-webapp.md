@@ -113,7 +113,8 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespaces.
+
+After installing the required packages, open the `~/_Imports.razor` file located in the **Blazor WebApp Client** project. Add the following namespace imports to make the Syncfusion components available throughout your application:
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -126,7 +127,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Syncfusion Blazor service in the **Program.cs** file of the **Blazor WebApp project** only, as this is where the UI components are rendered.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
