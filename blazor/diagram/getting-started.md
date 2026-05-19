@@ -5,6 +5,8 @@ description: Checkout and learn about the documentation for getting started with
 platform: Blazor
 control: Diagram Component
 documentation: ug
+permalink: /documentation/diagram/getting-started/
+canonical: https://blazor.syncfusion.com/documentation/diagram/getting-started/
 ---
 
 # Getting Started with Diagram Component in the Blazor Server App.

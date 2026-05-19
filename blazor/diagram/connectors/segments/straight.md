@@ -5,6 +5,8 @@ description: Checkout and learn here all about Straight Segments in Syncfusion B
 platform: Blazor
 control: Diagram Component
 documentation: ug
+permalink: /documentation/diagram/connectors/segments/straight
+canonical: https://blazor.syncfusion.com/documentation/diagram/connectors/segments/straight/
 ---
 
 # Straight Segments in Blazor Diagram Component
@@ -205,5 +207,5 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoiNtnUHWzxrCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.webp)" %}
 
->Note:  This feature ensures that the shape is updated regardless of whether the  [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) enum value is added to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the diagram. If you apply the `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
+>Note:  This feature ensures that the shape is updated regardless of whether the  `InheritSegmentThumbShape` enum value is added to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the diagram. If you apply the `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
  To make the shapes visible, ensure that the [DragSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSegmentThumb) enum is added to the connector's constraints.
