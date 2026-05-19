@@ -100,7 +100,7 @@ Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
-{% highlight C# tabtitle="Visual Studio Code/.NET CLI" %}
+{% highlight C# tabtitle="Visual Studio Code / .NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
