@@ -29,7 +29,7 @@ Blazor introduces a **component based**, **event-driven UI model**, where user i
 | Event handling | Form post and AJAX | `EventCallback<T>` and delegates |
 | Dependency injection | Built-in (controller centric) | Built-in (component centric) |
 | Routing and navigation | Controller based routing | SPA style routing using `@page` |
-| Scalability | Depends on server request handling | Depends on hosting model (Server: connection based, WASM: client-side scalable) |
+| Scalability | Limited by concurrent requests and vertical scaling typical | Server: scales to concurrent SignalR connections. WebAssembly: client-side execution eliminates server load |
 | Application updates | Requires redeployment | Blazor Server: Instant updates. WebAssembly: Requires refresh |
 
 ## Development Environment Setup
@@ -91,7 +91,7 @@ The following shared setup applies to all components and covers the common confi
 
 ### Package installation
 
-In ASP.NET Core MVC (and Web Forms), Syncfusion components are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
+In ASP.NET Core MVC, controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
 
 In Blazor applications, components are available as individual NuGet packages as well as a complete package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor). The individual packages are organized based on component usage and namespace, allowing you to install only the components required for your application. The combined `Syncfusion.Blazor` package is also available and continues to be supported (not deprecated). However, for better performance and optimized application size, it is recommended to use individual component packages whenever possible.
 
@@ -190,7 +190,7 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 **Blazor equivalent**
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <head>
     ...
@@ -229,7 +229,9 @@ For detailed explanation, refer to the [Blazor DataGrid getting started guide](h
 | Grouping | [AllowGrouping](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowGrouping), [GroupSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_GroupSettings)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping), [GroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) |
 | Lifecycle & refs | Controller actions, model binding, HTTP lifecycle | `OnInitialized[Async]`, DI, `@ref`, component lifecycle |
 
-In MVC, the grid is defined in the view and receives its data from the controller through the model. In Blazor, the grid is implemented as a Razor component and directly binds to a data collection defined inside the component. When the data changes, Blazor automatically updates the UI without requiring manual refresh or JavaScript.
+In ASP.NET Core MVC, the Grid is defined using HTML Helper APIs, where [Columns](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_Columns) configured through property during component initialization.
+
+In Blazor, the DataGrid component is defined in Razor markup, and its structure is built using declarative [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) while binding to data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property.
 
 **MVC approach**
 
@@ -390,12 +392,14 @@ For detailed explanation, refer to the [Blazor Scheduler getting started guide](
 | Theming & assets      | CSS/JS + `ScriptManager` in `_Layout.cshtml` | Static assets via `_content`, service registration (`AddSyncfusionBlazor`) |
 | Lifecycle & refs      | Controller lifecycle, HTTP requests          | `OnInitialized[Async]`, DI, `@ref` APIs               |
 
-In MVC, the Scheduler is defined in the view and gets its data from the controller. In Blazor, it is a component that directly binds to a local data collection.
+In ASP.NET Core MVC, the Scheduler is configured with [Views](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_Views) options such as Day, Week, and Month, and [EventSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_EventSettings) are applied to control how appointments are displayed and managed.
+
+In Blazor, the Scheduler component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
 
 **ASP.NET Core MVC approach**
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight cshtml tabtitle="Index.cshtml" %}
 
 @using Syncfusion.EJ2
 
@@ -489,7 +493,7 @@ public class Meeting
 {% endhighlight %}
 {% endtabs %}
 
-N> The `Meeting` class the default property names expected by the Scheduler. If your data uses different field names, you can map them using the `Fields` property in `ScheduleEventSettings`.
+N> The `Meeting` class uses the default property names expected by the Scheduler. If your data uses different field names, you can map them using the `Fields` property in `ScheduleEventSettings`.
 
 ### Add Rich Text Editor component
 
@@ -507,9 +511,9 @@ For detailed explanation, refer to the [Blazor Rich Text Editor getting started 
 | Theming & assets      | CSS/JS + `ScriptManager` in `_Layout.cshtml`   | Static assets via `_content`, service registration (`AddSyncfusionBlazor`)         |
 | Lifecycle & refs      | Controller lifecycle, HTTP requests            | `OnInitialized[Async]`, DI, `@ref` APIs                        |
 
-In MVC, the editor content is passed from the controller to the view and updated through form posts or AJAX.
+In ASP.NET Core MVC, the editor is initialized with configurable toolbar settings and supports content formatting through predefined tools and customization options.
 
-In Blazor, the editor binds directly to a variable using two-way binding.
+In Blazor, the Rich Text Editor component is defined in Razor markup, where content is managed using the Value or @bind-Value property and toolbar items can be customized declaratively.
 
 **ASP.NET Core MVC approach**
 
