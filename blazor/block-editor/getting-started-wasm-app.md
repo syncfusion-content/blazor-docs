@@ -142,76 +142,81 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component
+## Add Syncfusion<sup style="font-size:70%">®</sup> Blazor Block Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the **~/Pages/Index.razor** file.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfBlockEditor></SfBlockEditor>
-
-{% endhighlight %}
-{% endtabs %}
-
-* To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Block Editor component in the default web browser.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLIsrhAgbKCOpbZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor BlockEditor Default.](images/blazor-block-editor-default.webp)" %}
-
-## Configure blocks
-
-The Block Editor uses a block-based content structure where each block represents a specific content type (heading, paragraph, list, etc.). The [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property manages and configures these blocks, allowing full control over the content structure and presentation.
+Add the Syncfusion<sup style="font-size:70%">®</sup> Blazor Block Editor component in the **~/Pages/Index.razor** file and configure the initial blocks using the `Blocks` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.BlockEditor
 
-<SfBlockEditor @bind-Blocks="blockDataOverview">
-</SfBlockEditor>
+<SfBlockEditor @bind-Blocks="blockDataOverview"> </SfBlockEditor>
 
 @code {
-    private List<BlockModel> blockDataOverview = new EditorBlockData().GetBlockDataOverview();
+private List<BlockModel> blockDataOverview = new EditorBlockData().GetBlockDataOverview();
 
-    public class EditorBlockData
+```
+public class EditorBlockData
+{
+    public List<BlockModel> GetBlockDataOverview()
     {
-        public List<BlockModel> GetBlockDataOverview()
+        List<BlockModel> blockDataOverview = new List<BlockModel>
         {
-            List<BlockModel> blockDataOverview = new List<BlockModel>
+            new BlockModel
             {
-                new BlockModel
+                BlockType = BlockType.Heading,
+                Properties = new HeadingBlockSettings { Level = 2 },
+                Content =
                 {
-                    BlockType = BlockType.Heading,
-                    Properties = new HeadingBlockSettings { Level = 2 },
-                    Content =
+                    new ContentModel
                     {
-                        new ContentModel
+                        ContentType = ContentType.Text,
+                        Content = "Getting Started with Block Editor"
+                    }
+                }
+            },
+            new BlockModel
+            {
+                BlockType = BlockType.Paragraph,
+                Content =
+                {
+                    new ContentModel { ContentType = ContentType.Text, Content = "Welcome to" },
+                    new ContentModel
+                    {
+                        ContentType = ContentType.Text,
+                        Content = " Block Editor",
+                        Properties = new TextContentSettings
                         {
-                            ContentType = ContentType.Text,
-                            Content = "Getting Started with Block Editor"
+                            Styles = new StyleModel { Bold = true }
                         }
-                    }
-                },
-                new BlockModel
-                {
-                    BlockType = BlockType.Paragraph,
-                    Content =
+                    },
+                    new ContentModel
                     {
-                        new ContentModel { ContentType = ContentType.Text, Content = "Welcome to" },
-                        new ContentModel { ContentType = ContentType.Text, Content = " Block Editor", Properties = new TextContentSettings { Styles = new StyleModel { Bold = true } } },
-                        new ContentModel { ContentType = ContentType.Text, Content = " - your flexible, modular workspace for creating rich, structured content. Whether you're drafting documents, brainstorming ideas, or collaborating with your team, Block Editor makes it simple and intuitive." }
+                        ContentType = ContentType.Text,
+                        Content = " - your flexible, modular workspace for creating rich, structured content. Whether you're drafting documents, brainstorming ideas, or collaborating with your team, Block Editor makes it simple and intuitive."
                     }
-                },
-                new BlockModel { BlockType = BlockType.Paragraph, Content = new List<ContentModel>() }
-            };
-            return blockDataOverview;
-        }
+                }
+            },
+            new BlockModel
+            {
+                BlockType = BlockType.Paragraph,
+                Content = new List<ContentModel>()
+            }
+        };
+
+        return blockDataOverview;
     }
+}
+```
+
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSiBVATWtpaEWo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Block Editor Component](images/blazor-block-editor-component.webp)" %}
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor Block Editor component in the default web browser.
+
+{% previewsample "[https://blazorplayground.syncfusion.com/embed/LNLIsrhAgbKCOpbZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5](https://blazorplayground.syncfusion.com/embed/LNLIsrhAgbKCOpbZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor BlockEditor Default.](images/blazor-block-editor-default.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/BlockEditor)
