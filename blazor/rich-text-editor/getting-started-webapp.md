@@ -100,6 +100,12 @@ Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
+{% highlight C# tabtitle="Visual Studio Code/.NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
 {% endtabs %}
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
@@ -158,16 +164,11 @@ Add the Syncfusion Blazor Rich Text Editor component in the **~/Components/Pages
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @* desired render mode define here *@
 @rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
@@ -178,7 +179,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
+ To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)" %}
 
