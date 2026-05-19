@@ -5,6 +5,8 @@ description: Checkout and learn here all about Symbol Palette in Syncfusion Blaz
 platform: Blazor
 control: Diagram Component
 documentation: ug
+permalink: /documentation/diagram/symbol-palette/symbol-palette
+canonical: https://blazor.syncfusion.com/documentation/diagram/symbol-palette/symbol-palette/
 ---
 
 # Symbol Palette in Diagram Component
