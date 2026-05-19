@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Blazor Rendering Performance - Syncfusion
-description: Learn how Blazor's render tree, diffing, and update batching work, and apply techniques to optimize rendering with Syncfusion components effectively.
+description: Learn how Blazor's render tree, diffing, and update batching work, and apply techniques to optimize rendering with Blazor components effectively.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Syncfusion® Blazor Rendering and Performance Optimization
+# Blazor Rendering and Performance Optimization
 
-This guide explains how rendering works in Blazor and provides practical techniques to optimize rendering performance when using [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
+This guide explains how rendering works in Blazor and provides practical techniques to optimize rendering performance when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
 
-## Syncfusion® Blazor DataGrid example with stable data binding
+## Blazor DataGrid example with stable data binding
 
-The following example demonstrates a [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
+The following example demonstrates a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -242,9 +242,9 @@ protected override void OnInitialized()
 
 This keeps the render path simple and avoids repeated computation during every UI update.
 
-## Syncfusion® Blazor Chart example with render-efficient updates
+## Blazor Chart example with render-efficient updates
 
-[Syncfusion® Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
+[Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
 
 {% tabs %}
 {% highlight razor tabtitle="Charts.razor" %}
@@ -345,7 +345,7 @@ This difference is not about code style and directly impacts rendering efficienc
 * [Razor component rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0)
 * [Razor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
 * [Blazor rendering performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0)
-* [Getting started with Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-* [Getting started with Syncfusion Blazor Chart](https://blazor.syncfusion.com/documentation/chart/getting-started)
-* [Getting started with Syncfusion Blazor DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Getting started with Blazor Chart](https://blazor.syncfusion.com/documentation/chart/getting-started)
+* [Getting started with Blazor DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
 

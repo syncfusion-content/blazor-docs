@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Memory management in Syncfusion Blazor Components
-description: Provides best practices for managing memory efficiently in Syncfusion Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
+title: Memory management in Blazor Components | Syncfusion
+description: Provides best practices for managing memory efficiently in Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Memory Management with Syncfusion® Blazor Components
+# Memory Management with Blazor Components
 
-This guide explains best practices for [managing memory](https://learn.microsoft.com/en-us/aspnet/core/performance/memory) in Blazor applications using [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components). It covers efficient component lifecycle management, proper resource cleanup, and techniques such as `IDisposable` to prevent memory leaks and optimize application performance.
+This guide explains best practices for [managing memory](https://learn.microsoft.com/en-us/aspnet/core/performance/memory) in Blazor applications using [Blazor components](https://www.syncfusion.com/blazor-components). It covers efficient component lifecycle management, proper resource cleanup, and techniques such as `IDisposable` to prevent memory leaks and optimize application performance.
 
-## Preventing memory leaks with Syncfusion® Blazor components
+## Preventing memory leaks with Blazor components
 
-Syncfusion Blazor components are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references should be cleared explicitly.
+Blazor components are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references should be cleared explicitly.
 
 In Blazor WebAssembly, releasing these references allows the browser runtime to reclaim memory. In Blazor Server, proper cleanup prevents memory retention across active user circuits, which is essential for maintaining scalability.
 
-If you haven't created a Blazor application yet, follow the [Syncfusion® Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
+If you haven't created a Blazor application yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
-### Disposing data bound Syncfusion® Blazor components
+### Disposing data bound Blazor components
 
 Data bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) can hold large data collections in memory. These references should be cleared when the component is removed from the render tree.
 
@@ -91,7 +91,7 @@ This practice is particularly important in Blazor Server applications, where ret
 
 ### Managing event subscriptions
 
-Components or application logic used alongside [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) may subscribe to shared application events through services or state containers. These subscriptions should be removed during component disposal to prevent memory leaks and avoid retaining unnecessary references.
+Components or application logic used alongside [Blazor components](https://www.syncfusion.com/blazor-components) may subscribe to shared application events through services or state containers. These subscriptions should be removed during component disposal to prevent memory leaks and avoid retaining unnecessary references.
 
 This example demonstrates how to manage event subscriptions in a component that listens to shared application state and ensures proper cleanup during disposal.
 
@@ -188,11 +188,11 @@ Removing event subscriptions ensures the component is not retained in memory aft
 
 ### Virtualizing large data
 
-Rendering large datasets increases memory allocation and DOM size. [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) support [virtualization](https://blazor.syncfusion.com/documentation/common/performance-and-scalability/virtualization#components-supporting-virtualization) to improve performance.
+Rendering large datasets increases memory allocation and DOM size. [Blazor components](https://www.syncfusion.com/blazor-components) support [virtualization](https://blazor.syncfusion.com/documentation/common/performance-and-scalability/virtualization#components-supporting-virtualization) to improve performance.
 
 In [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), to configure row virtualization, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** and define a fixed content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property. The number of rendered records is implicitly determined by the content height.
 
-The following example demonstrates how to use built‑in virtualization in the Syncfusion DataGrid component to efficiently render large data collections.
+The following example demonstrates how to use built‑in virtualization in the DataGrid component to efficiently render large data collections.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -319,7 +319,7 @@ When the collection changes, Blazor can correctly match existing components inst
 
 In Blazor Server, each user maintains their own `ServiceProvider` instance per circuit. A scoped service is created once per user circuit, ensuring user specific state is isolated. `Singleton` services are shared across all users and may lead to unintended data sharing or memory issues.
 
-This behavior is important when working with [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) that depend on application state, data services, or user specific data. Choosing the correct service lifetime helps prevent memory retention issues and ensures proper component behavior.
+This behavior is important when working with [Blazor components](https://www.syncfusion.com/blazor-components) that depend on application state, data services, or user specific data. Choosing the correct service lifetime helps prevent memory retention issues and ensures proper component behavior.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
@@ -335,7 +335,8 @@ This guidance applies to the Blazor Server hosting model and to Blazor Web App p
 
 ## See also
 
-* [Blazor Component Lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
+* [Blazor DataGrid Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [Blazor Performance Guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
+* [Blazor Component Lifecycle documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
 * [Blazor Dependency Injection](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-10.0)
-* [Syncfusion® DataGrid Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
-* [Syncfusion® Blazor Performance Guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
+

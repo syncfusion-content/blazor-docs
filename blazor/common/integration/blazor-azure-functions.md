@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Syncfusion® Blazor components with Azure Functions | Syncfusion
-description: Step-by-step guide to integrate Azure Functions as a serverless backend for Blazor WebAssembly with Syncfusion components (Grid, Scheduler, DatePicker).
+title: Blazor components with Azure Functions | Syncfusion
+description: Step-by-step guide to integrate Azure Functions as a serverless backend for Blazor WebAssembly with Blazor components (Grid, Scheduler, DatePicker).
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® Blazor Components with Azure Functions
+# Integrating Blazor Components with Azure Functions
 
-This guide explains how to integrate [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) with [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend in a Blazor WebAssembly application.
+This guide explains how to integrate [Blazor components](https://www.syncfusion.com/blazor-components) with [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) as a serverless backend in a Blazor WebAssembly application.
 
 ## Prerequisites
 
@@ -61,7 +61,7 @@ Install required packages in your project using the NuGet Package Manager in Vis
 
 **Syncfusion® packages:**
 
-Navigate into the Blazor WASM project (`Client`) directory and install the necessary Syncfusion packages.
+Navigate into the Blazor WASM project (`Client`) directory and install the necessary Blazor packages.
 
 * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 * [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule)
@@ -90,9 +90,9 @@ Open the `Client/_Imports.razor` file from WASM project and import the below nam
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion® Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the `Client/Program.cs` file to enable Syncfusion components in the application.
+Add the Blazor service to the `Client/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -110,20 +110,20 @@ N> The `BaseAddress` is set to `http://localhost:7071/` for local development. I
 
 ## Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `wwwroot/index.html` file from WASM project.
+Add the Blazor theme CSS and required scripts to the `wwwroot/index.html` file from WASM project.
 
 {% tabs %}
 {% highlight html  %}
 
 <head>
     ...
-    <!-- Syncfusion® theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 <body>
     ...
-    <!-- Syncfusion® Blazor core script (required for UI components) -->
+    <!-- Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -197,9 +197,9 @@ public static class OrdersApi
             // Ignore parse errors and return unfiltered results
         }
 
-        var orders = allOrders.Where(o =>
-            (!from.HasValue || o.Date.Date >= from.Value) &&
-            (!to.HasValue || o.Date.Date <= to.Value)).ToArray();
+        var orders = allOrders.Where(order =>
+            (!from.HasValue || order.Date.Date >= from.Value) &&
+            (!to.HasValue || order.Date.Date <= to.Value)).ToArray();
 
         try {
             var logger = ctx.GetLogger("GetOrders");
@@ -258,7 +258,7 @@ public static class OrdersApi
 
 N> The above code example uses `Access-Control-Allow- : *` for development convenience only. In production, replace `"*"` with your Blazor client's origin (e.g., `https://myapp.azurewebsites.net`) in *Azure Portal → Function App → API → CORS*. Never use wildcards in production.
 
-## Integrating Syncfusion® components in the application
+## Integrating Blazor components in the application
 
 This example demonstrates the use of components, including a [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) to select a date range, a [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display orders, and a [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) to present events.
 
@@ -348,7 +348,7 @@ Add the following Razor page to your Blazor WebAssembly project.
       {
         OrdersList = new List<Order>();
       }
-      EventItems = OrdersList.Select(o => new EventItem { StartTime = o.Date, EndTime = o.Date.AddHours(1), Subject = $"{o.Customer} ({o.Total:C2})" }).ToList();
+      EventItems = OrdersList.Select(order => new EventItem { StartTime = order.Date, EndTime = order.Date.AddHours(1), Subject = $"{order.Customer} ({order.Total:C2})" }).ToList();
       StateHasChanged();
     } catch (Exception ex) {
       Console.WriteLine($"Load failed: {ex}");
@@ -396,6 +396,6 @@ dotnet run
 
 ## See also
 
-* [Getting started with Syncfusion DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-* [Getting started with Syncfusion Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started)
-* [Getting started with Syncfusion DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started)
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started)
+* [Getting started with Blazor DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started)
