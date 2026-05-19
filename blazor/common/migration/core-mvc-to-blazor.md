@@ -66,7 +66,7 @@ The following table maps common **ASP.NET Core MVC application artifacts** to th
 | Routing    | `MapControllerRoute`, attributes | `@page` directive        |
 | Business & data layer  | Models, Services, Repositories |  Reused via dependency injection |
 
-N> Existing domain models, data access layers, and business services can typically be reused in Blazor applications. However, code tightly coupled to MVC features such as controllers, HttpContext, or TempData must be refactored.
+N> Existing domain models, data access layers, and business services can typically be reused in Blazor applications. However, code tightly coupled to MVC features such as controllers, HttpContext, or TempData.
 
 ## Creating a Blazor project
 
