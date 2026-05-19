@@ -227,7 +227,6 @@ In WinForms, user interface elements are created as controls and rendered immedi
 using Syncfusion.WinForms.DataGrid;
 using System.Collections.Generic;
 
-
 public partial class MainForm : Form
 {
     public MainForm()
