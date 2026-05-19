@@ -127,7 +127,7 @@ After installing the required packages, open the `~/_Imports.razor` file located
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor service in the **Program.cs** file of the **Blazor WebApp project** only, as this is where the UI components are rendered.
+Register the Syncfusion<sup style="font-size:70%">®</sup> Blazor service only in the **Program.cs** file of the **Blazor WebApp** project, after declaring the `builder`, by adding it to the `builder.Services` configuration, as this is where the UI components are rendered.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}

@@ -115,7 +115,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App. After declaring the `builder`, add it using the `builder.Services` configuration.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
