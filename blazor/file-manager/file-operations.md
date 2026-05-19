@@ -1830,6 +1830,8 @@ The following table provides the toolbar buttons that appear based on the select
 
 ## Server-side Configuration
 
+This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Syncfusion Blazor File Manager component.
+
 ### Create Models
 
 Create a new folder named `Models` in the server project. Add the necessary model files to this folder for handling file operations. Download the `PhysicalFileProvider.cs` and `Base` folder from this [repository](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) and place them in the Models folder.
@@ -1944,7 +1946,11 @@ app.MapControllers();
 
 This will configure and map the controller in your Blazor App.
 
-### Create App
+## Add File Manager to the Application
+
+After configuring the server-side service, integrate the Syncfusion® Blazor File Manager component into the application by creating a dedicated Razor component.
+
+### Create the Razor Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in `.razor` file inside the `Pages` folder.
 
@@ -1954,10 +1960,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager com
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
-                             UploadUrl="/api/FileManager/Upload"
-                             DownloadUrl="/api/FileManager/Download"
-                             GetImageUrl="/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -1995,6 +1998,10 @@ Define a render mode at top of the component, as follows:
 
 {% endhighlight %}
 {% endtabs %}
+
+## Ajax Settings Configuration
+
+The Ajax Settings configuration allows you to define the endpoints for file operations, upload, download, and image preview functionality in the File Manager.
 
 ### File download support
 

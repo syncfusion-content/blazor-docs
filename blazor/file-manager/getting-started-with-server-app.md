@@ -185,5 +185,3 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
 [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-
- [File Manager File Operations](https://blazor.syncfusion.com/documentation/file-manager/file-operations#Server-side-Configuration)
