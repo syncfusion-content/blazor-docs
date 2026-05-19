@@ -5,7 +5,7 @@ description: Checkout and learn here all about Straight Segments in Syncfusion B
 platform: Blazor
 control: Diagram Component
 documentation: ug
-permalink: /documentation/diagram/connectors/segments/straight
+permalink: /documentation/diagram/connectors/segments/straight/
 canonical: https://blazor.syncfusion.com/documentation/diagram/connectors/segments/straight/
 ---
 
