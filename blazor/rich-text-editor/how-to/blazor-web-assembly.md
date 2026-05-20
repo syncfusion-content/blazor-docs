@@ -21,12 +21,12 @@ This article provides a step-by-step instructions for building Blazor WebAssembl
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
  
 Install the following NuGet packages in your project:
  
-* https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor  
-* https://www.nuget.org/packages/Syncfusion.Blazor.Themes/
+* [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor)  
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
  
 You can install these packages using different methods as shown below:
  
@@ -54,7 +54,7 @@ You can install these packages using different methods as shown below:
 2. Run the following commands:
  
 {% tabs %}
-{% highlight c# tabtitle="Install Packages" %}
+{% highlight C# tabtitle="Install Packages" %}
  
 Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -75,7 +75,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 3. Run the following commands:
  
 {% tabs %}
-{% highlight c# tabtitle="Install Packages" %}
+{% highlight C# tabtitle="Install Packages" %}
  
 dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}

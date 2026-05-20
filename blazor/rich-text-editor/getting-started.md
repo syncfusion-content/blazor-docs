@@ -70,29 +70,12 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor WebAssembly App using .NET CLI
-
-Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% endtabcontents %}
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Packages
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
  
 Install the following NuGet packages in your project:
  
-* https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor  
-* https://www.nuget.org/packages/Syncfusion.Blazor.Themes/
+* [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor)  
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
  
 You can install these packages using different methods as shown below:
  
@@ -120,7 +103,7 @@ You can install these packages using different methods as shown below:
 2. Run the following commands:
  
 {% tabs %}
-{% highlight c# tabtitle="Install Packages" %}
+{% highlight C# tabtitle="Install Packages" %}
  
 Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -141,7 +124,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 3. Run the following commands:
  
 {% tabs %}
-{% highlight c# tabtitle="Install Packages" %}
+{% highlight C# tabtitle="Install Packages" %}
  
 dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
