@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Improve Blazor Performance with Virtualization | Syncfusion
-description: Learn how Syncfusion Blazor components use virtualization to improve performance for large datasets, including row/column virtualization, placeholders, and infinite scrolling.
+description: Learn how Syncfusion Blazor components use row and column virtualization, Overscan, virtual placeholders, frozen columns, and infinite scrolling.
 platform: Blazor
 control: Common
 documentation: ug
@@ -32,7 +32,7 @@ The following Blazor components provide built-in virtualization support for effi
 | Faster initial load  | Renders only the items visible in the viewport    |
 | Reduced DOM size     | Keeps the DOM size small and reduces memory usage |
 | Smoother scrolling   | Reuses DOM elements to avoid frequent reflows     |
-| Scalable             | Handles tens of thousands of records efficiently   |
+| Scalable             | Handles tens of thousands of records efficiently  |
 
 ## DataGrid virtualization
 
