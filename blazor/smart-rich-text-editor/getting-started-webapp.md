@@ -462,7 +462,6 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Smart Rich Text Editor in Server App](getting-started.md)
+* [Getting Started with Smart Rich Text Editor in Server App](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started)
 * [Rich Text Editor Documentation](https://blazor.syncfusion.com/documentation/rich-text-editor)
-* [AI Features and Customization](ai-features.md)
 * [Blazor Web App Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid)
