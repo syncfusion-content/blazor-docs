@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Component E2E Test Automation with Playwright | Syncfusion®
+title: Blazor Components E2E Test Automation with Playwright | Syncfusion®
 description: Learn to automate end-to-end testing of Syncfusion Blazor components using Playwright and NUnit in a .NET WebAssembly app.
 platform: Blazor
 component: Common
@@ -9,7 +9,7 @@ documentation: ug
 
 # End-to-End Test Automation for Blazor Components with Playwright
 
-This guide explains how to integrate [Blazor UI components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
+This guide explains how to integrate [Blazor components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
 Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Blazor components behave as expected.
 
@@ -223,9 +223,9 @@ pwsh bin/Debug/net10.0/playwright.ps1 install
 
 N> This example uses `net10.0`. Update the path to match your project's target framework.
 
-If pwsh is not available, you can install it from the [official PowerShell site](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell)
+If pwsh is not available, you can install it from the [official PowerShell site](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell).
 
-Or use Windows PowerShell (`powershell.exe`) as an alternative:
+Alternatively, you can use Windows PowerShell (`powershell.exe`).
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -345,11 +345,13 @@ dotnet test
 
 This command builds and runs the test project. The **StartBlazorApp** method in `BlazorPlaywrightTests.cs` automatically starts the Blazor application before the tests execute.
 
-After running the tests, the Blazor application starts automatically, the browser opens and loads the app, and the DataGrid is displayed on the page. The test simulates user interaction by navigating between pages and verifies that the data changes correctly, confirming that the paging functionality works as expected. If everything is configured properly, the test execution completes successfully with a **Passed** status in the console, indicating that the UI components behave correctly.
+After running the tests, the Blazor application starts automatically, the browser opens and loads the app, and the DataGrid is displayed on the page. The test simulates user interaction by navigating between pages and verifies that the data changes correctly, confirming that the paging functionality works as expected. If everything is configured properly, the test execution completes successfully with a **Passed** status in the console, indicating that the components behave correctly.
+
+[Playwright test](./images/playwright-testcase.webp)
 
 N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
-This approach ensures reliable validation of [Blazor UI components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
+This approach ensures reliable validation of [Blazor components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
 
 ## See also
 
