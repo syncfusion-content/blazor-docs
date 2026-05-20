@@ -181,8 +181,9 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can render 
     }
 
 </style>
+
 {% endhighlight %}
-{% highlight c# tabtitle="AdaptiveDetails.cs" %}
+{% highlight cs tabtitle="AdaptiveDetails.cs" %}
 public class AdaptiveDetails
 {
 public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>();
@@ -442,7 +443,8 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports ve
 
 </style>
 {% endhighlight %}
-{% highlight c# tabtitle="AdaptiveDetails.cs" %}
+
+{% highlight cs tabtitle="AdaptiveDetails.cs" %}
 public class AdaptiveDetails
 {
     public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>();
@@ -511,9 +513,9 @@ The following features are supported in vertical row rendering:
 * Infinite scroll
 * Toolbar – Options such as **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and toolbar template are available when the corresponding features are enabled. The toolbar dynamically shows an overflow menu (three-dot icon) that contains additional actions such as **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, and **CsvExport** once these features are enabled. See the following animation.
 
-![ColumnMenu in vertical mode](images/vertical-column-menu.gif)
+![ColumnMenu in vertical mode](images/vertical-column-menu.webp)
 
-![Adaptive Grid with pager dropdown on small screens](images/pager-dropdown.gif)
+![Adaptive Grid with pager dropdown on small screens](images/pager-dropdown.webp)
 
 > The Column Menu feature (grouping, sorting, autofit, filter, and column chooser) is supported only when the Grid is in **Horizontal** [`RowRenderingMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode).
 
@@ -692,7 +694,7 @@ By default, the adaptive UI layout is rendered on both mobile devices and deskto
     }
 </style>
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
+{% highlight cs tabtitle="OrderData.cs" %}
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
