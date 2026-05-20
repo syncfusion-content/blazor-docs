@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Authentication using AWS Cognito | Syncfusion
+title: Blazor Authentication using AWS Cognito | Syncfusion
 description: Authenticate a Blazor Web App or Blazor Server App with AWS Cognito (OIDC Hosted UI) and secure Syncfusion components.
 platform: Blazor
 control: Common
@@ -15,7 +15,7 @@ This guide demonstrates how to integrate [AWS Cognito authentication](https://do
 
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later (examples in this guide target .NET 10)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-* [AWS Account with permission to manage Cognito](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html)
+* [AWS Account with permission to manage Cognito](https://docs.aws.amazon.com/accounts/latest/reference/getting-started.html)
 
 ## Create a Blazor project
 
