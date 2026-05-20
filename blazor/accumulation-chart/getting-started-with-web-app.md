@@ -89,12 +89,12 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
+Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet packages using one of the following methods.
 
 **Visual Studio (NuGet Package Manager)**:
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Charts` and `Syncfusion.Blazor.Themes`) and install it.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Charts`) and install it.
 
 **Visual Studio Code or .NET CLI**:
 
@@ -104,7 +104,6 @@ Open the terminal or command prompt and run the following commands:
 {% highlight C# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -169,7 +168,6 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-
 <SfAccumulationChart>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
