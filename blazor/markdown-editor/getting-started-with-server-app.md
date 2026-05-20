@@ -85,18 +85,69 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the following NuGet packages in your project:
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+* [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor)  
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+### Steps
+
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+### Steps
+
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
 Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+### Steps
+
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -150,170 +201,26 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor 
 N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @* desired render mode define here *@
 @rendermode InteractiveServer
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor EditorMode="EditorMode.Markdown" value="@MarkdownValue"></SfRichTextEditor>
 
 @code {
-    private string MarkdownValue { get; set; } = @"In Rich Text Editor, you click the toolbar buttons to format the words and 
-    the changes are visible immediately. In contrast, Markdown requires syntax to indicate formatting. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add your own custom formatting syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
+    private string MarkdownValue { get; set; } = @"Rich Text Editor formats text instantly using toolbar actions, whereas Markdown uses syntax to apply formatting. Markdown editing is supported when editorMode is set to **markdown**, allowing formatting via toolbar or keyboard. Custom Markdown syntax can also be added. This sample uses the <b>Marked</b> library to convert Markdown to HTML. [Sample link](https://ej2.syncfusion.com/home/).";
 
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd> + <kbd>F5</kbd> (Windows) or <kbd>⌘</kbd> + <kbd>F5</kbd> (macOS) in Visual Studio. Alternatively, run `dotnet run` using the .NET CLI or the integrated terminal in Visual Studio Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrIDqWvVJQriizU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Markdown Editor Component](./images/blazor-markdownteditor.png)" %}
-
-## Configure the Toolbar
-
-Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property as your application requires.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.RichTextEditor
-
-<SfRichTextEditor EditorMode="EditorMode.Markdown" value="@MarkdownValue">
-    <RichTextEditorToolbarSettings Items="@Tools" />
-</SfRichTextEditor>
-      
-@code {
-
-    private string MarkdownValue { get; set; } = @"In Rich Text Editor, you click the toolbar buttons to format the words and 
-    the changes are visible immediately. In contrast, Markdown requires syntax to indicate formatting. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add your own custom formatting syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
-
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.SuperScript },
-        new ToolbarItemModel() { Command = ToolbarCommand.SubScript },
-        new ToolbarItemModel() { Command = ToolbarCommand.Blockquote },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVotqWlVILIIHdX?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Markdown Editor with Toolbar](./images/blazor-markdownteditor-toolbar.png)" %}
-
-## Retrieve the formatted content
-
-To retrieve the contents of the Markdown editor, use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property of the Rich Text Editor.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.RichTextEditor
-@using Syncfusion.Blazor.Popups
-
-<SfButton @onclick="@GetValue">Get Value</SfButton>
-
-<br />
-<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px" Width="400px" ShowCloseIcon="true">
-    <DialogButtons>
-        <DialogButton Content="Ok" IsPrimary="true" OnClick="@DlgButtonClick" />
-    </DialogButtons>
-</SfDialog>
-
-<SfRichTextEditor @ref="RteObj" Value="@RteValue" EditorMode="EditorMode.Markdown"/>
-
-@code {
-    SfRichTextEditor RteObj;
-    SfDialog DialogObj;
-    private string Content;
-    private bool Visibility = false;
-    private string Header = "Markdown Editor Value";
-    private string RteValue = @" In Rich Text Editor, you click the toolbar buttons to format the words and 
-        the changes are visible immediately. In contrast, Markdown requires syntax to indicate formatting. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add your own custom formatting syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
-    private async Task GetValue()
-    {
-        this.Content = this.RteValue;
-        await this.DialogObj.ShowAsync();
-    }
-    private async Task DlgButtonClick(object arg)
-    {
-    await this.DialogObj.HideAsync();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Retrieve the number of characters
-
-To retrieve the maximum number of characters in the Markdown Editor's content, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method of the Rich Text Editor.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.RichTextEditor
-@using Syncfusion.Blazor.Popups
-
-<SfButton @onclick="@GetCharCount">Get Char Count</SfButton>
-
-<br />
-<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px"
-          Width="400px" ShowCloseIcon="true">
-    <DialogButtons>
-        <DialogButton Content="Ok" IsPrimary="true" OnClick="@DlgButtonClick" />
-    </DialogButtons>
-
-</SfDialog>
-<SfRichTextEditor @ref="RteObj" Value="@RteValue" EditorMode="EditorMode.Markdown"/>
-
-@code {
-    SfRichTextEditor RteObj;
-    SfDialog DialogObj;
-    private string Content;
-    private bool Visibility = false;
-    private string Header = "Rich Text Editor's Value";
-    private string RteValue = @"In Rich Text Editor, you click the toolbar buttons to format the words and 
-    the changes are visible immediately. In contrast, Markdown requires syntax to indicate formatting. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add your own custom formatting syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
-    private async Task GetCharCount()
-    {
-        double charCount = await this.RteObj.GetCharCountAsync();
-        this.Content = charCount.ToString(); // Convert double to string
-        await this.DialogObj.ShowAsync();
-    }
-    private async Task DlgButtonClick(object arg)
-    {
-        await this.DialogObj.HideAsync();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrIDqWvVJQriizU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Markdown Editor Component](./images/blazor-markdownteditor.webp)" %}
 
 ## See also
 
