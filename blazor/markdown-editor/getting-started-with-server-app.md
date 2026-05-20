@@ -99,7 +99,6 @@ You can install these packages using different methods as shown below:
 ### Steps
 
 1. In Visual Studio Navigate to:
-
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -211,7 +210,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 <SfRichTextEditor EditorMode="EditorMode.Markdown" value="@MarkdownValue"></SfRichTextEditor>
 
 @code {
-    private string MarkdownValue { get; set; } = @"Rich Text Editor formats text instantly using toolbar actions, whereas Markdown uses syntax to apply formatting. Markdown editing is supported when editorMode is set to **markdown**, allowing formatting via toolbar or keyboard. Custom Markdown syntax can also be added. This sample uses the <b>Marked</b> library to convert Markdown to HTML. [Sample link](https://ej2.syncfusion.com/home/).";
+    private string MarkdownValue { get; set; } = @"Rich Text Editor formats text instantly using toolbar actions, whereas Markdown uses syntax to apply formatting. Markdown editing is supported when editorMode is set to **markdown**, allowing formatting via toolbar or keyboard. Custom Markdown syntax can also be added. This sample uses the <b>Marked</b> library to convert Markdown to HTML. [Sample link](https://blazor.syncfusion.com/demos/markdown-editor/overview).";
 
 }
 
