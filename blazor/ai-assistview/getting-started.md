@@ -143,13 +143,9 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component
 
-<<<<<<< HEAD
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component in the **~/Pages/Index.razor** file. Use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to generate responses based on the entered prompts.
-=======
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI AssistView component in the **~/Pages/Index.razor** file.
 
-Use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to generate responses based on the entered prompts.
->>>>>>> 798378f559189b8c2973aa7c8f0af3167ecddfa3
+N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
