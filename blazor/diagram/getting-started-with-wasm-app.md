@@ -66,6 +66,8 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
+This command creates a new Blazor WebAssembly App and places it in a new directory called `BlazorApp` inside your current location.
+
 {% endtabcontent %}
 
 {% endtabcontents %}
