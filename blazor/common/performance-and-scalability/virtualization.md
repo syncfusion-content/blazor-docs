@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Improve Blazor Performance with Virtualization | Syncfusion
-description: Learn how Syncfusion Blazor components use row and column virtualization, Overscan, virtual placeholders, frozen columns, and infinite scrolling.
+description: Learn how Syncfusion Blazor components use row and column virtualization, overscan count, virtual placeholders, frozen columns, and infinite scrolling.
 platform: Blazor
 control: Common
 documentation: ug
