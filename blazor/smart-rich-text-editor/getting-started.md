@@ -250,19 +250,15 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 27 28 29 30 31 32 33" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="4 5 6 10 12 13 14 15 16 17 18" %}
 
-using Syncfusion.Blazor;
 using Syncfusion.Blazor.SmartRichTextEditor;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+....
 
 builder.Services.AddSyncfusionBlazor();
 
@@ -275,8 +271,7 @@ builder.Services.AddChatClient(openAIChatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 var app = builder.Build();
-
-// ... rest of configuration
+....
 
 {% endhighlight %}
 {% endtabs %}
@@ -346,9 +341,8 @@ dotnet add package Azure.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 17 18 19 20 21 22 23 24 25 26 27" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13 14 15 16 17 18 19 20 21" %}
 
-using Syncfusion.Blazor;
 using Syncfusion.Blazor.SmartRichTextEditor;
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
@@ -357,9 +351,7 @@ using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+....
 
 builder.Services.AddSyncfusionBlazor();
 
@@ -376,8 +368,7 @@ builder.Services.AddChatClient(azureOpenAIChatClient);
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 var app = builder.Build();
-
-// ... rest of configuration
+....
 
 {% endhighlight %}
 {% endtabs %}
