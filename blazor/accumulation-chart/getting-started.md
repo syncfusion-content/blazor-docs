@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Accumulation Chart | Syncfusion
+title: Getting Started with Blazor Accumulation Chart | Syncfusion
 description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor WebAssembly App.
 platform: Blazor
 control: Accumulation Chart
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Accumulation Chart Component
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -85,7 +85,7 @@ cd BlazorApp
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages into your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package into your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
 Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -93,7 +93,6 @@ Alternatively, run the following commands in the Package Manager Console to achi
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,30 +128,32 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script references in the **~/Components/App.razor** file.
 
 ```html
 
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
+<!-- SfAccumulationChart is the root container component for the accumulation chart -->
 <SfAccumulationChart>
+    <!-- Container for defining chart series -->
     <AccumulationChartSeriesCollection>
+        <!-- AccumulationChartSeries defines a data series with its data source and axis mappings -->
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
@@ -184,108 +185,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Cha
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accumulation Chart component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pie Chart](images/getting-started/blazor-pie-chart.webp)" %}
-
-## Add title
-
-Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property, a title to the accumulation chart is added to provide the user with quick information about the data plotted in the chart.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Olympic Medal Details">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-</SfAccumulationChart>
-@code{
-    public class ChartData
-    {
-        public string Country { get; set; }
-        public double Medals { get; set; }
-    }
-
-    public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { Country= "United States of America", Medals= 46 },
-        new ChartData { Country= "Great Britain", Medals= 27 },
-        new ChartData { Country= "China", Medals= 26 },
-        new ChartData { Country= "United Kingdom", Medals= 23 },
-        new ChartData { Country= "Australia", Medals= 16 },
-        new ChartData { Country= "India", Medals= 36 },
-        new ChartData { Country= "Nigeria", Medals= 12 },
-        new ChartData { Country= "Brazil", Medals= 20 },
-     };
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhpjMhShUPfYVwX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Title in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-with-title.webp)" %}
-
-## Add data label
-
-The data labels are added to improve the readability of the accumulation chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to `true` in the [AccumulationDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html).
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfAccumulationChart Title="Olympic Medal Details">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
-            <AccumulationDataLabelSettings Visible="true"/>
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-</SfAccumulationChart>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrJXWLorfzIwbIh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding Data Label in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-data-label.webp)" %}
-
-## Enable Tooltip
-
-When space constraints prevent from displaying the information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to `true`.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfAccumulationChart Title="Olympic Medal Details">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
-</SfAccumulationChart>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrJZMhyLfknWQpM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart displays Tooltip](images/getting-started/blazor-accumulation-chart-tooltip.webp)" %}
-
-## Enable Legend
-
-Legend is used for the accumulation chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to `true` in the [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-<SfAccumulationChart Title="Olympic Medal Details">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
-            <AccumulationDataLabelSettings Visible="true"></AccumulationDataLabelSettings>
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVzjCVSVyMUwbGm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart with Legend](images/getting-started/blazor-accumulation-chart-legend.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AccumulationChart).
 
