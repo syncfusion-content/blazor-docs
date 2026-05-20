@@ -99,7 +99,7 @@ Open the terminal or command prompt and run the following commands:
 {% tabs %}
 {% highlight C# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor. -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Calendars -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
