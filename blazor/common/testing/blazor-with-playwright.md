@@ -345,9 +345,9 @@ dotnet test
 
 This command builds and runs the test project. The **StartBlazorApp** method in `BlazorPlaywrightTests.cs` automatically starts the Blazor application before the tests execute.
 
-After running the tests, the Blazor application starts automatically, the browser opens and loads the app, and the DataGrid is displayed on the page. The test simulates user interaction by navigating between pages and verifies that the data changes correctly, confirming that the paging functionality works as expected. If everything is configured properly, the test execution completes successfully with a **Passed** status in the console, indicating that the components behave correctly.
+After running the tests, the Blazor application starts automatically, the browser opens and loads the app, and the DataGrid is displayed on the page. The test simulates user interaction by navigating between pages and verifies that the data changes correctly, confirming that the paging functionality works as expected. If everything is configured properly, the test execution completes successfully with a **Succeeded** status in the console, indicating that the components behave correctly.
 
-[Playwright test](./images/playwright-testcase.webp)
+![Playwright test](./images/playwright-testcase.webp)
 
 N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
