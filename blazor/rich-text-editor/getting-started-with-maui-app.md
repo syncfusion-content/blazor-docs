@@ -55,18 +55,66 @@ cd MauiBlazorApp
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the following NuGet packages in your project:
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+* [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor)  
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
 Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+### Steps
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
