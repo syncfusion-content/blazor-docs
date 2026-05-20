@@ -230,7 +230,6 @@ By following these principles, Blazor components enable developers to build appl
 ## See also
 
 * [Handling large datasets efficiently in Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
-* [Performance o
-ptimization for Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
+* [Performance optimization for Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
 * [Blazor rendering and performance optimization](https://blazor.syncfusion.com/documentation/common/performance-and-scalability/blazor-rendering-performance)
 
