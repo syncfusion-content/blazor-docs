@@ -1,23 +1,25 @@
 ---
 layout: post
-title: Working with components | Syncfusion
-description: Syncfusion Blazor Playground is a powerful online code editor for building and editing Blazor components easily.
+title: Working with Components in Blazor Playground | Syncfusion®
+description: Learn how to add and remove child components in Blazor Playground, a powerful online code editor for building and testing Blazor components in the browser.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Working with components in Blazor Playground
+# Working with Components in Blazor Playground
+
+The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to create and manage multiple [Blazor components](https://www.syncfusion.com/blazor-components) within a single project. You can add child components to your Blazor Playground project and remove them when they are no longer needed..
 
 ## Add a child component
 
-* Click the "+" button to add a new component.
-* Name the component in the input box.
-* Add code to the child component file (for example, a .razor file).
+1. Click the **+** button to add a new component.
+2. Name the component in the input box.
+3. Add code to the child component file (for example, `ChildComponent.razor`).
 
-For example, **ChildComponent.razor**:
+{% tabs %}
+{% highlight razor tabtitle="ChildComponent.razor" %}
 
-```cshtml
 <input @oninput="OnPasswordChanged"
        required
        type="@(_showPassword ? "text" : "password")"
@@ -43,10 +45,15 @@ For example, **ChildComponent.razor**:
         _showPassword = !_showPassword;
     }
 }
-```
-* The **__Index.razor** file is the main entry point in the Blazor Playground. To render the child component, reference it in **__Index.razor**.
 
-```cshtml
+{% endhighlight %}
+{% endtabs %}
+
+* The `_Index.razor` file is the main entry point in the Blazor Playground. To render the child component, reference it in `_Index.razor` file.
+
+{% tabs %}
+{% highlight razor tabtitle="_Index.razor" %}
+
 <h1>Parent Component</h1>
 
 <ChildComponent @bind-Password="_password" />
@@ -54,14 +61,22 @@ For example, **ChildComponent.razor**:
 @code {
     private string _password;
 }
-```
-* Press the Run button to execute the code and see the component rendered.
 
-![Syncfusion Blazor Playground with Child Component](images/child_component.webp)
+{% endhighlight %}
+{% endtabs %}
+
+* Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view."
+
+![Blazor Playground with Child Component](images/child_component.webp)
 
 ## Remove a child component
 
-Click the delete icon next to the child component in the Playground.
+Click the **cancel (✕)** icon next to the child component tab in the Playground.
 
-N> The Playground does not automatically remove references from `__Index.razor`. Manually update the file to reflect the deletion and prevent build errors.
+N> Blazor Playground does not automatically remove component references from `_Index.razor`. After deleting a child component, remove any corresponding `@using` directives and component tags from `_Index.razor` to prevent build errors.
 
+## See also
+
+* [Getting Started with Blazor Playground](./getting-started)
+* [Manage NuGet Packages in Blazor Playground](./managing-nuget-packages)
+* [Features and Capabilities of Blazor Playground](./end-user-capabilities)
