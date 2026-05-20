@@ -16,7 +16,7 @@ The following example creates a `CounterService` class, registers it in `Program
 1. Click the **+** button to add a new file and include the `CounterService` code.
 
 {% tabs %}
-{% highlight c# tabtitle="ConfigureServices.cs"  %}
+{% highlight c# tabtitle="CounterService.cs"  %}
 
 using System;
 using System.Text;
@@ -81,7 +81,7 @@ namespace Playground.User
 {% endhighlight %}
 {% endtabs %}
 
-3. Inject the service into `_Index.razor`.
+3. Inject the service into `_Index.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="_Index.razor" %}

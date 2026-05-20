@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Components in Blazor Playground
 
-The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to create and manage multiple [Blazor components](https://www.syncfusion.com/blazor-components) within a single project. You can add child components to your Blazor Playground project and remove them when they are no longer needed..
+The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to create and manage multiple [Blazor components](https://www.syncfusion.com/blazor-components) within a single project. You can add child components to your Blazor Playground project and remove them when they are no longer needed.
 
 ## Add a child component
 
@@ -65,7 +65,7 @@ The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to c
 {% endhighlight %}
 {% endtabs %}
 
-* Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view."
+* Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
 ![Blazor Playground with Child Component](images/child_component.webp)
 
