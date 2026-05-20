@@ -572,7 +572,6 @@ The Blazor DataGrid supports rendering a [RadioButton](https://blazor.syncfusion
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
-using System.Collections.Generic;
 public class OrderDetails
 {
     public static List<OrderDetails> Orders = new List<OrderDetails>();

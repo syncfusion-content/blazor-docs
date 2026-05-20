@@ -697,7 +697,7 @@ In the example below, the [DropDownList](https://blazor.syncfusion.com/documenta
     <GridColumns>
         <GridColumn Field="@nameof(EmployeeDetails.Id)" HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="90"></GridColumn>
         <GridColumn Field="@nameof(EmployeeDetails.CustomerID)" HeaderText="Employee Name" TextAlign="TextAlign.Center" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(EmployeeDetails.FeedbackDetails)" HeaderText="Employee Feedback" Type="ColumnType.Number" Width="120">
+        <GridColumn Field="@nameof(EmployeeDetails.FeedbackDetails)" HeaderText="Employee Feedback" Type="ColumnType.Integer" Width="120">
             <EditTemplate>
                 @{
                     var Order = (context as EmployeeDetails);
@@ -974,7 +974,7 @@ By default, the Grid renders a `DropDownList` as the editor for foreign key colu
                         titles[random.Next(titles.Length)],
                         countries[random.Next(countries.Length)],
                         cities[random.Next(cities.Length)],
-                        DateTime.Now.AddDays(-random.Next(1000, 5000)),
+                        DateTime.Now.AddDays(-random.Next(1000, 5000))
                     ));
                 }
             }

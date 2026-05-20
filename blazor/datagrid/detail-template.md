@@ -111,11 +111,10 @@ To integrate the detail template in the grid:
 }
 {% endhighlight %}
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class EmployeeData
 {
-public static List<EmployeeData> Employees = new List<EmployeeData>();
+        public static List<EmployeeData> Employees = new List<EmployeeData>();
 
         public EmployeeData() { }
 
@@ -164,7 +163,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? Country { get; set; }
         public string? City { get; set; } // New City property
         public DateTime HireDate { get; set; }
-    }
 }
 
 {% endhighlight %}
@@ -711,11 +709,10 @@ By default, detail rows are collapsed. Expand all detail rows programmatically b
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class OrderData
 {
-public static List<OrderData> Orders = new List<OrderData>();
+        public static List<OrderData> Orders = new List<OrderData>();
 
         public OrderData() { }
 
@@ -760,17 +757,15 @@ public static List<OrderData> Orders = new List<OrderData>();
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; }
-    }
 
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class EmployeeData
 {
-public static List<EmployeeData> Employees = new List<EmployeeData>();
+        public static List<EmployeeData> Employees = new List<EmployeeData>();
 
         public EmployeeData() { }
 
@@ -819,7 +814,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? Country { get; set; }
         public string? City { get; set; }
         public DateTime HireDate { get; set; }
-    }
 
 }
 
@@ -1147,11 +1141,10 @@ Here is an example that customizes the expand/collapse icons:
 }
 {% endhighlight %}
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class EmployeeData
 {
-public static List<EmployeeData> Employees = new List<EmployeeData>();
+        public static List<EmployeeData> Employees = new List<EmployeeData>();
 
         public EmployeeData() { }
 
@@ -1200,9 +1193,8 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? Country { get; set; }
         public string? City { get; set; } // New City property
         public DateTime HireDate { get; set; }
-    }
-}
 
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1301,7 +1293,7 @@ In the following sample, the instance of a specific child grid is retrieved usin
 
 public class OrderData
 {
-public static List<OrderData> Orders = new List<OrderData>();
+        public static List<OrderData> Orders = new List<OrderData>();
 
         public OrderData() { }
 
@@ -1346,8 +1338,6 @@ public static List<OrderData> Orders = new List<OrderData>();
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; }
-    }
-
 }
 
 {% endhighlight %}
@@ -1355,7 +1345,7 @@ public static List<OrderData> Orders = new List<OrderData>();
 
 public class EmployeeData
 {
-public static List<EmployeeData> Employees = new List<EmployeeData>();
+        public static List<EmployeeData> Employees = new List<EmployeeData>();
 
         public EmployeeData() { }
 
@@ -1404,7 +1394,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? Country { get; set; }
         public string? City { get; set; } // New City property
         public DateTime HireDate { get; set; }
-    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1468,6 +1458,7 @@ Use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
         visibility: hidden;
     }
 </style>
+
 @code {
     public List<EmployeeData> Employees { get; set; }
     public List<OrderData> Orders { get; set; }

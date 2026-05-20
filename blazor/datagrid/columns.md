@@ -457,10 +457,9 @@ public class OrderData
     {
 
     }
-    public OrderData(int? OrderID, string CustomerID, double Freight,DateTime? OrderDate)
+    public OrderData(int? OrderID, double Freight,DateTime? OrderDate)
     {
         this.OrderID = OrderID;
-        this.CustomerID = CustomerID;   
         this.Freight = Freight;  
         this.OrderDate = OrderDate;           
     }
@@ -472,15 +471,15 @@ public class OrderData
             int code = 10;
             for (int i = 1; i < 2; i++)
             {
-                Orders.Add(new OrderData(10248, 32.38,new DateTime(1996,7,4)));
+                Orders.Add(new OrderData(10248, 32.38, new DateTime(1996,7,4)));
                 Orders.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5)));
                 Orders.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 6)));
                 Orders.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 7)));
                 Orders.Add(new OrderData(10252, 51.30, new DateTime(1996, 7, 8)));
                 Orders.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 9)));
                 Orders.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 10)));
-                Orders.Add(new OrderData(10255, 148.33,"", new DateTime(1996, 7, 11)));
-                Orders.Add(new OrderData(10256, 13.97,"", new DateTime(1996, 7, 12)));
+                Orders.Add(new OrderData(10255, 148.33,new DateTime(1996, 7, 11)));
+                Orders.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 12)));
                 code += 5;
             }
         }
@@ -528,7 +527,7 @@ Once localization is enabled, apply a custom date format using the `Format` prop
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/counter"
+@page "/"
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -552,8 +551,7 @@ Once localization is enabled, apply a custom date format using the `Format` prop
 
 {% endhighlight %}
 {% highlight cs tabtitle="OrderData.cs" %}
-namespace LocalizationSample.Client
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -602,7 +600,6 @@ namespace LocalizationSample.Client
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}

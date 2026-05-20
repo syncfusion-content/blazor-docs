@@ -376,6 +376,15 @@ The Blazor DataGrid can be populated with data fetched on demand from a remote e
     public string StatusStyle { get; set; } = "color:black;";
     public List<OrdersDetails> Orders { get; set; } = new();
 
+    public class OrdersDetails
+    {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public string EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCountry { get; set; }
+    }
+
     private async Task ExecuteQuery()
     {
         try
