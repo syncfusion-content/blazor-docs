@@ -25,7 +25,7 @@ Client side processing means loading the entire dataset into the browser and per
  
 ### Server side data processing
 
-Server side processing shifts the workload to the server instead of the browser. Rather than sending all the data at once, the client requests only the necessary portion as needed. For example, when a user applies filtering or changes a page, the request is sent to the server, which processes it and returns only the relevant data. This approach is ideal for large or growing datasets, particularly when data comes from a database or external service and performance, scalability, and reliability are required.
+Server side processing transfers the workload from the browser to the server. Instead of sending all the data at once, the client requests only the required portion when needed. For instance, when a user applies a filter or navigates between pages, a request is sent to the server, which processes it and returns only the relevant data. This method is well-suited for handling large or continuously growing datasets, especially when the data is sourced from databases or external services, as it improves performance, scalability, and reliability.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
