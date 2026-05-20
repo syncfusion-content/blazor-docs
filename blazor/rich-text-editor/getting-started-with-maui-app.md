@@ -65,6 +65,12 @@ Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
+{% highlight C# tabtitle="Visual Studio Code / .NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
 {% endtabs %}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.

@@ -29,8 +29,13 @@ To add `Blazor RichTextEditor` component in the app, open the NuGet package mana
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% highlight C# tabtitle="Visual Studio Code / .NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -103,6 +108,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor c
 {% endhighlight %}
 {% endtabs %}
 
-* To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
 
 ![Blazor RichTextEditor Component](../images/blazor-richtexteditor-component.png)
