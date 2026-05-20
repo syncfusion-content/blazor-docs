@@ -74,8 +74,9 @@ cd BlazorWebApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location. 
-N> See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create), [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) and [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode) topics for more details.
+This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location.
+
+N> See the [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) and [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode) topics for more details.
 
 {% endtabcontent %}
 
