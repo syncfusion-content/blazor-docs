@@ -200,15 +200,7 @@ If your create application uses `Per page/component` interactivity, add this at 
     ```
 3. The application will start and display in your default web browser.
 
-## Basic Blazor Diagram Elements
-
-* Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
-* Connector: Represents the relationship between two nodes. Three types of connectors provided as follows:
- 1) Orthogonal
- 2) Bezier
- 3) Straight
-* Port: Acts as the connection points of node or connector and allow creating connections only at specific points.
-* Annotation: Additional information can be shown by adding text or labels on nodes and connectors.
+## Create your first Diagram with nodes and connectors
 
 This section explains how to create a simple flowchart by adding nodes, customizing their appearance, and connecting them using connectors.
 
