@@ -157,12 +157,9 @@ Add the Syncfusion® Blazor TreeGrid component in the **~/Pages/*.razor** file. 
 
 | Render Mode              | When to Use | Declaration |
 |--------------------------|----------------------------------------------------------------|-------------------------------------|
-| InteractiveServer        | Used when Server interactivity is selected in project setup    | `@rendermode InteractiveServer`     |
-| InteractiveWebAssembly   | Used when WebAssembly interactivity is chosen                  | `@rendermode InteractiveWebAssembly`|
-| InteractiveAuto          | Used when Auto (hybrid) interactivity is selected              | `@rendermode InteractiveAuto`       |
-
-
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+| InteractiveServer        | Used when Server interactivity is selected in project setup.    | `@rendermode InteractiveServer`     |
+| InteractiveWebAssembly   | Used when WebAssembly interactivity is selected in project setup.                  | `@rendermode InteractiveWebAssembly`|
+| InteractiveAuto          | Used when Auto (hybrid) interactivity is selected in project setup .             | `@rendermode InteractiveAuto`       |
 
 {% tabs %}
 {% highlight razor %}
@@ -172,6 +169,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -216,7 +215,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* **Visual Studio / VS Code** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
+### Run the application
+
+* **Visual Studio** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the **application**. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
  
 * **VS Code / CLI** → Run dotnet run (or dotnet watch run) in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
 
