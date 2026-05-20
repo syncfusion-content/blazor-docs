@@ -46,7 +46,12 @@ cd BlazorWebApp
 {% endhighlight %}
 {% endtabs %}
 
-N> If you're using WebAssembly or Auto render modes, you can optionally navigate to the client project directory (`cd BlazorWebApp.Client`) to manage client-specific dependencies. However, to run the application, navigate back to the root project directory (`cd ..`) and execute `dotnet run` from the root `BlazorWebApp` directory.
+N> If the application is configured with WebAssembly or Auto render modes, you may optionally navigate to the client project directory to manage client-specific dependencies. Once the required changes are completed, ensure that you navigate back to the root project directory.
+
+```
+cd BlazorWebApp.Client
+cd ..
+```
 
 {% endtabcontent %}
 
@@ -79,7 +84,12 @@ cd BlazorWebApp
 {% endhighlight %}
 {% endtabs %}
 
-N> If you're using WebAssembly or Auto render modes, you can optionally navigate to the client project directory (`cd BlazorWebApp.Client`) to manage client-specific dependencies. However, to run the application, navigate back to the root project directory (`cd ..`) and execute `dotnet run` from the root `BlazorWebApp` directory.
+N> If the application is configured with WebAssembly or Auto render modes, you may optionally navigate to the client project directory to manage client-specific dependencies. Once the required changes are completed, ensure that you navigate back to the root project directory.
+
+```
+cd BlazorWebApp.Client
+cd ..
+```
 
 {% endtabcontent %}
 

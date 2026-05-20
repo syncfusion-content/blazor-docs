@@ -48,7 +48,12 @@ cd BlazorWebApp
 {% endhighlight %}
 {% endtabs %}
 
-N> If you're using WebAssembly or Auto render modes, you can optionally navigate to the client project directory (`cd BlazorWebApp.Client`) to manage client-specific dependencies. However, to run the application, navigate back to the root project directory (`cd ..`) and execute `dotnet run` from the root `BlazorWebApp` directory.
+N> If the application is configured with WebAssembly or Auto render modes, you may optionally navigate to the client project directory to manage client-specific dependencies. Once the required changes are completed, ensure that you navigate back to the root project directory.
+
+```
+cd BlazorWebApp.Client
+cd ..
+```
 
 {% endtabcontent %}
 
@@ -84,7 +89,13 @@ cd BlazorApp
 
 This command creates a new Blazor Web App and places it in a new directory called `BlazorApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=linux-macos&view=aspnetcore-8.0) topics for more details.
 
-N> If you're using WebAssembly or Auto render modes, you can optionally navigate to the client project directory (`cd BlazorApp.Client`) to manage client-specific dependencies. However, to run the application, navigate back to the root project directory (`cd ..`) and execute `dotnet run` from the root `BlazorApp` directory.
+N> If the application is configured with WebAssembly or Auto render modes, you may optionally navigate to the client project directory to manage client-specific dependencies. Once the required changes are completed, ensure that you navigate back to the root project directory.
+
+```
+cd BlazorWebApp.Client
+cd ..
+```
+
 {% endtabcontent %}
 
 {% endtabcontents %}
