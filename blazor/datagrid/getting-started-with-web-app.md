@@ -160,7 +160,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Syncfusion Blazor DataGrid component inside the razor file.
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor DataGrid component inside the razor file.
 * If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.

@@ -158,9 +158,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ContextMenu component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Context Menu component
 
-* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Syncfusion Blazor ContextMenu component inside the razor file.
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Syncfusion Blazor Context Menu component inside the razor file.
 * If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
@@ -199,7 +199,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 **Visual Studio**:
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ContextMenu component will render in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Context Menu component will render in your default web browser.
 
 **Visual Studio Code or .NET CLI**:
 
