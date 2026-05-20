@@ -215,18 +215,17 @@ Use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inter
 </div>
 
 @code {
-    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
-    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
-
-    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
-    {
-        new ChatMessage() { Text = "Want to get coffee tomorrow?", Author = CurrentUserModel },
-        new ChatMessage() { Text = "Sure! What time?", Author = MichaleUserModel },
-        new ChatMessage() { Text = "How about 10 AM?", Author = CurrentUserModel }
-    };
+private static UserModel CurrentUserModel = new UserModel()
+{
+ID = "User1",
+User = "Albert"
+};
 }
 
 {% endhighlight %}
 {% endtabs %}
- 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLfWBixUbETBpmk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chat UI default prompt](./images/default-messages.webp)" %}
+
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor Chat UI component in the default web browser.
+
+{% previewsample "(https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.webp)" %}
+
