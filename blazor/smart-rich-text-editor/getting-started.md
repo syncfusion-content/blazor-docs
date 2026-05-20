@@ -439,5 +439,5 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor in Blazor Web App](getting-started-webapp.md)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
 * [RichTextEditor Documentation](https://blazor.syncfusion.com/documentation/rich-text-editor)
