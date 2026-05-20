@@ -30,7 +30,7 @@ Before installing Blazor UI Builder, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Converts prompts into complete Blazor components—not just snippets
+- Converts prompts into complete Blazor components-not just snippets
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
@@ -106,19 +106,19 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 ## How the Syncfusion® Blazor UI Builder Skill Works
 
-1. **Intent Analysis** — Parse the user's prompt to identify component types and high-level layout intent.
-2. **Project Detection** — Automatically detects project framework, package manager, and existing themes.
-3. **Component Mapping** — Map intent to Syncfusion® components and required feature modules.
+1. **Intent Analysis** - Parse the user's prompt to identify component types and high-level layout intent.
+2. **Project Detection** - Automatically detects project framework, package manager, and existing themes.
+3. **Component Mapping** - Map intent to Syncfusion® components and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option—proceed with this or change the theme as preferred.
+   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option-proceed with this or change the theme as preferred.
    - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
    - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation** — Produce C# Blazor components, parameter interfaces, and CSS/styling scaffolding.
-6. **Dependency Management** — Recommend or install required Syncfusion® packages and peer dependencies.
-7. **Validation** — Run accessibility and basic security checks, request confirmation for changes.
-8. **Code Insertion** — Create files or patch existing files following project structure and conventions.
+5. **Code Generation** - Produce C# Blazor components, parameter interfaces, and CSS/styling scaffolding.
+6. **Dependency Management** - Recommend or install required Syncfusion® packages and peer dependencies.
+7. **Validation** - Run accessibility and basic security checks, request confirmation for changes.
+8. **Code Insertion** - Create files or patch existing files following project structure and conventions.
 
 Key enforcement points:
 
@@ -152,7 +152,7 @@ Examples Prompts:
 Create a login page with the Tailwind 3 theme using a centered card layout containing email and password input fields with validation. Include a "Remember Me" checkbox, a forgot password link, and a primary login button. Add a secondary "Create Account" button below. Ensure the layout is responsive and works on mobile, tablet, and desktop.
 {% endpromptcard %}
 {% promptcard Admin Dashboard %}
-Create a CMS Admin Dashboard UI featuring a collapsible sidebar with navigation items for Dashboard, Content, Users, Analytics, and Settings; a top header (AppBar) showing the title “CMS Admin Dashboard” on the left and a user name with profile icon on the right; and a main content area that includes three compact summary cards in a single row displaying Total Content, Total Users, and Active Sessions (each card showing a label, relevant icon, prominent count value, and percentage change from last month), followed by a “Content Management” section with a filterable and data grid containing columns for Title, Author, Status, Date, and Actions (with edit and delete buttons), and finally two charts displayed side by side—a bar chart titled “Content Over Time” and a donut chart titled “Content by Category”—using realistic sample data for both the grid (10–12 rows) and the charts.
+Create a CMS Admin Dashboard UI featuring a collapsible sidebar with navigation items for Dashboard, Content, Users, Analytics, and Settings; a top header (AppBar) showing the title “CMS Admin Dashboard” on the left and a user name with profile icon on the right; and a main content area that includes three compact summary cards in a single row displaying Total Content, Total Users, and Active Sessions (each card showing a label, relevant icon, prominent count value, and percentage change from last month), followed by a “Content Management” section with a filterable and data grid containing columns for Title, Author, Status, Date, and Actions (with edit and delete buttons), and finally two charts displayed side by side-a bar chart titled “Content Over Time” and a donut chart titled “Content by Category”-using realistic sample data for both the grid (10–12 rows) and the charts.
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -162,9 +162,9 @@ Generated code follows best practices with accessible, semantic HTML, responsive
 
 Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
 
-- **Stay consistent** — Maintain consistent file organization, naming conventions, and coding standards throughout your project.
-- **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
-- **Review all content and assets before production** — Replace any placeholder images or icons (e.g., from emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
+- **Stay consistent** - Maintain consistent file organization, naming conventions, and coding standards throughout your project.
+- **Use advanced AI models** - For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
+- **Review all content and assets before production** - Replace any placeholder images or icons (e.g., from emoji sets) with your brand assets. Also validate the logic, security, and compatibility with your existing code before deployment.
 
 ## Troubleshooting
 
@@ -186,7 +186,7 @@ Any Skills-compatible agent that reads local skill files (Code Studio, VS Code, 
 Yes. Supported agents automatically load relevant skills based on your query.
 
 **Can I customize the generated styles?**
-Yes — the skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
+Yes - the skill supports choosing Tailwind, Bootstrap, Material, or a custom theme; generated components include clear integration points for style adjustments.
 
 **Does it modify files automatically?**
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
