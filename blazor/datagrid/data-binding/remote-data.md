@@ -9,7 +9,7 @@ documentation: ug
 
 # Remote Data in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports remote data binding for seamless interaction with external services such as **OData**, **Web API**, **RESTful endpoints**, or **GraphQL**. Remote data binding is configured using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) by specifying the service endpoint and adaptor type.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports remote data binding for seamless interaction with external services such as **OData**, **Web API**, **RESTful endpoints**, or **GraphQL**. Remote data binding is configured using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) by specifying the service endpoint and adaptor type.
 
 To configure remote data binding:
 
@@ -51,7 +51,7 @@ To configure remote data binding:
 
 ## Binding with OData services
 
-[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for **OData v3** and **v4** services using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+[OData](https://www.odata.org/documentation/) (Open Data Protocol) is a standardized protocol that simplifies data sharing across different systems by enabling querying and updating data through RESTful APIs. The Blazor DataGrid provides built-in support for **OData v3** and **v4** services using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 The `DataManager` communicates with the remote OData service using either [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) or [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor), depending on the protocol version.
 
@@ -92,7 +92,7 @@ The `DataManager` communicates with the remote OData service using either [OData
 
 ## Enable SfDataManager after initial rendering
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can defer remote loading by rendering the grid with an empty data source initially and adding [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) only after a condition is met. When `SfDataManager` is rendered, the grid automatically requests data from the configured remote endpoint using the specified adaptor.
+The Blazor DataGrid can defer remote loading by rendering the grid with an empty data source initially and adding [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) only after a condition is met. When `SfDataManager` is rendered, the grid automatically requests data from the configured remote endpoint using the specified adaptor.
 
 To implement this behavior:
 
@@ -239,7 +239,7 @@ To achieve this, configure the [Headers](https://help.syncfusion.com/cr/blazor/S
 
 ## Dynamically change query parameter values
 
-The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dynamic modification of data requests sent to remote services. This property can be updated at runtime to filter, sort, or customize the data retrieved from the server. Changing the query dynamically is useful for scenarios where data needs to be refreshed based on application events.
+The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property of the Blazor DataGrid allows dynamic modification of data requests sent to remote services. This property can be updated at runtime to filter, sort, or customize the data retrieved from the server. Changing the query dynamically is useful for scenarios where data needs to be refreshed based on application events.
 
 The example demonstrates modifying the query parameter dynamically. Initially, the grid displays orders where **CustomerID** equals **VINET**. When the **Modify Query Data** button is clicked, the grid updates to show orders where **CustomerID** equals **HANAR**.
 
@@ -344,7 +344,7 @@ A complete sample is available on [Github](https://github.com/SyncfusionExamples
 
 ## Fetch result from the DataManager query using external button
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be populated with data fetched on demand from a remote endpoint. An external button can trigger an HTTP request and assign the returned collection to the grid’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This approach provides control over when data is loaded and is suitable for scenarios where data retrieval should be deferred until a specific event occurs.
+The Blazor DataGrid can be populated with data fetched on demand from a remote endpoint. An external button can trigger an HTTP request and assign the returned collection to the grid’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This approach provides control over when data is loaded and is suitable for scenarios where data retrieval should be deferred until a specific event occurs.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -375,6 +375,15 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be popu
     public string StatusMessage { get; set; } = "";
     public string StatusStyle { get; set; } = "color:black;";
     public List<OrdersDetails> Orders { get; set; } = new();
+
+    public class OrdersDetails
+    {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public string EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCountry { get; set; }
+    }
 
     private async Task ExecuteQuery()
     {

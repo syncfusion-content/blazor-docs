@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DataGrid
 
-This section explains you through the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section explains you through the step-by-step process of integrating the [[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -118,37 +118,61 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application. Refer to the [Style and Appearance](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance) topic for customizing the DataGrid appearance and styling options.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
+## Add Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Pages/Home.razor** file.
+Add the Blazor DataGrid component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" />
+<SfGrid DataSource="@OrderData">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
-@code{
-    public List<Order> Orders { get; set; }
-
+@code {
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order()
-        {
-            OrderID = 0 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-        }).ToList();
+        OrderData = OrderDetails.GetAllRecords();
     }
-
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
     }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
 }
 
 {% endhighlight %}
@@ -168,176 +192,18 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor DataGrid Component](images/blazor-datagrid-component.webp)
-
-## Defining row data
-
-To bind data for the Grid, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the **DataManager**. You can assign the data source through the `OnInitialized` life cycle of the page.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" />
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-
-## Defining columns
-
-The columns are automatically generated when columns declaration is empty or undefined while initializing the Grid.
-
-The Grid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). To customize column properties, use [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html).
-
-Let’s check the properties used here:
-* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) is added to map with a property name in IEnumerable object.
-* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) is added to change the title of columns.
-* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) is used to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, define [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) as **Right**.
-* Also, you have used another useful property, [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). Using this, you can format number and date values to standard or custom formats.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Enable paging
-
-The paging feature enables users to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings).
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowPaging="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Enable sorting
-
-The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property as true. Sorting feature can be customized using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings).
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Enable filtering
-
-The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property as true. Filtering feature can be customized using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Enable grouping
-
-The grouping feature enables you to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as true. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
-</SfGrid>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBfDWBkLabNleSQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid](images/blazor-datagrid-render.webp)" %}
+![Blazor DataGrid Component](images/blazor-datagrid-maui-page.webp)
 
 ## Handling exceptions
 
-Exceptions occurred during Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
+Exceptions occurred during Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
 * **TValue** - Specifies the row data type of the grid (for example, Order). It enables strong typing for templates and event args and ensures proper binding/formatting.
-* **GridEvents** - When you use GridEvents, set the same TValue on both SfGrid and GridEvents so the event argument types (like FailureEventArgs, RowSelectEventArgs<TValue>) are correctly bound.
+* **GridEvents** - Use the same TValue on both SfGrid and GridEvents when working with GridEvents. This ensures that event argument types such as FailureEventArgs and RowSelectEventArgs&lt;TValue&gt; are correctly bound.
 
 The argument passed to the `OnActionFailure` event contains the error details returned from the server.
 
-N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
-
-The following sample code demonstrates notifying user when server-side exception has occurred during data operation:
+N> Binding the `OnActionFailure` event during application development helps in identifying exceptions effectively. Exception details can be shared with the support team to obtain solutions at the earliest stage.
 
 {% tabs %}
 {% highlight razor %}
@@ -386,8 +252,8 @@ The following sample code demonstrates notifying user when server-side exception
 
 ## See also
 
-* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting started with Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid in WebAssembly using Visual Studio](./how-to/blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with Blazor DataGrid in WebAssembly using Visual Studio](./how-to/blazor-webassembly-datagrid-using-visual-studio)

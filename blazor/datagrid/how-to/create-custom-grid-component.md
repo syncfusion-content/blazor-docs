@@ -113,3 +113,5 @@ namespace SF_Grid_Inheritance.Shared
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Looking for a complete Blazor DataGrid Component overview, including features, pricing, and documentation? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.

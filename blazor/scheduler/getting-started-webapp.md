@@ -13,7 +13,7 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-To get start quickly with Blazor Web App Scheduler, you can check on this video:
+To get started quickly with a Blazor Web App Scheduler, watch the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PwjvHHMtL3U"%}
@@ -22,11 +22,11 @@ To get start quickly with Blazor Web App Scheduler, you can check on this video:
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
+### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Web App in Visual Studio
+### Create a new Blazor Web App in Visual Studio
 
 Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
@@ -34,11 +34,11 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
+### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Web App in Visual Studio Code
+### Create a new Blazor Web App in Visual Studio Code
 
 Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
@@ -58,7 +58,7 @@ cd BlazorWebApp.Client
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
+### Prerequisites
 
 Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
@@ -70,7 +70,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor Web App using .NET CLI
+### Create a Blazor Web App using .NET CLI
 
 Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
 
@@ -94,15 +94,22 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+**Visual Studio (NuGet Package Manager)**:
+
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Schedule` and `Syncfusion.Blazor.Themes`) and install it.
+
+**Visual Studio Code or .NET CLI**:
+
+Open the terminal or command prompt and run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.Schedule -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -158,21 +165,15 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component
 
-Add the Syncfusion Blazor Scheduler component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor Scheduler component inside the razor file.
+* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
+N> If the **Interactivity Location** is set to `Global` with `Server`, `Auto`, or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@rendermode InteractiveAuto
 
 @using Syncfusion.Blazor.Schedule
 
@@ -204,9 +205,23 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in the default web browser.
+### Run the application
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVpjWADUUybFgTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
+2. Run the following command:
+
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBxNoMlgmFOllmR?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Scheduler).
 
@@ -297,7 +312,11 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 ## Setting view
 
-The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property. The applicable view names are,
+The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property. 
+
+### Available Views
+
+The Scheduler supports the following built-in views:
 
 * Day
 * Week
@@ -311,6 +330,8 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 * TimelineMonth
 * TimelineYear
 * Year
+
+You can configure only the required views as needed, and include additional views based on your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -328,42 +349,6 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 </SfSchedule>
 @code{
     View CurrentView = View.Month;
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Individual view customization
-
-Each individual Scheduler views can be customized with its own options such as setting different start and end hour on Week and Work Week views, whereas hiding the weekend days on Month view alone which can be achieved by defining the `ScheduleView`.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleViews>
-        <ScheduleView Option="View.Week" StartHour="07:00" EndHour="15:00"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek" StartHour="10:00" EndHour="18:00"></ScheduleView>
-        <ScheduleView Option="View.Month" MaxEventsPerRow="2" ShowWeekend="false"></ScheduleView>
-    </ScheduleViews>
-</SfSchedule>
-@code{
-    DateTime CurrentDate = new DateTime(2020, 2, 13);
     public class AppointmentData
     {
         public int Id { get; set; }
