@@ -17,11 +17,11 @@ This section briefly explains about how to include [Syncfusion<sup style="font-s
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
+### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio
+### Create a new Blazor App in Visual Studio
 
 Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
@@ -29,11 +29,11 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
+### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio Code
+### Create a new Blazor App in Visual Studio Code
 
 Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code) documentation.
 
@@ -54,7 +54,7 @@ cd BlazorApp
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
+### Prerequisites
 
 Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
 
@@ -66,7 +66,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Blazor WebAssembly App using .NET CLI
+### Create a Blazor WebAssembly App using .NET CLI
 
 Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
 
@@ -145,12 +145,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Schedule
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSchedule TValue=AppointmentData>
     <ScheduleViews>
@@ -182,7 +180,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler compon
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVpjWADUUybFgTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthHjyMbgFhiIMjE?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Scheduler).
 
@@ -191,9 +189,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 To populate the Scheduler with appointments, bind the event data to it by assigning the `DataSource` property under [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1__ctor).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Schedule
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
@@ -238,9 +234,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the two-way binding for [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Schedule
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
@@ -273,7 +267,11 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 ## Setting view
 
-The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property. The applicable view names are,
+The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property.
+
+### Available Views
+
+The Scheduler supports the following built-in views:
 
 * Day
 * Week
@@ -288,10 +286,10 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 * TimelineYear
 * Year
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+You can configure only the required views as needed, and include additional views based on your application requirements.
 
-@using Syncfusion.Blazor.Schedule
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView">
     <ScheduleViews>
@@ -304,42 +302,6 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 </SfSchedule>
 @code{
     View CurrentView = View.Month;
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Individual view customization
-
-Each individual Scheduler views can be customized with its own options such as setting different start and end hour on Week and Work Week views, whereas hiding the weekend days on Month view alone which can be achieved by defining the `ScheduleView`.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleViews>
-        <ScheduleView Option="View.Week" StartHour="07:00" EndHour="15:00"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek" StartHour="10:00" EndHour="18:00"></ScheduleView>
-        <ScheduleView Option="View.Month" MaxEventsPerRow="2" ShowWeekend="false"></ScheduleView>
-    </ScheduleViews>
-</SfSchedule>
-@code{
-    DateTime CurrentDate = new DateTime(2020, 2, 13);
     public class AppointmentData
     {
         public int Id { get; set; }
