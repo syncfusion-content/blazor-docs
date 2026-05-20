@@ -428,7 +428,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
     <AssistViewSettings Placeholder="Start typing or use AI assistance to enhance your content..." />
 </SfSmartRichTextEditor>
 
-
 {% endhighlight %}
 {% endtabs %}
 
