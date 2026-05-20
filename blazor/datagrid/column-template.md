@@ -572,7 +572,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports re
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
-using System.Collections.Generic;
 public class OrderDetails
 {
     public static List<OrderDetails> Orders = new List<OrderDetails>();
