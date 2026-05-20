@@ -9,9 +9,7 @@ documentation: ug
 
 # Common Pitfalls and Solutions in Blazor Applications
 
-This guide covers common issues encountered when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. It explains the cause of each issue, the impact it can have, and the recommended way to resolve it in real-world projects.
-
-## Overview
+This guide covers common issues encountered when building Blazor applications with **[Syncfusion Blazor components](https://www.syncfusion.com/blazor-components)**. It explains the cause of each issue, the impact it can have, and the recommended way to resolve it in real-world projects.
 
 Blazor development involves choosing the right rendering model, managing dependencies, configuring interactivity, and integrating Blazor component libraries. Common issues often relate to:
 
@@ -23,9 +21,7 @@ Blazor development involves choosing the right rendering model, managing depende
 * Performance optimization
 * Security and deployment
 
-The following sections highlight common pitfalls and recommended best practices when developing Blazor applications with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
-
-N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blazor components version 33.2.3 or later. Some details may differ in earlier versions.
+N> This guide is intended for Syncfusion® Blazor components version 33.2.3 or later, targeting .NET 8, .NET 9, or .NET 10. Some details may differ in earlier versions or older .NET releases.
 
 ## Setup and Initialization Pitfalls
 
@@ -37,14 +33,14 @@ N> This guide is intended for Syncfusion<sup style="font-size:70%">®</sup> Blaz
 
 **Impact**: Components are functional but visually broken, creating a poor user experience and potentially affecting usability.
 
-**Solution**: Ensure the Syncfusion theme stylesheet is correctly referenced in `~/Components/App.razor` within the `<head>` section.
+**Solution**: Ensure the Syncfusion Blazor theme stylesheet is correctly referenced in `~/Components/App.razor` within the `<head>` section.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
 <head>
     ...
-    <!-- Syncfusion theme stylesheet - must be included before custom styles -->
+    <!-- Syncfusion Blazor theme stylesheet - must be included before custom styles -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
@@ -86,7 +82,7 @@ N> If you switch themes during development, clear your browser cache (Ctrl+F5 or
 Add the render mode directive at the top of your `.razor` page.
 
 {% tabs %}
-{% highlight razor tabtitle="Counter.razor"  hl_lines="2" %}
+{% highlight razor tabtitle="Counter.razor" hl_lines="2" %}
 
 @page "/counter"
 @rendermode InteractiveServer
@@ -119,14 +115,12 @@ Add the render mode directive at the top of your `.razor` page.
 | `@rendermode InteractiveWebAssembly` | Client-side execution (WebAssembly) | Blazor Web App (WebAssembly) |
 | `@rendermode InteractiveAuto` | Prefer WebAssembly and fall back to server | Blazor Web App (progressive enhancement) |
 
-N> Blazor Server applications (.NET 6/7) are interactive by default and do not require explicit render mode directives.
-
 **For Global Interactivity configuration:**
 
 In `~/Program.cs`, configure global render mode.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -151,7 +145,7 @@ app.MapRazorComponents<App>()
 Apply an appropriate render mode to pages or components that use Syncfusion Blazor components.
 
 {% tabs %}
-{% highlight razor tabtitle="DataGridPage.razor" %}
+{% highlight razor tabtitle="DataGridPage.razor" hl_lines="2" %}
 
 @page "/datagrid"
 @rendermode InteractiveServer
@@ -361,7 +355,7 @@ Remove duplicate entries and ensure all Blazor packages use the same version.
 
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
-    <!-- All Blazor packages should use the same version -->
+    <!-- All Syncfusion Blazor packages should use the same version -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Calendars" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Charts" Version="33.2.3" />
@@ -638,7 +632,7 @@ System.InvalidOperationException: Cannot provide a value for property 'Localizer
 **Solution**: Register the Syncfusion Blazor service in `~/Program.cs`.
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Web App (.NET 8+)" hl_lines="2 11" %}
+{% highlight C# tabtitle="Blazor Web App (.NET 8+)" hl_lines="2 11" %}
 ....
 using Syncfusion.Blazor;
 
@@ -655,7 +649,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle="Blazor WebAssembly" hl_lines="2 7" %}
+{% highlight C# tabtitle="Blazor WebAssembly" hl_lines="2 7" %}
 ....
 using Syncfusion.Blazor;
 
@@ -668,22 +662,6 @@ await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle="Blazor Server (.NET 6/7)" hl_lines="2 10" %}
-....
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-
-// Register Syncfusion Blazor service
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-....
-
-{% endhighlight %}
 {% endtabs %}
 
 **Additional service registrations for specific components:**
@@ -693,7 +671,7 @@ Some components require additional service configurations.
 **For PDF Viewer component:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="6 9" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="6 9" %}
 
 using Syncfusion.Blazor;
 
@@ -718,7 +696,7 @@ var app = builder.Build();
 **For File Manager component:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="6" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="6" %}
 
 using Syncfusion.Blazor;
 
@@ -757,7 +735,7 @@ N> The `AddSyncfusionBlazor()` service registration is mandatory for all Syncfus
 **Solution**: Configure SignalR with appropriate message size limits and hub options in `~/Program.cs`.
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Web App (.NET 8+) - Server" %}
+{% highlight C# tabtitle="Blazor Web App (.NET 8+) - Server" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -782,23 +760,6 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 
 {% endhighlight %}
-{% highlight c# tabtitle="Blazor Server (.NET 6/7)" %}
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor()
-    .AddHubOptions(options =>
-    {
-        // Set maximum message size
-        options.MaximumReceiveMessageSize = 102400000; // 100MB
-    });
-
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-
-{% endhighlight %}
 {% endtabs %}
 
 **Component-specific recommendations:**
@@ -814,7 +775,7 @@ var app = builder.Build();
 **Advanced SignalR configuration:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -961,7 +922,7 @@ If you prefer to import namespaces only where needed.
 | `Syncfusion.Blazor.Notifications` | Toast, Message |
 | `Syncfusion.Blazor.SfPdfViewer` | PDF Viewer |
 | `Syncfusion.Blazor.FileManager` | File Manager |
-| `Syncfusion.Blazor.RichTextEditor` | Rich Text Editor |
+| `Syncfusion.Blazor.RichTextEditor` | RichTextEditor |
 
 **Best practices**:
 
@@ -975,7 +936,7 @@ N> The `_Imports.razor` file provides namespace imports to all Razor components 
 
 ### Pitfall 10: Incorrect TValue and field mapping in Syncfusion components
 
-**Symptom**: `SfGrid`, `SfDropDownList`, `SfMultiSelect`, `SfAutoComplete`, `SfNumericTextBox`, `SfDatePicker`, or similar components render empty, do not bind correctly, or fail during selection, editing, filtering, or display.
+**Symptom**: [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), [MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown), [AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete), [Numeric TextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker), or similar components render empty, do not bind correctly, or fail during selection, editing, filtering, or display.
 
 **Root cause**: The component `TValue`, item type, or field mappings such as `Field`, `Text`, and `Value` do not match the underlying data model. In some cases, the bound type also does not match the expected value format.
 
@@ -985,7 +946,7 @@ N> The `_Imports.razor` file provides namespace imports to all Razor components 
 
 **Step 1: Match `TValue` to the bound value type**
 
-In `SfDropDownList`, use the same type for `TValue` as the selected value stored in the component.
+In DropDown List, ensure that `TValue` matches the type of the bound value and the corresponding value field in the data model.
 
 **Correct Mapping**:
 
@@ -1055,7 +1016,7 @@ Here, `Value="OrderCode"` does not match any property in the data model, so the 
 
 **Step 2: Map columns to real model properties**
 
-In `SfGrid`, each `GridColumn Field` value must match a public property on the model.
+In DataGrid, each GridColumn [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value must match a public property on the model, including correct spelling and casing.
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Grid Mapping" %}
@@ -1096,7 +1057,7 @@ In `SfGrid`, each `GridColumn Field` value must match a public property on the m
 
 **Step 3: Use the correct value type for numeric and date inputs**
 
-For `SfNumericTextBox` and `SfDatePicker`, the bound property type must match the component type.
+For Numeric TextBox and DatePicker, the bound property type must match the component’s expected type (`TValue`).
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Input Mapping" %}
@@ -1118,7 +1079,7 @@ For `SfNumericTextBox` and `SfDatePicker`, the bound property type must match th
 
 **Step 4: Use the correct field names and value collection type**
 
-In `SfMultiSelect`, the selected value collection type must match the item value type.
+In MultiSelect Dropdown, the selected value collection type must match the item value type and corresponding field mapping.
 
 {% tabs %}
 {% highlight razor tabtitle="MultiSelect Mapping" %}
@@ -1162,11 +1123,11 @@ In `SfMultiSelect`, the selected value collection type must match the item value
 
 | Component | Common Error | Correct Approach |
 |-----------|--------------|------------------|
-| `SfGrid` | `Field="Customer"` when model has `CustomerName` | Use the exact property name |
-| `SfDropDownList` | `TValue="string"` with `Value="OrderID"` where `OrderID` is `int` | Make `TValue="int"` or change the value field |
-| `SfNumericTextBox` | Binding `string` to a numeric control | Use `int`, `decimal`, or `double` |
-| `SfDatePicker` | Binding `string` instead of `DateTime?` | Bind a date type |
-| `SfMultiSelect` | Mismatch between selected value collection and item value type | Use a matching collection type, such as `List<int>` |
+| DataGrid | `Field="Customer"` when model has `CustomerName` | Use the exact property name |
+| DropDown List | `TValue="string"` with `Value="OrderID"` where `OrderID` is `int` | Make `TValue="int"` or change the value field |
+| Numeric TextBox | Binding `string` to a numeric control | Use `int`, `decimal`, or `double` |
+| DatePicker | Binding `string` instead of `DateTime?` | Bind a date type |
+| MultiSelect Dropdown | Mismatch between selected value collection and item value type | Use a matching collection type, such as `List<int>` |
 
 N> This issue is usually a data-model mismatch, not a Syncfusion defect. In most cases, correcting the type mapping resolves the problem immediately.
 
@@ -1184,125 +1145,15 @@ N> This issue is usually a data-model mismatch, not a Syncfusion defect. In most
 
 **Virtual scrolling for DataGrid:**
 
-{% tabs %}
-{% highlight razor tabtitle="VirtualizedGrid.razor" %}
-
-@page "/virtualized-grid"
-@using Syncfusion.Blazor.Grids
-@rendermode InteractiveServer
-
-<PageTitle>Virtualized Grid</PageTitle>
-
-<SfGrid DataSource="@Orders" Height="400" EnableVirtualization="true" AllowSorting="true">
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Width="130"></GridColumn>
-        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<Order> Orders { get; set; } = new();
-
-    protected override void OnInitialized()
-    {
-        // Generate large dataset (100,000 records)
-        Orders = Enumerable.Range(1, 100000).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = $"Customer {x}",
-            OrderDate = DateTime.Now.AddDays(-x % 365),
-            Freight = Math.Round(32.38 * (x % 100), 2)
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; } = "";
-        public DateTime OrderDate { get; set; }
-        public double Freight { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+For a comprehensive explanation of virtual scrolling, including row and column virtualization, buffering strategies, and performance tuning, refer to the official [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling).
 
 **Pagination for DataGrid:**
 
-{% tabs %}
-{% highlight razor tabtitle="PaginatedGrid.razor" %}
-
-@page "/paginated-grid"
-@using Syncfusion.Blazor.Grids
-@rendermode InteractiveServer
-
-<SfGrid DataSource="@Orders" AllowPaging="true">
-    <GridPageSettings PageSize="20" PageCount="5"></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field="CustomerName" HeaderText="Customer" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    // Large dataset with pagination
-    public List<Order> Orders { get; set; } = new();
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 10000).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = $"Customer {x}"
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; } = "";
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+For detailed information about pagination, including GridPageSettings configuration, page size management, and pager customization options, refer to the official [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/paging)
 
 **On-demand loading with remote data:**
 
-{% tabs %}
-{% highlight razor tabtitle="RemoteDataGrid.razor" %}
-
-@page "/remote-data-grid"
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@rendermode InteractiveServer
-
-<SfGrid TValue="Order" AllowPaging="true">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor">
-    </SfDataManager>
-
-    <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="120" TextAlign="TextAlign.Right" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150" />
-        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120" TextAlign="TextAlign.Right" />
-        <GridColumn Field="@nameof(Order.ShipCountry)" HeaderText="Ship Country" Width="150" />
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+For complete guidance on working with remote data, including using `SfDataManager` and configuring adaptors (such as `ODataV4Adaptor`), refer to the official [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/data-binding/remote-data).
 
 **Performance best practices:**
 
@@ -1317,7 +1168,7 @@ N> This issue is usually a data-model mismatch, not a Syncfusion defect. In most
 **Memory management:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -1370,7 +1221,7 @@ dotnet user-secrets set "ConnectionStrings:DefaultConnection" "your-connection-s
 **Access user secrets in application:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -1403,7 +1254,7 @@ var app = builder.Build();
 **Production configuration with Azure Key Vault:**
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
@@ -1505,7 +1356,7 @@ Use browser developer tools (F12) to identify client-side issues:
 Review application logs for server-side exceptions:
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
