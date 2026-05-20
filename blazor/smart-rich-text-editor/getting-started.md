@@ -420,7 +420,7 @@ N> If an Interactivity Location is set to `Global` and the **Render Mode** is se
 
 * Use <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog for content improvement.
 
-![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.gif)
+![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
