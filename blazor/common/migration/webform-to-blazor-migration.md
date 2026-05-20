@@ -83,11 +83,11 @@ cd MyBlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-> N> The `--interactivity Server` flag configures SignalR based interactivity, providing immediate UI updates similar to Web Forms postback behavior, but over a persistent connection instead of full page reloads.
+N> The `--interactivity Server` flag configures SignalR based interactivity, providing immediate UI updates similar to Web Forms postback behavior, but over a persistent connection instead of full page reloads.
 
 ## Migrating Components from Web Forms to Blazor
 
-The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
+The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#add-blazor-datagrid-component).
 
 ### Package installation
 
@@ -185,9 +185,9 @@ For detailed explanation, refer to the [Blazor DataGrid getting started guide](h
 | Package (NuGet) | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  |
 | Namespace               | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>`   | Razor: `@using Syncfusion.Blazor.Grids`  |
 | Component declaration   | `<ej:Grid runat="server">` (ASPX)  | `<SfGrid>` / `<SfGrid TValue="T">` (Razor)   |
-| Data binding   | `DataSource` property set in `Page_Load` or callbacks  | `DataSource="@..."` bound during component initialization  |
+| Data binding   | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) property set in `Page_Load` or callbacks  | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property bound during component initialization  |
 | Collection type  | `DataTable`, `IEnumerable`, server managed collections | `List<T>` / `IEnumerable<T>`. UI updated via `StateHasChanged()` |
-| Columns | `<ej:Column Field="..." HeaderText="..." />` | `<GridColumn Field="..." HeaderText="..." Format="..." />`  |
+| Columns | [Columns](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_Columns) property defined by following `<ej:Column Field="..." HeaderText="..." />`  | [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) property defined by following `<GridColumn Field="..." HeaderText="..." Format="..." />`  |
 | Editing & API | [EditSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_EditSettings) | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), `@ref` async APIs  |
 | Events & commands   | Server events (postback / AJAX callbacks)   | `EventCallback<T>` based async handlers   |
 | Theming & assets   | CSS/JS referenced in `.aspx` or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()`         |
@@ -196,9 +196,11 @@ For detailed explanation, refer to the [Blazor DataGrid getting started guide](h
 | Grouping | [AllowGrouping](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowGrouping)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)|
 | Lifecycle & refs        | `Page_Load`, control IDs (`ID`)                        | `OnInitialized[Async]`, DI, `@ref` and async methods
 
-Bind data to the DataGrid and define the required columns. In Web Forms, the DataGrid is defined using server controls, and the data source is assigned in the code-behind during the page lifecycle (for example, in the `Page_Load` method).
+**Component configuration**
 
-In Blazor, the DataGrid component is declared in Razor markup and binds data directly to a component property using the `DataSource` property.
+In Web Forms, the DataGrid is defined using server controls, and the [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) is assigned in the code-behind during the page lifecycle (for example, in the `Page_Load` method).
+
+In Blazor, the DataGrid component is declared in Razor markup and binds data directly to a component property using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property.
 
 **Web Forms approach**
 
@@ -230,7 +232,6 @@ namespace WebFormsGrid
                 new Person() { FirstName = "Ben", LastName = "Beckett", Email = "ben@syncfusion.com" },
                 new Person() { FirstName = "Andrew", LastName = "Beckett", Email = "andrew@syncfusion.com" }
             };
-
             this.Grid.DataSource = Persons;
         }
     }
@@ -282,24 +283,24 @@ namespace WebFormsGrid
 
 ### Add Blazor Scheduler component
 
-For detailed explanation, refer to the [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
+For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started).
 
 | Aspect  | Web Forms (`ej:Schedule`) | Blazor (`SfSchedule<TValue>`)  |
 | --- | --- | --- |
 | Package (NuGet)      | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet)   | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule)  |
 | Namespace   | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>` | Razor: `@using Syncfusion.Blazor.Schedule`  |
 | Component declaration | `<ej:Schedule runat="server">` (ASPX) | `<SfSchedule TValue="T">` (Razor)   |
-| Data binding          | `DataSource` set during `Page_Load` or callbacks     | `DataSource="@..."` via `ScheduleEventSettings`          |
+| Data binding          | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleFields.html#Syncfusion_JavaScript_Models_ScheduleFields_DataSource) set during `Page_Load` or callbacks     | `DataSource="@..."` via https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleFields.html#Syncfusion_JavaScript_Models_ScheduleFields_DataSource          |
 | Appointment model    | [AppointmentSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_AppointmentSettings)  | [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html)   |
-| Views configuration   | [CurrentView](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_CurrentView) property  | [`<ScheduleViews>`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection    |
+| Views configuration   | [CurrentView](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_CurrentView) property  | [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection    |
 | Theming & assets  | CSS/JS referenced in ASPX or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID`  | `OnInitialized[Async]`, DI, `@ref` async APIs   |
 
-Configure the Scheduler component by defining its views and binding it to the required appointment data.
+**Component configuration**
 
 In Web Forms, the Scheduler is defined using server controls, where configuration is set through control properties and appointment data is assigned programmatically in the code-behind during page execution.
 
-In Blazor, the Scheduler is implemented as a Razor component, where views and event settings are defined declaratively in markup, and appointment data is bound directly using the `ScheduleEventSettings` property.
+In Blazor, the Scheduler is implemented as a Razor component, where views and event settings are defined declaratively in markup, and appointment data is bound directly using the [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
 
 **Web Forms approach**
 
@@ -323,7 +324,7 @@ namespace WebFormsScheduler
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Schedule1.DataSource = new List<Appointment>
+            Schedule1.ScheduleFields.DataSource = new List<Appointment>
             {
                 new Appointment
                 {
@@ -360,9 +361,7 @@ namespace WebFormsScheduler
         <ScheduleView Option="View.Week" />
         <ScheduleView Option="View.Month" />
     </ScheduleViews>
-
     <ScheduleEventSettings DataSource="@Meetings" />
-
 </SfSchedule>
 
 @code {
@@ -394,25 +393,23 @@ N> The event class (`Meeting` in this example) property names match the Schedule
 
 ### Add Blazor Rich Text Editor component
 
-For detailed explanation, refer to the [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started) and [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app).
+For detailed explanation, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started).
 
 | Aspect  | Web Forms (`ej:RTE`)  | Blazor (`SfRichTextEditor`)   |
 | --- | --- | ---|
 | Package (NuGet)       | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet)  | [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) |
 | Namespace   | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>` | Razor: `@using Syncfusion.Blazor.RichTextEditor`     |
 | Component declaration | `<ej:RTE runat="server">` (ASPX)  | `<SfRichTextEditor>` (Razor)  |
-| Content binding       | `Value` property set during page lifecycle   | `Value` / `@bind-Value` bound to component state  |
+| Content binding       | [Value](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_Value) property set during page lifecycle   | [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) / `@bind-Value` bound to component state  |
 | Toolbar configuration | [ToolsList](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_ToolsList), [Tools](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_Tools)  | [ToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) with predefined/custom items           |
-| Theming & assets      | CSS/JS referenced per page | CSS theme files \
-
-JS and `AddSyncfusionBlazor()` |
+| Theming & assets      | CSS/JS referenced per page | CSS theme files \JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID` | `OnInitialized[Async]`, DI, `@ref` async APIs  |
 
-Set and bind the initial content of the Rich Text Editor.
+**Component configuration**
 
 In Web Forms, the Rich Text Editor content is defined directly within the markup using the `RTEContent` section, with content embedded as static HTML.
 
-In Blazor, the Rich Text Editor is implemented as a Razor component, where content is bound dynamically using the `Value` property with two-way binding.
+In Blazor, the Rich Text Editor is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
 
 **Web Forms approach**
 
@@ -422,7 +419,7 @@ In Blazor, the Rich Text Editor is implemented as a Razor component, where conte
 <ej:RTE ID="RTE" Height="440" runat="server">
     <RTEContent>
         <p>Welcome to Blazor Rich Text Editor</p>
-    </RTEContent> 
+    </RTEContent>
 </ej:RTE>
 
 {% endhighlight %}
