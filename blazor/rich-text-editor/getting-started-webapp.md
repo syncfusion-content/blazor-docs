@@ -92,7 +92,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 Install the following NuGet packages in your project:
  
 * [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor)  
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
  
 You can install these packages using different methods as shown below:
  
@@ -102,7 +102,7 @@ You can install these packages using different methods as shown below:
  
 ### Steps
 1. In Visual Studio Navigate to:
- 
+
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -113,13 +113,13 @@ You can install these packages using different methods as shown below:
  
 ### Steps
 1. In Visual Studio Navigate to:
- 
+
    **Tools → NuGet Package Manager → Package Manager Console**
 2. Run the following commands:
  
 {% tabs %}
 {% highlight C# tabtitle="Install Packages" %}
- 
+
 Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
  
