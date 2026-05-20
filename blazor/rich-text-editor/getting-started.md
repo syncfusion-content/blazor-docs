@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with Rich Text Editor in Blazor | Syncfusion
+canonical_url: "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"
 description: Checkout and learn about getting started with the Rich Text Editor in Blazor WebAssembly Application.
 platform: Blazor
 control: RichTextEditor

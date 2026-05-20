@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Rendering Performance Optimization
 
-This guide explains how rendering works in Blazor and provides practical techniques to [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
+This guide explains how rendering works in Blazor and provides practical techniques for [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
 
 ## Blazor DataGrid example with stable data binding
 
@@ -68,6 +68,7 @@ There are cases where state changes occur but the visual output does not actuall
 ```c#
 
 private bool isUiUpdateRequired;
+private string data = string.Empty;
 
 // Controls whether the component should re-render
 protected override bool ShouldRender()
@@ -227,16 +228,6 @@ This approach improves code readability and maintainability. It also helps reduc
             Quantity = rand.Next(1, 5),
             Total = rand.Next(200, 2000)
         }).ToList();
-    }
-
-    private void UpdateData(object? state)
-    {
-        var index = rand.Next(Orders.Count);
-
-        Orders[index].Quantity = rand.Next(1, 5);
-        Orders[index].Total = rand.Next(200, 2000);
-
-        InvokeAsync(StateHasChanged);
     }
 }
 
