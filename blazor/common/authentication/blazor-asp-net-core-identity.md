@@ -388,7 +388,7 @@ Create two protected Razor pages named `SecureGrid.razor` and `SecureChart.razor
 
 ### Add Blazor DataGrid component
 
-This component displays a sample order list using Blazor DataGrid. The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
+This component displays a sample order list using [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
 
 {% tabs %}
 {% highlight razor tabtitle="SecureGrid.razor" %}
