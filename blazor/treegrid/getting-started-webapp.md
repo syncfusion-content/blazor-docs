@@ -219,7 +219,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * **Visual Studio** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the **application**. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
  
-* **VS Code / CLI** → Run dotnet run (or dotnet watch run) in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
+* **VS Code / CLI** → Run `dotnet run` in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
