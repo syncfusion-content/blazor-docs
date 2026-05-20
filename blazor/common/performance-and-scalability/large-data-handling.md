@@ -25,7 +25,7 @@ Client side processing means loading the entire dataset into the browser and per
  
 ### Server side data processing
 
-Server side processing transfers the workload from the browser to the server. Instead of sending all the data at once, the client requests only the required portion when needed. For instance, when a user applies a filter or navigates between pages, a request is sent to the server, which processes it and returns only the relevant data. This method is well-suited for handling large or continuously growing datasets, especially when the data is sourced from databases or external services, as it improves performance, scalability, and reliability.
+Server side processing transfers the workload from the browser to the server. Instead of sending all the data at once, the client requests only the required portion when needed. For instance, when a user applies a filter or navigates between pages, a request is sent to the server, which processes it and returns only the relevant data. This approach is ideal for large or growing datasets, particularly when data comes from a database or external service and performance, scalability, and reliability are required.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -70,9 +70,7 @@ N> Client side processing is generally suitable for smaller datasets, typically 
 
 Paging divides data into smaller sets and renders only one page at a time.  This approach helps reduce the number of elements rendered in the DOM, which improves the initial load time and keeps the interface responsive.
 
-Paging is most commonly used techniques for handling moderate to large datasets.
-
-By using paging, applications can load faster, consume less browser memory, and provide a more structured and predictable navigation experience for users.
+By using paging, applications load faster, consume less browser memory, and provide a more structured and predictable navigation experience for users.
 
 For example, when paging is enabled in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), the component requests only a single page of records from the server at a time, reducing data transfer and improving performance. For more details, refer to the DataGrid documentation on [Handling paging operation](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-paging-operation).
 
@@ -80,7 +78,7 @@ For example, when paging is enabled in the [Blazor DataGrid](https://www.syncfus
 
 Incremental loading, also known as load-on-demand, retrieves data in smaller chunks based on user interaction. Instead of loading all records at once, additional data is fetched only when it is needed, such as when a user navigates through the data or scrolls within a component.
 
-This approach is particularly helpful when working with very large datasets, where loading everything upfront would impact performance and responsiveness.
+This approach is particularly helpful for very large datasets, where loading everything upfront would impact performance and responsiveness.
 
 Incremental loading is triggered by actions like moving between pages, scrolling through a list, or expanding rows and nodes in hierarchical components. Because data is loaded progressively, the application feels faster and remains responsive to user actions.
 
@@ -190,7 +188,7 @@ For more information, refer to the **Blazor DataGrid** documentation for [Virtua
 
 Blazor Server applications rely on SignalR to handle communication between the client and the server. When very large datasets are sent in a single SignalR message, it can increase the message size significantly and affect application stability, including higher memory usage on the server circuit.
 
-To avoid these issues, it is better not to send large amounts of data in one go. Instead, techniques like paging, virtualization, or incremental loading should be used for UI-related data. For scenarios that involve large or bulk data transfers, it is more efficient to use a Web API or a gRPC streaming endpoint, while keeping SignalR focused on smaller, real-time updates such as notifications or UI interactions.
+To avoid these issues, it is better not to send large amounts of data in one go. Instead, techniques like paging, virtualization, or incremental loading should be used for UI related data. For scenarios that involve large or bulk data transfers, it is more efficient to use a Web API or a gRPC streaming endpoint, while keeping SignalR focused on smaller, real time updates such as notifications or UI interactions.
 
 When features such as persistence are enabled with a large number of columns, SignalR message size limits may be exceeded, potentially resulting in connection errors. In such cases, adjust the SignalR configuration or reduce the amount of state being persisted.
 
@@ -233,4 +231,5 @@ By following these principles, Blazor components enable developers to build appl
 
 * [Handling large datasets efficiently in Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
 * [Performance Optimization for Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
+* [Blazor Rendering and Performance Optimization](https://blazor.syncfusion.com/documentation/common/performance-and-scalability/blazor-rendering-performance)
 
