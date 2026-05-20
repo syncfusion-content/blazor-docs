@@ -417,7 +417,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
 N> Notice the `@rendermode InteractiveServer` directive on the page. This is required for Blazor Web App to enable server-side interactivity.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Home.razor" %}
+{% highlight razor tabtitle="~/Components/Pages/Home.razor" %}
 
 @rendermode InteractiveServer
 @using Syncfusion.Blazor.SmartRichTextEditor
