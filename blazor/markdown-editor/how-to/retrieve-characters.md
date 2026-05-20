@@ -7,7 +7,7 @@ control: MarkdownEditor
 documentation: ug
 ---
 
-# Retrieve the number of characters
+# Retrieve the number of characters in the Blazor Markdown Editor
 
 To retrieve the maximum number of characters in the Markdown Editor content, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method of the Rich Text Editor.
 
