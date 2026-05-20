@@ -7,7 +7,7 @@ control: MarkdownEditor
 documentation: ug
 ---
 
-# Retrieve the formatted content
+# # Retrieve the formatted content in the Blazor Markdown Editor
 
 To retrieve the contents of the Markdown editor, use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property of the Rich Text Editor.
 
