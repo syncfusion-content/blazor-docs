@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Annotation in Blazor DataGrid
 
-Data annotations define validation and display rules for model classes or properties in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
+Data annotations define validation and display rules for model classes or properties in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). These attributes ensure that input values follow specific formats and constraints while providing clear error messages during editing operations.
 
 When the DataGrid is bound to a model, data annotations automatically map to corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) settings. This enables built-in validation and metadata display during CRUD operations.
 
@@ -198,4 +198,4 @@ The following image shows how Data Annotations are applied to Grid columns in a 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthIZotuimdZMRyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.webp)" %}
 
-N> Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to see how data is presented and managed within an application.
+N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to see how data is presented and managed within an application.
