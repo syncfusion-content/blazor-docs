@@ -177,7 +177,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -221,7 +221,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxteMFgkJuRQhn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxteMFgkJuRQhn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
 
