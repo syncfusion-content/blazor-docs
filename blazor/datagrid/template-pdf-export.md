@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting Blazor DataGrid with templates
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting template content to a PDF document, enabling rich formatting in exported files. The following template types are supported:
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to a PDF document, enabling rich formatting in exported files. The following template types are supported:
 
 * [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template): Custom cell content such as formatted text, images, or hyperlinks.
 * [Caption Template](https://blazor.syncfusion.com/documentation/datagrid/caption-template): Group caption rows with customized display elements.
@@ -21,7 +21,7 @@ These templates are preserved during PDF export, allowing the resulting document
 
 ## Exporting with column template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting columns that use templates to a PDF document. Template columns can include **images**, **hyperlinks**, and **custom text**.
+The Blazor DataGrid supports exporting columns that use templates to a PDF document. Template columns can include **images**, **hyperlinks**, and **custom text**.
 
 To export template columns to a PDF document:
 
@@ -145,7 +145,7 @@ public class EmployeeData
 
 ## Exporting with group caption template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting grouped data along with a custom caption template to a PDF document. This feature is useful for adding meaningful group captions such as record counts or group keys to the exported file.
+The Blazor DataGrid supports exporting grouped data along with a custom caption template to a PDF document. This feature is useful for adding meaningful group captions such as record counts or group keys to the exported file.
 
 To customize group caption text in the exported PDF document:
 
@@ -260,7 +260,7 @@ public class OrderData
 
 ## Exporting with detail template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting both parent and child (detail) records, including nested data, to a PDF document.
+The Blazor DataGrid supports exporting both parent and child (detail) records, including nested data, to a PDF document.
 
 By default, the DataGrid exports only the parent rows along with expanded detail rows. To customize this behavior, configure the [PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property of [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) inside the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
@@ -614,7 +614,7 @@ public class ProductData
 
 ## Exporting hierarchical Blazor DataGrid using detail template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting hierarchical data to a PDF document using the detail template feature. This is useful when parent rows contain nested child records, such as employee details with related orders.
+The Blazor DataGrid supports exporting hierarchical data to a PDF document using the detail template feature. This is useful when parent rows contain nested child records, such as employee details with related orders.
 
 To export hierarchical DataGrid data to a PDF document:
 
