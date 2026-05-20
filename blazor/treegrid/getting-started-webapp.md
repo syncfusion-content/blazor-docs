@@ -25,7 +25,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install the required Syncfusion packages using the NuGet Package Manager in Visual Studio by navigating to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*, then search for and install the packages [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the NuGet Package Manager in Visual Studio by navigating to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*, then search for and install the packages [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 
 Alternatively, run the following commands in the Package Manager Console:
