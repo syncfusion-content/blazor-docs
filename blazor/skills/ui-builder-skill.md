@@ -270,7 +270,7 @@ For the best code quality and accuracy:
   ```csharp
   Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("your-license-key");
   ```
-- Obtain your key from [Syncfusion Account Portal](https://www.syncfusion.com/account/manage-licenses)
+- Obtain your key from [Syncfusion Account Portal](https://www.syncfusion.com/account)
 - Verify key is valid and not expired
 
 **"License has expired" message**
