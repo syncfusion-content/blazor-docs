@@ -25,4 +25,4 @@ N> Refer to the [localization documentation for Blazor Server](https://blazor.sy
 
 On successful configuration, the Sparkline will be rendered as shown below.
 
-![Localization in Blazor Sparkline Chart](./images/localization/blazor-sparkline-localization.png)
+![Localization in Blazor Sparkline Chart](./images/localization/blazor-sparkline-localization.webp)

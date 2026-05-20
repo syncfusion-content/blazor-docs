@@ -56,7 +56,7 @@ To do list binding to the Range Selector, you can assign a IEnumerable object to
 
 ```
 
-![Blazor Range Navigator with List](images/working-data/blazor-range-list-binding.png)
+![Blazor Range Navigator with List](images/working-data/blazor-range-list-binding.webp)
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -96,7 +96,7 @@ Range Selector is a generic component which is strongly bound to a model type. T
 }
 ```
 
-![Blazor Range Navigator with ExpandoObject](images/working-data/blazor-range-expando-object.png)
+![Blazor Range Navigator with ExpandoObject](images/working-data/blazor-range-expando-object.webp)
 
 ### DynamicObject binding
 
@@ -157,7 +157,7 @@ Range Selector supports **DynamicObject** data source when the model type is unk
 
 ```
 
-![Blazor Range Navigator with DynamicObject](images/working-data/blazor-range-dynamic-object.png)
+![Blazor Range Navigator with DynamicObject](images/working-data/blazor-range-dynamic-object.webp)
 
 ## Remote data
 
@@ -180,7 +180,7 @@ Range Selector supports **DynamicObject** data source when the model type is unk
 
 ```
 
-![Blazor Range Navigator with OData Adaptor](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with OData Adaptor](images/working-data/blazor-range-remote-data.webp)
 
 ### Binding with OData v4 services
 
@@ -201,7 +201,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ```
 
-![Blazor Range Navigator with OData v4 adaptor](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with OData v4 adaptor](images/working-data/blazor-range-remote-data.webp)
 
 ### Web API
 
@@ -221,7 +221,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ```
 
-![Blazor Range Navigator with Web API](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with Web API](images/working-data/blazor-range-remote-data.webp)
 
 ### Sending additional parameters to the server
 
@@ -251,7 +251,7 @@ The following sample code shows how to send parameters using the `Query` propert
 
 }
 ```
-![Blazor Range Navigator with Query](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with Query](images/working-data/blazor-range-remote-data.webp)
 
 ## Observable collection
 
@@ -301,6 +301,6 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 }
 ```
 
-![Blazor Chart with Web API Binding](images/working-data/blazor-range-observable-collection.png)
+![Blazor Chart with Web API Binding](images/working-data/blazor-range-observable-collection.webp)
 
 N> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.
