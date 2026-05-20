@@ -68,7 +68,7 @@ N> Client side processing is generally suitable for smaller datasets, typically 
 
 ## Enable paging to limit rendered records
 
-Paging divides data into smaller sets and renders only one page at a time.  This approach helps reduce the number of elements rendered in the DOM, which improves the initial load time and keeps the interface responsive.
+Paging divides data into smaller sets and renders only one page at a time. This approach helps reduce the number of elements rendered in the DOM, which improves the initial load time and keeps the interface responsive.
 
 By using paging, applications load faster, consume less browser memory, and provide a more structured and predictable navigation experience for users.
 
@@ -213,7 +213,7 @@ In many cases, data is loaded only after a user action. For example, it can be r
 
 Lazy loading improves perceived performance by reducing initial load time and allows users to interact with the application while data is being retrieved in the background.
 
-For an example of implementing the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) pattern in hierarchical [Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)components, refer to the [Gantt Chart data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
+For an example of implementing the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) pattern in hierarchical [Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) components, refer to the [Gantt Chart data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
 
 ## How Blazor components handle large data
 
@@ -230,6 +230,6 @@ By following these principles, Blazor components enable developers to build appl
 ## See also
 
 * [Handling large datasets efficiently in Blazor Gantt Chart](https://www.syncfusion.com/blogs/post/load-on-demand-blazor-gantt-chart)
-* [Performance Optimization for Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
-* [Blazor Rendering and Performance Optimization](https://blazor.syncfusion.com/documentation/common/performance-and-scalability/blazor-rendering-performance)
+* [Performance optimization for Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/performance)
+* [Blazor rendering and performance optimization](https://blazor.syncfusion.com/documentation/common/performance-and-scalability/blazor-rendering-performance)
 
