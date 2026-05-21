@@ -53,7 +53,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-## Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -64,7 +63,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-## Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -83,7 +81,6 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-## Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -185,25 +182,6 @@ Add the Smart Rich Text Editor to your Blazor page:
 - Check internet connectivity
 - Verify API key permissions
 - Review OpenAI service status
-
-## Cost Optimization
-
-### Tips for Reducing Costs
-
-1. **Use Efficient Models**: `gpt-3.5-turbo` is significantly cheaper than `gpt-4`
-2. **Limit Token Count**: Set reasonable `MaxTokens` values
-3. **Implement Caching**: Cache common requests
-4. **Monitor Usage**: Track API calls and costs
-5. **Batch Operations**: Process multiple requests efficiently
-
-## Security Best Practices
-
-1. **Never hardcode API keys** - Use environment variables or secure configuration
-2. **Use User Secrets** for development - Not for production
-3. **Implement Rate Limiting** - Prevent abuse of your application
-4. **Validate User Input** - Before sending to OpenAI
-5. **Review Content** - Always review AI-generated content before publishing
-6. **Set Spending Limits** - Configure usage limits on OpenAI account
 
 ## See also
 
