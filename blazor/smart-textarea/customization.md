@@ -25,7 +25,7 @@ The `ShowSuggestionOnPopup` attribute in Syncfusion<sup style="font-size:70%">&r
 }
 ```
 
-![SUggestion on popup](images/smart-textarea-popup.gif)
+![SUggestion on popup](images/smart-textarea-popup.webp)
 
 * If `ShowSuggestionOnPopup` is `false`, suggestions displayed inline.
 
@@ -41,11 +41,11 @@ The `ShowSuggestionOnPopup` attribute in Syncfusion<sup style="font-size:70%">&r
 }
 ```
 
-![SUggestion inline](images/smart-textarea-inline.gif)
+![SUggestion inline](images/smart-textarea-inline.webp)
 
 By default `ShowSuggestionOnPopup` is `false`.
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea with in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea with in Blazor Server App](https://blazor.syncfusion.com/documentation)

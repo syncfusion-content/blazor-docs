@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart Rich Text Editor Component
 
-This section briefly explains about how to include [Blazor Smart Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-smart-rich-text-editor) component in your Blazor Server App using Visual Studio.
+This section explains how to add the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-smart-rich-text-editor) component to a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -18,28 +18,10 @@ This section briefly explains about how to include [Blazor Smart Rich Text Edito
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* OpenAI or Azure OpenAI Account
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor and Themes NuGet in the App
-
-To add **Blazor Smart Rich Text Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SmartRichTextEditor](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartRichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.SmartRichTextEditor -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
 {% endtabcontent %}
 
@@ -48,50 +30,123 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* OpenAI or Azure OpenAI Account
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio Code
 
-You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
-Alternatively, you can create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a Server application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
 {% highlight c# tabtitle="Blazor Server App" %}
 
-dotnet new blazorserver -o BlazorApp
+dotnet new blazor -o BlazorApp -int Server
 cd BlazorApp
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor and Themes NuGet in the App
+{% endtabcontent %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-* Ensure you're in the project root directory where your `.csproj` file is located.
-* Run the following command to install [Syncfusion.Blazor.SmartRichTextEditor](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartRichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
+{% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
 
 {% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
 
-{% highlight c# tabtitle="Package Manager" %}
-
-dotnet add package Syncfusion.Blazor.SmartRichTextEditor -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet restore
+dotnet --version
 
 {% endhighlight %}
-
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+## Create a Blazor Server App using .NET CLI
+
+Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazor -o BlazorApp -int Server
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor and Themes NuGet in the App
+
+Install the following NuGet packages in your project:
+
+* [Syncfusion.Blazor.SmartRichTextEditor](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartRichTextEditor)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+Install-Package Syncfusion.Blazor.SmartRichTextEditor -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+### Steps
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Syncfusion.Blazor.SmartRichTextEditor --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
@@ -134,22 +189,70 @@ Follow the instructions below to register an AI model in your application.
 
 ### OpenAI
 
-For **OpenAI**, create an API key and place it at `openAIApiKey`. The value for `openAIModel` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+Install the following NuGet packages to your project:
 
-* Install the following NuGet packages to your project:
+* Microsoft.Extensions.AI
+* Microsoft.Extensions.AI.OpenAI
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
-
 {% endtabs %}
 
-* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+### Steps
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package Microsoft.Extensions.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+* For **OpenAI**, obtain an API key from [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) and specify the desired model (e.g., `gpt-3.5-turbo`, `gpt-4`). Store the API key securely in a configuration file.
+
+* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="4 5 6 10 12 13 14 15 16 17 18" %}
@@ -180,23 +283,73 @@ var app = builder.Build();
 
 ### Azure OpenAI
 
-For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAIKey`, `azureOpenAIEndpoint` and `azureOpenAIModel` will all be provided to you.
+Install the following NuGet packages to your project:
 
-* Install the following NuGet packages to your project:
+* Microsoft.Extensions.AI
+* Microsoft.Extensions.AI.OpenAI
+* Azure.AI.OpenAI
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
 Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
-
 {% endtabs %}
 
-* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+### Steps
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package Microsoft.Extensions.AI.OpenAI
+dotnet add package Azure.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+* For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAIKey`, `azureOpenAIEndpoint` and `azureOpenAIModel` will all be provided to you.
+
+* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13 14 15 16 17 18 19 20 21" %}
@@ -231,79 +384,18 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-### Ollama
-
-To use Ollama for running self-hosted models:
-
-1. **Download and install Ollama**  
-   Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.
-
-2. **Install the desired model from the Ollama library**  
-   You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`, etc.).
-
-3. **Configure your application**
-
-   - Provide the `Endpoint` URL where the model is hosted (e.g., `http://localhost:11434`).
-   - Set `ModelName` to the specific model you installed (e.g., `llama2:13b`).
-
-* Install the following NuGet packages to your project:
-
-{% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.Extensions.AI
-Install-Package OllamaSharp
-
-{% endhighlight %}
-
-{% endtabs %}
-
-* Add the following settings to the **~/Program.cs** file in your Blazor Server app.
-
-{% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="5 6 10 11 12 13 14 15" %}
-
-using Syncfusion.Blazor.SmartRichTextEditor;
-using Syncfusion.Blazor.AI;
-using Microsoft.Extensions.AI;
-using OllamaSharp;
-var builder = WebApplication.CreateBuilder(args);
-
-....
-
-builder.Services.AddSyncfusionBlazor();
-
-string ModelName = "MODEL_NAME";
-IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
-builder.Services.AddChatClient(chatClient);
-
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-
-var app = builder.Build();
-....
-
-{% endhighlight %}
-{% endtabs %}
+N> To configure other AI services, refer to the following sections [Ollama AI Service](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/ollama) and [Custom AI Service](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/custom-inference-backend).
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
-
-* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
-
-* For **.NET 10, .NET 9 and .NET 8** Blazor Server app, include it in the **~/Components/App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
 
 ```html
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
-</head>
 
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+....
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
 ```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
@@ -314,14 +406,10 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Tex
 
 N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
 
-```
-@* desired render mode define here *@
-@rendermode InteractiveServer
-```
-
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
 
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
@@ -339,7 +427,7 @@ N> If an Interactivity Location is set to `Global` and the **Render Mode** is se
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component in your default web browser.
+* To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component in the default web browser.
 
 * Start typing content and use the AI tools in the toolbar to enhance your editing experience.
 
@@ -351,5 +439,5 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor in Blazor Web App](getting-started-webapp.md)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
 * [RichTextEditor Documentation](https://blazor.syncfusion.com/documentation/rich-text-editor)

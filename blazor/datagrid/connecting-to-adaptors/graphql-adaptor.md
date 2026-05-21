@@ -333,7 +333,7 @@ The query resolver has been created successfully.
 
 ### Step 6: Create the DataManagerRequestInput Class
 
-A **DataManagerRequestInput** class is a GraphQL input type that represents all the parameters the Syncfusion Blazor DataGrid sends to the backend when requesting data. This class acts as a container for filtering, sorting, searching, paging, and other data operation parameters.
+A **DataManagerRequestInput** class is a GraphQL input type that represents all the parameters the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) sends to the backend when requesting data. This class acts as a container for filtering, sorting, searching, paging, and other data operation parameters.
 
 **Purpose**
 When the DataGrid performs operations like pagination, sorting, filtering, or searching, it packages all these parameters into a `DataManagerRequestInput` object and sends it to the GraphQL backend. The backend then uses these parameters to fetch and return only the data the grid needs.
@@ -347,7 +347,7 @@ When the DataGrid performs operations like pagination, sorting, filtering, or se
 namespace Grid_GraphQLAdaptor.Models;
 
 /// <summary>
-/// Represents the input structure for data manager requests from the Syncfusion Blazor DataGrid.
+/// Represents the input structure for data manager requests from the Blazor DataGrid.
 /// Contains all parameters needed for data operations like filtering, sorting, paging, and searching.
 /// </summary>
 public class DataManagerRequestInput
@@ -627,7 +627,7 @@ A mutation resolver is a C# method decorated with GraphQL attributes that:
 - **Persists changes** to the data source (database, file, memory).
 - **Returns results** to the client (modified record or success/failure status).
 
-The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the Syncfusion Blazor DataGrid.
+The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the Blazor DataGrid.
 
 ---
 
@@ -668,7 +668,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 
 ### Step 2: Update the Blazor DataGrid
 
-The `Home.razor` component will display the expense data in a Syncfusion Blazor DataGrid with search, filter, sort, editing and pagination capabilities.
+The `Home.razor` component will display the expense data in a Blazor DataGrid with search, filter, sort, editing and pagination capabilities.
 
 **Instructions:**
 
@@ -743,7 +743,7 @@ The `SfDataManager` component connects the DataGrid to the GraphQL backend using
 
 ### Step 3: Configure GraphQL Adaptor and Data Binding
 
-The GraphQL adaptor is a bridge that connects the Syncfusion Blazor DataGrid with the GraphQL backend. The adaptor translates DataGrid operations (filtering, sorting, paging, searching) into GraphQL queries and mutations. When the user interacts with the grid, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the grid display.
+The GraphQL adaptor is a bridge that connects the Blazor DataGrid with the GraphQL backend. The adaptor translates DataGrid operations (filtering, sorting, paging, searching) into GraphQL queries and mutations. When the user interacts with the grid, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the grid display.
 
 **What is a GraphQL Adaptor?**
 
@@ -2361,7 +2361,7 @@ This guide demonstrates how to:
 5. Implement GraphQL query resolvers to read data. [🔗](#step-5-graphql-query-resolvers)
 6. Create the DataManagerRequestInput input type to carry grid operations. [🔗](#step-6-create-the-datamanagerrequestinput-class)
 7. Define GraphQL mutation resolvers for Create, Update, and Delete. [🔗](#step-7-define-graphql-mutation-resolvers)
-8. Integrate Syncfusion Blazor DataGrid and configure the GraphQL adaptor. [🔗](#step-3-configure-graphql-adaptor-and-data-binding)
+8. Integrate Blazor DataGrid and configure the GraphQL adaptor. [🔗](#step-3-configure-graphql-adaptor-and-data-binding)
 9. Perform CRUD operations from the grid using GraphQL mutations. [🔗](#perform-crud-operations)
 
-The application now provides a complete solution for managing expenses with a modern Syncfusion Blazor DataGrid integrated with a Hot Chocolate GraphQL backend.
+The application now provides a complete solution for managing expenses with a modern [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) integrated with a Hot Chocolate GraphQL backend.

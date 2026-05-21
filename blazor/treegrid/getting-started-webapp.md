@@ -100,13 +100,13 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
+For Blazor Web Apps running in `WebAssembly` or `Auto` render mode, the solution includes both **Server** and **Client** projects. To fully support client-side features, ensure that all required packages are installed in the **Client project**.
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.TreeGrid` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the **Client** project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.TreeGrid` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -152,9 +152,14 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component
 
-Add the Syncfusion Blazor TreeGrid component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion® Blazor TreeGrid component in the **~/Pages/*.razor** file. If you selected **Per-page interactivity** during project setup, you must explicitly add the appropriate `@rendermode` at the top of each page where interactivity is needed.
 
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+
+| Render Mode              | When to Use | Declaration |
+|--------------------------|----------------------------------------------------------------|-------------------------------------|
+| InteractiveServer        | Used when Server interactivity is selected in project setup.    | `@rendermode InteractiveServer`     |
+| InteractiveWebAssembly   | Used when WebAssembly interactivity is selected in project setup.                  | `@rendermode InteractiveWebAssembly`|
+| InteractiveAuto          | Used when Auto (hybrid) interactivity is selected in project setup .             | `@rendermode InteractiveAuto`       |
 
 {% tabs %}
 {% highlight razor %}
@@ -164,6 +169,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -208,7 +215,11 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
+**Run the Application**
+
+* **Visual Studio** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the **application**. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
+ 
+* **VS Code / CLI** → Run `dotnet run` in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 

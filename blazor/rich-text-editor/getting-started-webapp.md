@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion Rich Text Editor in Blazor Web App
+canonical_url: "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-webapp"
 description: Check out the documentation for getting started with Syncfusion Blazor Rich Text Editor Components in Blazor Web App.
 platform: Blazor
 control: RichTextEditor
@@ -89,18 +90,66 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the following NuGet packages in your project:
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+* [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor)  
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+### Steps
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
 Install-Package Syncfusion.Blazor.RichTextEditor -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+### Steps
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Syncfusion.Blazor.RichTextEditor --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
 
@@ -158,17 +207,10 @@ Add the Syncfusion Blazor Rich Text Editor component in the **~/Components/Pages
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @* desired render mode define here *@
 @rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
@@ -180,9 +222,13 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)" %}
+> **NOTE**
+>
+> When using the .NET CLI or Visual Studio Code, ensure that you run the application from the **server (host) project directory**, not from the `.Client` project. The client project does not run independently and is hosted by the server application.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBdjohZVVUMIRjO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor).
 
