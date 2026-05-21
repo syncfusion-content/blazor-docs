@@ -84,21 +84,22 @@ N> See the [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/cor
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
+Install the [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 
-{% tabcontents %}
+**Visual Studio (NuGet Package Manager)**:
 
-{% tabcontent Visual Studio %}
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Diagram` and `Syncfusion.Blazor.Themes`) and install it.
 
-Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution → Select the package -> Install*).
+**Visual Studio Code or .NET CLI**:
 
-Alternatively, run the following commands in the Package Manager Console(*Tools → NuGet Package Manager → Package Manager Console*) to achieve the same.
+Open the terminal or command prompt and run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.Diagram -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Diagram -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -165,33 +166,39 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Configure Render Mode
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
+
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor Diagram component inside the razor file.
+* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 If your create application uses `Per page/component` interactivity, add this at the top of **Pages/Home.razor**:
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@* desired render mode define here *@
-@rendermode InteractiveServer
-
-{% endhighlight %}
-{% endtabs %}
-
-N> If the render mode is set to **None**, the diagram will not render.
-<br/> If the `Interactivity Location` is set to **Global**, this step is not required.
-
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component
-
-Add the DiagramComponent to create an empty diagram.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
+@rendermode InteractiveAuto
+@using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="100%" Height="600px"/>
 
 {% endhighlight %}
 {% endtabs %}
+
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Diagram component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
+2. Run the following command:
+
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
 
 ## Create your first Diagram with nodes and connectors
 
