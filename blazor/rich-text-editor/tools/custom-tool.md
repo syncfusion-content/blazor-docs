@@ -26,7 +26,7 @@ Refer to the following code sample to configure a custom toolbar item with toolt
         <RichTextEditorCustomToolbarItems>
             <RichTextEditorCustomToolbarItem Name="Symbol">
                 <Template>
-                    <SfButton @onclick="ClickHandler">Insert Symbol</SfButton>
+                    <SfButton @onclick="ClickHandler">Ω</SfButton>
                 </Template>
             </RichTextEditorCustomToolbarItem>
         </RichTextEditorCustomToolbarItems>
