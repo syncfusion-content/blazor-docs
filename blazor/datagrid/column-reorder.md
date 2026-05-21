@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Reorder in Blazor DataGrid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows columns to be reordered by dragging and dropping a column header from one position to another within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows columns to be reordered by dragging and dropping a column header from one position to another within the Grid.
 
 To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 

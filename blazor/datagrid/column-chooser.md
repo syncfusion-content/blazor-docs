@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Chooser in Blazor DataGrid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a column chooser feature that allows dynamically showing or hiding columns.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a column chooser feature that allows dynamically showing or hiding columns.
 
 To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser)  property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 

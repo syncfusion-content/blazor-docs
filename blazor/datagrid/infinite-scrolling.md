@@ -9,7 +9,7 @@ documentation: ug
 
 # Infinite scroll in Blazor DataGrid
 
-The infinite scrolling feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides load-on-demand data retrieval to handle large datasets without degrading performance. In default infinite scrolling, the Grid fetches the next block of data when the vertical scrollbar reaches the end of the scroller, creating a seamless browsing experience across extensive data.
+The infinite scrolling feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides load-on-demand data retrieval to handle large datasets without degrading performance. In default infinite scrolling, the Grid fetches the next block of data when the vertical scrollbar reaches the end of the scroller, creating a seamless browsing experience across extensive data.
 
 In this feature, a block is equivalent to the Grid’s [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize). If `PageSize` is not set, the Grid calculates it from the viewport height and row height. To enable infinite scrolling, set [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) to **true** and define a content [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height).
 
