@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor DataGrid Component in Blazor Web App
+title: Getting Started with Blazor DataGrid Component in Blazor Web App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor DataGrid component in a Blazor Web App using Visual Studio, Visual Studio Code, and the .NET CLI.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Getting Started with Blazor DataGrid Component in Blazor Web App
+# Getting Started with Blazor Web App
 
 This article provides step-by-step instructions for building a Blazor Web App with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
