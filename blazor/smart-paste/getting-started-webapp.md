@@ -363,7 +363,7 @@ Add the Syncfusion® **Blazor Smart Paste Button** component with form component
 1. Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application, rendering the Syncfusion® Blazor Smart Paste Button component in your default web browser.
 2. Copy the `Sample Content` and click the `Smart Paste` button to see the form fields automatically populated.
 
-![Syncfusion Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.gif)
+![Syncfusion Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
