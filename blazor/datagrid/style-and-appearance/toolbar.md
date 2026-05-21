@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar customization in Syncfusion Blazor DataGrid
 
-The appearance of toolbar elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
+The appearance of toolbar elements in the Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
 
 - **Toolbar root container:** The outer wrapper that contains all toolbar items.
 - **Toolbar buttons:**  Shows interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.

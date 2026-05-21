@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Template in Blazor DataGrid
 
-The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables complete control over the appearance and layout of each row. It is useful for displaying rich, composite content—such as images, buttons, and interactive controls—instead of plain text.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables complete control over the appearance and layout of each row. It is useful for displaying rich, composite content—such as images, buttons, and interactive controls—instead of plain text.
 
 To enable and configure the `RowTemplate` feature in the Grid, follow these steps:
 
@@ -191,7 +191,7 @@ public class EmployeeData
 
 ## Row template with formatting
 
-Typically, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). When using row templates, values rendered inside the template are not affected by `Columns.Format`.
+Typically, the Blazor DataGrid columns are formatted using [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). When using row templates, values rendered inside the template are not affected by `Columns.Format`.
 
 To format values inside a row template, apply .NET formatting in the template (for example, using `ToString` with a format string) or invoke a helper method to produce the desired output such as dates, currency, or custom text.
 
@@ -377,7 +377,7 @@ public class EmployeeData
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> control in row template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can render Syncfusion<sup style="font-size:70%">&reg;</sup> components inside row templates, enabling interactive UI elements within rows.
+The Blazor DataGrid can render Syncfusion<sup style="font-size:70%">&reg;</sup> components inside row templates, enabling interactive UI elements within rows.
 
 To render a Syncfusion<sup style="font-size:70%">&reg;</sup> control in a row template, set the `RowTemplate` property and provide the custom HTML that defines the row layout.
 
@@ -510,7 +510,7 @@ public class OrderData
 
 ## Render Syncfusion<sup style="font-size:70%">&reg;</sup> Chart in row template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports embedding other Syncfusion<sup style="font-size:70%">&reg;</sup> components, such as Charts, in row templates to visualize data directly within rows.
+The Blazor DataGrid supports embedding other Syncfusion<sup style="font-size:70%">&reg;</sup> components, such as Charts, in row templates to visualize data directly within rows.
 
 To render a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart in a row template, use the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property to define the row layout and include the chart markup within the template.
 
