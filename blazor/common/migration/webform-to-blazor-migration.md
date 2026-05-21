@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating ASP.NET Web Forms to Blazor | Syncfusion
+title: Migrating ASP.NET Web Forms Controls to Blazor Components | Syncfusion
 description: Learn how to migrate ASP.NET Web Forms controls to Blazor components, including key concepts and a detailed migration approach.
 platform: Blazor
 control: Common
@@ -290,7 +290,7 @@ For detailed explanation, refer to the [Blazor Scheduler getting started guide](
 | Package (NuGet)      | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet)   | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule)  |
 | Namespace   | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>` | Razor: `@using Syncfusion.Blazor.Schedule`  |
 | Component declaration | `<ej:Schedule runat="server">` (ASPX) | `<SfSchedule TValue="T">` (Razor)   |
-| Data binding          | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleFields.html#Syncfusion_JavaScript_Models_ScheduleFields_DataSource) set during `Page_Load` or callbacks     | `DataSource="@..."` via https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleFields.html#Syncfusion_JavaScript_Models_ScheduleFields_DataSource          |
+| Data binding          | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleFields.html#Syncfusion_JavaScript_Models_ScheduleFields_DataSource) set during `Page_Load` or callbacks     | `DataSource="@..."` via [ScheduleEventSettings.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource)      |
 | Appointment model    | [AppointmentSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_AppointmentSettings)  | [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html)   |
 | Views configuration   | [CurrentView](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_CurrentView) property  | [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection    |
 | Theming & assets  | CSS/JS referenced in ASPX or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()` |
@@ -352,7 +352,7 @@ namespace WebFormsScheduler
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
 
-@page '/schedule'
+@page "/schedule"
 @rendermode InteractiveServer
 
 <SfSchedule TValue="Meeting" Height="650px" CurrentView="View.Week">
@@ -402,7 +402,7 @@ For detailed explanation, refer to the [Blazor Rich Text Editor getting started 
 | Component declaration | `<ej:RTE runat="server">` (ASPX)  | `<SfRichTextEditor>` (Razor)  |
 | Content binding       | [Value](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_Value) property set during page lifecycle   | [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) / `@bind-Value` bound to component state  |
 | Toolbar configuration | [ToolsList](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_ToolsList), [Tools](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_Tools)  | [ToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) with predefined/custom items           |
-| Theming & assets      | CSS/JS referenced per page | CSS theme files \JS and `AddSyncfusionBlazor()` |
+| Theming & assets      | CSS/JS referenced per page | CSS theme files/ JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID` | `OnInitialized[Async]`, DI, `@ref` async APIs  |
 
 **Component configuration**
@@ -430,7 +430,7 @@ In Blazor, the Rich Text Editor is implemented as a Razor component, where conte
 {% tabs %}
 {% highlight razor tabtitle="Editor.razor" %}
 
-@page '/rte'
+@page "/rte"
 @rendermode InteractiveServer
 
 <SfRichTextEditor @bind-Value="Content" Height="400px"></SfRichTextEditor>
