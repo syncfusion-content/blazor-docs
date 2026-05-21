@@ -146,19 +146,21 @@ Add the Smart Rich Text Editor to your Blazor page:
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
-    <AssistViewSettings Placeholder="Start typing or use AI assistance..."/>
+    <AssistViewSettings Placeholder="Use OpenAI to enhance your content..." />
     <div>
-        <strong>Tips:</strong>
+        <strong>Use OpenAI with Smart Rich Text Editor:</strong>
         <ul>
-            <li>Select text and click "AI Commands" for quick improvements</li>
-            <li>Press Alt+Enter to open AI Query dialog</li>
-            <li>Use AI to fix grammar, adjust tone, or rephrase content</li>
+            <li>Select text and use <b>AI Commands</b> to generate or refine content</li>
+            <li>Press <b>Alt + Enter</b> to open the AI query dialog</li>
+            <li>Generate summaries, rephrase sentences, or improve grammar using AI</li>
         </ul>
     </div>
 </SfSmartRichTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
+
+![Syncfusion Smart Rich Text Editor OpenAI Integration](images/openai-integration.webp)
 
 ## Troubleshooting
 
