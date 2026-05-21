@@ -36,20 +36,70 @@ OpenAI offers various models for different use cases:
 
 > **Note**: Model availability and names may change. Refer to [OpenAI documentation](https://developers.openai.com/api/docs/models) for current options.
 
+## Set Up the Smart Rich Text Editor Component
+
+Follow the [Getting Started](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp) guide to configure and render the Smart Rich Text Editor component in the application and that prerequisites are met.
+
 ## Installation
 
-Install the required NuGet packages:
+Install the following NuGet packages to your project:
+
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+## Steps
+1. In Visual Studio Navigate to:
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+## Steps
+1. In Visual Studio Navigate to:
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
-Install-Package Syncfusion.Blazor.SmartRichTextEditor
-Install-Package Syncfusion.Blazor.Themes
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+## Steps
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package Microsoft.Extensions.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Configuration
 
@@ -72,11 +122,9 @@ builder.Services.AddServerSideBlazor();
 // Register Syncfusion Blazor Service
 builder.Services.AddSyncfusionBlazor();
 
-// Configure OpenAI - load from configuration
-string openAIApiKey = builder.Configuration["OpenAI:ApiKey"] 
-    ?? throw new InvalidOperationException("OpenAI:ApiKey not configured");
-string openAIModel = builder.Configuration["OpenAI:Model"] ?? "gpt-3.5-turbo";
-
+// Configure OpenAI
+string openAIApiKey = "Your API Key";
+string openAIModel = "Your Model Name";
 OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
 IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
 builder.Services.AddSingleton<IChatClient>(openAIChatClient);
@@ -84,26 +132,12 @@ builder.Services.AddSingleton<IChatClient>(openAIChatClient);
 // Register Smart Rich Text Editor Components with OpenAI
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
-
 var app = builder.Build();
 
 // ... rest of your application setup
 ```
 
-### Step 2: Add Imports to _Imports.razor
-
-Update **~/_Imports.razor** to include necessary namespaces:
-
-{% tabs %}
-{% highlight razor tabtitle="~/Components/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.SmartRichTextEditor
-
-{% endhighlight %}
-{% endtabs %}
-
-### Step 3: Use OpenAI with Smart Rich Text Editor Component
+### Step 2: Use OpenAI with Smart Rich Text Editor Component
 
 Add the Smart Rich Text Editor to your Blazor page:
 
@@ -126,72 +160,6 @@ Add the Smart Rich Text Editor to your Blazor page:
 
 {% endhighlight %}
 {% endtabs %}
-
-## Using Environment Variables
-
-For security, store your API key in environment variables:
-
-### Windows
-
-```powershell
-$env:OPENAI_API_KEY = "your-api-key"
-```
-
-### Linux/macOS
-
-```bash
-export OPENAI_API_KEY="your-api-key"
-```
-
-### Reading from Environment in Program.cs
-
-```csharp
-string openAIApiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") 
-    ?? throw new InvalidOperationException("OpenAI API key not found in environment variables");
-```
-
-## Using User Secrets
-
-For development, use User Secrets:
-
-```bash
-dotnet user-secrets init
-dotnet user-secrets set "OpenAI:ApiKey" "your-api-key"
-```
-
-Access in Program.cs:
-
-```csharp
-var openAIApiKey = builder.Configuration["OpenAI:ApiKey"];
-```
-
-## Advanced Configuration
-
-### Model Parameters
-
-Customize OpenAI model behavior:
-
-```csharp
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-    .ConfigureOpenAI(options =>
-    {
-        options.MaxTokens = 500;           // Limit response length
-        options.Temperature = 0.7f;         // Creativity level (0-2)
-        options.TopP = 0.9f;               // Diversity control
-        options.FrequencyPenalty = 0.5f;   // Repeat penalty
-        options.PresencePenalty = 0.5f;    // New topic penalty
-    });
-```
-
-### Parameter Explanation
-
-| Parameter | Range | Default | Description |
-|-----------|-------|---------|-------------|
-| MaxTokens | 1-4096 | 500 | Maximum length of AI response |
-| Temperature | 0-2 | 0.7 | Higher = more creative, Lower = more focused |
-| TopP | 0-1 | 0.9 | Nucleus sampling - controls diversity |
-| FrequencyPenalty | -2-2 | 0 | Reduces likelihood of repetition |
-| PresencePenalty | -2-2 | 0 | Encourages new topics |
 
 ## Troubleshooting
 
@@ -237,8 +205,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
 ## See also
 
-* [Getting Started with Smart Rich Text Editor](getting-started.md)
-* [AI Features and Customization](ai-features.md)
-* [Azure OpenAI Configuration](azure-openai-service.md)
-* [Ollama Configuration](ollama.md)
+* [Getting Started with Smart Rich Text Editor](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
+* [Azure OpenAI Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/azure-openai-service)
+* [Ollama Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/ollama)
 * [OpenAI Documentation](https://developers.openai.com/api/docs)
