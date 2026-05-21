@@ -119,7 +119,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component in the **~/Components/Pages/*.razor** file.
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor Badge component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
