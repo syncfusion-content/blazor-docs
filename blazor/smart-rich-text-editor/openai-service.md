@@ -36,11 +36,11 @@ OpenAI offers various models for different use cases:
 
 > **Note**: Model availability and names may change. Refer to [OpenAI documentation](https://developers.openai.com/api/docs/models) for current options.
 
-## Set Up the Smart Rich Text Editor Component
+## Setup the Smart Rich Text Editor Component
 
 Follow the [Getting Started](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp) guide to configure and render the Smart Rich Text Editor component in the application and that prerequisites are met.
 
-## Installation
+## Install NuGet packages
 
 Install the following NuGet packages to your project:
 
