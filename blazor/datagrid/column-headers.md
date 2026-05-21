@@ -9,11 +9,11 @@ documentation: ug
 
 # Headers in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides options to customize and manage headers for better data organization and presentation. 
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides options to customize and manage headers for better data organization and presentation. 
 
 ## Header text
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays the header text of a column from its [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value by default. 
+The Blazor DataGrid Blazor DataGrid displays the header text of a column from its [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value by default. 
 To override this and provide a custom header title, define the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 {% tabs %}
@@ -91,7 +91,7 @@ To override this and provide a custom header title, define the [HeaderText](http
 
 ## Header template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the header element of a column using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property enables rendering custom HTML elements or Blazor components in the header cell, allowing additional functionality such as icons, dropdowns, or switches.
+The Blazor DataGrid allows customizing the header element of a column using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property enables rendering custom HTML elements or Blazor components in the header cell, allowing additional functionality such as icons, dropdowns, or switches.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
@@ -229,7 +229,7 @@ public class OrderDetails
 
 ## Stacked header 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows grouping multiple levels of column headers by stacking columns. This feature organizes columns in a structured way and improves readability. 
+The Blazor DataGrid allows grouping multiple levels of column headers by stacking columns. This feature organizes columns in a structured way and improves readability. 
 
 To achieve this, nest the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn) directive within another `GridColumn` directive. Use the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property for each sub-header column to set its text.
 
@@ -341,7 +341,7 @@ public class OrderDetails
 
 ## Header text alignment
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows horizontally aligning the text in column headers using the [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign)  property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). By default, the text is aligned to the **left**. 
+The Blazor DataGrid allows horizontally aligning the text in column headers using the [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign)  property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). By default, the text is aligned to the **left**. 
 
 The alignment can be changed by setting `HeaderTextAlign` to one of the following options:
 
@@ -424,7 +424,7 @@ The alignment can be changed by setting `HeaderTextAlign` to one of the followin
 
 ## Autowrap the header text
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports wrapping header text when it exceeds the column width. Enable this feature by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrap mode using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_TextWrapSettings) property.
+The Blazor DataGrid supports wrapping header text when it exceeds the column width. Enable this feature by setting the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. Configure the wrap mode using the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_TextWrapSettings) property.
 
 Specify appropriate column widths using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property to ensure proper wrapping.
 
@@ -544,7 +544,7 @@ Override the default height of the **.e-grid .e-headercell** class to set a cust
 
 ## Change header text dynamically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows modifying the header text of a column in real time. This can be achieved in two ways:
+The Blazor DataGrid allows modifying the header text of a column in real time. This can be achieved in two ways:
 
 * **Using event**: The [HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_HeaderCellInfo) event triggers for each header cell during rendering. It provides access to the header cell element, allowing customization of the header text dynamically.
 * **Using methods**: The Grid includes methods such as [GetColumnByFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnByFieldAsync_System_String_) and [GetColumnByUidAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnByUidAsync_System_String_) to retrieve column objects and update their [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property. After updating, call [RefreshHeaderAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshHeaderAsync) to apply changes.
@@ -569,7 +569,7 @@ After updating the header text, call the `RefreshHeaderAsync` method to apply ch
 
 ### Using method
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides methods to change the header text dynamically. These methods allow retrieving column objects and updating their [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property. After updating, call the `RefreshHeaderAsync` method to apply changes.
+The Blazor DataGrid provides methods to change the header text dynamically. These methods allow retrieving column objects and updating their [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property. After updating, call the `RefreshHeaderAsync` method to apply changes.
 
 **Get Column by Field**
 
@@ -805,7 +805,7 @@ public class OrderDetails
 
 ## Change the orientation of header text
 
-By default, the text in the column headers of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is displayed **horizontally**. To change the orientation to **vertical**, **diagonal**, or a **custom angle**, apply a custom CSS class to the header cell using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+By default, the text in the column headers of the Blazor DataGrid is displayed **horizontally**. To change the orientation to **vertical**, **diagonal**, or a **custom angle**, apply a custom CSS class to the header cell using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 **Steps to change header text orientation:**
 
@@ -1051,13 +1051,13 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-> The Syncfusion Blazor DataGrid component includes a built-in feature to customize tooltip content for both header cells and content cells. For more information, refer to the documentation [here](https://blazor.syncfusion.com/documentation/datagrid/cell#show-tooltip).
+> The Blazor DataGrid component includes a built-in feature to customize tooltip content for both header cells and content cells. For more information, refer to the documentation [here](https://blazor.syncfusion.com/documentation/datagrid/cell#show-tooltip).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrJirtAJDjvaNlx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize header text styles 
 
-Customizing the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid header styles allows modifying the appearance of column headers to match design requirements. Styles such as **font**, **background color**, and **text color** can be applied using the following approaches:
+Customizing the Blazor DataGrid header styles allows modifying the appearance of column headers to match design requirements. Styles such as **font**, **background color**, and **text color** can be applied using the following approaches:
 
 * **Using CSS** - Apply styles globally or to specific columns by defining CSS rules.
 
@@ -1335,7 +1335,7 @@ public class OrderDetails
 
 ## How to refresh header 
 
-The refresh header feature updates the header section of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid when changes are made to column properties such as header text, width, or alignment. The [RefreshHeaderAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshHeaderAsync) method of the Grid is used to apply these changes immediately.
+The refresh header feature updates the header section of the Blazor DataGrid when changes are made to column properties such as header text, width, or alignment. The [RefreshHeaderAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshHeaderAsync) method of the Grid is used to apply these changes immediately.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
