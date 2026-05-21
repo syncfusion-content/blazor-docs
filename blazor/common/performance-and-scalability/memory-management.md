@@ -20,13 +20,15 @@ In Blazor WebAssembly, releasing these references allows the browser runtime to 
 If you haven't created a Blazor application yet, create one using the following Blazor getting started guides.
 
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-### Disposing data bound Blazor components
+### Disposing data-bound Blazor components
 
 Data bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) can hold large data collections in memory. Clearing large data collections during component disposal helps release memory references earlier, although the .NET garbage collector ultimately handles memory cleanup.
 
 The following example demonstrates how to release data collections used by the DataGrid component.
+
+N> This example requires the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) NuGet package. See [Getting Started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) for setup instructions.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -101,7 +103,7 @@ This example uses the [Blazor Button](https://www.syncfusion.com/blazor-componen
 
 @page "/"
 @using Syncfusion.Blazor.Buttons
-@inject AppState AppState
+@inject AppState appState
 @implements IDisposable
 
 <div style="padding:16px">
@@ -110,19 +112,19 @@ This example uses the [Blazor Button](https://www.syncfusion.com/blazor-componen
     </SfButton>
 
     <p style="margin-top:12px">
-        Current state: @AppState.CurrentMessage
+        Current state: @appState.CurrentMessage
     </p>
 </div>
 
 @code {
     protected override void OnInitialized()
     {
-        AppState.OnChange += OnAppStateChanged;
+        appState.OnChange += OnAppStateChanged;
     }
 
     private void OnClicked()
     {
-        AppState.CurrentMessage = $"Updated at {DateTime.Now:T}";
+        appState.CurrentMessage = $"Updated at {DateTime.Now:T}";
     }
 
     private void OnAppStateChanged()
@@ -132,12 +134,14 @@ This example uses the [Blazor Button](https://www.syncfusion.com/blazor-componen
 
     public void Dispose()
     {
-        AppState.OnChange -= OnAppStateChanged;
+        appState.OnChange -= OnAppStateChanged;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+N> This example requires the [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) NuGet package. See [Getting Started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) for setup instructions.
 
 **Add service file**
 
@@ -205,7 +209,6 @@ The following example demonstrates how to use built‑in virtualization in the D
 <SfGrid DataSource="@Employees"
         EnableVirtualization="true" RowHeight="36"
         Height="400">
-    <GridPageSettings PageSize="50"></GridPageSettings>
     <GridColumns>
         <GridColumn Field="Id" HeaderText="ID" Width="100" />
         <GridColumn Field="Name" HeaderText="Employee Name" Width="200" />
@@ -315,7 +318,7 @@ This behavior is important when working with [Blazor components](https://www.syn
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
 
-// `UserSessionService` is a placeholder representing any user-specific service (for example, one that maintains session state or per-user preferences). Replace it with your actual service type.
+// `UserSessionService` is a placeholder representing any user-specific service. Replace it with your actual service type.
 builder.Services.AddScoped<UserSessionService>();
 
 {% endhighlight %}
@@ -325,8 +328,8 @@ This guidance applies to the Blazor Server hosting model and to Blazor Web App p
 
 ## See also
 
-* [Getting started with Blazor DataGrid Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
-* [Discover best practices in Blazor Performance Guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
-* [Learn about the Blazor Component Lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle)
-* [Explore concepts in Blazor Dependency Injection](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection)
+* [Getting started with Blazor DataGrid virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [Discover best practices in Blazor performance guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
+* [Learn about the Blazor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle)
+* [Explore concepts in Blazor dependency injection](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection)
 
