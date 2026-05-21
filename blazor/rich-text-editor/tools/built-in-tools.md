@@ -81,7 +81,6 @@ This section provides tools for inserting and managing hyperlinks within the con
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Hyperlink | ![Hyperlink icon](../images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.|
 | InsertLink | ![InsertLink icon](../images/create-link.png) |Allows users to add a link to a particular item. |
 
 #### Link quicktoolbar items
@@ -110,7 +109,8 @@ The image quicktoolbar offers a set of tools to edit images inserted in the Rich
 |----------------|---------|---------|
 | Replace Image  | ![Replace icon](../images/image-replace.png) | Replace the selected image with another image. | 
 | Align Image | ![Alignment icon](../images/alignments.png) | The image can be aligned to the right, left, or center. | 
-| Remove Image | ![Remove icon](../images/table-remove.png) | Allows to remove the selected image from the editor. | 
+| Remove Image | ![Remove icon](../images/table-remove.png) | Allows to remove the selected image from the editor. |
+| Hyperlink | ![Hyperlink icon](../images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.| 
 | OpenImageLink | ![OpenImageLink icon](../images/open-link.png) | Opens the link that is attached to the selected image. | 
 | EditImageLink | ![EditImageLink icon](../images/edit-link.png) | Allows to edit the link that is attached to the selected image. |
 | RemoveImageLink | ![RemoveImageLink icon](../images/remove-link.png) | Removes the link that is attached to the selected image. | 
@@ -136,7 +136,7 @@ The table quicktoolbar provides options for table editing within the Rich Text E
 | TableHeader | ![TableHeader icon](../images/table-headers.png) | Allows you to add a table header. |
 | TableColumns | ![TableColumns icon](../images/table-columns.png) | Shows the dropdown to insert a column or delete the selected column. |
 | TableRows | ![TableRows icon](../images/table-row.png) | Shows the dropdown to insert a row ors delete the selected row. | 
-| TableCellHorizontalAAlignmentslign | ![TableCellHorizontalAlign icon](../images/alignments.png) | Allows the table cell content to be aligned horizontally. | 
+| Alignments | ![Alignments icon](../images/alignments.png) | Allows the table cell content to be aligned horizontally. | 
 | TableCellVerticalAlign | ![TableCellVerticalAlign icon](../images/vertical-align.png) | Allows the table cell content to be aligned vertically. | 
 | TableEditProperties | ![TableEditProperties icon](../images/table-edit.png) | Allows you to change the table width, padding, and cell spacing styles. |
 
@@ -154,8 +154,8 @@ These tools allow users to easily undo or redo any changes made within the edito
 
 | Name | Icons | Summary |
 |----------------|---------|---------|
-| Undo | ![Undo icon](../images/undo.png) | Allows to undo the actions.|toolbarSettings: { items: ['Undo']} |
-| Redo | ![Redo icon](../images/redo.png) | Allows to redo the actions.|toolbarSettings: { items: ['Redo']}|
+| Undo | ![Undo icon](../images/undo.png) | Allows to undo the actions.|
+| Redo | ![Redo icon](../images/redo.png) | Allows to redo the actions.|
 
 ### Other tools
 
