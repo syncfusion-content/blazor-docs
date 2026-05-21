@@ -9,10 +9,7 @@ documentation: ug
 
 # Value Binding in Blazor Rich Text Editor
 
-The Blazor Rich Text Editor supports two-way data binding to its [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property using the `@bind-Value` attribute. The `Value` property accepts a `string` and represents the HTML content of the editor.
-
-- When the editor content is modified, the bound variable is updated based on the configured save behavior (such as idle timeout, interval, or focus loss).
-- When the bound variable is updated programmatically, the editor content reflects the latest value immediately.
+The Blazor Rich Text Editor supports two-way data binding to its [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property using the `@bind-Value` attribute. The `Value` property accepts a `string` type. When the editor's content is modified, the bound variable is automatically updated. Likewise, any changes to the variable will be reflected in the editor's content.
 
 {% tabs %}
 {% highlight razor %}
@@ -26,15 +23,11 @@ The Blazor Rich Text Editor supports two-way data binding to its [Value](https:/
 
 The Rich Text Editor can automatically save its content based on the configuration of the [SaveInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_SaveInterval) and [AutoSaveOnIdle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_AutoSaveOnIdle) properties. By default, the content is saved when the editor loses focus.
 
-- When `AutoSaveOnIdle` is set to `true`, the editor saves the content only after the user stops typing. If no activity occurs for the duration specified by the `SaveInterval`, the content is saved automatically.
+* When `AutoSaveOnIdle` is `true`, the content is saved if the editor remains idle for the duration specified in the `SaveInterval` property (in milliseconds).
 
-- When `AutoSaveOnIdle` is set to `false`, the editor saves the content at regular time intervals defined by the `SaveInterval`, regardless of whether the user is actively typing or idle.
+* When `AutoSaveOnIdle` is `false`, the content is saved at the regular interval defined by the `SaveInterval` property.
 
-> **Important:**
-> - With `AutoSaveOnIdle = true`, `SaveInterval` acts as an *idle timeout*.
-> - With `AutoSaveOnIdle = false`, `SaveInterval` acts as a *fixed recurring interval*.
-
-The following example demonstrates how to use the `ValueChange` event to receive a notification whenever the editor content is saved, based on the configured auto-save behavior.
+The following example demonstrates how to use the `ValueChange` event to get a notification when the content is saved.
 
 {% tabs %}
 {% highlight razor %}
@@ -47,7 +40,7 @@ The following example demonstrates how to use the `ValueChange` event to receive
 </SfRichTextEditor>
 
 @code{
-    private string Value { get; set; } = "<p>Start to type a content to save</p>";
+    private string Value { get; set; } = "<p>Start to type a content to save </p>";
     private int SaveInterval { get; set; } = 5000;
     private void UpdateStatus(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
@@ -62,16 +55,7 @@ The following example demonstrates how to use the `ValueChange` event to receive
 
 ## Get editor content
 
-You can retrieve the editor's content using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event. 
-
-This event is triggered in the following scenarios:
-
-- When the editor loses focus  
-- When auto-save occurs based on the configured settings:
-  - After the idle duration when `AutoSaveOnIdle = true`
-  - At regular intervals defined by the [`SaveInterval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_SaveInterval) property when `AutoSaveOnIdle = false`
-
-This allows you to capture and process the latest editor content whenever a save action is triggered.
+You can retrieve the editor's content using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event. This event is triggered either when the editor loses focus or at the specified [SaveInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_SaveInterval), allowing you to capture the latest content.
 
 {% tabs %}
 {% highlight razor %}
