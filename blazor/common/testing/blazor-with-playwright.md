@@ -186,9 +186,9 @@ To do this, add the following configuration to your `<yourProjectName>.csproj` f
 {% tabs %}
 {% highlight xml tabtitle=".csproj" %}
 
-  <ItemGroup>
-    <Compile Remove="tests\**" />
-  </ItemGroup>
+<ItemGroup>
+  <Compile Remove="tests\**" />
+</ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
