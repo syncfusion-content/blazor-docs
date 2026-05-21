@@ -233,29 +233,14 @@ In the following code, the image size has been validated before uploading and it
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="Item"/>
     <RichTextEditorImageSettings MaxFileSize="30000000" />
 </SfRichTextEditor>
 
 @code {
-    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    private List<ToolbarItemModel> Item = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+        new ToolbarItemModel() { Command = ToolbarCommand.Image }
     };
 }
 
@@ -282,9 +267,8 @@ To explicitly remove images from the server, use the [ImageDelete](https://help.
 
 The following sample demonstrates how to use the `ImageDelete` event in Rich Text Editor to delete images from the server after they are removed from the editor content:
 
-`Index.razor`
-
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -292,6 +276,7 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
    <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
    <RichTextEditorImageSettings SaveUrl="@SaveURL" Path="@Path" RemoveUrl="@RemoveURL"/>
 </SfRichTextEditor>
+
 @code{
     private string SaveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/SaveFile";
     private string Path = "[SERVICE_HOSTED_PATH]/RichTextEditor/";
@@ -324,7 +309,8 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
 
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Set image dimensions
 
@@ -340,7 +326,11 @@ The image caption and alternative text can be specified for the inserted image i
 
 Through the `Alternative Text` option, set the alternative text for the image when the image is not successfully uploaded into the Rich Text Editor.
 
+![Blazor RichTextEditor alternative text](../images/blazor-richtexteditor-alternative-text.webp)
+
 When you click the `Image Caption` button, the image is wrapped in an image element with a caption. Then, type the caption content inside the Rich Text Editor.
+
+![Blazor RichTextEditor image caption](../images/blazor-richtexteditor-image-caption.webp)
 
 ## Setting image display position
 
@@ -348,18 +338,24 @@ Configure the default display behavior for inserted images when it is inserted i
 
 N> It has two possible options: `Inline` and `Break`.
 
+![Blazor RichTextEditor image display](../images/blazor-richtexteditor-image-display.webp)
+
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorImageSettings Display="ImageDisplay.Inline" />
-    <p>The Rich Text Editor allows you to insert images from the online source as well as the local computer where you want to insert the image in your content.</p>
-    <p><b>Get started with Quick Toolbar to click on the image</b></p>
-    <p>It is possible to add a custom style on the selected image inside the Rich Text Editor through the quick toolbar.</p>
-    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />
+    <RichTextEditorToolbarSettings Items="Item"/>
+    <p>The Rich Text Editor allows you to insert images and control their display behavior. When set to <b>Break</b>, the image appears as a separate block element. When set to <b>Inline</b>, the image appears within the text flow alongside other content.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png'/>
 </SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> Item = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Image }
+    };
+}
 
 {% endhighlight %}
 {% endtabs %}
