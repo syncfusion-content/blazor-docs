@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom aggregate in Blazor DataGrid
 
-The custom aggregate feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
+The custom aggregate feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
 
 To use the custom aggregate option:
 * Set the `AggregateType` as Custom in the `GridAggregateColumn` component.
