@@ -9,7 +9,7 @@ documentation: ug
  
 # Handling Large Data in Blazor Components
 
-Handling large datasets efficiently is a critical requirement for modern Blazor applications. With the right data-handling strategies, applications can reliably display and interact with thousands of records while maintaining a fast and responsive user interface.
+Handling large datasets efficiently is a critical requirement for modern Blazor applications. With the right data handling strategies, applications can reliably display and interact with thousands of records while maintaining a fast and responsive user interface.
 
 [Blazor components](https://www.syncfusion.com/blazor-components) are built to ensure responsive rendering, smooth scrolling, and efficient memory usage, even when working with large volumes of data. By leveraging capabilities such as data virtualization, server side data operations, lazy loading, and optimized rendering pipelines, these components minimize UI overhead and deliver consistent performance.
 
@@ -45,7 +45,6 @@ Server side processing transfers the workload from the browser to the server. In
 </SfGrid>
 
 @code {
-
     public class Order
     {
         public int? OrderID { get; set; }
@@ -53,7 +52,6 @@ Server side processing transfers the workload from the browser to the server. In
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
-
 }
 
 {% endhighlight %}
@@ -124,7 +122,7 @@ Virtualization and infinite scrolling are supported in several Blazor components
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<TaskDetails> TaskData { get; set; }
     protected override void OnInitialized()
     {
@@ -217,13 +215,13 @@ For an example of implementing the [LoadChildOnDemand](https://help.syncfusion.c
 
 ## How Blazor components handle large data
 
-Blazor components are built with large‑data scenarios and follow these core principles.
+Blazor components are built with large data scenarios and follow these core principles.
 
 *   Virtualized rendering for optimal UI performance
 *   Server side query execution using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and adaptors
 *   Minimal DOM updates and efficient data binding
 *   Built‑in support for lazy loading and incremental fetch
-*   Scalable design suitable for enterprise‑grade datasets
+*   Scalable design suitable for enterprise grade datasets
 
 By following these principles, Blazor components enable developers to build applications that efficiently manage large datasets while delivering a smooth, responsive, and reliable user experience.
 
