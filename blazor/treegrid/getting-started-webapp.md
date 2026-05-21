@@ -23,26 +23,6 @@ This guide explains how to integrate the [Syncfusion<sup style="font-size:70%">&
 
 Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
-
-Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> packages using the NuGet Package Manager in Visual Studio by navigating to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*, then search for and install the packages [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
-
-Alternatively, run the following commands in the Package Manager Console:
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.TreeGrid -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-For Blazor Web Apps running in `WebAssembly` or `Auto` render mode, the solution includes both **Server** and **Client** projects. To fully support client-side features, ensure that all required packages are installed in the **Client project**.
-
-N> - All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
-- Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
-
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -66,21 +46,6 @@ cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
-
-Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages using the integrated terminal in **Visual Studio Code**. Open the project folder in Visual Studio Code, then open the terminal using the shortcut <kbd>Ctrl</kbd>+<kbd>`</kbd> and run the following commands,
-
-{% tabs %}
-{% highlight C# tabtitle="Terminal" %}
-
-dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-For Blazor Web Apps running in `WebAssembly` or `Auto` render mode, the solution includes both **Server** and **Client** projects. To fully support client-side features, ensure that all required packages are installed in the **Client project**.
 
 {% endtabcontent %}
 
@@ -114,26 +79,30 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) topics for more details.
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages using the **.NET CLI** in a **command prompt**, **terminal**, or **shell environment**. Navigate to the project directory and run the following commands,
+Install [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
-{% highlight C# tabtitle="Terminal" %}
+{% highlight C# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.TreeGrid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
 For Blazor Web Apps running in `WebAssembly` or `Auto` render mode, the solution includes both **Server** and **Client** projects. To fully support client-side features, ensure that all required packages are installed in the **Client project**.
 
-{% endtabcontent %}
-
-{% endtabcontents %}
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
@@ -183,13 +152,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the **~/Pages/*.razor** file. If you selected **Per-page interactivity** during project setup, you must explicitly add the appropriate `@rendermode` at the top of each page where interactivity is needed.
-
-| Render Mode              | When to Use | Declaration |
-|--------------------------|----------------------------------------------------------------|-------------------------------------|
-| InteractiveServer        | Used when Server interactivity is selected in project setup.    | `@rendermode InteractiveServer`     |
-| InteractiveWebAssembly   | Used when WebAssembly interactivity is selected in project setup.                  | `@rendermode InteractiveWebAssembly`|
-| InteractiveAuto          | Used when Auto (hybrid) interactivity is selected in project setup .             | `@rendermode InteractiveAuto`       |
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the **~/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 {% tabs %}
 {% highlight razor %}
@@ -249,7 +212,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * **Visual Studio** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the **application**. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
  
-* **VS Code / CLI** → Run `dotnet run` in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
+* **VS Code / CLI** → Run **dotnet run** in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
