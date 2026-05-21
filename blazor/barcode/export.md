@@ -68,3 +68,11 @@ The following code example illustrates how to export the barcode as a Base64 enc
 N> Format specifies the image type of the exported file. The following export formats are supported:
 <br/>* JPG.
 <br/>* PNG.
+
+## See also
+
+* [How to generate a Barcode Generator in a Blazor Barcode Component](./barcodeGenerator)
+
+* [How to generate a QR Code Generator in a Blazor Barcode Component](./qrcodegenerator)
+
+* [How to generate a Data Matrix Generator in a Blazor Barcode Component](./datamatrixgenerator)
