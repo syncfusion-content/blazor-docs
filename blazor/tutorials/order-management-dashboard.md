@@ -1317,7 +1317,7 @@ The page binds data collections and state variables to these components, enablin
                 AllowSorting="true"
                 AllowSearching="true"
                 Toolbar="@(new List<string>() { "Search" })">
-            <GridPageSettings PageSize="10" PageSizes="@(new int[] {6, 10, 20, 50})"></GridPageSettings>
+            <GridPageSettings PageSize="10" PageSizes="@(new int[] {10, 20, 50, 100})"></GridPageSettings>
             <GridSearchSettings Fields="@(new string[] { "Id", "CustomerName", "OrderNumber", "Email" })" 
                                 IgnoreCase="true" 
                                 Operator="Syncfusion.Blazor.Operator.Contains"></GridSearchSettings>
