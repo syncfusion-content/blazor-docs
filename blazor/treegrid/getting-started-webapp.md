@@ -152,14 +152,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component
 
-Add the Syncfusion® Blazor TreeGrid component in the **~/Pages/*.razor** file. If you selected **Per-page interactivity** during project setup, you must explicitly add the appropriate `@rendermode` at the top of each page where interactivity is needed.
-
-
-| Render Mode              | When to Use | Declaration |
-|--------------------------|----------------------------------------------------------------|-------------------------------------|
-| InteractiveServer        | Used when Server interactivity is selected in project setup.    | `@rendermode InteractiveServer`     |
-| InteractiveWebAssembly   | Used when WebAssembly interactivity is selected in project setup.                  | `@rendermode InteractiveWebAssembly`|
-| InteractiveAuto          | Used when Auto (hybrid) interactivity is selected in project setup .             | `@rendermode InteractiveAuto`       |
+Add the Syncfusion Blazor TreeGrid component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 {% tabs %}
 {% highlight razor %}
@@ -219,7 +212,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * **Visual Studio** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the **application**. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component in the default web browser.
  
-* **VS Code / CLI** → Run `dotnet run` in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
+* **VS Code / CLI** → Run **dotnet run** in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid component.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
