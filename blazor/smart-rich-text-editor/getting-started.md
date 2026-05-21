@@ -98,6 +98,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -108,6 +109,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Package Manager Console**
 2. Run the following commands:
 
@@ -200,6 +202,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -210,6 +213,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Package Manager Console**
 2. Run the following commands:
 
@@ -251,11 +255,13 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="2 3 4 11 10 12 13 14 15 16 17" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 13 14 15 16 17 18 19" %}
 
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
+
 var builder = WebApplication.CreateBuilder(args);
 
 ....
@@ -292,6 +298,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -302,6 +309,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Package Manager Console**
 2. Run the following commands:
 
@@ -345,8 +353,9 @@ dotnet add package Azure.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="2 3 4 5 13 14 15 16 17 18 19 20 21 22 23" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 6 14 15 16 17 18 19 20 21 22 23 24" %}
 
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;

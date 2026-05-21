@@ -101,6 +101,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -111,6 +112,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Package Manager Console**
 2. Run the following commands:
 
@@ -204,6 +206,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -214,6 +217,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Package Manager Console**
 2. Run the following commands:
 
@@ -301,6 +305,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
 2. Search for the required packages.
 3. Select the package and click **Install**.
@@ -311,6 +316,7 @@ You can install these packages using different methods as shown below:
 
 ## Steps
 1. In Visual Studio Navigate to:
+
    **Tools → NuGet Package Manager → Package Manager Console**
 2. Run the following commands:
 
