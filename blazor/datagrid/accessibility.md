@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
 Supported guidelines include:
 
 - [Americans with Disabilities Act (ADA)]((https://www.ada.gov/))
@@ -44,7 +44,7 @@ Supported guidelines include:
 
 ## WAI-ARIA attributes
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including **JAWS** and **NVDA**. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the DataGrid accessible to individuals with disabilities.
+The Blazor DataGrid implements the [WAI-ARIA grid pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) to support accessibility requirements. This ensures compatibility with assistive technologies such as screen readers, including **JAWS** and **NVDA**. WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) attributes define roles, states, and properties that make the DataGrid accessible to individuals with disabilities.
 
 | Attribute | Purpose |
 |-----------|---------|
@@ -87,7 +87,7 @@ To improve accessibility, apply page landmarks, assign unique labels to search r
 
 ## Keyboard interaction
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports keyboard navigation based on the ARIA grid [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction) guidelines. This enables efficient navigation for scenarios involving keyboard input or assistive technologies.
+The Blazor DataGrid supports keyboard navigation based on the ARIA grid [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#keyboard-interaction) guidelines. This enables efficient navigation for scenarios involving keyboard input or assistive technologies.
 
 The supported keyboard shortcuts are listed below.
 
@@ -203,7 +203,7 @@ For example:
 
 ## Ensuring accessibility
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is validated for accessibility using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests.
+The Blazor DataGrid is validated for accessibility using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests.
 Accessibility compliance can be evaluated using the interactive [sample](https://blazor.syncfusion.com/accessibility/datagrid), which demonstrates the Grid's behavior with accessibility tools and validation steps.
 
 ## See also
