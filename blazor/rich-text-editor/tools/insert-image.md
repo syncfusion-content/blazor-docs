@@ -348,7 +348,7 @@ N> It has two possible options: `Inline` and `Break`.
 <SfRichTextEditor>
     <RichTextEditorImageSettings Display="ImageDisplay.Inline" />
     <RichTextEditorToolbarSettings Items="Item"/>
-    <p>The Rich Text Editor allows you to insert images and control their display behavior. When set to `Break`, the image appears as a separate block element. When set to `Inline`, the image appears within the text flow alongside other content.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png'/>
+    <p>The Rich Text Editor allows you to insert images and control their display behavior. When set to <b>Break</b>, the image appears as a separate block element. When set to <b>Inline</b>, the image appears within the text flow alongside other content.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png'/>
 </SfRichTextEditor>
 
 @code {
