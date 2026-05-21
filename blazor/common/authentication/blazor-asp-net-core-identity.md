@@ -214,7 +214,7 @@ Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion t
 Open `App.razor` and include the Syncfusion theme stylesheet and required script references.
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+{% highlight html tabtitle="App.razor" %}
 
 <head>
     ....
