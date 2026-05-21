@@ -9,7 +9,7 @@ documentation: ug
 
 # Detail Template in Blazor DataGrid
 
-The detail template in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Syncfusion<sup style="font-size:70%">&reg;</sup> components, or custom Blazor components.
+The detail template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Syncfusion<sup style="font-size:70%">&reg;</sup> components, or custom Blazor components.
 
 > Review the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) topic before adding a detail template to configure required settings.
 
@@ -172,7 +172,7 @@ public class EmployeeData
 
 ## Expand detail DataGrid initially
 
-Expanding detail rows by default in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful when immediate visibility into related data is required on initial load.
+Expanding detail rows by default in the Blazor DataGrid is useful when immediate visibility into related data is required on initial load.
 
 Use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync_System_String_System_Object_) method during the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event to expand a specific row by field and value.
 
@@ -299,7 +299,7 @@ public class OrderData
 
 ## Creating custom component/Hierarchical DataGrid 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can render custom components inside the detail row. This enables adding additional information or functionality for a specific row. A hierarchical structure can be created by nesting grids inside the detail row of the parent grid.
+The Blazor DataGrid can render custom components inside the detail row. This enables adding additional information or functionality for a specific row. A hierarchical structure can be created by nesting grids inside the detail row of the parent grid.
 
 To render a custom component or build a hierarchical grid inside the detail row, define the template in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) within the `GridTemplates` section. The hierarchical DataGrid displays data in expandable or collapsible levels using the expand or collapse button, or custom content such as HTML elements.
 
@@ -466,11 +466,11 @@ public class CustomerDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoDoUtUlcPEWyj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
+> The Blazor DataGrid does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
 
 ## Template column in detail DataGrid
 
-A template column in a detail grid within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful for customizing the appearance and behavior of specific columns. It enables the inclusion of interactive elements, custom formatting, or complex data representations within the detail grid.
+A template column in a detail grid within the Blazor DataGrid is useful for customizing the appearance and behavior of specific columns. It enables the inclusion of interactive elements, custom formatting, or complex data representations within the detail grid.
 
 Use the `Template` property of a column to display custom content instead of the field value.
 
@@ -1202,7 +1202,7 @@ public class EmployeeData
 
 ## How to access the child component in the detail template
 
-Using the detail template feature of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, a grid-like structure with hierarchical binding can be achieved by rendering a grid inside the DetailTemplate. By default, the @ref property of the grid is of type SfGrid<T>, which carries a single grid instance. For a hierarchy, each child grid requires a separate reference. Define the @ref using a dictionary of key–value pairs, where values are SfGrid<T> instances and keys are unique.
+Using the detail template feature of the Blazor DataGrid, a grid-like structure with hierarchical binding can be achieved by rendering a grid inside the DetailTemplate. By default, the @ref property of the grid is of type SfGrid<T>, which carries a single grid instance. For a hierarchy, each child grid requires a separate reference. Define the @ref using a dictionary of key–value pairs, where values are SfGrid<T> instances and keys are unique.
 
 In the following sample, the instance of a specific child grid is retrieved using the unique key value passed to the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. The selected record details are then obtained using [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) on that child grid:
 
@@ -1405,7 +1405,7 @@ public class EmployeeData
 
 ## Hide the expand/collapse icon in parent row when no record in detail DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports hiding the expand/collapse icon in parent rows when no records exist in the detail grid. This creates a cleaner and more intuitive interface by removing unnecessary icons from empty parent rows.
+The Blazor DataGrid supports hiding the expand/collapse icon in parent rows when no records exist in the detail grid. This creates a cleaner and more intuitive interface by removing unnecessary icons from empty parent rows.
 
 Use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event to check whether the detail grid has records for the current row and add a custom class to disable and hide the icon. Apply the following CSS to prevent interaction and hide the icon:
 
@@ -1710,7 +1710,7 @@ public class OrderData
 
 ## Customize the detail Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers multiple ways to customize the detail grid appearance using CSS or themes. Target detail grid elements with the `.e-detailcell` class selector.
+The Blazor DataGrid offers multiple ways to customize the detail grid appearance using CSS or themes. Target detail grid elements with the `.e-detailcell` class selector.
 
 ### Header
 

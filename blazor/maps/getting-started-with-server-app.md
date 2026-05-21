@@ -110,6 +110,8 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Maps` namespaces.
 
+N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
 
@@ -121,7 +123,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Server App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Server App. This step enables the Syncfusion components to work in your application.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -137,7 +139,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file.
+The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file (this is the root layout file of your application).
 
 ```html
 
@@ -210,21 +212,21 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
 
 @code {
     public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
-         new UNCouncilCountry { Name= "China", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "China", Membership= "Permanent" },
          new UNCouncilCountry { Name= "France", Membership= "Permanent" },
-         new UNCouncilCountry { Name= "Russia", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "United States", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent"}
+         new UNCouncilCountry { Name= "Russia", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "United States", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent" }
     };
 
     public class UNCouncilCountry
@@ -261,21 +263,21 @@ The following complete example shows a Maps component with the GeoJSON layer and
 
 @code {
     public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
-         new UNCouncilCountry { Name= "China", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "China", Membership= "Permanent" },
          new UNCouncilCountry { Name= "France", Membership= "Permanent" },
-         new UNCouncilCountry { Name= "Russia", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "United States", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent"}
+         new UNCouncilCountry { Name= "Russia", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "United States", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent" }
     };
 
     public class UNCouncilCountry

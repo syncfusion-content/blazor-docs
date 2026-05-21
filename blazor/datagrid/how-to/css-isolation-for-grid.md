@@ -71,3 +71,5 @@ Index.razor.css
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/CSS_Isolation).
 
 N> More information on CSS Isolation is available [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-8.0#child-component-support).
+
+N> Looking for a complete Blazor DataGrid Component overview, including features, pricing, and documentation? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.
