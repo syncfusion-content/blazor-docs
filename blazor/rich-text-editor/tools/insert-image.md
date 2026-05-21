@@ -233,12 +233,12 @@ In the following code, the image size has been validated before uploading and it
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorToolbarSettings Items="Item"/>
+    <RichTextEditorToolbarSettings Items="Items"/>
     <RichTextEditorImageSettings MaxFileSize="30000000" />
 </SfRichTextEditor>
 
 @code {
-    private List<ToolbarItemModel> Item = new List<ToolbarItemModel>()
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Image }
     };
@@ -347,12 +347,12 @@ N> It has two possible options: `Inline` and `Break`.
 
 <SfRichTextEditor>
     <RichTextEditorImageSettings Display="ImageDisplay.Inline" />
-    <RichTextEditorToolbarSettings Items="Item"/>
+    <RichTextEditorToolbarSettings Items="Items"/>
     <p>The Rich Text Editor allows you to insert images and control their display behavior. When set to <b>Break</b>, the image appears as a separate block element. When set to <b>Inline</b>, the image appears within the text flow alongside other content.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png'/>
 </SfRichTextEditor>
 
 @code {
-    private List<ToolbarItemModel> Item = new List<ToolbarItemModel>()
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Image }
     };
