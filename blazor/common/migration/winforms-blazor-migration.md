@@ -15,31 +15,31 @@ This guide provides a step‑by‑step approach to migrating a [Windows Forms (W
 
 | Aspect | WinForms | Blazor | Benefit of Migration |
 |------|----------|------------------|----------------------|
-| Platform Support | Windows only | Web, Desktop, Cloud, Cross‑platform | Application accessible from any browser or device |
+| Platform Support | Windows only | Web, Desktop, Cloud, Cross platform | Application accessible from any browser or device |
 | UI Technology | Legacy desktop UI | Modern web based UI | Improved look and user experience |
-| Architecture | Form‑centric, tightly coupled | Component based, modular | Better maintainability and scalability |
-| Deployment | Requires local installation | Runs in a web browser | No client‑side installation required |
-| Development Model | Event‑driven programming | Data binding and reactive UI | Cleaner and more readable code |
+| Architecture | Form centric, tightly coupled | Component based, modular | Better maintainability and scalability |
+| Deployment | Requires local installation | Runs in a web browser | No client side installation required |
+| Development Model | Event driven programming | Data binding and reactive UI | Cleaner and more readable code |
 | Responsiveness | Fixed desktop layouts | Responsive web layouts | Works across different screen sizes |
-| Maintenance | Hard to extend and update | Easy to maintain and enhance | Lower long-term maintenance effort |
+| Maintenance | Hard to extend and update | Easy to maintain and enhance | Lower long term maintenance effort |
 | Cloud Readiness | Minimal support | Designed for cloud deployment | Enables modern hosting scenarios |
 | Code Reusability | Low reusability | High reusability via components and services | Faster development and testing |
-| Future Support | Limited continued development | Actively developed framework | Long‑term application sustainability |
+| Future Support | Limited continued development | Actively developed framework | Long term application sustainability |
 
 ## Key architectural differences
 
-Understanding the architectural differences between **WinForms** and **Blazor** is essential before starting the migration. WinForms follows a traditional desktop‑based, event‑driven architecture, while Blazor uses a modern, component‑based web architecture designed for scalability and maintainability.
+Understanding the architectural differences between **WinForms** and **Blazor** is essential before starting the migration. WinForms follows a traditional desktop based, event driven architecture, while Blazor uses a modern, component based web architecture designed for scalability and maintainability.
 
 | Area | WinForms Architecture | Blazor Architecture |
 |-----|----------------------|--------------------------------|
 | Application Type | Desktop application | Web application |
-| UI Model | Form‑based controls | Component based UI |
-| Platform Dependency | Windows only | Cross‑platform |
+| UI Model | Form based controls | Component based UI |
+| Platform Dependency | Windows only | Cross platform |
 | Code Organization | UI and business logic often tightly coupled | Clear separation of UI, services, and models |
-| Rendering Engine | OS‑based rendering (GDI+/Windows) | Browser‑based rendering (HTML/CSS) |
-| State Management | Control state managed automatically | State‑driven UI with data binding |
+| Rendering Engine | OS based rendering (GDI+/Windows) | Browser based rendering (HTML/CSS) |
+| State Management | Control state managed automatically | State driven UI with data binding |
 | Event Handling | Traditional event handlers | Declarative event binding |
-| Layout System | Fixed, pixel‑based layout | Responsive, CSS based layout |
+| Layout System | Fixed, pixel based layout | Responsive, CSS based layout |
 | Navigation | Open and close forms | URL based routing |
 
 ## Project structure comparison
@@ -92,7 +92,7 @@ dotnet add package Syncfusion.SfDataGrid.WinForms
 
 **Blazor application**
 
-In Blazor applications, Blazor components are delivered as web‑based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
+In Blazor applications, Blazor components are delivered as web based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
 
 To use Blazor components in a Blazor application, install the component package and the theme package.
 
@@ -162,7 +162,7 @@ In Blazor applications, Blazor components must be registered with the built‑in
 
 This step is required only for Blazor applications and replaces the explicit control initialization and setup performed in WinForms.
 
-To enable Blazor components, register the Syncfusion® Blazor service in the `Program.cs` file.
+To enable Blazor components, register the **Syncfusion® Blazor service** in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -442,7 +442,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 |---|---|---|
 | [ChartControl](https://help.syncfusion.com/windowsforms/chart/getting-started) | [SfChart](https://blazor.syncfusion.com/documentation/chart/getting-started-wasm) | Supports column, line, bar, pie, area charts |
 | [Sparkline](https://help.syncfusion.com/windowsforms/sparkline/gettingstarted) | [SfSparkline](https://blazor.syncfusion.com/documentation/sparkline/getting-started) | Lightweight inline charts |
-| [Gauge](https://help.syncfusion.com/windowsforms/radial-gauge/overview) | [SfLinearGauge](https://blazor.syncfusion.com/documentation/linear-gauge/getting-started), [SfCircularGauge](https://blazor.syncfusion.com/documentation/circular-gauge/getting-started) | SVG‑based rendering |
+| [Gauge](https://help.syncfusion.com/windowsforms/radial-gauge/overview) | [SfLinearGauge](https://blazor.syncfusion.com/documentation/linear-gauge/getting-started), [SfCircularGauge](https://blazor.syncfusion.com/documentation/circular-gauge/getting-started) | SVG based rendering |
 | [Maps](https://help.syncfusion.com/windowsforms/map/getting-started) | [SfMaps](https://blazor.syncfusion.com/documentation/maps/getting-started) | Interactive maps |
 
 ### Scheduling and Time Management
@@ -489,7 +489,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | WinForms control | Blazor component | Notes |
 |---|---|---|
 | [PdfViewerControl](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/getting-started) | [SfPdfViewer2](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application) | PDF viewer |
-| [Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started) | [SfSpreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started) | Excel‑like UI |
+| [Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started) | [SfSpreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started) | Excel like UI |
 
 ### Diagram and Visual Modeling
 
