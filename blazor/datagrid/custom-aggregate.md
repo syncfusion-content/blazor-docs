@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom aggregate in Blazor DataGrid
 
-The custom aggregate feature in the Syncfusion Blazor DataGrid enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
+The custom aggregate feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables calculating summary values with a user-defined function when built-in aggregate types do not meet specific requirements. Configure a custom aggregate by setting the aggregate type and providing a delegate that computes the value.
 
 To use the custom aggregate option:
 * Set the `AggregateType` as Custom in the `GridAggregateColumn` component.
@@ -208,4 +208,4 @@ Custom aggregate functions can also compute distinct counts or other domain-spec
 
 > To display the aggregate value of the current column in another column, use the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property. If ColumnName is not defined, the value of Field is used.
 >
-> Refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for feature overviews. Explore the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to see data presentation and manipulation in action.
+> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for feature overviews. Explore the [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to see data presentation and manipulation in action.
