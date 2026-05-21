@@ -5,13 +5,12 @@
     <RichTextEditorQuickToolbarSettings Audio="AudioQuickToolbarItems" />
     <p><b>Get started with Quick Toolbar to click on an audio</b></p>
     <p>Using the quick toolbar, users can replace, display, and delete the selected audio.</p>
-    
 </SfRichTextEditor>
 
 @code {
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Audio },
+        new ToolbarItemModel() { Command = ToolbarCommand.Audio }
     };
     private List<AudioToolbarItemModel> AudioQuickToolbarItems = new List<AudioToolbarItemModel>()
     {
