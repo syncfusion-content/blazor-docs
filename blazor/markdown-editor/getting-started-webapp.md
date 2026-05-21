@@ -226,15 +226,15 @@ N> When using the .NET CLI or Visual Studio Code, ensure that you run the applic
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Webapp in .NET Core CLI](../getting-started/blazor-web-app-dotnet-cli)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app in .NET Core CLI](../getting-started/blazor-web-app-dotnet-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Webapp using single nuget](../getting-started/blazor-web-app-single-nuget)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app using single nuget](../getting-started/blazor-web-app-single-nuget)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Webapp in linux](../getting-started/blazor-web-app-linux)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app in linux](../getting-started/blazor-web-app-linux)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Webapp](../getting-started/blazor-web-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app](../getting-started/blazor-web-app)
 
-* [How to insert special charaters](https://blazor.syncfusion.com/demos/rich-text-editor/insert-special-characters?theme=bootstrap5)
+* [How to insert special characters](https://blazor.syncfusion.com/demos/rich-text-editor/insert-special-characters?theme=bootstrap5)
 
 * [Blog posting using Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/usecase?theme=bootstrap5)
 

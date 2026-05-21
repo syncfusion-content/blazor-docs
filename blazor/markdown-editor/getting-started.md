@@ -221,7 +221,7 @@ To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio,
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for webassembly in Visual Studio mac](../getting-started/blazor-webassembly-visual-studio-mac)
 
-* [How to insert special charaters](https://blazor.syncfusion.com/demos/rich-text-editor/insert-special-characters?theme=bootstrap5)
+* [How to insert special characters](https://blazor.syncfusion.com/demos/rich-text-editor/insert-special-characters?theme=bootstrap5)
 
 * [Blog posting using Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/usecase?theme=bootstrap5)
 
