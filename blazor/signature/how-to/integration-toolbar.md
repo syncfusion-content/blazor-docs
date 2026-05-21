@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integration Toolbar with Blazor Signature Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+description: Integrate Blazor Signature with Toolbar to enable undo, redo, save, clear, and color customization features.
 platform: Blazor
 control: Signature
 documentation: ug
