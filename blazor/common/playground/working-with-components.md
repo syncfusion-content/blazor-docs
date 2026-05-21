@@ -13,9 +13,9 @@ The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to c
 
 ## Add a child component
 
-1. Click the **+** button to add a new component.
-2. Name the component in the input box.
-3. Add code to the child component file (for example, `ChildComponent.razor`).
+1\. Click the **+** button to add a new component.
+2\. Name the component in the input box.
+3\. Add code to the child component file (for example, `ChildComponent.razor`).
 
 {% tabs %}
 {% highlight razor tabtitle="ChildComponent.razor" %}
@@ -49,7 +49,7 @@ The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to c
 {% endhighlight %}
 {% endtabs %}
 
-* The `_Index.razor` file is the main entry point in the Blazor Playground. To render the child component, reference it in `_Index.razor` file.
+4\. The `_Index.razor` file is the main entry point in the Blazor Playground. To render the child component, reference it in `_Index.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="_Index.razor" %}
@@ -65,7 +65,7 @@ The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to c
 {% endhighlight %}
 {% endtabs %}
 
-* Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
+5\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
 ![Blazor Playground with Child Component](images/child_component.webp)
 
@@ -77,6 +77,6 @@ N> Blazor Playground does not automatically remove component references from `_I
 
 ## See also
 
-* [Getting Started with Blazor Playground](./getting-started)
+* [Getting Started with Blazor Playground](./getting-started.md)
 * [Manage NuGet Packages in Blazor Playground](./managing-nuget-packages)
 * [Features and Capabilities of Blazor Playground](./end-user-capabilities)

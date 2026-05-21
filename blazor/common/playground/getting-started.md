@@ -20,8 +20,8 @@ To get started quickly with Blazor Playground, watch the following video.
 
 You can create a Blazor component in Blazor Playground by following these steps:
 
-* Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser.
-* In the editor, add the following code:
+1\. Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser.
+2\. In the editor, add the following code:
 
 {% tabs %}
 {% highlight razor tabtitle="_Index.razor" %}
@@ -74,7 +74,7 @@ You can create a Blazor component in Blazor Playground by following these steps:
 {% endhighlight %}
 {% endtabs %}
 
-* Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
+3\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHZyLtTXzqUKjn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
@@ -84,7 +84,7 @@ You can create a Blazor component in Blazor Playground by following these steps:
 
 Blazor Playground is preconfigured with the Syncfusion® Blazor package, stylesheets, and scripts. To use [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) in the Playground, import the required namespace and add the component as shown below:
 
-* Add the `@using Syncfusion.Blazor.Grids` namespace at the top of the editor. This namespace is provided by the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) NuGet package.
+1\. Add the `@using Syncfusion.Blazor.Grids` namespace at the top of the editor. This namespace is provided by the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) NuGet package.
 
 {% tabs %}
 {% highlight razor tabtitle="_Index.razor" %}
@@ -94,7 +94,7 @@ Blazor Playground is preconfigured with the Syncfusion® Blazor package, stylesh
 {% endhighlight %}
 {% endtabs %}
 
-* Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the editor.
+2\. Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the editor.
 
 {% tabs %}
 {% highlight razor tabtitle="_Index.razor" %}
@@ -139,7 +139,7 @@ Blazor Playground is preconfigured with the Syncfusion® Blazor package, stylesh
 {% endhighlight %}
 {% endtabs %}
 
-* Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. 
+3\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhxNSilfcqNzyDG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 

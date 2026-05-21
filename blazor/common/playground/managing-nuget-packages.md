@@ -15,15 +15,15 @@ N> Uninstall the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.B
 
 ## Add NuGet packages
 
-1. Open the **NuGet Asset Manager** sidebar.
-2. Search for the desired package and select a version.
-3. Click the **Install NuGet** button. The Playground restores packages automatically.
+1\. Open the **NuGet Asset Manager** sidebar.
+2\. Search for the desired package and select a version.
+3\. Click the **Install NuGet** button. The Playground restores packages automatically.
 
 The following example shows the result after uninstalling [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) and installing [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
 
 ![Blazor Playground with NuGet Package](images/adding_package.webp)
 
-4. Add rendering code in the editor.
+4\. Add rendering code in the editor.
 
 {% tabs %}
 {% highlight razor tabtitle="_Index.razor" %}
@@ -70,13 +70,13 @@ The following example shows the result after uninstalling [Syncfusion.Blazor](ht
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHjoWbHhPsUJbE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-### Remove packages
+## Remove packages
 
 Click the **Remove** button next to the installed package details to uninstall it.
 
 ![Blazor Playground with Delete Package](images/delete_Package.webp)
 
-### Control NuGet versioning
+## Control NuGet versioning
 
 Upgrade or downgrade packages by searching for the package name and selecting a specific version. The Playground handles installation or updates automatically.
 

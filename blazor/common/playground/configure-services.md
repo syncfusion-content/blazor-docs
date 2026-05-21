@@ -13,7 +13,7 @@ You can add or modify services in [Blazor Playground](https://blazorplayground.s
 
 The following example creates a `CounterService` class, registers it in `Program.cs`, and injects it into `_Index.razor` to manage a counter with increment and decrement actions.
 
-1. Click the **+** button to add a new file and include the `CounterService` code.
+1\. Click the **+** button to add a new file and include the `CounterService` code.
 
 {% tabs %}
 {% highlight c# tabtitle="CounterService.cs"  %}
@@ -47,7 +47,7 @@ namespace Playground.User
 {% endhighlight %}
 {% endtabs %}
 
-2. Click the **Services** button to open `Program.cs` and register the service in `ConfigureServices`.
+2\. Click the **Services** button to open `Program.cs` and register the service in `ConfigureServices`.
 
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
@@ -81,7 +81,7 @@ namespace Playground.User
 {% endhighlight %}
 {% endtabs %}
 
-3. Inject the service into `_Index.razor` file.
+3\. Inject the service into `_Index.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="_Index.razor" %}
@@ -111,7 +111,7 @@ namespace Playground.User
 {% endhighlight %}
 {% endtabs %}
 
-4. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
+4\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
 ![Blazor Playground with adding services](images/add_services.webp)
 

@@ -23,7 +23,7 @@ N> For each selected component, the corresponding individual NuGet package (late
 
 ![Blazor Playground with code snippets](./images/add_snippets.webp)
 
-4. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
+Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
 ![Selected snippet output](./images/Snippet_Output.webp)
 
