@@ -22,7 +22,7 @@ To create a Blazor application, follow the [Blazor getting started guide](https:
 
 ## Project structure
 
-The following project structure organizes the application into separate folders for components, data, models, and services, making the codebase maintainable and scalable.
+The following project structure organizes the application into separate folders for components, data, models, and services, making the code base maintainable and scalable.
 
 ```text
 BlazorProductGrid/
