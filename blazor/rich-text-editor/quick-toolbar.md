@@ -153,7 +153,7 @@ Refer to the following link for a complete list of available toolbar items: [Bui
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.Blazor.RichTextEditor;
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
     <RichTextEditorQuickToolbarSettings Text="@TextQuickToolbarItems"></RichTextEditorQuickToolbarSettings>
