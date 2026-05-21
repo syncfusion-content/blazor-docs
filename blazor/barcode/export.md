@@ -13,7 +13,6 @@ Saving and sharing barcode data in a flexible format is an essential requirement
 
 The `Export` feature allows you to easily save the generated barcode as an image file. This is useful when you need to download, print, or share the barcode outside the application. With just a single method call, the barcode is converted into a standard image format like JPG or PNG and downloaded directly to the browser, making it simple for end users to access and use.
 
-
 The `ExportAsBase64` feature is useful when you want to work with barcode data without creating physical image files. Instead of downloading the barcode, it is converted into a Base64 string that can be directly used in your application. This makes it easy to embed the barcode in web pages, send it through APIs, or store it in databases for later use.
 
 ## Export
