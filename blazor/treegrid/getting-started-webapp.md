@@ -122,7 +122,7 @@ Install the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor pac
 {% tabs %}
 {% highlight C# tabtitle="Terminal" %}
 
-ddotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.TreeGrid --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
