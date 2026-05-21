@@ -52,21 +52,72 @@ From your Azure OpenAI resource in Azure Portal, copy:
 - **Key**: Found under **Keys and Endpoint**
 - **Deployment name**: Created in Step 2
 
-## Installation
+## Setup the Smart Rich Text Editor Component
 
-Install required NuGet packages:
+Follow the [Getting Started](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp) guide to configure and render the Smart Rich Text Editor component in the application and that prerequisites are met.
+
+## Install NuGet packages
+
+Install the following NuGet packages to your project:
+
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+* [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
-Install-Package Syncfusion.Blazor.SmartRichTextEditor
-Install-Package Syncfusion.Blazor.Themes
 Install-Package Microsoft.Extensions.AI
 Install-Package Microsoft.Extensions.AI.OpenAI
 Install-Package Azure.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package Microsoft.Extensions.AI.OpenAI
+dotnet add package Azure.AI.OpenAI
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Configuration
 
@@ -102,13 +153,11 @@ AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
     new Uri(azureOpenAIEndpoint),
     new ApiKeyCredential(azureOpenAIKey)
 );
-
 IChatClient azureOpenAIChatClient = azureOpenAIClient
     .GetChatClient(azureOpenAIDeployment)
     .AsIChatClient();
 
 builder.Services.AddSingleton<IChatClient>(azureOpenAIChatClient);
-
 // Register Smart Rich Text Editor Components with Azure OpenAI
 builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 
@@ -117,18 +166,19 @@ var app = builder.Build();
 // ... rest of your application setup
 ```
 
-### Step 2: Add Imports to _Imports.razor
+### Step 2: Configure Azure OpenAI Credentials in appsettings.json
 
-Update **~/_Imports.razor**:
+```json
+{
+  "AzureOpenAI": {
+    "Key": "your-azure-openai-api-key",
+    "Endpoint": "https://<your-resource-name>.openai.azure.com/",
+    "DeploymentName": "your-deployment-name"
+  }
+}
+```
 
-{% tabs %}
-{% highlight razor tabtitle="~/Components/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.SmartRichTextEditor
-
-{% endhighlight %}
-{% endtabs %}
+> **Note**: Store sensitive keys in user secrets or environment variables, not in appsettings.json
 
 ### Step 3: Use Azure OpenAI with Smart Rich Text Editor Component
 
@@ -138,166 +188,21 @@ Update **~/_Imports.razor**:
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
-    <AssistViewSettings Placeholder="Start typing for AI assistance..."/>
+    <AssistViewSettings Placeholder="Use Azure OpenAI to enhance your content..." />
     <div>
-        <strong>Tips:</strong>
+        <strong>Use Azure OpenAI with Smart Rich Text Editor:</strong>
         <ul>
-            <li>Select text and click AI Commands for quick improvements</li>
-            <li>Press Alt+Enter to open AI Query dialog</li>
-            <li>Use AI to fix grammar, adjust tone, or rephrase content</li>
+            <li>Select text and use <b>AI Commands</b> to generate or refine content</li>
+            <li>Press <b>Alt + Enter</b> to open the Azure OpenAI query dialog</li>
+            <li>Use Azure OpenAI to fix grammar, adjust tone, or rephrase text</li>
         </ul>
-        <p>Welcome to the Smart Rich Text Editor — try selecting a sentence to see AI suggestions.</p>
     </div>
 </SfSmartRichTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Using Configuration Files
-
-### appsettings.json
-
-Store Azure credentials in configuration:
-
-```json
-{
-  "AzureOpenAI": {
-    "Key": "${AzureOpenAI_Key}",
-    "Endpoint": "https://<your-resource-name>.openai.azure.com/",
-    "DeploymentName": "<your-deployment-name>"
-  }
-}
-```
-
-> **Note**: Store sensitive keys in user secrets or environment variables, not in appsettings.json
-
-### Reading from Configuration
-
-```csharp
-string azureOpenAIKey = builder.Configuration["AzureOpenAI:Key"];
-string azureOpenAIEndpoint = builder.Configuration["AzureOpenAI:Endpoint"];
-string azureOpenAIDeployment = builder.Configuration["AzureOpenAI:DeploymentName"];
-
-AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-    new Uri(azureOpenAIEndpoint),
-    new ApiKeyCredential(azureOpenAIKey)
-);
-
-IChatClient azureOpenAIChatClient = azureOpenAIClient
-    .GetChatClient(azureOpenAIDeployment)
-    .AsIChatClient();
-
-builder.Services.AddChatClient(azureOpenAIChatClient);
-```
-
-## Using User Secrets
-
-For development environment:
-
-```bash
-dotnet user-secrets init
-dotnet user-secrets set "AzureOpenAI:Key" "<your-actual-key>"
-dotnet user-secrets set "AzureOpenAI:Endpoint" "https://<your-resource-name>.openai.azure.com/"
-dotnet user-secrets set "AzureOpenAI:DeploymentName" "<your-deployment-name>"
-```
-
-## Advanced Configuration
-
-### Model Parameters
-
-Customize Azure OpenAI behavior:
-
-```csharp
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-    .ConfigureAzureOpenAI(options =>
-    {
-        options.MaxTokens = 500;
-        options.Temperature = 0.7f;
-        options.TopP = 0.9f;
-        options.FrequencyPenalty = 0.5f;
-        options.PresencePenalty = 0.5f;
-    });
-```
-
-### Multiple Deployments
-
-For production with multiple model deployments:
-
-```csharp
-// Create clients for different deployments
-var gpt35Client = azureOpenAIClient
-    .GetChatClient("gpt-35-turbo-deployment")
-    .AsIChatClient();
-
-var gpt4Client = azureOpenAIClient
-    .GetChatClient("gpt-4-deployment")
-    .AsIChatClient();
-
-// Register based on use case
-builder.Services.AddKeyedSingleton<IChatClient>("gpt-35-turbo", gpt35Client);
-builder.Services.AddKeyedSingleton<IChatClient>("gpt-4", gpt4Client);
-```
-
-## Supported Models
-
-Azure OpenAI supports various models:
-
-| Model | Deployment Name | Use Case |
-|-------|-----------------|----------|
-| GPT-4 | `gpt-4` | Complex reasoning, high quality |
-| GPT-4 Turbo | `gpt-4-turbo` | Latest capabilities, balanced cost |
-| GPT-3.5 Turbo | `gpt-35-turbo` | Fast responses, cost-effective |
-
-## Security Features
-
-### Benefits of Azure OpenAI
-
-1. **Enterprise Security**
-   - Virtual Network support
-   - Private endpoints
-   - Azure security standards
-
-2. **Compliance**
-   - HIPAA compliance
-   - SOC 2 compliance
-   - Data residency options
-
-3. **Access Control**
-   - Azure AD integration
-   - Role-based access control
-   - Managed identities
-
-4. **Monitoring**
-   - Azure Monitor integration
-   - Detailed logging
-   - Usage analytics
-
-### Managed Identity (Recommended)
-
-For enhanced security using Managed Identity:
-
-```csharp
-// Enable Managed Identity in Azure
-// In Program.cs
-using Azure.Identity;
-
-var credential = new DefaultAzureCredential();
-string azureOpenAIEndpoint = builder.Configuration["AzureOpenAI:Endpoint"] 
-    ?? throw new InvalidOperationException("AzureOpenAI:Endpoint not configured");
-string azureOpenAIDeployment = builder.Configuration["AzureOpenAI:DeploymentName"] 
-    ?? throw new InvalidOperationException("AzureOpenAI:DeploymentName not configured");
-
-AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-    new Uri(azureOpenAIEndpoint),
-    credential
-);
-
-IChatClient azureOpenAIChatClient = azureOpenAIClient
-    .GetChatClient(azureOpenAIDeployment)
-    .AsIChatClient();
-
-builder.Services.AddSingleton<IChatClient>(azureOpenAIChatClient);
-```
+![Syncfusion Smart Rich Text Editor Azure OpenAI Integration](images/azureopenai-integration.webp)
 
 ## Troubleshooting
 
@@ -323,41 +228,9 @@ builder.Services.AddSingleton<IChatClient>(azureOpenAIChatClient);
 - Verify network connectivity
 - Consider timeout configuration
 
-## Monitoring and Analytics
-
-### Azure Monitor Integration
-
-Monitor your Smart Rich Text Editor usage:
-
-1. Go to your Azure OpenAI resource
-2. Click **Monitoring** > **Metrics**
-3. View metrics:
-   - Requests per minute
-   - Token usage
-   - Response latency
-   - Error rates
-
-### Application Insights
-
-Add Application Insights for detailed tracing:
-
-```csharp
-builder.Services.AddApplicationInsightsTelemetry();
-```
-
-## Cost Optimization
-
-### Tips for Azure OpenAI
-
-1. **Right-size deployments**: Use appropriate TPM (tokens per minute)
-2. **Monitor usage**: Check metrics regularly
-3. **Use appropriate models**: GPT-3.5-turbo for most cases
-4. **Implement caching**: Reduce repeated requests
-5. **Batch operations**: Process multiple requests efficiently
-
 ## See also
 
-* [Getting Started with Smart Rich Text Editor](getting-started.md)
-* [OpenAI Configuration](openai-service.md)
-* [AI Features and Customization](ai-features.md)
+* [Getting Started with Smart Rich Text Editor](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
+* [OpenAI Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/openai-service)
+* [Ollama Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/ollama)
 * [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
