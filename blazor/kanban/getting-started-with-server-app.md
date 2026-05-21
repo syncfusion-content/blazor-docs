@@ -130,19 +130,6 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Add import namespaces
-
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Kanban` namespaces.
-
-{% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Kanban
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Server App.
@@ -162,6 +149,9 @@ builder.Services.AddSyncfusionBlazor();
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
+
+- Add the **stylesheet reference inside the `<head>` tag** of the `App.razor` file.
+- Add the **script reference inside the `</body>` tag** of the `App.razor` file.
 
 ```html
 
@@ -228,11 +218,16 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the default web browser.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrxtSWbKaleSUCK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrxtSWbKaleSUCK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.webp)" %}
+* **Using Visual Studio:**
+  Press <kbd>Ctrl</kbd> + <kbd>F5</kbd> (Windows) or <kbd>⌘</kbd> + <kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component in the default web browser.
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
+* **Using Visual Studio Code / .NET CLI:**
+  Open a terminal in the project directory and run the following command:
+
+  ```bash
+  dotnet run 
 
 N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the Kanban Board.
 
