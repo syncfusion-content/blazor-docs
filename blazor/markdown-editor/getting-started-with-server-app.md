@@ -228,7 +228,7 @@ To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio,
 
 * [Blog posting using Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/usecase?theme=bootstrap5)
 
-* [How to insert special characterss](https://blazor.syncfusion.com/demos/rich-text-editor/insert-special-characters?theme=bootstrap5)
+* [How to insert special characters](https://blazor.syncfusion.com/demos/rich-text-editor/insert-special-characters?theme=bootstrap5)
 
 * [Accessibility in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/accessibility)
 
