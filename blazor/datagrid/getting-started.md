@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DataGrid in WASM App | Syncfusion
+canonical_url: "https://www.syncfusion.com/blazor-components/blazor-datagrid"
 description: Learn how to add the Syncfusion Blazor DataGrid to a Blazor WebAssembly (WASM) app using Visual Studio, VS Code, or the .NET CLI step-by-step.
 platform: Blazor
 control: DataGrid
