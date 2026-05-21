@@ -81,7 +81,6 @@ This section provides tools for inserting and managing hyperlinks within the con
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Hyperlink | ![Hyperlink icon](../images/create-link.webp) | Creates a hyperlink to a text or image to a specific location in the content.|
 | InsertLink | ![InsertLink icon](../images/create-link.webp) |Allows users to add a link to a particular item. |
 
 #### Link quicktoolbar items
@@ -110,7 +109,8 @@ The image quicktoolbar offers a set of tools to edit images inserted in the Rich
 |----------------|---------|---------|
 | Replace Image  | ![Replace icon](../images/image-replace.webp) | Replace the selected image with another image. | 
 | Align Image | ![Alignment icon](../images/alignments.webp) | The image can be aligned to the right, left, or center. | 
-| Remove Image | ![Remove icon](../images/table-remove.webp) | Allows to remove the selected image from the editor. | 
+| Remove Image | ![Remove icon](../images/table-remove.webp) | Allows to remove the selected image from the editor. |
+| Hyperlink | ![Hyperlink icon](../images/create-link.webp) | Creates a hyperlink to a image to a specific location in the content.| 
 | OpenImageLink | ![OpenImageLink icon](../images/open-link.webp) | Opens the link that is attached to the selected image. | 
 | EditImageLink | ![EditImageLink icon](../images/edit-link.webp) | Allows to edit the link that is attached to the selected image. |
 | RemoveImageLink | ![RemoveImageLink icon](../images/remove-link.webp) | Removes the link that is attached to the selected image. | 
@@ -154,8 +154,8 @@ These tools allow users to easily undo or redo any changes made within the edito
 
 | Name | Icons | Summary |
 |----------------|---------|---------|
-| Undo | ![Undo icon](../images/undo.webp) | Allows to undo the actions.|toolbarSettings: { items: ['Undo']} |
-| Redo | ![Redo icon](../images/redo.webp) | Allows to redo the actions.|toolbarSettings: { items: ['Redo']}|
+| Undo | ![Undo icon](../images/undo.webp) | Allows to undo the actions.|
+| Redo | ![Redo icon](../images/redo.webp) | Allows to redo the actions.|
 
 ### Other tools
 
