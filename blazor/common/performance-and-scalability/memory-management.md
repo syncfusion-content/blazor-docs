@@ -1,35 +1,40 @@
 ---
 layout: post
-title: Memory management in Blazor Components | Syncfusion
+title: Memory Management Best Practices for Blazor Applications | Syncfusion
 description: Provides best practices for managing memory efficiently in Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Memory Management with Blazor Components
+# Memory Management Best Practices for Blazor Applications
 
-This guide explains best practices for [managing memory](https://learn.microsoft.com/en-us/aspnet/core/performance/memory) in Blazor applications using [Blazor components](https://www.syncfusion.com/blazor-components). It covers efficient component lifecycle management, proper resource cleanup, and techniques such as `IDisposable` to prevent memory leaks and optimize application performance.
+This guide explains best practices for [managing memory](https://learn.microsoft.com/en-us/aspnet/core/performance/memory) in Blazor applications using [Blazor components](https://www.syncfusion.com/blazor-components). It covers efficient component lifecycle management, proper resource cleanup using `IDisposable` and `IAsyncDisposable`, and techniques to prevent memory leaks and optimize application performance.
 
 ## Preventing memory leaks with Blazor components
 
-Blazor components are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references should be cleared explicitly.
+[Blazor components](https://www.syncfusion.com/blazor-components) are optimized for efficient rendering and automatically manage their internal resources. However, application level objects such as data collections, service subscriptions, timers, and JavaScript interop references should be cleared explicitly.
 
 In Blazor WebAssembly, releasing these references allows the browser runtime to reclaim memory. In Blazor Server, proper cleanup prevents memory retention across active user circuits, which is essential for maintaining scalability.
 
-If you haven't created a Blazor application yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
+If you haven't created a Blazor application yet, create one using the following Blazor getting started guides.
 
-### Disposing data bound Blazor components
+* [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-Data bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) can hold large data collections in memory. These references should be cleared when the component is removed from the render tree.
+### Disposing data-bound Blazor components
+
+Data bound components such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [ListView](https://www.syncfusion.com/blazor-components/blazor-listview) can hold large data collections in memory. Clearing large data collections during component disposal helps release memory references earlier, although the .NET garbage collector ultimately handles memory cleanup.
 
 The following example demonstrates how to release data collections used by the DataGrid component.
+
+N> This example requires the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) NuGet package. See [Getting Started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) for setup instructions.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
-@implements IAsyncDisposable
+@implements IDisposable
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -47,7 +52,7 @@ The following example demonstrates how to release data collections used by the D
         Orders = GetOrders();
     }
 
-    public List<Order> GetOrders()
+    private List<Order> GetOrders()
     {
         return new List<Order>
         {
@@ -63,22 +68,18 @@ The following example demonstrates how to release data collections used by the D
             new Order { OrderId = 1010, CustomerName = "ALFKI" }
         };
     }
-
-    public ValueTask DisposeAsync()
+    
+    public void Dispose()
     {
-        if (Orders != null)
-        {
-            Orders.Clear();
-            Orders = null;
-        }
-        return ValueTask.CompletedTask;
+        // Synchronous cleanup
+        Orders?.Clear();
     }
 
     // Model class
     public class Order
     {
         public int OrderId { get; set; }
-        public string CustomerName { get; set; }
+        public string CustomerName { get; set; } = string.Empty;
     }
 }
 
@@ -89,18 +90,20 @@ In this example, the `Orders` collection is cleared during component disposal. T
 
 This practice is particularly important in Blazor Server applications, where retained references can increase server memory usage across user circuits.
 
+N> Use `IDisposable` when your cleanup is synchronous (such as clearing collections or removing references). Use `IAsyncDisposable` only when performing asynchronous cleanup operations, such as JavaScript interop calls, stream flushing, or releasing unmanaged async resources.
+
 ### Managing event subscriptions
 
 Components or application logic used alongside [Blazor components](https://www.syncfusion.com/blazor-components) may subscribe to shared application events through services or state containers. These subscriptions should be removed during component disposal to prevent memory leaks and avoid retaining unnecessary references.
 
-This example demonstrates how to manage event subscriptions in a component that listens to shared application state and ensures proper cleanup during disposal.
+This example uses the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component to trigger a state update.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Buttons
-@inject AppState AppState
+@inject AppState appState
 @implements IDisposable
 
 <div style="padding:16px">
@@ -109,19 +112,19 @@ This example demonstrates how to manage event subscriptions in a component that 
     </SfButton>
 
     <p style="margin-top:12px">
-        Current state: @AppState.CurrentMessage
+        Current state: @appState.CurrentMessage
     </p>
 </div>
 
 @code {
     protected override void OnInitialized()
     {
-       AppState.OnChange += OnAppStateChanged;
+        appState.OnChange += OnAppStateChanged;
     }
 
     private void OnClicked()
     {
-        AppState.CurrentMessage = $"Updated at {DateTime.Now:T}";
+        appState.CurrentMessage = $"Updated at {DateTime.Now:T}";
     }
 
     private void OnAppStateChanged()
@@ -131,14 +134,16 @@ This example demonstrates how to manage event subscriptions in a component that 
 
     public void Dispose()
     {
-        AppState.OnChange -= OnAppStateChanged;
+        appState.OnChange -= OnAppStateChanged;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Add service file:**
+N> This example requires the [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) NuGet package. See [Getting Started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) for setup instructions.
+
+**Add service file**
 
 Create a `Services` folder in your project root. Then add a service file named `AppState.cs` with the following code.
 
@@ -168,9 +173,9 @@ public class AppState
 {% endhighlight %}
 {% endtabs %}
 
-**Register the service:**
+**Register the service**
 
-Register this service into the `Program.cs` file:
+Register this service in the `Program.cs` file.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -182,7 +187,7 @@ builder.Services.AddScoped<AppState>();
 {% endhighlight %}
 {% endtabs %}
 
-The component subscribes to the `OnChange` event in `OnInitialized` and removes the subscription in Dispose.
+The component subscribes to the `OnChange` event in `OnInitialized` and removes the subscription in `Dispose()`.
 
 Removing event subscriptions ensures the component is not retained in memory after removal.
 
@@ -198,13 +203,12 @@ The following example demonstrates how to use built‑in virtualization in the D
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
-@implements IAsyncDisposable
+@implements IDisposable
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees"
         EnableVirtualization="true" RowHeight="36"
         Height="400">
-    <GridPageSettings PageSize="50"></GridPageSettings>
     <GridColumns>
         <GridColumn Field="Id" HeaderText="ID" Width="100" />
         <GridColumn Field="Name" HeaderText="Employee Name" Width="200" />
@@ -218,19 +222,13 @@ The following example demonstrates how to use built‑in virtualization in the D
     {
         Employees = GetLargeEmployeeList();
     }
-
-    public ValueTask DisposeAsync()
+    
+    public void Dispose()
     {
-        // Clear large datasets when component is disposed
-        if (Employees != null)
-        {
-            Employees.Clear();
-            Employees = null;
-        }
-        return ValueTask.CompletedTask;
+        Employees?.Clear();
     }
 
-    public List<Employee> GetLargeEmployeeList()
+    private List<Employee> GetLargeEmployeeList()
     {
         var employees = new List<Employee>();
         for (int i = 1; i <= 10000; i++)
@@ -243,7 +241,7 @@ The following example demonstrates how to use built‑in virtualization in the D
     public class Employee
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }
 
@@ -264,7 +262,7 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
-@implements IAsyncDisposable
+@implements IDisposable
 @using Syncfusion.Blazor.Inputs
 
 <div>
@@ -281,17 +279,13 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
     {
         Items = GetItems();
     }
-
-    public ValueTask DisposeAsync()
+    
+    public void Dispose()
     {
-        if (Items != null)
-        {
-            Items.Clear();
-            Items = null;
-        }
-        return ValueTask.CompletedTask;
+        Items?.Clear();
     }
-    public List<Item> GetItems()
+
+    private List<Item> GetItems()
     {
         return new List<Item>
         {
@@ -304,7 +298,7 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
     public class Item
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }
 
@@ -315,7 +309,7 @@ The `@key` directive ensures that each TextBox component is associated with a st
 
 When the collection changes, Blazor can correctly match existing components instead of destroying and recreating them, improving rendering efficiency and memory usage.
 
-### Service Lifetime Considerations in Blazor Server Applications
+### Managing service lifetimes in Blazor Server applications
 
 In Blazor Server, each user maintains their own `ServiceProvider` instance per circuit. A scoped service is created once per user circuit, ensuring user specific state is isolated. `Singleton` services are shared across all users and may lead to unintended data sharing or memory issues.
 
@@ -324,19 +318,18 @@ This behavior is important when working with [Blazor components](https://www.syn
 {% tabs %}
 {% highlight csharp tabtitle="Program.cs" %}
 
+// `UserSessionService` is a placeholder representing any user-specific service. Replace it with your actual service type.
 builder.Services.AddScoped<UserSessionService>();
 
 {% endhighlight %}
 {% endtabs %}
 
-`UserSessionService` is a placeholder representing any user specific service (for example, one that maintains session state or per user preferences). Replace it with your actual service type.
-
 This guidance applies to the Blazor Server hosting model and to Blazor Web App projects configured with server-side rendering. It is not applicable to standalone Blazor WebAssembly applications.
 
 ## See also
 
-* [Blazor DataGrid Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
-* [Blazor Performance Guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
-* [Blazor Component Lifecycle documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
-* [Blazor Dependency Injection](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-10.0)
+* [Getting started with Blazor DataGrid virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
+* [Discover best practices in Blazor performance guidelines](https://blazor.syncfusion.com/documentation/common/best-practices)
+* [Learn about the Blazor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle)
+* [Explore concepts in Blazor dependency injection](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/dependency-injection)
 
