@@ -98,7 +98,7 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
+## Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -109,7 +109,7 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
+## Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -128,7 +128,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
+## Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -223,9 +223,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor component in the default web browser.
 
-> **NOTE**
->
-> When using the .NET CLI or Visual Studio Code, ensure that you run the application from the **server (host) project directory**, not from the `.Client` project. The client project does not run independently and is hosted by the server application.
+N> When using the .NET CLI or Visual Studio Code, ensure that you run the application from the **server (host) project directory**, not from the `.Client` project. The client project does not run independently and is hosted by the server application.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrIDqWvVJQriizU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Markdown Editor Component](./images/blazor-markdownteditor.png)" %}
 

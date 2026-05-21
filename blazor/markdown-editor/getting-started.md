@@ -98,7 +98,7 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
+## Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -109,7 +109,7 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
+## Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -128,7 +128,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
+## Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
