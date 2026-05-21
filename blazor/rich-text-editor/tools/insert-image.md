@@ -276,6 +276,7 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
    <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
    <RichTextEditorImageSettings SaveUrl="@SaveURL" Path="@Path" RemoveUrl="@RemoveURL"/>
 </SfRichTextEditor>
+
 @code{
     private string SaveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/SaveFile";
     private string Path = "[SERVICE_HOSTED_PATH]/RichTextEditor/";
@@ -346,8 +347,16 @@ N> It has two possible options: `Inline` and `Break`.
 
 <SfRichTextEditor>
     <RichTextEditorImageSettings Display="ImageDisplay.Inline" />
+    <RichTextEditorToolbarSettings Items="Item"/>
     <p>The Rich Text Editor allows you to insert images and control their display behavior. When set to `Break`, the image appears as a separate block element. When set to `Inline`, the image appears within the text flow alongside other content.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png'/>
 </SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> Item = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Image }
+    };
+}
 
 {% endhighlight %}
 {% endtabs %}
