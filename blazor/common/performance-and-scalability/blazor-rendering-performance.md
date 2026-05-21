@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Rendering Performance Optimization
 
-This guide explains how rendering works in Blazor and provides practical techniques to [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
+This guide explains how rendering works in Blazor and provides practical techniques for [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
 
 ## Blazor DataGrid example with stable data binding
 
@@ -68,6 +68,7 @@ There are cases where state changes occur but the visual output does not actuall
 ```c#
 
 private bool isUiUpdateRequired;
+private string data = string.Empty;
 
 // Controls whether the component should re-render
 protected override bool ShouldRender()
@@ -175,7 +176,7 @@ The following example separates the [Button](https://www.syncfusion.com/blazor-c
 
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxDSCFqFoocyLn?appbar=false&editor=false&result=true&errorlist=false&theme="  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxDSCFqFoocyLn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
 In the above example, `EventCallback` allows a child component to notify the parent, which updates data and refreshes the UI efficiently.
 
@@ -228,16 +229,6 @@ This approach improves code readability and maintainability. It also helps reduc
             Total = rand.Next(200, 2000)
         }).ToList();
     }
-
-    private void UpdateData(object? state)
-    {
-        var index = rand.Next(Orders.Count);
-
-        Orders[index].Quantity = rand.Next(1, 5);
-        Orders[index].Total = rand.Next(200, 2000);
-
-        InvokeAsync(StateHasChanged);
-    }
 }
 
 {% endhighlight %}
@@ -250,7 +241,7 @@ This approach improves code readability and maintainability. It also helps reduc
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="300" AllowPaging="true">
+<SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="OrderId" HeaderText="Order ID" Width="100" />
         <GridColumn Field="Customer" HeaderText="Customer" Width="150" />
@@ -280,7 +271,7 @@ public sealed class Order
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVRXoCvTjjRwOzo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHXohZVnVqXvpX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
 The UI is organized into smaller components, where the parent handles data management and the child component focuses on rendering the grid. When the `Orders` data changes in the parent, the updated values are passed to the child, triggering a grid refresh. This separation keeps the code clean and helps Blazor perform efficient UI updates.
 
