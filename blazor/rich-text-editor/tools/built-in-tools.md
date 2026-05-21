@@ -136,7 +136,7 @@ The table quicktoolbar provides options for table editing within the Rich Text E
 | TableHeader | ![TableHeader icon](../images/table-headers.webp) | Allows you to add a table header. |
 | TableColumns | ![TableColumns icon](../images/table-columns.webp) | Shows the dropdown to insert a column or delete the selected column. |
 | TableRows | ![TableRows icon](../images/table-row.webp) | Shows the dropdown to insert a row ors delete the selected row. | 
-| TableCellHorizontalAAlignmentslign | ![TableCellHorizontalAlign icon](../images/alignments.webp) | Allows the table cell content to be aligned horizontally. | 
+| Alignments | ![Alignments icon](../images/alignments.webp) | Allows table cell content to be aligned. | 
 | TableCellVerticalAlign | ![TableCellVerticalAlign icon](../images/vertical-align.webp) | Allows the table cell content to be aligned vertically. | 
 | TableEditProperties | ![TableEditProperties icon](../images/table-edit.webp) | Allows you to change the table width, padding, and cell spacing styles. |
 
