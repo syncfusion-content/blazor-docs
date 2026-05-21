@@ -74,7 +74,7 @@ N> The required namespaces are typically defined in the `_Imports.razor` file, s
 Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 
 {% tabs %}
-{% highlight cs tabtitle="~/Program.cs" %}
+{% highlight cs tabtitle="~/Program.cs" hl_lines="1 8" %}
 
 using Syncfusion.Blazor;
 ...
@@ -100,10 +100,12 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 <head>
      ...
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 <body>
     ...
+    <!-- Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
 </body>
 
@@ -114,7 +116,7 @@ N> The example uses `fluent2.css`. Other available theme options include `bootst
 
 ## Configure routing
 
-The order management application uses a routing setup that consists of two key components working together. The `Routes.razor` component defines the routing logic and navigation behavior, while `App.razor` applies the `InteractiveServer` render mode globally to enable interactive server-side rendering across all pages.
+The application uses `Routes.razor` for routing and `App.razor` to apply the `InteractiveServer` render mode across routed pages.
 
 ### Routes component
 
@@ -141,8 +143,6 @@ Add the following code to the `@code` section of `Routes.razor`.
 {% endhighlight %}
 {% endtabs %}
 
-This code runs when the `Routes` component initializes. If the current URL ends with `/` (the root path), it redirects the user to `/dashboard`, ensuring the application always starts at the dashboard page. This ensures a consistent entry point for the application.
-
 ### App root component
 
 The `App.razor` file renders the `Routes` component and applies the `InteractiveServer` render mode attribute. This render mode enables interactive server-side rendering for all routed pages, allowing real-time user interactions and dynamic updates throughout the application.
@@ -162,8 +162,6 @@ Update the `App.razor` to include the `@rendermode` attribute on the `Routes` co
 
 {% endhighlight %}
 {% endtabs %}
-
-The `@rendermode="InteractiveServer"` attribute is applied globally to all routed pages, ensuring that the entire dashboard application uses interactive server-side rendering for seamless performance and interactivity.
 
 ## Project structure
 
