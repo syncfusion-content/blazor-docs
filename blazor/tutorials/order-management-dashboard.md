@@ -99,7 +99,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 {% highlight html tabtitle="App.razor" %}
 
 <head>
-     ...
+    ...
     <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
