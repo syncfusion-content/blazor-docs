@@ -72,6 +72,7 @@ Tools here allow users to create ordered and unordered lists, change the list st
 | UnorderedList | ![UnorderedList icon](../images/unorder-list.webp) | Create a new list item(bulleted). |
 | NumberFormatList | ![NumberFormatList icon](../images/number-format.webp) | Allows to create list items with various list style types(numbered).|
 | BulletFormatList | ![BulletFormatList icon](../images/bullet-format.webp) | Allows to create list items with various list style types(bulleted).|
+| CheckList | ![CheckList icon](../images/checklist.webp) | Allows creating checklist items with selectable (checked/unchecked) states.|
 | Indent | ![Indent icon](../images/increase-indent.webp) | Allows to increase the indent level of the content.|
 | Outdent | ![Outdent icon](../images/decrease-indent.webp) | Allows to decrease the indent level of the content.|
 
@@ -139,6 +140,7 @@ The table quicktoolbar provides options for table editing within the Rich Text E
 | Alignments | ![Alignments icon](../images/alignments.webp) | Allows table cell content to be aligned. | 
 | TableCellVerticalAlign | ![TableCellVerticalAlign icon](../images/vertical-align.webp) | Allows the table cell content to be aligned vertically. | 
 | TableEditProperties | ![TableEditProperties icon](../images/table-edit.webp) | Allows you to change the table width, padding, and cell spacing styles. |
+| Styles | ![Styles icon](../images/table-styles.webp) | Provides options to customize table border styles. |
 
 ### Horizontal Line
 
@@ -170,6 +172,11 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 | Print | ![Print icon](../images/print.webp) | Allows to print the editor content. |
 | ClearAll | ![ClearAll icon](../images/clear-all.webp) | Removes all styles that have been applied to the selected text.| 
 | SourceCode | ![SourceCode icon](../images/code-view.webp)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|
+| Insert Code Block | ![CodeBlock icon](../images/insert-code-block.webp) | Allows inserting code snippets in a formatted and structured way within the editor.|
+| LineHeight | ![LineHeight icon](../images/line-height.webp) | Allows adjusting the spacing between lines of text within the editor.|
+| ImportWord | ![ImportWord icon](../images/import-word.webp) | Imports content from a Word document into the editor.|
+| ExportWord | ![ExportWord icon](../images/export-word.webp) | Exports the editor content as a Word document.|
+| ExportPdf | ![ExportPdf icon](../images/export-pdf.webp) | Exports the editor content as a PDF file.|
 
 ## Removing built-in tool from toolbar
 
