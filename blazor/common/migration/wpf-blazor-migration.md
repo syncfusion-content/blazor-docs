@@ -109,7 +109,7 @@ In WPF, controls are created through XAML and code-behind, so explicit dependenc
 Blazor uses built-in dependency injection (DI). Register the Syncfusion Blazor services in `Program.cs` so the framework can resolve the required Syncfusion infrastructure.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="7" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="2 7" %}
 ...
 using Syncfusion.Blazor;
 ...
@@ -146,25 +146,25 @@ In Blazor, styles and scripts are delivered as static web assets from NuGet pack
 #### Blazor theme registration
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+{% highlight html tabtitle="App.razor" %}
 
 <head>
     ...
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 
 <body>
     ...
-    <!-- Syncfusion Blazor core script (required for most UI components) -->
+    <!-- Blazor core script (required for most UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Available Syncfusion Blazor themes include: `bootstrap5.css`, `fluent2.css`, `material3.css`, `tailwind.css`, and others. For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+N> Available Syncfusion Blazor themes include `bootstrap5.css`, `fluent2.css`, `material3.css`, `tailwind.css`, and others. For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 ### Namespace imports
 
@@ -475,7 +475,7 @@ For detailed explanation, refer to the [WPF Charts getting started guide](https:
 |---|---|---|
 | Component declaration | `<syncfusion:SfChart>` | `<SfChart>` |
 | Data binding | [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) with [XBindingPath](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.XyDataSeries.html?tabs=tabid-1#Syncfusion_UI_Xaml_Charts_XyDataSeries_YBindingPath) | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) with [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) |
-| Axis and series | Nested axis and series elements | [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html), [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html), and [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ChartSeriesCollection) |
+| Axis and series | Nested axis and series elements | [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html), [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html), and [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) |
 | Series types | [ColumnSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ColumnSeries.html), [LineSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.LineSeries.html), and similar series types | [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) with `Type="ChartSeriesType.*"` |
 | Markers and tooltips | Series-level settings and adornments | [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html) and [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) |
 | Events | CLR events | Event callbacks such as point and tooltip events |
@@ -768,7 +768,7 @@ For detailed explanation, refer to the [WPF Diagram getting started guide](https
 | Aspect | WPF (SfDiagram) | Blazor (SfDiagramComponent) |
 |---|---|---|
 | Component declaration | `<syncfusion:SfDiagram>` | `<SfDiagramComponent>` |
-| Element model | [NodeCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.NodeCollection.html) and [ConnectorCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.ConnectorCollection.html) | [DiagramObjectCollection<Node>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html) and [DiagramObjectCollection<Connector>](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html) |
+| Element model | [NodeCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.NodeCollection.html) and [ConnectorCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.ConnectorCollection.html) | `DiagramObjectCollection<Node>` and `DiagramObjectCollection<Connector>` |
 | Positioning | [OffsetX](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_OffsetX), [OffsetY](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_OffsetY), [UnitWidth](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_UnitWidth), and [UnitHeight](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_UnitHeight) | [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX), [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY), [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width), and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) |
 | Data binding | XAML-based configuration and data mapping | Component parameters and programmatic configuration |
 | Layouts | [LayoutManager](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.SfDiagram.html#Syncfusion_UI_Xaml_Diagram_SfDiagram_LayoutManager) settings | [LayoutType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html) and layout options |
