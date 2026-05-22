@@ -165,18 +165,23 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
     protected override void OnInitialized()
     {
+        var customers = new string[] { "James Hopper", "Michael Smith", "Sarah Johnson", "Robert Davis", "Emily Wilson" };
+        var cities = new string[] { "New York", "Los Angeles", "Chicago", "Houston", "Phoenix" };
+        var rng = new Random();
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2 * x,
+            CustomerName = customers[rng.Next(customers.Length)],
+            ShipCity = cities[rng.Next(cities.Length)],
+            Freight = Math.Round(10.5 + (x * 7.3), 2),
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
 
     public class Order {
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string CustomerName { get; set; }
+        public string ShipCity { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
@@ -217,4 +222,4 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVesWjwqtDJZluz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLdNyLhzWLkHYpX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.webp)" %}
