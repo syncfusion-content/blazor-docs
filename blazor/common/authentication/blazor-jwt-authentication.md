@@ -23,7 +23,7 @@ Ensure that **HTTPS is enabled** during project creation, as JWT based authoriza
 
 Install the following NuGet packages to use the **Blazor DataGrid** and enable **JWT** authentication.
 
-**Syncfusion® packages:**
+**Blazor packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -44,9 +44,9 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
+Open the `~/_Imports.razor` file and import the namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -60,14 +60,14 @@ Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
 
 ## Add stylesheet and Interactive Server routing
 
-Include the Syncfusion® theme stylesheet, required script references, and configure Interactive Server rendering in the `App.razor` file. 
+Include the theme stylesheet, required script references, and configure Interactive Server rendering in the `App.razor` file. 
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
 
 <head>
     ....
-    <!-- Syncfusion® theme stylesheet -->
+    <!-- Theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ....
 </head>
@@ -211,7 +211,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 
-// Register the Syncfusion® Blazor service 
+// Register the Blazor service 
 builder.Services.AddSyncfusionBlazor();
 
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("Jwt:Key missing");
