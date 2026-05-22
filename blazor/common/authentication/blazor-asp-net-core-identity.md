@@ -214,7 +214,7 @@ Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion t
 Open `App.razor` and include the Syncfusion theme stylesheet and required script references.
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+{% highlight html tabtitle="App.razor" %}
 
 <head>
     ....
@@ -388,7 +388,7 @@ Create two protected Razor pages named `SecureGrid.razor` and `SecureChart.razor
 
 ### Add Blazor DataGrid component
 
-This component displays a sample order list using Blazor DataGrid. The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
+This component displays a sample order list using [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). The `@attribute [Authorize]` directive ensures only authenticated users can access this page.
 
 {% tabs %}
 {% highlight razor tabtitle="SecureGrid.razor" %}

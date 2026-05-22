@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DataGrid in Server App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -145,9 +145,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application. Refer to the [Style and Appearance](https://blazor.syncfusion.com/documentation/datagrid/style-and-appearance) topic for customizing the DataGrid appearance and styling options.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
+## Add Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
+Add the Blazor DataGrid component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
 
 N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -214,70 +214,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor DataGrid in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdteMnJfRLuDhc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Handling exceptions
-
-Exceptions occurred during Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
-
-* **TValue** - Specifies the row data type of the grid (for example, Order). It enables strong typing for templates and event args and ensures proper binding/formatting.
-* **GridEvents** - Use the same TValue on both SfGrid and GridEvents when working with GridEvents. This ensures that event argument types such as FailureEventArgs and RowSelectEventArgs&lt;TValue&gt; are correctly bound.
-
-The argument passed to the `OnActionFailure` event contains the error details returned from the server.
-
-N> Binding the `OnActionFailure` event during application development helps in identifying exceptions effectively. Exception details can be shared with the support team to obtain solutions at the earliest stage.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-
-<span class="error">@ErrorDetails</span>
-<SfGrid TValue="Order" AllowPaging="true">
-    <GridEvents TValue="Order" OnActionFailure="@ActionFailure"></GridEvents>
-    <GridPageSettings PageSize="10"></GridPageSettings>
-    <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-<style>
-    .error {
-        color: red;
-    }
-</style>
-
-@code{
-    public string ErrorDetails = "";
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void ActionFailure(FailureEventArgs args)
-    {
-        this.ErrorDetails = "Server exception: 404 Not found";
-        StateHasChanged();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## See Also
-
-* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid in Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid in WebAssembly using Visual Studio](./how-to/blazor-webassembly-datagrid-using-visual-studio)

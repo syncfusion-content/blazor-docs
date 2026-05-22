@@ -66,7 +66,7 @@ WPF and Blazor use different application models. The table below shows the close
 | `Services/*.cs` | `Services/*.cs` | Handles shared application logic through dependency injection |
 | `ResourceDictionary` | CSS, CSS isolation, and static assets | Manages styling and static resources |
 | `UserControl` | Razor component (`.razor`) | Reusable UI component |
-| `ICommand` and `RelayCommand` | Event handlers, `EventCallback`, or injected services | Handles user actions and command logic |
+| `ICommand` and `RelayCommand` | Event handlers, `EventCallback`, component methods, or custom services | Implements user action handling and validation logic in Blazor using event callbacks or service methods |
 | `INotifyPropertyChanged` | Component state and re-rendering | Updates the UI when state changes |
 
 ## Creating a Blazor Web App with Interactive Server
@@ -80,13 +80,13 @@ cd MyBlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-N> The `--interactivity Server` flag configures SignalR-based interactivity and provides behavior similar to WPF's immediate UI update model, but over the network.
+N> The `--interactivity Server` flag creates a project with server-side interactivity enabled via SignalR. This means components will use `@rendermode InteractiveServer` for full interactivity, as shown in the component examples below.
 
-## Migrating key Syncfusion components from WPF to Blazor
+## Migrating Syncfusion components from WPF to Blazor
 
 The following shared setup applies to all Syncfusion components and covers the common configuration required before moving on to the [component-specific migration steps](./wpf-blazor-migration#1-datagrid).
 
-### Common NuGet packages
+### Package installation
 
 Install the required NuGet packages for each component based on your migration needs.
 
@@ -100,48 +100,75 @@ Install the required NuGet packages for each component based on your migration n
 | RichTextEditor | [Syncfusion.SfRichTextBoxAdv.WPF](https://www.nuget.org/packages/Syncfusion.SfRichTextBoxAdv.WPF) | [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) |
 | Themes | — | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
-N> Install `Syncfusion.Blazor.Themes` once at the application level. This package is required for the Blazor components used in this migration guide.
+N> Install `Syncfusion.Blazor.Themes` once per application, regardless of which components you use. All Syncfusion Blazor components depend on this package for styling.
+
+#### Service registration
+
+In WPF, controls are created through XAML and code-behind, so explicit dependency injection registration is not required. Application services are typically configured manually or through an external container.
+
+Blazor uses built-in dependency injection (DI). Register the Syncfusion Blazor services in `Program.cs` so the framework can resolve the required Syncfusion infrastructure.
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" hl_lines="2 7" %}
+...
+using Syncfusion.Blazor;
+...
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();
+...
+{% endhighlight %}
+{% endtabs %}
 
 ### Script and theme configuration
 
-Use the same Blazor theme and script setup for all migrated components.
+In WPF, Syncfusion themes are typically applied using [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager), while additional styling can be managed through `ResourceDictionary` and XAML-based styling. Scripts are not required because rendering happens locally in the desktop runtime.
+
+In Blazor, styles and scripts are delivered as static web assets from NuGet packages. Reference them once at the application level.
+
+#### WPF theme registration
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+{% highlight xml tabtitle="MainWindow.xaml" %}
+
+<Window x:Class="GettingStarted.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="FluentLight">
+    ...
+</Window>
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Blazor theme registration
+
+{% tabs %}
+{% highlight html tabtitle="App.razor" %}
 
 <head>
     ...
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ...
 </head>
 
 <body>
     ...
-    <!-- Syncfusion Blazor core script (required for most UI components) -->
+    <!-- Blazor core script (required for most UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
 {% endhighlight %}
 {% endtabs %}
 
-### Blazor service registration
-
-Register Syncfusion services once for all components.
-
-{% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
-...
-using Syncfusion.Blazor;
-...
-builder.Services.AddSyncfusionBlazor();
-...
-{% endhighlight %}
-{% endtabs %}
+N> Available Syncfusion Blazor themes include `bootstrap5.css`, `fluent2.css`, `material3.css`, `tailwind.css`, and others. For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 ### Namespace imports
 
-Add the following namespaces to `_Imports.razor` to make the Blazor components available across the application.
+Add the following namespaces to `_Imports.razor` to make the Syncfusion Blazor components available across the application.
 
 | Component | Required namespaces |
 |---|---|
@@ -161,12 +188,12 @@ For detailed explanation, refer to the [WPF DataGrid getting started guide](http
 | Aspect | WPF (SfDataGrid) | Blazor (SfGrid) |
 |---|---|---|
 | Component declaration | `<syncfusion:SfDataGrid>` | `<SfGrid>` |
-| Data binding | `ItemsSource` with `DataContext` or a view model | `DataSource` with component state |
-| Collection type | `ObservableCollection<T>` is commonly used | `List<T>` or `IEnumerable<T>` is commonly used |
-| Columns | `GridTextColumn`, `GridNumericColumn`, `GridTemplateColumn` | `GridColumn` with `Field`, `Format`, and `EditType` |
+| Data binding | [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ItemsSource) with `DataContext` or a view model | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) with component state |
+| Collection type | `ObservableCollection<T>` (automatic notifications) | `List<T>` or `IEnumerable<T>` (state updates trigger re-renders) |
+| Columns | [GridTextColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridTextColumn.html), [GridNumericColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridNumericColumn.html), [GridTemplateColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridTemplateColumn.html) | [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) with [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format), and [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditType) |
 | Templates | XAML `DataTemplate` | Razor `<Template>` |
-| Editing and events | Code-behind events and properties | `GridEditSettings`, `GridEvents`, and event callbacks |
-| Paging and virtualization | `SfDataPager` and native virtualization | `GridPageSettings`, `EnableVirtualization`, and `EnableColumnVirtualization` |
+| Editing and events | Code-behind events and properties | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), and event callbacks |
+| Paging and virtualization | [SfDataPager](https://help.syncfusion.com/wpf/datapager/overview) and native virtualization | [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization), and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) |
 | Styling | `ResourceDictionary`, styles, and triggers | CSS, CSS isolation, and callback-based styling |
 
 #### Component rendering
@@ -301,11 +328,11 @@ For detailed explanation, refer to the [WPF TreeGrid getting started guide](http
 |---|---|---|
 | Component declaration | `<syncfusion:SfTreeGrid>` | `<SfTreeGrid>` |
 | Data structure | Nested collections or self-referencing flat data | Self-referencing flat data is the common approach |
-| Hierarchy mapping | `ChildPropertyName`, `ParentPropertyName`, and `SelfRelationRootValue` | `IdMapping` and `ParentIdMapping` |
-| Tree column | Built-in hierarchical display | `TreeColumnIndex` |
-| Columns | `TreeGridTextColumn`, `TreeGridNumericColumn` | `TreeGridColumn` |
+| Hierarchy mapping | [ChildPropertyName](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_ChildPropertyName), [ParentPropertyName](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_ParentPropertyName), and [SelfRelationRootValue](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_SelfRelationRootValue) | [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_IdMapping) and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ParentIdMapping) |
+| Tree column | Built-in hierarchical display | [TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_TreeColumnIndex) |
+| Columns | [TreeGridTextColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridTextColumn.html), [TreeGridNumericColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridNumericColumn.html) | [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) |
 | Templates | XAML templates | Razor templates |
-| Events | WPF routed events and CLR events | `GridEvents` and event callbacks |
+| Events | WPF routed events and CLR events | [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html) and event callbacks |
 | Performance | Native desktop rendering | Virtual scrolling and load-on-demand |
 
 #### Component rendering
@@ -394,12 +421,12 @@ namespace WpfTreeGridApp
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor equivalent (Employees.razor):**
+**Blazor equivalent (Tasks.razor):**
 
 {% tabs %}
-{% highlight razor tabtitle="Employees.razor" %}
+{% highlight razor tabtitle="Tasks.razor" %}
 
-@page "/employees"
+@page "/tasks"
 @rendermode InteractiveServer
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1">
@@ -447,10 +474,10 @@ For detailed explanation, refer to the [WPF Charts getting started guide](https:
 | Aspect | WPF (SfChart) | Blazor (SfChart) |
 |---|---|---|
 | Component declaration | `<syncfusion:SfChart>` | `<SfChart>` |
-| Data binding | `ItemsSource` with `XBindingPath` and `YBindingPath` | `DataSource` with `XName` and `YName` |
-| Axis and series | Nested axis and series elements | `ChartPrimaryXAxis`, `ChartPrimaryYAxis`, and `ChartSeriesCollection` |
-| Series types | `ColumnSeries`, `LineSeries`, and similar series types | `ChartSeries` with `Type="ChartSeriesType.*"` |
-| Markers and tooltips | Series-level settings and adornments | `ChartMarker` and `ChartTooltipSettings` |
+| Data binding | [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) with [XBindingPath](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.XyDataSeries.html?tabs=tabid-1#Syncfusion_UI_Xaml_Charts_XyDataSeries_YBindingPath) | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) with [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) |
+| Axis and series | Nested axis and series elements | [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html), [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html), and [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) |
+| Series types | [ColumnSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ColumnSeries.html), [LineSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.LineSeries.html), and similar series types | [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) with `Type="ChartSeriesType.*"` |
+| Markers and tooltips | Series-level settings and adornments | [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html) and [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) |
 | Events | CLR events | Event callbacks such as point and tooltip events |
 | Responsiveness | Window-based layout | CSS-based responsive layout |
 
@@ -600,11 +627,11 @@ For detailed explanation, refer to the [WPF Scheduler getting started guide](htt
 | Aspect | WPF (SfScheduler) | Blazor (SfSchedule<TValue>) |
 |---|---|---|
 | Component declaration | `<syncfusion:SfScheduler>` | `<SfSchedule TValue="TModel">` |
-| Appointment model | Built-in `ScheduleAppointment` | Custom model mapped with `ScheduleEventSettings` |
-| View configuration | `ViewType` | `ScheduleViews` and `ScheduleView` |
-| Date and time binding | `DisplayDate` and related properties | `SelectedDate` and `CurrentDate` |
-| Data source | `ItemsSource` | `DataSource` |
-| Resources and grouping | `ResourceCollection` with mappings | `ScheduleResources` and `ScheduleResource` |
+| Appointment model | Built-in [ScheduleAppointment](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.ScheduleAppointment.html) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
+| View configuration | [ViewType](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ViewType) | [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) and [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) |
+| Date and time binding | [DisplayDate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_DisplayDate) and related properties | [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) and `CurrentDate` |
+| Data source | [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ItemsSource) | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) |
+| Resources and grouping | [ResourceCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ResourceCollection) with mappings | [ScheduleResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResources.html) and [ScheduleResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) |
 | Events | CLR events | Event callbacks such as action and cell events |
 | Large data handling | Native desktop behavior | Virtualization and lazy loading are commonly used |
 
@@ -730,6 +757,8 @@ namespace WpfScheduler
 {% endhighlight %}
 {% endtabs %}
 
+N> For resource and grouping configuration in Blazor Scheduler, refer to the [resources documentation](https://blazor.syncfusion.com/documentation/scheduler/resources).
+
 ### 5. Diagram
 
 For detailed explanation, refer to the [WPF Diagram getting started guide](https://help.syncfusion.com/wpf/diagram/getting-started) and [Blazor Diagram getting started guide](https://blazor.syncfusion.com/documentation/diagram/getting-started).
@@ -739,10 +768,10 @@ For detailed explanation, refer to the [WPF Diagram getting started guide](https
 | Aspect | WPF (SfDiagram) | Blazor (SfDiagramComponent) |
 |---|---|---|
 | Component declaration | `<syncfusion:SfDiagram>` | `<SfDiagramComponent>` |
-| Element model | `NodeCollection` and `ConnectorCollection` | `DiagramObjectCollection<Node>` and `DiagramObjectCollection<Connector>` |
-| Positioning | `OffsetX`, `OffsetY`, `UnitWidth`, and `UnitHeight` | `OffsetX`, `OffsetY`, `Width`, and `Height` |
+| Element model | [NodeCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.NodeCollection.html) and [ConnectorCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.ConnectorCollection.html) | `DiagramObjectCollection<Node>` and `DiagramObjectCollection<Connector>` |
+| Positioning | [OffsetX](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_OffsetX), [OffsetY](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_OffsetY), [UnitWidth](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_UnitWidth), and [UnitHeight](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.Node.html#Syncfusion_UI_Xaml_Diagram_Node_UnitHeight) | [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX), [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY), [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width), and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) |
 | Data binding | XAML-based configuration and data mapping | Component parameters and programmatic configuration |
-| Layouts | `LayoutManager` settings | `LayoutType` and layout options |
+| Layouts | [LayoutManager](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Diagram.SfDiagram.html#Syncfusion_UI_Xaml_Diagram_SfDiagram_LayoutManager) settings | [LayoutType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html) and layout options |
 | Ports and constraints | Declared in XAML | Configured in code with ports and constraints |
 | Events | Routed events and CLR events | Event callbacks |
 | Save and load | Built-in diagram persistence | Component methods for persistence |
@@ -875,8 +904,8 @@ For detailed explanation, refer to the [WPF RichTextBox getting started guide](h
 |---|---|---|
 | Component declaration | `<syncfusion:SfRichTextBoxAdv>` | `<SfRichTextEditor>` |
 | Content model | Document-based content | HTML string content |
-| Data binding | Stream-based load and save | `Value` and `@bind-Value` |
-| Toolbar | Ribbon-style and command-based UI | `ToolbarSettings` with toolbar items |
+| Data binding | Stream-based load and save | [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) and `@bind-Value` |
+| Toolbar | Ribbon-style and command-based UI | [ToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) with toolbar items |
 | Templates | WPF control templates and commands | Razor templates and component content |
 | Import and export | Native document formats | HTML-based content with conversion options |
 | Events | CLR and routed events | Event callbacks |
@@ -957,6 +986,20 @@ namespace WpfRichTextEditor
 @code {
     private string HtmlContent { get; set; } = "<p><b>Welcome!</b> Start editing your document here...</p>";
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Run the application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the Blazor application.
+
+Alternatively, run the application using the following .NET CLI command from the project root directory.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
 
 {% endhighlight %}
 {% endtabs %}

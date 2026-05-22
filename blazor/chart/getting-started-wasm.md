@@ -87,7 +87,7 @@ cd BlazorApp
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package Syncfusion.Blazor.Charts --version {{ site.releaseversion }}), or the .NET CLI.
 
 Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -105,6 +105,8 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
+N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
@@ -116,7 +118,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App. This step enables the Syncfusion components to work in your application.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -132,7 +134,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file.
+The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file (this is the main HTML entry point of your WebAssembly application).
 
 ```html
 
@@ -144,10 +146,10 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <!-- SfChart is the root container component for the chart -->
 <SfChart>
@@ -159,7 +161,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
 
 ## Populate Blazor chart with data
 
@@ -168,7 +170,7 @@ To bind data for the chart component, you can assign an IEnumerable object to th
 Map the data fields `Month` and `SalesValue` to the series [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [chart type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
@@ -205,7 +207,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTNiLezckHqsGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTNiLezckHqsGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart)
 
