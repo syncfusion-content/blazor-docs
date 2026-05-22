@@ -349,7 +349,7 @@ After running the tests, the Blazor application starts automatically, the browse
 
 ![Playwright test](./images/playwright-testcase.webp)
 
-N> Before running the tests, ensure the projectpath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
+N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
 This approach ensures reliable validation of [Blazor components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
 
