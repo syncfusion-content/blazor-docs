@@ -18,7 +18,7 @@ To get started quickly with a Blazor Web App, watch the following video.
 
 ## Using Playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows you to interact with our Blazor components directly in your web browser without needing to install any NuGet packages. By default, the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package is included in this.
+[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows you to interact with our Blazor components directly in your web browser without needing to install any NuGet packages.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
@@ -68,7 +68,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ### Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
 {% tabcontents %}
 
@@ -103,8 +103,6 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
-
 ### Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
@@ -120,7 +118,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ### Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -134,11 +132,9 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
-
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -151,14 +147,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ### Add Blazor DataGrid component
 
-* Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the razor file.
-* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the razor file.
 
-N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -194,7 +187,7 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+**Run the application**
 
 {% tabcontents %}
 
