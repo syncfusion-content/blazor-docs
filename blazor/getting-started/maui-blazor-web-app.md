@@ -24,16 +24,16 @@ The template generates the shared RCL, .NET MAUI Blazor Hybrid App, and Blazor W
 
 ## Install Blazor DataGrid and Themes NuGet in the app
 
-Open the NuGet Package Manager in Visual Studio by selecting **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**, and then install the following Syncfusion® NuGet packages.
+Open the NuGet Package Manager in Visual Studio by selecting **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**, and then install the following NuGet packages.
 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-N> Syncfusion® Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open both of the following files and add the Syncfusion® namespaces.
+Open both of the following files and add the namespaces.
 
 * `~/Components/_Imports.razor` (.NET MAUI Blazor Hybrid App)
 * `~/Components/_Imports.razor` (Blazor Web App)
@@ -47,9 +47,9 @@ Open both of the following files and add the Syncfusion® namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion® Blazor service
+## Register Blazor service
 
-Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the **.NET MAUI Blazor Hybrid App** and the `~/Program.cs` file of the **Blazor Web App** to enable Syncfusion® components in the application.
+Add the Blazor service in both the `MauiProgram.cs` file of the **.NET MAUI Blazor Hybrid App** and the `~/Program.cs` file of the **Blazor Web App** to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 4" %}
@@ -165,7 +165,7 @@ In the Visual Studio toolbar, select the **Windows Machine** target to build and
 
 N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-9.0#run-the-app-in-the-android-emulator) for emulator or device setup.
 
-![MAUI Blazor App with Syncfusion Blazor Components](../common/images/maui-blazor-datagrid.webp)
+![MAUI Blazor App with Blazor Components](../common/images/maui-blazor-datagrid.webp)
 
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfusion-Blazor-Components).
 
