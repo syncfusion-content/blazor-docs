@@ -202,7 +202,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion Smart Rich Text Editor Azure OpenAI Integration](images/azureopenai-integration.webp)
+![Syncfusion Smart Rich Text Editor Azure OpenAI Integration](images/azureopenai-integration.png)
 
 ## Troubleshooting
 

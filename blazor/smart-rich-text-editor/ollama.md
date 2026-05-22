@@ -261,7 +261,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion Smart Rich Text Editor Ollama Integration](images/ollama-integration.webp)
+![Syncfusion Smart Rich Text Editor Ollama Integration](images/ollama-integration.png)
 
 N> Running Ollama locally may lead to slower response times due to system resource usage.
 
