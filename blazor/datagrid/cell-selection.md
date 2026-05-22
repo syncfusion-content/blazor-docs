@@ -9,7 +9,7 @@ documentation: ug
 
 # Cell Selection in Blazor DataGrid
 
-Cell selection in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Grid.
+Cell selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Grid.
 
 > To enable cell selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to either **Cell** or **Both**. This determines the selection mode of the Grid.
 

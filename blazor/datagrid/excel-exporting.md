@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel exporting in Blazor DataGrid
 
-The Excel and CSV exporting feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Grid data to spreadsheet formats for external analysis or sharing.
+The Excel and CSV exporting feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables exporting Grid data to spreadsheet formats for external analysis or sharing.
 
 To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. This property activates the export functionality in the Grid.
 

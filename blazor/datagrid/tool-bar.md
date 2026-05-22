@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar in Blazor DataGrid
 
-The toolbar in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
+The toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides quick access to common actions such as adding, editing, deleting, printing, and exporting data (Excel, CSV, PDF).
 
 The toolbar can be configured with built-in toolbar items or custom items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. The `Toolbar` property accepts:
 - An array of strings for built-in items

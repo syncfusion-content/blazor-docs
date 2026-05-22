@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping in Blazor DataGrid
 
-The grouping feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
+The grouping feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) organizes rows into groups, enabling users to expand or collapse related records. Columns can be grouped by dragging the column header into the group drop area. Enable grouping by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Configure behavior using [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
