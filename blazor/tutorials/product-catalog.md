@@ -9,7 +9,7 @@ documentation: ug
 
 # Build a Blazor Product Catalog App
 
-This tutorial walks you through building a **Product Catalog application** using [Blazor components](https://www.syncfusion.com/blazor-components). You will learn how to display, manage, and interact with product data efficiently. The application includes features like product listing, category filtering, search functionality, shopping cart, and wishlist management.
+This guide shows how to build a **Product Catalog application** using [Blazor components](https://www.syncfusion.com/blazor-components). You will learn how to display, manage, and interact with product data efficiently. The application includes features like product listing, category filtering, search functionality, shopping cart, and favorites list management.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ N> If you are using Visual Studio Code, after completing the setup steps run the
 
 ## Project structure
 
-The following project structure organizes the application into separate folders for components, data, models, and services. This separation makes the codebase easier to maintain, extend, and scale as requirements evolve.
+The following project structure organizes the application into separate folders for components, data, models, and services. This separation makes the code base easier to maintain, extend, and scale as requirements evolve.
 
 ```text
 BlazorProductGrid/
