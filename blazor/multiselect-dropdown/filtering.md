@@ -319,7 +319,64 @@ The [Filtering](https://blazor.syncfusion.com/documentation/multiselect-dropdown
     }
 }
 ```
-{% previewsample "{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRXoZHzyVvCEeT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRXoZHzyVvCEeT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Using WhereFilter.Or with Filtering Event
+
+You can construct complex filter conditions using `WhereFilter.Or()` with a `List<WhereFilter>` when you need to combine multiple filter criteria with OR logic. This approach is particularly useful when working with remote data sources where you want the filtering to be performed on the server.
+
+```cshtml
+<SfMultiSelect TValue="string[]" @ref="mulObj" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries" AllowFiltering="true">
+    <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
+    <MultiSelectEvents TValue="string[]" TItem="Country" Filtering="OnFilter"></MultiSelectEvents>
+</SfMultiSelect>
+
+@code {
+    SfMultiSelect<string[], Country> mulObj { get; set; }
+
+    public class Country
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+
+    List<Country> Countries = new List<Country>
+    {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
+    };
+
+    private async Task OnFilter(Syncfusion.Blazor.DropDowns.FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var predicate = new List<WhereFilter>
+        {
+            new WhereFilter { Condition = "or", Field = "Name", value = args.Text, Operator = "contains", IgnoreAccent = true, IgnoreCase = true },
+            new WhereFilter { Condition = "or", Field = "Code", value = args.Text, Operator = "contains", IgnoreAccent = true, IgnoreCase = true }
+        };
+        var query = new Query().Where(WhereFilter.Or(predicate));
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+        await mulObj.FilterAsync(this.mulObj.DataSource, query);
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxtoLLgPhapZPz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+When using `WhereFilter.Or()`:
+
+| Property | Description |
+|----------|-------------|
+| **Condition** | Set to `"or"` to combine conditions with OR logic |
+| **Field** | The property name to filter on (e.g., `"Name"`, `"Code"`) |
+| **Operator** | The comparison operator (e.g., `"contains"`, `"startswith"`, `"equal"`) |
+| **Value** | The value to compare against (from `args.Text`) |
+| **IgnoreCase** | Set to `true` for case-insensitive filtering |
+| **IgnoreAccent** | Set to `true` for accent-insensitive filtering |
+
+> **Note:** The `WhereFilter.Or()` approach is recommended when working with remote data sources, as the filter query can be sent directly to the server for processing."
 
 ## Custom Value Creation with Filtering
 
