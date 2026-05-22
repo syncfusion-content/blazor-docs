@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Integrate Syncfusion Blazor DataGrid with Bold Report Viewer
-description: Step-by-step guide to integrate the Syncfusion Blazor DataGrid component and the Bold Reports Report Viewer in a Blazor application.
+title: Integrate Blazor DataGrid with Bold Report Viewer | Syncfusion
+description: Step-by-step guide to integrate the Blazor DataGrid component and the Bold Reports Report Viewer in a Blazor application.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® Blazor DataGrid with Bold Report Viewer
+# Integrating Blazor DataGrid with Bold Report Viewer
 
-This guide explains how to integrate the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
+This guide explains how to integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Bold Report Viewer](https://www.boldreports.com/) to display grid data inside RDLC reports. This enables scenarios such as exporting grid data, generating printable reports, and providing data‑driven visualizations directly from a Blazor application.
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
@@ -43,9 +43,9 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" hl_lines="2 5 6 7 9 12 13 14" %}
@@ -71,21 +71,21 @@ app.Run();
 
 ## Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. The Bold Report Viewer requires its specific script in addition to the core script.
+Add theme CSS and required scripts to the `~/Components/App.razor` file. The Bold Report Viewer requires its specific script in addition to the core script.
 
 {% tabs %}
 {% highlight html  %}
 
 <head>
-     <!-- Syncfusion theme style sheet -->
+     <!-- Blazor theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <!-- Bold Report Viewer CSS -->
     <link href="https://cdn.boldreports.com/12.2.6/content/v2.0/tailwind-light/bold.report-viewer.min.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor DataGrid component's script reference -->
+    <!-- Blazor DataGrid component's script reference -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-    <!-- Syncfusion Blazor Bold Report Viewer script reference-->
+    <!-- Blazor Bold Report Viewer script reference-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.boldreports.com/12.2.6/scripts/v2.0/common/bold.reports.common.min.js"></script>
     <script src="https://cdn.boldreports.com/12.2.6/scripts/v2.0/common/bold.reports.widgets.min.js"></script>
@@ -96,8 +96,6 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Syncfusion provides multiple theme variants, allowing selection of the theme that best aligns with the application's UI design. Additional theme options and customization details are available in the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 ## Add a sample report
 
@@ -553,7 +551,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## Use cases
 
-The integration of the Syncfusion® Blazor DataGrid with RDLC reporting enables seamless data interaction and on‑demand report generation within Blazor applications. This combination is ideal for applications that require real‑time reporting based on user‑selected or filtered grid data.
+The integration of the Blazor DataGrid with RDLC reporting enables seamless data interaction and on‑demand report generation within Blazor applications. This combination is ideal for applications that require real‑time reporting based on user‑selected or filtered grid data.
 
 ### Order processing and invoice generation
 
