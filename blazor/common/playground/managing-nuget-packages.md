@@ -9,7 +9,7 @@ documentation: ug
 
 # Manage NuGet Packages in Blazor Playground
 
-The [Blazor Playground](https://blazorplayground.syncfusion.com) is preconfigured with the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) meta package, which bundles all [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) for immediate use. Because this loads the full library, it can impact initial load time. For better performance, uninstall the meta package and install only the individual NuGet packages required for your components
+The [Blazor Playground](https://blazorplayground.syncfusion.com) is preconfigured with the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) meta package, which bundles all [Blazor components](https://www.syncfusion.com/blazor-components) for immediate use. Because this loads the full library, it can impact initial load time. For better performance, uninstall the meta package and install only the individual NuGet packages required for your components
 
 N> Uninstall the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package before installing individual packages to avoid duplication and reduce payload size.
 
@@ -19,7 +19,7 @@ N> Uninstall the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.B
 2\. Search for the desired package and select a version.
 3\. Click the **Install NuGet** button. The Playground restores packages automatically.
 
-The following example shows the result after uninstalling [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) and installing [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
+The following example demonstrates how to install the individual NuGet package [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
 
 ![Blazor Playground with NuGet Package](images/adding_package.webp)
 
@@ -80,7 +80,7 @@ Click the **Remove** button next to the installed package details to uninstall i
 
 Upgrade or downgrade packages by searching for the package name and selecting a specific version. The Playground handles installation or updates automatically.
 
-N> Maintain consistent versions across all Syncfusion® Blazor packages to avoid compatibility issues.
+N> Maintain consistent versions across all Blazor packages to avoid compatibility issues.
 
 ![Blazor Playground NuGet Asset Manager showing version selection for upgrading or downgrading a package](images/upgrade_downgrade.webp)
 
