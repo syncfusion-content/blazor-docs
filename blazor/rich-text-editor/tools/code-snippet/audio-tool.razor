@@ -1,6 +1,22 @@
-@using Syncfusion.Blazor.RichTextEditor;
+@using Syncfusion.Blazor.RichTextEditor
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
+    <h4>Insert Audio in Rich Text Editor!</h4>
+    <p>You can insert and play audio files within this editor. Click inside the editor and use the audio tool to add an audio file.</p>
+    <h5>What You Can Do</h5>
+    <ul>
+        <li><strong>Insert Audio:</strong> Upload audio files from local storage or provide a direct audio URL.</li>
+        <li><strong>Playback Support:</strong> Play audio directly within the editor using built-in controls.</li>
+        <li><strong>Layout Options:</strong> Display audio as inline content or as a separate block element.</li>
+        <li><strong>Drag and Drop:</strong> Insert audio by dragging files directly into the editor.</li>
+        <li><strong>Copy and Paste:</strong> Paste audio files directly into the editor from your system.</li>
+        <li><strong>Replace Audio:</strong> Easily change the existing audio using the replace option.</li>
+        <li><strong>Remove Audio:</strong> Delete audio files from the content whenever needed.</li>
+    </ul>
+    <h5>Try It Out!</h5>
+    <audio controls>
+        <source src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Audio.wav" type="audio/mp3" />
+    </audio>
 </SfRichTextEditor>
 
 @code {
