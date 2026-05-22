@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Web App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor DataGrid component in a Blazor Web App using Visual Studio, Visual Studio Code, and the .NET CLI.
+description: Learn how to get started with the Blazor DataGrid component in a Blazor Web App using Visual Studio, Visual Studio Code, and the .NET CLI.
 platform: Blazor
 component: Common
 documentation: ug
@@ -18,7 +18,7 @@ To get started quickly with a Blazor Web App, watch the following video.
 
 ## Using Playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows you to interact with our Blazor components directly in your web browser without needing to install any NuGet packages. By default, the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package is included in this.
+[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows you to interact with our Blazor components directly in your web browser without needing to install any NuGet packages.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
@@ -45,7 +45,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 Run the following command to create a new Blazor Web App.
 
 ```bash
-dotnet new blazor -o BlazorWebApp -int Auto
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 ```
 
 Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
@@ -57,7 +57,7 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 Run the following command to create a new Blazor Web App.
 
 ```bash
-dotnet new blazor -o BlazorWebApp -int Auto
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 ```
 
 {% endtabcontent %}
@@ -68,7 +68,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ### Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
 {% tabcontents %}
 
@@ -103,14 +103,12 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
-
 ### Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -120,7 +118,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ### Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -134,11 +132,9 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
-
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -151,41 +147,41 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ### Add Blazor DataGrid component
 
-* Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the razor file.
-* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the razor file.
 
-N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.Grids
-
 <SfGrid DataSource="@Orders" />
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
+        var customers = new string[] { "James Hopper", "Michael Smith", "Sarah Johnson", "Robert Davis", "Emily Wilson" };
+        var cities = new string[] { "New York", "Los Angeles", "Chicago", "Houston", "Phoenix" };
+        var rng = new Random();
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2 * x,
+            CustomerName = customers[rng.Next(customers.Length)],
+            ShipCity = cities[rng.Next(cities.Length)],
+            Freight = Math.Round(10.5 + (x * 7.3), 2),
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
 
     public class Order {
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string CustomerName { get; set; }
+        public string ShipCity { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
@@ -194,7 +190,7 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+**Run the application**
 
 {% tabcontents %}
 
@@ -226,4 +222,4 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVesWjwqtDJZluz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLdNyLhzWLkHYpX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.webp)" %}
