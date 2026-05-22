@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and appearance in Syncfusion Blazor DataGrid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
 - **DataGrid root element:** Defines the overall appearance of the grid container.
 - **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.

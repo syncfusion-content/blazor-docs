@@ -9,7 +9,7 @@ documentation: ug
 
 # Template Editing in Blazor DataGrid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component supports template editing, offering a flexible approach to customize the appearance and behavior of cells during editing. **Templates** can be used to define the structure and content of editable cells within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component supports template editing, offering a flexible approach to customize the appearance and behavior of cells during editing. **Templates** can be used to define the structure and content of editable cells within the Grid.
 
 ## Inline template editing
 
