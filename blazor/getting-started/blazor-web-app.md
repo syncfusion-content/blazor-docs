@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Web App | Syncfusion
-description: Learn how to get started with the Syncfusion Blazor DataGrid component in a Blazor Web App using Visual Studio, Visual Studio Code, and the .NET CLI.
+description: Learn how to get started with the Blazor DataGrid component in a Blazor Web App using Visual Studio, Visual Studio Code, and the .NET CLI.
 platform: Blazor
 component: Common
 documentation: ug
@@ -45,7 +45,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 Run the following command to create a new Blazor Web App.
 
 ```bash
-dotnet new blazor -o BlazorWebApp -int Auto
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 ```
 
 Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
@@ -57,7 +57,7 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 Run the following command to create a new Blazor Web App.
 
 ```bash
-dotnet new blazor -o BlazorWebApp -int Auto
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 ```
 
 {% endtabcontent %}
@@ -108,7 +108,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -158,11 +158,9 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.Grids
-
 <SfGrid DataSource="@Orders" />
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
