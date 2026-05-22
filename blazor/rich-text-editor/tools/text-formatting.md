@@ -147,6 +147,26 @@ The following example demonstrates how to customize the bullet format lists in t
 
 ![Blazor RichTextEditor bullet formatlist](../images/blazor-richtexteditor-bullet-format-list.png)
 
+## Checklist
+
+Checklists enable users to create interactive lists with selectable items, making it easier to track tasks and organize content efficiently. The Rich Text Editor provides a simple way to create and manage checklists:
+
+### Using the checklist tool
+
+The `CheckList` toolbar item provides a convenient way to create or toggle a checklist. To use it, select the desired text in the editor and click the `CheckList` button in the toolbar. The selected text will be converted into a checklist with checkable items. If the content is already a checklist, clicking the button will remove the checklist formatting.
+
+Please refer to the sample and code snippets below to add these checklist options in the Rich Text Editor.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/check-list.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor checklist](../images/blazor-richtexteditor-check-list.png)
+
 ## Nested list creation using Tab key
 
 In the Rich Text Editor, pressing the `Tab` key while the cursor is inside a list item automatically creates a nested list. This behavior allows users to structure their content hierarchically by indenting list items. Each press of the `Tab` key increases the nesting level, converting the current item into a sub-item of the previous one.
@@ -214,7 +234,7 @@ The following table list the default format name and width of the  [Format](http
 | Default Key | Default Value |
 |-----|--------------------------------------|
 | [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Width) | 65px|
-| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Code", Value = "Pre" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" }<br>}; |
+| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Preformatted", Value = "Pre" },<br>}; |
 
 {% tabs %}
 {% highlight razor %}
