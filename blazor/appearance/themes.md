@@ -9,166 +9,165 @@ documentation: ug
 
 # Blazor themes in Syncfusion® components
 
-The following themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library.
+The following themes are available in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components) library.
 
-|Theme	|Style Sheet Name|
-|--------|--------|
-|Tailwind 3.4 | tailwind3.css |
-|Tailwind 3.4 Dark | tailwind3-dark.css |
-|Bootstrap 5.3 | bootstrap5.3.css |
-|Bootstrap 5.3 Dark | bootstrap5.3-dark.css |
-|Fluent 2 | fluent2.css |
-|Fluent 2 Dark | fluent2-dark.css |
-|Material 3 | material3.css |
-|Material 3 Dark | material3-dark.css |
-|Bootstrap 5	| bootstrap5.css |
-|Bootstrap 5 Dark	| bootstrap5-dark.css |
-|Bootstrap 4	| bootstrap4.css |
-|Bootstrap 3	| bootstrap.css |
-|Bootstrap 3 Dark	| bootstrap-dark.css |
-|Google’s Material | material.css |
-|Google’s Material-Dark | material-dark.css |
-|Tailwind CSS | tailwind.css |
-|Tailwind CSS Dark | tailwind-dark.css |
-|Fluent | fluent.css |
-|Fluent Dark | fluent-dark.css |
-|Microsoft Office Fabric | fabric.css |
-|Microsoft Office Fabric Dark | fabric-dark.css |
-|High Contrast | highcontrast.css |
+## Latest themes (Recommended)
 
-The Bootstrap 3 theme is designed based on Bootstrap v3.
+| Theme family | Variants | Style sheet names |
+|---|---|---|
+| Tailwind 3.4 | Light, Dark | `tailwind3.css`, `tailwind3-dark.css` |
+| Bootstrap 5.3 | Light, Dark | `bootstrap5.3.css`, `bootstrap5.3-dark.css` |
+| Fluent 2 | Light, Dark | `fluent2.css`, `fluent2-dark.css` |
+| Material 3 | Light, Dark | `material3.css`, `material3-dark.css` |
 
-N> The Bootstrap 4 theme is designed based on Bootstrap v4, specifically version 4.3. It remains compatible with Bootstrap v4.6 applications. There are no significant differences between v4.3 and v4.6 that affect Syncfusion<sup style="font-size:70%">&reg;</sup> components. Therefore, using Bootstrap v4.3 will not impact functionality, as it performs equivalently to Bootstrap v4.6.
+## Legacy themes
+
+| Theme family | Variants | Style sheet names |
+|---|---|---|
+| Bootstrap 5 | Light, Dark | `bootstrap5.css`, `bootstrap5-dark.css` |
+| Bootstrap 4 | Light | `bootstrap4.css` |
+| Bootstrap 3 | Light, Dark | `bootstrap.css`, `bootstrap-dark.css` |
+| Google’s Material | Light, Dark | `material.css`, `material-dark.css` |
+| Tailwind CSS | Light, Dark | `tailwind.css`, `tailwind-dark.css` |
+| Fluent | Light, Dark | `fluent.css`, `fluent-dark.css` |
+| Microsoft Office Fabric | Light, Dark | `fabric.css`, `fabric-dark.css` |
+
+## Accessibility theme
+
+| Theme | Style sheet name | Notes |
+|---|---|---|
+| High Contrast | `highcontrast.css` | Designed for accessibility-focused experiences |
+
+The Bootstrap 3 theme is based on Bootstrap v3.
+
+N> The Bootstrap 4 theme is based on Bootstrap v4, specifically v4.3. It is compatible with Bootstrap v4.6 applications, as there are no significant differences between v4.3 and v4.6 that affect Syncfusion Blazor components.
 
 ## Optimized CSS themes
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available in two variants to help optimize application performance:
- 
-**Standard Theme Files:**
+Blazor themes are available in two variants to help optimize application performance.
 
-* The default theme files (<theme_name>.css) include comprehensive styling for both normal and bigger size modes, ensuring full UI flexibility but with a larger file size.
- 
-**Lite theme files:**
+### Standard theme files
 
-Optimized lite theme files (<theme_name>-lite.css):
+The default theme files (for example, `<theme_name>.css`) include styling for both normal and bigger size modes. This provides full UI flexibility but results in a larger file size.
 
-* Include styles exclusively for normal size mode
-* Omit bigger size mode styles
-* Reduce file size by approximately 30%, improving load times
+### Lite theme files
 
-**When to use lite themes:**
+The optimized lite theme files (for example, `<theme_name>-lite.css`):
 
-* Choose the lite theme variant when the application doesn't require the bigger size mode. Reference the `-lite.css` version instead of the standard theme file.
+- Include styles only for normal size mode  
+- Omit bigger size mode styles  
+- Can reduce file size by about 30%, improving load times
 
-Comparison of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button Component in **normal** and **bigger** size modes:
+### When to use lite themes
 
-![bigger-sized-button](./images/bigger-theme-button.webp)
+Use the lite theme variant when your application does not require bigger size mode. In those cases reference the `-lite.css` file instead of the standard theme file.
 
-Refer to the comparison below for the default and optimized theme file sizes:
+The following image compares the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in normal and bigger size modes:
 
-| Default Theme Name | Optimized Theme Name |
-| -- | -- |
-| Fluent 2 | Fluent 2 Lite |
-| Fluent 2 Dark | Fluent2 Dark Lite |
-| material 3 | material 3 Lite |
-| material 3 Dark | material 3 Dark Lite |
-| Bootstrap 5.3 | Bootstrap 5.3 Lite 2 |
-| Bootstrap 5.3 Dark | Bootstrap 5.3 Dark Lite |
-| Bootstrap 5 | Bootstrap 5 Lite 2 |
-| Bootstrap 5 Dark | Bootstrap 5 Dark Lite |
-| Bootstrap 4 | Bootstrap 4 Lite |
-| Bootstrap | Bootstrap Lite |
-| Bootstrap Dark | Bootstrap Dark Lite |
-| Google’s Material | Google’s Material Lite |
-| Google’s Material Dark | Google’s Material Dark Lite |
-| Tailwind | Tailwind Lite |
-| Tailwind Dark | Tailwind Dark Lite |
-| Fluent | Fluent Lite |
-| Fluent Dark | Fluent Dark Lite |
-| Microsoft Office Fabric | Microsoft Office Fabric Lite |
-| Microsoft Office Fabric Dark | Microsoft Office Fabric Dark Lite |
-| High Contrast | High Contrast Lite |
+![Button comparison: normal and bigger sizes](./images/bigger-theme-button.webp)
 
-## Reference themes in a Blazor application
+The following table maps theme display names to their corresponding standard and optimized (lite) CSS filenames:
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes can be used in your Blazor application by referencing the style sheet.
+| Theme (display) | Standard filename | Lite filename |
+| --- | --- | --- |
+| Fluent 2 | `fluent2.css` | `fluent2-lite.css` |
+| Fluent 2 Dark | `fluent2-dark.css` | `fluent2-dark-lite.css` |
+| Material 3 | `material3.css` | `material3-lite.css` |
+| Material 3 Dark | `material3-dark.css` | `material3-dark-lite.css` |
+| Bootstrap 5.3 | `bootstrap5.3.css` | `bootstrap5.3-lite.css` |
+| Bootstrap 5.3 Dark | `bootstrap5.3-dark.css` | `bootstrap5.3-dark-lite.css` |
+| Bootstrap 5 | `bootstrap5.css` | `bootstrap5-lite.css` |
+| Bootstrap 5 Dark | `bootstrap5-dark.css` | `bootstrap5-dark-lite.css` |
+| Bootstrap 4 | `bootstrap4.css` | `bootstrap4-lite.css` |
+| Bootstrap | `bootstrap.css` | `bootstrap-lite.css` |
+| Bootstrap Dark | `bootstrap-dark.css` | `bootstrap-dark-lite.css` |
+| Google’s Material | `material.css` | `material-lite.css` |
+| Google’s Material Dark | `material-dark.css` | `material-dark-lite.css` |
+| Tailwind | `tailwind.css` | `tailwind-lite.css` |
+| Tailwind Dark | `tailwind-dark.css` | `tailwind-dark-lite.css` |
+| Fluent | `fluent.css` | `fluent-lite.css` |
+| Fluent Dark | `fluent-dark.css` | `fluent-dark-lite.css` |
+| Microsoft Office Fabric | `fabric.css` | `fabric-lite.css` |
+| Microsoft Office Fabric Dark | `fabric-dark.css` | `fabric-dark-lite.css` |
+| High Contrast | `highcontrast.css` | `highcontrast-lite.css` |
 
-* For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, reference the stylesheet in the `<head>` of **~/Components/App.razor** file.
-* For **Blazor WebAssembly App**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
+## Theme reference methods in a Blazor application
 
-Using the following approaches, themes can be referenced in a Blazor application:
+You can reference Blazor themes using the following approaches:
 
-1. [Static web assets](#static-web-assets) - Reference CSS from local static web assets.
+1. [Static web assets](#static-web-assets) - Reference CSS from local package assets.
 2. [CDN](#cdn-reference) - Reference CSS from the Syncfusion CDN.
-3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components.
-4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components.
-5. [NPM packages](#npm-packages) - Used to customize the existing themes and bundle stylesheet's in an application.
+3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Generate resources only for the components used in the application.
+4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Customize and generate themes for the components used in the application.
+5. [NPM packages](#npm-package-reference) - Customize existing themes and bundle the styles with your application.
 
-Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages).
+If you need to customize a theme or bundle it with other styles, use [Static web assets](#static-web-assets) or [NPM packages](#npm-package-reference) instead of a [CDN reference](#cdn-reference).
 
 ## Static Web Assets
 
 ### Enable static web assets usage
 
-To use static web assets, ensure the [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called in the app's **~/Program.cs** file.
+To use Blazor theme files from static web assets, ensure the app serves static files by calling [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) in `~/Program.cs`.
 
-N> For **Blazor Web App with interaction mode as Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
+N> For a **Blazor Web App** with **Server**, **WebAssembly**, or **Auto** interactive render modes, add `UseStaticFiles()` in the **server project**. For a **standalone Blazor WebAssembly app**, no server-side middleware is required.
 
 ### Refer theme style sheet from static web assets
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
+Blazor themes are provided as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
-* For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, reference the stylesheet in the `<head>` of **~/Components/App.razor** file.
+* For **Blazor Web App** projects using **Server, WebAssembly, or Auto** interactive render modes, add the stylesheet to the `<head>` section of **`~/Components/App.razor`**.
 
-* For **Blazor WebAssembly App**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
+* For a **Blazor WebAssembly standalone app**, add the stylesheet to the `<head>` section of **`~/wwwroot/index.html`**.
 
-When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
+When using individual NuGet packages in your application, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and reference the theme stylesheet as shown below:
 
- ```html
+```html
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-```
-To refer to optimized CSS files, use the following syntax: 
-
- ```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5-lite.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 ```
 
-When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package,
+To use the optimized (lite) variant that excludes bigger-size mode styles, reference the `-lite` file:
 
- ```html
+```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2-lite.css" rel="stylesheet" />
 </head>
 ```
-To reference optimized CSS files from [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, here's how to:
 
- ```html
+When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) package, reference it from the styles path:
+
+```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap5-lite.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor/styles/fluent2.css" rel="stylesheet" />
+</head>
+```
+
+To reference the optimized (lite) CSS files from the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, use the following:
+
+```html
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/fluent2-lite.css" rel="stylesheet" />
 </head>
 ```
 
 ## CDN reference
 
-Instead of using a local resource on your server, you can use a cloud CDN to reference the theme style sheets. CDN Stands for "Content Delivery Network". A CDN is a group of servers distributed in different locations. While CDNs are often used to host websites, they are commonly used to provide other types of downloadable data as well. Examples include software programs, images, videos, and streaming media.
+Instead of using a local resource on your server, you can reference the theme style sheets from a cloud CDN. CDN stands for **[Content Delivery Network](https://learn.microsoft.com/en-us/microsoft-365/enterprise/content-delivery-networks?view=o365-worldwide)**. It is a network of servers distributed across different locations. CDNs are commonly used to deliver downloadable content such as software, images, videos, and streaming media.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Package you are using.
-
- ```html
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css" rel="stylesheet"/>
-</head>
-```
-
-To refer to optimized CSS files, use the following syntax:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes are available through the CDN. Ensure that the version in the URL matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package you are using.
 
 ```html
 <head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/<theme_name>-lite.css" rel="stylesheet"/>
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css" rel="stylesheet" />
+</head>
+```
+
+To reference an optimized CSS file, use the following syntax:
+
+```html
+<head>
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/<theme_name>-lite.css" rel="stylesheet" />
 </head>
 ```
 
