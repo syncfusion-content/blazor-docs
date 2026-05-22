@@ -23,6 +23,8 @@ The Rich Text Editor allows inserting audio files from online sources and the lo
 
 To include the audio tool in the Rich Text Editor, you can add the toolbar item `Audio` to the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_EJ2_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
+![Blazor RichTextEditor audio](../images/blazor-richtexteditor-audio.png)
+
 To configure `Audio` toolbar item, refer to the below code.
 
 {% tabs %}

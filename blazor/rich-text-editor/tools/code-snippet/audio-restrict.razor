@@ -1,28 +1,17 @@
 @using Syncfusion.Blazor.RichTextEditor
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-        <RichTextEditorAudioSettings MaxFileSize="30000000"></RichTextEditorAudioSettings>
+    <RichTextEditorAudioSettings MaxFileSize="30000000"></RichTextEditorAudioSettings>
+    <h5>Maximum File Size Restriction</h5>
+    <p>You can control the size of audio files uploaded to the editor to ensure optimal performance and prevent large file uploads.</p>
+    <ul>
+        <li>The MaxFileSize property allows you to restrict audio uploads by defining the maximum allowed file size. By default, the maximum size is set to 30,000,000 bytes (approximately 30 MB). </li>
+        <li>Audio files exceeding this limit are blocked from being uploaded to ensure better control and performance.</li>
+    </ul>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Audio },
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
+        new ToolbarItemModel() { Command = ToolbarCommand.Audio }
     };
 }
