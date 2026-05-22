@@ -429,8 +429,3 @@ namespace AudioUpload.Controllers
 ## Paste audio into the editor
 
 The Rich Text Editor supports pasting audio files directly into the editor content. You can paste single or multiple audio files from your file system directly into the editor.
-
-## See also
-
-* [How to configuring the toolbar position](https://blazor.syncfusion.com/documentation/rich-text-editor/toolbar#configuring-the-toolbar-position)
-* [How to use link editing option in the toolbar items](../tools#insert-link)
