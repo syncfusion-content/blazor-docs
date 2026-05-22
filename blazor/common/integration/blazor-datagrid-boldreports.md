@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrate Blazor DataGrid with Bold Report Viewer | Syncfusion
-description: Step-by-step guide to integrate the Blazor DataGrid component and the Bold Reports Report Viewer in a Blazor application.
+description: Complete step-by-step guide to integrate Blazor DataGrid and Spreadsheet components for seamless data handling and interactive web applications.
 platform: Blazor
 control: Common
 documentation: ug
