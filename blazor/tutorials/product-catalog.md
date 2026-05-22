@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Build a Blazor Product Catalog App using DataGrid | Syncfusion
+title: Build a Blazor Product Catalog App | Syncfusion
 description: Learn how to build a step-by-step Blazor Product Catalog application using Syncfusion Blazor components including DataGrid, Carousel, Dialog, and more.
 platform: Blazor
 control: Tutorials
@@ -20,9 +20,11 @@ This tutorial walks you through building a **Product Catalog application** using
 
 To create a Blazor application, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code).
 
+N> If you are using Visual Studio Code, after completing the setup steps run the application with `dotnet run` or `dotnet watch` from the terminal.
+
 ## Project structure
 
-The following project structure organizes the application into separate folders for components, data, models, and services, making the code base maintainable and scalable.
+The following project structure organizes the application into separate folders for components, data, models, and services. This separation makes the codebase easier to maintain, extend, and scale as requirements evolve.
 
 ```text
 BlazorProductGrid/
@@ -47,8 +49,6 @@ BlazorProductGrid/
 └── BlazorProductGrid.csproj
 ```
 
-This structure helps keep the application maintainable and scalable by clearly separating data models, services, and UI components. It also makes it easier to update or extend the application as requirements evolve.
-
 ## Install required Syncfusion® Blazor packages
 
 Install the NuGet packages listed below to add the required Blazor components to your application.
@@ -64,16 +64,16 @@ Click each package link in the table below to view the NuGet installation comman
 
 | Component Name | Package |
 |----------------|---------|
-| DataGrid | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
-| Button | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
-| Inputs | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
-| Accordion | [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) |
-| Dialog | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
+| [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
+| [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
+| [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
+| [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) | [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) |
+| [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-dialog) | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
 | Themes | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
-## Register Syncfusion® Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components across all pages.
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components across all pages.
 
 {% tabs %}
 {% highlight cs tabtitle="~/Program.cs" hl_lines="1 8 11 12" %}
@@ -96,7 +96,7 @@ var app = builder.Build();
 
 ## Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file.
+Add the theme CSS and required scripts to the `~/Components/App.razor` file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -115,11 +115,11 @@ Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor
 {% endhighlight %}
 {% endtabs %}
 
-N> The example uses `fluent2.css`. Other available theme options include `bootstrap5.css`, `fabric.css`, `highcontrast.css`, `tailwind.css`. See the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes) for customization details.
+N> The example uses `fluent2.css`. Other available theme options include `bootstrap5.css`, `material.css`, `fabric.css`, and `highcontrast.css`. See the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes) for customization details.
 
 ## Add required namespaces
 
-Open the `Components/_Imports.razor` file and import the following Syncfusion Blazor component, model, data, and service namespaces.
+Open the `Components/_Imports.razor` file and import the following Blazor component, model, data, and service namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -355,7 +355,7 @@ public class WishlistService
 {% endhighlight %}
 {% endtabs %}
 
-###Register services
+### Register services
 
 Register the application services in `Program.cs` so they can be accessed throughout the Blazor application using dependency injection.
 
@@ -379,6 +379,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
+N> Application level services (CartService, WishlistService) are registered in the [Register services](#register-services) step below.
 
 ## Create the application pages
 
@@ -386,7 +387,7 @@ In this section, you will learn how to create the main pages of the application 
 
 ### Create the Product Catalog Page
 
-The product catalog page is the main entry point of the application. It uses the Blazor DataGrid to display all products with sorting, paging, and search. Category filter chips, a cart preview dialog, and an image gallery powered by SfCarousel are also included on this page.
+The product catalog page is the main entry point of the application. It uses the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display all products with sorting, paging, and search. Category filter chips, a cart preview dialog, and an image gallery powered by [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) are also included on this page.
 
 Create `Components/Pages/ProductCatalog.razor` with the following code.
 
@@ -398,8 +399,6 @@ Create `Components/Pages/ProductCatalog.razor` with the following code.
 @inject CartService CartService
 @inject WishlistService WishlistService
 @inject NavigationManager Navigation
-@using BlazorProductGrid.Models
-@using BlazorProductGrid.Data
 @using BlazorProductGrid.Services
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
@@ -593,7 +592,7 @@ Create `Components/Pages/ProductCatalog.razor` with the following code.
     private List<string> Categories => Products.Select(p => p.Category).Distinct().OrderBy(c => c).ToList();
     private List<Product> FilteredProducts => Products.Where(p => SelectedCategory == null || p.Category == SelectedCategory).ToList();
 
-    public void OnInput(InputEventArgs args) => DefaultGrid?.SearchAsync(args.Value);
+    private void OnInput(InputEventArgs args) => DefaultGrid?.SearchAsync(args.Value);
     protected override void OnInitialized() => Products = ProductData.GetProducts();
     private void FilterByCategory(string? category) => SelectedCategory = category;
     private void ToggleCart() => ShowCart = !ShowCart;
@@ -1180,6 +1179,7 @@ Create `Components/Pages/Wishlist.razor` with the following code.
         CartService.AddToCart(product);
         WishlistService.RemoveFromWishlist(product);
         WishlistItems = WishlistService.WishlistItems.ToList();
+        StateHasChanged();
     }
 
     private void RemoveFromWishlist(Product product)
@@ -1400,7 +1400,7 @@ The **Cart** page provides an order summary view. It displays all cart items in 
 Create `Components/Pages/Cart.razor` with the following code.
 
 {% tabs %}
-{% highlight razor tabtitle="Pages/cart.razor" %}
+{% highlight razor tabtitle="Pages/Cart.razor" %}
 
 @page "/cart"
 @rendermode InteractiveServer
@@ -1538,69 +1538,6 @@ Create `Components/Pages/Cart.razor` with the following code.
         font-size: 1.1rem;
     }
 
-    .cart-table-section {
-        margin-bottom: 2rem;
-        overflow-x: auto;
-    }
-
-    .cart-table {
-        width: 100%;
-        border-collapse: collapse;
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    }
-
-    .cart-table th {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        padding: 1rem;
-        text-align: left;
-        font-weight: 600;
-    }
-
-    .cart-table td {
-        padding: 1rem;
-        border-bottom: 1px solid #e2e8f0;
-        color: #2d3748;
-    }
-
-    .cart-table tr:last-child td {
-        border-bottom: none;
-    }
-
-    .cart-table tr:hover {
-        background: #f7fafc;
-    }
-
-    .product-thumb {
-        width: 60px;
-        height: 60px;
-        object-fit: cover;
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
-    }
-
-    .product-name {
-        font-weight: 600;
-    }
-
-    .qty-cell {
-        text-align: center;
-        background: #667eea;
-        color: #fff;
-        padding: 0.35rem 1rem;
-        border-radius: 20px;
-        font-weight: 600;
-        display: inline-block;
-    }
-
-    .subtotal-cell {
-        font-weight: bold;
-        color: #667eea;
-    }
-
     .order-summary-card {
         background: #fff;
         border-radius: 16px;
@@ -1670,6 +1607,7 @@ Create `Components/Pages/Cart.razor` with the following code.
     .confirm-btn:hover {
         transform: scale(1.02);
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        opacity: 0.9;
     }
 
     .continue-btn {
@@ -1677,8 +1615,8 @@ Create `Components/Pages/Cart.razor` with the following code.
         background: #fff;
         color: #4a5568;
         border: 2px solid #e2e8f0;
-        padding: 1rem;
-        border-radius: 12px;
+        padding: 0.875rem 1.5rem;
+        border-radius: 8px;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.2s;
@@ -1687,6 +1625,7 @@ Create `Components/Pages/Cart.razor` with the following code.
     .continue-btn:hover {
         border-color: #667eea;
         color: #667eea;
+        background: #f7fafc;
     }
 
     .empty-cart {
@@ -1741,35 +1680,6 @@ Create `Components/Pages/Cart.razor` with the following code.
         color: #2d3748;
     }
 
-    .confirm-btn {
-        flex: 2;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        border: none;
-        padding: 0.875rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1rem;
-    }
-
-    .confirm-btn:hover {
-        opacity: 0.9;
-    }
-
-    .continue-btn {
-        flex: 1;
-        background: #fff;
-        color: #4a5568;
-        border: 1px solid #cbd5e0;
-        padding: 0.875rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 500;
-    }
-
-    .continue-btn:hover {
-        background: #f7fafc;
-    }
-
     @@media (max-width: 768px) {
         .cart-container {
             padding: 1rem;
@@ -1801,19 +1711,19 @@ Update `Components/Layout/NavMenu.razor` to add navigation links:
     <nav class="nav flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-grid-nav-menu"></span> Product Catalog
+                <span class="bi bi-grid"></span> Product Catalog
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="wishlist">
-                <span class="bi bi-heart-nav-menu"></span> Wishlist
+                <span class="bi bi-heart"></span> Wishlist
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="cart">
-                <span class="bi bi-cart-nav-menu"></span> Cart
+                <span class="bi bi-cart"></span> Cart
             </NavLink>
         </div>
     </nav>
@@ -1847,15 +1757,18 @@ dotnet run
 
 4. Click **❤️** to add products to your wishlist.
 
-5. Click the **Cart** button in the toolbar to open the cart preview dialog. Inside the dialog, click View Cart to navigate to the full Cart page.
+5. Click the **Cart** button in the toolbar to open the cart preview dialog. Inside the dialog, click **View Cart** to navigate to the full Cart page.
 
 6. Navigate to the **Wishlist** page using the side navigation to view and manage your saved products.
+
+![Product Catalog sample output](./images/product-catalog-sample.webp)
 
 ## See Also
 
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-* [Getting started with Blazor Charts](https://blazor.syncfusion.com/documentation/chart/getting-started)
 * [Getting started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
 * [Getting started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started-with-server-app)
 * [Getting started with Blazor Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-server-app)
+* [Getting started with Blazor Carousel](https://blazor.syncfusion.com/documentation/carousel/getting-started-with-server-app)
+* [Getting started with Blazor TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-with-server-app)
 
