@@ -145,7 +145,7 @@ builder.Services.AddSyncfusionBlazor();
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
 
 - Add the **stylesheet reference inside the `<head>` tag** of the `index.html` file.
-- Add the **script reference inside the `</body>` tag** of the `index.html` file.
+- Add the **script reference inside the `<body>` tag** of the `index.html` file.
 
 ```html
 
