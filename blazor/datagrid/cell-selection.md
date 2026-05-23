@@ -9,13 +9,13 @@ documentation: ug
 
 # Cell Selection in Blazor DataGrid
 
-Cell selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Grid.
+Cell selection in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables interactive selection of specific cells or ranges of cells using mouse clicks or keyboard navigation (arrow keys). This feature is useful for highlighting, manipulating, or performing actions on individual cells within the Grid.
 
 > To enable cell selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to either **Cell** or **Both**. This determines the selection mode of the Grid.
 
 ## Single cell selection
 
-Single cell selection allows selecting one cell at a time within the Syncfusion Blazor DataGrid. This is useful for focusing on a specific cell or performing actions on individual cell values.
+Single cell selection allows selecting one cell at a time within the Blazor DataGrid. This is useful for focusing on a specific cell or performing actions on individual cell values.
 
 To enable single cell selection:
 
@@ -101,7 +101,7 @@ public class OrderDetails
 
 ## Multiple cell selection
 
-Multiple cell selection in the Syncfusion Blazor DataGrid enables selection of multiple cells within the Grid. This feature is beneficial for performing actions on several cells simultaneously or focusing on specific areas of the data.
+Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Grid. This feature is beneficial for performing actions on several cells simultaneously or focusing on specific areas of the data.
 
 To enable multiple cell selection:
 
@@ -187,7 +187,7 @@ public class OrderDetails
 
 ## Cell selection mode
 
-The cell selection mode in the Syncfusion Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Grid.
+The cell selection mode in the Blazor DataGrid enables interactive selection of specific cells or ranges of cells. This feature is particularly useful for performing actions on selected cells or retrieving data from targeted areas within the Grid.
 
 The Grid supports three types of cell selection modes, configurable via the [GridSelectionSettings.CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) property:
 
@@ -298,7 +298,7 @@ public class OrderDetails
 
 ## Select cells via programmatically
 
-Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Syncfusion Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Grid.
+Single cell selection, multiple cell selection, and range-based cell selection can be performed externally in the Blazor DataGrid using built-in methods. These API's allow programmatic interaction with specific cells in the Grid.
 
 ### Single cell selection
 
@@ -397,7 +397,7 @@ public class OrderDetails
 
 ### Multiple cell selection
 
-Multiple cell selection in the Syncfusion Blazor DataGrid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
+Multiple cell selection in the Blazor DataGrid enables selection of multiple cells within the Grid. This is useful for performing actions on several cells simultaneously or focusing on specific data regions.
 
 To perform multiple cell selection programmatically, use the [SelectCellsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsAsync_System_ValueTuple_System_Int32_System_Int32____) method. This method accepts a collection of row and column index pairs to define the target cells.
 
@@ -499,7 +499,7 @@ public class OrderDetails
 
 ### Range of Cell selection
 
-To select a range of cells in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables selection of a continuous set of cells within the grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on a specific range of data.
+To select a range of cells in the Blazor DataGrid enables selection of a continuous set of cells within the grid. This feature is useful for performing actions on multiple cells simultaneously or focusing on a specific range of data.
 
 To achieve a range of cell selection, use the [SelectCellsByRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectCellsByRangeAsync_System_ValueTuple_System_Int32_System_Int32__System_Nullable_System_ValueTuple_System_Int32_System_Int32___) method. It selects a range of cells starting from the specified start index and ending at the specified end index.
 
@@ -610,7 +610,7 @@ public class OrderDetails
 
 ## Get selected row cell indexes
 
-The Syncfusion Blazor DataGrid provides a method to retrieve the collection of selected row and cell indexes for the currently selected cells. This is useful for performing actions or applying logic based on selected cell positions.
+The Blazor DataGrid provides a method to retrieve the collection of selected row and cell indexes for the currently selected cells. This is useful for performing actions or applying logic based on selected cell positions.
 
 To retrieve the selected indexes, use the [GetSelectedRowCellIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowCellIndexesAsync) method.
 
@@ -719,7 +719,7 @@ public class OrderDetails
 
 ## Clear selection via programmatically
 
-Clearing cell selection programmatically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid is useful when you need to remove existing cell selections based on user actions or application logic. This can be achieved using the [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) method.
+Clearing cell selection programmatically in the Blazor DataGrid is useful when you need to remove existing cell selections based on user actions or application logic. This can be achieved using the [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) method.
 
 The `ClearCellSelectionAsync` method is applicable when the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property is set to **Multiple** or **Single**.
 
@@ -806,7 +806,7 @@ public class OrderDetails
 
 ## Cell selection events
 
-The Syncfusion Blazor DataGrid provides multiple events to customize and respond to cell selection behavior. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
+The Blazor DataGrid provides multiple events to customize and respond to cell selection behavior. These events allow developers to implement validation, control selection flow, and trigger actions based on user interaction.
 
 * [CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting): Triggered before a cell is selected. Use this event to implement custom logic or validation to control whether the cell should be selected.
 

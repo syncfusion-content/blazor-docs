@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Integrating Syncfusion Blazor DataGrid with PDF Viewer
-description: Step-by-step guide to integrate the Syncfusion Blazor PDF Viewer and DataGrid in a Blazor Web App (Server).
+description: Step-by-step guide to integrate the Blazor PDF Viewer and DataGrid in a Blazor Web App using Server render mode.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Integrating Syncfusion® Blazor DataGrid with PDF Viewer
+# Integrating Blazor DataGrid with PDF Viewer
 
-This article explains how to integrate the **[Syncfusion® Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer)** with the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using Server render mode.
+This article explains how to integrate the **[Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer)** with the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in a Blazor Web App using Server render mode.
 
 If you haven’t created a Blazor Web App yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) to create your project.
 
-## Install Syncfusion<sup style="font-size:70%">®</sup> Blazor NuGet packages
+## Install Blazor NuGet packages
 
 From the server project folder (where the `.csproj` file is located), install the following packages:
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
@@ -33,11 +33,11 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Verify the latest versions before installation.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details. Verify the latest versions before installation.
 
 ## Add required namespaces
 
-Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespaces in the `~/Components/_Imports.razor` file.
+Add Blazor and required .NET namespaces in the `~/Components/_Imports.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -51,23 +51,24 @@ Add Syncfusion<sup style="font-size:70%">&reg;</sup> and required .NET namespace
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service to the `~/Program.cs` file to enable Syncfusion<sup style="font-size:70%">&reg;</sup> components in the application.
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 7 9 11" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="2 8 10 12" %}
 
 ...
 using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
-...
 
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 // Configure SignalR to support large PDF file transfers
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 // Add memory cache for PDF Viewer component caching
 builder.Services.AddMemoryCache();
-// Add Syncfusion Blazor service to the container.
+// Add Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 ...
 
@@ -76,18 +77,26 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-Add the following stylesheet and script references in the server app's `~/Components/App.razor` (inside the head/body as appropriate). Ensure no other Syncfusion theme CSS (for example, `bootstrap5.css` or `material.css`) is referenced to avoid conflicts.
+Before adding the stylesheet, ensure no other Blazor theme CSS (for example, `bootstrap5.css` or `tailwind.css`) is referenced to avoid conflicts.
+
+Add the following Blazor stylesheet and script references to `~/App.razor`.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-<!-- Syncfusion theme stylesheet -->
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+<head>
+    ...
+    <!-- Blazor theme stylesheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
 
-<!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-<!-- Syncfusion Blazor PDF Viewer component script -->
-<script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+<body>
+    ...
+    <!-- Blazor core script (required for most components, including DataGrid) -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!-- Blazor PDF Viewer component script -->
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +122,7 @@ N> If the `interactivity location` is set to `Global` and the app is configured 
 
 ## Integrate DataGrid and PDF Viewer
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer and DataGrid components to any `.razor` file in the server project's `Pages` folder (for example, `~/Pages/Home.razor`).
+Add the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) and [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components to any `.razor` file in the server project's `Pages` folder (for example, `~/Pages/Home.razor`).
 
 The example below displays a **DataGrid** with sample order data, and selecting a row generates and loads a detailed PDF for that order in the **PDF Viewer**.
 
@@ -239,13 +248,15 @@ N> This example uses direct file system access for simplicity. In production app
 
 ## Run the application
 
-```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet run
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-The app launches and renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer and DataGrid in your default browser.
+The app launches and renders the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) in your default browser.
 
 ![Blazor DataGrid with PDF Viewer](images/datagrid-with-pdfviewer.webp)
 
@@ -259,7 +270,7 @@ N> To fully test this example, create sample PDF files named `Order_1001.pdf` th
 
 ## Use cases
 
-Integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid with PDF Viewer provides powerful solutions for various business scenarios:
+Integrating the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) provides powerful solutions for various business scenarios:
 
 ### Invoice management system
 
@@ -283,9 +294,8 @@ Develop an e-learning platform where the DataGrid shows course materials, assign
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor PDF Viewer in Blazor Web App](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app)
-* [Getting Started with Syncfusion Blazor PDF Viewer in Blazor WASM](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
-* [Getting Started with Syncfusion Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Getting Started with Syncfusion Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-* [Blazor PDF Viewer Demo](https://liveviewereditorblazorapp.azurewebsites.net/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities)
-* [Blazor DataGrid Demo – Overview](https://blazor.syncfusion.com/demos/datagrid/overview?theme=fluent2)
+* [Getting Started with Blazor PDF Viewer in Blazor Web App](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-app)
+* [Getting Started with Blazor PDF Viewer in Blazor WASM](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
+* [Getting Started with Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting Started with Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+

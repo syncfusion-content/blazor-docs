@@ -196,10 +196,10 @@ Unscheduled tasks are planned for a project without any definite schedule dates.
 
 Taskbar state |Auto |Manual
 -----|-----|-----
-`Start Date Only` | ![Blazor Gantt Chart with Start Date Task](images/blazor-gantt-chart-start-date-task.png) | ![Alt text](images/startDate-manual.png)
-`End Date Only` | ![Blazor Gantt Chart with End Date Task](images/blazor-gantt-chart-end-date-task.png) | ![Alt text](images/endDate-manual.png)
-`Duration Only` | ![Blazot Gantt Chart with Duration Task](images/blazor-gantt-chart-duration-task.png) | ![Alt text](images/duration-manual.png)
-`Milestone`| ![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.png) | ![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.png)
+`Start Date Only` | ![Blazor Gantt Chart with Start Date Task](images/blazor-gantt-chart-start-date-task.webp) | ![Alt text](images/startDate-manual.webp)
+`End Date Only` | ![Blazor Gantt Chart with End Date Task](images/blazor-gantt-chart-end-date-task.webp) | ![Alt text](images/endDate-manual.webp)
+`Duration Only` | ![Blazot Gantt Chart with Duration Task](images/blazor-gantt-chart-duration-task.webp) | ![Alt text](images/duration-manual.webp)
+`Milestone`| ![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.webp) | ![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.webp)
 
 > A milestone is a task that has no start and end dates, but it has a duration value of zero.
 

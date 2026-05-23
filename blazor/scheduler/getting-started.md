@@ -180,7 +180,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler compon
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthHjyMbgFhiIMjE?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthHjyMbgFhiIMjE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Scheduler).
 
