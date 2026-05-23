@@ -135,9 +135,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes" />
+<SfDiagramComponent Connectors="@connectors" Height="700px" Nodes="@nodes" />
 
 @code
 {
@@ -263,9 +261,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
-## How to run the sample on windows
+## How to run the sample on Windows
 
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+Run the sample in **Windows Machine** mode, and it will run Blazor MAUI in Windows.
 
 ![Run Windows machine](images/blazor-diagram-maui.png)
 
@@ -275,7 +273,7 @@ When the application is successfully launched, the Diagram component will seamle
 
 ## How to run the sample on Android
 
-To run the Blazor Diagram component in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor Diagram component in a Blazor Android MAUI application using the **Android Emulator**, follow these steps:
 
 ![Run Windows machine](images/blazor-diagram-maui-android.png)
 

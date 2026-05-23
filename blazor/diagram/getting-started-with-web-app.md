@@ -129,6 +129,19 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
+## Add import namespaces
+
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Diagram` namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Diagram;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file.
