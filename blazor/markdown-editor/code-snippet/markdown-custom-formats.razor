@@ -1,6 +1,6 @@
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor Height="250px" Width="700px" EditorMode="EditorMode.Markdown" Value="@MarkdownValue">
+<SfRichTextEditor Height="250px" EditorMode="EditorMode.Markdown" Value="@MarkdownValue">
     <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" FormatSyntax="@FormatSyntax" SelectionSyntax="@SelectionSyntax" />
 </SfRichTextEditor>
 
@@ -12,6 +12,7 @@
     {
         { "UL", "+ " }
     };
+
     private Dictionary<string, string> FormatSyntax { get; set; } = new Dictionary<string, string>()
     {
         { "h1", "> " }
