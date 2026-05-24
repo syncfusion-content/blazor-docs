@@ -36,4 +36,4 @@ The following example demonstrates how to customize Markdown tags in the editor:
 
 ![Blazor RichTextEditor markdown custom format](./images/blazor-richtexteditor-markdown-custom-formats.png)
 
-![Blazor RichTextEditor markdown custom selection](./images/blazor-richtexteditor-markdown-custom-bold.png)
+![Blazor RichTextEditor markdown custom selection](./images/blazor-richtexteditor-markdown-custom-italic.png)
