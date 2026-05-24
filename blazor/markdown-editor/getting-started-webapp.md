@@ -228,9 +228,7 @@ N> When using the .NET CLI or Visual Studio Code, ensure that you run the applic
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app in .NET Core CLI](../getting-started/blazor-web-app-dotnet-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app using single nuget](../getting-started/blazor-web-app-single-nuget)
-
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app in linux](../getting-started/blazor-web-app-linux)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Web app](../getting-started/blazor-web-app)
 
