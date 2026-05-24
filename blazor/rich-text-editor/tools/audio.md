@@ -220,9 +220,9 @@ You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cance
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<RichTextEditor>
+<SfRichTextEditor>
     <RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
-</RichTextEditor>
+</SfRichTextEditor>
 @code{
     private void OnMediaDrop(MediaDropEventArgs args)
     {
