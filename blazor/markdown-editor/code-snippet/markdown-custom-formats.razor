@@ -4,9 +4,9 @@
     <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" FormatSyntax="@FormatSyntax" SelectionSyntax="@SelectionSyntax" />
 </SfRichTextEditor>
 
-@code{
+@code {
 
-    private string MarkdownValue { get; set; } = @"Rich Text Editor formats text instantly using toolbar actions, whereas Markdown uses syntax to apply formatting. Markdown editing is supported when editorMode is set to **markdown**, allowing formatting via toolbar or keyboard. Custom Markdown syntax can also be added. This sample uses the <b>Marked</b> library to convert Markdown to HTML. [Sample link](https://blazor.syncfusion.com/demos/markdown-editor/overview)";
+    private string MarkdownValue = "The sample is configured with customized markdown syntax using the [RichTextEditorMarkdownOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html).\nType the content and click the toolbar item to view customized markdown syntax.\n+ To make a phrase bold, you need to add two underscores before and after the phrase (e.g., __this text is bold__).";
 
     private Dictionary<string, string> ListSyntax { get; set; } = new Dictionary<string, string>()
     {
@@ -16,7 +16,6 @@
     {
         { "h1", "> " }
     };
-    
     private Dictionary<string, string> SelectionSyntax { get; set; } = new Dictionary<string, string>()
     {
         { "Bold", "__" },
