@@ -9,11 +9,13 @@ documentation: ug
 
 # Mention Support in Blazor Markdown Editor Component
 
-By integrating the [Mention](https://blazor.syncfusion.com/documentation/mention/getting-started) component with the Markdown Editor, users can effortlessly mention or tag other users or objects from a suggested list. This eliminates the need to manually type out names or identifying information, improving both efficiency and accuracy.
+By integrating the [Mention](https://blazor.syncfusion.com/documentation/mention/getting-started) component with the Markdown Editor, users can easily mention or tag other users or objects from the suggested list without manually typing names or identifiers.
 
-## How to Enable Mention in Blazor Markdown Editor
+## Setup and configuration
 
 To enable the Mention functionality within the Markdown Editor, set the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_Target)  property of the Mention component to the ID of the textarea element inside the editor. When specifying the target, ensure that you append the suffix `_editable-content` to the ID. This configuration allows users to mention or tag others from the suggested list while editing text.
+
+## Using mentions
 
 When a user types the `@` symbol followed by a character, the Markdown Editor displays a list of suggestions. Users can select an item from the list by either clicking on it or typing the desired name.
 
