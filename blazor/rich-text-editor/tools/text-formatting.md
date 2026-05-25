@@ -19,15 +19,15 @@ The table below lists the available text styles in the Rich Text Editor's toolba
 
 | Name | Icons | Summary |
 |----------------|---------|---------|
-| Bold  | ![Bold icon](../images/bold.webp) | Makes text thicker and darker |
-| Italic | ![Italic icon](../images/italic.webp) | Slants text to the right |
-| Underline | ![Underline icon](../images/under-line.webp) | Adds a line beneath the text |
-| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.webp) | Applies a line through the text. |
-| InlineCode |![InlineCode icon](../images/inlineCode.webp) | Formats text as inline code |
-| SubScript | ![SubScript icon](../images/sub-script.webp) | Positions text slightly below the normal line |
-| SuperScript | ![SuperScript icon](../images/super-script.webp) | Positions text slightly above the normal line |
-| LowerCase | ![LowerCase icon](../images/lower-case.webp) |  Converts text to lowercase |
-| UpperCase | ![UpperCase icon](../images/upper-case.webp) | Converts text to uppercase |
+| Bold  | ![Bold icon](../images/bold.png) | Makes text thicker and darker |
+| Italic | ![Italic icon](../images/italic.png) | Slants text to the right |
+| Underline | ![Underline icon](../images/under-line.png) | Adds a line beneath the text |
+| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.png) | Applies a line through the text. |
+| InlineCode |![InlineCode icon](../images/inlineCode.png) | Formats text as inline code |
+| SubScript | ![SubScript icon](../images/sub-script.png) | Positions text slightly below the normal line |
+| SuperScript | ![SuperScript icon](../images/super-script.png) | Positions text slightly above the normal line |
+| LowerCase | ![LowerCase icon](../images/lower-case.png) |  Converts text to lowercase |
+| UpperCase | ![UpperCase icon](../images/upper-case.png) | Converts text to uppercase |
 
 Please refer to the sample below to add these basic text styling options in the Rich Text Editor.
 
