@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service Integration with Blazor Smart Rich Text Editor | Syncfusion
+title: Custom AI Service Integration with Smart Rich Text Editor
 description: Learn how to use IChatInferenceService to integrate custom AI services with the Syncfusion Blazor Smart Rich Text Editor component.
 platform: Blazor
 control: Smart Rich Text Editor
@@ -65,7 +65,6 @@ builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSingleton<IChatInferenceService, MockAIService>();
 
 var app = builder.Build();
-// ...
 ```
 
 ## Testing the Custom AI Integration
