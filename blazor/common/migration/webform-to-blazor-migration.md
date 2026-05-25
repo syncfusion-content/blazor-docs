@@ -140,7 +140,7 @@ After packages are installed and services are registered, import the required na
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
 
-@* Common helpers — required once for all Syncfusion Blazor components *@
+@* Common helpers — required once for all Blazor components *@
 @using Syncfusion.Blazor
 @* DataGrid *@
 @using Syncfusion.Blazor.Grids

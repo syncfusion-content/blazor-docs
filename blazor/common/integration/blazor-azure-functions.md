@@ -303,7 +303,7 @@ Add the following Razor page to your Blazor WebAssembly project.
   private DateTime? From = DateTime.Today.AddDays(-7);
   private DateTime? To = DateTime.Today;
   class Order { public int Id { get; set; } public DateTime Date { get; set; } public string? Customer { get; set; } public double Total { get; set; } }
-  // Use property names expected by Syncfusion Schedule (StartTime/EndTime/Subject)
+  // Use property names expected by Blazor Schedule (StartTime/EndTime/Subject)
   class EventItem { public DateTime StartTime { get; set; } public DateTime EndTime { get; set; } public string? Subject { get; set; } }
 
   private async Task Load()
