@@ -17,7 +17,7 @@ N> You can refer to our Getting Started with [Blazor Server-Side RichTextEditor]
 
 During the Blazor Diffing Algorithm, every view of the RichTextEditor component and its child component will be checked for re-rendering. For instance, having an **EventCallBack** on the application or RichTextEditor will check every child component once the event callback is completed.
 
-You can have fine-grained control over the RichTextEditor component rendering. **PreventRender** method helps to avoid unnecessary re-rendering of the RichTextEditor component. This method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
+You can have fine-grained control over the RichTextEditor component rendering. [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_PreventRender_System_Boolean_) method helps to avoid unnecessary re-rendering of the RichTextEditor component. This method internally overrides the [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ShouldRender) method of the RichTextEditor to prevent rendering.
 
 In the following example:
 
@@ -50,13 +50,13 @@ N> **PreventRender** method accepts the boolean argument that accepts true or fa
 
 ## Avoid unnecessary component renders after RichTextEditor events
 
-When a callback method is assigned to the RichTextEditor events, then the **StateHasChanged** will be called in the parent component of the RichTextEditor automatically once the event is completed.
+When a callback method is assigned to the RichTextEditor events, then the [StateHasChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged?view=aspnetcore-10.0) will be called in the parent component of the RichTextEditor automatically once the event is completed.
 
-To prevent unnecessary re-rendering of the RichTextEditor component by calling the **PreventRender** method.
+To prevent unnecessary re-rendering of the RichTextEditor component by calling the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_PreventRender_System_Boolean_) method.
 
 In the following example:
 
-* **OnToolbarClick** event is bound to a callback method, when the editor content gets changed by toolbar action the event is completed, the **StateHasChanged** will be invoked for the parent component.
+[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnToolbarClick) event is bound to a callback method, when the editor content gets changed by toolbar action the event is completed, the [StateHasChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged?view=aspnetcore-10.0) will be invoked for the parent component.
 
 ```cshtml
 @using Syncfusion.Blazor.RichTextEditor
