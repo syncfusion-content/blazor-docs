@@ -147,7 +147,6 @@ The following example demonstrates how to customize the bullet format lists in t
 
 ![Blazor RichTextEditor bullet formatlist](../images/blazor-richtexteditor-bullet-format-list.webp)
 
-
 ## Checklist
 
 Checklists enable users to create interactive lists with selectable items, making it easier to track tasks and organize content efficiently. The Rich Text Editor provides a simple way to create and manage checklists:
