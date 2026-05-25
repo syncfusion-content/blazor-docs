@@ -1,17 +1,15 @@
-@using Syncfusion.Blazor.RichTextEditor;
+@using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items = "@Tools" />
-        <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-        <p><b> Key features:</b></p>
-        <ul>
-            <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
-            <li><p> Capable of handling markdown editing.</p></li>
-            <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
-            <li><p> Provides a fully customizable toolbar.</p></li>
-            <li><p> Provides HTML view to edit the source directly for developers.</p></li>
-            <li><p> Supports third - party library integration.</p></li>
-            <li><p> Allows preview of modified content before saving it.</p></li>
-        </ul>
+    <p>The Rich Text Editor provides checklist support to help you create task-based content.
+    You can add checklist items and update their status as you progress.</p>
+    <p><b>Key features:</b></p>
+    <ul class="e-rte-checklist">
+        <li><p>Add checklist items directly within the editor</p></li>
+        <li class="e-rte-checklist-checked"><p>Select or deselect items to mark progress</p></li>
+        <li><p>Use checklists for tasks, notes, or step-by-step workflows</p></li>
+    </ul>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
