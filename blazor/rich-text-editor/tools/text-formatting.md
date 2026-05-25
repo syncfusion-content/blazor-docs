@@ -17,17 +17,17 @@ The Rich Text Editor's basic styles feature provides essential formatting option
 
 The table below lists the available text styles in the Rich Text Editor's toolbar.
 
-| Name | Icons | Summary | Initialization |
-|----------------|---------|---------|------------------------------------------|
-| Bold  | ![Bold icon](../images/bold.png) | Makes text thicker and darker | toolbarSettings: { items: ['Bold']} | `<b>bold</b>` |
-| Italic | ![Italic icon](../images/italic.png) | Slants text to the right | toolbarSettings: { items: ['Italic']} | `<em>italic</em>` |
-| Underline | ![Underline icon](../images/under-line.png) | Adds a line beneath the text | toolbarSettings: { items: ['Underline']} |
-| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.png) | Applies a line through the text. |toolbarSettings: { items: ['StrikeThrough']}|
-| InlineCode |![InlineCode icon](../images/inlineCode.png) | Formats text as inline code | toolbarSettings: { items: ['InlineCode']} | `<code>inline code</code>`|
-| SubScript | ![SubScript icon](../images/sub-script.png) | Positions text slightly below the normal line |toolbarSettings: { items: ['SubScript']}|
-| SuperScript | ![SuperScript icon](../images/super-script.png) | Positions text slightly above the normal line |toolbarSettings: { items: ['SuperScript’']}|
-| LowerCase | ![LowerCase icon](../images/lower-case.png) |  Converts text to lowercase |toolbarSettings: { items: ['LowerCase']}|
-| UpperCase | ![UpperCase icon](../images/upper-case.png) | Converts text to uppercase |toolbarSettings: { items: ['UpperCase’']}|
+| Name | Icons | Summary |
+|----------------|---------|---------|
+| Bold  | ![Bold icon](../images/bold.webp) | Makes text thicker and darker |
+| Italic | ![Italic icon](../images/italic.webp) | Slants text to the right |
+| Underline | ![Underline icon](../images/under-line.webp) | Adds a line beneath the text |
+| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.webp) | Applies a line through the text. |
+| InlineCode |![InlineCode icon](../images/inlineCode.webp) | Formats text as inline code |
+| SubScript | ![SubScript icon](../images/sub-script.webp) | Positions text slightly below the normal line |
+| SuperScript | ![SuperScript icon](../images/super-script.webp) | Positions text slightly above the normal line |
+| LowerCase | ![LowerCase icon](../images/lower-case.webp) |  Converts text to lowercase |
+| UpperCase | ![UpperCase icon](../images/upper-case.webp) | Converts text to uppercase |
 
 Please refer to the sample below to add these basic text styling options in the Rich Text Editor.
 
