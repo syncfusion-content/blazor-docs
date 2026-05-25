@@ -42,9 +42,3 @@ The inline toolbar will appear only for the selected text by enabling the [RichT
 ![Blazor Rich Text Editor enabling selection](./images/blazor-richtexteditor-enable-selection.gif)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
-
-## See also
-
-* [How to Configuring the toolbar position](../toolbar/toolbar-position#configuring-the-toolbar-position)
-* [How to insert link editing option in the toolbar items](../tools/link-manipulation#insert-link)
-* [How to insert image editing option in the toolbar items](../tools/insert-image#uploading-and-inserting-images)
