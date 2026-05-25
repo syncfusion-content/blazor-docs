@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Package Management Issues in Blazor Applications | Syncfusion
-description: Comprehensive guide to resolving package management issues in Blazor applications, including NuGet package conflicts, version mismatches, and dependency management.
+description: Guide to resolving Blazor package management issues including NuGet conflicts, version mismatches, and dependency management
 platform: Blazor
 control: Common
 documentation: ug

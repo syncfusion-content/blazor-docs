@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance and Security Issues in Blazor Applications | Syncfusion
-description: Comprehensive guide to resolving performance and security issues in Blazor applications with Syncfusion components, including optimization for large datasets and secure configuration.
+description: Guide to improving Blazor performance and security with large dataset optimization, secure configuration, and troubleshooting
 platform: Blazor
 control: Common
 documentation: ug

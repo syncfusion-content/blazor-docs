@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setup and Configuration Issues in Blazor Applications | Syncfusion
-description: Comprehensive guide to resolving setup and configuration issues in Blazor applications with Syncfusion components, including styles, scripts, services, and render modes.
+description: Guide to fixing Blazor setup and configuration issues including styles, scripts, services, and render mode settings
 platform: Blazor
 control: Common
 documentation: ug

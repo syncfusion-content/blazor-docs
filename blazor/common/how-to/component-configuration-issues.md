@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Component Configuration Issues in Blazor Applications | Syncfusion
-description: Comprehensive guide to resolving component configuration issues in Blazor applications, including SignalR settings, namespace imports, and data binding problems.
+description: Comprehensive guide to resolving Blazor component configuration issues including SignalR, namespaces, and data binding problems
 platform: Blazor
 control: Common
 documentation: ug
