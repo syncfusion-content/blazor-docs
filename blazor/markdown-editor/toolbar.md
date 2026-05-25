@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar configuration in Markdown Editor Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides a flexible toolbar that enhances the editing experience. Users can choose from multiple toolbar layouts, enable sticky behavior, and add custom tools to suit their application needs. This guide explains the available toolbar types, configuration options, and customization techniques.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides a flexible toolbar that enhances the editing experience. Users can choose from multiple toolbar layouts, enable sticky behavior, and add custom tools based on their application requirements. This guide explains the available toolbar types, configuration options, and customization techniques.
 
 ## Default toolbar items
 
@@ -17,17 +17,18 @@ By default, the Markdown Editor displays the following toolbar items:
 
 > `Bold` , `Italic` , `|` , `Formats` , `Blockquote`, `OrderedList` , `UnorderedList` , `|` , `CreateLink` , `Image` , `|` , `SourceCode` , `Undo` , `Redo`
 
-These default items cover essential text editing features, such as text formatting, lists, and linking.
+These default items provide essential text editing features, including text formatting, list creation, block quotes, media insertion, and undo/redo actions.
 
 ## Type of toolbar 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Markdown Editor allows you to configure different type of toolbars using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) field in the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings) property.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Markdown Editor allows you to configure different type of toolbars using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property of the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings).
 
 The available toolbar types are:
 
 1. Expand
 2. MultiRow
 3. Scrollable
+4. Popup
 
 ### Expand Toolbar Configuration
 
@@ -69,7 +70,21 @@ You can display the toolbar items in a single line with horizontal scrolling by 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor multirow toolbar](./images/blazor-markdowneditor-scrollable-toolbar.webp)
+![Blazor Markdown Editor scrollable toolbar](./images/blazor-markdowneditor-scrollable-toolbar.webp)
+
+### Popup Toolbar Implementation
+
+The [ToolbarType.Popup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Popup) toolbar property displays items in a popup container, ideal for limited space or smaller screens.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/markdown-popup-toolbar.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor Markdown Editor popup toolbar](./images/blazor-markdowneditor-popup-toolbar.webp)
 
 ### Sticky Toolbar Behavior
 
@@ -115,8 +130,7 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
 
 @code {
     
-    private string MarkdownValue { get; set; } = @"In Rich Text Editor, you click the toolbar buttons to format the words and 
-        the changes are visible immediately. Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
+    private string MarkdownValue { get; set; } = @"Rich Text Editor formats text instantly using toolbar actions, whereas Markdown uses syntax to apply formatting. Markdown editing is supported when editorMode is set to **markdown**, allowing formatting via toolbar or keyboard. Custom Markdown syntax can also be added. This sample uses the <b>Marked</b> library to convert Markdown to HTML. [Sample link](https://blazor.syncfusion.com/demos/markdown-editor/overview).";
 
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
