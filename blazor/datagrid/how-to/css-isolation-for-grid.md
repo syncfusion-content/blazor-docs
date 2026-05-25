@@ -9,11 +9,30 @@ documentation: ug
 
 # CSS isolation for Blazor DataGrid
 
-CSS isolation allows defining component-specific styles by creating a **.razor.css** file that matches the name of the **.razor** file. This ensures that the styles apply only to the intended component without affecting other parts of the application. For example, to apply styles to an **Index** component, create a file named **Index.razor.css** in the same folder as **Index.razor**.
+CSS isolation in Blazor allows developers to define component-scoped styles that apply only to a specific Razor component. This approach helps prevent style conflicts and ensures that UI customizations do not unintentionally affect other parts of the application. When working with complex components like the Syncfusion Blazor DataGrid, CSS isolation is especially useful for maintaining clean, modular, and maintainable styling.
 
-To enable CSS isolation for the Grid, it is recommended to wrap the `SfGrid` inside a standard HTML div element (optionally with a custom class). This setup helps properly scope the styles when using the **::deep** combinator, which is required to target nested child elements rendered by the Grid within isolated styles.
+To enable CSS isolation, create a **razor.css** file with the same name as the corresponding **.razor** file. For example, to apply isolated styles to an **Index** component, create a file named **Index.razor.css** in the same directory as **Index.razor**. These styles are compiled and scoped automatically by the Blazor framework.
 
-Below is an example of implementing a simple Grid inside the **Index.razor** file:
+## Why use CSS isolation with DataGrid
+
+The Syncfusion Blazor DataGrid renders a rich set of nested HTML elements to support features such as paging, sorting, filtering, and editing. In global CSS files, targeting these nested elements can lead to conflicts or unintended style overrides. CSS isolation ensures that:
+
+* Styles are scoped only to the intended component  
+* Grid customization does not impact other UI elements  
+* Maintenance becomes easier in large-scale applications  
+* Styling logic remains clean and modular  
+
+## How CSS isolation works
+
+Blazor applies a unique attribute to elements in the component at runtime, and corresponding styles are generated to match only those elements. However, since the DataGrid internally renders child elements, direct selectors may not work inside isolated CSS. To address this, the **::deep** combinator is used to target nested elements rendered by child components.
+
+## Important requirement: wrapping the Grid
+
+When using CSS isolation with the Syncfusion DataGrid, it is recommended to wrap the **SfGrid** component inside a standard HTML container (such as a `div`). This wrapper helps define a clear styling boundary and ensures proper application of scoped styles when using the **::deep** selector.
+
+## Example: Applying CSS isolation to DataGrid
+
+Below is an example demonstrating how to implement a simple DataGrid in **Index.razor** and apply isolated styles using **Index.razor.css**.
 
 {% tabs %}
 {% highlight C# tabtitle="Index.razor" %}
@@ -67,6 +86,38 @@ Index.razor.css
     background-color: violet;
 }
 ```
+
+## Explanation of the styling
+
+In this example, the **.e-altrow** class targets alternate rows in the DataGrid. Since the DataGrid generates its internal DOM structure, the **::deep** combinator is used to penetrate the CSS isolation boundary and apply styles to child elements.
+
+The **.grid-host** wrapper ensures that the scope remains limited to this specific instance of the Grid, preventing unintended styling of other component
+
+
+## When to use CSS isolation
+
+CSS isolation is recommended in the following scenarios:
+
+* Customizing DataGrid appearance within a specific page or component  
+* Avoiding global CSS conflicts in large applications  
+* Building reusable components with independent styling  
+* Applying theme overrides without modifying global styles
+
+
+## Best practices
+
+* Always use a wrapper element (e.g., `div`) when styling third-party components  
+* Use **::deep** only when targeting child component elements  
+* Keep styles minimal and focused to maintain performance  
+* Combine CSS isolation with component-level design for better scalability  
+
+
+## Troubleshooting tips
+
+* If styles are not applied, verify that the **.razor.css** file name matches the component name  
+* Ensure the **::deep** selector is used for nested elements  
+* Check browser developer tools to inspect generated attributes and applied styles  
+* Avoid overly generic selectors that may conflict with framework style
 
 > Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/CSS_Isolation).
 
