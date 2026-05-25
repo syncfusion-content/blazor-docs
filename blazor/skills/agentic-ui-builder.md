@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Syncfusion® Blazor UI Builder Skill for AI Assistants | Syncfusion®
-description: Install Syncfusion® Blazor UI Builder to generate production-ready Blazor components from natural-language prompts.
+description: Install Syncfusion® Agentic Blazor UI Builder to generate production-ready Blazor components from natural-language prompts.
 control: Skills
 platform: Blazor
 documentation: ug
 ---
 
-# Syncfusion® Blazor UI Builder Skill for AI Assistants
+# Syncfusion® Agentic Blazor UI Builder Skill for AI Assistants
 
-**Syncfusion® Blazor UI Builder** is an AI-powered skill and companion agent that accelerates Blazor application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
+**Syncfusion® Agentic Blazor UI Builder** is an AI-powered skill and companion agent that accelerates Blazor application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
 
 Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® components** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Blazor UI Builder helps you rapidly build scalable dashboards and user interfaces without leaving your development workflow.
@@ -65,7 +65,7 @@ Run the following command to confirm APM is installed:
 apm --version
 ```
 
-### Install the Syncfusion® Blazor UI Builder package using APM
+### Install the Syncfusion® Agentic Blazor UI Builder package using APM
 
 Use the APM CLI to install the Blazor UI Builder skill for your preferred environment:
 
@@ -104,7 +104,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For Syncfusion® Code Studio, use the Copilot command above to install the Blazor UI Builder.
 
-## How the Syncfusion® Blazor UI Builder Skill Works
+## How the Syncfusion® Agentic Blazor UI Builder Skill Works
 
 1. **Intent Analysis** - Parse the user's prompt to identify component types and high-level layout intent.
 2. **Project Detection** - Automatically detects project framework, package manager, and existing themes.
