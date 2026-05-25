@@ -26,7 +26,7 @@ To create a Blazor application, refer to the following Blazor getting started gu
 
 Data-bound components such as [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) can hold large data collections in memory. Clearing large data collections during component disposal helps release memory references earlier, although the .NET garbage collector ultimately handles memory cleanup.
 
-The following example demonstrates how to release data collections used by the DataGrid component.
+The following example demonstrates how to release data collections used by the Blazor DataGrid component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -194,7 +194,7 @@ Rendering large datasets increases memory allocation and DOM size. Blazor compon
 
 In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), to configure row virtualization, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true** and define a fixed content height using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property. The number of rendered records is implicitly determined by the content height.
 
-The following example demonstrates how to use built‑in virtualization in the DataGrid component to efficiently render large data collections.
+The following example demonstrates how to use built‑in virtualization in the Blazor DataGrid component to efficiently render large data collections.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -248,7 +248,7 @@ The following example demonstrates how to use built‑in virtualization in the D
 
 With virtualization enabled, only visible records are rendered. Clearing the Employees collection during disposal releases references to large datasets, which is especially beneficial in Blazor WebAssembly to reduce browser memory usage.
 
-N> For datasets with many columns, consider also enabling `EnableColumnVirtualization="true"` on the DataGrid to virtualize horizontal rendering. See [Column Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) for details.
+N> For datasets with many columns, consider also enabling `EnableColumnVirtualization="true"` on the Blazor DataGrid to virtualize horizontal rendering. See [Column Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization) for details.
 
 ### Preventing unnecessary rendering
 
@@ -304,7 +304,7 @@ This example illustrates how the `@key` directive helps Blazor preserve componen
 {% endhighlight %}
 {% endtabs %}
 
-The `@key` directive ensures that each TextBox component is associated with a stable identifier.
+The `@key` directive ensures that each Blazor TextBox component is associated with a stable identifier.
 
 When the collection changes, Blazor can correctly match existing components instead of destroying and recreating them, improving rendering efficiency and memory usage.
 
