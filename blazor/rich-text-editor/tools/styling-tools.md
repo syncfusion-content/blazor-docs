@@ -17,7 +17,7 @@ To apply a different font style to a section of the content, select the text you
 
 ### Built-in font family
 
-The following table lists the default font name and width of the `FontName` dropdown and the available list of font names.
+The following table lists the default font name, the width of the `FontName` dropdown, and the available list of font names.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -192,23 +192,6 @@ This feature can be enabled separately for the [RichTextEditorFontColor](https:/
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Built-in editor content styles
 
