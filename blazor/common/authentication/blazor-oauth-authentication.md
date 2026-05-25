@@ -23,7 +23,7 @@ Ensure that **HTTPS is enabled** during project creation, as GitHub OAuth based 
 
 Install the following NuGet packages to use the **Blazor DataGrid** and enable authentication with **GitHub OAuth**.
 
-**Syncfusion® packages:**
+**Blazor packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -39,9 +39,9 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
+Open the `~/_Imports.razor` file and import the namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
