@@ -1,0 +1,26 @@
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor KeyConfigure="@KeyConfig">
+    <RichTextEditorToolbarSettings Items="Items" />
+    <h5>Blazor Rich Text Editor Custom Key Configuration</h5>
+    <p>Customize the key configuration for keyboard interaction in the Rich Text Editor using the <b>KeyConfigure</b> property.</p>
+    <ul>
+        <li>Allows defining custom keyboard shortcuts for formatting actions.</li>
+        <li>Press <b>Ctrl + 1</b> to apply bold formatting.</li>
+        <li>Press <b>Ctrl + 2</b> to apply italic formatting.</li>
+    </ul>
+</SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode }
+    };
+    private ShortcutKeys KeyConfig = new ShortcutKeys()
+    {
+        Bold = "ctrl+1",
+        Italic = "ctrl+2"
+    };
+}
