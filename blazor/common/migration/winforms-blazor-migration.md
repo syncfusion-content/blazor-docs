@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Windows Forms to Blazor
 
-This guide provides a step‑by‑step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to a [Blazor](https://www.syncfusion.com/blazor-components) application. It helps developers modernize existing desktop applications by transitioning to a web based architecture.     
+This guide provides a step by step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to a [Blazor](https://www.syncfusion.com/blazor-components) application. It helps developers modernize existing desktop applications by transitioning to a web based architecture.     
 
 ## Why Migrate from WinForms to Blazor?
 
@@ -162,7 +162,7 @@ In Blazor applications, Blazor components must be registered with the built‑in
 
 This step is required only for Blazor applications and replaces the explicit control initialization and setup performed in WinForms.
 
-To enable Blazor components, register the **Syncfusion® Blazor service** in the `Program.cs` file.
+To enable Blazor components, register the Blazor service in the `Program.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
