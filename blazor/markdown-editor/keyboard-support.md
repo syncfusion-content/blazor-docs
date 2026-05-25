@@ -93,18 +93,12 @@ These shortcuts provide additional functionalities like fullscreen mode.
 |----------------|---------| --------- |
 | Toggle full screen mode | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> |
 
-```cshtml
+{% tabs %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.RichTextEditor
+{% include_relative code-snippet/markdown-key-configuration.razor %}
 
-<SfRichTextEditor EditorMode="EditorMode.Markdown" Value="@MarkdownValue"></SfRichTextEditor>
+{% endhighlight %}
+{% endtabs %}
 
-@code{
-
-    private string MarkdownValue { get; set; } = @"In Rich Text Editor, you click the toolbar buttons to format the words and 
-        the changes are visible immediately. Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add our own custom formation syntax for the Markdown formation, [sample link](https://blazor.syncfusion.com/demos/markdown-editor/overview?theme=fluent2). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.";
-
-}
-```
-
-![Blazor RichTextEditor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
+![Blazor Markdown Editor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
