@@ -57,7 +57,7 @@ The character count indicator changes color based on usage thresholds:
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor ShowCharCount="true" MaxLength="500">
+<SfRichTextEditor ShowCharCount="true" MaxLength="300">
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -113,7 +113,7 @@ This feature allows the user to change the appearance of the Numbered and Bullet
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
-        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
     };
 }
 
