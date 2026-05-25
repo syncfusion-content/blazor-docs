@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Guide to Blazor Rendering Performance Optimization | Syncfusion
+title: Blazor Rendering Performance Optimization | Syncfusion
 description: Learn techniques to optimize Blazor rendering performance, including data binding, ShouldRender control, EventCallback usage, and efficient component design.
 platform: Blazor
 control: Common
@@ -65,7 +65,7 @@ N>  Reassigning a new list instance with the same items still counts as a parame
 
 There are cases where state changes occur but the visual output does not actually need to change. In such cases, the `ShouldRender` method can be used to explicitly control whether the component proceeds with rendering.
 
-```c#
+```csharp
 
 private bool isUiUpdateRequired;
 private string data = string.Empty;
@@ -87,13 +87,11 @@ private async Task RefreshDataAsync()
 // Called when data needs to be refreshed
 private async Task OnDataRefreshAsync()
 {
+    // Perform background work
+    await RefreshDataAsync();
     // Enable rendering before updating UI
     isUiUpdateRequired = true;
     StateHasChanged();
-
-    // Perform background work
-    await RefreshDataAsync();
-
     // Disable rendering after update
     isUiUpdateRequired = false;
     StateHasChanged(); // No render occurs if ShouldRender returns false
@@ -109,7 +107,7 @@ N> `ShouldRender` is most effective when the render conditions are clear, predic
 
 Event handling plays an important role in Blazor rendering because UI actions trigger state updates. Using `EventCallback` allows child components to notify parent components in a structured and efficient way, avoiding unnecessary delegate allocations.
 
-The following example separates the [Button](https://www.syncfusion.com/blazor-components/blazor-button) into a child component that exposes an `EventCallback`, making the pattern explicit.
+The following example separates the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) into a child component that exposes an `EventCallback`, making the pattern explicit.
 
 {% tabs %}
 {% highlight razor tabtitle="RefreshButton.razor" %}
@@ -182,7 +180,7 @@ In the above example, `EventCallback` allows a child component to notify the par
 
 ## Component splitting and child component patterns
 
-As Razor components grow larger, it is recommended to split them into smaller, focused child components instead of placing all UI logic in a single `.razor` file. For example, a page that contains a [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), and summary UI becomes easier to manage when each part is implemented as a separate component.
+As Razor components grow larger, it is recommended to split them into smaller, focused child components instead of placing all UI logic in a single `.razor` file. For example, a page that contains a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), and summary UI becomes easier to manage when each part is implemented as a separate component.
 
 This approach improves code readability and maintainability. It also helps reduce unnecessary UI updates by isolating different parts of the interface.
 
@@ -197,7 +195,7 @@ This approach improves code readability and maintainability. It also helps reduc
 
 @code {
     private List<Order> Orders = new();
-    private Random rand = new();
+    private static readonly Random rand = Random.Shared;
 
     private string[] customers = new[]
     {
@@ -234,7 +232,7 @@ This approach improves code readability and maintainability. It also helps reduc
 {% endhighlight %}
 {% endtabs %}
 
-**Child DataGrid component**
+**Child Blazor DataGrid component**
 
 {% tabs %}
 {% highlight razor tabtitle="OrdersGrid.razor" %}
@@ -325,6 +323,7 @@ This keeps the render path simple and avoids repeated computation during every U
 {% tabs %}
 {% highlight razor tabtitle="Charts.razor" %}
 
+@page "/charts"
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Monthly Sales">
@@ -368,7 +367,7 @@ This approach keeps chart rendering predictable. If the chart is part of a large
 
 A common performance issue in Blazor occurs when collections are created during each render cycle. This typically happens when methods are called directly in markup or properties that are evaluated during rendering. In such cases, a new collection instance is generated every time the component renders.
 
-In the following example, the [DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) receives a new data source on every render.
+In the following example, the [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) receives a new data source on every render.
 
 {% tabs %}
 {% highlight razor tabtitle="Dropdown.razor" %}
@@ -458,12 +457,12 @@ A more efficient approach is to create the collection once and reuse it.
 
     protected override void OnAfterRender(bool firstRender)
     {
-        AddLog(" Component rendered");
+        AddLog("Component rendered");
     }
 
     private void TriggerRender()
     {
-        AddLog(" Button clicked - forcing render");
+        AddLog("Button clicked - forcing render");
     }
 
     private void AddLog(string message)
