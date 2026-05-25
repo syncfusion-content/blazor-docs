@@ -1,6 +1,7 @@
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
     <RichTextEditorQuickToolbarSettings Image="@Image" />
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
@@ -9,16 +10,22 @@
 </SfRichTextEditor>
 
 @code {
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Image }
+    };
     private List<ImageToolbarItemModel> Image = new List<ImageToolbarItemModel>()
     {
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Replace },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Align },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Caption },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Remove },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.OpenImageLink },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Separator },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.InsertLink },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.OpenImageLink },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.EditImageLink },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.RemoveImageLink },
+        new ImageToolbarItemModel() { Command = ImageToolbarCommand.HorizontalSeparator },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Display },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.AltText },
         new ImageToolbarItemModel() { Command = ImageToolbarCommand.Dimension }
