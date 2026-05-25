@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting Blazor DataGrid with templates
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to a PDF document, enabling rich formatting in exported files. The following template types are supported:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to a PDF document, enabling rich formatting in exported files. The following template types are supported:
 
 * [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template): Custom cell content such as formatted text, images, or hyperlinks.
 * [Caption Template](https://blazor.syncfusion.com/documentation/datagrid/caption-template): Group caption rows with customized display elements.

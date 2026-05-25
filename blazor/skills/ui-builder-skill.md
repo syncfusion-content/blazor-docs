@@ -18,14 +18,14 @@ By combining intelligent code generation with best practices, accessibility stan
 
 Before installing Blazor UI Builder, ensure the following:
 
-- Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
-- Required [Node.js](https://nodejs.org/en) version ≥ 18
-- Blazor application (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-- A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
-  - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
-  - [Community License](https://www.syncfusion.com/products/communitylicense)  
-  - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
+| Requirement | Description |
+|-------------|-------------|
+| **Blazor Project** | Active Blazor WebAssembly or Blazor Server project (.NET 8+) |
+| **Microsoft .NET SDK 8.0 or later** | .NET CLI tools installed |
+| **Node.js version 18 or later** | npm package manager installed |
+| **Agent Package Manager (APM)** | Agent Package Manager installed. [Installation Guidelines](https://microsoft.github.io/apm/quickstart/#1-install-apm) |
+| **Syncfusion License** | [Commercial](https://www.syncfusion.com/sales/unlimitedlicense), [Free Community](https://www.syncfusion.com/products/communitylicense), or [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials) |
+| **Supported AI Agent / IDE** | A supported AI agent or IDE that integrates with Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.) 
 
 ## Key Benefits
 
@@ -140,9 +140,7 @@ To start using the skill:
 
 1. Open your supported IDE.
 2. In the chat panel, select the `syncfusion-blazor-ui-builder` agent from the **Agent dropdown**.
-
-![Set Agent](images/blazor-ui-builder.png)
-
+  ![Set Agent](images/blazor-ui-builder.png)
 3. Start prompting the agent with a clear description of your UI requirements.
 
 Examples Prompts:
@@ -156,7 +154,7 @@ Create a CMS Admin Dashboard UI featuring a collapsible sidebar with navigation 
 {% endpromptcard %}
 {% endpromptcards %}
 
-Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+* Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
@@ -193,5 +191,7 @@ The skill proposes changes and requires confirmation for insertion; automatic de
 
 ## See also
 
+- [Syncfusion Blazor Skills](component-skills)
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
+
