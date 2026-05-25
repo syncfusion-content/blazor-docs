@@ -84,6 +84,7 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings Methods](./images/smart-rich-text-editor-methods.webp)
+
 ---
 
 ## See Also

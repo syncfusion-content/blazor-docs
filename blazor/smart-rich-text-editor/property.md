@@ -276,6 +276,7 @@ Configures the toolbar in the header section of the AI Assistant interface.
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings HeaderToolbarSettings Property](./images/smart-rich-text-editor-header-toolbasettings-property.webp)
+
 ---
 
 ## PromptToolbarSettings
@@ -306,6 +307,7 @@ Configures the toolbar below of the prompt input area section.
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings PromptToolbarSettings Property](./images/smart-rich-text-editor-prompt-toolbasettings-property.webp)
+
 ---
 
 ## ResponseToolbarSettings
