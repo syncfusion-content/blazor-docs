@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® Agentic Blazor UI Builder Skill for AI Assistants | Syncfusion®
+title: Syncfusion® Blazor UI Builder Skill for AI Assistants | Syncfusion®
 description: Install Syncfusion® Agentic Blazor UI Builder to generate production-ready Blazor components from natural-language prompts.
 control: Skills
 platform: Blazor
