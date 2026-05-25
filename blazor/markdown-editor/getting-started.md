@@ -219,7 +219,7 @@ To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio,
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for webassembly in Visual Studio mac](../getting-started/blazor-webassembly-visual-studio-mac)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
 
 * [How to insert special characters](https://blazor.syncfusion.com/demos/rich-text-editor/insert-special-characters?theme=bootstrap5)
 
