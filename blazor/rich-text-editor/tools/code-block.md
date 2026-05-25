@@ -30,8 +30,9 @@ Below is an example of how to configure the `RichTextEditorCodeBlockSettings` us
 ```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor ID="code-block">
-    <RichTextEditorCodeBlockSettings Languages="languages" DefaultLanguage="plaintext"></RichTextEditorCodeBlockSettings>
+    <RichTextEditorCodeBlockSettings Languages="languages" DefaultLanguage="javascript"></RichTextEditorCodeBlockSettings>
     <RichTextEditorToolbarSettings Items="Tools"></RichTextEditorToolbarSettings>
 </SfRichTextEditor>
 @code {
@@ -76,7 +77,7 @@ Below is an example of how to configure the `RichTextEditorCodeBlockSettings` us
         new ToolbarItemModel() { Command = ToolbarCommand.LowerCase },
         new ToolbarItemModel() { Command = ToolbarCommand.UpperCase },
         new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode }
     };
 }
 
@@ -84,13 +85,13 @@ Below is an example of how to configure the `RichTextEditorCodeBlockSettings` us
 
 In this example:
 
-* The **Languages** array defines four supported languages: JavaScript, Python, HTML, and CSS.
+* The **Languages** array defines four supported languages: JavaScript, Plaintext, HTML, and CSS.
 * The **DefaultLanguage** is set to **javascript**, so new code blocks default to JavaScript.
 * Each language object specifies a **Language** (for internal use, e.g., syntax highlighting) and a **Label** (displayed in the dropdown).
 
 ## Integrating syntax highlighters
 
-To enhance code block readability, integrate a third-party syntax highlighter like [Prism.js](https://prismjs.com/) or [Highlight.js](https://highlightjs.org/), which supports numerous languages and customizable themes. Although live code block highlighting (real-time syntax highlighting during editing) is not possible in the Rich Text Editor, The highlighter can apply color-coded formatting to code blocks when the content is displayed on the frontend, such as in blog posts, website content, or preview mode. This ensures a polished presentation for end users.
+To enhance code block readability, integrate a third-party syntax highlighter like [Prism.js](https://prismjs.com/) or [Highlight.js](https://highlightjs.org/), which supports numerous languages and customizable themes. Although live code block highlighting (real-time syntax highlighting during editing) is not possible in the Rich Text Editor. The highlighter can apply color-coded formatting to code blocks when the content is displayed on the frontend, such as in blog posts, website content, or preview mode. This ensures a polished presentation for end users.
 
 ## Tips for editing around code blocks
 
