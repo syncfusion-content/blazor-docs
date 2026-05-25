@@ -111,6 +111,8 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
 }
 ```
 
+![Blazor RichTextEditor with customizing character count display](./images/blazor-richtexteditor-character-count.png)
+
 ## Modifying the editor container border
 
 Use the following CSS to customize the border color in the Rich Text Editor's container.
@@ -123,6 +125,8 @@ Use the following CSS to customize the border color in the Rich Text Editor's co
 }
 
 ```
+
+![Blazor RichTextEditor with modifying container border](./images/blazor-richtexteditor-border.png)
 
 ## Source code view 
 
