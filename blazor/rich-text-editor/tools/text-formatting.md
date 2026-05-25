@@ -194,6 +194,16 @@ To adjust the text indentation:
 
 To configure the `Indent` and `Outdent` toolbar item, refer to the below code.
 
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/indentations.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor indentations](../images/blazor-richtexteditor-indentations.png)
+
 ### Indentation in lists
 
 The Rich Text Editor provides powerful indentation features for both bullet and number format lists, allowing users to create nested lists and adjust list levels easily.
