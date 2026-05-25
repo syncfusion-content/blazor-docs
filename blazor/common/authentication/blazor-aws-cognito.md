@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Authentication using AWS Cognito | Syncfusion
-description: Authenticate a Blazor Web App or Blazor Server App with AWS Cognito (OIDC Hosted UI) and secure Syncfusion components.
+description: Authenticate a Blazor Web App or Blazor Server App with AWS Cognito (OIDC Hosted UI) and secure Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
@@ -305,7 +305,7 @@ Add the Blazor theme CSS and script references to your application's `App.razor`
 </head>
 <body>
     ...
-    <!-- core script (required for UI components, including DataGrid) -->
+    <!-- core script (required for UI components, including Blazor DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -315,7 +315,7 @@ Add the Blazor theme CSS and script references to your application's `App.razor`
 
 ## Blazor DataGrid on an authenticated page
 
-This page demonstrates how to conditionally render the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) based on the authenticated state using `<AuthorizeView>`. When unauthenticated, a **Sign in with AWS Cognito** button is displayed. Once authenticated, the grid renders with sample data.
+This page demonstrates how to conditionally render the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) based on the authenticated state using `<AuthorizeView>`. When unauthenticated, a **Sign in with AWS Cognito** button is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
