@@ -60,7 +60,7 @@ The [Scrollable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTex
 
 ![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-scrollable-toolbar.webp)
 
-## Configuring a popup toolbar
+## Popup toolbar
 
 The [Popup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Popup) toolbar property displays items in a popup container, ideal for limited space or smaller screens.
 
@@ -74,7 +74,7 @@ The [Popup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEdit
 
 ![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-popup-toolbar.webp)
 
-## Floating toolbar
+## Configuring a Floating toolbar
 
 By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [FloatingToolbarOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_FloatingToolbarOffset).
 
@@ -85,9 +85,10 @@ You can enable or disable the floating toolbar using [RichTextEditorToolbarSetti
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor Height="800px">
+<SfRichTextEditor Height="250px">
     <RichTextEditorToolbarSettings EnableFloating="true" />
-    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+    <h2>Welcome to the Syncfusion Rich Text Editor</h2><p>The Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><h3>Do you know the key features of the editor?</h3>
+    <ul><li>Basic features include headings, block quotes, numbered lists, bullet lists, and support to insert images, tables, audio, and video.</li> <li>Inline styles include <b>bold</b>, <em>italic</em>, <span style="text-decoration: underline">underline</span>, <span style="text-decoration: line-through">strikethrough</span>, <a class="e-rte-anchor" href="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" title="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" aria-label="Open in new window">hyperlinks</a>,<code>InlineCode</code> and more.</li> <li>The toolbar has multi-row, expandable, and scrollable modes. The Editor supports an inline toolbar, a floating toolbar, and custom toolbar items.</li></ul>
 </SfRichTextEditor>
 
 {% endhighlight %}
