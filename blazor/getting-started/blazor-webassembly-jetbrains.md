@@ -40,11 +40,11 @@ Once the project is created, Rider opens the solution and restores the required 
 
 ## Adding Blazor NuGet packages
 
-After creating the Blazor project, you must install the required Blazor NuGet packages to use Syncfusion® UI components.
+After creating the Blazor project, you must install the required NuGet packages to use Blazor components.
 
-**Install required Syncfusion® NuGet packages**
+**Install required NuGet packages**
 
-- In the **Solution Explorer**, right‑click the project name.
+- In the **Solution Explorer**, right click the project name.
 - Select **Manage NuGet Packages** from the context menu.
 - In the Browse tab, search for and install the following packages:
 
@@ -55,7 +55,7 @@ Once the installation is complete, the Blazor components are ready to be used in
 
 ## Register the Blazor services
 
-Add the Blazor service to the `Program.cs` file to enable Syncfusion® components in the application.
+Add the Blazor service to the `Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="3 9" %}
@@ -76,7 +76,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-To apply styles and enable Syncfusion® features, reference the theme CSS and scripts within the `wwwroot/index.html` file.
+To apply styles and enable features, reference the theme CSS and scripts within the `wwwroot/index.html` file.
 
 {% tabs %}
 {% highlight html  %}
