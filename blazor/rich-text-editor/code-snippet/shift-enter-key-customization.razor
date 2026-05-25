@@ -1,5 +1,15 @@
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor ShiftEnterKey="ShiftEnterKeyTag.DIV">
-    <div>In Rich text Editor, the <kbd>Enter</kbd> key and <kbd>Shift</kbd> + <kbd>Enter</kbd> key actions can be customized using the EnterKey and ShiftEnterKey properties.</div>
+    <RichTextEditorToolbarSettings Items="Items"></RichTextEditorToolbarSettings>
+        <p>In Rich Text Editor, the Shift Enter key behavior can be customized using the <code>ShiftEnterKey</code> property.
+        The possible tags are <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;br&gt;</code>.
+        This sample is configured with <code>Shift EnterKey</code> set to <b>DIV</b>.</p>
 </SfRichTextEditor>
+
+@code {
+ private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode }
+    };
+}
