@@ -46,7 +46,7 @@ The Range Selector can be customized by using the [RangeNavigatorStyleSettings](
 
 ```
 
-![Customizing Blazor RangeNavigator Appearance](images/custom/blazor-rangenavigator-custom-appearance.png)
+![Customizing Blazor RangeNavigator Appearance](images/custom/blazor-rangenavigator-custom-appearance.webp)
 
 ## Thumb
 
@@ -92,7 +92,7 @@ The [RangeNavigatorThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor RangeNavigator with Thumb](images/custom/blazor-rangenavigator-thumb.png)
+![Blazor RangeNavigator with Thumb](images/custom/blazor-rangenavigator-thumb.webp)
 
 ## Border
 
@@ -131,7 +131,7 @@ Using the [RangeNavigatorBorder](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-![Blazor RangeNavigator with Border](images/custom/blazor-rangenavigator-with-border.png)
+![Blazor RangeNavigator with Border](images/custom/blazor-rangenavigator-with-border.webp)
 
 ## Snapping
 

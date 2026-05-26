@@ -45,7 +45,7 @@ The [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkl
 
 ```
 
-![Blazor Sparkline Line Chart](images/SparklineTypes/blazor-line-sparkline.png)
+![Blazor Sparkline Line Chart](images/SparklineTypes/blazor-line-sparkline.webp)
 
 ## Column
 
@@ -62,7 +62,7 @@ The [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 
 N> Refer to the [code block](#line) for the **PopulationData** property value.
 
-![Blazor Sparkline Column Chart](images/SparklineTypes/blazor-column-sparkline.png)
+![Blazor Sparkline Column Chart](images/SparklineTypes/blazor-column-sparkline.webp)
 
 ## Pie
 
@@ -79,7 +79,7 @@ The [Pie](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkli
 
 N> Refer to the [code block](#line) for the **PopulationData** property value.
 
-![Blazor Sparkline Pie Chart](images/SparklineTypes/blazor-pie-sparkline.png)
+![Blazor Sparkline Pie Chart](images/SparklineTypes/blazor-pie-sparkline.webp)
 
 ## WinLoss
 
@@ -94,7 +94,7 @@ The [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spa
 
 ```
 
-![Blazor Sparkline WinLoss Chart](images/SparklineTypes/blazor-winloss-sparkline.png)
+![Blazor Sparkline WinLoss Chart](images/SparklineTypes/blazor-winloss-sparkline.webp)
 
 ## Area
 
@@ -111,4 +111,4 @@ The [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkl
 
 N> Refer to the [code block](#line) for the **PopulationData** property value.
 
-![Blazor Sparkline Area Chart](images/SparklineTypes/blazor-area-sparkline.png)
+![Blazor Sparkline Area Chart](images/SparklineTypes/blazor-area-sparkline.webp)
