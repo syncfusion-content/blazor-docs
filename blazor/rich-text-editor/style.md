@@ -146,20 +146,6 @@ The source code is presented with enhanced formatting and consistent indentation
 
 ![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.png)
 
-### Refreshing the editor UI
-
-While rendering the Rich Text Editor inside the dialog component, the dialog container and its wrapper elements are styled with display: none, so the editor’s toolbar does not get the proper offset width and will render above the edit area container. To resolve this issue, call the `RefreshUI` method of the RichTextEditor in the dialog's opened event.
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/refresh.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with refresh editor](./images/blazor-richtexteditor-refresh-editor.png)
-
 ## Highlight the specific lines
 
 Programmatically highlight a portion of the text in the editor, like setting the background color of the text by applying background style to the particular text using the RichTextEditor [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method and the `jsinterop` method.
