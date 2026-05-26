@@ -54,7 +54,7 @@ The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Blazor Column Chart with Multiple Series](images/multiple-series/blazor-column-chart-multiple-series.png)
+![Blazor Column Chart with Multiple Series](images/multiple-series/blazor-column-chart-multiple-series.webp)
 
 ## Combination chart series
 
@@ -113,7 +113,7 @@ N> Bar series cannot be combined with any other series as the axis orientation i
 
 ```
 
-![Displaying Combination of Blazor Chart](images/multiple-series/blazor-chart-combination.png)
+![Displaying Combination of Blazor Chart](images/multiple-series/blazor-chart-combination.webp)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

@@ -54,7 +54,7 @@ An axis can be positioned in the chart area using [CrossesAt](https://help.syncf
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUChLRrTftoDAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Cross Axis](images/axis-customization/blazor-column-chart-cross-axis.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUChLRrTftoDAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Cross Axis](images/axis-customization/blazor-column-chart-cross-axis.webp)" %}
 
 ## Title
 
@@ -95,7 +95,7 @@ A title can be added to the axis using [Title](https://help.syncfusion.com/cr/bl
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUihhRhzzqpdFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Axis Title](images/axis-customization/blazor-column-chart-axis-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUihhRhzzqpdFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Axis Title](images/axis-customization/blazor-column-chart-axis-title.webp)" %}
 
 ### Axis title alignment
 
@@ -139,7 +139,7 @@ The axis title's position can be aligned using the `TextAlignment` property in [
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVfDHirzNGCVAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Axis Title Alignment](images/axis-customization/blazor-column-chart-axis-title-alignment.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVfDHirzNGCVAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Axis Title Alignment](images/axis-customization/blazor-column-chart-axis-title-alignment.webp)" %}
 
 ## Tick lines
 
@@ -182,7 +182,7 @@ The width, color, and size of the minor and major tick lines can be customi
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgiBBdLTzRploJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgiBBdLTzRploJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.webp)" %}
 
 ## Grid lines customization
 
@@ -224,7 +224,7 @@ The width, color, and dash array of the minor and major grid lines can be c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAWVVnBzoAhreS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAWVVnBzoAhreS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.webp)" %}
 
 ## Multiple Axis
 
@@ -269,7 +269,7 @@ The [ChartAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqirBHhzyoYHVs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Multiple Axes](images/axis-customization/blazor-column-chart-multiple-axes.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqirBHhzyoYHVs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Multiple Axes](images/axis-customization/blazor-column-chart-multiple-axes.webp)" %}
 
 ## See also
 
@@ -316,7 +316,7 @@ When an axis is inversed, the greatest value on the axis moves closer to the ori
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgMBBRLzoOWYHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Inversed Axis](images/axis-customization/blazor-column-chart-inversed-axis.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgMBBRLzoOWYHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Inversed Axis](images/axis-customization/blazor-column-chart-inversed-axis.webp)" %}
 
 ## Opposed position
 
@@ -357,7 +357,7 @@ To place an axis in the opposite position of its original position, set its [Opp
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.webp)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
