@@ -43,7 +43,7 @@ To insert audio from the hosted link or local machine, you should enable the aud
 
 By default, the audio tool opens the audio dialog, allowing you to insert audio from an online source. Inserting the URL will be added to the `src` attribute of the `<source>` tag.
 
-![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-insert-audio.webp)
+![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-audio-web.webp)
 
 ## Upload and insert audio
 
