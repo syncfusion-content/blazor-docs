@@ -57,7 +57,7 @@ Blazor components can be integrated within the **AuthorizeView** component as sh
 
 To add the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to your application, open the NuGet Package Manager in Visual Studio **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**. Search and install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages.
 
-Alternatively, install the packages by using the following command in the **Package Manager Console**:
+Alternatively, install the required packages by using the following .NET CLI commands.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -182,7 +182,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Grid Component](images/sync-components-auth.webp)
+![Blazor DataGrid Component](images/sync-components-auth.webp)
 
 N> For a complete implementation, download the demo project from the [GitHub repository](https://github.com/SyncfusionExamples/blazor-authentication).
 
