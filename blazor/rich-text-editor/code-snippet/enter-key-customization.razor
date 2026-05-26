@@ -2,13 +2,11 @@
 
 <SfRichTextEditor EnterKey="EnterKeyTag.DIV">
     <RichTextEditorToolbarSettings Items="Items"></RichTextEditorToolbarSettings>
-        <p>In Rich Text Editor, the Enter key behavior can be customized using the <code>EnterKey</code> property.
-        The possible tags are <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;br&gt;</code>.
-        This sample is configured with <code>EnterKey</code> set to <b>DIV</b>.</p>
+    <p>In Rich Text Editor, the Enter key behavior can be customized using the <code>EnterKey</code> property.The possible tags are <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;br&gt;</code>.This sample is configured with <code>EnterKey</code> set to <b>DIV</b>.</p>
 </SfRichTextEditor>
 
 @code {
- private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.SourceCode }
     };
