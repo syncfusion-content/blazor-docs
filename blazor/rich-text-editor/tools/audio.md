@@ -171,7 +171,7 @@ In the following illustration, the audio size has been validated before uploadin
 
 Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) “Replace” option. You can replace the audio file using the web URL or the browse option in the audio dialog.
 
-![Blazor Rich Text Editor replace audio](../images/blazor-richtexteditor-replace-audio.webp)
+![Blazor Rich Text Editor replace audio](../images/blazor-richtexteditor-audio-replace.webp)
 
 ## Delete audio
 
@@ -179,7 +179,7 @@ To remove audio from the Rich Text Editor content, select audio and click the `R
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the delete icon.
 
-![Blazor RichTextEditor remove audio](../images/blazor-richtexteditor-remove-audio.webp)
+![Blazor RichTextEditor remove audio](../images/blazor-richtexteditor-audio-remove.webp)
 
 ## Display Position
 
