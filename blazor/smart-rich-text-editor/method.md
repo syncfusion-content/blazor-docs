@@ -89,6 +89,6 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 
 ## See also
 
-* [Properties](property.md)
-* [Appearance](appearance.md)
-* [Events](events.md)
+* [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
+* [Appearance](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/appearance)
+* [Events](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/events)
