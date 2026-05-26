@@ -70,23 +70,20 @@ Open the `~/_Imports.razor` file and add the `Syncfusion.Blazor`, `Syncfusion.Bl
 
 Before building the Blazor app, set up an AWS Cognito user pool.
 
-1. Go to **AWS Management Console** > **Amazon Cognito**.
+1. Go to **[AWS Management Console](https://console.aws.amazon.com/cognito)** > **Amazon Cognito**.
 2. Click **Create user pool**.
 3. Choose **Traditional Web Application** as the application type. Cognito groups all server-rendered web apps (including Blazor Server and Blazor Web App) under this category.
 4. Set your application name.
 5. Choose authentication method: **Email** or **Phone number** (or both).
-6. Continue through the setup wizard and confirm your settings. Once ready, click the **Create User Pool** button.
-7. Go to **Amazon Cognito** > **User pools**. Note the **User pool ID** and **User pool name**.
-8. Go to **App integration** > **App clients**.
-9. Click **Create app client**
-   - **App type:** Choose **Public client** (for PKCE without a secret).
-   - **Client name:** (for example, `MyBlazorServer`).
-   - **Authentication flows:** Ensure **Authorization code flow** is selected.
-   - Under **Allowed redirect URIs**, add: `https://localhost:7000/signin-oidc` (adjust port if different; check `Properties/launchSettings.json`).
-   - Under **Allowed sign-out URIs**, add: `https://localhost:7000/signout-callback-oidc`.
-10. Verify that in **App integration** > **Hosted UI**:
-   - "Hosted UI" is **enabled**.
-   - "Callback URLs" includes your app redirect URI.
+6. Enter your app's **Return URL** (also called callback URL): `https://localhost:7000/signin-oidc` (adjust the port if different; check `Properties/launchSettings.json`).
+7. Continue through the setup wizard and confirm your settings. Once ready, click the **Create User Directory** button.
+8. Go to **Amazon Cognito** > **User pools**. Note the **User pool ID** and **User pool name**.
+9. Go to **App clients**, select your app client, and verify or update the following settings:
+   - **Application type:** **Traditional Web Application** (this generates a client secret by default).
+   - **Allowed callback URLs:** Confirm `https://localhost:7000/signin-oidc` is listed.
+   - **Allowed sign-out URLs:** Add `https://localhost:7000/signout-callback-oidc`.
+   - **OAuth grant types:** Ensure **Authorization code grant** is selected.
+10. Go to **App integration** > **Domain** and confirm a Cognito domain (or custom domain) is assigned to your user pool. This is required to enable the managed login (hosted UI) pages.
 
 You now have the values to add to `appsettings.json`.
 
@@ -305,7 +302,7 @@ Add the Blazor theme CSS and script references to your application's `App.razor`
 </head>
 <body>
     ...
-    <!-- core script (required for UI components, including DataGrid) -->
+    <!-- core script (required for UI components, including Blazor DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -315,7 +312,7 @@ Add the Blazor theme CSS and script references to your application's `App.razor`
 
 ## Blazor DataGrid on an authenticated page
 
-This page demonstrates how to conditionally render the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) based on the authenticated state using `<AuthorizeView>`. When unauthenticated, a **Sign in with AWS Cognito** button is displayed. Once authenticated, the grid renders with sample data.
+This page demonstrates how to conditionally render the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) based on the authenticated state using `<AuthorizeView>`. When unauthenticated, a **Sign in with AWS Cognito** button is displayed. Once authenticated, the grid renders with sample data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
