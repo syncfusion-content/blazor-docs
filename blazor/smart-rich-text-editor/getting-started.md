@@ -96,7 +96,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -107,7 +106,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -126,7 +124,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -164,7 +161,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="4 11" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="4 11" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -200,7 +197,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -211,7 +207,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -230,7 +225,6 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -255,12 +249,13 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="4 5 6 10 12 13 14 15 16 17 18" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 13 14 15 16 17 18 19" %}
 
-using Syncfusion.Blazor.SmartRichTextEditor;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
+
 var builder = WebApplication.CreateBuilder(args);
 
 ....
@@ -295,7 +290,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -306,7 +300,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -326,7 +319,6 @@ Install-Package Azure.AI.OpenAI
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -352,9 +344,9 @@ dotnet add package Azure.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13 14 15 16 17 18 19 20 21" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 6 14 15 16 17 18 19 20 21 22 23 24" %}
 
-using Syncfusion.Blazor.SmartRichTextEditor;
+using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
