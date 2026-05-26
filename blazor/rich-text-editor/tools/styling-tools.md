@@ -289,7 +289,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   margin-top: 00.6em;
 }
 
-.e-rte-content .e-rte-image.e-imgbreak {
+.e-rte-content .e-rte-image.e-img-break {
   border: 0;
   cursor: pointer;
   display: block;
@@ -309,7 +309,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   position: relative;
 }
 
-.e-rte-content .e-rte-image.e-imginline {
+.e-rte-content .e-rte-image.e-img-inline {
   display: inline-block;
   float: none;
   margin-left: 5px;
@@ -318,7 +318,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   vertical-align: bottom;
 }
 
-.e-rte-content .e-rte-image.e-imgcenter {
+.e-rte-content .e-rte-image.e-img-center {
   cursor: pointer;
   display: block;
   float: none;
@@ -327,13 +327,13 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   position: relative;
 }
 
-.e-rte-content .e-rte-image.e-imgleft {
+.e-rte-content .e-rte-image.e-img-left {
   float: left;
   margin: 0 5px 0 0;
   text-align: left;
 }
 
-.e-rte-content .e-rte-image.e-imgright {
+.e-rte-content .e-rte-image.e-img-right {
   float: right;
   margin: 0 0 0 5px;
   text-align: right;
@@ -357,12 +357,12 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   vertical-align: bottom;
 }
 
-.e-rte-content .e-rte-img-caption.e-imgcenter {
+.e-rte-content .e-rte-img-caption.e-img-center {
   display: block;
 }
 
-.e-rte-content .e-rte-img-caption .e-rte-image.e-imgright,
-.e-rte-content .e-rte-img-caption .e-rte-image.e-imgleft {
+.e-rte-content .e-rte-img-caption .e-rte-image.e-img-right,
+.e-rte-content .e-rte-img-caption .e-rte-image.e-img-left {
   float: none;
   margin: 0;
 }
@@ -386,7 +386,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   border-style: dashed;
 }
 
-.e-rte-content .e-rte-img-caption .e-img-inner {
+.e-rte-content .e-rte-img-caption .e-img-caption-text {
   box-sizing: border-box;
   display: block;
   font-size: 16px;
