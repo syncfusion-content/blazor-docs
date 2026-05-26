@@ -133,7 +133,7 @@ You can configure custom toolbar tools in the Rich Text Editor. Actions performe
         new ToolbarItemModel() { Command = ToolbarCommand.Italic },
         new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough },
-        new ToolbarItemModel() { Name = "Insert HTML", TooltipText = "Insert HTML" },
+        new ToolbarItemModel() { Name = "Insert HTML", TooltipText = "Insert HTML" }
     };
     public async Task  onClick()
     {
