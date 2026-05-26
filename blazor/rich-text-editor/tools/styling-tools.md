@@ -32,7 +32,7 @@ The following table lists the default font name, the width of the `FontName` dro
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-build-in-font-name.png)
+![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-builtin-font-name.png)
 
 ### Custom font family
 
@@ -129,7 +129,7 @@ The following table lists the default font size and width of the [FontSize](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-build-in-font-size.png)
+![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-builtin-font-size.png)
 
 ### Custom font size
 
