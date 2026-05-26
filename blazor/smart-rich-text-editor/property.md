@@ -347,7 +347,7 @@ Configures the toolbar in the AI response viewer section.
 
 ---
 
-## See Also
+## See also
 
 * [Methods](method.md)
 * [Appearance](appearance.md)

@@ -87,7 +87,7 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 
 ---
 
-## See Also
+## See also
 
 * [Properties](property.md)
 * [Appearance](appearance.md)

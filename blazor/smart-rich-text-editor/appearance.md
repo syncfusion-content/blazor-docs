@@ -63,7 +63,7 @@ In this example, we customize the AI Assistant popup appearance by targeting the
 
 ---
 
-## See Also
+## See also
 
 * [Properties](property.md)
 * [Methods](method.md)

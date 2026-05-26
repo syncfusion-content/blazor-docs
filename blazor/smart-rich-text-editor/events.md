@@ -150,7 +150,7 @@ Fires before the AI Assistant popup closes. Use to save state or confirm before 
 
 ---
 
-## See Also
+## See also
 
 * [Properties](property.md)
 * [Methods](method.md)
