@@ -63,8 +63,8 @@ In this example, we customize the AI Assistant popup appearance by targeting the
 
 ---
 
-## See Also
+## See also
 
-* [Properties](property.md)
-* [Methods](method.md)
-* [Events](events.md)
+* [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
+* [Methods](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/method)
+* [Events](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/events)

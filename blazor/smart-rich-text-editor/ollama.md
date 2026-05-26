@@ -34,27 +34,36 @@ Ollama is a lightweight, open-source framework for running large language models
 
 Visit [Ollama's Official Website](https://ollama.com) and download the installer for your operating system.
 
-#### Windows
+{% tabcontents %}
 
-1. Download the Windows installer
-2. Run the installer and follow the setup wizard
-3. Accept default installation path or customize
-4. Complete installation
+{% tabcontent Windows %}
 
-#### macOS
+1. Visit [Windows](https://ollama.com/download)
+2. Click `Download for Windows` to get the `.exe installer`. 
+3. Run `OllamaSetup.exe` and follow the wizard to install.
 
-1. Download the macOS installer
-2. Open the `.dmg file`
-3. Drag Ollama to Applications folder
-4. Launch from Applications
+{% endtabcontent %}
 
-#### Linux
+{% tabcontent macOS %}
 
-Use the installation script:
+1. Visit [macOS](https://ollama.com/download/mac)
+2. Click `Download for macOS` to get `.dmg file`
+3. Install it by following the wizard.
 
-```bash
-curl https://ollama.ai/install.sh | sh
-```
+{% endtabcontent %}
+
+{% tabcontent Linux %}
+
+1. Visit [Linux](https://ollama.com/download/linux)
+2. Run the below command to install Ollama in your system
+
+   ```bash
+   curl https://ollama.ai/install.sh | sh
+   ```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ### Step 2: Verify Installation
 
@@ -66,17 +75,25 @@ ollama --version
 
 ### Step 3: Start Ollama Service
 
-#### Windows
+{% tabcontents %}
+
+{% tabcontent Windows %}
 
 Ollama starts automatically. Access at `http://localhost:11434`
 
-#### macOS/Linux
+{% endtabcontent %}
+
+{% tabcontent macOS/Linux %}
 
 Start the Ollama service:
 
 ```bash
 ollama serve
 ```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Installing Models
 
@@ -120,20 +137,69 @@ Type your prompt and press Enter. Type `/bye` to exit.
 
 > **Note**: OllamaSharp is a community package for local model integration. Ensure compliance with your organization's policy on third-party NuGet packages before using in production.
 
-### Installation
+## Setup the Smart Rich Text Editor Component
 
-Install required NuGet packages:
+Follow the [Getting Started](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp) guide to configure and render the Smart Rich Text Editor component in the application and that prerequisites are met.
+
+## Install NuGet packages
+
+Install the following NuGet packages to your project:
+
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [OllamaSharp](https://www.nuget.org/packages/OllamaSharp)
+
+You can install these packages using different methods as shown below:
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
+2. Search for the required packages.
+3. Select the package and click **Install**.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio (Package Manager Console) %}
+
+1. In Visual Studio Navigate to:
+
+   **Tools → NuGet Package Manager → Package Manager Console**
+2. Run the following commands:
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Install Packages" %}
 
-Install-Package Syncfusion.Blazor.SmartRichTextEditor
-Install-Package Syncfusion.Blazor.Themes
 Install-Package Microsoft.Extensions.AI
 Install-Package OllamaSharp
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code / .NET CLI %}
+
+1. Open your project.
+2. Open the terminal:
+   - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
+   - Or use any system terminal for CLI
+3. Run the following commands:
+
+{% tabs %}
+{% highlight C# tabtitle="Install Packages" %}
+
+dotnet add package Microsoft.Extensions.AI
+dotnet add package OllamaSharp
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ### Setup in Program.cs
 
@@ -158,7 +224,7 @@ string modelName = "mistral"; // or any other installed model
 IOllamaApiClient ollamaClient = new OllamaApiClient(ollamaEndpoint, modelName);
 
 // Convert to IChatClient
-IChatClient chatClient = ollamaClient;
+IChatClient chatClient = (IChatClient)ollamaClient;
 
 builder.Services.AddChatClient(chatClient);
 
@@ -170,17 +236,6 @@ var app = builder.Build();
 // ... rest of setup
 ```
 
-### Add to _Imports.razor
-
-{% tabs %}
-{% highlight razor tabtitle="~/Components/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.SmartRichTextEditor
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Use Ollama AI with Smart Rich Text Editor Component
 
 {% tabs %}
@@ -189,137 +244,26 @@ var app = builder.Build();
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
-    <AssistViewSettings Placeholder="Edit with local AI assistance..."/>
+    <AssistViewSettings Placeholder="Use Ollama AI for local AI-powered editing..." />
     <div>
-        <h3>Ollama + Smart Rich Text Editor</h3>
-        <p>Use AI Commands to improve selected text or change tone.</p>
+        <strong>Use Ollama AI with Smart Rich Text Editor:</strong>
         <ul>
-            <li>Select text and request suggestions</li>
-            <li>Press Alt+Enter for AI Query</li>
+            <li>Select text and use <b>AI Commands</b> to generate or refine content locally</li>
+            <li>Press <b>Alt + Enter</b> to open the Ollama AI query dialog</li>
+            <li>Improve grammar, rephrase sentences, or adjust tone using local AI</li>
         </ul>
+        <p>
+            Start typing your content and leverage Ollama AI to enhance writing quality, generate ideas, and optimize text directly within the editor using a local model.
+        </p>
     </div>
 </SfSmartRichTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Configuration Options
+![Syncfusion Smart Rich Text Editor Ollama Integration](images/ollama-integration.png)
 
-### Custom Endpoint
-
-If Ollama runs on different host/port:
-
-```csharp
-string ollamaEndpoint = "http://192.168.1.100:11434";
-IOllamaApiClient ollamaClient = new OllamaApiClient(ollamaEndpoint, "mistral");
-```
-
-### Model Parameters
-
-Configure model behavior:
-
-```csharp
-// Create client with parameters
-IOllamaApiClient ollamaClient = new OllamaApiClient("http://localhost:11434", "mistral");
-
-// Set parameters (varies by OllamaSharp version)
-var request = new GenerateRequest
-{
-    Model = "mistral",
-    Prompt = "Your prompt",
-    Temperature = 0.7f,
-    TopK = 40,
-    TopP = 0.9f,
-};
-```
-
-### Dynamic Model Selection
-
-```csharp
-// Read model name from configuration
-string modelName = builder.Configuration["Ollama:ModelName"] ?? "mistral";
-string endpoint = builder.Configuration["Ollama:Endpoint"] ?? "http://localhost:11434";
-
-IOllamaApiClient ollamaClient = new OllamaApiClient(endpoint, modelName);
-```
-
-## Docker Deployment
-
-### Docker Compose Setup
-
-```yaml
-version: '3.8'
-services:
-  ollama:
-    image: ollama/ollama:latest
-    ports:
-      - "11434:11434"
-    volumes:
-      - ollama_data:/root/.ollama
-    environment:
-      - OLLAMA_HOST=0.0.0.0:11434
-
-volumes:
-  ollama_data:
-```
-
-### Start with Docker
-
-```bash
-docker-compose up -d
-```
-
-### Pull Models in Container
-
-```bash
-docker exec -it <container-id> ollama pull mistral
-```
-
-## Advanced Configuration
-
-### Multiple Models
-
-Run different models for different purposes:
-
-```csharp
-// For general editing
-var generalClient = new OllamaApiClient("http://localhost:11434", "mistral");
-
-// For code-related tasks
-var codeClient = new OllamaApiClient("http://localhost:11434", "neural-chat");
-
-// Conditionally use based on context
-IChatClient chatClient = useForCode ? codeClient : generalClient;
-```
-
-## Performance Optimization
-
-### Tips for Better Performance
-
-1. **Use GPU Acceleration**
-   - NVIDIA GPUs: Install CUDA toolkit
-   - AMD GPUs: Install ROCm
-   - Intel GPUs: Install Intel oneAPI
-
-2. **Increase Memory Allocation**
-   ```bash
-   # Linux/macOS
-   export OLLAMA_NUM_PARALLEL=1
-   ollama serve
-   ```
-
-3. **Choose Efficient Models**
-   - Mistral is fastest
-   - `Orca-mini` for lightweight deployment
-   - `Dolphin-mixtral` for best quality
-
-4. **Implement Caching**
-   - Cache common prompts
-   - Reuse model responses
-
-5. **Optimize Request Size**
-   - Keep prompts concise
-   - Limit response length with max tokens
+N> Running Ollama locally may lead to slower response times due to system resource usage.
 
 ## Troubleshooting
 
@@ -352,44 +296,9 @@ ollama pull mistral
 - Close other applications
 - Restart Ollama service
 
-### Performance Issues
-
-**Slow response times**
-- Check CPU/GPU usage
-- Enable GPU acceleration if available
-- Use faster models
-- Increase system RAM
-
-## Model Recommendations
-
-| Use Case | Model | Pros | Cons |
-|----------|-------|------|------|
-| General editing | Mistral | Fast, good quality | Less context |
-| Content creation | Llama 2 | Balanced | Larger model |
-| Code assistance | Neural-chat | Good reasoning | Slower |
-| Lightweight | Orca-mini | Very fast | Limited capability |
-| Best quality | Dolphin-mixtral | Excellent | Resource heavy |
-
-## Security Considerations
-
-### Local Processing Benefits
-
-- All data stays on your machine
-- No external API calls
-- Compliance with data regulations
-- Full control over data retention
-
-### Best Practices
-
-1. Restrict network access to Ollama
-2. Use firewall rules if networked
-3. Keep Ollama updated
-4. Monitor resource usage
-
 ## See also
 
-* [Getting Started with Smart Rich Text Editor](getting-started.md)
-* [OpenAI Configuration](openai-service.md)
-* [Azure OpenAI Configuration](azure-openai-service.md)
-* [AI Features and Customization](ai-features.md)
+* [Getting Started with Smart Rich Text Editor](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
+* [OpenAI Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/openai-service)
+* [Azure OpenAI Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/azure-openai-service)
 * [Ollama Official Documentation](https://ollama.ai/docs)

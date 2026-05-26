@@ -231,7 +231,7 @@ To bind data for the Stock Chart component, assign a `IEnumerable` object to the
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Stock Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVHjeVNVEQConrD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVHjeVNVEQConrD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/StockChart).
 

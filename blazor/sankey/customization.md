@@ -93,7 +93,7 @@ Customize the diagram background using `BackgroundColor` and `BackgroundImage`. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customization Background](images/customization/sankey-customization-background.png)
+![Blazor Sankey Customization Background](images/customization/sankey-customization-background.webp)
 
 **Background Image**
 
@@ -107,7 +107,7 @@ Customize the diagram background using `BackgroundColor` and `BackgroundImage`. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.png)
+![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.webp)
 
 ## Dimensions (Width and Height)
 
@@ -188,7 +188,7 @@ Control diagram size using `Width` and `Height`. Values can be specified in pixe
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customization Dimensions](images/customization/sankey-customization-size.png)
+![Blazor Sankey Customization Dimensions](images/customization/sankey-customization-size.webp)
 
 ## Right-to-Left (RTL) Support
 
@@ -276,7 +276,7 @@ Enable RTL by setting `EnableRTL` to `true`. The entire layout—including nodes
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customization RTL](images/customization/sankey-customization-rtl.png)
+![Blazor Sankey Customization RTL](images/customization/sankey-customization-rtl.webp)
 
 ## Orientation
 
@@ -364,7 +364,7 @@ Control the flow direction using the `Orientation` property. Values include `Hor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customization Vertical](images/customization/sankey-customization-vertical.png)
+![Blazor Sankey Customization Vertical](images/customization/sankey-customization-vertical.webp)
 
 ## Key Points
 
