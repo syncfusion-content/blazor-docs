@@ -211,14 +211,19 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxteMFgkJuRQhn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-* **Using Visual Studio:**
-  Press <kbd>Ctrl</kbd> + <kbd>F5</kbd> (Windows) or <kbd>⌘</kbd> + <kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component in the default web browser.
+### Run the application
 
-* **Using Visual Studio Code / .NET CLI:**
-  Open a terminal in the project directory and run the following command:
+**Visual Studio**:
 
-  ```bash
-  dotnet run 
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Gantt Chart component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open a terminal in the project directory and run the following command:
+    ```
+    dotnet run
+    ```
+2. The application will start and display in your default web browser.
 
 N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the Kanban Board.
 
