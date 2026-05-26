@@ -1,0 +1,17 @@
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items = "@Tools" />
+    <p>The Rich Text Editor provides indent and outdent options to adjust the spacing of your content. These options help organize text visually and improve readability.</p>
+    <p><b>Key features:</b></p>
+    <p>Increase indentation to shift content inward and create visual hierarchy.</p>
+    <p style="margin-left: 20px;">Decrease indentation to shift content outward and realign content.</p>
+    <p>Quickly format paragraphs for better structure and readability.</p>  
+</SfRichTextEditor>
+@code {
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Indent },
+        new ToolbarItemModel() { Command = ToolbarCommand.Outdent }
+    };
+}
