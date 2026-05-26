@@ -57,7 +57,7 @@ The rendered stock chart can be printed directly using the print button in the p
 
 ```
 
-![Printing in Blazor Stock Chart](images/print/blazor-stock-chart-printing.png)
+![Printing in Blazor Stock Chart](images/print/blazor-stock-chart-printing.webp)
 
 ## Disable export and print
 
@@ -100,7 +100,7 @@ Set the `ExportType` property to an empty list to disable export options.
 
 ```
 
-![Disabling Export and Print in Blazor Stock Chart](images/print/blazor-stock-chart-disable-print-export.png)
+![Disabling Export and Print in Blazor Stock Chart](images/print/blazor-stock-chart-disable-print-export.webp)
 
 ## Customize the exported chart using the Exporting event
 

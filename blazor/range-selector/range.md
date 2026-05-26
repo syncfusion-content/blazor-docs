@@ -65,7 +65,7 @@ As shown in the following example, the [Value](https://help.syncfusion.com/cr/bl
 
 ```
 
-![Selecting Range in Blazor RangeNavigator](images/common/blazor-rangenavigator-range-selection.png)
+![Selecting Range in Blazor RangeNavigator](images/common/blazor-rangenavigator-range-selection.webp)
 
 ### Two-way binding
 
@@ -108,4 +108,4 @@ The **@bind-Value** code-behind attribute in the Range Selector can be used to a
 
 ```
 
-![Selecting Range in Blazor RangeNavigator](images/common/blazor-rangenavigator-range-selection.png)
+![Selecting Range in Blazor RangeNavigator](images/common/blazor-rangenavigator-range-selection.webp)

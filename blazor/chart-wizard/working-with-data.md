@@ -93,7 +93,7 @@ Any IEnumerable object can be assigned to the `DataSource` property of the `Char
 ```
 
 
-![Chart Wizard working with data - list binding](images/chart-wizard-working-with-data-list.png)
+![Chart Wizard working with data - list binding](images/chart-wizard-working-with-data-list.webp)
 
 ## ObservableCollection
 
@@ -143,7 +143,7 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 
 ```
 
-![Chart Wizard working with data - observable data binding](images/chart-wizard-working-with-data-observable.png)
+![Chart Wizard working with data - observable data binding](images/chart-wizard-working-with-data-observable.webp)
 
 
 ## See Also

@@ -183,6 +183,13 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWNVzLgvAOlvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the .NET MAUI Blazor Hybrid app.
+The application will open as a native app.
+
 ### How to run the sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
