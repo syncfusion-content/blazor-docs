@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating ASP.NET Core MVC Controls to Blazor
 
-Migrating enterprise applications from [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a transition from a controller driven, request response framework to a modern, component based web UI model built on .NET. This guide provides a **structured, step-by-step migration path** for [ASP.NET Core MVC controls](https://www.syncfusion.com/aspnet-mvc-ui-controls) to their [Blazor equivalents](https://www.syncfusion.com/blazor-components).
+Migrating enterprise applications from [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) represents a transition from a controller driven, request response framework to a modern, component based web UI model built on .NET. This guide provides a **structured, step-by-step migration path** for [ASP.NET Core MVC controls](https://www.syncfusion.com/aspnet-mvc-ui-controls) to their [Blazor equivalents](https://www.syncfusion.com/blazor-components).
 
 ## Why migrate from ASP.NET Core MVC to Blazor?
 
@@ -24,31 +24,18 @@ Blazor introduces a **component based**, **event-driven UI model**, where user i
 | UI definition | Views and partial views | Component based UI structure |
 | Code structure | Controllers and ViewModels | `@code {}` block or `.razor.cs` file |
 | Lifecycle model | Request based (per HTTP request) | Component lifecycle (`OnInitialized`, `OnParametersSet`, `OnAfterRender`, `Dispose`) |
-| State management |  stateless and session based options | Component state, cascading parameters, and DI services |
+| State management | Stateless and session based options | Component state, cascading parameters, and DI services |
 | User interaction | Full page reload or AJAX callback | Event driven UI updates |
 | Event handling | Form post and AJAX | `EventCallback<T>` and delegates |
 | Dependency injection | Built-in (controller centric) | Built-in (component centric) |
 | Routing and navigation | Controller based routing | SPA style routing using `@page` |
 | Scalability | Limited by concurrent requests and vertical scaling typical | Server: scales to concurrent SignalR connections. WebAssembly: client-side execution eliminates server load |
-| Application updates | Requires redeployment | Blazor Server: Instant updates. WebAssembly: Requires refresh |
+| Application updates | Requires redeployment | Blazor Server: Live UI updates over SignalR. WebAssembly: Requires page refresh after redeployment. |
 
-## Development Environment Setup
-
-### Prerequisites
+## Prerequisites for Blazor
 
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
-
-Verify installation using the following .NET CLI command, and ensure the .NET version is 8.0.0 or later.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet --version
-dotnet --info
-
-{% endhighlight %}
-{% endtabs %}
 
 ### Project structure comparison
 
@@ -56,7 +43,7 @@ The following table maps common **ASP.NET Core MVC application artifacts** to th
 
 | Concept  | ASP.NET Core MVC artifact  | Blazor equivalent      |
 | -----| ------ | ----- |
-| UI definition  | Razor Views (`Views/*.cshtml`) | Razor components (`Pages/*.razor`)  |
+| UI definition  | Razor Views (`Views/*.cshtml`) | Razor components (`Components/Pages/*.razor`)  |
 | Request handling logic    | `Controllers/*.cs`  | Component code (`@code {}` or `.razor.cs`) |
 | Application startup | `Program.cs` (MVC middleware)  | `Program.cs` (Blazor hosting & services)            |
 | Layout              | `_Layout.cshtml`   | `MainLayout.razor`      |
@@ -66,40 +53,23 @@ The following table maps common **ASP.NET Core MVC application artifacts** to th
 | Routing    | `MapControllerRoute`, attributes | `@page` directive        |
 | Business & data layer  | Models, Services, Repositories |  Reused via dependency injection |
 
-N> Existing domain models, data access layers, and business services can typically be reused in Blazor applications. However, code tightly coupled to MVC features such as controllers, HttpContext, or TempData.
-
-## Creating a Blazor project
-
-### Creating a Blazor Web App with Interactive Server
-
-For ASP.NET Core MVC migrations, create a **Blazor Web App with Interactive Server** option, which runs server-side and preserves the familiar server hosted execution model with real time interactivity via SignalR.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet new blazor -n MyBlazorApp --interactivity Server
-cd MyBlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-N> The `--interactivity Server` flag configures SignalR based interactivity providing immediate UI updates.
-
 ## Migrating Components from ASP.NET Core MVC to Blazor
 
-The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#add-syncfusion-datagrid-component).
+Create a Blazor project using one of the following getting started guides.
+
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+
+The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#component-specific-migration-steps).
 
 ### Package installation
 
 In ASP.NET Core MVC, controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
 
-In Blazor applications, components are available as individual NuGet packages as well as a complete package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor). The individual packages are organized based on component usage and namespace, allowing you to install only the components required for your application. The combined `Syncfusion.Blazor` package is also available and continues to be supported (not deprecated). However, for better performance and optimized application size, it is recommended to use individual component packages whenever possible.
+In Blazor applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
-To explore the complete list of Blazor component packages, refer to [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
-
-Additionally, install the following package for styling support [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes).
-
-N> Install `Syncfusion.Blazor.Themes` once at the application level. This package is required for the Blazor components used in this migration guide.
+Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
 ### Service registration
 
@@ -115,8 +85,6 @@ In the `Program.cs` file, add the Blazor namespace and register services.
 using Syncfusion.Blazor;
 ...
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
 builder.Services.AddSyncfusionBlazor();  // Register Syncfusion services
 var app = builder.Build();
 ...
@@ -143,13 +111,20 @@ Add the required namespace in `~/_ViewImports.cshtml`.
 
 In Blazor, `~/_Imports.razor` serves a similar purpose but applies to Razor components. It allows components to access namespaces globally without requiring repeated `@using` statements in each `.razor` file.
 
-Import the required required namespaces in the `~/_Imports.razor` file.
+Import the required namespaces in the `~/_Imports.razor` file.
 
-| Component | Required namespaces |
-|---|---|
-| DataGrid | `@using Syncfusion.Blazor`<br>`@using Syncfusion.Blazor.Grids` |
-| Scheduler | `@using Syncfusion.Blazor`<br>`@using Syncfusion.Blazor.Schedule` |
-| RichTextEditor | `@using Syncfusion.Blazor`<br>`@using Syncfusion.Blazor.RichTextEditor` |
+{% tabs %}
+{% highlight razor tabtitle="_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.RichTextEditor
+
+{% endhighlight %}
+{% endtabs %}
+
+The preceding code sample lists the namespaces for all components covered in this guide. Import only the namespaces required for the components you use.
 
 ### Theme and script configuration
 
@@ -165,7 +140,7 @@ In Blazor, scripts and styles are included once at the application level (such a
 <head>
     ...
     <!-- ASP.NET Core MVC controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/material.css" />
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/fluent2.css" />
     <!-- ASP.NET Core MVC controls scripts -->
     <script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2.min.js"></script>
 </head>
@@ -200,7 +175,7 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 </head>
 <body>
     ...
-    <!-- Blazor core script (required for UI components) -->
+    <!-- Blazor component script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
     ...
 </body>
@@ -208,7 +183,9 @@ Also, register the script manager `EJS().ScriptManager()` at the end of `<body>`
 {% endhighlight %}
 {% endtabs %}
 
-### Add DataGrid component
+## Component specific migration steps
+
+### Migrate to Blazor DataGrid component
 
 For detailed explanation, refer to the [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) and [ASP.NET Core MVC DataGrid getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/grid/getting-started-mvc).
 
@@ -229,11 +206,13 @@ For detailed explanation, refer to the [Blazor DataGrid getting started guide](h
 | Grouping | [AllowGrouping](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_AllowGrouping), [GroupSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_GroupSettings)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping), [GroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) |
 | Lifecycle & refs | Controller actions, model binding, HTTP lifecycle | `OnInitialized[Async]`, DI, `@ref`, component lifecycle |
 
-In ASP.NET Core MVC, the Grid is defined using HTML Helper APIs, where [Columns](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_Columns) configured through property during component initialization.
+#### Component configuration for DataGrid
 
-In Blazor, the DataGrid component is defined in Razor markup, and its structure is built using declarative [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) while binding to data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property.
+In ASP.NET Core MVC, the Grid is defined using HTML Helper APIs, where [Columns](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_Columns) are configured through properties during component initialization.
 
-**MVC approach**
+In Blazor, the [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is defined in Razor markup, and its structure is built using declarative [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) while binding to data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property.
+
+#### MVC approach
 
 {% tabs %}
 {% highlight cshtml %}
@@ -312,7 +291,7 @@ public class OrdersDetails
 
 {% endtabs %}
 
-**Blazor equivalent**
+#### Blazor equivalent
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -322,12 +301,12 @@ public class OrdersDetails
 @rendermode InteractiveServer
 
 <SfGrid DataSource="@orderData" TValue="OrdersDetails">
-    <GridColumns>
-        <GridColumn Field="@nameof(OrdersDetails.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(OrdersDetails.CustomerID)" HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(OrdersDetails.ShipCity)" HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(OrdersDetails.ShipName)" HeaderText="Ship Name" Width="120"></GridColumn>
-    </GridColumns>
+  <GridColumns>
+    <GridColumn Field="@nameof(OrdersDetails.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    <GridColumn Field="@nameof(OrdersDetails.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
+    <GridColumn Field="@nameof(OrdersDetails.OrderDate)" HeaderText="Order Date" Format="yMd" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+    <GridColumn Field="@nameof(OrdersDetails.ShipCountry)" HeaderText="Ship Country" Width="120"></GridColumn>
+  </GridColumns>
 </SfGrid>
 
 @code {
@@ -348,11 +327,11 @@ public class OrdersDetails
                 int code = 10000;
                 for (int i = 1; i < 5; i++)
                 {
-                    order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
-                    order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-                    order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-                    order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
-                    order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
+                    order.Add(new OrdersDetails { OrderID = code + 1, CustomerID = "ALFKI", EmployeeID = i + 0, Freight = 2.3 * i, Verified = false, OrderDate = new DateTime(1991, 05, 15), ShipCity = "Berlin", ShipName =  "Simons bistro", ShipCountry = "Denmark", ShippedDate = new DateTime(1996, 7, 16), ShipAddress = "Kirchgasse 6" });
+                    order.Add(new OrdersDetails { OrderID = code + 2, CustomerID = "ANATR", EmployeeID = i + 2, Freight = 3.3 * i, Verified = true, OrderDate = new DateTime(1990, 04, 04), ShipCity = "Madrid", ShipName = "Queen Cozinha", ShipCountry = "Brazil", ShippedDate = new DateTime(1996, 9, 11), ShipAddress = "Avda. Azteca 123" });
+                    order.Add(new OrdersDetails { OrderID = code + 3, CustomerID = "ANTON", EmployeeID = i + 1, Freight = 4.3 * i, Verified = true, OrderDate = new DateTime(1957, 11, 30), ShipCity = "Cholchester", ShipName = "Frankenversand", ShipCountry = "Germany", ShippedDate = new DateTime(1996, 10, 7), ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" });
+                    order.Add(new OrdersDetails { OrderID = code + 4, CustomerID = "BLONP", EmployeeID = i + 3, Freight = 5.3 * i, Verified = false, OrderDate = new DateTime(1930, 10, 22), ShipCity = "Marseille", ShipName = "Ernst Handel", ShipCountry = "Austria", ShippedDate = new DateTime(1996, 12, 30), ShipAddress = "Magazinweg 7" });
+                    order.Add(new OrdersDetails { OrderID = code + 5, CustomerID = "BOLID", EmployeeID = i + 4, Freight = 6.3 * i, Verified = true, OrderDate = new DateTime(1953, 02, 18), ShipCity = "Tsawassen", ShipName = "Hanari Carnes", ShipCountry = "Switzerland", ShippedDate = new DateTime(1997, 12, 3), ShipAddress = "1029 - 12th Ave. S." });
                     code += 5;
                 }
             }
@@ -375,7 +354,7 @@ public class OrdersDetails
 {% endhighlight %}
 {% endtabs %}
 
-### Add Scheduler component
+### Migrate to Blazor Scheduler component
 
 For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [ASP.NET Core MVC Scheduler getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/schedule/getting-started).
 
@@ -392,11 +371,13 @@ For detailed explanation, refer to the [Blazor Scheduler getting started guide](
 | Theming & assets      | CSS/JS + `ScriptManager` in `_Layout.cshtml` | Static assets via `_content`, service registration (`AddSyncfusionBlazor`) |
 | Lifecycle & refs      | Controller lifecycle, HTTP requests          | `OnInitialized[Async]`, DI, `@ref` APIs               |
 
+#### Component configuration for Scheduler
+
 In ASP.NET Core MVC, the Scheduler is configured with [Views](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_Views) options such as Day, Week, and Month, and [EventSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_EventSettings) are applied to control how appointments are displayed and managed.
 
-In Blazor, the Scheduler component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
+In Blazor, the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
 
-**ASP.NET Core MVC approach**
+#### ASP.NET Core MVC approach
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
@@ -449,7 +430,7 @@ public class Meeting
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor equivalent**
+#### Blazor equivalent
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -495,7 +476,7 @@ public class Meeting
 
 N> The `Meeting` class uses the default property names expected by the Scheduler. If your data uses different field names, you can map them using the `Fields` property in `ScheduleEventSettings`.
 
-### Add Rich Text Editor component
+### Migrate to Blazor Rich Text Editor component
 
 For detailed explanation, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [ASP.NET Core MVC Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/rich-text-editor/getting-started).
 
@@ -511,11 +492,13 @@ For detailed explanation, refer to the [Blazor Rich Text Editor getting started 
 | Theming & assets      | CSS/JS + `ScriptManager` in `_Layout.cshtml`   | Static assets via `_content`, service registration (`AddSyncfusionBlazor`)         |
 | Lifecycle & refs      | Controller lifecycle, HTTP requests            | `OnInitialized[Async]`, DI, `@ref` APIs                        |
 
+#### Component configuration for Rich Text Editor
+
 In ASP.NET Core MVC, the editor is initialized with configurable toolbar settings and supports content formatting through predefined tools and customization options.
 
-In Blazor, the Rich Text Editor component is defined in Razor markup, where content is managed using the Value or @bind-Value property and toolbar items can be customized declaratively.
+In Blazor, the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component is defined in Razor markup, where content is managed using the `Value` or `@bind-Value` property and toolbar items can be customized declaratively.
 
-**ASP.NET Core MVC approach**
+#### ASP.NET Core MVC approach
 
 {% tabs %}
 {% highlight cshtml %}
@@ -534,7 +517,7 @@ public class HomeController : Controller
 {
     public ActionResult Index()
     {
-        ViewBag.Value = @"<p>Welcome to Blazor Rich Text Editor</p>";
+        ViewBag.Value = @"<p>Welcome to Rich Text Editor</p>";
         return View();
     }
 }
@@ -542,7 +525,7 @@ public class HomeController : Controller
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor equivalent**
+#### Blazor equivalent
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
