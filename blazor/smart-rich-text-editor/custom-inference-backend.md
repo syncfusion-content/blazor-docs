@@ -93,7 +93,7 @@ If the custom AI service does not work as expected, try the following:
 - **Dependency Issues**: Verify that all required NuGet packages (e.g., `Syncfusion.Blazor.SmartRichTextEditor`) are installed. Run `dotnet restore` to resolve dependencies.
 - **Incorrect Responses**: Debug the custom AI service implementation to ensure it processes `ChatParameters` correctly and returns expected responses.
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor Smart Rich Text Editor](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
 * [OpenAI Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/openai-service)
