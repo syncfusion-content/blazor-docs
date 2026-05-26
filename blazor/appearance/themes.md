@@ -1044,119 +1044,210 @@ For a **Blazor Web App** using **Server**, **WebAssembly**, or **Auto** interact
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-@using Microsoft.AspNetCore.WebUtilities;
-@inject NavigationManager UrlHelper;
+@using Microsoft.AspNetCore.WebUtilities
+@inject NavigationManager Navigation
 
 @{
-    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-    QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var themeName);
-    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
+    var allowedThemes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "bootstrap5.3",
+        "bootstrap5.3-dark",
+        "fluent2",
+        "fluent2-dark",
+        "material3",
+        "material3-dark",
+        "tailwind3",
+        "tailwind3-dark",
+        "highcontrast"
+    };
+
+    var uri = new Uri(Navigation.Uri);
+    var query = QueryHelpers.ParseQuery(uri.Query);
+
+    var themeName = query.TryGetValue("theme", out var theme) &&
+                    allowedThemes.Contains(theme.FirstOrDefault() ?? string.Empty)
+        ? theme.FirstOrDefault()!
+        : "bootstrap5.3";
 }
+
 ...
 <head>
-...
+    ...
     <!-- Sets the selected theme name into styles -->
-    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css") rel="stylesheet" />
+    <link href="@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")" rel="stylesheet" />
+    <HeadOutlet />
 </head>
-...
+
+<body>
+    ...  
+    <!-- Blazor core script (required for UI components) -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
 
 2. **Create a dropdown component for theme selection**
 
-Create a new `DropDownComponent.razor` file with the following code. This component uses the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) to enable users to select a theme, which updates the URL query string and triggers a page reload with the selected theme.
+Create a new `ThemeSwitcher.razor` file in the `~/Components` folder with the following code. This component uses the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) to enable users to select a theme, which updates the URL query string and triggers a page reload with the selected theme.
 
 {% tabs %}
-{% highlight razor tabtitle="DropDownComponent.razor" %}
+{% highlight razor tabtitle="ThemeSwitcher.razor" %}
 
 @rendermode InteractiveAuto
-@using Syncfusion.Blazor.DropDowns;
-@inject NavigationManager UrlHelper;
+@using Syncfusion.Blazor.DropDowns
 @using Microsoft.AspNetCore.WebUtilities
+@inject NavigationManager Navigation
 
-<SfDropDownList TItem="ThemeDetails" TValue="string" @bind-Value="themeName" DataSource="@Themes">
-    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-    <DropDownListEvents TItem="ThemeDetails" TValue="string" ValueChange="OnThemeChange"></DropDownListEvents>
-</SfDropDownList>
+<div class="theme-switcher-container">
+    <SfDropDownList TItem="ThemeOption"
+                    TValue="string"
+                    DataSource="@Themes"
+                    @bind-Value="CurrentTheme">
+        <DropDownListFieldSettings Text="Text" Value="Id" />
+        <DropDownListEvents TItem="ThemeOption"
+                            TValue="string"
+                            ValueChange="OnThemeChanged" />
+    </SfDropDownList>
+</div>
 
 @code {
-    private string themeName;
+    private string CurrentTheme = "bootstrap5.3";
 
-    public class ThemeDetails
+    private static readonly HashSet<string> AllowedThemes = new(StringComparer.OrdinalIgnoreCase)
     {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    private List<ThemeDetails> Themes = new List<ThemeDetails>() {
-        new ThemeDetails(){ ID = "material3", Text = "Material 3" },
-        new ThemeDetails(){ ID = "material", Text = "Material" },
-        new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
-        new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
-        new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
-        new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
-        new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
-        new ThemeDetails(){ ID = "material3-dark", Text = "Material 3 Dark" },
-        new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
-        new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
-        new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
-        new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
+        "bootstrap5.3", "bootstrap5.3-dark",
+        "fluent2", "fluent2-dark",
+        "material3", "material3-dark",
+        "tailwind3", "tailwind3-dark",
+        "highcontrast"
     };
 
-    public void OnThemeChange(ChangeEventArgs<string, ThemeDetails> args)
-    {
-        var theme = GetThemeName();
-        if (theme != args.ItemData.ID)
-        {
-            UrlHelper.NavigateTo(GetUri(args.ItemData.ID), true);
-        }
-    }
-
-    private string GetThemeName()
-    {
-        var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-        QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
-        return theme.Count > 0 ? theme.First() : "bootstrap4";
-    }
-
-    private string GetUri(string themeName)
-    {
-        var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-        return uri.AbsolutePath + "?theme=" + themeName;
-    }
+    private static readonly List<ThemeOption> Themes =
+    [
+        new() { Id = "bootstrap5.3", Text = "Bootstrap 5.3" },
+        new() { Id = "bootstrap5.3-dark", Text = "Bootstrap 5.3 Dark" },
+        new() { Id = "fluent2", Text = "Fluent 2" },
+        new() { Id = "fluent2-dark", Text = "Fluent 2 Dark" },
+        new() { Id = "material3", Text = "Material 3" },
+        new() { Id = "material3-dark", Text = "Material 3 Dark" },
+        new() { Id = "tailwind3", Text = "Tailwind 3.4" },
+        new() { Id = "tailwind3-dark", Text = "Tailwind 3.4 Dark" },
+        new() { Id = "highcontrast", Text = "High Contrast" }
+    ];
 
     protected override void OnInitialized()
     {
-        var theme = GetThemeName();
-        themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
+        var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
+        var query = QueryHelpers.ParseQuery(uri.Query);
+
+        if (query.TryGetValue("theme", out var theme) &&
+            AllowedThemes.Contains(theme.FirstOrDefault() ?? string.Empty))
+        {
+            CurrentTheme = theme.First()!;
+        }
+    }
+
+    private void OnThemeChanged(ChangeEventArgs<string, ThemeOption> args)
+    {
+        if (string.IsNullOrWhiteSpace(args?.Value) || !AllowedThemes.Contains(args.Value))
+        {
+            return;
+        }
+
+        CurrentTheme = args.Value;
+
+        Navigation.NavigateTo(
+            Navigation.GetUriWithQueryParameter("theme", CurrentTheme),
+            forceLoad: true);
+    }
+
+    private sealed class ThemeOption
+    {
+        public string Id { get; set; } = string.Empty;
+        public string Text { get; set; } = string.Empty;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-3. **Add the dropdown component**
+Change the `@rendermode` directive to `InteractiveServer` or `InteractiveWebAssembly` based on your application's render mode configuration.
 
-Include the `DropDownComponent` in your `~/MainLayout.razor` file to display the theme switcher in your application layout.
+3. **Add the theme switcher component**
+
+Include the `ThemeSwitcher` component in your `~/Components/Layout/MainLayout.razor` file to display the theme switcher in your application layout.
 
 {% tabs %}
-{% highlight razor tabtitle="MainLayout.razor" hl_lines="4 5 6 7" %}
-....
-    <main>
-        <div class="top-row px-4">
-            <div class="theme-switcher">
-                @*Theme switcher*@
-                <DropDownComponent></DropDownComponent>
-            </div>
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+{% highlight razor tabtitle="MainLayout.razor" hl_lines="6 7 8" %}
+
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="top-row px-4">
+        <div class="theme-switcher">
+            <ThemeSwitcher />
         </div>
-    ....
-    </main>
+        <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+    </div>
+    ...
 </div>
 
 {% endhighlight %}
 {% endtabs %}
+
+4. **Add a sample component**
+
+Create or update your `Home.razor` component to display the DataGrid component that will reflect the theme changes:
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@page "/"
+@rendermode InteractiveAuto
+@using Syncfusion.Blazor.Grids
+
+<h1>Dynamically Change Theme</h1>
+
+<SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridPageSettings PageSizes="true" PageSize="10"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="140" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; } = [];
+
+    protected override void OnInitialized()
+    {
+        var customers = new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" };
+
+        Orders = Enumerable.Range(1, 75).Select(x => new Order
+        {
+            OrderID = 1000 + x,
+            CustomerID = customers[x % customers.Length],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Today.AddDays(-x)
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-web-app-theme-switching)
 
 ### Change theme dynamically in Blazor Server app
 
