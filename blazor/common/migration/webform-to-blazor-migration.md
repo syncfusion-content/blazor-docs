@@ -156,7 +156,7 @@ In Blazor, scripts and styles are included once at the application level (such a
 
 ## Component specific migration steps
 
-### Add Blazor DataGrid component
+### Migrate to Blazor DataGrid component
 
 For detailed explanation, refer to the [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) and [Web Forms DataGrid getting started guide](https://help.syncfusion.com/aspnet/grid/getting-started).
 
@@ -258,7 +258,7 @@ namespace WebFormsGrid
 {% endhighlight %}
 {% endtabs %}
 
-### Add Blazor Scheduler component
+### Migrate to Blazor Scheduler component
 
 For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started).
 
@@ -370,7 +370,7 @@ namespace WebFormsScheduler
 
 N> The event class (`Meeting` in this example) property names match the Scheduler's default field mappings. Alternatively, you can add an explicit [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html) configuration in `ScheduleEventSettings` to map custom property names.
 
-### Add Blazor Rich Text Editor component
+### Migrate to Blazor Rich Text Editor component
 
 For detailed explanation, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started).
 
