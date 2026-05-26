@@ -180,8 +180,6 @@ var app = builder.Build();
 
 N> Store sensitive keys in user secrets or environment variables, not in appsettings.json.
 
-> **Note**: Store sensitive keys in user secrets or environment variables, not in appsettings.json
-
 ### Step 3: Use Azure OpenAI with Smart Rich Text Editor Component
 
 {% tabs %}
