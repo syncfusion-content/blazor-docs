@@ -53,7 +53,7 @@ The server handles filtering, sorting, and searching. The client requests only t
 {% endhighlight %}
 {% endtabs %}
 
-For more information on remote data binding, see [DataManager Overview](https://blazor.syncfusion.com/documentation/data/getting-started) and [Remote Data Binding](https://blazor.syncfusion.com/documentation/data/adaptors)
+For more information on remote data binding, see [DataManager Overview](https://blazor.syncfusion.com/documentation/data/getting-started) and [Remote Data Binding](https://blazor.syncfusion.com/documentation/data/adaptors).
 
 N> Use server side processing with paging and virtualization for datasets larger than 10,000 records.
 
@@ -61,7 +61,7 @@ N> Use server side processing with paging and virtualization for datasets larger
 
 Paging divides data into smaller sets and renders only one page at a time. This reduces DOM elements, speeds up initial load, and keeps the interface responsive.
 
-In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), enable paging using the AllowPaging property:
+In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), enable paging using the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -112,7 +112,7 @@ For more information, refer to the [Handling server side filtering using adaptor
 
 **Infinite scrolling** auto loads more data as the user scrolls, providing a continuous scrolling experience without pagination controls.
 
-In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), enable virtualization using the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property:
+In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), enable virtualization using the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -192,7 +192,7 @@ For more information, refer to the [Virtualization](https://blazor.syncfusion.co
 
 ## Handle streaming data in Blazor Server
 
-[Blazor Server](https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-9.0#blazor-server) uses SignalR for client-server communication. Sending large datasets in a single SignalR message increases message size and affects stability.
+[Blazor Server](https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-9.0#blazor-server) uses SignalR for client server communication. Sending large datasets in a single SignalR message increases message size and affects stability.
 
 Use paging, virtualization, incremental loading, or Web API/gRPC streaming for large data transfers. Keep SignalR for smaller real time updates like notifications.
 
