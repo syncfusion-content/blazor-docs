@@ -66,7 +66,7 @@ Fires when the user clicks "Stop" during a streaming response.
 ## AIToolbarItemClicked
 **Type:** `EventCallback<AssistViewToolbarItemClickedEventArgs>`
 
-Fires when a user clicks an AssistView toolbar item, providing details of the selected action
+Fires when a user clicks an AssistView toolbar item, providing details of the selected action.
 
 {% tabs %}
 {% highlight razor %}
@@ -150,7 +150,7 @@ Fires before the AI Assistant popup closes. Use to save state or confirm before 
 
 ---
 
-## See Also
+## See also
 
 * [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
 * [Methods](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/method)
