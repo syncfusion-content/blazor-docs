@@ -17,7 +17,7 @@ To apply a different font style to a section of the content, select the text you
 
 ### Built-in font family
 
-The following table lists the default font name and width of the `FontName` dropdown and the available list of font names.
+The following table lists the default font name, the width of the `FontName` dropdown, and the available list of font names.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -32,7 +32,7 @@ The following table lists the default font name and width of the `FontName` drop
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.webp)
+![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-builtin-font-name.webp)
 
 ### Custom font family
 
@@ -129,7 +129,7 @@ The following table lists the default font size and width of the [FontSize](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.webp)
+![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-builtin-font-size.webp)
 
 ### Custom font size
 
@@ -192,23 +192,6 @@ This feature can be enabled separately for the [RichTextEditorFontColor](https:/
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Built-in editor content styles
 
@@ -437,7 +420,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
 ```
 ## Customizing numbered and bulleted lists
 
-This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
+This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase Greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}
