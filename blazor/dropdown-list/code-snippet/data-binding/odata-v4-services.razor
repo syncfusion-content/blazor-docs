@@ -7,7 +7,7 @@
 </SfDropDownList>
 
 @code {
-    public string OrderValue { get; set; } = "TOMSP";
+    public string OrderValue { get; set; } = "ALFKI";
     public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
 
     public class OrderDetails
