@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Rendering Performance Optimization
 
-This guide explains how rendering works in Blazor and provides practical techniques for [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing diffing overhead, and improving UI update efficiency.
+This guide explains how rendering works in Blazor and provides practical techniques for [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing the work needed to check for UI changes, and improving UI update efficiency.
 
 ## Blazor DataGrid example with stable data binding
 
@@ -57,7 +57,7 @@ The following example demonstrates a [Blazor DataGrid](https://www.syncfusion.co
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthdtoWPgPQkxKtj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
-In this pattern, the grid receives the same `Orders` reference unless the data actually changes. This allows Blazor to avoid treating the parameter as new on every render, which reduces the amount of diffing and internal component work.
+In this pattern, the grid receives the same `Orders` reference unless the data actually changes. This allows Blazor to avoid treating the parameter as new on every render, which reduces the work involved in checking for UI changes and internal component processing.
 
 N>  Reassigning a new list instance with the same items still counts as a parameter change and will cause the component to re-render unnecessarily.
 
@@ -422,7 +422,7 @@ In the following example, the [Blazor DropDownList](https://www.syncfusion.com/b
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhHZeCbztldiiGC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
-Although the displayed values remain unchanged, the component receives a new collection reference each time it renders. This leads to unnecessary diffing and can increase rendering overhead.
+Although the displayed values remain unchanged, the component receives a new collection reference each time it renders. This causes unnecessary UI comparisons and increases rendering overhead.
 
 A more efficient approach is to create the collection once and reuse it.
 
