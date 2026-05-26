@@ -499,3 +499,4 @@ N> In addition to standard errors, applications should **validate AI responses**
 When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
 
 ![AI-powered DataGrid in Blazor](../images/ai-powered-blazor-datagrid.webp)
+ 
