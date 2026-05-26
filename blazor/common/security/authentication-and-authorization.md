@@ -127,9 +127,9 @@ N> This example uses Blazor Server with ASP.NET Core Identity. For WebAssembly a
 
 ## Authentication with Blazor components
 
-This section explains how to implement **UI-level** and **data-level authentication** in [Blazor components](https://www.syncfusion.com/blazor-components) such as [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview). UI-level authentication is demonstrated across all components using `<AuthorizeView>` to control the visibility of UI elements based on the user’s authentication state.
+This section explains how to implement **UI-level** and **data-level authentication** in [Blazor components](https://www.syncfusion.com/blazor-components) such as [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview). UI-level authentication is demonstrated across all components using `<AuthorizeView>` to control the visibility of UI elements based on the user’s authentication state.
 
-For data-level security, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is configured to include **Bearer tokens** in API requests, enabling secure access to protected backend endpoints for components such as **DataGrid** and **Scheduler**. In this example, the **TreeView** component uses local data and focuses only on UI-level authentication.
+For data-level security, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is configured to include **Bearer tokens** in API requests, enabling secure access to protected backend endpoints for components such as **Blazor DataGrid** and **Blazor Scheduler**. In this example, the **Blazor TreeView** component uses local data and focuses only on UI-level authentication.
 
 ### Configure Bearer Token for API Requests
 
@@ -149,9 +149,9 @@ N> For testing only, add a Bearer token to `appsettings.json` under the section 
 {% endhighlight %}
 {% endtabs %}
 
-### DataGrid
+### Blazor DataGrid component
 
-The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be secured by using the [SfDataManager.Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property, which enables the component to send authenticated requests to protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be secured by using the [SfDataManager.Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property, which enables the component to send authenticated requests to protected APIs. This ensures that the UI behavior (via `<AuthorizeView>`) is aligned with the underlying data access rules.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -206,9 +206,9 @@ The [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can
 {% endhighlight %}
 {% endtabs %}
 
-### Scheduler
+### Blazor Scheduler component
 
-The [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to send authenticated requests and retrieve event data securely from protected APIs. This ensures that only authorized users can access protected data from the API.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to send authenticated requests and retrieve event data securely from protected APIs. This ensures that only authorized users can access protected data from the API.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -263,9 +263,9 @@ The [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) u
 {% endhighlight %}
 {% endtabs %}
 
-### TreeView
+### Blazor TreeView component
 
-The following example demonstrates UI-level authorization using `<AuthorizeView>`. [TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) in this sample uses local data. For data-bound TreeView scenarios (e.g., async data loading from an API), apply the same `SfDataManager + Bearer token` pattern shown in the DataGrid and Scheduler sections.
+The following example demonstrates UI-level authorization using `<AuthorizeView>`. [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) in this sample uses local data. For data-bound TreeView scenarios (e.g., async data loading from an API), apply the same `SfDataManager + Bearer token` pattern shown in the [Blazor DataGrid component](#blazor-datagrid-component) and [Blazor Scheduler component](#blazor-scheduler-component) sections.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -339,7 +339,7 @@ dotnet run
 **Expected behavior**
 * Blazor components should render **only for authorized users**.
 * If the user is not authenticated, the application should display **Register or Log in** options instead of the Blazor components.
-* After a successful login, the user should be able to view the Blazor components such as **DataGrid, Scheduler, and TreeView** while navigating across different pages.
+* After a successful login, the user should be able to view the Blazor components such as **Blazor DataGrid, Blazor Scheduler, and Blazor TreeView** while navigating across different pages.
 
 **Output:**
 ![Blazor Authentication And Authorization](./authentication-authorization.webp)
