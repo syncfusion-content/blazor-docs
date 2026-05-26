@@ -44,7 +44,7 @@ Color mapping is used to customize the color for each group or item based on the
 }
 ```
 
-![Blazor TreeMap with Color Mapping](images/Colormapping/blazor-treemap-color-mapping.png)
+![Blazor TreeMap with Color Mapping](images/Colormapping/blazor-treemap-color-mapping.webp)
 
 ## Equal color mapping
 
@@ -82,7 +82,7 @@ Equal color mapping is used to fill colors to each item by specifying equal valu
 }
 ```
 
-![Blazor TreeMap with Equal Color Mapping](images/Colormapping/blazor-treemap-equal-color-mapping.png)
+![Blazor TreeMap with Equal Color Mapping](images/Colormapping/blazor-treemap-equal-color-mapping.webp)
 
 ## Desaturation color mapping
 
@@ -103,7 +103,7 @@ Desaturation color mapping is used to apply colors to the items based on the [Mi
 
 N> Refer to the [code block](#range-color-mapping) to know about the property value of the **Fruits**.
 
-![Blazor TreeMap with Desaturation Color Mapping](images/Colormapping/blazor-treemap-desaturation-color-mapping.png)
+![Blazor TreeMap with Desaturation Color Mapping](images/Colormapping/blazor-treemap-desaturation-color-mapping.webp)
 
 ## Desaturation with multiple colors
 
@@ -124,7 +124,7 @@ Multiple colors are used to provide gradient effect to the TreeMap items based o
 
 N> Refer to the [code block](#range-color-mapping) to know about the property value of **Fruits**.
 
-![Multiple Color Mapping in Blazor TreeMap with Desaturation](images/Colormapping/blazor-treemap-desaturation-with-multiple-color.png)
+![Multiple Color Mapping in Blazor TreeMap with Desaturation](images/Colormapping/blazor-treemap-desaturation-with-multiple-color.webp)
 
 ## Palette color mapping
 
@@ -140,7 +140,7 @@ N> Refer to the [code block](#range-color-mapping) to know about the property va
 
 N> Refer to the [code block](#equal-color-mapping) to know about the property value of **Cars**.
 
-![Blazor TreeMap with Palette Color Mapping](images/Colormapping/blazor-treemap-palette-color-mapping.png)
+![Blazor TreeMap with Palette Color Mapping](images/Colormapping/blazor-treemap-palette-color-mapping.webp)
 
 ## Color for items excluded from color mapping
 
@@ -162,7 +162,7 @@ Get the excluded ranges from data source using the color mapping and apply the s
 
 N> Refer to the [code block](#range-color-mapping) to know about the property value of the **Fruits**.
 
-![Blazor TreeMap with Color Mapping for Excluded Items](images/Colormapping/blazor-treemap-color-for-exclude-item.png)
+![Blazor TreeMap with Color Mapping for Excluded Items](images/Colormapping/blazor-treemap-color-for-exclude-item.webp)
 
 ## Bind the colors to items from the data source
 
@@ -194,4 +194,4 @@ N> Refer to the [code block](#range-color-mapping) to know about the property va
 }
 ```
 
-![Binding Colors in Blazor TreeMap](images/Colormapping/blazor-treemap-color-binding.png)
+![Binding Colors in Blazor TreeMap](images/Colormapping/blazor-treemap-color-binding.webp)
