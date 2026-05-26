@@ -99,7 +99,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -110,7 +109,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -129,7 +127,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -195,8 +192,8 @@ Follow the instructions below to register an AI model in your application.
 
 Install the following NuGet packages to your project:
 
-* Microsoft.Extensions.AI
-* Microsoft.Extensions.AI.OpenAI
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
 
 You can install these packages using different methods as shown below:
 
@@ -204,7 +201,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -215,7 +211,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -234,7 +229,6 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -259,10 +253,9 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 27 28 29 30 31 32 33" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 15 16 17 18 19 20 21 22" %}
 
 using Syncfusion.Blazor;
-using Syncfusion.Blazor.SmartRichTextEditor;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
@@ -294,9 +287,9 @@ var app = builder.Build();
 
 Install the following NuGet packages to your project:
 
-* Microsoft.Extensions.AI
-* Microsoft.Extensions.AI.OpenAI
-* Azure.AI.OpenAI
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+* [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 
 You can install these packages using different methods as shown below:
 
@@ -304,7 +297,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
@@ -315,7 +307,6 @@ You can install these packages using different methods as shown below:
 
 {% tabcontent Visual Studio (Package Manager Console) %}
 
-### Steps
 1. In Visual Studio Navigate to:
 
    **Tools → NuGet Package Manager → Package Manager Console**
@@ -335,7 +326,6 @@ Install-Package Azure.AI.OpenAI
 
 {% tabcontent Visual Studio Code / .NET CLI %}
 
-### Steps
 1. Open your project.
 2. Open the terminal:
    - In Visual Studio Code: use the integrated terminal (<kbd>Ctrl</kbd> + <kbd>`</kbd>)
@@ -361,10 +351,9 @@ dotnet add package Azure.AI.OpenAI
 * To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 17 18 19 20 21 22 23 24 25 26 27" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 6 16 17 18 19 20 21 22 23 24 25 26 27" %}
 
 using Syncfusion.Blazor;
-using Syncfusion.Blazor.SmartRichTextEditor;
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -452,9 +441,7 @@ N> Notice the `@rendermode InteractiveServer` directive on the page. This is req
 
 * Use <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog for content improvement.
 
-> **NOTE**
->
-> When using the .NET CLI or Visual Studio Code, ensure that you run the application from the **server (host) project directory**, not from the `.Client` project. The client project does not run independently and is hosted by the server application.
+N> When using the .NET CLI or Visual Studio Code, ensure that you run the application from the **server (host) project directory**, not from the `.Client` project. The client project does not run independently and is hosted by the server application.
 
 ![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.webp)
 

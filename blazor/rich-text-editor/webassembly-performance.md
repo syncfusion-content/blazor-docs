@@ -7,22 +7,22 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# WebAssembly Performance in Blazor RichTextEditor Component
+# WebAssembly Performance in Blazor Rich Text Editor Component
 
-This section outlines performance best practices for using Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
+This section outlines performance best practices for using Syncfusion<sup style="font-size:70%">&reg;</sup> Rich Text Editor component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
 N> You can refer to our Getting Started with [Blazor Server-Side RichTextEditor](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/how-to/blazor-web-assembly) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
-During the Blazor Diffing Algorithm, every view of the RichTextEditor component and its child component will be checked for re-rendering. For instance, having an **EventCallBack** on the application or RichTextEditor will check every child component once the event callback is completed.
+During the Blazor Diffing Algorithm, every view of the Rich Text Editor component and its child component will be checked for re-rendering. For instance, having an **EventCallBack** on the application or Rich Text Editor will check every child component once the event callback is completed.
 
-You can have fine-grained control over the RichTextEditor component rendering. **PreventRender** method helps to avoid unnecessary re-rendering of the RichTextEditor component. This method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
+You can have fine-grained control over the Rich Text Editor component rendering. [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_PreventRender_System_Boolean_) method helps to avoid unnecessary re-rendering of the Rich Text Editor component. This method internally overrides the [ShouldRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ShouldRender) method of the Rich Text Editor to prevent rendering.
 
 In the following example:
 
 * **PreventRender** method is called in the **IncrementCount** method which is a click callback.
-* Now, the RichTextEditor component will not be a part of the rendering, which happens as a result of the click event, and **currentCount** alone will get updated.
+* Now, the Rich Text Editor component will not be a part of the rendering, which happens as a result of the click event, and **currentCount** alone will get updated.
 
 ```cshtml
 @using Syncfusion.Blazor.RichTextEditor
@@ -46,17 +46,17 @@ In the following example:
 ```
 
 N> **PreventRender** method accepts the boolean argument that accepts true or false to disable or enable rendering, respectively.
-<br/> **PreventRender** method can be used only after the RichTextEditor component completes initial rendering. Calling this method during initial rendering has no effect.
+<br/> **PreventRender** method can be used only after the Rich Text Editor component completes initial rendering. Calling this method during initial rendering has no effect.
 
-## Avoid unnecessary component renders after RichTextEditor events
+## Avoid unnecessary component renders after Rich Text Editor events
 
-When a callback method is assigned to the RichTextEditor events, then the **StateHasChanged** will be called in the parent component of the RichTextEditor automatically once the event is completed.
+When a callback method is assigned to the Rich Text Editor events, then the [StateHasChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged?view=aspnetcore-10.0) will be called in the parent component of the Rich Text Editor automatically once the event is completed.
 
-To prevent unnecessary re-rendering of the RichTextEditor component by calling the **PreventRender** method.
+To prevent unnecessary re-rendering of the Rich Text Editor component by calling the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_PreventRender_System_Boolean_) method.
 
 In the following example:
 
-* **OnToolbarClick** event is bound to a callback method, when the editor content gets changed by toolbar action the event is completed, the **StateHasChanged** will be invoked for the parent component.
+[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnToolbarClick) event is bound to a callback method, when the editor content gets changed by toolbar action the event is completed, the [StateHasChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged?view=aspnetcore-10.0) will be invoked for the parent component.
 
 ```cshtml
 @using Syncfusion.Blazor.RichTextEditor
@@ -79,5 +79,5 @@ In the following example:
 }
 ```
 
-N> **PreventRender** method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.  
+N> **PreventRender** method internally overrides the **ShouldRender** method of the Rich Text Editor to prevent rendering.  
 <br/> It is recommended to use the **PreventRender** method for user-interactive events such as `OnToolbarClick`, `UpdatedToolbarStatus`, etc., for better performance.
