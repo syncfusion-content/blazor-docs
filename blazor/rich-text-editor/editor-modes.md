@@ -45,7 +45,7 @@ To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/
 
 The IFrame editor mode enables content editing within an iframe, isolating styles from the main page.
 
-For more details, refer to the [Iframe Editor](../iframe) documentation.
+For more details, refer to the [Iframe Editor](./iframe) documentation.
 
 ## Markdown editor
 
@@ -82,7 +82,7 @@ To enable Markdown editing, set the [EditorMode](https://help.syncfusion.com/cr/
 
 ![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.webp)
 
-For further details on Markdown editing, refer to the [Markdown](./markdown) section.
+For further details on Markdown editing, refer to the [Markdown](https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp) section.
 
 N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) demo to learn how to render and configure the editor tools.
 
