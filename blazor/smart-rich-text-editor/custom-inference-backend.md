@@ -32,9 +32,11 @@ public interface IChatInferenceService
 
 Below is a sample implementation of a mock AI service named `MockAIService`. This service demonstrates how to implement the `IChatInferenceService` interface by returning sample responses. You can replace the logic with your own AI integration.
 
+1. Create a new class file named `MockAIService.cs` in your project.
+2. Add the following code:
+
 ```csharp
 using Syncfusion.Blazor.AI;
-using System.Threading.Tasks;
 
 public class MockAIService : IChatInferenceService
 {
@@ -70,8 +72,8 @@ var app = builder.Build();
 ## Testing the Custom AI Integration
 
 1. Implement and register the custom AI service as shown above.
-2. Add the Smart Rich Text Editor component to your application.
-3. Run the application using <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS).
+2. Follow the [Getting Started](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp) guide to configure and render the Smart Rich Text Editor component in the application and that prerequisites are met.
+3. Run the application press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component in the default web browser.
 4. Use the AI AssistView or AI Commands in the Smart Rich Text Editor to verify that the custom AI service generates appropriate responses.
 
 ![Smart Rich Text Editor with Custom AI Service](images/smart-richtexteditor-custom-ai-service.gif)
