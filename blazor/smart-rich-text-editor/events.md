@@ -66,7 +66,7 @@ Fires when the user clicks "Stop" during a streaming response.
 ## AIToolbarItemClicked
 **Type:** `EventCallback<AssistViewToolbarItemClickedEventArgs>`
 
-Fires when a user clicks an AssistView toolbar item, providing details of the selected action
+Fires when a user clicks an AssistView toolbar item, providing details of the selected action.
 
 {% tabs %}
 {% highlight razor %}
