@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Chart Component in Blazor MAUI App
 
-This section explains you through the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section explains the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -54,7 +54,7 @@ cd MauiBlazorApp
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`).
+Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package Syncfusion.Blazor.Charts --version {{ site.releaseversion }}).
 
 Alternatively, run the following command in the Package Manager Console to achieve the same.
 
@@ -72,6 +72,8 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
+N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
@@ -83,7 +85,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file. This step enables the Syncfusion components to work in your application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" %}
@@ -108,7 +110,7 @@ public static class MauiProgram
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file.
+The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file (this is the main HTML entry point of your MAUI Blazor application).
 
 ```html
 
@@ -137,7 +139,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chart component 
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Chart Component](images/blazor-chart-maui-app.png)
+![Blazor Chart Component](images/blazor-chart-maui-app.webp)
 
 ### How to run the sample on android
 
@@ -147,7 +149,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Chart Component](images/getting-started/blazor-chart.png)
+![Blazor Chart Component](images/getting-started/blazor-chart.webp)
 
 ## See also
 

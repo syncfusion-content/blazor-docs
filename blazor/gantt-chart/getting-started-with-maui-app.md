@@ -88,19 +88,6 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add import namespaces
-
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Gantt` namespaces.
-
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor 
-@using Syncfusion.Blazor.Gantt
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
@@ -129,6 +116,9 @@ public static class MauiProgram
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
+
+- Add the **stylesheet reference inside the `<head>` tag** of the `index.html` file.
+- Add the **script reference inside the `<body>` tag** of the `index.html` file.
 
 ```html
 
@@ -193,21 +183,30 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWNVzLgvAOlvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the .NET MAUI Blazor Hybrid app.
+The application will open as a native app.
+
 ### How to run the sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Gantt Chart Component](images/blazor-gantt-maui-app.png)
+![Blazor Gantt Chart Component](images/blazor-gantt-maui-app.webp)
 
 ### How to run the sample on Android
+
+Run the sample in Android Emulator mode, and it will launch the Blazor MAUI application on the configured Android virtual device.
+
+![Blazor Gantt Chart Component](blazor-gantt-maui-android.webp)
 
 To run the Blazor Gantt Chart in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
-N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
+N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ## See also
 

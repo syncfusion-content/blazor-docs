@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Custom toolbar in Blazor DataGrid
 
-The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized Grid experience.
+The custom toolbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) enables a distinctive toolbar layout, style, and behavior tailored to application requirements, delivering a personalized Grid experience.
 
 This is implemented by using the `Template` property, which provides extensive customization options for the toolbar. Define a custom template for the toolbar and handle toolbar item actions in the **OnClick** event.
 
@@ -115,7 +115,7 @@ This is implemented by using the `Template` property, which provides extensive c
 
 ## Render image with text in custom Toolbar
 
-Rendering an image with text in the custom toolbar of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid helps provide context and improves visual clarity for actions.
+Rendering an image with text in the custom toolbar of the Blazor DataGrid helps provide context and improves visual clarity for actions.
 
 To render an image with text in the custom toolbar, use the `Template` in [SfToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html).
 
@@ -220,7 +220,7 @@ To render an image with text in the custom toolbar, use the `Template` in [SfToo
 
 ## Render SfDropDownList in Custom Toolbar
 
-Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid extends toolbar functionality and enables actions based on user selection.
+Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor DataGrid extends toolbar functionality and enables actions based on user selection.
 
 This is achieved by using the `Template`. The example below shows how to render the `SfDropDownList` in the custom toolbar, where the toolbar template binds the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
 
@@ -351,7 +351,7 @@ In the **OnChange** method, the selected item text determines the action. For ex
 
 ## Render SfAutoComplete in custom toolbar
 
-Rendering the [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) in the custom toolbar of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enhances usability by enabling dynamic search based on user input.
+Rendering the [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) in the custom toolbar of the Blazor DataGrid enhances usability by enabling dynamic search based on user input.
 
 This is implemented by using the `Template` property of the [Toolbar](https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp). The example below renders the `SfAutoComplete` within the custom toolbar. The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_ValueChange) event of `SfAutoComplete` is bound to the **OnSearch** method, which searches the Grid based on the selected input.
 
@@ -468,7 +468,7 @@ In the **OnSearch** method, the selected value from `SfAutoComplete` is used as 
 
 ## Render a component or element using the Toolbar Template
 
-Rendering a component or element by using the toolbar template in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid extends the toolbar with custom components such as buttons, dropdowns, input fields, icons, or other UI elements. Event handlers can be bound within the template to enable actions for the added components.
+Rendering a component or element by using the toolbar template in the Blazor DataGrid extends the toolbar with custom components such as buttons, dropdowns, input fields, icons, or other UI elements. Event handlers can be bound within the template to enable actions for the added components.
 
 To render custom components within the toolbar, use the `Template` directive. For example, include an [SfButton](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.buttons.sfbutton.html) and perform specific Grid actions based on button clicks. When the **ExcelExport** button is clicked, [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) exports the Grid to Excel. When the **PdfExport** button is clicked, [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) exports the Grid to PDF. Likewise, when the Print button is clicked, [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) is triggered to print the Grid.
 

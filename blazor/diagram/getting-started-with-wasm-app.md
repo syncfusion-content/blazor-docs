@@ -66,14 +66,17 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
+This command creates a new Blazor WebAssembly App and places it in a new directory called `BlazorApp` inside your current location.
+
 {% endtabcontent %}
 
 {% endtabcontents %}
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-{% tabs %}
-{% highlight C# tabtitle="Visual Studio" %}
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution → Select the package -> Install*).
 
@@ -88,29 +91,44 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-{% endhighlight %}
+{% endtabcontent %}
 
-{% highlight C# tabtitle="Visual Studio Code" %}
+{% tabcontent Visual Studio Code %}
 
 Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the C# package management(*Right click the ".csproj" file, -> C# package management -> Add nuget package -> Select nuget package and version*)
 
-{% endhighlight %}
+{% endtabcontent %}
 
-{% highlight C# tabtitle=".NET CLI" %}
+{% tabcontent .NET CLI %}
 
 Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the .NET CLI command.
 
+{% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Diagram --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+
+## Add import namespaces
+
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Diagram` namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Diagram;
 
 {% endhighlight %}
 {% endtabs %}
-
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
@@ -267,3 +285,7 @@ In this example:
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application in Visual Studio. 
 * Run the application using `dotnet run` command in Command prompt.
 * This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
+
+The output will appear as follows:
+
+![Getting Started in Blazor Diagram](images/blazor-diagram-getting-started.webp)

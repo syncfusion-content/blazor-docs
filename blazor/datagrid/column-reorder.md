@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Reorder in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows columns to be reordered by dragging and dropping a column header from one position to another within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) allows columns to be reordered by dragging and dropping a column header from one position to another within the Grid.
 
 To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
@@ -83,7 +83,7 @@ public class OrderDetails
 
 ## Prevent reordering for particular column
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows all columns to be reordered by dragging and dropping their headers. However, certain columns are intended to remain fixed in position.
+The Blazor DataGrid allows all columns to be reordered by dragging and dropping their headers. However, certain columns are intended to remain fixed in position.
 
 To disable reordering for a specific column, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of that [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 
@@ -154,7 +154,7 @@ public class OrderDetails
 
 ## Reorder columns via programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows columns to be reordered programmatically using built-in methods. Columns can be moved based on index or field name, enabling dynamic layout control through external UI elements such as buttons.
+The Blazor DataGrid allows columns to be reordered programmatically using built-in methods. Columns can be moved based on index or field name, enabling dynamic layout control through external UI elements such as buttons.
 
 > To reorder columns externally, set the  [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **true**.
 
@@ -436,7 +436,7 @@ public class OrderDetails
 
 ## Reorder events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides events to handle column reordering interactions. These events allow executing custom logic during drag-and-drop operations.
+The Blazor DataGrid provides events to handle column reordering interactions. These events allow executing custom logic during drag-and-drop operations.
 
 1. [ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering): Triggered while a column header is being dragged.
 2. [ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered): Triggered when a column header is dropped on the target column.

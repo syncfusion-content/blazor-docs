@@ -43,8 +43,9 @@ Create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](http
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-{% tabs %}
-{% highlight C# tabtitle="Visual Studio" %}
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution → Select the package -> Install*).
 
@@ -59,14 +60,14 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-{% endhighlight %}
+{% endtabcontent %}
 
-{% highlight C# tabtitle="Visual Studio Code" %}
+{% tabcontent Visual Studio Code %}
 
 Install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the C# package management(*Right click the ".csproj" file, -> C# package management -> Add nuget package -> Select nuget package and version*)
 
-{% endhighlight %}
-{% endtabs %}
+{% endtabcontent %}
+{% endtabcontents %}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -134,9 +135,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes" />
+<SfDiagramComponent Connectors="@connectors" Height="700px" Nodes="@nodes" />
 
 @code
 {
@@ -262,9 +261,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
-## How to run the sample on windows
+## How to run the sample on Windows
 
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+Run the sample in **Windows Machine** mode, and it will run Blazor MAUI in Windows.
 
 ![Run Windows machine](images/blazor-diagram-maui.png)
 
@@ -274,7 +273,7 @@ When the application is successfully launched, the Diagram component will seamle
 
 ## How to run the sample on Android
 
-To run the Blazor Diagram component in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the Blazor Diagram component in a Blazor Android MAUI application using the **Android Emulator**, follow these steps:
 
 ![Run Windows machine](images/blazor-diagram-maui-android.png)
 

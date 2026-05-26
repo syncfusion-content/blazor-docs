@@ -60,7 +60,7 @@ properties.
 
 ```
 
-![Binding Local Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-local-data.png)
+![Binding Local Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-local-data.webp)
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data binding.
 
@@ -102,7 +102,7 @@ Stock Chart is a generic component strongly bound to a model type. When the mode
 
 ```
 
-![Blazor Stock Chart with ExpandoObject](images/common/blazor-stock-chart-expando.png)
+![Blazor Stock Chart with ExpandoObject](images/common/blazor-stock-chart-expando.webp)
 
 ### DynamicObject binding
 
@@ -167,7 +167,7 @@ Stock Chart supports **DynamicObject** as a data source when the model type is u
 
 ```
 
-![Blazor Stock Chart with Dynamic Object](images/common/blazor-stock-chart-dynamic.png)
+![Blazor Stock Chart with Dynamic Object](images/common/blazor-stock-chart-dynamic.webp)
 
 ## Remote Data
 
@@ -199,7 +199,7 @@ Stock Chart supports **DynamicObject** as a data source when the model type is u
 
 ```
 
-![Binding OData in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.png)
+![Binding OData in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.webp)
 
 ### Binding with OData v4 services
 
@@ -229,7 +229,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ```
 
-![Binding OData v4 Adaptor in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.png)
+![Binding OData v4 Adaptor in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.webp)
 
 ### Web API
 
@@ -259,7 +259,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ```
 
-![Binding Remote Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.png)
+![Binding Remote Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.webp)
 
 ## Observable collection
 
@@ -316,7 +316,7 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 
 ```
 
-![Blazor Chart with Web API Binding](images/common/blazor-stock-chart-observable-collection.png)
+![Blazor Chart with Web API Binding](images/common/blazor-stock-chart-observable-collection.webp)
 
 ## Entity Framework
 
@@ -622,7 +622,7 @@ When no data is available to render in the stock chart, the [NoDataTemplate](htt
 
 ```
 
-![No Data Template in Blazor Stock Chart](images/common/blazor-stock-chart-no-data-template.gif)
+![No Data Template in Blazor Stock Chart](images/common/blazor-stock-chart-no-data-template.webp)
 
 ## See Also
 

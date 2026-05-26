@@ -9,11 +9,11 @@ documentation: ug
 
 # Template Editing in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component supports template editing, offering a flexible approach to customize the appearance and behavior of cells during editing. **Templates** can be used to define the structure and content of editable cells within the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component supports template editing, offering a flexible approach to customize the appearance and behavior of cells during editing. **Templates** can be used to define the structure and content of editable cells within the Grid.
 
 ## Inline template editing
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports inline template editing, which allows customization of the default inline editing behavior by enabling custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The Blazor DataGrid supports inline template editing, which allows customization of the default inline editing behavior by enabling custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 This configuration is useful for rendering highly customized editors or modifying the layout of editable cells.
 
@@ -183,7 +183,7 @@ public class OrderDetails
 
 ## Dialog template editing
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dialog template editing, which allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog. This configuration is useful for designing customized edit dialogs or including additional fields that are not part of the column model.
+The Blazor DataGrid supports dialog template editing, which allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog. This configuration is useful for designing customized edit dialogs or including additional fields that are not part of the column model.
 
 To implement dialog template editing:
 
@@ -353,7 +353,7 @@ public class OrderDetails
 
 ### Disable components in dialog template
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, specific components rendered inside the dialog template can be disabled based on data source values. This behavior is controlled by setting the `Enabled` property of the components.
+In the Blazor DataGrid, specific components rendered inside the dialog template can be disabled based on data source values. This behavior is controlled by setting the `Enabled` property of the components.
 
 To dynamically modify the `Enabled` property within the dialog template, use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events of the grid. These events are triggered before adding a new record or editing an existing record, allowing conditional control over component states.
 
@@ -524,7 +524,7 @@ public class OrderDetails
 
 ### Get value from editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports reading, formatting, and updating the current editor value before it is saved. This functionality is useful for performing actions such as formatting or validation prior to committing data to the underlying data source.
+The Blazor DataGrid supports reading, formatting, and updating the current editor value before it is saved. This functionality is useful for performing actions such as formatting or validation prior to committing data to the underlying data source.
 
 To implement this behavior, use the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event, which is triggered before the save action is executed in the grid.
 
@@ -688,7 +688,7 @@ public class OrderDetails
 
 ### Set focus to particular column editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows control over the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog opens. In scenarios where the first input element is disabled or hidden, a valid input element can be explicitly focused.
+The Blazor DataGrid allows control over the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog opens. In scenarios where the first input element is disabled or hidden, a valid input element can be explicitly focused.
 
 This behavior can be achieved using the `Created` or `DataBound` event of the corresponding component.
 
@@ -856,7 +856,7 @@ public class OrderDetails
 
 ## Render tab component inside the dialog template
 
-Enhance the editing experience in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by rendering a [Tab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp) component inside the dialog template. This configuration is useful for presenting multiple editing sections or categories in a tabbed layout, providing a more intuitive and navigable interface for data editing.
+Enhance the editing experience in the Blazor DataGrid by rendering a [Tab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp) component inside the dialog template. This configuration is useful for presenting multiple editing sections or categories in a tabbed layout, providing a more intuitive and navigable interface for data editing.
 
 To enable this functionality:
 
@@ -1070,7 +1070,7 @@ public class OrderDetails
 
 ### Complex data binding with dialog template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports editing of complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using a dialog template. This configuration is suitable for managing hierarchical or nested data structures.
+The Blazor DataGrid supports editing of complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using a dialog template. This configuration is suitable for managing hierarchical or nested data structures.
 
 To bind and edit complex objects, render the required HTML editor elements or components such as [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). Use two-way data binding (**@bind-Value**) to ensure real-time updates to the data in the `GridColumn`.
 
@@ -1178,7 +1178,7 @@ public class SalaryDetails
 
 ### Use FileUploader in Grid dialog edit template
 
-Images can be uploaded during add or edit operations and displayed in a grid column using the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) and [Dialog Template](https://blazor.syncfusion.com/documentation/datagrid/template-editing#dialog-template-editing) features of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. The `Column Template` is used to display the image, while the `Dialog Template` renders the [SfUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) component for image upload during dialog editing.
+Images can be uploaded during add or edit operations and displayed in a grid column using the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) and [Dialog Template](https://blazor.syncfusion.com/documentation/datagrid/template-editing#dialog-template-editing) features of the Blazor DataGrid. The `Column Template` is used to display the image, while the `Dialog Template` renders the [SfUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) component for image upload during dialog editing.
 
 In this configuration, add, edit, and save operations are handled using the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing), and [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) events of the grid. Image file selection and upload actions are performed using the [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) events of the `SfUploader`.
 

@@ -54,7 +54,7 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrotEjvfKbMpjHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Last Data Label in Blazor Column Chart](images/last-value/blazor-column-chart-last-value-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrotEjvfKbMpjHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Last Data Label in Blazor Column Chart](images/last-value/blazor-column-chart-last-value-label.webp)" %}
 
 ## Customization
 
@@ -121,7 +121,7 @@ In the [ChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVojaDbzJnZIqnR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Last Data Label in Blazor Column Chart Customization](images/last-value/blazor-column-chart-last-value-label-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVojaDbzJnZIqnR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Last Data Label in Blazor Column Chart Customization](images/last-value/blazor-column-chart-last-value-label-customization.webp)" %}
 
 ## See also
 

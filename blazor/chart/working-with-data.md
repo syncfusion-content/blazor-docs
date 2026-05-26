@@ -54,7 +54,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKCrrVgRsckQvf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKCrrVgRsckQvf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.webp)" %}
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -91,7 +91,7 @@ Chart is a generic component which is strongly bound to a model type. There are 
 }
 ```
 
-![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.png)
+![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.webp)
 
 ### DynamicObject binding
 
@@ -148,7 +148,7 @@ Chart supports **DynamicObject** data source when the model type is unknown. The
 }
 ```
 
-![Blazor Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.png)
+![Blazor Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.webp)
 
 ## Remote data
 
@@ -172,7 +172,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 </SfChart>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAihBrgvFhnbIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAihBrgvFhnbIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.webp)" %}
 
 ### Binding with OData services
 
@@ -201,7 +201,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
     </ChartSeriesCollection>
 </SfChart>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLxXVDKBZhqezPa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLxXVDKBZhqezPa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.webp)" %}
 
 ### Sending additional parameters to the server
 
@@ -503,7 +503,7 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUiLBLAkpRpchN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/observable-collection.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUiLBLAkpRpchN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/observable-collection.webp)" %}
 
 ## Empty points
 
@@ -602,7 +602,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgMVhLAaIiyPBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgMVhLAaIiyPBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.webp)" %}
 
 ## Handling No Data
 

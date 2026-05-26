@@ -38,7 +38,7 @@ N> The Rich Text Editor link tool validates the URLs as you type them in the web
 
 ## Enable auto-linking
 
-When you type URL and enter key to the Rich Text Editor, the typed URL will be automatically changed into the hyperlink.
+When you type a URL and press the Enter key in the Rich Text Editor, the typed URL will be automatically changed into a hyperlink.
 
 ## Enable auto URL conversion
 
