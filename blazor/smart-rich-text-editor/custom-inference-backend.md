@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Edit
 
 ## IChatInferenceService Interface
 
-The `IChatInferenceService` interface defines a contract for integrating custom AI services with Syncfusion Smart Components. It enables the Smart Rich Text Editor to request and receive AI-generated responses.
+The `IChatInferenceService` interface defines a contract for integrating custom AI services with Syncfusion Smart Rich Text Editor. It enables the Smart Rich Text Editor to request and receive AI-generated responses.
 
 ```csharp
 using Syncfusion.Blazor.AI;
