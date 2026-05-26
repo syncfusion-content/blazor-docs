@@ -72,6 +72,7 @@ Tools here allow users to create ordered and unordered lists, change the list st
 | UnorderedList | ![UnorderedList icon](../images/unorder-list.png) | Create a new list item(bulleted). |
 | NumberFormatList | ![NumberFormatList icon](../images/number-format.png) | Allows to create list items with various list style types(numbered).|
 | BulletFormatList | ![BulletFormatList icon](../images/bullet-format.png) | Allows to create list items with various list style types(bulleted).|
+| CheckList | ![CheckList icon](../images/checklist.png) | Allows creating checklist items with selectable (checked/unchecked) states.|
 | Indent | ![Indent icon](../images/increase-indent.png) | Allows to increase the indent level of the content.|
 | Outdent | ![Outdent icon](../images/decrease-indent.png) | Allows to decrease the indent level of the content.|
 
@@ -81,7 +82,6 @@ This section provides tools for inserting and managing hyperlinks within the con
 
 | Name | Icons | Summary | 
 |----------------|---------|---------|
-| Hyperlink | ![Hyperlink icon](../images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.|
 | InsertLink | ![InsertLink icon](../images/create-link.png) |Allows users to add a link to a particular item. |
 
 #### Link quicktoolbar items
@@ -110,7 +110,8 @@ The image quicktoolbar offers a set of tools to edit images inserted in the Rich
 |----------------|---------|---------|
 | Replace Image  | ![Replace icon](../images/image-replace.png) | Replace the selected image with another image. | 
 | Align Image | ![Alignment icon](../images/alignments.png) | The image can be aligned to the right, left, or center. | 
-| Remove Image | ![Remove icon](../images/table-remove.png) | Allows to remove the selected image from the editor. | 
+| Remove Image | ![Remove icon](../images/table-remove.png) | Allows to remove the selected image from the editor. |
+| Hyperlink | ![Hyperlink icon](../images/create-link.png) | Creates a hyperlink to a text or image to a specific location in the content.| 
 | OpenImageLink | ![OpenImageLink icon](../images/open-link.png) | Opens the link that is attached to the selected image. | 
 | EditImageLink | ![EditImageLink icon](../images/edit-link.png) | Allows to edit the link that is attached to the selected image. |
 | RemoveImageLink | ![RemoveImageLink icon](../images/remove-link.png) | Removes the link that is attached to the selected image. | 
@@ -136,9 +137,10 @@ The table quicktoolbar provides options for table editing within the Rich Text E
 | TableHeader | ![TableHeader icon](../images/table-headers.png) | Allows you to add a table header. |
 | TableColumns | ![TableColumns icon](../images/table-columns.png) | Shows the dropdown to insert a column or delete the selected column. |
 | TableRows | ![TableRows icon](../images/table-row.png) | Shows the dropdown to insert a row ors delete the selected row. | 
-| TableCellHorizontalAAlignmentslign | ![TableCellHorizontalAlign icon](../images/alignments.png) | Allows the table cell content to be aligned horizontally. | 
+| Alignments | ![Alignments icon](../images/alignments.png) | Allows the table cell content to be aligned horizontally. | 
 | TableCellVerticalAlign | ![TableCellVerticalAlign icon](../images/vertical-align.png) | Allows the table cell content to be aligned vertically. | 
 | TableEditProperties | ![TableEditProperties icon](../images/table-edit.png) | Allows you to change the table width, padding, and cell spacing styles. |
+| Styles | ![Styles icon](../images/table-styles.png) | Provides options to customize table border styles. |
 
 ### Horizontal Line
 
@@ -154,8 +156,8 @@ These tools allow users to easily undo or redo any changes made within the edito
 
 | Name | Icons | Summary |
 |----------------|---------|---------|
-| Undo | ![Undo icon](../images/undo.png) | Allows to undo the actions.|toolbarSettings: { items: ['Undo']} |
-| Redo | ![Redo icon](../images/redo.png) | Allows to redo the actions.|toolbarSettings: { items: ['Redo']}|
+| Undo | ![Undo icon](../images/undo.png) | Allows to undo the actions.|
+| Redo | ![Redo icon](../images/redo.png) | Allows to redo the actions.|
 
 ### Other tools
 
@@ -170,6 +172,11 @@ This section contains miscellaneous tools such as full-screen mode, print, previ
 | Print | ![Print icon](../images/print.png) | Allows to print the editor content. |
 | ClearAll | ![ClearAll icon](../images/clear-all.png) | Removes all styles that have been applied to the selected text.| 
 | SourceCode | ![SourceCode icon](../images/code-view.png)  | Rich Text Editor includes the ability for users to directly edit HTML code via “Source View”. If you made any modification in Source view directly, synchronize with Design view.|
+| Insert Code Block | ![CodeBlock icon](../images/insert-code-block.png) | Allows inserting code snippets in a formatted and structured way within the editor.|
+| LineHeight | ![LineHeight icon](../images/line-height.png) | Allows adjusting the spacing between lines of text within the editor.|
+| ImportWord | ![ImportWord icon](../images/import-word.png) | Imports content from a Word document into the editor.|
+| ExportWord | ![ExportWord icon](../images/export-word.png) | Exports the editor content as a Word document.|
+| ExportPdf | ![ExportPdf icon](../images/export-pdf.png) | Exports the editor content as a PDF file.|
 
 ## Removing built-in tool from toolbar
 

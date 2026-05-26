@@ -111,6 +111,8 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
 }
 ```
 
+![Blazor RichTextEditor with customizing character count display](./images/blazor-richtexteditor-character-count.png)
+
 ## Modifying the editor container border
 
 Use the following CSS to customize the border color in the Rich Text Editor's container.
@@ -123,6 +125,8 @@ Use the following CSS to customize the border color in the Rich Text Editor's co
 }
 
 ```
+
+![Blazor RichTextEditor with modifying container border](./images/blazor-richtexteditor-border.png)
 
 ## Source code view 
 
@@ -141,20 +145,6 @@ The source code is presented with enhanced formatting and consistent indentation
 {% endtabs %}
 
 ![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.png)
-
-### Refreshing the editor UI
-
-While rendering the Rich Text Editor inside the dialog component, the dialog container and its wrapper elements are styled with display: none, so the editor’s toolbar does not get the proper offset width and will render above the edit area container. To resolve this issue, call the `RefreshUI` method of the RichTextEditor in the dialog's opened event.
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/refresh.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with refresh editor](./images/blazor-richtexteditor-refresh-editor.png)
 
 ## Highlight the specific lines
 
