@@ -87,7 +87,7 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 
 ---
 
-## See Also
+## See also
 
 * [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
 * [Appearance](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/appearance)

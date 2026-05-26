@@ -150,7 +150,7 @@ Fires before the AI Assistant popup closes. Use to save state or confirm before 
 
 ---
 
-## See Also
+## See also
 
 * [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
 * [Methods](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/method)

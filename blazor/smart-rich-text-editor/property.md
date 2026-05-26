@@ -347,7 +347,7 @@ Configures the toolbar in the AI response viewer section.
 
 ---
 
-## See Also
+## See also
 
 * [Methods](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/method)
 * [Appearance](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/appearance)
