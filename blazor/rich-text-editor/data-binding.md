@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Value Binding in Blazor RichTextEditor
+# Value Binding in Blazor Rich Text Editor
 
 The Blazor Rich Text Editor supports two-way data binding to its [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property using the `@bind-Value` attribute. The `Value` property accepts a `string` type. When the editor's content is modified, the bound variable is automatically updated. Likewise, any changes to the variable will be reflected in the editor's content.
 
@@ -34,14 +34,14 @@ The following example demonstrates how to use the `ValueChange` event to get a n
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor ID="AutoSave" SaveInterval="saveInterval" AutoSaveOnIdle="true" Value="@Value">
+<SfRichTextEditor ID="AutoSave" SaveInterval="SaveInterval" AutoSaveOnIdle="true" Value="@Value">
     <p>Type or edit the content to be saved automatically in the editor </p>
     <RichTextEditorEvents ValueChange="UpdateStatus" />
 </SfRichTextEditor>
 
 @code{
     private string Value { get; set; } = "<p>Start to type a content to save </p>";
-    private int saveInterval { get; set; } = 5000;
+    private int SaveInterval { get; set; } = 5000;
     private void UpdateStatus(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
         // Place the codes here, which save the Rich Text Editor value into database.
