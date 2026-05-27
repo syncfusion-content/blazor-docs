@@ -278,14 +278,6 @@ Some Syncfusion components require component-specific scripts in addition to the
 
 If you encounter "Failed to load resource" errors for `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, verify that the `Syncfusion.Blazor.Core` package is available in the project, the script path is correct, and the project has been built or published successfully.
 
-## Common error messages and solutions
-
-| Error Message | Likely Cause | Solution |
-|---------------|-------------|----------|
-| "Syncfusion is not defined" | Missing or incorrectly ordered script reference | Add `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` after the Blazor framework script |
-| "Unable to resolve service for type 'SyncfusionBlazorService'" | Missing Syncfusion service registration | Add `builder.Services.AddSyncfusionBlazor()` in Program.cs |
-| "Component is not interactive" | Missing render mode on the page/component | Add `@rendermode InteractiveServer` / `@rendermode InteractiveWebAssembly` or configure global render mode in Program.cs |
-
 ## Issue 4: Missing service registration
 
 **Symptom**: Runtime exception "Unable to resolve service for type 'Syncfusion.Blazor.SyncfusionBlazorService'" when attempting to render Syncfusion components. The application may build successfully but crash during component initialization.
@@ -400,3 +392,11 @@ var app = builder.Build();
 * Use dependency injection best practices (register services with appropriate lifetimes)
 
 The `AddSyncfusionBlazor()` service registration is mandatory for all Blazor components. Missing this registration is one of the most common setup errors.
+
+## Common error messages and solutions
+
+| Error Message | Likely Cause | Solution |
+|---------------|-------------|----------|
+| "Syncfusion is not defined" | Missing or incorrectly ordered script reference | Add `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` after the Blazor framework script |
+| "Unable to resolve service for type 'SyncfusionBlazorService'" | Missing Syncfusion service registration | Add `builder.Services.AddSyncfusionBlazor()` in Program.cs |
+| "Component is not interactive" | Missing render mode on the page/component | Add `@rendermode InteractiveServer` / `@rendermode InteractiveWebAssembly` or configure global render mode in Program.cs |

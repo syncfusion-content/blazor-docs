@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Performance and Security Issues in Blazor Applications
+# Performance, Security, and Troubleshooting in Blazor Applications
 
 This guide covers performance optimization and security considerations when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper attention to performance and security ensures scalable, safe, and user-friendly applications.
 
@@ -145,7 +145,6 @@ var app = builder.Build();
 {% highlight C# tabtitle="Program.cs" %}
 
 using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
 
 var builder = WebApplication.CreateBuilder(args);
 

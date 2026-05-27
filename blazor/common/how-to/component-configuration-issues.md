@@ -154,10 +154,8 @@ For production deployments, always balance functionality requirements with secur
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.JSInterop
 
-// Add Syncfusion core namespace
 @using Syncfusion.Blazor
 
-// Add component-specific namespaces as needed
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Charts
@@ -166,7 +164,6 @@ For production deployments, always balance functionality requirements with secur
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-// Add your application namespaces (replace with your actual project namespace)
 @using YourApp
 @using YourApp.Components
 
@@ -186,14 +183,25 @@ If you prefer to import namespaces only where needed.
 
 <PageTitle>Data Grid</PageTitle>
 
-<SfGrid DataSource="@Orders">
+<SfGrid TValue="Order" DataSource="@Orders" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID"></GridColumn>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="@nameof(Order.CustomerName)" HeaderText="Customer Name" Width="180" />
     </GridColumns>
 </SfGrid>
 
 @code {
-    // Component code
+    private List<Order> Orders { get; set; } = new()
+    {
+        new Order { OrderID = 1001, CustomerName = "Customer A" },
+        new Order { OrderID = 1002, CustomerName = "Customer B" }
+    };
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerName { get; set; } = string.Empty;
+    }
 }
 
 {% endhighlight %}
