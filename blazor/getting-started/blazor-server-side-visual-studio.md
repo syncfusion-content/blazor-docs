@@ -13,7 +13,7 @@ This article provides step-by-step instructions for building a Blazor Server App
 
 ## Using Playground
 
-[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows interaction with Blazor components directly in a web browser without needing to install any NuGet packages. By default, the `Syncfusion.Blazor` package is included.
+[Blazor Playground](https://blazor.syncfusion.com/documentation/common/playground/getting-started) allows interaction with Blazor components directly in a web browser without needing to install any NuGet packages.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
@@ -27,7 +27,7 @@ This section provides a brief guide on how to manually create a Blazor Server Ap
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
@@ -39,7 +39,7 @@ Run the following command to create a new Blazor Server App.
 dotnet new blazor -o BlazorApp --interactivity Server
 ```
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
