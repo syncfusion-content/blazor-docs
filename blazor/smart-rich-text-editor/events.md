@@ -87,7 +87,7 @@ Fires when a user clicks an AssistView toolbar item, providing details of the se
 ## AIPopupOpening
 **Type:** `EventCallback<BeforeOpenEventArgs>`
 
-Fires before the AI Assistant popup opens. Use to validate permissions or prefetch data.
+Fires before the AI Assistant popup opens. Use to perform actions before the popup appears.
 
 {% tabs %}
 {% highlight razor %}
@@ -115,7 +115,7 @@ Fires before the AI Assistant popup opens. Use to validate permissions or prefet
 ## AIPopupClosing
 **Type:** `EventCallback<BeforeCloseEventArgs>`
 
-Fires before the AI Assistant popup closes. Use to save state or confirm before closing.
+Fires before the AI Assistant popup closes. Use to perform actions before the popup closes.
 
 {% tabs %}
 {% highlight razor %}
