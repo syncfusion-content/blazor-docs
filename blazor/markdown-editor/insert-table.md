@@ -31,7 +31,7 @@ This default layout allows users to begin formatting and adding content immediat
 The following example demonstrates how to enable table insertion in the Syncfusion Blazor Markdown Editor.
 
 {% tabs %}
-{% highlight Index.razor %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-insert-table.razor %}
 

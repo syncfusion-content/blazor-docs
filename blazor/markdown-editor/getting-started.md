@@ -195,7 +195,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
