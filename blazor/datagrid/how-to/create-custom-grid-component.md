@@ -35,7 +35,7 @@ The custom component internally renders the Syncfusion `SfGrid` and applies pred
 
 This design approach provides a balance between reusable and flexibility. Developers can rely on the predefined defaults while still having the ability to extend or override behavior when needed.
 
-## When to use a custom DataGrid
+## When to Use a Custom Blazor DataGrid
 
 Using a custom DataGrid component is recommended in scenarios where consistency, scalability, and maintainability are key requirements.
 
