@@ -94,7 +94,7 @@ These shortcuts provide additional functionalities like fullscreen mode.
 | Toggle full screen mode | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> |
 
 {% tabs %}
-{% highlight Index.razor %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-key-configuration.razor %}
 
