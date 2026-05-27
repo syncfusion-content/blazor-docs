@@ -125,7 +125,9 @@ dotnet add package Azure.AI.OpenAI
 
 Add the following configuration to your **Program.cs** file:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Azure.AI.OpenAI;
@@ -164,11 +166,15 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 var app = builder.Build();
 
 // ... rest of your application setup
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 2: Configure Azure OpenAI Credentials in appsettings.json
 
-```json
+{% tabs %}
+{% highlight c# tabtitle="appsettings.json" %}
+
 {
   "AzureOpenAI": {
     "Key": "your-azure-openai-api-key",
@@ -176,7 +182,9 @@ var app = builder.Build();
     "DeploymentName": "your-deployment-name"
   }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Store sensitive keys in user secrets or environment variables, not in appsettings.json.
 

@@ -48,8 +48,6 @@ Use the `Commands` property to configure each `AICommands` entry, including its 
 
 ![Blazor Smart Rich Text Editor AssistViewSettings Command Property](./images/smart-rich-text-editor-command-property.png)
 
----
-
 ## PopupMaxHeight
 **Type:** `string` | **Default:** `"400"`
 
@@ -69,8 +67,6 @@ Sets the maximum height of the AI Assistant popup. Accepts CSS height values or 
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings PopupMaxHeight Property](./images/smart-rich-text-editor-popupmaxheight-property.png)
-
----
 
 ## PopupWidth
 **Type:** `string` | **Default:** `"600"`
@@ -92,7 +88,6 @@ Sets the width of the AI Assistant popup. Accepts CSS width values or numbers (t
 
 ![Blazor Smart Rich Text Editor AssistViewSettings PopupWidth Property](./images/smart-rich-text-editor-popupwidth-property.png)
 
----
 
 ## Placeholder
 **Type:** `string` | **Default:** `"Ask AI to rewrite or generate content."`
@@ -113,8 +108,6 @@ Specifies the placeholder text shown in the AI Assistant prompt textarea.
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings Placeholder Property](./images/smart-rich-text-editor-placeholder-property.png)
-
----
 
 ## Prompts
 **Type:** `List<AssistViewPrompt>`
@@ -165,8 +158,6 @@ Retrieves a list of users.
 
 ![Blazor Smart Rich Text Editor AssistViewSettings Prompts Property](./images/smart-rich-text-editor-prompts-property.png)
 
----
-
 ## Suggestions
 **Type:** `List<string>`
 
@@ -199,8 +190,6 @@ Defines suggestion prompts displayed in the AI Assistant popup.
 
 ![Blazor Smart Rich Text Editor AssistViewSettings Suggestions Property](./images/smart-rich-text-editor-suggestions-property.png)
 
----
-
 ## MaxPromptHistory
 **Type:** `int` | **Default:** `20`
 
@@ -218,8 +207,6 @@ Defines the maximum number of conversation entries retained in the editor's hist
 
 {% endhighlight %}
 {% endtabs %}
-
----
 
 ## BannerTemplate
 
@@ -246,8 +233,6 @@ Specifies the template for the banner in the AI Assistant popup, useful for bran
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings BannerTemplate Property](./images/smart-rich-text-editor-bannertemplate-property.png)
-
----
 
 ## HeaderToolbarSettings
 **Type:** `RenderFragment?`
@@ -276,8 +261,6 @@ Configures the toolbar in the header section of the AI Assistant interface.
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings HeaderToolbarSettings Property](./images/smart-rich-text-editor-header-toolbasettings-property.png)
-
----
 
 ## PromptToolbarSettings
 **Type:** `RenderFragment?`
@@ -308,13 +291,10 @@ Configures the toolbar below of the prompt input area section.
 
 ![Blazor Smart Rich Text Editor AssistViewSettings PromptToolbarSettings Property](./images/smart-rich-text-editor-prompt-toolbasettings-property.png)
 
----
-
 ## ResponseToolbarSettings
 **Type:** `RenderFragment?`
 
 Configures the toolbar in the AI response viewer section.
-
 
 {% tabs %}
 {% highlight razor %}
@@ -344,8 +324,6 @@ Configures the toolbar in the AI response viewer section.
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings ResponseToolbarSettings Property](./images/smart-rich-text-editor-response-toolbasettings-property.png)
-
----
 
 ## See also
 
