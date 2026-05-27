@@ -33,7 +33,7 @@ The custom component internally renders the Syncfusion `SfGrid` and applies pred
 
 * Attribute forwarding ensures that additional parameters, properties, or events passed to the custom component are automatically applied to the underlying `SfGrid`.
 
-This design approach provides a balance between reusability and flexibility. Developers can rely on the predefined defaults while still having the ability to extend or override behavior when needed.
+This design approach provides a balance between reusable and flexibility. Developers can rely on the predefined defaults while still having the ability to extend or override behavior when needed.
 
 ## When to use a custom DataGrid
 
