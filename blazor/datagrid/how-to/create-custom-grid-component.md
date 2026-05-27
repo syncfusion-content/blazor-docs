@@ -7,11 +7,50 @@ control: DataGrid
 documentation: ug
 ---
 
-# Create custom Blazor DataGrid
+# Create a reusable custom DataGrid Component
 
-Create a reusable custom Grid component by wrapping the `SfGrid` in a Razor component. This approach helps apply consistent defaults (for example, paging and sorting) and common settings across multiple Grids without repeating configuration.
+Creating a reusable custom Blazor DataGrid by wrapping the Syncfusion `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
 
-The following example creates a `CustomGrid` wrapper that renders `SfGrid` with default properties such as `GridPageSettings`. Any unmatched attributes passed to `CustomGrid` are forwarded to the inner `SfGrid`, and content placed inside `CustomGrid` is projected as columns via `ChildContent`.
+In such scenarios, manually configuring features such as paging, sorting, filtering, and layout for each Grid can result in duplicated code and inconsistent behavior. Over time, this repetitive setup increases development effort and makes updates more difficult. By introducing a wrapper component, common configurations can be centralized and reused efficiently, ensuring uniform behavior throughout the application.
+
+## Why create a custom DataGrid component
+
+A custom DataGrid component simplifies development by reducing repetitive configuration. Instead of defining the same settings for each Grid instance, properties such as paging, sorting, and layout can be configured once and reused across the application.
+
+This approach is especially beneficial in team environments where multiple developers contribute to different modules. It ensures that all Grid implementations follow consistent design patterns and behavior. Centralizing configurations also reduces the chances of errors or inconsistencies caused by manual setup.
+
+Another advantage is improved maintainability. When updates are required, such as modifying page size or enabling additional features, changes can be applied in a single location without affecting multiple files. This significantly reduces maintenance overhead and improves development efficiency.
+
+Additionally, a reusable component enhances code readability. By abstracting repetitive logic into a single component, page-level code becomes cleaner and easier to understand.
+
+## How the custom Grid works
+
+The custom component internally renders the Syncfusion `SfGrid` and applies predefined settings that are shared across all usages. It acts as a wrapper that encapsulates default behavior while allowing flexibility for customization.
+
+* Generic type support **TItem** enables strongly typed data binding, improving type safety and providing compile-time validation.
+
+* Child content projection using **ChildContent** allows dynamic column definitions, templates, and other elements to be passed into the Grid.
+
+* Attribute forwarding ensures that additional parameters, properties, or events passed to the custom component are automatically applied to the underlying `SfGrid`.
+
+This design approach provides a balance between reusability and flexibility. Developers can rely on the predefined defaults while still having the ability to extend or override behavior when needed.
+
+## When to use a custom DataGrid
+
+Using a custom DataGrid component is recommended in scenarios where consistency, scalability, and maintainability are key requirements.
+
+Common use cases include:
+
+* Applications with multiple Grid instances across various pages
+* Requirements for consistent paging, sorting, or layout behavior
+* Projects where Grid configurations are frequently updated
+* Large-scale applications that demand reusable and structured components
+
+Adopting this pattern helps enforce development standards, reduces duplication, and improves overall code quality.
+
+## CustomGrid component implementation
+
+The following example demonstrates how to create a reusable CustomGrid component with predefined `GridPageSettings`. This component centralizes common configuration options, such as `PageCount` and `PageSize`, while still allowing external customization through parameters and projected content.
 
 **CustomGrid.razor:**
 
@@ -69,6 +108,12 @@ namespace SF_Grid_Inheritance.Shared
 
 {% endhighlight %}
 {% endtabs %}
+
+## Use the custom Grid component
+
+Once the custom component is defined, it can be reused across different pages by supplying the required data source and defining column structures. The predefined settings are automatically applied, which reduces setup time and ensures consistent behavior.
+
+This approach allows developers to focus more on application logic rather than repetitive Grid configuration. It also ensures a consistent user experience across all parts of the application and simplifies long-term maintenance as the project evolves.
 
 **Index.razor:**
 
