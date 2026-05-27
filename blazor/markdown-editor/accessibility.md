@@ -61,7 +61,7 @@ The Blazor Markdown Editor element is assigned the role of `application`:
 | `aria-disabled` | Indicates the disabled state of the toolbar. |
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight Index.razor %}
 
 {% include_relative code-snippet/markdown-aria-attribute.razor %}
 
@@ -89,7 +89,7 @@ Customize the key configuration for the keyboard interaction of the Markdown Edi
 In the following code block, customize the bold and italic, toolbar actions with **ctrl+1**, **ctrl+2** respectively.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight Index.razor %}
 
 {% include_relative code-snippet/markdown-custom-key-config.razor%}
 
