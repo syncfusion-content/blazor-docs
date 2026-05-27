@@ -124,19 +124,6 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add import namespaces
-
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Gantt` namespaces.
-
-{% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Gantt
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
@@ -156,6 +143,9 @@ builder.Services.AddSyncfusionBlazor();
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
+
+- Add the **stylesheet reference inside the `<head>` tag** of the `index.html` file.
+- Add the **script reference inside the `<body>` tag** of the `index.html` file.
 
 ```html
 
@@ -219,11 +209,21 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart comp
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component in the default web browser.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWNVzLgvAOlvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Gantt Chart component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open a terminal in the project directory and run the following command:
+    ```
+    dotnet run
+    ```
+2. The application will start and display in your default web browser.
 
 ## See also
 

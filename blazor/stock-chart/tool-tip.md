@@ -57,7 +57,7 @@ By default, the tooltip is disabled. Enable it by setting the [Enable](https://h
 
 ```
 
-![Blazor Stock Chart with Tooltip](images/common/blazor-stock-chart-tooltip.png)
+![Blazor Stock Chart with Tooltip](images/common/blazor-stock-chart-tooltip.webp)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -151,7 +151,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ```
 
-![Blazor Stock Chart with Custom Tooltip](images/common/blazor-stock-chart-custom-tooltip.png)
+![Blazor Stock Chart with Custom Tooltip](images/common/blazor-stock-chart-custom-tooltip.webp)
 
 ## Tooltip position
 
@@ -207,6 +207,6 @@ By default, the tooltip aligns to the left side of the Stock Chart. To move the 
 
 ```
 
-![Blazor Stock Chart with moving tooltip](images/common/blazor-stock-chart-moving-tooltip.gif)
+![Blazor Stock Chart with moving tooltip](images/common/blazor-stock-chart-moving-tooltip.webp)
 
 N> Refer to the [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for a summary of key features and explore the [Blazor Stock Chart example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap5) to learn about chart types and time based data visualization at equal intervals.

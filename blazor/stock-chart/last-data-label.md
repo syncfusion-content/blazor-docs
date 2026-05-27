@@ -55,7 +55,7 @@ To enable the last data label, set the [ShowLabel](https://help.syncfusion.com/c
 
 ```
 
-![Last Data Label in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label.png)
+![Last Data Label in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label.webp)
 
 ## Customization
 
@@ -123,4 +123,4 @@ In [StockChartLastDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-![Last Data Label Customization in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label-customization.png)
+![Last Data Label Customization in Blazor Stock Chart](images/last-value/blazor-stock-chart-last-value-label-customization.webp)

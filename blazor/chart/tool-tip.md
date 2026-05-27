@@ -59,7 +59,7 @@ When space constraints prevent information from being displayed through data lab
 
 ```
 
-![Blazor Column Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.png)
+![Blazor Column Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.webp)
 
 ## Tooltip format
 
@@ -103,7 +103,7 @@ By default, The tooltip displays x and y values of a data point. In addition, fu
 
 ```
 
-![Blazor Column Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.png)
+![Blazor Column Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.webp)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -159,7 +159,7 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
 
 ```
 
-![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-step-chart-tooltip-template.png)
+![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-step-chart-tooltip-template.webp)
 
 ## Shared Tooltip template
 
@@ -236,7 +236,7 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
 
 ```
 
-![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-shared-tooltip-template.PNG)
+![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-shared-tooltip-template.webp)
 
 ## Tooltip customization
 
@@ -282,7 +282,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartT
 
 ```
 
-![Blazor Column Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.png)
+![Blazor Column Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.webp)
 
 ## Enabling highlight for series with tooltip
 
@@ -335,7 +335,7 @@ By enabling the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.webp)" %}
 
 ## Displaying tooltip for nearest data point
 
@@ -390,7 +390,7 @@ N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncf
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.webp)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
