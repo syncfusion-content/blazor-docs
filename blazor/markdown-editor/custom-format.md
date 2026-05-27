@@ -25,7 +25,7 @@ You can define custom symbols for various Markdown formatting options:
 The following example demonstrates how to customize Markdown tags in the editor:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight Index.razor %}
 
 {% include_relative code-snippet/markdown-custom-formats.razor %}
 
