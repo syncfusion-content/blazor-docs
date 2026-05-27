@@ -195,7 +195,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 **Visual Studio**:
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor SpeechToText component will render in your default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor SpeechToText component will render in your default web browser.
 
 **Visual Studio Code or .NET CLI**:
 
