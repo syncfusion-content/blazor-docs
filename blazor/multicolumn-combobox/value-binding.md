@@ -28,7 +28,7 @@ When the component value changes, all places bound with the same variable are up
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBJXYhzMFjWdrGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBJXYhzMFjWdrGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.webp)" %}
 
 ## Index value binding
 
@@ -40,7 +40,7 @@ The Index value binding is accomplished through the [@bind-Index]() attribute, w
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrJXOrUfZAICmMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrJXOrUfZAICmMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.webp)" %}
 
 <!-- ## Object binding
 
@@ -68,7 +68,7 @@ The following example uses `string` as the `TValue`, so clearing sets the value 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBftkrKpNAYFijk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBftkrKpNAYFijk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.webp)" %}
 
 ## Dynamically change TItem
 

@@ -93,7 +93,7 @@ Labels are defined within node settings and further customized using `SankeyLabe
 
 This configuration defines labels for each node and applies `SankeyLabelSettings` for color, weight, size, and style.
 
-![Blazor Sankey Labels](images/labels/sankey-labels.png)
+![Blazor Sankey Labels](images/labels/sankey-labels.webp)
 
 ## Customizing Label Appearance
 

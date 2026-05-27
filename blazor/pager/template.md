@@ -153,4 +153,4 @@ This configuration renders two **anchor** elements for navigating to **previous*
 }
 ```
 
-![Blazor Pager with Template](./images/blazor-pager-with-template.gif)
+![Blazor Pager with Template](./images/blazor-pager-with-template.webp)

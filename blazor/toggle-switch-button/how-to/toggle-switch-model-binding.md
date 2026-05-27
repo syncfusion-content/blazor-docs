@@ -45,4 +45,4 @@ In this sample, first check the option and click the submit button to post the s
 
 ```
 
-![Model Binding in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-model-binding.png)
+![Model Binding in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-model-binding.webp)

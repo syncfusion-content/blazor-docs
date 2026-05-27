@@ -167,6 +167,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Navigations
+
 <SfStepper>
     <StepperSteps>
         <StepperStep></StepperStep>
@@ -190,6 +192,8 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Navigations
 
 <SfStepper>
     <StepperSteps>

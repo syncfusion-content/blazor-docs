@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for individuals already familiar with that application.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) includes an Excel-like filter feature that provides an easy-to-use interface for filtering data. This feature mirrors the filtering tools found in Microsoft Excel, making it intuitive for individuals already familiar with that application.
 
 Excel-like filtering proves especially valuable when working with large datasets or when complex filtering operations are required for specific columns. This feature enables rapid data refinement to locate required information.
 
@@ -102,6 +102,7 @@ public class OrderData
 > * Supports multiple filter types: text, numbers, dates, and true/false values
 > * Provides search functionality to find specific values within the filter dialog
 > * Allows clearing of previously applied filters
+> * By default, the grid does not include a ‘Between’ operator. However, the Excel filter provides a ‘Between’ option for numeric and date columns, which functions as a range filter by applying two conditions.
 
 ## Checkbox Filtering
 
@@ -839,13 +840,13 @@ public class OrderData
 
 By default, when a filter is applied multiple times to the same column, the new filter replaces the previous selection. Previously applied filters can be retained by using the **Add current selection to filter** option. This checkbox appears in the filter search bar when searching for values in the CheckBox or Excel filter dialog.
 
-![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.png)
+![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.webp)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See Also
 
-Comprehensive information about the Syncfusion Blazor DataGrid and its features is available through the following resources:
+Comprehensive information about the Blazor DataGrid and its features is available through the following resources:
 
 * **Feature Overview:** The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
 * **Interactive Examples:** The [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) provide practical demonstrations of data presentation and manipulation.

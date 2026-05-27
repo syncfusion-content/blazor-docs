@@ -44,4 +44,4 @@ The Range Selector supports right-to-left (RTL), which can be enabled with the [
 }
 ```
 
-![Right to Left in Blazor RangeNavigator](images/common/blazor-rangenavigator-rght-to-left.png)
+![Right to Left in Blazor RangeNavigator](images/common/blazor-rangenavigator-rght-to-left.webp)

@@ -50,4 +50,4 @@ These translations enable the Maps component to adapt to the preferred language,
 
 The image below illustrates tooltip text for the zoom toolbar in different cultures.
 
-![Blazor Maps with Localization](./images/Localization/blazor-maps-zoom-toolbar-tooltip-with-localization.gif)
+![Blazor Maps with Localization](./images/Localization/blazor-maps-zoom-toolbar-tooltip-with-localization.webp)

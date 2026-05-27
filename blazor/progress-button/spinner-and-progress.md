@@ -68,7 +68,7 @@ Use a custom spinner by specifying the [SpinTemplate](https://help.syncfusion.co
 
 ```
 
-![Blazor ProgressButton with Spinner](./images/blazor-progressbutton-spinner.png)
+![Blazor ProgressButton with Spinner](./images/blazor-progressbutton-spinner.webp)
 
 ## Progress
 
@@ -85,7 +85,7 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButto
 </SfProgressButton>
 
 ```
-![Blazor ProgressButton with Animation](./images/blazor-progressbutton-animation.png)
+![Blazor ProgressButton with Animation](./images/blazor-progressbutton-animation.webp)
 
 ### Change step of the Progress Button
 

@@ -54,7 +54,7 @@ To render a line series, use series [Type](https://help.syncfusion.com/cr/blazor
 
 ```
 
-![Blazor RangeNavigator with Line Series](images/series-type/blazor-rangenavigator-line-series.png)
+![Blazor RangeNavigator with Line Series](images/series-type/blazor-rangenavigator-line-series.webp)
 
 ## Area
 
@@ -95,7 +95,7 @@ To render an area series, use series [Type](https://help.syncfusion.com/cr/blazo
 
 ```
 
-![Blazor RangeNavigator with Area Series](images/series-type/blazor-rangenavigator-area-series.png)
+![Blazor RangeNavigator with Area Series](images/series-type/blazor-rangenavigator-area-series.webp)
 
 ## Step Line
 
@@ -135,4 +135,4 @@ To render a Step line series, use series [Type](https://help.syncfusion.com/cr/b
 
 ```
 
-![Blazor RangeNavigator with StepLine Series](images/series-type/blazor-rangenavigator-stepline-series.png)
+![Blazor RangeNavigator with StepLine Series](images/series-type/blazor-rangenavigator-stepline-series.webp)

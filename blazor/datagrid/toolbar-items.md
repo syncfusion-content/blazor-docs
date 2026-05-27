@@ -9,11 +9,11 @@ documentation: ug
 
 # Toolbar items in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the DataGrid, providing convenient access to common actions and custom functionality.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the DataGrid, providing convenient access to common actions and custom functionality.
 
 ## Built-in Toolbar item
 
-Built-in toolbar items in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid use predefined actions to perform standard operations.
+Built-in toolbar items in the Blazor DataGrid use predefined actions to perform standard operations.
 
 Add them by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property as a collection of built-in item names (strings). Each item is rendered as a button with an icon and text. The following table lists the built-in toolbar items and their actions:
 
@@ -191,7 +191,7 @@ To show only icons, hide the text part of the buttons using CSS. For accessibili
 
 ### Customize the built-in toolbar items
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing built-in toolbar items, including disabling default actions and executing custom logic when a button is clicked.
+The Blazor DataGrid allows customizing built-in toolbar items, including disabling default actions and executing custom logic when a button is clicked.
 
 Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to intercept actions. Prefer checking **args.Item.Id** for reliability (IDs are stable and not affected by localization), although Text is also available.
 
@@ -281,7 +281,7 @@ public class OrderData
 
 ## Custom Toolbar Items
 
-Adding custom toolbar items to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid enables personalized functionality.
+Adding custom toolbar items to the Blazor DataGrid enables personalized functionality.
 
 Define custom items by setting the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property to a collection of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects, and handle actions in the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
 

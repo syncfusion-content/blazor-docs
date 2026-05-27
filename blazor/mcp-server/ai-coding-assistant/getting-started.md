@@ -17,7 +17,7 @@ The **Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant** is 
 Before you begin, ensure you have:
 
 * Required [Node.js](https://nodejs.org/en/) version >= 18
-* A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, etc.)
+* A **compatible MCP client** (VS Code, Visual Studio, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, etc.)
 * Active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 * Blazor application (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
@@ -51,6 +51,26 @@ Create a configuration file in your project folder to install the server for you
 {% highlight bash tabtitle="VS Code" %}
 
 Create a `.vscode/mcp.json` file in your workspace with the MCP server configuration:
+
+{
+  "servers": {
+    "sf-blazor-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@syncfusion/blazor-assistant@latest"],
+      "env": {
+        "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+        // or
+        // "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+
+{% endhighlight %}
+{% highlight bash tabtitle="Visual Studio" %}
+
+Create a `.vs/mcp.json` file in your workspace with the MCP server configuration:
 
 {
   "servers": {

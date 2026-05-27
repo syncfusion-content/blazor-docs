@@ -40,7 +40,7 @@ The rendered Linear Gauge can be printed directly from the browser by calling th
 }
 ```
 
-![Blazor Linear Gauge with Printing](images/blazor-linear-gauge-with-printing.png)
+![Blazor Linear Gauge with Printing](images/blazor-linear-gauge-with-printing.webp)
 
 ## Export
 
@@ -76,7 +76,7 @@ To use the image export functionality, set the [AllowImageExport](https://help.s
 }
 ```
 
-![Blazor Linear Gauge Image export](images/blazor-linear-gauge-image-export.png)
+![Blazor Linear Gauge Image export](images/blazor-linear-gauge-image-export.webp)
 
 ### PDF Export
 
@@ -106,7 +106,7 @@ To use the PDF export functionality, set the [AllowPdfExport](https://help.syncf
 }
 ```
 
-![Blazor Linear Gauge PDF Export](images/blazor-linear-gauge-image-export.png)
+![Blazor Linear Gauge PDF Export](images/blazor-linear-gauge-image-export.webp)
 
 ### Exporting Linear Gauge as base64 string of the file
 

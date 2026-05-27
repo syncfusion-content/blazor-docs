@@ -92,7 +92,7 @@ Enable tooltips using `SankeyTooltipSettings`.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Tooltip](images/tooltip/sankey-tooltip.png)
+![Blazor Sankey Tooltip](images/tooltip/sankey-tooltip.webp)
 
 
 ## Customizing Tooltip Appearance
@@ -197,7 +197,7 @@ Adjust tooltip appearance and behavior using `SankeyTooltipSettings`.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Tooltip Customization](images/tooltip/sankey-tooltip-customization.png)
+![Blazor Sankey Tooltip Customization](images/tooltip/sankey-tooltip-customization.webp)
 
 ## Advanced Tooltip Configuration
 
@@ -342,10 +342,10 @@ Customize tooltip content using `SankeyNodeTemplate` and `SankeyLinkTemplate` to
 {% endtabs %}
 
 **Node Template**
-![Blazor Sankey Node Tooltip Template](images/tooltip/sankey-tooltip-node-template.png)
+![Blazor Sankey Node Tooltip Template](images/tooltip/sankey-tooltip-node-template.webp)
 
 **Link Template**
-![Blazor Sankey Link Tooltip Template](images/tooltip/sankey-tooltip-link-template.png)
+![Blazor Sankey Link Tooltip Template](images/tooltip/sankey-tooltip-link-template.webp)
 
 Templates enable fully customized content and layout for node and link tooltips.
 

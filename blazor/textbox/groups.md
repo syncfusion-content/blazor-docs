@@ -83,7 +83,7 @@ Add icons to the TextBox to provide visual context or indicate the input purpose
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxthDVJpVHOpZY?appbar=false&editor=false&result=true&errorlist=false&theme=material" backgroundimage "[Blazor TextBox with icon and floating label](./images/blazor-textbox-float-label-and-icons.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxthDVJpVHOpZY?appbar=false&editor=false&result=true&errorlist=false&theme=material" backgroundimage "[Blazor TextBox with icon and floating label](./images/blazor-textbox-float-label-and-icons.webp)" %}
 
 ### Binding events to icons
 
@@ -139,7 +139,7 @@ Attach event handlers to icons by passing event attributes as a parameter to the
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrHtrDrzosNQGxi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding events to icons](./images/Binding-events-to-icons.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrHtrDrzosNQGxi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding events to icons](./images/Binding-events-to-icons.webp)" %}
 
 ## TextBox with clear button and floating label
 
@@ -161,7 +161,7 @@ Add a clear button to allow users to quickly remove the current input value. The
 </div>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrHtrNhfyRLMOds?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with clear button and floating label](./images/Blazor-TextBox-Clear-Icon.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrHtrNhfyRLMOds?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with clear button and floating label](./images/Blazor-TextBox-Clear-Icon.webp)" %}
 
 ## Multiline input with floating label
 
@@ -173,4 +173,4 @@ Enable [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
 <SfTextBox Placeholder="Enter text" Multiline="true" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![Blazor TextBox multiline mode with floating label](./images/blazor-multiline-textbox-with-floating-label.png)
+![Blazor TextBox multiline mode with floating label](./images/blazor-multiline-textbox-with-floating-label.webp)

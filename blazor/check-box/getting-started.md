@@ -164,7 +164,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor CheckBox compone
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor CheckBox component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CheckBox).
 

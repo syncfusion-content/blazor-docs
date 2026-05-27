@@ -48,7 +48,7 @@ The annotation size can be customized using the [Height](https://help.syncfusion
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/SizeOfAnnotation.razor)
 
-![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
+![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.webp)
 
 ## How to Add a Hyperlink to an Annotation
 
@@ -96,7 +96,7 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinktoAnnotation.razor)
 
-![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
+![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.webp)
 
 ### How to Display Text in Annotation Hyperlinks
 
@@ -145,7 +145,7 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinkWithContent.razor)
 
-![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
+![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.webp)
 
 ## How to Wrap Text Using Text Wrapping
 
@@ -196,9 +196,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | TextWrapping | Description | Image |
 | -------- | -------- | -------- |
-| [No Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_NoWrap) | Text will not be wrapped. | ![Blazor Diagram Text without Wrap](../images/blazor-diagram-label-without-wrap.png) |
-| [Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_Wrap) | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.png) |
-| [WrapWithOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_WrapWithOverflow) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.png) |
+| [No Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_NoWrap) | Text will not be wrapped. | ![Blazor Diagram Text without Wrap](../images/blazor-diagram-label-without-wrap.webp) |
+| [Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_Wrap) | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.webp) |
+| [WrapWithOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_WrapWithOverflow) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.webp) |
 
 ### How to Control Text Overflow
 
@@ -256,15 +256,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | TextOverflow | Wrapping | Image |
 | -------- | -------- | -------- |
-| Wrap | No Wrap | ![Blazor Diagram Without Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-nowrap.png) |
-| Wrap| Wrap | ![Blazor Diagram With Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrap.png) |
-| Wrap | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrapwithoverflow.png) |
-| Ellipsis | No Wrap | ![Blazor Diagram Without Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-nowrap.png) |
-| Ellipsis| Wrap | ![Blazor Diagram With Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrap.png) |
-| Ellipsis | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrapwithoverflow.png) |
-| Clip | No Wrap | ![Blazor Diagram Without Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-nowrap.png) |
-| Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.png) |
-| Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.png) |
+| Wrap | No Wrap | ![Blazor Diagram Without Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-nowrap.webp) |
+| Wrap| Wrap | ![Blazor Diagram With Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrap.webp) |
+| Wrap | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrapwithoverflow.webp) |
+| Ellipsis | No Wrap | ![Blazor Diagram Without Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-nowrap.webp) |
+| Ellipsis| Wrap | ![Blazor Diagram With Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrap.webp) |
+| Ellipsis | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrapwithoverflow.webp) |
+| Clip | No Wrap | ![Blazor Diagram Without Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-nowrap.webp) |
+| Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.webp) |
+| Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.webp) |
 
 N>**Note :** All overflow customizations are also applicable to connector annotations.
 
@@ -330,7 +330,7 @@ The following code explains how to customize the visual appearance of an annotat
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/Appearance.razor)
 
-![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
+![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.webp)
 
 ## How to Update Annotation Font Style at Runtime
 
@@ -537,7 +537,7 @@ Multiple annotations can be added to a single node or connector. The following c
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/MultipleAnnotation.razor)
 
-![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
+![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.webp)
 
 N>* Type of the annotation’s property of the node or connector is ObservableCollection.
 <br/>* Default value of the annotation will be **null**.
@@ -662,7 +662,7 @@ The following code illustrates how to define a template for both a node's and a 
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/TemplateSupportforAnnotation.razor)
 
-![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
+![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.webp)
 
 ## How to Add Additional Information for an Annotation
 

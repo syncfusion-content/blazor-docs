@@ -27,4 +27,4 @@ The `DropDownList` component can be placed inside an `EditForm` to enable data a
 
 {% endhighlight %}
 
-![Blazor DropDownList inside EditForm with validation](./images/form-validation/blazor_dropodown_with-editform.png)
+![Blazor DropDownList inside EditForm with validation](./images/form-validation/blazor_dropodown_with-editform.webp)

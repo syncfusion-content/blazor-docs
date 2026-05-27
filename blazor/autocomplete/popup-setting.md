@@ -34,7 +34,7 @@ In the following sample, the `PopupWidth` is set as `300px`.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with customizing popup width](./images/popup-setting/blazor_autocomplete_popup-width.png)
+![Blazor AutoComplete with customizing popup width](./images/popup-setting/blazor_autocomplete_popup-width.webp)
 
 ## Change the popup height
 
@@ -48,7 +48,7 @@ In the following sample, the `PopupHeight` is set as `200px`.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with customizing popup height](./images/popup-setting/blazor_autocomplete_popup-height.png)
+![Blazor AutoComplete with customizing popup height](./images/popup-setting/blazor_autocomplete_popup-height.webp)
 
 ## Change the popup z-index
 
@@ -66,7 +66,7 @@ Display the popup at initial load by calling [ShowPopupAsync()](https://help.syn
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Show popup on initial loading](./images/popup-setting/blazor_autocomplete_popup-initial-loading.png)
+![Blazor AutoComplete with Show popup on initial loading](./images/popup-setting/blazor_autocomplete_popup-initial-loading.webp)
 
 ## Preventing opening and closing
 
@@ -78,7 +78,7 @@ Prevent opening or closing the popup by setting [BeforeOpenEventArgs.cancel](htt
 
 {% endhighlight %}
 
-![Blazor AutoComplete with preventing popup opening and closing](./images/popup-setting/blazor_autocomplete_preventing-opening-closing.png)
+![Blazor AutoComplete with preventing popup opening and closing](./images/popup-setting/blazor_autocomplete_preventing-opening-closing.webp)
 
 ### OnOpen event
 

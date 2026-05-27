@@ -11,7 +11,7 @@ documentation: ug
 
 **Step 1:** Update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
 
-![Updating Blazor NuGet Package](../images/blazor-datagrid-update-nuget-package.PNG)
+![Updating Blazor NuGet Package](../images/blazor-datagrid-update-nuget-package.webp)
 
 ## Compatible .NET version
 
@@ -47,3 +47,5 @@ The following steps explain how to clean the cache:
 1. Delete/clear the `Syncfusion.Blazor` package from the installed location `{System drive}/Users/{user-name}/.nuget/packages/syncfusion.blazor`. On Windows, the installed location can also be accessed using `%userprofile%/.nuget/packages/syncfusion.blazor`.
 
 2. Update to the latest version of the `Syncfusion.Blazor` NuGet package.
+
+N> Looking for a complete Blazor DataGrid Component overview, including features, pricing, and documentation? Explore the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component page.

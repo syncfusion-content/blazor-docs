@@ -13,7 +13,7 @@ The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signa
 
 ## Open Signature
 
-The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the PNG, JPEG, and SVG image's base64.
+The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the webp, JPEG, and SVG image's base64.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -60,15 +60,15 @@ The signature component opens a pre-drawn signature as either base64 or hosted/ 
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-open-image.png)
+![Blazor Signature Component](./images/blazor-signature-open-image.webp)
 
 ## Save Signature
 
-The Signature component saves the signature as base64, blob, and image like PNG, JPEG, and SVG.
+The Signature component saves the signature as base64, blob, and image like webp, JPEG, and SVG.
 
 ### Save as Base64
 
-The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the PNG, JPEG, and SVG format as base64.
+The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the webp, JPEG, and SVG format as base64.
 
 ```cshtml
 
@@ -89,7 +89,7 @@ The Signature component gets the signature as base64 using the [`GetSignatureAsy
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-base.png)
+![Blazor Signature Component](./images/blazor-signature-save-base.webp)
 
 ### Save as Blob
 
@@ -113,11 +113,11 @@ The signature component saves the signature as Blob using [`SaveAsBlobAsync`](ht
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-blob.png)
+![Blazor Signature Component](./images/blazor-signature-save-blob.webp)
 
 ### Save as Image
 
-The Signature component saves the signature as an image using [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And it accepts file name and file type as parameter. The default file type is PNG.
+The Signature component saves the signature as an image using [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And it accepts file name and file type as parameter. The default file type is webp.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -131,7 +131,7 @@ The Signature component saves the signature as an image using [`SaveAsync`](http
             <SplitButtonEvents ItemSelected="OnSaveType" Clicked="OnSave">
             </SplitButtonEvents>
             <DropDownMenuItems>
-                <DropDownMenuItem Text="Png"></DropDownMenuItem>
+                <DropDownMenuItem Text="webp"></DropDownMenuItem>
                 <DropDownMenuItem Text="Jpeg"></DropDownMenuItem>
                 <DropDownMenuItem Text="Svg"></DropDownMenuItem>
             </DropDownMenuItems>
@@ -142,13 +142,13 @@ The Signature component saves the signature as an image using [`SaveAsync`](http
 
 @code {
     private SfSignature signature;
-    private SignatureFileType type = SignatureFileType.Png;
+    private SignatureFileType type = SignatureFileType.webp;
     private async void OnSaveType(MenuEventArgs args)
     {
         switch (args.Item.Text)
         {
-            case "PNG":
-                type = SignatureFileType.Png;
+            case "webp":
+                type = SignatureFileType.webp;
                 break;
             case "JPEG":
                 type = SignatureFileType.Jpeg;
@@ -166,7 +166,7 @@ The Signature component saves the signature as an image using [`SaveAsync`](http
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-image.png)
+![Blazor Signature Component](./images/blazor-signature-save-image.webp)
 
 ## Save with Background
 
@@ -186,7 +186,7 @@ In the following sample, the background color is set as ‘rgb(103, 58, 183)’ 
             <SplitButtonEvents ItemSelected="OnSaveType" Clicked="OnSave">
             </SplitButtonEvents>
             <DropDownMenuItems>
-                <DropDownMenuItem Text="Png"></DropDownMenuItem>
+                <DropDownMenuItem Text="webp"></DropDownMenuItem>
                 <DropDownMenuItem Text="Jpeg"></DropDownMenuItem>
                 <DropDownMenuItem Text="Svg"></DropDownMenuItem>
             </DropDownMenuItems>
@@ -197,13 +197,13 @@ In the following sample, the background color is set as ‘rgb(103, 58, 183)’ 
 
 @code {
     private SfSignature signature;
-    private SignatureFileType type = SignatureFileType.Png;
+    private SignatureFileType type = SignatureFileType.webp;
     private void OnSaveType(MenuEventArgs args)
     {
         switch (args.Item.Text)
         {
-            case "PNG":
-                type = SignatureFileType.Png;
+            case "webp":
+                type = SignatureFileType.webp;
                 break;
             case "JPEG":
                 type = SignatureFileType.Jpeg;
@@ -221,4 +221,4 @@ In the following sample, the background color is set as ‘rgb(103, 58, 183)’ 
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-save-bg.png)
+![Blazor Signature Component](./images/blazor-signature-save-bg.webp)

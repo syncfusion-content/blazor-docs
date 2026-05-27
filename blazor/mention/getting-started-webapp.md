@@ -165,7 +165,9 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <SfMention TItem="PersonData" DataSource="@EmailData">
     <TargetComponent>
@@ -209,7 +211,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mention component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTNCAjLjgvQOEF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention Component](images/blazor-mention.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTNCAjLjgvQOEF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention Component](images/blazor-mention.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Mention).
 
@@ -219,7 +221,10 @@ The `Target` property of the Mention component allows you to specify an element 
 
 In the bellow example, the `Target` property of the Mention component is set to the CSS selector `#mentionTarget`, which matches the textarea element with an id of `mentionTarget`. The mention element will be appended to the textarea element as a child element, allowing the user to select or mention a specific entity within the textarea.
 
-{% highlight razor %}
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.DropDowns
 
 <textarea id="mentionTarget" placeHolder="Type @@ and tag user"></textarea>
 
@@ -258,8 +263,9 @@ In the bellow example, the `Target` property of the Mention component is set to 
 }
 
 {% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrfXCADhtJlNdUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention target](images/blazor-mention-target.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrfXCADhtJlNdUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention target](images/blazor-mention-target.webp)" %}
 
 ## See also
 

@@ -21,7 +21,7 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVAiBLQUvNGLyuy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Readonly mode](./images/style/blazor_combobox_readonly-mode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVAiBLQUvNGLyuy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Readonly mode](./images/style/blazor_combobox_readonly-mode.webp)" %}
 
 ## Disabled state
 
@@ -33,7 +33,7 @@ Specify a boolean value for the [Enabled](https://help.syncfusion.com/cr/blazor/
 
 {% endhighlight %}
 
-![Blazor ComboBox in disabled state](./images/style/blazor_ComboBox_disabled-state.png)
+![Blazor ComboBox in disabled state](./images/style/blazor_ComboBox_disabled-state.webp)
 
 ## CssClass  
 
@@ -53,7 +53,7 @@ Some of the possible values are:
 
 {% endhighlight %} 
 
-![Blazor ComboBox with CssClass property](./images/style/blazor_combobox_cssclass-property.png)
+![Blazor ComboBox with CssClass property](./images/style/blazor_combobox_cssclass-property.webp)
 
 ## Customizing the disabled component’s text color
 
@@ -65,7 +65,7 @@ Customize the text color of a disabled component by targeting its CSS class `.e-
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVBwUFMudrwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Disabled component text color](./images/style/blazor_combobox_disabled-text-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVBwUFMudrwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Disabled component text color](./images/style/blazor_combobox_disabled-text-color.webp)" %}
 
 ## Customizing the appearance of the container element
 
@@ -77,7 +77,7 @@ Customize the ComboBox container by targeting the `.e-input` selector (the paren
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhqirLQUlXaeBFy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox container element customization](./images/style/blazor_combobox_appearance-of-container.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhqirLQUlXaeBFy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox container element customization](./images/style/blazor_combobox_appearance-of-container.webp)" %}
 
 ## Customizing the dropdown icon’s color
 
@@ -89,7 +89,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrqMBVQKbirhlfh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox icon color](./images/style/blazor_combobox_icon-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrqMBVQKbirhlfh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox icon color](./images/style/blazor_combobox_icon-color.webp)" %}
 
 ## Customizing the focus color
 
@@ -101,7 +101,7 @@ Customize the component color when it is focused by targeting its CSS class `.e-
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLUsVhGUFizesmJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox focus color](./images/style/blazor_combobox_focus-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLUsVhGUFizesmJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox focus color](./images/style/blazor_combobox_focus-color.webp)" %}
 
 ## Customizing the outline theme’s focus color
 
@@ -113,7 +113,7 @@ Customize the color of the combobox component when it is in a focused state and 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhqsVBQKFiQpUgc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox focusing color outline theme](./images/style/blazor_combobox_outline-focus-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhqsVBQKFiQpUgc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox focusing color outline theme](./images/style/blazor_combobox_outline-focus-color.webp)" %}
 
 ## Customizing the background color of focused, hovered, and active items
 
@@ -125,7 +125,7 @@ Customize background and text colors of list items in focused, hovered, or activ
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKWhLwgPKXzzDZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_combobox_background-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKWhLwgPKXzzDZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_combobox_background-color.webp)" %}
 
 ## Customizing the appearance of the popup element
 
@@ -137,7 +137,7 @@ Customize the popup’s appearance by targeting list item selectors within the p
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqiBVmUPKLSlDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing popup color](./images/style/blazor_combobox_appearance-of-popup.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqiBVmUPKLSlDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing popup color](./images/style/blazor_combobox_appearance-of-popup.webp)" %}
 
 ## Change the HTML attributes
 
@@ -149,7 +149,7 @@ Add additional HTML attributes such as styles and class to the root element usin
 
 {% endhighlight %}
 
-![Blazor ComboBox with custom HTML attributes](./images/style/blazor_ComboBox_html-attributes.png)
+![Blazor ComboBox with custom HTML attributes](./images/style/blazor_ComboBox_html-attributes.webp)
 
 ## Show tooltip on list item
 
@@ -161,13 +161,13 @@ Display a tooltip when hovering over ComboBox options by integrating the Tooltip
 
 {% endhighlight %}
 
-![Blazor ComboBox with tooltip](./images/style/blazor-combobox-tooltip.png)
+![Blazor ComboBox with tooltip](./images/style/blazor-combobox-tooltip.webp)
 
 ## Customize selected item opacity
 
 In the following code , the CSS style that targets the `.e-list-item` class within the `.e-dropdownbase` class when it is in an active or active and hovered state. It sets the opacity property , which will make the elements appear transparent. This can be used to change the appearance of the dropdown list items when they are in a certain state.
 
-![Blazor ComboBox with opacity style](./images/style/blazor_combobox_opacity-style.png)
+![Blazor ComboBox with opacity style](./images/style/blazor_combobox_opacity-style.webp)
 
 ## Disable specific items in ComboBox
 
@@ -205,7 +205,7 @@ Change the floating label text color when focused by targeting `.e-input-focus` 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhUsLhGgPhWFokH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with float label focusing color](./images/style/blazor_combobox_floatlabel-focus-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhUsLhGgPhWFokH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with float label focusing color](./images/style/blazor_combobox_floatlabel-focus-color.webp)" %}
 
 ## Customizing the color of the placeholder text
 
@@ -217,7 +217,7 @@ Change the placeholder color by targeting `input.e-input::placeholder` (scope wi
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKMrVQqbhTKwJQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with color placeholder](./images/style/blazor_combobox_placeholder-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKMrVQqbhTKwJQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with color placeholder](./images/style/blazor_combobox_placeholder-color.webp)" %}
 
 ## Customizing the placeholder to add a mandatory indicator (*)
 
@@ -229,7 +229,7 @@ Append a visual mandatory indicator to the floating placeholder by targeting `.e
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVAsVhmKPrHruAI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with mandatory indicator placeholder](./images/style/blazor_combobox_placeholder-with-mandatory.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVAsVhmKPrHruAI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with mandatory indicator placeholder](./images/style/blazor_combobox_placeholder-with-mandatory.webp)" %}
 
 ## Customizing the text selection color
 
@@ -241,4 +241,4 @@ The appearance of a selected item within a combobox component can be customized 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKCVBGgPVvrliw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_combobox_text-selection-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKCVBGgPVvrliw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_combobox_text-selection-color.webp)" %}

@@ -74,7 +74,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The following image shows the relationship between the annotation position and offset (fraction values).
 
-![Displaying Annotation based on Offset in Blazor Diagram](../images/blazor-diagram-annotation-basedon-offset.png)
+![Displaying Annotation based on Offset in Blazor Diagram](../images/blazor-diagram-annotation-basedon-offset.webp)
 
 >**Note:**
 > * By default, the `offset` value of a connector annotation is 0.5.
@@ -129,7 +129,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The following screenshot shows how the annotation of the connector aligned over its path.
 
-![Changing Annotation Alignment in Blazor Diagram](../images/blazor-diagram-change-annotation-alignment.png)
+![Changing Annotation Alignment in Blazor Diagram](../images/blazor-diagram-change-annotation-alignment.webp)
 
 N> By default, Alignment value of the connector annotation is `Center`.
 
@@ -225,8 +225,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | SegmentAngle | Output |
 |---|---|
-| True | ![Blazor Diagram Annotation in Vertical Position](../images/blazor-diagram-annotation-in-vertical-position.png) |
-| False | ![Blazor Diagram Annotation in Horizontal Position](../images/blazor-diagram-annotation-in-horizontal-position.png) |
+| True | ![Blazor Diagram Annotation in Vertical Position](../images/blazor-diagram-annotation-in-vertical-position.webp) |
+| False | ![Blazor Diagram Annotation in Horizontal Position](../images/blazor-diagram-annotation-in-horizontal-position.webp) |
 
 N> By default, the `SegmentAngle` property is **false**.
 

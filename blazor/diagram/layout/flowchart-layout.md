@@ -17,20 +17,20 @@ Different flowchart symbols have different meanings that are used to represent v
 
 |Symbol|Shape name|Description|
 |---|---|---|
-|![Blazor Diagram terminator symbol](../images/FlowShapes_Terminator.png)|[Terminator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Terminator)|Indicates the beginning and ending of the process.|
-|![Blazor Diagram data symbol](../images//FlowShapes_Data.png)|[Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Data)|Indicates data input or output for a process.|
-|![Blazor Diagram process symbol](../images/FlowShapes_Process.png)|[Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Process)|Represents an operation or set of operations and data manipulations.|
-|![Blazor Diagram decision symbol](../images/FlowShapes_Decision.png)|[Decision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Decision)|Shows a branching point where the decision is made to choose one of the two paths|
-|![Blazor Diagram document symbol](../images//FlowShapes_Document.png)|[Document](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Document)|Represents a single document or report in the process.|
-|![Blazor Diagram subprocess symbol](../images/FlowShapes_PreDefinedProcess.png)|[PreDefinedProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_PreDefinedProcess)|Represents a sequence of actions that combine to perform a specific task that is defined elsewhere.|
-|![Blazor Diagram direct data symbol](../images/FlowShapes_DirectData.png)|[DirectData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_DirectData)|Represents a collection of information that allows searching, sorting, and filtering.|
-|![Blazor Diagrm stored data symbol](../images/FlowShapes_StoredData.png)|[StoredData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_StoredData)|Represents a step where data get stored within a process.|
-|![Blazor Diagram manual input symbol](../images/FlowShapes_ManualInput.png)|[ManualInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_ManualInput)|Represents the manual input of data into a field or step in a process.|
-|![Blazor Diagram manual operation symbol](../images/FlowShapes_ManualOperation.png)|[ManualOperation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_ManualOperation)|Represents an operation in a process that must be done manually, not automatically.|
-|![Blazor Diagram preparation symbol](../images/FlowShapes_Preparation.png)|[Preparation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Preparation)|Represents a setup or initialization process to another step in the process.|
-|![Blazor Diagram off-page reference Symbol](../images/FlowShapes_OffPageReference.png)|[OffPageReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_OffPageReference)|Represents a labeled connector used to link two flowcharts on different pages.|
-|![Blazor Diagram multi-document symbol](../images/FlowShapes_MultiDocument.png)|[MultiDocument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_MultiDocument)|Represents multiple documents or reports in the process.|
-|![Blazor Diagram connector symbol](../images/FlowShapes_Connector.png)||Represents a direction of flow from one step to another. It will get created automatically based on the relationship between the parent and child.|
+|![Blazor Diagram terminator symbol](../images/FlowShapes_Terminator.webp)|[Terminator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Terminator)|Indicates the beginning and ending of the process.|
+|![Blazor Diagram data symbol](../images//FlowShapes_Data.webp)|[Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Data)|Indicates data input or output for a process.|
+|![Blazor Diagram process symbol](../images/FlowShapes_Process.webp)|[Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Process)|Represents an operation or set of operations and data manipulations.|
+|![Blazor Diagram decision symbol](../images/FlowShapes_Decision.webp)|[Decision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Decision)|Shows a branching point where the decision is made to choose one of the two paths|
+|![Blazor Diagram document symbol](../images//FlowShapes_Document.webp)|[Document](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Document)|Represents a single document or report in the process.|
+|![Blazor Diagram subprocess symbol](../images/FlowShapes_PreDefinedProcess.webp)|[PreDefinedProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_PreDefinedProcess)|Represents a sequence of actions that combine to perform a specific task that is defined elsewhere.|
+|![Blazor Diagram direct data symbol](../images/FlowShapes_DirectData.webp)|[DirectData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_DirectData)|Represents a collection of information that allows searching, sorting, and filtering.|
+|![Blazor Diagrm stored data symbol](../images/FlowShapes_StoredData.webp)|[StoredData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_StoredData)|Represents a step where data get stored within a process.|
+|![Blazor Diagram manual input symbol](../images/FlowShapes_ManualInput.webp)|[ManualInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_ManualInput)|Represents the manual input of data into a field or step in a process.|
+|![Blazor Diagram manual operation symbol](../images/FlowShapes_ManualOperation.webp)|[ManualOperation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_ManualOperation)|Represents an operation in a process that must be done manually, not automatically.|
+|![Blazor Diagram preparation symbol](../images/FlowShapes_Preparation.webp)|[Preparation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Preparation)|Represents a setup or initialization process to another step in the process.|
+|![Blazor Diagram off-page reference Symbol](../images/FlowShapes_OffPageReference.webp)|[OffPageReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_OffPageReference)|Represents a labeled connector used to link two flowcharts on different pages.|
+|![Blazor Diagram multi-document symbol](../images/FlowShapes_MultiDocument.webp)|[MultiDocument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_MultiDocument)|Represents multiple documents or reports in the process.|
+|![Blazor Diagram connector symbol](../images/FlowShapes_Connector.webp)||Represents a direction of flow from one step to another. It will get created automatically based on the relationship between the parent and child.|
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -212,7 +212,7 @@ Different flowchart symbols have different meanings that are used to represent v
 ```
 >**Note:** When rendering a flowchart layout using a data source, connector labels must be applied manually in the [DataLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DataLoaded) event.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVeWjNHTJDuhNZh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout rendered from data source](../images/Flowchart_Layout.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVeWjNHTJDuhNZh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout rendered from data source](../images/Flowchart_Layout.webp)" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/FlowchartLayout/FlowchartLayout.razor).
 
@@ -237,7 +237,7 @@ This orientation arranges elements vertically from top to bottom. It is commonly
     private SfDiagramComponent _diagram;
 }
 ```
-![Blazor flowchart layout with top-to-bottom orientation](../images/Flowchart_Layout.png)
+![Blazor flowchart layout with top-to-bottom orientation](../images/Flowchart_Layout.webp)
 
 ### How to Arrange Layout Using LeftToRight Orientation
 
@@ -256,7 +256,7 @@ This `Orientation` arranges elements horizontally from left to right. It is used
     private SfDiagramComponent _diagram;
 }
 ```
-![Blazor flowchart layout with left-to-right orientation](../images/Flowchart_LeftToRight.png)
+![Blazor flowchart layout with left-to-right orientation](../images/Flowchart_LeftToRight.webp)
 
 ## How to Customize Decision Output Directions
 
@@ -272,11 +272,11 @@ The following table will explain the pictorial representation of the behavior:
 
 |YesBranchDirection| NoBranchDirection | TopToBottom | LeftToRight |
 |---|---|---|---|
-| Left In Flow |Right In Flow|![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalLeftAndRightBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalLeftAndRightBranches.png)|
-| Right In Flow |Left In Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalRightAndLeftBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalRightAndLeftBranches.png) |
-| Same As Flow |Right In Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalSameAndRightBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalSameAndRightBranches.png) |
-| Right In Flow | Same As Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalRightAndSameBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalRightAndSameBranches.png) |
-|Same As Flow |Same As Flow|![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalSameBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalSameBranches.png)|
+| Left In Flow |Right In Flow|![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalLeftAndRightBranches.webp)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalLeftAndRightBranches.webp)|
+| Right In Flow |Left In Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalRightAndLeftBranches.webp)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalRightAndLeftBranches.webp) |
+| Same As Flow |Right In Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalSameAndRightBranches.webp)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalSameAndRightBranches.webp) |
+| Right In Flow | Same As Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalRightAndSameBranches.webp)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalRightAndSameBranches.webp) |
+|Same As Flow |Same As Flow|![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalSameBranches.webp)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalSameBranches.webp)|
 
 >**Note:** If both branch directions are the same, the **Yes** branch is prioritized.
 
@@ -438,7 +438,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/FlowchartLayout/CustomYesOrNoBranch.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDroWjZHzziHpvRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout with custom Yes/No branch values](../images/Flowchart_CustomYesOrNoBranches.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDroWjZHzziHpvRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor flowchart layout with custom Yes/No branch values](../images/Flowchart_CustomYesOrNoBranches.webp)" %}
 
 ## How to Update Spacing Between Nodes 
 

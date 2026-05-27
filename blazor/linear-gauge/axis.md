@@ -26,7 +26,7 @@ The start value and end value for the Linear Gauge can be set using the [Minimum
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Minimum and Maximum Values](images/blazor-linear-gauge-min-max-value.png)
+![Blazor Linear Gauge with Minimum and Maximum Values](images/blazor-linear-gauge-min-max-value.webp)
 
 ## Line Customization
 
@@ -50,7 +50,7 @@ The following properties in the [LinearGaugeLine](https://help.syncfusion.com/cr
 </SfLinearGauge>
 ```
 
-![Customizing Blazor Linear Gauge Line](images/blazor-linear-gauge-line.png)
+![Customizing Blazor Linear Gauge Line](images/blazor-linear-gauge-line.webp)
 
 ## Ticks Customization
 
@@ -79,7 +79,7 @@ Ticks are used to specify the interval in the axis. Ticks are of two types, majo
 </SfLinearGauge>
 ```
 
-![Customizing Blazor Linear Gauge Ticks](images/blazor-linear-gauge-ticks-customization.png)
+![Customizing Blazor Linear Gauge Ticks](images/blazor-linear-gauge-ticks-customization.webp)
 
 <!-- markdownlint-disable MD036 -->
 ### Positioning the ticks
@@ -106,7 +106,7 @@ The minor and major ticks can be positioned by using the [Offset](https://help.s
 </SfLinearGauge>
 ```
 
-![Changing Ticks Position in Blazor Linear Gauge](images/blazor-linear-gauge-tick-position.png)
+![Changing Ticks Position in Blazor Linear Gauge](images/blazor-linear-gauge-tick-position.webp)
 
 ## Labels Customization
 
@@ -133,7 +133,7 @@ The style of the labels can be customized using the following properties in [Lin
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Label Customization](images/blazor-linear-gauge-label-customization.png)
+![Blazor Linear Gauge with Label Customization](images/blazor-linear-gauge-label-customization.webp)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -157,7 +157,7 @@ Labels can be positioned by using [Offset](https://help.syncfusion.com/cr/blazor
 </SfLinearGauge>
 ```
 
-![Changing Label Position in Blazor Linear Gauge](images/blazor-linear-gauge-label-position.png)
+![Changing Label Position in Blazor Linear Gauge](images/blazor-linear-gauge-label-position.webp)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -179,7 +179,7 @@ If the last label is not in the visible range, it will be hidden by default. The
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Last Label](images/blazor-linear-gauge-last-label.png)
+![Blazor Linear Gauge with Last Label](images/blazor-linear-gauge-last-label.webp)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -203,7 +203,7 @@ Axis labels in the Linear Gauge control can be formatted using the [Format](http
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Custom Label Format](images/blazor-linear-gauge-custom-format.png)
+![Blazor Linear Gauge with Custom Label Format](images/blazor-linear-gauge-custom-format.webp)
 
 ### Displaying numeric format in labels
 
@@ -280,7 +280,7 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Numeric Label Format](images/blazor-linear-gauge-numeric-label-format.png)
+![Blazor Linear Gauge with Numeric Label Format](images/blazor-linear-gauge-numeric-label-format.webp)
 
 ## Orientation
 
@@ -298,7 +298,7 @@ By default, the Linear Gauge is rendered vertically. To change its orientation, 
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Horizontal Orientation](images/blazor-linear-gauge-horizontal-orientation.png)
+![Blazor Linear Gauge with Horizontal Orientation](images/blazor-linear-gauge-horizontal-orientation.webp)
 
 ## Inverted Axis
 
@@ -318,7 +318,7 @@ The axis of the Linear Gauge component can be inversed by setting the [IsInverse
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Inverted Axis](images/blazor-linear-gauge-invert-axis.png)
+![Blazor Linear Gauge with Inverted Axis](images/blazor-linear-gauge-invert-axis.webp)
 
 ## Opposed Axis
 
@@ -338,7 +338,7 @@ To place an axis opposite from its original position, [OpposedPosition](https://
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Opposed Axes](images/blazor-linear-gauge-opposite-axes.png)
+![Blazor Linear Gauge with Opposed Axes](images/blazor-linear-gauge-opposite-axes.webp)
 
 ## Multiple Axes
 
@@ -371,4 +371,4 @@ Multiple axes can be added to the Linear Gauge by adding multiple [LinearGaugeAx
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Multiple Axes](images/blazor-linear-gauge-multiple-axes.png)
+![Blazor Linear Gauge with Multiple Axes](images/blazor-linear-gauge-multiple-axes.webp)

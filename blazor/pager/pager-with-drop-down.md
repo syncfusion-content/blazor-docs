@@ -32,4 +32,4 @@ Values for the `PageSizes` property must be provided as a collection of integers
 
 ```
 
-![Blazor Pager with Dropdown](./images/blazor-pager-with-drop-down.png)
+![Blazor Pager with Dropdown](./images/blazor-pager-with-drop-down.webp)
