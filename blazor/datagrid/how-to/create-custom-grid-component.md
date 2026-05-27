@@ -7,13 +7,13 @@ control: DataGrid
 documentation: ug
 ---
 
-# Create a reusable custom DataGrid Component
+# Create a reusable custom Blazor DataGrid Component
 
 Creating a reusable custom Blazor DataGrid by wrapping the Syncfusion `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
 
 In such scenarios, manually configuring features such as paging, sorting, filtering, and layout for each Grid can result in duplicated code and inconsistent behavior. Over time, this repetitive setup increases development effort and makes updates more difficult. By introducing a wrapper component, common configurations can be centralized and reused efficiently, ensuring uniform behavior throughout the application.
 
-## Why create a custom DataGrid component
+## Why create a custom Blazor DataGrid component
 
 A custom DataGrid component simplifies development by reducing repetitive configuration. Instead of defining the same settings for each Grid instance, properties such as paging, sorting, and layout can be configured once and reused across the application.
 
@@ -23,7 +23,7 @@ Another advantage is improved maintainability. When updates are required, such a
 
 Additionally, a reusable component enhances code readability. By abstracting repetitive logic into a single component, page-level code becomes cleaner and easier to understand.
 
-## How the custom Grid works
+## How the Custom Syncfusion Blazor DataGrid Works
 
 The custom component internally renders the Syncfusion `SfGrid` and applies predefined settings that are shared across all usages. It acts as a wrapper that encapsulates default behavior while allowing flexibility for customization.
 
@@ -48,7 +48,7 @@ Common use cases include:
 
 Adopting this pattern helps enforce development standards, reduces duplication, and improves overall code quality.
 
-## CustomGrid component implementation
+## Implement a Custom Blazor DataGrid Component
 
 The following example demonstrates how to create a reusable CustomGrid component with predefined `GridPageSettings`. This component centralizes common configuration options, such as `PageCount` and `PageSize`, while still allowing external customization through parameters and projected content.
 
@@ -109,7 +109,7 @@ namespace SF_Grid_Inheritance.Shared
 {% endhighlight %}
 {% endtabs %}
 
-## Use the custom Grid component
+## Use the Reusable DataGrid Component in Blazor
 
 Once the custom component is defined, it can be reused across different pages by supplying the required data source and defining column structures. The predefined settings are automatically applied, which reduces setup time and ensures consistent behavior.
 
