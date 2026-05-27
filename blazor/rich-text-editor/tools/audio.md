@@ -177,7 +177,7 @@ Once an audio file has been inserted, you can change it using the Rich Text Edit
 
 To remove audio from the Rich Text Editor content, select audio and click the `Remove` tool from the quick toolbar. It will delete the audio from the Rich Text Editor content.
 
-Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
+Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the delete icon.
 
 ![Blazor RichTextEditor remove audio](../images/blazor-richtexteditor-audio-remove.webp)
 
@@ -220,9 +220,9 @@ You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cance
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<RichTextEditor>
+<SfRichTextEditor>
     <RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
-</RichTextEditor>
+</SfRichTextEditor>
 @code{
     private void OnMediaDrop(MediaDropEventArgs args)
     {
@@ -430,7 +430,3 @@ namespace AudioUpload.Controllers
 
 The Rich Text Editor supports pasting audio files directly into the editor content. You can paste single or multiple audio files from your file system directly into the editor.
 
-## See also
-
-* [How to configuring the toolbar position](https://blazor.syncfusion.com/documentation/rich-text-editor/toolbar#configuring-the-toolbar-position)
-* [How to use link editing option in the toolbar items](../tools#insert-link)

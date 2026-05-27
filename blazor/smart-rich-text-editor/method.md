@@ -42,6 +42,7 @@ The following example demonstrates how to use all AssistViewSettings methods tog
     <SfButton @onclick="GetHistoryAsync">Get AI History</SfButton>
 </div>
 <SfSmartRichTextEditor>
+    <p>Defines the available methods of the AssistViewSettings, allowing you to perform actions and programmatically control the behavior and functionality of the AssistView within the editor.</p>
     <AssistViewSettings @ref="AssistViewSettings" Placeholder="Ask AI to enhance your content..." />
 </SfSmartRichTextEditor>
 @code {
@@ -82,9 +83,11 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 {% endhighlight %}
 {% endtabs %}
 
+![Blazor Smart Rich Text Editor AssistViewSettings Methods](./images/smart-rich-text-editor-methods.webp)
+
 ---
 
-## See Also
+## See also
 
 * [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
 * [Appearance](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/appearance)

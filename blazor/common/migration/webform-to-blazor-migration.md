@@ -9,26 +9,26 @@ documentation: ug
 
 # Migrate ASP.NET Web Forms Controls to Blazor Components
 
-Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a significant architectural shift from a page-centric, postback-based framework to a modern, component-driven framework built on .NET. This guide provides a **structured, step-by-step migration approach** for [ASP.NET Web Forms controls](https://help.syncfusion.com/aspnet/overview) to their corresponding [Blazor components](https://blazor.syncfusion.com/documentation/introduction).
+Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a significant architectural shift from a page centric, postback based framework to a modern, component driven framework built on .NET. This guide provides a **structured, step-by-step migration approach** for [ASP.NET Web Forms controls](https://help.syncfusion.com/aspnet/overview) to their corresponding [Blazor components](https://blazor.syncfusion.com/documentation/introduction).
 
 ## Why migrate from Web Forms to Blazor?
 
 ASP.NET Web Forms follows a **server-side page model** that uses ViewState, postback, and a tightly coupled page lifecycle to process requests and maintain UI state across interactions.
 
-Blazor uses a component-based architecture with reusable Razor components and **event-driven UI updates**, where user interactions trigger handlers that refresh the UI without full page reloads. This modern approach improves maintainability, scalability, and testability, making Blazor the preferred choice for migrating and modernizing Web Forms applications.
+Blazor uses a component based architecture with reusable Razor components and **event driven UI updates**, where user interactions trigger handlers that refresh the UI without full page reloads. This modern approach improves maintainability, scalability, and testability, making Blazor the preferred choice for migrating and modernizing Web Forms applications.
 
 | Aspect | Web Forms | Blazor |
 | --- | --- | --- |
 | Execution model | Server-centric (page postback) | Blazor Server (SignalR) or Blazor WebAssembly |
 | Hosting & deployment | IIS hosted only | Cloud, containers, IIS, or static hosting |
 | UI technology | `.aspx` pages with server controls | Razor components (`.razor`, HTML + C#) |
-| UI definition | Separate markup and code-behind (`.aspx`, `.aspx.cs`) | Component-based (`.razor` with optional `.razor.cs`) |
+| UI definition | Separate markup and code-behind (`.aspx`, `.aspx.cs`) | Component based (`.razor` with optional `.razor.cs`) |
 | Lifecycle model | `Page_Load`, postback events, `Page_Unload` | `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}`, `Dispose` |
 | State management | ViewState (hidden fields, page level) | Component state (in-memory, persisted per connection in Blazor Server) |
-| User interaction | Full or partial postback (page reload) | Event-driven UI updates (real-time in Blazor Server via SignalR) |
+| User interaction | Full or partial postback (page reload) | Event driven UI updates (real-time in Blazor Server via SignalR) |
 | Event handling | Server callbacks (AutoPostBack) | `EventCallback<T>` and delegates |
 | Dependency injection | Limited or manual | Built-in with `IServiceCollection` |
-| Navigation model | Page based navigation (`.aspx`) | SPA-style routing using `@page` |
+| Navigation model | Page based navigation (`.aspx`) | SPA style routing using `@page` |
 | Tooling support | Visual Studio | Visual Studio and Visual Studio Code |
 | Scalability | Limited by server resources | Cloud native and horizontally scalable |
 | Application updates | Requires restart for assembly changes | Blazor Server: immediate; WebAssembly: versioned deployment |
@@ -52,7 +52,7 @@ ASP.NET Web Forms and Blazor Web Apps follow different application architectures
 | ViewState | Component state (fields/properties) | Maintains UI state in memory instead of hidden fields |
 | CSS references (`<link>`) | `wwwroot/css`, `App.razor` or layout files | Defines global styles and static assets |
 | Script references (`<script>`) | `wwwroot/js`, `App.razor` or layout files | Includes JavaScript files and interop scripts |
-| Routing (`*.aspx`) | `@page` directive in `.razor` files | Enables route-based navigation |
+| Routing (`*.aspx`) | `@page` directive in `.razor` files | Enables route based navigation |
 | Session / Application state | Scoped / Singleton services | Manages shared application state |
 
 ## Migrating Components from Web Forms to Blazor
@@ -156,7 +156,7 @@ In Blazor, scripts and styles are included once at the application level (such a
 
 ## Component specific migration steps
 
-### Add Blazor DataGrid component
+### Migrate to Blazor DataGrid component
 
 For detailed explanation, refer to the [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) and [Web Forms DataGrid getting started guide](https://help.syncfusion.com/aspnet/grid/getting-started).
 
@@ -258,7 +258,7 @@ namespace WebFormsGrid
 {% endhighlight %}
 {% endtabs %}
 
-### Add Blazor Scheduler component
+### Migrate to Blazor Scheduler component
 
 For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started).
 
@@ -370,7 +370,7 @@ namespace WebFormsScheduler
 
 N> The event class (`Meeting` in this example) property names match the Scheduler's default field mappings. Alternatively, you can add an explicit [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html) configuration in `ScheduleEventSettings` to map custom property names.
 
-### Add Blazor Rich Text Editor component
+### Migrate to Blazor Rich Text Editor component
 
 For detailed explanation, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started).
 
