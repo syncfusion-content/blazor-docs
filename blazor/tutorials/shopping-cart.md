@@ -1,34 +1,30 @@
 ---
 layout: post
-title: Creating a Shopping Cart in Blazor with Syncfusion components
-description: Step-by-step guide to build a shopping cart in a Blazor app, covering product listings, cart management, and checkout with Syncfusion components.
+title: Creating a Shopping Cart with Blazor components | Syncfusion
+description: Step-by-step guide to build a shopping cart in Blazor app, covering product listings, cart management, and checkout with Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Creating a Shopping Cart in Blazor with Syncfusion® Blazor components
+# Creating a Shopping Cart with Blazor Components
 
-## Overview
-
-This guide explains how to create a shopping cart workflow (product browsing → cart → checkout → order confirmation) in a Blazor Server application using Syncfusion Blazor components. The walkthrough covers the essential building blocks required for a typical e-commerce scenario, including defining data models, managing cart state using dependency-injected services, and implementing pages for product listing, shopping cart management, and checkout.
+This article explains how to build a shopping cart workflow in a Blazor application using [Blazor components](https://www.syncfusion.com/blazor-components). It covers product listing, cart operations, checkout, and order confirmation, along with managing cart state through dependency injection.
 
 ## Prerequisites
 
-Before starting, ensure that you have:
-
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) 
 
 ## Create the Blazor project
 
-To create a Blazor application, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
+To create a Blazor server application, follow the [Blazor Web App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
 
-## Install required Syncfusion® packages
+## Install required packages
 
-To add the Blazor components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
+Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
-| Components Name | Packages |
+| Component | Package |
 |----------------|---------|
 | Button     | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
 | Card           | [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards) |
@@ -40,7 +36,7 @@ To add the Blazor components to the app, open the NuGet Package Manager in Visua
 
 ## Add required namespaces
 
-Open the `Components/_Imports.razor` file and import the following Syncfusion components, shopping cart models and services namespaces.
+Open the `Components/_Imports.razor` file and import the following Blazor components, shopping cart models, and services namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -58,11 +54,9 @@ Open the `Components/_Imports.razor` file and import the following Syncfusion co
 {% endhighlight %}
 {% endtabs %}
 
-N> The required namespaces are typically defined in the `_Imports.razor` file, so they do not need to be included in each component individually. If not already added, ensure the necessary namespaces are imported in `_Imports.razor`.
+## Register Blazor service
 
-## Register Syncfusion® Blazor service
-
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight cs tabtitle="~/Program.cs" %}
@@ -75,30 +69,32 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Add stylesheets and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file. 
+Add the Blazor theme CSS and required scripts to the `~/Components/App.razor` file. 
 
 {% tabs %}
 {% highlight html tabtitle="App.razor"  %}
 
 <head>
-     ...
+    ...
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ...
 </head>
 <body>
     ...
+    <!-- Blazor core script (required for UI components) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    ...
 </body>
 
 {% endhighlight %}
 {% endtabs %}
 
-N>The example uses `fluent2.css`. Other available theme options include: `bootstrap5.css`, `fabric.css`, `highcontrast.css`, and `tailwind.css`. See the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes) for customization details.
-
 ## Project structure
 
-Organize the application using the following folder structure to separate concerns and maintain a clean project layout.
+Organize the application using the following folder structure to maintain a clear and modular architecture.
 
 ```text
 ShoppingCart/
@@ -108,7 +104,6 @@ ShoppingCart/
 │   ├── _Imports.razor  // Namespace imports
 │   ├── App.razor       // Root component
 │   ├── ProductCard.razor   // Reusable component
-│   ├── CartItems.razor     // Reusable component
 │   └── CartBadge.razor     // Reusable component
 ├── Models/             // Data models (Product, CartItem, Order, etc.)
 ├── Services/           // Application services (CartService, OrderService, etc.)
@@ -120,13 +115,15 @@ ShoppingCart/
 └── Program.cs
 ```
 
-This structure helps keep the application maintainable and scalable by clearly separating data models, services, and UI components. It also makes it easier to update or extend the application as requirements evolve.
+This organization improves code readability and modularity, enabling easier maintenance and scalability as the application evolves.
 
 ## Define data models
 
+The application uses the following data models to represent products, cart items, and order details.
+
 ### Product model
 
-Defines the data model used to represent products in the catalog.
+Represents a product in the catalog, including its basic details, pricing, and availability.
 
 {% tabs %}
 {% highlight cs tabtitle="Models/Product.cs"  %}
@@ -152,7 +149,7 @@ namespace ShoppingCart.Models
 
 ### Cart item model
 
-Defines the data model used to represent an item added to the shopping cart.
+Represents a product added to the cart along with quantity and calculated subtotal.
 
 {% tabs %}
 {% highlight cs tabtitle="Models/CartItem.cs"  %}
@@ -175,7 +172,7 @@ namespace ShoppingCart.Models
 
 ### Order model
 
-Defines the data models used to represent an order, including order details, shipping information, and payment information.
+Represents an order, including selected items, total amount, and associated shipping and payment details.
 
 {% tabs %}
 {% highlight cs tabtitle="Models/Order.cs"  %}
@@ -243,9 +240,9 @@ namespace ShoppingCart.Models
 {% endhighlight %}
 {% endtabs %}
 
-## Create the data
+## Create the data source
 
-This section defines sample product data used by the application.
+This section defines the sample product data used in the application for demonstration purposes.
 
 {% tabs %}
 {% highlight cs tabtitle="Data/ProductData.cs"  %}
@@ -293,17 +290,17 @@ namespace ShoppingCart.Data
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure placeholder images are placed in `wwwroot/images/` or replace `ImageUrl` values with URLs to your own images. 
+N> Ensure the image files are available in the `wwwroot/images/` folder or update the `ImageUrl` property values to point to valid image sources.
 
-This static data source provides product and category information for demonstration purposes. It allows the application to function without a backend service and supports catalog and filtering features.
+This static data source provides a predefined set of products and categories, enabling the application to run without a backend service.
 
 ## Create the services
 
-In a Blazor application, services are used to handle business logic and maintain shared state across components. They are registered with dependency injection and allow multiple pages and components to access the same data in a consistent and controlled manner.
+Services manage business logic and share data across components. In Blazor, they are registered with dependency injection to provide consistent access throughout the application.
 
-### Cart service interface
+### Cart service
 
-This interface defines the operations and state required to manage the shopping cart throughout the application
+Handles cart operations such as adding, removing, and updating items, while tracking the current cart state.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/ICartService.cs"  %}
@@ -327,15 +324,7 @@ namespace ShoppingCart.Services
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-It exposes cart data, summary values, and methods to modify cart items. The change event allows components to automatically refresh when the cart is updated.
-
-### Cart service implementation
-
-This class implements the cart logic and stores cart data for the current user session.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/CartService.cs"  %}
 
 using ShoppingCart.Models;
@@ -402,11 +391,11 @@ namespace ShoppingCart.Services
 {% endhighlight %}
 {% endtabs %}
 
-The service manages cart items in memory and recalculates totals as changes occur. Each update triggers a notification so subscribed components remain in sync.
+The service stores cart items in memory and updates totals automatically. It also triggers events to keep the UI updated when the cart changes.
 
-### Order service interface
+### Order service
 
-This interface defines methods for placing orders and retrieving order information.
+Manages order creation and retrieval within the application.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/IOrderService.cs"  %}
@@ -424,15 +413,7 @@ namespace ShoppingCart.Services
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-It separates order‑related operations from the UI and allows the underlying implementation to be replaced if needed.
-
-### Order service implementation
-
-This class provides a simple implementation for handling orders within the application.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/OrderService.cs"  %}
 
 using ShoppingCart.Models;
@@ -464,11 +445,11 @@ namespace ShoppingCart.Services
 {% endhighlight %}
 {% endtabs %}
 
-Orders are stored in memory and assigned sequential identifiers. Asynchronous methods are used to reflect real‑world data access patterns.
+The service maintains orders in memory and assigns unique identifiers. Asynchronous methods are used to represent real-world operations.
 
-### Product service interface
+### Product service
 
-This interface defines methods used to retrieve products and category information.
+Provides access to product and category data used in the application.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/IProductService.cs"  %}
@@ -487,15 +468,7 @@ namespace ShoppingCart.Services
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-It provides a consistent way to access product data across pages and components.
-
-### Product service implementation
-
-This class retrieves product data from a shared in‑memory source.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/ProductService.cs"  %}
 
 using ShoppingCart.Models;
@@ -534,12 +507,11 @@ namespace ShoppingCart.Services
 {% endhighlight %}
 {% endtabs %}
 
-The service supports product listing, category filtering, and product lookup using shared sample data.
+This service retrieves product data from a shared data source. It supports listing, filtering, and retrieving product details.
 
-### Wishlist service interface
+### Wishlist service
 
-This interface defines operations for managing wish-list items.
-
+Manages wishlist items for the current user session.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/IWishlistService.cs"  %}
@@ -550,11 +522,7 @@ namespace ShoppingCart.Services
 {
     public interface IWishlistService
     {
-        /// <summary>
-        /// Fires whenever a product is added, removed, or toggled in the wishlist.
-        /// </summary>
         event Action? OnChange;
-
         void Toggle(Product product);
         bool Contains(Product product);
         IReadOnlyList<Product> GetItems();
@@ -563,15 +531,7 @@ namespace ShoppingCart.Services
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-It exposes methods to add, remove, and query wish-list items while notifying components of changes.
-
-### Wishlist service implementation
-
-This class maintains the wish-list state for the current session.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/WishlistService.cs"  %}
 
 using ShoppingCart.Models;
@@ -610,7 +570,7 @@ namespace ShoppingCart.Services
 {% endhighlight %}
 {% endtabs %}
 
-The service tracks wish-list items in memory and notifies subscribed components whenever changes occur.
+This service keeps track of wishlist items in memory. It updates components whenever items are added or removed.
 
 ## Register services
 
@@ -622,7 +582,7 @@ Register the application services in `Program.cs` so they can be accessed throug
 using ShoppingCart.Services;
 ...
 var builder = WebApplication.CreateBuilder(args);
-//Syncfusion blazor service
+// Blazor service
 builder.Services.AddSyncfusionBlazor();
 ...
 // Application services
@@ -637,9 +597,11 @@ builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 ## Create reusable components
 
+Reusable components help create a consistent user interface and promote code reusability. They encapsulate common UI elements and logic that can be shared across multiple pages.
+
 ### Create the ProductCard component
 
-This reusable component displays individual product details and provides actions to add items to the cart or toggle wish-list status.
+Displays product details and provides actions for adding items to the cart and managing the wishlist.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/ProductCard.razor"  %}
@@ -650,7 +612,7 @@ This reusable component displays individual product details and provides actions
 
     <CardContent>
         <div class="product-image">
-            <img class="card-img" src="/@Item.ImageUrl" alt="@Item.Name" />
+            <img class="card-img" src="@Item.ImageUrl" alt="@Item.Name" />
         </div>
         <h6 class="fw-bold">@Item.Name</h6>
 
@@ -670,7 +632,7 @@ This reusable component displays individual product details and provides actions
 
             <!-- RIGHT: Actions -->
             <div class="footer-actions">
-                <SfButton Content="Add Cart"
+                <SfButton Content="Add to Cart"
                           CssClass="e-outline e-primary e-small"
                           Disabled="@(!Item.IsInStock)"
                           OnClick="AddToCart" />
@@ -768,11 +730,11 @@ This reusable component displays individual product details and provides actions
 {% endhighlight %}
 {% endtabs %}
 
-This component receives product data through parameters and uses Syncfusion UI components to render a consistent product card layout. It communicates user actions to parent components through callbacks and uses the wish-list service to manage and reflect wish-list state.
+This component accepts product data as a parameter and renders a structured card layout. It uses [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card), [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), and [Blazor Rating](https://www.syncfusion.com/blazor-components/blazor-rating) to build the UI. It also uses event callbacks for cart actions and integrates with the wishlist service to maintain the current state.
 
 ### Create the CartBadge component
 
-This component displays a cart icon with a badge that shows the total number of items currently in the cart. It can be placed in a layout or header to provide global visibility of the cart state.
+Displays a cart icon with a badge that indicates the current number of items in the cart.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/CartBadge.razor"  %}
@@ -789,7 +751,6 @@ This component displays a cart icon with a badge that shows the total number of 
 
 @code {
     [Inject] ICartService CartService { get; set; } = null!;
-    [Inject] NavigationManager NavigationManager { get; set; } = null!;
 
     protected override void OnInitialized()
     {
@@ -807,13 +768,15 @@ This component displays a cart icon with a badge that shows the total number of 
 {% endhighlight %}
 {% endtabs %}
 
-This component reads the cart item count from the cart service and displays it as a badge. It subscribes to cart state changes so the badge value updates automatically whenever items are added or removed.
+This component reads the cart item count from the cart service and updates automatically when changes occur. It can be placed in a layout or header to provide global visibility of the cart state alongside navigation elements.
 
 ## Create pages for catalog & cart
 
+Pages define the main user interface of the application. Each page handles a specific part of the shopping workflow, such as browsing products, managing the cart, and completing checkout.
+
 ### Create the Home page
 
-This page serves as the landing page and provides quick navigation to key areas of the application.
+Serves as the landing page and provides quick navigation to key sections of the application.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor"  %}
@@ -923,11 +886,11 @@ This page serves as the landing page and provides quick navigation to key areas 
 {% endhighlight %}
 {% endtabs %}
 
-The home page uses Syncfusion card components to present a simple hero section and navigation cards. It helps users quickly access the product catalog and wish-list.
+This page uses the [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component to present a hero section and navigation cards. It enables users to quickly navigate to the catalog and wishlist pages.
 
 ### Create the product catalog page
 
-This page displays the list of available products and allows users to filter products by category and add items to the shopping cart.
+Displays available products and provides filtering and cart actions.
 
 {% tabs %}
 {% highlight razor tabtitle="Catalog.razor"  %}
@@ -958,8 +921,7 @@ This page displays the list of available products and allows users to filter pro
 
     @if (products == null)
     {
-         <SfSpinner Visible="true">
-            </SfSpinner>
+         <SfSpinner Visible="true"></SfSpinner>
     }
     else if (!filteredProducts.Any())
     {
@@ -1039,11 +1001,11 @@ This page displays the list of available products and allows users to filter pro
 {% endhighlight %}
 {% endtabs %}
 
-This page retrieves product and category data using the product service and displays the results in a responsive grid layout. Users can filter products by category and add selected items to the cart using the cart service.
+This page uses [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) for category filtering and [Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) for loading states. It integrates the [reusable ProductCard component](#create-the-productcard-component) and interacts with services to manage product data and cart actions.
 
 ### Create the shopping cart page
 
-This page displays the items added to the shopping cart and allows users to modify quantities, remove items, and review order totals before proceeding to checkout.
+Displays selected items and allows users to update quantities or remove items.
 
 {% tabs %}
 {% highlight razor tabtitle="Cart.razor"  %}
@@ -1338,9 +1300,11 @@ This page displays the items added to the shopping cart and allows users to modi
 {% endhighlight %}
 {% endtabs %}
 
+This page uses the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display cart items and [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) and [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) components for layout and actions. It updates dynamically based on cart changes.
+
 ### Create the checkout page
 
-This page collects shipping and payment details, displays an order summary, and places the order when the user completes the checkout process.
+Collects user details and processes the order.
 
 {% tabs %}
 {% highlight razor tabtitle="Checkout.razor"  %}
@@ -1496,7 +1460,7 @@ This page collects shipping and payment details, displays an order summary, and 
 
 N> The payment form in this sample is for **demonstration purposes only** and is **NOT secure for production use**. 
 
-This page validates cart content, collects user input using an EditForm, and displays a live order summary. When the order is submitted, it creates a new order using the order service, clears the cart, and navigates to the order confirmation page.
+This page uses Blazor input components, including [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) and [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) to capture user input. It validates data and submits the order using the [order service](#order-service).
 
 ### Create the OrderConfirmation page
 
@@ -1586,7 +1550,7 @@ This page displays the order confirmation details after a successful checkout an
 {% endhighlight %}
 {% endtabs %}
 
-This page retrieves the order details using the order ID passed in the route and displays a confirmation message along with item and shipping information. It also provides a navigation option to return to the product catalog.
+This page retrieves order data using the order service and presents a confirmation summary, along with navigation to continue shopping.
 
 ### Create the OrderHistory page
 
@@ -1664,7 +1628,7 @@ This page displays a list of previously placed orders and allows users to review
 {% endhighlight %}
 {% endtabs %}
 
-This page retrieves order data using the order service and displays it in a summary format. It handles loading, empty, and populated states to provide a clear and consistent order history experience.
+This page uses [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) for loading indication and [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) for navigation. It presents order summaries and allows users to view details.
 
 ### Create the Wishlist page
 
@@ -1746,7 +1710,7 @@ else
 {% endhighlight %}
 {% endtabs %}
 
-This page uses the wish-list service to retrieve saved items and conditionally displays either an empty state or a list of products. Users can remove items from the wish-list or navigate back to the catalog.
+This page uses [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) and [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) components to present wishlist items. It interacts with the wishlist service to update and manage items dynamically.
 
 ## Run the application
 
@@ -1754,12 +1718,12 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 **Expected behavior**
 
-* The application launches successfully and displays the home page with navigation links to the product catalog and wish-list.
-* The product catalog lists available products using Syncfusion Blazor components, and adding items updates the cart badge immediately.
-* The shopping cart page shows selected items, supports quantity updates and removal actions, and recalculates totals in real time.
-* The checkout process allows users to enter shipping and payment details, place an order, and clear the cart upon completion.
-* After checkout, the order confirmation and order history pages display the appropriate order details and status.
-* The wish-list page allows users to save and remove products, and the saved items remain available while navigating across pages.
+* The application loads and displays the home page with navigation options for the product catalog and wishlist.
+* The product catalog presents items using Blazor components, and adding products updates the cart badge in real time.
+* The cart page displays selected items and supports updating quantities or removing items, with totals recalculated automatically.
+* The checkout page collects required details, processes the order, and clears the cart after successful submission.
+* The order confirmation and order history pages display accurate order information and status.
+* The wishlist page allows users to add or remove items, with selections preserved during navigation.
 
 **Output**
 
@@ -1767,11 +1731,11 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## See also
 
-* [Getting started with Syncfusion Blazor](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Syncfusion Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-* [Syncfusion Blazor Card](https://blazor.syncfusion.com/documentation/card/getting-started-with-server-app)
-* [Syncfusion Blazor Buttons](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
-* [Syncfusion Blazor ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-server-app)
-* [Syncfusion Blazor Rating](https://blazor.syncfusion.com/documentation/rating/getting-started-webapp)
-* [Syncfusion Blazor Spinner](https://blazor.syncfusion.com/documentation/spinner/getting-started-webapp)
-* [Dependency Injection in Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/dependency-injection)
+* [Getting started with Blazor Server app](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Getting started with Blazor Card](https://blazor.syncfusion.com/documentation/card/getting-started-with-server-app)
+* [Getting started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
+* [Getting started with Blazor ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-server-app)
+* [Getting started with Blazor Rating](https://blazor.syncfusion.com/documentation/rating/getting-started-webapp)
+* [Getting started with Blazor Spinner](https://blazor.syncfusion.com/documentation/spinner/getting-started-webapp)
+* [Configure dependency injection in Blazor applications](https://learn.microsoft.com/en-us/aspnet/core/blazor/dependency-injection)
