@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Menu in Blazor DataGrid
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a column menu that provides quick access to features such as sorting, grouping, filtering, column chooser, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a column menu that provides quick access to features such as sorting, grouping, filtering, column chooser, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options.
 
 To enable the column menu, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnMenu) property to **true** in the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) configuration.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor DataGrid
 
-Columns are the core structural elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
+Columns are the core structural elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 Each column defines:
 
 * The data field to display.
@@ -599,7 +599,7 @@ Once localization is enabled, apply a custom date format using the `Format` prop
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; }
-    }
+}
 
 {% endhighlight %}
 {% endtabs %}
