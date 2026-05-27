@@ -1,4 +1,4 @@
-    ---
+---
 layout: post
 title: Generate AI insights with Blazor DataGrid and AI models | Syncfusion
 description: Learn how to use Syncfusion Blazor DataGrid with Azure OpenAI or Ollama to analyze sales orders, generate AI insights, and highlight flagged records.
@@ -70,7 +70,7 @@ Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
 ## Add stylesheet and script resources
 
-Include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Include the Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 Add the stylesheet and script references to **~/Components/App.razor** for Blazor Web Apps using the Interactive Server render mode.
 
