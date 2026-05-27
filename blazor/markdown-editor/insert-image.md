@@ -24,7 +24,7 @@ The image will be added to the editor content at the current cursor position.
 The following example demonstrates how to enable image insertion in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-insert-image.razor %}
 
