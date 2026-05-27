@@ -19,7 +19,7 @@ The Syncfusion Blazor Markdown Editor includes a live preview panel that renders
 To enable the Markdown preview feature, the `Markdig` package is used to convert Markdown content into HTML. The following example demonstrates how to enable Markdown-to-HTML preview in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-preview.razor %}
 
