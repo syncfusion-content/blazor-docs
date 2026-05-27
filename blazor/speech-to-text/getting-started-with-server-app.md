@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor SpeechToText in Blazor Server App
+title: Getting Started with Syncfusion SpeechToText in Blazor Server App
 description: Checkout and learn about getting started with Blazor SpeechToText Component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: SpeechToText
