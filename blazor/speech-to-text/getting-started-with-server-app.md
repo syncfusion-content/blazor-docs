@@ -1,0 +1,235 @@
+---
+layout: post
+title: Getting Started with Syncfusion SpeechToText in Blazor Server App
+description: Checkout and learn about getting started with Blazor SpeechToText Component in Blazor Server App using Visual Studio and more.
+platform: Blazor
+control: SpeechToText
+documentation: ug
+---
+
+# Getting Started with Blazor SpeechToText in Blazor Server App
+
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio
+
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio Code
+
+Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
+
+Alternatively, create a Server application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Server App" %}
+
+dotnet new blazor -o BlazorApp -int Server
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+## Prerequisites
+
+Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+## Create a Blazor Server App using .NET CLI
+
+Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazor -o BlazorApp -int Server
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+
+Install the [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) NuGet package using one of the following methods.
+
+**Visual Studio (NuGet Package Manager)**:
+
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet package (`Syncfusion.Blazor.Inputs`) and install it.
+
+**Visual Studio Code or .NET CLI**:
+
+Open the terminal or command prompt and run the following command:
+
+{% tabs %}
+{% highlight C# tabtitle=".NET CLI" %}
+
+dotnet add package Syncfusion.Blazor.Inputs -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+
+## Add import namespaces
+
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
+
+{% tabs %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Inputs
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+
+Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Server App.
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
+....
+using Syncfusion.Blazor;
+....
+builder.Services.AddSyncfusionBlazor();
+....
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add script resources
+
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~/Components/App.razor** file.
+
+```html
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+```
+
+N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+
+## Add Syncfusion<sup style="font-size:70%">®</sup> Blazor SpeechToText component
+
+Add the Syncfusion<sup style="font-size:70%">®</sup> Blazor SpeechToText component in the **~/Components/Pages/Home.razor** file.
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Inputs
+
+<div class="speechtext-container">
+    <SfSpeechToText @bind-Transcript="@transcript"></SfSpeechToText>
+    <SfTextArea RowCount="5" ColumnCount="50"
+                @bind-Value="@transcript"
+                ResizeMode="Resize.None"
+                Placeholder="Transcribed text will be shown here...">
+    </SfTextArea>
+</div>
+
+<style>
+    .speechtext-container {
+        margin: 50px auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+@code {
+string transcript = "";
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Run the application
+
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor SpeechToText component will render in the default web browser.
+
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property to display the start listening text and [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property to display the stop listening text by using the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) property.
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Inputs
+
+<div class="speechtext-container">
+    <SfSpeechToText ButtonSettings="@buttonSettings"
+                    @bind-Transcript="@transcript">
+    </SfSpeechToText>
+<SfTextArea RowCount="5"
+            ColumnCount="50"
+            @bind-Value="@transcript"
+            ResizeMode="Resize.None"
+            Placeholder="Transcribed text will be shown here...">
+</SfTextArea>
+
+</div>
+
+<style>
+    .speechtext-container {
+        margin: 50px auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+@code {
+string transcript = "";
+
+SpeechToTextButtonSettings buttonSettings = new SpeechToTextButtonSettings()
+{
+    Text = "Start Listening",
+    StopStateText = "Stop Listening"
+};
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor SpeechToText Component](images/getting-started.webp)
+
+![Blazor SpeechToText with Button Content Start text](images/btn-content-start.webp)
+
+![Blazor SpeechToText with Button Content Stop text](images/btn-content-stop.webp)
+
+> The [SpeechToText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html) component requires an internet connection and a browser that supports [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) from the Web Speech API.
