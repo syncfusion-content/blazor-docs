@@ -20,11 +20,9 @@ Using the public methods, you can build custom workflows with the AI Assistant. 
 | `HideAIPopupAsync()` | Closes the AI Assistant popup. |
 | `ClearAIPromptHistoryAsync()` | Deletes all conversation history and resets the AI Assistant to a clean state. |
 
----
-
 ## Complete Example Using All Methods
 
-The following example demonstrates how to use all AssistViewSettings methods together in a single button click handler to create a comprehensive workflow:
+The following example demonstrates how to use AssistViewSettings methods in a button click handler to create a comprehensive workflow:
 
 {% tabs %}
 {% highlight razor %}
@@ -84,8 +82,6 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 {% endtabs %}
 
 ![Blazor Smart Rich Text Editor AssistViewSettings Methods](./images/smart-rich-text-editor-methods.png)
-
----
 
 ## See also
 
