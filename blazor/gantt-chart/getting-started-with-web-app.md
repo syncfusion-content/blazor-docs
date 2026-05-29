@@ -27,19 +27,22 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager.
+Install the [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 
-1. Go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**
-2. Search for `Syncfusion.Blazor.Gantt` and install the latest version
-3. Search for `Syncfusion.Blazor.Themes` and install the latest version
+**Visual Studio (NuGet Package Manager)**:
 
-Alternatively, run the following commands in the Package Manager Console:
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Gantt` and `Syncfusion.Blazor.Themes`) and install it.
+
+**Visual Studio Code or .NET CLI**:
+
+Open the terminal or command prompt and run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Gantt -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -144,19 +147,6 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-## Add import namespaces
-
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Gantt` namespaces.
-
-{% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Gantt
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of your Blazor Web App.
@@ -179,6 +169,9 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
 
+- Add the **stylesheet reference inside the `<head>` tag** of the `App.razor` file.
+- Add the **script reference inside the `<body>` tag** of the `App.razor` file.
+
 ```html
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -191,22 +184,15 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor Gantt Chart component inside the razor file.
+* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
-
-@* Define the desired render mode here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveAuto
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -251,6 +237,22 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% endhighlight %}
 {% endtabs %}
+
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Gantt Chart component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
+2. Run the following command:
+
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWNVzLgvAOlvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

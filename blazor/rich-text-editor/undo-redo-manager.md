@@ -16,7 +16,7 @@ To undo and redo operations, do one of the following:
 * Press the undo/redo button on the toolbar
 * Press the <kbd>Ctrl + Z</kbd>/ <kbd>Ctrl + Y</kbd> combination on the keyboard
 
-You can customize the number of undo and redo steps using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html) property. By default, undo and redo actions are stored every `300` milliseconds in the undo/redo manager. The time interval can be customized by using the [UndoRedoTimer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoTimer) property.
+You can customize the number of undo and redo steps using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoSteps) property. By default, undo and redo actions are stored every `300` milliseconds in the undo/redo manager. The time interval can be customized by using the [UndoRedoTimer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoTimer) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -50,6 +50,9 @@ In the following code example, remove the undo and redo tools from the toolbar.
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Buttons
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -90,7 +93,7 @@ In the following code example, remove the undo and redo tools from the toolbar.
         new ToolbarItemModel() { Command = ToolbarCommand.Print },
         new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
         new ToolbarItemModel() { Command = ToolbarCommand.FullScreen },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator }
     };
 }
 
@@ -104,7 +107,10 @@ You can configure custom toolbar tools in the Rich Text Editor. Actions performe
 {% tabs %}
 {% highlight razor %}
 
-<SfRichTextEditor>
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Buttons
+
+<SfRichTextEditor @ref="rteObj">
     <RichTextEditorToolbarSettings Items="@Tools">
                 <RichTextEditorCustomToolbarItems>
                     <RichTextEditorCustomToolbarItem Name="Insert HTML">
@@ -121,11 +127,13 @@ You can configure custom toolbar tools in the Rich Text Editor. Actions performe
     SfRichTextEditor rteObj;
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo },
         new ToolbarItemModel() { Command = ToolbarCommand.Bold },
         new ToolbarItemModel() { Command = ToolbarCommand.Italic },
         new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough },
-        new ToolbarItemModel() { Name = "Insert HTML", TooltipText = "Insert HTML" },
+        new ToolbarItemModel() { Name = "Insert HTML", TooltipText = "Insert HTML" }
     };
     public async Task  onClick()
     {

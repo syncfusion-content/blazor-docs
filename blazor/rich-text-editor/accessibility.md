@@ -81,20 +81,6 @@ The Blazor Rich Text Editor component's accessibility is validated using the [ax
 
 The accessibility compliance of the Rich Text Editor component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the component with accessibility tools.
 
-### Custom key configuration
-
-You can customize the key configurations for keyboard interactions in the Rich Text Editor using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
-
-In the following example, the bold and italic actions are customized to use **Ctrl+1** and **Ctrl+2**, respectively.
-
-{% tabs %}
-{% highlight cshtml %}
-
-{% include_relative code-snippet/custom-key-config.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
 N> You can explore the [Blazor Rich Text Editor feature tour page](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) to see its capabilities. You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
 
 ## See also
