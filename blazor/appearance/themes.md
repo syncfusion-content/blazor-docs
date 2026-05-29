@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor themes | Bootstrap, Fluent, Tailwind, Material | Syncfusion
-description: Learn how to use Syncfusion Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
+title: Apply Blazor Themes and Switch Dynamically | Syncfusion
+description: Learn how to use Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
 platform: Blazor
 component: Appearance
 documentation: ug
 ---
 
-# Blazor themes in Syncfusion® components
+# Apply Blazor Themes and Switch Dynamically
 
 The following themes are available in the [Blazor components](https://www.syncfusion.com/blazor-components) library.
 
@@ -38,9 +38,9 @@ The following themes are available in the [Blazor components](https://www.syncfu
 |---|---|---|
 | High Contrast | `highcontrast.css` | Designed for accessibility-focused experiences |
 
-The Bootstrap 3 theme is based on Bootstrap v3.
+The `Bootstrap 3` theme is based on Bootstrap v3.
 
-N> The Bootstrap 4 theme is based on Bootstrap v4, specifically v4.3. It is compatible with Bootstrap v4.6 applications, as there are no significant differences between v4.3 and v4.6 that affect Syncfusion Blazor components.
+N> The `Bootstrap 4` theme is based on Bootstrap v4, specifically v4.3. It is compatible with Bootstrap v4.6 applications, as there are no significant differences between v4.3 and v4.6 that affect Blazor components.
 
 ## Optimized CSS themes
 
@@ -64,7 +64,7 @@ Use the lite theme variant when your application does not require bigger size mo
 
 The following image compares the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in normal and bigger size modes:
 
-![Button comparison: normal and bigger sizes](./images/bigger-theme-button.webp)
+![Side-by-side comparison showing Blazor Button component rendered in normal size mode (left) and bigger size mode (right)](./images/bigger-theme-button.webp)
 
 The following table maps theme display names to their corresponding standard and optimized (lite) CSS filenames:
 
@@ -103,7 +103,7 @@ You can reference Blazor themes using the following approaches:
 
 If you need to customize a theme or bundle it with other styles, use [Static web assets](#static-web-assets) or [NPM packages](#npm-package-reference) instead of a [CDN reference](#cdn-reference).
 
-## Static Web Assets
+## Static web assets
 
 ### Enable static web assets usage
 
@@ -568,13 +568,13 @@ LibMan offers the following advantages,
 2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
 3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
-### Client-Side Library dialog
+### Client-side library dialog
 
 1.Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
 
 ![Client side library dialog](images/theme-client-side.webp)
 
-2.Select the **unpkg** in the provider dropdown to get the Syncfusion<sup style="font-size:70%">&reg;</sup> control themes.
+2.Select the **unpkg** in the provider dropdown to get the Blazor control themes.
 
 ![Select unpkg provider](images/client-library-unpkg.webp)
 
@@ -654,7 +654,7 @@ N> If you use individual component styles, you should install the styles of thei
 
 <head>
     ...
-    <!-- Syncfusion Blazor components' styles -->
+    <!-- Blazor components' styles -->
     <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -667,7 +667,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-libman)
 
 ## NPM package reference
 
-The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
+The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
 You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
@@ -1033,7 +1033,7 @@ Below table lists the importing theme path for the individual components.
 
 In Blazor applications, you can switch themes dynamically by changing the stylesheet reference at runtime. The implementation approach varies depending on your Blazor application type.
 
-### Prerequisites & Setup
+### Prerequisites and setup
 
 Before implementing theme switching, ensure you have created your Blazor application.
 
@@ -1149,6 +1149,7 @@ Create a new `ThemeSwitcher.razor` file in the `~/Components` folder with the fo
 @code {
     private string CurrentTheme = "bootstrap5.3";
 
+    // Restrict theme names to prevent arbitrary CSS path injection via query string.
     private static readonly HashSet<string> AllowedThemes = new(StringComparer.OrdinalIgnoreCase)
     {
         "bootstrap5.3", "bootstrap5.3-dark",
@@ -1236,9 +1237,9 @@ Include the `ThemeSwitcher` component in your `~/Components/Layout/MainLayout.ra
 
 ![Change theme dynamically in Blazor Web App](images/blazor-web-app-dynamic-theme-switch.webp)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-web-app-theme-switching)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app)
 
-### Change theme dynamically in Blazor WebAssembly (WASM) Standalone App
+### Change theme dynamically in Blazor WebAssembly (WASM) standalone app
 
 The following steps demonstrate how to dynamically switch themes in a Blazor WebAssembly (WASM) standalone application using Blazor themes with the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component. Unlike Blazor Web App, standalone WASM apps use JavaScript interop to dynamically change themes without requiring a full page reload, as they run entirely in the browser without server-side rendering capabilities.
 
@@ -1399,11 +1400,13 @@ Create or update the appropriate page file based on your application type.
 {% endhighlight %}
 {% endtabs %}
 
-Now, run your application and use the theme switcher dropdown to change themes. The DataGrid component will immediately reflect the selected theme, demonstrating the dynamic theme switching functionality.
+Now, run your application and use the theme switcher dropdown to change themes. The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component will immediately reflect the selected theme, demonstrating the dynamic theme switching functionality.
 
-## Render Blazor Components Offline with Material and Tailwind Themes
+## Render Blazor components offline with Material and Tailwind themes
 
 Material and Tailwind themes use the online Roboto font by default. If your application needs to work offline or in a local network without internet access, follow these steps to use offline fonts.
+
+### Download customized styles using Custom Resource Generator (CRG)
 
 1. Download the minified styles for the required components from the [CRG](https://blazor.syncfusion.com/crg) site. Learn more about CRG in the [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
@@ -1421,7 +1424,7 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
 
 5. Copy the files from the **customized** folder to your Blazor application's `~/wwwroot` folder.
 
-6. Add the custom styles to your Blazor application to render components without internet access.
+6. Reference the custom styles in your Blazor application to render components without internet access.
 
     * For **Blazor Web App** (using Server, WebAssembly, or Auto interactive render modes), add the reference in `~/Components/App.razor`.
     * For **Blazor WebAssembly Standalone App**, add the reference in `~/wwwroot/index.html`.
@@ -1433,27 +1436,25 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
     </head>
 ```
 
-### Using Customized Styles from `Syncfusion.Blazor.Themes` Package and CDN (From `v23.2.4` and above)
+### Using customized styles from `Syncfusion.Blazor.Themes` package and CDN
 
-Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are available in the `Syncfusion.Blazor.Themes` package. Also it can be accessed via CDN for Blazor components.
+Starting from version `v23.2.4`, customized `Material` and `Tailwind` themes are available in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) package and via CDN.
 
-#### Static Web Asset Reference:
+#### Static web asset reference:
 
 ```html
 <head>
-    ....
     ....
     <link href="_content/Syncfusion.Blazor.Themes/customized/material.css" rel="stylesheet" />
 </head>
 ```
 
-#### CDN Reference:
+#### CDN reference:
 
 ```html
 <head>
     ....
-    ....
-    <link href="https://cdn.syncfusion.com/blazor/23.2.4/styles/customized/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/customized/material.css" rel="stylesheet" />
 </head>
 ```
 
