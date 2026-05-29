@@ -106,7 +106,9 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 Add the following configuration to your **Program.cs** file:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -134,11 +136,11 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 var app = builder.Build();
 
 // ... rest of your application setup
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 2: Use OpenAI with Smart Rich Text Editor Component
-
-Add the Smart Rich Text Editor to your Blazor page:
 
 {% tabs %}
 {% highlight razor %}
