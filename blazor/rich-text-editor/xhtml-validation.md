@@ -30,7 +30,7 @@ The Rich Text Editor checks the following settings on validation:
 * Element Hierarchy: Inline elements cannot contain block elements.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/xhtml-validation.razor %}
 
