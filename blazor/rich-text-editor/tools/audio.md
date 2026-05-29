@@ -28,7 +28,7 @@ To include the audio tool in the Rich Text Editor, you can add the toolbar item 
 To configure `Audio` toolbar item, refer to the below code.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-tool.razor %}
 
@@ -58,7 +58,7 @@ The selected audio can be uploaded to the required destination using the control
 N> If you want to insert lower-sized audio files in the editor and don't want a specific physical location for saving audio, you can opt to save the format as `Base64`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-save.razor %}
 
@@ -160,7 +160,7 @@ By using the Rich Text Editor's [RichTextEditorAudioSettings.MaxFileSize](https:
 In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-restrict.razor %}
 
@@ -190,7 +190,7 @@ Sets the default display for an audio file when it is inserted in the Rich Text 
 N> The default `layoutOption` property is set to `Inline`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-display-position.razor %}
 
@@ -204,7 +204,7 @@ Default upload: Insert audio directly from your local file system (e.g., File Ex
 Server upload: Use the `SaveUrl` property to upload audio files to your server before inserting them into the editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-drag-and-drop.razor %}
 
@@ -242,7 +242,7 @@ Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Sy
 Refer `rename.cs` controller file for configure the server-side.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-rename.razor %}
 
@@ -342,7 +342,7 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 N> By default it doesn't support `UseDefaultCredentials` property, we need to manually append the default credentials with the upload request.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-authentication.razor %}
 
