@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Create a custom Grid component in Blazor DataGrid | Syncfusion
+canonical_url: "https://www.syncfusion.com/blazor-components/blazor-datagrid"
 description: Learn how to build a reusable custom Grid component that wraps SfGrid in Blazor to share default paging, sorting, and layout settings across the application.
 platform: Blazor
 control: DataGrid
