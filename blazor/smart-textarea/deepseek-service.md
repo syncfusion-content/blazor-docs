@@ -227,7 +227,7 @@ Add the Smart TextArea component to a Razor file (e.g., `~/Pages/Home.razor`) to
 3. Type phrases like "Thank" or "Please provide" in the Smart TextArea to verify that DeepSeek AI generates appropriate suggestions.
 4. Check that suggestions appear as configured (e.g., inline or pop-up, based on the `ShowSuggestionOnPopup` setting).
 
-![Smart TextArea with DeepSeek AI](images/smart-textarea.gif)
+![Smart TextArea with DeepSeek AI](images/smart-textarea.webp)
 
 ## Troubleshooting
 

@@ -9,15 +9,7 @@ documentation: ug
 
 # Integrating Blazor with .NET MAUI Blazor Hybrid and Web App
 
-This section explains how to create and run a **.NET MAUI Blazor Hybrid App** together with a **Blazor Web App** using [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
-
-## What is .NET MAUI Blazor Hybrid and Web App?
-
-The **.NET MAUI Blazor Hybrid and Web App** template creates a solution that consists of three projects, including a .NET MAUI Blazor Hybrid App (native), a Blazor Web App (server or WebAssembly), and a Razor Class Library (RCL) to store reusable Blazor components. These shared components can be used across the native MAUI app and the web app, making it easy to build one UI and deploy it across mobile, desktop, and web platforms.
-
-By sharing UI components between native and web apps, this pattern ensures consistent user experiences, maximizes code reuse, and simplifies maintenance for applications targeting multiple environments.
-
-Visual Studio includes the **[.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app)** project template. You can use this template to quickly create a .NET MAUI Hybrid App together with a Blazor Web App in one solution.
+This section explains how to create and run a [.NET MAUI Blazor Hybrid and Web App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app) together with a **Blazor Web App** using [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) components.
 
 ## Create a new .NET MAUI Blazor Hybrid and Blazor Web App in Visual Studio
 
@@ -30,18 +22,18 @@ The template generates the shared RCL, .NET MAUI Blazor Hybrid App, and Blazor W
 
 ![.NET MAUI Blazor Hybrid and Blazor Web App](images/maui/maui-web-app-template.webp)
 
-## Install Syncfusion® Blazor DataGrid and Themes NuGet in the app
+## Install Blazor DataGrid and Themes NuGet in the app
 
-Open the NuGet Package Manager in Visual Studio by selecting (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), and then install the following Syncfusion® NuGet packages.
+Open the NuGet Package Manager in Visual Studio by selecting **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**, and then install the following NuGet packages.
 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-N> Syncfusion® Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open both of the following files and add the Syncfusion® namespaces.
+Open both of the following files and add the namespaces.
 
 * `~/Components/_Imports.razor` (.NET MAUI Blazor Hybrid App)
 * `~/Components/_Imports.razor` (Blazor Web App)
@@ -55,9 +47,9 @@ Open both of the following files and add the Syncfusion® namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion® Blazor service
+## Register Blazor service
 
-Add the Syncfusion® Blazor service in both the `MauiProgram.cs` file of the **.NET MAUI Blazor Hybrid App** and the `~/Program.cs` file of the **Blazor Web App** to enable Syncfusion® components in the application.
+Add the Blazor service in both the `MauiProgram.cs` file of the **.NET MAUI Blazor Hybrid App** and the `~/Program.cs` file of the **Blazor Web App** to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 4" %}
@@ -93,39 +85,38 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  ....
-  <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
+ <head>
+    <meta charset="utf-8" />
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+ </head>
 
-<body>
-  ....
-  <div id="app">Loading...</div>
-  <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-  <script src="_framework/blazor.webview.js" autostart="false"></script>
-</body>
+ <body>
+    ....
+    <div id="app">Loading...</div>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_framework/blazor.webview.js" autostart="false"></script>
+ </body>
 
 </html>
 
 {% endhighlight %}
-{% highlight razor tabtitle="App.razor" hl_lines="7 13" %}
+{% highlight razor tabtitle="App.razor" hl_lines="6 12" %}
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+ <head>
     <meta charset="utf-8" />
     ....
-	<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     <HeadOutlet />
-</head>
+ </head>
 
-<body>
+ <body>
     <Routes />
-	<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     <script src="_framework/blazor.web.js"></script>
-</body>
+ </body>
 
 </html>
 
@@ -134,9 +125,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion® Blazor DataGrid component
+## Add Blazor DataGrid component
 
-Include the Syncfusion® Blazor **DataGrid** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
+Include the **Blazor DataGrid** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
 
 {% tabs %}
 {% highlight razor %}
@@ -174,12 +165,11 @@ In the Visual Studio toolbar, select the **Windows Machine** target to build and
 
 N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-9.0#run-the-app-in-the-android-emulator) for emulator or device setup.
 
-![MAUI Blazor App with Syncfusion Blazor Components](../common/images/maui-blazor-datagrid.webp)
+![MAUI Blazor App with Blazor Components](../common/images/maui-blazor-datagrid.webp)
 
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfusion-Blazor-Components).
 
 ## See also
 
 * [How to create Diagram Builder in MAUI platform?](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)
-
-N> [View MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
+* [View the MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
