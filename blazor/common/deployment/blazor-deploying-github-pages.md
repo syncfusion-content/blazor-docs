@@ -294,7 +294,7 @@ Configure your repository to serve the branch by following the steps below.
    - **Folder:** `/ (root)`
 4. Click **Save**.
 
-Your application will be live at a GitHub Pages within minutes.
+Your application will be live on GitHub Pages within minutes and can be accessed using the following URL format: `https://<username>.github.io/<repository-name>/`.
 
 ## See Also
 
