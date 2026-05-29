@@ -170,7 +170,7 @@ A Grid can combine both flexible and fixed-width columns to create a balanced la
 
 **2. Percentage**
 
-The column width is specified as a **percentage** of the Grid container's total width. For example, `25%` occupies 25% of the Grid `Width`.
+Column width can be defined as a **percentage** relative to the total width of the grid container. For example, assigning `25%` to a column will allocate one-fourth of the grid’s width to that column. This approach is useful for distributing space proportionally across columns.
 
 ```cshtml
  <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="25%"></GridColumn>
@@ -178,7 +178,7 @@ The column width is specified as a **percentage** of the Grid container's total 
 
 **3. Pixel**
 
-The column width is specified as an absolute **pixel** value. For example, a column width of `100px` will have a fixed width of 100 pixels, regardless of the Grid container's size.
+The column width can be defined using an absolute **pixel** value. For example, setting a column width to `100px` means the column will always occupy “100” pixels, regardless of the grid container’s size. The width for `GridColumn` can be set as pixels in the Grid configuration as shown below:
 
 ```cshtml
  <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
