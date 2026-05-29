@@ -67,7 +67,7 @@ Blazor components can be integrated within the **AuthorizeView** component as sh
 
 ### Install NuGet packages
 
-To add the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to your application, open the NuGet Package Manager in Visual Studio **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**. Search and install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages.
+To add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to your application, open the NuGet Package Manager in Visual Studio **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**. Search and install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages.
 
 Alternatively, install the required packages by using the following .NET CLI commands.
 
@@ -134,7 +134,7 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 
 ### Add Blazor component
 
-Add the [Blazor Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the **~/Pages/Home.razor** file within an `AuthorizeView`.
+Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the **~/Pages/Home.razor** file within an `AuthorizeView`.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor" %}
@@ -194,7 +194,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor WASM App with Blazor dataGrid Component](images/webAssembly-datagrid.webp)
+![Blazor WASM App with Blazor DataGrid Component](images/webAssembly-datagrid.webp)
 
 ## See Also
 
