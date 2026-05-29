@@ -27,7 +27,7 @@ Ensure that **HTTPS is enabled** during project creation, as GitHub OAuth based 
 
 ## Install required packages
 
-Install the following NuGet packages to use the **Blazor DataGrid** and enable authentication with **GitHub OAuth**.
+Install the following NuGet packages to use the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and enable authentication with **GitHub OAuth**.
 
 **Blazor packages:**
 
@@ -335,7 +335,7 @@ To allow components to receive authentication state, wrap the router inside **Ca
 
 ## Connect Blazor DataGrid 
 
-Create `SecureGrid.razor` page and render the **Blazor DataGrid** on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
+Create `SecureGrid.razor` page and render the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/SecureGrid.razor"  %}
@@ -442,7 +442,7 @@ This example demonstrates how to integrate **GitHub OAuth** into a **Blazor Web 
 
 ![Blazor DataGrid with GitHub OAuth loginpage](images/oauth-authentication.webp)
 
-After successfully signing in, authenticated users can access protected pages and interact with the **Blazor DataGrid** component. 
+After successfully signing in, authenticated users can access protected pages and interact with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. 
 
 ![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-datagrid.webp)
 
