@@ -23,7 +23,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnActionBegin="@OnActionBeginHandler" ></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnActionBeginHandler(ActionBeginEventArgs args)
     {
         // Here you can customize your code
@@ -45,7 +44,6 @@ This section explains the list of events of the Rich Text Editor component which
 </SfRichTextEditor>
 
 @code{
-
     public void OnActionCompleteHandler(ActionCompleteEventArgs args)
     {
         // Here you can customize your code
@@ -67,7 +65,6 @@ This section explains the list of events of the Rich Text Editor component which
     <RichTextEditorEvents OnDialogOpen="@OnDialogOpenHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnDialogOpenHandler(BeforeOpenEventArgs args)
     {
         // Here you can customize your code
@@ -89,7 +86,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents DialogOpened="@DialogOpenedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void DialogOpenedHandler(DialogOpenEventArgs args)
     {
         // Here you can customize your code
@@ -111,7 +107,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnDialogClose="@OnDialogCloseHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnDialogCloseHandler(BeforeCloseEventArgs args)
     {
         // Here you can customize your code
@@ -133,7 +128,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents DialogClosed="@DialogClosedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void DialogClosedHandler(DialogCloseEventArgs args)
     {
         // Here you can customize your code
@@ -154,7 +148,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnQuickToolbarOpen="@OnQuickToolbarOpenHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnQuickToolbarOpenHandler(BeforeQuickToolbarOpenArgs args)
     {
         // Here you can customize your code
@@ -175,7 +168,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents QuickToolbarOpened="@QuickToolbarOpenedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void QuickToolbarOpenedHandler(QuickToolbarEventArgs args)
     {
         // Here you can customize your code
@@ -196,7 +188,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents QuickToolbarClosed="@QuickToolbarClosedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void QuickToolbarClosedHandler(QuickToolbarEventArgs args)
     {
         // Here you can customize your code
@@ -218,7 +209,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnImageSelected="@OnImageSelectedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnImageSelectedHandler(SelectedEventArgs args)
     {
         // Here you can customize your code
@@ -236,10 +226,9 @@ This section explains the list of events of the Rich Text Editor component which
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents BeforeUploadImage ="@BeforeUploadImageHandler"></RichTextEditorEvents>
+   <RichTextEditorEvents BeforeUploadImage="@BeforeUploadImageHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void BeforeUploadImageHandler(ImageUploadingEventArgs args)
     {
         // Here you can customize your code
@@ -260,7 +249,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnImageUploadSuccess="@OnImageUploadSuccessHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnImageUploadSuccessHandler(ImageSuccessEventArgs args)
     {
         // Here you can customize your code
@@ -281,7 +269,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnImageUploadFailed="@OnImageUploadFailedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnImageUploadFailedHandler(ImageFailedEventArgs args)
     {
         // Here you can customize your code
@@ -303,7 +290,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnImageRemoving="@OnImageRemovingHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnImageRemovingHandler(RemovingEventArgs args)
     {
         // Here you can customize your code
@@ -324,7 +310,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnImageDeleteHandler(AfterImageDeleteEventArgs args)
     {
         // Here you can customize your code
@@ -345,7 +330,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents Created="@CreatedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void CreatedHandler(Object args)
     {
         // Here you can customize your code
@@ -366,7 +350,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents Destroyed="@DestroyedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void DestroyedHandler(DestroyedEventArgs args)
     {
         // Here you can customize your code
@@ -387,7 +370,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents Blur="@BlurHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void BlurHandler(BlurEventArgs args)
     {
         // Here you can customize your code
@@ -408,7 +390,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents OnToolbarClick="@OnToolbarClickHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnToolbarClickHandler(ToolbarClickEventArgs args)
     {
         // Here you can customize your code
@@ -429,7 +410,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents Focus="@FocusHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void FocusHandler(Syncfusion.Blazor.RichTextEditor.FocusEventArgs args)
     {
         // Here you can customize your code
@@ -450,7 +430,6 @@ This section explains the list of events of the Rich Text Editor component which
    <RichTextEditorEvents ValueChange="@ValueChangeHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void ValueChangeHandler(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
         // Here you can customize your code
@@ -494,7 +473,6 @@ N> This event does not trigger when the selection range is collapsed (i.e., when
    <RichTextEditorEvents OnResizeStart="@OnResizeStartHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnResizeStartHandler(ResizeArgs args)
     {
         // Here you can customize your code
@@ -515,7 +493,6 @@ N> This event does not trigger when the selection range is collapsed (i.e., when
    <RichTextEditorEvents OnResizeStop="@OnResizeStopHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void OnResizeStopHandler(ResizeArgs args)
     {
         // Here you can customize your code
@@ -536,7 +513,6 @@ N> This event does not trigger when the selection range is collapsed (i.e., when
    <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
-
     public void AfterPasteCleanupHandler(PasteCleanupArgs args)
     {
         // Here you can customize your code
