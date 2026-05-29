@@ -20,11 +20,9 @@ Using the public methods, you can build custom workflows with the AI Assistant. 
 | `HideAIPopupAsync()` | Closes the AI Assistant popup. |
 | `ClearAIPromptHistoryAsync()` | Deletes all conversation history and resets the AI Assistant to a clean state. |
 
----
-
 ## Complete Example Using All Methods
 
-The following example demonstrates how to use all AssistViewSettings methods together in a single button click handler to create a comprehensive workflow:
+The following example demonstrates how to use AssistViewSettings methods in a button click handler to create a comprehensive workflow:
 
 {% tabs %}
 {% highlight razor %}
@@ -42,6 +40,7 @@ The following example demonstrates how to use all AssistViewSettings methods tog
     <SfButton @onclick="GetHistoryAsync">Get AI History</SfButton>
 </div>
 <SfSmartRichTextEditor>
+    <p>Defines the available methods of the AssistViewSettings, allowing you to perform actions and programmatically control the behavior and functionality of the AssistView within the editor.</p>
     <AssistViewSettings @ref="AssistViewSettings" Placeholder="Ask AI to enhance your content..." />
 </SfSmartRichTextEditor>
 @code {
@@ -82,10 +81,10 @@ The following example demonstrates how to use all AssistViewSettings methods tog
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings Methods](./images/smart-rich-text-editor-methods.webp)
 
-## See Also
+## See also
 
-* [Properties](property.md)
-* [Appearance](appearance.md)
-* [Events](events.md)
+* [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
+* [Appearance](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/appearance)
+* [Events](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/events)

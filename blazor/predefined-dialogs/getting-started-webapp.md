@@ -87,15 +87,22 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+**Visual Studio (NuGet Package Manager)**:
+
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Popups` and `Syncfusion.Blazor.Themes`) and install it.
+
+**Visual Studio Code or .NET CLI**:
+
+Open the terminal or command prompt and run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.Popups -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Popups -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -170,18 +177,12 @@ After adding `SfDialogService` and `SfDialogProvider`, open predefined dialogs f
 
 ### Show alert dialog
 
-An alert dialog box is used to display errors, warnings, or informational messages that require user acknowledgment. This is achieved using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog displays an `OK` button. When the user selects `OK`, the alert dialog closes. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+An alert dialog box is used to display errors, warnings, or informational messages that require user acknowledgment. This is achieved using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog displays an `OK` button. When the user selects `OK`, the alert dialog closes. 
+
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor Predefined Dialogs component inside the razor file.
+* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
 
 In the following example, an alert dialog is displayed upon clicking a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
 
@@ -192,6 +193,22 @@ In the following example, an alert dialog is displayed upon clicking a Syncfusio
 
 {% endhighlight %}
 {% endtabs %}
+
+### Run the application
+
+**Visual Studio**:
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Predefined Dialogs component will render in your default web browser.
+
+**Visual Studio Code or .NET CLI**:
+
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
+2. Run the following command:
+
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBfNsKZLmlnIlwK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Alert Dialog](./images/blazor-alert-dialog.webp)" %}
 

@@ -1,6 +1,23 @@
-@using Syncfusion.Blazor.RichTextEditor;
+@using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
+    <h4>Insert Video in Rich Text Editor!</h4>
+    <p>You can insert and play video files within this editor. Click inside the editor and use the video tool to add a video file.</p>
+    <h5>What You Can Do</h5>
+    <ul>
+        <li><strong>Insert Video:</strong> Upload video files from local storage or provide a direct video URL.</li>
+        <li><strong>Playback Support:</strong> Play video directly within the editor using built-in controls.</li>
+        <li><strong>Layout Options:</strong> Display video as inline content or as a separate block element.</li>
+        <li><strong>Drag and Drop:</strong> Insert video by dragging files directly into the editor.</li>
+        <li><strong>Copy and Paste:</strong> Paste video files directly into the editor from your system.</li>
+        <li><strong>Replace Video:</strong> Easily change the existing video using the replace option.</li>
+        <li><strong>Remove Video:</strong> Delete video files from the content whenever needed.</li>
+    </ul>
+    <h5>Try It Out!</h5>
+    <video controls>
+        <source src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Ocean-Waves.mp4" type="video/mp4" />
+    </video>
 </SfRichTextEditor>
 
 @code {
