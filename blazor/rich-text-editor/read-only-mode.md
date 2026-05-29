@@ -20,7 +20,7 @@ This will allow you to view the content without making any modifications.
 Please refer to the sample and code snippets below to demonstrate how to enable the read-only mode in the Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/read-only-mode.razor %}
 

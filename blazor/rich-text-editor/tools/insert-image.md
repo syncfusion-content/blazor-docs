@@ -19,7 +19,7 @@ To insert an image from an online source like Google, Bing, and more, enable the
 
 Through the browse option in the image dialog, select the image from the local machine and insert it into the Rich Text Editor content.
 
-If the path field is not specified in [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted to `base64`, and a `blob` url for the image will be created, and the generated url will set as the `src` property of the `<img>` tag as follows:
+If the path field is not specified in [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted to `base64`, or a `blob` url for the image will be created, and the generated url will set as the `src` property of the `<img>` tag as follows:
 
 The image selected from the local machine will be uploaded and saved to the specified location.
 
@@ -235,6 +235,12 @@ In the following code, the image size has been validated before uploading and it
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="Items"/>
     <RichTextEditorImageSettings MaxFileSize="30000000" />
+    <h5>Maximum File Size Restriction</h5>
+    <p>You can control the size of image files uploaded to the editor to ensure optimal performance and prevent large file uploads.</p>
+    <ul>
+        <li>The MaxFileSize property allows you to restrict image uploads by defining the maximum allowed file size. By default, the maximum size is set to 30,000,000 bytes (approximately 30 MB). </li>
+        <li>Image files exceeding this limit are blocked from being uploaded to ensure better control and performance.</li>
+    </ul>
 </SfRichTextEditor>
 
 @code {
@@ -253,7 +259,7 @@ N> You can't restrict while uploading an image as a hyperlink in the insert imag
 
 To delete an image from the Rich Text Editor, select the image and click the `Remove` tool from the quick toolbar. It will delete the image from the Rich Text Editor content.
 
-After selecting the image from the local machine, the URL for the image will be generated. From there also, remove the image from the service location by clicking the cross icon as in the following image.
+After selecting the image from the local machine, the URL for the image will be generated. From there also, remove the image from the service location by clicking the delete icon as in the following image.
 
 ![Blazor RichTextEditor removing image](../images/blazor-richtexteditor-remove-image.png)
 
@@ -496,7 +502,3 @@ namespace RenameImage.Controllers
 ## Paste image into the editor
 
 The Rich Text Editor supports pasting images directly into the editor content. You can paste single or multiple images from your file system directly into the editor.
-
-## See also
-
-* [How to insert image editing option in the toolbar items](../toolbar#image-quick-toolbar)
