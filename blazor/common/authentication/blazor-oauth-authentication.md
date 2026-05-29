@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Securing Blazor DataGrid with OAuth 2.0 | Syncfusion® 
-description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Syncfusion® Blazor components in a Blazor Web App.
+description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Blazor DataGrid component in a Blazor Web App.
 platform: Blazor
 control: Blazor DataGrid
 documentation: ug
