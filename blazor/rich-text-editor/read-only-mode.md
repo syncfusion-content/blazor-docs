@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Control Editor Access in Blazor Rich Text Editor Component | Syncfusion
+title: Read-Only Mode in Blazor Rich Text Editor | Syncfusion
 description: Checkout and learn here all about Controlling Editor Access in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
