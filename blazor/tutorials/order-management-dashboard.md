@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Create an Order Management Dashboard in Blazor with Syncfusion
-description: Step-by-step guide to build a Blazor order management dashboard using Syncfusion components with models, services, grids, charts, KPIs, carts, and refunds.
+description: Step-by-step guide to build a Blazor order management dashboard using Blazor components with models, services, grids, charts, KPIs, carts, and refunds.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Create an Order Management Dashboard in Blazor with Syncfusion®
+# Create an Order Management Dashboard in Blazor
 
 ## Overview
 
-This guide explains how to create an order management dashboard in a Blazor Web App using the Interactive Server render mode with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). It walks through the core building blocks for a typical e-commerce back-office application, including defining data models, managing application state with dependency-injected services, and building pages for KPI metrics, order tracking, abandoned cart analysis, and return and refund management.
+This guide explains how to create an order management dashboard in a Blazor Web App using the Interactive Server render mode with [Blazor components](https://www.syncfusion.com/blazor-components). It walks through the core building blocks for a typical e-commerce back-office application, including defining data models, managing application state with dependency-injected services, and building pages for KPI metrics, order tracking, abandoned cart analysis, and return and refund management.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ This guide explains how to create an order management dashboard in a Blazor Web 
 
 To create a Blazor application, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
 
-## Install required Syncfusion® Blazor packages
+## Install required Blazor packages
 
 To add the required Blazor components to your application, install the NuGet packages listed below.
 
@@ -48,7 +48,7 @@ Click each package link in the table below to view the NuGet installation comman
 
 ## Add required namespaces
 
-Open the `Components/_Imports.razor` file and import the following Syncfusion Blazor components, order management models and services namespaces.
+Open the `Components/_Imports.razor` file and import the following Blazor components, order management models and services namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -69,9 +69,9 @@ Open the `Components/_Imports.razor` file and import the following Syncfusion Bl
 
 N> The required namespaces are typically defined in the `_Imports.razor` file, so they do not need to be included in each component individually. If not already added, ensure the necessary namespaces are imported in `_Imports.razor`.
 
-## Register Syncfusion® Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight cs tabtitle="~/Program.cs" hl_lines="1 8" %}
@@ -82,7 +82,7 @@ using Syncfusion.Blazor;
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register Syncfusion Blazor service
+// Register Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -93,7 +93,7 @@ var app = builder.Build();
 
 ## Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/Components/App.razor` file.
+Add the Blazor theme CSS and required scripts to the `~/Components/App.razor` file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -863,7 +863,7 @@ Register the application services in `Program.cs` so they can be accessed throug
 using Syncfusion.Blazor;
 
 ...
-// Syncfusion Blazor service
+// Register Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 // Application services
@@ -1083,7 +1083,7 @@ Update the navigation menu to include links to all dashboard pages.
 
 ### Create the Dashboard page
 
-This page demonstrates how the Dashboard page integrates multiple Syncfusion Blazor components to present an interactive overview of order data. It displays key performance indicators using **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)**, visualizes earnings and total profit trends using **[Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**, and renders a comprehensive order list using **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with built-in filtering and search.
+This page demonstrates how the Dashboard page integrates multiple Blazor components to present an interactive overview of order data. It displays key performance indicators using **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)**, visualizes earnings and total profit trends using **[Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**, and renders a comprehensive order list using **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with built-in filtering and search.
 
 The page binds data collections and state variables to these components, enabling dynamic updates, filtering options, and detailed order views. This provides a single, interactive view of order performance, profit trends, and order details.
 
@@ -1850,7 +1850,7 @@ The page binds data collections and state variables to these components, enablin
 
 ### Create the Abandoned Cart page
 
-This page demonstrates how the Abandoned Cart page uses Syncfusion Blazor components to present a searchable and filterable list of abandoned shopping carts. It displays the cart data in a **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)** layout and renders the records in a **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with paging, sorting, filtering, and search support.
+This page demonstrates how the Abandoned Cart page uses Blazor components to present a searchable and filterable list of abandoned shopping carts. It displays the cart data in a **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)** layout and renders the records in a **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with paging, sorting, filtering, and search support.
 
 The page binds the abandoned cart collection to the grid, allowing users to search by cart ID or customer email, view cart dates, and review estimated cart amounts in a structured format.
 
@@ -1942,7 +1942,7 @@ The page binds the abandoned cart collection to the grid, allowing users to sear
 
 ### Create the Return and Refund page
 
-This page demonstrates how the Return and Refund page uses Syncfusion Blazor components to manage customer return and refund requests. It displays the requests in a **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)** layout and renders them in a **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with paging, sorting, filtering, and search support.
+This page demonstrates how the Return and Refund page uses Blazor components to manage customer return and refund requests. It displays the requests in a **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)** layout and renders them in a **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with paging, sorting, filtering, and search support.
 
 The page binds return and refund records to the grid, showing order details, request reasons, status badges, and return dates. It also provides approve and reject actions for pending requests, enabling administrators to update request statuses directly from the page.
 
