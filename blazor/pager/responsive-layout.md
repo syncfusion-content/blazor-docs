@@ -39,4 +39,4 @@ A key strength of the **Pager** component lies in its adaptive handling of indiv
 
 These adjustments happen automatically and smoothly, ensuring that the user experience remains consistent and intuitive across all screen sizes. The component's ability to reorganize content rather than simply shrink it makes it especially effective in maintaining clarity and usability even in constrained spaces.
 
-Overall, the responsive and adaptive design of the Syncfusion Blazor **Pager** component ensures that applications maintain a professional and consistent appearance, regardless of the device being used. By dynamically optimizing its layout and prioritizing key elements, the Pager delivers a reliable and efficient navigation interface in every scenario
+Overall, the responsive and adaptive design of the Syncfusion Blazor **Pager** component ensures that applications maintain a professional and consistent appearance, regardless of the device being used. By dynamically optimizing its layout and prioritizing key elements, the Pager delivers a reliable and efficient navigation interface in every scenario.
