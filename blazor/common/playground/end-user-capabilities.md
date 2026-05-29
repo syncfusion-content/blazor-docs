@@ -1,68 +1,78 @@
 ---
 layout: post
-title: Exploring themes and code editor in Blazor Playground | Syncfusion
-description: Blazor Playground offers theme customization and a feature-rich code editor to simplify development and testing of Blazor components and more details.
+title: Features and Capabilities of Blazor Playground | Syncfusion®
+description: Learn how to switch themes, use the code editor, handle errors, share and embed code, and manage static assets in Blazor Playground.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# End-user capabilities
+# Features and Capabilities of Blazor Playground
+
+The [Blazor Playground](https://blazorplayground.syncfusion.com) provides a rich set of built-in features for developing, testing, and sharing [Blazor components](https://www.syncfusion.com/blazor-components) directly in the browser, including theme switching, a feature-rich code editor, error handling, code sharing, embedding, and static asset management.
 
 ## Switch themes
 
-Blazor Playground lets users customize the appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by choosing a theme from the dropdown available via the **Output Theme** button.
+Blazor Playground allow you to customize the appearance of Blazor components.
 
-![Syncfusion Blazor Playground with theme](images/output_theme.webp)
+1. Click the **Output Theme** button in the toolbar.
+2. Select a theme from the dropdown to apply it to the component output.
+
+![Blazor Playground with theme](images/output_theme.webp)
 
 ## Explore the code editor 
 
 * Type, copy, cut, paste, and edit your code within the editor.
-* Create and manage .razor and .cs files alongside the default `_Index.razor`.
+* Create and manage `.razor` and `.cs` files alongside the default `_Index.razor`.
 * Enhance readability with syntax highlighting for keywords, variables, strings, and comments.
 
-## Compiling and running code
+## Compile and run code
 
-* Execute code by pressing the Run button or using the <kbd>Ctrl</kbd>+<kbd>R</kbd> keyboard shortcut.
-* View the compiled output in the result view.
+1. Press the **Run** button or use the <kbd>Ctrl</kbd>+<kbd>R</kbd> keyboard shortcut to compile and execute your code.
+2. If there are no errors, the result view displays the compiled output.
 
-## Preview code output
+## Handle errors and warnings
 
-* Click the Run button to compile your code.
-* If there are no errors, the result view displays the output.
+During compilation, errors and warnings are displayed in the error console with their corresponding line numbers.
 
-## Error and warning handling
+1. Review the error message and note the line number.
+2. Click the error entry to navigate to the corresponding line in the code editor.
+3. Fix the issue and press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to recompile.
 
-During compilation, any errors or warnings are displayed with their corresponding line numbers for efficient identification and resolution.
+![Blazor Playground with error console](images/errorconsole.webp)
 
-![Syncfusion Blazor Playground with error console](images/errorconsole.webp)
+## Share code
 
-## Sharing code
+Click the **Share** button to generate a unique URL for collaboration and discussion. The dialog presents two sections: **Shared Link** and **Embed Link**.
 
-Click the Share button to generate a unique URL for collaboration and discussion. The dialog presents two sections: **Shared Link** and **Embed Link**.
+![Blazor Playground with save code snippet](images/save_snippet.webp)
 
-![Syncfusion Blazor Playground with save code snippet](images/save_snippet.webp)
-
-## Embedding code
+### Embed code
 
 Embed links provide customization options:
-* **Display Code Editor:** Enables the code editor for the end user.
+* **Display Code Editor:** Shows the code editor in the embedded view.
 * **Display Result View:** Disables the code editor and shows only the result.
 * **Display Error Console:** Shows the warnings and errors console.
 * **Display App Bar:** Enables the app bar with the Run button.
 
-For example, enable all options in an embed link. 
+The following example shows the embedded output when all display options are enabled. 
 
-![Syncfusion Blazor Playground with all embed options](images/embed_enableall.webp)
+![Blazor Playground with all embed options](images/embed_enableall.webp)
 
-For example, show only the result view and disable all other options.
+The following example shows the embedded output when only the result view is enabled and all other options are disabled.
 
-![Syncfusion Blazor Playground with result view](images/Embed_Result.webp)
+![Blazor Playground with result view](images/embed_result.webp)
 
-## Handling static assets
+## Manage static assets
 
 Manage CSS and JavaScript files for styling and scripting your application in Blazor Playground.
 * Add CDN links for static assets through the **Static Assets** tab in the **NuGet Asset Manager**.
-* Include the CDN link in your code files (for example, `__Index.razor`) to apply styles or scripts.
+* Include the CDN link in your code files (for example, `_Index.razor`) to apply styles or scripts.
 
-![Syncfusion Blazor Playground with static assets](images/static_assets.webp)
+![Blazor Playground with static assets](images/static_assets.webp)
+
+## See also
+
+* [Getting Started with Blazor Playground](./getting-started)
+* [Working with components in Blazor Playground](./working-with-components)
+* [Manage NuGet packages in Blazor Playground](./managing-nuget-packages)
