@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Create a reusable custom Blazor DataGrid Component
+# Create a reusable custom Blazor DataGrid component
 
 Creating a reusable custom Blazor DataGrid by wrapping the Syncfusion `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
 
@@ -23,7 +23,7 @@ Another advantage is improved maintainability. When updates are required, such a
 
 Additionally, a reusable component enhances code readability. By abstracting repetitive logic into a single component, page-level code becomes cleaner and easier to understand.
 
-## How the Custom Syncfusion Blazor DataGrid Works
+## How the custom Syncfusion Blazor DataGrid works
 
 The custom component internally renders the Syncfusion `SfGrid` and applies predefined settings that are shared across all usages. It acts as a wrapper that encapsulates default behavior while allowing flexibility for customization.
 
@@ -35,7 +35,7 @@ The custom component internally renders the Syncfusion `SfGrid` and applies pred
 
 This design approach provides a balance between reusable and flexibility. Developers can rely on the predefined defaults while still having the ability to extend or override behavior when needed.
 
-## When to Use a Custom Blazor DataGrid
+## When to use a custom Blazor DataGrid
 
 Using a custom DataGrid component is recommended in scenarios where consistency, scalability, and maintainability are key requirements.
 
@@ -48,7 +48,7 @@ Common use cases include:
 
 Adopting this pattern helps enforce development standards, reduces duplication, and improves overall code quality.
 
-## Implement a Custom Blazor DataGrid Component
+## Implement a custom Blazor DataGrid component
 
 The following example demonstrates how to create a reusable CustomGrid component with predefined [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings). This component centralizes common configuration options, such as [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) and [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), while still allowing external customization through parameters and projected content.
 
