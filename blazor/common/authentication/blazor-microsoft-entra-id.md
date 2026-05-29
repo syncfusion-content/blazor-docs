@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Securing Blazor DataGrid with Microsoft Entra ID | Syncfusion® 
-description: Step-by-step guide to integrating Microsoft Entra ID authentication with Blazor components in a Blazor Web App.
+description: Step-by-step guide to integrating Microsoft Entra ID authentication with Syncfusion® Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
 documentation: ug

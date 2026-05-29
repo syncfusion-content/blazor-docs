@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing customization in Syncfusion Blazor DataGrid
 
-The appearance of editing elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the editing interface:
+The appearance of editing elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the editing interface:
 
 - **Edited and newly added rows:** Highlights rows that are being modified or newly inserted.
 - **Edit form input fields:** Displays text boxes used to enter or update values during editing.

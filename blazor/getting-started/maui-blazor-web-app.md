@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrating Syncfusion® Blazor Components in .NET MAUI and Web App
-description: Step-by-step guide to create .NET MAUI Blazor Hybrid and Blazor Web App and integrate Blazor components.
+description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web App and integrate Syncfusion® Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -24,12 +24,12 @@ The template generates the shared RCL, .NET MAUI Blazor Hybrid App, and Blazor W
 
 ## Install Blazor DataGrid and Themes NuGet in the app
 
-Open the NuGet Package Manager in Visual Studio by selecting **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**, and then install the required packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
-
-**Install the following packages**
+Open the NuGet Package Manager in Visual Studio by selecting **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**, and then install the following NuGet packages.
 
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
 
 ## Add required namespaces
 
@@ -78,7 +78,7 @@ Add the Blazor service in both the `MauiProgram.cs` file of the **.NET MAUI Blaz
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the `~wwwroot/index.html` file of your **.NET MAUI Blazor Hybrid App** and in the `~/Components/App.razor` file of your **Blazor Web App**.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the **<head>** of the `~wwwroot/index.html` file of your **.NET MAUI Blazor Hybrid App** and in the `~/Components/App.razor` file of your **Blazor Web App**.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" hl_lines="6 12" %}
@@ -123,9 +123,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+
 ## Add Blazor DataGrid component
 
-Include the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
+Include the **Blazor DataGrid** component in any razor file. In this example, the DataGrid component is added in `~/Pages/Home.razor` under the `~/Pages` folder of the `.Shared` App.
 
 {% tabs %}
 {% highlight razor %}

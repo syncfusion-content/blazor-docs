@@ -52,4 +52,4 @@ To retrieve the number of characters in the Rich Text Editor content, use the [G
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor Number of Characters](../images/blazor-richtexteditor-number-character.png)
+![Blazor Rich Text Editor Number of Characters](../images/blazor-richtexteditor-number-character.webp)

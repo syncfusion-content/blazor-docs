@@ -40,7 +40,7 @@ Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `
 
 ## Register Blazor service
 
-Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
+Add Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Program.cs" hl_lines="1 6" %}

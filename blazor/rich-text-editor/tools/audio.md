@@ -23,7 +23,7 @@ The Rich Text Editor allows inserting audio files from online sources and the lo
 
 To include the audio tool in the Rich Text Editor, you can add the toolbar item `Audio` to the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_EJ2_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
-![Blazor RichTextEditor audio](../images/blazor-richtexteditor-audio.png)
+![Blazor RichTextEditor audio](../images/blazor-richtexteditor-audio.webp)
 
 To configure `Audio` toolbar item, refer to the below code.
 
@@ -43,7 +43,7 @@ To insert audio from the hosted link or local machine, you should enable the aud
 
 By default, the audio tool opens the audio dialog, allowing you to insert audio from an online source. Inserting the URL will be added to the `src` attribute of the `<source>` tag.
 
-![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-audio-web.png)
+![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-audio-web.webp)
 
 ## Upload and insert audio
 
@@ -171,7 +171,7 @@ In the following illustration, the audio size has been validated before uploadin
 
 Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) “Replace” option. You can replace the audio file using the web URL or the browse option in the audio dialog.
 
-![Blazor Rich Text Editor replace audio](../images/blazor-richtexteditor-audio-replace.png)
+![Blazor Rich Text Editor replace audio](../images/blazor-richtexteditor-audio-replace.webp)
 
 ## Delete audio
 
@@ -179,13 +179,13 @@ To remove audio from the Rich Text Editor content, select audio and click the `R
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the delete icon.
 
-![Blazor RichTextEditor remove audio](../images/blazor-richtexteditor-audio-remove.png)
+![Blazor RichTextEditor remove audio](../images/blazor-richtexteditor-audio-remove.webp)
 
 ## Display Position
 
 Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio elements’ layout position when updating the display positions.
 
-![Blazor RichTextEditor audio display](../images/blazor-richtexteditor-audio-display.png)
+![Blazor RichTextEditor audio display](../images/blazor-richtexteditor-audio-display.webp)
 
 N> The default `layoutOption` property is set to `Inline`.
 
@@ -429,3 +429,4 @@ namespace AudioUpload.Controllers
 ## Paste audio into the editor
 
 The Rich Text Editor supports pasting audio files directly into the editor content. You can paste single or multiple audio files from your file system directly into the editor.
+

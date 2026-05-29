@@ -9,7 +9,7 @@ documentation: ug
 
 # Headers in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides options to customize and manage headers for better data organization and presentation. 
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides options to customize and manage headers for better data organization and presentation. 
 
 ## Header text
 

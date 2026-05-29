@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor DataGrid in a standalone WebAssembly app using .NET CLI
 
-This article provides step-by-step instructions to build a standalone Blazor WebAssembly app and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor WebAssembly project standards and notes when to use a hosted WebAssembly option.
+This article provides step-by-step instructions to build a standalone Blazor WebAssembly app and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor WebAssembly project standards and notes when to use a hosted WebAssembly option.
 
 ## Using the Playground
 
