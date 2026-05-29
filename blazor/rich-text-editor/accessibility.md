@@ -60,7 +60,7 @@ The Blazor Rich Text Editor element is assigned the `application` role.
 | aria-disabled | Indicates the disabled state of the toolbar. |
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/aria-attribute.razor %}
 
