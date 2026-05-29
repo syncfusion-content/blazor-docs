@@ -210,7 +210,7 @@ N> Store sensitive keys in user secrets or environment variables, not in appsett
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion Smart Rich Text Editor Azure OpenAI Integration](images/azureopenai-integration.png)
+![Syncfusion Smart Rich Text Editor Azure OpenAI Integration](images/azureopenai-integration.webp)
 
 ## Troubleshooting
 
