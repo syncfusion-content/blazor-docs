@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility with Blazor Signature Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+description: Explore Blazor Signature accessibility with WCAG 2.2 support, screen readers, keyboard navigation, and mobile device compatibility.
 platform: Blazor
 control: Signature
 documentation: ug

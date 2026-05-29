@@ -3,54 +3,48 @@ layout: post
 title: Migrating from Windows Forms (WinForms) to Blazor Guide | Syncfusion®
 description: Step-by-step guide to migrate a WinForms app to Blazor, covering architecture, project setup, theming, service registration, and component mapping.
 platform: Blazor
-component: Common
+control: Common
 documentation: ug
 ---
 
 # Migrating from Windows Forms to Blazor
 
-This guide provides a step‑by‑step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to [Blazor](https://www.syncfusion.com/blazor-components) application. It is designed to help developers modernize existing desktop applications by moving to a web based architecture while continuing to use familiar .NET and C# skills.
-
-**This document covers:**
-
-* Architectural differences between Windows Forms and Blazor
-* Project structure mapping
-* Step-by-step migration from WinForms components to Blazor components.
+This guide provides a step by step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to a [Blazor](https://www.syncfusion.com/blazor-components) application. It helps developers modernize existing desktop applications by transitioning to a web based architecture.     
 
 ## Why Migrate from WinForms to Blazor?
 
 | Aspect | WinForms | Blazor | Benefit of Migration |
 |------|----------|------------------|----------------------|
-| Platform Support | Windows only | Web, Desktop, Cloud, Cross‑platform | Application accessible from any browser or device |
+| Platform Support | Windows only | Web, Desktop, Cloud, Cross platform | Application accessible from any browser or device |
 | UI Technology | Legacy desktop UI | Modern web based UI | Improved look and user experience |
-| Architecture | Form‑centric, tightly coupled | Component based, modular | Better maintainability and scalability |
-| Deployment | Requires local installation | Runs in a web browser | No client‑side installation required |
-| Development Model | Event‑driven programming | Data binding and reactive UI | Cleaner and more readable code |
+| Architecture | Form centric, tightly coupled | Component based, modular | Better maintainability and scalability |
+| Deployment | Requires local installation | Runs in a web browser | No client side installation required |
+| Development Model | Event driven programming | Data binding and reactive UI | Cleaner and more readable code |
 | Responsiveness | Fixed desktop layouts | Responsive web layouts | Works across different screen sizes |
-| Maintenance | Hard to extend and update | Easy to maintain and enhance | Lower long-term maintenance effort |
+| Maintenance | Hard to extend and update | Easy to maintain and enhance | Lower long term maintenance effort |
 | Cloud Readiness | Minimal support | Designed for cloud deployment | Enables modern hosting scenarios |
 | Code Reusability | Low reusability | High reusability via components and services | Faster development and testing |
-| Future Support | Limited continued development | Actively developed framework | Long‑term application sustainability |
+| Future Support | Limited continued development | Actively developed framework | Long term application sustainability |
 
 ## Key architectural differences
 
-Understanding the architectural differences between **WinForms** and **Blazor** is essential before starting the migration. WinForms follows a traditional desktop‑based, event‑driven architecture, while Blazor uses a modern, component‑based web architecture designed for scalability and maintainability.
+Understanding the architectural differences between **WinForms** and **Blazor** is essential before starting the migration. WinForms follows a traditional desktop based, event driven architecture, while Blazor uses a modern, component based web architecture designed for scalability and maintainability.
 
 | Area | WinForms Architecture | Blazor Architecture |
 |-----|----------------------|--------------------------------|
 | Application Type | Desktop application | Web application |
-| UI Model | Form‑based controls | Component based UI |
-| Platform Dependency | Windows only | Cross‑platform |
+| UI Model | Form based controls | Component based UI |
+| Platform Dependency | Windows only | Cross platform |
 | Code Organization | UI and business logic often tightly coupled | Clear separation of UI, services, and models |
-| Rendering Engine | OS‑based rendering (GDI+/Windows) | Browser‑based rendering (HTML/CSS) |
-| State Management | Control state managed automatically | State‑driven UI with data binding |
+| Rendering Engine | OS based rendering (GDI+/Windows) | Browser based rendering (HTML/CSS) |
+| State Management | Control state managed automatically | State driven UI with data binding |
 | Event Handling | Traditional event handlers | Declarative event binding |
-| Layout System | Fixed, pixel‑based layout | Responsive, CSS based layout |
+| Layout System | Fixed, pixel based layout | Responsive, CSS based layout |
 | Navigation | Open and close forms | URL based routing |
 
 ## Project structure comparison
 
-When migrating from WinForms to Blazor, one of the first changes you will notice is the project structure. WinForms applications are designed for desktop environments, whereas Blazor applications follow a component‑based web architecture. Understanding how files and responsibilities map between the two frameworks helps simplify the migration process.
+When migrating from WinForms to Blazor, one of the first changes you will notice is the project structure. WinForms applications are designed for desktop environments, whereas Blazor applications follow a component based web architecture. Understanding how files and responsibilities map between the two frameworks helps simplify the migration process.
 
 | **WinForms** | **Blazor** | **Description** |
 |---|---|---|
@@ -64,7 +58,7 @@ When migrating from WinForms to Blazor, one of the first changes you will notice
 
 To migrate a WinForms application, you first need to create a Blazor project. Blazor is a modern web framework that allows you to build interactive user interfaces using C# and .NET, instead of JavaScript.
 
-You can create a new Blazor project using the .NET Command Line Interface (CLI). Run the following command in a terminal or command prompt:
+You can create a new Blazor project using the .NET Command Line Interface (CLI). Run the following command in a terminal or command prompt.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -84,7 +78,7 @@ In WinForms applications, controls are installed as platform specific NuGet pack
 
 These WinForms packages include native WinForms rendering logic, control specific assemblies, and Windows only dependencies. Because WinForms applications run exclusively on Windows, the packages are tightly coupled with the Windows desktop environment.
 
-For example, you can install the Syncfusion DataGrid for WinForms using the following NuGet package:
+For example, you can install the DataGrid for WinForms using the following NuGet package.
 
 - [Syncfusion.SfDataGrid.WinForms](https://www.nuget.org/packages/Syncfusion.SfDataGrid.WinForms)
 
@@ -98,12 +92,7 @@ dotnet add package Syncfusion.SfDataGrid.WinForms
 
 **Blazor application**
 
-In Blazor applications, Blazor components are delivered as web‑based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
-
-Blazor packages are grouped into the following categories:
-
-- Component packages (Grid, Charts, Scheduler, etc.)
-- Theme packages (CSS‑based)
+In Blazor applications, Blazor components are delivered as web based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
 
 To use Blazor components in a Blazor application, install the component package and the theme package.
 
@@ -201,7 +190,7 @@ This step makes the Blazor components available throughout the application.
 
 ## Component rendering
 
-This section explains how user interface elements are rendered in WinForms and Blazor applications. It demonstrates the transition from control‑based rendering in desktop applications to state‑driven component rendering in Blazor.
+This section explains how user interface elements are rendered in WinForms and Blazor applications. It demonstrates the transition from control based rendering in desktop applications to state driven component rendering in Blazor.
 
 **WinForms: Component rendering**
 
@@ -443,7 +432,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 
 | WinForms control | Blazor component | Notes |
 |---|---|---|
-| [SfDataGrid](https://help.syncfusion.com/windowsforms/datagrid/gettingstarted) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) | Supports sorting, filtering, grouping, paging, editing |
+| [SfDataGrid](https://help.syncfusion.com/windowsforms/datagrid/gettingstarted) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) | Supports features such as sorting, filtering, grouping, paging, and editing |
 | [SfDataPager](https://help.syncfusion.com/windowsforms/datagrid/paging) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/paging) | Paging is handled using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) |
 | [Virtual Grid](https://help.syncfusion.com/windowsforms/grid-control/virtual-grid) | [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling) | Virtual scrolling can be enabled by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true**. |
 
@@ -453,7 +442,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 |---|---|---|
 | [ChartControl](https://help.syncfusion.com/windowsforms/chart/getting-started) | [SfChart](https://blazor.syncfusion.com/documentation/chart/getting-started-wasm) | Supports column, line, bar, pie, area charts |
 | [Sparkline](https://help.syncfusion.com/windowsforms/sparkline/gettingstarted) | [SfSparkline](https://blazor.syncfusion.com/documentation/sparkline/getting-started) | Lightweight inline charts |
-| [Gauge](https://help.syncfusion.com/windowsforms/radial-gauge/overview) | [SfLinearGauge](https://blazor.syncfusion.com/documentation/linear-gauge/getting-started), [SfCircularGauge](https://blazor.syncfusion.com/documentation/circular-gauge/getting-started) | SVG‑based rendering |
+| [Gauge](https://help.syncfusion.com/windowsforms/radial-gauge/overview) | [SfLinearGauge](https://blazor.syncfusion.com/documentation/linear-gauge/getting-started), [SfCircularGauge](https://blazor.syncfusion.com/documentation/circular-gauge/getting-started) | SVG based rendering |
 | [Maps](https://help.syncfusion.com/windowsforms/map/getting-started) | [SfMaps](https://blazor.syncfusion.com/documentation/maps/getting-started) | Interactive maps |
 
 ### Scheduling and Time Management
@@ -500,7 +489,7 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 | WinForms control | Blazor component | Notes |
 |---|---|---|
 | [PdfViewerControl](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/winforms/getting-started) | [SfPdfViewer2](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application) | PDF viewer |
-| [Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started) | [SfSpreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started) | Excel‑like UI |
+| [Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started) | [SfSpreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started) | Excel like UI |
 
 ### Diagram and Visual Modeling
 
@@ -519,5 +508,6 @@ It is intended to help developers **plan, assess, and execute** WinForms to Blaz
 ## See also
 
 - [Getting started with Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+- [Getting started with Blazor Chart in Web App](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
 - [Getting started with Blazor Components](https://blazor.syncfusion.com/documentation/introduction)
 

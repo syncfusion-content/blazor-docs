@@ -204,7 +204,7 @@ and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-**Root cause**: The project references both the all‑in‑one package (`Syncfusion.Blazor`) and one or more individual component packages (for example, `Syncfusion.Blazor.Grid` or `Syncfusion.Blazor.Core`). These packages expose the same public types from different assemblies, producing duplicate type definitions and ambiguous method overloads. The compiler therefore reports ambiguous-call or duplicate-type errors.
+**Root cause**: The project references both the all‑in‑one package ([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) and one or more individual component packages (for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) or [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)). These packages expose the same public types from different assemblies, producing duplicate type definitions and ambiguous method overloads. The compiler therefore reports ambiguous-call or duplicate-type errors.
 
 **Impact**: Compile-time errors that block builds, longer restore times, bigger deployment footprint, and hard-to-diagnose dependency problems.
 
@@ -299,7 +299,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> The `Syncfusion.Blazor.Themes` package should always be installed separately, regardless of which approach you choose, as it only contains theme stylesheets.
+N> The [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) package should always be installed separately, regardless of which approach you choose, as it only contains theme stylesheets.
 
 ### Pitfall 4: Duplicate package references
 
@@ -424,7 +424,7 @@ N> When upgrading Syncfusion packages, update **all Syncfusion packages** in you
 
 **Symptom**: Runtime exceptions such as `MissingMethodException`, `TypeLoadException`, or `FileLoadException`. Components may fail to initialize, throw errors during rendering, or exhibit unexpected behavior.
 
-**Root cause**: Different Syncfusion<sup style="font-size:70%">®</sup> Blazor packages are installed with incompatible versions. For example, `Syncfusion.Blazor.Grid` version 33.2.3 alongside `Syncfusion.Blazor.Calendars` version 32.1.19.
+**Root cause**: Different Syncfusion<sup style="font-size:70%">®</sup> Blazor packages are installed with incompatible versions. For example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) version 33.2.3 alongside [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) version 32.1.19.
 
 **Impact**: Application crashes, component initialization failures, broken features, and difficult-to-diagnose runtime errors that only appear under specific conditions.
 
@@ -726,7 +726,7 @@ N> The `AddSyncfusionBlazor()` service registration is mandatory for all Syncfus
 
 ### Pitfall 8: Incorrect SignalR configuration for large data
 
-**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. The browser console may show errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
+**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. The browser console may show errors like "Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'"
 
 **Root cause**: Default SignalR message size limits are too small for large data transfers. The default limit is 32KB, which is insufficient for components handling large files, images, or datasets.
 
@@ -936,7 +936,7 @@ N> The `_Imports.razor` file provides namespace imports to all Razor components 
 
 ### Pitfall 10: Incorrect TValue and field mapping in Syncfusion components
 
-**Symptom**: [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), [MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown), [AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete), [Numeric TextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox), [DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker), or similar components render empty, do not bind correctly, or fail during selection, editing, filtering, or display.
+**Symptom**: Components such as [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown), [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete), [Blazor Numeric TextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox), [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker), or similar components render empty, do not bind correctly, or fail during selection, editing, filtering, or display.
 
 **Root cause**: The component `TValue`, item type, or field mappings such as `Field`, `Text`, and `Value` do not match the underlying data model. In some cases, the bound type also does not match the expected value format.
 
@@ -946,7 +946,7 @@ N> The `_Imports.razor` file provides namespace imports to all Razor components 
 
 **Step 1: Match `TValue` to the bound value type**
 
-In DropDown List, ensure that `TValue` matches the type of the bound value and the corresponding value field in the data model.
+In Blazor DropDown List, ensure that `TValue` matches the type of the bound value and the corresponding value field in the data model.
 
 **Correct Mapping**:
 
@@ -1016,7 +1016,7 @@ Here, `Value="OrderCode"` does not match any property in the data model, so the 
 
 **Step 2: Map columns to real model properties**
 
-In DataGrid, each GridColumn [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value must match a public property on the model, including correct spelling and casing.
+In Blazor DataGrid, each GridColumn [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value must match a public property on the model, including correct spelling and casing.
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Grid Mapping" %}
@@ -1057,7 +1057,7 @@ In DataGrid, each GridColumn [Field](https://help.syncfusion.com/cr/blazor/Syncf
 
 **Step 3: Use the correct value type for numeric and date inputs**
 
-For Numeric TextBox and DatePicker, the bound property type must match the component’s expected type (`TValue`).
+For Blazor Numeric TextBox and DatePicker, the bound property type must match the component’s expected type (`TValue`).
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Input Mapping" %}
@@ -1079,7 +1079,7 @@ For Numeric TextBox and DatePicker, the bound property type must match the compo
 
 **Step 4: Use the correct field names and value collection type**
 
-In MultiSelect Dropdown, the selected value collection type must match the item value type and corresponding field mapping.
+In Blazor MultiSelect Dropdown, the selected value collection type must match the item value type and corresponding field mapping.
 
 {% tabs %}
 {% highlight razor tabtitle="MultiSelect Mapping" %}
@@ -1145,15 +1145,15 @@ N> This issue is usually a data-model mismatch, not a Syncfusion defect. In most
 
 **Virtual scrolling for DataGrid:**
 
-For a comprehensive explanation of virtual scrolling, including row and column virtualization, buffering strategies, and performance tuning, refer to the official [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling).
+For a comprehensive explanation of virtual scrolling, including row and column virtualization, buffering strategies, and performance tuning, refer to the [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling).
 
 **Pagination for DataGrid:**
 
-For detailed information about pagination, including GridPageSettings configuration, page size management, and pager customization options, refer to the official [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/paging)
+For detailed information about pagination, including GridPageSettings configuration, page size management, and pager customization options, refer to the [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/paging)
 
 **On-demand loading with remote data:**
 
-For complete guidance on working with remote data, including using `SfDataManager` and configuring adaptors (such as `ODataV4Adaptor`), refer to the official [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/data-binding/remote-data).
+For complete guidance on working with remote data, including using `SfDataManager` and configuring adaptors (such as `ODataV4Adaptor`), refer to the [Syncfusion documentation](https://blazor.syncfusion.com/documentation/datagrid/data-binding/remote-data).
 
 **Performance best practices:**
 

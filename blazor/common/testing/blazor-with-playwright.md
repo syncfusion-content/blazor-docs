@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor Component E2E Test Automation with Playwright | Syncfusion®
-description: Learn to automate end-to-end testing of Syncfusion Blazor components using Playwright and NUnit in a .NET WebAssembly app.
+title: Blazor Components E2E Test Automation with Playwright | Syncfusion®
+description: Learn to automate end-to-end testing of Blazor components using Playwright and NUnit in a .NET WebAssembly app.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # End-to-End Test Automation for Blazor Components with Playwright
 
-This guide explains how to integrate [Blazor UI components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
+This guide explains how to integrate [Blazor components](https://www.syncfusion.com/blazor-components) into a **Blazor WebAssembly Standalone App** and validate them through end‑to‑end tests using [Playwright](https://playwright.dev/dotnet).
 
 Playwright enables automated end‑to‑end (E2E) testing by simulating real user interactions such as clicking, typing, and navigation across the application. These tests can be executed repeatedly to verify complete UI workflows and ensure that Blazor components behave as expected.
 
@@ -19,9 +19,9 @@ If you already have a Blazor project configured, you can skip this section and p
 
 Otherwise, create a new Blazor application by following the [Getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) for a **Blazor WebAssembly Standalone App**.
 
-## Install required packages
+### Install NuGet packages
 
-Install the following NuGet packages to use the **Blazor components**.
+Install the following NuGet packages to use the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -37,20 +37,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-## Add required namespaces
-
-Open the `_Imports.razor` file at the root of your project and import the namespaces.
-
-{% tabs %}
-{% highlight razor tabtitle="_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-
-{% endhighlight %}
-{% endtabs %}
-
-## Register the Blazor service
+### Register the Blazor service
 
 Add the Blazor service to the `Program.cs` file to enable Blazor components in the application.
 
@@ -70,12 +57,25 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+### Add required namespaces
+
+Open the `_Imports.razor` file at the root of your project and import the namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add stylesheet and script resources
 
 Include the theme stylesheet and script references in the `wwwroot/index.html` file.
 
 {% tabs %}
-{% highlight html %}
+{% highlight html tabtitle="index.html" %}
 
 <head>
     ....
@@ -88,12 +88,11 @@ Include the theme stylesheet and script references in the `wwwroot/index.html` f
 {% endhighlight %}
 {% endtabs %}
 
-## Connect the Blazor DataGrid component
+### Connect the Blazor DataGrid component
 
 Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to a `.razor` page in your application to enable interactive UI functionality that can be tested using Playwright.
 
 The Blazor DataGrid includes paging functionality, enabling you to verify user interactions and UI behavior through end‑to‑end testing.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor" %}
@@ -186,9 +185,9 @@ To do this, add the following configuration to your `<yourProjectName>.csproj` f
 {% tabs %}
 {% highlight xml tabtitle=".csproj" %}
 
-  <ItemGroup>
-    <Compile Remove="tests\**" />
-  </ItemGroup>
+<ItemGroup>
+  <Compile Remove="tests\**" />
+</ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
@@ -211,7 +210,7 @@ dotnet build
 
 **Step 2: Install required browsers**
 
-Next, install the Playwright browsers (Chromium, Firefox, and WebKit) by running the generated script.
+Next, install the Playwright browsers (Chromium, Firefox, and WebKit) by running the generated script. This example uses `net10.0`. Update the path to match your project's target framework.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -221,21 +220,7 @@ pwsh bin/Debug/net10.0/playwright.ps1 install
 {% endhighlight %}
 {% endtabs %}
 
-N> This example uses `net10.0`. Update the path to match your project's target framework.
-
-If pwsh is not available, you can install it from the [official PowerShell site](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell)
-
-Or use Windows PowerShell (`powershell.exe`) as an alternative:
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-powershell -ExecutionPolicy Bypass -File "bin\Debug\net10.0\playwright.ps1" install
-
-{% endhighlight %}
-{% endtabs %}
-
-N> The `-ExecutionPolicy Bypass` option allows the script to run without being blocked by system security settings.
+If pwsh is not available, you can install it from the [official PowerShell site](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell).
 
 ## Create Playwright test class
 
@@ -260,7 +245,9 @@ namespace E2E.Tests
         [OneTimeSetUp]
         public async Task StartBlazorApp()
         {
-            var projectPath = @"<Absolute path to your Blazor application's .csproj file>"; // Example: @"C:\Users\MyBlazorApp\MyBlazorApp.csproj";
+            
+            // Specify the path (e.g., @"C:\Users\MyBlazorApp\MyBlazorApp.csproj").
+            var projectPath = @"<Absolute path to your Blazor application's .csproj file>";
 
             var psi = new ProcessStartInfo("dotnet", $"run --project \"{projectPath}\" --urls {_url}")
             {
@@ -345,11 +332,13 @@ dotnet test
 
 This command builds and runs the test project. The **StartBlazorApp** method in `BlazorPlaywrightTests.cs` automatically starts the Blazor application before the tests execute.
 
-After running the tests, the Blazor application starts automatically, the browser opens and loads the app, and the DataGrid is displayed on the page. The test simulates user interaction by navigating between pages and verifies that the data changes correctly, confirming that the paging functionality works as expected. If everything is configured properly, the test execution completes successfully with a **Passed** status in the console, indicating that the UI components behave correctly.
+After running the tests, the Blazor application starts automatically, the Playwright browser runs in headless mode, loads the app, and the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is rendered internally. The test simulates user interaction by navigating between pages and verifies that the data changes correctly, confirming that the paging functionality works as expected. If everything is configured properly, the test execution completes successfully with a **Succeeded** status in the console, indicating that the components behave correctly.
+
+![Playwright test](./images/playwright-testcase.webp)
 
 N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
-This approach ensures reliable validation of [Blazor UI components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
+This approach ensures reliable validation of [Blazor components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
 
 ## See also
 
