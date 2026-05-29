@@ -64,7 +64,7 @@ Use the lite theme variant when your application does not require bigger size mo
 
 The following image compares the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in normal and bigger size modes:
 
-![Side-by-side comparison showing Blazor Button component rendered in normal size mode (left) and bigger size mode (right)](./images/bigger-theme-button.webp)
+![Blazor Button component shown in normal size mode and bigger size mode side by side](./images/bigger-theme-button.webp)
 
 The following table maps theme display names to their corresponding standard and optimized (lite) CSS filenames:
 
