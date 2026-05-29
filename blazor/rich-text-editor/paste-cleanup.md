@@ -160,7 +160,7 @@ When pasting a large text into the editor it displays `Attempting to reconnect` 
 * Open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs hl_lines="11" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="11" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
