@@ -32,7 +32,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Mention component provides 
 The following example demonstrates how to enable Mention support in the Blazor Markdown Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-mention-support.razor %}
 
