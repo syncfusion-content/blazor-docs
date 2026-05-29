@@ -37,7 +37,7 @@ Using the [ToolbarCommand.CreateTable](https://help.syncfusion.com/cr/blazor/Syn
 
 The quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table, which increases the feasibility of editing the table easily.
 
-N> For more details about quick toolbar, refer to this [documentation section](../toolbar#quick-toolbar).
+N> For more details about quick toolbar, refer to this [documentation section](../quick-toolbar).
 
 ## Table properties
 
@@ -82,7 +82,7 @@ The text formatting feature in tables allows users to apply various styles to se
 
 <SfRichTextEditor ShowCharCount="true">
     <RichTextEditorToolbarSettings Items="@Tools" />
-    <h2>Discover the Table's Powerful Features</h2><p>A table can be created in the editor using either a keyboard shortcut or the      toolbar. With the quick toolbar, you can perform table cell insert, delete, split, and merge operations. You can style the table cells using background colours and borders.</p>      
+    <h2>Discover the Table's Powerful Features</h2><p>A table can be created in the editor using either a keyboard shortcut or the toolbar. With the quick toolbar, you can perform table cell insert, delete, split, and merge operations. You can style the table cells using background colours and borders.</p>      
     <table class="e-rte-table" style="width: 100%; min-width: 0px; height: 151px">
         <thead>
             <tr>
@@ -128,7 +128,7 @@ The text formatting feature in tables allows users to apply various styles to se
 
 The Rich Text Editor allows users to change the appearance of the tables by splitting or merging the table cells.
 
-The `TableCell` item should be configured in the Table [quickToolbarSettings](../toolbar#table-quick-toolbar) property to show the merge or split icons while selecting the table cells.
+The `TableCell` item should be configured in the Table [quickToolbarSettings](../quick-toolbar) property to show the merge or split icons while selecting the table cells.
 
 ### Cell merging
 
@@ -150,7 +150,7 @@ The [TableToolbarCommand.TableHeader](https://help.syncfusion.com/cr/blazor/Sync
 
 ## Insert rows
 
-The [TableCommandsArgs.Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Rows) can be inserted above or under the required table cell through the quick toolbar. Also, the focused row can be deleted.
+The [TableCommandsArgs.Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Rows) can be inserted above or under the required table cell through the quick toolbar. Also, the focused row can be deleted. The following screenshot shows the available options of the row item.
 
 ![ Blazor RichTextEditor inserting table rows](../images/blazor-richtexteditor-insert-table-rows.webp)
 
@@ -204,7 +204,7 @@ The Rich Text Editor offers a simple and intuitive way to add rows and columns t
 
 The text inside the table can be aligned to the top, middle, or bottom using the [TableToolbarCommand.TableCellVerticalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableCellVerticalAlign) command of the quick toolbar.
 
-![Blazor RichTextEditor changing vertical alignment](./images/blazor-richtexteditor-vertical-alignment.webp)
+![Blazor RichTextEditor changing vertical alignment](../images/blazor-richtexteditor-vertical-alignment.webp)
 
 ## Horizontal align
 
@@ -242,7 +242,7 @@ The Rich Text Editor provides support to custom styles for tables. If you want t
 
 The background color can be set for each table cell through the [TableToolbarCommand.BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_BackgroundColor) command available with the quick toolbar.
 
-![Blazor RichTextEditor changing table background color](./images/blazor-richtexteditor-table-background-color.webp)
+![Blazor RichTextEditor changing table background color](../images/blazor-richtexteditor-table-background-color.webp)
 
 ## Copy, cut, and paste table rows and columns
 
@@ -270,4 +270,4 @@ N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-comp
 
 ## See also
 
-* [How to edit the quick toolbar settings](../toolbar#quick-toolbar)
+* [How to edit the quick toolbar settings](../quick-toolbar)
