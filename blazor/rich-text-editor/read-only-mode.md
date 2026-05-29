@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Editor Access in Blazor Rich Text Editor Component | Syncfusion
+title: Control Editor Access in Blazor Rich Text Editor Component | Syncfusion
 description: Checkout and learn here all about Controlling Editor Access in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
