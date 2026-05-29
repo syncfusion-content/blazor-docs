@@ -20,7 +20,6 @@ The AI Assistant Popup can be styled using the following CSS class:
     z-index: 1;
 }
 ```
----
 
 ## Example: Custom Popup Styling
 
@@ -61,9 +60,7 @@ In this example, we customize the AI Assistant popup appearance by targeting the
 
 ![Blazor Smart Rich Text Editor AI AssistView Custom Class](./images/smart-rich-text-editor-ai-assistview-custom-class.webp)
 
----
-
-## See Also
+## See also
 
 * [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
 * [Methods](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/method)
