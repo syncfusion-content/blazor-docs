@@ -191,9 +191,9 @@ app.MapRazorPages();
 {% endhighlight %}
 {% endtabs %}
 
-## 7. Import authorization and Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces
+## 7. Import authorization and Blazor namespaces
 
-Add the required namespaces in `Components/_Imports.razor`. These namespaces allow you to use authorization features such as `[Authorize]` and `<AuthorizeView>`, and they enable Syncfusion components in your Blazor pages.
+Add the required namespaces in `Components/_Imports.razor`. These namespaces allow you to use authorization features such as `[Authorize]` and `<AuthorizeView>`, and they enable Blazor components in your Blazor pages.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/_Imports.razor" %}
@@ -207,11 +207,11 @@ Add the required namespaces in `Components/_Imports.razor`. These namespaces all
 {% endhighlight %}
 {% endtabs %}
 
-## 8. Add Syncfusion<sup style="font-size:70%">&reg;</sup> styles and script resources
+## 8. Add styles and script resources
 
-Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion theme CSS (e.g., `bootstrap5.css`, `tailwind.css`) is already referenced to avoid styling conflicts.
+Before adding the stylesheet, ensure no other Blazor theme CSS (for example, `bootstrap5.css` or `tailwind.css`) is referenced to avoid conflicts.
 
-Open `App.razor` and include the Syncfusion theme stylesheet and required script references.
+Add the following Blazor stylesheet and script references to `~/App.razor`.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -542,7 +542,7 @@ dotnet run
 3. You will be redirected to the Identity login page (`/Identity/Account/Login`) because you are not authenticated.
 4. Click **Register** and create a new account (email and password).
 5. After registration, you will be automatically logged in.
-6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Syncfusion components.
+6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Blazor components.
 7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page.
 
 **Output:**

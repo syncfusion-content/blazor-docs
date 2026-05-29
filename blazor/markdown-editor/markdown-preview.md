@@ -9,17 +9,17 @@ documentation: ug
 
 # Live Markdown Preview in Blazor Markdown Editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides an instant Markdown to HTML preview, allowing users to visualize formatted content in real time as they type or edit Markdown text. This feature enhances the editing experience by making formatting changes immediately visible. 
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides an instant Markdown to HTML preview, allowing users to visualize formatted content in real time as they type or edit Markdown text. This feature enhances the editing experience by making formatting changes immediately visible.
 
 ## Overview
-The Syncfusion Blazor Markdown Editor includes a live preview feature that instantly converts Markdown text into HTML. This allows users to see the formatted output in real time, improving the editing experience and reducing formatting errors.
+The Syncfusion Blazor Markdown Editor includes a live preview panel that renders the Markdown content into HTML format. It helps users verify formatting such as headings, lists, links, and emphasis, ensuring that the final output appears correctly before publishing or saving.
 
 ## Enable Markdown Preview in Blazor Markdown Editor  
 
 To enable the Markdown preview feature, the `Markdig` package is used to convert Markdown content into HTML. The following example demonstrates how to enable Markdown-to-HTML preview in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-preview.razor %}
 
