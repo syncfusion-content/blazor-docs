@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable Ripple support in Blazor components | Syncfusion
-description: Learn how to enable Ripple Effect support globally or per component for Syncfusion Blazor components in Blazor Web App, Blazor WASM standalone, and Blazor Server App.
+description: Learn how to enable Ripple Effect support globally for Syncfusion Blazor components in Blazor Web App, Blazor WASM standalone, and Blazor Server App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -13,7 +13,7 @@ Enable Ripple support can be enabled for Syncfusion<sup style="font-size:70%">&r
 
 ## Enable Ripple Effect Globally
 
-To enable the ripple effect for all Syncfusion<sup style="font-size:70%">&reg;</sup> components by setting the [EnableRippleeffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRippleEffect) global option to `true` when adding Syncfusion Blazor via `AddSyncfusionBlazor()`.
+To enable the ripple effect for all Syncfusion<sup style="font-size:70%">&reg;</sup> components by setting the [EnableRippleEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRippleEffect) global option to `true` when adding Syncfusion Blazor via `AddSyncfusionBlazor()`.
 
 ### Blazor Web App
 
