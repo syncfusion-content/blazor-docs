@@ -50,7 +50,7 @@ Adopting this pattern helps enforce development standards, reduces duplication, 
 
 ## Implement a Custom Blazor DataGrid Component
 
-The following example demonstrates how to create a reusable CustomGrid component with predefined `GridPageSettings`. This component centralizes common configuration options, such as `PageCount` and `PageSize`, while still allowing external customization through parameters and projected content.
+The following example demonstrates how to create a reusable CustomGrid component with predefined [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings). This component centralizes common configuration options, such as [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) and [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), while still allowing external customization through parameters and projected content.
 
 **CustomGrid.razor:**
 
