@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Playground | Syncfusion
-description: Learn here about how to write, edit, compile, build, run, and share Blazor and Syncfusion Blazor components directly in the browser using Blazor Playground.
+title: Getting Started with Blazor Playground for Building Apps | Syncfusion®
+description: Learn here about how to write, edit, compile, build, run, and share Blazor and Syncfusion® Blazor components directly in the browser using Blazor Playground.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,24 +9,22 @@ documentation: ug
 
 # Getting Started with Blazor Playground
 
-The Blazor playground allows you to develop and test any Blazor component, including both general components and pre-built Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The [Blazor Playground](https://blazorplayground.syncfusion.com) allows you to develop and test any Blazor component, including both general components and pre-built [Blazor components](https://www.syncfusion.com/blazor-components).
 
 To get started quickly with Blazor Playground, watch the following video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=tMu19E-xkyk" %}
 
-## Blazor component
+## Create a Blazor component
 
-You can create a Blazor component in Blazor playground by following the given steps below:
+You can create a Blazor component in Blazor Playground by following these steps:
 
-* Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser.
-* In the editor, add the following code:
+1\. Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser.
+2\. In the editor, add the following code:
 
-```cshtml
-<!-- ColorPicker.razor -->
-
-@page "/colorpicker"
+{% tabs %}
+{% highlight razor tabtitle="_Index.razor" %}
 
 <h3>Color Picker</h3>
 
@@ -72,33 +70,83 @@ You can create a Blazor component in Blazor playground by following the given st
     }
     
 </style>
-```
-* Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
-![Syncfusion Blazor Playground](images/blazor_component.webp)
+{% endhighlight %}
+{% endtabs %}
 
-## Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
+3\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
-Blazor Playground is preconfigured with the `Syncfusion.Blazor` package, stylesheets, and scripts. To render Syncfusion<sup style="font-size:70%">&reg;</sup> components in the Playground, import the required namespaces and add the component as shown below:
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHZyLtTXzqUKjn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-* Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces at the top of the editor.
+![Blazor Playground output showing the custom Color Picker component](images/blazor_component.webp)
 
+## Add a Syncfusion® Blazor Component
 
-```cshtml
+Blazor Playground is preconfigured with the Syncfusion® Blazor package, stylesheets, and scripts. To use [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) in the Playground, import the required namespace and add the component as shown below:
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Calendars
+1\. Add the `@using Syncfusion.Blazor.Grids` namespace at the top of the editor. This namespace is provided by the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) NuGet package.
 
-```
+{% tabs %}
+{% highlight razor tabtitle="_Index.razor" %}
 
-* Add the Blazor Calendar component in the editor.
+@using Syncfusion.Blazor.Grids
 
-```cshtml
+{% endhighlight %}
+{% endtabs %}
 
-<SfCalendar TValue="DateTime"></SfCalendar>
+2\. Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the editor.
 
-```
+{% tabs %}
+{% highlight razor tabtitle="_Index.razor" %}
 
-* Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the Result view.
+@using Syncfusion.Blazor.Grids
 
-![Syncfusion Blazor Playground with Calendar component](images/syncfusion_component.webp)
+<PageTitle>DataGrid</PageTitle>
+
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="100" />
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 12).Select(i => new Order {
+            OrderID = 1000 + i,
+            CustomerID = new[] { "ALFKI","ANATR","ANTON","BLONP","BOLID" }[Random.Shared.Next(5)],
+            OrderDate = DateTime.Today.AddDays(-i),
+            Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
+        }).ToList();
+
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
+        
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+3\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhxNSilfcqNzyDG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+![Blazor Playground output showing the DataGrid](images/blazor_datagrid.webp)
+
+## See also
+
+* [Working with components in Blazor Playground](./working-with-components)
+* [Manage NuGet packages in Blazor Playground](./managing-nuget-packages)
+* [Features and capabilities of Blazor Playground](./end-user-capabilities)
