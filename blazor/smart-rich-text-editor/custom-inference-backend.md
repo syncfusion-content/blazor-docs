@@ -35,7 +35,9 @@ Below is a sample implementation of a mock AI service named `MockAIService`. Thi
 1. Create a new class file named `MockAIService.cs` in your project.
 2. Add the following code:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="MockAIService.cs" %}
+
 using Syncfusion.Blazor.AI;
 
 public class MockAIService : IChatInferenceService
@@ -47,13 +49,17 @@ public class MockAIService : IChatInferenceService
         return Task.FromResult("This is a custom AI response.");
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Registering the Custom AI Service
 
 Register the custom AI service in the **~/Program.cs** file of your Blazor Web App:
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
@@ -67,7 +73,9 @@ builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSingleton<IChatInferenceService, MockAIService>();
 
 var app = builder.Build();
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Testing the Custom AI Integration
 
