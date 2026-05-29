@@ -38,7 +38,7 @@ dotnet run
 * Replace the `appsettings.json` file with the following content to configure the application with `Google OAuth 2.0`.
 
 {% tabs %}
-{% highlight cshtml tabtitle="appsettings.json" %}
+{% highlight json tabtitle="appsettings.json" %}
 
 {
   "Local": {
