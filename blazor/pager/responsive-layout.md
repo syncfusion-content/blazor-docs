@@ -18,7 +18,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component incl
 
 The **Pager** component continuously monitors changes in the browser window size and device resolution. Whenever a resize occurs, it dynamically recalculates the layout and rearranges its elements to best fit the available space. This includes adjusting numeric page links, navigation controls such as first, previous, next, and last buttons, as well as page size selectors and informational text.
 
-On smaller devices, such as smartphones, the component prioritizes usability by displaying only essential controls. To prevent clutter and maintain readability, non-essential elements are either minimized, repositioned, or temporarily hidden. Numeric page links may be reduced to a smaller subset, and navigation controls may be simplified to ensure that users can still navigate efficiently without horizontal scrolling or UI overlap.
+On smaller devices, such as smart phones, the component prioritizes usability by displaying only essential controls. To prevent clutter and maintain readability, non-essential elements are either minimized, repositioned, or temporarily hidden. Numeric page links may be reduced to a smaller subset, and navigation controls may be simplified to ensure that users can still navigate efficiently without horizontal scrolling or UI overlap.
 
 For medium-sized devices like tablets, the Pager provides a balanced layout. It intelligently distributes elements to maintain both readability and functionality. Navigation controls remain visible, while numeric links and informational content are organized with appropriate spacing to enhance clarity. This ensures a smooth and visually consistent experience when transitioning between device sizes.
 
