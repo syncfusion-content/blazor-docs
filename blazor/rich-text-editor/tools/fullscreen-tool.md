@@ -15,7 +15,7 @@ You can enable full screen mode using the `Full screen` icon toolbar button. Onc
 
 ## How it works
 
-Click the full screen icon in the toolbar to toggle fullscreen mode. When enabled, the editor:
+Click the full screen icon in the toolbar to toggle full screen mode. When enabled, the editor:
 
 - Expands to fill the entire browser window.
 - Adjusts its layout to optimize space for content and tools.
