@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Keyboard support in Blazor RichTextEditor Component
+# Keyboard support in Blazor Rich Text Editor Component
 
 The editor has full keyboard accessibility that includes shortcuts to open and other actions with toolbar items, drop-down lists, and dialogs.
 

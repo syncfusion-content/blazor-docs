@@ -11,7 +11,7 @@ documentation: ug
 
 ## Inserting images from web urls
 
-To insert an image from an online source like Google, Bing, and more, enable the images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows inserting an image from the online source.
+To insert an image from an online source like Google, Bing, and more, enable the images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows inserting an image from the local or online source.
 
 ![Blazor RichTextEditor inserting image](../images/blazor-richtexteditor-insert-image.png)
 
@@ -19,13 +19,20 @@ To insert an image from an online source like Google, Bing, and more, enable the
 
 Through the browse option in the image dialog, select the image from the local machine and insert it into the Rich Text Editor content.
 
-If the path field is not specified in [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted to `base64`, or a `blob` url for the image will be created, and the generated url will set as the `src` property of the `<img>` tag as follows:
+If the path field is not specified in [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted to `base64`, or a `blob` URL, and the generated URL will be set as the `src` property of the `<img>` tag as follows:
 
 The image selected from the local machine will be uploaded and saved to the specified location.
 
+A generated `blob` URL is assigned to the `<img>` tag as shown below:
+
 ```
 <img src="blob:http://blazor.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
+```
 
+A generated `base64` URL is assigned to the `<img>` tag as shown below:
+
+```
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...">
 ```
 N> If you want to insert many tiny images in the editor and don't want a specific physical location for saving images, opt to save the format as `Base64`.
 

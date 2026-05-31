@@ -19,7 +19,7 @@ Click the fullscreen icon in the toolbar to toggle fullscreen mode. When enabled
 
 - Expands to fill the entire browser window.
 - Adjusts its layout to optimize space for content and tools.
-- Can be exited by clicking the same icon again or pressing the `Esc` key.
+- Can be exited by clicking the `Minimize` icon or pressing the `Esc` key.
 
 {% tabs %}
 {% highlight razor %}

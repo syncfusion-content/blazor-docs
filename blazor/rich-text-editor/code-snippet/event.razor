@@ -1,8 +1,7 @@
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor @bind-Value="@Value" @ref="RteObj">
-    <RichTextEditorEvents ValueChange="@ValueChangeHandler">
-    </RichTextEditorEvents>
+    <RichTextEditorEvents ValueChange="@ValueChangeHandler" />
 </SfRichTextEditor>
 
 @code {
