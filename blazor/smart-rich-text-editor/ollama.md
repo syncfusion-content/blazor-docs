@@ -203,7 +203,9 @@ dotnet add package OllamaSharp
 
 ### Setup in Program.cs
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
+
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
@@ -234,7 +236,9 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 var app = builder.Build();
 
 // ... rest of setup
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Use Ollama AI with Smart Rich Text Editor Component
 
