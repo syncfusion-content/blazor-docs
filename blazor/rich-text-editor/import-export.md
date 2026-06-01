@@ -449,17 +449,14 @@ public ActionResult ExportToPdf([FromBody] ExportParam args)
     {
         return BadRequest("HTML content is empty."); // Fixed: Return proper HTTP status instead of null
     }
-
     using (WordDocument wordDocument = new WordDocument())
     {
         wordDocument.EnsureMinimal();
         wordDocument.HTMLImportSettings.ImageNodeVisited += OpenImage;
         wordDocument.LastParagraph.AppendHTML(htmlString);
-        
         DocIORenderer render = new DocIORenderer();
         PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
         wordDocument.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-        
         using (MemoryStream stream = new MemoryStream())
         {
             pdfDocument.Save(stream);
@@ -478,27 +475,21 @@ public FileStreamResult ExportToDocx([FromBody] ExportParam args)
     {
         return null; 
     }
-
     // Fixed: Removed the 'using' block from MemoryStream so it stays open for the file transfer
     MemoryStream stream = new MemoryStream();
-    
     using (WordDocument document = new WordDocument())
     {
         document.EnsureMinimal();
         document.HTMLImportSettings.ImageNodeVisited += OpenImage;
-        
         bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlString, XHTMLValidationType.None);
         if (isValidHtml)
         {
             document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlString);
         }
-        
         document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
         document.Save(stream, FormatType.Docx);
     } // WordDocument is disposed here safely
-    
     stream.Position = 0; // Reset position so the file downloader can read it from the start
-    
     // Fixed: Updated to correct modern DOCX MIME type
     return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Result.docx");
 }
