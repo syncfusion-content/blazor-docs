@@ -101,4 +101,4 @@ These shortcuts provide additional functionalities like fullscreen mode.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
+![Blazor Markdown Editor with Key Configuration](./images/blazor-richtexteditor-key-configuration.webp)

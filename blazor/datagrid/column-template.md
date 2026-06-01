@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. This feature is useful for displaying images, buttons, or other custom content within a column.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property that allows rendering custom elements in a column instead of the default field value. This feature is useful for displaying images, buttons, or other custom content within a column.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
@@ -572,7 +572,6 @@ The Blazor DataGrid supports rendering a [RadioButton](https://blazor.syncfusion
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
-using System.Collections.Generic;
 public class OrderDetails
 {
     public static List<OrderDetails> Orders = new List<OrderDetails>();

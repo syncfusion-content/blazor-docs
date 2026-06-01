@@ -9,7 +9,7 @@ documentation: ug
 
 # Batch editing in Blazor DataGrid
 
-Batch editing enables simultaneous editing of multiple cells in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). This mode allows efficient updates by double-clicking a cell to enter edit mode, then applying changes via the **Update** toolbar button or the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method.
+Batch editing enables simultaneous editing of multiple cells in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). This mode allows efficient updates by double-clicking a cell to enter edit mode, then applying changes via the **Update** toolbar button or the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method.
 
 To enable batch editing mode, set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Batch**. This property defines the editing behavior of the Grid and activates batch editing, allowing multiple cell values to be modified simultaneously before committing changes.
 

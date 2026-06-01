@@ -11,7 +11,7 @@ documentation: ug
 
 # Print in Blazor DataGrid
 
-The **Print** feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) generates a print-ready view of DataGrid content for offline access and documentation. Initiate printing through the  built-in toolbar option or programmatically using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. The output reflects the DataGrid’s current state, including visible columns, sorting, and filtering, and opens the browser’s print dialog.
+The **Print** feature in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) generates a print-ready view of DataGrid content for offline access and documentation. Initiate printing through the  built-in toolbar option or programmatically using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. The output reflects the DataGrid’s current state, including visible columns, sorting, and filtering, and opens the browser’s print dialog.
 
 To enable printing from the toolbar, add the **"Print"** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property.
 

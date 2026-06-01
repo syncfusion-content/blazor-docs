@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor DataGrid in a standalone Blazor Server app using .NET CLI
 
-This article provides step-by-step instructions to build a standalone Blazor Server app with Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor Server project standards.
+This article provides step-by-step instructions to build a standalone Blazor Server app with [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet). The guidance aligns with .NET 8/9 Blazor Server project standards.
 
 ## Manually creating a project
 
