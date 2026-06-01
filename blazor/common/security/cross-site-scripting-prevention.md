@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Cross-Site Scripting (XSS) Security in Blazor Apps | Syncfusion
-description: Protect Syncfusion Blazor components from XSS using built‑in sanitization, server-side validation, and essential security best practices.
+title: Preventing Cross-Site Scripting (XSS) in Blazor Apps | Syncfusion
+description: Protect Blazor components from XSS using built‑in sanitization, server-side validation, and essential security best practices.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Cross-Site Scripting (XSS) Security in Blazor Applications
+# Preventing Cross-Site Scripting (XSS) in Blazor Applications
 
 ## Overview
 
 [Cross-Site Scripting (XSS)](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/XSS) is one of the most common security vulnerabilities in web applications. It occurs when attackers inject malicious scripts or markup into an application, causing untrusted content to execute in the user’s browser with the same privileges as the application.
 
-This guide explains how to protect [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components) from XSS attacks. It covers built-in client-side sanitization, required server-side validation, and safe usage guidelines for components that handle user-generated content.
+This guide explains how to protect [Blazor components](https://www.syncfusion.com/blazor-components) from XSS attacks. It covers built-in client-side sanitization, required server-side validation, and safe usage guidelines for components that handle user-generated content.
 
 ## How to prevent XSS attacks?
 
@@ -100,9 +100,9 @@ HTML sanitization is required when an application allows rich HTML content to be
 
 Sanitize all HTML before storing it in the database and again before rendering it. This defense‑in‑depth approach ensures consistent protection even if rendering logic, usage scenarios, or content sources change, and it applies equally to application input and external data sources.
 
-#### Built-in sanitization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
+#### Built-in sanitization in Blazor components
 
-The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property is available in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor **[BlockEditor](https://www.syncfusion.com/blazor-components/blazor-block-editor)**, **[File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)**, and **[RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)** components. It provides built-in client-side XSS protection.
+The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property is available in the **[Blazor BlockEditor](https://www.syncfusion.com/blazor-components/blazor-block-editor)**, **[Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)**, and **[Blazor RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)** components. It provides built-in client-side XSS protection.
 
 #### How EnableHtmlSanitizer works?
 
@@ -184,7 +184,7 @@ N> Client-side sanitization alone cannot fully secure your application. The `Ena
 
 ### Safe HTML rendering in data components
 
-Components that display user-generated or database content, such as **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)**, should follow the same security approach. HTML content must be rendered only after it has been sanitized on the server, while plain text can be displayed safely using Blazor’s built‑in automatic encoding.
+Components that display user-generated or database content, such as **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** and **[Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview)**, should follow the same security approach. HTML content must be rendered only after it has been sanitized on the server, while plain text can be displayed safely using Blazor’s built‑in automatic encoding.
 
 #### Rendering user content safely
 
@@ -397,7 +397,7 @@ Server-side sanitization is the **authoritative and required** defense against X
 
 ### Server-side sanitization example
 
-The following example demonstrates server-side sanitization of user‑entered HTML submitted from the Syncfusion Blazor **RichTextEditor** component. The sanitization process removes script tags, embedded script content, disallowed HTML elements, inline event handler attributes, and unsafe URL protocols before the content is processed or stored.
+The following example demonstrates server-side sanitization of user‑entered HTML submitted from the [Blazor RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component. The sanitization process removes script tags, embedded script content, disallowed HTML elements, inline event handler attributes, and unsafe URL protocols before the content is processed or stored.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Services/HtmlSanitizerService.cs"  %}
@@ -560,4 +560,4 @@ builder.Services.AddSyncfusionBlazor();
 ## See also
 
 * [Cross-site scripting (XSS) prevention in Block Editor](https://blazor.syncfusion.com/documentation/block-editor/editor-security/cross-site-script)
-* [Content Security Policy in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
+* [Content Security Policy in Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
