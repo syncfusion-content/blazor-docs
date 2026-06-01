@@ -14,7 +14,7 @@ The Rich Text Editor supports validation with the [EditForm](https://learn.micro
 N> [View the sample on GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-editform-validation)
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/edit-form.razor %}
 
@@ -34,7 +34,7 @@ The Rich Text Editor provides the functionality of character counting and its va
 | [MaxLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.maxlengthattribute?view=net-7.0) | Enforces a maximum character count. |
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/validation-rules.razor %}
 
@@ -48,7 +48,7 @@ The Rich Text Editor provides the functionality of character counting and its va
 The validation error message can be displayed in a custom location instead of the default position.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-placement-validation-message.razor %}
 

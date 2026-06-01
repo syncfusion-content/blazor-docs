@@ -24,7 +24,9 @@ In the following example:
 * **PreventRender** method is called in the **IncrementCount** method which is a click callback.
 * Now, the Rich Text Editor component will not be a part of the rendering, which happens as a result of the click event, and **currentCount** alone will get updated.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.RichTextEditor
 
 <p>Current count: @currentCount</p>
@@ -33,7 +35,8 @@ In the following example:
 
 <SfRichTextEditor @ref="rteObj"> 
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p> 
-</SfRichTextEditor> 
+</SfRichTextEditor>
+
 @code {
     SfRichTextEditor rteObj;
     private int currentCount = 0;
@@ -43,7 +46,9 @@ In the following example:
         currentCount++;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> **PreventRender** method accepts the boolean argument that accepts true or false to disable or enable rendering, respectively.
 <br/> **PreventRender** method can be used only after the Rich Text Editor component completes initial rendering. Calling this method during initial rendering has no effect.
@@ -58,7 +63,9 @@ In the following example:
 
 [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnToolbarClick) event is bound to a callback method, when the editor content gets changed by toolbar action the event is completed, the [StateHasChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged?view=aspnetcore-10.0) will be invoked for the parent component.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor @ref="rteObj">
@@ -77,7 +84,9 @@ In the following example:
         this.Output = this.Output + "<span><b>OnToolbarClick</b> event called<hr></span>";
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> **PreventRender** method internally overrides the **ShouldRender** method of the Rich Text Editor to prevent rendering.  
 <br/> It is recommended to use the **PreventRender** method for user-interactive events such as `OnToolbarClick`, `UpdatedToolbarStatus`, etc., for better performance.
