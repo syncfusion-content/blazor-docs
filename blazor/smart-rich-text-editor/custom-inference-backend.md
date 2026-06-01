@@ -84,7 +84,7 @@ var app = builder.Build();
 3. Run the application press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component in the default web browser.
 4. Use the AI AssistView or AI Commands in the Smart Rich Text Editor to verify that the custom AI service generates appropriate responses.
 
-![Smart Rich Text Editor with Custom AI Service](images/smart-richtexteditor-custom-ai-service.gif)
+![Smart Rich Text Editor with Custom AI Service](images/smart-richtexteditor-custom-ai-service.webp)
 
 ## Implemented AI Services
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Resize the Blazor DataGrid in various dimensions
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) fills its parent container. Therefore, changing the parent’s dimensions adjusts the Grid size automatically. This example shows how to resize the Grid externally using inputs and a button to modify the parent container’s width and height.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) fills its parent container. Therefore, changing the parent’s dimensions adjusts the Grid size automatically. This example shows how to resize the Grid externally using inputs and a button to modify the parent container’s width and height.
 
 > - When using `Height="100%"` for the Grid, ensure the parent container has an explicit height (pixels or a resolved flex height).
 > - Setting `Width="100%"` on the Grid ensures it follows the parent width exactly.

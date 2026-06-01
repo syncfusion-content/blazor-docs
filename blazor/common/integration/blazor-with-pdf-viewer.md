@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrating Syncfusion Blazor DataGrid with PDF Viewer
+title: Integrating Blazor DataGrid with PDF Viewer | Syncfusion
 description: Step-by-step guide to integrate the Blazor PDF Viewer and DataGrid in a Blazor Web App using Server render mode.
 platform: Blazor
 control: Common
@@ -298,4 +298,3 @@ Develop an e-learning platform where the DataGrid shows course materials, assign
 * [Getting Started with Blazor PDF Viewer in Blazor WASM](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/web-assembly-application)
 * [Getting Started with Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 * [Getting Started with Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-

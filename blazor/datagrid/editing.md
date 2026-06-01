@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides powerful options for dynamically inserting, deleting, and updating records, enabling to modify data directly within the Grid. This feature is useful for performing CRUD (Create, Read, Update and Delete) operations seamlessly.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides powerful options for dynamically inserting, deleting, and updating records, enabling to modify data directly within the Grid. This feature is useful for performing CRUD (Create, Read, Update and Delete) operations seamlessly.
 
 To enable editing functionality directly within the Grid, editing requires configure the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditing), [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowAdding), and [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) properties within the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) to **true**.
 
@@ -697,7 +697,7 @@ In the example below, the [DropDownList](https://blazor.syncfusion.com/documenta
     <GridColumns>
         <GridColumn Field="@nameof(EmployeeDetails.Id)" HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="90"></GridColumn>
         <GridColumn Field="@nameof(EmployeeDetails.CustomerID)" HeaderText="Employee Name" TextAlign="TextAlign.Center" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(EmployeeDetails.FeedbackDetails)" HeaderText="Employee Feedback" Type="ColumnType.Number" Width="120">
+        <GridColumn Field="@nameof(EmployeeDetails.FeedbackDetails)" HeaderText="Employee Feedback" Type="ColumnType.Integer" Width="120">
             <EditTemplate>
                 @{
                     var Order = (context as EmployeeDetails);
@@ -974,7 +974,7 @@ By default, the Grid renders a `DropDownList` as the editor for foreign key colu
                         titles[random.Next(titles.Length)],
                         countries[random.Next(countries.Length)],
                         cities[random.Next(cities.Length)],
-                        DateTime.Now.AddDays(-random.Next(1000, 5000)),
+                        DateTime.Now.AddDays(-random.Next(1000, 5000))
                     ));
                 }
             }

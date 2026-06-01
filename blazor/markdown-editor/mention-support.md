@@ -39,4 +39,4 @@ The following example demonstrates how to enable Mention support in the Blazor M
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor with Mention Support](./images/blazor-markdowneditor-markdown-mention.png)
+![Blazor Markdown Editor with Mention Support](./images/blazor-markdowneditor-markdown-mention.webp)
