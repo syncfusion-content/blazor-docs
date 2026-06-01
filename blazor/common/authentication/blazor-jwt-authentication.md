@@ -11,6 +11,11 @@ documentation: ug
 
 This guide shows how to secure the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [JWT (JSON Web Token)](https://www.jwt.io/introduction) authentication.
 
+## Prerequisites
+
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later.
+* [Visual Studio Code](https://code.visualstudio.com/).
+
 ## Create a Blazor project
 
 If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](#install-required-packages).
