@@ -9,13 +9,13 @@ documentation: ug
 
 # Upgrade application To latest version in Blazor DataGrid
 
-**Step 1:** Update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
+**Step 1:** Update to the latest Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) package using the NuGet Package Manager in the application.
 
 ![Updating Blazor NuGet Package](../images/blazor-datagrid-update-nuget-package.webp)
 
 ## Compatible .NET version
 
-The latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are compatible with the latest .NET (for example, .NET 9). It is recommended to upgrade the .NET SDK on the machine before updating to the latest Syncfusion version.
+The latest Blazor components are compatible with the latest .NET (for example, .NET 9). It is recommended to upgrade the .NET SDK on the machine before updating to the latest Syncfusion version.
 
 ## Client resource file references
 

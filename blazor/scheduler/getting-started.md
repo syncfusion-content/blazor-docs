@@ -60,6 +60,13 @@ Install the [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusi
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet packages (`Syncfusion.Blazor.Schedule` and `Syncfusion.Blazor.Themes`) and install them.
 
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
+
+```bash
+Install-Package Syncfusion.Blazor.Schedule -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+```
+
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
