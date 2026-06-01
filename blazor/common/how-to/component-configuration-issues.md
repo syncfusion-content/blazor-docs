@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Component Configuration Issues in Blazor Applications | Syncfusion
+title: Resolving Component Configuration Issues in Blazor | Syncfusion
 description: Comprehensive guide to resolving Blazor component configuration issues including SignalR, namespaces, and data binding problems
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Component Configuration Issues in Blazor Applications
+# Resolving Component Configuration Issues in Blazor
 
 This guide covers common component configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper component configuration ensures smooth functionality and optimal performance.
 
@@ -156,6 +156,7 @@ For production deployments, always balance functionality requirements with secur
 
 @using Syncfusion.Blazor
 
+// Add only the required Blazor component namespaces. Avoid importing unused component namespaces globally.
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Charts
@@ -207,23 +208,9 @@ If you prefer to import namespaces only where needed.
 {% endhighlight %}
 {% endtabs %}
 
-**Common Syncfusion namespaces:**
+**Common Blazor namespaces and package references**
 
-| Namespace | Components Included |
-|-----------|-------------------|
-| `Syncfusion.Blazor` | Core infrastructure (required) |
-| `Syncfusion.Blazor.Grids` | DataGrid |
-| `Syncfusion.Blazor.Calendars` | Calendar, DatePicker, DateRangePicker, TimePicker |
-| `Syncfusion.Blazor.Charts` | Charts, Sparkline, Bullet Chart, Stock Chart |
-| `Syncfusion.Blazor.Inputs` | TextBox, NumericTextBox |
-| `Syncfusion.Blazor.DropDowns` | DropDownList, ComboBox, AutoComplete, MultiSelect DropDown |
-| `Syncfusion.Blazor.Navigations` | TreeView, Sidebar, Menu Bar, Tabs, Toolbar |
-| `Syncfusion.Blazor.Buttons` | Button, CheckBox, RadioButton, Toggle Switch Button |
-| `Syncfusion.Blazor.Popups` | Dialog, Tooltip |
-| `Syncfusion.Blazor.Notifications` | Toast, Message |
-| `Syncfusion.Blazor.SfPdfViewer` | PDF Viewer |
-| `Syncfusion.Blazor.FileManager` | File Manager |
-| `Syncfusion.Blazor.RichTextEditor` | RichTextEditor |
+For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 **Best practices**:
 
