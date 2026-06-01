@@ -314,7 +314,7 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
 
 @using Syncfusion.Blazor.RichTextEditor
 @inject HttpClient Http;
-@inject NavigationManager NavManager
+@inject NavigationManager NavManager;
 
 <SfRichTextEditor>
     <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
