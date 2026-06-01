@@ -114,7 +114,7 @@ Replace `../path/to/YourBlazorApp/YourBlazorApp.csproj` with the actual relative
 
 Create a `TestBase` class that serves as the base for all test classes. It registers the Syncfusion Blazor service, enables options support, and sets the JS interop to Loose mode so that JavaScript calls from Blazor components are accepted without throwing errors during testing.
 
-The `TestBase` base class differs by framework: xUnit uses `TestContext`, whereas NUnit and MSTest use `BunitContext`. The `NUnit/TestBase.cs` and `MSTest/TestBase.cs` implementations are identical, with only the inherited base class name differing from xUnit.
+The `TestBase` base class differs by framework: `xUnit` inherits bUnit's `TestContext`, whereas `NUnit` and `MSTest` inherit bUnit's `BunitContext`.
 
 {% tabs %}
 {% highlight csharp tabtitle="xUnit/TestBase.cs" %}
@@ -191,7 +191,8 @@ public class DataGridTests : TestBase
     {
         var comp = Render<Home>();
         var instance = comp.Instance;
-        Assert.Equal(75, instance.Orders.Count);
+        // Validate DataSource Count as 75 which is based on DataGrid getting started code example
+        Assert.Equal(75, instance.Orders.Count); 
     }
 
     [Fact]
@@ -201,7 +202,7 @@ public class DataGridTests : TestBase
         // Pager exists
         var pager = comp.Find(".e-pager");
         Assert.NotNull(pager);
-        // Validate first page row count (PageSize = 12)
+        // Validate first page row count (PageSize = 12) which is based on DataGrid getting started code example
         var rows = comp.FindAll(".e-row");
         Assert.Equal(12, rows.Count);
     }
@@ -210,6 +211,7 @@ public class DataGridTests : TestBase
     public void DataGrid_Column_Definition_Check()
     {
         var comp = Render<Home>();
+        // Validate column header count as 5 which is based on DataGrid getting started code example
         var headers = comp.FindAll(".e-headercell");
         Assert.Equal(5, headers.Count);
         Assert.Equal("Order ID", headers[0].TextContent.Trim());
@@ -244,6 +246,7 @@ using Bunit;
 // Replace with your actual project namespace, e.g., MyApp.Components.Pages
 using BlazorApp.Components.Pages;
 
+[TestFixture]
 public class DataGridTests : TestBase
 {
     [Test]
@@ -251,6 +254,7 @@ public class DataGridTests : TestBase
     {
         var comp = Render<Home>();
         var instance = comp.Instance;
+        // Validate DataSource Count as 75 which is based on DataGrid getting started code example
         Assert.That(instance.Orders.Count, Is.EqualTo(75));
     }
 
@@ -260,6 +264,7 @@ public class DataGridTests : TestBase
         var comp = Render<Home>();
         var pager = comp.Find(".e-pager");
         Assert.That(pager, Is.Not.Null);
+        // Validate first page row count (PageSize = 12) which is based on DataGrid getting started code example
         var rows = comp.FindAll(".e-row");
         Assert.That(rows.Count, Is.EqualTo(12));
     }
@@ -269,6 +274,7 @@ public class DataGridTests : TestBase
     {
         var comp = Render<Home>();
         var headers = comp.FindAll(".e-headercell");
+        // Validate column header count as 5 which is based on DataGrid getting started code example
         Assert.That(headers.Count, Is.EqualTo(5));
         Assert.That(headers[0].TextContent.Trim(), Is.EqualTo("Order ID"));
         Assert.That(headers[1].TextContent.Trim(), Is.EqualTo("Customer Name"));
@@ -302,6 +308,7 @@ using BlazorApp.Components.Pages;
 [TestClass]
 public class DataGridTests : TestBase
 {
+    // Validate DataSource count as 75 which is based on DataGrid getting started code example
     [TestMethod]
     public void DataGrid_DataSource_Count()
     {
@@ -317,7 +324,7 @@ public class DataGridTests : TestBase
         // Pager exists
         var pager = comp.Find(".e-pager");
         Assert.IsNotNull(pager);
-        // Validate first page row count (PageSize = 12)
+        // Validate first page row count (PageSize = 12) which is based on DataGrid getting started code example
         var rows = comp.FindAll(".e-row");
         Assert.AreEqual(12, rows.Count);
     }
@@ -326,6 +333,7 @@ public class DataGridTests : TestBase
     public void DataGrid_Column_Definition_Check()
     {
         var comp = Render<Home>();
+        // Validate column header count as 5 which is based on DataGrid getting started code example
         var headers = comp.FindAll(".e-headercell");
         Assert.AreEqual(5, headers.Count);
         Assert.AreEqual("Order ID", headers[0].TextContent.Trim());
