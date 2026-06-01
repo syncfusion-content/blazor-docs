@@ -4,8 +4,8 @@
         <RichTextEditorEvents FileUploadSuccess="@OnFileUploadSuccess"></RichTextEditorEvents>
         <RichTextEditorVideoSettings SaveUrl="api/Video/Rename" Path="./Video/"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
-@code {
 
+@code {
     public string[] header { get; set; }
 
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
@@ -21,5 +21,4 @@
         // Update the modified video name to display a video in the editor.
         args.File.Name = header[0];
     }
-
 }
