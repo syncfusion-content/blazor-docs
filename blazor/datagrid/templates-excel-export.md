@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Exporting grid with templates in Syncfusion Blazor DataGrid
+# Exporting grid with templates in Blazor DataGrid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to Excel, enabling rich formatting in exported documents. The following template types are supported:
 
