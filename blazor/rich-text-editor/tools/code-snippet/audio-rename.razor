@@ -2,7 +2,7 @@
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-    <RichTextEditorEvents FileUploadSuccess="@onFileUploadSuccess"></RichTextEditorEvents>
+    <RichTextEditorEvents FileUploadSuccess="@OnFileUploadSuccess"></RichTextEditorEvents>
     <RichTextEditorAudioSettings SaveUrl="api/Audio/Rename" Path="./Audio/"></RichTextEditorAudioSettings>
 </SfRichTextEditor>
 @code {
@@ -13,7 +13,7 @@
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Audio }
     };
-    private void onFileUploadSuccess(FileUploadSuccessEventArgs args)
+    private void OnFileUploadSuccess(FileUploadSuccessEventArgs args)
     {
         var headers = args.Response.Headers.ToString();
         header = headers.Split("name: ");

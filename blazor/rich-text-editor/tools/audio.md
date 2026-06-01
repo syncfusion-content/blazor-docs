@@ -13,10 +13,11 @@ The Rich Text Editor allows inserting audio files from online sources and the lo
 
 | Options | Description |
 |----------------|---------|
-| [AllowedTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorAudioSettings_AllowedTypes) |Specifies the extensions of the audio types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as `.mp3,` `.wav,` `.m4a,` and `.wma.`|
+| [AllowedTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorAudioSettings_AllowedTypes) |Specifies the extensions of the audio types allowed to insert on browsing and passing the extensions with comma separators. For example, pass allowedTypes as `.mp3,` `.wav,` `.m4a,` and `.wma.`|
 | [LayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) | Sets the default display for audio when it is inserted into the Rich Text Editor. Possible options are `Inline` and `Break.`|
 | [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) | Sets the default save format of the audio element when inserted. Possible options are `Blob` and `Base64.`|
 | [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) | Provides URL to map the action result method to save the audio.|
+| [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_RemoveUrl) | Provides the URL to map the action result method used to remove the audio file from the server.|
 | [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) | Specifies the location to store the audio.|
 
 ## Configure audio tool in the toolbar
@@ -53,7 +54,7 @@ If the path field is not specified in the [RichTextEditorAudioSettings](https://
 
 ### Server-side action
 
-The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and provide the required destination path through [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
+The selected audio can be uploaded to or removed from the required destination using the controller action below. Map the respective method names into [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and [RichTextEditorMediaSettings.RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_RemoveUrl) properties. Also, specify the required destination path using [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
 
 N> If you want to insert lower-sized audio files in the editor and don't want a specific physical location for saving audio, you can opt to save the format as `Base64`.
 
@@ -130,6 +131,35 @@ namespace AudioUpload.Controllers
                 Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
             }
         }
+
+        [HttpPost("[action]")]
+        [Route("api/Audio/Delete")]
+        public IActionResult Delete(IList<IFormFile> UploadFiles)
+        {
+            try
+            {
+                foreach (IFormFile uploadFile in UploadFiles)
+                {
+                    string? fileName = ContentDispositionHeaderValue.Parse(uploadFile.ContentDisposition).FileName?.Trim('"');
+                    string filePath = Path.Combine(hostingEnv.WebRootPath, "Audio/", fileName!);
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        System.IO.File.Delete(filePath);
+                        return Ok($"File '{fileName}' has been deleted.");
+                    }
+                    else
+                    {
+                        // Return 404 status if file not found
+                        return NotFound($"File '{fileName}' not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
+            return StatusCode(500, $"No file processed.");
+        }
     }
 }
 
@@ -142,22 +172,22 @@ The audio files can be saved as `Blob` or `Base64` url by using the [RichTextEdi
 
 N> By default, the files are saved in the `Blob` format.
 
-```cshtml
+The example below shows how audio is saved in `Blob` and `Base64` formats.
 
+```
 <audio>
     <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="audio/mp3" />
 </audio>
 <audio>
     <source src="data:audio/mp3;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="audio/mp3" />
 </audio>
-
 ```
 
 ## Maximum file size restriction
 
 By using the Rich Text Editor's [RichTextEditorAudioSettings.MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorAudioSettings_MaxFileSize) property, you can restrict the audio to upload when the given audio size is greater than the allowed fileSize. 
 
-In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
+In the following example, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
 
 {% tabs %}
 {% highlight razor %}
@@ -169,7 +199,7 @@ In the following illustration, the audio size has been validated before uploadin
 
 ## Replacing audio
 
-Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) “Replace” option. You can replace the audio file using the web URL or the browse option in the audio dialog.
+Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. You can also replace the audio file using the web URL or the browse option in the audio dialog.
 
 ![Blazor Rich Text Editor replace audio](../images/blazor-richtexteditor-audio-replace.png)
 
@@ -183,7 +213,7 @@ Once you select the audio from the local machine, the URL for the audio will be 
 
 ## Display Position
 
-Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio elements’ layout position when updating the display positions.
+Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio element's layout position when updating the display positions.
 
 ![Blazor RichTextEditor audio display](../images/blazor-richtexteditor-audio-display.png)
 
@@ -239,7 +269,7 @@ You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cance
 
 Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html) property, specify the server handler to upload the selected audio. Then, by binding the `FileUploadSuccess` event, you will receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
 
-Refer `rename.cs` controller file for configure the server-side.
+Refer `RenameController.cs` controller file for configure the server-side.
 
 {% tabs %}
 {% highlight razor %}
@@ -250,7 +280,7 @@ Refer `rename.cs` controller file for configure the server-side.
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml tabtitle="rename.cs" %}
+{% highlight cshtml tabtitle="RenameController.cs" %}
 
 using System;
 using System.IO;
@@ -295,13 +325,13 @@ namespace RenameAudio.Controllers
                         }
 
                         audiofileName = filename;
-                        string path = hostingEnv.WebRootPath + "\\Images" + $@"\{filename}";
+                        string path = hostingEnv.WebRootPath + "\\Audio" + $@"\{filename}";
 
                         // Rename a uploaded audio file name
                         while (System.IO.File.Exists(path))
                         {
-                            audiofileName = "rteImage" + x + "-" + filename;
-                            path = hostingEnv.WebRootPath + "\\Images" + $@"\rteImage{x}-{filename}";
+                            audiofileName = "rteAudio" + x + "-" + filename;
+                            path = hostingEnv.WebRootPath + "\\Audio" + $@"\rteAudio{x}-{filename}";
                             x++;
                         }
 

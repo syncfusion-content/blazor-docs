@@ -2,7 +2,7 @@
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-    <RichTextEditorAudioSettings SaveUrl="api/Audio/Save" Path="./Audio/"></RichTextEditorAudioSettings>
+    <RichTextEditorAudioSettings SaveUrl="api/Audio/Save" RemoveUrl="api/Audio/Delete" Path="./Audio/"></RichTextEditorAudioSettings>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
