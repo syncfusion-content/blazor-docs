@@ -191,9 +191,9 @@ app.MapRazorPages();
 {% endhighlight %}
 {% endtabs %}
 
-## 7. Import authorization and Syncfusion<sup style="font-size:70%">&reg;</sup> namespaces
+## 7. Import authorization and Blazor namespaces
 
-Add the required namespaces in `Components/_Imports.razor`. These namespaces allow you to use authorization features such as `[Authorize]` and `<AuthorizeView>`, and they enable Syncfusion components in your Blazor pages.
+Add the required namespaces in `Components/_Imports.razor`. These namespaces allow you to use authorization features such as `[Authorize]` and `<AuthorizeView>`, and they enable Blazor components in your Blazor pages.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/_Imports.razor" %}
@@ -207,23 +207,23 @@ Add the required namespaces in `Components/_Imports.razor`. These namespaces all
 {% endhighlight %}
 {% endtabs %}
 
-## 8. Add Syncfusion<sup style="font-size:70%">&reg;</sup> styles and script resources
+## 8. Add styles and script resources
 
-Before adding the Syncfusion theme stylesheet, ensure that no other Syncfusion theme CSS (e.g., `bootstrap5.css`, `tailwind.css`) is already referenced to avoid styling conflicts.
+Before adding the stylesheet, ensure no other Blazor theme CSS (for example, `bootstrap5.css` or `tailwind.css`) is referenced to avoid conflicts.
 
-Open `App.razor` and include the Syncfusion theme stylesheet and required script references.
+Add the following Blazor stylesheet and script references to `~/App.razor`.
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+{% highlight html tabtitle="App.razor" %}
 
 <head>
-    ....
+    ...
     <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
-    ....
+    ...
     <!-- Blazor core script (required for UI components, including DataGrid and Charts) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
@@ -233,7 +233,7 @@ Open `App.razor` and include the Syncfusion theme stylesheet and required script
 
 ## 9. Create the `_LoginPartial.cshtml` file for Identity UI
 
-The `_LoginPartial.cshtml` file displays login, logout, register, and account management links for ASP.NET Core Identity. It appears in the navigation bar and automatically updates based on the user's sign-in status.
+The `_LoginPartial.cshtml` file is **required by the default ASP.NET Core Identity layout** and displays login, logout, register, and account management links in the navigation bar. This file is essential for the scaffolded Identity Razor Pages (Login, Register, Manage) to render correctly.
 
 In the project root (next to `Program.cs`), create a `Pages` folder and add a `Shared` subfolder. Inside the `Shared` folder, create a file named `_LoginPartial.cshtml` and add the following content.
 
@@ -542,7 +542,7 @@ dotnet run
 3. You will be redirected to the Identity login page (`/Identity/Account/Login`) because you are not authenticated.
 4. Click **Register** and create a new account (email and password).
 5. After registration, you will be automatically logged in.
-6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Syncfusion components.
+6. Navigate back to **Secure Grid** or **Secure Chart** - the pages should now render successfully with Blazor components.
 7. Click **Logout** to end the session and verify that accessing the secure pages redirects back to the login page.
 
 **Output:**
