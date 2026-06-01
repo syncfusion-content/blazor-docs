@@ -9,7 +9,7 @@ documentation: ug
 
 # Insert Video in Blazor Rich Text Editor Component
 
-After inserting a video file, you can replace it using the Rich Text Editor[RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
+The Rich Text Editor allows inserting video files from online sources as well as from the local computer, making it easy to embed videos directly into your content. To support video insertion, the following list of configuration options has been provided through the [RichTextEditorVideoSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html).
 
 | Options | Description |
 |----------------|---------|
@@ -31,10 +31,12 @@ After inserting a video file, you can replace it using the Rich Text Editor[Rich
 
 To include the video tool in the Rich Text Editor, you can add the toolbar item `Video` to the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_EJ2_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
+![Blazor RichTextEditor insert video](../images/blazor-richtexteditor-video.webp)
+
 To configure `Video` toolbar item, refer to the below code.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-tool.razor %}
 
@@ -63,7 +65,7 @@ The selected video can be uploaded to the required destination using the control
 
 N> If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-save.razor %}
 
@@ -170,7 +172,7 @@ By using the Rich Text Editor's [RichTextEditorVideoSettings.MaxFileSize](https:
 In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-restrict.razor %}
 
@@ -187,9 +189,9 @@ After inserting a video file, you can replace it using the Rich Text Editor [Ric
 
 ## Delete video
 
-To remove a video from the Rich Text Editor content, select the video and click the “Remove” tool from the quick toolbar. It will delete the video from the Rich Text Editor content.
+To remove a video from the Rich Text Editor content, select the video and click the `Remove` tool from the quick toolbar. It will delete the video from the Rich Text Editor content.
 
-Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
+Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the delete icon.
 
 ![Blazor RichTextEditor video delete](../images/blazor-richtexteditor-video-del.webp)
 
@@ -205,10 +207,12 @@ Change the width and height of the [RichTextEditorQuickToolbarSettings](https://
 
 Sets the default display for a video when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption). It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
 
+![Blazor RichTextEditor video display](../images/blazor-richtexteditor-video-display.webp)
+
 N> The default `layoutOption` property is set to `Inline`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-display-position.razor %}
 
@@ -222,7 +226,7 @@ Default upload: Insert video directly from your local file system (e.g., File Ex
 Server upload: Use the `SaveUrl` property to upload video files to your server before inserting them into the editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-drag-and-drop.razor %}
 
@@ -233,8 +237,15 @@ Server upload: Use the `SaveUrl` property to upload video files to your server b
 
 You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cancel value to true. The following code shows how to prevent the drag-and-drop.
 
-```
-<RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+</SfRichTextEditor>
+
 @code{
     private void OnMediaDrop(MediaDropEventArgs args)
     {
@@ -243,7 +254,9 @@ You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cance
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Resize video
 
@@ -262,7 +275,7 @@ By using the [RichTextEditorVideoSettings](https://help.syncfusion.com/cr/blazor
 Refer `rename.cs` controller file for configure the server-side.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-rename.razor %}
 
@@ -362,7 +375,7 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 N> By default, it doesn't support the `UseDefaultCredentials` property, so you need to append the default credentials with the upload request manually.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-authentication.razor %}
 
@@ -449,8 +462,3 @@ namespace VideoUpload.Controllers
 ## Paste video into the editor
 
 The Rich Text Editor supports pasting video files directly into the editor content. You can paste single or multiple video files from your file system directly into the editor.
-
-## See also
-
-* [How to edit the quick toolbar settings](../toolbar#video-quick-toolbar)
-* [How to use link editing option in the toolbar items](../tools#insert-link)
