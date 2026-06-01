@@ -217,13 +217,13 @@ Add the following Blazor stylesheet and script references to `~/App.razor`.
 {% highlight html tabtitle="App.razor" %}
 
 <head>
-    ....
+    ...
     <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
-    ....
+    ...
     <!-- Blazor core script (required for UI components, including DataGrid and Charts) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
@@ -233,7 +233,7 @@ Add the following Blazor stylesheet and script references to `~/App.razor`.
 
 ## 9. Create the `_LoginPartial.cshtml` file for Identity UI
 
-The `_LoginPartial.cshtml` file displays login, logout, register, and account management links for ASP.NET Core Identity. It appears in the navigation bar and automatically updates based on the user's sign-in status.
+The `_LoginPartial.cshtml` file is **required by the default ASP.NET Core Identity layout** and displays login, logout, register, and account management links in the navigation bar. This file is essential for the scaffolded Identity Razor Pages (Login, Register, Manage) to render correctly.
 
 In the project root (next to `Program.cs`), create a `Pages` folder and add a `Shared` subfolder. Inside the `Shared` folder, create a file named `_LoginPartial.cshtml` and add the following content.
 
