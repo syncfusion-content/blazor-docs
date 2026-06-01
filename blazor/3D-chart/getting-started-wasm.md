@@ -129,7 +129,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-<script src="\_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
