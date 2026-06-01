@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resolving Component Configuration Issues in Blazor Applications | Syncfusion
+title: Resolving Component Configuration Issues in Blazor | Syncfusion
 description: Comprehensive guide to resolving Blazor component configuration issues including SignalR, namespaces, and data binding problems
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Resolving Component Configuration Issues in Blazor Applications
+# Resolving Component Configuration Issues in Blazor
 
 This guide covers common component configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper component configuration ensures smooth functionality and optimal performance.
 
