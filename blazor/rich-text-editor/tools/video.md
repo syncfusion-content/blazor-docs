@@ -52,7 +52,7 @@ To insert a video from the hosted link or local machine, you should enable the v
 
 By default, the video tool opens the video dialog, allowing you to insert an embedded URL.
 
-![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-embed-video.png)
+![Blazor RichTextEditor insert video from web](../images/blazor-richtexteditor-embed-video.png)
 
 ## Upload and insert video
 
