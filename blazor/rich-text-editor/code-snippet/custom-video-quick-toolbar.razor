@@ -1,17 +1,16 @@
-@using Syncfusion.Blazor.RichTextEditor;
+@using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
     <RichTextEditorQuickToolbarSettings Video="VideoQuickToolbarItems" />
     <p><b>Get started with Quick Toolbar to click on a video</b></p>
     <p>Using the quick toolbar, users can replace, align, display, dimension, and delete the selected video.</p>
-    
 </SfRichTextEditor>
 
 @code {
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Video },
+        new ToolbarItemModel() { Command = ToolbarCommand.Video }
     };
     private List<VideoToolbarItemModel> VideoQuickToolbarItems = new List<VideoToolbarItemModel>()
     {
@@ -20,6 +19,7 @@
         new VideoToolbarItemModel() { Command = VideoToolbarCommand.VideoLayoutOption },
         new VideoToolbarItemModel() { Command = VideoToolbarCommand.Separator },
         new VideoToolbarItemModel() { Command = VideoToolbarCommand.VideoAlign},
+        new VideoToolbarItemModel() { Command = VideoToolbarCommand.HorizontalSeparator },
         new VideoToolbarItemModel() { Command = VideoToolbarCommand.VideoDimension}
     };
 }

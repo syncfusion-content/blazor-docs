@@ -1,29 +1,35 @@
 ---
 layout: post
-title: Syncfusion® Blazor DataGrid with GitHub OAuth 2.0
-description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Syncfusion® Blazor components in a Blazor Web App.
+title: Securing Blazor DataGrid with OAuth 2.0 | Syncfusion® 
+description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Blazor DataGrid component in a Blazor Web App.
 platform: Blazor
-control: Common
+control: DataGrid
 documentation: ug
 ---
 
-# Securing Syncfusion® Blazor DataGrid with GitHub OAuth 2.0
+# Securing Blazor DataGrid with GitHub OAuth 2.0
 
-This guide explains how to secure the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [GitHub OAuth 2.0](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps) authentication.
+This guide explains how to secure the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [GitHub OAuth 2.0](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps) authentication.
+
+## Prerequisites
+
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later.
+* [Visual Studio Code](https://code.visualstudio.com/).
+* A [GitHub account](https://github.com/) with a registered [GitHub OAuth application](https://github.com/settings/developers) (Client ID and Client Secret).
 
 ## Create a Blazor project
 
-If you already have a Blazor project configured, you can skip this section and proceed to **Install required packages**.
+If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](#install-required-packages).
 
-Otherwise, create a new Blazor application by following the [Syncfusion® getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
+Otherwise, create a new Blazor application by following the [Getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) for a **Blazor Web App (Interactive Server)**.
 
 Ensure that **HTTPS is enabled** during project creation, as GitHub OAuth based authorization requires secure communication.
 
 ## Install required packages
 
-Install the following NuGet packages to use the **Syncfusion® Blazor DataGrid** and enable authentication with **GitHub OAuth**.
+Install the following NuGet packages to use the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and enable authentication with **GitHub OAuth**.
 
-**Syncfusion® packages:**
+**Blazor packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -39,9 +45,9 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
+Open the `~/_Imports.razor` file and import the namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -61,14 +67,14 @@ Include the theme stylesheet and script references in the `App.razor` file.
 
 <head>
     ....
-    <!-- Syncfusion® theme stylesheet -->
+    <!-- Theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ....
 </head>
 
 <body>
     ....
-    <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
+    <!-- Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ....
 </body>
@@ -117,7 +123,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
   .AddInteractiveServerComponents();
 
-// Register the Syncfusion® Blazor service  
+// Register the Blazor service  
 builder.Services.AddSyncfusionBlazor();
 
 // Configure authentication (Cookies + GitHub OAuth).
@@ -327,9 +333,9 @@ To allow components to receive authentication state, wrap the router inside **Ca
 {% endhighlight %}
 {% endtabs %}
 
-## Connect Syncfusion® Blazor DataGrid 
+## Connect Blazor DataGrid 
 
-Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** on a secured Blazor page using the **[Authorize]** attribute, allowing access only to authenticated users.
+Create `SecureGrid.razor` page and render the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/SecureGrid.razor"  %}
@@ -343,29 +349,34 @@ Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** o
 
 <PageTitle>Secure Data Grid</PageTitle>
 
-<SfGrid DataSource="@Orders" AllowPaging="true">
+<SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" />
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="150" />
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100" />
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
     </GridColumns>
 </SfGrid>
 
-@code {
-    public List<Order> Orders { get; set; } = new();
+@code{
+    public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order()
-        {
-            OrderID = x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+        Orders = Enumerable.Range(1, 12).Select(i => new Order {
+            OrderID = 1000 + i,
+            CustomerID = new[] { "ALFKI","ANATR","ANTON","BLONP","BOLID" }[Random.Shared.Next(5)],
+            OrderDate = DateTime.Today.AddDays(-i),
+            Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
         }).ToList();
     }
 
     public class Order
     {
-        public int? OrderID { get; set; }
+        public int OrderID { get; set; }
         public string? CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
     }
 }
 
@@ -374,7 +385,7 @@ Create `SecureGrid.razor` page and render the **Syncfusion® Blazor DataGrid** o
 
 ## Display content based on authentication status
 
-This section demonstrates how to dynamically render UI content based on the user’s authentication state. The `Home.razor` page uses the **<AuthorizeView>** component to show different content for authenticated and unauthenticated users.
+This section demonstrates how to dynamically render UI content based on the user’s authentication state. The `Home.razor` page uses the `<AuthorizeView>` component to show different content for authenticated and unauthenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor"  %}
@@ -401,7 +412,7 @@ This section demonstrates how to dynamically render UI content based on the user
 
             <p>
                 Click the Login button below to sign in with GitHub.
-                Once you’re logged in, the Syncfusion® Blazor DataGrid will be displayed.
+                Once you’re logged in, the Blazor DataGrid will be displayed.
             </p>
 
             <a class="btn btn-primary" href="/account/login?returnUrl=/">
@@ -431,12 +442,12 @@ This example demonstrates how to integrate **GitHub OAuth** into a **Blazor Web 
 
 ![Blazor DataGrid with GitHub OAuth loginpage](images/oauth-authentication.webp)
 
-After successfully signing in, authenticated users can access protected pages and interact with the **Syncfusion® Blazor DataGrid** component. 
+After successfully signing in, authenticated users can access protected pages and interact with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. 
 
 ![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-datagrid.webp)
 
 ## See also
 
 - [OAuth 2.0 and OIDC authentication in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols)
-- [Getting started with Syncfusion® Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+- [Getting started with Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 

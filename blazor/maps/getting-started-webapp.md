@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Getting started with Syncfusion Maps Component in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor Maps Component Components in Blazor Web App.
+description: Check out the documentation for getting started with Syncfusion Blazor Maps Component in Blazor Web App.
 platform: Blazor
-control: Maps
+component: Maps
 documentation: ug
 ---
 
 # Getting started with Blazor Maps Component in Blazor Web App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -42,10 +42,16 @@ For example, in a Blazor Web App with the `Auto` interactive render mode, use th
 
 dotnet new blazor -o BlazorWebApp -int Auto
 cd BlazorWebApp
-cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If the application is configured with WebAssembly or Auto render modes, you may optionally navigate to the client project directory to manage client-specific dependencies. Once the required changes are completed, ensure that you navigate back to the root project directory.
+
+```
+cd BlazorWebApp.Client
+cd ..
+```
 
 {% endtabcontent %}
 
@@ -74,10 +80,16 @@ For example, in a Blazor Web App with the `Auto` interactive render mode, use th
 
 dotnet new blazor -o BlazorWebApp -int Auto
 cd BlazorWebApp
-cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If the application is configured with WebAssembly or Auto render modes, you may optionally navigate to the client project directory to manage client-specific dependencies. Once the required changes are completed, ensure that you navigate back to the root project directory.
+
+```
+cd BlazorWebApp.Client
+cd ..
+```
 
 {% endtabcontent %}
 
@@ -87,7 +99,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package Syncfusion.Blazor.Maps --version {{ site.releaseversion }}), or the .NET CLI.
 
 Alternatively, run the following command in the Package Manager Console to achieve the same.
 
@@ -107,6 +119,8 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Maps` namespaces.
 
+N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
 
@@ -118,7 +132,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Web App. This step enables the Syncfusion components to work in your application.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -136,7 +150,7 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~/Components/App.razor** file.
+The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file (this is the root layout file of your application).
 
 ```html
 
@@ -146,43 +160,31 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component with GeoJSON data
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
 
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
 
-@* desired render mode define here *@
+@* desired render mode defined here *@
 @rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfMaps>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-The Maps will not show any content on the web page while running the application because the properties related to the layer are not initialized in the above code.
-
-## Adding GeoJSON data in Blazor Maps layer
-
-Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vector Graphics) for powerful data visualization of shapes. For example, you can render the World map and make desired customizations on it. You can also add any number of layers in the Maps.
-
-You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to load the GeoJSON shape data into the Maps component.
+Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vector Graphics) for powerful data visualization of shapes. You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to load the GeoJSON shape data into the Maps component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+<!-- SfMaps is the root container component for the maps -->
 <SfMaps>
+    <!-- MapsLayers contains one or more map layers to display on the map -->
     <MapsLayers>
+        <!-- MapsLayer defines a map layer with shape data and configuration -->
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
@@ -191,7 +193,7 @@ You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRNhjJJCBhIpFe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with GeoJSON Layer](./images/blazor-map.webp)" %}
 
@@ -208,21 +210,21 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
 
 @code {
     public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
-         new UNCouncilCountry { Name= "China", Membership= "Permanent"},
+         new UNCouncilCountry { Name= "China", Membership= "Permanent" },
          new UNCouncilCountry { Name= "France", Membership= "Permanent" },
-         new UNCouncilCountry { Name= "Russia", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "United States", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Ivory Coast", Membership= "Permanent"},
-         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent"},
-         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent"}
+         new UNCouncilCountry { Name= "Russia", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "United States", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent" }
     };
 
     public class UNCouncilCountry
@@ -239,191 +241,60 @@ N> The United Nations Security Council data is referred from [source](https://en
 
 You should also specify the field names in the shape data and data source to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) properties, respectively. These are used to identify the appropriate shapes and match the specific data source values to them.
 
+The following complete example shows a Maps component with the GeoJSON layer and data source binding:
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Maps
+@rendermode InteractiveAuto
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                   ShapePropertyPath='new string[] {"name"}'
+                   DataSource="SecurityCouncilDetails"
+                   ShapeDataPath="Name" TValue="UNCouncilCountry">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
+         new UNCouncilCountry { Name= "China", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "France", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Russia", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kazakhstan", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Poland", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Sweden", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "United Kingdom", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "United States", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Bolivia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Eq. Guinea", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Ethiopia", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Côte d Ivoire", Membership= "Permanent" },
+         new UNCouncilCountry { Name= "Kuwait", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Netherlands", Membership= "Non-Permanent" },
+         new UNCouncilCountry { Name= "Peru", Membership= "Non-Permanent" }
+    };
+
+    public class UNCouncilCountry
+    {
+        public string Name { get; set; }
+        public string Membership { get; set; }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+This example demonstrates the complete setup with:
+- The **ShapeData** pointing to the GeoJSON world map
+- The **ShapePropertyPath** set to `"name"` to match shape names
+- The **DataSource** bound to `SecurityCouncilDetails`
+- The **ShapeDataPath** set to `"Name"` to match data source field
+
 N> Please [refer to the section](populate-data#data-binding) for more information on data binding.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfMaps>
-    <MapsLayers>
-        @*To map shape data name field and data source field*@
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
-        </MapsLayer>
-    </MapsLayers>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> For example, consider field names specified in [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) have the same value: **"United States"**. So corresponding color, data label and tooltip related settings will be applied to the **United States** shape.
-
-## Apply color mapping
-
-The color mapping supports customization of shape colors based on the underlying value of shape received from the bound data source. The values from the field name specified in the [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property will be compared for the shapes with the values in the field name specified in the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property in [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html). Also, specify color and value in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html). Here, in this example, **"#EDB46F"** is specified for **"Permanent"** and **"#F1931B"** is specified for **"Non-Permanent"**.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfMaps>
-    <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
-            @* Color mapping related configuration *@
-            <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
-                <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
-                </MapsShapeColorMappings>
-            </MapsShapeSettings>
-        </MapsLayer>
-    </MapsLayers>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdXVZpTCKEstPx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.webp)" %}
-
-N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
-
-## Adding data labels
-
-Label provides information to users about the shapes, and you can enable label text to the shapes in the Maps component by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property as **true** and field name from data source in the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html).
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfMaps>
-    <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
-            @* To add data labels *@
-            <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
-            <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
-                <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
-                </MapsShapeColorMappings>
-            </MapsShapeSettings>
-        </MapsLayer>
-    </MapsLayers>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhHNLZzTMSPCHxK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Label](./images/blazor-map-label.webp)" %}
-
-## Adding title for Blazor Maps
-
-Title can be added to the Maps to provide quick information to the users about the shapes rendered in the component. You can add a title using [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html#Syncfusion_Blazor_Maps_MapsTitleSettings_Text) property in [MapsTitleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html).
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfMaps>
-    @* To add title *@
-    <MapsTitleSettings Text="Members of the UN Security Council"></MapsTitleSettings>
-    <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
-            <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
-            <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
-                <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
-                </MapsShapeColorMappings>
-            </MapsShapeSettings>
-        </MapsLayer>
-    </MapsLayers>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVnNLtpfWHcdHHC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Title](./images/blazor-map-title.webp)" %}
-
-## Enable legend
-
-The legend items are used to denote color mapping categories, and you can show legend for the Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property to **true** in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfMaps>
-    <MapsTitleSettings Text="Members of the UN Security Council"></MapsTitleSettings>
-    @* To add legend *@
-    <MapsLegendSettings Visible="true"></MapsLegendSettings>
-    <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
-            <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
-            <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
-                <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
-                </MapsShapeColorMappings>
-            </MapsShapeSettings>
-        </MapsLayer>
-    </MapsLayers>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHDrZTJilZXniY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Legend](./images/blazor-map-legend.webp)" %}
-
-## Enable tooltip
-
-The tooltip can be used when you cannot display information using the data labels due to space constraints. You can enable tooltip by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property to **true** in [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html).
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfMaps>
-    <MapsTitleSettings Text="Members of the UN Security Council"></MapsTitleSettings>
-    <MapsLegendSettings Visible="true"></MapsLegendSettings>
-    <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
-            <MapsDataLabelSettings Visible="true" LabelPath="Name" IntersectionAction="IntersectAction.Hide"></MapsDataLabelSettings>
-            <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
-                <MapsShapeColorMappings>
-                    <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#EDB46F"}'></MapsShapeColorMapping>
-                    <MapsShapeColorMapping Value="Non-Permanent" Color='new string[] {"#F1931B"}'></MapsShapeColorMapping>
-                </MapsShapeColorMappings>
-            </MapsShapeSettings>
-            @* To add tooltip for the shape *@
-            <MapsLayerTooltipSettings Visible='true' ValuePath="Name"></MapsLayerTooltipSettings>
-        </MapsLayer>
-    </MapsLayers>
-</SfMaps>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBdXhZpzMurAPfU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Tooltip](./images/blazor-map-tooltip.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 
