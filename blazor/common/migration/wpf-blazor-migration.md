@@ -95,7 +95,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Add required namespaces
 
-After the packages are installed and the services are registered, import the required namespaces in the `_Imports.razor` file. These namespace imports are required only in Blazor applications.
+In Blazor applications, after installing the required packages and registering services, import the necessary namespaces in the `_Imports.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
