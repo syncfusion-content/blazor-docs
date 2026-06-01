@@ -26,21 +26,10 @@ This guide provides a step by step approach to migrating a [Windows Forms (WinFo
 | Code Reusability | Low reusability | High reusability via components and services | Faster development and testing |
 | Future Support | Limited continued development | Actively developed framework | Long term application sustainability |
 
-## Key architectural differences
+## Prerequisites for Blazor
 
-Understanding the architectural differences between **WinForms** and **Blazor** is essential before starting the migration. WinForms follows a traditional desktop based, event driven architecture, while Blazor uses a modern, component based web architecture designed for scalability and maintainability.
-
-| Area | WinForms Architecture | Blazor Architecture |
-|-----|----------------------|--------------------------------|
-| Application Type | Desktop application | Web application |
-| UI Model | Form based controls | Component based UI |
-| Platform Dependency | Windows only | Cross platform |
-| Code Organization | UI and business logic often tightly coupled | Clear separation of UI, services, and models |
-| Rendering Engine | OS based rendering (GDI+/Windows) | Browser based rendering (HTML/CSS) |
-| State Management | Control state managed automatically | State driven UI with data binding |
-| Event Handling | Traditional event handlers | Declarative event binding |
-| Layout System | Fixed, pixel based layout | Responsive, CSS based layout |
-| Navigation | Open and close forms | URL based routing |
+* [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Project structure comparison
 
@@ -54,90 +43,76 @@ When migrating from WinForms to Blazor, one of the first changes you will notice
 | `UserControl` | Razor component (`.razor`) | Reusable UI components |
 | Event handlers | Component methods | Handles UI events, typically implemented as async methods |
 
-## Creating a Blazor project
+## Migrating Components from Windows Forms to Blazor
 
-To migrate a WinForms application, you first need to create a Blazor project. Blazor is a modern web framework that allows you to build interactive user interfaces using C# and .NET, instead of JavaScript.
+Create a Blazor project using one of the following getting started guides.
 
-You can create a new Blazor project using the .NET Command Line Interface (CLI). Run the following command in a terminal or command prompt.
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+
+The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#component-specific-migration-steps).
+
+### Package installation
+
+In WinForms applications, controls are installed as platform specific NuGet packages. For example, you can install the DataGrid for WinForms using the [Syncfusion.SfDataGrid.WinForms](https://www.nuget.org/packages/Syncfusion.SfDataGrid.WinForms) NuGet package.
+
+In Blazor applications, components are also provided as individual NuGet packages (for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)). Installing only the required component packages improves performance and reduces application size.
+
+For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+
+Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
+    
+### Service registration
+
+In Blazor applications, Blazor components must be registered with the built‑in dependency injection system. This registration enables component rendering, state management, and required runtime behavior.
+
+This step is required only for Blazor applications and replaces the explicit control initialization and setup performed in WinForms.
+
+To enable Blazor components, register the Blazor service in the `Program.cs` file.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight c# tabtitle="Program.cs" %}
 
-dotnet new blazor -n WinFormsToBlazor --interactivity Server
+using Syncfusion.Blazor;
+...
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();  // Register Blazor services
+var app = builder.Build();
+...
 
 {% endhighlight %}
 {% endtabs %}
 
-## Package installation
+### Add required namespace
 
-This section explains how packages are referenced in WinForms and Blazor applications, and highlights the key differences in how components, themes, and runtime dependencies are delivered in each framework.
-
-**WinForms**
-
-In WinForms applications, controls are installed as platform specific NuGet packages. Typically, each control (or a group of related controls) is provided as a separate package.
-
-These WinForms packages include native WinForms rendering logic, control specific assemblies, and Windows only dependencies. Because WinForms applications run exclusively on Windows, the packages are tightly coupled with the Windows desktop environment.
-
-For example, you can install the DataGrid for WinForms using the following NuGet package.
-
-- [Syncfusion.SfDataGrid.WinForms](https://www.nuget.org/packages/Syncfusion.SfDataGrid.WinForms)
+After packages are installed and services are registered, import the required namespaces in the `_Imports.razor` file.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight razor tabtitle="_Imports.razor" %}
 
-dotnet add package Syncfusion.SfDataGrid.WinForms
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
 
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor application**
+The above lists the namespaces for all components covered in this guide. Import only the namespaces required for the components you use.
 
-In Blazor applications, Blazor components are delivered as web based UI components. Instead of native Windows rendering, these components use HTML, CSS, and JavaScript and integrate with C# through the Blazor framework.
+### Applying themes 
 
-To use Blazor components in a Blazor application, install the component package and the theme package.
+In Windows Forms, themes are typically applied using [SkinManager](https://help.syncfusion.com/windowsforms/skins/getting-started).
 
-- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+In Blazor, styles and scripts are delivered as static web assets from NuGet packages. Reference them once at the application level.
 
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+For the complete list of supported themes, refer to the [Blazor themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
-dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Applying themes 
-
-This section explains how themes are applied and managed in WinForms and Blazor applications. It also highlights the key conceptual shift from desktop based theme managers to CSS based theming used in web applications.
-
-**WinForms**
-
-In WinForms applications, themes are applied using theme managers or control properties. All styling logic is handled inside the desktop runtime and tightly integrated with the Windows rendering system.
-
-Themes in WinForms can be applied at the form level or across the entire application, depending on requirements. UI rendering is managed by the Windows graphics system, and there is no need for external CSS or JavaScript files, as all styling is handled within the application itself.
+**Blazor equivalent**
 
 {% tabs %}
-{% highlight c# tabtitle="Form1.cs" %}
-
-using Syncfusion.WinForms.Controls;
-
-SfSkinManager.SetVisualStyle(this, VisualStyles.FluentLight);
-
-{% endhighlight %}
-{% endtabs %}
-
-**Blazor application**
-
-In Blazor applications, UI styling is separated from application logic and handled using web standards. Instead of theme managers, styles are applied through CSS files and supporting JavaScript.
-
-Themes in Blazor are applied by referencing a theme CSS file and loading the Blazor JavaScript runtime. This approach follows standard web development practices and enables flexible styling across different devices and browsers.
-
-To apply styles and enable required features, reference the theme CSS file and scripts in the `App.razor` file located under the Components folder.
-
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <head>
     ....
@@ -152,38 +127,6 @@ To apply styles and enable required features, reference the theme CSS file and s
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ....
 </body>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Service registration
-
-In Blazor applications, Blazor components must be registered with the built‑in dependency injection system. This registration enables component rendering, state management, and required runtime behavior.
-
-This step is required only for Blazor applications and replaces the explicit control initialization and setup performed in WinForms.
-
-To enable Blazor components, register the Blazor service in the `Program.cs` file.
-
-{% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
-
-using Syncfusion.Blazor;
-....
-builder.Services.AddSyncfusionBlazor();
-....
-
-{% endhighlight %}
-{% endtabs %}
-
-In Blazor, namespaces are commonly imported globally using the `_Imports.razor` file.
-
-This step makes the Blazor components available throughout the application.
-
-{% tabs %}
-{% highlight razor tabtitle="_Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
 
 {% endhighlight %}
 {% endtabs %}
