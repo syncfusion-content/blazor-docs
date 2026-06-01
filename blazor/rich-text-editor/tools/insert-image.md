@@ -541,7 +541,6 @@ N> [View sample in GitHub.](https://github.com/SyncfusionExamples/blazor-richtex
         var headers = args.Response.Headers.ToString();
         header = headers.Split("name: ");
         header = header[1].Split("\r");
-
         // Update the modified image name to display a image in the editor.
         args.File.Name = header[0];
     }
