@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Menu in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a column menu that provides quick access to features such as sorting, grouping, filtering, column chooser, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports a column menu that provides quick access to features such as sorting, grouping, filtering, column chooser, and autofit. Clicking the column header’s menu icon displays a contextual menu with these options.
 
 To enable the column menu, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnMenu) property to **true** in the [Grid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) configuration.
 
@@ -276,7 +276,7 @@ The **Filter** item is hidden when the column menu is opened for the **OrderID**
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true">
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true">
     <GridEvents OnColumnMenuOpen="OnColumnMenuOpenHandler" TValue="OrderData"></GridEvents>
     <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>

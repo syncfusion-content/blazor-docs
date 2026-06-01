@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Syncfusion Blazor DataGrid Styling Guide with CSS and Theme Studio
-description: Learn to customize the Syncfusion Blazor DataGrid using CSS and Theme Studio, including headers, rows, alternate rows, and grid lines.
+description: Learn to customize the Blazor DataGrid using CSS and Theme Studio, including headers, rows, alternate rows, and grid lines.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Style and appearance in Syncfusion Blazor DataGrid
+# Style and appearance in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
 - **DataGrid root element:** Defines the overall appearance of the grid container.
 - **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.

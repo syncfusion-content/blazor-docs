@@ -81,7 +81,7 @@ The following example demonstrates how to use AssistViewSettings methods in a bu
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Smart Rich Text Editor AssistViewSettings Methods](./images/smart-rich-text-editor-methods.png)
+![Blazor Smart Rich Text Editor AssistViewSettings Methods](./images/smart-rich-text-editor-methods.webp)
 
 ## See also
 

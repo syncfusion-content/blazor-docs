@@ -37,6 +37,6 @@ The Rich Text Editor checks the following settings on validation:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor XHTML Validation](./images/blazor-richtexteditor-xhtml-validation.png)
+![Blazor RichTextEditor XHTML Validation](./images/blazor-richtexteditor-xhtml-validation.webp)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
