@@ -178,6 +178,7 @@ The example below shows how audio is saved in `Blob` and `Base64` formats.
 <audio>
     <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="audio/mp3" />
 </audio>
+
 <audio>
     <source src="data:audio/mp3;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="audio/mp3" />
 </audio>
@@ -213,7 +214,7 @@ Once you select the audio from the local machine, the URL for the audio will be 
 
 ## Display Position
 
-Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio element's layout position when updating the display positions.
+Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `Inline` and `Break.` It also updates the audio element's layout position when updating the display positions.
 
 ![Blazor RichTextEditor audio display](../images/blazor-richtexteditor-audio-display.png)
 

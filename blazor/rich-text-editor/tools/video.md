@@ -23,6 +23,7 @@ The Rich Text Editor allows inserting video files from online sources as well as
 | [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) | Sets the minHeight of the video element when it is inserted in the Rich Text Editor.|
 | [MaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MaxHeight) | Sets the maxHeight of the video element when it is inserted in the Rich Text Editor.|
 | [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) | Provides URL to map the action result method to save the video.|
+| [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_RemoveUrl) | Provides the URL to map the action result method used to remove the video file from the server.|
 | [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) | Specifies the location to store the video.|
 | [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_EnableResize) | Sets the resizing action for the video element.|
 | [ResizeByPercent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_ResizeByPercent) | Sets the percentage values for the video element with the resizing action.|
@@ -51,7 +52,7 @@ To insert a video from the hosted link or local machine, you should enable the v
 
 By default, the video tool opens the video dialog, allowing you to insert an embedded URL.
 
-![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-video-web.png)
+![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-embed-video.png)
 
 ## Upload and insert video
 
@@ -142,6 +143,35 @@ namespace VideoUpload.Controllers
                 Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
             }
         }
+
+        [HttpPost("[action]")]
+        [Route("api/Video/Delete")]
+        public IActionResult Delete(IList<IFormFile> UploadFiles)
+        {
+            try
+            {
+                foreach (IFormFile uploadFile in UploadFiles)
+                {
+                    string? fileName = ContentDispositionHeaderValue.Parse(uploadFile.ContentDisposition).FileName?.Trim('"');
+                    string filePath = Path.Combine(hostingEnv.WebRootPath, "Video/", fileName!);
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        System.IO.File.Delete(filePath);
+                        return Ok($"File '{fileName}' has been deleted.");
+                    }
+                    else
+                    {
+                        // Return 404 status if file not found
+                        return NotFound($"File '{fileName}' not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
+            return StatusCode(500, $"No file processed.");
+        }
     }
 }
 
@@ -154,15 +184,16 @@ The video files can be saved as `Blob` or `Base64` url by using the [RichTextEdi
 
 N> By default, the files are saved in the `Blob` format.
 
-```cshtml
+The example below shows how video is saved in `Blob` and `Base64` formats.
 
+```
 <video>
     <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="video/mp4" >
 </video>
+
 <video>
     <source src="data:video/mp4;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="video/mp4" >
 </video>
-
 ```
 
 ## Maximum file size restriction
@@ -272,7 +303,7 @@ N> If the [RichTextEditorVideoSettings.MinWidth](https://help.syncfusion.com/cr/
 
 By using the [RichTextEditorVideoSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html) property, you can specify the server handler to upload the selected video. Then by binding the `FileUploadSuccess` event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert video dialog.
 
-Refer `rename.cs` controller file for configure the server-side.
+Refer `RenameController.cs` controller file for configure the server-side.
 
 {% tabs %}
 {% highlight razor %}
@@ -283,7 +314,7 @@ Refer `rename.cs` controller file for configure the server-side.
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml tabtitle="rename.cs" %}
+{% highlight cshtml tabtitle="RenameController.cs" %}
 
 using System;
 using System.IO;
@@ -309,7 +340,7 @@ namespace RenameVideo.Controllers
         }
 
         [HttpPost("[action]")]
-        [Route("api/Vedio/Rename")]
+        [Route("api/Video/Rename")]
         public void Rename(IList<IFormFile> UploadFiles)
         {
             try
@@ -328,13 +359,13 @@ namespace RenameVideo.Controllers
                         }
 
                         videofileName = filename;
-                        string path = hostingEnv.WebRootPath + "\\Images" + $@"\{filename}";
+                        string path = hostingEnv.WebRootPath + "\\Video" + $@"\{filename}";
 
-                        // Rename a uploaded image file name
+                        // Rename a uploaded video file name
                         while (System.IO.File.Exists(path))
                         {
-                            videofileName = "rteImage" + x + "-" + filename;
-                            path = hostingEnv.WebRootPath + "\\Images" + $@"\rteImage{x}-{filename}";
+                            videofileName = "rteVideo" + x + "-" + filename;
+                            path = hostingEnv.WebRootPath + "\\Video" + $@"\rteVideo{x}-{filename}";
                             x++;
                         }
 
