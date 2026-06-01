@@ -9,15 +9,27 @@ documentation: ug
 
 # Getting Started with Blazor WASM App with Authentication Library
 
-This article provides step-by-step instructions for building and securing a Blazor WebAssembly Standalone App with the Blazor WebAssembly Authentication library using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides step-by-step instructions for building and securing a Blazor WebAssembly Standalone App and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component for authenticated users.
 
-## Prerequisites
+## Create a new Blazor Web App 
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+To create a new Blazor Web App, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code).
 
-## Create a new Blazor WebAssembly Standalone App in Visual Studio
+Ensure the **Configure for HTTPS** option is enabled, and select **Individual Accounts** as the authentication type. This enables authentication support without persisting user data in a local database.
 
-You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) by setting the `Authentication type` to `Individual Accounts`. This selection adds authentication support and doesn't result in storing users in a database.
+![Project-setting](images/project-setting.webp)
+
+If using Visual Studio Code, run the following commands in your command-line interface (CLI):
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet new blazor -o BlazorAppAuthentication --interactivity Server --auth Individual
+cd BlazorAppAuthentication
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure the application with Google OAuth 2.0 (OIDC)
 
@@ -26,7 +38,7 @@ You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [
 * Replace the `appsettings.json` file with the following content to configure the application with `Google OAuth 2.0`.
 
 {% tabs %}
-{% highlight cshtml tabtitle="appsettings.json" %}
+{% highlight json tabtitle="appsettings.json" %}
 
 {
   "Local": {
@@ -49,74 +61,94 @@ You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [
 
 ![OAuth RedirectUri](images/oauth-rediredt-uri.webp)
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
+## Integrating Blazor component
 
-Here's an example of how to add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+Blazor components can be integrated within the **AuthorizeView** component as shown in the following steps.
+
+### Install NuGet packages
+
+To add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to your application, open the NuGet Package Manager in Visual Studio **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**. Search and install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages.
+
+Alternatively, install the required packages by using the following .NET CLI commands.
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
+### Register Blazor Service
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+Register the Blazor service in the **~/Program.cs** file of the Blazor Web App.
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces.
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
 
-```cshtml
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Calendars
-
-```
-
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file of the Blazor WebAssembly Standalone App.
-
-```cshtml
-
-....
 using Syncfusion.Blazor;
 ....
 builder.Services.AddSyncfusionBlazor();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Add stylesheet and script resources
+### Add required namespaces
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` section and the script at the end of the `<body>` of the main page as follows:
+Open the `~/_Imports.razor` file and import the namespaces.
 
-* For **.NET 10, .NET 9 and .NET 8** Blazor WebAssembly Standalone app, include it in the **~/Components/App.razor** file.
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-```html
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add stylesheet and script resources
+
+Include the theme stylesheet and script references in the `wwwroot/index.html` file.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!-- Theme stylesheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ....
 </head>
 
 <body>
     ....
+    <!-- Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    ....
 </body>
 
-```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+{% endhighlight %}
+{% endtabs %}
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
+### Add Blazor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/Home.razor** file under an `AuthorizeView`.
+Add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in the **~/Pages/Home.razor** file within an `AuthorizeView`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Pages/Home.razor" %}
 
 <AuthorizeView>
     <Authorized>
-        <SfCalendar TValue="DateTime" />
+        <SfGrid DataSource="@Orders">
+            <GridColumns>
+                <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+                <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+                <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100" />
+                <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+            </GridColumns>
+        </SfGrid>
     </Authorized>
     <NotAuthorized>
         <h1>Authentication Failure!</h1>
@@ -124,14 +156,45 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
     </NotAuthorized>
 </AuthorizeView>
 
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 12).Select(i => new Order
+        {
+            OrderID = 1000 + i,
+            CustomerID = new[] { "ALFKI", "ANATR", "ANTON", "BLONP", "BOLID" }[Random.Shared.Next(5)],
+            OrderDate = DateTime.Today.AddDays(-i),
+            Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the default web browser.
+### Run the application
 
+To run the application, use the following command:
 
-![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.webp)
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
 
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor WASM App with Blazor DataGrid Component](images/webAssembly-datagrid.webp)
 
 ## See Also
 

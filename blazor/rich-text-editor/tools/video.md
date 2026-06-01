@@ -36,7 +36,7 @@ To include the video tool in the Rich Text Editor, you can add the toolbar item 
 To configure `Video` toolbar item, refer to the below code.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-tool.razor %}
 
@@ -65,7 +65,7 @@ The selected video can be uploaded to the required destination using the control
 
 N> If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-save.razor %}
 
@@ -172,7 +172,7 @@ By using the Rich Text Editor's [RichTextEditorVideoSettings.MaxFileSize](https:
 In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-restrict.razor %}
 
@@ -212,7 +212,7 @@ Sets the default display for a video when it is inserted in the Rich Text Editor
 N> The default `layoutOption` property is set to `Inline`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-display-position.razor %}
 
@@ -226,7 +226,7 @@ Default upload: Insert video directly from your local file system (e.g., File Ex
 Server upload: Use the `SaveUrl` property to upload video files to your server before inserting them into the editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-drag-and-drop.razor %}
 
@@ -275,7 +275,7 @@ By using the [RichTextEditorVideoSettings](https://help.syncfusion.com/cr/blazor
 Refer `rename.cs` controller file for configure the server-side.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-rename.razor %}
 
@@ -375,7 +375,7 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 N> By default, it doesn't support the `UseDefaultCredentials` property, so you need to append the default credentials with the upload request manually.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/video-authentication.razor %}
 
