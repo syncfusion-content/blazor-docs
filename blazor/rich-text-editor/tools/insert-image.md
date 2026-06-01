@@ -39,7 +39,7 @@ N> If you want to insert many tiny images in the editor and don't want a specifi
 
 ### Server side action
 
-The selected image can be uploaded to the required destination using the controller action below. Map this method name into [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) and provide required destination path through [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property.
+The selected image can be uploaded to or removed from the required destination using the controller action below. Map the respective method names into [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) and [RichTextEditorImageSettings.RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_RemoveUrl) properties. Also, specify the required destination path using the[RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property.
 
 N> [View sample on GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
 
@@ -49,7 +49,7 @@ N> [View sample on GitHub.](https://github.com/SyncfusionExamples/blazor-richtex
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorImageSettings SaveUrl="api/Image/Save" Path="./Images/" />
+    <RichTextEditorImageSettings SaveUrl="api/Image/Save" RemoveUrl="api/Image/Delete" Path="./Images/" />
 </SfRichTextEditor>
 
 {% endhighlight %}
@@ -124,6 +124,35 @@ namespace ImageUpload.Controllers
                 Response.ContentType = "application/json; charset=utf-8";
                 Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
             }
+        }
+
+        [HttpPost("[action]")]
+        [Route("api/Image/Delete")]
+        public IActionResult Delete(IList<IFormFile> UploadFiles)
+        {
+            try
+            {
+                foreach (IFormFile uploadFile in UploadFiles)
+                {
+                    string? fileName = ContentDispositionHeaderValue.Parse(uploadFile.ContentDisposition).FileName?.Trim('"');
+                    string filePath = Path.Combine(hostingEnv.WebRootPath, "Images/", fileName!);
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        System.IO.File.Delete(filePath);
+                        return Ok($"File '{fileName}' has been deleted.");
+                    }
+                    else
+                    {
+                        // Return 404 status if file not found
+                        return NotFound($"File '{fileName}' not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
+            return StatusCode(500, $"No file processed.");
         }
     }
 }
@@ -284,17 +313,15 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
 {% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
+@inject HttpClient Http;
+@inject NavigationManager NavManager
 
 <SfRichTextEditor>
-   <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
-   <RichTextEditorImageSettings SaveUrl="@SaveURL" Path="@Path" RemoveUrl="@RemoveURL"/>
+    <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
+    <RichTextEditorImageSettings SaveUrl="api/Image/Save" Path="./Images/" RemoveUrl="api/Image/Delete"  />
 </SfRichTextEditor>
 
-@code{
-    private string SaveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/SaveFile";
-    private string Path = "[SERVICE_HOSTED_PATH]/RichTextEditor/";
-    private string RemoveURL = "[SERVICE_HOSTED_PATH]/api/RichTextEditor/DeleteFile";
-
+@code {
     public async Task OnImageDeleteHandler(AfterImageDeleteEventArgs args)
     {
         var imageSrc = args.Src;
@@ -303,8 +330,9 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
         var dummyFile = new ByteArrayContent(new byte[0]);
         content.Add(dummyFile, "UploadFiles", fileName);
         try
-        {
-            var response = await Http.PostAsync(RemoveURL, content);
+        {            
+            var response = await Http.PostAsync($"{NavManager.BaseUri}api/Image/Delete", content);
+
             if (response.IsSuccessStatusCode)
             {
                 Console.WriteLine($"Image deleted successfully: {fileName}");
@@ -319,7 +347,111 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
             Console.WriteLine($"Error deleting image: {ex.Message}");
         }
     }
+}
 
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight cshtml tabtitle="ImageController.cs" %}
+
+using System;
+using System.IO;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
+
+namespace ImageUpload.Controllers
+{
+    [ApiController]
+    public class ImageController : ControllerBase
+    {
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public ImageController(IWebHostEnvironment env)
+        {
+            this.hostingEnv = env;
+        }
+
+        [HttpPost("[action]")]
+        [Route("api/Image/Save")]
+        public void Save(IList<IFormFile> UploadFiles)
+        {
+            try
+            {
+                foreach (var file in UploadFiles)
+                {
+                    if (UploadFiles != null)
+                    {
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+
+                        // Create a new directory, if it does not exists
+                        if (!Directory.Exists(targetPath))
+                        {
+                            Directory.CreateDirectory(targetPath);
+                        }
+
+                        // Name which is used to save the image
+                        filename = targetPath + $@"\{filename}";
+
+                        if (!System.IO.File.Exists(filename))
+                        {
+                            // Upload a image, if the same file name does not exist in the directory
+                            using (FileStream fs = System.IO.File.Create(filename))
+                            {
+                                file.CopyTo(fs);
+                                fs.Flush();
+                            }
+                            Response.StatusCode = 200;
+                        }
+                        else
+                        {
+                            Response.StatusCode = 204;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Response.Clear();
+                Response.ContentType = "application/json; charset=utf-8";
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+            }
+        }
+
+        [HttpPost("[action]")]
+        [Route("api/Image/Delete")]
+        public IActionResult Delete(IList<IFormFile> UploadFiles)
+        {
+            try
+            {
+                foreach (IFormFile uploadFile in UploadFiles)
+                {
+                    string? fileName = ContentDispositionHeaderValue.Parse(uploadFile.ContentDisposition).FileName?.Trim('"');
+                    string filePath = Path.Combine(hostingEnv.WebRootPath, "Images/", fileName!);
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        System.IO.File.Delete(filePath);
+                        return Ok($"File '{fileName}' has been deleted.");
+                    }
+                    else
+                    {
+                        // Return 404 status if file not found
+                        return NotFound($"File '{fileName}' not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
+            return StatusCode(500, $"No file processed.");
+        }
+    }
 }
 
 {% endhighlight %}
@@ -398,7 +530,7 @@ N> [View sample in GitHub.](https://github.com/SyncfusionExamples/blazor-richtex
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorImageSettings SaveUrl="[SERVICE_HOSTED_PATH]/api/Image/Rename" Path="./Images/" />
+    <RichTextEditorImageSettings SaveUrl="api/Image/Rename" Path="./Images/" />
     <RichTextEditorEvents OnImageUploadSuccess="@ImageUploadSuccess" />
 </SfRichTextEditor>
 
