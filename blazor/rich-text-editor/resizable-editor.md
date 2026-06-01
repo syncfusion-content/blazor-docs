@@ -12,7 +12,7 @@ documentation: ug
 The Rich Text Editor supports dynamic resizing, allowing users to adjust the editor's dimensions based on their needs. You can enable or disable this feature using the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property. When `EnableResize` is set to `true`, a resize handle appears at the bottom-right corner of the editor, enabling diagonal resizing.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/resize-editor.razor %}
 
@@ -26,7 +26,7 @@ The Rich Text Editor supports dynamic resizing, allowing users to adjust the edi
 To restrict the resizable area of the Rich Text Editor, define the `min-width`, `max-width`, `min-height`, and `max-height` CSS properties on the editor's container element. By default, the editor can be resized up to the limits of the current viewport. Use the `e-richtexteditor` CSS class to apply the following styles and control the resizing boundaries.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 

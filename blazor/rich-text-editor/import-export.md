@@ -434,71 +434,74 @@ The following code block provides a detailed explanation of the API endpoint use
 
 ```csharp
 
-    public class ExportParam
-        {
-            public string html { get; set; }
-        }
+public class ExportParam
+{
+    public string html { get; set; }
+}
 
-        [AcceptVerbs("Post")]
-        [EnableCors("AllowAllOrigins")]
-        [Route("ExportToPdf")]
-        public ActionResult ExportToPdf([FromBody] ExportParam args)
-        {
-            string htmlString = args.html;
-            if (string.IsNullOrEmpty(htmlString)
-            {
-                return null;
-            }
-            using (WordDocument wordDocument = new WordDocument())
-            {
-                //This method adds a section and a paragraph in the document
-                wordDocument.EnsureMinimal();
-                wordDocument.HTMLImportSettings.ImageNodeVisited += OpenImage;
-                //Append the HTML string to the paragraph.
-                wordDocument.LastParagraph.AppendHTML(htmlString);
-                DocIORenderer render = new DocIORenderer();
-                //Converts Word document into PDF document
-                PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
-                wordDocument.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-                MemoryStream stream = new MemoryStream();
-                pdfDocument.Save(stream);
-                return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
-            }
-        }
+[AcceptVerbs("Post")]
+[EnableCors("AllowAllOrigins")]
+[Route("ExportToPdf")]
+public ActionResult ExportToPdf([FromBody] ExportParam args)
+{
+    string htmlString = args?.html;
+    if (string.IsNullOrEmpty(htmlString)) // Fixed: Added closing parenthesis
+    {
+        return BadRequest("HTML content is empty."); // Fixed: Return proper HTTP status instead of null
+    }
 
-        [AcceptVerbs("Post")]
-        [EnableCors("AllowAllOrigins")]
-        [Route("ExportToDocx")]
-        public FileStreamResult ExportToDocx([FromBody] ExportParam args)
+    using (WordDocument wordDocument = new WordDocument())
+    {
+        wordDocument.EnsureMinimal();
+        wordDocument.HTMLImportSettings.ImageNodeVisited += OpenImage;
+        wordDocument.LastParagraph.AppendHTML(htmlString);
+        
+        DocIORenderer render = new DocIORenderer();
+        PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
+        wordDocument.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+        
+        using (MemoryStream stream = new MemoryStream())
         {
-            string htmlString = args.html;
-             if (string.IsNullOrEmpty(htmlString)
-            {
-                return null;
-            }
-            using (WordDocument document = new WordDocument())
-            {
-                document.EnsureMinimal();
-                //Hooks the ImageNodeVisited event to open the image from a specific location
-                document.HTMLImportSettings.ImageNodeVisited += OpenImage;
-                //Validates the Html string
-                bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlString, XHTMLValidationType.None);
-                //When the Html string passes validation, it is inserted to the document
-                if (isValidHtml)
-                {
-                    //Appends the Html string to first paragraph in the document
-                    document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlString);
-                }
-                //Unhooks the ImageNodeVisited event after loading HTML
-                document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-                //Creates file stream.
-                MemoryStream stream = new MemoryStream();
-                document.Save(stream, FormatType.Docx);
-                stream.Position = 0;
-                //Download Word document in the browser
-                return File(stream, "application/msword", "Result.docx");
-            }
+            pdfDocument.Save(stream);
+            return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
         }
+    }
+}
+
+[AcceptVerbs("Post")]
+[EnableCors("AllowAllOrigins")]
+[Route("ExportToDocx")]
+public FileStreamResult ExportToDocx([FromBody] ExportParam args)
+{
+    string htmlString = args?.html;
+    if (string.IsNullOrEmpty(htmlString)) // Fixed: Added closing parenthesis
+    {
+        return null; 
+    }
+
+    // Fixed: Removed the 'using' block from MemoryStream so it stays open for the file transfer
+    MemoryStream stream = new MemoryStream();
+    
+    using (WordDocument document = new WordDocument())
+    {
+        document.EnsureMinimal();
+        document.HTMLImportSettings.ImageNodeVisited += OpenImage;
+        
+        bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlString, XHTMLValidationType.None);
+        if (isValidHtml)
+        {
+            document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlString);
+        }
+        
+        document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+        document.Save(stream, FormatType.Docx);
+    } // WordDocument is disposed here safely
+    
+    stream.Position = 0; // Reset position so the file downloader can read it from the start
+    
+    // Fixed: Updated to correct modern DOCX MIME type
+    return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Result.docx");
+}
 
 ```
 
@@ -1032,7 +1035,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight Controller.cs %}
 
 using System;
 using System.IO;

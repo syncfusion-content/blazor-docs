@@ -76,7 +76,8 @@ The table row and column selection feature in our editor allows for intuitive an
 
 The text formatting feature in tables allows users to apply various styles to selected cells, enhancing the appearance and readability of data. This includes the application of headings, paragraphs, lists, and inline styles such as bold, italic, and strikethrough. Users can efficiently format multiple cells simultaneously by selecting entire rows or columns.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -122,7 +123,8 @@ The text formatting feature in tables allows users to apply various styles to se
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Cell merge and split
 
