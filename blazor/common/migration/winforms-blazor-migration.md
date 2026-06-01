@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Windows Forms (WinForms) to Blazor Guide
+title: Migrating from Windows Forms (WinForms) to Blazor Guide | Syncfusion®
 description: Step-by-step guide to migrate a WinForms app to Blazor, covering architecture, project setup, theming, service registration, and component mapping.
 platform: Blazor
 control: Common
@@ -39,7 +39,7 @@ When migrating from WinForms to Blazor, one of the first changes you will notice
 |---|---|---|
 | `Program.cs` (with `Application.Run`) | `Program.cs` and `App.razor` | Defines startup and root rendering |
 | `Form1.cs` | `App.razor`, `MainLayout.razor`, and `Routes.razor` | Represents the application shell and routing structure |
-| `Form1.Designer.cs` | `Pages/*.razor` | Defines route-enabled UI pages |
+| `Form1.Designer.cs` | `Pages/*.razor` | Defines route enabled UI pages |
 | Event handlers and business logic | Services, component state, or `.razor.cs` | Contains UI logic and state |
 | `Models/*.cs` | `Models/*.cs` | Usually reusable without changes |
 | `Services/*.cs` or business layer | `Services/*.cs` | Handles shared application logic through dependency injection |
@@ -99,18 +99,20 @@ In Blazor, namespaces are commonly imported globally using the `_Imports.razor` 
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Charts
+@using Syncfusion.Blazor.Schedule
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Applying themes
 
-In WinForms, themes are typically applied using [SkinManager](https://help.syncfusion.com/windowsforms/skins/getting-started). The following example shows how to apply a theme programmatically:
+In WinForms, themes are typically applied using SfSkinManager. The following example shows how to apply a theme programmatically:
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
 
-using Syncfusion.WinForms.Controls;
+using Syncfusion.WinForms.Core;
 using System.Windows.Forms;
 
 namespace WinFormsDataGridApp
@@ -120,7 +122,7 @@ namespace WinFormsDataGridApp
         public Form1()
         {
             InitializeComponent();
-            SfSkinManager.SetSkin(this, VisualStyles.FluentLight);
+            SfSkinManager.SetTheme(this, new Theme("FluentLight"));
         }
     }
 }
@@ -156,17 +158,17 @@ For the complete list of supported themes, refer to the [Blazor themes documenta
 
 ### DataGrid
 
-[WinForms DataGrid](https://www.syncfusion.com/winforms-controls/datagrid) is a high-performance tabular control for Windows Forms applications, while [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is the web-first Razor component for building responsive, interactive, data-driven web interfaces.
+[WinForms DataGrid](https://www.syncfusion.com/winforms-controls/datagrid) is a high performance tabular control for Windows Forms applications, while [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is the web first Razor component for building responsive, interactive, data driven web interfaces.
 
 For additional details, refer to the [WinForms DataGrid getting started guide](https://help.syncfusion.com/winforms/datagrid/getting-started) and [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app).
 
-| Aspect | WinForms (SfDataGrid) | Blazor (SfGrid) |
+| Aspect | WinForms | Blazor |
 |---|---|---|
 | Package (NuGet) | [Syncfusion.SfDataGrid.WinForms](https://www.nuget.org/packages/Syncfusion.SfDataGrid.WinForms) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
 | Component declaration | `SfDataGrid` (programmatic or Designer) | `<SfGrid>` |
 | Data binding | Direct `DataSource` property assignment | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) with component state |
-| Collection type | `ObservableCollection<T>` (automatic notifications) | `List<T>` or `IEnumerable<T>` (state updates trigger re-renders) |
-| Columns | Designer-based column definitions or code-behind | [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) with [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format), and [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditType) |
+| Collection type | `ObservableCollection<T>` (automatic notifications) | `List<T>` or `IEnumerable<T>` (state updates trigger re renders) |
+| Columns | Designer based column definitions or code behind | [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) with [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format), and [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditType) |
 | Templates | `CellTemplate` and `EditTemplate` | Razor `<Template>` |
 | Editing and events | Event handlers (`CellClick`, `ValueChanged`, etc.) | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), and event callbacks |
 | Paging and virtualization | Built-in paging with `SfDataPager` | [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization), and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) |
@@ -265,18 +267,18 @@ namespace WinFormsDataGridApp
 
 ### Charts
 
-[WinForms Charts](https://www.syncfusion.com/winforms-controls/charts) is a comprehensive charting control for rich desktop visualizations, while [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is the Razor-based component for creating responsive, interactive charts on the web.
+[WinForms Charts](https://www.syncfusion.com/winforms-controls/charts) is a comprehensive charting control for rich desktop visualizations, while [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is the Razor based component for creating responsive, interactive charts on the web.
 
 For additional details, refer to the [WinForms Charts getting started guide](https://help.syncfusion.com/windowsforms/chart/getting-started) and [Blazor Charts getting started guide](https://blazor.syncfusion.com/documentation/chart/getting-started).
 
-| Aspect | WinForms (SfChart) | Blazor (SfChart) |
+| Aspect | WinForms | Blazor |
 |---|---|---|
 | Package (NuGet) | [Syncfusion.Chart.Windows](https://www.nuget.org/packages/Syncfusion.Chart.Windows) | [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts) |
-| Component declaration | `SfChart` (programmatic or Designer) | `<SfChart>` |
+| Component declaration | `ChartControl` (programmatic or Designer) | `<SfChart>` |
 | Data binding | `DataSource` property with `XValues` and `YValues` | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) with [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) |
-| Axis and series | Designer-based or programmatic configuration | [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html), [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html), and [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) |
-| Series types | Built-in series types (Column, Line, Bar, etc.) | [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) with `Type="ChartSeriesType.*"` |
-| Markers and tooltips | Series-level settings | [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html) and [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) |
+| Axis and series | Designer based or programmatic configuration | [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html), [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html), and [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) |
+| Series types | Built in series types (Column, Line, Bar, etc.) | [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) with `Type="ChartSeriesType.*"` |
+| Markers and tooltips | Series level settings | [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html) and [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) |
 | Events | CLR events | Event callbacks such as point and tooltip events |
 | Responsiveness | Fixed size based on form design | CSS-based responsive layout |
 
@@ -291,24 +293,22 @@ The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
 
-using Syncfusion.WinForms.Chart;
-using System.Collections.ObjectModel;
+using Syncfusion.Windows.Forms.Chart;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace WinFormsChartApp
 {
     public partial class Form1 : Form
     {
-        public ObservableCollection<SalesInfo> SalesData { get; set; }
-
         public Form1()
         {
             InitializeComponent();
-            
-            SfChart chart = new SfChart();
+
+            ChartControl chart = new ChartControl();
             chart.Dock = DockStyle.Fill;
-            
-            SalesData = new ObservableCollection<SalesInfo>
+
+            var salesData = new List<SalesInfo>
             {
                 new SalesInfo { Month = "Jan", Sales = 35 },
                 new SalesInfo { Month = "Feb", Sales = 28 },
@@ -316,11 +316,16 @@ namespace WinFormsChartApp
                 new SalesInfo { Month = "Apr", Sales = 32 },
                 new SalesInfo { Month = "May", Sales = 40 }
             };
-            
-            chart.Series[0].DataSource = SalesData;
-            chart.Series[0].XValues = "Month";
-            chart.Series[0].YValues = "Sales";
-            
+
+            ChartSeries series = new ChartSeries("Sales", ChartSeriesType.Column);
+            foreach (var item in salesData)
+            {
+                series.Points.Add(item.Month, item.Sales);
+            }
+            chart.Series.Add(series);
+            chart.PrimaryXAxis.Title = "Month";
+            chart.PrimaryYAxis.Title = "Sales";
+
             Controls.Add(chart);
         }
     }
@@ -386,16 +391,15 @@ namespace WinFormsChartApp
 
 ### Scheduler
 
-[WinForms Scheduler](https://www.syncfusion.com/winforms-controls/scheduler) is a feature-rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
+[WinForms Scheduler](https://www.syncfusion.com/winforms-controls/scheduler) is a feature rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
 
 For additional details, refer to the [WinForms Scheduler getting started guide](https://help.syncfusion.com/winforms/scheduler/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
 
-| Aspect | WinForms (SfSchedule) | Blazor (SfSchedule<TValue>) |
+| Aspect | WinForms | Blazor |
 |---|---|---|
 | Package (NuGet) | [Syncfusion.Schedule.Windows](https://www.nuget.org/packages/Syncfusion.Schedule.Windows) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
-| Component declaration | `SfSchedule` (programmatic or Designer) | `<SfSchedule TValue="TModel">` |
-| Appointment model | Built-in [ScheduleAppointment](https://help.syncfusion.com/winforms/schedule/appointments#creating-schedule-appointment) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
-| View configuration | [ViewType](https://help.syncfusion.com/winforms/schedule/views) | [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) and [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) |
+| Component declaration | `ScheduleControl` (programmatic or Designer) | `<SfSchedule TValue="TModel">` |
+| Appointment model | Built in [ScheduleAppointment](https://help.syncfusion.com/winforms/schedule/appointments#creating-schedule-appointment) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
 | Date and time binding | `SelectedDate` and `ScheduleDateTime` | [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) and `CurrentDate` |
 | Data source | `DataSource` property | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) |
 | Resources and grouping | `ResourceCollection` with mappings | [ScheduleResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResources.html) and [ScheduleResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) |
@@ -413,44 +417,37 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
 
-using Syncfusion.WinForms.Schedule;
+using Syncfusion.Windows.Forms.Schedule;
 using System;
-using System.Collections.ObjectModel;
 using System.Windows.Forms;
 
 namespace WinFormsSchedulerApp
 {
     public partial class Form1 : Form
     {
-        public DateTime SelectedDate { get; set; } = DateTime.Today;
-
         public Form1()
         {
             InitializeComponent();
-            
-            SfSchedule schedule = new SfSchedule();
+
+            ScheduleControl schedule = new ScheduleControl();
             schedule.Dock = DockStyle.Fill;
-            schedule.ViewType = ViewType.Week;
-            
-            // Create appointments
-            schedule.Appointments = new ObservableCollection<ScheduleAppointment>
+            schedule.ViewType = ScheduleViewType.WeekView;
+            schedule.SelectedDate = DateTime.Today;
+
+            schedule.Appointments.Add(new ScheduleAppointment
             {
-                new ScheduleAppointment
-                {
-                    Subject = "Project Meeting",
-                    StartTime = DateTime.Today.AddHours(10),
-                    EndTime = DateTime.Today.AddHours(11),
-                    AppointmentBackground = System.Drawing.Color.LightBlue
-                },
-                new ScheduleAppointment
-                {
-                    Subject = "Client Call",
-                    StartTime = DateTime.Today.AddHours(14),
-                    EndTime = DateTime.Today.AddHours(15),
-                    AppointmentBackground = System.Drawing.Color.LightGreen
-                }
-            };
-            
+                Subject = "Project Meeting",
+                StartTime = DateTime.Today.AddHours(10),
+                EndTime = DateTime.Today.AddHours(11)
+            });
+
+            schedule.Appointments.Add(new ScheduleAppointment
+            {
+                Subject = "Client Call",
+                StartTime = DateTime.Today.AddHours(14),
+                EndTime = DateTime.Today.AddHours(15)
+            });
+
             Controls.Add(schedule);
         }
     }
