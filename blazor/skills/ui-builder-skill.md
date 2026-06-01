@@ -129,12 +129,12 @@ Key enforcement points:
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
-## Using the AI Assistant
+## Generate UIs using the Agentic UI Builder
 
 After installing Blazor UI Builder with APM, the relevant agent and skill files are added to your project under:
 
 - `.agent/skills/` (skill files)
-- `.github/agents/` (Blazor UI builder agent configuration, based on the selected target)
+- `.github/agents/` (Blazor UI builder agent configuration)
 
 To start using the skill:
 
@@ -154,7 +154,7 @@ Create a CMS Admin Dashboard UI featuring a collapsible sidebar with navigation 
 {% endpromptcard %}
 {% endpromptcards %}
 
-* Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
+4. Generated code follows best practices with accessible, semantic HTML, responsive mobile-first layouts, strong C# typing, and built-in security measures such as input validation and avoidance of embedded secrets.
 
 ## Best Practices
 
