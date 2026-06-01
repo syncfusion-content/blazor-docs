@@ -105,6 +105,8 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrStJXuTcIPierd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+N> Inside the OnToolbarClick event of the Grid, the clicked toolbar item can be identified using its **ID** value, which is generated using the Grid’s ID and the toolbar item name; therefore, it is recommended to explicitly set the **ID** property for the Grid component to ensure proper identification of the clicked item.
+
 ## Show spinner while exporting 
 
 Displaying a spinner during export operations in the Blazor DataGrid provides a visual indication of progress and improves export feedback.
