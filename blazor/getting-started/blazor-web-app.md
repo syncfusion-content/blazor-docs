@@ -45,7 +45,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 Run the following command to create a new Blazor Web App.
 
 ```bash
-dotnet new blazor -o BlazorWebApp --interactivity Auto
+dotnet new blazor -o BlazorWebApp --interactivity Server --all-interactive
 ```
 
 Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
@@ -57,7 +57,7 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 Run the following command to create a new Blazor Web App.
 
 ```bash
-dotnet new blazor -o BlazorWebApp --interactivity Auto
+dotnet new blazor -o BlazorWebApp --interactivity Server --all-interactive
 ```
 
 {% endtabcontent %}
@@ -112,7 +112,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ### Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+After the packages are installed, open the **~/Components/_Imports.razor** file in the project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -146,24 +146,28 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-...
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    ...
+</head>
+
+<body>
+    ...
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Add Blazor DataGrid component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the razor file.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveAuto
 
 <SfGrid DataSource="@Orders" />
 
@@ -209,7 +213,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the `.Client` project folder, and run the following command.
+* Open the terminal and navigate to the project folder, and run the following command.
 
 ```bash
 dotnet run
@@ -219,7 +223,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the `.Client` project folder, and run the following command.
+* Open the command prompt and navigate to the project folder, and run the following command.
 
 ```bash
 dotnet run
