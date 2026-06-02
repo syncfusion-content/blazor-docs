@@ -52,7 +52,7 @@ To insert a video from the hosted link or local machine, you should enable the v
 
 By default, the video tool opens the video dialog, allowing you to insert an embedded URL.
 
-![Blazor Rich Text Editor insert audio from web](../images/blazor-richtexteditor-video-web.webp)
+![Blazor Rich Text Editor insert video from web](../images/blazor-richtexteditor-video-web.webp)
 
 ## Upload and insert video
 
@@ -212,7 +212,7 @@ In the following example, the video size has been validated before uploading and
 
 ## Replacing video
 
-After inserting a video file, you can replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
+After inserting a video file, you can replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
 
 ![Blazor RichTextEditor embed video replace](../images/blazor-richtexteditor-video-replace-embed.webp)
 
