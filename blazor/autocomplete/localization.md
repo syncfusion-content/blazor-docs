@@ -25,4 +25,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor AutoComplete with EnableRtl](./images/localization/blazor_autocomplete_enableRtl.png)
+![Blazor AutoComplete with EnableRtl](./images/localization/blazor_autocomplete_enableRtl.webp)

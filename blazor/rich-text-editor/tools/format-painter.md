@@ -29,7 +29,7 @@ The following example demonstrates how to add the Format Painter tool to the Ric
 
 ### Customizing copy and paste format
 
-Users can customize the behavior of the Format Painter tool using the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) property.
+Users can customize the behavior of the Format Painter tool using the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html) property.
 
 The [AllowedFormats](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormatPainterSettings_AllowedFormats) property helps you to specify tag names that allow the formats to be copied from the selected text. For instance, you can include formats from the selected text using tags like `[p;]` `[h1;]` `[h2;]` `[h3;]` `[div;]` `[ul;]` `[ol;]` `[li;]` `[span;]` `[strong;]` `[em;]` `[code;]`. The following example demonstrates how to customize this functionality.
 
@@ -57,6 +57,6 @@ Below is an example illustrating how to define the `AllowedFormats` and `DeniedF
 
 For more details on keyboard navigation, refer to the [Keyboard support](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support) documentation.
 
-> The Format Painter retains formatting after application, allowing you to apply the same styles multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
+N> The Format Painter retains formatting after application, allowing you to apply the same styles multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
 
-Additionally, users can perform the format painter actions programmatically using the [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_Syncfusion_Blazor_RichTextEditor_FormatPainterParams_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_) public method.
+Additionally, users can perform the format painter actions programmatically using the [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_) public method.

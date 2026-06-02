@@ -23,7 +23,7 @@ In the following sample, vegetables are grouped by category using the `AutoCompl
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhqMhMfLJxZyQGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete Grouping](./images/blazor-autocomplete-grouping.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhqMhMfLJxZyQGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete Grouping](./images/blazor-autocomplete-grouping.webp)" %}
 
 ## Fixed group header
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Height in Blazor DataGrid Component
 
-You can customize the row height of datagrid rows through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property. The [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property is used to change the row height of entire datagrid rows.
+You can customize the row height of [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) rows through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property. The [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property is used to change the row height of entire datagrid rows.
 
 In the below example, the `RowHeight` is set as '60'.
 
@@ -53,7 +53,7 @@ In the below example, the `RowHeight` is set as '60'.
 }
 ```
 
-![Customizing Row Height in Blazor DataGrid](./images/blazor-datagrid-row-height-customization.png)
+![Customizing Row Height in Blazor DataGrid](./images/blazor-datagrid-row-height-customization.webp)
 
 ## Customize row height for particular row
 
@@ -116,6 +116,6 @@ In the below example, the row height for the row with OrderID as '1003' is set a
 }
 ```
 
-![Customizing Specific Row Height in Blazor DataGrid](./images/blazor-datagrid-specific-row-height-customization.png)
+![Customizing Specific Row Height in Blazor DataGrid](./images/blazor-datagrid-specific-row-height-customization.webp)
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

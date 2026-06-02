@@ -25,7 +25,7 @@ The `ShowSuggestionOnPopup` attribute in Syncfusion<sup style="font-size:70%">&r
 }
 ```
 
-![SUggestion on popup](images/smart-textarea-popup.gif)
+![SUggestion on popup](images/smart-textarea-popup.webp)
 
 * If `ShowSuggestionOnPopup` is `false`, suggestions displayed inline.
 
@@ -41,7 +41,7 @@ The `ShowSuggestionOnPopup` attribute in Syncfusion<sup style="font-size:70%">&r
 }
 ```
 
-![SUggestion inline](images/smart-textarea-inline.gif)
+![SUggestion inline](images/smart-textarea-inline.webp)
 
 By default `ShowSuggestionOnPopup` is `false`.
 

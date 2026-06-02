@@ -94,11 +94,11 @@ else
 }
 ```
 
-![LazyLoad Line](../images/lazyload-line.png)
+![LazyLoad Line](../images/lazyload-line.webp)
 
 ### Line 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpZhLxzguqSeHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[LazyLoad Column](../images/lazyload-column.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpZhLxzguqSeHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[LazyLoad Column](../images/lazyload-column.webp)" %}
 
 ### Column 
 

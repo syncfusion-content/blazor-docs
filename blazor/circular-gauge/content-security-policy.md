@@ -75,3 +75,7 @@ Include `'unsafe-inline'` if you want smooth animations:
 ```
 
 > Use this only if animations are important for your user experience.
+
+## See also
+
+* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Chip Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Chip](https://www.syncfusion.com/blazor-components/blazor-chip) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chip](https://www.syncfusion.com/blazor-components/blazor-chip) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -174,13 +174,14 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chip component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.webp)" %}
 
 ## Render chip items from collection
 
 You can render the chip items from collection using for loop in Blazor Chip component as follows.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 @if(ChipData.Count != 0) {
@@ -229,9 +230,10 @@ You can render the chip items from collection using for loop in Blazor Chip comp
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-sample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-sample.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chip).
 

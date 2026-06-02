@@ -7,19 +7,19 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Fullscreen Mode in Blazor Rich Text Editor Component
+# Full screen Mode in Blazor Rich Text Editor Component
 
-The Fullscreen mode allows the Rich Text Editor to expand and occupy the entire browser viewport. This provides a distraction-free editing experience and more space to work with content and toolbar features.
+The Full screen mode allows the Rich Text Editor to expand and occupy the entire browser viewport. This provides a distraction-free editing experience and more space to work with content and toolbar features.
 
-You can enable fullscreen mode using the `FullScreen` icon toolbar button. Once activated, the editor transitions into fullscreen view, hiding other page elements and maximizing the editing area.
+You can enable full screen mode using the `Full Screen` icon toolbar button. Once activated, the editor transitions into full screen view, hiding other page elements and maximizing the editing area.
 
 ## How it works
 
-Click the fullscreen icon in the toolbar to toggle fullscreen mode. When enabled, the editor:
+Click the full screen icon in the toolbar to toggle full screen mode. When enabled, the editor:
 
 - Expands to fill the entire browser window.
 - Adjusts its layout to optimize space for content and tools.
-- Can be exited by clicking the same icon again or pressing the `Esc` key.
+- Can be exited by clicking the `Minimize` icon again or pressing the `Esc` key.
 
 {% tabs %}
 {% highlight razor %}
@@ -29,4 +29,4 @@ Click the fullscreen icon in the toolbar to toggle fullscreen mode. When enabled
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor fullscreen](../images/blazor-richtexteditor-fullscreen.png)
+![Blazor RichTextEditor full screen](../images/blazor-richtexteditor-fullscreen.webp)

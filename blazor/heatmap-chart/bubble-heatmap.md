@@ -79,7 +79,7 @@ To render a bubble HeatMap with size series, set the [BubbleType](https://help.s
 
 ```
 
-![Changing Bubble Size in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-size.png)
+![Changing Bubble Size in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-size.webp)
 
 ### Bubble color
 
@@ -131,7 +131,7 @@ To represent the data points with variations in bubble colors, set the [BubbleTy
 
 ```
 
-![Changing Bubble Color in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-color.png)
+![Changing Bubble Color in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-color.webp)
 
 ### Bubble sector
 
@@ -183,7 +183,7 @@ To render the data points with bubble sector, set the [BubbleType](https://help.
 
 ```
 
-![Displaying Bubble Sector in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-sector.png)
+![Displaying Bubble Sector in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-sector.webp)
 
 
 ### Combining size and color bubble types
@@ -267,7 +267,7 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 ```
 
-![Bubble HeatMap with size and color combined and rendered with array data and table adaptor type](images/bubble/blazor-heatmap-chart-table-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color combined and rendered with array data and table adaptor type](images/bubble/blazor-heatmap-chart-table-data-bubble-sizeandcolor.webp)
 
 **Cell**
 
@@ -339,7 +339,7 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 ```
 
-![Bubble HeatMap with size and color combined and rendered with array data and cell adaptor type](images/bubble/blazor-heatmap-chart-cell-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color combined and rendered with array data and cell adaptor type](images/bubble/blazor-heatmap-chart-cell-data-bubble-sizeandcolor.webp)
 
 **JSON binding**
 
@@ -401,7 +401,7 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 ```
 
-![Bubble HeatMap with size and color combined and rendered with JSON data and table adaptor type](images/bubble/blazor-heatmap-chart-json-table-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color combined and rendered with JSON data and table adaptor type](images/bubble/blazor-heatmap-chart-json-table-data-bubble-sizeandcolor.webp)
 
 **Cell**
 
@@ -518,7 +518,7 @@ The following example illustrates how to render a bubble HeatMap with different 
 
 ```
 
-![Bubble HeatMap with size and color combined and rendered with JSON data and cell adaptor type](images/bubble/blazor-heatmap-chart-json-cell-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color combined and rendered with JSON data and cell adaptor type](images/bubble/blazor-heatmap-chart-json-cell-data-bubble-sizeandcolor.webp)
 
 
 **Binding size and color values from datasource**
@@ -630,4 +630,4 @@ The size and color of the bubbles in the **SizeAndColor** bubble HeatMap type ca
 
 ```
 
-![Bubble HeatMap with size and color type and bubble attributes](images/bubble/blazor-heatmap-chart-bubble-size-and-color-cell.png)
+![Bubble HeatMap with size and color type and bubble attributes](images/bubble/blazor-heatmap-chart-bubble-size-and-color-cell.webp)

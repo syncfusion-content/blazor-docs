@@ -33,4 +33,4 @@ The following code example initializes the Numeric TextBox in `Chinese` culture.
 }
 ```
 
-![Right to Left in Blazor Numeric TextBox](./images/blazor-numerictextbox-right-to-left.png)
+![Right to Left in Blazor Numeric TextBox](./images/blazor-numerictextbox-right-to-left.webp)

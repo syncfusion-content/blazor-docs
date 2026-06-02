@@ -33,7 +33,7 @@ In the following sample, `PopupWidth` is set to `300px`.
 
 {% endhighlight %}
 
-![Blazor ComboBox with customizing popup width](./images/popup-setting/blazor_ComboBox_popup-width.png)
+![Blazor ComboBox with customizing popup width](./images/popup-setting/blazor_ComboBox_popup-width.webp)
 
 ## Change the popup height
 
@@ -47,7 +47,7 @@ In the following sample, `PopupHeight` is set to `500px`.
 
 {% endhighlight %}
 
-![Blazor ComboBox with customizing popup height](./images/popup-setting/blazor_ComboBox_popup-height.png)
+![Blazor ComboBox with customizing popup height](./images/popup-setting/blazor_ComboBox_popup-height.webp)
 
 ## Change the popup z-index
 
@@ -65,7 +65,7 @@ Show the popup when the component is initialized by calling [ShowPopupAsync()](h
 
 {% endhighlight %}
 
-![Blazor ComboBox with Show popup on initial loading](./images/popup-setting/blazor_ComboBox_popup-initial-loading.png)
+![Blazor ComboBox with Show popup on initial loading](./images/popup-setting/blazor_ComboBox_popup-initial-loading.webp)
 
 ## Preventing opening and closing
 
@@ -77,7 +77,7 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 {% endhighlight %}
 
-![Blazor ComboBox with preventing opening and closing](./images/popup-setting/blazor_ComboBox_preventing-opening-closing.png)
+![Blazor ComboBox with preventing opening and closing](./images/popup-setting/blazor_ComboBox_preventing-opening-closing.webp)
 
 The following events are used when opening and closing the popup.
 

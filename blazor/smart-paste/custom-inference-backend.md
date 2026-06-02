@@ -53,9 +53,8 @@ using Syncfusion.Blazor.AI;
 using Syncfusion.Blazor.SmartComponents;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<IChatInferenceService, MockAIService>();
@@ -72,7 +71,7 @@ var app = builder.Build();
 4. Copy the sample content provided in the Razor file.
 5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the custom AI service.
 
-![Syncfusion Blazor Smart Paste Button with Custom AI](images/smart-paste.gif)
+![Syncfusion Blazor Smart Paste Button with Custom AI](images/smart-paste.webp)
 
 ## Implemented AI Services
 

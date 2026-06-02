@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and appearance in Syncfusion Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
 - **DataGrid root element:** Defines the overall appearance of the grid container.
 - **Alternate rows with frozen columns:** Applies styles to alternate rows when frozen columns are enabled.
@@ -28,7 +28,7 @@ Default styles such as **colors**, **typography**, **spacing**, and **borders** 
 
 Properties like **background-color**, **color**, **font-family**, and **padding** can be changed to match the grid layout design and improve visual consistency.
 
-![Change header background](../images/style-and-appearance/header-background.png)
+![Change header background](../images/style-and-appearance/header-background.webp)
 
 **Using Theme Studio:**
 
@@ -51,7 +51,7 @@ The **.e-grid** class styles the root container of the Blazor DataGrid. Apply CS
 
 Properties such as f **font-family**,**background-color**, and spacing-related styles can be adjusted to align with the grid design.
 
-![Grid root element](../images/style-and-appearance/style-font-family.png)
+![Grid root element](../images/style-and-appearance/style-font-family.webp)
 
 This customization applies a `cursive` font to the grid content. Additional styling can be applied to rows, alternate rows, selected rows, and hover states. Avoid using `!important` for hover styles in production environments. Instead, increase selector specificity to maintain consistent styling control.
 
@@ -168,7 +168,7 @@ The **.e-altrow .e-rowcell** selector styles cells in alternate rows when [Froze
 
 Adjust properties like **background-color**,**font-family**, and **border** to maintain consistent styling across frozen and movable sections.
 
-![Alternate row styling with frozen columns](../images/style-and-appearance/style-frozon.png)
+![Alternate row styling with frozen columns](../images/style-and-appearance/style-frozon.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -248,7 +248,7 @@ internal sealed class OrderData
 
 ## Customize the color of grid lines
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
+The Blazor DataGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 
@@ -262,7 +262,7 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Sf
 
 ```
 
-![Grid lines with custom borders](../images/style-and-appearance/grid-line.png)
+![Grid lines with custom borders](../images/style-and-appearance/grid-line.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

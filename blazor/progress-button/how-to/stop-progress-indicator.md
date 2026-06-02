@@ -27,4 +27,4 @@ Stop the active progress programmatically by calling the [EndProgressAsync](http
 }
 ```
 
-![Stop Progress Indicator in ProgressButton](./../images/blazor-progressbutton-stop-indicator.png)
+![Stop Progress Indicator in ProgressButton](./../images/blazor-progressbutton-stop-indicator.webp)

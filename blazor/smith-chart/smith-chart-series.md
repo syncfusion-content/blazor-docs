@@ -50,7 +50,7 @@ The [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 ```
 
-![Blazor Smith Chart with Series](./images/SmithChartSeries/blazor-smith-chart-series.png)
+![Blazor Smith Chart with Series](./images/SmithChartSeries/blazor-smith-chart-series.webp)
 
 ## Animation
 

@@ -37,7 +37,7 @@ Bind a preselected value to the AutoComplete component using the [@bind-Value](h
 
 {% endhighlight %}
 
-![Blazor AutoComplete showing a preselected value on initial render](./images/selection/blazor_autocomplete_preselect_value.png)
+![Blazor AutoComplete showing a preselected value on initial render](./images/selection/blazor_autocomplete_preselect_value.webp)
 
 ## Programmatically change the selected value
 
@@ -85,7 +85,7 @@ The following sample shows how to bind the index during initial rendering.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with bind-index selecting an item by position](./images/selection/blazor_autocomplete_preselect-value-index.png)
+![Blazor AutoComplete with bind-index selecting an item by position](./images/selection/blazor_autocomplete_preselect-value-index.webp)
 
 ## Autofill the selected value
 

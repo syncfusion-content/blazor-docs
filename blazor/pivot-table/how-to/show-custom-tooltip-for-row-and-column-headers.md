@@ -165,4 +165,4 @@ To show tooltips for row and column headers, use the [SfTooltip](https://blazor.
 
 ```
 
-![Show tooltip for row and column headers in Blazor PivotTable](images/blazor-pivottable-tooltip-for-row-and-column-headers.png)
+![Show tooltip for row and column headers in Blazor PivotTable](images/blazor-pivottable-tooltip-for-row-and-column-headers.webp)

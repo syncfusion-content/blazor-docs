@@ -17,7 +17,7 @@ To apply a different font style to a section of the content, select the text you
 
 ### Built-in font family
 
-The following table lists the default font name and width of the `FontName` dropdown and the available list of font names.
+The following table lists the default font name, the width of the `FontName` dropdown, and the available list of font names.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -32,7 +32,7 @@ The following table lists the default font name and width of the `FontName` drop
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.png)
+![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-builtin-font-name.webp)
 
 ### Custom font family
 
@@ -47,7 +47,7 @@ If you want to add additional font names and font sizes to the font drop-down, p
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with custom fonts family](../images/blazor-richtexteditor-custom-font.png)
+![Blazor RichTextEditor with custom fonts family](../images/blazor-richtexteditor-custom-font.webp)
 
 ### Google font support
 
@@ -104,7 +104,7 @@ For Blazor WebAssembly App, refer style in the `<head>` of the **~/index.html** 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Google font](../images/blazor-richtexteditor-google-font.png)
+![Blazor RichTextEditor with Google font](../images/blazor-richtexteditor-google-font.webp)
 
 ## Font size
 
@@ -129,7 +129,7 @@ The following table lists the default font size and width of the [FontSize](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.png)
+![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-builtin-font-size.webp)
 
 ### Custom font size
 
@@ -143,7 +143,7 @@ The Rich Text Editor provides support for customizing the font size with the exi
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.png)
+![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.webp)
 
 ## Font and background color
 
@@ -157,7 +157,7 @@ You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
+![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.webp)
 
 ### Custom font and background colors
 
@@ -175,7 +175,7 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-custom-background-color.png)
+![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-custom-background-color.webp)
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
@@ -192,23 +192,6 @@ This feature can be enabled separately for the [RichTextEditorFontColor](https:/
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Built-in editor content styles
 
@@ -306,7 +289,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   margin-top: 00.6em;
 }
 
-.e-rte-content .e-rte-image.e-imgbreak {
+.e-rte-content .e-rte-image.e-img-break {
   border: 0;
   cursor: pointer;
   display: block;
@@ -326,7 +309,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   position: relative;
 }
 
-.e-rte-content .e-rte-image.e-imginline {
+.e-rte-content .e-rte-image.e-img-inline {
   display: inline-block;
   float: none;
   margin-left: 5px;
@@ -335,7 +318,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   vertical-align: bottom;
 }
 
-.e-rte-content .e-rte-image.e-imgcenter {
+.e-rte-content .e-rte-image.e-img-center {
   cursor: pointer;
   display: block;
   float: none;
@@ -344,13 +327,13 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   position: relative;
 }
 
-.e-rte-content .e-rte-image.e-imgleft {
+.e-rte-content .e-rte-image.e-img-left {
   float: left;
   margin: 0 5px 0 0;
   text-align: left;
 }
 
-.e-rte-content .e-rte-image.e-imgright {
+.e-rte-content .e-rte-image.e-img-right {
   float: right;
   margin: 0 0 0 5px;
   text-align: right;
@@ -374,12 +357,12 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   vertical-align: bottom;
 }
 
-.e-rte-content .e-rte-img-caption.e-imgcenter {
+.e-rte-content .e-rte-img-caption.e-img-center {
   display: block;
 }
 
-.e-rte-content .e-rte-img-caption .e-rte-image.e-imgright,
-.e-rte-content .e-rte-img-caption .e-rte-image.e-imgleft {
+.e-rte-content .e-rte-img-caption .e-rte-image.e-img-right,
+.e-rte-content .e-rte-img-caption .e-rte-image.e-img-left {
   float: none;
   margin: 0;
 }
@@ -403,7 +386,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   border-style: dashed;
 }
 
-.e-rte-content .e-rte-img-caption .e-img-inner {
+.e-rte-content .e-rte-img-caption .e-img-caption-text {
   box-sizing: border-box;
   display: block;
   font-size: 16px;
@@ -437,7 +420,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
 ```
 ## Customizing numbered and bulleted lists
 
-This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
+This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase Greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -447,7 +430,7 @@ This feature allows users to change the appearance of the numbered and bulleted 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.png)
+![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.webp)
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
@@ -465,4 +448,4 @@ The following code will configure the InsertCode button in the toolbar and set t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor format code block](../images/blazor-richtexteditor-format-code-block.png)
+![Blazor RichTextEditor format code block](../images/blazor-richtexteditor-format-code-block.webp)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor MaskedTextBox Component in Server App
 
-This section briefly explains about how to include [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -159,7 +159,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfMaskedTextBox></SfMaskedTextBox>
 
@@ -168,7 +168,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MaskedTextBox component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrzXsLuJBRJNWJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrzXsLuJBRJNWJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.webp)" %}
 
 ## Set the mask
 
@@ -177,14 +177,14 @@ Set a mask on the MaskedTextBox to validate user input using the [Mask](https://
 The following example demonstrates the mask element `0`, which allows any single digit from `0` to `9`.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfMaskedTextBox Mask='000-000-0000'></SfMaskedTextBox>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLJtsLEzVdPzZtq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLJtsLEzVdPzZtq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MaskedTextBox).
 

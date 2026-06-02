@@ -71,7 +71,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Displaying HTML Content in Blazor TreeGrid Cell](images/blazor-treegrid-cell-with-html-content.png)
+![Displaying HTML Content in Blazor TreeGrid Cell](images/blazor-treegrid-cell-with-html-content.webp)
 
 ## Customize cell styles
 
@@ -167,7 +167,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Custom Cell Styles](images/blazor-treegrid-custom-cell-style.png)
+![Blazor TreeGrid with Custom Cell Styles](images/blazor-treegrid-custom-cell-style.webp)
 
 ## Auto wrap
 
@@ -236,7 +236,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blaor TreeGrid with Auto Wrap](images/blazor-treegrid-auto-wrap.png)
+![Blaor TreeGrid with Auto Wrap](images/blazor-treegrid-auto-wrap.webp)
 
 ## Grid lines
 
@@ -313,7 +313,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Grid Lines](images/blazor-treegrid-with-grid-lines.png)
+![Blazor TreeGrid with Grid Lines](images/blazor-treegrid-with-grid-lines.webp)
 
 N> By default, the tree grid renders with **Default** mode.
 
@@ -389,6 +389,6 @@ public class TreeData
 {% endtabs %}
 
 
-![Clip Mode in Blazor TreeGrid](images/blazor-treegrid-clip-mode.png)
+![Clip Mode in Blazor TreeGrid](images/blazor-treegrid-clip-mode.webp)
 
 N> By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode) value is **Ellipsis**.

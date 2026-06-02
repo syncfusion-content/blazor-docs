@@ -70,7 +70,7 @@ A linear trendline is a best-fit straight line used with simpler data sets. To r
 
 ```
 
-![Linear Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-linear-trendlines.png)
+![Linear Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-linear-trendlines.webp)
 
 ## Exponential
 
@@ -129,7 +129,7 @@ Exponential trendline is a curved line that is most useful when data values rise
 
 ```
 
-![Exponential Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-exponential-trendlines.png)
+![Exponential Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-exponential-trendlines.webp)
 
 ## Logarithmic
 
@@ -188,7 +188,7 @@ A logarithmic trendline is a best-fit curved line that is most useful when the r
 
 ```
 
-![Logarithmic Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-logarithmic-trendlines.png)
+![Logarithmic Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-logarithmic-trendlines.webp)
 
 ## Polynomial
 
@@ -247,7 +247,7 @@ A polynomial trendline is a curved line that is used when data fluctuates. To re
 
 ```
 
-![Polynomial Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-polynomial-trendlines.png)
+![Polynomial Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-polynomial-trendlines.webp)
 
 ## Power
 
@@ -306,7 +306,7 @@ A power trendline is a curved line that is best used with data sets that compare
 
 ```
 
-![Power Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-power-trendlines.png)
+![Power Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-power-trendlines.webp)
 
 ## Moving Average
 
@@ -365,7 +365,7 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
 ```
 
-![Moving Average Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-moving-average-trendlines.png)
+![Moving Average Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-moving-average-trendlines.webp)
 
 ## Forecasting
 
@@ -428,7 +428,7 @@ The value set to [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ```
 
-![Forward Forecasting Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-forward-forecasting-trendlines.png)
+![Forward Forecasting Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-forward-forecasting-trendlines.webp)
 
 ### Backward forecasting
 
@@ -487,7 +487,7 @@ The value set to [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Backward Forecasting Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-backward-forecasting-trendlines.png)
+![Backward Forecasting Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-backward-forecasting-trendlines.webp)
 
 ## Trendlines customization
 
@@ -552,7 +552,7 @@ Use the trendline [visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Hide Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-hide-trendlines.png)
+![Hide Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-hide-trendlines.webp)
 
 ## See also
 

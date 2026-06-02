@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection customization in Syncfusion Blazor DataGrid
 
-The appearance of selection elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for:
+The appearance of selection elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for:
 
 - **Row selection background:** Highlights the entire row when selected.
 - **Cell selection background:** Highlights individual cells when selected.
@@ -26,7 +26,7 @@ The **.e-selectionbackground** class styles the background of selected rows in t
 
 Properties such as **background-color**, **color**, and **font-weight** can be adjusted to match the grid’s design.
 
-![Row selection](../images/style-and-appearance/row-selection.png)
+![Row selection](../images/style-and-appearance/row-selection.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -118,7 +118,7 @@ The **.e-cellselectionbackground** class styles the background of selected cells
 
 Modify visual properties to align with the overall layout and improve clarity.
 
-![Cell selection](../images/style-and-appearance/cell-selection.png)
+![Cell selection](../images/style-and-appearance/cell-selection.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

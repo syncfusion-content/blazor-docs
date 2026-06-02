@@ -87,7 +87,7 @@ The Spinner component is rendered with other Blazor components. For example, ren
 
 ```
 
-![Blazor Tab Spinner](./images/blazor-tab-spinner.png)
+![Blazor Tab Spinner](./images/blazor-tab-spinner.webp)
 
 ## See also
 * [How to prevent focus on the controls beneath the overlay of the Blazor spinner?](https://support.syncfusion.com/kb/article/11568/how-to-prevent-focus-on-the-controls-beneath-the-overlay-of-the-blazor-spinner-)

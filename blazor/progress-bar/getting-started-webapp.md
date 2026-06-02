@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor ProgressBar Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -165,7 +165,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endtabs %}
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfProgressBar Value="50" Minimum="0" Maximum="100" TrackThickness="12" ProgressThickness="12">
 </SfProgressBar>
@@ -175,7 +175,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ProgressBar component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVzNiAXLOxVFFXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVzNiAXLOxVFFXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.webp)" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar)
 
@@ -184,7 +184,7 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 Change the type of the ProgressBar by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property. By default, the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear) type of ProgressBar will be rendered. In the following example, view the [Circular](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular) type.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfProgressBar Type="ProgressType.Circular" Value="70" Minimum="0" Maximum="100" TrackThickness="8" ProgressThickness="8">
 </SfProgressBar>
@@ -192,6 +192,6 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpDMUZLacfZQlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpDMUZLacfZQlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
 
 N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear) that shows you how to render and configure the ProgressBar.

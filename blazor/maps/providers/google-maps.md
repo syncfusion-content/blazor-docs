@@ -235,7 +235,7 @@ In the following example, Google Maps tiles are displayed by setting the `UrlTem
 }
 ```
 
-![Blazor Google Maps](../images/MapProviders/Google-maps/blazor-google-maps.png)
+![Blazor Google Maps](../images/MapProviders/Google-maps/blazor-google-maps.webp)
 
 ## Enable zooming and panning
 
@@ -261,7 +261,7 @@ To enable zooming, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfu
 </SfMaps>
 ```
 
-![Blazor Google Maps with Zooming and Panning](../images/MapProviders/Google-maps/blazor-google-maps-zooming.png)
+![Blazor Google Maps with Zooming and Panning](../images/MapProviders/Google-maps/blazor-google-maps-zooming.webp)
 
 N> Refer to the session token retrieval method described in the [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps) section.
 
@@ -309,7 +309,7 @@ Markers can be added to the Google Maps layer by setting the latitude and longit
 
 ```
 
-![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders/Google-maps/blazor-google-maps-marker-and-line.png)
+![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders/Google-maps/blazor-google-maps-marker-and-line.webp)
 
 N> Refer to the session token retrieval method described in the [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps) section.
 
@@ -335,7 +335,7 @@ A GeoJSON shape can be rendered as a sublayer on top of the Google Maps layer to
 
 ```
 
-![Blazor Google Maps with Sublayer](../images/MapProviders/Google-maps/blazor-google-maps-sublayer.png)
+![Blazor Google Maps with Sublayer](../images/MapProviders/Google-maps/blazor-google-maps-sublayer.webp)
 
 N> Refer to the session token retrieval method described in the [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps) section.
 
@@ -400,6 +400,6 @@ In the following example, the legend is associated with markers on the Google Ma
 
 ```
 
-![Blazor Google Maps with Legend](../images/MapProviders/Google-maps/blazor-google-maps-legend.png)
+![Blazor Google Maps with Legend](../images/MapProviders/Google-maps/blazor-google-maps-legend.webp)
 
 N> Refer to the session token retrieval method described in the [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps) section.

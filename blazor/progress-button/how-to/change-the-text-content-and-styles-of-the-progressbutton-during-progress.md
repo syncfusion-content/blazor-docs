@@ -39,4 +39,4 @@ Change the button text and styles during the progress state by updating the Cont
 
 ```
 
-![Changing Text Content and Style of Blazor ProgressButton](./../images/blazor-progressbutton-change-text.png)
+![Changing Text Content and Style of Blazor ProgressButton](./../images/blazor-progressbutton-change-text.webp)

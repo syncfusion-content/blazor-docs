@@ -126,10 +126,10 @@ using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -177,9 +177,8 @@ using Microsoft.Extensions.AI;
 using OpenAI;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string openAIApiKey = "API-KEY";
@@ -216,9 +215,8 @@ using Azure.AI.OpenAI;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string azureOpenAIKey = "AZURE_OPENAI_KEY";
@@ -264,9 +262,8 @@ using Microsoft.Extensions.AI;
 using OllamaSharp;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string ModelName = "MODEL_NAME";
@@ -363,7 +360,7 @@ Add the Syncfusion® **Blazor Smart Paste Button** component with form component
 1. Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application, rendering the Syncfusion® Blazor Smart Paste Button component in your default web browser.
 2. Copy the `Sample Content` and click the `Smart Paste` button to see the form fields automatically populated.
 
-![Syncfusion Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.gif)
+![Syncfusion Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
