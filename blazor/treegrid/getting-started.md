@@ -208,5 +208,8 @@ dotnet run
 ```bash
 dotnet run
 ```
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
