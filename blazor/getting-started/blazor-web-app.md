@@ -44,7 +44,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 Run the following command to create a new Blazor Web App.
 
-```bash
+```html
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 ```
 
@@ -56,7 +56,7 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 
 Run the following command to create a new Blazor Web App.
 
-```bash
+```html
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 ```
 
@@ -79,7 +79,7 @@ Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.B
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
-```bash
+```html
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
@@ -90,7 +90,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 Open the terminal and run the following commands.
 
-```bash
+```html
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 ```
@@ -101,7 +101,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 Open the command prompt and run the following commands.
 
-```bash
+```html
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 ```
@@ -211,7 +211,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 * Open the terminal and navigate to the `.Client` project folder, and run the following command.
 
-```bash
+```html
 dotnet run
 ```
 
@@ -221,7 +221,7 @@ dotnet run
 
 * Open the command prompt and navigate to the `.Client` project folder, and run the following command.
 
-```bash
+```html
 dotnet run
 ```
 
