@@ -34,4 +34,4 @@ The disableItem method can be used to handle dynamic changing in disable state o
 
 To disable the entire component, set the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Enabled) property to false.
 
-![Disabled ComboBox Component](./images/combobox-disable.png)
+![Disabled ComboBox Component](./images/combobox-disable.webp)

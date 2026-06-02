@@ -133,7 +133,7 @@ The following example demonstrates how to use the `CellClicked` event. In this e
 }
 ```
 
-![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.gif)
+![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.webp)
 
 ## CellRendering
 
@@ -170,7 +170,7 @@ The following example demonstrates how to use the `CellRendering` event to custo
     public string[] yAxisLabels = new string[] { "2008", "2009" };
 }
 ```
-![CellRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
+![CellRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-rendering-event.webp)
 
 
 ## CellSelected
@@ -221,7 +221,7 @@ The following example demonstrates how to use the `CellSelected` event to obtain
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![CellSelected event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-selected-event.gif)
+![CellSelected event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-selected-event.webp)
 
 ## Created
 
@@ -271,7 +271,7 @@ The following example demonstrates how to use the `Created` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![Created event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-created-event.png)
+![Created event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-created-event.webp)
 
 ## OnLoad
 
@@ -322,7 +322,7 @@ The following example demonstrates how to use the `OnLoad` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![OnLoad event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-on-load-event.png)
+![OnLoad event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-on-load-event.webp)
 
 ## Loaded
 
@@ -372,7 +372,7 @@ The following example demonstrates how to use the `Loaded` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![Loaded event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-loaded-event.png)
+![Loaded event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-loaded-event.webp)
 
 
 ## Resized
@@ -423,7 +423,7 @@ The following example demonstrates how to use the `Resized` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![Resized event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-resized-event.gif)
+![Resized event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-resized-event.webp)
 
 ## TooltipRendering
 
@@ -466,7 +466,7 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
     public string[] yAxisLabels = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 }
 ```
-![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
+![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.webp)
 
 ## CellDoubleClicked
 
@@ -524,7 +524,7 @@ The following example demonstrates how to use the `CellDoubleClicked` event to r
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![CellDoubleClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-double-clicked-event.gif)
+![CellDoubleClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-double-clicked-event.webp)
 
 ## LegendRendering
 
@@ -582,4 +582,4 @@ The following example demonstrates how to use the `LegendRendering` event to cus
     }
 }
 ```
-![LegendRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-legendrendering-event.png)
+![LegendRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-legendrendering-event.webp)

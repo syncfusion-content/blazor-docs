@@ -144,7 +144,7 @@ to last focusable element</td></tr>
 
 
 
-![Accessibility in Blazor Dialog](./images/blazor-dialog-accessibility.png)
+![Accessibility in Blazor Dialog](./images/blazor-dialog-accessibility.webp)
 
 ## See also
 

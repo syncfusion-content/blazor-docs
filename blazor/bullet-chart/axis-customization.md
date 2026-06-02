@@ -43,7 +43,7 @@ The following properties can be used to customize [MajorTicklines](https://help.
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAshrMpzsZIqTR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Major and Minor TickLines in Blazor Bullet Chart](images/blazor-bullet-chart-tick-line-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAshrMpzsZIqTR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Major and Minor TickLines in Blazor Bullet Chart](images/blazor-bullet-chart-tick-line-customization.webp)" %}
 
 ## Tick placement
 
@@ -63,7 +63,7 @@ The major and the minor ticks can be placed [Inside](https://help.syncfusion.com
 
 N> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgiLVCTTsfCtyC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Tick Position in Blazor Bullet Chart](images/blazor-bullet-chart-tick-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgiLVCTTsfCtyC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Tick Position in Blazor Bullet Chart](images/blazor-bullet-chart-tick-position.webp)" %}
 
 ## Label format
 
@@ -83,7 +83,7 @@ The axis labels support all the globalize formats and can be changed using the [
 
 N> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgMBVMpfCnRdov?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Label Format in Blazor Bullet Chart](images/blazor-bullet-chart-label-format.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgMBVMpfCnRdov?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Label Format in Blazor Bullet Chart](images/blazor-bullet-chart-label-format.webp)" %}
 
 The following table describes the result of applying some commonly used formats to numeric axis values.
 
@@ -173,7 +173,7 @@ To separate the groups of thousands, set the [EnableGroupSeparator](https://help
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthqsBLMzfBQwPJD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Bullet Chart](images/blazor-bullet-chart-grouping.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthqsBLMzfBQwPJD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Bullet Chart](images/blazor-bullet-chart-grouping.webp)" %}
 
 ## Custom label format
 
@@ -193,7 +193,7 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUshVCfpgssdbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Custom Label Format](images/blazor-bullet-chart-custom-label-format.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUshVCfpgssdbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Custom Label Format](images/blazor-bullet-chart-custom-label-format.webp)" %}
 
 ## Label placement
 
@@ -213,7 +213,7 @@ Label can be placed [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUMrBWJfgftZky?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Label Position in Blazor Bullet Chart](images/blazor-bullet-chart-labels-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUMrBWJfgftZky?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Label Position in Blazor Bullet Chart](images/blazor-bullet-chart-labels-position.webp)" %}
 
 ## Opposed position
 
@@ -233,7 +233,7 @@ To place an axis opposite to its original position, set the [OpposedPosition](ht
 
 N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBqMBVWzJqnbrpi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Opposed Position](images/blazor-bullet-chart-opposed-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBqMBVWzJqnbrpi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Opposed Position](images/blazor-bullet-chart-opposed-position.webp)" %}
 
 ## Category label
 
@@ -264,7 +264,7 @@ The [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgsrViJpTWnjZN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Category Label](images/blazor-bullet-chart-category-label.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgsrViJpTWnjZN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Category Label](images/blazor-bullet-chart-category-label.webp)" %}
 
 ## Axis label and category label customization
 
@@ -286,4 +286,4 @@ The label color, opacity, font size, font family, font weight, and font style ca
 
 N> Refer to the [code block](#category-label) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWrLCzTJTgHRy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Axis and Category Label in Blazor Bullet Chart](images/blazor-bullet-chart-label-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWrLCzTJTgHRy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Axis and Category Label in Blazor Bullet Chart](images/blazor-bullet-chart-label-customization.webp)" %}

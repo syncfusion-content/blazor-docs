@@ -58,7 +58,7 @@ The grouping bar provides intuitive interactions similar to the Field List, maki
 
 ```
 
-![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
+![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.webp)
 
 ## Show or hide fields panel
 
@@ -94,7 +94,7 @@ To display the fields panel, set the [ShowFieldsPanel](https://help.syncfusion.c
 }
 ```
 
-![Displaying Fields Panel in Blazor PivotTable](images/blazor-pivottable-show-fields-panel.png)
+![Displaying Fields Panel in Blazor PivotTable](images/blazor-pivottable-show-fields-panel.webp)
 
 ## Show or hide all filter icon
 
@@ -138,7 +138,7 @@ By default, the filter icon appears next to each field in the grouping bar. If y
 }
 ```
 
-![Hiding All Filter Icon in GroupBar in Blazor PivotTable](images/blazor-pivottable-hide-filter-icon-in-group-bar.png)
+![Hiding All Filter Icon in GroupBar in Blazor PivotTable](images/blazor-pivottable-hide-filter-icon-in-group-bar.webp)
 
 ## Show or hide specific filter icon
 
@@ -179,7 +179,7 @@ In the sample below, the filter icons for the "Quarter" and "Products" fields ar
 }
 ```
 
-![Hiding Specific Filter Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-filter-icon.png)
+![Hiding Specific Filter Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-filter-icon.webp)
 
 ## Show or hide all sort icon
 
@@ -224,7 +224,7 @@ To disable the sort option, set the [ShowSortIcon](https://help.syncfusion.com/c
 
 ```
 
-![Hiding All Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-sort-icon.png)
+![Hiding All Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-sort-icon.webp)
 
 ## Show or hide specific sort icon
 
@@ -266,7 +266,7 @@ In the example below, the sort icons for the "Quarter" and "Country" fields are 
 
 ```
 
-![Hiding Specific Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-sort-icon.png)
+![Hiding Specific Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-sort-icon.webp)
 
 ## Show or hide all remove icon
 
@@ -310,7 +310,7 @@ If you want to hide the remove icon, set the [ShowRemoveIcon](https://help.syncf
 }
 ```
 
-![Hiding All Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-remove-icon.png)
+![Hiding All Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-remove-icon.webp)
 
 ## Show or hide specific remove icon
 
@@ -351,7 +351,7 @@ In the example below, the remove icon for the "Year", "Sold", and "Products" fie
 }
 ```
 
-![Hiding Specific Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-remove-icon.png)
+![Hiding Specific Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-remove-icon.webp)
 
 ## Disable all fields from dragging
 
@@ -391,7 +391,7 @@ In the Pivot Table, the grouping bar lets users move fields between the row, col
 }
 ```
 
-![Disabling All Fields while Dragging in Blazor PivotTable](images/blazor-pivottable-disable-all-field-while-dragging.png)
+![Disabling All Fields while Dragging in Blazor PivotTable](images/blazor-pivottable-disable-all-field-while-dragging.webp)
 
 ## Disable specific field from dragging
 
@@ -473,11 +473,11 @@ By default, the icon for setting the aggregation type is visible in the grouping
 ```
 
 <!-- markdownlint-disable MD012 -->
-![Changing Aggregation Type Icon in Blazor PivotTable](images/aggregation_gb_icon.png)
+![Changing Aggregation Type Icon in Blazor PivotTable](images/aggregation_gb_icon.webp)
 <br/>
 <br/>
 <br/>
-![Changing Aggregation Type in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.png)
+![Changing Aggregation Type in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.webp)
 
 ## Show or hide specific dropdown icon
 
@@ -518,7 +518,7 @@ In the following example, the dropdown icon for the "Sold" field is hidden:
 }
 ```
 
-![Hiding Specific DropDown Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-dropdown-icon.png)
+![Hiding Specific DropDown Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-dropdown-icon.webp)
 
 N> The properties [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowFilterIcon), [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowSortIcon), [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ShowValueTypeIcon), and [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_AllowDragAndDrop) in fields of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) are applicable for both grouping bar and field list.
 

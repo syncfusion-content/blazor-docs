@@ -17,17 +17,17 @@ The Rich Text Editor's basic styles feature provides essential formatting option
 
 The table below lists the available text styles in the Rich Text Editor's toolbar.
 
-| Name | Icons | Summary | Initialization |
-|----------------|---------|---------|------------------------------------------|
-| Bold  | ![Bold icon](../images/bold.png) | Makes text thicker and darker | toolbarSettings: { items: ['Bold']} | `<b>bold</b>` |
-| Italic | ![Italic icon](../images/italic.png) | Slants text to the right | toolbarSettings: { items: ['Italic']} | `<em>italic</em>` |
-| Underline | ![Underline icon](../images/under-line.png) | Adds a line beneath the text | toolbarSettings: { items: ['Underline']} |
-| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.png) | Applies a line through the text. |toolbarSettings: { items: ['StrikeThrough']}|
-| InlineCode |![InlineCode icon](../images/inlineCode.png) | Formats text as inline code | toolbarSettings: { items: ['InlineCode']} | `<code>inline code</code>`|
-| SubScript | ![SubScript icon](../images/sub-script.png) | Positions text slightly below the normal line |toolbarSettings: { items: ['SubScript']}|
-| SuperScript | ![SuperScript icon](../images/super-script.png) | Positions text slightly above the normal line |toolbarSettings: { items: ['SuperScript’']}|
-| LowerCase | ![LowerCase icon](../images/lower-case.png) |  Converts text to lowercase |toolbarSettings: { items: ['LowerCase']}|
-| UpperCase | ![UpperCase icon](../images/upper-case.png) | Converts text to uppercase |toolbarSettings: { items: ['UpperCase’']}|
+| Name | Icons | Summary |
+|----------------|---------|---------|
+| Bold  | ![Bold icon](../images/bold.webp) | Makes text thicker and darker |
+| Italic | ![Italic icon](../images/italic.webp) | Slants text to the right |
+| Underline | ![Underline icon](../images/under-line.webp) | Adds a line beneath the text |
+| StrikeThrough | ![StrikeThrough icon](../images/strikethrough.webp) | Applies a line through the text. |
+| InlineCode |![InlineCode icon](../images/inlineCode.webp) | Formats text as inline code |
+| SubScript | ![SubScript icon](../images/sub-script.webp) | Positions text slightly below the normal line |
+| SuperScript | ![SuperScript icon](../images/super-script.webp) | Positions text slightly above the normal line |
+| LowerCase | ![LowerCase icon](../images/lower-case.webp) |  Converts text to lowercase |
+| UpperCase | ![UpperCase icon](../images/upper-case.webp) | Converts text to uppercase |
 
 Please refer to the sample below to add these basic text styling options in the Rich Text Editor.
 
@@ -39,7 +39,7 @@ Please refer to the sample below to add these basic text styling options in the 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor basic text styles](../images/blazor-richtexteditor-basic-text-format.png)
+![Blazor RichTextEditor basic text styles](../images/blazor-richtexteditor-basic-text-format.webp)
 
 ## Text alignments
 
@@ -71,7 +71,7 @@ Please refer to the sample and code snippets below to add these alignment option
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor text alignments](../images/blazor-richtexteditor-text-alignment.png)
+![Blazor RichTextEditor text alignments](../images/blazor-richtexteditor-text-alignment.webp)
 
 ## Number and bullet format list
 
@@ -114,7 +114,7 @@ The following example demonstrates how to customize the number format lists in t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor number formatlist](../images/blazor-richtexteditor-number-format-list.png)
+![Blazor RichTextEditor number formatlist](../images/blazor-richtexteditor-number-format-list.webp)
 
 ### Unordered lists
 
@@ -145,7 +145,27 @@ The following example demonstrates how to customize the bullet format lists in t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor bullet formatlist](../images/blazor-richtexteditor-bullet-format-list.png)
+![Blazor RichTextEditor bullet formatlist](../images/blazor-richtexteditor-bullet-format-list.webp)
+
+## Checklist
+
+Checklists enable users to create interactive lists with selectable items, making it easier to track tasks and organize content efficiently. The Rich Text Editor provides a simple way to create and manage checklists:
+
+### Using the checklist tool
+
+The `CheckList` toolbar item provides a convenient way to create or toggle a checklist. To use it, select the desired text in the editor and click the `CheckList` button in the toolbar. The selected text will be converted into a checklist with checkable items. If the content is already a checklist, clicking the button will remove the checklist formatting.
+
+Please refer to the sample and code snippets below to add these checklist options in the Rich Text Editor.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/check-list.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor checklist](../images/blazor-richtexteditor-check-list.webp)
 
 ## Nested list creation using Tab key
 
@@ -153,7 +173,7 @@ In the Rich Text Editor, pressing the `Tab` key while the cursor is inside a lis
 
 Please refer to the below video for visual behavior and interaction examples:
 
-![Rich Text Editor list editing behaviour](../images/list-editing.gif)
+![Rich Text Editor list editing behaviour](../images/list-editing.webp)
 
 ## Increase and decrease indent
 
@@ -173,6 +193,16 @@ To adjust the text indentation:
 3. The indentation of the selected text will be modified accordingly.
 
 To configure the `Indent` and `Outdent` toolbar item, refer to the below code.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/indentations.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor indentations](../images/blazor-richtexteditor-indentations.webp)
 
 ### Indentation in lists
 
@@ -214,7 +244,7 @@ The following table list the default format name and width of the  [Format](http
 | Default Key | Default Value |
 |-----|--------------------------------------|
 | [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Width) | 65px|
-| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Code", Value = "Pre" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" }<br>}; |
+| [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Preformatted", Value = "Pre" },<br>}; |
 
 {% tabs %}
 {% highlight razor %}
@@ -224,7 +254,7 @@ The following table list the default format name and width of the  [Format](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.png)
+![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.webp)
 
 ### Custom format
 
@@ -238,7 +268,7 @@ The Rich Text Editor provides support for custom formats with an existing list. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.png)
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.webp)
 
 ## Quotation formatting
 
@@ -258,7 +288,7 @@ Use the `Blockquote` tool in the editor below to see the feature in action.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-quotation-formatting.png)
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-quotation-formatting.webp)
 
 ### Nested blockquotes
 
@@ -278,7 +308,7 @@ While the toolbar does not provide a direct method to apply blockquote formattin
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-nested-quotation-formatting.png)
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-nested-quotation-formatting.webp)
 
 ## LineHeight
 
@@ -312,7 +342,7 @@ Example: Add the LineHeight tool and configure items
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with LineHeight](../images/blazor-richtexteditor-line-height.png)
+![Blazor RichTextEditor with LineHeight](../images/blazor-richtexteditor-line-height.webp)
 
 ## Horizontal line
 
@@ -330,7 +360,7 @@ Use the `HorizontalLine` tool in the editor below to see the feature in action.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-horizontal-line.png)
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-horizontal-line.webp)
 
 ## Format Painter in Blazor Rich Text Editor
 
@@ -382,7 +412,7 @@ Here's an example of how to configure the Clear Format feature:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-clear-format.png)
+![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-clear-format.webp)
 
 ### Using clear format
 
@@ -402,7 +432,7 @@ Using `Clear Format` makes it easy to undo styling changes and keep your text lo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-using-clear-format.gif)
+![Blazor RichTextEditor with Clear Format](../images/blazor-richtexteditor-using-clear-format.webp)
 
 ## Markdown Auto Format
 

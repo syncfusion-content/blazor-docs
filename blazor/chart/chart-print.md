@@ -60,7 +60,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ```
 
-![Printing in Blazor Chart](images/getting-started/blazor-chart-printing.png)
+![Printing in Blazor Chart](images/getting-started/blazor-chart-printing.webp)
 
 ### Print - Multiple Charts
 
@@ -232,8 +232,8 @@ Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts.png)
-![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts2.png)
+![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts.webp)
+![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts2.webp)
 
 ## Export
 

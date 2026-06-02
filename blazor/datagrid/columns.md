@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor DataGrid
 
-Columns are the core structural elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
+Columns are the core structural elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 Each column defines:
 
 * The data field to display.
@@ -20,7 +20,7 @@ Effective column configuration ensures data is presented clearly, remains access
 
 ## Column Types
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid utilizes columns to organize and display diverse data. Each column can be assigned a specific data type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This property accepts values from the [ColumnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html) enumeration, which is crucial for determining how data is displayed and formatted (e.g., numeric, date, or string).
+The Blazor DataGrid utilizes columns to organize and display diverse data. Each column can be assigned a specific data type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. This property accepts values from the [ColumnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html) enumeration, which is crucial for determining how data is displayed and formatted (e.g., numeric, date, or string).
 
 The DataGrid supports the following column types:
 
@@ -132,7 +132,7 @@ If multiple CheckBox columns are defined, selecting a checkbox in one column aut
 
 ## Column Width
 
-The Syncfusion Blazor DataGrid allows adjustment of column width using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width)  property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property accepts values in **pixels** or **percentages**. For example, set `100` for 100 pixels or `25%` for 25% of the available width.
+The Blazor DataGrid allows adjustment of column width using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width)  property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property accepts values in **pixels** or **percentages**. For example, set `100` for 100 pixels or `25%` for 25% of the available width.
 
 **Key behaviors**
 
@@ -154,7 +154,7 @@ The Syncfusion Blazor DataGrid allows adjustment of column width using the [Widt
 
 **Supported types for column width**
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports the following three types of column width:
+The Blazor DataGrid supports the following three types of column width:
 
 **1. Auto**
 
@@ -248,7 +248,7 @@ public class OrderData
 
 ## Column Formatting
 
-Column formatting is a powerful feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid that allows customization of data display within Grid columns. Various formatting options are available to meet specific requirements, such as displaying numbers with particular formats, formatting dates according to a specific locale, and using templates to format column values.
+Column formatting is a powerful feature in the Blazor DataGrid that allows customization of data display within Grid columns. Various formatting options are available to meet specific requirements, such as displaying numbers with particular formats, formatting dates according to a specific locale, and using templates to format column values.
 
 The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property can be used to specify the format for column values.
 
@@ -328,7 +328,7 @@ The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridC
 
 ### Number formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing the display of numeric values in columns using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property supports both standard numeric format strings and custom numeric format strings.
+The Blazor DataGrid allows customizing the display of numeric values in columns using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property supports both standard numeric format strings and custom numeric format strings.
 
 | Format | Description       | Remarks                                                    |
 |--------|-------------------|------------------------------------------------------------|
@@ -457,10 +457,9 @@ public class OrderData
     {
 
     }
-    public OrderData(int? OrderID, string CustomerID, double Freight,DateTime? OrderDate)
+    public OrderData(int? OrderID, double Freight,DateTime? OrderDate)
     {
         this.OrderID = OrderID;
-        this.CustomerID = CustomerID;   
         this.Freight = Freight;  
         this.OrderDate = OrderDate;           
     }
@@ -472,15 +471,15 @@ public class OrderData
             int code = 10;
             for (int i = 1; i < 2; i++)
             {
-                Orders.Add(new OrderData(10248, 32.38,new DateTime(1996,7,4)));
+                Orders.Add(new OrderData(10248, 32.38, new DateTime(1996,7,4)));
                 Orders.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5)));
                 Orders.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 6)));
                 Orders.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 7)));
                 Orders.Add(new OrderData(10252, 51.30, new DateTime(1996, 7, 8)));
                 Orders.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 9)));
                 Orders.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 10)));
-                Orders.Add(new OrderData(10255, 148.33,"", new DateTime(1996, 7, 11)));
-                Orders.Add(new OrderData(10256, 13.97,"", new DateTime(1996, 7, 12)));
+                Orders.Add(new OrderData(10255, 148.33,new DateTime(1996, 7, 11)));
+                Orders.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 12)));
                 code += 5;
             }
         }
@@ -528,7 +527,7 @@ Once localization is enabled, apply a custom date format using the `Format` prop
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/counter"
+@page "/"
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -552,8 +551,7 @@ Once localization is enabled, apply a custom date format using the `Format` prop
 
 {% endhighlight %}
 {% highlight cs tabtitle="OrderData.cs" %}
-namespace LocalizationSample.Client
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -602,12 +600,11 @@ namespace LocalizationSample.Client
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Format the date column based on localization](./images/blazor-datagrid-format-localization.png)
+![Format the date column based on localization](./images/blazor-datagrid-format-localization.webp)
 
 > [Syncfusion<sup style="font-size:70%">&reg;</sup> GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
 
@@ -801,7 +798,7 @@ public class OrderData
 
 ## Text and Header Alignment
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides options to align both column content and header text for better readability and presentation.
+The Blazor DataGrid provides options to align both column content and header text for better readability and presentation.
 
 ### Text Alignment
 
@@ -817,7 +814,7 @@ Text alignment is useful for improving readability, especially for numeric or da
 
 ### Header Text Alignment
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows aligning header text using the [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property also accepts values from the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) enum:
+The Blazor DataGrid allows aligning header text using the [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property also accepts values from the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) enum:
 
 * **None** – No specific alignment; defaults to **Left**.
 * **Left** – Aligns header text to the left.
@@ -949,7 +946,7 @@ N >* The `TextAlign` property only changes the alignment of cell content, not th
 
 ## Render boolean values as checkbox
 
-Boolean values in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be displayed as checkboxes instead of text. This is achieved by enabling the [DisplayAsCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisplayAsCheckBox) property in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) configuration.
+Boolean values in the Blazor DataGrid can be displayed as checkboxes instead of text. This is achieved by enabling the [DisplayAsCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisplayAsCheckBox) property in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1025,7 +1022,7 @@ Boolean values in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Da
 
 ## AutoFit columns
 
-AutoFit in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid automatically adjusts column widths so that the content is fully visible without wrapping. This feature ensures a clean layout and improves readability without manual width adjustments.
+AutoFit in the Blazor DataGrid automatically adjusts column widths so that the content is fully visible without wrapping. This feature ensures a clean layout and improves readability without manual width adjustments.
 
 AutoFit is useful when:
 
@@ -1035,16 +1032,16 @@ AutoFit is useful when:
 
 **Options to Apply AutoFit**
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides multiple options to automatically adjust column widths based on content or predefined settings.
+The Blazor DataGrid provides multiple options to automatically adjust column widths based on content or predefined settings.
 
 1. AutoFit on double-click
 2. AutoFit via Programmatically
 3. AutoFit with Empty Space
-4. AutoFit on Column Visibility Change
+<!-- 4. AutoFit on Column Visibility Change -->
 
 ### AutoFit on double-click
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows columns to automatically adjust their width based on the maximum content width when you double-click the resizer symbol in the column header. This ensures that all data in the grid rows is displayed without wrapping.
+The Blazor DataGrid allows columns to automatically adjust their width based on the maximum content width when you double-click the resizer symbol in the column header. This ensures that all data in the grid rows is displayed without wrapping.
 
 To enable this feature, Set the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowResizing) property to **true** in the grid.
 
@@ -1126,7 +1123,7 @@ public class OrderData
 
 ### AutoFit via Programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the `AutoFitColumnsAsync` method to resize columns based on content.
+The Blazor DataGrid provides the `AutoFitColumnsAsync` method to resize columns based on content.
 
 - Autofit specific columns by passing their field names.
 - Autofit all columns by calling the method without parameters.
@@ -1384,9 +1381,9 @@ public class OrderDetails
 
 > If any column width is undefined, that column automatically adjusts to fill the remaining grid width, even when `AutoFit` is enabled.
 
-### AutoFit on Column Visibility Change
+<!-- ### AutoFit on Column Visibility Change
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can automatically adjust column widths when column visibility changes through the column chooser. This behavior is implemented by invoking [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) from the [ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) event, which is raised after the column chooser applies visibility updates. The [ColumnVisibilityChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnVisibilityChangedEventArgs.html) class provides context for the columns that became visible or hidden.
+The Blazor DataGrid can automatically adjust column widths when column visibility changes through the column chooser. This behavior is implemented by invoking [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) from the [ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) event, which is raised after the column chooser applies visibility updates. The [ColumnVisibilityChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnVisibilityChangedEventArgs.html) class provides context for the columns that became visible or hidden.
 
 The example demonstrates autofitting columns after changing visibility using the [Column Chooser](https://blazor.syncfusion.com/documentation/datagrid/column-chooser):
 
@@ -1467,11 +1464,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLICrNzRDbCTmVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLICrNzRDbCTmVz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Fixed columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports fixing specific columns at the beginning of the grid to maintain their position during scrolling. Fixed columns cannot be **reordered** or **grouped** and remain in the defined order.
+The Blazor DataGrid supports fixing specific columns at the beginning of the grid to maintain their position during scrolling. Fixed columns cannot be **reordered** or **grouped** and remain in the defined order.
 
 Enable this behavior by setting the [FixedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FixedColumn) property to **true** for the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
@@ -1548,11 +1545,11 @@ public class OrderDetails
 
 ## Show or hide columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports dynamic control of column visibility using properties or methods. Columns can be displayed or hidden based on configuration or runtime actions.
+The Blazor DataGrid supports dynamic control of column visibility using properties or methods. Columns can be displayed or hidden based on configuration or runtime actions.
 
 ### Show or hide columns via property
 
-Column visibility in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be controlled through the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property. Setting this property to **true** displays the column, while setting it to **false** hides the column from the grid layout.
+Column visibility in the Blazor DataGrid can be controlled through the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property. Setting this property to **true** displays the column, while setting it to **false** hides the column from the grid layout.
 
 The `Visible` property is set to **false** for the **ShipCity** column.
 
@@ -1635,7 +1632,7 @@ public class OrderData
 
 ### Show or hide columns via programmatically
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides methods to dynamically control column visibility at runtime. Columns can be shown or hidden using the built-in methods.
+The Blazor DataGrid provides methods to dynamically control column visibility at runtime. Columns can be shown or hidden using the built-in methods.
 
 * **Show columns**
 
@@ -1859,7 +1856,7 @@ public class OrderData
 
 ## Removing hidden column elements from the DOM
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid optimizes the DOM by removing hidden columns from the rendered HTML. This reduces unnecessary elements in the DOM and improves performance, especially when working with large datasets.
+The Blazor DataGrid optimizes the DOM by removing hidden columns from the rendered HTML. This reduces unnecessary elements in the DOM and improves performance, especially when working with large datasets.
 
 To enable this behavior, set the [ShouldRenderHiddenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRenderHiddenColumns) property to **false** in the Grid.
 
@@ -1950,7 +1947,7 @@ public class OrderDetails
 
 ## Controlling Blazor DataGrid actions
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows controlling specific actions such as **filtering**, **grouping**, **sorting**, **resizing**, **reordering**, **editing**, and **searching** for individual columns using the following properties:
+The Blazor DataGrid allows controlling specific actions such as **filtering**, **grouping**, **sorting**, **resizing**, **reordering**, **editing**, and **searching** for individual columns using the following properties:
 
 * [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing): Enables or disables editing for a column.
 * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering): Enables or disables filtering for a column.
@@ -2032,7 +2029,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows cont
 
 ## Customize column styles
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows customizing column styles to match design requirements. Styles such as font, background color, and other visual properties can be modified using:
+The Blazor DataGrid allows customizing column styles to match design requirements. Styles such as font, background color, and other visual properties can be modified using:
 
 * Grid events (e.g., `QueryCellInfo` for dynamic styling)
 * CSS classes for static styling
@@ -2043,11 +2040,11 @@ For detailed guidance, refer to the [Customize Cell Styles](https://blazor.syncf
 
 ## Manipulating columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides options to access, add, and remove columns dynamically using properties, methods, and events.
+The Blazor DataGrid provides options to access, add, and remove columns dynamically using properties, methods, and events.
 
 ### Accessing Columns
 
-To access columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, use the following methods:
+To access columns in the Blazor DataGrid, use the following methods:
 
 **1. Get All Columns**
 
@@ -2089,7 +2086,7 @@ The [GetColumnFieldNamesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ### Adding or Removing Columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the DataGrid instance.
+The Blazor DataGrid allows dynamically adding or removing columns using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which is accessible through the DataGrid instance.
 
 - Use the **Add** method to insert a new column object into the Columns collection.
 - Use the **RemoveAt** method to remove a column by its index from the Columns collection.
@@ -2195,14 +2192,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows dyna
 
 ### Refresh columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method to refresh column definitions dynamically. This method is useful when columns are added, removed, or updated based on actions or data changes.
+The Blazor DataGrid provides the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method to refresh column definitions dynamically. This method is useful when columns are added, removed, or updated based on actions or data changes.
 
 ```cs
 await Grid.RefreshColumnsAsync();
 ```
 ## Responsive columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports responsive column visibility using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HideAtMedia) property. This property accepts valid CSS [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html) and hides columns based on screen width conditions.
+The Blazor DataGrid supports responsive column visibility using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HideAtMedia) property. This property accepts valid CSS [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html) and hides columns based on screen width conditions.
 
 Use `HideAtMedia` property to create responsive layouts where certain columns are hidden automatically on smaller screens, improving readability and reducing horizontal scrolling.
 
@@ -2278,6 +2275,6 @@ Use `HideAtMedia` property to create responsive layouts where certain columns ar
 
 * [How to create a Custom Grid Column component](https://support.syncfusion.com/kb/article/11220/blazor-grid-how-to-create-a-custom-grid-column-component)
 
-* Comprehensive information about the Syncfusion Blazor DataGrid and its features is available through the following resources:
+* Comprehensive information about the Blazor DataGrid and its features is available through the following resources:
     * **Feature Overview:** The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour provides a complete overview of available capabilities.
     * **Interactive Examples:** The [Blazor DataGrid examples](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) provide practical demonstrations of data presentation and manipulation.

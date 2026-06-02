@@ -430,4 +430,4 @@ To perform a tap action on a column header in the Syncfusion<sup style="font-siz
 
 The following screenshot shows Gantt touch sorting,
 
-![Multiple Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-sorting.png)
+![Multiple Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-sorting.webp)

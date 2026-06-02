@@ -128,7 +128,7 @@ N> For this customization, refer the `fabric.css` file. This could be found from
 </style>
   ```
 
-![Blazor Toggle Switch Button with Custom Bar](./../images/blazor-toggle-switch-button-custom-bar.png)
+![Blazor Toggle Switch Button with Custom Bar](./../images/blazor-toggle-switch-button-custom-bar.webp)
 
 ## Color the Toggle Switch Button
 

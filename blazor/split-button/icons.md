@@ -39,7 +39,7 @@ documentation: ug
 
 ```
 
-![Blazor SplitButton with Icon](./images/blazor-splitbutton-icon.png)
+![Blazor SplitButton with Icon](./images/blazor-splitbutton-icon.webp)
 
 Third-party or custom icons can also be applied by assigning the appropriate class name to the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property. Ensure the corresponding icon font or stylesheet is referenced in the application.
 
@@ -66,7 +66,7 @@ A vertical layout for the Split Button can be achieved by adding the `e-vertical
 
 ```
 
-![Blazor SplitButton in Vertical](./images/blazor-splitbutton-vertical.png)
+![Blazor SplitButton in Vertical](./images/blazor-splitbutton-vertical.webp)
 
 ## Separator
 
@@ -92,7 +92,7 @@ Separators are horizontal lines used to group items in the popup menu. Separator
 
 ```
 
-![Blazor SplitButton with Separator](./images/blazor-splitbutton-separator.png)
+![Blazor SplitButton with Separator](./images/blazor-splitbutton-separator.webp)
 
 ## See Also
 

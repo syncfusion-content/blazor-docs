@@ -161,7 +161,7 @@ N> The order of toolbar options can be changed by simply moving the position of 
 
 ```
 
-![Blazor PivotTable with Toolbar](images/blazor-pivottable-with-toolbar.png)
+![Blazor PivotTable with Toolbar](images/blazor-pivottable-with-toolbar.webp)
 
 ## Show desired chart types in the dropdown menu
 
@@ -217,19 +217,19 @@ To learn more about the supported chart types, see the [Pivot Chart documentatio
 
 ```
 
-![Displaying Blazor PivotChart in DropDown Menu](images/blazor-pivotchart-in-dropdown-menu.png)
+![Displaying Blazor PivotChart in DropDown Menu](images/blazor-pivotchart-in-dropdown-menu.webp)
 
 ## Switch the chart to multiple axes
 
 In the pivot chart, users can switch between a single axis and multiple axes using a built-in checkbox located in the chart type dropdown menu on the toolbar. This option allows users to display data on multiple axes for better visualization. For more details, [refer here](https://blazor.syncfusion.com/documentation/pivot-table/pivot-chart#multi-axis).
 
-![Displaying Multiple Axes in Blazor PivotTable DropDown Menu](images/blazor-pivotchart-show-multiple-axes.png)
+![Displaying Multiple Axes in Blazor PivotTable DropDown Menu](images/blazor-pivotchart-show-multiple-axes.webp)
 
 ## Show or hide legend
 
 In the pivot chart, you can show or hide the legend dynamically using an option in the chart type drop-down menu on the toolbar. This allows you to control whether the legend appears alongside the chart. For accumulation chart types, such as pie, doughnut, pyramid, and funnel, the legend is hidden by default. You can enable or disable the legend using a built-in checkbox available in the drop-down menu.
 
-![Blazor PivotChart with Legend](images/blazor-pivotchart-legend.png)
+![Blazor PivotChart with Legend](images/blazor-pivotchart-legend.webp)
 
 ## Save and load reports to a SQL database
 
@@ -528,11 +528,11 @@ For example, the report shown in the following code snippet will be passed to th
 
 ```
 
-![The current report has been saved in the SQL database](./images/blazor_output_save_report.png)
+![The current report has been saved in the SQL database](./images/blazor_output_save_report.webp)
 
 In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [SaveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the **SaveReportToDB** method, as mentioned above.
 
-![Copy of the current report has been saved in the SQL database](./images/blazor_output_save_as_report.png)
+![Copy of the current report has been saved in the SQL database](./images/blazor_output_save_as_report.webp)
 
 #### Loading a report
 
@@ -634,7 +634,7 @@ For example, if the report name **"Sample Report 1"** is selected from a dropdow
 
 ```
 
-![Loading a report from SQL database](./images/blazor_output_load_report.png)
+![Loading a report from SQL database](./images/blazor_output_load_report.webp)
 
 #### Renaming a report
 
@@ -749,7 +749,7 @@ For example, if we rename the current report from **"Sample Report 1"** to **"Sa
 
 ```
 
-![Renaming a report in the SQL database](./images/blazor_output_rename_report.png)
+![Renaming a report in the SQL database](./images/blazor_output_rename_report.webp)
 
 #### Deleting a report
 
@@ -854,13 +854,13 @@ For example, if we delete the current report **"Sample Report 2"** from the pivo
 
 ```
 
-![Deleting a report from the SQL database](./images/blazor_output_remove_report.png)
+![Deleting a report from the SQL database](./images/blazor_output_remove_report.webp)
 
 #### Adding a report
 
 When you select the **"Create a new report"** option from the toolbar, the [NewReport](#newreport) event is triggered, followed by the [SaveReport](#savereport) event. To save this new report to the SQL database, the [SaveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
-![Adding a report in the SQL database](./images/blazor_output_new_report.png)
+![Adding a report in the SQL database](./images/blazor_output_new_report.webp)
 
 > In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-blazor-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample to save and load reports from SQL Server database.
 
@@ -868,7 +868,7 @@ When you select the **"Create a new report"** option from the toolbar, the [NewR
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the document [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
-![Create ASP.NET Core Web App project](images/azure-asp-core-web-service-create.png)
+![Create ASP.NET Core Web App project](images/azure-asp-core-web-service-create.webp)
 
 **2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
 
@@ -1188,11 +1188,11 @@ namespace MyWebService.Controllers
 
 ```
 
-![The current report has been saved in the SQL database](images/blazor_output_save_report.png)
+![The current report has been saved in the SQL database](images/blazor_output_save_report.webp)
 
 In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [SaveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the Web API service, as mentioned above.
 
-![Copy of the current report has been saved in the SQL database](images/blazor_output_save_as_report.png)
+![Copy of the current report has been saved in the SQL database](images/blazor_output_save_as_report.webp)
 
 #### Loading a report
 
@@ -1327,7 +1327,7 @@ namespace MyWebService.Controllers
 
 ```
 
-![Loading a report from SQL database](images/blazor_output_load_report.png)
+![Loading a report from SQL database](images/blazor_output_load_report.webp)
 
 #### Renaming a report
 
@@ -1480,7 +1480,7 @@ namespace MyWebService.Controllers
 
 ```
 
-![Renaming a report in the SQL database](images/blazor_output_rename_report.png)
+![Renaming a report in the SQL database](images/blazor_output_rename_report.webp)
 
 #### Deleting a report
 
@@ -1611,13 +1611,13 @@ namespace MyWebService.Controllers
 
 ```
 
-![Deleting a report from the SQL database](images/blazor_output_remove_report.png)
+![Deleting a report from the SQL database](images/blazor_output_remove_report.webp)
 
 #### Adding a report
 
 When you select the **"Create a new report"** option from the toolbar, the [NewReport](#newreport) event is triggered, followed by the [SaveReport](#savereport) event. To save this new report to the SQL database, use the [SaveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
-![Adding a report in the SQL database](images/blazor_output_new_report.png)
+![Adding a report in the SQL database](images/blazor_output_new_report.webp)
 
 > In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
 
@@ -1768,7 +1768,7 @@ By default, the Pivot Table displays with the report configuration defined in th
 }
 
 ```
-![Blazor Pivot Table loaded with desired report from saved report collection](images/blazor-pivottable-load-default-report.PNG)
+![Blazor Pivot Table loaded with desired report from saved report collection](images/blazor-pivottable-load-default-report.webp)
 
 ## Events
 

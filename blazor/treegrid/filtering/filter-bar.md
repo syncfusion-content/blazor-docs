@@ -93,7 +93,7 @@ namespace TreeGridComponent.Data {
 {% endtabs %}
 
 The following screenshot shows filtering using FilterBar
-![Filtering in Blazor Tree Grid](../images/blazor-treegrid-filtering.png)
+![Filtering in Blazor Tree Grid](../images/blazor-treegrid-filtering.webp)
 
 ## Filter bar template with custom component
 
@@ -197,7 +197,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Blazor TreeGrid with Filter Template](../images/blazor-treegrid-filter-template.png)
+![Blazor TreeGrid with Filter Template](../images/blazor-treegrid-filter-template.webp)
 
 ## Change default filter operator
 
@@ -303,7 +303,7 @@ namespace TreeGridComponent.Data {
 {% endtabs %}
 
 The following screenshot represents Filter with change in default operator as contains
-![Changing Filter Operator in Blazor Tree Grid](../images/blazor-treegrid-filter-operator.png)
+![Changing Filter Operator in Blazor Tree Grid](../images/blazor-treegrid-filter-operator.webp)
 
 ## Filter bar modes
 

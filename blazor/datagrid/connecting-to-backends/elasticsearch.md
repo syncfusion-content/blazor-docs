@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting Blazor Data Grid to Elasticsearch
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from an Elasticsearch index using the Elastic.Clients.Elasticsearch library. This modern approach provides full-text search capabilities, advanced filtering, and high-performance data operations.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from an Elasticsearch index using the Elastic.Clients.Elasticsearch library. This modern approach provides full-text search capabilities, advanced filtering, and high-performance data operations.
 
 **What is Elasticsearch?**
 
@@ -40,7 +40,7 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | 10.0 or compatible | Runtime and build tools |
 | Elasticsearch | 9.3.0 or later | Search and analytics engine |
-| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Elastic.Clients.Elasticsearch | 9.3.0 or later | Official C# client for Elasticsearch |
 
@@ -758,7 +758,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid for 
 
 **Instructions:**
 
-* The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous section.
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous section.
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
@@ -785,7 +785,7 @@ Syncfusion components are now configured and ready to use.
 
 ### Step 2: Update the Blazor DataGrid
 
-The `Home.razor` component displays inventory data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component displays inventory data in a Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
@@ -836,7 +836,7 @@ The Home component has been updated successfully with a basic DataGrid.
 
 ### Step 3: Implement the CustomAdaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from **Elasticsearch** using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
+The Blazor DataGrid can bind data from **Elasticsearch** using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
 The `CustomAdaptor` is a bridge between the DataGrid and Elasticsearch. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations.
 

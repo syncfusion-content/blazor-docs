@@ -91,4 +91,4 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor Tree Grid with Detail Template](../images/blazor-treegrid-detail-template.png)
+![Blazor Tree Grid with Detail Template](../images/blazor-treegrid-detail-template.webp)

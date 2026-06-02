@@ -67,7 +67,6 @@ Touch input is supported on mobile and tablet devices. For accessibility, consid
 }
 
 ```
-
-![Dragging a rule to reorder within a group in the Blazor Query Builder](./images/drag-and-drop.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLdtzVcSqZOaneN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging a rule to reorder within a group in the Blazor Query Builder](./images/drag-and-drop.webp)" %}
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

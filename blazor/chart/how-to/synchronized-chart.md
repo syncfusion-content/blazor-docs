@@ -152,7 +152,7 @@ In the `ShowTooltip` method, specify the following parameters programmatically t
 
 ```
 
-![Tooltip synchronization in Blazor Chart](../images/blazor-chart-tooltip-synchronization.gif)
+![Tooltip synchronization in Blazor Chart](../images/blazor-chart-tooltip-synchronization.webp)
 
 ## Crosshair synchronization
 
@@ -297,7 +297,7 @@ In the `ShowCrosshair` method, specify the following parameters programmatically
 
 ```
 
-![Crosshair synchronization in Blazor Chart](../images/blazor-chart-crosshair-synchronization.gif)
+![Crosshair synchronization in Blazor Chart](../images/blazor-chart-crosshair-synchronization.webp)
 
 ## Zooming synchronization
 
@@ -401,7 +401,7 @@ You can maintain constant zoom levels across multiple charts using the [OnZoomEn
 
 ```
 
-![Zooming synchronization in Blazor Chart](../images/blazor-chart-zooming-synchronization.gif)
+![Zooming synchronization in Blazor Chart](../images/blazor-chart-zooming-synchronization.webp)
 
 Check out the JSON file used for the above samples from here [Synchronized Chart Data](https://www.syncfusion.com/downloads/support/directtrac/general/ze/synchronized-data641318336).
 

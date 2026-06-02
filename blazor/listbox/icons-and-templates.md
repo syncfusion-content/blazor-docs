@@ -66,7 +66,7 @@ In the following example, icon classes are mapped to the `IconCss` field.
 </style>
 ```
 
-![Blazor ListBox with item icons](./images/blazor-listbox-icons.png)
+![Blazor ListBox with item icons](./images/blazor-listbox-icons.webp)
 
 ## Templates
 
@@ -172,4 +172,4 @@ ListBox items can be customized according to the requirement using [ItemTemplate
 
 ```
 
-![Blazor ListBox with icon](./images/blazor-listbox-icon-template.png)
+![Blazor ListBox with icon](./images/blazor-listbox-icon-template.webp)

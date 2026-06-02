@@ -9,14 +9,14 @@ documentation: ug
 
 # Column Template in Blazor Tree Grid
 
-N> Before adding column template to the tree grid, it is recommended to go through the [template](../templates/#templates) section topic to configure the template.
+N> Before adding column template to the tree grid, it is recommended to go through the [template](../templates) section topic to configure the template.
 
 To know about **Column Template** in Blazor tree grid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}
 
-The Column template has options to display custom element value or content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to specify the custom content. Inside the `Template`, you can access the data using the implicit named parameter **context**.
+The Column template has options to display custom element value or content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to specify the custom content. Inside the `Template`, you can access the data using the implicit named parameter **context**.
 
 N> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
 
@@ -223,15 +223,15 @@ N> The column template feature is used to render the customized element value in
 ```
 
 The following screenshot represents the column Template.
-![Blazor Tree Grid with Column template](../images/blazor-treegrid-column-template.png)
+![Blazor Tree Grid with Column template](../images/blazor-treegrid-column-template.webp)
 
 N> * Tree Grid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the `Field` is not specified in the
 template column, the tree grid actions cannot be performed.
-<br/> * For Templated tree grid component, [ModelType](../templates/#template-modeltype) property of tree grid should be defined.
+<br/> * For Templated tree grid component, [ModelType](../templates.md#template-modeltype) property of tree grid should be defined.
 
 ## Using conditions inside template
 
-Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
+Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
 
 In the following code, checkbox is rendered based on Discontinued field value in the datasource. This data can be accessed inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) using the implicit named parameter **context**.
 
@@ -325,9 +325,9 @@ In the following code, checkbox is rendered based on Discontinued field value in
 ```
 
 The following screenshot represents the Conditional Template.
-![Blazor Tree Grid with Conditional Template](../images/blazor-treegrid-conditional-template.png)
+![Blazor Tree Grid with Conditional Template](../images/blazor-treegrid-conditional-template.webp)
 
-N> For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
+N> For Templated Tree Grid component, [ModelType](../templates.md#template-modeltype) property of Tree Grid should be defined.
 
 ## Using image inside template
 
@@ -536,7 +536,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 
 The following screenshot represents the Image Template.
-![Blazor Tree Grid with Image Template](../images/blazor-treegrid-image-template.png)
+![Blazor Tree Grid with Image Template](../images/blazor-treegrid-image-template.webp)
 
 ## Using hyperlink column
 
@@ -631,4 +631,4 @@ In the above code, the url to be navigated is specified in the Link variable of 
 ```
 
 The following GIF represents template routing in tree grid
-![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.gif)
+![Blazor Tree Grid with Routing Template](../images/blazor-treegrid-template-routing.webp)

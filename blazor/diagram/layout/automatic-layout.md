@@ -89,7 +89,7 @@ The following code illustrates how to configure an automatic layout:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/BasicLayout.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLyCtNnJqIyRajV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram hierarchical layout example](../images/BasicLayout.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLyCtNnJqIyRajV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram hierarchical layout example](../images/BasicLayout.webp)" %}
 
 ## How to Update Layout
 
@@ -141,7 +141,7 @@ Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. M
 }
 ```
 
-![Blazor Complex Hierarchical Diagram](../images/LayoutSpacing.png)
+![Blazor Complex Hierarchical Diagram](../images/LayoutSpacing.webp)
 
 ## How to Configure Layout Orientation
 
@@ -167,7 +167,7 @@ Default values: `HorizontalSpacing` is **30** and `VerticalSpacing` is **30**. M
 }
 ```
 
-![Blazor Complex Hierarchical Diagram](../images/LayoutOrientation.png)
+![Blazor Complex Hierarchical Diagram](../images/LayoutOrientation.webp)
 
 >**Note:** [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) is not applicable to the [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree) layout. For the [Flowchart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_Flowchart) layout, only [TopToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_TopToBottom) and [LeftToRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_LeftToRight) orientations are supported.
 
@@ -201,7 +201,7 @@ The possible values for HorizontalAlignment are:
     private HorizontalAlignment horizontalAlignment = HorizontalAlignment.Center;
 }
 ```
-![Blazor Diagram layout horizontal alignment centered](../images/LayoutAlignmentCenter.png)
+![Blazor Diagram layout horizontal alignment centered](../images/LayoutAlignmentCenter.webp)
 
 The `VerticalAlignment` property defines how the layout is aligned vertically within the container. The default value is **Auto**, which means the layout adjusts based on its content.
 
@@ -229,7 +229,7 @@ The possible values for VerticalAlignment are:
     private VerticalAlignment verticalAlignment = VerticalAlignment.Bottom;
 }
 ```
-![Blazor Complex Hierarchical Diagram](../images/LayoutVerticalAlignmentBottom.png)
+![Blazor Complex Hierarchical Diagram](../images/LayoutVerticalAlignmentBottom.webp)
 
 ## How to Configure Layout Margins
 
@@ -271,7 +271,7 @@ Here’s an example of how to use this property:
     private SfDiagramComponent _diagram;
 }
 ```
-![Blazor Diagram layout with SamePoint disabled](../images/LayoutSamePoint.png)
+![Blazor Diagram layout with SamePoint disabled](../images/LayoutSamePoint.webp)
 
 ## See also
 

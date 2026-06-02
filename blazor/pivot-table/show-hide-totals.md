@@ -55,7 +55,7 @@ N> By default, all of these properties—[ShowGrandTotals](https://help.syncfusi
 
 ```
 
-![Hiding Grand Total in Blazor PivotTable](images/blazor-pivottable-hide-grand-total.png)
+![Hiding Grand Total in Blazor PivotTable](images/blazor-pivottable-hide-grand-total.webp)
 
 ## Set grand totals position
 
@@ -98,7 +98,7 @@ To display grand totals at the top of both rows and columns, set the [GrandTotal
 
 ```
 
-![Grand total position top at in Blazor PivotTable](images/blazor-pivottable-grand-total-position-top.png)
+![Grand total position top at in Blazor PivotTable](images/blazor-pivottable-grand-total-position-top.webp)
 
 ## Show or hide sub-totals
 
@@ -145,7 +145,7 @@ N> By default, the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ```
 
-![Hiding Sub Totals in Blazor PivotTable](images/blazor-pivottable-hide-sub-total.png)
+![Hiding Sub Totals in Blazor PivotTable](images/blazor-pivottable-hide-sub-total.webp)
 
 ## Show or hide sub-totals for specific fields
 
@@ -187,7 +187,7 @@ N> By default, the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ```
 
-![Hiding Sub Total for Specific Field in Blazor PivotTable](images/blazor-pivottable-hide-sub-total-for-specific-field.png)
+![Hiding Sub Total for Specific Field in Blazor PivotTable](images/blazor-pivottable-hide-sub-total-for-specific-field.webp)
 
 ## Show sub-totals at top or bottom
 
@@ -229,7 +229,7 @@ To display sub-totals at the top of header groups for both rows and columns, set
 }
 ```
 
-![Show sub-totals at top](images/blazor-pivottable-show-sub-totals-at-top.png)
+![Show sub-totals at top](images/blazor-pivottable-show-sub-totals-at-top.webp)
 
 To display sub-totals at the bottom of header groups for both rows and columns, set the [`SubTotalsPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SubTotalsPosition.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Bottom**.
 
@@ -267,7 +267,7 @@ To display sub-totals at the bottom of header groups for both rows and columns, 
 }
 ```
 
-![Show sub-totals at bottom](images/blazor-pivottable-show-sub-totals-at-bottom.png)
+![Show sub-totals at bottom](images/blazor-pivottable-show-sub-totals-at-bottom.webp)
 
 ## Show or hide totals using toolbar
 
@@ -313,10 +313,10 @@ The toolbar also includes options for "Grand Totals Position" and "Subtotals Pos
 ```
 
 <!-- markdownlint-disable MD012 -->
-![Displaying Grand Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-total-using-toolbar.png)
+![Displaying Grand Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-total-using-toolbar.webp)
 <br/>
 
-![Displaying Specific Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-sub-total-using-toolbar.png)
+![Displaying Specific Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-sub-total-using-toolbar.webp)
 <br/>
 
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

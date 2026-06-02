@@ -52,7 +52,7 @@ The stock chart adapts to its container size. Set the container dimensions with 
 
 ```
 
-![Changing Blazor Stock Chart Size](images/size/blazor-stock-chart-size.png)
+![Changing Blazor Stock Chart Size](images/size/blazor-stock-chart-size.webp)
 
 ## Size for Stock Chart
 
@@ -99,7 +99,7 @@ Set the stock chart size directly using the [Width](https://help.syncfusion.com/
 
 ```
 
-![Changing Blazor Stock Chart Size in Pixel](images/size/blazor-stock-chart-size-in-pixel.png)
+![Changing Blazor Stock Chart Size in Pixel](images/size/blazor-stock-chart-size-in-pixel.webp)
 
 **In Percentage**
 
@@ -142,6 +142,6 @@ When values are specified in percentages, the stock chart sizes relative to its 
 
 ```
 
-![Changing Blazor Stock Chart Size in Percentage](images/size/blazor-stock-chart-size-in-percentage.png)
+![Changing Blazor Stock Chart Size in Percentage](images/size/blazor-stock-chart-size-in-percentage.webp)
 
 N> If no size is specified, a default height of 450px is used and the width matches the window size.

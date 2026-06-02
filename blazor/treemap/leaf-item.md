@@ -58,7 +58,7 @@ In the following example, the name of the property **CountryName** from data sou
 }
 ```
 
-![Blazor TreeMap with Leaf Item](images/LeafItem/blazor-treemap-leaf-item.png)
+![Blazor TreeMap with Leaf Item](images/LeafItem/blazor-treemap-leaf-item.webp)
 
 ## Label position and format
 
@@ -77,7 +77,7 @@ Positioning the leaf item label using the [LabelPosition](https://help.syncfusio
 
 N> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
 
-![Changing Label Position and Format in Blazor TreeMap](images/LeafItem/blazor-treemap-change-label-position-format.png)
+![Changing Label Position and Format in Blazor TreeMap](images/LeafItem/blazor-treemap-change-label-position-format.webp)
 
 ## Gap between the leaf items
 
@@ -94,4 +94,4 @@ The [Gap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMa
 
 N> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
 
-![Gap in Blazor TreeMap Items](images/LeafItem/blazor-treemap-gap-between-item.png)
+![Gap in Blazor TreeMap Items](images/LeafItem/blazor-treemap-gap-between-item.webp)

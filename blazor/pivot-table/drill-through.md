@@ -43,10 +43,10 @@ The drill-through feature in the Pivot Table component allows users to view the 
 }
 ```
 
-![Before Drill Through in Blazor PivotTable](images/blazor-pivottable-before-drillthrough.png)
+![Before Drill Through in Blazor PivotTable](images/blazor-pivottable-before-drillthrough.webp)
 <br/>
 <br/>
-![After Drill Through in Blazor PivotTable](images/blazor-pivottable-after-drillthrough.png)
+![After Drill Through in Blazor PivotTable](images/blazor-pivottable-after-drillthrough.webp)
 
 Users can also access drill-through data through the pivot chart. By clicking on any data point in the pivot chart, they can view the raw data in a data grid displayed in a new window.
 
@@ -87,10 +87,10 @@ Users can also access drill-through data through the pivot chart. By clicking on
 }
 ```
 
-![Before Drill Through in Blazor PivotChart](images/blazor-pivotchart-before-drillthrough.png)
+![Before Drill Through in Blazor PivotChart](images/blazor-pivotchart-before-drillthrough.webp)
 <br/>
 <br/>
-![After Drill Through in Blazor PivotChart](images/blazor-pivotchart-after-drillthrough.png)
+![After Drill Through in Blazor PivotChart](images/blazor-pivotchart-after-drillthrough.webp)
 
 ## Maximum rows to retrieve
 
@@ -135,6 +135,6 @@ The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-![Blazor PivotTable with Maximum Rows](images/blazor-pivottable-maximum-rows.png)
+![Blazor PivotTable with Maximum Rows](images/blazor-pivottable-maximum-rows.webp)
 
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

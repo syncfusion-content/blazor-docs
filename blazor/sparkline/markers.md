@@ -26,7 +26,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spa
 
 ```
 
-![Blazor Sparkline Chart with Marker](./images/marker/blazor-sparkline-marker.png)
+![Blazor Sparkline Chart with Marker](./images/marker/blazor-sparkline-marker.webp)
 
 ## Adding Special Point Markers
 
@@ -51,7 +51,7 @@ Markers can be enabled for specific points as a collection. The following specia
 
 ```
 
-![Displaying High and Low Points Marker in Blazor Sparkline Chart](./images/marker/blazor-sparkline-high-low-point-marker.png)
+![Displaying High and Low Points Marker in Blazor Sparkline Chart](./images/marker/blazor-sparkline-high-low-point-marker.webp)
 
 ## Markers Customization
 
@@ -76,4 +76,4 @@ The following properties can be used to customize markers:
 
 ```
 
-![Blazor Sparkline Chart with Custom Marker](./images/marker/blazor-sparkline-custom-marker.png)
+![Blazor Sparkline Chart with Custom Marker](./images/marker/blazor-sparkline-custom-marker.webp)

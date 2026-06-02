@@ -80,6 +80,6 @@ Use the [CssClass property](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor ListBox displayed horizontally with custom CSS](./images/blazor-horizontal-listbox.png)
+![Blazor ListBox displayed horizontally with custom CSS](./images/blazor-horizontal-listbox.webp)
 
 N> [View sample on GitHub](https://github.com/SyncfusionExamples/how-to-set-the-blazor-list-box-items-as-horizontal-list)

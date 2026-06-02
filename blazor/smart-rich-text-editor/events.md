@@ -14,7 +14,9 @@ documentation: ug
 
 Fires when the user submits a prompt. This is where you process the user input and send it to your AI backend.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -28,15 +30,18 @@ Fires when the user submits a prompt. This is where you process the user input a
         // Your required action here
     }
 }
-```
----
+
+{% endhighlight %}
+{% endtabs %}
 
 ## AIResponseStopped
 **Type:** `EventCallback<ResponseStoppedEventArgs>`
 
 Fires when the user clicks "Stop" during a streaming response.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -50,15 +55,18 @@ Fires when the user clicks "Stop" during a streaming response.
         // Your required action here
     }
 }
-```
----
+
+{% endhighlight %}
+{% endtabs %}
 
 ## AIToolbarItemClicked
 **Type:** `EventCallback<AssistViewToolbarItemClickedEventArgs>`
 
-Fires when the user clicks a toolbar button (Insert, Copy, Regenerate, etc.).
+Fires when a user clicks an AssistView toolbar item, providing details of the selected action.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -72,15 +80,18 @@ Fires when the user clicks a toolbar button (Insert, Copy, Regenerate, etc.).
         // Your required action here
     }
 }
-```
----
+
+{% endhighlight %}
+{% endtabs %}
 
 ## AIPopupOpening
 **Type:** `EventCallback<BeforeOpenEventArgs>`
 
-Fires before the AI Assistant popup opens. Use to validate permissions or prefetch data.
+Fires before the AI Assistant popup opens. Use to perform actions before the popup appears.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.Popups
 
@@ -94,19 +105,21 @@ Fires before the AI Assistant popup opens. Use to validate permissions or prefet
         // Your required action here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Event Args Properties:**
 - `Cancel` — Set to true to prevent opening
 
----
-
 ## AIPopupClosing
 **Type:** `EventCallback<BeforeCloseEventArgs>`
 
-Fires before the AI Assistant popup closes. Use to save state or confirm before closing.
+Fires before the AI Assistant popup closes. Use to perform actions before the popup closes.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.SmartRichTextEditor
 @using Syncfusion.Blazor.Popups
 
@@ -120,15 +133,15 @@ Fires before the AI Assistant popup closes. Use to save state or confirm before 
         // Your required action here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **Event Args Properties:**
 - `Cancel` — Set to true to prevent closing
 
----
+## See also
 
-## See Also
-
-* [Properties](property.md)
-* [Methods](method.md)
-* [Appearance](appearance.md)
+* [Properties](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/property)
+* [Methods](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/method)
+* [Appearance](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/events)

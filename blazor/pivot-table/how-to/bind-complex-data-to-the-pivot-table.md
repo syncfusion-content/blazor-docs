@@ -88,4 +88,4 @@ In the example below, the `ConvertToFlatData` function transforms complex data w
 
 ```
 
-![Convert complex data to flat data and bind it to the Blazor Pivot Table](images/blazor-pivottable-complex-expando-data-binding.png)
+![Convert complex data to flat data and bind it to the Blazor Pivot Table](images/blazor-pivottable-complex-expando-data-binding.webp)

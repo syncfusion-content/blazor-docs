@@ -49,4 +49,4 @@ The following example wires the OnBegin, Progressing, and OnEnd events and displ
 
 ```
 
-![Tracing Events in Blazor ProgressButton](./../images/blazor-progressbutton-trace-event.png)
+![Tracing Events in Blazor ProgressButton](./../images/blazor-progressbutton-trace-event.webp)

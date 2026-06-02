@@ -85,7 +85,7 @@ N> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/
 }
 ```
 
-![Normal Editing in Blazor PivotTable](images/blazor-pivottable-normal-editing.png)
+![Normal Editing in Blazor PivotTable](images/blazor-pivottable-normal-editing.webp)
 
 ## Dialog
 
@@ -124,7 +124,7 @@ The dialog edit mode provides a focused editing environment by displaying the se
 }
 ```
 
-![Dialog Editing in Blazor PivotTable](images/blazor-pivottable-dialog-editing.png)
+![Dialog Editing in Blazor PivotTable](images/blazor-pivottable-dialog-editing.webp)
 
 ## Batch
 
@@ -163,7 +163,7 @@ Batch editing enables users to make multiple changes to data grid cells and save
 }
 ```
 
-![Batch Editing in Blazor PivotTable](images/blazor-pivottable-batch-editing.png)
+![Batch Editing in Blazor PivotTable](images/blazor-pivottable-batch-editing.webp)
 
 ## Command column
 
@@ -215,7 +215,7 @@ N>
 }
 ```
 
-![Command Editing in Blazor PivotTable](images/blazor-pivottable-command-editing.png)
+![Command Editing in Blazor PivotTable](images/blazor-pivottable-command-editing.webp)
 
 ## Inline Editing
 
@@ -254,7 +254,7 @@ The inline editing option provides streamlined data modification by allowing dir
 }
 ```
 
-![Inline Editing in Blazor PivotTable](images/blazor-pivottable-inline-editing.png)
+![Inline Editing in Blazor PivotTable](images/blazor-pivottable-inline-editing.webp)
 
 ## Editing using the pivot chart
 
@@ -300,10 +300,10 @@ Clicking a data point in the pivot chart displays the underlying raw items in a 
 }
 ```
 
-![Before Editing in Blazor PivotChart](images/blazor-pivotchart-before-drillthrough.png)
+![Before Editing in Blazor PivotChart](images/blazor-pivotchart-before-drillthrough.webp)
 <br/>
 <br/>
-![Dialog Editing in Blazor PivotChart](images/blazor-pivotchart-editing-dialog.png)
+![Dialog Editing in Blazor PivotChart](images/blazor-pivotchart-editing-dialog.webp)
 
 ## Events
 

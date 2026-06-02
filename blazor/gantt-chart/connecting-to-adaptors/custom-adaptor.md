@@ -187,7 +187,7 @@ The following example demonstrates how to implement custom data binding using a 
 
 The following image shows the custom-bind data displayed in the Gantt Chart:
 
-![Custom Binding in Gantt](../images/blazor-gantt-custom-binding.png)
+![Custom Binding in Gantt](../images/blazor-gantt-custom-binding.webp)
 
 > If the `Read/ReadAsync` method is not overridden in the custom adaptor, the default read handler will be used.
 
@@ -316,7 +316,7 @@ The following example demonstrates how to inject a service into the Custom Adapt
 
 When using a custom adaptor, searching operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` object provides details about the search action as shown in the image below:
 
-![Handling Searching in Custom Adaptor](../images/searching-custom-adaptor.png)
+![Handling Searching in Custom Adaptor](../images/searching-custom-adaptor.webp)
 
 The following example demonstrates how to implement searching operation for custom-bound data:
 
@@ -407,7 +407,7 @@ The following example demonstrates how to implement searching operation for cust
 
 When using a custom adaptor, filtering operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` object provides filtering details as shown in the image below:
 
-![Handling Filtering in Custom Adaptor](../images/filtering-in-custom-binding.png)
+![Handling Filtering in Custom Adaptor](../images/filtering-in-custom-binding.webp)
 
 Based on this information, the custom data source can be filtered using the built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method of the `DataOperations` class.
 
@@ -506,7 +506,7 @@ The following example demonstrates how to implement the filtering operation for 
 
 When using a custom adaptor, the sorting operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` object provides sorting details, as shown in the image below:
 
-![Handling Sorting in Custom Adaptor](../images/sorting-in-custom-binding.png)
+![Handling Sorting in Custom Adaptor](../images/sorting-in-custom-binding.webp)
 
 You can sort data using the built‑in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_SortedColumn__) method of the `DataOperations` class.
 
@@ -853,4 +853,4 @@ The following example demonstrates how to send additional parameters to the serv
 
 ```
 
-![Passing Additional Parameters to Custom Adaptor in Blazor Gantt Chart](../images/sending-additional-param-custom-binding.png)
+![Passing Additional Parameters to Custom Adaptor in Blazor Gantt Chart](../images/sending-additional-param-custom-binding.webp)

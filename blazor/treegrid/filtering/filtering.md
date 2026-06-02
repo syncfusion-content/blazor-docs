@@ -80,7 +80,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Filtering in Blazor TreeGrid](../images/blazor-treegrid-filtering.png)
+![Filtering in Blazor TreeGrid](../images/blazor-treegrid-filtering.webp)
 Filtering enabled in the TreeGrid with basic column configurations.
 
 N> Use [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) to apply a filter programmatically and [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ClearFilteringAsync) to clear filters. To disable filtering for a specific column, set the column’s `AllowFiltering` to false.
@@ -176,7 +176,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Blazor TreeGrid with Initial Filter](../images/blazor-treegrid-initial-filter.png)
+![Blazor TreeGrid with Initial Filter](../images/blazor-treegrid-initial-filter.webp)
 
 ## Filter operators
 
@@ -229,7 +229,7 @@ a* |Values that start with “a”.
 
 The following image illustrates the **Wildcard** operator in action.
 
-![WildcardFilter](../images/blazor-treegrid-wildcard-search.gif) 
+![WildcardFilter](../images/blazor-treegrid-wildcard-search.webp) 
 
 > When using the **Wildcard** operator, records are displayed according to the selected filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For details, see the filter hierarchy modes [section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
 
@@ -250,7 +250,7 @@ ab% |Values that start with “ab”.
 
 The following image illustrates the **LIKE** operator in action.
 
-![LIKEFilter](../images/blazor-treegrid-like_filter.gif)
+![LIKEFilter](../images/blazor-treegrid-like_filter.webp)
 
 > When using the **LIKE** operator, records are displayed according to the selected filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings). For details, see the filter hierarchy modes [section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
 
