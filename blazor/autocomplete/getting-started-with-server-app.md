@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor AutoComplete Blazor Server App | Syncfusion
+title: Getting Started with Blazor AutoComplete in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Server App.
 platform: Blazor
 component: AutoComplete
