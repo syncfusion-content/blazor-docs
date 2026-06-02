@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Avatar Component in Blazor Web App
+title: Getting Started with Avatar Component in Blazor Web App
 description: Checkout and learn about the documentation for getting started with Blazor Avatar Component in Blazor Web App.
 platform: Blazor
 component: Avatar
