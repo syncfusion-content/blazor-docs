@@ -10,7 +10,7 @@ keywords: Blazor DataGrid, AI insights, sales order analysis, Syncfusion Blazor 
 
 # Generate AI insights with Blazor DataGrid and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to analyze sales order data and generate AI-powered business insights in the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables seamless integration with AI models to process and summarize data, while Azure OpenAI or Ollama can be used to generate structured, JSON‑based insights such as an executive summary, key trends, recommendations, and flagged order IDs. In the following example, the application analyzes sales orders, highlights flagged records, and presents actionable business insights.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to analyze sales order data and generate AI-powered business insights in the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables seamless integration with AI models to process and summarize data, while Azure OpenAI or Ollama can be used to generate structured, JSON‑based insights such as an executive summary, key trends, recommendations, and flagged order IDs. In the following example, the application analyzes sales orders, highlights flagged records, and presents actionable business insights.
 
 If you have not created a Blazor application yet, refer to the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
@@ -50,14 +50,18 @@ Install-Package OllamaSharp
 
 ### Syncfusion packages
 
-- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+- [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+- [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 - [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Spinner -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
@@ -66,23 +70,22 @@ Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
 ## Add stylesheet and script resources
 
-Include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Include the Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-- For **.NET 6** Blazor Server apps, add the references to **~/Pages/_Layout.cshtml**.
-- For **.NET 8, .NET 9, or .NET 10** Blazor Server apps, add the references to **~/Components/App.razor**.
+Add the stylesheet and script references to **~/Components/App.razor** for Blazor Web Apps using the Interactive Server render mode.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
 <head>
     ....
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 
 <body>
     ....
-    <!-- Syncfusion Blazor core script (required for most components, including DataGrid) -->
+    <!-- Blazor core script (required for most components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 
@@ -162,9 +165,9 @@ var app = builder.Build();
 
 N> Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app's **Interactive Render Mode**:
+Add the Blazor service to the **~/Program.cs** file. The configuration depends on the app's **Interactive Render Mode**:
 
 - **Server mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -222,7 +225,7 @@ N> If the interactivity location is set to **Global**, no per-page directive is 
 
 ## How AI models integrate with Blazor DataGrid
 
-This sample demonstrates how to use the **Syncfusion® Blazor DataGrid** to analyze sales order data and generate business insights with AI models. The AI service returns structured JSON that includes an executive summary, key trends, recommendations, and flagged order IDs. While the request is being processed, a loading spinner is displayed, and the grid highlights the rows identified by the AI.
+This sample demonstrates how to use the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** to analyze sales order data and generate business insights with AI models. The AI service returns structured JSON that includes an executive summary, key trends, recommendations, and flagged order IDs. While the request is being processed, a loading spinner is displayed, and the grid highlights the rows identified by the AI.
 
 The sample loads sales order data in `Home.razor.cs` and sends it to the AI service when the user selects **Generate AI Insights**.
 
@@ -479,7 +482,7 @@ public partial class Home
 
 ## Error handling and reliability in AI-powered DataGrids
 
-If the AI service fails to return a valid response, the Blazor DataGrid displays an appropriate error message to inform the user. To ensure reliability and a smooth user experience, consider handling the following common scenarios:
+If the AI service fails to return a valid response, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays an appropriate error message to inform the user. To ensure reliability and a smooth user experience, consider handling the following common scenarios:
 
 - **Invalid configuration**: Ensure the API key, endpoint, and model name are valid and accessible.
 - **Model unavailable**: Ensure the specified `azureOpenAIModel` or `modelName` is deployed and supported.
