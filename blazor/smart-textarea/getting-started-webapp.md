@@ -133,6 +133,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
 // Add services to the container.
 

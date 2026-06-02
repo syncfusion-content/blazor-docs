@@ -53,6 +53,7 @@ using Syncfusion.Blazor.AI;
 using Syncfusion.Blazor.SmartComponents;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
