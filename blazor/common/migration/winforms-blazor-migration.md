@@ -258,7 +258,7 @@ namespace WinFormsDataGridApp
     public class Order
     {
         public int OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public double Freight { get; set; }
     }
 }
@@ -333,7 +333,7 @@ namespace WinFormsChartApp
 
     public class SalesInfo
     {
-        public string? Month { get; set; };
+        public string? Month { get; set; }
         public double Sales { get; set; }
     }
 }
@@ -381,7 +381,7 @@ namespace WinFormsChartApp
     
     public class SalesInfo
     {
-        public string Month { get; set; }
+        public string? Month { get; set; }
         public double Sales { get; set; }
     }
 }
@@ -474,7 +474,7 @@ namespace WinFormsSchedulerApp
     </ScheduleViews>
 </SfSchedule>
 
-@code{
+@code {
     DateTime CurrentDate = new DateTime(2025, 2, 14);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -515,5 +515,5 @@ dotnet run
 
 - [Getting started with Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 - [Getting started with Blazor Chart in Web App](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
-- [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp)
+- [Getting started with Blazor Scheduler in Web App](https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp)
 - [Getting started with Blazor Components](https://blazor.syncfusion.com/documentation/introduction)
