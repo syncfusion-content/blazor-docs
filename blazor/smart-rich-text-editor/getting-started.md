@@ -188,8 +188,8 @@ Follow the instructions below to register an AI model in your application.
 
 Install the following NuGet packages to your project:
 
-* Microsoft.Extensions.AI
-* Microsoft.Extensions.AI.OpenAI
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
 
 You can install these packages using different methods as shown below:
 
@@ -280,9 +280,9 @@ var app = builder.Build();
 
 Install the following NuGet packages to your project:
 
-* Microsoft.Extensions.AI
-* Microsoft.Extensions.AI.OpenAI
-* Azure.AI.OpenAI
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+* [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 
 You can install these packages using different methods as shown below:
 
