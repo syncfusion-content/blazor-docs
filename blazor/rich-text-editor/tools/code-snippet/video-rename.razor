@@ -1,11 +1,11 @@
 @using Syncfusion.Blazor.RichTextEditor;
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-        <RichTextEditorEvents FileUploadSuccess="@onFileUploadSuccess"></RichTextEditorEvents>
+        <RichTextEditorEvents FileUploadSuccess="@OnFileUploadSuccess"></RichTextEditorEvents>
         <RichTextEditorVideoSettings SaveUrl="api/Video/Rename" Path="./Video/"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
-@code {
 
+@code {
     public string[] header { get; set; }
 
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
@@ -13,14 +13,12 @@
         new ToolbarItemModel() { Command = ToolbarCommand.Video }
     };
 
-    private void onFileUploadSuccess(FileUploadSuccessEventArgs args)
+    private void OnFileUploadSuccess(FileUploadSuccessEventArgs args)
     {
         var headers = args.Response.Headers.ToString();
         header = headers.Split("name: ");
         header = header[1].Split("\r");
-
         // Update the modified video name to display a video in the editor.
         args.File.Name = header[0];
     }
-
 }
