@@ -104,6 +104,7 @@ Create the token service file under the Services folder. In this example, use `T
 
 public class TokenService
 {
+    // Replace this method with your actual token retrieval or generation logic
     public string GenerateToken()
     {
         // Replace this with your actual token generation logic.
