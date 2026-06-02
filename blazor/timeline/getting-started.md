@@ -162,7 +162,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Ti
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Timeline component will render in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -176,12 +176,16 @@ dotnet run
 
 {% endtabcontent %}
 
-{% endtabcontents %}
+{% tabcontent .NET CLI %}
 
 * Open the command prompt and navigate to the Blazor WebAssembly App project folder, and run the following command.
 
 ```bash
 dotnet run
 ```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrzZJtMfhknPrWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component](./images/blazor-timeline-component.png)" %}
