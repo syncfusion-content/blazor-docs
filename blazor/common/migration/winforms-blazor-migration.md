@@ -163,7 +163,7 @@ For the complete list of supported themes, refer to the [Blazor themes documenta
 
 [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) is a high performance tabular control for Windows Forms applications, while [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is the web first Razor component for building responsive, interactive, data driven web interfaces.
 
-For additional details, refer to the [WinForms DataGrid getting started guide](https://help.syncfusion.com/windowsforms/datagrid/getting-started) and [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app).
+For additional details, refer to the [WinForms DataGrid getting started guide](https://help.syncfusion.com/windowsforms/datagrid/gettingstarted) and [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app).
 
 | Aspect | WinForms | Blazor |
 |---|---|---|
@@ -399,7 +399,7 @@ For additional details, refer to the [WinForms Scheduler getting started guide](
 |---|---|---|
 | Package (NuGet) | [Syncfusion.Schedule.Windows](https://www.nuget.org/packages/Syncfusion.Schedule.Windows) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
 | Component declaration | `ScheduleControl` (programmatic or Designer) | `<SfSchedule TValue="TModel">` |
-| Appointment model | Built in [ScheduleAppointment](https://help.syncfusion.com/windowsforms/schedule/appointments#creating-schedule-appointment) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
+| Appointment model | Built in [ScheduleAppointment](https://help.syncfusion.com/windowsforms/scheduler/getting-started#schedule-appointment) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
 | Date and time binding | `SelectedDate` and `CurrentDate` | [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) (two-way binding via `@bind-SelectedDate`) |
 | Data source | `DataSource` property | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) |
 | Resources and grouping | `ResourceCollection` with mappings | [ScheduleResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResources.html) and [ScheduleResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) |
@@ -515,5 +515,5 @@ dotnet run
 
 - [Getting started with Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 - [Getting started with Blazor Chart in Web App](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
-- [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-web-app)
+- [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp)
 - [Getting started with Blazor Components](https://blazor.syncfusion.com/documentation/introduction)
