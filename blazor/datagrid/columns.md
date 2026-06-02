@@ -1305,7 +1305,7 @@ The [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ### AutoFit via GridColumn
 
-The Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports autoFit the specific columns during initial rendering by enabling the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AutoFit) property on the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. When `AutoFit` is enabled at the column level, the column width is calculated dynamically based on the content it contains.
+The Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports AutoFit the specific columns during initial rendering by enabling the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AutoFit) property on the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. When `AutoFit` is enabled at the column level, the column width is calculated dynamically based on the content it contains.
 
 This behavior allows the column to expand or shrink automatically so that cell values are fully visible without being truncated. When `AutoFit` is applied, the content‑driven width takes precedence over any predefined width values, ensuring optimal display for columns that contain variable or unpredictable data.
 
