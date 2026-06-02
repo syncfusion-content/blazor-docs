@@ -14,7 +14,7 @@ This article explains how to build a shopping cart workflow in a Blazor applicat
 ## Prerequisites
 
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) 
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com) with [C# Dev Kit extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) 
 
 ## Create the Blazor project
 
