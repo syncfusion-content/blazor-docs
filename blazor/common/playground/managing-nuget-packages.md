@@ -80,9 +80,9 @@ Click the **Remove** button next to the installed package details to uninstall i
 
 Upgrade or downgrade packages by searching for the package name and selecting a specific version. The Playground handles installation or updates automatically.
 
-N> Maintain consistent versions across all Blazor packages to avoid compatibility issues.
-
 ![Blazor Playground NuGet Asset Manager showing version selection for upgrading or downgrading a package](images/upgrade_downgrade.webp)
+
+N> Maintain consistent versions across all Blazor packages to avoid compatibility issues.
 
 ## See also
 
