@@ -128,8 +128,7 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -178,8 +177,6 @@ using OpenAI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string openAIApiKey = "API-KEY";
@@ -217,8 +214,6 @@ using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string azureOpenAIKey = "AZURE_OPENAI_KEY";
@@ -265,8 +260,6 @@ using OllamaSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 string ModelName = "MODEL_NAME";
