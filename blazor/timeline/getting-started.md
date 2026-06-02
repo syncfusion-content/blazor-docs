@@ -176,7 +176,7 @@ dotnet run
 
 {% endtabcontent %}
 
-{% tabcontent .NET CLI %}
+{% endtabcontents %}
 
 * Open the command prompt and navigate to the Blazor WebAssembly App project folder, and run the following command.
 
