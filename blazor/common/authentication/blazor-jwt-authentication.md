@@ -14,7 +14,7 @@ This guide shows how to secure the [Blazor DataGrid](https://www.syncfusion.com/
 ## Prerequisites
 
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later.
-* [Visual Studio Code](https://code.visualstudio.com/).
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 ## Create a Blazor project
 
