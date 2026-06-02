@@ -183,11 +183,9 @@ dotnet run
 ```bash
 dotnet run
 ```
+{% endtabcontent %}
 
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
+{% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBfDCqZpxexmezs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Component](./images/blazor-toolbar.png)" %}
 
