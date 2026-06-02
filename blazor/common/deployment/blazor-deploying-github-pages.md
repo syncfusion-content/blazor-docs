@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Deploying Blazor WASM with Syncfusion Components to GitHub Pages
-description: Guide to deploying Syncfusion Blazor Components to GitHub Pages with complete configuration and examples.
+title: Deploy Blazor WASM with Components on GitHub Pages | Syncfusion
+description: A comprehensive guide to deploying Blazor components to GitHub Pages with full configuration steps and practical examples.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Deploying Syncfusion® Blazor Components to GitHub Pages
+# Deploying Blazor Components to GitHub Pages
 
-This guide demonstrates how to deploy [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) to [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) in a Blazor WebAssembly application. It includes steps for publishing the application, configuring client-side routing, and hosting the application.
+This guide demonstrates how to deploy [Blazor components](https://www.syncfusion.com/blazor-components) to [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) in a Blazor WebAssembly application. It includes steps for publishing the application, configuring client-side routing, and hosting the application.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ This guide demonstrates how to deploy [Syncfusion® Blazor components](https://w
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * [GitHub account](https://github.com/)
 
-If you haven't created your Blazor app yet, follow the [Syncfusion® Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) to create a Blazor WebAssembly project.
+If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) to create a Blazor WebAssembly project.
 
 ## Create GitHub repository
 
@@ -31,7 +31,7 @@ Follow the below steps to create GitHub repository for deploying Blazor applicat
 * Select **Public** visibility.
 * Click **Create Repository** button to create the repository.
 
-## Configure Syncfusion® Blazor DataGrid component
+## Configure Blazor DataGrid component
 
 ### Install required packages
 
@@ -65,9 +65,9 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-### Register Syncfusion® Blazor service
+### Register Blazor service
 
-Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight cs tabtitle="~/Program.cs" %}
@@ -83,17 +83,17 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Add stylesheet and script resources
 
-Add the Syncfusion theme CSS and required scripts to the `~/wwwroot/index.html` file.
+Add the Blazor theme CSS and required scripts to the `~/wwwroot/index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
 <head>
-    <!-- Syncfusion theme stylesheet -->
+    <!-- Blazor theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Syncfusion Blazor core script (required for UI components, including DataGrid) -->
+    <!-- Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     <!-- Blazor WebAssembly script reference -->
   <script src="_framework/blazor.webassembly.js"></script>
@@ -104,7 +104,7 @@ Add the Syncfusion theme CSS and required scripts to the `~/wwwroot/index.html` 
 
 ### DataGrid component example
 
-This sample demonstrates how to use the [Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to display a list of orders. It also helps confirm that the DataGrid is correctly integrated and functioning as expected for deployment scenarios.
+This sample demonstrates how to use the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to display a list of orders. It also helps confirm that the DataGrid is correctly integrated and functioning as expected for deployment scenarios.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -225,7 +225,7 @@ dotnet run
 
 **Expected behavior:**
 - The application loads without errors.
-- Syncfusion components render with correct styles and fonts.
+- Blazor components render with correct styles and fonts.
 - Navigation between pages works as expected.
 - No JavaScript console errors appear.
 
@@ -294,11 +294,11 @@ Configure your repository to serve the branch by following the steps below.
    - **Folder:** `/ (root)`
 4. Click **Save**.
 
-Your application will be live at a GitHub Pages within minutes.
+Your application will be live on GitHub Pages within minutes and can be accessed using the following URL format: `https://<username>.github.io/<repository-name>/`.
 
 ## See Also
 
-* [Getting started with Syncfusion WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting started with Syncfusion DataGrid component](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Getting started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting started with Blazor DataGrid component](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
 * [Blazor WebAssembly Hosting and Deployment](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly/github-pages?view=aspnetcore-10.0)
 * [GitHub Pages Configuration](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)

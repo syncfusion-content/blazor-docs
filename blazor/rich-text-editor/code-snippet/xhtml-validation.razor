@@ -1,9 +1,17 @@
 @using Syncfusion.Blazor.RichTextEditor
-
-<div class="control-section">    
-    <SfRichTextEditor EnableXhtml="true">
-        <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
-        <p><b>Get started Quick Toolbar to click on the image</b></p>
-        <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-    </SfRichTextEditor>                         
-</div>
+ 
+<SfRichTextEditor EnableXhtml="true">
+    <RichTextEditorToolbarSettings Items="Items"></RichTextEditorToolbarSettings>
+    <DIV>
+        <p>XHTML validation ensures structured and standard-compliant content in the Rich Text Editor.</p>
+        <B>It automatically corrects invalid markup and enforces proper formatting</b>
+        <p>Enable this feature using EnableXhtml property in the editor</P>
+    </DIV>
+</SfRichTextEditor>
+ 
+@code {
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode }
+    };
+}
