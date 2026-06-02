@@ -1,5 +1,5 @@
 ---
-title: Securing Syncfusion Blazor Components with ASP.NET Core Identity
+title: Securing Blazor Components with ASP.NET Core Identity | Syncfusion
 description: Guide to configure ASP.NET Core Identity in an Interactive Server Blazor app and protect Blazor components (DataGrid, Charts).
 platform: blazor
 component: common
