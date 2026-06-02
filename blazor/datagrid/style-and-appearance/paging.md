@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging customization in Syncfusion Blazor DataGrid
 
-The appearance of paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be customized using CSS. Styling options are available for different parts of the pager interface:
+The appearance of paging elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the pager interface:
 
 - **Root container:** The outermost wrapper that holds all pager content.
 - **Pager container:** The inner layout that positions the controls.
@@ -34,7 +34,7 @@ Properties like **font-family**, **background-color**, and spacing-related style
 
 ## Customize the pager container element
 
-The **.e-pagercontainer** class styles the pager container in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid. Apply CSS to modify its look:
+The **.e-pagercontainer** class styles the pager container in the Blazor DataGrid. Apply CSS to modify its look:
 
 ```css
 .e-grid .e-pagercontainer {

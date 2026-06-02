@@ -1,27 +1,38 @@
 ---
 layout: post
-title: Predefined code templates in Blazor Playground | Syncfusion
-description: Learn here all about how to simplify Blazor development using Syncfusion's ready-to-use code templates in the Blazor Playground and explore more details.
+title: Predefined Code Snippets in Blazor Playground | Syncfusion®
+description: Learn how to use predefined code snippets in Blazor Playground to quickly add Syncfusion® Blazor components and automatically install required NuGet packages.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Predefined code snippets for Blazor Playground
-Blazor Playground provides predefined code snippets for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to quickly insert component code examples.
+# Predefined Code Snippets for Blazor Playground
 
-* Click the Snippet button to open a dialog containing a list of predefined code snippets for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components.
+The [Blazor Playground](https://blazorplayground.syncfusion.com) provides predefined code snippets for all [Blazor components](https://www.syncfusion.com/blazor-components) to quickly insert component code examples.
+
+1\. Click the **Snippet** button to open a dialog box containing predefined code snippets.
+
 ![Blazor Playground with preconfigured code snippet](./images/click_snippet.webp)
 
-* Select up to 10 components to render by clicking the desired snippets. Multiple components can be selected simultaneously.
+2\. Select up to 10 components by clicking the desired snippets. Multiple components can be selected simultaneously.
+
 ![Blazor Playground selecting a component](./images/select_component.webp)
 
-* After selecting components, click the Add button. The chosen snippets are added to the editor.
+3\. Click the **Add** button. The selected code snippets are inserted into the editor.
 
 ![Blazor Playground with code snippets](./images/add_snippets.webp)
 
-N> For each selected component, the corresponding individual NuGet package (latest version) is added automatically, and the overall `Syncfusion.Blazor` package is removed.
+N> For each selected component, the corresponding individual NuGet package (latest version) is added automatically, and the overall [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package is removed.
 
-![Selected snippet output](./images/Snippet_Output.webp)
+4\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
-* Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
+![Selected snippet output](./images/snippet_output.webp)
+
+## See also
+
+* [Getting Started with Blazor Playground](./getting-started)
+* [Working with components in Blazor Playground](./working-with-components)
+* [Features and capabilities of Blazor Playground](./end-user-capabilities)
+* [Manage NuGet packages in Blazor Playground](./managing-nuget-packages)
+

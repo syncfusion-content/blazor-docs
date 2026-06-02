@@ -161,7 +161,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler compon
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Scheduler Component](images/blazor-scheduler-maui-app.png)
+![Blazor Scheduler Component](images/blazor-scheduler-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -171,7 +171,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Scheduler Component](images/blazor-scheduler.png)
+![Blazor Scheduler Component](images/blazor-scheduler.webp)
 
 ## Populating appointments
 
@@ -218,7 +218,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
+![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.webp)
 
 ## Setting date
 
@@ -261,7 +261,11 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 ## Setting view
 
-The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property. The applicable view names are,
+The Scheduler displays `Week` view by default. To change the current view, define the applicable view name to the two-way binding of [CurrentView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView) property.
+
+### Available Views
+
+The Scheduler supports the following built-in views:
 
 * Day
 * Week
@@ -275,6 +279,8 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 * TimelineMonth
 * TimelineYear
 * Year
+
+You can configure only the required views as needed, and include additional views based on your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -293,43 +299,6 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 
 @code{
     View CurrentView = View.Month;
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Individual view customization
-
-Each individual Scheduler views can be customized with its own options such as setting different start and end hour on Week and Work Week views, whereas hiding the weekend days on Month view alone which can be achieved by defining the `ScheduleView`.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleViews>
-        <ScheduleView Option="View.Week" StartHour="07:00" EndHour="15:00"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek" StartHour="10:00" EndHour="18:00"></ScheduleView>
-        <ScheduleView Option="View.Month" MaxEventsPerRow="2" ShowWeekend="false"></ScheduleView>
-    </ScheduleViews>
-</SfSchedule>
-
-@code{
-    DateTime CurrentDate = new DateTime(2020, 2, 13);
     public class AppointmentData
     {
         public int Id { get; set; }

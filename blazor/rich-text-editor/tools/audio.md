@@ -23,10 +23,12 @@ The Rich Text Editor allows inserting audio files from online sources and the lo
 
 To include the audio tool in the Rich Text Editor, you can add the toolbar item `Audio` to the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_EJ2_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
+![Blazor RichTextEditor audio](../images/blazor-richtexteditor-audio.webp)
+
 To configure `Audio` toolbar item, refer to the below code.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-tool.razor %}
 
@@ -56,7 +58,7 @@ The selected audio can be uploaded to the required destination using the control
 N> If you want to insert lower-sized audio files in the editor and don't want a specific physical location for saving audio, you can opt to save the format as `Base64`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-save.razor %}
 
@@ -158,7 +160,7 @@ By using the Rich Text Editor's [RichTextEditorAudioSettings.MaxFileSize](https:
 In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-restrict.razor %}
 
@@ -175,7 +177,7 @@ Once an audio file has been inserted, you can change it using the Rich Text Edit
 
 To remove audio from the Rich Text Editor content, select audio and click the `Remove` tool from the quick toolbar. It will delete the audio from the Rich Text Editor content.
 
-Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
+Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the delete icon.
 
 ![Blazor RichTextEditor remove audio](../images/blazor-richtexteditor-audio-remove.webp)
 
@@ -183,10 +185,12 @@ Once you select the audio from the local machine, the URL for the audio will be 
 
 Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio elements’ layout position when updating the display positions.
 
+![Blazor RichTextEditor audio display](../images/blazor-richtexteditor-audio-display.webp)
+
 N> The default `layoutOption` property is set to `Inline`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-display-position.razor %}
 
@@ -200,7 +204,7 @@ Default upload: Insert audio directly from your local file system (e.g., File Ex
 Server upload: Use the `SaveUrl` property to upload audio files to your server before inserting them into the editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-drag-and-drop.razor %}
 
@@ -211,8 +215,14 @@ Server upload: Use the `SaveUrl` property to upload audio files to your server b
 
 You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cancel value to true. The following code shows how to prevent the drag-and-drop.
 
-```
-<RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorEvents OnMediaDrop="@OnMediaDrop"></RichTextEditorEvents>
+</SfRichTextEditor>
 @code{
     private void OnMediaDrop(MediaDropEventArgs args)
     {
@@ -221,7 +231,10 @@ You can prevent drag-and-drop action by setting the `OnMediaDrop` argument cance
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Rename audio before inserting
 
 Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html) property, specify the server handler to upload the selected audio. Then, by binding the `FileUploadSuccess` event, you will receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
@@ -229,7 +242,7 @@ Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Sy
 Refer `rename.cs` controller file for configure the server-side.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-rename.razor %}
 
@@ -329,7 +342,7 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 N> By default it doesn't support `UseDefaultCredentials` property, we need to manually append the default credentials with the upload request.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/audio-authentication.razor %}
 
@@ -417,7 +430,3 @@ namespace AudioUpload.Controllers
 
 The Rich Text Editor supports pasting audio files directly into the editor content. You can paste single or multiple audio files from your file system directly into the editor.
 
-## See also
-
-* [How to configuring the toolbar position](https://blazor.syncfusion.com/documentation/rich-text-editor/toolbar#configuring-the-toolbar-position)
-* [How to use link editing option in the toolbar items](../tools#insert-link)

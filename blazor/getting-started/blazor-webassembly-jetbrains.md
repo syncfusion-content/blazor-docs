@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor WASM App in JetBrains Rider 
 
-This guide explains how to create a Blazor WebAssembly application and integrate [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) in [JetBrains Rider](https://www.jetbrains.com/rider/).
+This guide explains how to create a Blazor WebAssembly application and integrate [Blazor components](https://www.syncfusion.com/blazor-components) in [JetBrains Rider](https://www.jetbrains.com/rider/).
 
-To quickly get started with a Blazor WebAssembly application in JetBrains Rider with Syncfusion® Blazor components, watch the following video:
+To quickly get started with a Blazor WebAssembly application in JetBrains Rider with Blazor components, watch the following video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=hLBBg-mkC2Y" %}
@@ -38,24 +38,24 @@ Follow these steps to create a Blazor application in Rider:
 
 Once the project is created, Rider opens the solution and restores the required dependencies automatically.
 
-## Adding Syncfusion® Blazor NuGet packages
+## Adding Blazor NuGet packages
 
-After creating the Blazor project, you must install the required Syncfusion® Blazor NuGet packages to use Syncfusion® UI components.
+After creating the Blazor project, you must install the required NuGet packages to use Blazor components.
 
-**Install required Syncfusion® NuGet packages**
+**Install required NuGet packages**
 
-- In the **Solution Explorer**, right‑click the project name.
+- In the **Solution Explorer**, right click the project name.
 - Select **Manage NuGet Packages** from the context menu.
 - In the Browse tab, search for and install the following packages:
 
     - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-Once the installation is complete, the Syncfusion® Blazor components are ready to be used in your application.
+Once the installation is complete, the Blazor components are ready to be used in your application.
 
-## Register the Syncfusion® services
+## Register the Blazor services
 
-Add the Syncfusion® Blazor service to the `Program.cs` file to enable Syncfusion® components in the application.
+Add the Blazor service to the `Program.cs` file to enable Blazor components in the application.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="3 9" %}
@@ -76,21 +76,21 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-To apply styles and enable Syncfusion® features, reference the theme CSS and scripts within the `wwwroot/index.html` file.
+To apply styles and enable features, reference the theme CSS and scripts within the `wwwroot/index.html` file.
 
 {% tabs %}
 {% highlight html  %}
 
 <head>
     ....
-    <!-- Syncfusion® theme stylesheet -->
+    <!-- Theme stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
     ....
 </head>
 
 <body>
     ....
-    <!-- Syncfusion® Blazor core script (required for UI components, including DataGrid) -->
+    <!-- Blazor core script (required for UI components, including DataGrid) -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     ....
 </body>
@@ -98,9 +98,9 @@ To apply styles and enable Syncfusion® features, reference the theme CSS and sc
 {% endhighlight %}
 {% endtabs %}
 
-## Connect the Syncfusion® Blazor DataGrid
+## Connect the Blazor DataGrid
 
-Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** components to a `.razor` file within your app. 
+Add the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** components to a `.razor` file within your app. 
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/Home.razor"  %}
@@ -150,13 +150,13 @@ Add the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-compo
 - Once the application starts, a local URL is displayed in the Run window.
 - The default browser opens the application using this URL. If it does not open automatically, copy the URL and open it manually in a browser.
 
-The app launches and renders the **[Syncfusion® Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in your default browser.
+The app launches and renders the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** in your default browser.
 
 ![Blazor DataGrid in JetBrains Rider](images/jetbrains-datagrid.webp)
 
 ## See also
 
-- [Getting started with Syncfusion® Blazor DataGrid in WASM App](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-- [Integrating Syncfusion® Blazor Components with Azure Functions](https://blazor.syncfusion.com/documentation/common/integration/blazor-azure-functions)
+- [Getting started with Blazor DataGrid in WASM App](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+- [Integrating Blazor Components with Azure Functions](https://blazor.syncfusion.com/documentation/common/integration/blazor-azure-functions)
 - [Blazor WebAssembly with JetBrains Rider and Syncfusion®](https://www.syncfusion.com/webinars/blazor-webassembly-with-jetbrains-rider-and-syncfusion)
 
