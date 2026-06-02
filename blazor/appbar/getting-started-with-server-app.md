@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion AppBar Component in Blazor Server App
+title: Getting Started with Blazor AppBar Component in Blazor Server App
 description: Checkout and learn about the documentation for getting started with Blazor AppBar Component in Blazor Server App.
 platform: Blazor
 component: AppBar
