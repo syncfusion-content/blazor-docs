@@ -55,9 +55,6 @@ Run the following command to create a new Blazor WebAssembly App.
 dotnet new blazorwasm -o BlazorApp
 ```
 
-{% endhighlight %}
-{% endtabs %}
-
 {% endtabcontent %}
 
 {% endtabcontents %}
