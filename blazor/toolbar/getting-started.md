@@ -184,6 +184,11 @@ dotnet run
 dotnet run
 ```
 
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBfDCqZpxexmezs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Component](./images/blazor-toolbar.png)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Toolbar).
