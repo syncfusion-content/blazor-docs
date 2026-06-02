@@ -39,13 +39,13 @@ When migrating from WinForms to Blazor, one of the first changes you will notice
 |---|---|---|
 | `Program.cs` (with `Application.Run`) | `Program.cs` and `App.razor` | Defines startup and root rendering |
 | `Form1.cs` | `App.razor`, `MainLayout.razor`, and `Routes.razor` | Represents the application shell and routing structure |
-| `Form1.Designer.cs` | `Pages/*.razor` | Defines route enabled UI pages |
+| `Form1.Designer.cs` | `.razor` markup section | Defines the UI layout and component hierarchy |
 | Event handlers and business logic | Services, component state, or `.razor.cs` | Contains UI logic and state |
 | `Models/*.cs` | `Models/*.cs` | Usually reusable without changes |
 | `Services/*.cs` or business layer | `Services/*.cs` | Handles shared application logic through dependency injection |
 | `Resources` folder or `Resources.resx` | `wwwroot` folder and static assets | Manages images, icons, and static resources |
 | `UserControl` | Razor component (`.razor`) | Reusable UI component |
-| Event handlers (`EventArgs`) | `EventCallback`, component methods, or custom services | Implements user action handling and validation logic in Blazor |
+| Event handlers (`EventArgs`) | `EventCallback`, component methods, or custom services | Handles user interaction, events, and validation logic |
 
 ## Migrating components from Windows Forms to Blazor
 
@@ -69,20 +69,18 @@ Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packa
 
 ### Service registration
 
-In Blazor applications, Blazor components must be registered with the built-in dependency injection system. This registration enables component rendering, state management, and required runtime behavior.
+In Blazor applications, components must be registered with the built-in dependency injection system. This registration enables component rendering, state management, and required runtime behavior.
 
 This step applies only to Blazor applications. It replaces the explicit control initialization and setup performed in WinForms.
 
 To enable Blazor components, register the Blazor service in the `Program.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="1 6" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="1 4" %}
 
 using Syncfusion.Blazor;
 ...
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
 builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 ...
@@ -107,13 +105,12 @@ In Blazor, namespaces are commonly imported globally using the `_Imports.razor` 
 
 ### Applying themes
 
-In WinForms, themes are typically applied using SfSkinManager. The following example shows how to apply a theme programmatically:
+In WinForms, themes are typically applied using [SkinManager](https://help.syncfusion.com/windowsforms/skins/getting-started). The following example shows how to apply a theme programmatically:
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
 
-using Syncfusion.WinForms.Core;
-using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
 
 namespace WinFormsDataGridApp
 {
@@ -122,7 +119,13 @@ namespace WinFormsDataGridApp
         public Form1()
         {
             InitializeComponent();
-            SfSkinManager.SetTheme(this, new Theme("FluentLight"));
+            
+            // Create SkinManager instance.
+            SkinManager skinManager1 = new SkinManager(this.components);
+            
+            // Apply theme to entire form (all Syncfusion controls).
+            skinManager1.Controls = this;
+            skinManager1.VisualTheme = VisualTheme.HighContrast;
         }
     }
 }
@@ -158,9 +161,9 @@ For the complete list of supported themes, refer to the [Blazor themes documenta
 
 ### DataGrid
 
-[WinForms DataGrid](https://www.syncfusion.com/winforms-controls/datagrid) is a high performance tabular control for Windows Forms applications, while [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is the web first Razor component for building responsive, interactive, data driven web interfaces.
+[WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) is a high performance tabular control for Windows Forms applications, while [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is the web first Razor component for building responsive, interactive, data driven web interfaces.
 
-For additional details, refer to the [WinForms DataGrid getting started guide](https://help.syncfusion.com/winforms/datagrid/getting-started) and [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app).
+For additional details, refer to the [WinForms DataGrid getting started guide](https://help.syncfusion.com/windowsforms/datagrid/getting-started) and [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app).
 
 | Aspect | WinForms | Blazor |
 |---|---|---|
@@ -175,7 +178,7 @@ For additional details, refer to the [WinForms DataGrid getting started guide](h
 
 #### Component rendering
 
-The [WinForms DataGrid](https://www.syncfusion.com/winforms-controls/datagrid) control can be added programmatically or via the Visual Studio Designer. Columns are configured in the Designer or programmatically, and data is assigned through the `DataSource` property.
+The [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) control can be added programmatically or via the Visual Studio Designer. Columns are configured in the Designer or programmatically, and data is assigned through the `DataSource` property.
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
 
@@ -216,7 +219,7 @@ namespace WinFormsDataGridApp
     public class Order
     {
         public int OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string? CustomerID { get; set; }
         public double Freight { get; set; }
     }
 }
@@ -229,11 +232,9 @@ namespace WinFormsDataGridApp
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-@page "/orders"
-@rendermode InteractiveServer
+@page "/Orders"
 
 <SfGrid DataSource="@Orders">
-    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="100"></GridColumn>
         <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="120"></GridColumn>
@@ -267,7 +268,7 @@ namespace WinFormsDataGridApp
 
 ### Charts
 
-[WinForms Charts](https://www.syncfusion.com/winforms-controls/charts) is a comprehensive charting control for rich desktop visualizations, while [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is the Razor based component for creating responsive, interactive charts on the web.
+[WinForms Charts](https://www.syncfusion.com/winforms-ui-controls/charts) is a comprehensive charting control for rich desktop visualizations, while [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is the Razor based component for creating responsive, interactive charts on the web.
 
 For additional details, refer to the [WinForms Charts getting started guide](https://help.syncfusion.com/windowsforms/chart/getting-started) and [Blazor Charts getting started guide](https://blazor.syncfusion.com/documentation/chart/getting-started).
 
@@ -284,7 +285,7 @@ For additional details, refer to the [WinForms Charts getting started guide](htt
 
 #### Component rendering
 
-The [WinForms Chart](https://www.syncfusion.com/winforms-controls/charts) control can be added programmatically or via the Visual Studio Designer. Axes and series are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
+The [WinForms Chart](https://www.syncfusion.com/winforms-ui-controls/charts) control can be added programmatically or via the Visual Studio Designer. Axes and series are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
 
 The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
 
@@ -332,7 +333,7 @@ namespace WinFormsChartApp
 
     public class SalesInfo
     {
-        public string Month { get; set; }
+        public string? Month { get; set; };
         public double Sales { get; set; }
     }
 }
@@ -345,11 +346,10 @@ namespace WinFormsChartApp
 {% tabs %}
 {% highlight razor tabtitle="Sales.razor" %}
 
-@page "/sales"
-@rendermode InteractiveServer
+@page "/Sales"
 
 <SfChart Title="Sales Analysis">
-    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryXAxis Title="Month" ValueType="@Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartPrimaryYAxis Title="Sales"></ChartPrimaryYAxis>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesData" 
@@ -391,16 +391,16 @@ namespace WinFormsChartApp
 
 ### Scheduler
 
-[WinForms Scheduler](https://www.syncfusion.com/winforms-controls/scheduler) is a feature rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
+[WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) is a feature rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
 
-For additional details, refer to the [WinForms Scheduler getting started guide](https://help.syncfusion.com/winforms/scheduler/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
+For additional details, refer to the [WinForms Scheduler getting started guide](https://help.syncfusion.com/windowsforms/scheduler/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
 
 | Aspect | WinForms | Blazor |
 |---|---|---|
 | Package (NuGet) | [Syncfusion.Schedule.Windows](https://www.nuget.org/packages/Syncfusion.Schedule.Windows) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
 | Component declaration | `ScheduleControl` (programmatic or Designer) | `<SfSchedule TValue="TModel">` |
-| Appointment model | Built in [ScheduleAppointment](https://help.syncfusion.com/winforms/schedule/appointments#creating-schedule-appointment) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
-| Date and time binding | `SelectedDate` and `ScheduleDateTime` | [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) and `CurrentDate` |
+| Appointment model | Built in [ScheduleAppointment](https://help.syncfusion.com/windowsforms/schedule/appointments#creating-schedule-appointment) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
+| Date and time binding | `SelectedDate` and `CurrentDate` | [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) (two-way binding via `@bind-SelectedDate`) |
 | Data source | `DataSource` property | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) |
 | Resources and grouping | `ResourceCollection` with mappings | [ScheduleResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResources.html) and [ScheduleResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) |
 | Events | CLR events | Event callbacks such as action and cell events |
@@ -408,7 +408,7 @@ For additional details, refer to the [WinForms Scheduler getting started guide](
 
 #### Component rendering
 
-The [WinForms Scheduler](https://www.syncfusion.com/winforms-controls/scheduler) control can be added programmatically or via the Visual Studio Designer. Views and appointments are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
+The [WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) control can be added programmatically or via the Visual Studio Designer. Views and appointments are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
 
 The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
 
@@ -459,51 +459,40 @@ namespace WinFormsSchedulerApp
 **Blazor equivalent**
 
 {% tabs %}
-{% highlight razor tabtitle="Calendar.razor" %}
+{% highlight razor tabtitle="Schedule.razor" %}
 
-@page "/calendar"
-@rendermode InteractiveServer
+@page "/Schedule"
 
-<SfSchedule TValue="Meeting" Height="650px" @bind-SelectedDate="@CurrentDate">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
         <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
-    <ScheduleEventSettings DataSource="@Appointments"></ScheduleEventSettings>
 </SfSchedule>
 
-@code {
-    private DateTime CurrentDate = DateTime.Today;
-    public List<Meeting> Appointments { get; set; } = new();
-    
-    protected override void OnInitialized()
+@code{
+    DateTime CurrentDate = new DateTime(2025, 2, 14);
+    List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        Appointments = new List<Meeting>
-        {
-            new Meeting 
-            { 
-                Id = 1,
-                Subject = "Project Meeting", 
-                StartTime = DateTime.Today.AddHours(10), 
-                EndTime = DateTime.Today.AddHours(11)
-            },
-            new Meeting 
-            { 
-                Id = 2,
-                Subject = "Client Call", 
-                StartTime = DateTime.Today.AddHours(14), 
-                EndTime = DateTime.Today.AddHours(15)
-            }
-        };
-    }
-    
-    public class Meeting
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2025, 2, 13, 10, 0, 0) , EndTime = new DateTime(2025, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2025, 2, 15, 10, 0, 0) , EndTime = new DateTime(2025, 2, 15, 12, 0, 0) }
+    };
+    public class AppointmentData
     {
         public int Id { get; set; }
         public string Subject { get; set; }
+        public string Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 
@@ -526,4 +515,5 @@ dotnet run
 
 - [Getting started with Blazor DataGrid in Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 - [Getting started with Blazor Chart in Web App](https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app)
+- [Getting started with Blazor Scheduler](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-web-app)
 - [Getting started with Blazor Components](https://blazor.syncfusion.com/documentation/introduction)
