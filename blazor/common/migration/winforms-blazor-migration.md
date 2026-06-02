@@ -33,7 +33,7 @@ This guide provides a step by step approach to migrating a [Windows Forms (WinFo
 
 ## Project structure comparison
 
-When migrating from WinForms to Blazor, one of the first changes you will notice is the project structure. WinForms applications are designed for desktop environments, whereas Blazor applications follow a component based web architecture. Understanding how files and responsibilities map between the two frameworks helps simplify the migration process.
+WinForms and Blazor Web Apps follow different application architectures. The following table maps common WinForms artifacts to their Blazor equivalents and describes their roles in a Blazor Web App.
 
 | **WinForms** | **Blazor** | **Description** |
 |---|---|---|
@@ -59,11 +59,9 @@ The following shared setup applies to all components and covers the common confi
 
 ### Package installation
 
-In WinForms applications, controls are installed as platform specific NuGet packages. For example, you can install the DataGrid for WinForms using the [Syncfusion.SfDataGrid.WinForms](https://www.nuget.org/packages/Syncfusion.SfDataGrid.WinForms) NuGet package.
+In WinForms applications, controls are installed as platform specific [WinForms NuGet packages](https://help.syncfusion.com/windowsforms/installation/install-nuget-packages).
 
-In Blazor applications, components are also provided as individual NuGet packages (for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)). Installing only the required component packages improves performance and reduces application size.
-
-For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In Blazor applications, components are also provided as individual NuGet packages, which helps improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
@@ -133,9 +131,7 @@ namespace WinFormsApp
 {% endhighlight %}
 {% endtabs %}
 
-In Blazor, styles and scripts are delivered as static web assets from NuGet packages. Reference them once at the application level.
-
-For the complete list of supported themes, refer to the [Blazor themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
+In Blazor, The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
