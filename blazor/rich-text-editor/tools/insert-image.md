@@ -352,6 +352,18 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
 {% endhighlight %}
 {% endtabs %}
 
+N> If the service is hosted on an external server, the full service-hosted path must be specified in the `SaveUrl` and `RemoveUrl` properties instead of a relative path.
+>
+> **Example:**
+>
+> ```razor
+> <RichTextEditorImageSettings SaveUrl="[SERVICE_HOSTED_PATH]/api/Image/Save" Path="./Images/" />
+>
+> <RichTextEditorImageSettings RemoveUrl="[SERVICE_HOSTED_PATH]/api/Image/Delete" Path="./Images/" />
+> ```
+>
+> Replace `[SERVICE_HOSTED_PATH]` with the appropriate base URL of the hosted service.
+
 {% tabs %}
 {% highlight cshtml tabtitle="ImageController.cs" %}
 
@@ -548,16 +560,6 @@ N> [View sample in GitHub.](https://github.com/SyncfusionExamples/blazor-richtex
  
 {% endhighlight %}
 {% endtabs %}
-
-N> If the service is hosted on an external server, the full service-hosted path must be specified in the `SaveUrl` property instead of a relative path.
->
-> **Example:**
->
-> ```razor
-> <RichTextEditorImageSettings SaveUrl="[SERVICE_HOSTED_PATH]/api/Image/Rename" Path="./Images/" />
-> ```
->
-> Replace `[SERVICE_HOSTED_PATH]` with the appropriate base URL of the hosted service.
 
 To configure the server-side handler in the Web API service, refer the below code.
 
