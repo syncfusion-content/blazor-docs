@@ -176,7 +176,6 @@ using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
 var builder = WebApplication.CreateBuilder(args);
-....
 
 ....
 
@@ -227,7 +226,6 @@ using Microsoft.Extensions.AI;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
-....
 
 ....
 
@@ -293,7 +291,6 @@ using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OllamaSharp;
 var builder = WebApplication.CreateBuilder(args);
-....
 
 ....
 
