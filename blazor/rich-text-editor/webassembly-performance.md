@@ -57,7 +57,7 @@ N> **PreventRender** method accepts the boolean argument that accepts true or fa
 
 When a callback method is assigned to the Rich Text Editor events, then the [StateHasChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged?view=aspnetcore-10.0) will be called in the parent component of the Rich Text Editor automatically once the event is completed.
 
-To prevent unnecessary re-rendering of the Rich Text Editor component by calling the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_PreventRender_System_Boolean_) method.
+Prevent unnecessary re-rendering of the Rich Text Editor component by calling the [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_PreventRender_System_Boolean_) method.
 
 In the following example:
 
@@ -82,7 +82,7 @@ In the following example:
     {
         rteObj.PreventRender();
         this.Output = this.Output + "<span><b>OnToolbarClick</b> event called<hr></span>";
-    };
+    }
 }
 
 {% endhighlight %}

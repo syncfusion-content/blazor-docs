@@ -104,7 +104,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> All Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
