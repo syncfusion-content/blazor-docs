@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor AutoComplete Component
+title: Getting Started with Blazor AutoComplete Component | Syncfusion
 description: Checkout and learn about getting started with Blazor AutoComplete component in Blazor WebAssembly App.
 platform: Blazor
 control: AutoComplete
