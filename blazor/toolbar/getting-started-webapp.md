@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor Toolbar Component in Blazor Web App | Syncfusion
+title: Getting started with Blazor Toolbar Component in Web App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor Toolbar Components in Blazor Web App.
 platform: Blazor
 control: Toolbar
