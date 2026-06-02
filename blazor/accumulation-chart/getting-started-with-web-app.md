@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Accumulation Chart in Blazor Web App
+title: Getting Started with Blazor Accumulation Chart in Blazor Web App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Accumulation Chart Component in Blazor Web App.
 platform: Blazor
 component: Accumulation Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor Accumulation Chart in Blazor Web App
+# Getting Started with Blazor Accumulation Chart in Web App
 
 This section briefly explains how to include [Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
