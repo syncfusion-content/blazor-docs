@@ -182,6 +182,10 @@ dotnet run
 dotnet run
 ```
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBpXsqjfdrkkiow?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.webp)" %}
 
 ## Setting On and Off text
