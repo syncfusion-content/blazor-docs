@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating Syncfusion WPF Controls to Blazor Components
+title: Migrating WPF Controls to Blazor Components | Syncfusion
 description: Step-by-step guide to migrate WPF controls to Blazor components on .NET 8+, including setup, configuration, and code examples.
 platform: Blazor
 component: Common
@@ -68,6 +68,47 @@ In Blazor applications, components are also provided as individual NuGet package
 For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package at the application level to enable styling.
+
+### Service registration
+
+In WPF, controls are usually declared in XAML and initialized in code-behind, so you do not need to register them explicitly. Application services are typically configured manually or through an external DI container.
+
+Blazor uses the built-in .NET dependency injection (DI) system, so required services must be registered in the application’s service container to enable component communication and framework functionality.
+
+In the `Program.cs` file, add the following namespace and register the required services.
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" hl_lines="2 8" %}
+
+...
+using Syncfusion.Blazor;
+...
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+// Register Blazor services
+builder.Services.AddSyncfusionBlazor();
+...
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add required namespaces
+
+In Blazor applications, after installing the required packages and registering services, import the necessary namespaces in the `_Imports.razor` file.
+
+{% tabs %}
+{% highlight razor tabtitle="_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Charts
+@using Syncfusion.Blazor.Schedule
+
+{% endhighlight %}
+{% endtabs %}
+
+This example includes the namespaces used by the components covered in this guide. Import only the namespaces needed for the components used in your application.
 
 ### Theme and script configuration
 
@@ -220,6 +261,7 @@ namespace WpfDataGridApp
 
 @page "/orders"
 @rendermode InteractiveServer
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
@@ -273,7 +315,7 @@ For additional details, refer to the [WPF Charts getting started guide](https://
 
 #### Component rendering
 
-The [WPF Chart](https://www.syncfusion.com/wpf-controls/charts) control is defined using nested XAML elements, and data is assigned through the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) property using binding paths for the X and Y values.
+The [WPF Charts](https://www.syncfusion.com/wpf-controls/charts) control is defined using nested XAML elements, and data is assigned through the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) property using binding paths for the X and Y values.
 
 The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
 
@@ -364,6 +406,7 @@ namespace WpfChart
 
 @page "/sales"
 @rendermode InteractiveServer
+@using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
@@ -497,6 +540,7 @@ namespace WpfScheduler
 
 @page "/calendar"
 @rendermode InteractiveServer
+@using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="Meeting" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
