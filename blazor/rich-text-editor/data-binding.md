@@ -40,7 +40,7 @@ The following example demonstrates how to use the `ValueChange` event to get a n
 </SfRichTextEditor>
 
 @code{
-    private string Value { get; set; } = "<p>Start to type a content to save </p>";
+    private string Value { get; set; } = "<p>Type or edit the content to be saved automatically in the editor</p>";
     private int SaveInterval { get; set; } = 5000;
     private void UpdateStatus(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
