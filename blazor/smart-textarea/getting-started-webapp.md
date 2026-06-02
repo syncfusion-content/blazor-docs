@@ -133,6 +133,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
 // Add services to the container.
 
@@ -175,6 +176,7 @@ using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OpenAI;
 var builder = WebApplication.CreateBuilder(args);
+....
 
 ....
 
@@ -225,6 +227,7 @@ using Microsoft.Extensions.AI;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
 ....
 
@@ -290,6 +293,7 @@ using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
 using OllamaSharp;
 var builder = WebApplication.CreateBuilder(args);
+....
 
 ....
 
