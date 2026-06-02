@@ -18,7 +18,7 @@ To get started quickly with Blazor Playground, watch the following video.
 
 ## Create a Blazor component
 
-You can create a Blazor component in Blazor Playground by following these steps:
+You can create a Blazor component in Blazor Playground by following these steps.
 
 1\. Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser.
 2\. In the editor, add the following code:
@@ -76,13 +76,13 @@ You can create a Blazor component in Blazor Playground by following these steps:
 
 3\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHZyLtTXzqUKjn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
 ![Blazor Playground output showing the custom Color Picker component](images/blazor_component.webp)
 
-## Add a Syncfusion® Blazor Component
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHZyLtTXzqUKjn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-Blazor Playground is preconfigured with the Syncfusion® Blazor package, stylesheets, and scripts. To use [Syncfusion® Blazor components](https://www.syncfusion.com/blazor-components) in the Playground, import the required namespace and add the component as shown below:
+## Add a Blazor Component
+
+Blazor Playground is preconfigured with the Blazor package, stylesheets, and scripts. To use [Blazor components](https://www.syncfusion.com/blazor-components) in the Playground, import the required namespace and add the component as shown below:
 
 1\. Add the `@using Syncfusion.Blazor.Grids` namespace at the top of the editor. This namespace is provided by the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) NuGet package.
 
@@ -141,9 +141,9 @@ Blazor Playground is preconfigured with the Syncfusion® Blazor package, stylesh
 
 3\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhxNSilfcqNzyDG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
-
 ![Blazor Playground output showing the DataGrid](images/blazor_datagrid.webp)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhxNSilfcqNzyDG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
