@@ -19,7 +19,7 @@ Ensure the **Configure for HTTPS** option is enabled, and select **Individual Ac
 
 ![Project-setting](images/project-setting.webp)
 
-If using Visual Studio Code, run the following commands in your command-line interface (CLI):
+If using Visual Studio Code, run the following commands in your command line interface (CLI):
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -39,7 +39,7 @@ After creating the project, run the application. On the registration page, click
 
 ## Apply Database Migrations
 
-After registration completes, click **Apply Migrations** to create the database schema and configure account-related tables and settings.
+After registration completes, click **Apply Migrations** to create the database schema and configure account related tables and settings.
 
 ![Apply-migration](images/apply-migration.webp)
 
