@@ -112,7 +112,7 @@ In WinForms, themes are typically applied using [SkinManager](https://help.syncf
 
 using Syncfusion.Windows.Forms;
 
-namespace WinFormsDataGridApp
+namespace WinFormsApp
 {
     public partial class Form1 : Form
     {
@@ -484,14 +484,14 @@ namespace WinFormsSchedulerApp
     public class AppointmentData
     {
         public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
+        public string? Subject { get; set; }
+        public string? Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
+        public string? RecurrenceRule { get; set; }
+        public string? RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
     }
 }
