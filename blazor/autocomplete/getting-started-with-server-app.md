@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with AutoComplete in Blazor Server App
+title: Getting Started with Blazor AutoComplete in Blazor Server App
 description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Server App.
 platform: Blazor
 component: AutoComplete
