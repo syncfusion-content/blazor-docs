@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WASM App with Authentication Library
 
-This article provides step-by-step instructions for building and securing a Blazor WebAssembly Standalone App and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component for authenticated users.
+This article provides step by step instructions for building and securing a Blazor WebAssembly Standalone App and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component for authenticated users.
 
 ## Create a new Blazor Web App 
 
@@ -19,7 +19,7 @@ Ensure the **Configure for HTTPS** option is enabled, and select **Individual Ac
 
 ![Project-setting](images/project-setting.webp)
 
-If using Visual Studio Code, run the following commands in your command-line interface (CLI):
+If using Visual Studio Code, run the following commands in your command line interface (CLI):
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -43,9 +43,9 @@ dotnet run
 {
   "Local": {
     "Authority": "https://accounts.google.com/",
-    "ClientId": "2...7-e...q.apps.googleusercontent.com",
-    "PostLogoutRedirectUri": "https://<example.com>/authentication/logout-callback",
-    "RedirectUri": "https://<example.com>/authentication/login-callback",
+    "ClientId": "2...7-e...q.apps.googleusercontent.com", 
+    "PostLogoutRedirectUri": "https://localhost:5001/authentication/logout-callback",  // Replace **5001** with your application’s actual HTTPS port number from launchSettings.json if different.
+    "RedirectUri": "https://localhost:5001/authentication/login-callback",
     "ResponseType": "id_token"
   }
 }
@@ -57,13 +57,13 @@ dotnet run
 
 ![OAuth 2.0 client ID](images/oauth-client-id.webp)
 
-* The `RedirectUri` (https://<example.com>/authentication/login-callback) must be registered in the Google APIs console as shown below.
+* The `RedirectUri` (https://localhost:5001/authentication/login-callback) must be registered in the Google APIs console as shown below.
 
 ![OAuth RedirectUri](images/oauth-rediredt-uri.webp)
 
 ## Integrating Blazor component
 
-Blazor components can be integrated within the **AuthorizeView** component as shown in the following steps.
+Blazor components can be integrated within the `AuthorizeView` component as shown in the following steps.
 
 ### Install NuGet packages
 
@@ -82,7 +82,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ### Register Blazor Service
 
-Register the Blazor service in the **~/Program.cs** file of the Blazor Web App.
+Register the Blazor service in the **Program.cs** file of the Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
