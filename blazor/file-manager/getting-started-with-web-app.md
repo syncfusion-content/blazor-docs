@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor File Manager Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -87,15 +87,22 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
 
-Install [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+**Visual Studio (NuGet Package Manager)**:
+
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.FileManager` and `Syncfusion.Blazor.Themes`) and install it.
+
+**Visual Studio Code or .NET CLI**:
+
+Open the terminal or command prompt and run the following commands:
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.FileManager -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.FileManager -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,22 +158,15 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor File Manager component inside the razor file.
+* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
-@* desired render mode define here *@
 @rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor %}
-
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
@@ -180,347 +180,24 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-## Create Models
+### Run the application
 
-Create a new folder named `Models` in the server project. Add the necessary model files to this folder for handling file operations. Download the `PhysicalFileProvider.cs` and `Base` folder from this [repository](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) and place them in the Models folder.
+**Visual Studio**:
 
-## Create a new folder controller
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor File Manager component will render in your default web browser.
 
-To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder.
+**Visual Studio Code or .NET CLI**:
 
-Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
+1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
+2. Run the following command:
 
-File Manager's base functions are available in the below namespace.
-```cshtml
-using Syncfusion.EJ2.FileManager.Base;
-````
-File Manager's operations are available in the below namespace.
-````cshtml
-using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
-````
-
-## Initialize the service in controller
-
-File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
-To perform the action add the following code in that `FileManagerController.cs` file.
-
-{% tabs %}
-{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
-
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Features;
-//File Manager's base functions are available in the below namespace.
-using Syncfusion.EJ2.FileManager.Base;
-//File Manager's operations are available in the below namespace.
-using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace filemanager.Server.Controllers
-{
-    [Route("api/[controller]")]
-    public class FileManagerController : Controller
-    {
-        public PhysicalFileProvider operation;
-        public string basePath;
-        string root = "wwwroot\\Files";
-        [Obsolete]
-        public FileManagerController(IWebHostEnvironment hostingEnvironment)
-        {
-            this.basePath = hostingEnvironment.ContentRootPath;
-            this.operation = new PhysicalFileProvider();
-            this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
-        }
-
-        // Processing the File Manager operations.
-        [Route("FileOperations")]
-        public object FileOperations([FromBody] FileManagerDirectoryContent args)
-        {
-            switch (args.Action)
-            {
-                // Add your custom action here.
-                case "read":
-                    // Path - Current path; ShowHiddenItems - Boolean value to show/hide hidden items.
-                    return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.ShowHiddenItems));
-                case "delete":
-                    // Path - Current path where the folder to be deleted; Names - Name of the files to be deleted
-                    return this.operation.ToCamelCase(this.operation.Delete(args.Path, args.Names));
-                case "copy":
-                    //  Path - Path from where the file was copied; TargetPath - Path where the file/folder is to be copied; RenameFiles - Files with same name in the copied location that is confirmed for renaming; TargetData - Data of the copied file
-                    return this.operation.ToCamelCase(this.operation.Copy(args.Path, args.TargetPath, args.Names, args.RenameFiles, args.TargetData));
-                case "move":
-                    // Path - Path from where the file was cut; TargetPath - Path where the file/folder is to be moved; RenameFiles - Files with same name in the moved location that is confirmed for renaming; TargetData - Data of the moved file
-                    return this.operation.ToCamelCase(this.operation.Move(args.Path, args.TargetPath, args.Names, args.RenameFiles, args.TargetData));
-                case "details":
-                    // Path - Current path where details of file/folder is requested; Name - Names of the requested folders
-                    return this.operation.ToCamelCase(this.operation.Details(args.Path, args.Names));
-                case "create":
-                    // Path - Current path where the folder is to be created; Name - Name of the new folder
-                    return this.operation.ToCamelCase(this.operation.Create(args.Path, args.Name));
-                case "search":
-                    // Path - Current path where the search is performed; SearchString - String typed in the searchbox; CaseSensitive - Boolean value which specifies whether the search must be casesensitive
-                    return this.operation.ToCamelCase(this.operation.Search(args.Path, args.SearchString, args.ShowHiddenItems, args.CaseSensitive));
-                case "rename":
-                    // Path - Current path of the renamed file; Name - Old file name; NewName - New file name
-                    return this.operation.ToCamelCase(this.operation.Rename(args.Path, args.Name, args.NewName));
-            }
-            return null;
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code to configure the service for the controller and map the controller after `app.UseRouting()`. The `app.UseRouting()` middleware should be placed after `app.UseHttpsRedirection()`. The correct ordering is essential to ensure proper request handling and middleware functionality:
-
-```cshtml
-
-builder.Services.AddControllers();
-
-...
-
-app.UseRouting();
-app.MapControllers();
-
-```
-
-This will configure and map the controller in your Blazor App.
-
-## Create Web App
-
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in `.razor` file inside the `Pages` folder.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.FileManager
-
-<SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
-                             UploadUrl="/api/FileManager/Upload"
-                             DownloadUrl="/api/FileManager/Download"
-                             GetImageUrl="/api/FileManager/GetImage">
-    </FileManagerAjaxSettings>
-</SfFileManager>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Interactive Modes to be Chosen
-
-Blazor supports different interactive modes for server-side rendering:
-
-* Interactive Server Render Mode: This mode allows Blazor components to be rendered on the server, sending the HTML to the client while maintaining interactive capabilities. It provides a balance between server-side processing and client-side responsiveness.
-
-* To enable this mode, configure the `Program.cs` file in your Blazor  project using the `AddInteractiveServerRenderMode` method.
-````cshtml
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-````
-Define a render mode at top of the component, as follows:
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveServer
-
-{% endhighlight %}
-{% endtabs %}
-
-Add your required files and folders under the `wwwroot\Files` directory.
-
-* In your  project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of your server project.
-* Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the default web browser.
-
-![Blazor File Manager Component](images/blazor-filemanager-component.png)
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
-
-## File download support
-
-To perform the download operation, initialize the [DownloadUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_DownloadUrl) property in a FileManagerAjaxSettings.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.FileManager
-
-<SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
-                                DownloadUrl="/api/FileManager/Download">
-    </FileManagerAjaxSettings>
-</SfFileManager>
-
-{% endhighlight %}
-{% endtabs %}
-
-Initialize the `Download` FileOperation in Controller part with the following code snippet.
-
-{% tabs %}
-{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
-
-namespace filemanager.Server.Controllers
-{
-    [Route("api/[controller]")]
-    public class FileManagerController : Controller
-    {
-        // Processing the Download operation.
-        [Route("Download")]
-        public IActionResult Download(string downloadInput)
-        {
-            var options = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            };
-            FileManagerDirectoryContent args = JsonSerializer.Deserialize<FileManagerDirectoryContent>(downloadInput, options);
-            return operation.Download(args.Path, args.Names, args.Data);
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## File upload support
-
-To perform the upload operation, initialize the [UploadUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_UploadUrl) property in a FileManagerAjaxSettings.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.FileManager
-
-<SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
-                                UploadUrl="/api/FileManager/Upload">
-    </FileManagerAjaxSettings>
-</SfFileManager>
-
-{% endhighlight %}
-{% endtabs %}
-
-Initialize the `Upload` File Operation in Controller part with the following code snippet.
-
-{% tabs %}
-{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
-
-namespace filemanager.Server.Controllers
-{
-    [Route("api/[controller]")]
-    public class FileManagerController : Controller
-    {
-        // Processing the Upload operation.
-        [Route("Upload")]
-        [DisableRequestSizeLimit]
-        public IActionResult Upload(string path, long size, IList<IFormFile> uploadFiles, string action)
-        {
-            try
-            {
-                FileManagerResponse uploadResponse;
-                foreach (var file in uploadFiles)
-                {
-                    var folders = (file.FileName).Split('/');
-                    // checking the folder upload
-                    if (folders.Length > 1)
-                    {
-                        for (var i = 0; i < folders.Length - 1; i++)
-                        {
-                            string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
-                            if (Path.GetFullPath(newDirectoryPath) != (Path.GetDirectoryName(newDirectoryPath) + Path.DirectorySeparatorChar + folders[i]))
-                            {
-                                throw new UnauthorizedAccessException("Access denied for Directory-traversal");
-                            }
-                            if (!Directory.Exists(newDirectoryPath))
-                            {
-                                this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
-                            }
-                            path += folders[i] + "/";
-                        }
-                    }
-                }
-                uploadResponse = operation.Upload(path, uploadFiles, action, size, null);
-                if (uploadResponse.Error != null)
-                {
-                    Response.Clear();
-                    Response.ContentType = "application/json; charset=utf-8";
-                    Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
-                    Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
-                }
-            }
-            catch (Exception e)
-            {
-                ErrorDetails er = new ErrorDetails();
-                er.Message = e.Message.ToString();
-                er.Code = "417";
-                er.Message = "Access denied for Directory-traversal";
-                Response.Clear();
-                Response.ContentType = "application/json; charset=utf-8";
-                Response.StatusCode = Convert.ToInt32(er.Code);
-                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = er.Message;
-                return Content("");
-            }
-            return Content("");
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Image preview support
-
-To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.FileManager
-
-<SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
-                                GetImageUrl="/api/FileManager/GetImage">
-    </FileManagerAjaxSettings>
-</SfFileManager>
-
-{% endhighlight %}
-{% endtabs %}
-
-Initialize the `GetImage` File Operation in Controller part with the following code snippet.
-
-{% tabs %}
-{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
-
-namespace filemanager.Server.Controllers
-{
-    [Route("api/[controller]")]
-    public class FileManagerController : Controller
-    {
-        // Processing the GetImage operation.
-        [Route("GetImage")]
-        public IActionResult GetImage(FileManagerDirectoryContent args)
-        {
-            return this.operation.GetImage(args.Path, args.Id,false,null, null);
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor File Manager with Image Preview](images/blazor-filemanager-image-preview.png)
-
+    ```
+    dotnet run
+    ```
+3. The application will start and display in your default web browser.
 
 ## See also
 
 1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 3. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-

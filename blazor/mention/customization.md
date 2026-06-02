@@ -19,7 +19,7 @@ To show the mentioned character along with the text when displaying the selected
 
 {% endhighlight %}
 
-![Blazor Mention with show or hide mention character](./images/blazor-mention-show-mention-char.png)
+![Blazor Mention with show or hide mention character](./images/blazor-mention-show-mention-char.webp)
 
 ## Adding the suffix character after selection
 
@@ -43,7 +43,7 @@ By default, the popup list width value is set to `auto`. Depending on the mentio
 
 {% endhighlight %}
 
-![Blazor Mention with popup list](./images/blazor-mention-popup-list.png)
+![Blazor Mention with popup list](./images/blazor-mention-popup-list.webp)
 
 ## Trigger character
 
@@ -55,7 +55,7 @@ The [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 {% endhighlight %}
 
-![Blazor Mention with trigger character](./images/blazor-mention-trigger-char.png)
+![Blazor Mention with trigger character](./images/blazor-mention-trigger-char.webp)
 
 ## Leading Space Requirement
 

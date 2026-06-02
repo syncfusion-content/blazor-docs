@@ -78,7 +78,7 @@ This data type is a collection of array of numbers, where each array represents 
 
 ```
 
-![Array - Table Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-binding.png)
+![Array - Table Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-binding.webp)
 
 ### Array - Cell binding
 
@@ -151,7 +151,7 @@ This data type is a collection of array objects that contain information about t
 
 ```
 
-![Array - Cell Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-cell-binding.png)
+![Array - Cell Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-cell-binding.webp)
 
 ### JSON data - Table binding
 
@@ -209,7 +209,7 @@ In JSON table data binding, each JSON object contains an X-axis data point as ro
 
 ```
 
-![JSON Data - Table Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-json-data-table-binding.png)
+![JSON Data - Table Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-json-data-table-binding.webp)
 
 ### JSON data - Cell binding
 
@@ -326,7 +326,7 @@ In JSON cell data binding, each JSON object consists a value for each cell along
 
 ```
 
-![JSON Data - Cell Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-json-data-cell-binding.png)
+![JSON Data - Cell Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-json-data-cell-binding.webp)
 
 ## Empty points
 
@@ -370,4 +370,4 @@ The data points that use the `null` value are considered as empty points. Empty 
 
 ```
 
-![Blazor HeatMap Chart with Empty Points](images/data/blazor-heatmap-chart-empty-points.png)
+![Blazor HeatMap Chart with Empty Points](images/data/blazor-heatmap-chart-empty-points.webp)

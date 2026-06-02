@@ -59,7 +59,7 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 
 ```
 
-![Printing in Blazor 3D Chart](images/getting-started/blazor-chart-printing.png)
+![Printing in Blazor 3D Chart](images/getting-started/blazor-chart-printing.webp)
 
 ## Export
 
@@ -111,4 +111,4 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 
 ```
 
-![Exporting in Blazor 3D Chart](images/getting-started/blazor-chart-exporting.png)
+![Exporting in Blazor 3D Chart](images/getting-started/blazor-chart-exporting.webp)

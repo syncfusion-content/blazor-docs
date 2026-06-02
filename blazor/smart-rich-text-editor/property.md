@@ -21,6 +21,7 @@ Use the `Commands` property to configure each `AICommands` entry, including its 
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
+    <p>The <strong>AssistViewSettings</strong> properties in the Syncfusion Smart Rich Text Editor enable you to configure and customize the behavior and features of the AssistView. These settings allow you to control toolbar actions, manage user interactions, and tailor the overall assistance experience within the editor.</p>
     <AssistViewSettings Commands="@MyCommands" />
 </SfSmartRichTextEditor>
 
@@ -45,7 +46,7 @@ Use the `Commands` property to configure each `AICommands` entry, including its 
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings Command Property](./images/smart-rich-text-editor-command-property.webp)
 
 ## PopupMaxHeight
 **Type:** `string` | **Default:** `"400"`
@@ -58,13 +59,14 @@ Sets the maximum height of the AI Assistant popup. Accepts CSS height values or 
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
+    <p>Specifies the maximum height of the AssistView popup. This property helps control the vertical size of the popup to ensure optimal display and usability within the editor layout.</p>
     <AssistViewSettings PopupMaxHeight="80vh" />
 </SfSmartRichTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings PopupMaxHeight Property](./images/smart-rich-text-editor-popupmaxheight-property.webp)
 
 ## PopupWidth
 **Type:** `string` | **Default:** `"600"`
@@ -77,13 +79,15 @@ Sets the width of the AI Assistant popup. Accepts CSS width values or numbers (t
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
-    <AssistViewSettings PopupWidth="650px" />
+    <p>Specifies the width of the AssistView popup. This property allows you to control the horizontal size of the popup to ensure it fits well within the editor layout and provides an optimal user experience.</p>
+    <AssistViewSettings PopupWidth="550px" />
 </SfSmartRichTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings PopupWidth Property](./images/smart-rich-text-editor-popupwidth-property.webp)
+
 
 ## Placeholder
 **Type:** `string` | **Default:** `"Ask AI to rewrite or generate content."`
@@ -96,13 +100,14 @@ Specifies the placeholder text shown in the AI Assistant prompt textarea.
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
+    <p>Specifies the placeholder text displayed in the AssistView input area when no content is entered.</p>
     <AssistViewSettings Placeholder="How can I improve this document?" />
 </SfSmartRichTextEditor>
 
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings Placeholder Property](./images/smart-rich-text-editor-placeholder-property.webp)
 
 ## Prompts
 **Type:** `List<AssistViewPrompt>`
@@ -116,6 +121,7 @@ Defines a collection of predefined prompts and their corresponding responses. Th
 @using Syncfusion.Blazor.InteractiveChat
 
 <SfSmartRichTextEditor>
+    <p>Specifies the collection of predefined prompts available in the AssistView. These prompts help guide users by providing ready-to-use suggestions, enabling quicker interactions and improving the overall assistance experience within the editor.</p>
     <AssistViewSettings Prompts="@TemplatePrompts" />
 </SfSmartRichTextEditor>
 
@@ -150,7 +156,7 @@ Retrieves a list of users.
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings Prompts Property](./images/smart-rich-text-editor-prompts-property.webp)
 
 ## Suggestions
 **Type:** `List<string>`
@@ -163,6 +169,7 @@ Defines suggestion prompts displayed in the AI Assistant popup.
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
+    <p>Specifies the list of suggested prompts displayed in the AssistView. These suggestions help users quickly choose common actions or queries, improving efficiency and guiding interactions within the editor.</p>
     <AssistViewSettings Suggestions="@QuickSuggestions" />
 </SfSmartRichTextEditor>
 
@@ -181,7 +188,7 @@ Defines suggestion prompts displayed in the AI Assistant popup.
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings Suggestions Property](./images/smart-rich-text-editor-suggestions-property.webp)
 
 ## MaxPromptHistory
 **Type:** `int` | **Default:** `20`
@@ -201,8 +208,6 @@ Defines the maximum number of conversation entries retained in the editor's hist
 {% endhighlight %}
 {% endtabs %}
 
----
-
 ## BannerTemplate
 
 Specifies the template for the banner in the AI Assistant popup, useful for branding, status, or short instructions.
@@ -213,6 +218,7 @@ Specifies the template for the banner in the AI Assistant popup, useful for bran
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
+    <p>Specifies a custom template for the banner section in the AssistView. This property allows you to define personalized content or UI elements to be displayed, enhancing the visual appearance and user experience.</p>   
     <AssistViewSettings>
         <BannerTemplate>
             <div style="padding: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
@@ -226,7 +232,7 @@ Specifies the template for the banner in the AI Assistant popup, useful for bran
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings BannerTemplate Property](./images/smart-rich-text-editor-bannertemplate-property.webp)
 
 ## HeaderToolbarSettings
 **Type:** `RenderFragment?`
@@ -241,6 +247,7 @@ Configures the toolbar in the header section of the AI Assistant interface.
 @using Syncfusion.Blazor.Navigations
 
 <SfSmartRichTextEditor>
+    <p>Specifies the toolbar settings for the header section of the AssistView. This property allows you to configure the available toolbar items and control their appearance and behavior, enabling customized interactions within the AssistView.</p>    
     <AssistViewSettings>
         <HeaderToolbarSettings>
             <AssistViewToolbarItem Type="ItemType.Spacer" />
@@ -253,7 +260,7 @@ Configures the toolbar in the header section of the AI Assistant interface.
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings HeaderToolbarSettings Property](./images/smart-rich-text-editor-header-toolbasettings-property.webp)
 
 ## PromptToolbarSettings
 **Type:** `RenderFragment?`
@@ -268,6 +275,7 @@ Configures the toolbar below of the prompt input area section.
 @using Syncfusion.Blazor.Navigations
 
 <SfSmartRichTextEditor>
+    <p>Specifies the toolbar settings for the prompt input area in the AssistView. This property allows you to customize the available toolbar actions and control how users interact with prompts, enhancing the overall assistance workflow.</p>
     <AssistViewSettings>
         <PromptToolbarSettings>
             <PromptToolbarItem Text="Edit" IconCss="e-icons e-assist-edit" Tooltip="Edit prompt" />
@@ -281,13 +289,12 @@ Configures the toolbar below of the prompt input area section.
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings PromptToolbarSettings Property](./images/smart-rich-text-editor-prompt-toolbasettings-property.webp)
 
 ## ResponseToolbarSettings
 **Type:** `RenderFragment?`
 
 Configures the toolbar in the AI response viewer section.
-
 
 {% tabs %}
 {% highlight razor %}
@@ -297,6 +304,7 @@ Configures the toolbar in the AI response viewer section.
 @using Syncfusion.Blazor.Navigations
 
 <SfSmartRichTextEditor>
+    <p>Specifies the toolbar settings for the response section in the AssistView. This property allows you to configure the available actions and control how users interact with generated responses, enabling a more flexible and interactive experience.</p>
     <AssistViewSettings>
         <ResponseToolbarSettings>
             <ResponseToolbarItem Text="Regenerate" IconCss="e-icons e-refresh" />
@@ -315,10 +323,10 @@ Configures the toolbar in the AI response viewer section.
 {% endhighlight %}
 {% endtabs %}
 
----
+![Blazor Smart Rich Text Editor AssistViewSettings ResponseToolbarSettings Property](./images/smart-rich-text-editor-response-toolbasettings-property.webp)
 
-## See Also
+## See also
 
-* [Methods](method.md)
-* [Appearance](appearance.md)
-* [Events](events.md)
+* [Methods](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/method)
+* [Appearance](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/appearance)
+* [Events](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/events)

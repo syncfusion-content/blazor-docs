@@ -53,7 +53,7 @@ For numeric fields, the formatting settings include the following properties:
 
 ```
 
-![Number Formatting in Blazor Pivot Table](images/blazor-pivottable-number-formatting.png)
+![Number Formatting in Blazor Pivot Table](images/blazor-pivottable-number-formatting.webp)
 
 ## Date and Time formatting
 
@@ -94,7 +94,7 @@ For date and time fields, the formatting settings include these properties:
 
 ```
 
-![Date Formatting in Blazor Pivot Table](images/blazor-pivottable-date-formatting.png)
+![Date Formatting in Blazor Pivot Table](images/blazor-pivottable-date-formatting.webp)
 
 ## Limitations of date formatting
 

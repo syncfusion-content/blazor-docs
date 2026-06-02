@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting grid with templates in Syncfusion Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting template content to Excel, enabling rich formatting in exported documents. The following template types are supported:
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to Excel, enabling rich formatting in exported documents. The following template types are supported:
 
 * [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template): Custom cell content such as formatted text, images, or hyperlinks.
 * [Caption Template](https://blazor.syncfusion.com/documentation/datagrid/caption-template): Group caption rows with customized display elements.
@@ -19,7 +19,7 @@ These templates are preserved during export, allowing the resulting Excel file t
 
 ## Exporting with column template
 
-The Excel export functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting columns that use templates containing images, hyperlinks, and custom text.
+The Excel export functionality in Blazor DataGrid supports exporting columns that use templates containing images, hyperlinks, and custom text.
 
 To export template columns to an Excel document:
 
@@ -141,11 +141,11 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with column template](./images/column-template.gif)
+![Exporting with column template](./images/column-template.webp)
 
 ## Exporting with group caption template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting grouped data along with a custom caption template to an Excel document. This feature is useful for adding meaningful group captions such as record counts or group keys to the exported file.
+The Blazor DataGrid supports exporting grouped data along with a custom caption template to an Excel document. This feature is useful for adding meaningful group captions such as record counts or group keys to the exported file.
 
 To customize group caption text in the exported Excel document:
 
@@ -258,7 +258,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with group caption template](./images/group-caption.gif)
+![Exporting with group caption template](./images/group-caption.webp)
 
 ## Customizing and Aligning Group Caption Templates in Excel Export
 
@@ -422,7 +422,7 @@ public class ProductInfo
 
 ## Exporting with detail template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting both parent and child (detail) records including nested data to an Excel document.
+The Blazor DataGrid supports exporting both parent and child (detail) records including nested data to an Excel document.
 
 By default, the Grid exports only the parent rows along with expanded detail rows. To customize this behavior, configure the [ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExcelDetailRowMode) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) inside the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
@@ -756,11 +756,11 @@ public class ProductData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with detail template](./images/detail-template.gif)
+![Exporting with detail template](./images/detail-template.webp)
 
 ## Exporting hierarchical Grid using detail template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports exporting hierarchical data to Excel using the detail template feature. This is useful when parent rows contain nested child records, such as employee details with related orders.
+The Blazor DataGrid supports exporting hierarchical data to Excel using the detail template feature. This is useful when parent rows contain nested child records, such as employee details with related orders.
 
 To export hierarchical Grid data to an Excel document:
 
@@ -1054,4 +1054,4 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.gif)
+![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.webp)

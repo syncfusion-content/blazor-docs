@@ -173,7 +173,7 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Ci
 
 ```
 
-![Blazor Circular Gauge inside Dashboard Layout component](../images/blazor-circulargauge-with-dashboard-layout.png)
+![Blazor Circular Gauge inside Dashboard Layout component](../images/blazor-circulargauge-with-dashboard-layout.webp)
 
 ## Circular Gauge component inside Tab
 
@@ -313,7 +313,7 @@ When the Circular Gauge component renders within the Tab component, its renderin
 
 ```
 
-![Blazor Circular Gauge inside Tab component](../images/blazor-circulargauge-with-tab.png)
+![Blazor Circular Gauge inside Tab component](../images/blazor-circulargauge-with-tab.webp)
 
 
 ## Circular Gauge component inside Dialog
@@ -403,7 +403,7 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSZkicrHnxtFdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSZkicrHnxtFdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.webp)" %}
 
 
 ## Circular Gauge component inside Accordion
@@ -584,4 +584,4 @@ Color="#e5ce20" PointerWidth="30">
 
 ```
 
-![Blazor Circular Gauge inside Accordion component](../images/blazor-circulargauge-with-accordion.png)
+![Blazor Circular Gauge inside Accordion component](../images/blazor-circulargauge-with-accordion.webp)

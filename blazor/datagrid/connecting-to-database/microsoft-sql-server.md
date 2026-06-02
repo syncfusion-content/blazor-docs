@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQL Server to Blazor Data Grid Using Entity Framework
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from a SQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
 
 **What is Entity Framework Core?**
 
@@ -36,7 +36,7 @@ Ensure the following software and packages are installed before proceeding:
 | Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
 | .NET SDK | net8.0 or compatible | Runtime and build tools |
 | SQL Server | 2019 or later | Database server |
-| Syncfusion.Blazor.Grids | {{site.blazorversion}} | DataGrid and UI components |
+| Syncfusion.Blazor.Grid | {{site.blazorversion}} | DataGrid and UI components |
 | Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for DataGrid components |
 | Microsoft.EntityFrameworkCore | 9.0.0 or later | Core framework for database operations |
 | Microsoft.EntityFrameworkCore.Tools | 9.0.0 or later | Tools for managing database migrations |
@@ -581,7 +581,7 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 
 **Instructions:**
 
-* The Syncfusion.Blazor.Grids package was installed in **Step 2** of the previous heading.
+* The Syncfusion.Blazor.Grid package was installed in **Step 2** of the previous heading.
 * Import the required namespaces in the `Components/_Imports.razor` file:
 
 ```csharp
@@ -607,7 +607,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 
 ### Step 2: Update the Blazor DataGrid
 
-The `Home.razor` component will display the ticket data in a Syncfusion Blazor DataGrid with search, filter, sort, and pagination capabilities.
+The `Home.razor` component will display the ticket data in a Blazor DataGrid with search, filter, sort, and pagination capabilities.
 
 **Instructions:**
 
@@ -658,9 +658,9 @@ The Home component has been updated successfully with DataGrid.
 
 ### Step 3: Implement the CustomAdaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can bind data from a **SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
+The Blazor DataGrid can bind data from a **SQL Server** database using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) property to [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/custom-adaptor) for scenarios that require full control over data operations.
 
-The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
+The `CustomAdaptor` is a bridge between the DataGrid and the database. It handles all data operations including reading, searching, filtering, sorting, paging, and CRUD operations. Each operation in the CustomAdaptor's `ReadAsync` method handles specific grid functionality. The Blazor DataGrid sends operation details to the API through a [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object. These details can be applied to the data source using methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class.
 
 **Instructions:**
 
@@ -847,7 +847,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Network Support Ticket System is now running and ready to use.
 
-![Basic DataGrid displaying tickets from the SQL Server database](../images/blazor-datagrid-sql.png)
+![Basic DataGrid displaying tickets from the SQL Server database](../images/blazor-datagrid-sql.webp)
 
 ### Step 6: Implement Paging Feature
 

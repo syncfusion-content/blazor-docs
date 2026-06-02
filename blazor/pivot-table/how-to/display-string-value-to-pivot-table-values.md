@@ -73,4 +73,4 @@ In the following example, each value cell for the **Sold** field is converted to
 
 ```
 
-![Display String Value in Blazor PivotTable](images/display-string-value-in-blazor-pivottable.png)
+![Display String Value in Blazor PivotTable](images/display-string-value-in-blazor-pivottable.webp)

@@ -56,7 +56,7 @@ Category axis type is used to represent the string values in axis labels.
 
 ```
 
-![Blazor HeatMap Chart with Axis](images/axis/blazor-heatmap-chart-axis.png)
+![Blazor HeatMap Chart with Axis](images/axis/blazor-heatmap-chart-axis.webp)
 
 ### Numeric axis
 
@@ -97,7 +97,7 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 ```
 
-![Blazor HeatMap Chart with Numeric Axis](images/axis/blazor-heatmap-chart-numeric-axis.png)
+![Blazor HeatMap Chart with Numeric Axis](images/axis/blazor-heatmap-chart-numeric-axis.webp)
 
 ### Date-time axis
 
@@ -141,7 +141,7 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 ```
 
-![Blazor HeatMap Chart with DateTime Axis](images/axis/blazor-heatmap-chart-datetime-axis.png)
+![Blazor HeatMap Chart with DateTime Axis](images/axis/blazor-heatmap-chart-datetime-axis.webp)
 
 ## Inversed axis
 
@@ -185,7 +185,7 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 ```
 
-![Blazor HeatMap Chart with Inversed Axis](images/axis/blazor-heatmap-chart-inversed-axis.png)
+![Blazor HeatMap Chart with Inversed Axis](images/axis/blazor-heatmap-chart-inversed-axis.webp)
 
 ## Opposed axis
 
@@ -229,7 +229,7 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ```
 
-![Blazor HeatMap Chart with Opposed Axis](images/axis/blazor-heatmap-chart-opposed-axis.png)
+![Blazor HeatMap Chart with Opposed Axis](images/axis/blazor-heatmap-chart-opposed-axis.webp)
 
 ## Axis labels customization
 
@@ -299,7 +299,7 @@ The text style of the axis labels can be customized using the following options 
 
 ```
 
-![Text style customization for the axis labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.png)
+![Text style customization for the axis labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.webp)
 
 ### Providing line breaks
 
@@ -335,7 +335,7 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
 
 ```
 
-![Axis Labels with line breaks in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-axis-labels-with-line-breaks.png)
+![Axis Labels with line breaks in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-axis-labels-with-line-breaks.webp)
 
 ### Customizing axis labels when intersecting
 
@@ -402,7 +402,7 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
 
 ```
 
-![Label customization when intersecting with other labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.png)
+![Label customization when intersecting with other labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.webp)
 
 ### Rotating axis labels
 
@@ -460,7 +460,7 @@ The axis labels can be rotated to a desired angle by using the [LabelRotation](h
 
 ```
 
-![Label rotation in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-rotation.png)
+![Label rotation in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-rotation.webp)
 
 ### Label formatting
 
@@ -504,7 +504,7 @@ The HeatMap supports formatting the axis labels by using the [LabelFormat](https
 
 ```
 
-![Formatting Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-format.png)
+![Formatting Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-format.webp)
 
 ## Axis intervals
 
@@ -548,7 +548,7 @@ In heat map, you can define an interval between the axis labels using the `Inter
 
 ```
 
-![Blazor HeatMap Chart with Axis Intervals](images/axis/blazor-heatmap-chart-axis-interval.png)
+![Blazor HeatMap Chart with Axis Intervals](images/axis/blazor-heatmap-chart-axis-interval.webp)
 
 ## Axis label increment
 
@@ -590,7 +590,7 @@ Axis label increment in the heat map is used to display the axis labels with reg
 
 ```
 
-![Incrementing Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-increment-axis-label.png)
+![Incrementing Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-increment-axis-label.webp)
 
 ## Multilevel labels
 
@@ -718,4 +718,4 @@ The multilevel labels can be customized by using the following properties and ta
 }
 
 ```
-![Multilevel labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-multi-level-labels.png)
+![Multilevel labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-multi-level-labels.webp)

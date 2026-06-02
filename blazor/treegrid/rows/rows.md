@@ -102,7 +102,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Blazor Tree Grid Rows](../images/blazor-treegrid-row-customization.png)
+![Customizing Blazor Tree Grid Rows](../images/blazor-treegrid-row-customization.webp)
 
 ## Styling alternate rows
 
@@ -184,7 +184,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Alternate Rows in Blazor Tree Grid](../images/blazor-treegrid-alternate-rows-customization.png)
+![Customizing Alternate Rows in Blazor Tree Grid](../images/blazor-treegrid-alternate-rows-customization.webp)
 
 ## Accessing row model information programmatically
 

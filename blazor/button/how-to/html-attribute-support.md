@@ -22,4 +22,4 @@ The following example demonstrates how to set type attribute in the [SfButton](h
 ```
 
 
-![Blazor Button with HTML Attribute](./../images/blazor-button-with-html.png)
+![Blazor Button with HTML Attribute](./../images/blazor-button-with-html.webp)

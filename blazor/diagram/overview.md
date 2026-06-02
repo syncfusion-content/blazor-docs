@@ -12,7 +12,7 @@ documentation: ug
 
  {% youtube "youtube:https://www.youtube.com/watch?v=LIlVk9iOo2U" %}
 
- ![Diagram Component Overview](images/flowchart.png)
+ ![Diagram Component Overview](images/Flowchart.webp)
 
 ## Key features of Diagram Component are as follows:
 

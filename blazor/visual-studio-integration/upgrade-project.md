@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrade a Project to the latest Syncfusion® Version
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for Visual Studio updates an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor application to a newer Essential Studio<sup style="font-size:70%">&reg;</sup> release by automatically updating NuGet package references and theme links.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Migration add-in for Visual Studio helps you update an existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor project to a newer Essential Studio<sup style="font-size:70%">&reg;</sup> release. The tool updates NuGet package references and theme links and provides an optional backup to preserve your project before applying changes.
 
 ## Steps to migrate the project
 
@@ -23,21 +23,17 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for
 
 2. Open the Migration Wizard using one of the following options:
 
-    **Option 1:**
+    - Choosing **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Migrate Project…** from the Visual Studio menu.
 
-    Choose **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Migrate Project…** from the Visual Studio menu.
+        ![Open the Migrate Project wizard from the Extensions menu in Visual Studio](images/migrationmenu.webp)
 
-    ![Open the Migrate Project wizard from the Extensions menu in Visual Studio](images/migrationmenu.webp)
-
-    **Option 2:**
-
-    In **Solution Explorer**, right-click the project, select **Syncfusion® Blazor**, then choose **Migrate Syncfusion® Blazor project from another version...**
+    - Or right-clicking the project in Solution Explorer, selecting **Syncfusion® Blazor**, then choose **Migrate Syncfusion® Blazor project from another version...**
 
       ![Open the Migrate Project wizard from the Solution Explorer context menu](images/migrationaddin.webp)
 
     N> The Migration option becomes available only after the project references the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
 
-3. In the Syncfusion® Project Migration window, select the desired Syncfusion® Blazor version to migrate to.
+3. In the Syncfusion® Project Migration window, select the desired Syncfusion® Blazor version to migrate.
 
     ![Syncfusion Blazor Project Migration wizard with version selection](images/migration.webp)
 

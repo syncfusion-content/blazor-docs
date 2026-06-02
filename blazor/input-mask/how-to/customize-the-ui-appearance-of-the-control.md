@@ -42,4 +42,4 @@ The following example demonstrates how to change the appearance of the MaskedTex
 </style>
 ```
 
-![Blazor Input Mask with custom CSS applied](../images/customCss.png)
+![Blazor Input Mask with custom CSS applied](../images/customCss.webp)

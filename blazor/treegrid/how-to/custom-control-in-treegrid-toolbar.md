@@ -118,4 +118,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Custom Control in Blazor TreeGrid Toolbar](../images/blazor-treegrid-custom-control-in-toolbar.gif)
+![Custom Control in Blazor TreeGrid Toolbar](../images/blazor-treegrid-custom-control-in-toolbar.webp)

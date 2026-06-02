@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind data and perform CRUD actions with CustomAdaptor in Syncfusion Blazor DataGrid
-description: Learn all about Custom Binding in the Syncfusion Blazor DataGrid and much more.
+title: Blazor DataGrid with Custom Adaptor | Syncfusion
+description: Learn about Custom Data Binding and perform CRUD operations using CustomAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
@@ -10,7 +10,7 @@ documentation: ug
 
 # Custom Binding in Blazor DataGrid
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling you to perform manual operations on the data. This feature is useful for implementing custom data binding and editing operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling you to perform manual operations on the data. This feature is useful for implementing custom data binding and editing operations in the Blazor DataGrid.
 
 To implement custom data binding in the Grid, the **DataAdaptor** class is used. This abstract class serves as a base class for the custom adaptor.
 
@@ -76,7 +76,7 @@ To learn more about **Custom Binding** in the Grid, watch this video:
 
 ## Data Binding
 
-Custom data binding can be performed in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid by providing a custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
+Custom data binding can be performed in the Blazor DataGrid by providing a custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
 
 The following sample code demonstrates how to implement custom data binding using a custom adaptor:
 
@@ -180,7 +180,7 @@ The following sample code demonstrates how to implement custom data binding usin
 
 The following image shows the custom-bound data displayed in the Grid:
 
-![Custom Binding in Grid](../images/blazor-datagrid-custom-binding.png)
+![Custom Binding in Grid](../images/blazor-datagrid-custom-binding.webp)
 
 > If the `Read/ReadAsync` method is not overridden in the custom adaptor, it will be handled by the default read handler.
 
@@ -471,7 +471,7 @@ You can find the complete code in the [Github](https://github.com/SyncfusionExam
 
 When using a custom adaptor, the searching operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Grid action details, including search criteria.
 
-![Handling Searching in Custom Adaptor](../images/blazor-datagrid-searching-in-custom-adaptor.png)
+![Handling Searching in Custom Adaptor](../images/blazor-datagrid-searching-in-custom-adaptor.webp)
 
 The following sample code demonstrates how to implement the searching operation for custom-bound data:
 
@@ -539,7 +539,7 @@ The following sample code demonstrates how to implement the searching operation 
 
 When using a custom adaptor, the filtering operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Grid action details, as shown in the image below:
 
-![Handling Filtering in Custom Adaptor](../images/blazor-datagrid-filtering-in-custom-adaptor.png)
+![Handling Filtering in Custom Adaptor](../images/blazor-datagrid-filtering-in-custom-adaptor.webp)
 
 Based on these Grid action details, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class.
 
@@ -611,7 +611,7 @@ The following sample code demonstrates how to implement the filtering operation 
 
 When using a custom adaptor, the sorting operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Grid action details, as shown in the image below:
 
-![Handling Sorting in Custom Adaptor](../images/blazor-datagrid-sorting-in-custom-adaptor.png)
+![Handling Sorting in Custom Adaptor](../images/blazor-datagrid-sorting-in-custom-adaptor.webp)
 
 Based on these Grid action details, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class.
 
@@ -683,7 +683,7 @@ The following sample code demonstrates how to implement the sorting operation fo
 
 When using a custom adaptor, the paging operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` class provides Grid action details, including skip and take values for paging.
 
-![Handling Paging in Custom Adaptor](../images/blazor-datagrid-paging-in-custom-adaptor.png)
+![Handling Paging in Custom Adaptor](../images/blazor-datagrid-paging-in-custom-adaptor.webp)
 
 The following sample code demonstrates how to implement the paging operation for custom-bound data:
 
@@ -957,7 +957,7 @@ You can find the complete code in the [Github](https://github.com/SyncfusionExam
 
 ## Handling CRUD operations
 
-The CRUD operations for custom-bound data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class:
+The CRUD operations for custom-bound data in the Blazor DataGrid can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class:
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**
@@ -1100,15 +1100,15 @@ The following sample code demonstrates how to implement CRUD operations for cust
 
 The following GIF demonstrates the CRUD operations on custom-bound data in the Grid:
 
-![Editing Custom Data in Grid](../images/blazor-datagrid-editing-custom-data.gif)
+![Editing Custom Data in Grid](../images/blazor-datagrid-editing-custom-data.webp)
 
 You can find the complete code in the [Github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/CustomAdaptor).
 
-> You can refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
 
 ## How to pass additional parameters to custom adaptor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to send custom parameters with each data request. This is particularly useful when you need to pass additional information (e.g., user role, token, or filters) to the server for enhanced processing logic.
+The Blazor DataGrid allows you to send custom parameters with each data request. This is particularly useful when you need to pass additional information (e.g., user role, token, or filters) to the server for enhanced processing logic.
 
 You can achieve this by using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the grid along with the `AddParams` method of the `Query` class.
 
@@ -1224,4 +1224,4 @@ The following example demonstrates how to send additional parameters to the serv
 }
 ```
 
-![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](../images/custom-adaptor-params.png)
+![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](../images/custom-adaptor-params.webp)

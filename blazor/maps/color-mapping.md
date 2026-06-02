@@ -76,7 +76,7 @@ Bind the **PopulationDetails** data to the [DataSource](https://help.syncfusion.
 
 ```
 
-![Blazor Maps with Range Color Mapping](./images/Colormapping/blazor-maps-range-color-mapping.png)
+![Blazor Maps with Range Color Mapping](./images/Colormapping/blazor-maps-range-color-mapping.webp)
 
 ### Equal color mapping
 
@@ -121,7 +121,7 @@ The following example highlights permanent and non-permanent members of the UN S
 
 ```
 
-![Blazor Maps with Equal Color Mapping](./images/Colormapping/blazor-maps-equal-color-mapping.png)
+![Blazor Maps with Equal Color Mapping](./images/Colormapping/blazor-maps-equal-color-mapping.webp)
 
 ### Desaturation color mapping
 
@@ -149,7 +149,7 @@ Bind **PopulationDetails** to the [DataSource](https://help.syncfusion.com/cr/bl
 
 ```
 
-![Blazor Maps with Desaturation Color Mapping](./images/Colormapping/blazor-maps-desaturation-color-mapping.png)
+![Blazor Maps with Desaturation Color Mapping](./images/Colormapping/blazor-maps-desaturation-color-mapping.webp)
 
 ## Multiple colors for a single shape
 
@@ -179,7 +179,7 @@ Bind **PopulationDetails** to the [DataSource](https://help.syncfusion.com/cr/bl
 
 ```
 
-![Blazor Maps with Multi Color Mapping](./images/Colormapping/blazor-maps-multi-color-mapping.png)
+![Blazor Maps with Multi Color Mapping](./images/Colormapping/blazor-maps-multi-color-mapping.webp)
 
 ## Color for items excluded from color mapping
 
@@ -210,7 +210,7 @@ In the following example, color mapping is configured for the range 0 to 300. If
 
 ```
 
-![Blazor Maps with Exculde Color Mapping](./images/Colormapping/blazor-maps-exclude-color-mapping.png)
+![Blazor Maps with Exculde Color Mapping](./images/Colormapping/blazor-maps-exclude-color-mapping.webp)
 
 ## Color mapping for bubbles
 
@@ -255,4 +255,4 @@ Range, equal, and desaturation color mapping types are also supported for bubble
 
 ```
 
-![Blazor Maps with Bubbles Color Mapping](./images/Colormapping/blazor-maps-bubble-color-mapping.PNG)
+![Blazor Maps with Bubbles Color Mapping](./images/Colormapping/blazor-maps-bubble-color-mapping.webp)

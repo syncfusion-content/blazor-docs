@@ -187,7 +187,7 @@ public class VirtualData
 
 {% endtabs %}
 
-![Virtualization in Blazor TreeGrid](images/blazor-treegrid-virtualization.gif)
+![Virtualization in Blazor TreeGrid](images/blazor-treegrid-virtualization.webp)
 
 ## Managing Records Count
 
@@ -651,7 +651,7 @@ Set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 N> Specify each column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) property for column virtualization. If not provided, TreeGrid defaults to a width of **200px**.
 
 The following GIF represent a TreeGrid with Column virtualization.
-![Column Virtualization in Blazor TreeGrid](./images/blazor-treegrid-column-virtualization.gif)
+![Column Virtualization in Blazor TreeGrid](./images/blazor-treegrid-column-virtualization.webp)
 
 ## Enable Cell placeholder during Virtualization
 
@@ -757,7 +757,7 @@ To set up the enable cell placeholder during virtualization, define the [EnableV
 ```
 
 The following image represents a TreeGrid with the mask row virtualization.
-![Blazor TreeGrid with Mask Row virtualization](./images/blazor-treegrid-mask-row-virtualization.gif)
+![Blazor TreeGrid with Mask Row virtualization](./images/blazor-treegrid-mask-row-virtualization.webp)
 
 > For a better experience, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property of the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property should be defined.
 

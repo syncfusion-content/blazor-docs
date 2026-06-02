@@ -50,7 +50,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrzNECVpIkCNalF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spline Chart](../images/chart-types-images/blazor-spline-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrzNECVpIkCNalF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spline Chart](../images/chart-types-images/blazor-spline-chart.webp)" %}
 
 N> Refer to the [Blazor Spline Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Spline Chart Example](https://blazor.syncfusion.com/demos/chart/spline?theme=bootstrap5) to know how to connect the data points with smooth curves.
 

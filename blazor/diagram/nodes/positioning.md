@@ -75,7 +75,7 @@ The following code shows how to change the pivot value.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Position/Positioning.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhIWDXwLVtSsRsA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Positioning a node using pivot and offsets in Blazor Diagram](../images/blazor-diagram-node-position.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhIWDXwLVtSsRsA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Positioning a node using pivot and offsets in Blazor Diagram](../images/blazor-diagram-node-position.webp)" %}
 
 Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the `RotationAngle` value.
 
@@ -116,7 +116,7 @@ Rotation of a node is controlled by the [RotationAngle](https://help.syncfusion.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Position/NodeRotateAngle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVoiNDchBsisDsF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing a nodes rotation angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVoiNDchBsisDsF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing a nodes rotation angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.webp)" %}
 
 ## How to Set Minimum and Maximum Node Size
 
@@ -163,7 +163,7 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Position/MinMaxSize.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNreCZZcBrsHVKLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNreCZZcBrsHVKLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.webp)" %}
 
 ## See also
 

@@ -530,7 +530,7 @@ public class WrapData
 
 {% endtabs %}
 
-![Drag and Drop within Blazor TreeGrid Rows](../images/blazor-treegrid-drag-and-drop-rows.png)
+![Drag and Drop within Blazor TreeGrid Rows](../images/blazor-treegrid-drag-and-drop-rows.webp)
 
 N> - Enable selection to use row drag-and-drop.  
 - For multiple-row drag, set SelectionSettings.Type to Multiple.  
@@ -1066,7 +1066,7 @@ public class WrapData
 
 {% endtabs %}
 
-![Drag and Drop Row between Different Blazor TreeGrid](../images/blazor-treegrid-drag-drop-row.png)
+![Drag and Drop Row between Different Blazor TreeGrid](../images/blazor-treegrid-drag-drop-row.webp)
 
 N> - Set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) on a column to enable row drag-and-drop operations across grids.
 

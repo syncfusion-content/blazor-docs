@@ -51,7 +51,7 @@ The [AllowSpaces](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 {% endhighlight %}
 
-![Blazor Mention with allow space between search](./images/blazor-mention-allow-space.png)
+![Blazor Mention with allow space between search](./images/blazor-mention-allow-space.webp)
 
 ## Customize the suggestion item count
 
@@ -63,7 +63,7 @@ The [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor Mention with suggestion item count](./images/blazor-mention-suggestion-list.png)
+![Blazor Mention with suggestion item count](./images/blazor-mention-suggestion-list.webp)
 
 ## See also
 

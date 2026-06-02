@@ -55,7 +55,7 @@ N> The Pivot Table component can be exported to PDF format using options availab
 }
 ```
 
-![PDF Export in Blazor PivotTable](images/blazor-pivottable-pdf-export.png)
+![PDF Export in Blazor PivotTable](images/blazor-pivottable-pdf-export.webp)
 
 ## Export table and chart into the same document
 
@@ -412,7 +412,7 @@ N> By default, the Material theme is applied to the exported PDF document.
 }
 ```
 
-![Changing Blazor PivotTable Style while Exporting](images/blazor-pivottable-pdf-formatting.png)
+![Changing Blazor PivotTable Style while Exporting](images/blazor-pivottable-pdf-formatting.webp)
 
 ## Changing the file name while exporting
 
@@ -459,7 +459,7 @@ The PDF export provides an option to change the file name of the document before
 }
 ```
 
-![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-pdf-file-name.png)
+![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-pdf-file-name.webp)
 
 ## Changing page size while exporting
 
@@ -510,7 +510,7 @@ This option lets users easily adjust the PDF layout to fit their specific needs 
 }
 ```
 
-![Changing Blazor PivotTable Page Size while Exporting](images/blazor-pivottable-change-pdf-page-size.png)
+![Changing Blazor PivotTable Page Size while Exporting](images/blazor-pivottable-change-pdf-page-size.webp)
 
 ## Changing page orientation while exporting
 
@@ -557,7 +557,7 @@ When exporting the Pivot Table as a PDF, users can choose the page orientation o
 }
 ```
 
-![Changing Blazor PivotTable Page Orientation while Exporting](images/blazor-pivottable-change-pdf-orientation.png)
+![Changing Blazor PivotTable Page Orientation while Exporting](images/blazor-pivottable-change-pdf-orientation.webp)
 
 ## Saving PDF document to stream
 
@@ -805,6 +805,6 @@ The event provides the following parameters:
 }
 ```
 
-![Customizing the Blazor Pivot Table cell values and styles while exporting](images/blazor-pivottable-pdfexportevents.png)
+![Customizing the Blazor Pivot Table cell values and styles while exporting](images/blazor-pivottable-pdfexportevents.webp)
 
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the Pivot Table.

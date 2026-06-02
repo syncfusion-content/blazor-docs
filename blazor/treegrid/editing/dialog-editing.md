@@ -76,7 +76,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Dialog Editing in Blazor TreeGrid](../images/blazor-treegrid-dialog-editing.png)
+![Dialog Editing in Blazor TreeGrid](../images/blazor-treegrid-dialog-editing.webp)
 
 ## Customize the header and footer of edit dialog
 
@@ -185,4 +185,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Customize the header and footer of edit dialog in Blazor Tree Grid](../images/blazor-treegrid-customize-edit-dialog.png)
+![Customize the header and footer of edit dialog in Blazor Tree Grid](../images/blazor-treegrid-customize-edit-dialog.webp)

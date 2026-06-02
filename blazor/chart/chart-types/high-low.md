@@ -58,7 +58,7 @@ This indicates that the data should be represented as a hilo chart, which shows 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrzNPLjzSqgHuAy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Hilo Chart](../images/financial-types/blazor-hilo-chart.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrzNPLjzSqgHuAy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Hilo Chart](../images/financial-types/blazor-hilo-chart.webp)" %}
 
 N> Refer to the [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore the [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
 

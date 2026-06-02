@@ -62,7 +62,7 @@ N> The Pivot Table maintains a minimum width of **400px** to ensure proper displ
 }
 ```
 
-![Setting Height and Width in Blazor PivotTable](images/blazor-pivottable-set-height-width.png)
+![Setting Height and Width in Blazor PivotTable](images/blazor-pivottable-set-height-width.webp)
 
 ## Row Height
 
@@ -105,7 +105,7 @@ In the following code sample, the [RowHeight](https://help.syncfusion.com/cr/bla
 }
 ```
 
-![Changing Row Height in Blazor PivotTable](images/blazor-pivottable-change-row-height.png)
+![Changing Row Height in Blazor PivotTable](images/blazor-pivottable-change-row-height.webp)
 
 ## Column Width
 
@@ -148,7 +148,7 @@ In the following example, the [ColumnWidth](https://help.syncfusion.com/cr/blazo
 }
 ```
 
-![Changing Column Width in Blazor PivotTable](images/blazor-pivottable-change-column-width.png)
+![Changing Column Width in Blazor PivotTable](images/blazor-pivottable-change-column-width.webp)
 
 ### Adjust width based on columns
 
@@ -186,7 +186,7 @@ By default, when the component width exceeds the total width of all columns, the
 }
 ```
 
-![AutoFit Column in Blazor PivotTable](images/blazor-pivottable-autofit-column.png)
+![AutoFit Column in Blazor PivotTable](images/blazor-pivottable-autofit-column.webp)
 
 ## Reorder
 
@@ -227,7 +227,7 @@ To enable this option, set the [AllowReordering](https://help.syncfusion.com/cr/
 }
 ```
 
-![Reordering Specific Column in Blazor PivotTable](images/blazor-pivottable-reorder-specific-column.png)
+![Reordering Specific Column in Blazor PivotTable](images/blazor-pivottable-reorder-specific-column.webp)
 
 ## Column Resizing
 
@@ -267,7 +267,7 @@ N> In right-to-left (RTL) mode, users should click and drag the left edge of the
 }
 ```
 
-![Column Resizing in Blazor PivotTable](images/blazor-pivottable-column-resizing.png)
+![Column Resizing in Blazor PivotTable](images/blazor-pivottable-column-resizing.webp)
 
 ## Text Wrap
 
@@ -306,7 +306,7 @@ The Pivot Table allows users to wrap cell content to the next line when the cont
 }
 ```
 
-![Text Wrapping in Blazor PivotTable](images/blazor-pivottable-text-wrap.png)
+![Text Wrapping in Blazor PivotTable](images/blazor-pivottable-text-wrap.webp)
 
 ## Text Align
 
@@ -370,7 +370,7 @@ Text alignment provides flexibility in positioning content within cells, making 
 }
 ```
 
-![Align text inside the Blazor Pivot Table cell](images/text-align.png)
+![Align text inside the Blazor Pivot Table cell](images/text-align.webp)
 
 ## Grid Lines
 
@@ -421,7 +421,7 @@ N> The Pivot Table displays grid lines in [PivotGridLine.Both](https://help.sync
 }
 ```
 
-![Grid lines in Blazor Pivot Table](images/blazor-pivotgrid-gridlines.png)
+![Grid lines in Blazor Pivot Table](images/blazor-pivotgrid-gridlines.webp)
 
 ## Selection
 
@@ -469,7 +469,7 @@ The Pivot Table provides two selection modes, controlled by the [Type](https://h
 }
 ```
 
-![Selection in Blazor PivotTable](images/blazor-pivottable-selection.png)
+![Selection in Blazor PivotTable](images/blazor-pivottable-selection.webp)
 
 ### Selection Mode
 
@@ -517,7 +517,7 @@ By choosing the right selection mode, users can quickly highlight and review the
 }
 ```
 
-![Blazor PivotTable with Row and Column Selection](images/blazor-pivottable-row-column-selection.png)
+![Blazor PivotTable with Row and Column Selection](images/blazor-pivottable-row-column-selection.webp)
 
 ### Cell Selection Mode
 
@@ -565,7 +565,7 @@ N> Cell selection requires [Mode](https://help.syncfusion.com/cr/blazor/Syncfusi
 }
 ```
 
-![Cell Selection in Blazor PivotTable](images/blazor-pivottable-cell-selection.png)
+![Cell Selection in Blazor PivotTable](images/blazor-pivottable-cell-selection.webp)
 
 ### Changing background color of the selected cell
 
@@ -613,7 +613,7 @@ In the example below, selected cells appear with a **green-yellow** background. 
 }
 ```
 
-![Changing Cell Selection Background Color in Blazor PivotTable](images/blazor-pivottable-cell-selection-color.png)
+![Changing Cell Selection Background Color in Blazor PivotTable](images/blazor-pivottable-cell-selection-color.webp)
 
 ### Event
 
@@ -685,7 +685,7 @@ When a user finishes selecting cells, the [CellSelected](https://help.syncfusion
 }
 ```
 
-![Displaying Selection Event Details in Blazor PivotTable](images/blazor-pivottable-selection-event-details.png)
+![Displaying Selection Event Details in Blazor PivotTable](images/blazor-pivottable-selection-event-details.webp)
 
 ## Clip Mode
 
@@ -730,7 +730,7 @@ N> By default, the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 ```
 
-![Blazor PivotTable with Clip Mode](images/blazor-pivottable-clip-mode.png)
+![Blazor PivotTable with Clip Mode](images/blazor-pivottable-clip-mode.webp)
 
 ## Cell Template
 
@@ -796,6 +796,6 @@ N> Specify the model type for the data source, as it determines the context that
 }
 ```
 
-![Blazor PivotTable with Cell Template](images/blazor-pivottable-cell-template.png)
+![Blazor PivotTable with Cell Template](images/blazor-pivottable-cell-template.webp)
 
 N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

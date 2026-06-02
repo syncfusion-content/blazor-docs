@@ -111,4 +111,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Blazor TreeGrid Items](../images/blazor-treegrid-customization.png)
+![Customizing Blazor TreeGrid Items](../images/blazor-treegrid-customization.webp)

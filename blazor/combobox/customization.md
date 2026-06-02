@@ -43,4 +43,4 @@ Automatically open the ComboBox dropdown when the input receives focus by handli
 }
 ```
 
-![Blazor ComboBox opening dropdown on focus](./images/blazor-combobox-customization.png)
+![Blazor ComboBox opening dropdown on focus](./images/blazor-combobox-customization.webp)

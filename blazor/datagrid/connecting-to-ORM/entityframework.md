@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQL Server to Blazor DataGrid via Entity Framework
 
-The Syncfusion Blazor DataGrid supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
 
 **What is Entity Framework Core?**
 
@@ -368,7 +368,7 @@ Syncfusion components are now configured and ready to use. For additional guidan
 
 ### Step 2: Update the Blazor DataGrid
 
-The `Home.razor` component will display the order data in a Syncfusion Blazor DataGrid with search, filter, sort, paging, and CRUD capabilities using UrlAdaptor to communicate with REST API endpoints.
+The `Home.razor` component will display the order data in a Blazor DataGrid with search, filter, sort, paging, and CRUD capabilities using UrlAdaptor to communicate with REST API endpoints.
 
 **Instructions:**
 
@@ -590,7 +590,7 @@ The application will start, and the console will display the local URL (typicall
 2. Navigate to the URL displayed in the console.
 3. The DataGrid application is now running and ready to use.
 
-![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.png)
+![Basic DataGrid displaying orders from the SQL Server database](../images/blazor-datagrid-ef-url.webp)
 
 
 ### Step 5: Implement Paging Feature

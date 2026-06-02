@@ -39,7 +39,7 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with placeholder](./images/blazor-richtexteditor-placeholder.png)
+![Blazor RichTextEditor with placeholder](./images/blazor-richtexteditor-placeholder.webp)
 
 ## Styling the editor content area
 
@@ -61,7 +61,7 @@ Apply the following CSS to customize the default content styling of the Rich Tex
 }
 ```
 
-![Blazor RichTextEditor with customizing editor content](./images/blazor-richtexteditor-editor-content.png)
+![Blazor RichTextEditor with customizing editor content](./images/blazor-richtexteditor-editor-content.webp)
 
 ##  Customizing the toolbar appearance
 
@@ -93,7 +93,7 @@ Apply the following CSS to modify the default color of toolbar icons in the Rich
     color: red;
 }
 ```
-![Blazor RichTextEditor with customizing editor toolbar](./images/blazor-richtexteditor-editor-toolbar.png)
+![Blazor RichTextEditor with customizing editor toolbar](./images/blazor-richtexteditor-editor-toolbar.webp)
 
 ## Styling the character count display
 
@@ -111,6 +111,8 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
 }
 ```
 
+![Blazor RichTextEditor with customizing character count display](./images/blazor-richtexteditor-character-count.webp)
+
 ## Modifying the editor container border
 
 Use the following CSS to customize the border color in the Rich Text Editor's container.
@@ -123,6 +125,8 @@ Use the following CSS to customize the border color in the Rich Text Editor's co
 }
 
 ```
+
+![Blazor RichTextEditor with modifying container border](./images/blazor-richtexteditor-border.webp)
 
 ## Source code view 
 
@@ -140,21 +144,7 @@ The source code is presented with enhanced formatting and consistent indentation
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.png)
-
-### Refreshing the editor UI
-
-While rendering the Rich Text Editor inside the dialog component, the dialog container and its wrapper elements are styled with display: none, so the editor’s toolbar does not get the proper offset width and will render above the edit area container. To resolve this issue, call the `RefreshUI` method of the RichTextEditor in the dialog's opened event.
-
-{% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/refresh.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with refresh editor](./images/blazor-richtexteditor-refresh-editor.png)
+![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.webp)
 
 ## Highlight the specific lines
 
@@ -221,6 +211,6 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor com
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with highlight the specific lines](./images/blazor-richtexteditor-highlight-line.gif)
+![Blazor RichTextEditor with highlight the specific lines](./images/blazor-richtexteditor-highlight-line.webp)
 
 N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.

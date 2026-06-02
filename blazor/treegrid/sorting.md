@@ -156,7 +156,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Sorting in Blazor TreeGrid](images/blazor-treegrid-sorting.png)
+![Sorting in Blazor TreeGrid](images/blazor-treegrid-sorting.webp)
 
 ## Sorting events
 
@@ -242,10 +242,10 @@ N> The **args.requestType** is the current action name. For example, in sorting 
 
 ## Touch interaction
 
-When the tree grid header is tapped on the touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for the multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired tree grid headers.
+When the tree grid header is tapped on the touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.webp) is displayed for the multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.webp), and then tap the desired tree grid headers.
 
 <!-- markdownlint-disable MD033 -->
-<img src="images/blazor-treegrid-touch-sorting.jpg" alt="Sorting in Blazor TreeGrid" style="width:320px;height: 620px">
+<img src="images/blazor-treegrid-touch-sorting.webp" alt="Sorting in Blazor TreeGrid" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->
 
 ## Custom sorting 

@@ -18,4 +18,4 @@ To modify the RadioButton appearance, override the component’s default CSS. Th
 | .e-radio:checked + label::after, e-radio:checked + label::before | To customize the checked radiobutton. |
 | .e-radio:checked:focus + label::before, .e-radio:checked + label:hover::before | To customize the checked radiobutton on hover. |
 
-![Blazor RadioButton with Style and Appearance](./images/blazor-radiobutton-style-and-appearance.png)
+![Blazor RadioButton with Style and Appearance](./images/blazor-radiobutton-style-and-appearance.webp)

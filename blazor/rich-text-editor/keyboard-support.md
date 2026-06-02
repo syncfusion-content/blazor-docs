@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Keyboard support in Blazor RichTextEditor Component
+# Keyboard support in Blazor Rich Text Editor Component
 
 The editor has full keyboard accessibility that includes shortcuts to open and other actions with toolbar items, drop-down lists, and dialogs.
 
@@ -135,41 +135,18 @@ These miscellaneous shortcuts help with actions like toggling fullscreen, cleari
 
 ## Custom key config
 
-Customize the key config for the keyboard interaction of Rich Text Editor, using the `KeyConfigure` property.
+Customize the key config for the keyboard interaction of Rich Text Editor, using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
 
 In the following code block, customize the bold and italic, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
-@using Syncfusion.Blazor.RichTextEditor
+{% include_relative code-snippet/keyboard-support.razor %}
 
-<SfRichTextEditor KeyConfigure="@KeyConfig">
-    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-    <p><b> Key features:</b></p>
-    <ul>
-    <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
-    <li><p> Capable of handling markdown editing.</p></li>
-    <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
-    <li><p> Provides a fully customizable toolbar.</p></li>
-    <li><p> Provides HTML view to edit the source directly for developers.</p></li>
-    <li><p> Supports third - party library integration.</p></li>
-    <li><p> Allows preview of modified content before saving it.</p></li>
-    </ul>
-</SfRichTextEditor>
+{% endhighlight %}
+{% endtabs %}
 
-@code {
-    private ShortcutKeys KeyConfig = new ShortcutKeys()
-    {
-        Bold = "ctrl+1",
-        Italic = "ctrl+2"
-    };
-}
-
-```
+![Blazor Rich Text Editor custom key configuration](./images/blazor-richtexteditor-shortcutkey.webp)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
-
-## See also
-
-* [Globalization](./globalization)
-* [Accessibility](./accessibility)

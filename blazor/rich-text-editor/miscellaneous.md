@@ -39,7 +39,7 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 ```
 
-![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.png)
+![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.webp)
 
 ## Character count and limit enforcement
 
@@ -57,7 +57,7 @@ The character count indicator changes color based on usage thresholds:
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor ShowCharCount="true" MaxLength="500">
+<SfRichTextEditor ShowCharCount="true" MaxLength="300">
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -68,7 +68,7 @@ The character count indicator changes color based on usage thresholds:
 
 ```
 
-![Displaying Character Count in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count.png)
+![Displaying Character Count in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count.webp)
 
 ## Code view
 
@@ -89,7 +89,7 @@ The Rich Text Editor includes the ability for users to directly edit HTML code v
 
 ```
 
-![Blazor RichTextEditor with Code View](./images/blazor-richtexteditor-code-view.png)
+![Blazor RichTextEditor with Code View](./images/blazor-richtexteditor-code-view.webp)
 
 ## Number and Bullet Format Lists
 
@@ -113,7 +113,7 @@ This feature allows the user to change the appearance of the Numbered and Bullet
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
-        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
     };
 }
 

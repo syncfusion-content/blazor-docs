@@ -25,7 +25,7 @@ The **.e-gridfooter** class styles the root container of the aggregate footer ro
 
 Properties like **font-family**, **font-size**, and **padding** can be changed to fit the grid layout design.
 
-![Aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.png)
+![Aggregate footer root with custom font](../images/style-and-appearance/aggregate-root-element.webp)
 
 ## Customize the aggregate cell elements
 
@@ -39,7 +39,7 @@ The **.e-summaryrow** and **.e-summarycell** classes define the appearance of th
 
 Properties such as **background-color**, **color**, and **text-align** can be adjusted to improve clarity and interaction.
 
-![Aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.png)
+![Aggregate summary cell with custom background color](../images/style-and-appearance/aggregate-cell-element.webp)
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
