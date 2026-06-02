@@ -40,7 +40,7 @@ and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfu
 
 ### Option 1: Install individual component packages
 
-Install only the specific component packages your application uses. Recommended for most projects.
+Install only the specific component packages your application uses. This option is recommended for most projects.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -62,7 +62,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ### Option 2: Install comprehensive package
 
-Install the all-in-one package([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) that includes all Blazor components. Recommended for applications that use many components.
+Install the all-in-one package([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) that includes all Blazor components. This option is recommended for applications that use many components.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -80,7 +80,7 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 
 ### Best practices
 
-* Never mix Syncfusion.Blazor (comprehensive) with individual Syncfusion component packages in the same project.
+* Never mix [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (comprehensive) with individual Syncfusion component packages in the same project.
 * Audit your `.csproj` file regularly to identify redundant packages
 * Use individual packages unless you are using 5 or more component types
 * Document your package strategy in team guidelines
@@ -195,7 +195,7 @@ Remove duplicate entries and ensure all Blazor packages use the same version.
 
 ### Step 4: Use Central Package Management
 
-Use Central Package Management (CPM) for solution-wide version consistency. Recommended for solutions with multiple projects.
+Use Central Package Management (CPM) for solution-wide version consistency. This approach is recommended for solutions with multiple projects.
 
 Create a `Directory.Packages.props` file in your solution root.
 
@@ -235,7 +235,7 @@ Then update your project files to reference packages without versions.
 {% endhighlight %}
 {% endtabs %}
 
-Central Package Management is recommended for solutions with multiple projects. For single‑project apps, consolidating package references directly in the `.csproj` file may be sufficient.
+For single‑project apps, consolidating package references directly in the `.csproj` file may be sufficient.
 
 ### Best practices
 
