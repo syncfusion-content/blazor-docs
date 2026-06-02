@@ -48,7 +48,7 @@ The following code shows how to customize the appearance of a shape.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeAppearance.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreCDNdTPXnzIxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreCDNdTPXnzIxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.webp)" %}
 
 N> The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node must be unique. `ID` property is used to find nodes at runtime for further customization.
 
@@ -195,7 +195,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 N> In this example, the node's background color is updated using the click event of the button defined in the template.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLyCXjxTbrhOftv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLyCXjxTbrhOftv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Node Template](../images/blazor-diagram-node-template.webp)" %}
 
 ## How to Update Common Node Styles
 
@@ -301,7 +301,7 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/SetTemplate.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIWZZRJvqiUhpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIWZZRJvqiUhpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.webp)" %}
 
 ## How to change the border color of a node
 
@@ -344,7 +344,7 @@ The diagram provides the ability to customize the border color of a node using t
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/BorderColor.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhosNjHfPAnHiMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Border Color for Node](../images/BorderColor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhosNjHfPAnHiMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Border Color for Node](../images/BorderColor.webp)" %}
 
 ## How to change the border width of a node
 
@@ -426,7 +426,7 @@ Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfus
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeShadow.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSWNXHzlpHUmqs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSWNXHzlpHUmqs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.webp)" %}
 
 ### How to Customize Node Shadow
 
@@ -475,7 +475,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/CustomShadow.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyiZjdpFIWLXYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyiZjdpFIWLXYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.webp)" %}
 
 ## How to Apply Gradient Style
 
@@ -538,7 +538,7 @@ There are two types of gradients:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/LinearGradientStyle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIWjNRpFSnUxQF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIWjNRpFSnUxQF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.webp)" %}
 
 ### How to Apply Radial Gradient Brush
 
@@ -597,7 +597,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/RadientGradientStyle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBosNDdJlxWJNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBosNDdJlxWJNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.webp)" %}
 
 ## How to Add Additional Information for a Node
 

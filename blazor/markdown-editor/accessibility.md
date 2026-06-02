@@ -47,7 +47,7 @@ The toolbar in the Blazor Markdown Editor is assigned the role of `toolbar` and 
 | --- | --- |
 | `role="toolbar"` | Describes the actual role of the toolbar element. |
 | `aria-orientation` | Indicates the toolbar orientation. Default is `horizontal`. |
-| `aria-haspopup` | Indicates whether the toolbar has a popup. Default is `false`. Set to `true` wwhen popup mode is enabled. |
+| `aria-haspopup` | Indicates whether the toolbar has a popup. Default is `false`. Set to `true` when popup mode is enabled. |
 | `aria-disabled` | Indicates the disabled state of the toolbar. |
 | `aria-owns` | Identifies an element to define a visual, functional, or contextual parent/child relationship between DOM elements when the DOM hierarchy cannot represent the relationship. In the Markdown Editor, the attribute contains the ID of the Markdown Editor to indicate the popup as a child element. |
 
@@ -61,14 +61,14 @@ The Blazor Markdown Editor element is assigned the role of `application`:
 | `aria-disabled` | Indicates the disabled state of the toolbar. |
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-aria-attribute.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor with accessibility](./images/blazor-markdowneditor-accessibility.png)
+![Blazor Markdown Editor with accessibility](./images/blazor-markdowneditor-accessibility.webp)
 
 ## Keyboard interaction
 
@@ -89,7 +89,7 @@ Customize the key configuration for the keyboard interaction of the Markdown Edi
 In the following code block, customize the bold and italic, toolbar actions with **ctrl+1**, **ctrl+2** respectively.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-custom-key-config.razor%}
 

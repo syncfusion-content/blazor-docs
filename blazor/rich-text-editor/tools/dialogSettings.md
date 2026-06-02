@@ -31,7 +31,7 @@ The following example demonstrates how to configure dialog settings in the Blazo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor DialogSettings](../images/dialog-Settings.png)
+![Blazor RichTextEditor DialogSettings](../images/dialog-Settings.webp)
 
 ## See also
 

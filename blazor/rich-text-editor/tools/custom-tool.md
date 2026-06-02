@@ -26,7 +26,7 @@ Refer to the following code sample to configure a custom toolbar item with toolt
         <RichTextEditorCustomToolbarItems>
             <RichTextEditorCustomToolbarItem Name="Symbol">
                 <Template>
-                    <SfButton @onclick="ClickHandler">Insert Symbol</SfButton>
+                    <SfButton @onclick="ClickHandler">Ω</SfButton>
                 </Template>
             </RichTextEditorCustomToolbarItem>
         </RichTextEditorCustomToolbarItems>
@@ -57,10 +57,10 @@ Refer to the following code sample to configure a custom toolbar item with toolt
 {% endhighlight %}
 {% endtabs %}
 
-![Custom Toolbar Tool in Blazor Rich Text Editor](../images/blazor-richtexteditor-custom-tool.png)
+![Custom Toolbar Tool in Blazor Rich Text Editor](../images/blazor-richtexteditor-custom-tool.webp)
 
 ## Enabling and disabling toolbar items
 
 You can use the `EnableToolbarItem` and `disableToolbarItem` methods to control the state of toolbar items. This methods takes a single item or an array of [Items](./built-in-tools#available-toolbar-items) as parameter.
 
-> You can add the command name `Custom` to disable the custom toolbar items on source code view and other quicktoolbar operations.
+> You can add the command name `Custom` to disable the custom toolbar items on source code view and other quick toolbar operations.

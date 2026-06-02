@@ -60,7 +60,7 @@ In the following example, three levels are added and each level is configured us
 }
 ```
 
-![Multiple Blazor TreeMap Levels with Group](images/Levels/blazor-treemap-levels-with-group-path.png)
+![Multiple Blazor TreeMap Levels with Group](images/Levels/blazor-treemap-levels-with-group-path.webp)
 
 ## Gap between groups
 
@@ -89,7 +89,7 @@ The [GroupGap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.T
 
 N> Refer to the [code block](#group-path) to know about the property value of the **Employees**.
 
-![Blazor TreeMap Levels with Group Gap](images/Levels/blazor-treemap-levels-with-group-gap.png)
+![Blazor TreeMap Levels with Group Gap](images/Levels/blazor-treemap-levels-with-group-gap.webp)
 
 ## Header height and style
 
@@ -121,7 +121,7 @@ Customize the font color, family, weight, opacity and size using the [TreeMapHea
 
 N> Refer to the [code block](#group-path) to know about the property value of **Employees**.
 
-![Blazor TreeMap with Custom Header Height and Style](images/Levels/blazor-treemap-custom-header-height.png)
+![Blazor TreeMap with Custom Header Height and Style](images/Levels/blazor-treemap-custom-header-height.webp)
 
 ## Customization
 
@@ -156,4 +156,4 @@ The following properties are available to customize the header content in the [T
 
 N> Refer to the [code block](#group-path) to know about the property value of `Employees`.
 
-![Customizing Header Alignment in Blazor TreeMap](images/Levels/blazor-treemap-header-alignment.png)
+![Customizing Header Alignment in Blazor TreeMap](images/Levels/blazor-treemap-header-alignment.webp)

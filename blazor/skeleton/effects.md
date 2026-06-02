@@ -21,7 +21,7 @@ You can use the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-pulse-effect.png)
+![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-pulse-effect.webp)
 
 Below example demonstrates a list with pulse effect skeleton.
 
@@ -73,4 +73,4 @@ Below example demonstrates a list with pulse effect skeleton.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-Effect.png)
+![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-Effect.webp)

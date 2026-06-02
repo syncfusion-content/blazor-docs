@@ -23,7 +23,7 @@ Specify the length of the OTP by using the [Length](https://help.syncfusion.com/
 
 ```
 
-![Blazor OTP Input Component with Length](images/blazor-otp-length.png)
+![Blazor OTP Input Component with Length](images/blazor-otp-length.webp)
 
 ## Disable inputs
 
@@ -37,7 +37,7 @@ Disable the OTP Input component by using the [Disabled](https://help.syncfusion.
 
 ```
 
-![Blazor OTP Input Component with Disabled](images/blazor-otp-disabled.png)
+![Blazor OTP Input Component with Disabled](images/blazor-otp-disabled.webp)
 
 ## CssClass
 
@@ -59,7 +59,7 @@ The OTP input component supports the following predefined styles that can be app
 
 ```
 
-![Blazor OTP Input Component with CssClass](images/blazor-otp-success.png)
+![Blazor OTP Input Component with CssClass](images/blazor-otp-success.webp)
 
 ## Style Customization
 

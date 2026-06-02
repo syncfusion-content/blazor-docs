@@ -37,4 +37,4 @@ In the following example, the popup is moved upward and to the left using negati
 
 
 
-![Changing popup position in Blazor DropDownMenu](./../images/blazor-dropdownmenu-popup-position.png)
+![Changing popup position in Blazor DropDownMenu](./../images/blazor-dropdownmenu-popup-position.webp)

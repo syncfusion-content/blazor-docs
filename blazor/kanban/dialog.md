@@ -94,7 +94,7 @@ KanbanSwimlaneSettings.KeyField (If applicable) | DropDown | -
 
 ```
 
-![Editing a Card in Blazor Kanban](./images/blazor-kanban-card-editing.png)
+![Editing a Card in Blazor Kanban](./images/blazor-kanban-card-editing.webp)
 
 ## Customizing Dialog Fields
 
@@ -151,7 +151,7 @@ N> Each of the above types can be used once per custom dialog. The dialog templa
 }
 ```
 
-![Custom Fields in Kanban Card Editing Dialog](./images/blazor-kanban-dialog-custom-fields.png)
+![Custom Fields in Kanban Card Editing Dialog](./images/blazor-kanban-dialog-custom-fields.webp)
 
 ## Creating a Custom Dialog Template
 
@@ -300,7 +300,7 @@ Using the dialog template, you can render your own form fields with dialog by us
 
 ```
 
-![Customized Dialog Template in Blazor Kanban](./images/blazor-kanban-dialog-template.png)
+![Customized Dialog Template in Blazor Kanban](./images/blazor-kanban-dialog-template.webp)
 
 ## Preventing the Dialog from Opening
 

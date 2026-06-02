@@ -133,10 +133,10 @@ using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -362,7 +362,7 @@ Here,
 
 * Type 'To investigate' to experience instant sentence autocompletion.
 
-![Syncfusion Smart TextArea - Output](images/smart-textarea-userphrases.gif)
+![Syncfusion Smart TextArea - Output](images/smart-textarea-userphrases.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 

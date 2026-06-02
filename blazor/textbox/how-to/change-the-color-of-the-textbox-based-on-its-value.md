@@ -33,4 +33,4 @@ Change the TextBox’s visual state by validating its value on every `Input` eve
 }
 ```
 
-![Changing Validation Text Color in Blazor TextBox](../images/blazor-textbox-validation-text-color.png)
+![Changing Validation Text Color in Blazor TextBox](../images/blazor-textbox-validation-text-color.webp)

@@ -160,7 +160,7 @@ Connectors can also be dragged through user interaction:
 * Drag an object by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
 * While dragging, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are triggered and allow customization in these events.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhyCDNdJVFmTCOP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhyCDNdJVFmTCOP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.webp)" %}
 
 ## How to Drag Connector Endpoints
 
@@ -224,7 +224,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/EndPointDragging.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhyWjXRfLkUypIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhyWjXRfLkUypIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.webp)" %}
 
 ## How to Route the Connectors
 
@@ -289,7 +289,7 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/DefaultRouting.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIsXtHpUjXzHNh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIsXtHpUjXzHNh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.webp)" %}
 
 **Note:** Routing is applicable only for orthogonal connectors.
 
@@ -524,7 +524,7 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/NodeRoutingObstable.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBostDnzqiRDGEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBostDnzqiRDGEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.webp)" %}
 
 ### How to Enable or Disable Connector Routing
 
@@ -688,7 +688,7 @@ By default, connector routing behavior is inherited based on the value of the di
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/RoutingConstraints.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCtZRJgLXPLPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCtZRJgLXPLPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.webp)" %}
 
 ### How to Define Distance Between Nodes and Connectors
 
@@ -797,8 +797,8 @@ The following table shows the various obstacle padding.
 
 | ObstaclePadding values | Output |
 |---|---|
-| 12 | ![Blazor Diagram ObstaclePadding12 ](../images/blazor-diagram-obstacle-padding12.png) |
-| 20 | ![Blazor Diagram ObstaclePadding20 ](../images/blazor-diagram-obstacle-padding20.png) |
+| 12 | ![Blazor Diagram ObstaclePadding12 ](../images/blazor-diagram-obstacle-padding12.webp) |
+| 20 | ![Blazor Diagram ObstaclePadding20 ](../images/blazor-diagram-obstacle-padding20.webp) |
 
 **Note:** [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property is only applicable when the [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property is set to [RoutingTypes.Advanced]. Default value of [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) is **12**.
 
@@ -825,7 +825,7 @@ Enable this behavior by adding the [AvoidLineOverlapping](https://help.syncfusio
     };
 }
 ```
-![Blazor Diagram Avoid Line Overlapping](../images/AvoidLineOverlapGif.gif)
+![Blazor Diagram Avoid Line Overlapping](../images/AvoidLineOverlapGif.webp)
 
 The Avoid Connector Overlapping behavior ensures connectors do not visually overlap within the viewport, improving readability and reducing visual clutter.
 

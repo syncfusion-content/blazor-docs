@@ -57,9 +57,8 @@ using Syncfusion.Blazor.AI;
 using Syncfusion.Blazor.SmartComponents;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<IChatInferenceService, MockAIService>();
@@ -76,7 +75,7 @@ var app = builder.Build();
 4. Type phrases like "thank" or "investigate" in the Smart TextArea to verify that the custom AI service generates appropriate responses.
 5. Ensure suggestions appear as configured (e.g., inline or pop-up, based on the `ShowSuggestionOnPopup` setting).
 
-![Smart TextArea with Custom AI Service](images/smart-textarea.gif)
+![Smart TextArea with Custom AI Service](images/smart-textarea.webp)
 
 ## Implemented AI Services
 

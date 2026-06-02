@@ -52,7 +52,7 @@ Drag and drop within a single ListBox can be achieved by setting the [AllowDragA
 
 ```
 
-![Dragging Item within Blazor ListBox](./images/blazor-listbox-dragging-item.png)
+![Dragging Item within Blazor ListBox](./images/blazor-listbox-dragging-item.webp)
 
 ## Multiple ListBox
 
@@ -121,7 +121,7 @@ Drag and drop between two ListBoxes can be achieved by setting the [AllowDragAnd
 </style>
 ```
 
-![Dragging items between multiple Blazor ListBoxes](./images/blazor-listbox-multiple-drag-item.png)
+![Dragging items between multiple Blazor ListBoxes](./images/blazor-listbox-multiple-drag-item.webp)
 
 ## Dual ListBox with drag and drop
 
@@ -184,4 +184,4 @@ The toolbar and drag-and-drop actions between two ListBoxes can be enabled by as
 </style>
 ```
 
-![Dragging Item between Blazor dual ListBox](./images/blazor-listbox-dual-and-drag.png)
+![Dragging Item between Blazor dual ListBox](./images/blazor-listbox-dual-and-drag.webp)
