@@ -218,9 +218,9 @@ else
 // In Production require a valid HTTPS Cognito authority.
 if (!builder.Environment.IsDevelopment())
 {
-    if (!TryGetAuthorityUri(cognitoAuthority, out var prodUri) 
-    || prodUri!.Scheme != Uri.UriSchemeHttps 
-    || string.IsNullOrWhiteSpace(cognitoClientId) 
+    if (!TryGetAuthorityUri(cognitoAuthority, out var prodUri)
+    || prodUri!.Scheme != Uri.UriSchemeHttps
+    || string.IsNullOrWhiteSpace(cognitoClientId)
     || cognitoClientId.Contains("YOUR_APP_CLIENT_ID"))
     {
         throw new InvalidOperationException(
