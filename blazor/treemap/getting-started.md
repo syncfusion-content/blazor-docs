@@ -194,6 +194,10 @@ dotnet run
 dotnet run
 ```
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLzNCgtfcrsSecB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap Component](images/blazor-treemap.webp)" %}
 
 ## Adding labels in Blazor TreeMap items
