@@ -2,7 +2,7 @@
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-    <RichTextEditorEvents FileUploading="@onFileUploading"></RichTextEditorEvents>
+    <RichTextEditorEvents FileUploading="@OnFileUploading"></RichTextEditorEvents>
     <RichTextEditorAudioSettings SaveUrl="api/Audio/Save" Path="./Audio/"></RichTextEditorAudioSettings>
 </SfRichTextEditor>
 @code {
@@ -10,11 +10,10 @@
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Audio }
     };
-    private void onFileUploading(FileUploadingEventArgs args)
+    private void OnFileUploading(FileUploadingEventArgs args)
     {
         var accessToken = "Authorization_token";
         // adding custom Form Data
         args.CustomFormData = new List<object> { new { Authorization = accessToken } };
     }
-
 }
