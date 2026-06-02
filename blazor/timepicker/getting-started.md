@@ -174,6 +174,10 @@ dotnet run
 dotnet run
 ```
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBJjCKtzSOIsHLx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.webp)" %}
 
 ## Setting the time format
