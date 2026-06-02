@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Setup and Configuration Issues in Blazor Applications | Syncfusion
+title: Resolving Setup and Configuration Issues in Blazor | Syncfusion
 description: Guide to fixing Blazor setup and configuration issues including styles, scripts, services, and render mode settings
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Setup and Configuration Issues in Blazor Applications
+# Resolving Setup and Configuration Issues in Blazor
 
 This guide covers essential setup and configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper configuration is critical for components to render correctly and function interactively.
 
@@ -104,11 +104,7 @@ Add the render mode directive at the top of your `.razor` page.
 
 **Available render modes**:
 
-| Render Mode | Use | Typical Hosting |
-|------------|-----|-----------------|
-| `@rendermode InteractiveServer` | Server-side interactivity (SignalR) | Blazor Web App (server) |
-| `@rendermode InteractiveWebAssembly` | Client-side execution (WebAssembly) | Blazor Web App (WebAssembly) |
-| `@rendermode InteractiveAuto` | Prefer WebAssembly and fall back to server | Blazor Web App (progressive enhancement) |
+For detailed information about the available render modes, refer to the [Blazor render modes documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes).
 
 **For Global Interactivity configuration:**
 
@@ -135,9 +131,9 @@ app.MapRazorComponents<App>()
 {% endhighlight %}
 {% endtabs %}
 
-**For Syncfusion<sup style="font-size:70%">®</sup> Blazor components:**
+**For Blazor components:**
 
-Apply an appropriate render mode to pages or components that use Syncfusion Blazor components.
+Apply an appropriate render mode to pages or components that use Blazor components.
 
 {% tabs %}
 {% highlight razor tabtitle="DataGridPage.razor" hl_lines="2" %}
@@ -231,7 +227,7 @@ Add scripts to `wwwroot/index.html`.
 
 **For components requiring additional scripts (for example, PDF Viewer):**
 
-Some Syncfusion components require component-specific scripts in addition to the core script.
+Some Blazor components require component-specific scripts in addition to the core script.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -265,9 +261,9 @@ Some Syncfusion components require component-specific scripts in addition to the
 
 * Placing scripts in `<head>` instead of at the end of `<body>`
 * Incorrect script paths (for example, using old paths from .NET 6 documentation)
-* Missing component-specific scripts for Syncfusion components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)
+* Missing component-specific scripts for Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)
 * Loading the Syncfusion script before the Blazor framework script
-* Using outdated script references from previous Syncfusion versions
+* Using outdated script references from previous Blazor versions
 
 **Verification steps**:
 
@@ -276,7 +272,7 @@ Some Syncfusion components require component-specific scripts in addition to the
 3. Check the **Network tab** to verify scripts load successfully (200 status)
 4. Verify script loading order in the **Sources tab**
 
-If you encounter "Failed to load resource" errors for `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, verify that the `Syncfusion.Blazor.Core` package is available in the project, the script path is correct, and the project has been built or published successfully.
+If you encounter "Failed to load resource" errors for `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, verify that the [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) package is available in the project, the script path is correct, and the project has been built or published successfully.
 
 ## Issue 4: Missing service registration
 
@@ -294,11 +290,11 @@ System.InvalidOperationException: Cannot provide a value for property 'Localizer
 {% endhighlight %}
 {% endtabs %}
 
-**Root cause**: The Syncfusion Blazor service is not registered in the application's dependency injection (DI) container (missing call to `builder.Services.AddSyncfusionBlazor()`).
+**Root cause**: The Blazor service is not registered in the application's dependency injection (DI) container (missing call to `builder.Services.AddSyncfusionBlazor()`).
 
-**Impact**: All Syncfusion components fail to initialize, resulting in application crashes or blank pages. This is a blocking issue that prevents the application from functioning.
+**Impact**: All Blazor components fail to initialize, resulting in application crashes or blank pages. This is a blocking issue that prevents the application from functioning.
 
-**Solution**: Register the Syncfusion Blazor service in `~/Program.cs`.
+**Solution**: Register the Blazor service in `~/Program.cs`.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Web App (.NET 8+)" hl_lines="2 11" %}
@@ -311,7 +307,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register Syncfusion Blazor service
+// Register Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -324,7 +320,7 @@ using Syncfusion.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-// Register Syncfusion Blazor service
+// Register Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 await builder.Build().RunAsync();
