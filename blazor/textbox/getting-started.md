@@ -7,7 +7,7 @@ control: TextBox
 documentation: ug
 ---
 
-# Getting started with the Blazor TextBox component
+# Getting started with the Blazor TextBox component in WASM App
 
 This guide explains how to include the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
