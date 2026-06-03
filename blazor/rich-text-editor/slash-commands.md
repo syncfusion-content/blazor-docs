@@ -22,7 +22,7 @@ The [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Sync
 This list can include various formatting options such as paragraph and heading levels. Here’s an code snippet of configuring the slash menu items:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/slash-commands-items.razor %}
 
@@ -36,7 +36,7 @@ The size of the slash menu popup can be customized using the [PopupWidth](https:
 Below is a code snippet showing how to customize both the width and height of the popup:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/slash-commands-popup.razor %}
 
@@ -60,7 +60,7 @@ Each custom slash menu item can include the following properties:
 The following code demonstrates how to set up the custom slash menu item in the Rich Text Editor to insert meeting notes and signature:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/slash-commands.razor %}
 
