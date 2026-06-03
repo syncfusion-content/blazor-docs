@@ -7,7 +7,7 @@ component: Breadcrumb
 documentation: ug
 ---
 
-# Getting Started with Blazor Breadcrumb Component in Server App
+# Getting Started with Blazor Breadcrumb Component in Blazor Server App
 
 This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
