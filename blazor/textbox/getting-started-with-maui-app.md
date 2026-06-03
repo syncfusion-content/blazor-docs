@@ -136,7 +136,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox componen
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor TextBox Component](./images/blazor-textbox-maui-app.png)
+![Blazor TextBox Component](./images/blazor-textbox-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -146,7 +146,7 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If any errors occur while using the Android Emulator, see Troubleshooting Android Emulator for common resolutions: [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor TextBox Component](./images/blazor-textbox.png)
+![Blazor TextBox Component](./images/blazor-textbox.webp)
 
 ## Adding icons to the Blazor TextBox
 
@@ -182,7 +182,7 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextBox with icon in .NET MAUI Blazor](./images/blazor-textbox-icons.png)
+![Blazor TextBox with icon in .NET MAUI Blazor](./images/blazor-textbox-icons.webp)
 
 ## Floating label
 
@@ -198,7 +198,7 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextBox with floating label in .NET MAUI Blazor](./images/blazor-textbox-float-label.png)
+![Blazor TextBox with floating label in .NET MAUI Blazor](./images/blazor-textbox-float-label.webp)
 
 ## See also
 

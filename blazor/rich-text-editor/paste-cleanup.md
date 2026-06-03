@@ -26,12 +26,12 @@ When pasting content into the editor, you can control the formatting and styles 
 
 ## Prompt dialog options
 
-When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor opens a dialog box with three options as radio buttons: keep, clean, and plain text.
+When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor opens a dialog box with three options as radio buttons: Keep Format, Clean Format, and Plain Text.
 
-![Blazor RichTextEditor with prompt](./images/blazor-richtexteditor-paste-prompt.png)
+![Blazor Rich Text Editor with prompt](./images/blazor-richtexteditor-paste-prompt.webp)
 
-1. `Keep`: To keep the same format with copied content.
-2. `Clean`: To clear all the style formats with copied content.
+1. `Keep Format`: To keep the same format with copied content.
+2. `Clean Format`: To clear all the style formats with copied content.
 3. `Plain Text`: To paste the copied content as plain text without any formatting or style (including the removal of all tags).
 
 N> When the `Prompt` value is set to true, the API properties [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_PlainText) and [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) will not be considered for processing when pasting the content.
@@ -58,15 +58,15 @@ N> When `PlainText` value is set true, the API property [Prompt](https://help.sy
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with plain text](./images/blazor-richtexteditor-paste-plain-text.gif)
+![Blazor Rich Text Editor with plain text](./images/blazor-richtexteditor-paste-plain-text.webp)
 
 ## Keep format
 
-When [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) is set to `true`, the pasted content retains its original formatting, including styles, fonts, and structure. However, the formatting is still subject to filtering based on the `AllowedStyleProperties`, `DeniedTags`, and `DeniedAttrs` settings:
+When [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_KeepFormat) is set to `true`, the pasted content retains its original formatting, including styles, fonts, and structure. However, the formatting is still subject to filtering based on the `AllowedStyleProperties`, `DeniedTags`, and `DeniedAttributes` settings:
 
 * Only the style properties listed in `AllowedStyleProperties` will be preserved.
 * Any HTML tags listed in `DeniedTags` will be removed.
-* Any attributes listed in `DeniedAttrs` will be stripped from the pasted content.
+* Any attributes listed in `DeniedAttributes` will be stripped from the pasted content.
 
 This ensures that while the formatting is retained, it remains clean, safe, and consistent with your application's styling rules.
 
@@ -78,7 +78,7 @@ This ensures that while the formatting is retained, it remains clean, safe, and 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with keep format](./images/blazor-richtexteditor-paste-keep-format.gif)
+![Blazor Rich Text Editor with keep format](./images/blazor-richtexteditor-paste-keepformat.webp)
 
 >When `KeepFormat` is set to true, set both `Prompt` and `PlainText` to false.
 
@@ -86,10 +86,10 @@ This ensures that while the formatting is retained, it remains clean, safe, and 
 
 When the `Prompt`, `PlainText`, and `KeepFormat` options are all set to false, the Rich Text Editor performs clean format paste cleanup. In this mode, all inline styles from the pasted content are removed, eliminating any custom or external styling. This ensures a consistent and uniform appearance within the editor.
 
-Despite the removal of styling, essential structural HTML tags such as `<p>`, `<ul>`, `<table>`, and others are preserved. This maintains the original layout and semantic integrity of the content, allowing it to remain well-structured and readable.However, the formatting is still subject to filtering based on the `DeniedTags`, and `DeniedAttrs` settings:
+Despite the removal of styling, essential structural HTML tags such as `<p>`, `<ul>`, `<table>`, and others are preserved. This maintains the original layout and semantic integrity of the content, allowing it to remain well-structured and readable.However, the formatting is still subject to filtering based on the `DeniedTags`, and `DeniedAttributes` settings:
 
 - **`DeniedTags`**: Tags listed here will still be removed from the pasted content.
-- **`DeniedAttrs`**: Attributes listed here will also be stripped from the pasted content.
+- **`DeniedAttributes`**: Attributes listed here will also be stripped from the pasted content.
 
 > The `AllowedStyleProps` setting only applies if `KeepFormat` is enabled.
 
@@ -109,7 +109,7 @@ The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with denied tags](./images/blazor-richtexteditor-paste-denied-tag.gif)
+![Blazor Rich Text Editor with denied tags](./images/blazor-richtexteditor-paste-denied-tag.webp)
 
 > This setting is ignored when `PlainText` is set to `true`. <br>
 It only works when either `KeepFormat` is set to `true`, or when `Prompt`, `PlainText`, and `KeepFormat` are all set to `false`, which triggers clean format behavior.
@@ -126,7 +126,7 @@ The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with denied attribute](./images/blazor-richtexteditor-deniedattribute.gif)
+![Blazor Rich Text Editor with denied attribute](./images/blazor-richtexteditor-deniedattribute.webp)
 
 > This setting is ignored when `PlainText` is set to `true`. <br>
 It only works when either `KeepFormat` is set to `true`, or when `Prompt`, `PlainText`, and `KeepFormat` are all set to `false`, which triggers clean format behavior.
@@ -147,7 +147,7 @@ For Example, **public string[] AllowedStyles = new string[] { "color", "margin" 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with allowed styles](./images/blazor-richtexteditor-allowedstyleproperties.gif)
+![Blazor Rich Text Editor with allowed styles](./images/blazor-richtexteditor-allowedstyleproperties.webp)
 
 > This setting works only when `KeepFormat` is set to true. If `KeepFormat` is `false` or `PlainText` is `true`, style filtering via `AllowedStyleProperties` will not be applied.
 
@@ -157,10 +157,10 @@ When pasting a large text into the editor it displays `Attempting to reconnect` 
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
+Open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="11" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="11" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -185,7 +185,7 @@ var app = builder.Build();
 Open **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the client web app.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="13" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="13" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -212,11 +212,15 @@ You can get the pasted text as HTML text using the [AfterPasteCleanup](https://h
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor @ref="RteObj" @bind-Value="htmlText" EditorMode="EditorMode.HTML">
     <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler" />
 </SfRichTextEditor>
 
 @code {
+    SfRichTextEditor RteObj;
+    private string htmlText { get; set; } = "Paste content here";
     public void AfterPasteCleanupHandler(PasteCleanupArgs args)
     {
         // Here you can get the pasted Html string using args.Value

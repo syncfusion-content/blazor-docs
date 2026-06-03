@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is built to support widely accepted accessibility standards. These standards help ensure that the component is usable by individuals with varying abilities, including those using assistive technologies.
 Supported guidelines include:
 
 - [Americans with Disabilities Act (ADA)]((https://www.ada.gov/))

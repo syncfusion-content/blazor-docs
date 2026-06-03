@@ -25,15 +25,15 @@ You can define custom symbols for various Markdown formatting options:
 The following example demonstrates how to customize Markdown tags in the editor:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-custom-formats.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor markdown custom list](./images/blazor-richtexteditor-markdown-custom-list.png)
+![Blazor RichTextEditor markdown custom list](./images/blazor-richtexteditor-markdown-custom-list.webp)
 
-![Blazor RichTextEditor markdown custom format](./images/blazor-richtexteditor-markdown-custom-formats.png)
+![Blazor RichTextEditor markdown custom format](./images/blazor-richtexteditor-markdown-custom-formats.webp)
 
-![Blazor RichTextEditor markdown custom selection](./images/blazor-richtexteditor-markdown-custom-italic.png)
+![Blazor RichTextEditor markdown custom selection](./images/blazor-richtexteditor-markdown-custom-italic.webp)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Edit Types in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports multiple edit types that allow customization of the editing behavior for individual columns. These edit types improve data entry efficiency and provide flexibility for handling various data types.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports multiple edit types that allow customization of the editing behavior for individual columns. These edit types improve data entry efficiency and provide flexibility for handling various data types.
 
 ## Default cell edit type editor
 
@@ -1682,7 +1682,6 @@ public class EmployeeData
         this.Country = Country;
         this.City = City;
         this.HireDate = HireDate;
-        this.ImageURL = ImageURL;
     }
     public static List<EmployeeData> GetAllRecords()
     {
@@ -1984,7 +1983,7 @@ To use a `SfNumericTextBox` in the edit form, configure the [EditTemplate](https
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns 
+@using Syncfusion.Blazor.Inputs
 
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">

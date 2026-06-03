@@ -94,11 +94,11 @@ These shortcuts provide additional functionalities like fullscreen mode.
 | Toggle full screen mode | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> |
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-key-configuration.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
+![Blazor Markdown Editor with Key Configuration](./images/blazor-richtexteditor-key-configuration.webp)

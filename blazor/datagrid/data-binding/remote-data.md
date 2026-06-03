@@ -9,7 +9,7 @@ documentation: ug
 
 # Remote Data in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports remote data binding for seamless interaction with external services such as **OData**, **Web API**, **RESTful endpoints**, or **GraphQL**. Remote data binding is configured using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) by specifying the service endpoint and adaptor type.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports remote data binding for seamless interaction with external services such as **OData**, **Web API**, **RESTful endpoints**, or **GraphQL**. Remote data binding is configured using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) by specifying the service endpoint and adaptor type.
 
 To configure remote data binding:
 
@@ -375,6 +375,15 @@ The Blazor DataGrid can be populated with data fetched on demand from a remote e
     public string StatusMessage { get; set; } = "";
     public string StatusStyle { get; set; } = "color:black;";
     public List<OrdersDetails> Orders { get; set; } = new();
+
+    public class OrdersDetails
+    {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public string EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCountry { get; set; }
+    }
 
     private async Task ExecuteQuery()
     {

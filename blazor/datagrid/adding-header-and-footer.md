@@ -9,7 +9,7 @@ documentation: ug
 
 # Adding header and footer in Blazor DataGrid 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports customizing header and footer sections in PDF exports. These regions can include:
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports customizing header and footer sections in PDF exports. These regions can include:
 
 * **Text** – Titles, dates, or disclaimers.
 * **Page Numbers** – For easy navigation.

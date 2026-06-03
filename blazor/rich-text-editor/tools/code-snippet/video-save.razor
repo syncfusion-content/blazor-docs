@@ -2,7 +2,7 @@
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-    <RichTextEditorVideoSettings SaveUrl="api/Video/Save" Path="./Video/"></RichTextEditorVideoSettings>
+    <RichTextEditorVideoSettings SaveUrl="api/Video/Save" RemoveUrl="api/Video/Delete" Path="./Video/"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
 
 @code {
@@ -10,5 +10,4 @@
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Video }
     };
-
 }

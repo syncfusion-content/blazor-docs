@@ -64,7 +64,7 @@ Download PostgreSQL from the official website: [https://www.postgresql.org/downl
   - Keep the default port **5432**.
   - Next, the Select Components screen will open.
   - By default, all options are selected, as shown in the image:
-    ![Select Components](images/select-component-Package.png)
+    ![Select Components](images/select-component-Package.webp)
   - Uncheck the **Stack Builder** option — it is not necessary for this setup.
   - Ensure **PostgreSQL Server**, **pgAdmin 4**, and **Command Line Tools** are selected.
 4. Complete the installation.
@@ -82,19 +82,19 @@ Two options are available to create a database:
 
 PostgreSQL includes pgAdmin 4, a graphical tool for database management. Open pgAdmin 4 from the Windows Start menu or application launcher.
 
-![Opening pgAdmin 4](images/pgadmin-start.jpg)
+![Opening pgAdmin 4](images/pgadmin-start.webp)
 
 #### Creating the Database
 
 Right-click on the **Databases** option and select **Create** → **Database**.
 
-![Create Database Menu](images/create-database-menu.png)
+![Create Database Menu](images/create-database-menu.webp)
 
 In the **Create - Database** dialog:
 1. Enter **org_chart_db** as the database name. 
 2. Click **Save** to create the database.
 
-![Database Creation Dialog](images/database-creation-dialog.png)
+![Database Creation Dialog](images/database-creation-dialog.webp)
 
 After creating the database, right-click the **org_chart_db** database and choose **Query Tool** from the context menu.
 
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS org_chart_layout (
   parent_id text NULL
 );
 ```
-![Create Table Query](images/create-table-query.jpg)
+![Create Table Query](images/create-table-query.webp)
 
 The table structure includes:
 - **id** – Primary key for unique node identification.
@@ -153,7 +153,7 @@ SET role = EXCLUDED.role,
     parent_id = EXCLUDED.parent_id;
 ```
 
-![Insert Data Query](images/insert-data-query.jpg)
+![Insert Data Query](images/insert-data-query.webp)
 
 #### Verifying Data Insertion
 
@@ -165,7 +165,7 @@ SELECT * FROM org_chart_layout ORDER BY id;
 
 The query should return 18 rows. Parent–child relationships are indicated by the **parent_id** column, which references the **id** of the parent node (NULL for root nodes).
 
-![Verify Data Query Results](images/verify-data-results.jpg)
+![Verify Data Query Results](images/verify-data-results.webp)
 
 ### Option B — Automated Database Setup Using EF Core Migrations
 
@@ -709,9 +709,10 @@ dotnet run
 
 ### No data in Diagram
 
-- Verify that `DataSourceSettings` uses the correct property names. These property names must exactly match the model returned by the API:
+- Verify that `DataSourceSettings` uses the correct property names:
   - `ID="Id"`
   - `ParentID="ParentId"`
+  These property names must exactly match the model returned by the API.
 - Check the browser developer console (F12) for errors from `LayoutService` class.
 - Ensure migrations completed successfully and that seed data exists in the database
   (you may verify this directly in PostgreSQL).
@@ -727,7 +728,6 @@ You can clone the repository, update the PostgreSQL connection string, apply mig
 ## Summary
 
 This guide demonstrates how to:
-
 1. Install PostgreSQL. [🔗](#installing-postgresql)
 2. Create a PostgreSQL database with layout nodes using pgAdmin 4. [🔗](#postgresql-database-setup)
 3. Configure backend implementations. [🔗](#backend-implementation)
@@ -739,5 +739,6 @@ This guide demonstrates how to:
 The application now provides a complete solution for visualizing organizational chart data from PostgreSQL.
 
 ## See Also
+
 - [Data Binding](https://blazor.syncfusion.com/documentation/diagram/data-binding#how-to-specify-parent-child-relationship-in-data-source)
 - [Organizational Chart Layout](https://blazor.syncfusion.com/documentation/diagram/layout/organizational-chart)

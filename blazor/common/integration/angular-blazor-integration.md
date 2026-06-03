@@ -64,7 +64,7 @@ The following CSS styles are available in the `../node_modules/@syncfusion` fold
 
 ### Add DataGrid component
 
-Update your `src/app/app.ts` file to incorporate the [Angular DataGrid](https://www.syncfusion.com/angular-components/angular-data-grid) component.  
+Update your `src/app/app.ts` file to incorporate the [Angular DataGrid](https://www.syncfusion.com/angular-components/angular-data-grid) component. 
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
