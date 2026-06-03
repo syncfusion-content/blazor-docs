@@ -26,8 +26,6 @@ N> This guide is intended for Blazor components version 33.2.3 or later, targeti
 
 **Root cause**: The Blazor theme CSS file is either missing, incorrectly referenced, or placed in the wrong location within the application structure.
 
-**Impact**: Components are functional but visually broken, creating a poor user experience and potentially affecting usability.
-
 **Solution**: Ensure the Blazor theme stylesheet is correctly referenced in `~/Components/App.razor` within the `<head>` section.
 
 {% tabs %}
@@ -44,7 +42,7 @@ N> This guide is intended for Blazor components version 33.2.3 or later, targeti
 
 **Available themes**: For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
-**Best practices**:
+### Best practices
 
 * Reference only **one** theme stylesheet to avoid style conflicts
 * Place the theme reference **before** custom stylesheets to allow overrides
@@ -64,15 +62,13 @@ If you switch themes during development, clear your browser cache (Ctrl+F5 or Ct
 
 ## Issue 2: Components not rendering interactively
 
-**Symptom**: Blazor components render as static HTML without interactivity. Events don't trigger, data binding doesn't work, and components don't respond to user input.
+**Symptom**: Blazor components render as static HTML without interactivity. Events don't trigger, data binding doesn't work, and components do not respond to user input, preventing user-driven functionality.
 
 **Root cause**: Missing or incorrect render mode configuration. Blazor Web Apps require explicit render mode declarations for interactive components when interactivity location is set to **Per page/component**.
 
-**Impact**: Components appear as static markup, breaking functionality that depends on user interaction, state management, or real-time updates.
+**Solution**: Configure the appropriate render mode based on your application requirements. For detailed information about the available render modes, refer to the [Blazor render modes documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes).
 
-**Solution**: Configure the appropriate render mode based on your application requirements.
-
-**For Blazor Web App (Per page/component interactivity):**
+### For Blazor Web App (Per page/component interactivity)
 
 Add the render mode directive at the top of your `.razor` page.
 
@@ -102,11 +98,7 @@ Add the render mode directive at the top of your `.razor` page.
 {% endhighlight %}
 {% endtabs %}
 
-**Available render modes**:
-
-For detailed information about the available render modes, refer to the [Blazor render modes documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes).
-
-**For Global Interactivity configuration:**
+### For Global Interactivity configuration
 
 In `~/Program.cs`, configure global render mode.
 
@@ -131,7 +123,7 @@ app.MapRazorComponents<App>()
 {% endhighlight %}
 {% endtabs %}
 
-**For Blazor components:**
+### For Blazor components
 
 Apply an appropriate render mode to pages or components that use Blazor components.
 
@@ -173,9 +165,9 @@ Apply an appropriate render mode to pages or components that use Blazor componen
 {% endhighlight %}
 {% endtabs %}
 
-**Best practices**:
+### Best practices
 
-* For pages with Syncfusion components, always specify a render mode (Server, WebAssembly, or Auto)
+* For pages with Blazor components, always specify a render mode (Server, WebAssembly, or Auto)
 * Use `InteractiveServer` for prototypes and internal applications with controlled user counts
 * Use `InteractiveWebAssembly` for public-facing applications requiring scalability
 * Test render mode behavior in both development and production environments
@@ -183,15 +175,13 @@ Apply an appropriate render mode to pages or components that use Blazor componen
 
 ## Issue 3: Missing or incorrect script references
 
-**Symptom**: JavaScript interop errors in browser console such as "Syncfusion is not defined" or "syncfusion.blazor is not a function". Components fail to initialize, interactive features don't work, or the application shows blank areas where components should render.
+**Symptom**: JavaScript interop errors in browser console such as `Syncfusion is not defined` or `syncfusion.blazor is not a function`. Components fail to initialize, interactive features don't work, or the application shows blank areas where components should render.
 
 **Root cause**: Required Syncfusion JavaScript files are either missing, referenced in the wrong order, or placed in incorrect locations within the HTML structure.
 
-**Impact**: Component failure, loss of interactive functionality, and poor user experience. Some components may render partially while others fail entirely.
-
 **Solution**: Ensure proper script references in the correct order and location.
 
-**For Blazor Web App (.NET 8+):**
+### For Blazor Web App
 
 Add scripts to `~/Components/App.razor` before the closing `</body>` tag.
 
@@ -208,7 +198,7 @@ Add scripts to `~/Components/App.razor` before the closing `</body>` tag.
 {% endhighlight %}
 {% endtabs %}
 
-**For Blazor WebAssembly:**
+### For Blazor WebAssembly
 
 Add scripts to `wwwroot/index.html`.
 
@@ -225,7 +215,7 @@ Add scripts to `wwwroot/index.html`.
 {% endhighlight %}
 {% endtabs %}
 
-**For components requiring additional scripts (for example, PDF Viewer):**
+### For components requiring additional scripts (for example, PDF Viewer)
 
 Some Blazor components require component-specific scripts in addition to the core script.
 
@@ -243,13 +233,13 @@ Some Blazor components require component-specific scripts in addition to the cor
 {% endhighlight %}
 {% endtabs %}
 
-**Script loading order requirements**:
+### Script loading order requirements
 
 1. **Blazor framework script** (`blazor.web.js` or `blazor.webassembly.js`) - Always load first
 2. **Syncfusion core script** (`syncfusion-blazor.min.js`) - Load second, after Blazor framework
 3. **Component-specific scripts** (if required) - Load after the core script
 
-**Best practices**:
+### Best practices
 
 * Always place scripts at the end of the `<body>` tag, not in `<head>`
 * Verify script paths match your installed package versions
@@ -257,7 +247,7 @@ Some Blazor components require component-specific scripts in addition to the cor
 * Use `type="text/javascript"` attribute for Syncfusion scripts to ensure proper MIME type
 * Avoid using CDN script references in production. Instead, use NuGet package scripts for version consistency
 
-**Common script reference mistakes**:
+### Common script reference mistakes
 
 * Placing scripts in `<head>` instead of at the end of `<body>`
 * Incorrect script paths (for example, using old paths from .NET 6 documentation)
@@ -265,18 +255,18 @@ Some Blazor components require component-specific scripts in addition to the cor
 * Loading the Syncfusion script before the Blazor framework script
 * Using outdated script references from previous Blazor versions
 
-**Verification steps**:
+### Verification steps
 
 1. Open browser developer tools (F12)
 2. Check the **Console tab** for JavaScript errors
 3. Check the **Network tab** to verify scripts load successfully (200 status)
 4. Verify script loading order in the **Sources tab**
 
-If you encounter "Failed to load resource" errors for `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, verify that the [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) package is available in the project, the script path is correct, and the project has been built or published successfully.
+If you encounter `Failed to load resource` errors for `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, verify that the [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) package is available in the project, the script path is correct, and the project has been built or published successfully.
 
 ## Issue 4: Missing service registration
 
-**Symptom**: Runtime exception "Unable to resolve service for type 'Syncfusion.Blazor.SyncfusionBlazorService'" when attempting to render Syncfusion components. The application may build successfully but crash during component initialization.
+**Symptom**: Runtime exception `Unable to resolve service for type 'Syncfusion.Blazor.SyncfusionBlazorService'` when attempting to render Syncfusion components. The application may build successfully but crash during component initialization.
 
 A common concrete error when the Syncfusion service is not registered is:
 
@@ -291,8 +281,6 @@ System.InvalidOperationException: Cannot provide a value for property 'Localizer
 {% endtabs %}
 
 **Root cause**: The Blazor service is not registered in the application's dependency injection (DI) container (missing call to `builder.Services.AddSyncfusionBlazor()`).
-
-**Impact**: All Blazor components fail to initialize, resulting in application crashes or blank pages. This is a blocking issue that prevents the application from functioning.
 
 **Solution**: Register the Blazor service in `~/Program.cs`.
 
@@ -329,11 +317,11 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-**Additional service registrations for specific components:**
+### Additional service registrations for specific components
 
 Some components require additional service configurations.
 
-**For PDF Viewer component:**
+#### For PDF Viewer component
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="6 9" %}
@@ -358,7 +346,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-**For File Manager component:**
+#### For File Manager component
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="6" %}
@@ -380,7 +368,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-**Best practices**:
+### Best practices
 
 * Register `AddSyncfusionBlazor()` early in the service configuration pipeline
 * Place the registration after `AddRazorComponents()` but before building the app
@@ -393,6 +381,6 @@ The `AddSyncfusionBlazor()` service registration is mandatory for all Blazor com
 
 | Error Message | Likely Cause | Solution |
 |---------------|-------------|----------|
-| "Syncfusion is not defined" | Missing or incorrectly ordered script reference | Add `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` after the Blazor framework script |
-| "Unable to resolve service for type 'SyncfusionBlazorService'" | Missing Syncfusion service registration | Add `builder.Services.AddSyncfusionBlazor()` in Program.cs |
-| "Component is not interactive" | Missing render mode on the page/component | Add `@rendermode InteractiveServer` / `@rendermode InteractiveWebAssembly` or configure global render mode in Program.cs |
+| `Syncfusion is not defined` | Missing or incorrectly ordered script reference | Add `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` after the Blazor framework script |
+| `Unable to resolve service for type 'SyncfusionBlazorService'` | Missing Syncfusion service registration | Add `builder.Services.AddSyncfusionBlazor()` in Program.cs |
+| `Component is not interactive` | Missing render mode on the page/component | Add `@rendermode InteractiveServer` / `@rendermode InteractiveWebAssembly` or configure global render mode in Program.cs |
