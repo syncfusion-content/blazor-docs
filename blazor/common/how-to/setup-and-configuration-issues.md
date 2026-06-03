@@ -215,7 +215,7 @@ Add scripts to `wwwroot/index.html`.
 
 ### For components requiring additional scripts
 
-Some Blazor components(for example, PDF Viewer) require component-specific scripts in addition to the core script.
+In addition to the core script, specific Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) require dedicated component-specific scripts.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
