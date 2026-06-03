@@ -423,7 +423,7 @@ N> Provided support to apply execute commands which do not require direct DOM ac
 The following code block demonstrates the usage of the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html#constructors) in Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/html-execute-command.razor %}
 
@@ -562,7 +562,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 </table>
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-execute-command.razor %}
 
