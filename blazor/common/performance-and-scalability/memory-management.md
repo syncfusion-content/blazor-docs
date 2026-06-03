@@ -17,11 +17,6 @@ Blazor components are optimized for efficient rendering and automatically manage
 
 In Blazor WebAssembly, releasing these references allows the browser runtime to reclaim memory. In Blazor Server, proper cleanup prevents memory retention across active user circuits, which is essential for maintaining scalability.
 
-To create a Blazor application, refer to the following Blazor getting started guides.
-
-* [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-
 ### Disposing data-bound Blazor components
 
 Data-bound components such as [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) can hold large data collections in memory. Clearing large data collections during component disposal helps release memory references earlier, although the .NET garbage collector ultimately handles memory cleanup.
@@ -97,56 +92,12 @@ Components or application logic used alongside Blazor components may subscribe t
 
 This example uses the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component to trigger a state update.
 
-**Add service file**
-
-Create a `Services` folder in your project root. Then add a service file named `AppState.cs` with the following code.
-
-{% tabs %}
-{% highlight cs tabtitle="AppState.cs" %}
-
-public class AppState
-{
-    private string _currentMessage = "Initial State";
-
-    public string CurrentMessage
-    {
-        get => _currentMessage;
-        set
-        {
-            if (_currentMessage == value)
-                return;
-
-            _currentMessage = value;
-            OnChange?.Invoke();
-        }
-    }
-
-    public event Action? OnChange;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Register the service**
-
-Register this service in the `Program.cs` file.
-
-{% tabs %}
-{% highlight cs tabtitle="Program.cs" %}
-
-...
-builder.Services.AddScoped<AppState>();
-...
-
-{% endhighlight %}
-{% endtabs %}
-
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Buttons
-@inject AppState AppState
+@inject AppState AppStateS
 @implements IDisposable
 
 <div style="padding:16px">
@@ -179,6 +130,36 @@ builder.Services.AddScoped<AppState>();
     {
         AppState.OnChange -= OnAppStateChanged;
     }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Add service file**
+
+Create a `Services` folder in your project root. Then add a service file named `AppState.cs` with the following code.
+
+{% tabs %}
+{% highlight cs tabtitle="AppState.cs" %}
+
+public class AppState
+{
+    private string _currentMessage = "Initial State";
+
+    public string CurrentMessage
+    {
+        get => _currentMessage;
+        set
+        {
+            if (_currentMessage == value)
+                return;
+
+            _currentMessage = value;
+            OnChange?.Invoke();
+        }
+    }
+
+    public event Action? OnChange;
 }
 
 {% endhighlight %}
