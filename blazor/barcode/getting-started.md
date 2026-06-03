@@ -7,7 +7,7 @@ control: Barcode
 documentation: ug
 ---
 
-# Getting Started with Blazor Barcode Component
+# Getting Started with Blazor Barcode Component in Blazor WASM App
 
 This section explains how to include [Blazor Barcode](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
