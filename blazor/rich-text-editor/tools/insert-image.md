@@ -356,7 +356,7 @@ N> If the service is hosted on an external server, the full service-hosted path 
 >
 > **Example:**
 >
-> ```razor
+> ```
 > <RichTextEditorImageSettings SaveUrl="[SERVICE_HOSTED_PATH]/api/Image/Save" Path="./Images/" />
 >
 > <RichTextEditorImageSettings RemoveUrl="[SERVICE_HOSTED_PATH]/api/Image/Delete" Path="./Images/" />
@@ -565,7 +565,7 @@ N> If the service is hosted on an external server, the full service-hosted path 
 >
 > **Example:**
 >
-> ```razor
+> ```
 > <RichTextEditorImageSettings SaveUrl="[SERVICE_HOSTED_PATH]/api/Image/Rename" Path="./Images/" />
 > ```
 >
