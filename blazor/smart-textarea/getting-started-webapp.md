@@ -133,10 +133,10 @@ using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
