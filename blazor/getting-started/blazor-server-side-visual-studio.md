@@ -35,9 +35,13 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 
 Run the following command to create a new Blazor Server App.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet new blazor -o BlazorApp --interactivity Server
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
@@ -47,9 +51,13 @@ Alternatively, create a **Blazor Server App** using Visual Studio Code via [Micr
 
 Run the following command to create a new Blazor Server App.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle=".NET CLI" %}
+
 dotnet new blazor -o BlazorApp --interactivity Server
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -70,10 +78,14 @@ Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.B
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle="Package Manager" %}
+
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -81,10 +93,14 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 Open the terminal and run the following commands.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -92,10 +108,14 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 Open the command prompt and run the following commands.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle=".NET CLI" %}
+
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -199,9 +219,13 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 * Open the terminal and run the following command.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -209,9 +233,13 @@ dotnet run
 
 * Open the command prompt and run the following command.
 
-```html
+{% tabs %}
+{% highlight razor tabtitle=".NET CLI" %}
+
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
