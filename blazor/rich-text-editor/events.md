@@ -15,7 +15,8 @@ This section explains the list of events of the Rich Text Editor component which
 
 [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnActionBegin) event triggers before command execution using the toolbar items.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -29,20 +30,21 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnActionComplete
 
 [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnActionComplete) event triggers after command execution using the toolbar items.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
     <RichTextEditorEvents OnActionComplete="@OnActionCompleteHandler" ></RichTextEditorEvents>
 </SfRichTextEditor>
-
 @code{
     public void OnActionCompleteHandler(ActionCompleteEventArgs args)
     {
@@ -50,13 +52,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnDialogOpen
 
 [OnDialogOpen]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnDialogOpen)) event triggers when the dialog is being opened.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
@@ -71,13 +75,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## DialogOpened
 
 [DialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_DialogOpened) event triggers when a dialog is opened.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
@@ -92,13 +98,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnDialogClose
 
 [OnDialogClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnDialogClose) event triggers when the dialog is being closed.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
@@ -113,13 +121,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## DialogClosed
 
 [DialogClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_DialogClosed) event triggers after the dialog has been closed.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
@@ -134,13 +144,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnQuickToolbarOpen
 
 [OnQuickToolbarOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnQuickToolbarOpen) event triggers when the quick toolbar is being opened.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -154,13 +166,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## QuickToolbarOpened
 
 [QuickToolbarOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_QuickToolbarOpened) event triggers when a quick toolbar is opened.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -174,13 +188,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## QuickToolbarClosed
 
 [QuickToolbarClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_QuickToolbarClosed) event triggers after the quick toolbar has been closed.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -194,13 +210,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnImageSelected
 
 [OnImageSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageSelected) event triggers when the image is selected or dragged into the insert image dialog.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.RichTextEditor
@@ -215,13 +233,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## BeforeUploadImage
 
 [BeforeUploadImage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_BeforeUploadImage) event triggers before the image upload process.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -235,13 +255,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnImageUploadSuccess
 
 [OnImageUploadSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageUploadSuccess) event triggers when the image is successfully uploaded to the server side.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -255,13 +277,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnImageUploadFailed
 
 [OnImageUploadFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageUploadFailed) event triggers when there is an error in the image upload.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -275,13 +299,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnImageRemoving
 
 [OnImageRemoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageRemoving) event triggers when the selected image is cleared from the insert image dialog.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Inputs
@@ -296,13 +322,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## ImageDelete
 
 [ImageDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ImageDelete) event triggers when the selected image is cleared from the Rich Text Editor Content.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -316,13 +344,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Created
 
 [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_Created) event triggers when the Rich Text Editor is rendered.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -336,13 +366,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Destroyed
 
 [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_Destroyed) event triggers when the Rich Text Editor is destroyed.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -356,13 +388,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Blur
 
 [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_Blur) event triggers when Rich Text Editor is focused out.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -376,13 +410,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnToolbarClick
 
 [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnToolbarClick) event triggers when Rich Text Editor Toolbar items is clicked.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -396,13 +432,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Focus
 
 [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_Focus) event triggers when Rich Text Editor is focused in.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -416,13 +454,15 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## ValueChange
 
 [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event triggers only when Rich Text Editor is blurred and changes are done to the content.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -436,7 +476,8 @@ This section explains the list of events of the Rich Text Editor component which
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## SelectionChanged
 
@@ -444,14 +485,14 @@ The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 
 N> This event does not trigger when the selection range is collapsed (i.e., when only the cursor is placed without any content being selected).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
     <RichTextEditorEvents SelectionChanged="@SelectionChangedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
-
 @code {
     public void SelectionChangedHandler(Syncfusion.Blazor.RichTextEditor.SelectionChangedEventArgs args)
     {
@@ -459,13 +500,15 @@ N> This event does not trigger when the selection range is collapsed (i.e., when
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnResizeStart
 
 [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnResizeStart) event triggers only when resizing the image is started.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -479,13 +522,15 @@ N> This event does not trigger when the selection range is collapsed (i.e., when
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## OnResizeStop
 
 [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnResizeStop) event triggers only when resizing the image is stopped.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -499,13 +544,15 @@ N> This event does not trigger when the selection range is collapsed (i.e., when
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## AfterPasteCleanup
 
 [AfterPasteCleanup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_AfterPasteCleanup) event triggers after cleaning up the copied content.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -519,4 +566,5 @@ N> This event does not trigger when the selection range is collapsed (i.e., when
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
