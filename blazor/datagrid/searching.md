@@ -286,7 +286,7 @@ Search operators define how the search key is compared to data values. Configure
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheMWibUKtkPFVK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLHNxjKrsEWoEWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Search by external button
 
