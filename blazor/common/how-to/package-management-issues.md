@@ -255,9 +255,7 @@ When upgrading Syncfusion packages, update **all Syncfusion packages** in your s
 
 **Solution**: Ensure all Blazor packages in your project use the **exact same version number**.
 
-### Verification steps
-
-#### Step 1: Check current package versions
+### Step 1: Check current package versions
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -282,7 +280,7 @@ Project 'YourApp' has the following package references
 {% endhighlight %}
 {% endtabs %}
 
-#### Step 2: Update all packages to matching version
+### Step 2: Update all packages to matching version
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -299,7 +297,7 @@ dotnet build
 {% endhighlight %}
 {% endtabs %}
 
-#### Step 3: Verify version alignment
+### Step 3: Verify version alignment
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
