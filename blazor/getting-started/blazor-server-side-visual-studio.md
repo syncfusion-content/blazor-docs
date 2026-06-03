@@ -35,7 +35,7 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 
 Run the following command to create a new Blazor Server App.
 
-```bash
+```html
 dotnet new blazor -o BlazorApp --interactivity Server
 ```
 
@@ -47,7 +47,7 @@ Alternatively, create a **Blazor Server App** using Visual Studio Code via [Micr
 
 Run the following command to create a new Blazor Server App.
 
-```bash
+```html
 dotnet new blazor -o BlazorApp --interactivity Server
 ```
 
@@ -70,7 +70,7 @@ Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.B
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
-```bash
+```html
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
@@ -81,7 +81,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 Open the terminal and run the following commands.
 
-```bash
+```html
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 ```
@@ -92,7 +92,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 Open the command prompt and run the following commands.
 
-```bash
+```html
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 ```
@@ -199,7 +199,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 * Open the terminal and run the following command.
 
-```bash
+```html
 dotnet run
 ```
 
@@ -209,7 +209,7 @@ dotnet run
 
 * Open the command prompt and run the following command.
 
-```bash
+```html
 dotnet run
 ```
 
