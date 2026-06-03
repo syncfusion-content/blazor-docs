@@ -25,9 +25,13 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 
 Run the following command to create a new Blazor Server App.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet new blazor -o BlazorApp --interactivity Server
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
@@ -37,9 +41,13 @@ Alternatively, create a **Blazor Server App** using Visual Studio Code via [Micr
 
 Run the following command to create a new Blazor Server App.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
 dotnet new blazor -o BlazorApp --interactivity Server
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -60,9 +68,13 @@ Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Package Manager Console" %}
+
 Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -70,9 +82,13 @@ Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
 
 Open the terminal and run the following commands.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -80,15 +96,19 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 Open the command prompt and run the following commands.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
 dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Add import namespaces
+### Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
@@ -119,7 +139,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script resources
+### Add script resources
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
@@ -191,9 +211,13 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 * Open the terminal and run the following command.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -201,9 +225,13 @@ dotnet run
 
 * Open the command prompt and run the following command.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -213,7 +241,7 @@ dotnet run
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AccumulationChart)
 
-## See also
+### See also
 
 
 1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
