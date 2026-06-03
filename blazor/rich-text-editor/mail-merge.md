@@ -92,7 +92,6 @@ When the user selects an item from the dropdown:
 - The snippet is inserted at the current cursor position using [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_System_String_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_).
 
 ```csharp
- {% raw %}
     public async Task OnItemSelect(MenuEventArgs args)
     {
         if (args.Item.Text != null)
@@ -104,7 +103,6 @@ When the user selects an item from the dropdown:
             await this._mailMergeEditor.SaveSelectionAsync();
         }
     }
- {% endraw %}
 ```
 
 ## Role of Mention control in mail merge
@@ -120,9 +118,7 @@ Mention control enhances usability by enabling inline field suggestions:
 
 <SfMention DataSource="_mergeData" TItem="MergeData" Target="#_mailMergeEditor" MentionChar="_mentionChar" AllowSpaces="true" PopupWidth='250px' PopupHeight='200px' @ref="mentionObj">
     <DisplayTemplate>
-        {% raw %}
         <span>@((context as MergeData).Value)</span>
-        {% endraw %}
     </DisplayTemplate>
     <ChildContent>
         <MentionFieldSettings Text="Text"></MentionFieldSettings>
@@ -219,11 +215,13 @@ When the `Merge Data` button is clicked:
 ```
 This ensures all placeholders are dynamically replaced without manual editing.
 
-{% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/mail-merge.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Blazor RichTextEditor Mail Merge](./images/blazor-richtexteditor-mail-merge.webp)
 
