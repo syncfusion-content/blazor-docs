@@ -9,11 +9,11 @@ documentation: ug
 
 # Download and Installation in VS Code Extension
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio Code extension in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions). Install it directly from Visual Studio Code or download it from the Marketplace and install locally.
+Syncfusion publishes the Visual Studio Code extension in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions). Install it directly from Visual Studio Code or download it from the Marketplace and install locally.
 
 ## Prerequisites
 
-Install the following prerequisites to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension and to create, convert, and upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications.
+Install the following prerequisites to install the Syncfusion Blazor extension and to create, convert, and upgrade Syncfusion Blazor applications.
 
 - [Visual Studio Code 1.29.0 or later](https://code.visualstudio.com/download)
 - [.NET SDK 10.0](https://dotnet.microsoft.com/en-us/download)
@@ -21,7 +21,7 @@ Install the following prerequisites to install the Syncfusion<sup style="font-si
 
 ## Install through the Visual Studio Code Extensions
 
-The steps below describe how to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension from the Extensions view in Visual Studio Code.
+The steps below describe how to install the Syncfusion Blazor extension from the Extensions view in Visual Studio Code.
 
 1. Open Visual Studio Code.
 2. Navigate to **View > Extensions**, and the Manage Extensions option will appear on the left side of the window.
@@ -42,7 +42,7 @@ The steps below describe how to install the Syncfusion<sup style="font-size:70%"
 
 The following steps describe how to download and install the extension from the Visual Studio Code Marketplace.
 
-1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor VS Code Extensions](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) page in the Marketplace.
+1. Open the [Syncfusion Blazor VS Code Extensions](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) page in the Marketplace.
 2. Click Install from Visual Studio Code Marketplace. The browser displays a popup window with information such as **"Open Visual Studio Code"**. When you click Open Visual Studio Code, the [Syncfusion® Blazor Extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) will launch in Visual Studio Code.
 3. In Visual Studio Code, click **Install** on the **Blazor VSCode Extensions - Syncfusion** page.
 4. Reload Visual Studio Code after installation by using the **Reload Window** command from the Command Palette. Open the Command Palette with **Ctrl+Shift+P**, then run Reload Window.

@@ -7,9 +7,9 @@ control: Common
 documentation: ug
 ---
 
-# Convert a Blazor Project to Syncfusion® Blazor
+# Convert a Blazor Project to Syncfusion Blazor
 
-The Syncfusion® Blazor extension for Visual Studio Code upgrades a Blazor project by adding the required Syncfusion® NuGet packages and configuring the selected theme automatically.
+The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension for Visual Studio Code upgrades a Blazor project by adding the required Syncfusion NuGet packages and configuring the selected theme automatically.
 
 ## Supported project types
 
@@ -26,23 +26,23 @@ The Syncfusion® Blazor extension for Visual Studio Code upgrades a Blazor proje
 
     ![Context menu showing Convert to Syncfusion Blazor Application option](images/conversion.webp)
 
-3. In the Command Palette, pick **Select Blazor Version** and choose the desired Syncfusion® Blazor release (pulled from `nuget.org`).
+3. In the Command Palette, pick **Select Blazor Version** and choose the desired Syncfusion Blazor release (pulled from [nuget.org](https://www.nuget.org)).
 
     ![Command Palette showing Blazor version selection](images/versionselection.webp)
 
-4. Choose the theme from the theme list (Material, Bootstrap, Tailwind, Fluent, HighContrast, etc.).
+4. Choose the theme from the theme list. Supported themes include Material, Bootstrap, Tailwind, Fluent, and High Contrast. Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for the full list.
 
     ![Command Palette showing theme selection options](images/ChooseThemes.webp)
 
    N> The conversion process will run automatically. This may take a few moments as NuGet packages are downloaded and the project is configured.
 
-After conversion, the project contains the required Syncfusion® Blazor NuGet packages and the selected theme stylesheet.
+After conversion, the project contains the required Syncfusion Blazor NuGet packages and the selected theme stylesheet.
 
-If the trial setup or NuGet packages from `nuget.org`, register the Syncfusion® license key in the application. Syncfusion® introduced the licensing system in the 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to the application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the Syncfusion license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.
 
 ## What changes are made during conversion
 
-- NuGet packages: Adds `Syncfusion.Blazor` (and other required packages depending on project type).
+- NuGet packages: Adds [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (and other required packages depending on project type).
 
     ![Project file showing Syncfusion NuGet package references](images/nugetpackage.webp)
 
@@ -50,10 +50,19 @@ If the trial setup or NuGet packages from `nuget.org`, register the Syncfusion®
 
     | Application Type | Theme file location |
     | --- | --- |
-    | Blazor Web App (Server or WebAssembly) | Components/App.razor |
-    | Blazor WebAssembly (standalone) | wwwroot/index.html |
-    | Blazor WebAssembly (ASP.NET Core hosted) | Client project: wwwroot/index.html |
-    | Blazor WebAssembly (PWA) | wwwroot/index.html |
+    | Blazor Web App (Server or WebAssembly) | `Components/App.razor` |
+    | Blazor WebAssembly (standalone) | `wwwroot/index.html` |
+    | Blazor WebAssembly (ASP.NET Core hosted) | Client project: `wwwroot/index.html` |
+    | Blazor WebAssembly (PWA) | `wwwroot/index.html` |
 
     ![Example showing where the theme link is added in the project](images/cdnlink.webp)
+
+## See also
+
+- [Overview of Blazor Extension for Visual Studio Code](overview.md)
+- [Download and Installation](download-and-installation.md)
+- [Create Project Template](create-project.md)
+- [Code Snippets](code-snippet.md)
+- [Upgrade Project](upgrade-project.md)
+- [Scaffolding](scaffolding.md)
 

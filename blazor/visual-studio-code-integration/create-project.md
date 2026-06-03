@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Create projects using project templates in VS Code | Syncfusion
+title: Create a Blazor Application Using Visual Studio Code Extension | Syncfusion®
 description: Learn how to create a Syncfusion Blazor application using the Syncfusion Blazor extension for Visual Studio Code.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Create a Syncfusion® Blazor application
+# Create a Syncfusion Blazor application
 
-The Syncfusion® Blazor Template Studio for Visual Studio Code scaffolds a Blazor application preconfigured with Syncfusion® NuGet packages, namespaces, themes, and sample component render code. Use the guided wizard to quickly create an application tailored to your platform and selected controls.
+The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) Template Studio for Visual Studio Code scaffolds a Blazor application preconfigured with Syncfusion NuGet packages, namespaces, themes, and sample component render code. Use the guided wizard to quickly create an application tailored to your platform and selected controls.
 
-N> Blazor project templates from version `v17.4.0.39` and later are supported by the Syncfusion® Visual Studio Code project template.
+N> Blazor project templates require Essential Studio v27.1.x or later for .NET 8, 9, and 10 support.
 
-Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications in Visual Studio Code:
+Use the following steps to create Syncfusion Blazor applications in Visual Studio Code:
 
 1. Open the Command Palette (`Ctrl+Shift+P`) and search for "Syncfusion" to list available commands.
 
@@ -25,12 +25,12 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
 3. On the **Project type** tab, select the application type that matches your installed .NET SDK.
 
-    Supported .NET SDKs and Syncfusion® application types:
+    Supported .NET SDKs and Syncfusion application types:
 
-    | .NET SDK version | Application type |
+    | Application Type | Supported .NET SDK Versions |
     | --- | --- |
-    | .NET 10.0, 9.0, 8.0 | Syncfusion Blazor Web App |
-    | .NET 10.0, 9.0, 8.0 | Syncfusion Blazor WebAssembly App |
+    | Blazor Web App | .NET 8.0, 9.0, 10.0 |
+    | Blazor WebAssembly App | .NET 8.0, 9.0, 10.0 |
 
     In the Blazor Web App type you can choose interactivity (Server, WebAssembly, Auto) and interactivity location (global or per page/component).
 
@@ -40,7 +40,7 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
     ![Project type selection showing Blazor WebAssembly and PWA option](images/projecttypedetails1.webp)
 
-4. On the **Controls** tab, pick the Syncfusion® components to include in the project by selecting their tiles.
+4. On the **Controls** tab, pick the Syncfusion components to include in the project by selecting their tiles.
 
     ![Controls tab listing Syncfusion Blazor components](images/controlssection.webp)
 
@@ -69,15 +69,25 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
     ![Project Details panel showing selected controls and configuration summary](images/projectdetailsrightside.webp)
 
-7. Click **Create**. The Template Studio generates the project with the selected Syncfusion® NuGet packages, theme references, namespaces, and component render code.
+7. Click **Create**. The Template Studio generates the project with the selected Syncfusion NuGet packages, theme references, namespaces, and component render code.
 
-8. Run the project (F5 or Run > Start Debugging) to view the included Syncfusion® components.
+8. Run the project using the terminal command or the debugger:
 
-    ![Running the generated Syncfusion Blazor project in Visual Studio Code](images/runproject.webp)
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+Alternatively, press **F5** or go to **Run > Start Debugging** to launch the application.
+
+![Running the generated Syncfusion Blazor project in Visual Studio Code](images/runproject.webp)
 
 ## What Template Studio configures for you
 
-- NuGet: Adds the `Syncfusion.Blazor` package (and individual packages when applicable).
+- NuGet: Adds the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package (and individual packages when applicable).
 
     ![NuGetPackage](images/nugetpackage.webp)
 
@@ -85,7 +95,7 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
     ![Theme reference location examples](images/cdnlink.webp)
 
-- Namespaces: Inserts Syncfusion® namespaces into `_imports.razor`.
+- Namespaces: Inserts Syncfusion namespaces into `_imports.razor`.
 
     ![Imports file showing Syncfusion namespaces](images/namespace.webp)
 
@@ -93,7 +103,13 @@ Use the following steps to create Syncfusion<sup style="font-size:70%">&reg;</su
 
     ![Index page updated with Syncfusion components](images/indexfilechange.webp)
 
-If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the Syncfusion license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.    
 
+## See also
 
-
+- [Overview of Blazor Extension for Visual Studio Code](overview.md)
+- [Download and Installation](download-and-installation.md)
+- [Code Snippets](code-snippet.md)
+- [Convert Project](convert-project.md)
+- [Upgrade Project](upgrade-project.md)
+- [Scaffolding](scaffolding.md)
