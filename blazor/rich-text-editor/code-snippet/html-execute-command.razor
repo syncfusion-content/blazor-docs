@@ -9,12 +9,10 @@
 
 @code {
     SfRichTextEditor RteObj;
-
     private async Task OnBoldCommand()
     {
         await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
     }
-
     private async Task OnInsertHtmlCommand()
     {
         await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML, "<div>Syncfusion Rich Text Editor component</div>");
