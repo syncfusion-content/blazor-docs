@@ -2,7 +2,7 @@
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-    <RichTextEditorEvents FileUploading="@onFileUploading"></RichTextEditorEvents>
+    <RichTextEditorEvents FileUploading="@OnFileUploading"></RichTextEditorEvents>
     <RichTextEditorVideoSettings SaveUrl="api/Video/Save" Path="./Video/"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
 
@@ -12,7 +12,7 @@
         new ToolbarItemModel() { Command = ToolbarCommand.Video }
     };
 
-    private void onFileUploading(FileUploadingEventArgs args)
+    private void OnFileUploading(FileUploadingEventArgs args)
     {
         var accessToken = "Authorization_token";
         // adding custom Form Data
