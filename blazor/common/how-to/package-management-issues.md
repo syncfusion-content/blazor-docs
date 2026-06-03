@@ -36,13 +36,11 @@ and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfu
 
 **Root cause**: The project references both the all‑in‑one package ([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) and one or more individual component packages (for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) or [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)). These packages expose the same public types from different assemblies, producing duplicate type definitions and ambiguous method overloads. The compiler therefore reports ambiguous-call or duplicate-type errors.
 
-**Impact**: Compile-time errors that block builds, longer restore times, bigger deployment footprint, and hard-to-diagnose dependency problems.
-
 **Solution**: Choose **one** packaging approach based on your application requirements.
 
-**Option 1: Install individual component packages (Recommended for most projects)**
+### Option 1: Install individual component packages
 
-Install only the specific component packages your application uses.
+Install only the specific component packages your application uses. This option is recommended for most projects.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -56,14 +54,15 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endtabs %}
 
 **Benefits**:
+
 * Smaller deployment size
 * Faster build and restore times
 * Clear dependency tracking
 * Reduced licensing footprint for production deployments
 
-**Option 2: Install comprehensive package (For applications using many components)**
+### Option 2: Install comprehensive package
 
-Install the all-in-one package that includes all Blazor components.
+Install the all-in-one package([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) that includes all Blazor components. This option is recommended for applications that use many components.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -79,14 +78,14 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 * Easier upgrades across all components
 * Suitable for applications using 5 or more different component types
 
-**Best practices**:
+### Best practices
 
-* Never mix Syncfusion.Blazor (comprehensive) with individual Syncfusion component packages in the same project.
+* Never mix [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (comprehensive) with individual Syncfusion component packages in the same project.
 * Audit your `.csproj` file regularly to identify redundant packages
 * Use individual packages unless you are using 5 or more component types
 * Document your package strategy in team guidelines
 
-**How to check for redundancy:**
+### How to check for redundancy
 
 To check for redundant packages, inspect your project's `.csproj` file for duplicate or overlapping `<PackageReference>` entries.
 
@@ -111,7 +110,7 @@ To check for redundant packages, inspect your project's `.csproj` file for dupli
 {% endhighlight %}
 {% endtabs %}
 
-**To clean up redundant packages:**
+### To clean up redundant packages
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -133,15 +132,13 @@ The [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.
 
 ## Issue 2: Duplicate package references
 
-**Symptom**: Build warnings such as "Detected package downgrade", "Duplicate 'PackageReference' items found" or "Version conflict detected" or unpredictable runtime behavior where component features work inconsistently.
+**Symptom**: Build warnings such as `Detected package downgrade`, `Duplicate 'PackageReference' items found` or `Version conflict detected` or unpredictable runtime behavior where component features work inconsistently. These issues can also cause deployment problems due to assembly version conflicts and may lead to potential runtime exceptions.
 
 **Root cause**: The same NuGet package is referenced multiple times with different versions, either directly in the project file or transitively through dependencies.
 
-**Impact**: Compilation warnings, potential runtime exceptions, feature inconsistencies, and deployment issues due to assembly version conflicts.
-
 **Solution**: Identify and consolidate all package references to use a single version.
 
-**Step 1: Identify duplicate references**
+### Step 1: Identify duplicate references
 
 Run the following command to analyze your project dependencies.
 
@@ -155,7 +152,7 @@ dotnet list package --include-transitive
 
 This command shows all packages, including transitive dependencies, helping you spot version conflicts.
 
-**Step 2: Inspect project file**
+### Step 2: Inspect project file
 
 Check your `.csproj` file for duplicate entries.
 
@@ -176,7 +173,7 @@ Check your `.csproj` file for duplicate entries.
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Consolidate versions**
+### Step 3: Consolidate versions
 
 Remove duplicate entries and ensure all Blazor packages use the same version.
 
@@ -196,9 +193,9 @@ Remove duplicate entries and ensure all Blazor packages use the same version.
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4: Use Central Package Management (Recommended for solutions with multiple projects)**
+### Step 4: Use Central Package Management
 
-For solution-wide version consistency, use Central Package Management (CPM).
+Use Central Package Management (CPM) for solution-wide version consistency. This approach is recommended for solutions with multiple projects.
 
 Create a `Directory.Packages.props` file in your solution root.
 
@@ -238,9 +235,9 @@ Then update your project files to reference packages without versions.
 {% endhighlight %}
 {% endtabs %}
 
-Central Package Management is recommended for solutions with multiple projects. For single‑project apps, consolidating package references directly in the `.csproj` file may be sufficient.
+For single‑project apps, consolidating package references directly in the `.csproj` file may be sufficient.
 
-**Best practices**:
+### Best practices
 
 * Maintain consistent versions across all Blazor packages in your solution
 * Use tooling like `dotnet list package --outdated` to identify version inconsistencies
@@ -252,17 +249,15 @@ When upgrading Syncfusion packages, update **all Syncfusion packages** in your s
 
 ## Issue 3: Version mismatches across packages
 
-**Symptom**: Runtime exceptions such as `MissingMethodException`, `TypeLoadException`, or `FileLoadException`. Components may fail to initialize, throw errors during rendering, or exhibit unexpected behavior.
+**Symptom**: Runtime exceptions such as `MissingMethodException`, `TypeLoadException`, or `FileLoadException`. Components may fail to initialize, throw errors during rendering, or exhibit unexpected behavior. These problems can lead to application crashes and difficult-to-diagnose runtime errors that only appear under specific conditions.
 
 **Root cause**: Different Blazor packages are installed with incompatible versions. For example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) version 33.2.3 alongside [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) version 32.1.19.
 
-**Impact**: Application crashes, component initialization failures, broken features, and difficult-to-diagnose runtime errors that only appear under specific conditions.
-
 **Solution**: Ensure all Blazor packages in your project use the **exact same version number**.
 
-**Verification steps**:
+### Verification steps
 
-**Step 1: Check current package versions**
+#### Step 1: Check current package versions
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -287,7 +282,7 @@ Project 'YourApp' has the following package references
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2: Update all packages to matching version**
+#### Step 2: Update all packages to matching version
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -304,7 +299,7 @@ dotnet build
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Verify version alignment**
+#### Step 3: Verify version alignment
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -329,7 +324,7 @@ Project 'YourApp' has the following package references
 {% endhighlight %}
 {% endtabs %}
 
-**Best practices**:
+### Best practices
 
 * Always upgrade all Blazor packages simultaneously to the same version
 * Use automated tools or scripts to ensure version consistency across projects
@@ -337,7 +332,7 @@ Project 'YourApp' has the following package references
 * Test critical functionality after version updates
 * Consider using wildcard versioning cautiously: `<PackageReference Include="Syncfusion.Blazor.Grid" Version="33.*" />`
 
-**Common version mismatch scenarios**:
+### Common version mismatch scenarios
 
 * Copying component code from older projects without updating package versions
 * Partial upgrades where only some packages are updated

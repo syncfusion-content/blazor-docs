@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Securing Blazor DataGrid with Microsoft Entra ID | Syncfusion® 
-description: Step-by-step guide to integrating Microsoft Entra ID authentication with Syncfusion® Blazor components in a Blazor Web App.
+description: Step-by-step guide to integrating Microsoft Entra ID authentication with Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -220,7 +220,7 @@ Create a protected page that displays the **Blazor DataGrid** only after the use
 			<h1>Welcome!</h1>
 			<p>	
 			   Click the Login button below to sign in with Microsoft Entra ID.
-			   Once you’re logged in, the Syncfusion® Blazor DataGrid will be displayed below.
+			   Once you’re logged in, the Blazor DataGrid will be displayed below.
 			</p>
 			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn">Login with Microsoft</a>
 		</div>
