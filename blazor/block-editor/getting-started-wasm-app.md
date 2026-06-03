@@ -7,7 +7,7 @@ control: BlockEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor Block Editor Component
+# Getting Started with Blazor Block Editor Component in Blazor WASM App
 
 The Blazor Block Editor is a modular, block-based content editor component that enables rich, structured content creation. It provides an intuitive interface for building documents and articles content using customizable blocks such as headings, paragraphs, lists, and more. The WebAssembly deployment model allows the editor to run entirely in the browser, providing a responsive client-side experience.
 
