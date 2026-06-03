@@ -7,6 +7,7 @@
         <RichTextEditorSlashMenuSettings Enable="true" Items="@slashmenuItems" />
     </SfRichTextEditor>
 </div>
+
 @code
 {
     private SfRichTextEditor richTextEditorObj;
@@ -75,7 +76,6 @@
         new SlashMenuItemModel() { Text="Signature", GroupBy= "Custom" , IconCss = "e-icons e-signature", Description= "Insert a signature template." },
         new SlashMenuItemModel() { Text="HorizontalLine", GroupBy = "Custom" , IconCss = "e-icons e-horizontal-line", Description= "Insert a horizontal line" },
         new SlashMenuItemModel() { Text="CheckList", GroupBy= "Custom" , IconCss = "e-icons e-checklist", Description= "Insert a check list" }
-
     };
     public async Task OnSlashMenuItemSelect ( SlashMenuSelectEventArgs args )
     {
