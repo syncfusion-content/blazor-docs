@@ -7,7 +7,7 @@ control: Toast
 documentation: ug
 ---
 
-# Getting Started with Blazor Toast Component in WASM App
+# Getting Started with Blazor Toast Component in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
