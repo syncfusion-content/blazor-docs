@@ -7,7 +7,7 @@ control: Calendar
 documentation: ug
 ---
 
-# Getting Started with Blazor Calendar Component
+# Getting Started with Blazor Calendar Component in Blazor WASM App
 
 This guide shows how to include [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
