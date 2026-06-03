@@ -135,7 +135,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfDiagramComponent Connectors="@connectors" Height="700px" Nodes="@nodes" />
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes" />
 
 @code
 {
@@ -261,27 +263,27 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
-## How to run the sample on Windows
+## How to run the sample on windows
 
-Run the sample in **Windows Machine** mode, and it will run Blazor MAUI in Windows.
+Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Run Windows machine](images/blazor-diagram-maui.png)
+![Run Windows machine](images/blazor-diagram-maui.webp)
 
 When the application is successfully launched, the Diagram component will seamlessly render the specified diagram page.
 
-![Run Windows machine](images/blazor-diagram-maui-page.png)
+![Run Windows machine](images/blazor-diagram-maui-page.webp)
 
 ## How to run the sample on Android
 
-To run the Blazor Diagram component in a Blazor Android MAUI application using the **Android Emulator**, follow these steps:
+To run the Blazor Diagram component in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
-![Run Windows machine](images/blazor-diagram-maui-android.png)
+![Run Windows machine](images/blazor-diagram-maui-android.webp)
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Diagram Component](images/blazor-diagram-maui-andoid-page.png)
+![Blazor Diagram Component](images/blazor-diagram-maui-andoid-page.webp )
 
 ## See also
 

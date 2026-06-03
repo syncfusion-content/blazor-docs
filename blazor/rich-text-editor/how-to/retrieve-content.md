@@ -57,6 +57,6 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor to Get Value](../images/blazor-richtexteditor-how-formatted-value.png)
+![Blazor Rich Text Editor to Get Value](../images/blazor-richtexteditor-how-formatted-value.webp)
 
-![Blazor Rich Text Editor to Get Text](../images/blazor-richtexteditor-how-formatted-text.png)
+![Blazor Rich Text Editor to Get Text](../images/blazor-richtexteditor-how-formatted-text.webp)

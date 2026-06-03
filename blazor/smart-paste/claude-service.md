@@ -184,9 +184,9 @@ using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<ClaudeAIService>();

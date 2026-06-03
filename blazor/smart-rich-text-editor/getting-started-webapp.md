@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion Smart Rich Text Editor in Web App
-description: Learn how to create and run Syncfusion Blazor Smart Rich Text Editor component in Blazor Web App with server interactivity.
+description: Learn how to create and run Blazor Smart Rich Text Editor component in Blazor Web App with server interactivity.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -443,7 +443,7 @@ N> Notice the `@rendermode InteractiveServer` directive on the page. This is req
 
 N> When using the .NET CLI or Visual Studio Code, ensure that you run the application from the **server (host) project directory**, not from the `.Client` project. The client project does not run independently and is hosted by the server application.
 
-![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.gif)
+![Blazor Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 

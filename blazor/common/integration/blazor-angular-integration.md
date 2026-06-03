@@ -166,7 +166,6 @@ Then update the start script in `package.json`.
 
 The Blazor runtime and scripts/themes are required to load Blazor components inside Angular. Add the following to your Angular project’s `index.html` file.
 
-
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
@@ -264,7 +263,7 @@ Add the following scripts to  `package.json`.
 {% endhighlight %}
 {% endtabs %}
 
-Then, run both with one command:  
+Then, run both with one command
 
 {% tabs %}
 {% highlight bash tabtitle="Angular CLI" %}
@@ -274,7 +273,7 @@ Then, run both with one command:
 {% endhighlight %}
 {% endtabs %}
 
-Once the compilation completes, open your browser and navigate to `http://localhost:4200/` to see your application with the integrated [DataGrid](https://www.syncfusion.com/angular-components/angular-data-grid) component.  
+Once the compilation completes, open your browser and navigate to `http://localhost:4200/` to see your application with the integrated [DataGrid](https://www.syncfusion.com/angular-components/angular-data-grid) component. 
 
 ![Blazor DataGrid Component](../images/blazor-angular-integration.webp)
 

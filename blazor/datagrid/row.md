@@ -8,7 +8,7 @@ documentation: ug
 
 # Row in Blazor DataGrid
 
-Each row represents a single record from a data source and displays values for the fields of that record in a tabular format. Rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) support interaction such as selection, editing, sorting, filtering, and event-driven behaviors.
+Each row represents a single record from a data source and displays values for the fields of that record in a tabular format. Rows in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) support interaction such as selection, editing, sorting, filtering, and event-driven behaviors.
 
 ## Customize row styles
 

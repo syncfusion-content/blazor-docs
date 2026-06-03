@@ -244,7 +244,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
     ```
     dotnet run
     ```
-2. The application will start and display in your default web browser.
+2. The application will start and display in your default web browser. 
 
 ## See also
 
