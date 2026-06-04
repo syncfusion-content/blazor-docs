@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor 3D Chart Component | Syncfusion
+title: Getting Stared with Blazor 3D Chart in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Syncfusion Blazor 3D Chart in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: 3D Chart
