@@ -27,7 +27,8 @@ The Code Block feature supports customizable programming languages via the `Rich
 
 Below is an example of how to configure the `RichTextEditorCodeBlockSettings` using the Rich Text Editor:
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -35,6 +36,7 @@ Below is an example of how to configure the `RichTextEditorCodeBlockSettings` us
     <RichTextEditorCodeBlockSettings Languages="languages" DefaultLanguage="javascript"></RichTextEditorCodeBlockSettings>
     <RichTextEditorToolbarSettings Items="Tools"></RichTextEditorToolbarSettings>
 </SfRichTextEditor>
+
 @code {
     private List<CodeBlockLanguageModel> languages = new List<CodeBlockLanguageModel>
          {
@@ -81,7 +83,8 @@ Below is an example of how to configure the `RichTextEditorCodeBlockSettings` us
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 In this example:
 
