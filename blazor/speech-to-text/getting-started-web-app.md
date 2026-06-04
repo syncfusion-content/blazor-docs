@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor SpeechToText Component | Syncfusion
+title: Getting Stared Blazor SpeechToText in Blazor Web App | Syncfusion
 description: Checkout and learn about getting started with Blazor SpeechToText in Blazor Web App using Visual Studio and more.
 platform: Blazor
 control: SpeechToText
@@ -54,6 +54,8 @@ dotnet new blazor -o BlazorWebApp --interactivity Auto
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ### Install the required Blazor packages
 
