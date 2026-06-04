@@ -1067,6 +1067,8 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
+For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+
 ### Change theme dynamically in Blazor Web App
 
 The following steps demonstrate how to dynamically switch themes in a Blazor Web App using Blazor themes with the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component.
