@@ -174,9 +174,11 @@ For additional details, refer to the [WinForms DataGrid getting started guide](h
 
 #### Component rendering
 
-**WinForms approach**
-
 The [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) control can be added programmatically or via the Visual Studio Designer. Columns are configured in the Designer or programmatically, and data is assigned through the `DataSource` property.
+
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
+
+**WinForms approach**
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
@@ -222,8 +224,6 @@ namespace WinFormsDataGridApp
 {% endtabs %}
 
 **Blazor equivalent**
-
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -281,9 +281,11 @@ For additional details, refer to the [WinForms Charts getting started guide](htt
 
 #### Component rendering
 
-**WinForms approach**
-
 The [WinForms Chart](https://www.syncfusion.com/winforms-ui-controls/charts) control can be added programmatically or via the Visual Studio Designer. Axes and series are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
+
+The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
+
+**WinForms approach**
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
@@ -336,8 +338,6 @@ namespace WinFormsChartApp
 {% endtabs %}
 
 **Blazor equivalent**
-
-The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
 
 {% tabs %}
 {% highlight razor tabtitle="Sales.razor" %}
@@ -404,9 +404,11 @@ For additional details, refer to the [WinForms Scheduler getting started guide](
 
 #### Component rendering
 
-**WinForms approach**
-
 The [WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) control can be added programmatically or via the Visual Studio Designer. Views and appointments are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
+
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
+
+**WinForms approach**
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
@@ -451,8 +453,6 @@ namespace WinFormsSchedulerApp
 {% endtabs %}
 
 **Blazor equivalent**
-
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
 
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
