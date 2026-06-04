@@ -50,7 +50,7 @@ N> The Material and Tailwind themes use the online Roboto font. For offline or r
 
 ### Use a customized theme in a web application
 
-You can use the customized CSS file directly in the web application.
+Before applying a custom theme, ensure you have created a Blazor project. For guidance, see [Getting Started with Blazor](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app). You can use the customized CSS file directly in the web application.
 
 1. Copy the customized CSS file from the download folder to the app’s `wwwroot` folder. You can place it directly under `wwwroot` or in a subfolder such as `wwwroot/styles/`.
 2. Reference the customized CSS file in the appropriate host page:
@@ -3020,33 +3020,42 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-## Overriding Blazor Theme Studio Variables Using Sass `@use` + `with()`
+## Overriding Blazor Theme Studio variables using Sass `@use` and `with()`
 
-When using Blazor Theme Studio, you may want to override predefined theme variables without directly editing the generated theme files.
-The cleanest and most Sass‑compliant way to do this is to pair CSS custom properties with Sass variable overrides using:
+When working with Blazor Theme Studio, you may want to override predefined theme variables without editing the generated theme files directly.
 
-`@use 'theme.scss' with (...)`
+The recommended Sass approach is to use the module system with `@use` and `with()`.
 
-### Define your color as a CSS custom property
+### Define the value as a CSS custom property
 
-Create or update your `Custom.scss` (or any global Sass file):
+Create or update your `Custom.scss` file, or any other global stylesheet:
 
-```css
+{% tabs %}
+{% highlight scss %}
+
 :root {
   --color-test-primary: 124, 86, 118;
 }
-```
-### Override Theme Studio variables using `@use`, `with()`
 
-Import your generated Theme Studio file (e.g., material3.scss) and override variables via with():
+{% endhighlight %}
+{% endtabs %}
 
-```css
+### Override the Theme Studio variable
+
+Import the generated Theme Studio stylesheet, such as `material3.scss`, and configure the variable with `with()`:
+
+{% tabs %}
+{% highlight scss %}
+
 @use 'material3.scss' with (
-  $primary: var(#{'--color-test-primary'})
+  $primary: var(--color-test-primary)
 );
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Why this pattern works
 
-- `@use` is the modern, recommended Sass import system, ensuring variables are scoped and safely overridden.
-- `with()` injects your custom values before the Theme Studio file compiles, giving you full control without editing generated code.
-- `var(#{…})` enables passing a CSS custom property into a Sass variable, something Sass normally prevents without interpolation.
+- `@use` is the modern Sass module system and is the recommended replacement for `@import`.
+- `with()` lets you configure Sass variables before the stylesheet is compiled.
+- `var(--color-test-primary)` allows the compiled CSS to read the value from a CSS custom property.
