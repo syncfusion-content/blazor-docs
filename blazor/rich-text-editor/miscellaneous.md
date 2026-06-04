@@ -39,7 +39,7 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 ```
 
-![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.png)
+![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.webp)
 
 ## Character count and limit enforcement
 
@@ -68,7 +68,7 @@ The character count indicator changes color based on usage thresholds:
 
 ```
 
-![Displaying Character Count in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count.png)
+![Displaying Character Count in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count.webp)
 
 ## Code view
 
@@ -89,7 +89,7 @@ The Rich Text Editor includes the ability for users to directly edit HTML code v
 
 ```
 
-![Blazor RichTextEditor with Code View](./images/blazor-richtexteditor-code-view.png)
+![Blazor RichTextEditor with Code View](./images/blazor-richtexteditor-code-view.webp)
 
 ## Number and Bullet Format Lists
 

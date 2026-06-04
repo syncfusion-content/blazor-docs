@@ -91,6 +91,7 @@ When the user selects an item from the dropdown:
 - It constructs an HTML snippet with a non-editable span containing the placeholder.
 - The snippet is inserted at the current cursor position using [ExecuteCommandAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_System_String_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_).
 
+{% raw %}
 ```csharp
     public async Task OnItemSelect(MenuEventArgs args)
     {
@@ -104,6 +105,7 @@ When the user selects an item from the dropdown:
         }
     }
 ```
+{% endraw %}
 
 ## Role of Mention control in mail merge
 
@@ -223,7 +225,7 @@ This ensures all placeholders are dynamically replaced without manual editing.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor Mail Merge](./images/blazor-richtexteditor-mail-merge.png)
+![Blazor RichTextEditor Mail Merge](./images/blazor-richtexteditor-mail-merge.webp)
 
 ## Related resources
 

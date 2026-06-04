@@ -30,7 +30,7 @@ Linear Gauge displays the details about a pointer value through [LinearGaugeTool
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge displays Tooltip](images/blazor-linear-gauge-tooltip.png)
+![Blazor Linear Gauge displays Tooltip](images/blazor-linear-gauge-tooltip.webp)
 
 ### Tooltip format
 
@@ -53,7 +53,7 @@ Tooltip in the Linear Gauge control can be formatted using the [Format](https://
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Tooltip Format](images/blazor-linear-gauge-tooltip-format.png)
+![Blazor Linear Gauge with Tooltip Format](images/blazor-linear-gauge-tooltip-format.webp)
 
 ### Tooltip Template
 
@@ -79,7 +79,7 @@ The HTML element can be rendered in the tooltip of the Linear Gauge using the [T
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Tooltip Template](images/blazor-linear-gauge-tooltip-template.png)
+![Blazor Linear Gauge with Tooltip Template](images/blazor-linear-gauge-tooltip-template.webp)
 
 ### Customize the appearance of the tooltip
 
@@ -114,7 +114,7 @@ The tooltip can be customized using the following properties in [LinearGaugeTool
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with custom Tooltip](images/blazor-linear-gauge-custom-tooltip.png)
+![Blazor Linear Gauge with custom Tooltip](images/blazor-linear-gauge-custom-tooltip.webp)
 
 ### Positioning the tooltip
 
@@ -137,7 +137,7 @@ The tooltip is positioned at the [End](https://help.syncfusion.com/cr/blazor/Syn
 </SfLinearGauge>
 ```
 
-![Changing Tooltip Position in Blazor Linear Gauge](images/blazor-linear-gauge-tooltip-position.png)
+![Changing Tooltip Position in Blazor Linear Gauge](images/blazor-linear-gauge-tooltip-position.webp)
 
 ## Pointer drag
 
@@ -158,4 +158,4 @@ To drag either marker or bar pointer to the desired axis value, set the [EnableD
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Drag Pointer](images/blazor-linear-gauge-drag-pointer.gif)
+![Blazor Linear Gauge with Drag Pointer](images/blazor-linear-gauge-drag-pointer.webp)

@@ -96,7 +96,7 @@ The following example demonstrates customizing a polygon on a geometry map.
 }
 
 ```
-![Blazor Maps with polygon shape](./images/Polygon/blazor-map-polygon-shape-on-maps-layer.png)
+![Blazor Maps with polygon shape](./images/Polygon/blazor-map-polygon-shape-on-maps-layer.webp)
 
 ## Tooltip
 
@@ -190,7 +190,7 @@ The following properties in [MapsPolygonTooltipSettings](https://help.syncfusion
 
 ```
 
-![Blazor Maps with tooltip for polygon shape](./images/Polygon/blazor-map-polygon-shape-tooltip.png)
+![Blazor Maps with tooltip for polygon shape](./images/Polygon/blazor-map-polygon-shape-tooltip.webp)
 
 ### Tooltip template
 
@@ -268,7 +268,7 @@ Any HTML element can be rendered in the tooltip of polygon shapes using the [Too
 
 ```
 
-![Blazor Maps with tooltip template for polygon shape](./images/Polygon/blazor-map-polygon-shape-tooltip-template.png)
+![Blazor Maps with tooltip template for polygon shape](./images/Polygon/blazor-map-polygon-shape-tooltip-template.webp)
 
 
 ## Changing a Polygon Shape to a Line
@@ -352,4 +352,4 @@ The following example demonstrates how to customize a line shape on an online ma
 ```
 > Note: Refer to the content of the JSON file [line.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043).
 
-![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.gif)
+![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.webp)

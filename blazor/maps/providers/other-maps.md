@@ -34,7 +34,7 @@ The following example shows how to add a TomTom map. Generate an API key using t
 
 ```
 
-![Blazor TomTom Maps](../images/MapProviders/blazor-tomtom-maps.png)
+![Blazor TomTom Maps](../images/MapProviders/blazor-tomtom-maps.webp)
 
 **Enable zooming and panning**
 
@@ -60,7 +60,7 @@ Tile map layers support zooming and panning. Zooming provides a closer view for 
 
 ```
 
-![Blazor TomTom Maps with Zooming and Panning](../images/MapProviders/blazor-tomtom-maps-zooming.png)
+![Blazor TomTom Maps with Zooming and Panning](../images/MapProviders/blazor-tomtom-maps-zooming.webp)
 
 **Adding markers and navigation line**
 
@@ -106,7 +106,7 @@ Markers can be added to tile layers by providing the latitude and longitude for 
 
 ```
 
-![Blazor TomTom Maps with Markers and Navigation Line](../images/MapProviders/blazor-tomtom-maps-marker-and-line.png)
+![Blazor TomTom Maps with Markers and Navigation Line](../images/MapProviders/blazor-tomtom-maps-marker-and-line.webp)
 
 **Adding sublayer**
 
@@ -130,7 +130,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile layer to high
 
 ```
 
-![Blazor TomTom Maps with Sublayer](../images/MapProviders/blazor-tomtom-map-sublayer.png)
+![Blazor TomTom Maps with Sublayer](../images/MapProviders/blazor-tomtom-map-sublayer.webp)
 
 **Enable legend**
 
@@ -191,7 +191,7 @@ A legend can be added to a tile map by setting the [Visible](https://help.syncfu
 
 ```
 
-![Blazor TomTom Maps with Legend](../images/MapProviders/blazor-tomtom-map-legend.png)
+![Blazor TomTom Maps with Legend](../images/MapProviders/blazor-tomtom-map-legend.webp)
 
 ## Other supportive online map service providers
 
@@ -217,4 +217,4 @@ The Maps component can render maps from the following online providers:
 
 ```
 
-![Blazor MapBox Map](../images/MapProviders/blazor-mapbox-map.png)
+![Blazor MapBox Map](../images/MapProviders/blazor-mapbox-map.webp)
