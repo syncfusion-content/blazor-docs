@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate ASP.NET Web Forms Controls to Blazor Components
 
-Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a significant architectural shift from a page centric, postback based framework to a modern, component driven framework built on .NET. This guide provides a **structured, step-by-step migration approach** for [ASP.NET Web Forms controls](https://help.syncfusion.com/aspnet/overview) to their corresponding [Blazor components](https://blazor.syncfusion.com/documentation/introduction).
+Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) represents a significant architectural shift from a page centric, postback based framework to a modern, component driven framework built on .NET. This guide provides a structured, step-by-step migration approach for [ASP.NET Web Forms controls](https://help.syncfusion.com/aspnet/overview) to their corresponding [Blazor components](https://blazor.syncfusion.com/documentation/introduction).
 
 ## Why migrate from Web Forms to Blazor?
 
@@ -19,7 +19,7 @@ Blazor uses a component based architecture with reusable Razor components and **
 
 | Aspect | Web Forms | Blazor |
 | --- | --- | --- |
-| Execution model | Server-centric (page postback) | Blazor Server (SignalR) or Blazor WebAssembly |
+| Execution model | Server centric (page postback) | Blazor Server (SignalR) or Blazor WebAssembly |
 | Hosting & deployment | IIS hosted only | Cloud, containers, IIS, or static hosting |
 | UI technology | `.aspx` pages with server controls | Razor components (`.razor`, HTML + C#) |
 | UI definition | Separate markup and code-behind (`.aspx`, `.aspx.cs`) | Component based (`.razor` with optional `.razor.cs`) |
@@ -29,8 +29,6 @@ Blazor uses a component based architecture with reusable Razor components and **
 | Event handling | Server callbacks (AutoPostBack) | `EventCallback<T>` and delegates |
 | Dependency injection | Limited or manual | Built-in with `IServiceCollection` |
 | Navigation model | Page based navigation (`.aspx`) | SPA style routing using `@page` |
-| Tooling support | Visual Studio | Visual Studio and Visual Studio Code |
-| Scalability | Limited by server resources | Cloud native and horizontally scalable |
 | Application updates | Requires restart for assembly changes | Blazor Server: immediate; WebAssembly: versioned deployment |
 
 ## Prerequisites for Blazor
@@ -38,7 +36,7 @@ Blazor uses a component based architecture with reusable Razor components and **
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
-## Project Structure Comparison
+## Project structure comparison
 
 ASP.NET Web Forms and Blazor Web Apps follow different application architectures. The following table maps common Web Forms artifacts to their Blazor equivalents and describes their roles in a Blazor Web App.
 
@@ -48,14 +46,12 @@ ASP.NET Web Forms and Blazor Web Apps follow different application architectures
 | `Default.aspx.cs` | `@code {}` block or `.razor.cs` file | Contains UI logic and event handling |
 | `Global.asax` | `Program.cs` | Configures application startup, services, and middleware |
 | `web.config` | `appsettings.json` | Stores configuration and environment settings |
-| Master Page (`Site.Master`) | `MainLayout.razor` | Defines shared layout and structure across pages |
+| Master Page (`Site.Master`) | `MainLayout.razor`, `App.razor` | Defines shared layout and structure across pages and defines script and style |
 | ViewState | Component state (fields/properties) | Maintains UI state in memory instead of hidden fields |
-| CSS references (`<link>`) | `wwwroot/css`, `App.razor` or layout files | Defines global styles and static assets |
-| Script references (`<script>`) | `wwwroot/js`, `App.razor` or layout files | Includes JavaScript files and interop scripts |
 | Routing (`*.aspx`) | `@page` directive in `.razor` files | Enables route based navigation |
 | Session / Application state | Scoped / Singleton services | Manages shared application state |
 
-## Migrating Components from Web Forms to Blazor
+## Migrating components from Web Forms to Blazor
 
 Create a Blazor project using one of the following getting started guides.
 
@@ -96,7 +92,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-### Add required namespace
+### Add required namespaces
 
 After packages are installed and services are registered, import the required namespaces in the `_Imports.razor` file.
 
@@ -115,11 +111,9 @@ The above lists the namespaces for all components covered in this guide. Import 
 
 ### Theme and script configuration
 
-In Web Forms, scripts and styles are added manually in individual `.aspx` pages or `Site.Master` pages.
-
-In Blazor, scripts and styles are included once at the application level (such as in `App.razor` file) and are served from static web assets. This approach ensures consistent styling and avoids duplicate references across pages.
-
 **Web Forms approach**
+
+Scripts and styles are added manually in individual `.aspx` pages or `Site.Master` pages.
 
 {% tabs %}
 {% highlight html tabtitle=".aspx" %}
@@ -134,6 +128,8 @@ In Blazor, scripts and styles are included once at the application level (such a
 {% endtabs %}
 
 **Blazor equivalent**
+
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -158,13 +154,15 @@ In Blazor, scripts and styles are included once at the application level (such a
 
 ### Migrate to Blazor DataGrid component
 
+**ASP.NET Web Forms Grid** is a server-side control that relies on postbacks, making it suitable for traditional web applications with simpler interaction. [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is a modern, component based grid that provides faster, more dynamic, and interactive user experiences without full page reloads.
+
 For detailed explanation, refer to the [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) and [Web Forms DataGrid getting started guide](https://help.syncfusion.com/aspnet/grid/getting-started).
 
 | Aspect   | Web Forms (`ej:Grid`)   | Blazor (`SfGrid / SfGrid<TValue>`)                               |
 | --- | --- | ---|
 | Package (NuGet) | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)  |
-| Namespace               | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>`   | Razor: `@using Syncfusion.Blazor.Grids`  |
-| Component declaration   | `<ej:Grid runat="server">` (ASPX)  | `<SfGrid>` / `<SfGrid TValue="T">` (Razor)   |
+| Namespace               |  `<%@ Register Assembly="Syncfusion.EJ.Web" %>`   |  `@using Syncfusion.Blazor.Grids`  |
+| Component declaration   | `<ej:Grid runat="server">`   | `<SfGrid>` / `<SfGrid TValue="T">`    |
 | Data binding   | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) property set in `Page_Load` or callbacks  | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property bound during component initialization  |
 | Collection type  | `DataTable`, `IEnumerable`, server managed collections | `List<T>` / `IEnumerable<T>`. UI updated via `StateHasChanged()` |
 | Columns | [Columns](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_Columns) property defined using `<ej:Column Field="..." HeaderText="..." />`  | [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) property defined by using `<GridColumn Field="..." HeaderText="..." Format="..." />`  |
@@ -176,13 +174,11 @@ For detailed explanation, refer to the [Blazor DataGrid getting started guide](h
 | Grouping | [AllowGrouping](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowGrouping)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)|
 | Lifecycle & refs        | `Page_Load`, control IDs (`ID`)                        | `OnInitialized{Async}`, DI, `@ref` and async methods |
 
-#### Component configuration for DataGrid
+#### Component rendering
 
-In Web Forms, the DataGrid is defined using server controls, and the [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) is assigned in the code-behind during the page lifecycle (for example, in the `Page_Load` method).
+**Web Forms approach**
 
-In Blazor, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup and binds data directly to a component property using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property.
-
-#### Web Forms approach for DataGrid
+The DataGrid is defined using server controls, and the [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) is assigned in the code-behind during the page lifecycle (for example, in the `Page_Load` method).
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -226,7 +222,9 @@ namespace WebFormsGrid
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor equivalent of DataGrid
+**Blazor equivalent**
+
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup and binds data directly to a component property using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -273,13 +271,11 @@ For detailed explanation, refer to the [Blazor Scheduler getting started guide](
 | Theming & assets  | CSS/JS referenced in ASPX or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID`  | `OnInitialized{Async}`, DI, `@ref` async APIs   |
 
-#### Component configuration for Scheduler
+#### Component rendering
+
+**Web Forms approach**
 
 In Web Forms, the Scheduler is defined using server controls, where configuration is set through control properties and appointment data is assigned programmatically in the code-behind during page execution.
-
-In Blazor, the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is implemented as a Razor component, where views and event settings are defined declaratively in markup, and appointment data is bound directly using the [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
-
-#### Web Forms approach for Scheduler
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -330,7 +326,9 @@ namespace WebFormsScheduler
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor equivalent of Scheduler
+**Blazor equivalent**
+
+In Blazor, the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is implemented as a Razor component, where views and event settings are defined declaratively in markup, and appointment data is bound directly using the [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
@@ -384,13 +382,11 @@ For detailed explanation, refer to the [Blazor Rich Text Editor getting started 
 | Theming & assets      | CSS/JS referenced per page | CSS theme files/JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID` | `OnInitialized{Async}`, DI, `@ref` async APIs  |
 
-#### Component configuration for Rich Text Editor
+#### Component rendering
+
+**Web Forms approach**
 
 In Web Forms, the Rich Text Editor content is defined directly within the markup using the `RTEContent` section, with content embedded as static HTML.
-
-In Blazor, the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
-
-#### Web Forms approach for Rich Text Editor
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -404,7 +400,9 @@ In Blazor, the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-compo
 {% endhighlight %}
 {% endtabs %}
 
-#### Blazor equivalent of Rich Text Editor
+**Blazor equivalent**
+
+In Blazor, the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
 
 {% tabs %}
 {% highlight razor tabtitle="Editor.razor" %}
