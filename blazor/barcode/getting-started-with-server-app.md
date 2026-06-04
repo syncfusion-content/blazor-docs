@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Barcode Component Server App | Syncfusion
+title: Getting Started with Blazor Barcode in Blazor Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Barcode Component in Blazor Server App.
 platform: Blazor
 component: Barcode
