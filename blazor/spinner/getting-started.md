@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Spinner Component | Syncfusion
+title: Getting Started with Blazor Spinner in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Spinner component in Blazor WebAssembly Application.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# Getting Started with Blazor Spinner Component in Blazor WASM App
+# Getting Started with Blazor Spinner in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
