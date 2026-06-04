@@ -20,11 +20,9 @@ This guide shows how to build a **Product Catalog application** using [Blazor co
 
 To create a Blazor application, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code).
 
-N> If you are using Visual Studio Code, after completing the setup steps run the application with `dotnet run` or `dotnet watch` from the terminal.
-
 ## Project structure
 
-The following project structure organizes the application into separate folders for components, data, models, and services. This separation makes the code base easier to maintain, extend, and scale as requirements evolve.
+Organize the application using the following folder structure to maintain a clear and modular architecture.
 
 ```text
 BlazorProductGrid/
@@ -55,7 +53,7 @@ Install the NuGet packages listed below to add the required Blazor components to
 
 **Using Visual Studio**
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+1. Go to **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**.
 2. Search for each required NuGet package and install it.
 
 **Using Visual Studio Code or .NET CLI**
@@ -68,7 +66,7 @@ Click each package link in the table below to view the NuGet installation comman
 | [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
 | [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
 | [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) | [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) |
-| [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-dialog) | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
+| [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-diagram) | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
 | Themes | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
 ## Register Blazor service
@@ -76,7 +74,7 @@ Click each package link in the table below to view the NuGet installation comman
 Add the Blazor service to the `~/Program.cs` file to enable Blazor components across all pages.
 
 {% tabs %}
-{% highlight cs tabtitle="~/Program.cs" hl_lines="1 8 11 12" %}
+{% highlight cs tabtitle="~/Program.cs" hl_lines="1 9" %}
 
 using Syncfusion.Blazor;
 using BlazorProductGrid.Services;
@@ -96,7 +94,7 @@ var app = builder.Build();
 
 ## Add stylesheet and script resources
 
-Add the theme CSS and required scripts to the `~/Components/App.razor` file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -114,8 +112,6 @@ Add the theme CSS and required scripts to the `~/Components/App.razor` file.
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The example uses `fluent2.css`. Other available theme options include `bootstrap5.css`, `material.css`, `fabric.css`, and `highcontrast.css`. See the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes) for customization details.
 
 ## Add required namespaces
 
@@ -136,8 +132,6 @@ Open the `Components/_Imports.razor` file and import the following Blazor compon
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The required namespaces are typically defined in the `_Imports.razor` file, so they do not need to be included in each component individually. If not already added, ensure the necessary namespaces are imported in `_Imports.razor`.
 
 ## Create the Product Model
 
@@ -163,20 +157,9 @@ public class Product
 {% endhighlight %}
 {% endtabs %}
 
-This model includes:
-
-- **Id** – Unique identifier for each product
-- **Name** – Product name
-- **Category** – Product category (Electronics, Accessories, etc.)
-- **Price** – Product price in decimal
-- **Stock** – Available quantity
-- **ImageUrl** – URL to product image
-- **Rating** – Product rating (0-5 stars)
-- **Description** – Detailed product description
-
 ## Create Product Data
 
-The **ProductData** class provides static sample data used to populate the DataGrid. Create a `Data/ProductData.cs` file with the following code
+The **ProductData** class provides static sample data used to populate the DataGrid. Create a `Data/ProductData.cs` file with the following code.
 
 {% tabs %}
 {% highlight cs tabtitle="Data/ProductData.cs" %}
@@ -220,7 +203,7 @@ public class ProductData
 
 ## Create services
 
-This application uses two scoped services to manage state across pages: **CartService** tracks items added to the shopping cart, and **WishlistService** manages saved products. Both services are injected into Blazor components via the `@inject` directive.
+Services manage business logic and share data across components. In Blazor, they are registered with dependency injection to provide consistent access throughout the application.
 
 ### Cart Service
 
@@ -383,13 +366,11 @@ N> Application level services (CartService, WishlistService) are registered in t
 
 ## Create the application pages
 
-In this section, you will learn how to create the main pages of the application that users will interact with. These include the Product Catalog, Wishlist, and Cart pages, each serving a specific purpose in the shopping experience, such as browsing products, saving items for later, and managing purchases.
+Pages define the main user interface of the application. Each page handles a specific part of the workflow, such as browsing products, saving items for later, and managing purchases.
 
 ### Create the Product Catalog Page
 
 The product catalog page is the main entry point of the application. It uses the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display all products with sorting, paging, and search. Category filter chips, a cart preview dialog, and an image gallery powered by [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) are also included on this page.
-
-Create `Components/Pages/ProductCatalog.razor` with the following code.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/ProductCatalog.razor" %}
@@ -1078,8 +1059,6 @@ Create `Components/Pages/ProductCatalog.razor` with the following code.
 
 The **Wishlist** page displays all products the user has saved. It uses a Blazor DataGrid to list wishlist items and provides **Add to Cart** and **Remove** actions for each product.
 
-Create `Components/Pages/Wishlist.razor` with the following code.
-
 {% tabs %}
 {% highlight razor tabtitle="Pages/Wishlist.razor" %}
 
@@ -1397,8 +1376,6 @@ Create `Components/Pages/Wishlist.razor` with the following code.
 
 The **Cart** page provides an order summary view. It displays all cart items in a Blazor DataGrid with per-item subtotals, a totals summary card, and a **Confirm Order** button that clears the cart and returns the user to the catalog.
 
-Create `Components/Pages/Cart.razor` with the following code.
-
 {% tabs %}
 {% highlight razor tabtitle="Pages/Cart.razor" %}
 
@@ -1702,10 +1679,8 @@ Create `Components/Pages/Cart.razor` with the following code.
 
 Update the navigation menu to include links to the Product Catalog, Wishlist, and Cart pages so users can move between sections of the application.
 
-Update `Components/Layout/NavMenu.razor` to add navigation links:
-
 {% tabs %}
-{% highlight razor tabtitle="Layout/NavMenu.razor" %}
+{% highlight razor tabtitle="Components/Layout/NavMenu.razor" %}
 
 <div class="nav-scrollable">
     <nav class="nav flex-column">
