@@ -51,7 +51,7 @@ Once migrations are complete, refresh the page. You should see your email addres
 
 ## Integrating Blazor component
 
-[Blazor component](https://www.syncfusion.com/blazor-components) can be integrated within the `AuthorizeView` component as shown in the following steps.
+[Blazor components](https://www.syncfusion.com/blazor-components) can be integrated within the `AuthorizeView` component as shown in the following steps.
 
 ### Install NuGet packages
 
