@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor AppBar Component Server App | Syncfusion
+title: Getting Started with Blazor AppBar in Blazor Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor AppBar Component in Blazor Server App.
 platform: Blazor
 component: AppBar
 documentation: ug
 ---
 
-# Getting Started with Blazor AppBar Component in Server App
+# Getting Started with Blazor AppBar Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor AppBar](https://www.syncfusion.com/blazor-components/blazor-appbar) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
