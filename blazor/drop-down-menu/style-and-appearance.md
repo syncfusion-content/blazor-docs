@@ -24,9 +24,7 @@ To modify the appearance of the DropDownButton, override the component’s defau
 
 ## Disable a Dropdown Menu
 
-The Dropdown Menu component can be disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Disabled) property. When the Disabled property is set to `true`, the dropdown button becomes non-interactive, preventing users from opening the menu or performing any actions. This is useful in scenarios where you need to temporarily disable certain UI elements based on application state or user permissions.
-
-The disabled state provides visual feedback to users that the button is not available for interaction. When disabled, the button typically displays reduced opacity or a grayed-out appearance, making it clear that the action cannot be performed.
+The Dropdown Menu component can be disabled by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Disabled) property. To disable Dropdown Menu component, the disabled property can be set as `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -41,13 +39,13 @@ The disabled state provides visual feedback to users that the button is not avai
 </SfDropDownButton>
 ```
 
-![Disabled state of Blazor DropDownMenu](./../images/blazor-dropdownmenu-in-disable-state.webp)
+![Disabled state of Blazor DropDownMenu](./images/blazor-dropdownmenu-in-disable-state.webp)
 
 ## Create Dropdown Menu with Rounded Corner
 
-Dropdown Menu with rounded corner can be achieved by adding the `border-radius` CSS property to the button element. The rounded corner design can enhance the visual appearance of your dropdown menu and align it with modern UI design patterns. This styling approach provides a polished and contemporary look to your application.
+Dropdown Menu with rounded corner can be achieved by adding the `border-radius` CSS property to button element.
 
-In the following example, the `e-round-corner` class sets a `5px` `border-radius`, which is applied to the DropDownButton via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. Adjust the radius value as needed to align with your design system and brand guidelines. You can also apply similar styling to `.e-dropdown-popup` if you want the menu panel to share the same rounded appearance for a consistent visual experience.
+In the following example, the `e-round-corner` class sets a `5px` `border-radius`, which is applied to the DropDownButton via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. Adjust the radius value as needed to align with your design system, and apply similar styling to `.e-dropdown-popup` if you want the menu panel to share the same rounded appearance.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -65,6 +63,7 @@ In the following example, the `e-round-corner` class sets a `5px` `border-radius
         border-radius: 5px;
     }
 </style>
+
 ```
 
-![Blazor DropDownMenu with Rounded Corner](./../images/blazor-dropdownmenu-with-rounded-corner.webp)
+![Blazor DropDownMenu with Rounded Corner](./images/blazor-dropdownmenu-with-rounded-corner.webp)
