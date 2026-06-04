@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor AutoComplete Component | Syncfusion
+title: Getting Started | Blazor AutoComplete in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor AutoComplete component in Blazor WebAssembly App.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Getting Started with Blazor AutoComplete Component
+# Getting Started with Blazor AutoComplete Component in Blazor WASM App
 
 This section explains how to include the [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
