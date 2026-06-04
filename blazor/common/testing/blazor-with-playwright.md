@@ -158,7 +158,7 @@ cd tests/E2E.Tests
 
 This command creates an NUnit test project named **E2E.Tests** under the `tests` folder, which will host all Playwright based UI tests.
 
-**Install required packages**
+### Install required packages
 
 Install the following NuGet packages into the **E2E.Tests** project to enable Playwright based end‑to‑end testing in the test project.
 
