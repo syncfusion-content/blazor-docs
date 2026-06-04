@@ -14,7 +14,7 @@ The undo and redo tools in the Rich Text Editor allow users to revert or restore
 To undo and redo operations, do one of the following:
 
 * Press the undo/redo button on the toolbar
-* Press the <kbd>Ctrl + Z</kbd>/ <kbd>Ctrl + Y</kbd> combination on the keyboard
+* Press the <kbd>Ctrl + Z</kbd> / <kbd>Ctrl + Y</kbd> combination on the keyboard
 
 You can customize the number of undo and redo steps using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoSteps) property. By default, undo and redo actions are stored every `300` milliseconds in the undo/redo manager. The time interval can be customized by using the [UndoRedoTimer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_UndoRedoTimer) property.
 

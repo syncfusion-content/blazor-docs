@@ -57,21 +57,10 @@ The following font style links are referred in the page.
 
 ### Blazor Server App
 
-* For **.NET 6** app, refer style in the `<head>` of the **~/Pages/_Layout.cshtml** file.
-
-* For **.NET 7** app, refer style in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 10** app, refer style in the `<head>` of the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
-
-<head>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes">
-</head>
-
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 10 (~/App.razor)" %}
 
 <head>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
