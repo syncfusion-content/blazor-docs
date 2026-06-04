@@ -14,7 +14,7 @@ The appearance of a node can be customized by changing its [Fill](https://help.s
 To learn more about node customization, refer to the below video link,
 
 {% youtube "youtube:https://www.youtube.com/watch?v=iKuBSy8mOpE&t=271s" %}
-
+<br><br>
 The following code shows how to customize the appearance of a shape.
 
 ```cshtml
@@ -111,7 +111,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Update Node Templates 
 
-Define node style using a template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. To apply different templates to individual nodes, differentiate the nodes by the `ID` property. The following code explains how to define template for a node.
+Define node style using a template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. To apply different templates to individual nodes, differentiate the nodes by the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) property. The following code explains how to define template for a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -348,7 +348,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to change the border width of a node
 
-The diagram allows customizing the border width of a node using the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderWidth) property. By default, the border width is **1** pixel. Adjust this value to increase or decrease the thickness of the node's border as needed.
+The diagram allows customizing the border width of a node using the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderWidth) property. By default, the border width is **1 pixel**. Adjust this value to increase or decrease the thickness of the node's border as needed.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -389,7 +389,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Update Node Shadow
 
-Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a node. `Shadow` is disabled by default and can be enabled by using the node’s constraints. The following example shows how to draw a shadow.
+Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a `node.Shadow` is disabled by default and can be enabled by using the node’s constraints. The following example shows how to draw a shadow.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -713,7 +713,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Set Pivot Property for a Node
 
-*  Node rotation is based on [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) values which range from **0 to 1** similar to offset values. By default, `Pivot` is **X = 0.5** and **Y = 0.5**.
+*  Node rotation is based on [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) values which range from **0 to 1** similar to offset values. By default, `Pivot` is X = **0.5** and Y = **0.5**.
 
 
 The following code illustrates how to set the Pivot value.
