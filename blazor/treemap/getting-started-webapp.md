@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor TreeMap in Web App | Syncfusion
+title: Getting started with Blazor TreeMap in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor TreeMap Component Components in Blazor Web App.
 platform: Blazor
 control: TreeMap
