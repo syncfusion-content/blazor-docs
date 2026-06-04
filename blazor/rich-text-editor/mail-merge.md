@@ -223,7 +223,7 @@ This ensures all placeholders are dynamically replaced without manual editing.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor Mail Merge](./images/blazor-richtexteditor-mail-merge.png)
+![Blazor RichTextEditor Mail Merge](./images/blazor-richtexteditor-mail-merge.webp)
 
 ## Related resources
 
