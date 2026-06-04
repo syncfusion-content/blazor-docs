@@ -8,7 +8,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Reusable Blazor DataGrid component – customizable, performant and easy to integrate
+# Reusable Blazor DataGrid component – customizable, efficient and easy to integrate
 
 Creating a reusable custom Blazor DataGrid by wrapping the Syncfusion `SfGrid` inside a Razor component helps standardize configuration and improve maintainability across applications. This approach is particularly useful in modern web applications where multiple Grid instances are used across different pages or modules.
 
