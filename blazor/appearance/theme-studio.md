@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Theme Studio in Blazor | Custom Themes | Syncfusion
+title: Customize Blazor Component Themes with Theme Studio | Syncfusion
 description: Create custom themes for Blazor components using Theme Studio. Customize colors, filter components, download CSS/SCSS, and import settings.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Theme Studio for Blazor components
+# Customize Blazor component themes with Theme Studio
 
 Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), Range Navigator, and [Maps](https://www.syncfusion.com/blazor-components/blazor-map).
 
-## Customize theme colors from theme studio
+## Customize theme colors from Theme Studio
 
 The Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the [Blazor components](https://www.syncfusion.com/blazor-components). All Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
@@ -77,11 +77,11 @@ If you need to change your application theme and UI design in the future, do not
 ![Theme Studio filter-customized](images/filter-customized.webp)
 5. The exported file contains your latest changes. You can just replace the older custom style with a new style to refresh your application.
 
-## Common Variables
+## Common variables
 
 The following list of common variables is used in the Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 
-### Material 3 Theme
+### Material 3 theme
 
 <table>
     <style>
@@ -506,7 +506,7 @@ The following list of common variables is used in the Blazor library themes for 
     </tbody>
 </table>
 
-### Bootstrap 5 Theme
+### Bootstrap 5 theme
 
 <table>
     <style>
@@ -724,7 +724,7 @@ The following list of common variables is used in the Blazor library themes for 
     </tbody>
 </table>
 
-### Fluent Theme
+### Fluent theme
 
 <table>
     <style>
@@ -1014,7 +1014,7 @@ The following list of common variables is used in the Blazor library themes for 
     </tbody>
 </table>
 
-### Bootstrap 4 Theme
+### Bootstrap 4 theme
 
 <table>
     <style>
@@ -1639,7 +1639,7 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-### Material Theme
+### Material theme
 
 <table>
     <style>
@@ -1984,7 +1984,7 @@ Design based on Bootstrap 3 theme.
         </tr>
     </tbody>
 </table>
-### Tailwind CSS Theme
+### Tailwind CSS theme
 
 <table>
     <style>
@@ -2427,7 +2427,7 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-### Microsoft Office Fabric Theme
+### Microsoft Office Fabric theme
 
 <table>
     <style>
