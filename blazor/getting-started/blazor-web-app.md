@@ -240,8 +240,6 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-N> When the **Interactive Render Mode** is set to `Auto` or `WebAssembly`, the entire application runs from the main `BlazorWebApp` project folder. There is no need to navigate to a separate folder.
-
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
@@ -256,8 +254,6 @@ dotnet run
 
 {% endhighlight %}
 {% endtabs %}
-
-N> When the **Interactive Render Mode** is set to `Auto` or `WebAssembly`, the entire application runs from the main `BlazorWebApp` project folder. There is no need to navigate to a separate folder.
 
 {% endtabcontent %}
 
