@@ -66,7 +66,7 @@ Click each package link in the table below to view the NuGet installation comman
 | [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
 | [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
 | [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) | [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) |
-| [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-diagram) | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
+| [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
 | Themes | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
 ## Register Blazor service
