@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | Blazor TextBox in Server App | Syncfusion
+title: Getting Started | Blazor TextBox in Blazor Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor TextBox component in Blazor Server Application.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Getting Started with Blazor TextBox Component in Server App
+# Getting Started with Blazor TextBox in Blazor Server App
 
 This section explains how to include the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor Server app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -52,6 +52,8 @@ dotnet new blazor -o BlazorServerApp --interactivity Server
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ### Install the required Blazor packages
 
