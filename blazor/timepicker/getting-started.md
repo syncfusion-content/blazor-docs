@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor TimePicker Component | Syncfusion
+title: Getting Started with Blazor TimePicker in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor TimePicker component in Blazor WebAssembly Application.
 platform: Blazor
 control: TimePicker
