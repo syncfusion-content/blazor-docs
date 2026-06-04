@@ -266,7 +266,7 @@ You can add additional data with the word file uploaded from the Rich Text Edito
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml tabtitle="controller.cs" %}
+{% highlight csharp tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
