@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Breadcrumb Component | Syncfusion
+title: Getting Started with Blazor Breadcrumb in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Breadcrumb component in Blazor WebAssembly App.
 platform: Blazor
 control: Breadcrumb
