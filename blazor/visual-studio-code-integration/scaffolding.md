@@ -45,7 +45,7 @@ Before starting, confirm the **Syncfusion Blazor Scaffolder Extension** is insta
 
         ![Choose required Model](images/model_window_remote.webp)
 
-N> Example adaptor links in the UI are placeholders for demonstration and do not perform full CRUD operations. To enable real CRUD, supply a valid back-end endpoint that supports the required operations.
+      - Example adaptor links in the UI are placeholders for demonstration and do not perform full CRUD operations. To enable real CRUD, supply a valid back-end endpoint that supports the required operations.
 
 4. On the features screen, choose the control features and map data fields as needed, then click **Add**.
 
@@ -57,7 +57,7 @@ N> Example adaptor links in the UI are placeholders for demonstration and do not
 
       ![Required Controller and Razor files added in the project for the selected control](images/files_for_local_data.webp)
 
-- Remote Data (Localhost URL): Adds controller and Razor files.
+    - Remote Data (Localhost URL): Adds controller and Razor files.
 
       ![Required Controller and Razor files added in the project for the selected control](images/files_for_remote_data.webp)
 
