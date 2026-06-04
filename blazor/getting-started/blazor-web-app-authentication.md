@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Web App Authentication | Syncfusion
+title: Getting Started with Blazor Web App Authentication | Syncfusion®
 description: Check out the documentation for getting started with Blazor Web App and Blazor Components with Authentication.
 platform: Blazor
 component: Common
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App Authentication
 
-This guide explains how to create a Blazor Web App with authentication enabled. You will learn how to use the built-in `AuthenticationStateProvider` to manage user identity and integrate the [Blazor component](https://www.syncfusion.com/blazor-components) for authenticated users.
+This guide explains how to create a Blazor Web App with authentication enabled. You will learn how to use the built-in `AuthenticationStateProvider` to manage user identity and integrate the [Blazor components](https://www.syncfusion.com/blazor-components) for authenticated users.
 
 ## Create a new Blazor Web App 
 

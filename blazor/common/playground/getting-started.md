@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Playground for Building Apps | Syncfusion®
-description: Learn here about how to write, edit, compile, build, run, and share Blazor and Syncfusion® Blazor components directly in the browser using Blazor Playground.
+description: Learn here about how to write, edit, compile, build, run, and share Blazor components directly in the browser using Blazor Playground.
 platform: Blazor
 control: Common
 documentation: ug

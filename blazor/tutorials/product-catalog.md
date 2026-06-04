@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Build a Blazor Product Catalog App | Syncfusion
-description: Learn how to build a step-by-step Blazor Product Catalog application using Syncfusion Blazor components including DataGrid, Carousel, Dialog, and more.
+title: Build a Blazor Product Catalog App | Syncfusion®
+description: Learn how to build a step-by-step Blazor Product Catalog application using Blazor components including DataGrid, Carousel, Dialog, and more.
 platform: Blazor
 control: Tutorials
 documentation: ug
