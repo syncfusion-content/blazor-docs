@@ -40,7 +40,7 @@ To disable undo and redo functionality, set the [UndoRedoSteps](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor disable undo/redo operation](./images/blazor-richtexteditor-disable-undo-redo.gif)
+![Blazor RichTextEditor disable undo/redo operation](./images/blazor-richtexteditor-disable-undo-redo.webp)
 
 ## Remove undo redo toolbar item
 
