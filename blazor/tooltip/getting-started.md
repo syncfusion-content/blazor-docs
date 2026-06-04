@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Tooltip Component | Syncfusion
+title: Getting Started with Blazor Tooltip in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Tooltip component in Blazor WebAssembly Application.
 platform: Blazor
 control: Tooltip
