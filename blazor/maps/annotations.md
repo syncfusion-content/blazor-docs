@@ -38,7 +38,7 @@ Use the `ContentTemplate` property of [MapsAnnotation](https://help.syncfusion.c
 
 ```
 
-![Blazor Maps with Annotation](./images/Annotation/blazor-maps-annotation.PNG)
+![Blazor Maps with Annotation](./images/Annotation/blazor-maps-annotation.webp)
 
 ## Annotation customization
 
@@ -69,7 +69,7 @@ Change the stacking order of an annotation element using the [ZIndex](https://he
 
 ```
 
-![Changing ZIndex in Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-zindex.PNG)
+![Changing ZIndex in Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-zindex.webp)
 
 ### Positioning an annotation
 
@@ -98,7 +98,7 @@ Place annotations anywhere on the map by specifying percentage values for the [X
 
 ```
 
-![Changing Annotation Position in Blazor Maps](./images/Annotation/blazor-maps-annotation-position.PNG)
+![Changing Annotation Position in Blazor Maps](./images/Annotation/blazor-maps-annotation-position.webp)
 
 ### Alignment of an annotation
 
@@ -127,7 +127,7 @@ Align annotations using the [HorizontalAlignment](https://help.syncfusion.com/cr
 
 ```
 
-![Changing Alignment of Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-alignment.PNG)
+![Changing Alignment of Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-alignment.webp)
 
 ## Multiple Annotation
 
@@ -163,4 +163,4 @@ Add multiple annotations by including multiple [MapsAnnotation](https://help.syn
 
 ```
 
-![Blazor Maps with Multiple Annotation](./images/Annotation/blazor-maps-multiple-annotation.PNG)
+![Blazor Maps with Multiple Annotation](./images/Annotation/blazor-maps-multiple-annotation.webp)

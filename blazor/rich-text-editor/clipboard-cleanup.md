@@ -27,7 +27,7 @@ By default, `EnableClipboardCleanup` is set to `true`. Check with the below demo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with default clipboard cleanup](./images/blazor-richtexteditor-clipboard-cleanup-default.png)
+![Blazor RichTextEditor with default clipboard cleanup](./images/blazor-richtexteditor-clipboard-cleanup-default.webp)
 
 When set to `false`, the browser’s default copy and cut behavior applies. Check with the below demonstration:
 
@@ -39,4 +39,4 @@ When set to `false`, the browser’s default copy and cut behavior applies. Chec
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with clipboard cleanup disabled](./images/blazor-richtexteditor-clipboard-cleanup-custom.png)
+![Blazor RichTextEditor with clipboard cleanup disabled](./images/blazor-richtexteditor-clipboard-cleanup-custom.webp)
