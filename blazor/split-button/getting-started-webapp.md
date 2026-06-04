@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor Split Button in Web App | Syncfusion
+title: Getting started Blazor Split Button in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor Split Button Components in Blazor Web App.
 platform: Blazor
 control: Split Button
@@ -52,6 +52,8 @@ dotnet new blazor -o BlazorWebApp --interactivity Auto
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ### Install the required Blazor packages
 
