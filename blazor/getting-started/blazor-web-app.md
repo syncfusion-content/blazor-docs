@@ -229,29 +229,35 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the `.Client` project folder, and run the following command.
+Open the terminal and navigate to the **BlazorWebApp** project root folder, then run:
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
 {% endtabs %}
+
+N> When the **Interactive Render Mode** is set to `Auto` or `WebAssembly`, the entire application runs from the main `BlazorWebApp` project folder. There is no need to navigate to a separate folder.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the `.Client` project folder, and run the following command.
+Open the command prompt and navigate to the **BlazorWebApp** project root folder, then run:
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
 {% endtabs %}
+
+N> When the **Interactive Render Mode** is set to `Auto` or `WebAssembly`, the entire application runs from the main `BlazorWebApp` project folder. There is no need to navigate to a separate folder.
 
 {% endtabcontent %}
 
