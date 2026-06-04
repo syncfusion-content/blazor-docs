@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started | Blazor Accumulation Chart in Server App | Syncfusion
+title: Getting Started Blazor Accumulation Chart Blazor Server App Syncfusion
 description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor Server App.
 platform: Blazor
 control: Accumulation Chart
