@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor TreeMap Component | Syncfusion
+title: Getting Stared with Blazor TreeMap in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor TreeMap component in Blazor WebAssembly Application.
 platform: Blazor
 control: TreeMap
