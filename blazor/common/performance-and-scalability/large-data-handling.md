@@ -100,7 +100,7 @@ Incremental loading fetches additional data blocks as needed, while virtualizati
 
 ## Apply server driven querying
 
-For large datasets, let the server handle filtering, sorting, grouping, and searching. The component sends query parameters to the server, which returns only the processed result.
+For large datasets, the server handle filtering, sorting, grouping, and searching. The component sends query parameters to the server, which returns only the processed result.
 
 When a user applies a column filter, the filter criteria are sent to the server, and only matching records return.
 
