@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion SpeedDial Component in Blazor Web App
+title: Getting started with SpeedDial Component in Web App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor SpeedDial Components in Blazor Web App.
 platform: Blazor
 control: SpeedDial
@@ -9,72 +9,42 @@ documentation: ug
 
 # Getting Started with Blazor SpeedDial in Blazor Web App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+
+### Create a new Blazor Web App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor Web App in Visual Studio
-
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor Web App in Visual Studio Code
-
-Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
-
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
+Run the following command to create a new Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
+{% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazor -o BlazorWebApp -int Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 
 {% endhighlight %}
 {% endtabs %}
+
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
-
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the following command to create a new Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a Blazor Web App using .NET CLI
-
-Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
-
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands:
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-dotnet new blazor -o BlazorWebApp -int Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 
 {% endhighlight %}
 {% endtabs %}
@@ -83,23 +53,36 @@ cd BlazorWebApp.Client
 
 {% endtabcontents %}
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+### Install the required Blazor packages
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+Install the [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
-Install the [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
+{% tabcontents %}
 
-**Visual Studio (NuGet Package Manager)**:
+{% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Themes`) and install it.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Themes`) and install them.
 
-**Visual Studio Code or .NET CLI**:
-
-Open the terminal or command prompt and run the following commands:
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET CLI" %}
+{% highlight razor tabtitle="Package Manager Console" %}
+
+Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Open the terminal and run the following commands.
+
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Buttons -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -107,11 +90,26 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the client project.
+{% endtabcontent %}
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+{% tabcontent .NET CLI %}
 
-## Add import namespaces
+Open the command prompt and run the following commands.
+
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet add package Syncfusion.Blazor.Buttons -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+### Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Buttons` namespaces.
 
@@ -124,9 +122,9 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+### Register the Blazor service
 
-Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -140,9 +138,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
-
-## Add stylesheet and script resources
+### Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/Components/App.razor** file.
 
@@ -156,12 +152,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeedDial component
+### Add Blazor SpeedDial component
 
-* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor SpeedDial component inside the razor file.
-* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the razor file.
 
-N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -183,27 +178,51 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
+**Run the application**
 
-**Visual Studio**:
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor SpeedDial component will render in your default web browser.
 
-**Visual Studio Code or .NET CLI**:
+{% endtabcontent %}
 
-1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
-2. Run the following command:
+{% tabcontent Visual Studio Code %}
 
-    ```
-    dotnet run
-    ```
-3. The application will start and display in your default web browser.
+* Open the terminal and navigate to the `.Client` project folder, and run the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+* Open the command prompt and navigate to the `.Client` project folder, and run the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrfjigtfqnDNcxJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 
-## Linear and radial display modes
+### Linear and radial display modes
 
 You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to either display the menu in linear order like a list or like a radial menu in radial (circular) direction.
 
@@ -235,7 +254,7 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrfZsUDfgdgUggM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.webp)" %}
 
-## Item clicked event
+### Item clicked event
 
 The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked. You can use this event to perform the required action.
 
