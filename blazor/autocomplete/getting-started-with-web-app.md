@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor AutoComplete in Web App | Syncfusion
+title: Getting Started | Blazor AutoComplete in Blazor Web App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Web App.
 platform: Blazor
 component: AutoComplete
 documentation: ug
 ---
 
-# Getting Started with Blazor AutoComplete in Web App
+# Getting Started with Blazor AutoComplete in Blazor Web App
 
 This section briefly explains about how to include [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
