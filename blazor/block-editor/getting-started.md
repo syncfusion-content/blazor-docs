@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Block Editor | Syncfusion
+title: Getting Started | Blazor Block Editor in Blazor Web App | Syncfusion
 description: Learn how to get started with the Blazor Block Editor component in Blazor Web App using Visual Studio, Visual Studio Code, or the .NET CLI.
 platform: Blazor
 control: BlockEditor
