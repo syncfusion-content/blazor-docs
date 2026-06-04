@@ -72,7 +72,7 @@ Open the `_Imports.razor` file at the root of your project and import the namesp
 
 ### Add stylesheet and script resources
 
-Include the theme stylesheet and script references in the `wwwroot/index.html` file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the `wwwroot/index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
