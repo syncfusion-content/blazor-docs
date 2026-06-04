@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Splitter Component | Syncfusion
+title: Getting Started with Blazor Splitter in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Splitter component in Blazor WebAssembly Application.
 platform: Blazor
 control: Splitter
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor Splitter Component in Blazor WASM App
+# Getting Started with Blazor Splitter in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
