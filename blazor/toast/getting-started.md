@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Toast Component | Syncfusion
+title: Getting Started with Blazor Toast in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Toast component in Blazor WebAssembly Application.
 platform: Blazor
 control: Toast
