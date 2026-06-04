@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor SpeedDial Component | Syncfusion
+title: Getting Started with Blazor SpeedDial in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor SpeedDial component in Blazor WebAssembly Application.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Getting Started with Blazor SpeedDial Component in Blazor WASM App
+# Getting Started with Blazor SpeedDial in Blazor WASM App
 
 This section briefly explains about how to include [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component to a Blazor WebAssembly application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
