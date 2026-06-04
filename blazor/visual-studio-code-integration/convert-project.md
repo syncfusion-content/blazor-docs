@@ -9,7 +9,7 @@ documentation: ug
 
 # Convert a Blazor Project to Syncfusion Blazor
 
-The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension for Visual Studio Code upgrades a Blazor project by adding the required Syncfusion NuGet packages and configuring the selected theme automatically.
+The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) for Visual Studio Code upgrades a Blazor project by adding the required NuGet packages and configuring the selected theme automatically.
 
 ## Supported project types
 
@@ -26,17 +26,17 @@ The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension 
 
     ![Context menu showing Convert to Syncfusion Blazor Application option](images/conversion.webp)
 
-3. In the Command Palette, pick **Select Blazor Version** and choose the desired Syncfusion Blazor release (pulled from [nuget.org](https://www.nuget.org)).
+3. In the Command Palette, pick **Select Blazor Version** and choose the desired Syncfusion® Blazor release (pulled from [nuget.org](https://www.nuget.org)).
 
     ![Command Palette showing Blazor version selection](images/versionselection.webp)
 
-4. Choose the theme from the theme list. Supported themes include Material, Bootstrap, Tailwind, Fluent, and High Contrast. Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for the full list.
+4. Choose the theme from the theme list. Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for the full list.
 
     ![Command Palette showing theme selection options](images/ChooseThemes.webp)
 
    N> The conversion process will run automatically. This may take a few moments as NuGet packages are downloaded and the project is configured.
 
-After conversion, the project contains the required Syncfusion Blazor NuGet packages and the selected theme stylesheet.
+After conversion, the project contains the required Syncfusion® Blazor NuGet packages and the selected theme stylesheet.
 
 N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the Syncfusion license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.
 
@@ -60,9 +60,9 @@ N> If you installed the trial setup or NuGet packages from [nuget.org](https://w
 ## See also
 
 - [Overview of Blazor Extension for Visual Studio Code](overview.md)
-- [Download and Installation](download-and-installation.md)
-- [Create Project Template](create-project.md)
-- [Code Snippets](code-snippet.md)
-- [Upgrade Project](upgrade-project.md)
-- [Scaffolding](scaffolding.md)
+- [Download and Installation for Visual Studio Code](download-and-installation.md)
+- [Create Project Template for Visual Studio Code](create-project.md)
+- [Code Snippets for Visual Studio Code](code-snippet.md)
+- [Upgrade Project for Visual Studio Code](upgrade-project.md)
+- [Scaffolding for Visual Studio Code](scaffolding.md)
 

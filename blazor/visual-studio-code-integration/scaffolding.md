@@ -9,11 +9,9 @@ documentation: ug
 
 # Syncfusion Blazor Scaffolder
 
-The Syncfusion Blazor Scaffolder in Visual Studio Code helps you generate Razor pages and controller/service code that interact with your data models. It accelerates common data workflows for controls like controls like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram-component) by scaffolding CRUD-ready files and UI markup.
+The [Syncfusion® Blazor Scaffolder](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Scaffolder-VSCode-Extensions) in Visual Studio Code helps you generate Razor pages and controller/service code that interact with your data models. It accelerates common data workflows for controls like controls like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram-component) by scaffolding CRUD-ready files and UI markup. The Syncfusion® Blazor Scaffolder is available from `v32.2.3` or later.
 
-N> Check that at least one Entity Framework model exists, and the application has been compiled once. If no Entity Framework model exists in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required DBContext and properties are added. Now, build the application, and try scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
-
-N> The Syncfusion Blazor Scaffolder is available from `v32.2.3` or later.
+N> Check that at least one Entity Framework model exists, and the application has been compiled once. If no Entity Framework model exists in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required `DbContext` and properties are added. Now, build the application, and try scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
 
 ## Add a scaffolded item
 
@@ -53,13 +51,13 @@ N> Example adaptor links in the UI are placeholders for demonstration and do not
 
     ![Choose required selected control features for the hosted project](images/fetaure_window_hosted_feature.webp)
 
-5. Scaffolding will generate the Controller/Service and Razor files according to your selections:
+5. Scaffolding will generate the **Controller/Service** and **Razor** files according to your selections:
 
     - Local Data: Adds service and Razor files.
 
       ![Required Controller and Razor files added in the project for the selected control](images/files_for_local_data.webp)
 
-    - Remote Data (Localhost URL): Adds controller and Razor files.
+- Remote Data (Localhost URL): Adds controller and Razor files.
 
       ![Required Controller and Razor files added in the project for the selected control](images/files_for_remote_data.webp)
 
@@ -74,8 +72,8 @@ N> If you installed the trial setup or NuGet packages from [nuget.org](https://w
 ## See also
 
 - [Overview of Blazor Extension for Visual Studio Code](overview.md)
-- [Download and Installation](download-and-installation.md)
-- [Create Project Template](create-project.md)
-- [Code Snippets](code-snippet.md)
-- [Convert Project](convert-project.md)
-- [Upgrade Project](upgrade-project.md)
+- [Download and Installation for Visual Studio Code](download-and-installation.md)
+- [Create Project Template for Visual Studio Code](create-project.md)
+- [Code Snippets for Visual Studio Code](code-snippet.md)
+- [Convert Project for Visual Studio Code](convert-project.md)
+- [Upgrade Project for Visual Studio Code](upgrade-project.md)

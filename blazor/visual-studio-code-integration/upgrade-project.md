@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrade the Syncfusion Blazor Application to the Latest Version
 
-The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension for Visual Studio Code enables upgrading an existing Syncfusion Blazor application to a newer Essential Studio release by updating NuGet package references and theme links automatically.
+The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) extension for Visual Studio Code enables upgrading an existing Syncfusion® Blazor application to a newer Essential ® release by updating NuGet package references and theme links automatically.
 
 ## Supported project types
 
@@ -20,19 +20,19 @@ The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension 
 
 ## Steps to migrate the project
 
-1. Open the Syncfusion Blazor project in Visual Studio Code.
+1. Open the Syncfusion® Blazor project in Visual Studio Code.
 
 2. In Explorer, right-click the project `.csproj` file and choose **Migrate Syncfusion Blazor Application to another version**.
 
     ![Context menu showing Migrate Syncfusion Blazor Application option](images/migration.webp)
 
-    N> The migration command is available only if the project already references Syncfusion Blazor NuGet packages.
+    N> The migration command is available only if the project already references Syncfusion® Blazor NuGet packages.
 
-3. In the Command Palette, choose **Select Blazor Version** and pick the desired Syncfusion Blazor release version (versions are retrieved from [nuget.org](https://www.nuget.org)).
+3. In the Command Palette, choose **Select Blazor Version** and pick the desired Syncfusion® Blazor release version (versions are retrieved from [nuget.org](https://www.nuget.org)).
 
     ![Command Palette showing Syncfusion version selection](images/versionselection.webp)
 
-4. The tool updates the Syncfusion Blazor NuGet package references to the selected version.
+4. The tool updates the Syncfusion® Blazor NuGet package references to the selected version.
 
     ![Project file updated with Syncfusion NuGet package references](images/nugetpackage.webp)
 
@@ -41,8 +41,8 @@ N> If you installed the trial setup or NuGet packages from [nuget.org](https://w
 ## See also
 
 - [Overview of Blazor Extension for Visual Studio Code](overview.md)
-- [Download and Installation](download-and-installation.md)
-- [Create Project Template](create-project.md)
-- [Code Snippets](code-snippet.md)
-- [Convert Project](convert-project.md)
-- [Scaffolding](scaffolding.md)
+- [Download and Installation for Visual Studio Code](download-and-installation.md)
+- [Create Project Template for Visual Studio Code](create-project.md)
+- [Code Snippets for Visual Studio Code](code-snippet.md)
+- [Convert Project for Visual Studio Code](convert-project.md)
+- [Scaffolding for Visual Studio Code](scaffolding.md)

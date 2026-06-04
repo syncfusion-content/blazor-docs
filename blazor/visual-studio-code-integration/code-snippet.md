@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Syncfusion Blazor Components Using Code Snippets
 
-The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension for Visual Studio Code speeds up component insertion by providing ready-to-use Razor markup and placeholders for common features.
+The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) for Visual Studio Code speeds up component insertion by providing ready-to-use Razor markup and placeholders for common features.
 
 ## Quick start
 
@@ -21,11 +21,11 @@ The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension 
     sf<Syncfusion component name>-<feature>
     ```
     For example, type `sfgrid-grouping` to insert a DataGrid with grouping enabled.
-4. Choose the snippet from the suggestions and press Enter or Tab. The component markup is inserted with editable placeholders.
+4. Choose the snippet from the suggestions and press **Enter** or **Tab**. The component markup is inserted with editable placeholders.
 
     ![Animated demo showing insertion of a Syncfusion Blazor code snippet](images/codesnippet.webp)
 
-5. Use Tab to navigate placeholders and fill required values. Inline comments in the snippet highlight required fields.
+5. Use **Tab** to navigate placeholders and fill required values. Inline comments in the snippet highlight required fields.
 
     ![Snippet comments highlighting required placeholders](images/comment.webp)
 
@@ -33,26 +33,26 @@ The [Syncfusion Blazor](https://www.syncfusion.com/blazor-components) extension 
 
     ![Help link shown at the top of the inserted snippet](images/help.webp)
 
-## After inserting a snippet — project configuration checklist
+## After inserting a snippet - project configuration checklist
 
-The snippet only adds Razor markup. To render Syncfusion components correctly, ensure the project is configured as follows:
+The snippet only adds Razor markup. To render [Blazor components](https://www.syncfusion.com/blazor-components) correctly, ensure the project is configured as follows:
 
-- Add the required Syncfusion NuGet package(s). Individual packages are recommended — refer to [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages) for details.
+- Add the required NuGet package(s). Individual packages are recommended. Refer to [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages) for details.
 
     ![NuGet Package](images/nuget-snippet.webp)
 
-- Import Syncfusion namespaces in `~/_Imports.razor`.
+- Import required namespaces in `~/_Imports.razor`.
 
     ![Namespace](images/namespace-snippet.webp)
 
-- Include a Syncfusion [theme](https://blazor.syncfusion.com/documentation/appearance/themes) stylesheet in the page head: 
+- Include a [theme](https://blazor.syncfusion.com/documentation/appearance/themes) stylesheet in the page head: 
     - `~/Components/App.razor` — (Blazor Web App)
     - `~/Pages/_Host.cshtml` — (Blazor Server)
     - `~/wwwroot/index.html` — (Blazor WebAssembly)
 
     ![Themes](images/themes-snippet.webp)
 
-- Register the Syncfusion Blazor service in the appropriate `Program.cs` files. For interactive Web App render modes `WebAssembly` or `Auto`, register in both `Program.cs` files when applicable.
+- Register the Blazor service in the appropriate `Program.cs` files. For interactive Web App render modes `WebAssembly` or `Auto`, register in both `Program.cs` files when applicable.
 
     ![Registration of the Syncfusion Blazor service](images/configuration-snippet.webp)
 
@@ -61,8 +61,8 @@ N> If you installed the trial setup or NuGet packages from [nuget.org](https://w
 ## See also
 
 - [Overview of Blazor Extension for Visual Studio Code](overview.md)
-- [Download and Installation](download-and-installation.md)
-- [Create Project Template](create-project.md)
-- [Convert Project](convert-project.md)
-- [Upgrade Project](upgrade-project.md)
-- [Scaffolding](scaffolding.md)
+- [Download and Installation for Visual Studio Code](download-and-installation.md)
+- [Create Project Template for Visual Studio Code](create-project.md)
+- [Convert Project for Visual Studio Code](convert-project.md)
+- [Upgrade Project for Visual Studio Code](upgrade-project.md)
+- [Scaffolding for Visual Studio Code](scaffolding.md)
