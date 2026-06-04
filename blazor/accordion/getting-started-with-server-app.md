@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Stared with Blazor Accordion Component | Syncfusion
+title: Getting Stared with Blazor Accordion in Blazor Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor Accordion component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Getting Started with Blazor Accordion Component in Server App
+# Getting Started with Blazor Accordion Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
