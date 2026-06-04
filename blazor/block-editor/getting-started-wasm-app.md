@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Block Editor in WASM | Syncfusion
+title: Getting Started | Blazor Block Editor in Blazor WASM App | Syncfusion
 description: Get started with Blazor Block Editor in Blazor WebAssembly App using Visual Studio, Visual Studio Code, or .NET CLI.
 platform: Blazor
 control: BlockEditor
