@@ -65,7 +65,7 @@ Open the `~/_Imports.razor` file and import the namespaces.
 
 ### Add stylesheet and Interactive Server routing
 
-Include the theme stylesheet, required script references, and configure Interactive Server rendering in the `App.razor` file. 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes), [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) and configure Interactive Server rendering in the `App.razor` file. 
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
