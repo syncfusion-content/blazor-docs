@@ -1026,7 +1026,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% endtabs %}
 
 {% tabs %}
-{% highlight Controller.cs %}
+{% highlight csharp tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
