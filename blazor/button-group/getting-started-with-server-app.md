@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor ButtonGroup in Server App | Syncfusion
+title: Getting Started | Blazor ButtonGroup in Blazor Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor ButtonGroup Component in Blazor Server App.
 platform: Blazor
 component: ButtonGroup
@@ -183,13 +183,13 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor ButtonGroup component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor ButtonGroup component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and run the following command.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -203,7 +203,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and run the following command.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
