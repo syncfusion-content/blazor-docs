@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor icons library - Syncfusion
+title: Blazor Icons Library Usage and Customization | Syncfusion
 description: Learn how to use the Blazor Icon component with SfIcon and e-icons, set sizes and tooltips, customize appearance, and integrate with other Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Blazor icons library
+# Blazor Icons Library Usage and Customization
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library provides a set of base64-formatted font icons used across [Blazor components](https://www.syncfusion.com/blazor-components). Icons can be used via the `SfIcon` component or the `e-icons` CSS class.
 
@@ -194,11 +194,19 @@ The following code explains how to render `open-iconic` icons using the `IconCss
 
 ![Load custom icon in Blazor Icon Component](./images/icons/icon-css.webp)
 
-### HTML attribute support
+### Create custom icons with Syncfusion Metro Studio
 
-You can add additional HTML attributes to the icon element using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_HtmlAttributes) property. HTML attributes can be added by specifying them as inline attributes or by using the `@attributes` Razor directive.
+[Syncfusion Metro Studio](https://help.syncfusion.com/metro-studio/overview) is a desktop tool for creating and customizing icon fonts for applications. It includes more than 7,000 flat and wireframe icon templates that you can modify to fit your design needs. You can also customize existing icons and export them in multiple formats, including SVG.
 
-The following example shows icon font size customization using the `@attributes` directive.
+After exporting the icon font, use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property of the [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) component to display the custom icon in your application.
+
+For more information, refer to the [Metro Studio documentation](https://help.syncfusion.com/metro-studio/overview).
+
+### Icon styling with inline attributes
+
+You can customize the icon element by applying HTML attributes directly to the `SfIcon` component. To reuse the same attribute values across multiple icons, use the `@attributes` Razor directive.
+
+The following example demonstrates how to customize the icon font size using the `@attributes` directive.
 
 {% tabs %}
 {% highlight razor %}
@@ -219,7 +227,7 @@ The following example shows icon font size customization using the `@attributes`
 {% endhighlight %}
 {% endtabs %}
 
-![Load custom icons using HtmlAttributes](./images/icons/htmlattributes-icon.webp)
+![Custom icon styling using inline attributes](./images/icons/htmlattributes-icon.webp)
 
 ## Icon integration with Button component
 
