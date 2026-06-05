@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Windows Forms (WinForms) to Blazor app | Syncfusion®
+title: Migrating from Windows Forms (WinForms) to Blazor App | Syncfusion®
 description: Step-by-step guide to migrate a WinForms app to Blazor, covering architecture, project setup, theming, service registration, and component mapping.
 platform: Blazor
 control: Common
