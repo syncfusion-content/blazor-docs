@@ -220,7 +220,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdteMnJfRLuDhc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLdtnjezVQkTkGd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Run the Application**
 
