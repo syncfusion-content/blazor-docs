@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor 3D Chart Component in WebApp
+title: Getting Started with Blazor 3D Chart in Web App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor 3D Chart Component in Blazor Web App.
 platform: Blazor
 component: 3D Chart
