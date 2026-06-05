@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Windows Forms (WinForms) to Blazor Guide | Syncfusion®
+title: Migrating from Windows Forms (WinForms) to Blazor App | Syncfusion®
 description: Step-by-step guide to migrate a WinForms app to Blazor, covering architecture, project setup, theming, service registration, and component mapping.
 platform: Blazor
 control: Common
@@ -61,7 +61,7 @@ The following shared setup applies to all components and covers the common confi
 
 In WinForms applications, controls are installed as platform specific [WinForms NuGet packages](https://help.syncfusion.com/windowsforms/installation/install-nuget-packages).
 
-In Blazor applications, components are also provided as individual NuGet packages, which helps improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In Blazor applications, components are also provided as individual NuGet packages, which helps improve performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
@@ -131,7 +131,7 @@ namespace WinFormsApp
 {% endhighlight %}
 {% endtabs %}
 
-In Blazor, The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+In Blazor, the theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -175,6 +175,8 @@ For additional details, refer to the [WinForms DataGrid getting started guide](h
 #### Component rendering
 
 The [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) control can be added programmatically or via the Visual Studio Designer. Columns are configured in the Designer or programmatically, and data is assigned through the `DataSource` property.
+
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
 
 **WinForms approach**
 
@@ -222,8 +224,6 @@ namespace WinFormsDataGridApp
 {% endtabs %}
 
 **Blazor equivalent**
-
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -283,6 +283,8 @@ For additional details, refer to the [WinForms Charts getting started guide](htt
 
 The [WinForms Chart](https://www.syncfusion.com/winforms-ui-controls/charts) control can be added programmatically or via the Visual Studio Designer. Axes and series are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
 
+The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
+
 **WinForms approach**
 
 {% tabs %}
@@ -336,8 +338,6 @@ namespace WinFormsChartApp
 {% endtabs %}
 
 **Blazor equivalent**
-
-The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
 
 {% tabs %}
 {% highlight razor tabtitle="Sales.razor" %}
@@ -406,6 +406,8 @@ For additional details, refer to the [WinForms Scheduler getting started guide](
 
 The [WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) control can be added programmatically or via the Visual Studio Designer. Views and appointments are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
 
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
+
 **WinForms approach**
 
 {% tabs %}
@@ -452,8 +454,6 @@ namespace WinFormsSchedulerApp
 
 **Blazor equivalent**
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
-
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
 
@@ -474,21 +474,15 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
     DateTime CurrentDate = new DateTime(2025, 2, 14);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2025, 2, 13, 10, 0, 0) , EndTime = new DateTime(2025, 2, 13, 12, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2025, 2, 15, 10, 0, 0) , EndTime = new DateTime(2025, 2, 15, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Team Meeting", StartTime = new DateTime(2025, 2, 13, 10, 0, 0) , EndTime = new DateTime(2025, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Client Presentation", StartTime = new DateTime(2025, 2, 15, 10, 0, 0) , EndTime = new DateTime(2025, 2, 15, 12, 0, 0) }
     };
     public class AppointmentData
     {
         public int Id { get; set; }
         public string? Subject { get; set; }
-        public string? Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public string? Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string? RecurrenceRule { get; set; }
-        public string? RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 
