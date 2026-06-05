@@ -26,7 +26,7 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
     ![Context menu showing Convert to Blazor Application option](images/conversion.webp)
 
-3. In the Command Palette, pick **Select Blazor Version** and choose the desired Syncfusion® Blazor release (pulled from [nuget.org](https://www.nuget.org)).
+3. In the Command Palette, pick **Select Blazor Version** and choose the desired Blazor release (pulled from [nuget.org](https://www.nuget.org)).
 
     ![Command Palette showing Blazor version selection](images/versionselection.webp)
 
@@ -36,7 +36,7 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
    N> The conversion process will run automatically. This may take a few moments as NuGet packages are downloaded and the project is configured.
 
-After conversion, the project contains the required Syncfusion® Blazor NuGet packages and the selected theme stylesheet.
+After conversion, the project contains the required Blazor NuGet packages and the selected theme stylesheet.
 
 N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.
 

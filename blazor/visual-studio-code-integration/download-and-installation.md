@@ -20,7 +20,7 @@ Install the following prerequisites to install the [Syncfusion® Blazor extensio
 
 ## Install through the Visual Studio Code Extensions
 
-The steps below describe how to install the S[Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) from the Extensions view in Visual Studio Code.
+The steps below describe how to install the [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) from the Extensions view in Visual Studio Code.
 
 1. Open Visual Studio Code.
 2. Navigate to **View > Extensions**, and the Manage Extensions option will appear on the left side of the window.
@@ -42,7 +42,7 @@ The steps below describe how to install the S[Syncfusion® Blazor extension](htt
 The following steps describe how to download and install the extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/).
 
 1. Open the [Syncfusion® Blazor VS Code Extensions](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) page in the Marketplace.
-2. Click **Install** from Visual Studio Code Marketplace. The browser displays a popup window with information such as **"Open Visual Studio Code"**. When you click Open Visual Studio Code, the [Syncfusion® Blazor Extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) will launch in Visual Studio Code.
+2. Click **Install** from Visual Studio Code Marketplace. The browser displays a popup window with information such as **"Open Visual Studio Code"**. When you click Open Visual Studio Code, the **Syncfusion® Blazor Extension** will launch in Visual Studio Code.
 3. In Visual Studio Code, click **Install** on the **Blazor VSCode Extensions - Syncfusion** page.
 4. Reload Visual Studio Code after installation by using the **Reload Window** command from the Command Palette. Open the Command Palette with **Ctrl+Shift+P**, then run Reload Window.
 
@@ -54,7 +54,7 @@ The following steps describe how to download and install the extension from the 
 
 ## Manually Installing an Extension in Visual Studio Code
 
-The following steps describe how to install the Syncfusion® Blazor extension manually in Visual Studio Code.
+The following steps describe how to install the **Syncfusion® Blazor extension** manually in Visual Studio Code.
 
 1. Download the `SyncfusionInc.Blazor-VSCode-Extensions.vsix` file from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions).
 2. In Visual Studio Code, open the Extensions view by clicking the Extensions icon in the Activity Bar.
