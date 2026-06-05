@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Labels in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about the Data Labels in Syncfusion Blazor 3D Chart component and much more.
+title: Data Labels in Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn here all about the Data Labels in Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
