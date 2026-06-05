@@ -389,7 +389,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Update Node Shadow
 
-Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a `node.Shadow` is disabled by default and can be enabled by using the node’s constraints. The following example shows how to draw a shadow.
+Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a node.`Shadow` is disabled by default and can be enabled by using the node’s constraints. The following example shows how to draw a shadow.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
