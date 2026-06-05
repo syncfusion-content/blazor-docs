@@ -217,6 +217,10 @@ dotnet run
 
 {% endtabcontents %}
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLJNWgNzHwucLWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip.gif)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip).
