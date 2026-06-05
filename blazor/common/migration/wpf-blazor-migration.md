@@ -112,13 +112,9 @@ This example includes the namespaces used by the components covered in this guid
 
 ### Theme and script configuration
 
-In WPF, themes are typically applied using [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager), while additional styling can be managed through `ResourceDictionary` and XAML-based styling. Scripts are not required because rendering happens locally in the desktop runtime.
-
-In Blazor, styles and scripts are delivered as static web assets from NuGet packages. Reference them once at the application level.
-
-For the complete list of supported themes, refer to the [Blazor themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
-
 **WPF approach**
+
+In WPF, themes are typically applied using [SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager), while additional styling can be managed through `ResourceDictionary` and XAML-based styling. Scripts are not required because rendering happens locally in the desktop runtime.
 
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
@@ -135,6 +131,8 @@ For the complete list of supported themes, refer to the [Blazor themes documenta
 {% endtabs %}
 
 **Blazor equivalent**
+
+In Blazor, the theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -177,11 +175,9 @@ For additional details, refer to the [WPF DataGrid getting started guide](https:
 
 #### Component rendering
 
-The [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) control is defined in XAML, with its data collection assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ItemsSource) property.
-
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
-
 **WPF approach**
+
+The [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) control is defined in XAML, with its data collection assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ItemsSource) property.
 
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
@@ -256,6 +252,8 @@ namespace WpfDataGridApp
 
 **Blazor equivalent**
 
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
+
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
@@ -315,11 +313,9 @@ For additional details, refer to the [WPF Charts getting started guide](https://
 
 #### Component rendering
 
-The [WPF Charts](https://www.syncfusion.com/wpf-controls/charts) control is defined using nested XAML elements, and data is assigned through the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) property using binding paths for the X and Y values.
-
-The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
-
 **WPF approach**
+
+The [WPF Charts](https://www.syncfusion.com/wpf-controls/charts) control is defined using nested XAML elements, and data is assigned through the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) property using binding paths for the X and Y values.
 
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
@@ -401,6 +397,8 @@ namespace WpfChart
 
 **Blazor equivalent**
 
+The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
+
 {% tabs %}
 {% highlight razor tabtitle="Sales.razor" %}
 
@@ -469,11 +467,9 @@ For additional details, refer to the [WPF Scheduler getting started guide](https
 
 #### Component rendering
 
-The [WPF Scheduler](https://www.syncfusion.com/wpf-controls/scheduler) control is defined in XAML, with the active view and display date configured through properties, and appointments are assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ItemsSource) property.
-
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
-
 **WPF approach**
+
+The [WPF Scheduler](https://www.syncfusion.com/wpf-controls/scheduler) control is defined in XAML, with the active view and display date configured through properties, and appointments are assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ItemsSource) property.
 
 {% tabs %}
 {% highlight xml tabtitle="MainWindow.xaml" %}
@@ -534,6 +530,8 @@ namespace WpfScheduler
 {% endtabs %}
 
 **Blazor equivalent**
+
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
 
 {% tabs %}
 {% highlight razor tabtitle="Calendar.razor" %}
