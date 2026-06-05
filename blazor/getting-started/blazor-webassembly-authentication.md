@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor WebAssembly App with Authentication Library | Syncfusion
-description: Check out the documentation for getting started with Blazor WebAssembly App and Syncfusion Blazor Components with Authentication Library.
+title: Blazor WebAssembly App with Authentication Library | Syncfusion®
+description: Check out the documentation for getting started with Blazor WebAssembly App and Blazor Components with Authentication Library.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WASM App with Authentication Library
 
-This article provides step by step instructions for building and securing a Blazor WebAssembly Standalone App and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component for authenticated users.
+This article provides step by step instructions for building and securing a Blazor WebAssembly Standalone App and integrate the [Blazor components](https://www.syncfusion.com/blazor-components) for authenticated users.
 
 ## Create a new Blazor Web App 
 
@@ -63,7 +63,7 @@ dotnet run
 
 ## Integrating Blazor component
 
-Blazor components can be integrated within the `AuthorizeView` component as shown in the following steps.
+[Blazor components](https://www.syncfusion.com/blazor-components) can be integrated within the `AuthorizeView` component as shown in the following steps.
 
 ### Install NuGet packages
 
@@ -110,7 +110,7 @@ Open the `~/_Imports.razor` file and import the namespaces.
 
 ### Add stylesheet and script resources
 
-Include the theme stylesheet and script references in the `wwwroot/index.html` file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the `wwwroot/index.html` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
