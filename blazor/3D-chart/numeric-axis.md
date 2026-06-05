@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Numeric Axis in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about the Numeric Axis in Syncfusion Blazor 3D Chart component and much more.
+title: Numeric Axis in Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn here all about the Numeric Axis in Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
