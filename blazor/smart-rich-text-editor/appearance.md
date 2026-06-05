@@ -58,7 +58,7 @@ In this example, we customize the AI Assistant popup appearance by targeting the
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Smart Rich Text Editor AI AssistView Custom Class](./images/smart-rich-text-editor-ai-assistview-custom-class.png)
+![Blazor Smart Rich Text Editor AI AssistView Custom Class](./images/smart-rich-text-editor-ai-assistview-custom-class.webp)
 
 ## See also
 

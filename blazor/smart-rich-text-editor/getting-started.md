@@ -394,12 +394,12 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Text Editor** component in the **~/Pages/Index.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Index.razor` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Text Editor** component in the **~/Pages/Home.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Home.razor` page.
 
 N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor tabtitle="~/Home.razor" %}
 
 @rendermode InteractiveServer
 @using Syncfusion.Blazor.SmartRichTextEditor
@@ -425,7 +425,7 @@ N> If an Interactivity Location is set to `Global` and the **Render Mode** is se
 
 * Use <kbd>Alt</kbd>+<kbd>Enter</kbd> to open the AI Query dialog for content improvement.
 
-![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.gif)
+![Syncfusion Smart Rich Text Editor - Output](images/smart-rich-text-editor-overview.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
