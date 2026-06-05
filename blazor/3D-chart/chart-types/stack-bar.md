@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Bar in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all about 100% Stacked Bar Chart in Blazor 3D Chart component and more.
+description: Checkout and learn here all features about 100% Stacked Bar Chart in Blazor 3D Chart component and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug

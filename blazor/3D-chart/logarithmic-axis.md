@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logarithmic Axis in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all about Logarithmic Axis in Blazor 3D Chart component and much more.
+description: Checkout and learn here all features about Logarithmic Axis in Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
