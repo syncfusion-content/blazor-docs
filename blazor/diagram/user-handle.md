@@ -217,7 +217,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to Position User Handles
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of user handles allows precise positioning based on fractional values. A value of 0 represents the Top-Left corner, 1 represents the Bottom-Right corner, and 0.5 represents the midpoint of either the Width or Height. The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property determines the alignment orientation of the user handle relative to the specified `Offset`. Together, these properties offer flexible and accurate placement of user handles within the diagram.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of user handles allows precise positioning based on fractional values. A value of **0** represents the Top-Left corner, **1** represents the Bottom-Right corner, and **0.5** represents the midpoint of either the Width or Height. The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property determines the alignment orientation of the user handle relative to the specified `Offset`. Together, these properties offer flexible and accurate placement of user handles within the diagram.
 
 The following table visually demonstrates the possible alignments and user handle positions.
 
@@ -386,7 +386,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to change the size of the user handle
 
-The Diagram component supports customizing user handle dimensions through the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. This sets the width and height of user handles in pixels. If not explicitly set, the `Size` property defaults to 25 pixels, providing a standard visual representation. Adjusting this value lets create user handles that are appropriately sized for the specific diagram requirements.
+The Diagram component supports customizing user handle dimensions through the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. This sets the width and height of user handles in pixels. If not explicitly set, the `Size` property defaults to **25 pixels**, providing a standard visual representation. Adjusting this value lets create user handles that are appropriately sized for the specific diagram requirements.
 
 ### How to Style User Handles
 
@@ -397,7 +397,7 @@ User handles can be styled using properties such as PathColor, BorderColor, Back
 
 * Use [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderColor) and [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BackgroundColor) properties to set the border and background colors respectively. Additionally, the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderWidth) property allows you to adjust the thickness of the user handle's border.
 
-* The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property controls the visibility of the user handle in the diagram. Set it to `true` to display the handle, or `false` to hide it from view.
+* The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property controls the visibility of the user handle in the diagram. Set it to **true** to display the handle, or **false** to hide it from view.
 
 The following code explains how to customize the appearance of the user handle.
 
@@ -1178,9 +1178,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ### How to Position Connector Fixed User Handle Using Offset
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Offset) property of the connector fixed user handle allows precise positioning along the connector's length. It uses a fractional value where:
-* 0 represents the connector source point
-* 1 represents the connector target point
-* 0.5 represents the midpoint of the connector segment
+* **0** represents the connector source point
+* **1** represents the connector target point
+* **0.5** represents the midpoint of the connector segment
 
 This fractional system enables flexible and accurate alignment of user handles on connectors.
 

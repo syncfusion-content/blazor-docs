@@ -104,7 +104,7 @@ Tooltips can be attached to 12 predefined positions around the target element. W
 * [`RightCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Position.html#Syncfusion_Blazor_Popups_Position_RightCenter)
 * [RightBottom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Position.html#Syncfusion_Blazor_Popups_Position_RightCenter)
 
-N> By default, the Tooltip is placed at the BottomRight of the target element.
+N> By default, the Tooltip is placed at the **BottomRight** of the target element.
 
 The following code example sets the tooltip position for the nodes.
 
@@ -595,7 +595,7 @@ The Tooltip activation mode can be customized to determine how it appears on the
 * `Click`
 
 
-N> By default, the Tooltip open mode is Auto.
+N> By default, the Tooltip open mode is **Auto**.
 
 The following code example illustrates how to set the open mode for tooltips on nodes.
 
@@ -916,7 +916,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 Tooltips for user handles can be configured to remain visible until manually dismissed, a feature known as "sticky" tooltips. When enabled, a close icon appears in the top-right corner of the tooltip, allowing users to explicitly close it when desired.
 
-To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to **false**.
 
 N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 
@@ -1146,7 +1146,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 Enhance the diagram's user experience with sticky tooltips for ports. This feature allows tooltips to remain visible until explicitly closed, providing users with persistent information. When enabled, a close icon appears in the top-right corner of the tooltip, empowering users to dismiss it at their convenience.
 
-To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to **false**.
 
 N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 

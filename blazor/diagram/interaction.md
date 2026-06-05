@@ -988,7 +988,7 @@ User handles can be aligned relative to the node boundaries. It has [Margin](htt
 
 ##  How to Position User Handle
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle based on fractions. 0 represents top or left corner, 1 represents bottom or right corner, and 0.5 represents half of width or height.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle based on fractions. **0** represents top or left corner, **1** represents bottom or right corner, and **0.5** represents half of width or height.
 
 ## HHow to Align User Handles Based on Connector Boundary
 

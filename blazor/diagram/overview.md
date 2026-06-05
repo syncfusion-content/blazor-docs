@@ -23,7 +23,7 @@ documentation: ug
 * **Swimlane:** Visualize groups and categorizes activities or tasks based on the role or department responsible for their execution, aiding in illustrating complex processes involving multiple participants or departments within an organization.
 * **Connectors:** Represent connections between nodes, defining relationships and workflows within the diagram.
 * **Annotations:** Add textual representations to nodes or connectors using annotations. These editable text blocks can be displayed over diagram elements to provide additional information or labels. Multiple annotations can be attached to a single node or connector, allowing for flexible and detailed labeling of diagram components. Annotations support real-time editing, enabling dynamic updates to the diagram's textual content during runtime.
-* **Routing:** Enhanced the dynamic updating of connector routes based on the placement or movement of nearby shapes. This feature is activated by setting the Routing enum value to the Constraints property for both the diagram and connectors, and setting the RoutingType to Classic or Advanced.
+* **Routing:** Enhanced the dynamic updating of connector routes based on the placement or movement of nearby shapes. This feature is activated by setting the Routing enum value to the Constraints property for both the diagram and connectors, and setting the `RoutingType` to **Classic** or **Advanced**.
 * **Interaction:** Diagram elements can be selected, rotated, resized, and moved.
 * **Z-Order:** Diagram elements overlapping can be controlled by changing their Z-Order value.
 * **Pan and Zoom:** Navigate the diagram with pan and zoom options for detailed and broad views.

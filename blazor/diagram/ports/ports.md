@@ -33,6 +33,8 @@ To learn more about creating and customizing ports in the Blazor Diagram, watch 
 
 {% youtube "youtube:https://www.youtube.com/watch?v=aMgmimZZBcA" %}
 
+<br><br>
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 

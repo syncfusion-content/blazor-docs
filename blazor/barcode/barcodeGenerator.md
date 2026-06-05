@@ -11,7 +11,7 @@ documentation: ug
 
 ## Code39
 
-The Code 39 character set includes digits 0-9, uppercase letters A–Z, and the symbols space, minus (-), plus (+), period (.), dollar ($), slash (/), and percent (%). A special start/stop character is placed at the beginning and end of each barcode. The barcode can be of any length; even more than 25 characters begin to push the bounds. Code 39 is the only type of barcode that does not require a checksum for common use.
+The Code 39 character set includes digits **0-9**, uppercase letters **A–Z**, and the **symbols space**, **minus (-)**, **plus (+)**, **period (.)**, **dollar ($)**, **slash (/)**, and **percent (%)**. A special start/stop character is placed at the beginning and end of each barcode. The barcode can be of any length; even more than 25 characters begin to push the bounds. Code 39 is the only type of barcode that does not require a checksum for common use.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -23,7 +23,7 @@ The Code 39 character set includes digits 0-9, uppercase letters A–Z, and the 
 
 ## Code39 Extended
 
-Code 39 Extended is an enhanced version of Code 39 that supports ASCII character set. In Code 39 Extended, it can encode lowercase letters (a–z) and special keyboard characters by using combinations of standard Code 39 symbols.
+Code 39 Extended is an enhanced version of Code 39 that supports ASCII character set. In Code 39 Extended, it can encode lowercase letters (**a–z**) and special keyboard characters by using combinations of standard Code 39 symbols.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -35,7 +35,7 @@ Code 39 Extended is an enhanced version of Code 39 that supports ASCII character
 
 ## Code 11
 
-Code 11 is used primarily for labeling telecommunications equipment. The character set includes digits 0 to 9, a dash (-), and start/stop codes.
+Code 11 is used primarily for labeling telecommunications equipment. The character set includes digits **0 to 9**, a **dash (-)**, and **start/stop codes**.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -49,7 +49,7 @@ Code 11 is used primarily for labeling telecommunications equipment. The charact
 
 Codabar is a variable-length symbol that encodes the following 20 characters:
 
-0123456789-$:/.+ABCD
+**0123456789-$:/.+ABCD**
 
 The characters A, B, C, and D serve as start and stop characters. Codabar is used in libraries, blood banks, the package delivery industry and a variety of other information processing applications.
 
@@ -81,7 +81,7 @@ The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if n
 
 ## Code 93
 
-Code 93 is designed to complement and improve Code 39. It represents the entire ASCII character set through combinations of two characters. Code 93 is a continuous, variable-length symbology and produces denser code. The Standard Mode (default implementation) can encode uppercase letters (A-Z), digits (0-9), and special characters like *, -, $, %, (Space), ., /, and +.
+Code 93 is designed to complement and improve Code 39. It represents the entire ASCII character set through combinations of two characters. Code 93 is a continuous, variable-length symbology and produces denser code. The Standard Mode (default implementation) can encode uppercase letters (**A-Z**), digits (**0-9**), and special characters like ***, -, $, %, (Space), ., /, and +**.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -107,7 +107,7 @@ Code 128 is a variable-length, high-density, alphanumeric, linear bar code symbo
 
 ### Code 128 Special characters
 
-The last seven characters of Code Sets A and B (character values 96-102) and the last three characters of Code Set C (character values 100-102) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
+The last seven characters of Code Sets A and B (character values **96-102**) and the last three characters of Code Set C (character values **100-102**) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -157,7 +157,7 @@ In barcode generators, Customize the barcode text by using display [Text](https:
 
 ## Enable Check Sum
 
-The [EnableCheckSum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_EnableCheckSum) property specifies an error detection in which some additional characters are added to a barcode to protect the integrity of the barcode data. The default value of this property is set as true for BarcodeType.Code39.
+The [EnableCheckSum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_EnableCheckSum) property specifies an error detection in which some additional characters are added to a barcode to protect the integrity of the barcode data. The default value of this property is set as **true** for `BarcodeType.Code39`.
 
 The below code explains how to set the EnableCheckSum property to hide the extra characters displayed at the end of the barcode.
 

@@ -83,7 +83,7 @@ The following table shows the relationship between the shape port position and p
 
 ## How to Set Path Position for Connector Port
 
-Use the `PathPosition` property to place a connector port along the connector path. It accepts values between 0 to 1, where:
+Use the `PathPosition` property to place a connector port along the connector path. It accepts values between **0 to 1**, where:
 
 * **0** represents the start point of the connector
 * **1** represents the end point of the connector

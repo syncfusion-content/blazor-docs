@@ -580,7 +580,7 @@ The following table shows the relationship between the Icon position and Icon **
 
 ### How to find node is in expanded or not 
 
-**IsExpanded** is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of **IsExpanded** property is **true**.
+[IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of **IsExpanded** property is **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
