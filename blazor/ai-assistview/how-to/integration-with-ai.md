@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integration | Blazor AI AssistView component | Syncfusion
+title: Integration | Blazor AI AssistView component | Syncfusion®
 description: Checkout and learn about Integration with Microsoft.Extensions.AI and Keyboard interaction with Blazor AI AssistView component and more details.
 platform: Blazor
 control: AI AssistView
@@ -9,7 +9,7 @@ documentation: ug
 
 # Integration of Microsoft.Extensions.AI with AI AssistView component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
+The AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 
 `Microsoft.Extensions.AI` simplifies integration with different providers and typically requires only minimal configuration changes based on the selected model. The following example demonstrates integration using `Azure OpenAI`.
 
@@ -48,7 +48,7 @@ dotnet add package Markdig
 
 ### Configure services in Program.cs
 
-Register the `Azure OpenAI` client and the Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component within the Blazor application.
+Register the `Azure OpenAI` client and the AI AssistView component within the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -88,7 +88,7 @@ var app = builder.Build();
 
 ### AI AssistView with IChatClient
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> AI AssistView component is designed to integrate seamlessly with external AI services. When an `IChatClient` is registered via Microsoft.Extensions.AI, the component automatically uses it to process user prompts without additional component configuration.
+The AI AssistView component is designed to integrate seamlessly with external AI services. When an `IChatClient` is registered via Microsoft.Extensions.AI, the component automatically uses it to process user prompts without additional component configuration.
 
 In the following example, user input is sent to the injected `IChatClient`. The AI model’s response is returned in Markdown, converted to HTML using the `Markdig` library, and rendered in the AI AssistView component.
 
