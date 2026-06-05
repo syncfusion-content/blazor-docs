@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Windows Forms (WinForms) to Blazor Guide | Syncfusion®
+title: Migrating from Windows Forms (WinForms) to Blazor App | Syncfusion®
 description: Step-by-step guide to migrate a WinForms app to Blazor, covering architecture, project setup, theming, service registration, and component mapping.
 platform: Blazor
 control: Common
@@ -55,13 +55,13 @@ Create a Blazor project using one of the following getting started guides.
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-The following shared setup applies to all components and covers the common configuration required before proceeding to the [component-specific migration steps](#component-specific-migration-steps).
+The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#component-specific-migration-steps).
 
 ### Package installation
 
 In WinForms applications, controls are installed as platform specific [WinForms NuGet packages](https://help.syncfusion.com/windowsforms/installation/install-nuget-packages).
 
-In Blazor applications, components are also provided as individual NuGet packages, which helps improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In Blazor applications, components are also provided as individual NuGet packages, which helps improve performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
@@ -131,7 +131,7 @@ namespace WinFormsApp
 {% endhighlight %}
 {% endtabs %}
 
-In Blazor, The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+In Blazor, the theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -153,7 +153,7 @@ In Blazor, The theme stylesheet and script can be accessed from NuGet through [S
 {% endhighlight %}
 {% endtabs %}
 
-## Component-specific migration steps
+## Component specific migration steps
 
 ### DataGrid
 
@@ -474,21 +474,15 @@ namespace WinFormsSchedulerApp
     DateTime CurrentDate = new DateTime(2025, 2, 14);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2025, 2, 13, 10, 0, 0) , EndTime = new DateTime(2025, 2, 13, 12, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2025, 2, 15, 10, 0, 0) , EndTime = new DateTime(2025, 2, 15, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Team Meeting", StartTime = new DateTime(2025, 2, 13, 10, 0, 0) , EndTime = new DateTime(2025, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Client Presentation", StartTime = new DateTime(2025, 2, 15, 10, 0, 0) , EndTime = new DateTime(2025, 2, 15, 12, 0, 0) }
     };
     public class AppointmentData
     {
         public int Id { get; set; }
         public string? Subject { get; set; }
-        public string? Location { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public string? Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string? RecurrenceRule { get; set; }
-        public string? RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 
