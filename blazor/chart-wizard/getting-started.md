@@ -10,7 +10,7 @@ keywords: chart wizard, blazor, chart
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Chart Wizard Component in Blazor Server App
+# Getting Started with Blazor Chart Wizard in Blazor Server App
 
 This section briefly explains about how to include [Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
