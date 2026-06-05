@@ -228,7 +228,7 @@ In the following example, toolbar item type is set as `Button`.
 
 ```
 
-![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.)
+![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.webp)
 
 #### Setting text
 
