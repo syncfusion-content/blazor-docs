@@ -1029,7 +1029,7 @@ To add additional worksheets during export:
 
 3. Set the [GridSheetIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_GridSheetIndex) property to **0** to specify the worksheet index where the Grid data should be placed.
 
-4. The Grid exports data to the first worksheet by default, you can customize the sheet name using the Workbook.Worksheets[0].Name property. Optionally, you can use the GridSheetIndex property to specify the worksheet index used for exporting.
+4. The Grid exports data to the first worksheet by default, you can customize the sheet name using the Workbook.Worksheets[0].Name property. Optionally, you can use the `GridSheetIndex` property to specify the worksheet index used for exporting.
 
 5. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the additional worksheets.
 
