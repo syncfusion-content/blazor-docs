@@ -68,7 +68,7 @@ The Blazor Markdown Editor element is assigned the role of `application`:
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor with accessibility](./images/blazor-markdowneditor-accessibility.png)
+![Blazor Markdown Editor with accessibility](./images/blazor-markdowneditor-accessibility.webp)
 
 ## Keyboard interaction
 
