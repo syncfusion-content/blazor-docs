@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create a Blazor Application Using Visual Studio Code Extension | Syncfusion®
-description: Learn how to create a Syncfusion Blazor application using the Syncfusion Blazor extension for Visual Studio Code.
+title: Create a Blazor Application Using VS Code Extension | Syncfusion®
+description: Learn how to create a Blazor application using the Syncfusion Blazor extension for Visual Studio Code.
 platform: Blazor
 control: Common
 documentation: ug
@@ -17,7 +17,7 @@ Use the following steps to create Syncfusion® Blazor applications in Visual Stu
 
 1. Open the Command Palette (`Ctrl+Shift+P`) and search for **Syncfusion** to list available commands.
 
-    ![Command Palette showing Syncfusion commands](images/createblazorprojectpalette.webp)
+    ![Command Palette showing commands](images/createblazorprojectpalette.webp)
 
 2. Choose **Syncfusion Blazor Template Studio: Launch** and provide the project name and path in the wizard.
 
@@ -25,7 +25,7 @@ Use the following steps to create Syncfusion® Blazor applications in Visual Stu
 
 3. On the **Project type** tab, select the application type that matches your installed .NET SDK.
 
-    Supported .NET SDKs and Syncfusion application types:
+    Supported .NET SDKs and application types:
 
     | Application Type | Supported .NET SDK Versions |
     | --- | --- |
@@ -42,7 +42,7 @@ Use the following steps to create Syncfusion® Blazor applications in Visual Stu
 
 4. On the **Controls** tab, pick the [Blazor components](https://www.syncfusion.com/blazor-components) to include in the project by selecting their tiles.
 
-    ![Controls tab listing Syncfusion Blazor components](images/controlssection.webp)
+    ![Controls tab listing Blazor components](images/controlssection.webp)
 
     N> Select at least one control to enable the **Features** and **Configuration** tabs.
 
@@ -83,7 +83,7 @@ dotnet run
 
 Alternatively, press **F5** or go to **Run > Start Debugging** to launch the application.
 
-![Running the generated Syncfusion Blazor project in Visual Studio Code](images/runproject.webp)
+![Running the generated Blazor project in Visual Studio Code](images/runproject.webp)
 
 ## What Template Studio configures for you
 
@@ -95,15 +95,15 @@ Alternatively, press **F5** or go to **Run > Start Debugging** to launch the app
 
     ![Theme reference location examples](images/cdnlink.webp)
 
-- Namespaces: Inserts Syncfusion namespaces into `_Imports.razor`.
+- Namespaces: Inserts namespaces into `_Imports.razor`.
 
-    ![Imports file showing Syncfusion namespaces](images/namespace.webp)
+    ![Imports file showing namespaces](images/namespace.webp)
 
 - Component render code: Adds sample usage (Calendar, Button, DataGrid) into the Pages folder (Index/Counter/FetchData).
 
-    ![Index page updated with Syncfusion components](images/indexfilechange.webp)
+    ![Index page updated with components](images/indexfilechange.webp)
 
-N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the Syncfusion license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.    
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.    
 
 ## See also
 

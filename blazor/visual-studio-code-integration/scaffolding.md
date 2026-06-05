@@ -67,7 +67,7 @@ Before starting, confirm the **Syncfusion Blazor Scaffolder Extension** is insta
 
 6. Add a navigation entry to your app to access the newly created Razor page.
 
-N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the Syncfusion license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.  
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.  
 
 ## See also
 

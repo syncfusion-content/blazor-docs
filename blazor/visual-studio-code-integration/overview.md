@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Extension for Visual Studio Code - Overview | Syncfusion
+title: Blazor Extension for Visual Studio Code - Overview | Syncfusion®
 description: Overview of the Blazor extension for Visual Studio Code that simplifies project setup, code snippets, project conversion, and upgrades for Blazor applications.
 platform: Blazor
 control: Common

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert a project using the Blazor extension | Syncfusion
+title: Convert a project using the Blazor extension | Syncfusion®
 description: Learn here about how to convert an existing Blazor application into a Syncfusion Blazor application using the Blazor extension for Visual Studio Code.
 platform: Blazor
 control: Common
@@ -24,7 +24,7 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
 2. In Explorer, right-click the project `.csproj` file and choose **Convert to Syncfusion Blazor App...**.
 
-    ![Context menu showing Convert to Syncfusion Blazor Application option](images/conversion.webp)
+    ![Context menu showing Convert to Blazor Application option](images/conversion.webp)
 
 3. In the Command Palette, pick **Select Blazor Version** and choose the desired Syncfusion® Blazor release (pulled from [nuget.org](https://www.nuget.org)).
 
@@ -38,13 +38,13 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
 After conversion, the project contains the required Syncfusion® Blazor NuGet packages and the selected theme stylesheet.
 
-N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the Syncfusion license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.
 
 ## What changes are made during conversion
 
 - NuGet packages: Adds [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (and other required packages depending on project type).
 
-    ![Project file showing Syncfusion NuGet package references](images/nugetpackage.webp)
+    ![Project file showing NuGet package references](images/nugetpackage.webp)
 
 - Theme: Adds the chosen theme reference to the appropriate file based on application type:
 

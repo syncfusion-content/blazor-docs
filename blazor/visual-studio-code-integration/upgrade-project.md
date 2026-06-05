@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Upgrade the Syncfusion Blazor Application to the Latest Version
+# Upgrade the Blazor Application to the Latest Version
 
 The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) extension for Visual Studio Code enables upgrading an existing Syncfusion® Blazor application to a newer Essential ® release by updating NuGet package references and theme links automatically.
 
@@ -30,13 +30,13 @@ The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?i
 
 3. In the Command Palette, choose **Select Blazor Version** and pick the desired Syncfusion® Blazor release version (versions are retrieved from [nuget.org](https://www.nuget.org)).
 
-    ![Command Palette showing Syncfusion version selection](images/versionselection.webp)
+    ![Command Palette showing version selection](images/versionselection.webp)
 
 4. The tool updates the Syncfusion® Blazor NuGet package references to the selected version.
 
-    ![Project file updated with Syncfusion NuGet package references](images/nugetpackage.webp)
+    ![Project file updated with NuGet package references](images/nugetpackage.webp)
 
-N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the Syncfusion license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.  
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key.  
 
 ## See also
 
