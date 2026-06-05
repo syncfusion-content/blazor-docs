@@ -26,7 +26,7 @@ To enable the Markdown preview feature, the `Markdig` package is used to convert
 {% endhighlight %}
 {% endtabs %}
 
-![Live Markdown Preview in Blazor Editor](./images/blazor-markdowneditor-markdown-preview.gif)
+![Live Markdown Preview in Blazor Editor](./images/blazor-markdowneditor-markdown-preview.webp)
 
 ## See also
 
