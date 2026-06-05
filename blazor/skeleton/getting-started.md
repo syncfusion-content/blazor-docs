@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started Blazor Skeleton Component in WASM App | Syncfusion
+title: Getting Started Blazor Skeleton in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Skeleton component in Blazor WebAssembly Application.
 platform: Blazor
 control: Skeleton
 documentation: ug
 ---
 
-# Getting Started with Blazor Skeleton Component
+# Getting Started with Blazor Skeleton in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
