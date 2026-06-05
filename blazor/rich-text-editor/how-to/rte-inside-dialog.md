@@ -46,4 +46,4 @@ While rendering the Rich Text Editor inside the [Dialog](https://blazor.syncfusi
 
 {% endhighlight %}
 
-![Blazor RichTextEditor with Dialog Component](../images/blazor-richtexteditor-dialog-component.png)
+![Blazor RichTextEditor with Dialog Component](../images/blazor-richtexteditor-dialog-component.webp)

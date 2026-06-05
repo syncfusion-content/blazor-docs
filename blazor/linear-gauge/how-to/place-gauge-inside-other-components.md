@@ -177,7 +177,7 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Li
 }
 
 ```
-![Blazor Linear Gauge inside Dashboard Layout component](../images/blazor-LinearGauge-with-dashboard-layout.png)
+![Blazor Linear Gauge inside Dashboard Layout component](../images/blazor-LinearGauge-with-dashboard-layout.webp)
 
 ## Linear Gauge component inside Tab
 
@@ -324,7 +324,7 @@ When the Linear Gauge component renders within the Tab component, its rendering 
 }
 
 ```
-![Blazor Linear Gauge inside Tab component](../images/blazor-LinearGauge-with-tab.png)
+![Blazor Linear Gauge inside Tab component](../images/blazor-LinearGauge-with-tab.webp)
 
 
 ## Linear Gauge component inside Dialog
@@ -416,7 +416,7 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
 }
 
 ```
-![Blazor Linear Gauge inside Dialog component](../images/blazor-LinearGauge-with-dialog.png)
+![Blazor Linear Gauge inside Dialog component](../images/blazor-LinearGauge-with-dialog.webp)
 
 
 ## Linear Gauge component inside Accordion
@@ -603,4 +603,4 @@ When you expand the Accordion component, the Linear Gauge component is not notif
 }
 
 ```
-![Blazor Linear Gauge inside Accordion component](../images/blazor-LinearGauge-with-accordion.png)
+![Blazor Linear Gauge inside Accordion component](../images/blazor-LinearGauge-with-accordion.webp)

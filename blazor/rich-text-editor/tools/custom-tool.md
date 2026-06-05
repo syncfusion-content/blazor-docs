@@ -57,7 +57,7 @@ Refer to the following code sample to configure a custom toolbar item with toolt
 {% endhighlight %}
 {% endtabs %}
 
-![Custom Toolbar Tool in Blazor Rich Text Editor](../images/blazor-richtexteditor-custom-tool.png)
+![Custom Toolbar Tool in Blazor Rich Text Editor](../images/blazor-richtexteditor-custom-tool.webp)
 
 ## Enabling and disabling toolbar items
 

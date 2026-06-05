@@ -188,7 +188,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor Rich Text Editor Component](./images/blazor-richtexteditor-maui-app.png)
+![Blazor Rich Text Editor Component](./images/blazor-richtexteditor-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -198,7 +198,7 @@ Refer to the [Android Device Manager](https://learn.microsoft.com/en-us/dotnet/m
 
 N> If you encounter any errors while using the Android Emulator, refer to the [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for guidance.
 
-![Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)
+![Blazor Rich Text Editor Component](./images/blazor-richtexteditor.webp)
 
 ## See also
 

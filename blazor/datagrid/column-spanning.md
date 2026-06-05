@@ -9,7 +9,7 @@ documentation: ug
 
 # Column spanning in Blazor DataGrid
 
-Column spanning in the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This feature enhances data readability by consolidating repeated values into a single, taller cell, making it particularly effective for scenarios where the same value appears across consecutive rows.
+Column spanning in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides automatic vertical merging of adjacent cells within the same column when identical values are detected. This feature enhances data readability by consolidating repeated values into a single, taller cell, making it particularly effective for scenarios where the same value appears across consecutive rows.
 
 The functionality is enabled by setting the [AutoSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoSpan) property of the [SfGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) component to **AutoSpanMode.Column**. Once applied, the grid evaluates each column and merges stacked cells that share identical values, thereby reducing visual redundancy and presenting a cleaner, more structured layout. The merging process is fully declarative and requires no additional code or preprocessing.
 

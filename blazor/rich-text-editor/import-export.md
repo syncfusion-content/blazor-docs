@@ -44,7 +44,7 @@ The Rich Text Editor allows you to load an external HTML file in the editor's co
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor import to HTML file](./images/blazor-richtexteditor-import-html.png)
+![Blazor RichTextEditor import to HTML file](./images/blazor-richtexteditor-import-html.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-html-file-to-blazor-rich-text-editor).
 
@@ -83,7 +83,7 @@ To import an RTF file into the editor, use the file uploader component and retri
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor import to RTF file](./images/blazor-richtexteditor-import-rtf.png)
+![Blazor RichTextEditor import to RTF file](./images/blazor-richtexteditor-import-rtf.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-rtf-file-to-blazor-rich-text-editor).
 
@@ -125,7 +125,7 @@ The Rich Text Editor allows you to load an external text file into the editor. R
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor import to text file](./images/blazor-richtexteditor-import-text.png)
+![Blazor RichTextEditor import to text file](./images/blazor-richtexteditor-import-text.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-text-file-to-blazor-rich-text-editor).
 
@@ -174,7 +174,7 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor import content from microsoft word](./images/ImportWord.png)
+![Blazor RichTextEditor import content from microsoft word](./images/ImportWord.webp)
 
 ### Maximum file size restriction
 
@@ -266,7 +266,7 @@ You can add additional data with the word file uploaded from the Rich Text Edito
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml tabtitle="controller.cs" %}
+{% highlight csharp tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
@@ -434,71 +434,65 @@ The following code block provides a detailed explanation of the API endpoint use
 
 ```csharp
 
-    public class ExportParam
-        {
-            public string html { get; set; }
-        }
+public class ExportParam
+{
+    public string html { get; set; }
+}
 
-        [AcceptVerbs("Post")]
-        [EnableCors("AllowAllOrigins")]
-        [Route("ExportToPdf")]
-        public ActionResult ExportToPdf([FromBody] ExportParam args)
+[AcceptVerbs("Post")]
+[EnableCors("AllowAllOrigins")]
+[Route("ExportToPdf")]
+public ActionResult ExportToPdf([FromBody] ExportParam args)
+{
+    string htmlString = args?.html;
+    if (string.IsNullOrEmpty(htmlString)) // Fixed: Added closing parenthesis
+    {
+        return BadRequest("HTML content is empty."); // Fixed: Return proper HTTP status instead of null
+    }
+    using (WordDocument wordDocument = new WordDocument())
+    {
+        wordDocument.EnsureMinimal();
+        wordDocument.HTMLImportSettings.ImageNodeVisited += OpenImage;
+        wordDocument.LastParagraph.AppendHTML(htmlString);
+        DocIORenderer render = new DocIORenderer();
+        PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
+        wordDocument.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+        using (MemoryStream stream = new MemoryStream())
         {
-            string htmlString = args.html;
-            if (string.IsNullOrEmpty(htmlString)
-            {
-                return null;
-            }
-            using (WordDocument wordDocument = new WordDocument())
-            {
-                //This method adds a section and a paragraph in the document
-                wordDocument.EnsureMinimal();
-                wordDocument.HTMLImportSettings.ImageNodeVisited += OpenImage;
-                //Append the HTML string to the paragraph.
-                wordDocument.LastParagraph.AppendHTML(htmlString);
-                DocIORenderer render = new DocIORenderer();
-                //Converts Word document into PDF document
-                PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
-                wordDocument.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-                MemoryStream stream = new MemoryStream();
-                pdfDocument.Save(stream);
-                return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
-            }
+            pdfDocument.Save(stream);
+            return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
         }
+    }
+}
 
-        [AcceptVerbs("Post")]
-        [EnableCors("AllowAllOrigins")]
-        [Route("ExportToDocx")]
-        public FileStreamResult ExportToDocx([FromBody] ExportParam args)
+[AcceptVerbs("Post")]
+[EnableCors("AllowAllOrigins")]
+[Route("ExportToDocx")]
+public FileStreamResult ExportToDocx([FromBody] ExportParam args)
+{
+    string htmlString = args?.html;
+    if (string.IsNullOrEmpty(htmlString)) // Fixed: Added closing parenthesis
+    {
+        return null; 
+    }
+    // Fixed: Removed the 'using' block from MemoryStream so it stays open for the file transfer
+    MemoryStream stream = new MemoryStream();
+    using (WordDocument document = new WordDocument())
+    {
+        document.EnsureMinimal();
+        document.HTMLImportSettings.ImageNodeVisited += OpenImage;
+        bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlString, XHTMLValidationType.None);
+        if (isValidHtml)
         {
-            string htmlString = args.html;
-             if (string.IsNullOrEmpty(htmlString)
-            {
-                return null;
-            }
-            using (WordDocument document = new WordDocument())
-            {
-                document.EnsureMinimal();
-                //Hooks the ImageNodeVisited event to open the image from a specific location
-                document.HTMLImportSettings.ImageNodeVisited += OpenImage;
-                //Validates the Html string
-                bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlString, XHTMLValidationType.None);
-                //When the Html string passes validation, it is inserted to the document
-                if (isValidHtml)
-                {
-                    //Appends the Html string to first paragraph in the document
-                    document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlString);
-                }
-                //Unhooks the ImageNodeVisited event after loading HTML
-                document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-                //Creates file stream.
-                MemoryStream stream = new MemoryStream();
-                document.Save(stream, FormatType.Docx);
-                stream.Position = 0;
-                //Download Word document in the browser
-                return File(stream, "application/msword", "Result.docx");
-            }
+            document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlString);
         }
+        document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+        document.Save(stream, FormatType.Docx);
+    } // WordDocument is disposed here safely
+    stream.Position = 0; // Reset position so the file downloader can read it from the start
+    // Fixed: Updated to correct modern DOCX MIME type
+    return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Result.docx");
+}
 
 ```
 
@@ -1032,7 +1026,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight csharp tabtitle="controller.cs" %}
 
 using System;
 using System.IO;

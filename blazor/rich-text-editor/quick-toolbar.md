@@ -18,7 +18,7 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 | [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#fields) | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
 | [Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#fields) | AudioReplace, AudioRemove, AudioLayoutOption |
 | [Video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) | VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, VideoDimension |
-| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) |No Default item have it and it support the all toolbar items |
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) | There are no default items provided. It supports all toolbar items. |
 
 ## Image quick toolbar
 
@@ -48,7 +48,7 @@ Customize the inserted image using the [RichTextEditorQuickToolbarSettings.Image
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-quick-toolbar.png)
+![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-quick-toolbar.webp)
 
 ## Link quick toolbar
 
@@ -68,7 +68,7 @@ Customize the selected link using the [RichTextEditorQuickToolbarSettings.Link](
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.png)
+![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.webp)
 
 ## Table quick toolbar
 
@@ -97,7 +97,7 @@ The table quick toolbar appears when clicking on a table. You can customize the 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor table quick toolbar](./images/blazor-richtexteditor-table-quick-toolbar.png)
+![Blazor RichTextEditor table quick toolbar](./images/blazor-richtexteditor-table-quick-toolbar.webp)
 
 ## Audio quick toolbar
 
@@ -117,7 +117,7 @@ Customize the inserted audio using the [RichTextEditorQuickToolbarSettings.Audio
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-audio-quick-toolbar.png)
+![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-audio-quick-toolbar.webp)
 
 ## Video quick toolbar
 
@@ -126,7 +126,7 @@ Customize the inserted video using the [RichTextEditorQuickToolbarSettings.video
 | Tools | Description |
 |----------------|--------------------------------------|
 | [VideoReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoReplace) | Can replace the video with some other video |
-| [VideoAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoAlign) | Align the image with left, right and center |
+| [VideoAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoAlign) | Align the video with left, right and center |
 | [VideoRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoRemove) | Delete the video |
 | [VideoLayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoLayoutOption) | Display the video as inline or with break |
 | [VideoDimension](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoDimension) | Can change an video dimensions, such as its height and width|
@@ -141,7 +141,7 @@ Customize the inserted video using the [RichTextEditorQuickToolbarSettings.video
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor video quick toolbar](./images/blazor-richtexteditor-video-quick-toolbar.png)
+![Blazor RichTextEditor video quick toolbar](./images/blazor-richtexteditor-video-quick-toolbar.webp)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
 
@@ -185,4 +185,4 @@ Refer to the following link for a complete list of available toolbar items: [Bui
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor removed default toolbar items](./images/blazor-richtexteditor-text-quick-toolbar.png)
+![Blazor RichTextEditor removed default toolbar items](./images/blazor-richtexteditor-text-quick-toolbar.webp)

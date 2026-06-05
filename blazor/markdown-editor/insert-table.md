@@ -38,4 +38,4 @@ The following example demonstrates how to enable table insertion in the Syncfusi
 {% endhighlight %}
 {% endtabs %}
 
-![Table insertion using Blazor Markdown Editor toolbar](./images/blazor-richtexteditor-markdown-table.png)
+![Table insertion using Blazor Markdown Editor toolbar](./images/blazor-richtexteditor-markdown-table.webp)

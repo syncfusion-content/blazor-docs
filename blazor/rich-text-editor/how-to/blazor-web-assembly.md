@@ -151,4 +151,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor c
 
 To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
 
-![Blazor RichTextEditor Component](../images/blazor-richtexteditor-component.png)
+![Blazor RichTextEditor Component](../images/blazor-richtexteditor-component.webp)
