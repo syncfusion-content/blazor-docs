@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Editor Access in Blazor Rich Text Editor Component | Syncfusion
+title: Read-Only Mode in Blazor Rich Text Editor | Syncfusion
 description: Checkout and learn here all about Controlling Editor Access in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
@@ -20,7 +20,7 @@ This will allow you to view the content without making any modifications.
 Please refer to the sample and code snippets below to demonstrate how to enable the read-only mode in the Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/read-only-mode.razor %}
 

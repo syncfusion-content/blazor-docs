@@ -16,30 +16,30 @@ The Rich Text Editor allows you to load an external HTML file in the editor's co
 {% tabs %}
 {% highlight razor %}
 
-@using System.IO; 
-@using Syncfusion.Blazor.RichTextEditor 
- 
-<SfRichTextEditor @bind-Value="@HtmlString"> 
-    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p> 
-    <p><b>Get started Quick Toolbar to click on the image</b></p> 
-    <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p> 
-</SfRichTextEditor> 
- 
+@using System.IO
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor @bind-Value="@HtmlString">
+    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
+    <p><b>Get started Quick Toolbar to click on the image</b></p>
+    <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
+</SfRichTextEditor>
+
 @code { 
-    private string HtmlString { get; set; } 
-    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\wwwroot\HtmlFiles\HtmlTest.html"); 
-    protected override void OnInitialized() 
-    { 
-        using (FileStream fs = File.Open(PathToHTMLFile, FileMode.Open, FileAccess.ReadWrite)) 
+    private string HtmlString { get; set; }
+    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\wwwroot\HtmlFiles\HtmlTest.html");
+    protected override void OnInitialized()
+    {
+        using (FileStream fs = File.Open(PathToHTMLFile, FileMode.Open, FileAccess.ReadWrite))
         { 
-            using (StreamReader sr = new StreamReader(fs)) 
+            using (StreamReader sr = new StreamReader(fs))
             {
                 // Importing values from HTML file.
-                HtmlString = sr.ReadToEnd(); 
-            } 
-        } 
-    } 
-} 
+                HtmlString = sr.ReadToEnd();
+            }
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,9 +55,9 @@ To import an RTF file into the editor, use the file uploader component and retri
 {% tabs %}
 {% highlight razor %}
 
-@using Import_RTF_File.Data;
-@using Syncfusion.Blazor.RichTextEditor;
-@using Syncfusion.Blazor.Inputs;
+@using Import_RTF_File.Data
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Inputs
 @inject ExportService exportService
 
 <SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
@@ -140,15 +140,15 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
 {% tabs %}
 {% highlight razor %}
 
-@using System.IO; 
-@using Syncfusion.Blazor.RichTextEditor 
- 
-<SfRichTextEditor Height="300px" Width="700px"> 
+@using System.IO
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor Height="300px" Width="700px">
     <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
     <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/production/api/RichTextEditor/ImportFromWord"></RichTextEditorImportWord>
-</SfRichTextEditor> 
- 
-@code { 
+</SfRichTextEditor>
+
+@code {
      private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.ImportWord },
@@ -169,7 +169,7 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
         new ToolbarItemModel() { Command = ToolbarCommand.Undo },
         new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -183,15 +183,15 @@ You can restrict the word uploaded from the local machine when the uploaded word
 {% tabs %}
 {% highlight razor %}
 
-@using System.IO; 
-@using Syncfusion.Blazor.RichTextEditor 
- 
-<SfRichTextEditor Height="300px"> 
+@using System.IO
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor Height="300px">
     <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
     <RichTextEditorImportWord ServiceUrl="https://blazor.syncfusion.com/services/production/api/RichTextEditor/ImportFromWord" MaxFileSize="10000000"></RichTextEditorImportWord>
-</SfRichTextEditor> 
- 
-@code { 
+</SfRichTextEditor>
+
+@code {
      private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.ImportWord },
@@ -212,7 +212,7 @@ You can restrict the word uploaded from the local machine when the uploaded word
         new ToolbarItemModel() { Command = ToolbarCommand.Undo },
         new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -224,16 +224,16 @@ You can add additional data with the word file uploaded from the Rich Text Edito
 {% tabs %}
 {% highlight razor %}
 
-@using System.IO; 
-@using Syncfusion.Blazor.RichTextEditor 
- 
-<SfRichTextEditor Height="300px"> 
+@using System.IO
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor Height="300px">
     <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
     <RichTextEditorEvents FileUploading="@FileUploading"></RichTextEditorEvents>
     <RichTextEditorImportWord ServiceUrl="api/Word/ImportFromWord" MaxFileSize="10000000"></RichTextEditorImportWord>
-</SfRichTextEditor> 
- 
-@code { 
+</SfRichTextEditor>
+
+@code {
     private void FileUploading(FileUploadingEventArgs args)
     {
         var accessToken = "Authorization_token";
@@ -260,13 +260,13 @@ You can add additional data with the word file uploaded from the Rich Text Edito
         new ToolbarItemModel() { Command = ToolbarCommand.Undo },
         new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml tabtitle="controller.cs" %}
+{% highlight csharp tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
@@ -303,24 +303,24 @@ namespace WordUpload.Controllers
 
 ## Export to RTF file
 
-Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format. Ensure the Syncfusion.DocIO.NET NuGet package is installed in your project.
+Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the Rich Text Editor content to the RTF format. Ensure the Syncfusion.DocIO.NET NuGet package is installed in your project.
 
-Click **Export**, and use **Syncfusion.DocIO** libraries to convert the RTE content to an RTF file. Use the following code to export the RTF file.
+Click **Export**, and use **Syncfusion.DocIO** libraries to convert the Rich Text Editor content to an RTF file. Use the following code to export the RTF file.
 
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.RichTextEditor;
-@using Syncfusion.Blazor.Inputs;
-@inject NavigationManager navigationManager;
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Inputs
+@inject NavigationManager navigationManager
 @inject HttpClient Http
-@using System.Net.Http;
-@using System.Threading.Tasks;
+@using System.Net.Http
+@using System.Threading.Tasks
 
 <Syncfusion.Blazor.Buttons.SfButton OnClick="OnExport">Export</Syncfusion.Blazor.Buttons.SfButton>
-    <SfRichTextEditor ID="customtool" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
-        <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings>
-    </SfRichTextEditor>
+<SfRichTextEditor ID="customtool" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
+    <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings>
+</SfRichTextEditor>
 
 @code {
     SfRichTextEditor RteObj;
@@ -346,7 +346,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-tex
 
 ## Export to HTML file
 
-Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format. Make sure the required NuGet package is referenced in your project.
+Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the Rich Text Editor content to HTML format. Make sure the required NuGet package is referenced in your project.
 
 While clicking on the export button, it makes a call to the Export to HTML service.
 
@@ -434,71 +434,65 @@ The following code block provides a detailed explanation of the API endpoint use
 
 ```csharp
 
-    public class ExportParam
-        {
-            public string html { get; set; }
-        }
+public class ExportParam
+{
+    public string html { get; set; }
+}
 
-        [AcceptVerbs("Post")]
-        [EnableCors("AllowAllOrigins")]
-        [Route("ExportToPdf")]
-        public ActionResult ExportToPdf([FromBody] ExportParam args)
+[AcceptVerbs("Post")]
+[EnableCors("AllowAllOrigins")]
+[Route("ExportToPdf")]
+public ActionResult ExportToPdf([FromBody] ExportParam args)
+{
+    string htmlString = args?.html;
+    if (string.IsNullOrEmpty(htmlString)) // Fixed: Added closing parenthesis
+    {
+        return BadRequest("HTML content is empty."); // Fixed: Return proper HTTP status instead of null
+    }
+    using (WordDocument wordDocument = new WordDocument())
+    {
+        wordDocument.EnsureMinimal();
+        wordDocument.HTMLImportSettings.ImageNodeVisited += OpenImage;
+        wordDocument.LastParagraph.AppendHTML(htmlString);
+        DocIORenderer render = new DocIORenderer();
+        PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
+        wordDocument.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+        using (MemoryStream stream = new MemoryStream())
         {
-            string htmlString = args.html;
-            if (string.IsNullOrEmpty(htmlString)
-            {
-                return null;
-            }
-            using (WordDocument wordDocument = new WordDocument())
-            {
-                //This method adds a section and a paragraph in the document
-                wordDocument.EnsureMinimal();
-                wordDocument.HTMLImportSettings.ImageNodeVisited += OpenImage;
-                //Append the HTML string to the paragraph.
-                wordDocument.LastParagraph.AppendHTML(htmlString);
-                DocIORenderer render = new DocIORenderer();
-                //Converts Word document into PDF document
-                PdfDocument pdfDocument = render.ConvertToPDF(wordDocument);
-                wordDocument.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-                MemoryStream stream = new MemoryStream();
-                pdfDocument.Save(stream);
-                return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
-            }
+            pdfDocument.Save(stream);
+            return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Application.Pdf, "Sample.pdf");
         }
+    }
+}
 
-        [AcceptVerbs("Post")]
-        [EnableCors("AllowAllOrigins")]
-        [Route("ExportToDocx")]
-        public FileStreamResult ExportToDocx([FromBody] ExportParam args)
+[AcceptVerbs("Post")]
+[EnableCors("AllowAllOrigins")]
+[Route("ExportToDocx")]
+public FileStreamResult ExportToDocx([FromBody] ExportParam args)
+{
+    string htmlString = args?.html;
+    if (string.IsNullOrEmpty(htmlString)) // Fixed: Added closing parenthesis
+    {
+        return null; 
+    }
+    // Fixed: Removed the 'using' block from MemoryStream so it stays open for the file transfer
+    MemoryStream stream = new MemoryStream();
+    using (WordDocument document = new WordDocument())
+    {
+        document.EnsureMinimal();
+        document.HTMLImportSettings.ImageNodeVisited += OpenImage;
+        bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlString, XHTMLValidationType.None);
+        if (isValidHtml)
         {
-            string htmlString = args.html;
-             if (string.IsNullOrEmpty(htmlString)
-            {
-                return null;
-            }
-            using (WordDocument document = new WordDocument())
-            {
-                document.EnsureMinimal();
-                //Hooks the ImageNodeVisited event to open the image from a specific location
-                document.HTMLImportSettings.ImageNodeVisited += OpenImage;
-                //Validates the Html string
-                bool isValidHtml = document.LastSection.Body.IsValidXHTML(htmlString, XHTMLValidationType.None);
-                //When the Html string passes validation, it is inserted to the document
-                if (isValidHtml)
-                {
-                    //Appends the Html string to first paragraph in the document
-                    document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlString);
-                }
-                //Unhooks the ImageNodeVisited event after loading HTML
-                document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
-                //Creates file stream.
-                MemoryStream stream = new MemoryStream();
-                document.Save(stream, FormatType.Docx);
-                stream.Position = 0;
-                //Download Word document in the browser
-                return File(stream, "application/msword", "Result.docx");
-            }
+            document.Sections[0].Body.Paragraphs[0].AppendHTML(htmlString);
         }
+        document.HTMLImportSettings.ImageNodeVisited -= OpenImage;
+        document.Save(stream, FormatType.Docx);
+    } // WordDocument is disposed here safely
+    stream.Position = 0; // Reset position so the file downloader can read it from the start
+    // Fixed: Updated to correct modern DOCX MIME type
+    return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "Result.docx");
+}
 
 ```
 
@@ -610,7 +604,7 @@ The following example demonstrates how to configure the `ExportWord` and `Export
         new ToolbarItemModel() { Command = ToolbarCommand.ClearFormat },
         new ToolbarItemModel() { Command = ToolbarCommand.Print },
         new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen },
+        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen }
     };
     private List<TableToolbarItemModel> TableQuickToolbarItems = new List<TableToolbarItemModel>()
     {
@@ -836,7 +830,7 @@ td {
     max-width: 100%;
     position: relative;
 }
-.e-imginline {
+.e-img-inline {
     margin-left: 5px;
     margin-right: 5px;
     display: inline-block;
@@ -863,7 +857,7 @@ td {
     padding: 1px;
     vertical-align: bottom;
 }
-.e-imgcenter {
+.e-img-center {
     cursor: pointer;
     display: block;
     float: none;
@@ -885,7 +879,7 @@ td {
     max-width: 100%;
     position: relative;
 }
-.e-imgright {
+.e-img-right {
     float: right;
     margin-top: 0;
     margin-right: auto;
@@ -903,7 +897,7 @@ td {
     margin-left: 5px;
     text-align: right;
 }
-.e-imgleft {
+.e-img-left {
     float: left;
     margin-top: 0;
     margin-right: auto;
@@ -950,7 +944,7 @@ td {
     text-align: center;
     width: 100%;
 }
-.e-imgbreak {
+.e-img-break {
     border: 0;
     cursor: pointer;
     display: block;
@@ -997,6 +991,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor>
     <RichTextEditorEvents OnExport="@Export" />
     <RichTextEditorToolbarSettings Items="@Items" />
@@ -1004,13 +999,14 @@ The following example demonstrates how to pass authentication tokens and custom 
     <RichTextEditorExportWord ServiceUrl="@exportWordServiceUrl" />
     Rich Text Editor
 </SfRichTextEditor>
+
 @code {
     private string exportWordServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToDocx";
     private string exportPdfServiceUrl = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/ExportToPdf";
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.ExportPdf },
-        new ToolbarItemModel() { Command = ToolbarCommand.ExportWord },
+        new ToolbarItemModel() { Command = ToolbarCommand.ExportWord }
     };
     private void Export(ExportingEventArgs args)
     {
@@ -1030,7 +1026,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% endtabs %}
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight Controller.cs %}
 
 using System;
 using System.IO;

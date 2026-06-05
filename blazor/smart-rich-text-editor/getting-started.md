@@ -188,8 +188,8 @@ Follow the instructions below to register an AI model in your application.
 
 Install the following NuGet packages to your project:
 
-* Microsoft.Extensions.AI
-* Microsoft.Extensions.AI.OpenAI
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
 
 You can install these packages using different methods as shown below:
 
@@ -280,9 +280,9 @@ var app = builder.Build();
 
 Install the following NuGet packages to your project:
 
-* Microsoft.Extensions.AI
-* Microsoft.Extensions.AI.OpenAI
-* Azure.AI.OpenAI
+* [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+* [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+* [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 
 You can install these packages using different methods as shown below:
 
@@ -394,12 +394,12 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Text Editor** component in the **~/Pages/Index.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Index.razor` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart Rich Text Editor** component in the **~/Pages/Home.razor** file. If an interactivity location as `per page/component`, define a render mode at the top of the `Home.razor` page.
 
 N> If an Interactivity Location is set to `Global` and the **Render Mode** is set to `Server`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor tabtitle="~/Home.razor" %}
 
 @rendermode InteractiveServer
 @using Syncfusion.Blazor.SmartRichTextEditor

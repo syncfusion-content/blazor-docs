@@ -11,6 +11,11 @@ documentation: ug
 
 This guide shows how to secure the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [JWT (JSON Web Token)](https://www.jwt.io/introduction) authentication.
 
+## Prerequisites
+
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
+
 ## Create a Blazor project
 
 If you already have a Blazor project configured, you can skip this section and proceed to [Install required packages](#install-required-packages).
@@ -19,9 +24,9 @@ Otherwise, create a new Blazor application by following the [Getting started gui
 
 Ensure that **HTTPS is enabled** during project creation, as JWT based authorization requires secure communication.
 
-## Install required packages
+### Install required packages
 
-Install the following NuGet packages to use the **Blazor DataGrid** and enable **JWT** authentication.
+Install the following NuGet packages to use the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and enable **JWT** authentication.
 
 **Blazor packages:**
 
@@ -44,7 +49,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 {% endhighlight %}
 {% endtabs %}
 
-## Add required namespaces
+### Add required namespaces
 
 Open the `~/_Imports.razor` file and import the namespaces.
 
@@ -58,9 +63,9 @@ Open the `~/_Imports.razor` file and import the namespaces.
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and Interactive Server routing
+### Add stylesheet and Interactive Server routing
 
-Include the theme stylesheet, required script references, and configure Interactive Server rendering in the `App.razor` file. 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes), [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) and configure Interactive Server rendering in the `App.razor` file. 
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
@@ -295,7 +300,7 @@ public class OrdersDetails
 
 ## Protecting the Blazor DataGrid API
 
-This section explains how the **Blazor DataGrid** API endpoint is secured to allow access only to authenticated requests. The `Authorize` attribute enforces token based access to DataGrid data.
+This section explains how the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) API endpoint is secured to allow access only to authenticated requests. The `Authorize` attribute enforces token based access to DataGrid data.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Controllers/GridController.cs"  %}
@@ -328,7 +333,7 @@ public class GridController : ControllerBase
 
 ## Adding JWT to Blazor DataManager headers
 
-This example demonstrates how a **JWT** token is retrieved from the server and attached to the **Blazor DataManager** as an HTTP Authorization header. This ensures that the **DataGrid** loads data only from a secured API after the user has been authenticated.
+This example demonstrates how a **JWT** token is retrieved from the server and attached to the **DataManager** as an HTTP Authorization header. This ensures that the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) loads data only from a secured API after the user has been authenticated.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -341,7 +346,7 @@ This example demonstrates how a **JWT** token is retrieved from the server and a
 @inject HttpClient Http
 @inject NavigationManager Nav
 
-<h3>JWT‑Secured Syncfusion® Blazor DataGrid</h3>
+<h3>JWT‑Secured Blazor DataGrid</h3>
 
 <button class="btn btn-primary" style="margin-bottom: 15px" @onclick="LoadGridWithToken">Load GridData</button>
 
@@ -415,7 +420,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, click the **Load GridData** button to initiate authentication. The application requests a **JWT** token, attaches it to the **DataManager** request, and then securely loads data from the authorized API endpoint into the **Blazor DataGrid**.
+After the application starts, click the **Load GridData** button to initiate authentication. The application requests a **JWT** token, attaches it to the **DataManager** request, and then securely loads data from the authorized API endpoint into the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid).
 
 ![Blazor DataGrid with JWT](images/jwt-authentication.webp)
 
