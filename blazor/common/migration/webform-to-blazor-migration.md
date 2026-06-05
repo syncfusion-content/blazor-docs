@@ -21,7 +21,6 @@ Blazor uses a component based architecture with reusable Razor components and **
 | --- | --- | --- |
 | Execution model | Server centric (page postback) | Blazor Server (SignalR) or Blazor WebAssembly |
 | Hosting & deployment | IIS hosted only | Cloud, containers, IIS, or static hosting |
-| UI technology | `.aspx` pages with server controls | Razor components (`.razor`, HTML + C#) |
 | UI definition | Separate markup and code-behind (`.aspx`, `.aspx.cs`) | Component based (`.razor` with optional `.razor.cs`) |
 | Lifecycle model | `Page_Load`, postback events, `Page_Unload` | `OnInitialized{Async}`, `OnParametersSet{Async}`, `OnAfterRender{Async}`, `Dispose` |
 | State management | ViewState (hidden fields, page level) | Component state (in-memory, persisted per connection in Blazor Server) |
@@ -78,7 +77,7 @@ Blazor uses dependency injection (DI), where components must be registered in th
 In the `Program.cs` file, add the following namespace and register the required services.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight csharp tabtitle="Program.cs" %}
 
 using Syncfusion.Blazor;
 ...
@@ -154,9 +153,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ### Migrate to Blazor DataGrid component
 
-**ASP.NET Web Forms Grid** is a server-side control that relies on postbacks, making it suitable for traditional web applications with simpler interaction. [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) is a modern, component based grid that provides faster, more dynamic, and interactive user experiences without full page reloads.
+**ASP.NET Web Forms Grid** is a traditional control for displaying and managing tabular data in web applications while [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)  is a modern component designed to provide a faster, more interactive, and responsive user experience. 
 
-For detailed explanation, refer to the [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) and [Web Forms DataGrid getting started guide](https://help.syncfusion.com/aspnet/grid/getting-started).
+For additional details, refer to the [Blazor DataGrid getting started guide](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app) and [Web Forms DataGrid getting started guide](https://help.syncfusion.com/aspnet/grid/getting-started).
 
 | Aspect   | Web Forms (`ej:Grid`)   | Blazor (`SfGrid / SfGrid<TValue>`)                               |
 | --- | --- | ---|
@@ -164,21 +163,20 @@ For detailed explanation, refer to the [Blazor DataGrid getting started guide](h
 | Namespace               |  `<%@ Register Assembly="Syncfusion.EJ.Web" %>`   |  `@using Syncfusion.Blazor.Grids`  |
 | Component declaration   | `<ej:Grid runat="server">`   | `<SfGrid>` / `<SfGrid TValue="T">`    |
 | Data binding   | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) property set in `Page_Load` or callbacks  | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property bound during component initialization  |
-| Collection type  | `DataTable`, `IEnumerable`, server managed collections | `List<T>` / `IEnumerable<T>`. UI updated via `StateHasChanged()` |
+| Collection type  | `DataTable`, `IEnumerable`, server managed collections | `List<T>` / `IEnumerable<T>` |
 | Columns | [Columns](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_Columns) property defined using `<ej:Column Field="..." HeaderText="..." />`  | [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) property defined by using `<GridColumn Field="..." HeaderText="..." Format="..." />`  |
 | Editing & API | [EditSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_EditSettings) | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), `@ref` async APIs  |
 | Events & commands   | Server events (postback / AJAX callbacks)   | `EventCallback<T>` based async handlers   |
-| Theming & assets   | CSS/JS referenced in `.aspx` or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()`         |
-| Paging / virtualization |  [AllowPaging](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowPaging), [ScrollSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_ScrollSettings) | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html), [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) |
-| Filtering | [AllowFiltering](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowFiltering) | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) |
-| Grouping | [AllowGrouping](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowGrouping)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)|
+| Paging / virtualization API |  [AllowPaging](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowPaging), [ScrollSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_ScrollSettings) | [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html),  [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) |
+| Filtering API | [AllowFiltering](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowFiltering) | [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) |
+| Grouping API | [AllowGrouping](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_AllowGrouping)  | [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping)|
 | Lifecycle & refs        | `Page_Load`, control IDs (`ID`)                        | `OnInitialized{Async}`, DI, `@ref` and async methods |
 
-#### Component rendering
+#### Component configuration for DataGrid
 
 **Web Forms approach**
 
-The DataGrid is defined using server controls, and the [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) is assigned in the code-behind during the page lifecycle (for example, in the `Page_Load` method).
+The Grid control for ASP.NET is an efficient display engine for tabular data by defining [Columns](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_Columns) and linking them to `Fields` in a [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.GridProperties.html#Syncfusion_JavaScript_Models_GridProperties_DataSource) property. In the example, a list of people is created and assigned to the Grid, which then automatically displays the data as rows and columns.
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -258,24 +256,25 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Migrate to Blazor Scheduler component
 
-For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started).
+**ASP.NET Web Forms Scheduler** is used to organize and manage events across different calendar views in web applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is a modern component that offers a more dynamic and user friendly way to handle appointments and scheduling. 
+
+For additional details, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started).
 
 | Aspect  | Web Forms (`ej:Schedule`) | Blazor (`SfSchedule<TValue>`)  |
 | --- | --- | --- |
 | Package (NuGet)      | [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet)   | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule)  |
-| Namespace   | ASPX: `<%@ Register Assembly="Syncfusion.EJ.Web" %>` | Razor: `@using Syncfusion.Blazor.Schedule`  |
-| Component declaration | `<ej:Schedule runat="server">` (ASPX) | `<SfSchedule TValue="T">` (Razor)   |
-| Data binding          | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleFields.html#Syncfusion_JavaScript_Models_ScheduleFields_DataSource) set during `Page_Load` or callbacks     | `DataSource="@..."` via [ScheduleEventSettings.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource)      |
-| Appointment model    | [AppointmentSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_AppointmentSettings)  | [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html)   |
+| Namespace   | `<%@ Register Assembly="Syncfusion.EJ.Web" %>` | `@using Syncfusion.Blazor.Schedule`  |
+| Component declaration | `<ej:Schedule runat="server">` | `<SfSchedule TValue="T">`   |
+| Data binding API        | [DataSource](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleFields.html#Syncfusion_JavaScript_Models_ScheduleFields_DataSource) set during `Page_Load` or callbacks     | `DataSource="@..."` via [ScheduleEventSettings.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource)      |
+| Appointment model API   | [AppointmentSettings](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_AppointmentSettings)  | [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html)   |
 | Views configuration   | [CurrentView](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.ScheduleProperties.html#Syncfusion_JavaScript_Models_ScheduleProperties_CurrentView) property  | [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) collection    |
-| Theming & assets  | CSS/JS referenced in ASPX or Master Page  | CSS theme files + JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID`  | `OnInitialized{Async}`, DI, `@ref` async APIs   |
 
-#### Component rendering
+#### Component configuration for Scheduler
 
 **Web Forms approach**
 
-In Web Forms, the Scheduler is defined using server controls, where configuration is set through control properties and appointment data is assigned programmatically in the code-behind during page execution.
+The **Scheduler** is an event calendar that manages the list of various activities (events/appointments) in different available views (day, week, workweek, month and agenda) for various resources. It is simply a server-side wrapper of JS Scheduler component and all the features of JS platform are applicable in ASP Scheduler too. 
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -328,7 +327,7 @@ namespace WebFormsScheduler
 
 **Blazor equivalent**
 
-In Blazor, the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is implemented as a Razor component, where views and event settings are defined declaratively in markup, and appointment data is bound directly using the [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [ScheduleEventSettings.Datasource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
@@ -370,7 +369,9 @@ N> The event class (`Meeting` in this example) property names match the Schedule
 
 ### Migrate to Blazor Rich Text Editor component
 
-For detailed explanation, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started).
+**ASP.ET Web Forms Rich Text Editor**  is a component used for creating and formatting content such as text, images, tables, and links with various editing tools. [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is a modern component that offers a more dynamic and user-friendly way to create rich content with support for HTML, Markdown, and responsive design. 
+
+For additional details, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started).
 
 | Aspect  | Web Forms (`ej:RTE`)  | Blazor (`SfRichTextEditor`)   |
 | --- | --- | ---|
@@ -379,14 +380,13 @@ For detailed explanation, refer to the [Blazor Rich Text Editor getting started 
 | Component declaration | `<ej:RTE runat="server">` (ASPX)  | `<SfRichTextEditor>` (Razor)  |
 | Content binding       | [Value](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_Value) property set during page lifecycle   | [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) / `@bind-Value` bound to component state  |
 | Toolbar configuration | [ToolsList](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_ToolsList), [Tools](https://help.syncfusion.com/cr/aspnet/Syncfusion.JavaScript.Models.RTEproperties.html#Syncfusion_JavaScript_Models_RTEproperties_Tools)  | [ToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) with predefined/custom items |
-| Theming & assets      | CSS/JS referenced per page | CSS theme files/JS and `AddSyncfusionBlazor()` |
 | Lifecycle & refs      | `Page_Load`, control `ID` | `OnInitialized{Async}`, DI, `@ref` async APIs  |
 
-#### Component rendering
+#### Component configuration for Rich Text Editor
 
 **Web Forms approach**
 
-In Web Forms, the Rich Text Editor content is defined directly within the markup using the `RTEContent` section, with content embedded as static HTML.
+The Rich Text Editor content is defined directly within the markup using the `RTEContent` section, with content embedded as static HTML.
 
 {% tabs %}
 {% highlight html tabtitle="Default.aspx" %}
@@ -402,7 +402,7 @@ In Web Forms, the Rich Text Editor content is defined directly within the markup
 
 **Blazor equivalent**
 
-In Blazor, the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
 
 {% tabs %}
 {% highlight razor tabtitle="Editor.razor" %}
