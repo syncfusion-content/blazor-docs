@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor BulletChart in Server App | Syncfusion
+title: Getting Started Blazor Bullet Chart in Blazor Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Bullet Chart Component in Blazor Server App.
 platform: Blazor
 component: Bullet Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor BulletChart Component in Blazor Server App
+# Getting Started with Blazor Bullet Chart Component in Blazor Server App
 
 This section briefly explains about how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -186,13 +186,13 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Bullet Chart component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Bullet Chart component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and run the following command.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -206,7 +206,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and run the following command.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
