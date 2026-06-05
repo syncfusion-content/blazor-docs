@@ -266,7 +266,7 @@ You can add additional data with the word file uploaded from the Rich Text Edito
 {% endtabs %}
 
 {% tabs %}
-{% highlight csharp tabtitle="controller.cs" %}
+{% highlight cshtml tabtitle="Controller.cs" %}
 
 using System;
 using System.IO;
@@ -1026,7 +1026,7 @@ The following example demonstrates how to pass authentication tokens and custom 
 {% endtabs %}
 
 {% tabs %}
-{% highlight Controller.cs %}
+{% highlight cshtml tabtitle="Controller.cs" %}
 
 using System;
 using System.IO;
