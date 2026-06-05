@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Web App Authentication | Syncfusion
+title: Getting Started with Blazor Web App Authentication | Syncfusion®
 description: Check out the documentation for getting started with Blazor Web App and Blazor Components with Authentication.
 platform: Blazor
 component: Common
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App Authentication
 
-This guide explains how to create a Blazor Web App with authentication enabled. You will learn how to use the built-in `AuthenticationStateProvider` to manage user identity and integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component for authenticated users.
+This guide explains how to create a Blazor Web App with authentication enabled. You will learn how to use the built-in `AuthenticationStateProvider` to manage user identity and integrate the [Blazor components](https://www.syncfusion.com/blazor-components) for authenticated users.
 
 ## Create a new Blazor Web App 
 
@@ -33,13 +33,13 @@ dotnet run
 
 ## Register a User
 
-After creating the project, run the application. On the registration page, click the **Register** button. Enter your **email address** and **password**, then click **Register** to create a new account.
+Click the **Register** button. Enter your **email address** and **password**, then click **Register** to create a new account.
 
 ![Enter-register-details](images/register-details.webp)
 
 ## Apply Database Migrations
 
-After registration completes, click **Apply Migrations** to create the database schema and configure account related tables and settings.
+Click **Apply Migrations** to create the database schema and configure account related tables and settings.
 
 ![Apply-migration](images/apply-migration.webp)
 
@@ -51,7 +51,7 @@ Once migrations are complete, refresh the page. You should see your email addres
 
 ## Integrating Blazor component
 
-Blazor components can be integrated within the **AuthorizeView** component as shown in the following steps.
+[Blazor components](https://www.syncfusion.com/blazor-components) can be integrated within the `AuthorizeView` component as shown in the following steps.
 
 ### Install NuGet packages
 
@@ -98,7 +98,7 @@ Open the `~/_Imports.razor` file and import the namespaces.
 
 ### Add stylesheet and script resources
 
-Include the theme stylesheet and script references in the `App.razor` file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="App.razor" %}
