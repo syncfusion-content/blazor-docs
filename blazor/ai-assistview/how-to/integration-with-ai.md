@@ -78,7 +78,7 @@ builder.Services.AddChatClient(
         .AsIChatClient()
 );
 
-// Register Syncfusion Blazor components
+// Register Blazor components
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
