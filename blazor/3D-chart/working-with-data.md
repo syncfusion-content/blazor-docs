@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all about working with data in Blazor 3D Chart component, it's elements and more.
+description: Checkout and learn here all features about working with data in Blazor 3D Chart component, it's elements and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug

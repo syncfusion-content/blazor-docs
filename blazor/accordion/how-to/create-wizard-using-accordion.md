@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Wizard in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all about how to create Wizard in Blazor Accordion component and much more.
+description: Checkout and learn here all features about how to create Wizard in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug

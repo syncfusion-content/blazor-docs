@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all about handling Accordion events in Blazor Accordion components.
+description: Checkout and learn here all features about handling Accordion events in Blazor Accordion components.
 platform: Blazor
 control: Accordion
 documentation: ug

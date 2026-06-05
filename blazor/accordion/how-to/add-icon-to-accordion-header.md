@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Icon to Header in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all about how to add Icon to Header in Blazor Accordion component and more.
+description: Checkout and learn here all features about how to add Icon to Header in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Accordion Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Accordion component and much more.
+description: Checkout and learn here all features about Accessibility in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
