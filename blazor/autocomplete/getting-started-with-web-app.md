@@ -199,17 +199,18 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor AutoComplete component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor AutoComplete component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the `.Client` project folder, and run the following command.
+Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -219,11 +220,12 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the `.Client` project folder, and run the following command.
+Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -237,7 +239,7 @@ dotnet run
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AutoComplete)
 
-## Binding data source
+### Binding data source
 
 After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
 
@@ -286,7 +288,7 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhfjCLSBGLRJZjX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.webp)" %}
 
-## Configure the suggestion list
+### Configure the suggestion list
 
 By default, the suggestion list width automatically matches the AutoComplete input element, and the suggestion list height is `300px`. Customize the popup size using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties.
 
@@ -302,7 +304,7 @@ By default, the suggestion list width automatically matches the AutoComplete inp
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVJXCByVQxticee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.webp)" %}
 
-## See also
+### See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
