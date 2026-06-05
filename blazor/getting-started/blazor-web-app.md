@@ -229,7 +229,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and navigate to the **BlazorWebApp** project root folder, then run:
+Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -244,7 +244,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and navigate to the **BlazorWebApp** project root folder, then run:
+Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
