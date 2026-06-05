@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Playground for Building Apps | Syncfusion®
-description: Learn here about how to write, edit, compile, build, run, and share Blazor and Syncfusion® Blazor components directly in the browser using Blazor Playground.
+description: Learn here about how to write, edit, compile, build, run, and share Blazor components directly in the browser using Blazor Playground.
 platform: Blazor
 control: Common
 documentation: ug
@@ -82,7 +82,7 @@ You can create a Blazor component in Blazor Playground by following these steps.
 
 ## Add a Blazor Component
 
-Blazor Playground is preconfigured with the Blazor package, stylesheets, and scripts. To use [Blazor components](https://www.syncfusion.com/blazor-components) in the Playground, import the required namespace and add the component as shown below:
+[Blazor Playground](https://blazorplayground.syncfusion.com) is preconfigured with the Blazor package, stylesheets, and scripts. To use [Blazor components](https://www.syncfusion.com/blazor-components) in the Playground, import the required namespace and add the component as shown below:
 
 1\. Add the `@using Syncfusion.Blazor.Grids` namespace at the top of the editor. This namespace is provided by the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) NuGet package.
 
