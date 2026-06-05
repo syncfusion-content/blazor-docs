@@ -302,6 +302,63 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWhBxpxgIqdqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+**No risers**
+
+You can eliminate the vertical lines between points by setting the `ShowRisers` property to `false` in the series.
+This approach is useful for highlighting trends without the distraction of risers.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="England - Run Rate">
+    <ChartPrimaryXAxis Title="Overs"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Runs"></ChartPrimaryYAxis>
+    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ChartData" XName="X" YName="Y" Type="ChartSeriesType.StepArea"
+                    Opacity="0.1" ShowRisers="false" >
+            <ChartSeriesBorder Width="1.5"></ChartSeriesBorder>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartPoint
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartPoint> ChartData = new()
+    {
+        new() { X = 1,  Y = 7  },
+        new() { X = 2,  Y = 1  },
+        new() { X = 3,  Y = 1  },
+        new() { X = 4,  Y = 14 },
+        new() { X = 5,  Y = 1  },
+        new() { X = 6,  Y = 10 },
+        new() { X = 7,  Y = 8  },
+        new() { X = 8,  Y = 6  },
+        new() { X = 9,  Y = 10 },
+        new() { X = 10, Y = 10 },
+        new() { X = 11, Y = 16 },
+        new() { X = 12, Y = 6  },
+        new() { X = 13, Y = 14 },
+        new() { X = 14, Y = 7  },
+        new() { X = 15, Y = 5  },
+        new() { X = 16, Y = 2  },
+        new() { X = 17, Y = 14 },
+        new() { X = 18, Y = 7  },
+        new() { X = 19, Y = 7  },
+        new() { X = 20, Y = 10 }
+    };
+}
+
+```
+
+![Blazor Step Area Chart NoRiser Series](../images/chart-types-images/blazor-step-area-chart-noriser-series.webp)
+
 ## Empty points
 
 Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
