@@ -17,7 +17,7 @@ To enable this functionality, assign an instance of `UmlSequenceDiagramModel` to
 
 A sequence diagram consists of several key elements, including participants, messages, activation boxes, and fragments. Each of these components plays a crucial role in representing the flow of interaction between objects over time.
 
-The diagram component allows to define and manage these elements through the `UmlSequenceDiagramModel`. Below is an overview of how each element can be implemented:
+The diagram component allows to define and manage these elements through the `UmlSequenceDiagramModel.Below` is an overview of how each element can be implemented:
 
 * [Participants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Participants): Represent the lifelines (such as actors or systems) involved in the interaction.
 * [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Messages): Indicate the communication between participants, including synchronous and asynchronous calls, returns, and self-messages.
