@@ -204,7 +204,7 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBpNMqZALaYvkYW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rating Component](images/blazor-rating-component.webp)" %}
 
-## Value
+### Value
 
 Set the rating value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property.
 
