@@ -62,7 +62,7 @@ Custom context menu provides an option to add new custom items to the context me
 
 ### How to Add Custom and Default Context Menu Items Together
 
-The following code example shows how to add custom context menu items along with the default context menu. Set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to false to render both the custom context menu and default context menu.
+The following code example shows how to add custom context menu items along with the default context menu. Set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to **false** to render both the custom context menu and default context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
