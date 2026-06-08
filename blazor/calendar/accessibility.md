@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Calendar Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Calendar component and much more.
+description: Checkout and learn here all about Accessibility in Blazor Calendar component including keyboard navigation, ARIA attributes, and usability features.
 platform: Blazor
 control: Calendar
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the First Day of Week in Blazor Calendar Component | Syncfusion®
+title: Change the First Day of Week in Blazor Calendar | Syncfusion®
 description: Checkout and learn here all features about Change the First Day of Week in Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
