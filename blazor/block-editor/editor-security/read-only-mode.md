@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Editor Access | Blazor Block Editor Component | Syncfusion®
+title: Controlling Editor Access in Blazor Block Editor | Syncfusion®
 description: Learn how to control editor access and implement read-only mode in the Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
