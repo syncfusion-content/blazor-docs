@@ -142,8 +142,8 @@ The following code demonstrates how to align an annotation.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AlignmentOfNodeAnnotation.razor)
 
 
-N>* The value of the `HorizontalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Center) by default.
-<br/>* The value of the `VerticalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) by default.
+N>* The value of the `HorizontalAlignment` is **Center** by default.
+<br/>* The value of the `VerticalAlignment` is **Center** by default.
 <br/>* Alignment is positioned based on the offset value.
 
 ## How to Change Annotation Margin
