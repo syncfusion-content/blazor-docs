@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Types and Styles in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Types and Styles in Syncfusion Blazor Button component and much more.
+title: Types and Styles in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all features about Types and Styles in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
