@@ -37,7 +37,7 @@ The Dropdown Menu component can be disabled by setting the [Disabled](https://he
 </SfDropDownButton>
 ```
 
-![Disabled state of Blazor DropDownMenu](./images/blazor-dropdownmenu-in-disable-state.webp)
+![Disabled state of Blazor DropDownMenu](.\images\blazor-dropdownmenu-in-disable-state.png)
 
 ## Create Dropdown Menu with Rounded Corner
 
@@ -64,4 +64,4 @@ In the following example, the `e-round-corner` class sets a `5px` `border-radius
 
 ```
 
-![Blazor DropDownMenu with Rounded Corner](./images/blazor-dropdownmenu-with-rounded-corner.webp)
+![Blazor DropDownMenu with Rounded Corner](.\images\blazor-dropdownmenu-with-rounded-corner.png)
