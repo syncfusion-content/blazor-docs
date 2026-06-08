@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Card Component | Syncfusion
+title: Getting Started with Blazor Card Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor Card component in Blazor WebAssembly Application.
 platform: Blazor
 control: Card

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Populating items with Blazor Carousel Component | Syncfusion
+title: Populating items with Blazor Carousel Component | Syncfusion®
 description: Checkout and learn about populating items with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Carousel
