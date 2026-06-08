@@ -2116,7 +2116,7 @@ The page binds return and refund records to the grid, showing order details, req
 {% endhighlight %}
 {% endtabs %}
 
-## Run the Application
+## Run the application
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.
 
