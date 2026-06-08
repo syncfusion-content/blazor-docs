@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Carousel in Web App | Syncfusion®
+title: Getting Started with Blazor Carousel in Web App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor Carousel Component in Blazor Web App.
 platform: Blazor
 component: Carousel
