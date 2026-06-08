@@ -9,11 +9,11 @@ documentation: ug
 
 # Series Label in Blazor Charts Component
 
-The series label displays the name of each series inline, positioned near the end of the series path or the last visible data point. This helps identify each series without referring to the legend.
+The series label feature displays the name of each series directly within the chart area. This improves readability by identifying each series inline and reducing the need to refer to the legend. The label can be enabled and customized using the `SeriesLabelSettings` property.
 
-## Overview
+## Enable series label
 
-Enable series labels using the `SeriesLabelSettings` property within the series configuration. Set the `visible` property to **true** to display the label.
+To enable the series label, set the `Visible` property of the `SeriesLabelSettings` configuration to **true** within the series settings.
 
 ```cshtml
 
@@ -30,10 +30,10 @@ Enable series labels using the `SeriesLabelSettings` property within the series 
             <ChartMarker Visible="true" Width="7" Height="7"
                 Shape="ChartShape.Circle" IsFilled="true">
             </ChartMarker>
-            <SeriesLabelSettings Visible="true" ></SeriesLabelSettings>
+            <SeriesLabelSettings Visible="true" > </SeriesLabelSettings>
         </ChartSeries>
         <ChartSeries DataSource="@IndonesiaData" XName="X" YName="Y"
-        Name="Indonesia" Type="ChartSeriesType.Line" Width="2">
+            Name="Indonesia" Type="ChartSeriesType.Line" Width="2">
             <ChartMarker Visible="true" Width="5" Height="5" 
                 Shape="ChartShape.Rectangle" IsFilled="true">
             </ChartMarker>
@@ -44,20 +44,21 @@ Enable series labels using the `SeriesLabelSettings` property within the series 
             <ChartMarker Visible="true" Width="5" Height="5"
                 Shape="ChartShape.Rectangle" IsFilled="true">
             </ChartMarker>
-            <SeriesLabelSettings Visible="true" ></SeriesLabelSettings>
+            <SeriesLabelSettings Visible="true" > </SeriesLabelSettings>
         </ChartSeries>
         <ChartSeries DataSource="@PolandData" XName="X" YName="Y"
             Name="Poland" Type="ChartSeriesType.Line" Width="2">
-            <ChartMarker Visible="true" Width="5" Height="5" Shape="ChartShape.Rectangle" IsFilled="true">
+            <ChartMarker Visible="true" Width="5" Height="5" 
+                Shape="ChartShape.Rectangle" IsFilled="true">
             </ChartMarker>
-            <SeriesLabelSettings Visible="true" ></SeriesLabelSettings>
+            <SeriesLabelSettings Visible="true" > </SeriesLabelSettings>
         </ChartSeries>
         <ChartSeries DataSource="@MexicoData" XName="X" YName="Y"
             Name="Mexico" Type="ChartSeriesType.Line" Width="2">
             <ChartMarker Visible="true" Width="5" Height="5"
                 Shape="ChartShape.Rectangle" IsFilled="true">
             </ChartMarker>
-            <SeriesLabelSettings Visible="true" ></SeriesLabelSettings>
+            <SeriesLabelSettings Visible="true" > </SeriesLabelSettings>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -141,14 +142,23 @@ Enable series labels using the `SeriesLabelSettings` property within the series 
 
 ## Customization
 
-Customize the appearance of series labels using the following properties:
+The appearance of the series label can be customized using the following properties.
 
-* `Text` – Custom text for the label. By default, the series name is used.
-* `Background` – Background color of the label.
-* `Opacity` – Specifies the transparency of the label.
-* `ShowOverlapText` – When set to `false`, overlapping labels are hidden.
-* `SeriesLabelFont` – Used to customize the label font such as size, family, weight, and color.
-* `SeriesLabelBorder` – Used to customize the border width and color.
+In the `SeriesLabelSettings`:
+* `Text`: Sets custom text for the series label. By default, the series name is displayed.
+* `Background`: Sets the background color of the series label.
+* `Opacity`: Sets the transparency of the series label. The accepted range is from `0` to `1`.
+* `ShowOverlapText`: Specifies whether overlapping series labels are allowed.
+
+In the `SeriesLabelBorder`:
+* `Color`: Sets the border color of the series label.
+* `Width`: Sets the border width of the series label.
+
+In the `SeriesLabelFont`:
+* `Size`: Sets the font size of the label text.
+* `Color`: Sets the font color of the label text.
+* `FontFamily`: Specifies the font family of the label text.
+* `FontWeight`: Sets the font weight of the label text.
 
 ```cshtml
 
@@ -162,7 +172,7 @@ Customize the appearance of series labels using the following properties:
     <ChartSeriesCollection>
         <ChartSeries DataSource="@VietnamData" XName="X" YName="Y"
             Name="Vietnam" Type="ChartSeriesType.Line" Width="2">
-            <ChartMarker Visible="true" Width="7" Height="7" Shape="ChartShape.Circle" IsFilled="true">
+            <ChartMarker Visible="true" Width="7" Height="7" Shape="ChartShape.Circle"     IsFilled="true">
             </ChartMarker>
             <SeriesLabelSettings Visible="true" Text="Vietnam" Background="#E8F5E9" Opacity="0.9"
                 ShowOverlapText="true">
@@ -297,6 +307,4 @@ Customize the appearance of series labels using the following properties:
 * [Legend](./legend)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-
 
