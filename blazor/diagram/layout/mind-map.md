@@ -15,6 +15,8 @@ To see a quick walkthrough of creating a mind map layout, watch the following vi
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_EHmKNok4GQ" %}
 
+<br><br>
+
 The following code example illustrates how to create a mind map layout using a data source.
 
 ```csharp
