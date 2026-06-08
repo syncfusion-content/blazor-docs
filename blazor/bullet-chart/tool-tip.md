@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all features about Tooltip in Blazor Bullet Chart component and much more.
+description: Checkout and learn here all about Tooltip in Blazor Bullet Chart component including customization and templates.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug

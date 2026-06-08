@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all features about Accessibility in Blazor Button component and much more.
+description: Checkout and learn here all about Accessibility in Blazor Button component including keyboard navigation, ARIA attributes, and usability features.
 platform: Blazor
 control: Button
 documentation: ug
