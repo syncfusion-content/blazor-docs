@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ranges in Blazor Bullet Chart Component | Syncfusion®
-description: Checkout and learn here all about the ranges in Blazor Bullet Chart component and much more.
+description: Checkout and learn here all features about the ranges in Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug

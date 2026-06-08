@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTML Attribute Support in Blazor Button Component | Syncfusion®
-description: Checkout and learn here all about HTML Attribute Support in Blazor Button component and much more.
+description: Checkout and learn here all feature about HTML Attribute Support in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
