@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | Blazor Chart Wizard Component in WASM | Syncfusion
-description: Check out and learn about getting started with Syncfusion Blazor Chart Wizard in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Started | Blazor Chart Wizard Component in WASM | Syncfusion®
+description: Check out and learn about getting started with Blazor Chart Wizard in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
@@ -100,7 +100,7 @@ Install-Package Syncfusion.Blazor.ChartWizard -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+N> All Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 

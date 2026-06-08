@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Chart Wizard Component | Syncfusion
-description: Check out and learn here all about accessibility using keyboard navigation in Syncfusion Blazor Chart Wizard component and more.
+title: Accessibility in Blazor Chart Wizard Component | Syncfusion®
+description: Check out and learn here all about accessibility using keyboard navigation in Blazor Chart Wizard component and more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
