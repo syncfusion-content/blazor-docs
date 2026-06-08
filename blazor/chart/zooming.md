@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zooming in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Zooming functionality in Syncfusion Blazor Charts component and more.
+title: Zooming in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all about Zooming functionality in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
