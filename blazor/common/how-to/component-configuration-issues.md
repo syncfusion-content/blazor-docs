@@ -9,7 +9,7 @@ documentation: ug
 
 # Resolving Component Configuration Issues in Blazor
 
-This guide covers common component configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper component configuration ensures smooth functionality and optimal performance.
+This guide explains how to resolve common component configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper component configuration ensures smooth functionality and optimal performance.
 
 Common configuration issues relate to:
 
@@ -59,11 +59,11 @@ var app = builder.Build();
 
 | Component | Recommended Message Size | Reason |
 |-----------|------------------------|--------|
-| DataGrid | 50MB - 100MB | Large datasets with thousands of rows |
-| PDF Viewer | 100MB - 200MB | Large PDF documents |
-| File Manager | 100MB - 500MB | File uploads and downloads |
-| Spreadsheet | 50MB - 100MB | Excel files with multiple worksheets |
-| Image Editor | 50MB - 100MB | High-resolution images |
+| [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | 50MB - 100MB | Large datasets with thousands of rows |
+| [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) | 100MB - 200MB | Large PDF documents |
+| [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) | 100MB - 500MB | File uploads and downloads |
+| [Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor?utm_source=nuget&utm_medium=listing&utm_campaign=blazor-spreadsheet-editor-nuget) | 50MB - 100MB | Excel files with multiple worksheets |
+| [Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) | 50MB - 100MB | High-resolution images |
 
 ### Advanced SignalR configuration
 
@@ -175,8 +175,8 @@ If you prefer to import namespaces only where needed.
 {% highlight razor tabtitle="DataGridPage.razor" %}
 
 @page "/datagrid"
-@using Syncfusion.Blazor.Grids
 @rendermode InteractiveServer
+@using Syncfusion.Blazor.Grids
 
 <PageTitle>Data Grid</PageTitle>
 
