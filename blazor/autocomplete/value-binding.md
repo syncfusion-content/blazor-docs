@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value Binding in Blazor AutoComplete Component | Syncfusion®
-description: Learn how to bind and manage selected values in the Blazor AutoComplete component and much more.
+description: Checkout and Learn how to bind and manage selected values in the Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
