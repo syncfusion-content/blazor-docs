@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all about Templates in Blazor AutoComplete component and much more.
+description: Checkout and learn here all features about Templates in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

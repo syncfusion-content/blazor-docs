@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor AutoComplete Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor AutoComplete component and more.
+description: Checkout and learn here all features about Accessibility in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
