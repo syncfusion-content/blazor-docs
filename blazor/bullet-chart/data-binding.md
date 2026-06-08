@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with Data in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about working with data in Syncfusion Blazor Bullet Chart component and more.
+title: Working with Data in Blazor Bullet Chart Component | Syncfusion®
+description: Checkout and learn here all about working with data in Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug

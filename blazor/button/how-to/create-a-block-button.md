@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create a Block Button in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Creating a Block Button in Syncfusion Blazor Button component and more.
+title: Create a Block Button in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all about Creating a Block Button in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug

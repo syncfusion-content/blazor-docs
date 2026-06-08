@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis Customization in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Axis Customization in Syncfusion Blazor Bullet Chart component and more.
+title: Axis Customization in Blazor Bullet Chart Component | Syncfusion®
+description: Checkout and learn here all about Axis Customization in Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
