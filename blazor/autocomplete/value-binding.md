@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Value Binding in Blazor AutoComplete Component | Syncfusion
-description: Learn how to bind and manage selected values in the Syncfusion Blazor AutoComplete component
+title: Value Binding in Blazor AutoComplete Component | Syncfusion®
+description: Learn how to bind and manage selected values in the Blazor AutoComplete component
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -217,7 +217,7 @@ Here, the AutoComplete component uses `TValue` as `string` in `/Index.razor` and
 
 ## Two way binding
 
-Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete component, Use the @bind-Value directive to bind the value of the AutoComplete
+Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Blazor AutoComplete component, Use the @bind-Value directive to bind the value of the AutoComplete
 
 {% highlight cshtml %}
 

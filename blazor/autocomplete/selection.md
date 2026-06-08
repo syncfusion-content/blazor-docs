@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor AutoComplete component and more.
+title: Selection in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all about the Selection feature in Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

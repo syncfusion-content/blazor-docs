@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor AutoComplete component and much more.
+title: Virtualization in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all about Virtualization in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
