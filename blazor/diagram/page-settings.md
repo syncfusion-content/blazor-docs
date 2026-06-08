@@ -11,7 +11,7 @@ documentation: ug
 
 By default, the diagram page size is decided based on the position of its diagram elements. The size and appearance of diagram pages can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html) property of the diagram.
 
-* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Height) properties of `PageSettings` define the size of the page. The default `Width` is **1123** pixels, and `Height` is **794** pixels.
+* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Height) properties of `PageSettings` define the size of the page. The default `Width` is **1123 pixels**, and `Height` is **794 pixels**.
 
 * The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation) property of `PageSettings` is used to change the page orientation to portrait or landscape. The default orientation is landscape.
 
@@ -22,6 +22,8 @@ By default, the diagram page size is decided based on the position of its diagra
 To learn more about customization of diagram page, refer to the below video link,
 
 {% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=74s" %}
+
+<br><br>
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -208,7 +210,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Change Page Margins
 
-The area between the maintain content of a page and the page edges can be changed by using the [PageMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageMargin.html) property. The default margins are **25** pixels on all sides.
+The area between the maintain content of a page and the page edges can be changed by using the [PageMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageMargin.html) property. The default margins are **25 pixels** on all sides.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -301,7 +303,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ## How to Make Responsive with Parent Container
 
 By setting the value in percentage, the diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
-Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
+Setting the Height to **100%** requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
 
 The following code example illustrates how to set width and height in percentage
 
