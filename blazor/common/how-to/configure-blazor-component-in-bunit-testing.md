@@ -25,7 +25,7 @@ If you already have a Blazor project, proceed to the [Set up the bUnit test proj
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-In this guide cover the bUnit testing with [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. If you do not have an existing Blazor project with the Blazor DataGrid configured, follow the [Getting Started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) guide to create and configure the application before proceeding.
+This guide covers bUnit testing with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. If you do not have an existing Blazor project with the Blazor DataGrid configured, follow the [Getting Started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) guide to create and configure the application before proceeding.
 
 ## Set up the bUnit test project
 
