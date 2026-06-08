@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility Customization in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all about Accessibility Customization in Blazor Charts component and more.
+description: Checkout and learn here all the features about Accessibility Customization in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

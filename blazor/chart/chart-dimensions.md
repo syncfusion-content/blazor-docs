@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart Dimensions in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all about Chart Dimensions in Blazor Charts component and much more.
+description: Checkout and learn here all the features about Chart Dimensions in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

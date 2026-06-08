@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trendlines in Blazor Charts Component | Syncfusion®
-description: Checkout and learn here all about the Trendlines in Blazor Charts component and much more.
+description: Checkout and learn here all the features about the Trendlines in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
