@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Blazor Component Themes with Theme Studio | Syncfusion
+title: Customize Blazor Component Themes with Theme Studio | Syncfusion®
 description: Create custom themes for Blazor components using Theme Studio. Customize colors, filter components, download CSS/SCSS, and import settings.
 platform: Blazor
 control: Common
@@ -46,7 +46,7 @@ You can download the custom styles after customizing the theme colors.
 
 ![Theme Studio output-files](images/output-files.webp)
 
-N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS files without Google Fonts dependencies. Lightweight theme files, such as `fluent2-lite.css`, improve performance by excluding larger styles. When using a customized CSS file, remove any other Syncfusion base theme references (CDN or local) to avoid duplicate or conflicting styles.
+N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS files without Google Fonts dependencies. Lightweight theme files, such as `fluent2-lite.css`, improve performance by excluding larger styles. When using a customized CSS file, remove any other Syncfusion® base theme references (CDN or local) to avoid duplicate or conflicting styles.
 
 ### Use a customized theme in a web application
 
