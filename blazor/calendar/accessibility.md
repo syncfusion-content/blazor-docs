@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Calendar component and much more.
+title: Accessibility in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -87,4 +87,4 @@ The accessibility compliance of the Calendar component is shown in the following
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in components](../common/accessibility)

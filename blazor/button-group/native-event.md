@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native Events in Blazor Button Group Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor Button Group component and much more.
+title: Native Events in Blazor Button Group Component | Syncfusion®
+description: Checkout and learn here all features about Native Events in Blazor Button Group component and much more.
 platform: Blazor
 control: Button Group
 documentation: ug

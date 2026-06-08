@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Calendar component and much more.
+title: Globalization in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Globalization in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Calendar Component
 
-[Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right-To-Left
 
