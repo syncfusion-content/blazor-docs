@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change animation settings in Blazor ContextMenu Component | Syncfusion
-description: Learn how to customize animation settings in Syncfusion Blazor ContextMenu and explore advanced options for smooth, interactive menus and more actions.
+title: Change animation settings in Blazor ContextMenu Component | Syncfusion®
+description: Learn how to customize animation settings in Blazor ContextMenu and explore advanced options for smooth, interactive menus and more actions.
 platform: Blazor
 control: Context Menu
 documentation: ug
