@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid connected to Elasticsearch | Syncfusion
+title: Blazor Data Grid connected to Elasticsearch | Syncfusion®
 description: Bind Elasticsearch data to Blazor Data Grid using Elastic.Clients.Elasticsearch with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
@@ -744,13 +744,13 @@ app.Run();
 - **`AddScoped<InventoryRepository>`**: Registers the repository as a scoped service (new instance per HTTP request).
 - **`AddScoped<ElasticSearchInitializationService>`**: Registers the initialization service as a scoped service.
 - **`InitializeAsync()`**: Called during application startup to create the Elasticsearch index and seed data before the application starts handling requests.
-- **`AddSyncfusionBlazor()`**: Registers Syncfusion Blazor components.
+- **`AddSyncfusionBlazor()`**: Registers Blazor components.
 
 The service registration has been completed successfully.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -769,19 +769,19 @@ Syncfusion is a library that provides pre-built UI components like DataGrid for 
 @using Grid_ElasticSearch.Data
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. Different themes can be selected or customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for theming and customization options.
+For this project, the tailwind3 theme is used. Different themes can be selected or customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation for theming and customization options.
 
-Syncfusion components are now configured and ready to use.
+Blazor components are now configured and ready to use.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -1675,7 +1675,7 @@ private static IDictionary<string, object> ExtractAggregatesFromResponse(IReadOn
 
 **Explanation of `ExtractAggregatesFromResponse` Method:**
 
-**Purpose**: Extracts numeric results from Elasticsearch aggregation responses and converts them to format expected by Syncfusion DataGrid footer display.
+**Purpose**: Extracts numeric results from Elasticsearch aggregation responses and converts them to format expected by DataGrid footer display.
 
 **Parameters**:
 - **`esAggregations`**: Read-only dictionary of aggregation results from Elasticsearch response containing aggregation names and their computed values
