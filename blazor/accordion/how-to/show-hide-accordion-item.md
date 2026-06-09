@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show/Hide Accordion item in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about how to Show/Hide Accordion item in Syncfusion Blazor Accordion component and more.
+title: Show/Hide Accordion item in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all about how to Show/Hide Accordion item in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
