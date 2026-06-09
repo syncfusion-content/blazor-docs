@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Memory Management Best Practices for Blazor Applications | Syncfusion
+title: Memory Management Best Practices for Blazor Applications | Syncfusion®
 description: Provides best practices for managing memory efficiently in Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
 platform: Blazor
 control: Common

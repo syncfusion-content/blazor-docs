@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Reference script files for Syncfusion Blazor
-description: Add Syncfusion Blazor script references via CDN, static web assets, or the Custom Resource Generator (CRG).
+title: Reference script files for Blazor | Syncfusion®
+description: Add Blazor script references via CDN, static web assets, or the Custom Resource Generator (CRG).
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,18 +9,18 @@ documentation: ug
 
 # Reference scripts in Blazor applications
 
-This page explains script isolation and how to reference Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts from the CDN, static web assets, and the Custom Resource Generator (CRG).
+This page explains script isolation and how to reference Blazor scripts from the CDN, static web assets, and the Custom Resource Generator (CRG).
 
 N> JavaScript interop files are required for features that cannot be implemented natively in Blazor.
 
 ## CDN reference
 
-You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts using the CDN resources.
+You can refer the Blazor scripts using the CDN resources.
 
 * For **.NET 8, .NET 9 and .NET 10** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
 * For a **Blazor WebAssembly (standalone) App**, add scripts in `~/wwwroot/index.html`.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on the CDN per version. Ensure the version in the URLs matches the NuGet package version used in the application.
+Blazor components are available on the CDN per version. Ensure the version in the URLs matches the NuGet package version used in the application.
 
 <table>
 <tr>
@@ -47,7 +47,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min
 </head>
 ```
 
-Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
+Additionally, Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
 
 | Component | CDN Script Reference |
 | --- | --- |
@@ -55,7 +55,7 @@ Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 
 ## Static web assets
 
-You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts from NuGet packages using static web assets.
+You can refer the Blazor scripts from NuGet packages using static web assets.
 
 ### Enable static web assets usage
 
@@ -76,7 +76,7 @@ N> For a **Blazor Web App** (interaction mode: Auto) and **Blazor WebAssembly Ap
 
 ## Individual component script references
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components.
+Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components.
 
 You can add a component script reference in one of the following ways based on usage,
 
@@ -384,7 +384,7 @@ The following table lists components and their script file names.
 
 ## Custom Resource Generator
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides an option to generate component interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+Blazor provides an option to generate component interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 
