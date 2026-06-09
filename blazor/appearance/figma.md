@@ -11,7 +11,7 @@ documentation: ug
 
 [Figma UI kits](https://www.figma.com/@syncfusion) to streamline collaboration between designers and developers. The kits match the themes used by Blazor components and are available for [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme), [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme), [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme).
 
-Each kit contains reusable design controls with states and variants, along with detailed figures, measurements, and icons that represent controls.
+Each kit contains reusable design controls with states and variants, along with detailed figures, measurements, and icons that represent Syncfusion controls.
 
 ![Preview of the Material 3 Figma UI kit](./images/material3.webp)
 
