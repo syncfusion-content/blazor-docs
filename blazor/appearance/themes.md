@@ -679,7 +679,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     ![Web Compiler 2022+](images/web_compiler.webp)
 
-* Install the [Syncfusion® Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
+* Install the [Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
     ```
     npm install @syncfusion/blazor-themes
@@ -756,7 +756,7 @@ It is important to note that the Material 3 theme uses CSS variables. To overrid
 }
 ```
 
-N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Syncfusion® Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
+N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
 
 The following shows the importing theme path for the overall theme.
 
@@ -1462,4 +1462,4 @@ Starting from version `v23.2.4`, customized `Material` and `Tailwind` themes are
 
 ## See also
 
-[How to change background of browser based on Syncfusion® Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes) 
+[How to change background of browser based on Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes) 
