@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Editor Access | Blazor Block Editor Component | Syncfusion
+title: Controlling Editor Access in Blazor Block Editor | Syncfusion®
 description: Learn how to control editor access and implement read-only mode in the Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
@@ -9,7 +9,7 @@ documentation: ug
 
 # Controlling Editor Access in Blazor Block Editor Component
 
-The Syncfusion Blazor Block Editor provides a read-only mode to control user interaction with the editor. This allows users to view formatted content without editing. These features are useful for displaying content without modifications or temporarily restricting input, such as when presenting archived documents, previewing content, or restricting editing permissions.
+The Blazor Block Editor provides a read-only mode to control user interaction with the editor. This allows users to view formatted content without editing. These features are useful for displaying content without modifications or temporarily restricting input, such as when presenting archived documents, previewing content, or restricting editing permissions.
 
 ## Read-only mode
 
