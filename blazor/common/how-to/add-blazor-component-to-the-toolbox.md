@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Blazor components to the Toolbox | Syncfusion
+title: Add Blazor components to the Toolbox | Syncfusion®
 description: Learn how to add the Blazor component snippets to the Visual Studio Toolbox in a Blazor project on Windows and explore here to more details.
 platform: Blazor
 control: Common
