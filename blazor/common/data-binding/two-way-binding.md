@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Two-way data binding in Blazor | Syncfusion
-description: Learn here all about how Syncfusion Blazor components use the two-way data binding with @bind-Value and related patterns. Explore here to more details.
+title: Two-way data binding in Blazor | Syncfusion®
+description: Learn here all about how Blazor components use the two-way data binding with @bind-Value and related patterns. Explore here to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Two-way data binding
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provide data binding features with the `@bind-value` Razor directive attribute with a field, property, or Razor expression value. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
+Blazor components provide data binding features with the `@bind-value` Razor directive attribute with a field, property, or Razor expression value. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
 
-To enable two-way binding on Syncfusion<sup style="font-size:70%">&reg;</sup> components, use `@bind-Value`. In the following example, the `SfTextBox` component is bound to the C# `textValue` property. When the textbox loses focus, the bound field is updated.
+To enable two-way binding on components, use `@bind-Value`. In the following example, the `SfTextBox` component is bound to the C# `textValue` property. When the textbox loses focus, the bound field is updated.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ To enable two-way binding on Syncfusion<sup style="font-size:70%">&reg;</sup> co
 
 ![Two-way data binding example in Blazor](../images/blazor-two-way-binding.gif)
 
-The following Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support two-way binding:
+The following Blazor components support two-way binding:
 
 * [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/data-binding)
 * [Calendar](https://blazor.syncfusion.com/documentation/calendar/data-binding)
