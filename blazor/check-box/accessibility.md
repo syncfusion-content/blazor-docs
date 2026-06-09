@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor CheckBox Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor CheckBox component and much more.
+title: Accessibility in Blazor CheckBox Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor CheckBox component and much more.
 platform: Blazor
 control: Checkbox
 documentation: ug
