@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains how to include [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-> **Ready to streamline your Syncfusion® Blazor development?** <br/>Discover the full potential of Blazor components with Syncfusion® AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion® CodeStudio and more. [Explore Syncfusion® AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with Syncfusion AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion CodeStudio and more. [Explore Syncfusion AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 
