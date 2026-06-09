@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip for Button in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Tooltip for Button in Syncfusion Blazor Button component and more.
+title: Tooltip for Button in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all feature about Tooltip for Button in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
