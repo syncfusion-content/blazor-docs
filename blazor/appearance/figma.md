@@ -66,14 +66,14 @@ Feel free to experiment with these customization options to create a design that
 
 ## Download customized styles
 
-Download customized style changes as tokens and CSS variables using the Syncfusion® Design Tokens plugin. This plugin bridges the gap between design and development by converting Figma design variables into tokens for direct use in your applications to ensure a smooth transition from design to implementation.
+Download customized style changes as tokens and CSS variables using the Syncfusion Design Tokens plugin. This plugin bridges the gap between design and development by converting Figma design variables into tokens for direct use in your applications to ensure a smooth transition from design to implementation.
 
 ### Exporting design tokens
 
 Follow these steps to download the customized styles from the Figma UI Kit:
 
 - First, open a [Figma UI Kit](https://www.figma.com/@syncfusion).
-- Navigate to the `Plugins and widgets` section in Figma and search for **Syncfusion® Design Tokens**.
+- Navigate to the `Plugins and widgets` section in Figma and search for **Syncfusion Design Tokens**.
 - Run the plugin. A dialog appears with an `Export` button.
 - Click the `Export` button. This action will generate a zip file containing your design tokens.
 - Select a directory to save the exported files.
