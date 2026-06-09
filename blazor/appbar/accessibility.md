@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor AppBar Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor AppBar component and much more.
+title: Accessibility in Blazor AppBar Component | Syncfusion®
+description: Check out and learn in detail about accessibility features in the Blazor AppBar component and much more.
 platform: Blazor
 control: AppBar
 documentation: ug

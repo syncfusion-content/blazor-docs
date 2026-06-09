@@ -29,11 +29,13 @@ By default, `MinLength` is set to 0, which means the suggestion list appears imm
 
 In the following example, the `MinLength` is set to 3, so the suggestion list will only appear once the user types three or more characters after the @ symbol.
 
-{% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/mention-min-length.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Blazor RichTextEditor mention minimum length](./images/blazor-richtexteditor-mention-min-length.webp)
 
@@ -45,11 +47,13 @@ By default, the suggestion list displays 25 items. You can customize this value 
 
 In the example below, the `SuggestionCount` is set to 5, so only 5 items will be displayed in the suggestion list when the user types the mention character (@).
 
-{% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/mention-suggestion-count.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Blazor RichTextEditor mention minimum length](./images/blazor-richtexteditor-mention-suggestion-count.webp)
 
@@ -86,11 +90,13 @@ In the following sample, we configured the following properties:
 * [AllowSpaces](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_AllowSpaces) - Allow to continue search action if user enter space after mention character while searching.
 * [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuggestionCount) - The maximum number of items that will be displayed in the suggestion list.
 
-{% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/mention-integration.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Blazor RichTextEditor mention integration](./images/blazor-richtexteditor-mention-integration.webp)
 
