@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use the Blazor Report Viewer (Bold Reports) | Syncfusion
+title: Use the Blazor Report Viewer (Bold Reports) | Syncfusion®
 description: Learn here about how to use the Blazor Report Viewer from Bold Reports in Blazor WebAssembly (WASM) and Blazor Server Apps. Explore here to more details.
 platform: Blazor
 control: Common

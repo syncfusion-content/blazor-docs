@@ -121,7 +121,7 @@ namespace WinFormsApp
             // Create SkinManager instance.
             SkinManager skinManager1 = new SkinManager(this.components);
             
-            // Apply theme to entire form (all Syncfusion controls).
+            // Apply theme to entire form (all controls).
             skinManager1.Controls = this;
             skinManager1.VisualTheme = VisualTheme.HighContrast;
         }
