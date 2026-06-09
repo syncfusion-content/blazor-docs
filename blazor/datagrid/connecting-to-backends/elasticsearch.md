@@ -919,7 +919,7 @@ dotnet run
 2. Navigate to `https://localhost:5001` (or the port shown in the terminal).
 3. The Inventory Stock Control System is now running and ready to use.
 
-![Basic DataGrid displaying inventory stock from a static list using Elasticsearch](../images/blazor-datagrid-elasticsearch.png)
+![Basic DataGrid displaying inventory stock from a static list using Elasticsearch](../images/blazor-datagrid-elasticsearch.webp)
 
 ---
 
