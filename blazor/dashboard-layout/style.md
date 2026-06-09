@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS Structure in Blazor Dashboard Layout Component | Syncfusion®
-description: Checkout and learn here all about CSS Structure in Blazor Dashboard Layout component and much more.
+description: Checkout and learn here all about CSS Structure in Blazor Dashboard Layout component and much more details.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
