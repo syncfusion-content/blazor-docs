@@ -262,7 +262,7 @@ To consume data from the gRPC service, inject the **OrdersServiceClient** into t
 
 Here,  the `DataSource` property of the DataGrid component is used to bind the data to DataGrid in the WebAssembly application.
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Columns are created using the following code, let’s see the properties used and their usage.
+Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Columns are created using the following code, let’s see the properties used and their usage.
 
 * `Field` property specifies the column name of the **Orders** table to display in the grid column.
 * The `Width` property specifies the column width.

@@ -265,7 +265,7 @@ In previous steps, you have successfully configured the Blazor package in the ap
 
 ## Binding data to the DataGrid component
 
-Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) here.
+Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/data/custom-binding) here.
 
 The following points must be considered for creating a custom adaptor.
 
@@ -303,8 +303,7 @@ public class BugDataAdaptor: DataAdaptor
 Now, Open the `Program.cs` file in the application and register the `BugDataAdaptor` class.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
-
+{% highlight c# tabtitle="~/Program.cs" hl_lines="4" %}
 ....
 builder.Services.AddScoped<BugDataAccessLayer>();
 builder.Services.AddSyncfusionBlazor();
