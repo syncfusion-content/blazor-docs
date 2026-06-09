@@ -200,7 +200,7 @@ function updateContentEditableDiv(element, value) {
 
 {% endtabs %}
 
-![Integrating Speech-to-Text with Chat UI](./images/chatui-stt.png)
+![Integrating Speech-to-Text with Chat UI](./images/chatui-stt.webp)
 
 ## Error Handling
 
