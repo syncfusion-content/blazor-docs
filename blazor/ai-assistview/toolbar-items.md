@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar items in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Toolbar items with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Toolbar items in Blazor AI AssistView Component | Syncfusion®
+description: Checkout and learn here all about Toolbar items with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: AI AssistView
 documentation: ug
@@ -228,7 +228,7 @@ In the following example, toolbar item type is set as `Button`.
 
 ```
 
-![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.)
+![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.webp)
 
 #### Setting text
 
