@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Value Binding in Blazor ComboBox Component | Syncfusion
-description: Discover how to configure value, index, and primitive bindings in the Syncfusion Blazor ComboBox component.
+title: Value Binding in Blazor ComboBox Component | Syncfusion®
+description: Discover how to configure value, index, and primitive bindings in the Blazor ComboBox component.
 platform: Blazor
 control: ComboBox
 documentation: ug
