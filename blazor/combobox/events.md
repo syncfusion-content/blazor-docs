@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor ComboBox Component | Syncfusion®
-description: Checkout and learn here all about the Events in Blazor ComboBox component and much more details.
+description: Checkout and learn here all about the features and events in Blazor ComboBox component and much more details.
 platform: Blazor
 control: ComboBox
 documentation: ug
