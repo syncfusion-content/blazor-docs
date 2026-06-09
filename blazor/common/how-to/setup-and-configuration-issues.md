@@ -9,7 +9,7 @@ documentation: ug
 
 # Resolving Setup and Configuration Issues in Blazor
 
-This guide covers essential setup and configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper configuration is critical for components to render correctly and function interactively.
+This guide explains how to resolve common setup and configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper configuration is critical for components to render correctly and function interactively.
 
 Common setup issues relate to:
 
@@ -26,7 +26,7 @@ N> This guide is intended for Blazor components version 33.2.3 or later, targeti
 
 **Root cause**: The Blazor theme CSS file is either missing, incorrectly referenced, or placed in the wrong location within the application structure.
 
-**Solution**: Ensure the Blazor theme stylesheet is correctly referenced in `~/Components/App.razor` within the `<head>` section.
+**Solution**: Ensure the Blazor theme stylesheet is correctly referenced in `~/Components/App.razor` within the `<head>` section. For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -39,8 +39,6 @@ N> This guide is intended for Blazor components version 33.2.3 or later, targeti
 
 {% endhighlight %}
 {% endtabs %}
-
-**Available themes**: For the complete list of supported themes, see the [themes documentation](https://blazor.syncfusion.com/documentation/appearance/themes).
 
 ### Best practices
 
@@ -68,9 +66,9 @@ If you switch themes during development, clear your browser cache (Ctrl+F5 or Ct
 
 **Solution**: Configure the appropriate render mode based on your application requirements. For detailed information about the available render modes, refer to the [Blazor render modes documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes).
 
-### For Blazor Web App (Per page/component interactivity)
+### For Blazor Web App
 
-Add the render mode directive at the top of your `.razor` page.
+This applies when interactivity location is set to **Per page/component**. Add the render mode directive at the top of your `.razor` page.
 
 {% tabs %}
 {% highlight razor tabtitle="Counter.razor" hl_lines="2" %}
@@ -215,9 +213,9 @@ Add scripts to `wwwroot/index.html`.
 {% endhighlight %}
 {% endtabs %}
 
-### For components requiring additional scripts (for example, PDF Viewer)
+### For components requiring additional scripts
 
-Some Blazor components require component-specific scripts in addition to the core script.
+In addition to the core script, specific Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) require dedicated component-specific scripts.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
