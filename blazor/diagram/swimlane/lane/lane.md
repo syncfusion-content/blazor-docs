@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lane in Blazor Diagram Component | Syncfusion®
-description: Check out and learn here all about Lane in Blazor Diagram component, its elements and more.
+description: Check out and learn here all about Lane in Blazor Diagram component, its elements and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

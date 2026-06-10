@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node Interaction in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn here all about node interaction in Blazor Diagram component and much more details.
+description: Checkout and learn here all the features about node interaction in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
