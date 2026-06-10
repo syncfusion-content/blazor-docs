@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about handling Accordion events in Syncfusion Blazor Accordion components.
+title: Events in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about handling Accordion events in Blazor Accordion components.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Accordion Component
 
-This section lists the events available in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion and when they are triggered for various Accordion actions.
+This section lists the events available in the Blazor Accordion and when they are triggered for various Accordion actions.
 
 Events are assigned to the Accordion by using a single `<AccordionEvents>` component inside `<SfAccordion>`.
 

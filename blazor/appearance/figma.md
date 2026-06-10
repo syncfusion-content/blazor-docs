@@ -25,7 +25,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits offer the fol
 
 ## Downloading the UI kits
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are available in the [Figma community](https://www.figma.com/@syncfusion). Download the theme-specific kits from the following links:
+The Figma UI kits are available in the [Figma community](https://www.figma.com/@syncfusion). Download the theme-specific kits from the following links:
 
 - [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme)
 - [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme)
@@ -52,7 +52,7 @@ Here's how to customize the primary button color of the Material 3 theme in your
 
 1. Visit our [UI kits](#downloading-the-ui-kits) and choose your preferred theme, such as the Material 3 theme.
 2. Open the selected theme in the Figma web application by clicking **Open in Figma**.
-3. For the desktop application, click **Import** in the top-right corner. Select the downloaded Syncfusion<sup style="font-size:70%">&reg;</sup> Figma file and click **Open**.
+3. For the desktop application, click **Import** in the top-right corner. Select the downloaded Figma file and click **Open**.
 4. Identify the button you wish to customize within your layout.
 5. On the right side of the Figma interface, locate the color variables. For example, a button color variable might be labeled `$primary-bg-color`, derived from the primary color variable.
 6. To customize the primary button color, click outside the button to reveal the **Variables** panel. It contains the design tokens for color variables. Click **Variables**.
