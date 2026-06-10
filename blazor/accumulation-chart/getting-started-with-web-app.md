@@ -119,7 +119,7 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the Client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
 N> 
 - The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
