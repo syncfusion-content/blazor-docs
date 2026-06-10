@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN Activity in Blazor Diagram Component | Syncfusion®
-description: Learn here all about BPMN activity such as task, sub-process in Blazor Diagram component and more.
+description: Learn here all about BPMN activity such as task, sub-process in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
