@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Automatic Layout in Blazor Diagram Component | Syncfusion®
-description: Learn here all about how to create automatic layout in Blazor Diagram component and more.
+description: Learn here all about how to create automatic layout in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
