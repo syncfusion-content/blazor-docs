@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in Blazor DataGrid | Syncfusion
-description: Learn how to configure and customize editing features in the Syncfusion Blazor DataGrid efficiently.
+title: Editing in Blazor DataGrid | Syncfusion®
+description: Learn how to configure and customize editing features in the Blazor DataGrid efficiently.
 platform: Blazor
 control: DataGrid
 documentation: ug
