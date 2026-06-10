@@ -50,7 +50,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are customiza
 
 Here's how to customize the primary button color of the Material 3 theme in your Figma design:
 
-1. Visit our [UI kits](#downloading-the-ui-kits) and choose your preferred theme, such as the Material 3 theme.
+1. Visit our [UI kits](#download-the-ui-kits) and choose your preferred theme, such as the Material 3 theme.
 2. Open the selected theme in the Figma web application by clicking **Open in Figma**.
 3. For the desktop application, click **Import** in the top-right corner. Select the downloaded Figma file and click **Open**.
 4. Identify the button you wish to customize within your layout.
@@ -101,5 +101,5 @@ To upgrade the UI kits, download the latest versions from the links above. Follo
 
 ## See also
 
-* [Apply Blazor Themes and Switch Dynamically](https://blazor.syncfusion.com/documentation/appearance/themes)
+* [Apply Blazor themes and switch dynamically](https://blazor.syncfusion.com/documentation/appearance/themes)
 * [Customize Blazor component themes with Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio)

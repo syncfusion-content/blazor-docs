@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Icons Library Usage and Customization | Syncfusion®
+title: Blazor icons library usage and customization | Syncfusion®
 description: Learn how to use the Blazor Icon component with SfIcon and e-icons, set sizes and tooltips, customize appearance, and integrate with other Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Blazor Icons Library Usage and Customization
+# Blazor icons library usage and customization
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library provides a set of base64-formatted font icons used across [Blazor components](https://www.syncfusion.com/blazor-components). Icons can be used via the `SfIcon` component or the `e-icons` CSS class.
 
@@ -102,7 +102,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 
 N> The [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Size) property is applicable only when defining the icon using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Name) property. Otherwise, use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
 
-### Tooltip for icons
+### Display tooltips for icons
 
 The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Title) property is used to set the title attribute for the icon, which improves accessibility with screen readers and shows a tooltip on mouseover. The following code example displays tooltip text for appropriate icons.
 
@@ -124,7 +124,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIc
 
 ![ToolTip for Blazor Icon Component](./images/icons/icon-title.webp)
 
-### Icon appearance customization 
+### Customize icon appearance
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) component supports customizing color and size by overriding the `e-icons` class.
 
@@ -154,7 +154,7 @@ The following code example demonstrates custom font-size and color for icons.
 
 ![Blazor Icon Component Customization](./images/icons/custom-icon.webp)
 
-### Third-party icons integration
+### Integrate third-party icons
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) component supports rendering custom font icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property. To render custom font icons, define the required font CSS that provides the font name, font size, and content for the icon.
 
@@ -202,7 +202,7 @@ After exporting the icon font, use the [IconCss](https://help.syncfusion.com/cr/
 
 For more information, refer to the [Metro Studio documentation](https://help.syncfusion.com/metro-studio/overview).
 
-### Icon styling with inline attributes
+### Style icons with inline attributes
 
 You can customize the icon element by applying HTML attributes directly to the `SfIcon` component. To reuse the same attribute values across multiple icons, use the `@attributes` Razor directive.
 
@@ -229,7 +229,7 @@ The following example demonstrates how to customize the icon font size using the
 
 ![Custom icon styling using inline attributes](./images/icons/htmlattributes-icon.webp)
 
-## Icon integration with Button component
+## Integrate icons with the Button component
 
 The built-in Blazor icons can be integrated with other Blazor components without defining the `<SfIcon>` tag. To use Blazor icons, add the `e-icons` class that contains the font-family and common properties of the font icons. Add the icon class with the corresponding icon name from the [available icons](#icons-list) with the `e-` prefix.
 
@@ -247,7 +247,7 @@ The following example shows how to integrate icons with the [Blazor Button](http
 
 ![Using Icons with Blazor Button Component](./images/icons/button-integration.webp)
 
-## Use icons directly in an HTML element
+## Use icons in an HTML element
 
 Built-in Blazor icons can be rendered directly in an HTML element by adding the `e-icons` class (font family and common properties) and the [available icon](#icons-list) class with the `e-` prefix.
 

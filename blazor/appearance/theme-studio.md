@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Blazor Component Themes with Theme Studio | Syncfusion®
+title: Customize Blazor component themes with Theme Studio | Syncfusion®
 description: Create custom themes for Blazor components using Theme Studio. Customize colors, filter components, download CSS/SCSS, and import settings.
 platform: Blazor
 control: Common
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Blazor component themes with Theme Studio
 
-Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), Range Navigator, and [Maps](https://www.syncfusion.com/blazor-components/blazor-map).
+Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), and Range Navigator.
 
 ## Customize theme colors from Theme Studio
 

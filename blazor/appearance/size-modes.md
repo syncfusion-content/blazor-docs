@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Enable Touch-Friendly Size Modes in Blazor | Syncfusion®
+title: Enable touch-friendly size modes in Blazor | Syncfusion®
 description: Learn how to enable touch-friendly sizing with the .e-bigger class in Blazor, apply it app-wide or per component, and toggle at runtime.
 platform: Blazor
 control: Appearance
 documentation: ug
 ---
 
-# Enable Touch-Friendly Size Modes in Blazor
+# Enable touch-friendly size modes in Blazor
 
 Blazor components support two size modes: **normal** and **touch** (bigger theme). The touch mode provides larger, touch-friendly UI elements for better accessibility on touch devices.
 
-## Prerequisites and setup
+## Prerequisites
 
 Before applying the size modes, ensure you have created your Blazor application.
 
@@ -47,7 +47,7 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
-## Size mode for the application
+## Set the size mode for the application
 
 You can enable touch mode for the entire application by adding the `.e-bigger` class to the `body` element.
 
@@ -77,7 +77,7 @@ You can enable touch mode for the entire application by adding the `.e-bigger` c
    {% endhighlight %}
    {% endtabs %}
 
-## Size mode for a component
+## Set the size mode for a component
 
 You can enable touch mode for individual components by wrapping them in a `div` with the `.e-bigger` class.
 
@@ -139,7 +139,7 @@ If the Blazor Web App uses interactivity location **Per page/component**, ensure
 
 You can dynamically toggle between touch and normal modes at runtime using [JavaScript interop](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-8.0).
 
-### Step 1: Add CSS class
+### Step 1: Add the CSS class
 
 Add the `.e-bigger` CSS class in the `~/wwwroot/css/app.css` or `~/wwwroot/app.css` file.
 
@@ -161,7 +161,7 @@ Add the `.e-bigger` CSS class in the `~/wwwroot/css/app.css` or `~/wwwroot/app.c
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Add JavaScript functions
+### Step 2: Add the JavaScript functions
 
 Add the following JavaScript methods to toggle the size mode. Place the script in the appropriate file:
 - **Blazor Web App**: `~/Components/App.razor`
@@ -183,7 +183,7 @@ Add the following JavaScript methods to toggle the size mode. Place the script i
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Call JavaScript from .NET
+### Step 3: Call the JavaScript from .NET
 
 Inject the `IJSRuntime` abstraction and call the JavaScript methods.
 
@@ -240,7 +240,7 @@ Inject the `IJSRuntime` abstraction and call the JavaScript methods.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
-## Change size mode for a component at runtime
+## Change the size mode for a component at runtime
 
 You can dynamically change the size mode for individual components by conditionally applying the `.e-bigger` CSS class.
 
@@ -311,7 +311,7 @@ You can dynamically change the size mode for individual components by conditiona
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
-## Customize font size and font family
+## Customize the font size and font family
 
 You can customize the font size and font family for all components by overriding the CSS for the `.e-control` class:
 
