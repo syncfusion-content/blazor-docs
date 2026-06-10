@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable Touch-Friendly Size Modes in Blazor | Syncfusion
-description: Learn how to enable touch-friendly sizing with the .e-bigger class in Syncfusion Blazor, apply it app-wide or per component, and toggle at runtime.
+title: Enable Touch-Friendly Size Modes in Blazor | Syncfusion®
+description: Learn how to enable touch-friendly sizing with the .e-bigger class in Blazor, apply it app-wide or per component, and toggle at runtime.
 platform: Blazor
 control: Appearance
 documentation: ug
