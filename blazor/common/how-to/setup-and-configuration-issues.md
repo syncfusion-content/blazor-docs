@@ -9,7 +9,7 @@ documentation: ug
 
 # Resolving Setup and Configuration Issues in Blazor
 
-This guide covers essential setup and configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper configuration is critical for components to render correctly and function interactively.
+This guide explains how to resolve common setup and configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper configuration is critical for components to render correctly and function interactively.
 
 Common setup issues relate to:
 

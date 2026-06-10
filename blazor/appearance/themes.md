@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apply Blazor Themes and Switch Dynamically | Syncfusion
+title: Apply Blazor Themes and Switch Dynamically | Syncfusion®
 description: Learn how to use Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
 platform: Blazor
 component: Appearance
@@ -580,7 +580,7 @@ LibMan offers the following advantages,
 
 3.You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
 
-![Specify Syncfusion library](images/library-unpkg.webp)
+![Specify library](images/library-unpkg.webp)
 
 4.You can choose to select specific files or include all library files, as shown below.
 
@@ -679,7 +679,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     ![Web Compiler 2022+](images/web_compiler.webp)
 
-* Install the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
+* Install the [Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
     ```
     npm install @syncfusion/blazor-themes
@@ -756,7 +756,7 @@ It is important to note that the Material 3 theme uses CSS variables. To overrid
 }
 ```
 
-N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
+N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
 
 The following shows the importing theme path for the overall theme.
 
@@ -1066,6 +1066,8 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 ### Change theme dynamically in Blazor Web App
 
@@ -1460,4 +1462,4 @@ Starting from version `v23.2.4`, customized `Material` and `Tailwind` themes are
 
 ## See also
 
-[How to change background of browser based on Syncfusion<sup style="font-size:70%">&reg;</sup> Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes) 
+[How to change background of browser based on Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes) 
