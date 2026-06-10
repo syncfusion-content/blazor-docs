@@ -167,7 +167,6 @@ In the `SeriesLabelFont`:
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Country Values by Year">
-
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartPrimaryYAxis Title="Value"></ChartPrimaryYAxis>
     <ChartLegendSettings Visible="true"></ChartLegendSettings>
