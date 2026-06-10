@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor DateRangePicker component and more.
+title: Accessibility in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -116,4 +116,4 @@ The accessibility compliance of the DateRangePicker component is shown in the fo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in components](../common/accessibility)
