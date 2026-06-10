@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable/Disable Context Menu items in Blazor ContextMenu | Syncfusion
-description: Learn here all about Enable/Disable Context Menu items in Syncfusion Blazor ContextMenu component and more.
+title: Enable/Disable Context Menu items in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Enable/Disable Context Menu items in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug

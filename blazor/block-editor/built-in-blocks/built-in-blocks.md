@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blocks in Blazor Block Editor Component | Syncfusion
-description: Learn about blocks and content organization in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
+title: Blocks in Blazor Block Editor Component | Syncfusion®
+description: Learn about blocks and content organization in the Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blocks in Blazor Block Editor Component
 
-The Syncfusion Block Editor uses [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property.
+The Block Editor uses [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) as the fundamental units for creating and managing content. The entire editor content is structured as a collection of these blocks, which are configured and managed through the [Blocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_Blocks) property.
 
 ## Blocks
 

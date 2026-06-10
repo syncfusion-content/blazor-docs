@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Card Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor Card component and more.
+title: Style and Appearance in Blazor Card Component | Syncfusion®
+description: Checkout and learn here all feature about Style and Appearance in Syncfusion Blazor Card component and much more.
 platform: Blazor
 control: Card
 documentation: ug
