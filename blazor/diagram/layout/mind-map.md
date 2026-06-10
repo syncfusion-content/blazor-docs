@@ -1,7 +1,7 @@
 ---
 layout: post
-title: MindMap Layout in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create the MindMap layout in Syncfusion Blazor Diagram component and more.
+title: MindMap Layout in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create the MindMap layout in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

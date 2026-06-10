@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flowchart Layout in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create flowchart layout in Syncfusion Blazor Diagram component and more.
+title: Flowchart Layout in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create flowchart layout in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
