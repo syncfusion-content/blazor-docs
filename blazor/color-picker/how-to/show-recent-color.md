@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show Recent color in Blazor Color Picker Component | Syncfusion
-description: Checkout and learn here all about Show Recent color in Syncfusion Blazor Color Picker component and more.
+title: Show Recent color in Blazor Color Picker Component | Syncfusion®
+description: Checkout and learn here all the features about Show Recent color in Blazor Color Picker component and much more.
 platform: Blazor
 control: Color Picker
 documentation: ug

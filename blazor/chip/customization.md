@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor Chip Component | Syncfusion
-description: Checkout and learn here all about Customization in the Syncfusion Blazor Chip component and much more.
+title: Customization in Blazor Chip Component | Syncfusion®
+description: Checkout and learn here all the features about Customization in the Blazor Chip component and much more.
 platform: Blazor
 control: Chip
 documentation: ug
