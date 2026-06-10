@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Navigations and Indicators with Blazor Carousel Component | Syncfusion
+title: Navigations and Indicators with Blazor Carousel | Syncfusion®
 description: Checkout and learn about Navigations and Indicators with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Carousel
