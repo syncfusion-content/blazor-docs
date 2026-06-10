@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor DateTimePicker Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Datetime Picker component and more.
+title: Globalization in Blazor DateTimePicker Component | Syncfusion®
+description: Checkout and learn here all about Globalization in Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Datetime Picker Component
 
-The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component supports localization and culture-specific formatting. For configuration details, see the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. When a Locale is set, the component reflects the culture’s date and time formats, month and day names, and other culture-specific settings. Ensure that the required culture data is loaded before rendering the component.
+The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component supports localization and culture-specific formatting. For configuration details, see the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic for Blazor components. When a Locale is set, the component reflects the culture’s date and time formats, month and day names, and other culture-specific settings. Ensure that the required culture data is loaded before rendering the component.
 
 ## Right-To-Left
 

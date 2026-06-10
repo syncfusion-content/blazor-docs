@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DateTime Range in Blazor DateTimePicker Component | Syncfusion
-description: Checkout and learn here all about DateTime Range in Syncfusion Blazor Datetime Picker component and more.
+title: DateTime Range in Blazor DateTimePicker Component | Syncfusion®
+description: Checkout and learn here all about DateTime Range in Blazor Datetime Picker component and more.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
