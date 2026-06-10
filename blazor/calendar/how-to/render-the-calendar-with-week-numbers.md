@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Render Week Numbers in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about rendering week numbers in Syncfusion Blazor Calendar component and much more.
+title: Render Week Numbers in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about rendering week numbers in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
