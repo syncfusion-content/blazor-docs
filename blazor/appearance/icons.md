@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Icons Library Usage and Customization | Syncfusion
+title: Blazor Icons Library Usage and Customization | Syncfusion®
 description: Learn how to use the Blazor Icon component with SfIcon and e-icons, set sizes and tooltips, customize appearance, and integrate with other Blazor components.
 platform: Blazor
 control: Common

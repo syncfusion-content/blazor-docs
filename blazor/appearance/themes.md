@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Apply Blazor Themes and Switch Dynamically | Syncfusion®
+title: Apply Blazor themes and switch dynamically | Syncfusion®
 description: Learn how to use Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
 platform: Blazor
 component: Appearance
 documentation: ug
 ---
 
-# Apply Blazor Themes and Switch Dynamically
+# Apply Blazor themes and switch dynamically
 
 The following themes are available in the [Blazor components](https://www.syncfusion.com/blazor-components) library.
 
@@ -111,7 +111,7 @@ To use Blazor theme files from static web assets, ensure the app serves static f
 
 N> For a **Blazor Web App** using **Server**, **WebAssembly**, or **Auto** interactive render modes, ensure that `UseStaticFiles()` is configured in the **server project**. For a **standalone Blazor WebAssembly app**, no server-side middleware configuration is required.
 
-### Refer theme style sheet from static web assets
+### Reference the theme stylesheet from static web assets
 
 Blazor themes are provided as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
@@ -1404,7 +1404,7 @@ Create or update the appropriate page file based on your application type.
 
 Now, run your application and use the theme switcher dropdown to change themes. The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component will immediately reflect the selected theme, demonstrating the dynamic theme switching functionality.
 
-## Render Blazor components offline with Material and Tailwind themes
+## Render Blazor components offline using Material and Tailwind themes
 
 Material and Tailwind themes use the online Roboto font by default. If your application needs to work offline or in a local network without internet access, follow these steps to use offline fonts.
 
@@ -1438,11 +1438,11 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
     </head>
 ```
 
-### Using customized styles from `Syncfusion.Blazor.Themes` package and CDN
+### Use customized styles from the `Syncfusion.Blazor.Themes` package and CDN
 
 Starting from version `v23.2.4`, customized `Material` and `Tailwind` themes are available in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) package and via CDN.
 
-#### Static web asset reference:
+#### Static web asset reference
 
 ```html
 <head>
@@ -1451,7 +1451,7 @@ Starting from version `v23.2.4`, customized `Material` and `Tailwind` themes are
 </head>
 ```
 
-#### CDN reference:
+#### CDN reference
 
 ```html
 <head>

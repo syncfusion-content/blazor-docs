@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Figma UI Kits for Blazor Components with Design Tokens | Syncfusion
+title: Figma UI kits for Blazor components with design tokens | Syncfusion®
 description: Learn about Syncfusion’s Figma UI kits for Blazor, available for Material 3, Fluent, Tailwind, and Bootstrap 5 themes, and how to export design tokens.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Figma UI Kits for Blazor Components with Design Tokens
+# Figma UI kits for Blazor components with design tokens
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides [Figma UI kits](https://www.figma.com/@syncfusion) to streamline collaboration between designers and developers. The kits match the themes used by [Blazor components](https://www.syncfusion.com/blazor-components) and are available for [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme), [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme), [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme).
 
@@ -23,7 +23,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits offer the fol
 - Developers can match [Blazor components](https://www.syncfusion.com/blazor-components) to design requirements for alignment and accuracy.
 - Standardized components and themes maintain a consistent look and feel across projects.
 
-## Downloading the UI kits
+## Download the UI kits
 
 The Figma UI kits are available in the [Figma community](https://www.figma.com/@syncfusion). Download the theme-specific kits from the following links:
 
@@ -44,7 +44,7 @@ The Figma UI kits are structured for easy navigation and exploration of componen
 
 ![Layout](./images/figma-kit-structure.webp)
 
-## Customizing the UI kits
+## Customize the UI kits
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are customizable to meet specific needs, allowing unique designs and color adjustments to match brand guidelines. Because the components are built using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), customizations will be seamlessly reflected across multiple components and variants.
 
@@ -69,7 +69,7 @@ Feel free to experiment with these customization options to create a design that
 
 Download customized styles as design tokens and CSS variables using the Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens plugin. This plugin bridges the gap between design and development by converting Figma design variables into Syncfusion<sup style="font-size:70%">&reg;</sup> tokens for direct use in your applications to ensure a smooth transition from design to implementation.
 
-### Exporting design tokens
+### Export design tokens
 
 Follow these steps to download the customized styles from the Figma UI Kit:
 
@@ -87,7 +87,7 @@ Follow these steps to download the customized styles from the Figma UI Kit:
 The exported zip file includes the following files:
 
 - `css-variables.css`: Contains CSS variables for light and dark themes derived from the Figma design. Import this file alongside component styles to reflect custom designs.
-- `<theme-name>-tokens.json`: Contains style variables and values in a JSON format compatible with [Theme Studio](./theme-studio). The `<theme-name>` placeholder represents the selected theme (e.g., `material3-tokens.json`, `fluent-tokens.json`). This file can be [imported](./theme-studio#import-previously-changed-settings-into-the-theme-studio) into [Theme Studio](./theme-studio) for further customization. After processing in [Theme Studio](./theme-studio), you can [download](./theme-studio#download-the-customized-theme) the updated styles file and integrate it into your application, bringing your custom themes to life.
+- `<theme-name>-tokens.json`: Contains style variables and values in a JSON format compatible with [Theme Studio](./theme-studio). The `<theme-name>` placeholder represents the selected theme (e.g., `material3-tokens.json`, `fluent-tokens.json`). This file can be [imported](./theme-studio#import-previous-settings-into-theme-studio) into Theme Studio for further customization. After processing in Theme Studio, you can [download](./theme-studio#download-the-customized-theme) the updated styles file and integrate it into your application, bringing your custom themes to life.
 
 This streamlined process ensures that your unique design vision, crafted in Figma, is accurately translated into your final application, maintaining consistency between design and implementation.
 
@@ -95,11 +95,11 @@ This streamlined process ensures that your unique design vision, crafted in Figm
 
 To upgrade the UI kits, download the latest versions from the links above. Follow these guidelines for a seamless upgrade:
 
-- Monitor the [Figma community page](https://www.figma.com/@syncfusion) or [Syncfusion release notes](https://blazor.syncfusion.com/documentation/release-notes) for updates or new versions of UI kits.
+- Monitor the [Figma community page](https://www.figma.com/@syncfusion) for updates or new versions of UI kits.
 - Before upgrading, back up your ongoing projects to prevent data loss or compatibility issues.
 - Share feedback regarding the upgraded UI kits, including any issues encountered or suggestions for improvement.
 
 ## See also
 
-* [Available themes](https://blazor.syncfusion.com/documentation/appearance/themes)
-* [Customizing themes](https://blazor.syncfusion.com/documentation/appearance/theme-studio#customizing-theme-color-from-theme-studio)
+* [Apply Blazor Themes and Switch Dynamically](https://blazor.syncfusion.com/documentation/appearance/themes)
+* [Customize Blazor component themes with Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio)
