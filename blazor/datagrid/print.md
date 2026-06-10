@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in Blazor DataGrid Component | Syncfusion
-description: Learn to print the Syncfusion Blazor DataGrid using the toolbar Print command or PrintAsync method, configure browser page setup, and handle large columns.
+title: Print in Blazor DataGrid Component | Syncfusion®
+description: Learn to print the Blazor DataGrid using the toolbar Print command or PrintAsync method, configure browser page setup, and handle large columns.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -364,7 +364,7 @@ To include more columns in the printable area:
 
 These adjustments ensure visibility of all columns for wide grids.
 
-![Printing large number of columns in Syncfusion Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.webp)
+![Printing large number of columns in Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.webp)
 
 <!-- Show or hide columns while Printing
 

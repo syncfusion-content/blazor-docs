@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Height in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Row Height in Syncfusion Blazor DataGrid component and much more details.
+title: Row Height in Blazor DataGrid Component | Syncfusion®
+description: Checkout and learn here all about Row Height in Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
