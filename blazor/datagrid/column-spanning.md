@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Spanning in Blazor DataGrid Component | Syncfusion®
-description: Learn here all about column spanning in Blazor DataGrid component of Essential Studio and more.
+description: Learn here all about column spanning in Blazor DataGrid component of Essential Studio and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
