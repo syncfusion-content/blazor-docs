@@ -187,7 +187,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Rows in Blazor DataGrid](./images/blazor-datagrid-rows.png)
+![Rows in Blazor DataGrid](./images/blazor-datagrid-rows.webp)
 
 ## Row template with formatting
 
@@ -373,7 +373,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.png)
+![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.webp)
 
 ## Render control in row template
 

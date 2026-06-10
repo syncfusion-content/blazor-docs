@@ -230,19 +230,19 @@ When you tap on a Grid row using a touch screen, the tapped row is automatically
 
 To select multiple rows in the Grid, you can utilize the multi-row selection feature. When you tap on a row, a popup is displayed, indicating the option for multi-row selection. You can tap on the popup, and then proceed to tap on the desired rows that you want to select. This allows you to select and interact with multiple rows simultaneously, as shown in the following image:
 
-![Multi row selection](images/selection.jpg)
+![Multi row selection](images/selection.webp)
 
 **Multi-Row or Cell Selection**
 
 In addition to selecting multiple rows, you can also perform multi-row or cell selection in the Grid. By tapping on the popup, you can choose the option for multi-row or cell selection. Once selected, you can then tap on the desired rows or cells to make the selection, as shown in the following image:
 
-![Multi row or cell selection](images/mselection.jpg)
+![Multi row or cell selection](images/mselection.webp)
 
 > For multi-selection, it requires the selection [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be **Multiple**.
 
 The following screenshot represents a Grid touch selection in the device.
 
-![Touch Selection in Blazor DataGrid](./images/blazor-datagrid-touch-selection.jpg) -->
+![Touch Selection in Blazor DataGrid](./images/blazor-datagrid-touch-selection.webp) -->
 
 ## Toggle selection
 

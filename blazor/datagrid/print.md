@@ -352,7 +352,7 @@ This is demonstrated in the below sample code,
 ```
 
 The following image represents Hierarchial Grid with print toolbar item,
-![Print Hierarchial Grid Content](./images/grid-hierarchial-print.png) -->
+![Print Hierarchial Grid Content](./images/grid-hierarchial-print.webp) -->
 
 ## Printing large number of Columns
 
