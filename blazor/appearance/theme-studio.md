@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Blazor Component Themes with Theme Studio | Syncfusion
+title: Customize Blazor Component Themes with Theme Studio | Syncfusion®
 description: Create custom themes for Blazor components using Theme Studio. Customize colors, filter components, download CSS/SCSS, and import settings.
 platform: Blazor
 control: Common

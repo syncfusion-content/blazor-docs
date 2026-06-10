@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Synchronized Chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Synchronized Chart in Syncfusion Blazor Charts component and much more details.
+title: Synchronized Chart in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Synchronized Chart in Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
