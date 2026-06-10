@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility Features in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn all about accessibility in Syncfusion Blazor Diagram component and many more details.
+title: Accessibility Features in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn all about accessibility in Blazor Diagram component and many more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -165,4 +165,4 @@ The accessibility compliance of the Blazor Diagram component is shown in the fol
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
