@@ -12,7 +12,7 @@ documentation: ug
 The Blazor Gantt Chart component supports a two-tier timeline layout, enabling customization of both the top and bottom tiers through specific configuration options.
 
 - [TopTier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_TopTier) and [BottomTier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_BottomTier): Define the structure and visibility of each timeline tier.
-- [Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit): Specifies the time unit for each tier, such as day, week, or month.
+- [Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit): Specifies the time unit for each tier, such as day, week, month, quarter, or half-year.
 - [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Format): Determines the date format displayed in timeline cells.
 - [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Count): Combines multiple time units into a single timeline cell.
 - [Formatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Formatter): Applies a custom method to format the timeline cell values programmatically.
@@ -134,6 +134,126 @@ By adjusting these values, the timeline can display broader or more granular int
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVeMjsmrILGXGvG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Display Quarter timeline mode
+
+In the Blazor Gantt Chart component, the timeline can be configured to display quarterly intervals using the `TimelineViewMode.Quarter` timeline unit. This helps visualize project schedules over broader time periods by grouping the timeline into quarters such as `Q1`, `Q2`, `Q3`, and `Q4`.
+
+The following example demonstrates how to configure the timeline with:
+
+- Top tier configured to display years
+- Bottom tier configured to display quarters
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentID">
+    </GanttTaskFields>
+    <GanttTimelineSettings TimelineUnitSize="100">
+        <GanttTopTierSettings Unit="TimelineViewMode.Year"></GanttTopTierSettings>
+        <GanttBottomTierSettings Unit="TimelineViewMode.Quarter" Format="Q"></GanttBottomTierSettings>
+    </GanttTimelineSettings>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentID { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 10, 31), },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 70, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 05, 06), EndDate = new DateTime(2022, 12, 01), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 70, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 50, ParentID = 5 },
+        };
+        return Tasks;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Display Half-year timeline mode
+
+In the Blazor Gantt Chart component, the timeline can be configured to display half-yearly intervals using the `TimelineViewMode.HalfYear` timeline unit. This enables project schedules to be viewed across larger time spans, such as the first half (`H1`) and second half (`H2`) of a year.
+
+The following example demonstrates how to configure the timeline with:
+
+- Top tier configured to display years
+- Bottom tier configured to display half-year intervals
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+            Duration="Duration" Progress="Progress" ParentID="ParentID">
+    </GanttTaskFields>
+    <GanttTimelineSettings TimelineUnitSize="100">
+        <GanttTopTierSettings Unit="TimelineViewMode.Year"></GanttTopTierSettings>
+        <GanttBottomTierSettings Unit="TimelineViewMode.HalfYear" Format="H"></GanttBottomTierSettings>
+    </GanttTimelineSettings>
+</SfGantt>
+
+@code{
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentID { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 10, 31), },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 70, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 05, 06), EndDate = new DateTime(2022, 12, 01), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 70, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 50, ParentID = 5 },
+        };
+        return Tasks;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Format value of timeline cell
 

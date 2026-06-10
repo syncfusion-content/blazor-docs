@@ -384,6 +384,8 @@ In Gantt Chart, the task's duration value can be measured by the following durat
 * Day
 * Hour
 * Minute
+* Week
+* Month
 
 In Gantt, we can define duration unit for whole project by using [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_DurationUnit) property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
 
@@ -404,7 +406,7 @@ The below code snippet explains the mapping of duration unit data source field t
     </GanttTaskFields>
 </SfGantt>
 
-@code{
+@code {
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -422,29 +424,28 @@ The below code snippet explains the mapping of duration unit data source field t
         public string DurationUnit { get; set; }
         public int? ParentID { get; set; }
     }
-
-
     private static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 18) },
             new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 70, ParentID = 1, DurationUnit = "day" },
             new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 50, ParentID = 1, DurationUnit = "hour" },
             new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "480", Progress = 30, ParentID = 1, DurationUnit = "minute" },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, DurationUnit = "hour" },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, DurationUnit = "day" },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskID = 5, TaskName = "Construction Planning", StartDate = new DateTime(2022, 01, 05), Duration = "2", Progress = 45, ParentID = 1, DurationUnit = "week" },
+            new TaskData() { TaskID = 6, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 02, 21) },
+            new TaskData() { TaskID = 7, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 6, DurationUnit = "hour" },
+            new TaskData() { TaskID = 8, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 6, DurationUnit = "day" },
+            new TaskData() { TaskID = 9, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 6 },
+            new TaskData() { TaskID = 10, TaskName = "Budget Review", StartDate = new DateTime(2022, 01, 10), Duration = "1", Progress = 20, ParentID = 6, DurationUnit = "month" }
         };
+
         return Tasks;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBoCNsehHsMykiH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The default value of the [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_DurationUnit) property is `day`.
 
@@ -462,7 +463,7 @@ Duration units for the tasks can also be defined along with the duration values,
     </GanttTaskFields>
 </SfGantt>
 
-@code{
+@code {
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -485,13 +486,15 @@ Duration units for the tasks can also be defined along with the duration values,
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "3days", Progress = 70, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "12hours", Progress = 50, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "1800minutes", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "480minutes", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3days", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 18) },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "3days", Progress = 70, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "12hours", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "1800minutes", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Construction Planning", StartDate = new DateTime(2022, 01, 05), Duration = "2weeks", Progress = 45, ParentID = 1 },
+            new TaskData() { TaskID = 6, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 02, 21) },
+            new TaskData() { TaskID = 7, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "480minutes", Progress = 30, ParentID = 6 },
+            new TaskData() { TaskID = 8, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3days", Progress = 40, ParentID = 6 },
+            new TaskData() { TaskID = 9, TaskName = "Budget Review", StartDate = new DateTime(2022, 01, 10), Duration = "1month", Progress = 20, ParentID = 6 }
         };
         return Tasks;
     }
@@ -499,8 +502,6 @@ Duration units for the tasks can also be defined along with the duration values,
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNheMDCeVHrVxHgU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
 
