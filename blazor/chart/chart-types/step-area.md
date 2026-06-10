@@ -302,9 +302,9 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWhBxpxgIqdqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-**No Risers**
+**Show Risers**
 
-You can eliminate the vertical lines between points by setting the `ShowRisers` property to `false` in the series.This approach is useful for highlighting trends without the distraction of risers.
+The `ShowRisers` property controls whether vertical riser lines are displayed between data points in the series. Set `ShowRisers` to `true` to display the riser lines and `false` to hide them. Hiding risers helps simplify the chart appearance and makes the overall trend easier to follow.  
 
 ```cshtml
 
