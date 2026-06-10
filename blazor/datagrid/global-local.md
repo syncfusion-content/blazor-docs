@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor DataGrid | Syncfusion®
-description: Learn all about globalization and right-to-left text support in the Blazor DataGrid component.
+description: Learn all about globalization and right-to-left text support in the Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

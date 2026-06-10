@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor DataGrid Component in Web App | Syncfusion®
+title: Getting Started with Blazor DataGrid in Web App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Syncfusion Blazor DataGrid in Blazor Web App.
 platform: Blazor
 component: DataGrid
