@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Model Binding in Blazor CheckBox Component | Syncfusion
-description: Check out and learn here all about Model Binding in Syncfusion Blazor CheckBox component and much more.
+title: Model Binding in Blazor CheckBox Component | Syncfusion®
+description: Check out and learn here all the features about Model Binding in Blazor CheckBox component and much more.
 platform: Blazor
 control: Checkbox
 documentation: ug
