@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Week Numbers in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about Week Numbers in Blazor DateTimePicker component and more.
+description: Checkout and learn here all about Week Numbers in Blazor DateTimePicker component and much more details.
 platform: Blazor
 control: DateTimePicker
 documentation: ug

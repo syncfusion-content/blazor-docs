@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DateTime Format in Blazor DateTimePicker Component | Syncfusion®
-description: Checkout and learn here all about DateTime Format in Blazor DateTimePicker component and much more.
+description: Checkout and learn here all about DateTime Format in Blazor DateTimePicker component and much more details.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
