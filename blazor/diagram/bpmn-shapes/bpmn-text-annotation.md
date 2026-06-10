@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BPMN Text Annotation in Diagram | Syncfusion
-description: Learn here all about how to create BPMN text annotation in Syncfusion Blazor Diagram component and more.
+title: BPMN Text Annotation in Diagram | Syncfusion®
+description: Learn here all about how to create BPMN text annotation in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

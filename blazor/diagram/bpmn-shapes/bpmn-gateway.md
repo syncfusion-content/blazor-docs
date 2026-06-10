@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BPMN Gateway in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create the BPMN gateway in Syncfusion Blazor Diagram component and more.
+title: BPMN Gateway in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create the BPMN gateway in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

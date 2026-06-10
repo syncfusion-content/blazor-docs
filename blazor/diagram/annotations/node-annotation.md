@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node Annotation Position in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn how to position annotations on nodes in Syncfusion Blazor Diagram component and more.
+title: Node Annotation Position in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn how to position annotations on nodes in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

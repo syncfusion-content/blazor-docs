@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiple Segments in Blazor Diagram Component | Syncfusion
-description: Check out and learn about Multiple Segments in the Syncfusion Blazor Diagram component and much more details.
+title: Multiple Segments in Blazor Diagram Component | Syncfusion®
+description: Check out and learn about Multiple Segments in the Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
