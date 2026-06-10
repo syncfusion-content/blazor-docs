@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor DateRangePicker in Server App | Syncfusion®
+title: Getting Started with DateRangePicker in Server App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor DateRangePicker Component in Blazor Server App.
 platform: Blazor
 component: DateRangePicker
