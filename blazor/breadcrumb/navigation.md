@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn here all about Navigation with Blazor Breadcrumb component of Syncfusion and more.
+title: Navigation with Blazor Breadcrumb component | Syncfusion®
+description: Checkout and learn here all features about Navigation with Blazor Breadcrumb component and much more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
