@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right-To-Left in Blazor CheckBox Component | Syncfusion
-description: Checkout and learn here all about Right-To-Left in Syncfusion Blazor CheckBox component and much more.
+title: Right-To-Left in Blazor CheckBox Component | Syncfusion®
+description: Checkout and learn here all the features about Right-To-Left in Blazor CheckBox component and much more.
 platform: Blazor
 control: Checkbox
 documentation: ug
