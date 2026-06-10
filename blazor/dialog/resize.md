@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resizing in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Resizing in Syncfusion Blazor Dialog component and much more details.
+title: Resizing in Blazor Dialog Component | Syncfusion®
+description: Checkout and learn here all about Resizing in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

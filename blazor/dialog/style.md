@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Dialog component and more.
+title: Style and appearance in Blazor Dialog Component | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Dialog Customization
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog component allows extensive customization options to enhance its appearance and behavior. You can modify its dimensions, support RTL layouts, apply custom styles, and animate its display.
+The Blazor Dialog component allows extensive customization options to enhance its appearance and behavior. You can modify its dimensions, support RTL layouts, apply custom styles, and animate its display.
 
 ### Width
 

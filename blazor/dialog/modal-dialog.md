@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Modal in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Modal in Syncfusion Blazor Dialog component and much more details.
+title: Modal in Blazor Dialog Component | Syncfusion®
+description: Checkout and learn here all about Modal in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug
