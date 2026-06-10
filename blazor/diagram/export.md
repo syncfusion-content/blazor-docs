@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn here all about the Exporting feature in Blazor Diagram component and more.
+description: Checkout and learn here all the features about the Exporting feature in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn all about the Tooltip support in Blazor Diagram component and much more.
+description: Checkout and learn all the features about the Tooltip support in Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

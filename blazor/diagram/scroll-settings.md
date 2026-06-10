@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scroll Settings in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn here all about Scroll Setting in Blazor Diagram component and much more.
+description: Checkout and learn here all the features about Scroll Setting in Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

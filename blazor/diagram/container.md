@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Container in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn here all about Container support in Blazor Diagram component and much more.
+description: Checkout and learn here all the features about Container support in Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

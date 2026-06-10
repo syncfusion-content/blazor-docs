@@ -41,7 +41,7 @@ Create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](http
 
 {% endtabcontents %}
 
-## Install requoired Blazor packages
+## Install required Blazor packages
 
 {% tabcontents %}
 

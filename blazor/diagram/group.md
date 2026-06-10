@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node Group in Blazor Diagram Component | Syncfusion®
-description: Learn here all about how to create and update the NodeGroup in Blazor Diagram component and more.
+description: Learn here all about how to create and update the NodeGroup in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
