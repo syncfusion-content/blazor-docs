@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Dropdown Tree component and more.
+title: Style and appearance in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Style and appearance in Blazor Dropdown Tree component and more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -343,7 +343,7 @@ Add the additional html attributes such as styles, class, and more to the root e
     {
         {"class", "e-employee" },
         {"style", "background-color: #0bebd6; text-align: right" },
-        {"title", "Syncfusion DropDownTree" }
+        {"title", "DropDownTree" }
     };
     
     class EmployeeData

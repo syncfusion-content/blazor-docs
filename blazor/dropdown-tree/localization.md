@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization and RTL in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Localization and RTL in Syncfusion Blazor Dropdown Tree component and more.
+title: Localization and RTL in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Localization and RTL in Blazor Dropdown Tree component and more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -25,4 +25,4 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 
 ## RTL
 
-Dropdown Tree component has `RTL` support. It helps to render the Dropdown Tree from right-to-left direction. Refer to the [Right-To-Left Support](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to enable the `RTL` in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
+Dropdown Tree component has `RTL` support. It helps to render the Dropdown Tree from right-to-left direction. Refer to the [Right-To-Left Support](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to enable the `RTL` in Blazor components
