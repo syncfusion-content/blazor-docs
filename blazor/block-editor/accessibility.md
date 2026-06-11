@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Block Editor Component | Syncfusion
+title: Accessibility in Blazor Block Editor Component | Syncfusion®
 description: Checkout and learn about Accessibility and Keyboard interaction with Blazor Block Editor component and more details.
 platform: Blazor
 control: Block Editor
