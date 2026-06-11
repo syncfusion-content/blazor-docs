@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Matrix generator in Blazor Barcode Component | Syncfusion
-description: Checkout and learn here all about Data Matrix generator in Syncfusion Blazor Barcode component and more.
+title: Data Matrix generator in Blazor Barcode Component | Syncfusion®
+description: Checkout and learn here all features about Data Matrix generator in Blazor Barcode component and much more.
 platform: Blazor
 control: Barcode
 documentation: ug
