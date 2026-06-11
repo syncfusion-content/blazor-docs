@@ -304,7 +304,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 **Show Risers**
 
-The `ShowRisers` property controls whether vertical riser lines are displayed between data points in the series. Set `ShowRisers` to `true` to display the riser lines and `false` to hide them. Hiding risers helps simplify the chart appearance and makes the overall trend easier to follow.  
+The `ShowRisers` property determines whether vertical riser lines are displayed between consecutive data points in the series. Set this property to `true` to show the riser lines or `false` to hide them. Hiding risers can simplify the chart appearance and make the overall trend easier to follow. 
 
 ```cshtml
 
@@ -316,7 +316,7 @@ The `ShowRisers` property controls whether vertical riser lines are displayed be
     <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartData" XName="X" YName="Y" Type="ChartSeriesType.StepArea"
-                    Opacity="0.1" ShowRisers="false" >
+                Opacity="0.1" ShowRisers="false">
             <ChartSeriesBorder Width="1.5"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
