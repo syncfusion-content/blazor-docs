@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Display a Blazor Dialog with custom position | Syncfusion®
-description: Learn here all about Display a Dialog with custom position in Blazor Dialog component and more.
+description: Learn here all about Display a Dialog with custom position in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

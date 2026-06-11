@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Dialog component and much more.
+description: Checkout and learn here all the features about Accessibility in Blazor Dialog component and much more.
 platform: Blazor
 control: Dialog
 documentation: ug

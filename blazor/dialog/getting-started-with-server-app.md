@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Dialog Component in Server App | Syncfusion®
+title: Getting Started with Blazor Dialog in Server App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor Dialog Component in Blazor Server App.
 platform: Blazor
 component: Dialog

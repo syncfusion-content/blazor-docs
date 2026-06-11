@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all about Style and appearance in Blazor Dialog component and more.
+description: Checkout and learn here all the features about Style and appearance in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

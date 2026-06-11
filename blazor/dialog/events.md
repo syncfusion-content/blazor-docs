@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Dialog Component | Syncfusion®
-description: Checkout and learn here all about Events in Blazor Dialog component and much more details.
+description: Checkout and learn here all the features about Events in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Dialog Component
 
-This section explains the list of events of the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog)component which will be triggered for appropriate Dialog actions.
+This section explains the list of events of the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component which will be triggered for appropriate Dialog actions.
 
 ## Created
 

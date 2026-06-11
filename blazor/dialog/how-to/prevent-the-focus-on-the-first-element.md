@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent the focus on the first element in Blazor Dialog | Syncfusion®
-description: Learn here all about Preventing the focus on the first element in Blazor Dialog component and more.
+description: Learn here all about Preventing the focus on the first element in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug
