@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize HTTP handler | Syncfusion
+title: Customize HTTP handler | Syncfusion®
 description: Learn here all about customizing the HTTP handler in the Windows authenticated client application for Blazor FileManager.
 platform: Blazor
 control: File Manager
@@ -143,7 +143,7 @@ This section explains how to create a Blazor server application with Windows aut
 
 ### Create Windows Authenticated Blazor Server Application
 
-You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ![Authentication](../images/customize-http-handler.png)
 
