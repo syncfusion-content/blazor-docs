@@ -55,14 +55,14 @@ These properties allow precise control over how timeline cells display time inte
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 05), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 06), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentID = 5 },
         };
         return Tasks;
     }
@@ -71,7 +71,7 @@ These properties allow precise control over how timeline cells display time inte
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrSWXicLfvvejyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLxZRWCraktvlOF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Combining timeline cells
 
@@ -118,13 +118,13 @@ By adjusting these values, the timeline can display broader or more granular int
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 08, 21), },
-            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 70, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 05, 06), EndDate = new DateTime(2022, 09, 21), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 70, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 50, ParentID = 5 },
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 70, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 05, 07), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 05, 07), Duration = "150", Progress = 70, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 05, 07), Duration = "150", Progress = 50, ParentID = 5 },
         };
         return Tasks;
     }
@@ -133,7 +133,7 @@ By adjusting these values, the timeline can display broader or more granular int
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVeMjsmrILGXGvG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBHjHWiqXXIusAC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Display Quarter timeline mode
 
@@ -180,13 +180,13 @@ The following example demonstrates how to configure the timeline with:
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 10, 31), },
-            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 70, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 05, 06), EndDate = new DateTime(2022, 12, 01), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 70, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 50, ParentID = 5 },
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 70, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 05, 07), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 05, 07), Duration = "150", Progress = 70, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 05, 07), Duration = "150", Progress = 50, ParentID = 5 },
         };
         return Tasks;
     }
@@ -240,13 +240,13 @@ The following example demonstrates how to configure the timeline with:
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 10, 31), },
-            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 70, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 05, 06), EndDate = new DateTime(2022, 12, 01), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 70, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 50, ParentID = 5 },
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 70, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "150", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 05, 07), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 05, 07), Duration = "150", Progress = 70, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 05, 07), Duration = "150", Progress = 50, ParentID = 5 },
         };
         return Tasks;
     }
@@ -286,8 +286,8 @@ For each task, the scheduling mode will be mapped from the data source field. Th
 </SfGantt>
 
 @code{
-    private DateTime ProjectStart = new DateTime(2022, 01, 10);
-    private DateTime ProjectEnd = new DateTime(2022, 12, 10);
+    private DateTime ProjectStart = new DateTime(2026, 01, 10);
+    private DateTime ProjectEnd = new DateTime(2026, 12, 10);
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -319,14 +319,14 @@ For each task, the scheduling mode will be mapped from the data source field. Th
     }
     public static List<TaskData> GetTaskCollection() {
     List<TaskData> Tasks = new List<TaskData> () {
-        new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 06, 08) },
-        new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "20", Progress = 30, ParentID = 1 },
-        new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "24", Progress = 40, ParentID = 1 },
-        new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 05, 05), Duration = "25", Progress = 30, ParentID = 1 },
-        new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 06, 06), EndDate = new DateTime(2022, 09, 02) },
-        new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 06, 06), Duration = "33", Progress = 30, ParentID = 5 },
-        new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 07, 06), Duration = "23", Progress = 40, ParentID = 5 },
-        new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 08, 06), Duration = "20", Progress = 30, ParentID = 5 }
+        new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 05) },
+        new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 07), Duration = "20", Progress = 30, ParentID = 1 },
+        new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 07), Duration = "24", Progress = 40, ParentID = 1 },
+        new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 05, 05), Duration = "25", Progress = 30, ParentID = 1 },
+        new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 06, 06) },
+        new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 06, 06), Duration = "33", Progress = 30, ParentID = 5 },
+        new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 07, 06), Duration = "23", Progress = 40, ParentID = 5 },
+        new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 08, 06), Duration = "20", Progress = 30, ParentID = 5 }
     };
     return Tasks;
     }
@@ -335,7 +335,7 @@ For each task, the scheduling mode will be mapped from the data source field. Th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSsNimUskhhuZd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVxjRWiKNKfWXNZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Timeline cell width
 
@@ -381,14 +381,14 @@ This configuration lets you control the width and spacing of timeline cells, sup
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 07), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 07), Duration = "4", Progress = 40, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 08), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 08), Duration = "3", Progress = 30, ParentID = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 08), Duration = "3", Progress = 40, ParentID = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 08), Duration = "0", Progress = 30, ParentID = 5 }
         };
         return Tasks;
     }
@@ -397,4 +397,4 @@ This configuration lets you control the width and spacing of timeline cells, sup
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBSMZCQKVggEfTc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdNxMWAtJQNpbM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -62,14 +62,14 @@ The rendering of the parent taskbar in auto-scheduling mode also takes into acco
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "2", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "1", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "2", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "2", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "1", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 07), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 07), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 07), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 07), Duration = "2", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -78,7 +78,7 @@ The rendering of the parent taskbar in auto-scheduling mode also takes into acco
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrSMNCShfHotWhE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrdDdCMAIPafbzi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Manually scheduled tasks
 
@@ -118,14 +118,14 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
     {
         List<TaskData> Tasks = new List<TaskData>()
     {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 01), EndDate = new DateTime(2022, 01, 09), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 06), Duration = "4", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 06), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 05), EndDate = new DateTime(2022, 01, 08), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 05), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 01), EndDate = new DateTime(2026, 01, 09), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 06), Duration = "4", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 06), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 05), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -134,7 +134,7 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBosNWSLzYVIouF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVdDdCMKoOvGJZX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom
 
@@ -172,14 +172,14 @@ When the [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gant
     {
         List<TaskData> Tasks = new List<TaskData>()
     {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "3", Progress = 30, ParentID = 1, IsManual= true , },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, IsManual= true },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "3", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), IsManual= true },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, IsManual= true }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 04) },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 04), Duration = "3", Progress = 30, ParentID = 1, IsManual= true , },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 04), Duration = "4", Progress = 40, ParentID = 1, IsManual= true },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 04), Duration = "3", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 06), IsManual= true },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 30, ParentID = 5, IsManual= true }
         };
         return Tasks;
     }
@@ -188,7 +188,7 @@ When the [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gant
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLSCjWyVIMRWTuf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhHZRsCqHMjEuoM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Unscheduled tasks
 
@@ -240,9 +240,9 @@ You can define the various types of unscheduled tasks in the data source as foll
         List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskID = 1, TaskName = "Project initiation", Duration = "4", },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 07), },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), Progress = 30, },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), Progress = 30, },
             new TaskData() { TaskID = 5, TaskName = "Project estimation", Duration = "0"}
         };
         return Tasks;
@@ -252,7 +252,7 @@ You can define the various types of unscheduled tasks in the data source as foll
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhSsXMyhygtBxWx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBHZRMMAnBUJlmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > If the [AllowUnscheduledTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowUnscheduledTasks) property is set to **false**, then the Gantt Chart Component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
 
@@ -300,13 +300,13 @@ The following code snippet explains how to define the working time range for the
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 04), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "1", Progress = 70, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "1", Progress = 50, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "1", Progress = 50, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 06), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "1", Progress = 70, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "1", Progress = 50, ParentID = 5, }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 05), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "1", Progress = 70, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), Duration = "1", Progress = 50, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "1", Progress = 50, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 07), EndDate = new DateTime(2026, 01, 07), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 07), Duration = "1", Progress = 70, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 07), Duration = "1", Progress = 50, ParentID = 5, }
         };
         return Tasks;
     }
@@ -315,7 +315,7 @@ The following code snippet explains how to define the working time range for the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLeWjiyhepokIyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhxZRWiqHgbWRwT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* Individual tasks can lie between any time within the defined working time range of the project.
 >* The [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property is used to define the working time for the whole project.
@@ -356,14 +356,14 @@ Non-working days/weekend are used to represent the non-productive days in a proj
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 09), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 10), },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), Duration = "4", Progress = 40, ParentID = 1, },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentID = 1, },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 08), EndDate = new DateTime(2022, 01, 12), },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 08), Duration = "3", Progress = 30, ParentID = 5, },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 08), Duration = "3", Progress = 40, ParentID = 5, },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 08), Duration = "0", Progress = 30, ParentID = 5, }
         };
         return Tasks;
     }
@@ -372,7 +372,7 @@ Non-working days/weekend are used to represent the non-productive days in a proj
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBSsjsoByxMWadO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBnXHssUxHjqQyl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
 > In the Gantt control, you can make weekend as working day by setting the [IncludeWeekend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_IncludeWeekend) property to **true**`.
@@ -428,16 +428,16 @@ The below code snippet explains the mapping of duration unit data source field t
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 18) },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 70, ParentID = 1, DurationUnit = "day" },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 50, ParentID = 1, DurationUnit = "hour" },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "480", Progress = 30, ParentID = 1, DurationUnit = "minute" },
-            new TaskData() { TaskID = 5, TaskName = "Construction Planning", StartDate = new DateTime(2022, 01, 05), Duration = "2", Progress = 45, ParentID = 1, DurationUnit = "week" },
-            new TaskData() { TaskID = 6, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 02, 21) },
-            new TaskData() { TaskID = 7, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 6, DurationUnit = "hour" },
-            new TaskData() { TaskID = 8, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 6, DurationUnit = "day" },
-            new TaskData() { TaskID = 9, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 6 },
-            new TaskData() { TaskID = 10, TaskName = "Budget Review", StartDate = new DateTime(2022, 01, 10), Duration = "1", Progress = 20, ParentID = 6, DurationUnit = "month" }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05) },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "4", Progress = 70, ParentID = 1, DurationUnit = "day" },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), Duration = "4", Progress = 50, ParentID = 1, DurationUnit = "hour" },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "480", Progress = 30, ParentID = 1, DurationUnit = "minute" },
+            new TaskData() { TaskID = 5, TaskName = "Construction Planning", StartDate = new DateTime(2026, 01, 05), Duration = "2", Progress = 45, ParentID = 1, DurationUnit = "week" },
+            new TaskData() { TaskID = 6, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 06) },
+            new TaskData() { TaskID = 7, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 30, ParentID = 6, DurationUnit = "hour" },
+            new TaskData() { TaskID = 8, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 40, ParentID = 6, DurationUnit = "day" },
+            new TaskData() { TaskID = 9, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentID = 6 },
+            new TaskData() { TaskID = 10, TaskName = "Budget Review", StartDate = new DateTime(2026, 01, 10), Duration = "1", Progress = 20, ParentID = 6, DurationUnit = "month" }
         };
 
         return Tasks;
@@ -486,15 +486,15 @@ Duration units for the tasks can also be defined along with the duration values,
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 18) },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "3days", Progress = 70, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "12hours", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "1800minutes", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Construction Planning", StartDate = new DateTime(2022, 01, 05), Duration = "2weeks", Progress = 45, ParentID = 1 },
-            new TaskData() { TaskID = 6, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 02, 21) },
-            new TaskData() { TaskID = 7, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "480minutes", Progress = 30, ParentID = 6 },
-            new TaskData() { TaskID = 8, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3days", Progress = 40, ParentID = 6 },
-            new TaskData() { TaskID = 9, TaskName = "Budget Review", StartDate = new DateTime(2022, 01, 10), Duration = "1month", Progress = 20, ParentID = 6 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05) },
+            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "3days", Progress = 70, ParentID = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), Duration = "12hours", Progress = 50, ParentID = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "1800minutes", Progress = 30, ParentID = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Construction Planning", StartDate = new DateTime(2026, 01, 05), Duration = "2weeks", Progress = 45, ParentID = 1 },
+            new TaskData() { TaskID = 6, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 06) },
+            new TaskData() { TaskID = 7, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), Duration = "480minutes", Progress = 30, ParentID = 6 },
+            new TaskData() { TaskID = 8, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), Duration = "3days", Progress = 40, ParentID = 6 },
+            new TaskData() { TaskID = 9, TaskName = "Budget Review", StartDate = new DateTime(2026, 01, 10), Duration = "1month", Progress = 20, ParentID = 6 }
         };
         return Tasks;
     }
