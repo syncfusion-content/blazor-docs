@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Serialization | Blazor Chart Wizard Component | Syncfusion
-description: Check out and learn here all about serialization in Syncfusion Blazor Chart Wizard component and much more.
+title: Serialization | Blazor Chart Wizard Component | Syncfusion®
+description: Check out and learn here all the features about serialization in Blazor Chart Wizard component and much more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
