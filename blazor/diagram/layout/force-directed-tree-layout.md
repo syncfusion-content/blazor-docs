@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Force-Directed Tree Layout in Blazor Diagram Component | Syncfusion
-description: Learn how to create and customize the Force-Directed Tree Layout in the Syncfusion Blazor Diagram component through detailed steps and examples.
+title: Force-Directed Tree Layout in Blazor Diagram Component | Syncfusion®
+description: Learn how to create and customize the Force-Directed Tree Layout in the Blazor Diagram component through detailed steps and examples.
 platform: Blazor
 control: Diagram
 documentation: ug
