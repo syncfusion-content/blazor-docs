@@ -116,4 +116,4 @@ The accessibility compliance of the DatePicker component is shown in the followi
 
 ## See also
 
-* [Accessibility in components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
