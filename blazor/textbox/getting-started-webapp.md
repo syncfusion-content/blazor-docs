@@ -275,5 +275,5 @@ The floating label moves the label above the TextBox when the control is focused
 
 ### See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+* [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
