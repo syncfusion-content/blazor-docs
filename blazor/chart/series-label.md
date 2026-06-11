@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series Label in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Series label in Syncfusion Blazor Charts component and much more.
+description: Check out and learn here all about the Series label in the Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
