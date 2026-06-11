@@ -159,7 +159,7 @@ Blazor Themes are available through the CDN. Ensure that the version in the URL 
 
 ```html
 <head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2.css" rel="stylesheet" />
 </head>
 ```
 
@@ -1033,7 +1033,7 @@ Below table lists the importing theme path for the individual components.
 
 In Blazor applications, you can switch themes dynamically by changing the stylesheet reference at runtime. The implementation approach varies depending on your Blazor application type.
 
-### Prerequisites and setup
+### Prerequisites
 
 Before implementing theme switching, ensure you have created your Blazor application.
 
@@ -1073,12 +1073,12 @@ For the complete list of available packages, refer to the [Blazor NuGet packages
 
 The following steps demonstrate how to dynamically switch themes in a Blazor Web App using Blazor themes with the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component.
 
-1. **Configure theme loading**
+#### 1. Configure theme loading
 
 For a **Blazor Web App** using **Server**, **WebAssembly**, or **Auto** interactive render modes, update the `~/Components/App.razor` file to read the `theme` query string parameter and load the corresponding theme stylesheet.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 @using Microsoft.AspNetCore.WebUtilities
 @inject NavigationManager Navigation
@@ -1124,7 +1124,7 @@ For a **Blazor Web App** using **Server**, **WebAssembly**, or **Auto** interact
 {% endhighlight %}
 {% endtabs %}
 
-2. **Create a dropdown component for theme selection**
+#### 2. Create a dropdown component for theme selection
 
 Create a new `ThemeSwitcher.razor` file in the `~/Components` folder with the following code. This component uses the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) to enable users to select a theme, which updates the URL query string and triggers a page reload with the selected theme.
 
@@ -1212,7 +1212,7 @@ Create a new `ThemeSwitcher.razor` file in the `~/Components` folder with the fo
 
 N> Change the `@rendermode` directive to `InteractiveAuto` or `InteractiveWebAssembly` based on your application's render mode configuration.
 
-3. **Add the theme switcher component**
+#### 3. Add the theme switcher component
 
 Include the `ThemeSwitcher` component in your `~/Components/Layout/MainLayout.razor` file to display the theme switcher in your application layout.
 
@@ -1245,7 +1245,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching
 
 The following steps demonstrate how to dynamically switch themes in a Blazor WebAssembly (WASM) standalone application using Blazor themes with the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component. Unlike Blazor Web App, standalone WASM apps use JavaScript interop to dynamically change themes without requiring a full page reload, as they run entirely in the browser without server-side rendering capabilities.
 
-1. **Configure theme switching with JavaScript**
+#### 1. Configure theme switching with JavaScript
 
 Add the following code to the `~/wwwroot/index.html` file. This script dynamically updates the theme stylesheet reference when the user selects a theme from the dropdown.
 
@@ -1276,7 +1276,7 @@ Add the following code to the `~/wwwroot/index.html` file. This script dynamical
 {% endhighlight %}
 {% endtabs %}
 
-2. **Add the theme switcher dropdown**
+#### 2. Add the theme switcher dropdown
 
 Modify your `~/Layout/MainLayout.razor` file to include the theme switcher dropdown using the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list). This dropdown calls the JavaScript `setTheme()` function when the user selects a different theme.
 
@@ -1431,12 +1431,12 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
     * For **Blazor Web App** (using Server, WebAssembly, or Auto interactive render modes), add the reference in `~/Components/App.razor`.
     * For **Blazor WebAssembly Standalone App**, add the reference in `~/wwwroot/index.html`.
 
-```html
-    <head>
-        ....
-        <link href="material.min.css" rel="stylesheet" />
-    </head>
-```
+    ```html
+        <head>
+            ....
+            <link href="material.min.css" rel="stylesheet" />
+        </head>
+    ```
 
 ### Use customized styles from the `Syncfusion.Blazor.Themes` package and CDN
 

@@ -51,31 +51,36 @@ For the complete list of available packages, refer to the [Blazor NuGet packages
 
 You can enable touch mode for the entire application by adding the `.e-bigger` class to the `body` element.
 
-1. Define the `.e-bigger` CSS class in your app stylesheet (`~/wwwroot/css/app.css` or `~/wwwroot/app.css`):
+### Step 1: Define the touch-friendly CSS class
 
-   {% tabs %}
-   {% highlight css tabtitle="~/wwwroot/css/app.css or ~/wwwroot/app.css" %}
+Add the `.e-bigger` CSS class to your application stylesheet (`~/wwwroot/css/app.css` or `~/wwwroot/app.css`).
 
-   .e-bigger {
-       font-size: x-large;
-   }
+{% tabs %}
+{% highlight css tabtitle="~/wwwroot/css/app.css or ~/wwwroot/app.css" %}
 
-   {% endhighlight %}
-   {% endtabs %}
+.e-bigger {
+    font-size: x-large;
+}
 
-2. Add the `.e-bigger` class to the `body` element:
-   - For **Blazor Web App**: Add to `~/Components/App.razor`
-   - For **Blazor WebAssembly Standalone App**: Add to `~/wwwroot/index.html`
+{% endhighlight %}
+{% endtabs %}
 
-   {% tabs %}
-   {% highlight html tabtitle="App.razor or index.html" %}
+### Step 2: Apply the class to the document body
 
-   <body class="e-bigger">
-       ...
-   </body>
+Add the `.e-bigger` class to the `body` element.
 
-   {% endhighlight %}
-   {% endtabs %}
+- For **Blazor Web App**: Add to `~/Components/App.razor`
+- For **Blazor WebAssembly Standalone App**: Add to `~/wwwroot/index.html`
+
+{% tabs %}
+{% highlight html tabtitle="App.razor or index.html" %}
+
+<body class="e-bigger">
+    ...
+</body>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set the size mode for a component
 
@@ -185,7 +190,7 @@ Add the following JavaScript methods to toggle the size mode. Place the script i
 
 ### Step 3: Call the JavaScript from .NET
 
-Inject the `IJSRuntime` abstraction and call the JavaScript methods.
+Inject the [IJSRuntime](https://learn.microsoft.com/en-us/dotnet/api/microsoft.jsinterop.ijsruntime?view=aspnetcore-10.0) abstraction and call the JavaScript methods.
 
 {% tabs %}
 {% highlight razor %}
