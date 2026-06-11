@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DiagramIcon in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create the Diagram Icon handles in Syncfusion Blazor Diagram component and more.
+title: DiagramIcon in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create the Diagram Icon handles in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
