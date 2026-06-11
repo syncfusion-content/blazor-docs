@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Carousel Component | Syncfusion
+title: Style and Appearance in Blazor Carousel Component | Syncfusion®
 description: Checkout and learn here all about style and appearance in Syncfusion Blazor Carousel component and more.
 platform: Blazor
 control: Carousel
