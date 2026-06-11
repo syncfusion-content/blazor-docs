@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Button component and much more.
+title: Accessibility in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor Button component including keyboard navigation, ARIA attributes, and usability features.
 platform: Blazor
 control: Button
 documentation: ug
@@ -62,4 +62,4 @@ The accessibility compliance of the Blazor Button component is shown in the foll
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
