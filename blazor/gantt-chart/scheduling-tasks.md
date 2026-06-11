@@ -397,20 +397,20 @@ In Gantt, we can define duration unit for whole project by using [GanttTaskField
 The below code snippet explains the mapping of duration unit data source field to the Gantt control using the [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_DurationUnit) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
                      Duration="Duration" DurationUnit="DurationUnit" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -418,7 +418,6 @@ The below code snippet explains the mapping of duration unit data source field t
         public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string DurationUnit { get; set; }
@@ -453,20 +452,20 @@ The below code snippet explains the mapping of duration unit data source field t
 Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -474,7 +473,6 @@ Duration units for the tasks can also be defined along with the duration values,
         public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentID { get; set; }

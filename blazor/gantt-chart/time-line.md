@@ -128,21 +128,21 @@ In Month mode, the top tier shows months and the bottom tier shows weeks, ideal 
 In Quarter mode, the top tier shows quarters and the bottom tier shows months, enabling project schedules to be viewed across quarterly intervals with monthly granularity.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttTimelineSettings TimelineViewMode="TimelineViewMode.Quarter"></GanttTimelineSettings>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -150,7 +150,6 @@ In Quarter mode, the top tier shows quarters and the bottom tier shows months, e
         public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentID { get; set; }
@@ -180,21 +179,21 @@ In Quarter mode, the top tier shows quarters and the bottom tier shows months, e
 In Half-year mode, the top tier shows half-year intervals and the bottom tier shows months, making it suitable for visualizing long-term project schedules with monthly granularity.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
                Duration="Duration" Progress="Progress" ParentID="ParentID">
     </GanttTaskFields>
     <GanttTimelineSettings TimelineViewMode="TimelineViewMode.HalfYear"></GanttTimelineSettings>
 </SfGantt>
 
 @code{
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -202,7 +201,6 @@ In Half-year mode, the top tier shows half-year intervals and the bottom tier sh
         public int TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentID { get; set; }
