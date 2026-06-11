@@ -13,9 +13,9 @@ The Gantt provides support for automatic and manual task scheduling modes. It is
 
 The Gantt control supports three types of mode. They are:
 
-* **Auto**: All the tasks are automatically validate.
-* **Manual**: All the tasks are manually validate by the user.
-* **Custom**: Both Auto and Manual tasks are render by mapped from data source.
+* **Auto**: All the tasks are automatically validated.
+* **Manual**: All the tasks are manually validated by the user.
+* **Custom**: Both Auto and Manual tasks are rendered based on a field mapped from the data source.
 
 > The default value of [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskMode) is **Auto**.
 
@@ -138,7 +138,7 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 
 ## Custom
 
-When the [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskMode) property is set as **Custom**, the scheduling mode for each tasks will be mapped from the data source field. The `Boolean` property [GanttTaskFields.Manual](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Manual) is used to map the manual scheduling mode field from the data source.
+When the [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskMode) property is set as **Custom**, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property [GanttTaskFields.Manual](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Manual) is used to map the manual scheduling mode field from the data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -196,9 +196,9 @@ Unscheduled tasks are planned for a project without any definite schedule dates.
 
 Taskbar state |Auto |Manual
 -----|-----|-----
-`Start Date Only` | ![Blazor Gantt Chart with Start Date Task](images/blazor-gantt-chart-start-date-task.webp) | ![Alt text](images/startDate-manual.webp)
-`End Date Only` | ![Blazor Gantt Chart with End Date Task](images/blazor-gantt-chart-end-date-task.webp) | ![Alt text](images/endDate-manual.webp)
-`Duration Only` | ![Blazot Gantt Chart with Duration Task](images/blazor-gantt-chart-duration-task.webp) | ![Alt text](images/duration-manual.webp)
+| `Start Date Only` | ![Blazor Gantt Chart with Start Date Task](images/blazor-gantt-chart-start-date-task.webp) | ![Start-date-only task in manual mode](images/startDate-manual.webp) |
+| `End Date Only` | ![Blazor Gantt Chart with End Date Task](images/blazor-gantt-chart-end-date-task.webp) | ![End-date-only task in manual mode](images/endDate-manual.webp) |
+| `Duration Only` | ![Blazor Gantt Chart with Duration Task](images/blazor-gantt-chart-duration-task.webp) | ![Duration-only task in manual mode](images/duration-manual.webp) |
 `Milestone`| ![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.webp) | ![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.webp)
 
 > A milestone is a task that has no start and end dates, but it has a duration value of zero.

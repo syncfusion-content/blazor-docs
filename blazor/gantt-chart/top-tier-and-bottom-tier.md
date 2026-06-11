@@ -17,7 +17,7 @@ The Blazor Gantt Chart component supports a two-tier timeline layout, enabling c
 - [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Count): Combines multiple time units into a single timeline cell.
 - [Formatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Formatter): Applies a custom method to format the timeline cell values programmatically.
 
-These properties allow precise control over how time intervals are displayed, enhancing the readability and usability of the Gantt chart across various project scales.
+These properties allow precise control over how timeline cells display time intervals, improving the clarity and usability of the Gantt chart across various project scales.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -262,7 +262,7 @@ In the Blazor Gantt Chart component, the values displayed in the top and bottom 
 - [TopTier.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Format) and [BottomTier.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Format): Define the date format for timeline cells using predefined format strings.
 - [TopTier.formatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Formatter) and [BottomTier.formatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Formatter): Apply custom logic to format timeline cell values programmatically.
 
-These options provide flexibility in presenting timeline data according to project requirements or localization needs.
+For each task, the scheduling mode will be mapped from the data source field. These options provide flexibility in presenting timeline data according to project requirements or localization needs.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -346,7 +346,7 @@ The width of the top tier cells is automatically calculated based on the bottom 
 - [TimelineSettings.TimelineUnitSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_TimelineUnitSize): Defines the pixel width of each bottom-tier timeline cell.
 - [TopTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit): Determines how the top-tier cell width is derived relative to the bottom tier.
 
-This configuration allows precise control over the visual density of the timeline, supporting both detailed and high-level project views.
+This configuration lets you control the width and spacing of timeline cells, supporting both detailed and high-level project views.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

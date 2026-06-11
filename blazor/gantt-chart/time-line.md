@@ -9,7 +9,7 @@ documentation: ug
 
 # Timeline in Blazor Gantt Chart Component
 
-The timeline in the Blazor Gantt Chart component represents project durations as cells with defined units and formats, supporting in-built view modes like Hour-Minute, Day-Hour, Week-Day, Month-Week, Quarter-Month, Half-Year-Month, Year-Month, and Minutes for flexible visualization. Configure modes using the [TimelineViewMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TimelineViewMode.html) property, with top and bottom tiers customized via [TopTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) and [BottomTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) in [TimelineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html). This enables detailed views, such as weekly overviews with daily breakdowns for projects, ensuring accurate timeline representation.
+The timeline in the Blazor Gantt Chart component represents project durations as cells with defined units and formats, supporting in-built view modes like Hour-Minute, Day-Hour, Week-Day, Month-Week, Quarter-Month, Half-Year-Month, and Year-Month for flexible visualization. Configure modes using the [TimelineViewMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TimelineViewMode.html) property, with top and bottom tiers customized via [TopTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) and [BottomTier.Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit) in [TimelineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html). This enables detailed views, such as weekly overviews with daily breakdowns for projects, ensuring accurate timeline representation.
 
 ## Configure timeline view modes
 
@@ -392,7 +392,7 @@ In Hour mode, the top tier shows hours and the bottom tier minutes, perfect for 
 
 ## Customize week start day
 
-In the Gantt chart component, you can customize the week start day using the [GanttTimelineSettings.WeekStartDay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_WeekStartDay) property. By default, the `GanttTimelineSettings.WeekStartDay` is set to **0**, which specifies the **Sunday** as a start day of the week. But, you can customize the week start day by using the following code example.
+In the Gantt chart component, you can customize the week start day using the [GanttTimelineSettings.WeekStartDay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_WeekStartDay) property. By default, the `GanttTimelineSettings.WeekStartDay` is set to **0**, which specifies **Sunday** as the start day of the week. You can customize the week start day using the following code example.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -447,7 +447,7 @@ In the Gantt chart component, you can customize the week start day using the [Ga
 
 ## Customize automatic timescale update action
 
-In the Gantt component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the [GanttTimelineSettings.UpdateTimescaleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_UpdateTimescaleView) property.
+In the Gantt component, the schedule timeline will be automatically updated when task date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the [GanttTimelineSettings.UpdateTimescaleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_UpdateTimescaleView) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
