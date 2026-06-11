@@ -22,7 +22,7 @@ Diagram allows you to customize the connector appearances. The following topics 
 To learn more about connector customization, watch the following video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=iKuBSy8mOpE&t=519s" %}
-
+<br><br>
 * The following code example illustrates how to create decorators of various shapes.
 
 ```cshtml
@@ -72,7 +72,7 @@ To learn more about connector customization, watch the following video:
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhSsZDdUmUzCzAM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Decorator)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/Decorator.razor)
 
 ### How to Customize Connector Decorator Appearance
 
@@ -141,7 +141,7 @@ The following code example illustrates how to customize the decorator appearance
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/DecoratorAppearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/DecoratorAppearance.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiZNHqcgvBDIK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with customized decorators in Blazor Diagram](../images/blazor-diagram-decorator.webp)" %}
 
@@ -217,7 +217,7 @@ Padding adds space between the connector’s end point and the object to where i
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Padding)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/Padding.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVeWZtdqQzoBYft?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector demonstrating source and target padding in Blazor Diagram](../images/blazor-diagram-connector-padding.webp)" %}
 
@@ -312,11 +312,11 @@ The following code example illustrates how to enable line bridging.
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Bridging)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/Bridging.razor)
 
 >**Note:** Bridging support is not applicable for layout.
 
-The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors define the width of the line bridging. The default value is **10** pixels.
+The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors define the width of the line bridging. The default value is **10 pixels**.
 
 Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) does not support bridging.
 
@@ -375,7 +375,7 @@ Corner radius rounds the corners of connectors. Set the radius using the [Corner
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CornerRadius)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/CornerRadius.razor)
 
 Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) does not support corner radius.
 
@@ -442,7 +442,7 @@ The following code example illustrates how to customize the segment appearance.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhoCNNxAmxqeFTF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SegmentAppearance)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/SegmentAppearance.razor)
 
 ## How to Enable or Disable Connector Behavior
 
@@ -502,7 +502,7 @@ The following code illustrates how to disable selection.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIMXjnqwHvfxiD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Constraints)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Wasm/Pages/Connectors/Customization/Constraints.razor)
 
 ## How to Add Additional Information for Connector
 
@@ -560,7 +560,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhysDZxAQmzMPsc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/CustomProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/CustomProperty.razor)
 
 ## How to Set Connector Z-Index 
 
@@ -602,16 +602,16 @@ The following code illustrates how to render a connector based on stack order.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBIsZDnUcmuZCJG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ZIndexProperty)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/ZIndexProperty.razor)
 
 ## How to Set Hit Padding for Connector
 
-* The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The `HitPadding` property allows you to customize the vicinity area while selecting. The default value is **10** pixels. Within the hit padding region, the connector can be selected and deselected.
+* The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The `HitPadding` property allows you to customize the vicinity area while selecting. The default value is **10 pixels**. Within the hit padding region, the connector can be selected and deselected.
 
 To learn more about connector hit padding, watch the following segment:
 
 {% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=651s" %}
-
+<br><br>
 The following code illustrates how to set hit padding for a connector.
 
 ```cshtml
@@ -700,7 +700,7 @@ The following code example illustrates how to leave space between the connection
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSiZjRUwPlqeJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SourcePaddingAndTargetPadding)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/SourcePaddingAndTargetPadding.razor)
 
 ## How to Set Connection Padding for Connector
 
@@ -752,7 +752,7 @@ The following code example illustrates how to set connection padding for a conne
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBIMZZHAQYodScU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ConnectionPadding)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Wasm/Pages/Connectors/Customization/ConnectionPadding.razor)
 
 ## How to enable Connector Split
 
@@ -831,7 +831,7 @@ The following code illustrates how to enable connector splitting and create conn
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/ConnectorSplitting.razor)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSsNXnqvDymRvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ConnectorSplitting](../images/ConnectorSplitDemo.webp)" %}
 
@@ -839,7 +839,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Limit Segment Thumbs in a Connector
 
- The [`MaxSegmentThumbs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property limits the number of segment thumbs displayed on a connector. Segment thumbs are interactive handles that allow users to modify the connector's path. By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
+ The [MaxSegmentThumbs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_MaxSegmentThumbs) property limits the number of segment thumbs displayed on a connector. Segment thumbs are interactive handles that allow users to modify the connector's path. By setting this property, you can limit how many thumbs appear, helping to simplify the user interface and reduce visual complexity.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -889,7 +889,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumb).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/MaxSegmentThumb.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSMXDnAFShGTba?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[MaxSegmentThumbs](../images/MaxSegmentThumb.webp)" %}
 
@@ -982,7 +982,7 @@ The following example demonstrates how to update the `MaxSegmentThumbs` value at
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoCDtRUlyaTMHD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/MaxSegmentThumbRuntime).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Customization/MaxSegmentThumbRuntime.razor).
 
 >**Note:** The `MaxSegmentThumbs` property is applicable only when the connector type is set to **Orthogonal**.
 
