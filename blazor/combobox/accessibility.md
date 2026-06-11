@@ -130,4 +130,5 @@ The accessibility compliance of the ComboBox component is demonstrated in the fo
 
 ## See also
 
-* [Accessibility in components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
+
