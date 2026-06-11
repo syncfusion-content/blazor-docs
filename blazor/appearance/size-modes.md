@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enable touch-friendly size modes in Blazor | Syncfusion®
+title: Enable Touch Friendly Size Modes in Blazor | Syncfusion®
 description: Learn how to enable touch-friendly sizing with the .e-bigger class in Blazor, apply it app-wide or per component, and toggle at runtime.
 platform: Blazor
 control: Appearance
 documentation: ug
 ---
 
-# Enable touch-friendly size modes in Blazor
+# Enable Touch Friendly Size Modes in Blazor
 
 Blazor components support two size modes: **normal** and **touch** (bigger theme). The touch mode provides larger, touch-friendly UI elements for better accessibility on touch devices.
 

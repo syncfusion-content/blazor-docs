@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor icons library usage and customization | Syncfusion®
+title: Blazor Icons Library Usage and Customization | Syncfusion®
 description: Learn how to use the Blazor Icon component with SfIcon and e-icons, set sizes and tooltips, customize appearance, and integrate with other Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Blazor icons library usage and customization
+# Blazor Icons Library Usage and Customization
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library provides a set of base64-formatted font icons used across [Blazor components](https://www.syncfusion.com/blazor-components). Icons can be used via the `SfIcon` component or the `e-icons` CSS class.
 

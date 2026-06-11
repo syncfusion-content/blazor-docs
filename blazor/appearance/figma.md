@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Figma UI kits for Blazor components with design tokens | Syncfusion®
+title: Figma UI Kits for Blazor Components with Design Tokens | Syncfusion®
 description: Learn about Syncfusion’s Figma UI kits for Blazor, available for Material 3, Fluent, Tailwind, and Bootstrap 5 themes, and how to export design tokens.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Figma UI kits for Blazor components with design tokens
+# Figma UI Kits for Blazor Components with Design Tokens
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> provides [Figma UI kits](https://www.figma.com/@syncfusion) to streamline collaboration between designers and developers. The kits match the themes used by [Blazor components](https://www.syncfusion.com/blazor-components) and are available for [Material 3](https://www.figma.com/community/file/1454123774600129202/syncfusion-ui-kit-material-3-theme), [Fluent](https://www.figma.com/community/file/1385969120047188707/syncfusion-ui-kit-fluent-theme), [Tailwind](https://www.figma.com/community/file/1385969065626384098/syncfusion-ui-kit-tailwind-theme), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272/syncfusion-ui-kit-bootstrap-5-theme).
 
@@ -101,5 +101,5 @@ To upgrade the UI kits, download the latest versions from the links above. Follo
 
 ## See also
 
-* [Apply Blazor themes and switch dynamically](https://blazor.syncfusion.com/documentation/appearance/themes)
-* [Customize Blazor component themes with Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio)
+* [Apply Blazor Themes and Switch Themes Dynamically](https://blazor.syncfusion.com/documentation/appearance/themes)
+* [Customize Blazor Component Themes with Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio)
