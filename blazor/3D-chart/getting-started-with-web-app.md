@@ -276,7 +276,7 @@ You can add data labels to improve the readability of the 3D Chart. This can be 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVRXRNvqMCiUPzs?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVRXRNvqMCiUPzs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable tooltip
 
