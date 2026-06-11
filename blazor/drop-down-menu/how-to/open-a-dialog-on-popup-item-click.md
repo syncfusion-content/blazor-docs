@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open a dialog on popup item click in Blazor Dropdown Menu | Syncfusion®
+title: Open a dialog on popup item click in Dropdown Menu | Syncfusion®
 description: Learn here all about Open a dialog on popup item click in Blazor Dropdown Menu component and much more details.
 platform: Blazor
 control: Dropdown Menu
