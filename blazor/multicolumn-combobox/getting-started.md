@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor MultiColumn ComboBox in WASM App | Synfusion
+title: Getting Started Blazor MultiColumn ComboBox in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor MultiColumn ComboBox component in Blazor WebAssembly Application.
 platform: Blazor
 control: MultiColumn ComboBox
