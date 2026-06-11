@@ -116,4 +116,4 @@ The accessibility compliance of the DateRangePicker component is shown in the fo
 
 ## See also
 
-* [Accessibility in components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
