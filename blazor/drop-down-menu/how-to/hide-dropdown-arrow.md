@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide dropdown arrow in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about Hide dropdown arrow in Blazor Dropdown Menu component and more.
+description: Checkout and learn here all about Hide dropdown arrow in Blazor Dropdown Menu component and much more details.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

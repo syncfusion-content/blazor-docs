@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Dropdown List in Popup of Blazor Dropdown Menu | Syncfusion®
-description: Learn here all about Create Dropdown List in Popup of Blazor Dropdown Menu component and more.
+description: Learn here all about Create Dropdown List in Popup of Blazor Dropdown Menu component and much more details.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

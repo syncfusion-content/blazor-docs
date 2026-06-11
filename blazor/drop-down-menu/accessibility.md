@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Dropdown Menu component and more.
+description: Checkout and learn here all the features about Accessibility in Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
