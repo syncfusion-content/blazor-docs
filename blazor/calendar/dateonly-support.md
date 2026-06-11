@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  DateOnly Support in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about DateOnly Support in Syncfusion Blazor Calendar component and much more.
+title:  DateOnly Support in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about DateOnly Support in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug

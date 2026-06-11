@@ -18,9 +18,9 @@ This article explains how to build a shopping cart workflow in a Blazor applicat
 
 ## Create the Blazor project
 
-To create a Blazor server application, follow the [Blazor Web App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
+To create a Blazor server application, follow the [Blazor Server App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
 
-## Install required packages
+### Install required packages
 
 Install required packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -34,9 +34,9 @@ Install required packages in your project using the NuGet Package Manager in Vis
 | Spinner        | [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner) |
 | Themes         | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
-## Add required namespaces
+### Add required namespaces
 
-Open the `Components/_Imports.razor` file and import the following Blazor components, shopping cart models, and services namespaces.
+After the packages are installed, open the `Components/_Imports.razor` file and import the following Blazor components, shopping cart models, and services namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -54,7 +54,7 @@ Open the `Components/_Imports.razor` file and import the following Blazor compon
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor service
+### Register Blazor service
 
 Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
@@ -69,10 +69,9 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheets and script resources
+### Add stylesheets and script resources
 
-Add the Blazor theme CSS and required scripts to the `~/Components/App.razor` file. 
-
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 {% tabs %}
 {% highlight html tabtitle="App.razor"  %}
 
@@ -660,7 +659,11 @@ Displays product details and provides actions for adding items to the cart and m
         return OnAddToCart.InvokeAsync(Item);
     }
 }
-<style>
+
+{% endhighlight %}
+
+{% highlight css tabtitle="Components/ProductCard.razor.css"  %}
+
     .product-card {
         border-radius: 10px;
         transition: box-shadow 0.2s ease;
@@ -725,7 +728,6 @@ Displays product details and provides actions for adding items to the cart and m
         font-size: 25px;
         color: crimson;
     }
-</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -819,7 +821,10 @@ Serves as the landing page and provides quick navigation to key sections of the 
     </div>
 </div>
 
-<style>
+{% endhighlight %}
+
+{% highlight css tabtitle="Home.razor.css"  %}
+
     /* PAGE LAYOUT */
     .home-container {
         max-width: 1000px;
@@ -881,9 +886,8 @@ Serves as the landing page and provides quick navigation to key sections of the 
         font-size: 14px;
     }
 
-</style>
-
 {% endhighlight %}
+
 {% endtabs %}
 
 This page uses the [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card) component to present a hero section and navigation cards. It enables users to quickly navigate to the catalog and wishlist pages.
@@ -973,8 +977,10 @@ Displays available products and provides filtering and cart actions.
     }
 }
 
-<style>
-   
+{% endhighlight %}
+
+{% highlight css tabtitle="Catalog.razor.css"  %}
+  
     article.content {
        overflow: hidden;
     }
@@ -991,9 +997,9 @@ Displays available products and provides filtering and cart actions.
     @@media (max-width: 768px) {
         .catalog-scroll { max-height: calc(100vh - 160px); }
     }
-</style>
 
 {% endhighlight %}
+
 {% endtabs %}
 
 This page uses [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) for category filtering and [Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) for loading states. It integrates the [reusable ProductCard component](#create-the-productcard-component) and interacts with services to manage product data and cart actions.
@@ -1215,7 +1221,10 @@ Displays selected items and allows users to update quantities or remove items.
     private void NavigateToCheckout() => NavigationManager.NavigateTo("/checkout");
 }
 
-<style>
+{% endhighlight %}
+
+{% highlight css tabtitle="Cart.razor.css"  %}
+
     .e-card {
         border: 0px;
         box-shadow: none;
@@ -1290,7 +1299,6 @@ Displays selected items and allows users to update quantities or remove items.
 
     .summary-list::-webkit-scrollbar { width: 8px; }
     .summary-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 6px; }
-</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -1685,7 +1693,15 @@ else
     </div>
 }
 
-<style>
+@code {
+    private void NavigateToCatalog() => NavigationManager.NavigateTo("/catalog");
+
+    private void NavigateToPopular() => NavigationManager.NavigateTo("/catalog");
+}
+
+{% endhighlight %}
+{% highlight css tabtitle="Whishlist.razor.css"  %}
+
     .e-card.empty-wishlist-card {
         border: 0px;
         box-shadow: none;
@@ -1694,13 +1710,6 @@ else
     .empty-wishlist-card { max-width:700px; width:100%; border-radius:12px; }
     .wishlist-icon { font-size:48px; width:84px; height:84px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#fff6fb; color:#d6336c; margin:auto; }
     @@media (max-width:576px){ .empty-wishlist-card{ padding:1rem } .wishlist-icon{ width:64px;height:64px;font-size:36px }}
-</style>
-
-@code {
-    private void NavigateToCatalog() => NavigationManager.NavigateTo("/catalog");
-
-    private void NavigateToPopular() => NavigationManager.NavigateTo("/catalog");
-}
 
 {% endhighlight %}
 {% endtabs %}
