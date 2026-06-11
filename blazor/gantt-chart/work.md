@@ -13,17 +13,15 @@ documentation: ug
 
 The work is the total hours required to complete a task. Work can be mapped from the data source field using the property [GanttTaskFields.Work](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Work). 
 
-N> When the work field is mapped from the data source, the default task type will be `FixedWork`.
-
 The Blazor Gantt Chart component supports the following work units:
 
-* Hour - Displays work in hours using the `WorkUnit.Hour`.
-* Day - Displays work in days using the `WorkUnit.Day`.
-* Minute - Displays work in minutes using the `WorkUnit.Minute`.
-* Week - Displays work in weeks using the `WorkUnit.Week`.
-* Month - Displays work in months using the `WorkUnit.Month`.
+* [Hour](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in hours, representing the total effort required for a task in hourly units. This is the default work unit.
+* [Day](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in days, representing the total effort required for a task in daily units.
+* [Minute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in minutes, representing the total effort required for a task in minute-based units.
+* [Week](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in weeks, representing the total effort required for a task in weekly units.
+* [Month](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in months, representing the total effort required for a task in monthly units.
 
-By default, the `Work` property is measured in `Hour`. The unit used for the `Work` property can be set using the `WorkUnit` enum.
+N> When the work field is mapped from the data source, the default task type will be `FixedWork`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

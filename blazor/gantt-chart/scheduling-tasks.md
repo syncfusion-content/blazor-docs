@@ -445,6 +445,8 @@ The below code snippet explains the mapping of duration unit data source field t
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrHDHMiTFIffSUF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 > The default value of the [GanttTaskFields.DurationUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_DurationUnit) property is `day`.
 
 ### Defining duration unit along with duration field
@@ -499,6 +501,8 @@ Duration units for the tasks can also be defined along with the duration values,
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthdNdMCpbHsFufF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
 

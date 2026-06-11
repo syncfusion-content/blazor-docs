@@ -174,6 +174,8 @@ In Quarter mode, the top tier shows quarters and the bottom tier shows months, e
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthxjHMMJvwBxLlR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Half-year timeline mode
 
 In Half-year mode, the top tier shows half-year intervals and the bottom tier shows months, making it suitable for visualizing long-term project schedules with monthly granularity.
@@ -224,6 +226,8 @@ In Half-year mode, the top tier shows half-year intervals and the bottom tier sh
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRZdWsflQFhHRc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Year timeline mode
 
