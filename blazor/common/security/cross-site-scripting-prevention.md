@@ -192,7 +192,7 @@ Templates allow you to customize how data is displayed by controlling the HTML s
 
 The following examples demonstrate recommended practices for displaying user content securely. They show how improper handling can lead to security risks and how using sanitized HTML or safely encoded plain text ensures content is rendered securely without exposing the application to XSS vulnerabilities.
 
-#### UNSAFE - Direct HTML rendering
+#### UNSAFE – direct HTML rendering
 
 The example below shows a scenario that should never be used. It renders raw HTML from the data source using `MarkupString`, which bypasses Blazor’s HTML encoding.
 
@@ -232,7 +232,7 @@ If the content includes malicious scripts, it can lead to XSS attacks.
 {% endhighlight %}
 {% endtabs %}
 
-#### SAFE – Sanitized MarkupString (pre-sanitized data)
+#### SAFE – sanitized MarkupString (pre-sanitized data)
 
 When HTML content is sanitized on the server or during data preparation and stored in a dedicated property, rendering it with `MarkupString` is acceptable.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with data | Blazor Chart Wizard Component | Syncfusion
-description: Check out and learn here all about working with data in Syncfusion Blazor Chart Wizard component, it's elements and more.
+title: Working with data in Blazor Chart Wizard Component | Syncfusion®
+description: Check out and learn here all about working with data in Blazor Chart Wizard component, it's elements and more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug

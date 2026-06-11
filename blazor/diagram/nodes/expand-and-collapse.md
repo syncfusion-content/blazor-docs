@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DiagramIcon in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create the Diagram Icon handles in Syncfusion Blazor Diagram component and more.
+title: DiagramIcon in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create the Diagram Icon handles in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -580,7 +580,7 @@ The following table shows the relationship between the Icon position and Icon **
 
 ### How to find node is in expanded or not 
 
-**IsExpanded** is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of **IsExpanded** property is **true**.
+[IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of `IsExpanded` property is **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
