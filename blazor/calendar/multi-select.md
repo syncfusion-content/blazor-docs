@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multi Selection in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Multi Selection in Syncfusion Blazor Calendar component and much more.
+title: Multi Selection in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Multi Selection in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
