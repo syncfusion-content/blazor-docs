@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shapes in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Shapes in Syncfusion Blazor Diagram component and much more details.
+title: Shapes in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about Shapes in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -215,7 +215,7 @@ HTML elements can be embedded in the diagram by setting the node Shape type to [
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Add a Namespace for a Syncfusion<sup style="font-size:70%">&reg;</sup> control used in Diagrm HTML node *@
+@* Add a Namespace for a control used in Diagrm HTML node *@
 @using Syncfusion.Blazor.CircularGauge
 
 @* Initialize Diagram with node template *@
@@ -558,7 +558,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to Create Polygon and Circle Shapes in Blazor Diagram](https://support.syncfusion.com/kb/article/18054/how-to-create-polygon-and-circle-shapes-in-blazor-diagram)  
 * [How to Export HTML Shapes Into Image and PDF Format in Blazor Diagram](https://support.syncfusion.com/kb/article/16039/how-to-export-html-shapes-into-image-and-pdf-format-in-blazor-diagram)  
-* [How to Serialize the HTML Template Value of the NodeTemplate Property in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17218/how-to-serialize-the-html-template-value-of-the-nodetemplate-property-in-syncfusion-blazor-diagram)  
+* [How to Serialize the HTML Template Value of the NodeTemplate Property in Blazor Diagram](https://support.syncfusion.com/kb/article/17218/how-to-serialize-the-html-template-value-of-the-nodetemplate-property-in-syncfusion-blazor-diagram)  
 * [How to Add Custom HTML Nodes in Symbol Palette for Blazor Diagram](https://support.syncfusion.com/kb/article/18737/how-to-add-custom-html-nodes-in-symbol-palette-for-blazor-diagram)  
 * [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)  
 * [How to Update HTML Node Size on HTML Template in Blazor Diagram](https://support.syncfusion.com/kb/article/18692/how-to-update-html-node-size-on-html-template-in-blazor-diagram)  
