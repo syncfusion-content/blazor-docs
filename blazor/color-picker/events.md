@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Colorpicker Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Colorpicker component and much more details.
+title: Events in Blazor Colorpicker Component | Syncfusion®
+description: Checkout and learn here all about the Events in Blazor Color picker component and much more details.
 platform: Blazor
 control: Colorpicker
 documentation: ug
