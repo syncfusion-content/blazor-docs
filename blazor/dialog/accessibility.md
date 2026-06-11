@@ -158,4 +158,4 @@ The accessibility compliance of the Dialog component is shown in the following s
 
 ## See also
 
-* [Accessibility in components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
