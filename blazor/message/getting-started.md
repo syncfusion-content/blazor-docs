@@ -157,7 +157,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ### Add Blazor Message component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message)component inside the razor file.
+Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
