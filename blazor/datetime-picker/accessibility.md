@@ -129,4 +129,4 @@ The accessibility compliance of the DateTimePicker component is shown in the fol
 
 ## See also
 
-* [Accessibility in components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
