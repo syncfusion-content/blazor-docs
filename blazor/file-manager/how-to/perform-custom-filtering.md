@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Perform Custom Filtering in Blazor File Manager Component | Syncfusion®
+title: Perform Custom Filtering in Blazor File Manager | Syncfusion®
 description: Checkout and learn here all about Custom Filtering in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager

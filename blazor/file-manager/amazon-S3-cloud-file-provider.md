@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Amazon S3 cloud Provider in Blazor File Manager Component | Syncfusion®
+title: Amazon S3 cloud Provider in Blazor File Manager | Syncfusion®
 description: Check out and learn about the Amazon S3 cloud file provider in the Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
