@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
-description: Learn about bind data and performing CRUD operations using UrlAdaptor in Blazor Gantt Chart.
+description: Learn about bind data and performing CRUD operations using UrlAdaptor in Blazor Gantt Chart much more details.
 platform: Blazor
 control: Gantt Chart
 keywords: adaptors, urladaptor, url adaptor, remotedata 

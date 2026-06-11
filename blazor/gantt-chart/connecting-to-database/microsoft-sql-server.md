@@ -477,7 +477,7 @@ The service registration has been completed successfully.
 
 ### Step 1: Install and configure Blazor Gantt Chart Components
 
-is a library that provides pre-built UI components like Gantt Chart, which visualizes project schedules, task hierarchies, dependencies, baselines, and progress on a timeline.
+Syncfusion is a library that provides pre-built UI components like Gantt Chart, which visualizes project schedules, task hierarchies, dependencies, baselines, and progress on a timeline.
 
 **Instructions:**
 
