@@ -85,4 +85,4 @@ The accessibility compliance of the DropDownList component is shown in the follo
 
 ## See also
 
-* [Accessibility in components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
