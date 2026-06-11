@@ -66,7 +66,7 @@ The toolbar can be configured with built-in toolbar items or custom items using 
         }
     }
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 
@@ -160,7 +160,7 @@ Toolbar items in the Blazor TreeGrid can be enabled or disabled dynamically usin
         }
     }
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhnZRCMptoXZHKj?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
@@ -238,7 +238,7 @@ Use the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.T
         }
     }
 }
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrAXEVuUjkraxax?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -317,9 +317,9 @@ The following example demonstrates changing the background color of the `Add`, `
         background: #add8e6;
     }
 </style>
-{% highlight %}
+{% endhighlight %}
 {% endtabs %}
 
-{% previewsample "{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrAXEVuUjkraxax?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrAXEVuUjkraxax?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Styling tips: when using CSS isolation, place styles in the component's **.razor.css** file. To target inner elements from isolated CSS, use the **::deep** selector where appropriate. Consider additional state styles (hover, active, focus-visible, disabled) and high-contrast themes to improve accessibility.
