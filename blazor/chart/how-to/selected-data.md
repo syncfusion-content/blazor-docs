@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visualize grid data in chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Visualize grid data in chart in Syncfusion Blazor Charts component and more.
+title: Visualize grid data in chart in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Visualize grid data in chart in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
