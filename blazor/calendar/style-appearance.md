@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Calendar component and more.
+title: Style and appearance in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Style and appearance in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
