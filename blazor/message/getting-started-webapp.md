@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor Message in Blazor Web App | Synfusion
+title: Getting started with Blazor Message in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor Message Components in Web App.
 platform: Blazor
 control: Message
