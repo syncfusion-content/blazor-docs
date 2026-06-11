@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles in Blazor Floating Action Button Component | Syncfusion
-description: Checkout and learn here all about Styles in Syncfusion Blazor Floating Action Button component and much more.
+title: Styles in Blazor Floating Action Button Component | Syncfusion®
+description: Checkout and learn here all about Styles in Blazor Floating Action Button component and much more.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
