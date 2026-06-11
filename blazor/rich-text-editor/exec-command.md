@@ -273,6 +273,149 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });
 {% endhighlight %}</td>
 </tr>
+
+<tr>
+<td><p>Undo</p></td>
+<td><p>Allows you to undo your actions.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.Undo);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Format Block</p></td>
+<td><p>Allows you to apply block-level formatting, such as headings (H1–H6) or paragraphs, to the selected text.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.FormatBlock, "H3");
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Heading</p></td>
+<td><p>Allows you to directly apply the Heading 1 block style to the selected text.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.Heading);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Insert Code Block</p></td>
+<td><p>Allows you to insert a preformatted multi-line block by defining the syntax language identifier and its visual dropdown text label.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.InsertCodeBlock, new CodeBlockCommandArgs() { Language = "typescript", Label = "TypeScript" });
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Insert Paragraph</p></td>
+<td><p>Allows you to insert a new paragraph block at the current cursor position.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.InsertParagraph);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Insert Horizontal Rule</p></td>
+<td><p>Allows you to insert a straight horizontal rule line element to serve as a thematic structural divider between text blocks.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.InsertHorizontalRule);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Insert Br On Return</p></td>
+<td><p>Configures the editor to insert a standard HTML line break element when the Enter key is pressed, rather than splitting the current block into a new paragraph.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.InsertBrOnReturn);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Insert Code</p></td>
+<td><p>Allows you to apply inline code formatting to the selected text for highlighting variables or short commands.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.InsertCode);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Insert Table</p></td>
+<td><p>Allows you to programmatically insert a structured HTML table layout component by declaring the exact row and column constraints.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.InsertTable, new TableCommandArgs() { Row = 3, Columns = 3 });
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Edit Image</p></td>
+<td><p>Allows you to programmatically modify an existing image element's properties using specific source URLs, dimensions, and custom CSS classes.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(
+    CommandName.EditImage, 
+    new ImageCommandsArgs() 
+    { 
+        Url = "https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png", 
+        AltText = "Alternative description text", 
+        CssClass = "custom-img-style",
+        Width = new CommandsWidth() { Width = "300px" },
+        Height = new CommandsHeight() { Height = "auto" }
+    }
+);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Edit Link</p></td>
+<td><p>Allows you to programmatically modify a hyperlink element by declaring the destination URL, display text, and title attributes.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(
+    CommandName.EditLink, 
+    new LinkCommandsArgs() { Url = "https://", Text = "Syncfusion", Title = "Visit Home Page" }
+);
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Video</p></td>
+<td><p>Allows you to programmatically embed an interactive HTML5 video viewport by assigning specific media source URLs.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(
+    CommandName.Video, 
+    new VideoCommandsArgs() { Url = "https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Ocean-Waves.mp4", CssClass = "e-rte-video" });
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Audio</p></td>
+<td><p>Allows you to programmatically embed an interactive HTML5 audio player tracking path by assigning specific media source URLs.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(
+    CommandName.Audio, 
+    new AudioCommandsArgs() { Url = "https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Audio.wav", CssClass = "e-rte-audio" });
+{% endhighlight %}</td>
+</tr>
+
+<tr>
+<td><p>Checklist</p></td>
+<td><p>Allows you to format the selected text as an interactive checklist.</p></td>
+<td>
+{% highlight cshtml %}
+await this.RteObj.ExecuteCommandAsync(CommandName.Checklist);
+{% endhighlight %}</td>
+</tr>
 </table>
 
 N> Provided support to apply execute commands which do not require direct DOM access.
@@ -280,7 +423,7 @@ N> Provided support to apply execute commands which do not require direct DOM ac
 The following code block demonstrates the usage of the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html#constructors) in Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/html-execute-command.razor %}
 
@@ -419,7 +562,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 </table>
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-execute-command.razor %}
 

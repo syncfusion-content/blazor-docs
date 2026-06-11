@@ -1,14 +1,17 @@
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
     <RichTextEditorQuickToolbarSettings Link="@Link" />
-    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
-    <p><b>Get started Quick Toolbar to click on the link</b></p>
-    <p>It is possible to add custom style on the selected link inside the Rich Text Editor through quick toolbar.</p>
-    <img alt='Logo' style='width: 150px; height: 150px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png' />
+    <h2>Welcome to the Syncfusion Rich Text Editor</h2><p>The Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><h3>Do you know the key features of the editor?</h3>
+    <ul><li>Basic features include headings, block quotes, numbered lists, bullet lists, and support to insert images, tables, audio, and video.</li> <li>Inline styles include <b>bold</b>, <em>italic</em>, <span style="text-decoration: underline">underline</span>, <span style="text-decoration: line-through">strikethrough</span>, <a class="e-rte-anchor" href="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" title="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" aria-label="Open in new window">hyperlinks</a>,<code>InlineCode</code> and more.</li></ul>
 </SfRichTextEditor>
 
 @code {
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink }
+    };
     private List<LinkToolbarItemModel> Link = new List<LinkToolbarItemModel>()
     {
         new LinkToolbarItemModel() { Command = LinkToolbarCommand.Open },

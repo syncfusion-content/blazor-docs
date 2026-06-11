@@ -20,7 +20,8 @@ The Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-com
 
 To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html) property to `HTML`.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -37,7 +38,8 @@ To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/
     </ul>
 </SfRichTextEditor>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor RichTextEditor with HTML Editor](./images/blazor-richtexteditor-with-html-editor.webp)
 
@@ -45,7 +47,7 @@ To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/
 
 The IFrame editor mode enables content editing within an iframe, isolating styles from the main page.
 
-For more details, refer to the [Iframe Editor](../iframe) documentation.
+For more details, refer to the [Iframe Editor](./iframe) documentation.
 
 ## Markdown editor
 
@@ -60,7 +62,8 @@ To enable Markdown editing, set the [EditorMode](https://help.syncfusion.com/cr/
 
 - `Bold`, `Italic`, `StrikeThrough`, `InlineCode`, `SubScript`, `SuperScript`, `UpperCase`, `LowerCase`
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -78,11 +81,12 @@ To enable Markdown editing, set the [EditorMode](https://help.syncfusion.com/cr/
     *Lists*:Creates bulleted and numbered list
 </SfRichTextEditor>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.webp)
 
-For further details on Markdown editing, refer to the [Markdown](./markdown) section.
+For further details on Markdown editing, refer to the [Markdown](https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp) section.
 
 N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) demo to learn how to render and configure the editor tools.
 

@@ -17,7 +17,7 @@ To apply a different font style to a section of the content, select the text you
 
 ### Built-in font family
 
-The following table lists the default font name and width of the `FontName` dropdown and the available list of font names.
+The following table lists the default font name, the width of the `FontName` dropdown, and the available list of font names.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -32,7 +32,7 @@ The following table lists the default font name and width of the `FontName` drop
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.webp)
+![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-builtin-font-name.webp)
 
 ### Custom font family
 
@@ -57,21 +57,11 @@ The following font style links are referred in the page.
 
 ### Blazor Server App
 
-* For **.NET 6** app, refer style in the `<head>` of the **~/Pages/_Layout.cshtml** file.
-
-* For **.NET 7** app, refer style in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 10** app, refer style in the `<head>` of the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
-<head>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes">
-</head>
-
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 10 (~/App.razor)" %}
 
 <head>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
@@ -129,7 +119,7 @@ The following table lists the default font size and width of the [FontSize](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.webp)
+![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-builtin-font-size.webp)
 
 ### Custom font size
 
@@ -192,23 +182,6 @@ This feature can be enabled separately for the [RichTextEditorFontColor](https:/
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Built-in editor content styles
 
@@ -306,7 +279,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   margin-top: 00.6em;
 }
 
-.e-rte-content .e-rte-image.e-imgbreak {
+.e-rte-content .e-rte-image.e-img-break {
   border: 0;
   cursor: pointer;
   display: block;
@@ -326,7 +299,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   position: relative;
 }
 
-.e-rte-content .e-rte-image.e-imginline {
+.e-rte-content .e-rte-image.e-img-inline {
   display: inline-block;
   float: none;
   margin-left: 5px;
@@ -335,7 +308,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   vertical-align: bottom;
 }
 
-.e-rte-content .e-rte-image.e-imgcenter {
+.e-rte-content .e-rte-image.e-img-center {
   cursor: pointer;
   display: block;
   float: none;
@@ -344,13 +317,13 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   position: relative;
 }
 
-.e-rte-content .e-rte-image.e-imgleft {
+.e-rte-content .e-rte-image.e-img-left {
   float: left;
   margin: 0 5px 0 0;
   text-align: left;
 }
 
-.e-rte-content .e-rte-image.e-imgright {
+.e-rte-content .e-rte-image.e-img-right {
   float: right;
   margin: 0 0 0 5px;
   text-align: right;
@@ -374,12 +347,12 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   vertical-align: bottom;
 }
 
-.e-rte-content .e-rte-img-caption.e-imgcenter {
+.e-rte-content .e-rte-img-caption.e-img-center {
   display: block;
 }
 
-.e-rte-content .e-rte-img-caption .e-rte-image.e-imgright,
-.e-rte-content .e-rte-img-caption .e-rte-image.e-imgleft {
+.e-rte-content .e-rte-img-caption .e-rte-image.e-img-right,
+.e-rte-content .e-rte-img-caption .e-rte-image.e-img-left {
   float: none;
   margin: 0;
 }
@@ -403,7 +376,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
   border-style: dashed;
 }
 
-.e-rte-content .e-rte-img-caption .e-img-inner {
+.e-rte-content .e-rte-img-caption .e-img-caption-text {
   box-sizing: border-box;
   display: block;
   font-size: 16px;
@@ -437,7 +410,7 @@ N> Make sure to add a CSS class `e-rte-content` to the content container.
 ```
 ## Customizing numbered and bulleted lists
 
-This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
+This feature allows users to change the appearance of the numbered and bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase Greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}
