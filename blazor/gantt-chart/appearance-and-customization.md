@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance Customization in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about appearance and customization in Syncfusion Blazor Gantt Chart component and more.
+title: Appearance Customization in Blazor Gantt Chart Component | Syncfusion®
+description: Learn here all about appearance and customization in Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

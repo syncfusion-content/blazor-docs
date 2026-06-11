@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Markers in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Data Markers in Syncfusion Blazor Gantt Chart component and much more.
+title: Data Markers in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Data Markers in Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
