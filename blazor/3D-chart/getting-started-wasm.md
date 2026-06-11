@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Stared with Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Blazor 3D Chart in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Stared with Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn about getting started with Blazor 3D Chart in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -335,6 +335,6 @@ The tooltip is useful when you cannot display information by using the data labe
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
