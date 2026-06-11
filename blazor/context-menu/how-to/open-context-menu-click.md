@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Sub Menu on Item Click in Blazor ContextMenu | Syncfusion
-description: Learn here all about Open Sub Menu on Context Menu Item Click in Syncfusion Blazor ContextMenu component and more.
+title: Open Sub Menu on Item Click in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Open Sub Menu on Context Menu Item Click in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
