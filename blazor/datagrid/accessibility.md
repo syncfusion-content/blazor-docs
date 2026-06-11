@@ -208,4 +208,4 @@ Accessibility compliance can be evaluated using the interactive [sample](https:/
 
 ## See also
 
-* [Accessibility in Blazor](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor component](https://blazor.syncfusion.com/documentation/common/accessibility)
