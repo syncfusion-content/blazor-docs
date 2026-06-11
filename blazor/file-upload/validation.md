@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validation in Blazor File Upload Component | Syncfusion®
-description: Checkout and learn here all about Validation in Blazor File Upload component and much more details.
+description: Checkout and learn here all the features about Validation in Blazor File Upload component and much more details.
 platform: Blazor
 control: File Upload
 documentation: ug

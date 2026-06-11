@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File Upload Configuration in Blazor File Upload Component | Syncfusion®
+title: File Upload Configuration in Blazor File Upload | Syncfusion®
 description: Checkout and learn here all about File Upload Configuration in Blazor File Upload component and and much more details.
 platform: Blazor
 control: File Upload
