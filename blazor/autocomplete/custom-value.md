@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom value in Blazor AutoComplete Component | Syncfusion
-description: Learn how to enable or disable custom values in the Syncfusion Blazor AutoComplete component using the AllowCustom property.
+title: Custom value in Blazor AutoComplete Component | Syncfusion®
+description: Learn how to enable or disable custom values in the Blazor AutoComplete component using the AllowCustom property.
 platform: Blazor
 control: AutoComplete
 documentation: ug
