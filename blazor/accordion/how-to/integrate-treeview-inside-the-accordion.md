@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Treeview Integration in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Treeview Integration in Syncfusion Blazor Accordion component and more.
+title: Treeview Integration in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about Treeview Integration in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
