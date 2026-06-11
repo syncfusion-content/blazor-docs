@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Special Dates in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Special Dates in Syncfusion Blazor Calendar component and more details.
+title: Special Dates in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Special Dates in Blazor Calendar component and more details.
 platform: Blazor
 control: Calendar
 documentation: ug
