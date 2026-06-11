@@ -7,7 +7,7 @@ component: Dropdown List
 documentation: ug
 ---
 
-# Getting Started with Blazor DropDown List Component in Blazor Web App
+# Getting Started with Blazor Dropdown List Component in Blazor Web App
 
 This section briefly explains about how to include [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -259,7 +259,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 
 ### Configure the popup list
 
-By default, the popup list width adjusts to the DropDownList input width, and the popup list height is `350px`. Customize the height and width using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties.
+By default, the popup list width adjusts to the Dropdown List input width, and the popup list height is `350px`. Customize the height and width using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -297,7 +297,7 @@ By default, the popup list width adjusts to the DropDownList input width, and th
 
 ### Get selected value
 
-Get the selected value of the DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Get the selected value of the Dropdown List component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

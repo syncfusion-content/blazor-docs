@@ -3,13 +3,13 @@ layout: post
 title: Getting started with Blazor Dropdown List in Blazor Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor Dropdown List component in Blazor Server Application.
 platform: Blazor
-control: DropDownList
+control: Dropdown List
 documentation: ug
 ---
 
-# Getting Started with Blazor DropDown List in Blazor Server App
+# Getting Started with Blazor Dropdown List in Blazor Server App
 
-This section explains how to include the [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to include the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ### Create a new Blazor Server App 
 
@@ -214,7 +214,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown List Component](./images/blazor-dropdownlist-component.webp)" %}
 
 ### Binding data source
 
@@ -252,7 +252,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor Dropdown List](./images/blazor-dropdownlist-data-binding.webp)" %}
 
 ### Configure the popup list
 
@@ -290,7 +290,7 @@ By default, the popup list width adjusts to match the DropDownList input width, 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTDWBYqHlMcKgk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTDWBYqHlMcKgk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Popup List Height in Blazor Dropdown List](./images/blazor-dropdownlist-popup-height.webp)" %}
 
 ### Get selected value
 

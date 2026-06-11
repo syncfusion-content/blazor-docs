@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started Blazor DropDown List in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor DropDown List component in Blazor WebAssembly Application.
+title: Getting Started Blazor Dropdown List in Blazor WASM App | Syncfusion
+description: Checkout and learn about getting started with Blazor Dropdown List component in Blazor WebAssembly Application.
 platform: Blazor
-control: DropDownList
+control: Dropdown List
 documentation: ug
 ---
 
 # Getting Started with Blazor Dropdown List in Blazor WASM App
 
-This guide briefly explains how to include [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Ensure a valid Syncfusion license is registered in the application and choose a theme (Bootstrap, Fluent, Material, or Tailwind) as part of setup.
+This guide briefly explains how to include [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Ensure a valid Syncfusion license is registered in the application and choose a theme (Bootstrap, Fluent, Material, or Tailwind) as part of setup.
 
 ### Create a new Blazor WebAssembly (Standalone) App
 
@@ -250,11 +250,11 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor Dropdown List](./images/blazor-dropdownlist-data-binding.webp)" %}
 
 ### Configure the popup list
 
-By default, the popup list width automatically adjusts to the DropDownList input width, and the popup list height is `350px`. Customize the height and width using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties.
+By default, the popup list width automatically adjusts to the Dropdown List input width, and the popup list height is `350px`. Customize the height and width using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
