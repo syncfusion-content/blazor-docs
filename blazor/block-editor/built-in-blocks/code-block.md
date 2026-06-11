@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code Block in Blazor Block Editor Component | Syncfusion
-description: Learn about Code Block in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
+title: Code Block in Blazor Block Editor Component | Syncfusion®
+description: Learn about Code Block in the Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Code Block in Blazor Block Editor component
 
-The Syncfusion Block Editor allows you to render code snippets with syntax highlighting by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Code](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Code). You can set a default language using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property.
+The Block Editor allows you to render code snippets with syntax highlighting by setting the [BlockType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html) property to [Code](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockType.html#Syncfusion_Blazor_BlockEditor_BlockType_Code). You can set a default language using the [Properties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockModel.html#Syncfusion_Blazor_BlockEditor_BlockModel_Properties) property.
 
 ## Global code settings
 
