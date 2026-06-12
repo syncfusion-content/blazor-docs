@@ -156,4 +156,4 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
+![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.webp)

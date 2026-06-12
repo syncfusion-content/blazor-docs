@@ -83,7 +83,7 @@ Add the Blazor Calendar component in the **~/Pages/Index.razor** file.
 
 * <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Blazor Calendar component will be rendered in the default web browser.
 
-![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
+![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.webp)
 
 N> When using a PDF viewer on macOS (ARM), we recommend our [PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it is compatible with macOS (ARM).
 
