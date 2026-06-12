@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Palette in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Palette in Syncfusion Blazor HeatMap Chart component and much more.
+title: Palette in Blazor HeatMap Chart Component | Syncfusion®
+description: Checkout and learn here all about Palette in Blazor HeatMap Chart component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug

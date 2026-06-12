@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Axis in Syncfusion Blazor HeatMap Chart component and much more details.
+title: Axis in Blazor HeatMap Chart Component | Syncfusion®
+description: Checkout and learn here all about the Axis in Blazor HeatMap Chart component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
