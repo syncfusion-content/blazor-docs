@@ -255,7 +255,6 @@ Below example demonstrates simple column chooser template using [TreeGridColumnC
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.TreeGrid;
-@inject WeatherForecastService ForecastService
 
 <SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
             ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
