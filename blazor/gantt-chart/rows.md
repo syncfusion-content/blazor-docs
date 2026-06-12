@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Rows in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Rows in Syncfusion Blazor Gantt Chart component and much more details.
+title: Rows in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Rows in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -13,7 +13,7 @@ Each row in the Blazor Gantt Chart Component represents a record from the data s
 
 ## Row height
 
-You can customize row height in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
+You can customize row height in the Gantt Chart by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -186,7 +186,7 @@ You can retain the expand or collapse state of parent rows in the Gantt Chart du
 
 ### Customize expand and collapse action
 
-You can customize expand and collapse behavior in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component using the [expanding](https://blazor.syncfusion.com/documentation/gantt-chart/events#expanding), [expanded](https://blazor.syncfusion.com/documentation/gantt-chart/events#expanded), [collapsing](https://blazor.syncfusion.com/documentation/gantt-chart/events#collapsing), and [collapsed](https://blazor.syncfusion.com/documentation/gantt-chart/events#collapsed) events.
+You can customize expand and collapse behavior in the Blazor Gantt component using the [expanding](https://blazor.syncfusion.com/documentation/gantt-chart/events#expanding), [expanded](https://blazor.syncfusion.com/documentation/gantt-chart/events#expanded), [collapsing](https://blazor.syncfusion.com/documentation/gantt-chart/events#collapsing), and [collapsed](https://blazor.syncfusion.com/documentation/gantt-chart/events#collapsed) events.
 
 The following example demonstrates how to:
 - Cancel the expand action when the **TaskID** column value is 1.
@@ -386,7 +386,7 @@ The following example demonstrates how to apply custom styles to rows and cells 
 
 ### Using CSS
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows row-level customization through CSS. Each row is assigned specific class names, enabling precise styling to improve readability and visual presentation.
+The Blazor Gantt Chart component allows row-level customization through CSS. Each row is assigned specific class names, enabling precise styling to improve readability and visual presentation.
 
 **Customize selected row:**
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor Gantt Chart component and much more.
+title: Selection in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Selection in Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -20,7 +20,7 @@ The Gantt component supports two types of selection that can be set by using the
 
 ## Selection mode
 
-The Syncfusion Blazor Gantt Chart component supports three selection modes, configured using [SelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionMode.html) property. They are:
+The Blazor Gantt Chart component supports three selection modes, configured using [SelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionMode.html) property. They are:
 
 - **Row:** Selects only rows. This is the default mode.
 - **Cell:** Selects only individual cells.
@@ -310,7 +310,7 @@ To clear selected rows and cells in the Gantt component, use the [ClearSelection
 
 ## Touch interaction
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component supports touch interaction, allowing you to intuitively navigate and interact with chart elements on touch-enabled devices like smart phones and tablets. This feature enhances usability by allowing intuitive gestures for selecting and managing tasks.
+The Blazor Gantt Chart component supports touch interaction, allowing you to intuitively navigate and interact with chart elements on touch-enabled devices like smart phones and tablets. This feature enhances usability by allowing intuitive gestures for selecting and managing tasks.
 
 [Single Row selection](https://blazor.syncfusion.com/documentation/gantt-chart/selection): Tapping a row on a touch screen automatically selects it, offering a straightforward way to interact with the chart.
 

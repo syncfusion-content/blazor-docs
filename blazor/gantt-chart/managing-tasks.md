@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Managing Tasks in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Managing Tasks in Syncfusion Blazor Gantt Chart component and more.
+title: Managing Tasks in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Managing Tasks in Blazor Gantt Chart component and more.
 platform: Blazor
 control:  Managing tasks
 documentation: ug
@@ -158,7 +158,7 @@ Below is the combined content from the provided markdown sections in bullet poin
 
 ## Cell edit template
 
-The cell [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditTemplate) feature in Syncfusion Blazor Gantt Chart component allows you to customize the editing interface of individual cell by embedding custom components or HTML elements. Instead of using the default editor such as a textbox, you can define a template that provides a tailored editing experience such as a dropdown, date picker, or checkbox based on your application's requirements. This is especially useful when you need more control over how data is entered or displayed during editing.
+The cell [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditTemplate) feature in Blazor Gantt Chart component allows you to customize the editing interface of individual cell by embedding custom components or HTML elements. Instead of using the default editor such as a textbox, you can define a template that provides a tailored editing experience such as a dropdown, date picker, or checkbox based on your application's requirements. This is especially useful when you need more control over how data is entered or displayed during editing.
 
 The following code example demonstrates how to define an edit template for a specific column, where the **TaskName** field is rendered using a dropdown.
 
@@ -304,7 +304,7 @@ In the following demo, editing is disabled for the **TaskName** column.
 
 ## Troubleshoot: Editing works only when primary key column is defined
 
-The editing feature in the Syncfusion Blazor Gantt Chart component requires a primary key column to perform CRUD operations. When defining columns using the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) property, at least one column must be marked as the primary key.
+The editing feature in the Blazor Gantt Chart component requires a primary key column to perform CRUD operations. When defining columns using the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) property, at least one column must be marked as the primary key.
 
 By default, the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) column is considered the primary key. If the `Id` column is not defined, you must explicitly set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsPrimaryKey) property to true for one of the columns in the `GanttColumns` collection to enable editing functionality.
 

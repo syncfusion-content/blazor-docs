@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about templates in Syncfusion Blazor Gantt Chart component and much more details.
+title: Templates in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about templates in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
