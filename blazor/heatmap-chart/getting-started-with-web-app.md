@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor HeatMap Chart in Web App | Syncfusion®
+title: Getting Started with Blazor HeatMap Chart in Web App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor HeatMap Chart Component in Blazor Web App.
 platform: Blazor
 component: HeatMap Chart

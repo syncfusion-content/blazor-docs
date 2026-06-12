@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor HeatMap Chart Component | Syncfusion®
-description: Checkout and learn here all about Tooltip in Blazor HeatMap Chart component and much more details.
+description: Checkout and learn here all the features about Tooltip in Blazor HeatMap Chart component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug

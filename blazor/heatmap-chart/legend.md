@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor HeatMap Chart Component | Syncfusion®
-description: Checkout and learn here all about Legend in Blazor HeatMap Chart component and much more details.
+description: Checkout and learn here all the features about Legend in Blazor HeatMap Chart component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -307,7 +307,7 @@ Paging is available only for the list type legend in the heat map, and it can be
 
 ```
 
-![Heatmap Sample](images/legend/paging.gif)
+![Heatmap Sample](images/legend/paging.webp)
 
 ## Smart legend
 
@@ -432,4 +432,4 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
 
 ```
 
-![Heatmap Sample](images/legend/Toggle.png) -->
+![Heatmap Sample](images/legend/Toggle.webp) -->
