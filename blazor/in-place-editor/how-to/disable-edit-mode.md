@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disable the edit mode in Blazor In-place Editor Component | Syncfusion
-description: Learn here all about Disable the edit mode specifically in Syncfusion Blazor In-place Editor component and more.
+title: Disable the edit mode in Blazor In-place Editor Component | Syncfusion®
+description: Learn here all about Disable the edit mode specifically in Blazor In-place Editor component and much more details.
 platform: Blazor
 control: In-place Editor
 documentation: ug

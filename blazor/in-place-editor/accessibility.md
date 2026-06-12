@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor In-place Editor Component | Syncfusion
-description: Checkout and learn here all about keyboard shortcuts in Syncfusion Blazor In-place Editor component and more.
+title: Accessibility in Blazor In-place Editor Component | Syncfusion®
+description: Checkout and learn here all about keyboard shortcuts in Blazor In-place Editor component and much more details.
 platform: Blazor
 control: In-place Editor
 documentation: ug
@@ -53,4 +53,5 @@ The accessibility compliance of the In-place Editor component is shown in the fo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
+
