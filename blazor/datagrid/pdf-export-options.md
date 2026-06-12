@@ -538,6 +538,117 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDreZOVnTQCljdmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Remove header row while exporting
+
+Removing the header row while exporting from the Blazor DataGrid allows generating a PDF document that contains only the data rows without column headers. This is useful when creating clean reports or data-only exports.
+
+To remove the header row during export:
+
+1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
+
+2. Set the [IncludeHeaderRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeHeaderRow) property to false in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) object.
+
+3. Invoke the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method with the export properties.
+
+In this configuration, the header row is visible in the Grid but excluded from the exported PDF file when `PdfExportProperties.IncludeHeaderRow` is disabled.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+    <label style="font-weight: bold">Include or exclude header row</label>
+    <SfSwitch @bind-Checked="IncludeHeaderRow"></SfSwitch>
+</div>
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" Visible="false" />
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+   public bool IncludeHeaderRow { get; set; } = true;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport") // ID is a combination of the Grid ID and item name.
+        {
+            PdfExportProperties exportProperties = new PdfExportProperties
+                {
+                    IncludeHeaderRow = IncludeHeaderRow
+                };
+
+            await Grid.ExportToPdfAsync(exportProperties);
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+        this.ShipCountry = shipCountry;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "France"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Germany"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "France"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "Belgium"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese", "Switzerland"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt", "Switzerland"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export", "Brazil"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos", "Venezuela"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel", "Austria"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial", "Mexico"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen", "Germany"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia", "Brazil"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery", "USA"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdXdWLJnYgdDeX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ## Change page orientation
 
 The Blazor DataGrid supports changing the PDF [page orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PageOrientation.html) to fit different layouts. This feature is useful for exporting wide datasets that require more horizontal space.
