@@ -7,7 +7,7 @@ control: Smart Rich Text Editor
 documentation: ug
 ---
 
-# Getting Started with Blazor Smart Rich Text Editor in Blazor Server App
+# Getting Started with Blazor Smart Rich Text Editor in Server App
 
 This section explains how to add the [Blazor Smart Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-smart-rich-text-editor) component to a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
