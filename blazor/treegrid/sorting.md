@@ -172,7 +172,7 @@ During the sort action, the tree grid component triggers two events. The [Action
 @inject IJSRuntime JsRuntime;
 
 <SfTreeGrid DataSource="@TreeGridData" AllowSorting="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
-    <TreeGridEvents TValue="TreeData.BusinessObject"  Sorting="OnSorting" Sorted="OnSorted"></TreeGridEvents>
+    <TreeGridEvents TValue="TreeData" Sorting="SortingHandler" Sorted="SortedHandler"></TreeGridEvents>
     <TreeGridColumns> 
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </TreeGridColumn> <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn> 
