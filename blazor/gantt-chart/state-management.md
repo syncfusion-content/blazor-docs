@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Management in Blazor Gantt Chart Component | Syncfusion®
-description: Check out and learn all about State Management in Blazor Gantt Chart component and more here.
+description: Check out and learn all about State Management in Blazor Gantt Chart component and much more details here.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

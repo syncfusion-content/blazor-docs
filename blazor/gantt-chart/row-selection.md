@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Selection in Blazor Gantt Chart Component | Syncfusion®
-description: Checkout and learn here all about row Selection in Blazor Gantt Chart component and much more.
+description: Checkout and learn here all about row Selection in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
