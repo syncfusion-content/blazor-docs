@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Like Filter in Blazor Tree Grid Component
 
-Excel like filter can be enabled by defining the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Type.html) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Excel**. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
+Excel like filter can be enabled by defining the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Type.html) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) as **Excel**. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 {% tabs %}
 
@@ -166,7 +166,7 @@ You can customize the height and width of each column’s filter dialog using th
 
 Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, we can set the height and width of filter popup dynamically using CSS.
 
-In the following sample we have set the height and width of the TaskId and TaskName column's filter dialog using the CSS style.
+In the following sample we have set the height and width of the **TaskId** and **TaskName** column's filter dialog using the CSS style.
 
 {% tabs %}
 

@@ -206,16 +206,16 @@ namespace TreeGridComponent. Data
 
 ## Custom validator component
 
-Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the `Validator` property of the `TreeGridEditSettings` component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
+Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the [Validator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Validator) property of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
-For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
+For creating a [FormValidator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidator.html) component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
 
 In the below code example, the following things have been done.
 
-* Created a form validator component named `MyCustomValidator` which accepts [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) value as parameter.
+* Created a form validator component named `MyCustomValidator` which accepts `ValidatorTemplateContext` value as parameter.
 * Used the `MyCustomValidator` component inside the `Validator` property.
 * This validator component will check whether Duration value is in between 0 to 30.
-* Displayed the validation error messages using `ValidationMessage` component.
+* Displayed the validation error messages using [ValidationMessage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ValidationMessages.html) component.
 
 {% tabs %}
 
@@ -432,7 +432,7 @@ The output will be as follows.
 
 ## Disable in-built validator component
 
-`Validator` property can also be used to disable the in-built validator component used by the tree grid. For instance, by default, the tree grid uses two validator components, `DataAnnotationValidator` and an internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, for handling edit form validation. If you are willing to use only the `DataAnnotationValidator` component, then it could be simply achieved by using the `Validator` component inside [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
+`Validator` property can also be used to disable the in-built validator component used by the tree grid. For instance, by default, the tree grid uses two validator components, `DataAnnotationValidator` and an internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, for handling edit form validation. If you are willing to use only the `DataAnnotationValidator` component, then it could be simply achieved by using the `Validator` component inside [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
 
 {% tabs %}
 

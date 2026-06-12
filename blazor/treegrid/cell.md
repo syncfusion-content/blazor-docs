@@ -85,7 +85,7 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
-    <TreeGridEvents QueryCellInfo="querycellinfo" TValue="TreeData"></TreeGridEvents>
+    <TreeGridEvents QueryCellInfo="QueryCellInfo" TValue="TreeData"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="90" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
@@ -115,7 +115,7 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private void querycellinfo(QueryCellInfoEventArgs<TreeData> Args)
+    private void QueryCellInfo(QueryCellInfoEventArgs<TreeData> Args)
     {
         if (Args.Column.Field == "Progress" && Args.Data.Progress > 70 && Args.Data.Progress <= 100)
         {

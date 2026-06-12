@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Export in Blazor TreeGrid Component
 
-The Excel export feature allows exporting TreeGrid data to an Excel document using the **ExportToExcelAsync** method. To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport) property to `true`.
+The Excel export feature allows exporting TreeGrid data to an Excel document using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToExcelAsync) method. To enable Excel export, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowExcelExport) property to `true`.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=FNVCqLmaF1A"%}
@@ -97,7 +97,7 @@ The excel export provides an option to customize mapping of the TreeGrid to exce
 
 ### Export current page
 
-The excel export provides an option to export the current page into excel. To export current page, define **exportType** to **CurrentPage**.
+The excel export provides an option to export the current page into excel. To export current page, define [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExportType.html) to **CurrentPage**.
 
 {% tabs %}
 
@@ -180,7 +180,7 @@ public class TreeData
 
 ### Export hidden columns
 
-The excel export provides an option to export hidden columns of TreeGrid by defining **includeHiddenColumn** as **true**.
+The excel export provides an option to export hidden columns of TreeGrid by defining [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) as **true**.
 
 {% tabs %}
 
@@ -265,7 +265,7 @@ public class TreeData
 
 The excel export provides an option to include theme for exported excel document.
 
-To apply theme in exported Excel, define the **theme** in export properties.
+To apply theme in exported Excel, define the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Theme) in export properties.
 
 {% tabs %}
 
@@ -361,7 +361,7 @@ N> By default, material theme is applied to exported excel document.
 
 ### File name for exported document
 
-The file name can be assigned for the exported document by defining **fileName** property in excel export properties.
+The file name can be assigned for the exported document by defining [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_FileName) property in excel export properties.
 
 {% tabs %}
 
@@ -443,7 +443,7 @@ public class TreeData
 
 ### To persist collapsed state
 
-The collapsed state can be persisted in the exported document by defining **IsCollapsedStatePersist** property as true in the **TreeGridExcelExportProperties** parameter of the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+The collapsed state can be persisted in the exported document by defining [IsCollapsedStatePersist](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridExcelExportProperties.html#Syncfusion_Blazor_TreeGrid_TreeGridExcelExportProperties_IsCollapsedStatePersist) property as true in the [TreeGridExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridExcelExportProperties.html) parameter of the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 {% tabs %}
 
