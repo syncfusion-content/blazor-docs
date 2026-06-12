@@ -417,7 +417,7 @@ dotnet add package OllamaSharp
 Add the following to the **~/Program.cs** file:
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Program.cs" hl_lines="7 8 9 11 12 13" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
