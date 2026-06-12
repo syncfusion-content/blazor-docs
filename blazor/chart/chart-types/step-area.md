@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Step Area in Blazor Charts Component | SyncfusionÂ®
+title: Step Area in Blazor Charts Component | Syncfusion®
 description: Checkout and learn here all the features about Step Area Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
@@ -356,6 +356,7 @@ The `ShowRisers` property determines whether vertical riser lines are displayed 
 
 ```
 
+Need to add the preview sample
 ![Blazor Step Area Chart NoRiser Series](../images/chart-types-images/blazor-step-area-chart-noriser-series.webp)
 
 ## Empty points

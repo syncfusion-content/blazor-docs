@@ -23,30 +23,21 @@ To display series labels, set the `Visible` property of `SeriesLabelSettings` to
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Startup Growth Metrics Over 6 Months" Width="100%" Height="450px">
-    <ChartArea>
-        <ChartAreaBorder Width="0" />
-    </ChartArea>
-    <ChartMargin Left="10" Right="10" Top="20" Bottom="20" />
+<ChartLegendSettings Visible="false" />
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Title="Month">
-        <ChartAxisMajorGridLines Width="0" />
-        <ChartAxisMajorTickLines Width="0" />
     </ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Count / Score" Minimum="0" Maximum="600" Interval="100">
-        <ChartAxisLineStyle Width="0" />
-        <ChartAxisMajorTickLines Width="0" />
+    <ChartPrimaryYAxis Title="Count / Score">
     </ChartPrimaryYAxis>
-    <ChartTooltipSettings Enable="true" Header="<b>${series.name}</b>" Format="${point.x} : <b>${point.y}</b>" />
-    <ChartLegendSettings Visible="true" Position="LegendPosition.Bottom" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ActiveUsersData" Name="Active Users" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#4F65F1">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Circle" />
             <SeriesLabelSettings Visible="true"> </SeriesLabelSettings>
         </ChartSeries>
-        <ChartSeries DataSource="@SupportTicketsData" Name="Support Tickets" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#E6951A">
+    <ChartSeries DataSource="@SupportTicketsData" Name="Support Tickets" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#E6951A">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Diamond" />
             <SeriesLabelSettings Visible="true"> </SeriesLabelSettings>
         </ChartSeries>
-        <ChartSeries DataSource="@FeatureRequestsData" Name="Feature Requests" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#2DBE60">
+    <ChartSeries DataSource="@FeatureRequestsData" Name="Feature Requests" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#2DBE60">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Triangle" />
             <SeriesLabelSettings Visible="true"> </SeriesLabelSettings>
         </ChartSeries>
@@ -90,6 +81,7 @@ To display series labels, set the `Visible` property of `SeriesLabelSettings` to
 
 ```
 
+Need to add the preview sample
 ![Blazor line chart displaying inline series labels](images/series-label/blazor-line-chart-series-label.webp)
 
 ## Customization
@@ -120,41 +112,32 @@ In the `SeriesLabelFont`:
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Startup Growth Metrics Over 6 Months" Width="100%" Height="450px">
-    <ChartArea>
-        <ChartAreaBorder Width="0" />
-    </ChartArea>
-    <ChartMargin Left="10" Right="10" Top="20" Bottom="20" />
+<ChartLegendSettings Visible="false" />
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Title="Month">
-        <ChartAxisMajorGridLines Width="0" />
-        <ChartAxisMajorTickLines Width="0" />
     </ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Count / Score" Minimum="0" Maximum="600" Interval="100">
-        <ChartAxisLineStyle Width="0" />
-        <ChartAxisMajorTickLines Width="0" />
+    <ChartPrimaryYAxis Title="Count / Score">
     </ChartPrimaryYAxis>
-    <ChartTooltipSettings Enable="true" Header="<b>${series.name}</b>" Format="${point.x} : <b>${point.y}</b>" />
-    <ChartLegendSettings Visible="true" Position="LegendPosition.Bottom" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ActiveUsersData" Name="Active Users" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#4F65F1">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Circle" />
-            <SeriesLabelSettings Visible="true" Background="#EEF2FF" Opacity="0.95" ShowOverlapText="true">
-                <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#3347D6" />
-                <SeriesLabelBorder Width="1.5" Color="#4F65F1" />
-            </SeriesLabelSettings>
+        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1" ShowOverlapText="true">
+            <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#2E7D32" />
+            <SeriesLabelBorder Width="2" Color="#4A9652" />
+        </SeriesLabelSettings>
         </ChartSeries>
         <ChartSeries DataSource="@SupportTicketsData" Name="Support Tickets" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#E6951A">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Diamond" />
-            <SeriesLabelSettings Visible="true" Background="#FFF7E8" Opacity="0.95" ShowOverlapText="true">
-                <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#B86A00" />
-                <SeriesLabelBorder Width="1.5" Color="#E6951A" />
-            </SeriesLabelSettings>
+        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1" ShowOverlapText="true">
+            <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#2E7D32" />
+            <SeriesLabelBorder Width="2" Color="#4A9652" />
+        </SeriesLabelSettings>
         </ChartSeries>
         <ChartSeries DataSource="@FeatureRequestsData" Name="Feature Requests" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#2DBE60">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Triangle" />
-            <SeriesLabelSettings Visible="true" Background="#EAFBF1" Opacity="0.95" ShowOverlapText="true">
-                <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#1F8D47" />
-                <SeriesLabelBorder Width="1.5" Color="#2DBE60" />
-            </SeriesLabelSettings>
+        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1" ShowOverlapText="true">
+            <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#2E7D32" />
+            <SeriesLabelBorder Width="2" Color="#4A9652" />
+        </SeriesLabelSettings>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -196,6 +179,7 @@ In the `SeriesLabelFont`:
 
 ```
 
+Need to add the preview sample
 ![Blazor line chart with customized series label background, font, and border](images/series-label/blazor-line-chart-series-label-customization.webp)
 
 ## See also
