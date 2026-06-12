@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Razor Class Library in Visual Studio | Syncfusion®
-description: Check out the documentation for Creating Razor Class Library (RCL) using Blazor components.
+title: Getting Started with Razor Class Library in VS | Syncfusion®
+description: Check out the documentation for Creating Razor Class Library (RCL) using Blazor components and much more details. 
 platform: Blazor
 component: Common
 documentation: ug

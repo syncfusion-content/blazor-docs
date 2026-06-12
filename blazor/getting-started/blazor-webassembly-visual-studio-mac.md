@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor WebAssembly App in VS for Mac | Syncfusion®
+title: Getting started with WebAssembly App in VS for Mac | Syncfusion®
 description: Check out the documentation for getting started with Blazor WebAssembly App and Blazor Components in Visual Studio for Mac and much more.
 platform: Blazor
 component: Common

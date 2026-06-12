@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Microsoft Teams App in Visual Studio | Syncfusion®
+title: Getting Started with Microsoft Teams App in VS | Syncfusion®
 description: Check out the documentation for getting started with Microsoft Teams App using Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
