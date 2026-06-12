@@ -83,8 +83,6 @@ public class TreeData
 
 {% endtabs %}
 
-The editing feature can be disabled for a particular column by setting [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing) to **false**.
-
 N> For strong typing and validation, specify the model type via TValue on the TreeGrid or ensure the DataSource is a typed list (for example, List<TreeData.BusinessObject>).
 
 ```csharp
@@ -241,7 +239,7 @@ public class TreeData
 
 ## Disable editing for a particular column
 
-Disable editing for a specific column using [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing).
+The editing feature can be disabled for a particular column by setting [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing) to **false**.
 
 In the following example, editing is disabled for the **Duration** column.
 

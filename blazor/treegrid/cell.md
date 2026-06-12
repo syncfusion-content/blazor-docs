@@ -83,6 +83,7 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEvents QueryCellInfo="QueryCellInfo" TValue="TreeData"></TreeGridEvents>
