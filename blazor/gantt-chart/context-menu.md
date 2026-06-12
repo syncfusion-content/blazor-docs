@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Blazor Gantt Chart Component | Syncfusion®
-description: Check out and learn here all about Context Menu in Blazor Gantt Chart component and much more.
+description: Check out and learn here all about Context Menu in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Gantt Chart Component | Syncfusion®
-description: Checkout and learn here all about events in Blazor Gantt Chart component and much more details.
+description: Checkout and learn here all about the features and events in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
