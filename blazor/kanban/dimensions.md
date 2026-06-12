@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dimensions in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about dimensions in Syncfusion Blazor Kanban component and much more details.
+title: Dimensions in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all about dimensions in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Dimensions in Blazor Kanban Component
 
-This section explains how to configure the height and width of the Syncfusion Blazor Kanban component to achieve responsive and fixed layouts.
+This section explains how to configure the height and width of the Blazor Kanban component to achieve responsive and fixed layouts.
 
 The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component allows customization of its overall layout dimensions height and width using three value types:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Input Mask component and more.
+title: Style and appearance in Blazor Input Mask Component | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug

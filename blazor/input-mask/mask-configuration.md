@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mask Configuration in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Mask Configuration in Syncfusion Blazor Input Mask component and more.
+title: Mask Configuration in Blazor Input Mask Component | Syncfusion®
+description: Checkout and learn here all about Mask Configuration in Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug

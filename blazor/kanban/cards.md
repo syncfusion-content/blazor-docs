@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cards in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about cards in Syncfusion Blazor Kanban component and much more details.
+title: Cards in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all about cards in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

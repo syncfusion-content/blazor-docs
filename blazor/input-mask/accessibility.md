@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Input Mask component and much more.
+title: Accessibility in Blazor Input Mask Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor Input Mask component and much more.
 platform: Blazor
 control: Input Mask
 documentation: ug
@@ -60,4 +60,4 @@ The accessibility compliance of the MaskedTextBox component is shown in the foll
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
