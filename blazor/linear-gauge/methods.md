@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Methods in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about methods in Syncfusion Blazor Linear Gauge component and much more.
+title: Methods in Blazor Linear Gauge Component | Syncfusion®
+description: Checkout and learn here all about methods in Blazor Linear Gauge component and much more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug

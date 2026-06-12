@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axes in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about axes in Syncfusion Blazor Linear Gauge component and much more details.
+title: Axes in Blazor Linear Gauge Component | Syncfusion®
+description: Checkout and learn here all about axes in Blazor Linear Gauge component and much more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug

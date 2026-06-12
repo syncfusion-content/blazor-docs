@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag And Drop in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about drag and drop in Syncfusion Blazor ListBox component and much more.
+title: Drag And Drop in Blazor ListBox Component | Syncfusion®
+description: Checkout and learn here all about drag and drop in Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug

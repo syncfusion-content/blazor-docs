@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion LinearGauge in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor LinearGauge Component Components in Web App.
+title: Getting started with LinearGauge in Blazor Web App | Syncfusion®
+description: Check out the documentation for getting started with Blazor LinearGauge Component Components in Web App.
 platform: Blazor
 control: LinearGauge
 documentation: ug
@@ -127,7 +127,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
 
-Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}

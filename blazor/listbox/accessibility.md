@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor ListBox component and much more.
+title: Accessibility in Blazor ListBox Component | Syncfusion®
+description: Checkout and learn here all about accessibility in Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor ListBox Component | Syncfusion
+title: Getting Started with Blazor ListBox Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor ListBox component in Blazor WebAssembly Application.
 platform: Blazor
 control: List Box

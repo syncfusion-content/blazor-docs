@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion LinearGauge in Blazor Server App
-description: Check out the documentation for getting started with Syncfusion Blazor LinearGauge Component Components in Server App.
+title: Getting started with LinearGauge in Blazor Server App | Syncfusion®
+description: Check out the documentation for getting started with Blazor LinearGauge Component Components in Server App.
 platform: Blazor
 control: LinearGauge
 documentation: ug

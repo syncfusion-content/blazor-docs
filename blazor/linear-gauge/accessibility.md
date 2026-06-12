@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Linear Gauge component and more.
+title: Accessibility in Blazor Linear Gauge Component | Syncfusion®
+description: Checkout and learn here all about accessibility in Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
