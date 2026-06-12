@@ -105,7 +105,7 @@ You can handle the tree grid's state manually by using built-in state persistenc
     {  
         await TreeGrid.SetPersistDataAsync(SavedPersistence);
     } 
-    private async void ClearPersistence()  
+    private async Task ClearPersistence()  
     {  
         await TreeGrid.ResetPersistDataAsync();
     }  

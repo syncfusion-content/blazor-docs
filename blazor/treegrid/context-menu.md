@@ -68,7 +68,7 @@ The following sample code demonstrates enabling context menu with its default it
     protected override void OnInitialized()
     {
         TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 50000, Progress = 70, ParentId = null, Priority = "High", Approved = true });
-        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child Task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal", Approved = false });
         TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 500000, Progress = 65, ParentId = 1, Priority = "Critical", Approved = true });
         TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 609890, Progress = 77, ParentId = null, Priority = "Low", Approved = false });
         TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9778686, Progress = 25, ParentId = 4, Priority = "Normal", Approved = true });
@@ -121,7 +121,7 @@ The following sample code demonstrates defining custom context menu item and its
     protected override void OnInitialized()
     {
         TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 50000, Progress = 70, ParentId = null, Priority = "High" });
-        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal" });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child Task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal" });
         TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 500000, Progress = 65, ParentId = 1, Priority = "Critical" });
         TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 609890, Progress = 77, ParentId = null, Priority = "Low" });
         TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9778686, Progress = 25, ParentId = 4, Priority = "Normal" });
@@ -131,11 +131,11 @@ The following sample code demonstrates defining custom context menu item and its
         TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 778907897, Progress = 70, ParentId = 7, Priority = "Low" });
     }
 
-    public void OnContextMenuClick(ContextMenuClickEventArgs args)
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<BusinessObject> args)
     {
         if (args.Item.Id == "copywithheader")
         {
-            this.TreeGrid.CopyAsync(true);
+            await this.TreeGrid.CopyAsync(true);
         }
     }
 }
