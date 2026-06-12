@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Toolbar Items in Blazor TreeGrid Component | Syncfusion
-description: Learn how to use built-in and custom toolbar items in Syncfusion Blazor TreeGrid, including icons, alignment, tooltips, and handling toolbar actions.
+description: Learn about using built-in and custom toolbar items in Syncfusion Blazor TreeGrid, including icons, alignment, tooltips, and handling toolbar actions.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -360,7 +360,7 @@ Define the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tre
         if (args.Item.Text == "Click")
         {
             message = "Custom Toolbar Clicked";
-            //You can customize your code here.
+            //Customize the code here as needed.
         }
     }
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Toolbar in Blazor TreeGrid Component | Syncfusion
-description: Learn how to create and use custom toolbar in the Syncfusion Blazor TreeGrid, including templates, icons with text, dropdowns, and export actions.
+description: Learn about creating and using custom toolbar in the Syncfusion Blazor TreeGrid, including templates, icons with text, dropdowns, and export actions.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -200,7 +200,7 @@ To render an image with text in the custom toolbar, use the `Template` in [SfToo
 
 Rendering an [SfDropdownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) in the custom toolbar of the Blazor TreeGrid extends toolbar functionality and enables actions based on user selection.
 
-This is achieved by using the `Template`. The example below shows how to render the `SfDropDownList` in the custom toolbar, where the toolbar template binds the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
+This is achieved by using the `Template`. The example below demonstrates rendering the `SfDropDownList` in the custom toolbar, where the toolbar template binds the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event to the **OnChange** method.
 
 In the **OnChange** method, the selected item text determines the action. For example, if **Update** is chosen, the [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEditAsync) method exits edit mode. If **Edit** is selected, the selected record is passed to [StartEditingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_StartEditingAsync) to start editing dynamically. Similarly, if **Delete** is chosen, the selected record is passed to [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DeleteRecordAsync) to remove it from the TreeGrid.
 

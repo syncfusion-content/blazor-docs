@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Configuring and Customizing Toolbar in Syncfusion Blazor TreeGrid
-description: Learn how to configure, customize, and manage toolbar actions in Syncfusion Blazor TreeGrid, including dynamic control and CSS styling
+description: Learn about configuring, customizing, and managing toolbar actions in Syncfusion Blazor TreeGrid, including dynamic control and CSS styling
 platform: Blazor
 control: TreeGrid
 documentation: ug
