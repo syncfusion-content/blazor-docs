@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all about events in Blazor Linear Gauge component and much more details.
+description: Checkout and learn here all about the features and events in Blazor Linear Gauge component and much more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug

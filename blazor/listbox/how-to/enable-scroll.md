@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable Scroller in Blazor ListBox Component | Syncfusion®
-description: Checkout and learn here all about enable scroller in Blazor ListBox component and much more.
+description: Checkout and learn here all about enable scroller in Blazor ListBox component and and much more details.
 platform: Blazor
 control: List Box
 documentation: ug

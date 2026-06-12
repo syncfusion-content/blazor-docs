@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor ListBox in Blazor Server App | Syncfusion®
-description: Check out the documentation for getting started with Blazor ListBox Component in Blazor Server App.
+description: Check out the documentation for getting started with Blazor ListBox Component in Blazor Server App and much more details.
 platform: Blazor
 control: List Box
 documentation: ug

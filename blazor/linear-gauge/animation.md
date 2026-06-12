@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Linear Gauge Component | Syncfusion®
-description: Checkout and learn here all about animation in Blazor Linear Gauge component and much more details.
+description: Checkout and learn here all the features about animation in Blazor Linear Gauge component and much more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
