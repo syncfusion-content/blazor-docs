@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PDF Export with templates in Blazor Gantt Chart Component | Syncfusion®
+title: PDF Export with templates in Blazor Gantt Chart | Syncfusion®
 description: Checkout and learn here all about PDF Exporting with templates in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
