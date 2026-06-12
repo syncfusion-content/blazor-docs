@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom toolbar items in Blazor TreeGrid Component
 
-The Custom toolbar items can be created with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, it is suggested to define the **Id** property for custom toolbar items.
+The Custom toolbar items can be created with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, it is suggested to define the `Id` property for custom toolbar items.
 
-This is demonstrated in the below sample code where there are custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when TreeGridEditSettings is defined in TreeGrid. So custom toolbar will be in disabled state considering it as default toolbar item. That behavior must be overcame by defining the Id property.
+This is demonstrated in the below sample code where there are custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) is defined in TreeGrid. So custom toolbar will be in disabled state considering it as default toolbar item. That behavior must be overcome by defining the `Id` property.
 
 {% tabs %}
 
@@ -32,7 +32,7 @@ This is demonstrated in the below sample code where there are custom toolbar ite
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="85"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duation" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="70"></TreeGridColumn>
     </TreeGridColumns>
