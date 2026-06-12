@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Razor Class Library in Visual Studio | Syncfusion
-description: Check out the documentation for Creating Razor Class Library (RCL) using Syncfusion Blazor components.
+title: Getting Started with Razor Class Library in Visual Studio | Syncfusion®
+description: Check out the documentation for Creating Razor Class Library (RCL) using Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating Razor Class Library (RCL) using Syncfusion® Blazor components
 
-This guide explains how to create a Razor Class Library (RCL) that includes Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This guide explains how to create a Razor Class Library (RCL) that includes Blazor components using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -37,7 +37,7 @@ This guide explains how to create a Razor Class Library (RCL) that includes Sync
 
     ![select framework](images/VS2022/blazor-select-template-rcl.webp)
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in the App
+## Install Blazor Grid and Themes NuGet in the App
 
 To add the **Blazor DataGrid** component to the library, open NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, use the following Package Manager commands.
 
@@ -50,11 +50,11 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
-## Importing Syncfusion Blazor component in Razor Class Library
+## Importing Blazor component in Razor Class Library
 
-Import and add the Syncfusion Blazor components in the `~/Component1.razor` file. For example, the Blazor DataGrid component is imported and added in the **~/Component1.razor** page.
+Import and add the Blazor components in the `~/Component1.razor` file. For example, the Blazor DataGrid component is imported and added in the **~/Component1.razor** page.
 
 {% tabs %}
 {% highlight razor %}
@@ -95,7 +95,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Create a Blazor project in Visual Studio
 
-* Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+* Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
@@ -120,9 +120,9 @@ cd RazorUIClassLib
 
 {% endtabs %}
 
-## Install Syncfusion Blazor Grid and Themes NuGet in the App
+## Install Blazor Grid and Themes NuGet in the App
 
-If using the `WebAssembly` or `Auto` render modes in a Blazor Web App, install Syncfusion Blazor component NuGet packages in the client project.
+If using the `WebAssembly` or `Auto` render modes in a Blazor Web App, install Blazor component NuGet packages in the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
@@ -140,11 +140,11 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
-## Importing Syncfusion Blazor component in Razor Class Library
+## Importing Blazor component in Razor Class Library
 
-Import and add the Syncfusion Blazor components in the `~/Component1.razor` file. For example, the Blazor DataGrid component is imported and added in the **~/Component1.razor** page.
+Import and add the Blazor components in the `~/Component1.razor` file. For example, the Blazor DataGrid component is imported and added in the **~/Component1.razor** page.
 
 {% tabs %}
 {% highlight razor %}
@@ -185,7 +185,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Create a Blazor project in Visual Studio Code
 
-Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 {% endtabcontent %}
 
@@ -217,9 +217,9 @@ Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App
     @using RazorClassLibrary
     ```
 
-2. Register the Syncfusion Blazor Service in the **~/Program.cs** file of the Blazor App.
+2. Register the Blazor Service in the **~/Program.cs** file of the Blazor App.
 
-   * If you select an **Interactive render mode** as `WebAssembly` or `Auto`, need to register the Syncfusion Blazor service in both **~/Program.cs** files of the Blazor Web App.
+   * If you select an **Interactive render mode** as `WebAssembly` or `Auto`, need to register the Blazor service in both **~/Program.cs** files of the Blazor Web App.
 
     ```cshtml
 
@@ -259,6 +259,6 @@ Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App
 
     ```
 
-5. Run the application, The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component will be rendered in the default web browser.
+5. Run the application, The Blazor Grid component will be rendered in the default web browser.
 
     ![RCL output](images/blazor-grid-with-rcl.webp)

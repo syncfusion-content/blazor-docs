@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with WinForms Blazor App in Visual Studio | Syncfusion
-description: Check out the documentation for getting started with WinForms Blazor App and Syncfusion Blazor Components in Visual Studio and explore here to more details.
+title: Getting Started with WinForms Blazor App in Visual Studio | Syncfusion®
+description: Check out the documentation for getting started with WinForms Blazor App and Blazor Components in Visual Studio and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with WinForms Blazor Application
 
-This section explains how to create and run a WinForms Blazor App (.NET WinForms Blazor) that integrates Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run a WinForms Blazor App (.NET WinForms Blazor) that integrates Blazor components.
 
 ## What is WinForms Blazor App?
 
@@ -26,7 +26,7 @@ Visual Studio provides the **WinForms Application** template to create WinForms 
 
 To create a **WinForms Blazor App** using Visual Studio, follow the comprehensive steps in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/windows-forms?view=aspnetcore-8.0) documentation. Ensuring and understanding each step in the official guide establishes the foundation required to continue with this documentation.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in the App
+## Install Blazor Grid and Themes NuGet in the App
 
 To add the **Blazor DataGrid** component in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -43,7 +43,7 @@ N> Ensure that the package [Microsoft.AspNetCore.Components.WebView.WindowsForms
 
 ![Winforms Blazor App NuGet package reference](images/winforms/winforms-blazor-package-reference.webp)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Add Import Namespaces
 
@@ -58,9 +58,9 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `Form1.cs` file of the WinForms Blazor App.
+Register the Blazor service in the `Form1.cs` file of the WinForms Blazor App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/Form1.cs" hl_lines="1 3" %}
@@ -91,9 +91,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
+## Add Blazor component
 
-Add a Syncfusion Blazor component to any Razor file in the Blazor project. The example below adds the Blazor Grid component into `~/Counter.razor` file.
+Add a Blazor component to any Razor file in the Blazor project. The example below adds the Blazor Grid component into `~/Counter.razor` file.
 
 {% tabs %}
 {% highlight razor %}
@@ -128,4 +128,4 @@ Add a Syncfusion Blazor component to any Razor file in the Blazor project. The e
 
 In the Visual Studio toolbar, click the start button to build and run the app.
 
-![WinForms Blazor App with Syncfusion Blazor Components](images/winforms/winforms-blazor-datagrid.webp)
+![WinForms Blazor App with Blazor Components](images/winforms/winforms-blazor-datagrid.webp)

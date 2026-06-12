@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion.Blazor Single NuGet in Visual Studio
-description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Syncfusion Blazor Application and and explore here to more details.
+title: Getting started with Syncfusion.Blazor Single NuGet in Visual Studio | Syncfusion®
+description: Check out the documentation for getting started with Syncfusion.Blazor Single NuGet in Blazor Application and and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -17,9 +17,9 @@ This section explains how to add a Blazor component by using the consolidated Sy
 
 ## Create a new Blazor App in Visual Studio
 
-Create a **Blazor Web App (Server Interactive Mode) or WebAssembly Standalone** using Visual Studio via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor Web App (Server Interactive Mode) or WebAssembly Standalone** using Visual Studio via the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion® Blazor extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Single NuGet in the App
+## Install Blazor Single NuGet in the App
 
 To add the **Blazor Calendar** component to the app, open NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor). Alternatively, use the following Package Manager command.
 
@@ -31,9 +31,9 @@ Install-Package Syncfusion.Blazor -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details. The Syncfusion.Blazor Single NuGet package is a comprehensive package that includes all components, with the exception of PDF Viewer and Document Editor.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details. The Syncfusion.Blazor Single NuGet package is a comprehensive package that includes all components, with the exception of PDF Viewer and Document Editor.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Blazor Service
 
 Open **~/Components/_Imports.razor** and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespaces.
 
@@ -44,7 +44,7 @@ Open **~/Components/_Imports.razor** and import the `Syncfusion.Blazor` and `Syn
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebApp Server Interactive Mode or WebAssembly Standalone app.
+Now, register the Blazor Service in the **~/Program.cs** file of your Blazor WebApp Server Interactive Mode or WebAssembly Standalone app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -102,9 +102,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 N> If you are using Syncfusion.Blazor single NuGet, you don’t have to refer Syncfusion.Blazor.Themes NuGet. Since style sheets already inside the assets of Syncfusion.Blazor NuGet.
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
+## Add Blazor component
 
-* Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Components/Pages/Index.razor**  file.
+* Now, add the Blazor Calendar component in the **~/Components/Pages/Index.razor**  file.
 
 {% tabs %}
 {% highlight razor %}
@@ -114,6 +114,6 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Blazor Calendar component will be rendered in the default web browser.
 
 ![Blazor Calendar Component](images/core-hosted/browser-output.png)
