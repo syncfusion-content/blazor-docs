@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Binding in Blazor DataManager | Syncfusion
+title: Custom Binding in Blazor DataManager | Syncfusion®
 description: Learn how to implement custom binding in Syncfusion Blazor DataManager for flexible data operations and CRUD integration with DataGrid.
 platform: Blazor
 control: DataManager
@@ -11,7 +11,7 @@ documentation: ug
 
 # Custom Binding in Blazor DataManager Component
 
-Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.htm) component provides a mechanism to implement custom logic for data retrieval and manipulation. It allows defining how data operations are executed by creating a [custom adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) that overrides default behavior.
+Custom binding in the Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.htm) component provides a mechanism to implement custom logic for data retrieval and manipulation. It allows defining how data operations are executed by creating a [custom adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) that overrides default behavior.
 
 Custom binding is applicable in scenarios where:
 
@@ -127,7 +127,7 @@ Overriding these methods enables custom logic for **creating**, **reading**, **u
 
 ## Implementing Custom Adaptor
 
-Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor `DataManager` component can be integrated with the `DataGrid` by creating a custom adaptor that defines data operations and CRUD functionality.
+Custom binding in the Blazor `DataManager` component can be integrated with the `DataGrid` by creating a custom adaptor that defines data operations and CRUD functionality.
 
 **Steps to implement custom binding and integrate with DataGrid**
 
