@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Export in Blazor DataGrid | Syncfusion
-description: Learn how to configure Excel export in Syncfusion Blazor DataGrid, including custom formats, selected records, parameters, and aggregate support.
+title: Excel Export in Blazor DataGrid | Syncfusion®
+description: Learn how to configure Excel export in Blazor DataGrid, including custom formats, selected records, parameters, and aggregate support.
 platform: Blazor
 control: DataGrid
 documentation: ug
