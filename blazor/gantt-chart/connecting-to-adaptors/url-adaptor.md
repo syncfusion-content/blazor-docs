@@ -1,18 +1,18 @@
 ---
 layout: post
-title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion
-description: Learn about bind data and performing CRUD operations using UrlAdaptor in Syncfusion Blazor Gantt Chart.
+title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
+description: Learn about bind data and performing CRUD operations using UrlAdaptor in Blazor Gantt Chart much more details.
 platform: Blazor
 control: Gantt Chart
 keywords: adaptors, urladaptor, url adaptor, remotedata 
 documentation: ug
 ---
 
-# UrlAdaptor in Syncfusion Blazor Gantt Chart
+# UrlAdaptor in Blazor Gantt Chart
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor that enables communication between remote data services and a UI component. It supports seamless data binding and interaction with custom API services or any remote endpoint via URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place.
 
-This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server‑side data operations and CRUD actions.
+This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server‑side data operations and CRUD actions.
 
 ## Creating an API service
  
@@ -20,7 +20,7 @@ To configure a server with the Blazor Gantt Chart, follow these steps:
  
 **1. Create a Blazor web app**
  
-You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Create a model class**
  
@@ -171,15 +171,15 @@ app.MapControllers();
  
 Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:71xx/api/gantt` (where `71xx` represents the port number in the launchSettings.json). Please verify that the API returns the task data.
 
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart to an API service
+## Connecting Blazor Gantt Chart to an API service
  
 To integrate the Blazor Gantt Chart into your project using Visual Studio 2026, follow the below steps:
  
-**1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt and Themes NuGet packages**
+**1. Install Blazor Gantt and Themes NuGet packages**
  
 To add the Blazor Gantt Chart in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
+If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Blazor NuGet packages in the client project.
  
 Alternatively, use the following Package Manager commands:
  
@@ -188,9 +188,9 @@ Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
  
-> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
  
-**2. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
+**2. Register Blazor service**
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
@@ -200,7 +200,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Data
 ```
  
-- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+- Register the Blazor service in the **~/Program.cs** file.
  
 ```csharp
 using Syncfusion.Blazor;
@@ -519,7 +519,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling CRUD operations
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every action, facilitating server-side operations.
+The Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every action, facilitating server-side operations.
 
 **CRUD operations mapping**
 
