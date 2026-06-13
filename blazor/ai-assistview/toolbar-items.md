@@ -678,6 +678,106 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
+### Regenerate responses
+
+The AI AssistView allows users to `regenerate` responses to request a new response for the same prompt. The navigation buttons with `previous` and `next` buttons are rendered along with a response index indicator (e.g., `1 / 3`) allowing users to navigate between all regenerated responses for the prompt.
+
+> The navigation UI appears automatically once more than one response is available for a prompt either regenerated or preloaded using the `RegeneratedResponses` property in the [Prompts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Prompts) collection.
+
+#### Adding regenerate item
+
+You can enable the regenerate button by adding the `e-assist-regenerate` icon to the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directive within the [ResponseToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbar.html).
+
+#### Adding regenerated response
+
+When regenerated, it triggers the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event with the existing prompt, enabling you to call your preferred AI service again and update the response using the `Response` property of the event args.
+
+In the following example, AI AssistView component rendered with the built-in `regenerate` toolbar item in the response toolbar.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest">
+        <ResponseToolbar>
+            <ResponseToolbarItem IconCss="e-icons e-assist-copy" Tooltip="Copy"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-like" Tooltip="Like"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-dislike" Tooltip="Need Improvement"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-regenerate" Tooltip="Regenerate"></ResponseToolbarItem>
+        </ResponseToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() { Prompt = "What is AI?", Response = "AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making." }
+    };
+    private List<string> regenerateResponses = new List<string>()
+    {
+        "AI, or Artificial Intelligence, refers to the simulation of human intelligence in machines programmed to think and learn like humans.",
+        "Artificial Intelligence is the development of computer systems capable of performing tasks that typically require human intelligence.",
+        "AI is a branch of computer science focused on building machines that can perform tasks requiring human-like intelligence."
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var isRegenerate = prompts.Any(p => p.Prompt == args.Prompt);
+        args.Response = isRegenerate
+            ? regenerateResponses[new Random().Next(regenerateResponses.Count)]
+            : "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+    }
+}
+```
+
+![Blazor AI AssistView Regenerate Response](./images/assistview-regenerate-response.webp)
+
+#### Pre-loading regenerated responses
+
+You can use the [RegeneratedResponses](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewPrompt.html#Syncfusion_Blazor_InteractiveChat_AssistViewPrompt_RegeneratedResponses) property in the [Prompts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Prompts) collection to pre-load multiple responses for a prompt at the initial render, without requiring the user to trigger the regenerate action. Users can navigate between the pre-loaded responses using the `previous` and `next` buttons in the response navigation UI.
+
+In the following example, the `RegeneratedResponses` property is used to pre-load multiple responses for a prompt.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest">
+        <ResponseToolbar>
+            <ResponseToolbarItem IconCss="e-icons e-assist-copy" Tooltip="Copy"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-like" Tooltip="Like"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-dislike" Tooltip="Need Improvement"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-regenerate" Tooltip="Regenerate"></ResponseToolbarItem>
+        </ResponseToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt()
+        {
+            Prompt = "What is AI?",
+            Response = "AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.",
+            RegeneratedResponses = new List<string>()
+            {
+                "AI, or Artificial Intelligence, refers to the simulation of human intelligence in machines programmed to think and learn like humans.",
+                "Artificial Intelligence is the development of computer systems capable of performing tasks that typically require human intelligence.",
+                "AI is a branch of computer science focused on building machines that can perform tasks requiring human-like intelligence."
+            }
+        }
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        args.Response = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+    }
+}
+```
+
+![Blazor AI AssistView Regenerate Preload](./images/assistview-regenerate-preload.webp)
 
 #### Item clicked
 
