@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content Security Policy (CSP) - Syncfusion
-description: Learn how to use Syncfusion Blazor components with a strict Content Security Policy (CSP) in Blazor Web App, Blazor WebAssembly (WASM), and Blazor Server.
+title: Content Security Policy (CSP) | Syncfusion®
+description: Learn how to use Blazor components with a strict Content Security Policy (CSP) in Blazor Web App, Blazor WebAssembly (WASM), and Blazor Server.
 platform: Blazor
 control: Common
 documentation: ug
@@ -66,7 +66,7 @@ WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en
 
 ## When you need *'unsafe-inline'* ?
 
-Most Syncfusion components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
+Most components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
 
 
 ### Scenario 1: components that always require *'unsafe-inline'*
@@ -105,7 +105,7 @@ The following components need inline styles to work and always require `'unsafe-
 </td>
 <td>
 <ul>
-<li>These components are independent of external Syncfusion theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.</li>
+<li>These components are independent of external theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.</li>
 <li>Dynamic calculation of axes, scales, gradients, data labels, and tooltips at runtime.</li>
 <li>Inline styles ensure pixel-perfect alignment and high-performance redraws during zoom, pan, and real-time updates.</li>
 </ul>
