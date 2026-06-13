@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Rendering Performance Optimization | Syncfusion
+title: Blazor Rendering Performance Optimization | Syncfusion®
 description: Learn techniques to optimize Blazor rendering performance, including data binding, ShouldRender control, EventCallback usage, and efficient component design.
 platform: Blazor
 control: Common
