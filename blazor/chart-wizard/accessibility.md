@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Chart Wizard Component | Syncfusion
-description: Check out and learn here all about accessibility using keyboard navigation in Syncfusion Blazor Chart Wizard component and more.
+title: Accessibility in Blazor Chart Wizard Component | Syncfusion®
+description: Check out and learn here all about accessibility using keyboard navigation in Blazor Chart Wizard component and more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug
@@ -91,7 +91,7 @@ The accessibility compliance of the Blazor Chart Wizard component is shown in th
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
 
-* [Accessibility Customization in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](./advanced-accessibility-configuration)
+* [Accessibility Customization in Blazor components](./advanced-accessibility-configuration)
 

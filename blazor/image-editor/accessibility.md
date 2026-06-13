@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Image Editor component | Syncfusion
+title: Accessibility in Blazor Image Editor component | Syncfusion®
 description: Learn about accessibility support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
@@ -61,4 +61,4 @@ The accessibility compliance of the Blazor Image Editor component is demonstrate
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
