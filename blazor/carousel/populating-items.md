@@ -53,7 +53,7 @@ When rendering the Carousel component using items binding, you can assign templa
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVAChhhVnHFuwlZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVxjxWVUhhiStlD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Selection
 
@@ -110,7 +110,7 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLgiVVLhncMgRcW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Carousel selected slide](images/selected_index.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXxMLgBrfFPXo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel selected slide](images/selected_index.png)" %}
 
 ### Select an item using the method
 
@@ -180,7 +180,7 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBKsrLhrHGAvIMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBHNHMVghLlzRml?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Partial visible slides
 
@@ -235,7 +235,7 @@ The Carousel component supports to show one complete slide and a partial view of
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhqMVVLVdwQwMNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Carousel partial visible slide](images/partial-visible.jpg)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdXRshqBqhCAOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/partial-visible.jpg)" %}
 
 N> Slide animation only applicable if the `partialVisible` is enabled. 
 
@@ -294,7 +294,7 @@ The following example code depicts the functionality of `partialVisible` and wit
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLqMrrLhHlMnUgO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Carousel partial visible slide](images/without-loop.jpg)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXniVUBqodeNT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/without-loop.jpg)" %}
 
 ## See also
 
