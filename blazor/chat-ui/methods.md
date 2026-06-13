@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Methods in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Methods with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Methods in Blazor Chat UI Component | Syncfusion®
+description: Checkout and learn here all about Methods with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug
