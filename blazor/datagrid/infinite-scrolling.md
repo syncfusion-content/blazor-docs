@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Infinite Scrolling in Blazor DataGrid | Syncfusion
-description: Learn how to implement Infinite Scrolling in Syncfusion Blazor DataGrid and explore more advanced features and customization options.
+title: Infinite Scrolling in Blazor DataGrid | Syncfusion®
+description: Learn how to implement Infinite Scrolling in Blazor DataGrid and explore more advanced features and customization options.
 platform: Blazor
 control: DataGrid
 documentation: ug
