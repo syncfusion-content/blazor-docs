@@ -9,7 +9,20 @@ documentation: ug
 
 # Customized Checkbox in Blazor CheckBox Component
 
-## Customize checkbox appearance
+## Customize Styles and Appearances
+
+To modify the [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) appearance, you need to override the default CSS of CheckBox component. Find the list of CSS classes and their corresponding section in CheckBox. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+
+|CSS Class | Purpose of Class|
+|-----|-----|
+|.e-checkbox-wrapper .e-frame|To customize the checkbox frame. |
+|.e-checkbox-wrapper:hover .e-frame|To customize the checkbox frame on hover. |
+|.e-checkbox-wrapper .e-label|To customize the checkbox label. |
+|.e-checkbox-wrapper:hover .e-label|To customize the checkbox label on hover. |
+|.e-checkbox-wrapper .e-frame.e-check|To customize the checked checkbox. |
+|.e-checkbox-wrapper:hover .e-frame.e-check|To customize the checked checkbox when hover. |
+
+## Customize Checkbox appearance
 
 You can customize the appearance of the Checkbox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the
 [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
@@ -76,7 +89,7 @@ The background and border color of the Checkbox is customized through the custom
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKshBQrJbnEQzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Blazor CheckBox](./../images/blazor-checkbox-appearance-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKshBQrJbnEQzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Blazor CheckBox](./images/blazor-checkbox-appearance-customization.webp)" %}
 
 ## Customize width and height
 
@@ -117,7 +130,7 @@ The following section explains about how to customize the height and width of th
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUWLLGVTFECslm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Height and Width of Blazor CheckBox](./../images/blazor-checkbox-height-width-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUWLLGVTFECslm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Height and Width of Blazor CheckBox](./images/blazor-checkbox-height-width-customization.webp)" %}
 
 ## Custom frame
 
@@ -174,7 +187,7 @@ In the following example, to-do list is displayed with round checkbox by changin
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrgirhGhJYCyqDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor CheckBox Frame](./../images/blazor-checkbox-frame-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrgirhGhJYCyqDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor CheckBox Frame](./images/blazor-checkbox-frame-customization.webp)" %}
 
 ## Custom check icon
 
@@ -222,4 +235,63 @@ In the following example, the check icon can be customized by changing check ico
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgWrLGrpkSQSUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Check Icon in Blazor CheckBox](./../images/blazor-checkbox-check-icon-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgWrLGrpkSQSUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Check Icon in Blazor CheckBox](./images/blazor-checkbox-check-icon-customization.webp)" %}
+
+## Right-To-Left in Blazor CheckBox Component
+
+Checkbox component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) as `true`.
+
+The following example illustrates how to enable right-to-left support in Checkbox component.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+
+<SfCheckBox Label="Default" @bind-Checked="isChecked" EnableRtl="true"></SfCheckBox>
+
+@code {
+    private bool isChecked = true;
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgiLhmVyZvKJzz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor CheckBox](./images/blazor-checkbox-right-to-left.webp)" %}
+
+## Model Binding in Blazor CheckBox Component
+
+To get start quickly with Model Binding in Blazor CheckBox Component, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=4vMuReo0Hz4"%}
+
+This section demonstrates the strongly typed extension support in Checkbox. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view, access model properties on that view, and use data associated with model to render the component.
+
+In this sample, first check the option and click the submit button to post the selected value in the Checkbox. When the value is not checked, validation error message will be shown below the Checkbox.
+
+```csharp
+
+@using Syncfusion.Blazor.Buttons
+@using System.ComponentModel.DataAnnotations
+
+<EditForm Model="Annotate">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group">
+        <SfCheckBox Label="Option 1" @bind-Checked="@Annotate.Check"></SfCheckBox>
+        <ValidationMessage For="@(() => Annotate.Check)" />
+    </div>
+    <SfButton HtmlAttributes="@Submit" Content="Submit"></SfButton>
+</EditForm>
+
+@code {
+    public Annotation Annotate = new Annotation();
+    public class Annotation
+    {
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
+        public bool Check { get; set; }
+    }
+    public Dictionary<string, object> Submit = new Dictionary<string, object>()
+    {
+        { "type", "submit"}
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKMVrmrJkahhmZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Model Binding in Blazor CheckBox](./images/blazor-checkbox-model-binding.webp)" %}
