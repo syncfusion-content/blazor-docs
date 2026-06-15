@@ -111,7 +111,7 @@ This is implemented by using the `Template` property, which provides extensive c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVnjxiSVDGstrby?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdZRMIqxXdTZFN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render image with text in custom Toolbar
 
