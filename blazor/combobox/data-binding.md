@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor ComboBox component and much more.
+title: Data Binding in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Data Binding in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
