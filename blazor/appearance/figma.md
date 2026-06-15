@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Figma UI Kits for Blazor Components with Design Tokens | Syncfusion®
-description: Learn about Syncfusion’s Figma UI kits for Blazor, available for Material 3, Fluent, Tailwind, and Bootstrap 5 themes, and how to export design tokens.
+description: Learn about Figma UI kits for Blazor, available for Material 3, Fluent, Tailwind, and Bootstrap 5 themes, and how to export design tokens.
 platform: Blazor
 control: Common
 documentation: ug
@@ -67,13 +67,13 @@ Feel free to experiment with these customization options to create a design that
 
 ## Download customized styles
 
-Download customized styles as design tokens and CSS variables using the Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens plugin. This plugin bridges the gap between design and development by converting Figma design variables into Syncfusion<sup style="font-size:70%">&reg;</sup> tokens for direct use in your applications to ensure a smooth transition from design to implementation.
+Download customized styles as design tokens and CSS variables using the Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens plugin. This plugin bridges the gap between design and development by converting Figma design variables into Design tokens for direct use in your applications to ensure a smooth transition from design to implementation.
 
 ### Export design tokens
 
 Follow these steps to download the customized styles from the Figma UI Kit:
 
-- First, open a [Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI Kit](https://www.figma.com/@syncfusion).
+- First, open a [Figma UI Kit](https://www.figma.com/@syncfusion).
 - In Figma, navigate to **Resources** -> **Plugins** and click **Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens**.
 - Open **Syncfusion<sup style="font-size:70%">&reg;</sup> Design Tokens** and run the plugin. A dialog appears with an **Export** button.
 - Click the **Export** button. This action will generate a zip file containing your design tokens.
