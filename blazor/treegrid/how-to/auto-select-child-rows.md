@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Auto Select Child Rows When Selecting Parent Row in Blazor TreeGrid | Syncfusion
+title: Auto Select Child Rows on Parent Selection in TreeGrid | Syncfusion
 description: Learn to automatically select child rows when selecting a parent row in the Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Automatically Select Child Rows When Selecting a Parent Row in Blazor TreeGrid
+# Auto-Select Child Rows on Parent Row Selection in Blazor TreeGrid
 
 Handle the [RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelecting) event to automatically select all child rows when a parent row is selected. Inside the event handler, use the `GetCurrentViewRecords` method to get the current view data and identify the selected row. Check whether the selected row is a parent using the `HasChild` boolean field, retrieve its child records recursively, and select them using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SelectRowsAsync_System_Int32___) method.
 
