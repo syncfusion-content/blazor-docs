@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started Blazor Rich Text Editor in Blazor Web App | Syncfusion
+title: Getting Started Blazor Rich Text Editor in Blazor Web App | Syncfusion
 canonical_url: "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-webapp"
 description: Check out the documentation for getting started with Blazor Rich Text Editor Components in Blazor Web App.
 platform: Blazor
