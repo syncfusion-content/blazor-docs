@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Kanban Component | Syncfusion®
-description: Check out and learn here all about data binding in Blazor Kanban component and much more details.
+description: Check out and learn here all the features about data binding in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

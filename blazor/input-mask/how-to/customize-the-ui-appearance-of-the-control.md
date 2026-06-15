@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Appearance of Blazor Input Mask Component | Syncfusion®
-description: Learn here all about customizing the UI appearance of Blazor Input Mask component and more.
+description: Learn here all about customizing the UI appearance of Blazor Input Mask component and much more details.
 platform: Blazor
 control: Input Mask
 documentation: ug

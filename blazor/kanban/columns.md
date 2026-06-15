@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor Kanban Component | Syncfusion®
-description: Checkout and learn here all about columns in Blazor Kanban component and much more details.
+description: Checkout and learn here all the features about columns in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

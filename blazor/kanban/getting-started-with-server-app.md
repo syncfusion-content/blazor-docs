@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Kanban Component in Server App | Syncfusion®
+title: Getting Started with Blazor Kanban in Server App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor Kanban Component in Blazor Server App.
 platform: Blazor
 component: Kanban

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Input Mask Component | Syncfusion®
-description: Checkout and learn here all about Events in Blazor Input Mask component and much more details.
+description: Checkout and learn here all the features and Events in Blazor Input Mask component and much more details.
 platform: Blazor
 control: Input Mask
 documentation: ug
