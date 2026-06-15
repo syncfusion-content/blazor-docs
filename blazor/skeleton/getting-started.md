@@ -241,4 +241,3 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfDiqjgFiEILVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.webp)" %}
 
 N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/skeleton/defaultfunctionalities) that shows how to render and configure the skeleton.
-
