@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disabled the Blazor DatePicker Component | Syncfusion
-description: Check out and learn here all about disabling the Syncfusion Blazor DatePicker Component and much more.
+title: Disabled the Blazor DatePicker Component | Syncfusion®
+description: Check out and learn here all the features about disabling the Blazor DatePicker Component and much more.
 platform: Blazor
 control: DatePicker
 documentation: ug
