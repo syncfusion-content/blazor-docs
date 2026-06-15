@@ -62,14 +62,14 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ### Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.ChartWizard](https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.ChartWizard](https://www.nuget.org/packages/Syncfusion.Blazor.ChartWizard/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.ChartWizard` and `Syncfusion.Blazor.Themes`) and install them.
+2. Search the required NuGet packages (`Syncfusion.Blazor.ChartWizard`) and install them.
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
@@ -77,7 +77,6 @@ Alternatively, you can install the same packages using the Package Manager Conso
 {% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.ChartWizard -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +91,6 @@ Open the terminal and run the following commands.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.ChartWizard -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +105,6 @@ Open the command prompt and run the following commands.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.ChartWizard -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -145,16 +142,13 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add stylesheet and script resources
+### Add script resources
  
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the  [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-...
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
