@@ -31,8 +31,6 @@ When state persistence is enabled, the Grid saves the following settings in loca
 | **FilterSettings**   | All properties |  None                             | 
 | **SearchSettings**   | All properties                                                               | None                                       |
 | **SortSettings**     | All properties                                                                                            | None                                       |
-|
-
 
 
 > When a row is initially selected using the `SelectedRowIndex` property, only that configured value is persisted. Changes made through UI interactions are not retained after a reload.
@@ -160,7 +158,6 @@ The [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
 
-    public string _state;
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -262,10 +259,10 @@ Clear the **local storage** entry used for state persistence to remove all store
 public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
-    public OrderDetails(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    public OrderDetails(int OrderID, string CustomerID, string ShipCity, string ShipName)
     {
         this.OrderID = OrderID;
-        this.CustomerID = CustomerId;
+        this.CustomerID = CustomerID;
         this.ShipCity = ShipCity;
         this.ShipName = ShipName;
     }
@@ -391,10 +388,10 @@ protected override void OnInitialized()
 public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
-    public OrderDetails(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    public OrderDetails(int OrderID, string CustomerID, string ShipCity, string ShipName)
     {
         this.OrderID = OrderID;
-        this.CustomerID = CustomerId;
+        this.CustomerID = CustomerID;
         this.ShipCity = ShipCity;
         this.ShipName = ShipName;
     }

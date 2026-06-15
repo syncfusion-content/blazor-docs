@@ -527,9 +527,9 @@ By default, custom toolbar items are aligned on the left. Modify the position by
         {
 
         }
-        public OrderData(int? EmployeeId,string FirstName,string Country,string PostalCode)
+        public OrderData(int? EmployeeID,string FirstName,string Country,string PostalCode)
         {
-           this.EmployeeID = EmployeeId;
+           this.EmployeeID = EmployeeID;
            this.FirstName = FirstName;
            this.Country = Country;
            this.PostalCode = PostalCode;
