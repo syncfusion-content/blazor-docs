@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Smart Rich Text Editor Blazor Web App | Syncfusion
-description: Learn how to create and run Syncfusion Blazor Smart Rich Text Editor component in Blazor Web App with server interactivity.
+title: Getting Started Smart Rich Text Editor in Blazor Web App | Syncfusion
+description: Learn how to create and run Blazor Smart Rich Text Editor component in Blazor Web App with server interactivity.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -350,15 +350,15 @@ N> To configure other AI services, refer to the following sections [Ollama AI Se
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 ...
-<link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
