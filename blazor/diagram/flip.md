@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flip in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about flip support in Syncfusion Blazor Diagram component and much more details.
+title: Flip in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about flip support in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

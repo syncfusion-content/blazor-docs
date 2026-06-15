@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Export options in Blazor DataGrid | Syncfusion
-description: Learn about Excel export options in Syncfusion Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
+title: Excel Export options in Blazor DataGrid | Syncfusion®
+description: Learn about Excel export options in Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1029,7 +1029,9 @@ To add additional worksheets during export:
 
 3. Set the [GridSheetIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_GridSheetIndex) property to **0** to specify the worksheet index where the Grid data should be placed.
 
-4. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the additional worksheets.
+4. The Grid exports data to the first worksheet by default, you can customize the sheet name using the **Workbook.Worksheets[0].Name** property. Optionally, you can use the `GridSheetIndex` property to specify the worksheet index used for exporting.
+
+5. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the additional worksheets.
 
 Two extra blank worksheets are added along with the worksheet containing the Grid data in this configuration.
 
@@ -1072,6 +1074,9 @@ Two extra blank worksheets are added along with the worksheet containing the Gri
             ExportProperties.Workbook.Worksheets.Add();
             // Define the Gridsheet index where Grid data must be exported.
             ExportProperties.GridSheetIndex = 0;
+            //Access the first worksheet and assign a custom name
+            // Worksheets collection is available after Workbook initialization
+            ExportProperties.Workbook.Worksheets[0].Name = "My Exported Data";
             await Grid.ExportToExcelAsync(ExportProperties);
         }
     }
@@ -1128,7 +1133,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVytTCWguoXpvbV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxNHZhrfXTmOyO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Conditional cell formatting
 
@@ -1688,7 +1693,7 @@ public class OrderData
 
 ### Enable filtering in exported file
 
-The Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [Syncfusion XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
+The Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
 
 This method is helpful when the exported **Excel** file needs to support data analysis, sorting, and filtering immediately after download, without requiring any additional manual setup.
 
