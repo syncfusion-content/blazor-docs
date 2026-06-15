@@ -41,8 +41,6 @@ Control the popup width with `PopupWidth` property in the CommandSettings. Accep
 
 Control the popup height with `PopupHeight` property in the CommandSettings. Use this to enable scrollable lists when many commands exist.
 
-The below sample demonstrates the `CommandSettings` property.
-
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
