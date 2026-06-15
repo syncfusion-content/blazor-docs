@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started Blazor Range Slider in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Range Slider component of Syncfusion, and more details.
+description: Checkout and learn about the documentation getting started with Blazor Range Slider component, and more details.
 platform: Blazor
 control: Range Slider
 documentation: ug
