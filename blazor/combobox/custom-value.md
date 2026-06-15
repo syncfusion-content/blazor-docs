@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding Custom Value to the Blazor ComboBox Popup | Syncfusion
-description: Learn how to add custom values to the Syncfusion Blazor ComboBox component using the AllowCustom property and AddItemsAsync method.
+title: Adding Custom Value to the Blazor ComboBox Popup | Syncfusion®
+description: Learn how to add custom values to the Blazor ComboBox component using the AllowCustom property and AddItemsAsync method.
 platform: Blazor
 control: ComboBox
 documentation: ug
