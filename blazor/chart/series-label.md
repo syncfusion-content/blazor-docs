@@ -120,21 +120,21 @@ In the `SeriesLabelFont`:
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ActiveUsersData" Name="Active Users" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#4F65F1">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Circle" />
-        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1" ShowOverlapText="true">
+        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1">
             <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#2E7D32" />
             <SeriesLabelBorder Width="2" Color="#4A9652" />
         </SeriesLabelSettings>
         </ChartSeries>
         <ChartSeries DataSource="@SupportTicketsData" Name="Support Tickets" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#E6951A">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Diamond" />
-        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1" ShowOverlapText="true">
+        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1">
             <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#2E7D32" />
             <SeriesLabelBorder Width="2" Color="#4A9652" />
         </SeriesLabelSettings>
         </ChartSeries>
         <ChartSeries DataSource="@FeatureRequestsData" Name="Feature Requests" XName="Month" YName="Value" Type="ChartSeriesType.Line" Width="3" Fill="#2DBE60">
             <ChartMarker Visible="true" Width="10" Height="10" IsFilled="true" Shape="ChartShape.Triangle" />
-        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1" ShowOverlapText="true">
+        <SeriesLabelSettings Visible="true" Background="#DCE8DC" Opacity="1">
             <SeriesLabelFont Size="13px" FontFamily="Segoe UI" FontWeight="600" Color="#2E7D32" />
             <SeriesLabelBorder Width="2" Color="#4A9652" />
         </SeriesLabelSettings>
