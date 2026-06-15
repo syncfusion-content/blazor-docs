@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Step Area in Blazor Charts Component | Syncfusion®
+title: Step Area in Blazor Charts Component | Syncfusionï¿½
 description: Checkout and learn here all the features about Step Area Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
