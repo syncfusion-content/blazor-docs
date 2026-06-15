@@ -19,7 +19,7 @@ Built-in items appear by default and cannot be removed, but custom items can be 
 
 ## Custom response item configuration
 
-You can use the `ResponseSettings` property to add custom items for the response popup in Inline AI Assist. The custom items will be added with the existing built-in items in the response popup. The custom items will be displayed together with the existing built-in items in the response popup.
+You can use the `ResponseSettings` tag to add custom items for the response popup in Inline AI Assist. The custom items will be added with the existing built-in items in the response popup. The custom items will be displayed together with the existing built-in items in the response popup.
 
 Each response item object can include the following properties:
 
@@ -36,7 +36,7 @@ Each response item object can include the following properties:
 
 The `ItemSelect` event is triggered when an item is selected from the response popup in the Inline AI Assist control.
 
-The below example demonstrates the `ResponseSettings` property
+The below example demonstrates the `ResponseSettings` tag
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
