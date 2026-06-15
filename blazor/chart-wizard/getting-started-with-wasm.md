@@ -159,7 +159,7 @@ Add the Blazor Chart Wizard component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Chart Wizard component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Chart Wizard Default](images/chart-wizard-default.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBnXxWLzxoymrJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Chart Wizard Default](images/chart-wizard-default.webp)" %}
 
 ## Populate Blazor Chart Wizard data
 
