@@ -280,7 +280,7 @@ System.InvalidOperationException: Cannot provide a value for property 'Localizer
 
 **Root cause**: The Blazor service is not registered in the application's dependency injection (DI) container (missing call to `builder.Services.AddSyncfusionBlazor()`).
 
-**Solution**: Register the Blazor service in `~/Program.cs`.
+**Solution**: Register the Blazor service in `~/Program.cs`. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto` in a Blazor Web App, register the Blazor service in the `Program.cs` files of both the server and client projects.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Web App (.NET 8+)" hl_lines="2 11" %}

@@ -239,4 +239,4 @@ The wizard functions by:
 
 This pattern can be customized to create multi-step forms, registration processes, or any sequential workflow in your Blazor applications.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBgWVMgUGQmZvwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVHDxsssbFaexpb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
