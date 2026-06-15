@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent the Expand or Collapse item in Blazor Accordion | Syncfusion
-description: Learn here all about how to prevent Expand or Collapse item in Syncfusion Blazor Accordion component and more.
+title: Prevent the Expand or Collapse item in Blazor Accordion | Syncfusion®
+description: learn here all features about how to prevent Expand or Collapse item in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -117,4 +117,4 @@ The following code example demonstrates how to prevent expand and collapse actio
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthAChWqgyaWwIZu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVnjnMWCYGBhotU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.gif)" %}

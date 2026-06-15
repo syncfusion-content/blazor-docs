@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor AutoComplete component and much more.
+title: Virtualization in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all features about Virtualization in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -23,7 +23,7 @@ N> Virtualization accuracy depends on consistent item heights. Using templates t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhqsLsJUSqMNRqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with virtualization](./images/blazor_autocomplete_virtualization.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLHZdMCgNjeZHKz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with virtualization](./images/blazor_autocomplete_virtualization.gif)" %}
 
 ## Remote data
 
@@ -33,7 +33,7 @@ N> Virtualization accuracy depends on consistent item heights. Using templates t
 
 {% endhighlight %}
 
-![Blazor AutoComplete demonstrating virtualization with remote data](./images/blazor_autocomplete_remote-data-virtualization.gif)
+![Blazor AutoComplete demonstrating virtualization with remote data](./images/blazor_autocomplete_remote-data-virtualization.webp)
 
 ## Grouping with Virtualization
 

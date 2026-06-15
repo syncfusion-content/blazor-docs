@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resolving NuGet Package Management Issues in Blazor | Syncfusion
+title: Resolving NuGet Package Management Issues in Blazor | Syncfusion®
 description: Guide to resolving Blazor package management issues including NuGet conflicts, version mismatches, and dependency management
 platform: Blazor
 control: Common
@@ -9,7 +9,7 @@ documentation: ug
 
 # Resolving NuGet Package Management Issues in Blazor
 
-This guide covers common nuget package management issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper package management is essential for maintainable, efficient, and error-free applications.
+This guide explains how to resolve common NuGet package management issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper package management is essential for maintainable, efficient, and error-free applications.
 
 Common package management issues relate to:
 
@@ -22,7 +22,7 @@ N> This guide is intended for Blazor components version 33.2.3 or later, targeti
 
 ## Issue 1: Installing redundant NuGet packages  
 
-**Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling Syncfusion APIs, for example:
+**Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling APIs, for example:
 
 {% tabs %}
 {% highlight text tabtitle="Error Message" %}
@@ -80,7 +80,7 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 
 ### Best practices
 
-* Never mix [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (comprehensive) with individual Syncfusion component packages in the same project.
+* Never mix [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (comprehensive) with individual component packages in the same project.
 * Audit your `.csproj` file regularly to identify redundant packages
 * Use individual packages unless you are using 5 or more component types
 * Document your package strategy in team guidelines
@@ -90,7 +90,7 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 To check for redundant packages, inspect your project's `.csproj` file for duplicate or overlapping `<PackageReference>` entries.
 
 {% tabs %}
-{% highlight xml tabtitle="YourApp.csproj" %}
+{% highlight xml tabtitle="Incorrect setup" %}
 
 <Project Sdk="Microsoft.NET.Sdk.Web">
   ...
@@ -99,7 +99,16 @@ To check for redundant packages, inspect your project's `.csproj` file for dupli
     <!-- BAD: Both comprehensive and individual packages -->
     <PackageReference Include="Syncfusion.Blazor" Version="{{ site.releaseversion }}" />
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="{{ site.releaseversion }}" />
-    
+  </ItemGroup>
+</Project>
+
+{% endhighlight %}
+{% highlight xml tabtitle="Recommended setup" %}
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  ...
+
+  <ItemGroup>
     <!-- GOOD: Only individual packages -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="{{ site.releaseversion }}" />
     <PackageReference Include="Syncfusion.Blazor.Calendars" Version="{{ site.releaseversion }}" />
@@ -195,7 +204,7 @@ Remove duplicate entries and ensure all Blazor packages use the same version.
 
 ### Step 4: Use Central Package Management
 
-Use Central Package Management (CPM) for solution-wide version consistency. This approach is recommended for solutions with multiple projects.
+Use [Central Package Management (CPM)](https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management) for solution-wide version consistency. This approach is recommended for solutions with multiple projects.
 
 Create a `Directory.Packages.props` file in your solution root.
 
@@ -328,7 +337,6 @@ Project 'YourApp' has the following package references
 * Use automated tools or scripts to ensure version consistency across projects
 * Review release notes before upgrading to understand breaking changes
 * Test critical functionality after version updates
-* Consider using wildcard versioning cautiously: `<PackageReference Include="Syncfusion.Blazor.Grid" Version="33.*" />`
 
 ### Common version mismatch scenarios
 

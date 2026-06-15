@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to place Circular Gauge inside other components | Syncfusion
+title: How to place Circular Gauge inside other components | Syncfusion®
 description: Learn here about how to place the Circular Gauge inside other components like Dashboard Layout, Tab, Dialog and Accordion.
 platform: Blazor
 control: Circular Gauge

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data binding in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Data binding in Syncfusion Blazor Accordion component and much more.
+title: Data binding in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about Data binding in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -74,4 +74,4 @@ The following example demonstrates how to initialize accordion items using `temp
 ```
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUMrigKgalNSWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLnZxWMCmODAXOD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)" %}
