@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable Ripple support in Blazor components | Syncfusion
-description: Learn how to enable Ripple Effect support globally for Syncfusion Blazor components in Blazor Web App, Blazor WASM standalone, and Blazor Server App.
+title: Enable Ripple support in Blazor components | Syncfusion®
+description: Learn how to enable Ripple Effect support globally for Blazor components in Blazor Web App, Blazor WASM standalone, and Blazor Server App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Enable Ripple Support in Syncfusion® Blazor Components
 
-Enable Ripple support can be enabled for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by setting the `EnableRippleEffect` property to `true`. This renders supported Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to display a ripple effect.
+Enable Ripple support can be enabled for Blazor components by setting the `EnableRippleEffect` property to `true`. This renders supported Blazor components to display a ripple effect.
 
 ## Enable Ripple Effect Globally
 
-To enable the ripple effect for all Syncfusion<sup style="font-size:70%">&reg;</sup> components by setting the [EnableRippleEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRippleEffect) global option to `true` when adding Syncfusion Blazor via `AddSyncfusionBlazor()`.
+To enable the ripple effect for all components by setting the [EnableRippleEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRippleEffect) global option to `true` when adding Syncfusion Blazor via `AddSyncfusionBlazor()`.
 
 ### Blazor Web App
 
@@ -53,9 +53,9 @@ await builder.Build().RunAsync();
 
 {% endtabs %}
 
-The above configuration enables ripple effect globally for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The above configuration enables ripple effect globally for all Blazor components.
 
-For example, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tab component will display with a ripple animation effect:
+For example, the Blazor Tab component will display with a ripple animation effect:
 
 ![Blazor components rendered with ripple effect](images/EnableRipple.gif)
 
