@@ -96,7 +96,7 @@ In the `SeriesLabelSettings`:
 * `Visible`: Enables or disables the display of series labels. Set to `true` to display the label for the corresponding series.
 * `Text`: Specifies the custom text to be displayed in the series label. If this property is not set, the label displays the corresponding series name by default.
 * `Background`: Specifies the background color of the series label. This helps the label stand out clearly within the chart area.
-* `Opacity`:  Specifies the transparency level of the series label. The accepted range is from 0 to 1, where 0 represents full transparency and 1 represents full opacity.
+* `Opacity`: Specifies the transparency level of the series label. The accepted range is from 0 to 1, where 0 represents full transparency and 1 represents full opacity.
 * `ShowOverlapText`: Determines whether overlapping series labels should be displayed. This is useful when labels overlap because the corresponding series are positioned close to one another.
 
 In the `SeriesLabelBorder`:
