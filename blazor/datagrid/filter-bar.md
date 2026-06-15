@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter Bar in Blazor DataGrid | Syncfusion
-description: Learn about the Filter Bar feature in Syncfusion Blazor DataGrid, including configuration, usage, and customization options.
+title: Filter Bar in Blazor DataGrid | Syncfusion®
+description: Learn about the Filter Bar feature in Blazor DataGrid, including configuration, usage, and customization options.
 platform: Blazor
 control: DataGrid
 documentation: ug

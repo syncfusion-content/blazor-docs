@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor ComboBox component and much more.
+title: Accessibility in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Accessibility in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -130,4 +130,5 @@ The accessibility compliance of the ComboBox component is demonstrated in the fo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
+

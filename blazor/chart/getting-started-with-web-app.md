@@ -114,7 +114,9 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 After the package is installed, open the **~/_Imports.razor** file from the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
-N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+N> 
+- The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+- If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, add these namespaces in both the server and client project **~/_Imports.razor** files.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -216,7 +218,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRjRiBKleQGqKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
 
 ### Populate Blazor chart with data
 
@@ -260,7 +262,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTNiLezckHqsGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRZdMVgPGhfPSi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
