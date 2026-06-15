@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor Tabs in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Tabs Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor Tabs Components in Blazor Web App.
 platform: Blazor
 control: Tabs
 documentation: ug
