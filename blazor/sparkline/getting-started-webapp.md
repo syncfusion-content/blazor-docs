@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor Sparkline in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Sparkline Component Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor Sparkline Component Components in Blazor Web App.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
