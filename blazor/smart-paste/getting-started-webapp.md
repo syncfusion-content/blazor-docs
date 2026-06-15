@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Blazor Smart Paste Button Blazor Web App | Syncfusion
-description: Learn how to integrate the Syncfusion Blazor Smart Paste Button in a Blazor Web App with step-by-step instructions.
+title: Get Started Blazor Smart Paste Button in Blazor Web App | Syncfusion
+description: Learn how to integrate the Blazor Smart Paste Button in a Blazor Web App with step-by-step instructions.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug
@@ -448,15 +448,15 @@ var app = builder.Build();
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 ...
-<link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
