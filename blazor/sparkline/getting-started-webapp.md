@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor Sparkline in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Blazor Sparkline Component Components in Blazor Web App.
+title: Getting Started with Blazor Sparkline in Blazor Web App | Syncfusion
+description: Check out and learn the documentation for getting started with Blazor Sparkline Components in Blazor Web App.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -140,12 +140,12 @@ builder.Services.AddSyncfusionBlazor();
 ### Add script resources
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
