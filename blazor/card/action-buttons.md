@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Action Buttons in Blazor Card Component | Syncfusion
-description: Checkout and learn here all about Action Buttons in the Syncfusion Blazor Card component and much more.
+title: Action Buttons in Blazor Card Component | Syncfusion®
+description: Checkout and learn here all features about Action Buttons in the Syncfusion Blazor Card component and much more.
 platform: Blazor
 control: Card
 documentation: ug
@@ -23,7 +23,7 @@ For adding action buttons, you can create a  `CardFooterContent` component withi
     </CardFooter>
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBgMrBLhHADhaVd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLnDnsLBkQSGAqR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Vertical
 
@@ -44,4 +44,4 @@ By default, action buttons are aligned horizontally. They can also be aligned ve
     </CardFooter>
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVUWVrhVdfXSDrA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBdtxsrVOlDOpyD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
