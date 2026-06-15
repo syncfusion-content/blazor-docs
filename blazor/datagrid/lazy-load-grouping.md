@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Lazy load grouping in Blazor DataGrid | Syncfusion
-description: Learn how to enable lazy load grouping in Syncfusion Blazor DataGrid with on-demand data loading, infinite scrolling, and virtual scrolling for large datasets.
+title: Lazy load grouping in Blazor DataGrid | Syncfusion®
+description: Learn how to enable lazy load grouping in Blazor DataGrid with on-demand data loading, infinite scrolling, and virtual scrolling for large datasets.
 platform: Blazor
 control: DataGrid
 documentation: ug
