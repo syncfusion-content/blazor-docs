@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Windows Forms to Blazor
 
-This guide provides a step by step approach to migrating a [Windows Forms (WinForms)](https://www.syncfusion.com/winforms-ui-controls) application to a [Blazor](https://www.syncfusion.com/blazor-components) application.
+Migrating enterprise applications from [Windows Forms (WinForms)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) involves a significant architectural shift, transitioning from a traditional event driven desktop UI framework to a modern, component based web framework running on .NET. This guide provides a structured, step-by-step migration approach for [WinForms controls](https://www.syncfusion.com/winforms-ui-controls) to their corresponding [Blazor components](https://www.syncfusion.com/blazor-components).
 
 ## Why Migrate from WinForms to Blazor?
 
@@ -121,7 +121,7 @@ namespace WinFormsApp
             // Create SkinManager instance.
             SkinManager skinManager1 = new SkinManager(this.components);
             
-            // Apply theme to entire form (all Syncfusion controls).
+            // Apply theme to entire form (all controls).
             skinManager1.Controls = this;
             skinManager1.VisualTheme = VisualTheme.HighContrast;
         }

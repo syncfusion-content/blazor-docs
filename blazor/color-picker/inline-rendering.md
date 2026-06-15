@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Inline Rendering in Blazor Color Picker Component | Syncfusion
-description: Checkout and learn here all about Inline Rendering in Syncfusion Blazor Color Picker component and more.
+title: Inline Rendering in Blazor Color Picker Component | Syncfusion®
+description: Checkout and learn here all the features about Inline Rendering in Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug

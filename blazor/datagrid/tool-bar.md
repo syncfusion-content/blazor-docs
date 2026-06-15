@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Configuring and Customizing Toolbar in Syncfusion Blazor DataGrid
-description: Learn how to configure, customize, and manage toolbar actions in Syncfusion Blazor DataGrid, including dynamic control and CSS styling
+title: Configuring and Customizing Toolbar in Blazor DataGrid | Syncfusion®
+description: Learn how to configure, customize, and manage toolbar actions in Blazor DataGrid, including dynamic control and CSS styling
 platform: Blazor
 control: DataGrid
 documentation: ug

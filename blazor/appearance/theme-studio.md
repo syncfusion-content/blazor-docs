@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize Blazor Component Themes with Theme Studio | Syncfusion
+title: Customize Blazor Component Themes with Theme Studio | Syncfusion®
 description: Create custom themes for Blazor components using Theme Studio. Customize colors, filter components, download CSS/SCSS, and import settings.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Customize Blazor component themes with Theme Studio
+# Customize Blazor Component Themes with Theme Studio
 
-Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), Range Navigator, and [Maps](https://www.syncfusion.com/blazor-components/blazor-map).
+Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), and Range Navigator.
 
 ## Customize theme colors from Theme Studio
 
@@ -46,7 +46,7 @@ You can download the custom styles after customizing the theme colors.
 
 ![Theme Studio output-files](images/output-files.webp)
 
-N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS files without Google Fonts dependencies. Lightweight theme files, such as `fluent2-lite.css`, improve performance by excluding larger styles. When using a customized CSS file, remove any other Syncfusion base theme references (CDN or local) to avoid duplicate or conflicting styles.
+N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS files without Google Fonts dependencies. Lightweight theme files, such as `fluent2-lite.css`, improve performance by excluding larger styles. When using a customized CSS file, remove any other Blazor base theme references (CDN or local) to avoid duplicate or conflicting styles.
 
 ### Use a customized theme in a web application
 
