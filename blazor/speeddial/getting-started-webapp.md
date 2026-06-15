@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor SpeedDial in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor SpeedDial Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor SpeedDial Components in Blazor Web App.
 platform: Blazor
 control: SpeedDial
 documentation: ug
