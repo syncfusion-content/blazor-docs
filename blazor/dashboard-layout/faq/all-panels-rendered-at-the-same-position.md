@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent Panel Overlap in Blazor Dashboard | Syncfusion
-description: Check out and learn how to preventing panel overlap in the Syncfusion Blazor Dashboard Layout component.
+title: Prevent Panel Overlap in Blazor Dashboard | Syncfusion®
+description: Check out and learn how to preventing panel overlap in the Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
