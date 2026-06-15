@@ -690,10 +690,8 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
     In the following code, the primary theme variable color is changed. For all components:
 
     ```scss
-    $primary: blue !default;
-
     /* @use 'blazor-themes/SCSS-Themes/<Theme name>.scss'; */
-    @use 'blazor-themes/SCSS-Themes/fluent.scss';
+    @use 'blazor-themes/SCSS-Themes/fluent.scss' with ( $primary: blue );
     ```
 
     **Output:**
@@ -703,10 +701,8 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
     For the Calendar (individual) component:
 
     ```scss
-    $primary: #666699 !default;
-
     /* @use 'blazor-themes/SCSS-Themes/<Package name>/<Control name>/<Theme name>.scss'; */
-    @use 'blazor-themes/SCSS-Themes/calendars/calendar/fluent.scss';
+    @use 'blazor-themes/SCSS-Themes/calendars/calendar/fluent.scss' with ( $primary: #666699 );
     ```
 
     **Output:**
@@ -737,7 +733,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
     <head>
       ...
       ...
-      <link href="~/styles/custom.css" rel="stylesheet" />
+      <link href="styles/custom.css" rel="stylesheet" />
     </head>
     ```
 
@@ -761,7 +757,7 @@ N> If you come across the **'Can't find stylesheet to import'** error, ensure th
 The following shows the importing theme path for the overall theme.
 
 ```css
-@use 'blazor-themes/SCSS-Themes/{THEME-NAME}.scss'
+@use 'blazor-themes/SCSS-Themes/{THEME-NAME}.scss' as *;
 ```
 
 Below table lists the importing theme path for the individual components.
