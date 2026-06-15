@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter Menu in Blazor DataGrid | Syncfusion
-description: Explore and understand the Filter Menu in Syncfusion Blazor DataGrid. Learn about its features, usage, customization, and more.
+title: Filter Menu in Blazor DataGrid | Syncfusion®
+description: Explore and understand the Filter Menu in Blazor DataGrid. Learn about its features, usage, customization, and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
