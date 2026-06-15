@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Sankey Diagram in Blazor WASM App | Syncfusion
+title: Get Started with Sankey Diagram in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Sankey Diagram in Blazor WASM App using Visual Studio and more.
 platform: Blazor
 control: Sankey
@@ -143,9 +143,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
- 
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 

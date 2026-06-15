@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared Blazor Sankey Diagram in Blazor Server App | Syncfusion
+title: Get Started Blazor Sankey Diagram in Blazor Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor Sankey diagram in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Sankey
@@ -142,12 +142,12 @@ builder.Services.AddSyncfusionBlazor();
 ### Add script resources
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 

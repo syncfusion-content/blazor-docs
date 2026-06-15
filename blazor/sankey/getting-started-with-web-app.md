@@ -142,12 +142,12 @@ builder.Services.AddSyncfusionBlazor();
 ### Add script resources
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
