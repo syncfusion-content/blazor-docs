@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Scheduler in WASM App | Syncfusion
+title: Getting Started with Blazor Scheduler Blazor in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Scheduler component in Blazor WebAssembly Application.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Getting Started with Blazor Scheduler in WASM App
+# Getting Started with Blazor Scheduler in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
