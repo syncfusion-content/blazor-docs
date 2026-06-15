@@ -371,7 +371,7 @@ This example shows how to use the [`Created`](https://help.syncfusion.com/cr/bla
 
     private void OnUploaderCreated()
     {
-        statusMessage = "Syncfusion File Uploader has been successfully created and initialized!";
+        statusMessage = "File Uploader has been successfully created and initialized!";
         Console.WriteLine(statusMessage);
         // You could also interact with JavaScript to modify DOM here if needed.
         // For example: JSRuntime.InvokeVoidAsync("someJsFunction");

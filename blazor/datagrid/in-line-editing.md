@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Inline Editing in Blazor DataGrid | Syncfusion
-description: Learn about Inline Editing in Syncfusion Blazor DataGrid, including supported events, configuration options, and customization techniques.
+title: Inline Editing in Blazor DataGrid | Syncfusion®
+description: Learn about Inline Editing in Blazor DataGrid, including supported events, configuration options, and customization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
