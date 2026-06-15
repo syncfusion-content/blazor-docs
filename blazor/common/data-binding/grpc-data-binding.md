@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bind data to the Blazor components using gRPC service | Syncfusion®
-description: Checkout and learn here all about how to consume data from gRPC service and bind it to the Blazor Component.
+title: "Bind data to the Blazor components using gRPC service | Syncfusion"
+description: "Checkout and learn here all about how to consume data from gRPC service and bind it to the Syncfusion Component."
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Bind Data to the Blazor Components Using gRPC Service
+# Bind Data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Using gRPC Service
 
-In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) service and bind it to a Blazor Component.
+In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component.
 
 ## Prerequisite software
 
@@ -201,9 +201,9 @@ public static async Task Main(string[] args)
 
 N> The **OrdersService.OrdersServiceClient** class is also generated automatically from the `.proto` file.
 
-## Add Blazor DataGrid package
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid package
 
-We are going to explain this data (gRPC service data) binding process using the DataGrid component. So, we are going to install the packages required to use the Blazor components. Now, right-click **Dependencies** in the project and select **Manage NuGet Packages**.
+We are going to explain this data (gRPC service data) binding process using the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component. So, we are going to install the packages required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. Now, right-click **Dependencies** in the project and select **Manage NuGet Packages**.
 
 ![Manage NuGet packages](../images/manage-nuget-pack.png)
 
@@ -213,16 +213,16 @@ In the **Browse** tab, search and install the `Syncfusion.Blazor.Grid` NuGet pac
 
 N> For this demo, `Syncfusion.Blazor`(19.1.0.66) NuGet package is used. A new `Syncfusion.Blazor` NuGet package with new enhancement will be released in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
 
-## Adding Blazor DataGrid component
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Open `_Import.razor` file and add the following namespaces which are required to use Blazor DataGrid Component in this application.
+Open `_Import.razor` file and add the following namespaces which are required to use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid Component in this application.
 
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 ```
 
-Open `Program.cs` file in a **Client** project and **register** the `service` in the **ConfigureServices** method as follows.
+Open `Program.cs` file in a **Client** project and **register** the `Syncfusion<sup style="font-size:70%">&reg;</sup> service` in the **ConfigureServices** method as follows.
 
 ```c#
 using Syncfusion.Blazor;
@@ -248,7 +248,7 @@ In this demo application, the **Bootstrap4** theme will be used. To add the them
 <link href="_content/Syncfusion.Blazor.Themes/ bootstrap4.css" rel="stylesheet" />
 ```
 
-In previous steps, we have successfully configured the Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
+In previous steps, we have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
 
 ```cshtml
 <SfGrid>
@@ -262,7 +262,7 @@ To consume data from the gRPC service, inject the **OrdersServiceClient** into t
 
 Here,  the `DataSource` property of the DataGrid component is used to bind the data to DataGrid in the WebAssembly application.
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Columns are created using the following code, let’s see the properties used and their usage.
+Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Columns are created using the following code, let’s see the properties used and their usage.
 
 * `Field` property specifies the column name of the **Orders** table to display in the grid column.
 * The `Width` property specifies the column width.
