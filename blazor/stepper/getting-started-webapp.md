@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor Stepper in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Stepper Components in Blazor Web App.
+title: Getting Started with Blazor Stepper in Blazor Web App | Syncfusion
+description: Check out the documentation for getting started with Blazor Stepper Components in Blazor Web App.
 platform: Blazor
 control: Stepper
 documentation: ug
