@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started Blazor Stock Chart in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Stock Chart Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor Stock Chart Components in Blazor Web App.
 platform: Blazor
 component: Stock Chart
 documentation: ug
