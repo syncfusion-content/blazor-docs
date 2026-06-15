@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor Spinner Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Spinner Components in Blazor Web App.
+title: Getting started with Blazor Spinner in Blazor Web App | Syncfusion
+description: Check out the documentation for getting started with Blazor Spinner Components in Blazor Web App.
 platform: Blazor
 control: Spinner
 documentation: ug
