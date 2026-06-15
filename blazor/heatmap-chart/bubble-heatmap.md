@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bubble HeatMap in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Bubble HeatMap in Syncfusion Blazor HeatMap Chart component and more.
+title: Bubble HeatMap in Blazor HeatMap Chart Component | Syncfusion®
+description: Checkout and learn here all about Bubble HeatMap in Blazor HeatMap Chart component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
