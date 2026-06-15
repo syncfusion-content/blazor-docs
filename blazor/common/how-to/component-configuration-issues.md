@@ -36,7 +36,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR(options =>
 {
     // Set maximum message size to 100MB (adjust based on your needs)
-    options.MaximumReceiveMessageSize = 102400000; // 100MB in bytes
+    options.MaximumReceiveMessageSize = 104857600; // 100MB in bytes (100 * 1024 * 1024)
     
     // Optional: Configure other SignalR options
     options.EnableDetailedErrors = builder.Environment.IsDevelopment();
@@ -59,11 +59,11 @@ var app = builder.Build();
 
 | Component | Recommended Message Size | Reason |
 |-----------|------------------------|--------|
-| [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | 50MB - 100MB | Large datasets with thousands of rows |
-| [PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) | 100MB - 200MB | Large PDF documents |
-| [File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) | 100MB - 500MB | File uploads and downloads |
-| [Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor?utm_source=nuget&utm_medium=listing&utm_campaign=blazor-spreadsheet-editor-nuget) | 50MB - 100MB | Excel files with multiple worksheets |
-| [Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) | 50MB - 100MB | High-resolution images |
+| [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | 50MB - 100MB | Large datasets with thousands of rows |
+| [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) | 100MB - 200MB | Large PDF documents |
+| [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) | 100MB - 500MB | File uploads and downloads |
+| [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor?utm_source=nuget&utm_medium=listing&utm_campaign=blazor-spreadsheet-editor-nuget) | 50MB - 100MB | Excel files with multiple worksheets |
+| [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) | 50MB - 100MB | High-resolution images |
 
 ### Advanced SignalR configuration
 
@@ -75,7 +75,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR(options =>
 {
     // Maximum message size (required)
-    options.MaximumReceiveMessageSize = 102400000;
+    options.MaximumReceiveMessageSize = 104857600; // 100MB in bytes (100 * 1024 * 1024)
     
     // Enable detailed errors in development
     options.EnableDetailedErrors = builder.Environment.IsDevelopment();
@@ -224,7 +224,7 @@ The `_Imports.razor` file provides namespace imports to all Razor components in 
 
 ### Step 1: Match `TValue` to the bound value type
 
-In Blazor DropDown List, ensure that `TValue` matches the type of the bound value and the corresponding value field in the data model.
+In [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), ensure that `TValue` matches the type of the bound value and the corresponding value field in the data model.
 
 **Correct Mapping**:
 
@@ -294,10 +294,10 @@ Here, `Value="OrderCode"` does not match any property in the data model, so the 
 
 ### Step 2: Map columns to real model properties
 
-In Blazor DataGrid, each GridColumn [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value must match a public property on the model, including correct spelling and casing.
+In [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), each GridColumn [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value must match a public property on the model, including correct spelling and casing.
 
 {% tabs %}
-{% highlight razor tabtitle="Correct Grid Mapping" %}
+{% highlight razor tabtitle="Blazor DataGrid Example" %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -335,7 +335,7 @@ In Blazor DataGrid, each GridColumn [Field](https://help.syncfusion.com/cr/blazo
 
 ### Step 3: Use the correct value type for numeric and date inputs
 
-For Blazor Numeric TextBox and DatePicker, the bound property type must match the component's expected type (`TValue`).
+For [Blazor Numeric TextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) and [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker), the bound property type must match the component's expected type (`TValue`).
 
 {% tabs %}
 {% highlight razor tabtitle="Correct Input Mapping" %}
@@ -357,7 +357,7 @@ For Blazor Numeric TextBox and DatePicker, the bound property type must match th
 
 ### Step 4: Use the correct field names and value collection type
 
-In Blazor MultiSelect Dropdown, the selected value collection type must match the item value type and corresponding field mapping.
+In [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown), the selected value collection type must match the item value type and corresponding field mapping.
 
 {% tabs %}
 {% highlight razor tabtitle="MultiSelect Mapping" %}
@@ -401,11 +401,11 @@ In Blazor MultiSelect Dropdown, the selected value collection type must match th
 
 | Component | Common Error | Correct Approach |
 |-----------|--------------|------------------|
-| DataGrid | `Field="Customer"` when model has `CustomerName` | Use the exact property name |
-| DropDown List | `TValue="string"` with `Value="OrderID"` where `OrderID` is `int` | Make `TValue="int"` or change the value field |
-| Numeric TextBox | Binding `string` to a numeric control | Use `int`, `decimal`, or `double` |
-| DatePicker | Binding `string` instead of `DateTime?` | Bind a date type |
-| MultiSelect Dropdown | Mismatch between selected value collection and item value type | Use a matching collection type, such as `List<int>` |
+| [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | `Field="Customer"` when model has `CustomerName` | Use the exact property name |
+| [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) | `TValue="string"` with `Value="OrderID"` where `OrderID` is `int` | Make `TValue="int"` or change the value field |
+| [Blazor Numeric TextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) | Binding `string` to a numeric control | Use `int`, `decimal`, or `double` |
+| [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) | Binding `string` instead of `DateTime?` | Bind a date type |
+| [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) | Mismatch between selected value collection and item value type | Use a matching collection type, such as `List<int>` |
 
 This issue is usually a data-model mismatch, not a Syncfusion defect. In most cases, correcting the type mapping resolves the problem immediately.
 
