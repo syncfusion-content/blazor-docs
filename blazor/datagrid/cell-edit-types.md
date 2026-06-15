@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell Edit Types in Blazor DataGrid Component | Syncfusion®
-description: Checkout and learn here all about Cell Edit Types in Blazor DataGrid component and much more details.
+title: Cell Edit Types in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about Cell Edit Types in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
