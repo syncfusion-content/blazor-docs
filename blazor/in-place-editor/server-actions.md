@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Server Actions in Blazor In-place Editor Component | Syncfusion
-description: Checkout and learn here all about Server Actions in Syncfusion Blazor In-place Editor component and more.
+title: Server Actions in Blazor In-place Editor Component | Syncfusion®
+description: Checkout and learn here all about Server Actions in Blazor In-place Editor component and much more details.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
