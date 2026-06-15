@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor Splitter in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Splitter Components in Blazor Web App.
+title: Getting Started with Blazor Splitter in Blazor Web App | Syncfusion
+description: Check out the documentation for getting started with Blazor Splitter Components in Blazor Web App.
 platform: Blazor
 control: Splitter
 documentation: ug
