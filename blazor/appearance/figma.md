@@ -17,7 +17,7 @@ Each kit contains reusable design components with states and variants, along wit
 
 ## Advantages of UI kits
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits offer the following advantages:
+The Figma UI kits offer the following advantages:
 - Detailed information about components, including lists, states, and variants, to quickly understand available options.
 - Design components follow the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), making customization straightforward.
 - Developers can match [Blazor components](https://www.syncfusion.com/blazor-components) to design requirements for alignment and accuracy.
@@ -46,7 +46,7 @@ The Figma UI kits are structured for easy navigation and exploration of componen
 
 ## Customize the UI kits
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Figma UI kits are customizable to meet specific needs, allowing unique designs and color adjustments to match brand guidelines. Because the components are built using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), customizations will be seamlessly reflected across multiple components and variants.
+The Figma UI kits are customizable to meet specific needs, allowing unique designs and color adjustments to match brand guidelines. Because the components are built using the [atomic design methodology](https://atomicdesign.bradfrost.com/chapter-2/), customizations will be seamlessly reflected across multiple components and variants.
 
 Here's how to customize the primary button color of the Material 3 theme in your Figma design:
 
