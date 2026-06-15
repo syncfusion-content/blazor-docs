@@ -18,7 +18,7 @@ Before integrating `Text-to-Speech`, ensure the following:
 1. The Syncfusion AI AssistView component is properly set up in your Blazor application.
     - [Blazor Getting Started Guide](../getting-started)
 
-2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
+2. The AI AssistView component is integrated with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
     - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
 ## Configure text to speech
@@ -137,7 +137,7 @@ To enable the built-in Text-to-Speech functionality, add the `e-assist-audio` ic
 
 ## Configuring the speech settings
 
-You can use the [TextToSpeechSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_TextToSpeechSettings) property to customize the speech synthesis behavior using the following available properties such as [Language](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Language), [SpeechPitch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_SpeechPitch), [SpeechRate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_SpeechRate), [Volume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Volume) and [Voice](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Voice).
+You can use the [TextToSpeechSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_TextToSpeechSettings) tag to customize the speech synthesis behavior using the following available properties such as [Language](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Language), [SpeechPitch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_SpeechPitch), [SpeechRate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_SpeechRate), [Volume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Volume) and [Voice](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Voice).
 
 {% tabs %}
 {% highlight c# tabtitle="razor" %}
