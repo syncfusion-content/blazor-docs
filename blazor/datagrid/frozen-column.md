@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column pinning (Frozen) in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about column pinning (Frozen) in the Syncfusion Blazor DataGrid component and much more details.
+title: Column pinning (Frozen) in Blazor DataGrid Component | Syncfusion®
+description: Checkout and learn here all about column pinning (Frozen) in the Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
