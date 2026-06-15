@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Datetime Picker Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Datetime Picker component and more.
+title: Style and appearance in Blazor Datetime Picker Component | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker
 documentation: ug
