@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Connecting DataGrid to SQLite via Entity Framework | Syncfusion®
+title: Blazor DataGrid to SQLite via Entity Framework | Syncfusion®
 description: Bind SQLite data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
