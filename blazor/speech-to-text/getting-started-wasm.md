@@ -143,9 +143,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
- 
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 

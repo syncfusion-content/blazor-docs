@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared Blazor SpeechToText in Blazor Web App | Syncfusion
+title: Getting Started Blazor SpeechToText in Blazor Web App | Syncfusion
 description: Checkout and learn about getting started with Blazor SpeechToText in Blazor Web App using Visual Studio and more.
 platform: Blazor
 control: SpeechToText
@@ -145,9 +145,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
  
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
