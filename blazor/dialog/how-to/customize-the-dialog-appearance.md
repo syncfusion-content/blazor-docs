@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the appearance in Blazor Dialog Component | Syncfusion®
-description: Learn here all the features about customizing the appearance in Blazor Dialog component and much more details.
+title: Customize the appearance in Blazor Dialog Component | Syncfusion
+description: Learn here all about customizing the appearance in Syncfusion Blazor Dialog component and much more.
 platform: Blazor
 control: Dialog
 documentation: ug

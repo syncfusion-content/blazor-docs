@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Close Blazor Dialog when clicking outside of its region | Syncfusion®
+title: Close Blazor Dialog when clicking outside of its region | Syncfusion
 description: Learn here all about closing the Blazor Dialog Component when clicking outside of its region and more.
 platform: Blazor
 control: Dialog

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Position the Blazor Dialog in center of the page | Syncfusion®
+title: Position the Blazor Dialog in center of the page | Syncfusion
 description: Learn here all about positioning the Blazor Dialog in center of the page on scrolling and much more.
 platform: Blazor
 control: Dialog
