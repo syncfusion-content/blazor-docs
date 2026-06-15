@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and Appearance in Blazor DataForm Component | Syncfusion
+title: Style and Appearance in Blazor DataForm Component | Syncfusion®
 description: Learn how to apply basic styling, colors, fonts, and text formatting to customize the appearance of the Blazor DataForm component and its elements.
 platform: Blazor
 control: DataForm
