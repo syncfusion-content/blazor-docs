@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor Tooltip in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Tooltip Components in Blazor Web App.
+title: Getting Started with Blazor Tooltip in Blazor Web App | Syncfusion
+description: Check out the documentation for getting started with Blazor Tooltip Components in Blazor Web App.
 platform: Blazor
 control: Tooltip
 documentation: ug
