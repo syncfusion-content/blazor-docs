@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cascading in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Cascading in the Syncfusion Blazor ComboBox component and much more.
+title: Cascading in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Cascading in the Blazor ComboBox component and much more.
 platform: Blazor
 control: DropDown List
 documentation: ug
