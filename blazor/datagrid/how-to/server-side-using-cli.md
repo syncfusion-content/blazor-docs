@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Syncfusion DataGrid to standalone Blazor Server app using .NET CLI
-description: Add the Syncfusion Blazor DataGrid to a Blazor Server app using the .NET CLI on .NET 8/9, including setup, theme, scripts, and basic features.
+title: Add DataGrid to standalone Blazor Server app using .NET CLI | Syncfusion®
+description: Add the Blazor DataGrid to a Blazor Server app using the .NET CLI on .NET 8/9, including setup, theme, scripts, and basic features.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -68,9 +68,9 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details. If a project requires a Syncfusion license key, see the [licensing](https://blazor.syncfusion.com/documentation/common/essential-studio/licensing/overview) topic to register it at startup.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details. If a project requires a license key, see the [licensing](https://blazor.syncfusion.com/documentation/common/essential-studio/licensing/overview) topic to register it at startup.
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+### Register Blazor service
 
 1. Import namespaces:
 
@@ -82,9 +82,9 @@ Open the **~/_Imports.razor** file and add the following namespaces:
 @using Syncfusion.Blazor.Grids
 
 ```
-2. Register the Syncfusion<sup style="font-size:70%">&reg;</sup> service:
+2. Register the service:
 
-In the **~/Program.cs** file, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service as shown below:
+In the **~/Program.cs** file, register the Blazor service as shown below:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -668,8 +668,8 @@ public class OrderData
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started-with-server-app.md)
+* [Getting Started with DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started-with-server-app.md)
 
-* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid in Blazor WebAssembly App using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)
+* [Getting started with Data Grid in Blazor WebAssembly App using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor WebAssembly using Visual Studio 2022](../getting-started.md)
+* [Getting Started with DataGrid in Blazor WebAssembly using Visual Studio 2022](../getting-started.md)
