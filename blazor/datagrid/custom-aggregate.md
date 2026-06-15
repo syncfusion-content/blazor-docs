@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Custom aggregate in Blazor DataGrid Component | Syncfusion
-description: Learn how to create and display custom aggregates in Syncfusion Blazor DataGrid using CustomAggregate callback and template context.
+title:  Custom aggregate in Blazor DataGrid Component | Syncfusion®
+description: Learn how to create and display custom aggregates in Blazor DataGrid using CustomAggregate callback and template context.
 platform: Blazor
 control: DataGrid
 documentation: ug
