@@ -21,13 +21,13 @@ You can use the `PopupHeight` property to set the height of the Inline AI Assist
 
 ### Z-index
 
-You can use the `zIndex` property to set z-index for the Inline AI Assist popup. The default value is `1000`.
+You can use the `ZIndex` property to set z-index for the Inline AI Assist popup. The default value is `1000`.
 
 ## Custom styling using cssClass
 
 You can customize the appearance of the Inline AI Assist control by using the `CSSClass property.
 
-The below example shows the use case of the properties such as `Zindex`, `PopupWidth`, `PopupHeight` and `CssClass`.
+The below example shows the use case of the properties such as `ZIndex`, `PopupWidth`, `PopupHeight` and `CssClass`.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -54,19 +54,13 @@ The below example shows the use case of the properties such as `Zindex`, `PopupW
 </style>
 
 <div class="container" style="height: 350px; width: 650px;">
-    <SfButton id="summarizeBtn" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnSummarizeClick">Content Summarize</SfButton>
+    <SfButton id="summarizeButton" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnSummarizeClick">Content Summarize</SfButton>
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
 
-    <SfInlineAIAssist @ref="inlineAssist"
-                      RelateTo="#summarizeBtn"
-                      PopupHeight="70px"
-                      PopupWidth="650px"
-                      Placeholder="Type your prompt here..."
-                      CssClass="custom-container"
-                      ZIndex="4000"
-                      PromptRequested="OnPromptRequestAsync">
+    <SfInlineAIAssist @ref="inlineAssist"vRelateTo="#summarizeButton" PopupHeight="70px" PopupWidth="650px" 
+    Placeholder="Type your prompt here..." CssClass="custom-container" ZIndex="4000" PromptRequested="OnPromptRequestAsync">
         <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>
 </div>

@@ -19,15 +19,9 @@ Before starting, ensure you have the following:
 
 * **Syncfusion Inline AI Assist**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
-
 ## Set Up the Inline AI Assist Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the Inline AI Assist component in the application and that prerequisites are met.
-
-## Install Dependency
-
-To install the Markdig package by run `NuGet\Install-Package Markdig` in Package Manager Console.
 
 ## Configuring Ollama
 
@@ -155,7 +149,7 @@ app.Run();
 </style>
 
 <div class="container" style="height: 350px; width: 650px;">
-    <span id="summarizeBtn" style="display: inline-block; margin-bottom: 10px;">
+    <span id="summarizeButton" style="display: inline-block; margin-bottom: 10px;">
         <SfButton IsPrimary="true" @onclick="OnSummarizeClickAsync">
             Content Summarize
         </SfButton>
@@ -169,10 +163,7 @@ app.Run();
             The component supports multiple response modes including inline editing and popup-based interactions.</p>
     </div>
 
-    <SfInlineAIAssist @ref="inlineAssist"
-                      RelateTo="#summarizeBtn"
-                      EnableStreaming="true"
-                      PromptRequested="OnPromptRequestAsync">
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" EnableStreaming="true" PromptRequested="OnPromptRequestAsync">
         <ChildContent>
             <InlineToolbar ItemClick="OnToolbarItemClickAsync"></InlineToolbar>
             <ResponseActions ItemSelect="OnResponseItemSelectAsync"></ResponseActions>
@@ -183,39 +174,30 @@ app.Run();
 @code {
     private SfInlineAIAssist inlineAssist = new();
     private bool stopStreaming = false;
-
-    // Ollama settings — mirrors the TS fetch URL and body
     private const string OllamaUrl = "http://localhost:11434/api/generate";
     private const string OllamaModel = "deepseek-r1";
     private const int ResponseUpdateRate = 10; // chars per chunk
     private const string DefaultErrorResponse =
         "⚠️ Something went wrong while connecting to the AI service. Please check your Ollama application running background.";
-
     private async Task OnSummarizeClickAsync()
     {
         await inlineAssist.ShowPopupAsync();
     }
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         try
         {
-            // Mirrors the fetch body — same prompt format and stream: false
             var requestBody = new
             {
                 model = OllamaModel,
                 prompt = $"### Instruction:\nRespond in up to 5 lines.\n\n### Input:\n{args.Prompt}",
                 stream = false
             };
-
             var response = await Http.PostAsJsonAsync(OllamaUrl, requestBody);
             response.EnsureSuccessStatusCode();
-
             var json = await response.Content.ReadFromJsonAsync<JsonElement>();
             var responseText = json.GetProperty("response").GetString()?.Trim()
                                ?? "No response received.";
-
-            // Mirrors: if(response) { stopStreaming = false; streamResponse(reply.response); }
             stopStreaming = false;
             await StreamResponseAsync(responseText);
         }
@@ -225,8 +207,6 @@ app.Run();
             await inlineAssist.UpdateResponseAsync(DefaultErrorResponse, true);
         }
     }
-
-    // Mirrors the inner streamResponse function in TS exactly
     private async Task StreamResponseAsync(string response)
     {
         var buffer = new StringBuilder();
@@ -241,16 +221,12 @@ app.Run();
             if (i % ResponseUpdateRate == 0 || i == total)
             {
                 bool isFinal = (i == total);
-                // UpdateResponseAsync handles Markdown→HTML internally
-                // mirrors: marked.parse(lastResponse) + inlineAIAssist.addResponse(html, isFinal)
                 await inlineAssist.UpdateResponseAsync(buffer.ToString(), isFinal);
             }
 
             await Task.Delay(15); // mirrors: setTimeout(resolve, 15)
         }
     }
-
-    // Mirrors: inlineToolbarSettings.itemClick — stop on e-inline-stop
     private async Task OnToolbarItemClickAsync(ToolbarItemClickEventArgs args)
     {
         if (args.Item?.IconCss?.Contains("e-inline-stop") == true)
@@ -258,8 +234,6 @@ app.Run();
             stopStreaming = true;
         }
     }
-
-    // Mirrors: responseSettings.itemSelect
     private async Task OnResponseItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")

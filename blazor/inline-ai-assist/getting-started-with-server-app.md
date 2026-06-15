@@ -143,7 +143,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Inline AI Assist component
 
-Add the Blazor Inline AI Assist component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file. Use the `relateTo` property to position the Inline AI Assist relative to a specific DOM element, and the `target` property to specify the element where the component should be appended. Both properties accept either a CSS selector string (for example, .container or #id) or an HTMLElement instance.
+Add the Blazor Inline AI Assist component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file. Use the `RelateTo` property to position the Inline AI Assist relative to a specific DOM element, and the `Target` property to specify the element where the component should be appended. Both properties accept either a CSS selector string (for example, .container or #id) or an HTMLElement instance.
 
 N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -153,7 +153,6 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 ```razor
 @* desired render mode define here *@
 @rendermode InteractiveServer
-
 @using Syncfusion.Blazor.InteractiveChat
 
 <style>
@@ -168,15 +167,8 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
         border: 1px solid;
     }
 </style>
-
 <div id="container" style="height: 350px; width: 650px;">
-    <button id="summarizeBtn"
-            class="btn btn-primary"
-            style="margin-bottom: 10px;"
-            @onclick="ShowPopup">
-        Content Summarize
-    </button>
-
+    <button id="summarizeButton" style="margin-bottom: 10px;" @onclick="ShowPopup"> Content Summarize </button>
     <div id="editableText" contenteditable="true">
         <p>
             Inline AI Assist component provides intelligent text processing
@@ -192,27 +184,18 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
             popup-based interactions.
         </p>
     </div>
-
-    <SfInlineAIAssist @ref="inlineAssist"
-                      RelateTo="#summarizeBtn"
-                      Target="#container"
-                      PromptRequested="PromptRequest">
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" Target="#container" PromptRequested="PromptRequest">
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new();
-
     private async Task PromptRequest(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
-
         string defaultResponse =
             "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task ShowPopup()
     {
         await inlineAssist.ShowPopupAsync();
@@ -229,7 +212,7 @@ To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio,
 
 ## Response display modes
 
-Responses can be shown in two modes: `Inline` (updates content in-place) and `Popup` (shows responses in a floating popup). Toggle this behavior with the `responseMode` property.
+Responses can be shown in two modes: `Inline` (updates content in-place) and `Popup` (shows responses in a floating popup). Toggle this behavior with the `ResponseMode` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -249,7 +232,6 @@ Responses can be shown in two modes: `Inline` (updates content in-place) and `Po
         border: 1px solid;
     }
 </style>
-
 <div class="container" style="height: 350px; width: 650px;">
     <div style="margin-bottom: 10px;">
         <label for="responseMode">Response Mode:</label>
@@ -258,29 +240,24 @@ Responses can be shown in two modes: `Inline` (updates content in-place) and `Po
             <option value="Inline">Inline</option>
         </select>
     </div>
-    <SfButton id="summarizeBtn" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnSummarizeClick">Content Summarize</SfButton>
+    <SfButton id="summarizeButton" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnSummarizeClick">Content Summarize</SfButton>
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
-
-    <SfInlineAIAssist @ref="inlineAssist" ResponseMode="@currentResponseMode" RelateTo="#summarizeBtn" PromptRequested="OnPromptRequestAsync">
-        <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
+    <SfInlineAIAssist @ref="inlineAssist" ResponseMode="@currentResponseMode" RelateTo="#summarizeButton" PromptRequested="OnPromptRequestAsync"> <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new SfInlineAIAssist();
     private ResponseDisplayMode currentResponseMode = ResponseDisplayMode.Popup;
     private string editableContent = @"<p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>";
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
         string defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task OnItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")
@@ -297,12 +274,10 @@ Responses can be shown in two modes: `Inline` (updates content in-place) and `Po
             await inlineAssist!.HidePopupAsync();
         }
     }
-
     private async Task OnSummarizeClick()
     {
         await inlineAssist.ShowPopupAsync();
     }
-
     private async Task OnResponseModeChangeAsync(ChangeEventArgs args)
     {
         if (Enum.TryParse<ResponseDisplayMode>(args.Value?.ToString(), out var mode))

@@ -13,7 +13,7 @@ The Inline AI Assist provides several template options to customize the response
 
 ## Editor template
 
-You can use the `editorTemplate` property to customize the default footer area and manage prompt request actions in the Inline AI Assist. This allows users to create unique footers that meet their specific needs.
+You can use the `EditorTemplate` tag to customize the default footer area and manage prompt request actions in the Inline AI Assist. This allows users to create unique footers that meet their specific needs.
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
@@ -33,14 +33,12 @@ You can use the `editorTemplate` property to customize the default footer area a
         border-radius: 4px;
         border: 1px solid;
     }
-
     .custom-footer {
         display: flex;
         gap: 10px;
         padding: 10px;
         background-color: transparent;
     }
-
     #promptTextArea {
         width: 100%;
         padding: 12px;
@@ -49,21 +47,16 @@ You can use the `editorTemplate` property to customize the default footer area a
         border: 1px solid #ccc;
         margin-bottom: 0;
     }
-
     #sendPrompt {
         padding: 5px 15px;
         align-self: center;
     }
 </style>
-
 <div class="container" style="height: 350px; width: 650px;">
-    <!-- Wrap the button in a span so RelateTo="#summarizeBtn" targets the button precisely -->
-    <span id="summarizeBtn" style="display: inline-block; margin-bottom: 10px;">
-        <SfButton IsPrimary="true" @onclick="OnSummarizeClickAsync">
-            Content Summarize
-        </SfButton>
+    <!-- Wrap the button in a span so RelateTo="#summarizeButton" targets the button precisely -->
+    <span id="summarizeButton" style="display: inline-block; margin-bottom: 10px;">
+        <SfButton IsPrimary="true" @onclick="OnSummarizeClickAsync"> Content Summarize </SfButton>
     </span>
-
     <div id="editableText" contenteditable="true" @ref="editableTextRef">
         <p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity.
             It leverages advanced natural language processing to understand context and deliver precise suggestions.
@@ -71,32 +64,24 @@ You can use the `editorTemplate` property to customize the default footer area a
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences.
             The component supports multiple response modes including inline editing and popup-based interactions.</p>
     </div>
-
-    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeBtn" PopupWidth="500px"
-                      PromptRequested="OnPromptRequestAsync">
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" PopupWidth="500px" PromptRequested="OnPromptRequestAsync">
         <EditorTemplate>
             <div class="custom-footer">
                 <textarea id="promptTextArea" class="e-input" rows="2" placeholder="Enter your prompt here"
                           @bind="promptText" @bind:event="oninput"></textarea>
-                <SfButton id="sendPrompt" IsPrimary="true" @onclick="OnGenerateClickAsync">Generate</SfButton>
-            </div>
+                <SfButton id="sendPrompt" IsPrimary="true" @onclick="OnGenerateClickAsync">Generate</SfButton> </div>
         </EditorTemplate>
-        <ChildContent>
-            <ResponseActions ItemSelect="OnResponseItemSelectAsync"></ResponseActions>
-        </ChildContent>
+        <ChildContent> <ResponseActions ItemSelect="OnResponseItemSelectAsync"></ResponseActions> </ChildContent>
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new();
     private ElementReference editableTextRef;
     private string promptText = string.Empty;
-
     private async Task OnSummarizeClickAsync()
     {
         await inlineAssist.ShowPopupAsync();
     }
-
     private async Task OnGenerateClickAsync()
     {
         if (!string.IsNullOrWhiteSpace(promptText))
@@ -106,14 +91,12 @@ You can use the `editorTemplate` property to customize the default footer area a
             await inlineAssist.ExecutePromptAsync(prompt);
         }
     }
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
         var defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task OnResponseItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")
@@ -141,7 +124,7 @@ You can use the `editorTemplate` property to customize the default footer area a
 
 ## Response template
 
-You can use the `responseTemplate` property to customize response items within the Inline AI Assist. The template context includes the `response` and `toolbarItems` values.
+You can use the `Responsetemplate` tag to customize response items within the Inline AI Assist. The template context includes the `Response` and `ToolbarItems` values.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -158,11 +141,9 @@ You can use the `responseTemplate` property to customize response items within t
         border-radius: 4px;
         border: 1px solid;
     }
-
     .responseItemContent {
         padding: 10px;
     }
-
     .response-header {
         display: flex;
         align-items: center;
@@ -170,18 +151,15 @@ You can use the `responseTemplate` property to customize response items within t
         margin-bottom: 10px;
         font-weight: bold;
     }
-
     .response-header .e-assistview-icon:before {
         font-size: 18px;
     }
-
     .responseContent {
         margin-top: 8px;
     }
 </style>
-
 <div class="container" style="height: 350px; width: 650px;">
-    <span id="summarizeBtn" style="display: inline-block; margin-bottom: 10px;">
+    <span id="summarizeButton" style="display: inline-block; margin-bottom: 10px;">
         <SfButton IsPrimary="true" @onclick="OnSummarizeClickAsync">
             Content Summarize
         </SfButton>
@@ -194,12 +172,8 @@ You can use the `responseTemplate` property to customize response items within t
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences.
             The component supports multiple response modes including inline editing and popup-based interactions.</p>
     </div>
-
-    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeBtn" PopupWidth="500px"
-                      PromptRequested="OnPromptRequestAsync">
-        <ChildContent>
-            <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
-        </ChildContent>
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" PopupWidth="500px" PromptRequested="OnPromptRequestAsync">
+        <ChildContent> <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions> </ChildContent>
         <ResponseTemplate>
             <div class="responseItemContent">
                 <div class="response-header">
@@ -213,22 +187,18 @@ You can use the `responseTemplate` property to customize response items within t
         </ResponseTemplate>
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new();
-
     private async Task OnSummarizeClickAsync()
     {
         await inlineAssist.ShowPopupAsync();
     }
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
         var defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task OnItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")

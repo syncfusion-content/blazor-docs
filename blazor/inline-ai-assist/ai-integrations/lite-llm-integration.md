@@ -28,14 +28,6 @@ Before starting, ensure you have the following:
 
 * **Syncfusion Inline AI Assist**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* **Markdig**: For parsing Markdown responses.
-
-```bash
-
-Nuget\Install-Package Markdig
-
-```
-
 ## Set Up the Inline AI Assist Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the Inline AI Assist component in the application and that prerequisites are met.
@@ -75,15 +67,13 @@ To integrate **LiteLLM** with the **Syncfusion Inline AI Assist** component, mod
 In the following example:
 
 * The `PromptRequested` event sends the user prompt to the LiteLLM proxy at `/v1/chat/completions`. 
-* The proxy uses the **model alias** defined in `config.yaml` (e.g., `openai/gpt-4o-mini`) and routes the request to the actual LLM provider. 
-* The response is parsed as **Markdown** using the `Markdig` library and displayed in the Inline AI Assist component.
+* The proxy uses the **model alias** defined in `config.yaml` (e.g., `openai/gpt-4o-mini`) and routes the request to the actual LLM provider.
 
 {% tabs %}
 {% highlight razor %}
 @rendermode InteractiveAuto
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
-@using Markdig
 @using System.Text.Json
 @using System.Text
 @inject HttpClient Http
@@ -102,12 +92,12 @@ In the following example:
 </style>
 
 <div class="container" style="height: 350px; width: 650px;">
-    <SfButton id="summarizeBtn" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnSummarizeClick">Content Summarize</SfButton>
+    <SfButton id="summarizeButton" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnSummarizeClick">Content Summarize</SfButton>
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
 
-    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeBtn" PromptRequested="OnPromptRequestAsync">
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" PromptRequested="OnPromptRequestAsync">
         <InlineToolbar ItemClick="OnToolbarItemClickAsync"></InlineToolbar>
         <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>

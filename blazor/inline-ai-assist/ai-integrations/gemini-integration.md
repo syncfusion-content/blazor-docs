@@ -19,8 +19,6 @@ Before starting, ensure you have the following:
 
 * **Syncfusion Inline AI Assist**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package: For parsing Markdown responses.
-
 ## Set Up the Inline AI Assist Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the Inline AI Assist component in the application and that prerequisites are met.
@@ -34,14 +32,6 @@ Install the required packages:
 ```bash
 
 Nuget\Install-Package Mscc.GenerativeAI
-
-```
-
-* Install the `Markdig` nuget packages in the application.
-
-```bash
-
-Nuget\Install-Package Markdig
 
 ```
 
@@ -94,7 +84,7 @@ const string GeminiApiKey = 'Place your API key here';
 </style>
 
 <div class="container" style="height: 350px; width: 650px;">
-    <span id="summarizeBtn" style="display: inline-block; margin-bottom: 10px;">
+    <span id="summarizeButton" style="display: inline-block; margin-bottom: 10px;">
         <SfButton IsPrimary="true" @onclick="OnSummarizeClickAsync">
             Content Summarize
         </SfButton>
@@ -108,10 +98,7 @@ const string GeminiApiKey = 'Place your API key here';
             The component supports multiple response modes including inline editing and popup-based interactions.</p>
     </div>
 
-    <SfInlineAIAssist @ref="inlineAssist"
-                      RelateTo="#summarizeBtn"
-                      EnableStreaming="true"
-                      PromptRequested="OnPromptRequestAsync">
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" EnableStreaming="true" PromptRequested="OnPromptRequestAsync">
         <ChildContent>
             <InlineToolbar ItemClick="OnToolbarItemClickAsync"></InlineToolbar>
             <ResponseActions ItemSelect="OnResponseItemSelectAsync"></ResponseActions>
@@ -188,7 +175,6 @@ const string GeminiApiKey = 'Place your API key here';
             await Task.Delay(15); // matches TS 15ms delay for streaming effect
         }
     }
-
     private async Task OnToolbarItemClickAsync(ToolbarItemClickEventArgs args)
     {
         if (args.Item?.IconCss?.Contains("e-inline-stop") == true)
@@ -196,7 +182,6 @@ const string GeminiApiKey = 'Place your API key here';
             stopStreaming = true;
         }
     }
-
     private async Task OnResponseItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")

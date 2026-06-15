@@ -11,7 +11,7 @@ documentation: ug
 
 ## Adding response
 
-You can use the `addResponse` public method to add the response to the Inline AI Assist.
+You can use the `AddResponse` public method to add the response to the Inline AI Assist.
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
@@ -32,30 +32,25 @@ You can use the `addResponse` public method to add the response to the Inline AI
         border: 1px solid;
     }
 </style>
-
 <div class="container" style="height: 350px; width: 650px;">
     <SfButton id="addResponse" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnAddResponseClickAsync">Add Response</SfButton>
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
-
     <SfInlineAIAssist @ref="inlineAssist" RelateTo="#addResponse" PromptRequested="OnPromptRequestAsync">
         <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new SfInlineAIAssist();
     private string editableContent = @"<p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>";
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
         string defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task OnItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")
@@ -72,7 +67,6 @@ You can use the `addResponse` public method to add the response to the Inline AI
             await inlineAssist!.HidePopupAsync();
         }
     }
-
     private async Task OnAddResponseClickAsync()
     {
         await inlineAssist.ShowPopupAsync();
@@ -88,7 +82,7 @@ You can use the `addResponse` public method to add the response to the Inline AI
 
 ## Executing prompt
 
-You can use the `executePrompt` method to execute the prompts dynamically in the Inline AI Assist. It accepts prompts as string values, which triggers the `promptRequest` event and performs the callback actions.
+You can use the `ExecutePrompt` method to execute the prompts dynamically in the Inline AI Assist. It accepts prompts as string values, which triggers the `PromptRequest` event and performs the callback actions.
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
@@ -109,30 +103,25 @@ You can use the `executePrompt` method to execute the prompts dynamically in the
         border: 1px solid;
     }
 </style>
-
 <div class="container" style="height: 350px; width: 650px;">
     <SfButton id="executePrompt" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnExecutePromptClickAsync">Execute Prompt</SfButton>
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
-
     <SfInlineAIAssist @ref="inlineAssist" RelateTo="#executePrompt" PromptRequested="OnPromptRequestAsync">
         <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new SfInlineAIAssist();
     private string editableContent = @"<p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>";
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
         string defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task OnItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")
@@ -149,7 +138,6 @@ You can use the `executePrompt` method to execute the prompts dynamically in the
             await inlineAssist!.HidePopupAsync();
         }
     }
-
     private async Task OnExecutePromptClickAsync()
     {
         await inlineAssist.ShowPopupAsync();
@@ -165,11 +153,11 @@ You can use the `executePrompt` method to execute the prompts dynamically in the
 
 ## Showing popup
 
-You can use `showPopup` method to open the Inline AI Assist popup and optionally position it at specified coordinates.
+You can use `ShowPopup` method to open the Inline AI Assist popup and optionally position it at specified coordinates.
 
 ## Hiding popup
 
-You can use `hidePopup` method to close the Inline AI Assist popup.
+You can use `HidePopup` method to close the Inline AI Assist popup.
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
@@ -197,24 +185,20 @@ You can use `hidePopup` method to close the Inline AI Assist popup.
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
-
     <SfInlineAIAssist @ref="inlineAssist" RelateTo="#showPopup" PromptRequested="OnPromptRequestAsync">
         <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new SfInlineAIAssist();
     private string editableContent = @"<p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>";
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
         string defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task OnItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")
@@ -231,12 +215,10 @@ You can use `hidePopup` method to close the Inline AI Assist popup.
             await inlineAssist!.HidePopupAsync();
         }
     }
-
     private async Task OnShowPopupClickAsync()
     {
         await inlineAssist.ShowPopupAsync();
     }
-
     private async Task OnHidePopupClickAsync()
     {
         await inlineAssist.HidePopupAsync();
@@ -251,11 +233,11 @@ You can use `hidePopup` method to close the Inline AI Assist popup.
 
 ## Showing command popup
 
-Use `showCommandPopup` to open the command action popup; it only opens when the Inline AI Assist popup is already opened.
+Use `ShowCommandPopup` to open the command action popup; it only opens when the Inline AI Assist popup is already opened.
 
 ## Hiding command popup
 
-You can use `hideCommandPopup` to close the command action popup in the Inline AI Assist control.
+You can use `HideCommandPopup` to close the command action popup in the Inline AI Assist control.
 
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
@@ -263,7 +245,6 @@ You can use `hideCommandPopup` to close the command action popup in the Inline A
 ```razor
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
-
 <style>
     #editableText {
         width: 100%;
@@ -276,26 +257,22 @@ You can use `hideCommandPopup` to close the command action popup in the Inline A
         border: 1px solid;
     }
 </style>
-
 <div class="container" style="height: 350px; width: 650px;">
     <SfButton id="showCommandsBtn" IsPrimary="true" Style="margin-bottom: 10px;" @onclick="OnShowCommandPopupClickAsync">Show Command Popup</SfButton>
     <SfButton id="hideCommandsBtn" CssClass="e-outline" Style="margin-bottom: 10px;" @onclick="OnHideCommandPopupClickAsync">Hide Command Popup</SfButton>
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
-
     <SfInlineAIAssist @ref="inlineAssist" RelateTo="#showCommandsBtn" Closed="OnClosedAsync" PromptRequested="OnPromptRequestAsync">
         <CommandMenu Commands="commandItems"></CommandMenu>
         <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>
 </div>
-
 @code {
     private SfInlineAIAssist inlineAssist = new SfInlineAIAssist();
     private bool showPopup = false;
     private string editableContent = @"<p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>";
-
     private List<CommandItem> commandItems = new List<CommandItem>
     {
         new CommandItem { Label = "Summarize", Prompt = "Summarize the content" },
@@ -303,14 +280,12 @@ You can use `hideCommandPopup` to close the command action popup in the Inline A
         new CommandItem { Label = "Translate", Prompt = "Translate the content" },
         new CommandItem { Label = "Make professional", Prompt = "Make the content more professional" }
     };
-
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
         string defaultResponse = "For real-time prompt processing, connect the Inline AI Assist component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         await inlineAssist.UpdateResponseAsync(defaultResponse);
     }
-
     private async Task OnItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")
@@ -327,7 +302,6 @@ You can use `hideCommandPopup` to close the command action popup in the Inline A
             await inlineAssist!.HidePopupAsync();
         }
     }
-
     private async Task OnClosedAsync()
     {
         if (showPopup)
@@ -335,14 +309,12 @@ You can use `hideCommandPopup` to close the command action popup in the Inline A
             await inlineAssist.ShowPopupAsync();
         }
     }
-
     private async Task OnShowCommandPopupClickAsync()
     {
         showPopup = true;
         await inlineAssist.ShowPopupAsync();
         await inlineAssist.ShowCommandPopupAsync();
     }
-
     private async Task OnHideCommandPopupClickAsync()
     {
         showPopup = false;

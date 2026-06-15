@@ -19,8 +19,6 @@ Before starting, ensure you have the following:
 
 * **Syncfusion Inline AI Assist**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
-* [Markdig](https://www.nuget.org/packages/Markdig) package available in the project for Markdown-to-HTML conversion (required by the sample code).
-
 ## Set Up the Inline AI Assist Component
 
 Follow the [Getting Started](../getting-started) guide to configure and render the Inline AI Assist component in the application and that prerequisites are met.
@@ -36,14 +34,6 @@ Install the required packages:
 NuGet\Install-Package OpenAI
 NuGet\Install-Package Azure.AI.OpenAI
 NuGet\Install-Package Azure.Core
-
-```
-
-* Install the `Markdig` nuget packages in the application.
-
-```bash
-
-Nuget\Install-Package Markdig
 
 ```
 
@@ -99,7 +89,7 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
 </style>
 
 <div class="container" style="height: 350px; width: 650px;">
-    <span id="summarizeBtn" style="display: inline-block; margin-bottom: 10px;">
+    <span id="summarizeButton" style="display: inline-block; margin-bottom: 10px;">
         <SfButton IsPrimary="true" @onclick="OnSummarizeClickAsync">
             Content Summarize
         </SfButton>
@@ -113,10 +103,7 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
             The component supports multiple response modes including inline editing and popup-based interactions.</p>
     </div>
 
-    <SfInlineAIAssist @ref="inlineAssist"
-                      RelateTo="#summarizeBtn"
-                      EnableStreaming="true"
-                      PromptRequested="OnPromptRequestAsync">
+    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" EnableStreaming="true" PromptRequested="OnPromptRequestAsync">
         <ChildContent>
             <InlineToolbar ItemClick="OnToolbarItemClickAsync"></InlineToolbar>
             <ResponseActions ItemSelect="OnResponseItemSelectAsync"></ResponseActions>
@@ -127,8 +114,6 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
 @code {
     private SfInlineAIAssist inlineAssist = new();
     private bool stopStreaming = false;
-
-    // Azure OpenAI settings — mirrors the TS constants
     private const string AzureOpenAIApiKey = "";       // Replace with your key
     private const string AzureOpenAIEndpoint = "";     // Replace with your endpoint
     private const string AzureOpenAIApiVersion = "";   // Replace with your API version
@@ -143,14 +128,11 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
 
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
-        // Mirrors the TS URL construction:
-        // endpoint + /openai/deployments/{name}/chat/completions?api-version={version}
         var url = $"{AzureOpenAIEndpoint.TrimEnd('/')}" +
                   $"/openai/deployments/{Uri.EscapeDataString(AzureDeploymentName)}/chat/completions" +
                   $"?api-version={Uri.EscapeDataString(AzureOpenAIApiVersion)}";
         try
         {
-            // Mirrors the fetch body
             var requestBody = new
             {
                 model = "gpt-4o-mini",
@@ -161,8 +143,6 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
                 max_tokens = MaxTokens,
                 stream = false
             };
-
-            // Mirrors: headers: { Authorization: azureOpenAIApiKey }
             using var request = new HttpRequestMessage(HttpMethod.Post, url);
             request.Content = JsonContent.Create(requestBody);
             request.Headers.Add("api-key", AzureOpenAIApiKey);
@@ -176,8 +156,6 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
                 .GetProperty("message")
                 .GetProperty("content")
                 .GetString()?.Trim() ?? "No response received.";
-
-            // Mirrors: stopStreaming = false; streamResponse(responseText);
             stopStreaming = false;
             await StreamResponseAsync(responseText);
         }
@@ -191,8 +169,6 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
             stopStreaming = true;
         }
     }
-
-    // Mirrors the TS streamResponse function exactly
     private async Task StreamResponseAsync(string response)
     {
         var buffer = new StringBuilder();
@@ -214,8 +190,6 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
             await Task.Delay(15); // mirrors: setTimeout(resolve, 15)
         }
     }
-
-    // Mirrors: inlineToolbarSettings.itemClick
     private async Task OnToolbarItemClickAsync(ToolbarItemClickEventArgs args)
     {
         if (args.Item?.IconCss?.Contains("e-inline-stop") == true)
@@ -223,8 +197,6 @@ Modify the razor file to integrate the Azure OpenAI with the Inline AI Assist co
             stopStreaming = true;
         }
     }
-
-    // Mirrors: responseSettings.itemSelect
     private async Task OnResponseItemSelectAsync(ResponseItemSelectEventArgs args)
     {
         if (args.Item.Label == "Accept")
