@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor In-place Editor Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor In-place Editor component and more.
+title: Globalization in Blazor In-place Editor Component | Syncfusion®
+description: Checkout and learn here all about Globalization in Blazor In-place Editor component and much more details.
 platform: Blazor
 control: In-place Editor 
 documentation: ug
