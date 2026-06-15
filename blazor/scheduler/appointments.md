@@ -596,6 +596,69 @@ When the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
+## Limiting Concurrent Events in Vertical views
+
+The `MaxEventStack` property on the [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) allows you to limit the number of overlapping events displayed in each time slot. This feature prevents visual overcrowding when multiple events overlapped in the same time slot. When the number of overlapping events exceeds the specified limit, a "+N" indicator appears, indicating how many additional events are exist. Users can click this indicator to view all remaining events in a popup window.
+
+N> The `MaxEventStack` property is applicable only with **Day**, **Week**, and **WorkWeek** views when the [`TimeScale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTimeScale.html) option is enabled.
+
+### Display all events without limiting
+
+By default, the Scheduler shows all overlapping events without any restrictions. The default value of `MaxEventStack` is `0`.
+
+### Limit the number of visible events
+
+To set a maximum limit for visible events per time slot, configure the `MaxEventStack` property on each [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) with a specific numeric value. When the number of overlapping events exceeds this limit, the "+N" indicator appears, allowing users to click and view the remaining events in a popup window.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day" MaxEventStack="2"></ScheduleView>
+        <ScheduleView Option="View.Week" MaxEventStack="2"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek" MaxEventStack="2"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    DateTime CurrentDate = new DateTime(2026, 6, 15);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2026, 6, 15, 9, 30, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Annual Conference", StartTime = new DateTime(2026, 6, 15, 10, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Tech Symposium", StartTime = new DateTime(2026, 6, 15, 10, 30, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 30, 0) },
+        new AppointmentData { Id = 4, Subject = "Client Meeting", StartTime = new DateTime(2026, 6, 15, 12, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 14, 0, 0) },
+        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2026, 6, 15, 13, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 15, 0, 0) },
+    };
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+    }
+}
+```
+
+**How it works:** In this example, `MaxEventStack` is set to `2` for all three views. When you have three or more overlapping events in the same time slot:
+- The Scheduler displays only the first two events
+- A "+N" indicator appears to show how many additional events exist (for example, "+1" if there are 3 total events)
+- Users can click the indicator to open a popup displaying all remaining events for that time slot
+
+![Blazor Scheduler with MaxEventStack](images/blazor-scheduler-max-event-stack.png)
+
 ## Restricting event creation on specific time slots
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
 
