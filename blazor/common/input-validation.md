@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Input form validation in Blazor - Syncfusion
-description: Learn how to validate Syncfusion Blazor input components using data annotations with EditForm, DataAnnotationsValidator, ValidationMessage, ValidationSummary.
+title: Input form validation in Blazor | Syncfusion®
+description: Learn how to validate Blazor input components using data annotations with EditForm, DataAnnotationsValidator, ValidationMessage, ValidationSummary.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Input Form Validation and Data Annotation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor components can be validated by the standards defined in the Blazor [Form Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0). The user's input value can be validated based on the [DataAnnotation attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0) defined in the model class.
+The Blazor UI input and editor components can be validated by the standards defined in the Blazor [Form Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0). The user's input value can be validated based on the [DataAnnotation attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0) defined in the model class.
 
-## How to validate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components
+## How to validate Blazor UI components
 
 1. Create a model class and apply [data annotation attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0) to its properties.
 
@@ -47,7 +47,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor 
 N> [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-8.0): Attaches validation support to the `EditContext` using data annotations.
 <br/>[ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0): Displays a summarized list of all validation messages.
 
-3. Add any desired [Syncfusion<sup style="font-size:70%">&reg;</sup> components](#blazor-form-validation-supported-components) inside the `EditForm` and provide values via the appropriate `@bind-` parameter.
+3. Add any desired [Components](#blazor-form-validation-supported-components) inside the `EditForm` and provide values via the appropriate `@bind-` parameter.
 
     ```cshtml
     <EditForm Model="@employeeModel">
@@ -149,7 +149,7 @@ W> Do not use the `OnSubmit` handler together with `OnValidSubmit` and `OnInvali
 
 ## Blazor form validation supported components
 
-The following section lists the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components that support form validation, the corresponding `@bind` parameters, and validation examples.
+The following section lists the Blazor UI components that support form validation, the corresponding `@bind` parameters, and validation examples.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -1053,15 +1053,15 @@ Custom validation logic can be implemented by applying [custom attributes](https
 
 ![Custom attribute data annotation validation in Blazor](images/custom-attribute-validation.webp)
 
-### Validate Syncfusion<sup style="font-size:70%">&reg;</sup> components inside another component
+### Validate components inside another component
 
-You can create a new Blazor component and use [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](#blazor-form-validation-supported-components) on top of it for your custom implementation. In this case, you may need to validate your Blazor component that should validate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+You can create a new Blazor component and use [Blazor components](#blazor-form-validation-supported-components) on top of it for your custom implementation. In this case, you may need to validate your Blazor component that should validate the Blazor components.
 
-Refer to the following steps to create and validate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component on your custom Blazor component.
+Refer to the following steps to create and validate the Blazor component on your custom Blazor component.
 
 1. Right-click on the `~/Pages/` folder in the Visual Studio and navigate to `Add -> Razor Component`. Specify the component name and create it.
 
-2. Add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the new component and assign the `Value`, `ValueChanged`, and `ValueExpression` parameters. Refer to the [data binding with component parameters](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/data-binding?view=aspnetcore-8.0#binding-with-component-parameters) documentation for details.
+2. Add a Blazor component in the new component and assign the `Value`, `ValueChanged`, and `ValueExpression` parameters. Refer to the [data binding with component parameters](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/data-binding?view=aspnetcore-8.0#binding-with-component-parameters) documentation for details.
 
     ```cshtml
     @using System.Linq.Expressions;
