@@ -9,7 +9,7 @@ documentation: ug
 
 # Text-to-Speech in Blazor AI AssistView
 
-The Syncfusion Blazor AI AssistView component integrates `Text-to-Speech` (TTS) functionality using the browser's Web Speech API, specifically the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface. This allows AI-generated responses to be converted into spoken audio, enhancing accessibility and user interaction.
+The Syncfusion Blazor AI AssistView component provides built-in `Text-to-Speech` (TTS) support using the browser's Web Speech API, specifically the [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) interface. This allows AI-generated responses into spoken audio, enhancing accessibility and user interaction.
 
 ## Prerequisites
 
@@ -21,11 +21,9 @@ Before integrating `Text-to-Speech`, ensure the following:
 2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
     - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
-## Configure Text-to-Speech
+## Configure text to speech
 
-To enable Text-to-Speech functionality, modify the `Home.razor` file to incorporate the Web Speech API. A custom `Read Aloud` button is added to the response toolbar using the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directive. When clicked, the [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbar.html#Syncfusion_Blazor_InteractiveChat_ResponseToolbar_ItemClicked) event extracts plain text from the generated AI response and uses the browser's SpeechSynthesis API to read it aloud.
-
-The `texttospeech.js` file handles the core speech logic—extracting text from HTML, initiating speech synthesis, and cancel ongoing speech when needed. Meanwhile, the `texttospeech.css` file styles the AI AssistView layout and ensures the component remains responsive across different screen sizes and devices.
+To enable the built-in Text-to-Speech functionality, add the `e-assist-audio` icon to the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directive within the [ResponseToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbar.html). When clicked, it fetches the text from the generated AI response and uses the browser's SpeechSynthesis API to read it aloud.
 
 {% tabs %}
 {% highlight c# tabtitle="razor" %}
@@ -34,8 +32,6 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
 @using AssistView_OpenAI.Components.Services
 @using Syncfusion.Blazor.Navigations
 @inject AzureOpenAIService OpenAIService
-@inject IJSRuntime JSRuntime
-@implements IDisposable
 
 <div class="integration-texttospeech-section">
     <SfAIAssistView @ref="assistView" PromptRequested="@PromptRequest">
@@ -43,7 +39,7 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
             <AssistView>
                 <BannerTemplate>
                     <div class="banner-content">
-                        <div class="e-icons e-audio"></div>
+                        <div class="e-icons e-assist-audio"></div>
                         <i>Ready to assist voice enabled !</i>
                     </div>
                 </BannerTemplate>
@@ -53,9 +49,9 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
             <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
             <AssistViewToolbarItem IconCss="e-icons e-refresh"></AssistViewToolbarItem>
         </AssistViewToolbar>
-        <ResponseToolbar ItemClicked="ResponseToolbarItemClicked">
+        <ResponseToolbar>
             <ResponseToolbarItem IconCss="e-icons e-assist-copy" Tooltip="Copy"></ResponseToolbarItem>
-            <ResponseToolbarItem IconCss="@audioIconCss" Tooltip="@audioTooltip"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-audio" Tooltip="Read Aloud"></ResponseToolbarItem>
             <ResponseToolbarItem IconCss="e-icons e-assist-like" Tooltip="Like"></ResponseToolbarItem>
             <ResponseToolbarItem IconCss="e-icons e-assist-dislike" Tooltip="Need Improvement"></ResponseToolbarItem>
         </ResponseToolbar>
@@ -65,17 +61,6 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
 @code {
     private SfAIAssistView assistView;
     private string finalResponse { get; set; }
-    private string audioIconCss = "e-icons e-audio";
-    private string audioTooltip = "Read Aloud";
-    private bool IsSpeaking = false;
-    // If component class name isn’t Home (file is not Home.razor), update DotNetObjectReference to match the actual component type.
-    private DotNetObjectReference<Home>? dotNetRef;
-
-    protected override void OnInitialized()
-    {
-        dotNetRef = DotNetObjectReference.Create(this);
-    }
-    
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
         var lastIdx = assistView.Prompts.Count - 1;
@@ -112,106 +97,6 @@ The `texttospeech.js` file handles the core speech logic—extracting text from 
             assistView.Prompts.Clear();
         }
     }
-
-    // Handles toolbar item clicks to toggle text-to-speech functionality for AI responses
-    private async void ResponseToolbarItemClicked(AssistViewToolbarItemClickedEventArgs args)
-    {
-        var prompts = assistView.Prompts;
-        if (prompts.Count > args.DataIndex && prompts[args.DataIndex].Response != null)
-        {
-            string responseHtml = prompts[args.DataIndex].Response;
-            string text = await JSRuntime.InvokeAsync<string>("extractTextFromHtml", responseHtml);
-
-            if (args.Item.IconCss == "e-icons e-audio" || args.Item.IconCss == "e-icons e-assist-stop")
-            {
-                if (IsSpeaking)
-                {
-                    await JSRuntime.InvokeVoidAsync("cancel");
-                    IsSpeaking = false;
-                    audioIconCss = "e-icons e-audio";
-                    audioTooltip = "Read Aloud";
-                }
-                else if (!string.IsNullOrEmpty(text))
-                {
-                    IsSpeaking = await JSRuntime.InvokeAsync<bool>("speak", text, dotNetRef);
-                    if (IsSpeaking)
-                    {
-                        audioIconCss = "e-icons e-assist-stop";
-                        audioTooltip = "Stop";
-                    }
-                    else
-                    {
-                        await JSRuntime.InvokeVoidAsync("console.warn", "Failed to start speech synthesis.");
-                    }
-                }
-                await InvokeAsync(StateHasChanged);
-            }
-        }
-    }
-
-    [JSInvokable]
-    public void OnSpeechEnd()
-    {
-        IsSpeaking = false;
-        audioIconCss = "e-icons e-audio";
-        audioTooltip = "Read Aloud";
-        StateHasChanged();
-    }
-
-    public void Dispose()
-    {
-        dotNetRef?.Dispose();
-        dotNetRef = null;
-    }
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="texttospeech.js" %}
-
-// Initialize the speechSynthesisInterop object to store speech-related data if it doesn't exist.
-window.speechSynthesisInterop = window.speechSynthesisInterop || {};
-
-// Converts HTML content to plain text by stripping HTML tags.
-function extractTextFromHtml(html) {
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
-    return (tempDiv.textContent || tempDiv.innerText || '').trim();
-}
-
-// Initiates text-to-speech synthesis to read the provided text aloud.
-function speak(text, dotNetRef) {
-    // Check if the browser supports the Web Speech API
-    if ('speechSynthesis' in window) {
-        // Create a new speech synthesis utterance with the provided text
-        const utterance = new SpeechSynthesisUtterance(text);
-        // Call the Blazor OnSpeechEnd method when speech ends
-        utterance.onend = () => {
-            dotNetRef.invokeMethodAsync('OnSpeechEnd');
-        };
-        utterance.onerror = (event) => {
-            console.error('Speech synthesis error:', event);
-            dotNetRef.invokeMethodAsync('OnSpeechEnd');
-        };
-        // Start speaking the utterance
-        window.speechSynthesis.speak(utterance);
-        // Store the utterance in the global interop object for cancellation
-        window.speechSynthesisInterop.currentUtterance = utterance;
-        return Promise.resolve(true);
-    } else {
-        console.warn('Web Speech API is not supported.');
-        return Promise.resolve(false);
-    }
-}
-
-// Cancels any ongoing speech synthesis.
-function cancel() {
-    if ('speechSynthesis' in window) {
-        // Stop any active speech synthesis
-        window.speechSynthesis.cancel();
-        // Clear the stored utterance reference
-        window.speechSynthesisInterop.currentUtterance = null;
-    }
 }
 
 {% endhighlight %}
@@ -224,7 +109,7 @@ function cancel() {
     margin: 0 auto;
 }
 
-.integration-texttospeech-section .banner-content .e-audio:before {
+.integration-texttospeech-section .banner-content .e-assist-audio:before {
     font-size: 25px;
 }
 
@@ -249,6 +134,61 @@ function cancel() {
 {% endtabs %}
 
 ![Integrating Text-to-Speech with AI AssistView](../images/assist-tts.webp)
+
+## Configuring the speech settings
+
+You can use the [TextToSpeechSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_TextToSpeechSettings) property to customize the speech synthesis behavior using the following available properties such as [Language](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Language), [SpeechPitch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_SpeechPitch), [SpeechRate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_SpeechRate), [Volume](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Volume) and [Voice](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AIAssistViewTextToSpeechSettings.html#Syncfusion_Blazor_InteractiveChat_AIAssistViewTextToSpeechSettings_Voice).
+
+{% tabs %}
+{% highlight c# tabtitle="razor" %}
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="integration-texttospeech-section">
+    <SfAIAssistView Prompts="@promptsData" PromptRequested="@PromptRequest">
+        <ResponseToolbar>
+            <ResponseToolbarItem IconCss="e-icons e-assist-copy" Tooltip="Copy"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-audio" Tooltip="Read Aloud"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-like" Tooltip="Like"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-dislike" Tooltip="Need Improvement"></ResponseToolbarItem>
+        </ResponseToolbar>
+        <AIAssistViewTextToSpeechSettings Language="en-US" SpeechPitch="1" SpeechRate="1" Volume="1">
+        </AIAssistViewTextToSpeechSettings>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private List<AssistViewPrompt> promptsData = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() { Prompt = "What is AI?", Response = "AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making." }
+    };
+
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        args.Response = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="texttospeech.css" %}
+
+.integration-texttospeech-section {
+    height: 350px;
+    width: 650px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 750px) {
+    .integration-texttospeech-section {
+        width: 100%;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## See Also
 
