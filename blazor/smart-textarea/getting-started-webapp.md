@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started Blazor Smart TextArea in Blazor Web App | Syncfusion
-description: Checkout and learn here all about Getting started with Syncfusion Blazor Smart TextArea component in Blazor Webapp and more.
+title: Getting Started Blazor Smart TextArea in Blazor Web App | Syncfusion
+description: Checkout and learn here all about Getting started with Blazor Smart TextArea component in Blazor Webapp and more.
 platform: Blazor
 platform: Blazor
 control: Smart TextArea
@@ -454,7 +454,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% highlight html tabtitle="App.razor" %}
  
 ...
-<link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
  
