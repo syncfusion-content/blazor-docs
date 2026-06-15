@@ -7,15 +7,6 @@ control: Listview
 documentation: ug
 ---
 
----
-layout: post
-title: Styles and Appearances in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor ListView component and more.
-platform: Blazor
-control: ListView
-documentation: ug
----
-
 # Styles and Appearances in Blazor ListView Component
 
 Customize the appearance of the ListView by overriding the component's default CSS. The following table lists commonly used CSS selectors and the corresponding UI areas they affect. For consistent theming across applications, consider generating a custom theme with [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
