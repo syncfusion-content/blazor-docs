@@ -190,7 +190,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfZMDKrVnxBgsm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component](images/blazor-accordion-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLHZnWCMwmUySjR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component](images/blazor-accordion-component.png)" %}
 
 ## Initialize Blazor Accordion using template
 
@@ -204,7 +204,7 @@ The following code explains how to initialize Blazor Accordion using header and 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVoisjQKaKacVAK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBxXxMWWmPLNxjK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
 
 
 ## See also
