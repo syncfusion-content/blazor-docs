@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Filtering in the Syncfusion Blazor ComboBox component and much more.
+title: Filtering in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Filtering in the Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -83,7 +83,7 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Multi column filtering 
 
-In the built-in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme files, support for multi column layout can be enabled by adding the `e-multi-column` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
+In the built-in Blazor theme files, support for multi column layout can be enabled by adding the `e-multi-column` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
 {% highlight cshtml %}
 

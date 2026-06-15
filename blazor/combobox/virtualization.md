@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor ComboBox component and much more.
+title: Virtualization in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Virtualization in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug

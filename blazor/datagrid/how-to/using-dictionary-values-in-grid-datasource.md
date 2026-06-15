@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Using Dictionary Values in Blazor DataGrid | Syncfusion
-description: Learn how to display dictionary values in Syncfusion Blazor DataGrid using column templates and KeyValuePair mapping.
+title: Using Dictionary Values in Blazor DataGrid | Syncfusion®
+description: Learn how to display dictionary values in Blazor DataGrid using column templates and KeyValuePair mapping.
 platform: Blazor
 control: DataGrid
 documentation: ug
