@@ -12,9 +12,9 @@ keywords: Blazor Chart series label, series label, chart labels, inline series l
 
 The series label feature displays the name of each series directly within the chart area. This improves readability by helping users identify series inline and reduces reliance on the legend.
 
-This feature is especially useful in multi-series visualizations and exported charts, where quick in-chart identification is important. It is currently supported for Line , Area, scatter , Column, and Bar series, as well as Polar Line and Radar Line series. Series labels can be enabled and customized using the `SeriesLabelSettings` property.
+This feature is especially useful in multi-series visualizations and exported charts, where quick in-chart identification is important. It is currently supported for Line, Area, Scatter, Column, and Bar series, as well as Polar Line and Radar Line series. Series labels can be enabled and customized using the `SeriesLabelSettings` property.
 
-## Enable series label
+## Enable series labels
 
 To display series labels, set the `Visible` property of `SeriesLabelSettings` to `true` for the required series.
 
@@ -92,6 +92,8 @@ You can customize the appearance of the series label using the following propert
 
 Configure the main series label appearance:
 
+In the `SeriesLabelSettings`:
+* `Visible`: Enables or disables the display of series labels. Set to `true` to display the label for the corresponding series.
 * `Text`: Specifies the custom text to be displayed in the series label. If this property is not set, the label displays the corresponding series name by default.
 * `Background`: Specifies the background color of the series label. This helps the label stand out clearly within the chart area.
 * `Opacity`:  Specifies the transparency level of the series label. The accepted range is from 0 to 1, where 0 represents full transparency and 1 represents full opacity.
