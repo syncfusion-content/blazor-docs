@@ -11,18 +11,6 @@ documentation: ug
 
 This guide explains how to include the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-### Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-### Create a new Blazor App in Visual Studio
-
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
-
 ### Create a new Blazor WASM App
 
 {% tabcontents %}

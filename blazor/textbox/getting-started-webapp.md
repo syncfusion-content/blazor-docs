@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor TextBox in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor TextBox Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor TextBox Components in Blazor Web App.
 platform: Blazor
 control: TextBox
 documentation: ug
