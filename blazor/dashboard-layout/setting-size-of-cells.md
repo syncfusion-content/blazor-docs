@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Configure Grid Layout in Blazor Dashboard | Syncfusion
-description: Learn here all about Configuring the Grid Layout in Syncfusion Blazor Dashboard Layout component and more.
+title: Configure Grid Layout in Blazor Dashboard | Syncfusion®
+description: Learn here all about Configuring the Grid Layout in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug

@@ -124,7 +124,9 @@ N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget
 
 After the package is installed, open the **~/_Imports.razor** file from the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
-N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+N> 
+- The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+- If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, add these namespaces in both the server and client project **~/_Imports.razor** files.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -193,7 +195,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRjRiBKleQGqKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
 
 ## Populate Blazor chart with data
 
@@ -237,7 +239,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTNiLezckHqsGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRZdMVgPGhfPSi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
