@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State Persistence in Blazor Dashboard Layout Component | Syncfusion
+title: State Persistence in Blazor Dashboard Layout Component | Syncfusion®
 description: Checkout and learn about State Persistence in Blazor Dashboard Layout component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Dashboard Layout

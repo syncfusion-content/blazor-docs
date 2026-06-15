@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header and Content in Blazor Card Component | Syncfusion
+title: Header and Content in Blazor Card Component | Syncfusion®
 description: Checkout and learn here all about Header and Content in Syncfusion Blazor Card component and much more.
 platform: Blazor
 control: Card
@@ -48,7 +48,7 @@ Card header has an option for adding images in the header. It is aligned with ei
     <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
 </SfCard>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrKWLLVLykMTnDF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrRtxiVBYyfeJns?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Content
 
@@ -69,7 +69,7 @@ Content in Card holds texts, images, links, and all possible HTML elements. It i
 </SfCard>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAWVhrLSuSWdJj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdjHsrVEycBMCY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Image
 
@@ -94,4 +94,4 @@ Card content is designed to display an image tag within it. You can wrap an imag
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUWBrBVxCfudwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnjRsrrunDISPn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.png)" %}
