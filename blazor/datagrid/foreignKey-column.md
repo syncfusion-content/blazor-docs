@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Foreign key column in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure and customize foreign key columns in Syncfusion Blazor DataGrid, including remote data binding and edit templates.
+title: Foreign key column in Blazor DataGrid Component | Syncfusion®
+description: Learn how to configure and customize foreign key columns in Blazor DataGrid, including remote data binding and edit templates.
 platform: Blazor
 control: DataGrid
 documentation: ug
