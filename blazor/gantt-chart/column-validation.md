@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Validation in Blazor Gantt Chart Component | Syncfusion
-description: Learn to configure built-in and custom column validation in Syncfusion Blazor Gantt Chart, including validation rules, data annotations, and custom validators.
+title: Column Validation in Blazor Gantt Chart Component | Syncfusion®
+description: Learn to configure built-in and custom column validation in Blazor Gantt Chart, including validation rules, data annotations, and custom validators.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -434,7 +434,7 @@ namespace ColumnValidationComponents
         }
 
         /// <summary>
-        /// Adds a validation error message for a given field and notifies the Syncfusion validator template
+        /// Adds a validation error message for a given field and notifies the validator template
         /// to display the message within the corresponding column.
         /// </summary>
         private void AddError(FieldIdentifier id, string message)
@@ -444,7 +444,7 @@ namespace ColumnValidationComponents
         }
 
         /// <summary>
-        /// Clears validation messages for a given field and notifies the Syncfusion validator template
+        /// Clears validation messages for a given field and notifies the validator template
         /// to remove any message shown for the corresponding column.
         /// </summary>
         private void ClearField(FieldIdentifier id)

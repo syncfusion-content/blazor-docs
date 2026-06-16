@@ -1,7 +1,7 @@
 ---
 layout: post
-title: State Management in Blazor DataGrid | Syncfusion
-description: Learn how to persist, restore, and manage state in Syncfusion Blazor DataGrid, including saving, resetting, and versioned persistence.
+title: State Management in Blazor DataGrid | Syncfusion®
+description: Learn how to persist, restore, and manage state in Blazor DataGrid, including saving, resetting, and versioned persistence.
 platform: Blazor
 control: DataGrid
 documentation: ug

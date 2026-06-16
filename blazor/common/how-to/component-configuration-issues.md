@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resolving Component Configuration Issues in Blazor | Syncfusion
+title: Resolving Component Configuration Issues in Blazor | Syncfusion®
 description: Comprehensive guide to resolving Blazor component configuration issues including SignalR, namespaces, and data binding problems
 platform: Blazor
 control: Common
@@ -130,11 +130,11 @@ For production deployments, always balance functionality requirements with secur
 
 ## Issue 2: Namespace import issues
 
-**Symptom**: Compilation errors such as `The type or namespace name 'Syncfusion' could not be found` or `The name 'SfGrid' does not exist in the current context.` IntelliSense doesn't show Syncfusion components.
+**Symptom**: Compilation errors such as `The type or namespace name 'Syncfusion' could not be found` or `The name 'SfGrid' does not exist in the current context.` IntelliSense doesn't show components.
 
-**Root cause**: Required Syncfusion namespaces are not imported in `_Imports.razor` or component files.
+**Root cause**: Required namespaces are not imported in `_Imports.razor` or component files.
 
-**Solution**: Add required Syncfusion namespaces to `~/Components/_Imports.razor` for global access or to individual component files. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+**Solution**: Add required namespaces to `~/Components/_Imports.razor` for global access or to individual component files. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 ### Global namespace import (recommended)
 

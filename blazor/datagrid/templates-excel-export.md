@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Exporting with Templates in Blazor Grid | Syncfusion
+title: Excel Exporting with Templates in Blazor Grid | Syncfusion®
 description: Export Blazor DataGrid templates to Excel, preserving custom content like images, hyperlinks, and structured layouts for rich exported documents.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Exporting grid with templates in Syncfusion Blazor DataGrid
+# Exporting grid with templates in Blazor DataGrid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports exporting template content to Excel, enabling rich formatting in exported documents. The following template types are supported:
 
@@ -262,7 +262,7 @@ public class OrderData
 
 ## Customizing and Aligning Group Caption Templates in Excel Export
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports aligning exported grouped data along with a custom caption template in an Excel document. This capability enables the application of custom formatting and horizontal alignment to group captions, providing enhanced visual presentation and improved readability of exported hierarchical data in Excel spreadsheets.
+The Blazor DataGrid supports aligning exported grouped data along with a custom caption template in an Excel document. This capability enables the application of custom formatting and horizontal alignment to group captions, providing enhanced visual presentation and improved readability of exported hierarchical data in Excel spreadsheets.
 
 ### Steps to Customize and Align Group Caption Text in Excel Export
 
