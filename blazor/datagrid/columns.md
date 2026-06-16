@@ -333,8 +333,8 @@ The Blazor DataGrid allows customizing the display of numeric values in columns 
 | Format | Description       | Remarks                                                    |
 |--------|-------------------|------------------------------------------------------------|
 | **N**  | Numeric format    | Use N2, N3, etc., to specify the number of decimal places. |
-| **C**  | currency format   | Use C2, C3, etc., for currency with specified precision.   |
-| **P**  | Percentage format | Use C2, C3, etc., for currency with specified precision.   |
+| **C**  | Currency format   | Use C2, C3, etc., for currency with specified precision.   |
+| **P**  | Percentage format | Use P2, P3, etc., for percentage with specified precision. |
 
 
 {% tabs %}

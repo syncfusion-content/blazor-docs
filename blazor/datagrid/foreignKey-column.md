@@ -1015,7 +1015,7 @@ The Blazor DataGrid supports customizing the edit template for foreign key colum
 @using Syncfusion.Blazor.DropDowns
 
 
-<SfGrid TValue="OrdersDetails" AllowPaging="true" Toolbar="@new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" }">
+<SfGrid TValue="OrdersDetails" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
 
     <SfDataManager Url="https://localhost:xxxx/api/grid"
                    InsertUrl="https://localhost:xxxx/api/grid/Insert"
