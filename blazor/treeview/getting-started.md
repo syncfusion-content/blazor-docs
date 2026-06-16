@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor TreeView in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor TreeView component in Blazor WebAssembly Application.
+description: Chec kout and learn about getting started with Blazor TreeView component in Blazor WebAssembly Application.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor TreeView Component in Blazor WASM App
+# Getting Started with Blazor TreeView in Blazor WASM App
 
 This section briefly explains about how to include [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
