@@ -1888,7 +1888,7 @@ To save the exported PDF file locally:
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
 
             // For creating the exporting location with file name, for this need to specify the physical exact path of the file. 
-            string filePaths = "C:Users/abc/Downloads/SampleTestPdf.pdf";
+            string filePaths = "C:/Users/abc/Downloads/SampleTestPdf.pdf";
 
             // Create a file stream to write the memory stream contents to a file.
             using (FileStream fileStream = File.Create(filePaths))

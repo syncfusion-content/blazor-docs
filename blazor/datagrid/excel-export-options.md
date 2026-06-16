@@ -1804,8 +1804,6 @@ In this configuration, the memory stream is converted and saved as a file named 
 
 @using Syncfusion.Blazor.Grids
 @using System.IO;
-@using Syncfusion.XlsIO
-@using Syncfusion.ExcelExport;
 @inject IJSRuntime JSRuntime
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
@@ -1838,7 +1836,7 @@ In this configuration, the memory stream is converted and saved as a file named 
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc.ToArray());
 
             //For creating the exporting location with file name, for this need to specify the physical exact path of the file.
-            string filePaths = "C:Users/abc/Downloads/SampleTestExcel.xlsx";
+            string filePaths = "C:/Users/abc/Downloads/SampleTestExcel.xlsx";
 
             // Create a FileStream to write the memory stream contents to a file.
             using (FileStream fileStream = File.Create(filePaths))

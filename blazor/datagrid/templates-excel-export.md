@@ -599,6 +599,8 @@ To format and customize the detail rows in the exported Excel document:
                 }
             }
         });
+
+        // Add the second row with product cost and availability status.
         excelRows.Add( new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
@@ -614,7 +616,7 @@ To format and customize the detail rows in the exported Excel document:
             }
         });
 
-        // Add the second row with product cost and availability status.
+        // Add the third row with product status and return policy.
         excelRows.Add(new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
@@ -634,7 +636,7 @@ To format and customize the detail rows in the exported Excel document:
             }
         });
 
-        // Add the third row with product status and return policy.
+        // Add the fourth row with offers and cancellation information.
         excelRows.Add(new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
@@ -653,7 +655,7 @@ To format and customize the detail rows in the exported Excel document:
             }
         });
 
-         // Add the fifth row with product ratings and delivery information.
+        // Add the fifth row with product ratings and delivery information.
         excelRows.Add(new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
