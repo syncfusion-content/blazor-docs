@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Groups in Blazor DataForm Component | Syncfusion
+title: Form Groups in Blazor DataForm Component | Syncfusion®
 description: Checkout and learn here about the single and multiple form group configuration  with Blazor DataForm component.
 platform: Blazor
 control: DataForm

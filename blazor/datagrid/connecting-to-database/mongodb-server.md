@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid connected to MongoDB | Syncfusion
+title: Blazor Data Grid connected to MongoDB | Syncfusion®
 description: Bind MongoDB data to Blazor Data Grid using MongoDB.Driver with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
@@ -108,7 +108,7 @@ After inserting these documents, the project records are stored in the `Projects
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-For this guide, a Blazor application named **Grid_MongoDB** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable MongoDB integration and Syncfusion DataGrid components.
+For this guide, a Blazor application named **Grid_MongoDB** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the application. These packages enable MongoDB integration and DataGrid components.
 
 **Method 1: Using Package Manager Console**
 
@@ -409,7 +409,7 @@ The database connection string has been configured successfully.
 
 ### Step 6: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable MongoDB service and Syncfusion components.
+The `Program.cs` file is where application services are registered and configured. This file must be updated to enable MongoDB service and Blazor components.
 
 **Instructions:**
 
@@ -427,7 +427,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register Syncfusion Blazor services
+// Register Blazor services
 builder.Services.AddSyncfusionBlazor();
 
 // Register MongoDB service for dependency injection
@@ -456,7 +456,7 @@ The service registration has been completed successfully.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -475,20 +475,20 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Syncfusion.Blazor.DropDowns
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ---
 
@@ -522,7 +522,7 @@ The `Home.razor` component will display the project data in a Blazor DataGrid wi
         <div class="col-md-12">
             <div class="card shadow-sm">
                 <div class="card-body p-0">
-                    <!-- Syncfusion Blazor DataGrid Component -->
+                    <!-- Blazor DataGrid Component -->
                     <SfGrid TValue="Project" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
                         <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
                         
