@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor Gantt Chart component and much more.
+title: Data Binding in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Data Binding in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -586,7 +586,7 @@ This interface is used to notify that a property value has changed. For example,
 
 ## Remote Data
 
-The Syncfusion Blazor component enables remote data binding by connecting UI components to server-side data sources. This approach facilitates fetching, displaying, and manipulating data stored on remote servers.
+The Blazor component enables remote data binding by connecting UI components to server-side data sources. This approach facilitates fetching, displaying, and manipulating data stored on remote servers.
 
 To bind remote data to the Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or use the `SfDataManager` component.Set the service endpoint using the **Url** property to enable data operations.
 
