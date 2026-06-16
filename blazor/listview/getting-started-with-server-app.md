@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor ListView in Blazor Server App | Syncfusion®
+title: Getting started with ListView in Blazor Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor ListView Components in Blazor Server App.
 platform: Blazor
 control: Listview

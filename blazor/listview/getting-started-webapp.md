@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor ListView in Blazor Web App | Syncfusion®
-description: Check out the documentation for getting started with Blazor ListView Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor ListView Components in Blazor Web App amd much more details.
 platform: Blazor
 control: Listview
 documentation: ug
