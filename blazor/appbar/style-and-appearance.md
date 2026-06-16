@@ -45,7 +45,7 @@ CssClass is used for AppBar customization based on the custom class. In the exam
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthgCVMTrrGSfJrV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with CssClass customization](./images/cssclass_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhnDxMCLmTfSmJh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with CssClass customization](./images/cssclass_appbar.png)" %}
 
 ## HtmlAttributes
 
@@ -61,4 +61,4 @@ It can be used for additional inline attributes by specifying as inline attribut
     </SfAppBar>
 </div>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVgWBizBhGaNVBq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhnDdCMrGnUwvdG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
