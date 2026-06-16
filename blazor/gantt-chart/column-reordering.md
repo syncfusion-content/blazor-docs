@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Reordering in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Column Reordering in Syncfusion Blazor Gantt Chart component and much more details.
+title: Column Reordering in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Column Reordering in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Column reorder in Blazor Gantt Chart component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component supports column reordering by dragging a column header to a new position. 
+The Blazor Gantt Chart component supports column reordering by dragging a column header to a new position. 
 
 To enable column reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowReordering) property to **true** in the Gantt configuration.
 
