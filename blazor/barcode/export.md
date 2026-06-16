@@ -28,7 +28,7 @@ documentation: ug
 }
 
  ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVKMVWJJCCNRCqQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHXnMsTBUxakMy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### ExportAsBaseImage
 
@@ -53,7 +53,7 @@ Barcode provides support to export as an image in the specified image type and r
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBgWLWfTiCgSXzC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVxZnMCphJlUjJS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Format specifies the image type of the exported file. The following export formats are supported:
 <br/>* JPG.

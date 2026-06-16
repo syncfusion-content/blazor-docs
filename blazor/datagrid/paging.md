@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paging in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure paging in the Syncfusion Blazor DataGrid, including page size, page count, current page, pager templates, events, and top pager layout.
+title: Paging in Blazor DataGrid Component | Syncfusion®
+description: Learn how to configure paging in the Blazor DataGrid, including page size, page count, current page, pager templates, events, and top pager layout.
 platform: Blazor
 control: DataGrid
 documentation: ug
