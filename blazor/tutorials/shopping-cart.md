@@ -72,6 +72,7 @@ builder.Services.AddSyncfusionBlazor();
 ### Add stylesheets and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+
 {% tabs %}
 {% highlight html tabtitle="App.razor"  %}
 
@@ -118,11 +119,7 @@ This organization improves code readability and modularity, enabling easier main
 
 ## Define data models
 
-The application uses the following data models to represent products, cart items, and order details.
-
-### `Product` model
-
-Represents a product in the catalog, including its basic details, pricing, and availability.
+The application uses the following data models to represent products, cart items, and order details. `Product` model represents a product in the catalog, including its basic details, pricing, and availability. `CartItem` model represents a product added to the cart along with quantity and calculated subtotal. `Order` model represents an order, including selected items, total amount, and associated shipping and payment details.
 
 {% tabs %}
 {% highlight cs tabtitle="Models/Product.cs"  %}
@@ -144,13 +141,7 @@ namespace ShoppingCart.Models
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-### `CartItem` model
-
-Represents a product added to the cart along with quantity and calculated subtotal.
-
-{% tabs %}
 {% highlight cs tabtitle="Models/CartItem.cs"  %}
 
 namespace ShoppingCart.Models
@@ -167,13 +158,7 @@ namespace ShoppingCart.Models
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-### `Order` model
-
-Represents an order, including selected items, total amount, and associated shipping and payment details.
-
-{% tabs %}
 {% highlight cs tabtitle="Models/Order.cs"  %}
 
 using System.ComponentModel.DataAnnotations;
