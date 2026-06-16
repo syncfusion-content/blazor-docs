@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor QueryBuilder in Blazor WASM App | Syncfusion
+title: Getting Started Blazor Query Builder in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor QueryBuilder component in Blazor WebAssembly Application.
 platform: Blazor
 control: QueryBuilder
