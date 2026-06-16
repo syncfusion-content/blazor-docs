@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Markdown Editor Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Markdown Editor component and more.
+title: Accessibility in Blazor Markdown Editor Component | Syncfusion®
+description: Checkout and learn here all about the accessibility in Blazor Markdown Editor component and much more details.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
@@ -101,4 +101,4 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

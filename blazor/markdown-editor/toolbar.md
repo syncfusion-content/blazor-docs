@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar Configuration in Blazor Markdown Editor Component | Syncfusion
-description: Checkout and learn here all about Toolbar Configuration in Syncfusion Blazor Markdown Editor component and more.
+title: Toolbar Configuration in Blazor Markdown Editor Component | Syncfusion®
+description: Checkout and learn here all about Toolbar Configuration in Blazor Markdown Editor component and more.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar configuration in Markdown Editor Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Markdown Editor provides a flexible toolbar that enhances the editing experience. Users can choose from multiple toolbar layouts, enable sticky behavior, and add custom tools based on their application requirements. This guide explains the available toolbar types, configuration options, and customization techniques.
+The Blazor Markdown Editor provides a flexible toolbar that enhances the editing experience. Users can choose from multiple toolbar layouts, enable sticky behavior, and add custom tools based on their application requirements. This guide explains the available toolbar types, configuration options, and customization techniques.
 
 ## Default toolbar items
 
@@ -21,7 +21,7 @@ These default items provide essential text editing features, including text form
 
 ## Type of toolbar 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Markdown Editor allows you to configure different type of toolbars using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property of the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings).
+The Markdown Editor allows you to configure different type of toolbars using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property of the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings).
 
 The available toolbar types are:
 

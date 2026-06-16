@@ -1,14 +1,14 @@
 ---
 layout: post
-title: AI and Smart Tooling for Blazor Development | Syncfusion
-description: Accelerate Blazor development with Syncfusion MCP Server - instant access to component APIs, UI blocks, themes, and 600+ icons via MCP in your IDE.
-control: Syncfusion Blazor MCP Server Overview
+title: AI and Smart Tooling for Blazor Development | Syncfusion®
+description: Accelerate Blazor development with MCP Server - instant access to component APIs, UI blocks, themes, and 600+ icons via MCP in your IDE.
+control: Blazor MCP Server Overview
 platform: blazor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion MCP Server Overview
+# MCP Server Overview
 
 Syncfusion's MCP Server accelerate Blazor application development by providing deep context-aware knowledge directly in your AI-powered IDE. Through Model Context Protocol (MCP) integration, you get instant access to component APIs, pre-built UI blocks, styling configurations, icon libraries, and code generation - all without leaving your development environment.
 
@@ -25,7 +25,7 @@ Use these tools to speed up development and follow best practices when building 
 
 ## How it works
 
-Syncfusion MCP Server are delivered as an npm-based Model Context Protocol (MCP) server that integrates seamlessly with AI-powered development environments. The server provides two specialized modes tailored to different development workflows:
+MCP Server are delivered as an npm-based Model Context Protocol (MCP) server that integrates seamlessly with AI-powered development environments. The server provides two specialized modes tailored to different development workflows:
 
 **Agentic UI Builder** (`#sf_blazor_ui_builder`)  
 Build complete UIs with coordinated tools for layout, components, styling, and icons. Perfect for creating pages, dashboards, and complex sections from scratch.
@@ -43,13 +43,13 @@ For detailed setup instructions, see the [Installation Guide](installation).
 
 ## Available Tools
 
-Syncfusion MCP Server includes five specialized tools that work together to streamline your development workflow:
+MCP Server includes five specialized tools that work together to streamline your development workflow:
 
 * **UI Builder Orchestrator** - Analyzes requirements and coordinates multiple tools to build complete UIs
 * **Layout Tool** - Provides pre-built, responsive UI blocks (headers, footers, sidebars, dashboards, forms)
-* **Component Tool** - Delivers API and implementation guidance for Syncfusion Blazor components
+* **Component Tool** - Delivers API and implementation guidance for Blazor components
 * **Styling Tool** - Generates theme configurations for Tailwind CSS, Bootstrap, Material, and Fluent with light/dark mode support, and also provides a comprehensive icon library with component‑level integration patterns and accessibility guidance.
-* **Coding Assistant Tool** - Provides contextual component documentation, code snippets, and configuration examples for individual Syncfusion Blazor components
+* **Coding Assistant Tool** - Provides contextual component documentation, code snippets, and configuration examples for individual Blazor components
 
 ## Unlimited Access
 
@@ -70,11 +70,11 @@ For optimal results, use high-performance AI models like **Claude Sonnet 4.5** (
 
 ## Privacy & Security
 
-The Syncfusion MCP Server are designed with privacy considerations:
+The MCP Server are designed with privacy considerations:
 
 * The tools do not access project files or workspace contents directly.
 * User prompts are not stored or used for other purposes.
-* Prompts are not used to train Syncfusion models.
+* Prompts are not used to train models.
 * The assistant provides context; the final output is produced by the selected AI model.
 
 The MCP Server acts purely as a knowledge bridge, connecting your AI model with Syncfusion-specific expertise while respecting your privacy and maintaining security.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mention support in Blazor Markdown Editor Component | Syncfusion
-description: Checkout and learn here all about Mention support in Syncfusion Blazor Markdown Editor component and more.
+title: Mention support in Blazor Markdown Editor Component | Syncfusion®
+description: Checkout and learn here all about Mention support in Blazor Markdown Editor component and more.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
@@ -21,7 +21,7 @@ When a user types the `@` symbol followed by a character, the Markdown Editor di
 
 ## Configuring Mention Properties
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Mention component provides several customizable properties to enhance the tagging experience:
+The Mention component provides several customizable properties to enhance the tagging experience:
 
 * [AllowSpaces](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_AllowSpaces) - Allow to continue search action if user enter space after mention character while searching.
 * [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_SuggestionCount) - The maximum number of items that will be displayed in the suggestion list.
