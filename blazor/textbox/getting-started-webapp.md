@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor TextBox in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Blazor TextBox Components in Blazor Web App.
+title: Getting Started with Blazor TextBox in Blazor Web App | Syncfusion
+description: Check out and learn the documentation for getting started with Blazor TextBox Components in Blazor Web App.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -181,7 +181,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor TextBox component will render in your default web browser.
 
 {% endtabcontent %}
 
