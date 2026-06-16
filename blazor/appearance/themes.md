@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Apply and Customize Blazor Themes | Syncfusion®
-description: Learn how to use Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
+description: Learn how to use Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, and explore theme customization options.
 platform: Blazor
 component: Appearance
 documentation: ug
