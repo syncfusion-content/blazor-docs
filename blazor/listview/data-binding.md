@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor ListView component and much more.
+title: Data Binding in Blazor ListView Component | Syncfusion®
+description: Checkout and learn here all about data binding in Blazor ListView component and much more details.
 platform: Blazor
 control: ListView
 documentation: ug

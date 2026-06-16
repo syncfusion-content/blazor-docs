@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter & Search list items using Blazor ListView | Syncfusion
-description: Learn here all about filter and search list items using Syncfusion Blazor ListView component and more.
+title: Filter & Search list items using Blazor ListView | Syncfusion®
+description: Learn here all about filter and search list items using Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
