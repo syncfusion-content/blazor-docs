@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LiteLLM Integration with Blazor Inline AI Assist Component | Syncfusion®
+title: LiteLLM Integration in Blazor Inline AI Assist | Syncfusion
 description: Checkout and learn about LiteLLM integration with Blazor Inline AI Assist component in Blazor WebAssembly Application.
 platform: Blazor
 control: Inline AI Assist

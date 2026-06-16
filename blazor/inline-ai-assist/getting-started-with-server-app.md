@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Inline AI Assist in Blazor Server App | Syncfusion®
+title: Getting Started with Blazor Inline AI Assist Server App | Syncfusion
 description: Check out the documentation for getting started with Blazor Inline AI Assist Components in Blazor Server App.
 platform: Blazor
 control: Inline AI Assist
