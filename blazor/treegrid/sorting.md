@@ -238,14 +238,6 @@ public class TreeData
 
 {% endtabs %}
 
-## Touch interaction
-
-When the tree grid header is tapped on the touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.webp) is displayed for the multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.webp), and then tap the desired tree grid headers.
-
-<!-- markdownlint-disable MD033 -->
-<img src="images/blazor-treegrid-touch-sorting.webp" alt="Sorting in Blazor TreeGrid" style="width:320px;height: 620px">
-<!-- markdownlint-enable MD033 -->
-
 ## Custom sorting 
 
 The Blazor TreeGrid provides a way to customize the default sort action for a column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_SortComparer) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). The `SortComparer` data type uses the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0&viewFallbackFrom=net-5) interface, so the custom sort comparer class should be implemented in the interface `IComparer`.
