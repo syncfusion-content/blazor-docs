@@ -133,19 +133,6 @@ Install-Package Syncfusion.Blazor.Themes -Version {{site.blazorversion}}
    - **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)** (version {{site.blazorversion}})
    - **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)** (version {{site.blazorversion}})
 
-**Project File Reference**
-
-The installed packages are reflected in the **Grid_PostgreSQL.csproj** file:
-
-```xml
-<ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0" />
-    <PackageReference Include="Syncfusion.Blazor.Grid" Version="*" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="*" />
-</ItemGroup>
-```
-
 All required packages are now installed.
 
 ### Step 3: Create the Data Model
@@ -1966,7 +1953,7 @@ This guide demonstrates how to:
 4. Configure connection strings and register services. [🔗](#step-5-configure-the-connection-string)
 5. Implement the repository pattern for data access with helper methods. [🔗](#step-6-create-the-repository-class)
 6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
-7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
+7. Handle bulk operations and batch updates. [🔗](#step-11-perform-crud-operations)
 
 The application now provides a complete solution for managing purchase orders with a modern, user-friendly interface integrated with PostgreSQL.
 
