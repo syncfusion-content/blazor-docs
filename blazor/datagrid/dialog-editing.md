@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dialog Editing in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Dialog Editing in Syncfusion Blazor DataGrid and much more details.
+title: Dialog Editing in Blazor DataGrid | Syncfusion®
+description: Checkout and learn here all the features about Dialog Editing in Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -180,7 +180,7 @@ public class OrderDetails
 
 ### Add and Edit Dialog Animation Support for Modern UI Experience
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides built-in support for animation effects in dialog edit mode, creating a smooth and modern editing experience. Animation effects can be applied to the edit dialog during add and edit operations by using [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) with the [Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Dialog) property.
+The Blazor DataGrid provides built-in support for animation effects in dialog edit mode, creating a smooth and modern editing experience. Animation effects can be applied to the edit dialog during add and edit operations by using [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) with the [Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Dialog) property.
 The **DialogSettings** configuration allows full control over dialog behavior and appearance. Options include dialog height, dialog width, animation effect, and layout customization. These settings enhance visual interaction while maintaining consistent data handling and validation behavior.
 
 Animation effects are automatically applied whenever the edit dialog opens in dialog edit mode. The feature improves user experience without affecting performance, data integrity, or validation logic.
