@@ -398,6 +398,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" AllowSelection="true" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridSelectionSettings  EnableToggle="true" Type="SelectionType.Multiple"></TreeGridSelectionSettings>
@@ -648,7 +649,7 @@ Retrieve selected row indexes using the `GetSelectedRowIndexesAsync` method.
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private async void RowSelectHandler(RowSelectEventArgs<TreeData> Args)
+    private async Task RowSelectHandler(RowSelectEventArgs<TreeData> Args)
     {
         this.SelectedRowIndexes = await this.TreeGrid.GetSelectedRowIndexesAsync();   /// get the selected row indexes
 

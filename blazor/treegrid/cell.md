@@ -83,6 +83,7 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEvents QueryCellInfo="querycellinfo" TValue="TreeData"></TreeGridEvents>
@@ -121,12 +122,12 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
         {
             String[] s1 = new String[1] { "intro" };
             Args.Cell.AddClass(s1);
-            }
+        }
         else if (Args.Column.Field == "Progress" && Args.Data.Progress > 20)
         {
             String[] s2 = new String[1] { "intro1" };
             Args.Cell.AddClass(s2);
-            }
+        }
     }
 }
 
