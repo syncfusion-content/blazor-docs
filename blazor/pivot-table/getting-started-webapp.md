@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started Blazor Pivot Table Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Pivot Table component in Blazor Web App.
+title: Getting Started Blazor Pivot Table in Blazor Web App | Syncfusion
+description: Checkout and learn the documentation for getting started with Blazor Pivot Table component in Blazor Web App.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -162,6 +162,8 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+
 ### Add Blazor Pivot Table component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component inside the razor file.
@@ -235,13 +237,13 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Pivot Table component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Pivot Table component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the **BlazorWebApp** project root folder, then run:
+Open the terminal and navigate to the **BlazorWebApp** project root folder, then run:
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -256,7 +258,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the **BlazorWebApp** project root folder, then run:
+Open the command prompt and navigate to the **BlazorWebApp** project root folder, then run:
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
