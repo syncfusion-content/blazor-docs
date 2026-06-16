@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started Blazor ProgressButton Blazor Server App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor ProgressButton Components in Blazor Server App.
+title: Get Started Blazor ProgressButton in Blazor Server App | Syncfusion
+description: Checkout and learn the documentation for getting started with Blazor ProgressButton Components in Blazor Server App.
 platform: Blazor
 control: ProgressButton
 documentation: ug
 ---
 
-# Getting Started with Blazor ProgressButton in Server App
+# Getting Started with Blazor ProgressButton in Blazor Server App
 
 This section briefly explains about how to include [Blazor ProgressButton](https://www.syncfusion.com/blazor-components/blazor-progress-button) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -142,13 +142,16 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Add stylesheet and script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
+...
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
