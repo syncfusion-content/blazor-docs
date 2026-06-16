@@ -424,6 +424,22 @@ Shape = new UmlClassifierShape()
 }
 ```
 
+## Editing UML Classifier Members
+
+UML class diagrams support inline editing of classifier members. You can modify attribute names and types, method names and return types, and enumeration member names directly on the canvas.
+
+### How to Edit
+
+- **Double-click** on the row which needs to be edited, or press **F2** while it's selected, then edit the values in the input field.
+
+| Member Type | Editable Fields |
+|---|---|
+| **Attributes** | Name, Type |
+| **Methods** | Name, Return Type |
+| **Enumeration Members** | Name |
+
+> **Note:** The visibility scope symbol (e.g., `+`, `-`, `#`, `~`) cannot be edited through inline editing. To change the scope, modify the `Scope` property programmatically.
+
 ## UML Relationships
 
 UML class diagrams express the structural connections between classifiers through relationship connectors. Use the [RelationShip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html) connector shape to define the type of association and its cardinality.
