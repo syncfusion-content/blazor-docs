@@ -18,15 +18,15 @@ By default, Gantt task date values are validated based on predecessor values. Yo
 
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" ProjectStartDate="ProjectStart" ProjectEndDate="ProjectEnd"
  Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})" EnablePredecessorValidation="false">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
-                     Duration="Duration" Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
+                     Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
 @code {
     public SfGantt<TaskData> Gantt;
-    private DateTime ProjectStart = new DateTime(2022, 03, 31);
-    private DateTime ProjectEnd = new DateTime(2022, 07, 06);
+    private DateTime ProjectStart = new DateTime(2026, 03, 31);
+    private DateTime ProjectEnd = new DateTime(2026, 07, 06);
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -36,26 +36,26 @@ By default, Gantt task date values are validated based on predecessor values. Yo
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public string Duration { get; set; }
         public string Predecessor { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05)},
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Progress = 30, ParentID = 1},
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 40, Predecessor = "2fs", ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "1", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "2", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Progress = 30, ParentId = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "1", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "2", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -64,7 +64,7 @@ By default, Gantt task date values are validated based on predecessor values. Yo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhysZjqhxCOrQrM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHtnsHqvoVKVQe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Custom validation using TaskbarEditing event
 
@@ -90,14 +90,14 @@ The following code example explains enabling the [RespectLink](https://help.sync
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing></GanttEditSettings>
     <GanttEvents TValue="TaskData" TaskbarEditing="TaskbarEditing"></GanttEvents>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -111,27 +111,27 @@ The following code example explains enabling the [RespectLink](https://help.sync
     }
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08) },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 13) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06),  Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Progress = 30, ParentId = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "1", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "2", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -140,7 +140,7 @@ The following code example explains enabling the [RespectLink](https://help.sync
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSsDXgVRpnkcxM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHZHMdUbdNoKvO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Predecessor offset validation
 
@@ -153,18 +153,18 @@ The taskbar can be moved above the specified predecessor offset value, but if it
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" ProjectStartDate="ProjectStart" ProjectEndDate="ProjectEnd"
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px" ProjectStartDate="ProjectStart" ProjectEndDate="ProjectEnd"
          Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })" AutoUpdatePredecessorOffset="false">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
-                     Duration="Duration" Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
+                     Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>    
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    private DateTime ProjectStart = new DateTime(2022, 03, 31);
-    private DateTime ProjectEnd = new DateTime(2022, 07, 06);
-    private List<TaskData> TaskCollection { get; set; }
+    
+    private DateTime ProjectStart = new DateTime(2026, 03, 31);
+    private DateTime ProjectEnd = new DateTime(2026, 07, 06);
+    public List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -173,26 +173,26 @@ The taskbar can be moved above the specified predecessor offset value, but if it
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public string Duration { get; set; }
         public string Predecessor { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 04)},
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 04), Progress = 30, ParentID = 1},
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 40, Predecessor = "2fs", ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 04), Duration = "1", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 04) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 07), Duration = "3", Progress = 40, Predecessor = "6", ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 04), Duration = "2", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Progress = 30, ParentId = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "1", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "2", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -201,7 +201,7 @@ The taskbar can be moved above the specified predecessor offset value, but if it
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBSsDZKrRmnkxBc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBHtnMxgPPdMVbR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> When `EnablePredecessorOffsetValidation` is enabled, the predecessor offset will not be updated on dragging the taskbar. You can update the predecessor offset either by cell edit or dialog edit.
 
@@ -216,18 +216,18 @@ In the following code example, the connector line connected from task ID 2 to ta
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate"
-                     Duration="Duration" Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
+                     Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>
     <GanttEvents TaskbarEditing="TaskbarEditingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    private DateTime ProjectStart = new DateTime(2022, 3, 24);
-    private DateTime ProjectEnd = new DateTime(2022, 7, 6);
-    private List<TaskData> TaskCollection { get; set; }
+  
+    private DateTime ProjectStart = new DateTime(2026, 3, 24);
+    private DateTime ProjectEnd = new DateTime(2026, 7, 6);
+    public List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -241,26 +241,26 @@ In the following code example, the connector line connected from task ID 2 to ta
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public string Duration { get; set; }
         public string Predecessor { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 04)},
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 04), Progress = 30, ParentID = 1},
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 40, Predecessor = "2fs", ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 04), Duration = "1", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 04) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 04), Duration = "2", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Progress = 30, ParentId = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "1", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "2", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -269,6 +269,6 @@ In the following code example, the connector line connected from task ID 2 to ta
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBICtjghxOULcTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhxNxingkZucsiM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > [EnablePredecessorValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) API is used to enable/disable validation based on predecessor values both on load time and on edit actions like cell editing, dialog editing, and on predecessor drawing. Whereas, [EnablePredecessorValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TaskbarEditingEventArgs-1.html#Syncfusion_Blazor_Gantt_TaskbarEditingEventArgs_1_EnablePredecessorValidation) event argument is used to enable/disable validation only on predecessor drawing. 

@@ -23,26 +23,26 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
-<SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData>? GanttInstance { get; set; } = new();
+    public SfGantt<TaskData>? Gantt { get; set; } = new();
     private List<Syncfusion.Blazor.Navigations.ToolbarItem> toolbarItem = new List<Syncfusion.Blazor.Navigations.ToolbarItem>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    private List<TaskData> TaskCollection = GetTaskCollection();
+    public List<TaskData> TaskCollection = GetTaskCollection();
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
         public string Predecessor { get; set; }
     }
 
@@ -50,14 +50,14 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1, Predecessor = "2" },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 , Predecessor = "3" },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 10), EndDate = new DateTime(2026, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 08), Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 08), Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
         };
         return Tasks;
     }
@@ -68,7 +68,7 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
         {
             GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
             // enables multi-page mode during PDF export.
-            await GanttInstance.ExportToPdfAsync(pdfExportProperties, true); 
+            await Gantt.ExportToPdfAsync(pdfExportProperties, true); 
         }
     }
 }
@@ -76,7 +76,7 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhnDBWiLWZgJOqk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhxZnCHgwKTvBwo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## PDF export scaling in Blazor Gantt Chart
 
@@ -115,26 +115,26 @@ These properties provide precise control over scaling and pagination, enabling c
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
-<SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExporting="PdfExportingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData>? GanttInstance { get; set; } = new();
+    public SfGantt<TaskData>? Gantt { get; set; } = new();
     private List<ToolbarItem> toolbarItem = new List<ToolbarItem>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    private List<TaskData> TaskCollection = GetTaskCollection();
+    public List<TaskData> TaskCollection = GetTaskCollection();
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
         public string Predecessor { get; set; }
     }
 
@@ -142,14 +142,14 @@ These properties provide precise control over scaling and pagination, enabling c
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1, Predecessor = "2" },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 , Predecessor = "3" },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 10), EndDate = new DateTime(2026, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 08), Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 08), Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
         };
         return Tasks;
     }
@@ -159,7 +159,7 @@ These properties provide precise control over scaling and pagination, enabling c
         if (args?.Item?.Id == "PdfExport")
         {
             GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
-            await GanttInstance.ExportToPdfAsync(pdfExportProperties, true);
+            await Gantt.ExportToPdfAsync(pdfExportProperties, true);
         }
     }
     public async Task PdfExportingHandler(PdfExportEventArgs args)
@@ -177,7 +177,7 @@ These properties provide precise control over scaling and pagination, enabling c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVnZrWChCgvrfHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHNdsdAQesofDb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Export Gantt Chart to PDF with custom scaling
 
@@ -197,26 +197,26 @@ This approach provides precise control over the overall Gantt Chart size while p
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
-<SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExporting="PdfExportingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData>? GanttInstance { get; set; } = new();
+    public SfGantt<TaskData>? Gantt { get; set; } = new();
     private List<ToolbarItem> toolbarItem = new List<ToolbarItem>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    private List<TaskData> TaskCollection = GetTaskCollection();
+    public List<TaskData> TaskCollection = GetTaskCollection();
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
         public string Predecessor { get; set; }
     }
 
@@ -224,14 +224,14 @@ This approach provides precise control over the overall Gantt Chart size while p
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1, Predecessor = "2" },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 , Predecessor = "3" },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 10), EndDate = new DateTime(2026, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 08), Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 08), Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
         };
         return Tasks;
     }
@@ -241,7 +241,7 @@ This approach provides precise control over the overall Gantt Chart size while p
         if (args?.Item?.Id == "PdfExport")
         {
             GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
-            await GanttInstance.ExportToPdfAsync(pdfExportProperties, true);
+            await Gantt.ExportToPdfAsync(pdfExportProperties, true);
         }
     }
     public async Task PdfExportingHandler(PdfExportEventArgs args)
@@ -255,7 +255,7 @@ This approach provides precise control over the overall Gantt Chart size while p
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrRNBMiLWxgQKBr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrxtRWngQxyjQQL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations
 
