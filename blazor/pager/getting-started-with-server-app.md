@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor Pager in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Pager in Blazor Server App | Syncfusion
 description: Learn how to configure and use the Syncfusion Blazor Pager component in a Blazor Server App for efficient navigation and paging.
 platform: Blazor
 control: Pager
@@ -143,15 +143,15 @@ builder.Services.AddSyncfusionBlazor();
 ### Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
