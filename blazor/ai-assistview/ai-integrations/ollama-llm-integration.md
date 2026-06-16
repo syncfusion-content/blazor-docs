@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LLM Model with Blazor AI AssistView Component | Syncfusion
+title: LLM Model with Blazor AI AssistView Component | Syncfusion®
 description: Checkout and learn about Integration of LLM Model with Blazor AI AssistView component in Blazor WebAssembly Application.
 platform: Blazor
 control: AI AssistView
@@ -80,9 +80,9 @@ ollama serve
 
 ## Configure AI AssistView with Ollama
 
-To integrate Ollama with the Syncfusion Blazor AI AssistView component in your Blazor application:
+To integrate Ollama with the Blazor AI AssistView component in your Blazor application:
 
-* Configure the AI services in the `Program.cs` file to register the Ollama client and Syncfusion Blazor services.
+* Configure the AI services in the `Program.cs` file to register the Ollama client and Blazor services.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
