@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Blazor OTP Input in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor OTP Input Components in Blazor Web App.
+title: Getting Started with Blazor OTP Input in Blazor Web App | Syncfusion
+description: Checkout and learn the documentation for getting started with Blazor OTP Input Components in Blazor Web App.
 platform: Blazor
 control: OTP Input
 documentation: ug
@@ -147,10 +147,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="index.html" %}
+{% highlight html tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
