@@ -141,9 +141,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
- 
+
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -194,7 +194,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Tr
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor TreeMap component will render in your default web browser.
 
 {% endtabcontent %}
 
