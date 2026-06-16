@@ -9,7 +9,7 @@ documentation: ug
 
 # Segments in Blazor Diagram Component
 
-The path of the connector is defined with a collection of segments. Each segment determines how the connector travels between its source and target points. The Diagram component supports the following types of segments.
+The path of the connector is defined with a collection of segments. Each segment determines how the connector travels between its source and target points. The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component supports the following types of segments.
 
 * Straight Segments
 * Orthogonal Segments

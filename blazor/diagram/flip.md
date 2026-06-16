@@ -9,7 +9,7 @@ documentation: ug
 
 # Flip in Blazor Diagram Component
 
-The diagram component supports flipping nodes, connectors, and groups. Flipping creates a mirror image of the original element, allowing for versatile visual representations within the diagram.
+The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component supports flipping nodes, connectors, and groups. Flipping creates a mirror image of the original element, allowing for versatile visual representations within the diagram.
 
 ## How to Flip the Node or Group
 

@@ -13,7 +13,7 @@ The diagram's core functionalities are implemented through a comprehensive set o
 
 ## How to Add Nodes Using the Add Method
 
-Create a node in a Blazor diagram, define a Node object and add it to the diagram's nodes collection using the `Add` method. It's crucial to call the `Add` method within the `OnInitialized` lifecycle method. This approach ensures that each diagram element is properly measured and rendered individually before the entire diagram is displayed. Attempting to use the `Add` method outside of `OnInitialized` is not recommended, as it may lead to unexpected behavior or rendering issues in the diagram. The following code example shows how to add a node to the diagram.
+Create a node in a [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), define a Node object and add it to the diagram's nodes collection using the `Add` method. It's crucial to call the `Add` method within the `OnInitialized` lifecycle method. This approach ensures that each diagram element is properly measured and rendered individually before the entire diagram is displayed. Attempting to use the `Add` method outside of `OnInitialized` is not recommended, as it may lead to unexpected behavior or rendering issues in the diagram. The following code example shows how to add a node to the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

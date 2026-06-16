@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Diagram Component
 
-* The [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) can be populated with [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) from an external data source.
+* The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) can be populated with [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) from an external data source.
 
 * Diagram exposes data-related properties to specify the data source fields from where the node information has to be retrieved.
 
@@ -2049,7 +2049,7 @@ A complete working sample can be downloaded from [github](https://github.com/Syn
 
 * [How to Specify Parent Child Relationship in Blazor Diagram Datasource](https://support.syncfusion.com/kb/article/16306/how-to-specify-parent-child-relationship-in-blazor-diagram-datasource)
 
-* [Why is it Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
+* [Why is it Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
 
 * [How to Create a Family Tree Structure in Blazor Diagram](https://support.syncfusion.com/kb/article/16300/how-to-create-a-family-tree-structure-in-blazor-diagram)
 

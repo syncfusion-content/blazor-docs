@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand and Collapse Support for Nodes in Blazor Diagram Component
 
-The Diagram component supports to describe the state of the node. i.e., whether the node is in an expanded or collapsed state. Use the [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) property on a node to expand or collapse its children nodes. Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
+The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component supports to describe the state of the node. i.e., whether the node is in an expanded or collapsed state. Use the [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) property on a node to expand or collapse its children nodes. Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
 
 The following Node properties represent the state of the node and allows user to Expand and Collapse the desired Node :
 

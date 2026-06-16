@@ -9,7 +9,7 @@ documentation: ug
 
 # Node Interaction in Diagram Component
 
-Diagram provides the support to select, drag, resize, or rotate the node interactively.
+[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) provides the support to select, drag, resize, or rotate the node interactively.
 
 ## How to Select a Node
 

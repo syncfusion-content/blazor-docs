@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview in Blazor Diagram Component
 
-The [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) provides a miniature view of the entire diagram content, offering a comprehensive preview at a glance. This powerful feature enables users to effortlessly navigate, pan, and zoom to specific areas of interest within large and complex diagrams. By presenting a bird's-eye view, it enhances the user's ability to understand the diagram's structure and quickly locate desired sections, significantly improving overall usability and efficiency.
+The [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) provides a miniature view of the entire diagram content, offering a comprehensive preview at a glance. This powerful feature enables users to effortlessly navigate, pan, and zoom to specific areas of interest within large and complex diagrams. By presenting a bird's-eye view, it enhances the user's ability to understand the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) structure and quickly locate desired sections, significantly improving overall usability and efficiency.
 
 ## Usage Scenario
 
@@ -217,4 +217,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See also 
 
-* [How to Integrate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram with Overview Support in SfTab Component](https://support.syncfusion.com/kb/article/17263/how-to-integrating-syncfusion-blazor-diagram-with-overview-support-in-sftab-component)
+* [How to Integrate Blazor Diagram with Overview Support in SfTab Component](https://support.syncfusion.com/kb/article/17263/how-to-integrating-syncfusion-blazor-diagram-with-overview-support-in-sftab-component)

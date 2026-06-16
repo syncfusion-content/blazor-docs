@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Use the Created Event
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Created) event is raised after the Diagram component is fully rendered and initialized. This event provides an opportunity to execute custom logic or perform specific actions immediately after the diagram is created. For instance, use this event to programmatically select objects, modify diagram properties, or initialize additional components that depend on the diagram's existence.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Created) event is raised after the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component is fully rendered and initialized. This event provides an opportunity to execute custom logic or perform specific actions immediately after the diagram is created. For instance, use this event to programmatically select objects, modify diagram properties, or initialize additional components that depend on the diagram's existence.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -470,7 +470,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See also
 
-* [How to Identify the Clicked Diagram Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+* [How to Identify the Clicked Diagram Elements in Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
 
 * [How to Notify the Double-Click Event in Blazor Diagram](https://support.syncfusion.com/kb/article/16014/how-to-notify-the-double-click-event-in-blazor-diagram)
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Scroll Settings in Diagram Component
 
-The diagram can be scrolled using vertical and horizontal scrollbars. In addition to the scrollbars, the mouse wheel can be used to scroll the diagram. The Diagram’s [ScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html) allows to read the current scroll status, current zoom and zoom factor values. 
+The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) can be scrolled using vertical and horizontal scrollbars. In addition to the scrollbars, the mouse wheel can be used to scroll the diagram. The Diagram’s [ScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html) allows to read the current scroll status, current zoom and zoom factor values. 
 
 ## How to Get Current Scroll Status
 
@@ -384,4 +384,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See also
 
-* [How to Detect Nodes That Cross Page Breaks in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)
+* [How to Detect Nodes That Cross Page Breaks in Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)

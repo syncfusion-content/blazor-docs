@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Diagram Component
 
-In a Graphical User Interface (GUI), a tooltip is an informative pop-up message that appears when the user hovers their cursor over an interactive element. The diagram component offers comprehensive tooltip support, enhancing user experience during various interactions. These tooltips are displayed when dragging, resizing, or rotating nodes, as well as when the mouse hovers over any diagram element, providing contextual information and improving overall usability.
+In a Graphical User Interface (GUI), a tooltip is an informative pop-up message that appears when the user hovers their cursor over an interactive element. The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component offers comprehensive tooltip support, enhancing user experience during various interactions. These tooltips are displayed when dragging, resizing, or rotating nodes, as well as when the mouse hovers over any diagram element, providing contextual information and improving overall usability.
 
 ## How to Show Default Tooltip
 

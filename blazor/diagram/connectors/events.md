@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Handle Selection Change Event
 
-* While selecting the diagram elements, the following events can be used to do the customization.
+* While selecting the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) elements, the following events can be used to do the customization.
 * `SelectionChanging` occurs before the selection is committed and can be canceled; `SelectionChanged` occurs after selection is updated and is typically used for UI updates or logging.
 
 |Event Name|Arguments|Description|

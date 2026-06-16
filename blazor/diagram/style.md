@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Customize the Connector Endpoint Handle
 
-To customize the visual appearance of the connector endpoint handle in a diagram, apply the following CSS code:
+To customize the visual appearance of the connector endpoint handle in a [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), apply the following CSS code:
 
 ```cshtml
 <style>

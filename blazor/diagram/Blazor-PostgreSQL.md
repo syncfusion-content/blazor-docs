@@ -9,7 +9,7 @@ documentation: ug
 
 # Loading Blazor Diagram from PostgreSQL Database
 
-This guide explains how to display an organizational chart using data stored in a PostgreSQL database and visualize it with the Syncfusion® Blazor Diagram component.
+This guide explains how to display an organizational chart using data stored in a PostgreSQL database and visualize it with the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component.
 
 It covers:
 * Design and store organizational chart data in a database.
@@ -543,7 +543,7 @@ The backend setup is now complete. The next section focuses on configuring the B
 
 ### Step 1: Install and Configure Blazor Diagram Component
 
-This section explains how to render an organizational chart using the Syncfusion® Blazor Diagram component by binding it to data loaded from the backend API.
+This section explains how to render an organizational chart using the Blazor Diagram component by binding it to data loaded from the backend API.
 
 **Instructions:**
 

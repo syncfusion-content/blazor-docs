@@ -9,7 +9,7 @@ documentation: ug
 
 # Constraints in Diagram Component
 
-Constraints are used to enable or disable specific behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
+Constraints are used to enable or disable specific behaviors of the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
 
 To learn more about bitwise operators, refer to [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 
@@ -838,7 +838,7 @@ In the previous example, check whether the rotate constraints are enabled in a n
 
 ## See also
 
-* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+* [How to Disable Node Interaction While Maintaining Layout Updates in Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
 
 * [How to Zoom the Diagram Without Ctrl + Wheel and Enable Pan on Right-Click Instead of Left-Click in Blazor Diagram](https://support.syncfusion.com/kb/article/18992/how-to-zoom-the-diagram-without-ctrl--wheel-and-enable-pan-on-right-click-instead-of-left-click-in-blazor-diagram)
 

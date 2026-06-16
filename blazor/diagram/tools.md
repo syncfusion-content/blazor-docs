@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Use Drawing Tools
 
-Use drawing tool to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
+Use drawing tool to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) page.
 
 ## How to Draw Shapes Using the Drawing Tool
 

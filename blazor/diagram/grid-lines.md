@@ -9,7 +9,7 @@ documentation: ug
 
 # Grid Lines in Blazor Diagram Component
 
-Gridlines are the pattern of lines drawn behind diagram elements. They provide visual guidance while dragging or arranging objects on the diagram surface. The [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) property customizes gridlines and controls snapping behavior in the diagram.
+Gridlines are the pattern of lines drawn behind diagram elements. They provide visual guidance while dragging or arranging objects on the diagram surface. The [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) property customizes gridlines and controls snapping behavior in the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram).
 
 ## How to Customize Grid Lines Visibility
 

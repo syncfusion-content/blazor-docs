@@ -14,7 +14,7 @@ A [Swimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swi
 ![Swimlane Content](./Swimlane-images/Swimlane_Default.PNG)
 
 ## How to Create a Swimlane
-A swimlane can be created and added to the diagram either programmatically or interactively.
+A swimlane can be created and added to the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) either programmatically or interactively.
 
 ### How to Add Swimlane Through Swimlanes Collection
 

@@ -12,7 +12,7 @@ documentation: ug
 
 A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or responsible department in a business process that helps to map a process within the functional unit or between other functional units.
 
-Multiple lanes can be added to a swimlane and rendered in the diagram. Lanes are automatically stacked inside the swimlane in the order they are added.
+Multiple lanes can be added to a swimlane and rendered in the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram). Lanes are automatically stacked inside the swimlane in the order they are added.
 
 ## How to Create an Empty Lane
 

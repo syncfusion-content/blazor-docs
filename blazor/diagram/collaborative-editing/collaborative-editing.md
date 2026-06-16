@@ -13,7 +13,7 @@ Collaborative editing enables multiple users to edit diagrams simultaneously in 
 
 ## Purpose
 
-Collaborative editing in diagram control allows multiple users to edit and review diagrams in real time, ensuring accuracy, consistency, and faster updates. It streamlines teamwork by reducing delays, improving communication through comments, and maintaining data integrity with version tracking.
+Collaborative editing in [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) control allows multiple users to edit and review diagrams in real time, ensuring accuracy, consistency, and faster updates. It streamlines teamwork by reducing delays, improving communication through comments, and maintaining data integrity with version tracking.
 
 ## Configuration
 
