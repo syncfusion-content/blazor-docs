@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor 3DChart Component | Syncfusion
+title: Getting Stared with Blazor 3DChart Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor 3D Chart component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: 3D Chart
@@ -11,73 +11,37 @@ documentation: ug
 
 # Getting Started with Blazor 3D Chart Component in Blazor Server App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+
+### Create a new Blazor Server App 
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor App in Visual Studio
-
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
+Run the following command to create a new Blazor Server App.
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+```bash
+dotnet new blazor -o BlazorApp --interactivity Server
+```
 
-## Create a new Blazor App in Visual Studio Code
-
-Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
-
-Alternatively, create a Server application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
-
-{% tabs %}
-
-{% highlight c# tabtitle="Blazor Server App" %}
-
-dotnet new blazor -o BlazorApp -int Server
-cd BlazorApp
-
-{% endhighlight %}
-
-{% endtabs %}
+Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
+Run the following command to create a new Blazor Server App.
 
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a Blazor Server App using .NET CLI
-
-Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp -int Server
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
+```bash
+dotnet new blazor -o BlazorApp --interactivity Server
+```
 
 {% endtabcontent %}
 
@@ -85,21 +49,46 @@ cd BlazorApp
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+### Install the required Blazor packages
 
-Install [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-Alternatively, run the following command in the Package Manager Console to achieve the same.
+{% tabcontents %}
 
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% tabcontent Visual Studio %}
 
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet package (`Syncfusion.Blazor.Chart3D`) and install them.
+
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
+
+```bash
 Install-Package Syncfusion.Blazor.Chart3D -Version {{ site.releaseversion }}
+```
 
-{% endhighlight %}
-{% endtabs %}
+{% endtabcontent %}
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+{% tabcontent Visual Studio Code %}
+
+Open the terminal and run the following commands.
+
+```bash
+dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
+```
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Open the command prompt and run the following commands.
+
+```bash
+dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
+```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Add import namespaces
 
@@ -114,9 +103,9 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+### Register the Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Server App.
+Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -132,33 +121,28 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~/Components/App.razor** file.
-
-```html
-
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-```
-
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
-## Add Blazor 3D Chart component
-
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
-
-N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight html tabtitle="App.razor" %}
 
-@* desired render mode define here *@
-@rendermode InteractiveServer
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
 
+N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+
+### Add Blazor 3D Chart component
+
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component inside the razor file.
+
+N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@rendermode InteractiveServer
 
 <SfChart3D>
 
@@ -167,7 +151,37 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor 3D Chart component in the default web browser.
+**Run the application**
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor 3D chart component will render in your default web browser.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+* Open the terminal and run the following command.
+
+```bash
+dotnet run
+```
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+* Open the command prompt and run the following command.
+
+```bash
+dotnet run
+```
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Populate Blazor 3D Chart with data
 
@@ -201,8 +215,6 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Chart3D
-
 <SfChart3D>
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
@@ -233,7 +245,7 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLJZHCKiVjCNqCE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnXHjFqigAUBMv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add 3D Chart title
 
@@ -255,7 +267,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLfNRsgCVjHdioT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVdZRZbgWJkPGWh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable legend
 
@@ -276,7 +288,7 @@ You can use legend for the 3D Chart by setting the `Visible` property to **true*
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpDRiKMriVAFPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLxDdNbqVmczTuh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add data label
 
@@ -297,7 +309,7 @@ You can add data labels to improve the readability of the 3D Chart. This can be 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDxCqCLizaoKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVxXxNPKVlFPKwB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable tooltip
 
@@ -319,10 +331,10 @@ The tooltip is useful when you cannot display information by using the data labe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzXHWUiVMwxISt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLnDxZbgduLcrQe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
