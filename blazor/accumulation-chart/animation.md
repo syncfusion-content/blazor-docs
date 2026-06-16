@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Animation in Syncfusion Blazor Accumulation Chart component and more.
+title: Animation in Blazor Accumulation Chart Component | Syncfusion®
+description: Checkout and learn here all about Animation in Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
