@@ -726,3 +726,113 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTtWrFGgPwVFGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Show filter operators in filter bar cell
+
+The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar using the **ShowFilterBarOperator** property.
+
+When this property is enabled, an operator dropdown is displayed in each filter bar cell when the filter icon is clicked. Users can select the required filtering operator based on the column type, eliminating the need to manually enter filter expressions.
+
+Each filter bar cell also includes a **clear filter icon** that is rendered individually for every column and behaves based on the filter state of that specific column. The clear filter icon is **enabled** when a filter is applied to the corresponding column and remains **disabled** when no filter is active. This column-specific behavior provides better control and improves visibility when managing filters across multiple columns.
+
+**Benefits of operator-based filtering**
+
+* Eliminates need for manual operator expression input
+* Provides type-safe input controls based on column data type
+* Improves filtering precision and consistency
+* Delivers a structured and user-friendly filtering experience
+
+**Column-specific filter controls**
+
+The filter bar dynamically renders input controls based on the corresponding column data type, ensuring type-safe and intuitive interaction.
+
+| Column Type | Filter Control |
+|-------------|----------------|
+| String | Text input fields |
+| Numeric | Numeric input controls |
+| Date | Date picker controls |
+| Time | Time picker controls |
+| DateTime | DateTime picker controls |
+| Boolean | Dropdown with True/False options |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridFilterSettings  ShowFilterBarOperator="true"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.IsSelected) HeaderText="Is Selected" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName, bool IsSelected)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+        this.IsSelected = IsSelected;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+
+            int OrderID = 10247;
+
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali", false));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten", true));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes", false));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock", false));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices", false));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes", true));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese", false));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt", false));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import", true));
+                OrderID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public bool IsSelected { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
