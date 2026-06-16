@@ -21,6 +21,7 @@ The export behavior can be customized using the [ExcelExportProperties](https://
 * Exporting multiple Grids.
 * Customizing data using queries.
 * Defining delimiters for CSV export.
+* Encoding support for CSV export.
 * Applying themes.
 
 ## Export current page records
@@ -1134,6 +1135,121 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxNHZhrfXTmOyO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Encoding support for CSV Exporting
+
+The Syncfusion Blazor DataGrid provides support for specifying encoding in exported CSV documents. This capability enables customization of the character encoding format to meet specific requirements. To configure encoding, include the **System.Text** namespace in the application. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the official Microsoft documentation [here](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-10.0).
+
+> By default, the **Encoding.UTF8** type is used to export the CSV document.
+
+To customize the encoding type, use the **Encoding** property inside the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class, and provide the customization using the Encoding Enum which derives from the System.Text namespace. Please refer the below sample for implementation.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport", "PdfExport" })" AllowExcelExport="true" AllowPdfExport="true">
+    <GridEvents OnToolbarClick="ToolbarClick" TValue="OrdersDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Type="ColumnType.Date" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code 
+{
+    SfGrid<OrdersDetails>? Grid;
+    public List<OrdersDetails>? GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrdersDetails.GetAllRecords();
+    }
+
+    public void ToolbarClick(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (this.Grid != null)
+        {
+            if (args.Item.Id == "Grid_pdfexport")
+            {
+                this.Grid.ExportToPdfAsync();
+            }
+            else if (args.Item.Id == "Grid_excelexport")
+            {
+                this.Grid.ExportToExcelAsync();
+            }
+            else
+            {
+                this.Grid.ExportToCsvAsync(new ExcelExportProperties
+                {
+                    Encoding = System.Text.Encoding.UTF8,
+                });
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+ public class OrdersDetails
+ {
+     public OrdersDetails()
+     {
+     }
+     public OrdersDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, DateTime ShippedDate, string ShipAddress, string Email)
+     {
+         this.OrderID = OrderID;
+         this.CustomerID = CustomerId;
+         this.EmployeeID = EmployeeId;
+         this.Freight = Freight;
+         this.ShipCity = ShipCity;
+         this.Verified = Verified;
+         this.OrderDate = OrderDate;
+         this.ShipName = ShipName;
+         this.ShipCountry = ShipCountry;
+         this.ShippedDate = ShippedDate;
+         this.ShipAddress = ShipAddress;
+         this.Email = Email;
+     }
+     public static List<OrdersDetails> GetAllRecords()
+     {
+         List<OrdersDetails> order = new List<OrdersDetails>();
+         int code = 10000;
+         for (int i = 1; i <= 15; i++)
+         {
+             order.Add(new OrdersDetails(code + 1, "€ ALFKI", i + 0, Math.Round((2.3 * i), 2), false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6", "alfki@domain.com"));
+             order.Add(new OrdersDetails(code + 2, "€ ANATR", i + 2, Math.Round((3.3 * i), 2), true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123", "anatr@domain.com"));
+             order.Add(new OrdersDetails(code + 3, "¤ ANTON", i + 1, Math.Round((4.3 * i), 2), false, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo", "anton@domain.com"));
+             order.Add(new OrdersDetails(code + 4, "¤ BLONP", i + 3, Math.Round((5.3 * i), 2), true, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7", "blonp@domain.com"));
+             order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, Math.Round((6.3 * i), 2), false, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S.", "bolid@domain.com"));
+             code += 5;
+         }
+         return order;
+     }
+     public int? OrderID { get; set; }
+     public string? CustomerID { get; set; }
+     public int? EmployeeID { get; set; }
+     public double? Freight { get; set; }
+     public string? ShipCity { get; set; }
+     public bool Verified { get; set; }
+     public DateTime? OrderDate { get; set; }
+     public string? ShipName { get; set; }
+     public string? ShipCountry { get; set; }
+     public DateTime? ShippedDate { get; set; }
+     public string? ShipAddress { get; set; }
+     public string? Email { get; set; }
+ }
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Conditional cell formatting
 
