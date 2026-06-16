@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started Blazor Range Selector in Blazor WASM App | Syncfusion
+title: Getting Started Blazor Range Selector in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Range Selector component in Blazor WebAssembly Application.
 platform: Blazor
 control: Range Selector
