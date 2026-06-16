@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor TextArea in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor TextArea component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor TextArea component in Blazor WebAssembly Application.
 platform: Blazor
 control: TextArea
 documentation: ug
