@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get selected items from Blazor ListView Component | Syncfusion®
-description: Learn here all about getting the selected items in Blazor ListView component and much more details.
+description: Learn here all the features about getting the selected items in Blazor ListView component and much more details.
 platform: Blazor
 control: ListView
 documentation: ug
