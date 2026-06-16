@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Maps Component | Syncfusion®
-description: Check out and learn about all available events and event handling in the Blazor Maps component.
+description: Check out and learn about all available events and event handling in the Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
