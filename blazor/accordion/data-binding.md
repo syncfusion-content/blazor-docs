@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data binding in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Data binding in Syncfusion Blazor Accordion component and much more.
+title: Data binding in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about Data binding in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
