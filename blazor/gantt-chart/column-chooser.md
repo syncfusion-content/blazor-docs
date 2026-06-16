@@ -21,14 +21,14 @@ You can add a custom column chooser option to the toolbar using the [Toolbar](ht
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Toolbar="@ToolbarItems" ShowColumnChooser="true" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickAsync" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> GanttInstance;
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     public List<Object> ToolbarItems = new List<Object>() {
         new Syncfusion.Blazor.Navigations.ToolbarItem() { 
             Text = "Column Chooser", TooltipText = "Column Chooser", Id = "columnchooser"
@@ -50,27 +50,27 @@ You can add a custom column chooser option to the toolbar using the [Toolbar](ht
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() 
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 09), Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 08), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -79,7 +79,7 @@ You can add a custom column chooser option to the toolbar using the [Toolbar](ht
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVysZWwKLepScXX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLxDHsfhYPrNVmI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Note**: Use <kbd>Tab</kbd> and arrow keys for keyboard navigation in the chooser. Test on mobile devices for responsiveness.
 
@@ -223,30 +223,30 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
     {
         List<TaskData> Tasks = new List<TaskData>
         {
-            new() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), Done = "Yes" },
-            new() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "10", Progress = 30, ParentID = 1, Done = "No" },
-            new() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1, Predecessor = "2", Done = "No", IsMilestone = true },
-            new() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 30, ParentID = 1, Predecessor = "3", Done = "No" },
-            new() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), Done = "Yes" },
-            new() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5, Done = "No" },
-            new() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "13", Progress = 40, ParentID = 5, Predecessor = "6+2", Done = "No", IsMilestone = true },
-            new() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "25", Progress = 30, ParentID = 5, Predecessor = "7-2", Done = "No" },
-            new() { TaskID = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2022, 04, 07), EndDate = new DateTime(2022, 04, 21), Done = "Yes" },
-            new() { TaskID = 10, TaskName = "Customer Strength", StartDate = new DateTime(2022, 04, 07), Duration = "3", Progress = 30, ParentID = 9, Done = "Yes" },
-            new() { TaskID = 11, TaskName = "Competitor analysis", StartDate = new DateTime(2022, 04, 07), Duration = "13", Progress = 40, ParentID = 10, Done = "Yes" },
-            new() { TaskID = 12, TaskName = "Product Strength Analysis", StartDate = new DateTime(2022, 04, 07), Duration = "25", Progress = 30, ParentID = 11, Done = "No" },
-            new() { TaskID = 13, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 07), EndDate = new DateTime(2022, 04, 21), Done = "Yes" },
-            new() { TaskID = 14, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 22), Duration = "25", Progress = 30, ParentID = 13, Done = "Yes" },
-            new() { TaskID = 15, TaskName = "List materials", StartDate = new DateTime(2022, 04, 07), Duration = "12", Progress = 40, ParentID = 14, Done = "Yes" },
-            new() { TaskID = 16, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 07), Duration = "6", Progress = 30, ParentID = 15, Done = "Yes" },
-            new() { TaskID = 17, TaskName = "Identifying raw materials", StartDate = new DateTime(2022, 04, 07), Duration = "6", ParentID = 16, Done = "Yes" },
-            new() { TaskID = 18, TaskName = "Define cost plan", StartDate = new DateTime(2022, 04, 12), Progress = 30, ParentID = 17, Done = "Yes" },
-            new() { TaskID = 19, TaskName = "Manufacturing cost", StartDate = new DateTime(2022, 04, 12), Duration = "7", Progress = 40, ParentID = 18, Done = "Yes" },
-            new() { TaskID = 20, TaskName = "Selling cost", StartDate = new DateTime(2022, 04, 12), Duration = "6", Progress = 30, ParentID = 19, Done = "Yes" },
-            new() { TaskID = 21, TaskName = "Development of final design", StartDate = new DateTime(2022, 04, 12), Duration = "5", ParentID = 20, Done = "Yes" },
-            new() { TaskID = 22, TaskName = "Develop dimensions and design", StartDate = new DateTime(2022, 04, 12), Duration = "15", Progress = 30, ParentID = 21, Done = "Yes" },
-            new() { TaskID = 23, TaskName = "Develop designs to meet industry", StartDate = new DateTime(2022, 04, 12), Duration = "15", Progress = 40, ParentID = 22, Done = "Yes" },
-            new() { TaskID = 24, TaskName = "Include all the details", StartDate = new DateTime(2022, 04, 12), Duration = "25", Progress = 30, ParentID = 23, Done = "No" }
+            new() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), Done = "Yes" },
+            new() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "10", Progress = 30, ParentID = 1, Done = "No" },
+            new() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "4", Progress = 40, ParentID = 1, Predecessor = "2", Done = "No", IsMilestone = true },
+            new() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 30, ParentID = 1, Predecessor = "3", Done = "No" },
+            new() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), Done = "Yes" },
+            new() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 30, ParentID = 5, Done = "No" },
+            new() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 06), Duration = "13", Progress = 40, ParentID = 5, Predecessor = "6+2", Done = "No", IsMilestone = true },
+            new() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 06), Duration = "25", Progress = 30, ParentID = 5, Predecessor = "7-2", Done = "No" },
+            new() { TaskID = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 21), Done = "Yes" },
+            new() { TaskID = 10, TaskName = "Customer Strength", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, ParentID = 9, Done = "Yes" },
+            new() { TaskID = 11, TaskName = "Competitor analysis", StartDate = new DateTime(2026, 04, 07), Duration = "13", Progress = 40, ParentID = 10, Done = "Yes" },
+            new() { TaskID = 12, TaskName = "Product Strength Analysis", StartDate = new DateTime(2026, 04, 07), Duration = "25", Progress = 30, ParentID = 11, Done = "No" },
+            new() { TaskID = 13, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 21), Done = "Yes" },
+            new() { TaskID = 14, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 22), Duration = "25", Progress = 30, ParentID = 13, Done = "Yes" },
+            new() { TaskID = 15, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "12", Progress = 40, ParentID = 14, Done = "Yes" },
+            new() { TaskID = 16, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "6", Progress = 30, ParentID = 15, Done = "Yes" },
+            new() { TaskID = 17, TaskName = "Identifying raw materials", StartDate = new DateTime(2026, 04, 07), Duration = "6", ParentID = 16, Done = "Yes" },
+            new() { TaskID = 18, TaskName = "Define cost plan", StartDate = new DateTime(2026, 04, 12), Progress = 30, ParentID = 17, Done = "Yes" },
+            new() { TaskID = 19, TaskName = "Manufacturing cost", StartDate = new DateTime(2026, 04, 12), Duration = "7", Progress = 40, ParentID = 18, Done = "Yes" },
+            new() { TaskID = 20, TaskName = "Selling cost", StartDate = new DateTime(2026, 04, 12), Duration = "6", Progress = 30, ParentID = 19, Done = "Yes" },
+            new() { TaskID = 21, TaskName = "Development of final design", StartDate = new DateTime(2026, 04, 12), Duration = "5", ParentID = 20, Done = "Yes" },
+            new() { TaskID = 22, TaskName = "Develop dimensions and design", StartDate = new DateTime(2026, 04, 12), Duration = "15", Progress = 30, ParentID = 21, Done = "Yes" },
+            new() { TaskID = 23, TaskName = "Develop designs to meet industry", StartDate = new DateTime(2026, 04, 12), Duration = "15", Progress = 40, ParentID = 22, Done = "Yes" },
+            new() { TaskID = 24, TaskName = "Include all the details", StartDate = new DateTime(2026, 04, 12), Duration = "25", Progress = 30, ParentID = 23, Done = "No" }
         };
         return Tasks;
     }

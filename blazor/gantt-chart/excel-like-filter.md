@@ -19,51 +19,51 @@ To enable this feature, configure [GanttFilterSettings.FilterType](https://help.
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowFiltering="true">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttFilterSettings FilterType="Syncfusion.Blazor.Gantt.FilterType.Excel"></GanttFilterSettings>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; } = new();
+    public List<TaskData> TaskCollection { get; set; } = new();
 
     protected override void OnInitialized()
     {
         TaskCollection = GetTaskCollection();
     }
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 7), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 10), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 07), EndDate = new DateTime(2026, 01, 09), Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 07), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 07), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLosDjqgkPbKMzW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBHZRWSTzwLcgAT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The Excel-like filter feature supports various filter conditions, including text-based filters for task names, number-based filters for task Id and progress, and date-based filters for project timelines.
 > * The filter dialog provides additional options, such as searching for specific task values, and clearing applied project filters.
@@ -81,16 +81,14 @@ To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/
 @using Syncfusion.Blazor.Grids
 
 <SfGantt DataSource="@TaskCollection" AllowFiltering="true" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttFilterSettings FilterType="Syncfusion.Blazor.Gantt.FilterType.Excel"></GanttFilterSettings>
     <GanttEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; } = new();
-    SfGantt<TaskData> Gantt { get; set; }
-
+    public List<TaskData> TaskCollection { get; set; } = new();
     public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
         args.FilterChoiceCount = 100;
@@ -104,15 +102,15 @@ To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/
     private List<TaskData> GetTaskCollection()
     {
         List<TaskData> tasks = new List<TaskData>();
-        int TaskID = 1;
+        int TaskId = 1;
 
         // Generate larger dataset for demonstration.
         for (int i = 1; i <= 50; i++)
         {
-            tasks.Add(new TaskData() { TaskID = TaskID++, TaskName = $"Project Phase {i}", StartDate = new DateTime(2023, 04, 02), Duration = 10, Progress = 25, ParentID = null });
-            tasks.Add(new TaskData() { TaskID = TaskID++, TaskName = $"Task A-{i}", StartDate = new DateTime(2023, 04, 02), Duration = 3, Progress = 50, ParentID = TaskID - 2 });
-            tasks.Add(new TaskData() { TaskID = TaskID++, TaskName = $"Task B-{i}", StartDate = new DateTime(2023, 04, 05), Duration = 4, Progress = 75, ParentID = TaskID - 3 });
-            tasks.Add(new TaskData() { TaskID = TaskID++, TaskName = $"Task C-{i}", StartDate = new DateTime(2023, 04, 09), Duration = 3, Progress = 30, ParentID = TaskID - 4 });
+            tasks.Add(new TaskData() { TaskId = TaskId++, TaskName = $"Project Phase {i}", StartDate = new DateTime(2026, 04, 02), Duration = 10, Progress = 25, ParentId = null });
+            tasks.Add(new TaskData() { TaskId = TaskId++, TaskName = $"Task A-{i}", StartDate = new DateTime(2026, 04, 02), Duration = 3, Progress = 50, ParentId = TaskId - 2 });
+            tasks.Add(new TaskData() { TaskId = TaskId++, TaskName = $"Task B-{i}", StartDate = new DateTime(2026, 04, 05), Duration = 4, Progress = 75, ParentId = TaskId - 3 });
+            tasks.Add(new TaskData() { TaskId = TaskId++, TaskName = $"Task C-{i}", StartDate = new DateTime(2026, 04, 09), Duration = 3, Progress = 30, ParentId = TaskId - 4 });
         }
 
         return tasks;
@@ -120,20 +118,20 @@ To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLSCDjUzNLJlHUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnNxWeJyCNtWmg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The specified filter choice count value determines the display of unique items as a checkbox list in the Excel type filter dialog. This can result in a delay in rendering these checkbox items when opening the filter dialog. Therefore, it is advisable to set a restricted filter choice count value for optimal project management performance.
 
@@ -150,11 +148,11 @@ In the example below, the filter checkbox list for the **Status** column is cust
 @using Syncfusion.Blazor.Grids
 
 <SfGantt DataSource="@TaskCollection" AllowFiltering="true" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-                     Duration="Duration" Progress="Progress" ParentID="ParentID" />
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Progress="Progress" ParentID="ParentId" />
     <GanttFilterSettings FilterType="Syncfusion.Blazor.Gantt.FilterType.Excel" />
     <GanttColumns>
-        <GanttColumn Field="TaskID" HeaderText="Task ID" Width="100" />
+        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100" />
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="200" />
         <GanttColumn Field="IsCompleted" HeaderText="Status" Width="120" DisplayAsCheckBox="true">
             <FilterItemTemplate>
@@ -166,12 +164,12 @@ In the example below, the filter checkbox list for the **Status** column is cust
                 @itemTemplateValue
             </FilterItemTemplate>
         </GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration" Width="120" />
+        
     </GanttColumns>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; } = new();
+    public List<TaskData> TaskCollection { get; set; } = new();
 
     protected override void OnInitialized()
     {
@@ -182,33 +180,32 @@ In the example below, the filter checkbox list for the **Status** column is cust
     {
         return new List<TaskData>
         {
-            new TaskData { TaskID = 1, TaskName = "Project Management", StartDate = new DateTime(2023, 04, 03), EndDate = new DateTime(2023, 04, 03), Duration = 10, Progress = 40, IsCompleted = true },
-            new TaskData { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 03), EndDate = new DateTime(2023, 04, 03), Duration = 4, Progress = 100, IsCompleted = true, ParentID = 1 },
-            new TaskData { TaskID = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 03), EndDate = new DateTime(2023, 04, 03), Duration = 4, Progress = 50, IsCompleted = true, ParentID = 1 },
-            new TaskData { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 03), EndDate = new DateTime(2023, 04, 03), Duration = 4, Progress = 100, IsCompleted = true, ParentID = 1 },
-            new TaskData { TaskID = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 04), EndDate = new DateTime(2023, 04, 04), Duration = 8, Progress = 60, IsCompleted = false },
-            new TaskData { TaskID = 6, TaskName = "Develop floor plan", StartDate = new DateTime(2023, 04, 04), EndDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 100, IsCompleted = false, ParentID = 5 },
-            new TaskData { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), EndDate = new DateTime(2023, 04, 04), Duration = 3, Progress = 40, IsCompleted = false, ParentID = 5 }
+            new TaskData { TaskId = 1, TaskName = "Project Management", StartDate = new DateTime(2026, 04, 03), EndDate = new DateTime(2026,04 , 13),  Progress = 40, IsCompleted = true },
+            new TaskData { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 03), EndDate = new DateTime(2026, 04, 09),  Progress = 100, IsCompleted = true, ParentId = 1 },
+            new TaskData { TaskId = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2026, 04, 03), EndDate = new DateTime(2026, 04, 07), Progress = 50, IsCompleted = true, ParentId = 1 },
+            new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 03), EndDate = new DateTime(2026, 04, 13),  Progress = 100, IsCompleted = true, ParentId = 1 },
+            new TaskData { TaskId = 5, TaskName = "Project Estimation", StartDate = new DateTime(2026, 04, 04), EndDate = new DateTime(2026, 04, 07),  Progress = 60, IsCompleted = false },
+            new TaskData { TaskId = 6, TaskName = "Develop floor plan", StartDate = new DateTime(2026, 04, 04), EndDate = new DateTime(2026, 04, 05),  Progress = 100, IsCompleted = false, ParentId = 5 },
+            new TaskData { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 04), EndDate = new DateTime(2026, 04, 06), Progress = 40, IsCompleted = false, ParentId = 5 }
         };
     }
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public int Duration { get; set; }
         public int Progress { get; set; }
         public bool IsCompleted { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSCjNqzrNWxSym?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBxZxCIoebzAQaq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the Excel filter using CSS
 
@@ -234,7 +231,7 @@ To remove the context menu from the filter dialog, apply the following CSS rule 
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true" AllowFiltering="true">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttFilterSettings FilterType="Syncfusion.Blazor.Gantt.FilterType.Excel"></GanttFilterSettings>
 </SfGantt>
@@ -257,34 +254,34 @@ To remove the context menu from the filter dialog, apply the following CSS rule 
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 7), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 10), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLyMtZUJqmzHKur?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVRXRMISGbxPFVr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Customize the height and width of filter dialog
 
@@ -297,7 +294,7 @@ You can adjust the height and width of the filter dialog for each column using C
 @using Syncfusion.Blazor.Grids
 
 <SfGantt ID="Gantt" AllowFiltering="true" DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="TaskData"></GanttEvents>
     <GanttFilterSettings FilterType="Syncfusion.Blazor.Gantt.FilterType.Excel"></GanttFilterSettings>
@@ -323,7 +320,7 @@ You can adjust the height and width of the filter dialog for each column using C
 }
 
 @code {
-    private List<TaskData> TaskCollection { get; set; } = new();
+    public List<TaskData> TaskCollection { get; set; } = new();
     public bool IsLarge;
     public bool IsSmall;
     protected override void OnInitialized()
@@ -350,38 +347,39 @@ You can adjust the height and width of the filter dialog for each column using C
         }
     }
     
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 7), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 10), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoCtXgzJXiUzEe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLnXdiIIlsKWfNN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Customize filter icon for filtered columns
 
@@ -394,7 +392,7 @@ When a column is filtered, the Gantt Chart displays a default icon with predefin
 @using Syncfusion.Blazor.Grids
 
 <SfGantt ID="Gantt" AllowFiltering="true" DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="TaskData"></GanttEvents>
     <GanttFilterSettings FilterType="Syncfusion.Blazor.Gantt.FilterType.Excel"></GanttFilterSettings>
@@ -420,7 +418,7 @@ When a column is filtered, the Gantt Chart displays a default icon with predefin
 }
 
 @code {
-    private List<TaskData> TaskCollection { get; set; } = new();
+    public List<TaskData> TaskCollection { get; set; } = new();
     public bool IsLarge;
     public bool IsSmall;
     protected override void OnInitialized()
@@ -447,37 +445,37 @@ When a column is filtered, the Gantt Chart displays a default icon with predefin
         }
     }
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 7), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 10), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBSWNtATpopODgg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhdZnWySPrlNOnl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page provides comprehensive feature representations. The [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/overview?theme=bootstrap4) demonstrates how to present and manipulate project data effectively.

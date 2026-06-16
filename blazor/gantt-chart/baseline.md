@@ -22,9 +22,9 @@ The baseline feature enables users to view the deviation between the planned dat
 </SfGantt>
 
 @code{
-    private DateTime ProjectStart = new DateTime(2022, 04, 01);
-    private DateTime ProjectEnd = new DateTime(2022, 04, 30); 
-    private List<TaskData> TaskCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2026, 04, 01);
+    private DateTime ProjectEnd = new DateTime(2026, 04, 30); 
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -47,13 +47,13 @@ The baseline feature enables users to view the deviation between the planned dat
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), BaselineStartDate = new DateTime(2022, 04, 06), BaselineEndDate = new DateTime(2022, 04, 08), Duration = "0", Progress = 70, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), BaselineStartDate = new DateTime(2022, 04, 04), BaselineEndDate = new DateTime(2022, 04, 09), Duration = "8", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), BaselineStartDate = new DateTime(2022, 04, 08), BaselineEndDate = new DateTime(2022, 04, 12), Duration = "4", Progress = 50, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), BaselineStartDate = new DateTime(2022, 04, 08), BaselineEndDate = new DateTime(2022, 04, 12), Duration = "4", Progress = 70, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), BaselineStartDate = new DateTime(2022, 04, 02), BaselineEndDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 50, ParentId = 5 },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 05), EndDate = new DateTime(2026, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2026, 04, 05), BaselineStartDate = new DateTime(2026, 04, 07), BaselineEndDate = new DateTime(2026, 04, 09), Duration = "0", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 05), BaselineStartDate = new DateTime(2026, 04, 04), BaselineEndDate = new DateTime(2026, 04, 09), Duration = "8", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 05), BaselineStartDate = new DateTime(2026, 04, 08), BaselineEndDate = new DateTime(2026, 04, 12), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 06), BaselineStartDate = new DateTime(2026, 04, 08), BaselineEndDate = new DateTime(2026, 04, 12), Duration = "4", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 06), BaselineStartDate = new DateTime(2026, 04, 02), BaselineEndDate = new DateTime(2026, 04, 02), Duration = "0", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }

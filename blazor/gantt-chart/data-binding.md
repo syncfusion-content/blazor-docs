@@ -32,12 +32,12 @@ This following sample shows self-referential data binding in the Gantt Chart by 
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -45,27 +45,26 @@ This following sample shows self-referential data binding in the Gantt Chart by 
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     private static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2022, 01, 10), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05),Duration = "5" , },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 05), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 07), Duration = "5", },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 07), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 07), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 07), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
@@ -74,7 +73,7 @@ This following sample shows self-referential data binding in the Gantt Chart by 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLeMZLfLAFkPmGF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhHNxCIVMXTHwot?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## List binding
 
@@ -90,12 +89,12 @@ Hierarchical data binding organizes complex parent-child relationships through n
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -103,10 +102,9 @@ Hierarchical data binding organizes complex parent-child relationships through n
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public List<TaskData> SubTasks { get; set; }
@@ -115,8 +113,8 @@ Hierarchical data binding organizes complex parent-child relationships through n
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, }, new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, }, new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30 }, }) },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, }, new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40 }, new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, } }) }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), Duration="20", SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, }, new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "4", Progress = 40, }, new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30 }, }) },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), Duration="20", SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, }, new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 40 }, new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, } }) }
         };
         return Tasks;
     }
@@ -125,7 +123,7 @@ Hierarchical data binding organizes complex parent-child relationships through n
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXryWDrzgHBfdbbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBnjdiSLMekVXKg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> * Indent/Outdent is not supported for hierarchy data.
 >* ExpandCollapse state maintenance is not supported for hierarchy data.
@@ -142,12 +140,12 @@ This approach enables the component to reconstruct hierarchical tree structures 
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -155,23 +153,22 @@ This approach enables the component to reconstruct hierarchical tree structures 
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
     
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 05), EndDate = new DateTime(2021, 04, 21), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = "2", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Concept approval", StartDate = new DateTime(2021, 04, 08), EndDate = new DateTime(2021, 04, 08), Duration="0", ParentID = 1 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 05),Duration = "20" , },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = "2", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2021, 04, 08), Duration="0", ParentId = 1 }
         };
         return Tasks;
     }
@@ -180,7 +177,7 @@ This approach enables the component to reconstruct hierarchical tree structures 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSCDrpKdvgSTeD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVHXRMSBMPnFGNG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### DynamicObject binding
 
@@ -195,9 +192,9 @@ To handle scenarios where the data model is not defined at compile time, the Gan
 @using System.Dynamic
 
 <SfGantt DataSource="@GanttDynamicData" Height="500px" Width="100%" HighlightWeekends="true">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" Progress="Progress" Duration="Duration" ParentID="ParentID"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Progress="Progress" Duration="Duration" ParentID="ParentId"></GanttTaskFields>
     <GanttColumns>
-        <GanttColumn Field="TaskID" HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskId" HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="250"></GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration" Width="250"></GanttColumn>
@@ -226,37 +223,37 @@ To handle scenarios where the data model is not defined at compile time, the Gan
         for (var i = 1; i <= 10; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2022, 01, 07);
+            DateTime start = new DateTime(2026, 02, 10);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ParentRecord = new DynamicDictionary();
-            ParentRecord.TaskID = ++ParentRecordID;
+            ParentRecord.TaskId = ++ParentRecordID;
             ParentRecord.TaskName = "Parent Task " + i;
             ParentRecord.StartDate = startingDate;
             ParentRecord.Progress = ran.Next(10, 100);
             ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
-            ParentRecord.ParentID = null;
+            ParentRecord.ParentId = null;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
         return Data;
     }
 
-    public static void AddChildRecords(int ParentID)
+    public static void AddChildRecords(int ParentId)
     {
         for (var i = 1; i < 4; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2022, 01, 07);
+            DateTime start = new DateTime(2026, 02, 10);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ChildRecord = new DynamicDictionary();
-            ChildRecord.TaskID = ++ParentRecordID;
+            ChildRecord.TaskId = ++ParentRecordID;
             ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
             ChildRecord.StartDate = startingDate;
             ChildRecord.Progress = ran.Next(10, 100);
             ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
-            ChildRecord.ParentID = ParentID;
+            ChildRecord.ParentId = ParentId;
             Data.Add(ChildRecord);
         }
     }
@@ -286,7 +283,7 @@ To handle scenarios where the data model is not defined at compile time, the Gan
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLIsjrfgbLmeSRq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLxDnMorBiLbZbh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### ExpandoObject Binding
 
@@ -299,8 +296,8 @@ To handle scenarios where the model type is unknown at compile time, the Gantt C
 @using System.Dynamic
 
 <SfGantt TValue="ExpandoObject" DataSource="@TreeData" @ref="Gantt" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
@@ -324,36 +321,36 @@ To handle scenarios where the model type is unknown at compile time, the Gantt C
         for (var i = 1; i <= 60; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2022, 03, 07);
+            DateTime start = new DateTime(2026, 03, 07);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ParentRecord = new ExpandoObject();
-            ParentRecord.TaskID = ++ParentRecordID;
+            ParentRecord.TaskId = ++ParentRecordID;
             ParentRecord.TaskName = "Parent Task " + i;
             ParentRecord.StartDate = startingDate;
             ParentRecord.Progress = ran.Next(10, 100);
             ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
-            ParentRecord.ParentID = null;
+            ParentRecord.ParentId = null;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
         return Data;
     }
-    public static void AddChildRecords(int ParentID)
+    public static void AddChildRecords(int ParentId)
     {
         for (var i = 1; i < 4; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2022, 03, 07);
+            DateTime start = new DateTime(2026, 03, 07);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ChildRecord = new ExpandoObject();
-            ChildRecord.TaskID = ++ParentRecordID;
+            ChildRecord.TaskId = ++ParentRecordID;
             ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
             ChildRecord.StartDate = startingDate;
             ChildRecord.Progress = ran.Next(10, 100);
             ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
-            ChildRecord.ParentID = ParentID;
+            ChildRecord.ParentId = ParentId;
             Data.Add(ChildRecord);
         }
     }
@@ -362,7 +359,7 @@ To handle scenarios where the model type is unknown at compile time, the Gantt C
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVyWNrfUFwbmcnX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdDHMIBrBlyKPx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Observable collection and INotifyPropertyChanged
 
@@ -389,7 +386,7 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
         @StatusMessage
     </div>
     <SfGantt DataSource="@ObservableData" Toolbar="@(new List<string>() { "Add", "Delete" })">
-        <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
         </GanttTaskFields>
         <GanttEditSettings AllowAdding="true" AllowDeleting="true"></GanttEditSettings>
     </SfGantt>
@@ -407,7 +404,7 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
 
     public void AddRecord()
     {
-        int newId = ObservableData.Any() ? ObservableData.Max(t => t.TaskID) + 1 : 1;
+        int newId = ObservableData.Any() ? ObservableData.Max(t => t.TaskId) + 1 : 1;
         Random rand = new Random();
 
         int randomProgress = rand.Next(0, 101);
@@ -415,7 +412,7 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
 
         ObservableData.Add(new TaskData()
         {
-            TaskID = newId,
+            TaskId = newId,
             TaskName = $"New Task {newId}",
             StartDate = DateTime.Now,
             Duration = randomDuration.ToString(),
@@ -427,7 +424,7 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
     {
         if (ObservableData.Count != 0)
         {
-            int deleteRecordTaskID = ObservableData.First().TaskID;
+            int deleteRecordTaskID = ObservableData.First().TaskId;
             ObservableData.Remove(ObservableData.First());
             RemoveChild(deleteRecordTaskID);
         }
@@ -435,10 +432,10 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
 
     public void RemoveChild(int id)
     {
-        var childRecords = ObservableData.Where(t => t.ParentID == id).ToList();
+        var childRecords = ObservableData.Where(t => t.ParentId == id).ToList();
         foreach (var child in childRecords)
         {
-            RemoveChild(child.TaskID);
+            RemoveChild(child.TaskId);
             ObservableData.Remove(child);
         }
     }
@@ -447,14 +444,14 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
     {
         return new ObservableCollection<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08) },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), Duration = "10" },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), Duration = "10" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }
         };
     }
 
@@ -473,20 +470,19 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeMXhmBmWiglpH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVnXHCIVLyxTPmz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### INotifyPropertyChanged
 
@@ -508,7 +504,7 @@ This interface is used to notify that a property value has changed. For example,
     </div>
 
     <SfGantt DataSource="@ObservableData" Toolbar="@(new List<string>() { "Cancel", "Edit", "Update" })">
-        <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
         </GanttTaskFields>
         <GanttEditSettings AllowEditing="true"></GanttEditSettings>
     </SfGantt>
@@ -535,20 +531,20 @@ This interface is used to notify that a property value has changed. For example,
     {
         return new ObservableCollection<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 08) },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 08) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), Duration = "10" },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), Duration = "10" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }
         };
     }
 
     public class TaskData : INotifyPropertyChanged
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
 
         private string taskName;
         public string TaskName
@@ -565,10 +561,9 @@ This interface is used to notify that a property value has changed. For example,
         }
 
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -582,7 +577,7 @@ This interface is used to notify that a property value has changed. For example,
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVysjVQBwoWOmGQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdjdCoVhQOJIZn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Remote Data
 
@@ -606,14 +601,14 @@ The Gantt Chart component utilizes the **WebApiAdaptor**, an extension of the **
 
 <SfGantt TValue="GanttRemoteData" Height="450px">
     <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/GanttData" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
     public class GanttRemoteData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public int? Duration { get; set; }
@@ -625,7 +620,7 @@ The Gantt Chart component utilizes the **WebApiAdaptor**, an extension of the **
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVoMXhzJQuKjqpZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBxNxMorqBpYhjl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### ODataV4 adaptor
 
@@ -1157,14 +1152,14 @@ namespace URLAdaptor.Models
         {
             List<TaskDetails> Tasks = new List<TaskDetails>()
             {
-                new TaskDetails() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 7), },
-                new TaskDetails() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-                new TaskDetails() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
-                new TaskDetails() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-                new TaskDetails() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 10), },
-                new TaskDetails() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
-                new TaskDetails() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
-                new TaskDetails() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
+                new TaskDetails() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 07), },
+                new TaskDetails() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+                new TaskDetails() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 04), Duration = "4", Progress = 40, ParentID = 1, },
+                new TaskDetails() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
+                new TaskDetails() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 04), EndDate = new DateTime(2026, 01, 10), },
+                new TaskDetails() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 30, ParentID = 5, },
+                new TaskDetails() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), Duration = "3", Progress = 40, ParentID = 5, },
+                new TaskDetails() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentID = 5, }
             };
             return Tasks;
         }
@@ -1290,8 +1285,8 @@ The following sample code demonstrates notifying user when server-side exception
 <label class="error" style="display:block; color: red; margin-bottom: 20px;">@ErrorDetails</label>
 <SfGantt TValue="TaskData" Height="450px" Width="700px">
      <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents TValue="TaskData" OnActionFailure="ActionFailure"></GanttEvents>
 </SfGantt>
@@ -1300,13 +1295,13 @@ The following sample code demonstrates notifying user when server-side exception
     private string ErrorDetails = "";
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public void ActionFailure(Syncfusion.Blazor.Grids.FailureEventArgs args)
@@ -1319,7 +1314,7 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrosNrTBJxCLRgJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBHDdCoVzBmuLfQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Handling exceptions
 
@@ -1356,8 +1351,8 @@ The following sample code demonstrates notifying user when server-side exception
 <label class="error" style="display:block; color: red; margin-bottom: 20px;">@ErrorDetails</label>
 <SfGantt TValue="TaskData" Height="450px" Width="700px">
      <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents TValue="TaskData" OnActionFailure="ActionFailure"></GanttEvents>
 </SfGantt>
@@ -1366,13 +1361,13 @@ The following sample code demonstrates notifying user when server-side exception
     private string ErrorDetails = "";
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public void ActionFailure(Syncfusion.Blazor.Grids.FailureEventArgs args)
@@ -1385,4 +1380,4 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrosNrTBJxCLRgJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdjdsyVpzeOzOT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
