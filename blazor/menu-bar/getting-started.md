@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor Menu Bar in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Menu Bar component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Menu Bar component in Blazor WebAssembly Application.
 platform: Blazor
 control: Menu Bar
 documentation: ug
 ---
 
-# Getting Started with Blazor Menu Bar Component
+# Getting Started with Blazor Menu Bar in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
