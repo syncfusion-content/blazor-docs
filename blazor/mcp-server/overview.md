@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# MCP Server Overview
+# Overview of MCP Server for Blazor Components
 
 Syncfusion's MCP Server accelerate Blazor application development by providing deep context-aware knowledge directly in your AI-powered IDE. Through Model Context Protocol (MCP) integration, you get instant access to component APIs, pre-built UI blocks, styling configurations, icon libraries, and code generation - all without leaving your development environment.
 

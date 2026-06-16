@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Insert Image in Blazor Markdown Editor Component | Syncfusion®
-description: Checkout and learn here all about Insert Image in Blazor Markdown Editor component and more.
+description: Checkout and learn here all about Insert Image in Blazor Markdown Editor component and much more details.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug

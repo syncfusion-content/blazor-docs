@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Media Query in Blazor Web App | Syncfusion®
+title: Getting Started with Media Query in Blazor Web App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Media Query Components in Blazor Web App.
 platform: Blazor
 control: Media Query

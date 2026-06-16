@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Markdown Editor in Blazor Server App | Syncfusion®
+title: Getting started with Markdown Editor in Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Markdown Editor Components in Blazor Server App.
 platform: Blazor
 control: MarkdownEditor
