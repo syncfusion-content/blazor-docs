@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Dropdown Tree component and much more details.
+title: Events in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features and Events in Blazor Dropdown Tree component and much more details.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
