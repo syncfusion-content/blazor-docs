@@ -9,11 +9,11 @@ documentation: ug
 
 # Create custom toolbar with drop-down list in Blazor TreeGrid Component
 
- ToolBar items can be created in the Tree Grid. It can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar). Actions for this ToolBar template items are defined in the [ToolbarClick`]
+ ToolBar items can be created in the Tree Grid. It can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar). Actions for this ToolBar template items are defined in the `ToolbarClick`.
 
 **Step 1**:
 
-Initialize the template for the custom component. Using the following code add the DropDownList component to the ToolBar.
+Initialize the template for the custom component. Using the following code add the [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component to the ToolBar.
 
 ```cshtml
 <SfToolbar>
@@ -32,7 +32,7 @@ Initialize the template for the custom component. Using the following code add t
 
 **Step 2**:
 
-To render the DropDownList component, use the [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). The Tree Grid row index can be selected based on the selected data in the DropDownList.
+To render the `SfDropDownList` component, use the [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). The Tree Grid row index can be selected based on the selected data in the DropDownList.
 
 {% tabs %}
 

@@ -11,7 +11,7 @@ documentation: ug
 
 N> Before adding column template to the tree grid, it is recommended to go through the [template](../templates) section topic to configure the template.
 
-To know about **Column Template** in Blazor tree grid Component, you can check this video.
+To know about **Column Template** in Blazor tree grid component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}

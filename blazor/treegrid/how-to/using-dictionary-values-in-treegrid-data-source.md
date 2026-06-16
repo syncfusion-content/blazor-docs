@@ -11,7 +11,7 @@ documentation: ug
 
 The dictionary values can be assigned in the Tree Grid's data source by accessing them using **KeyValuePair** data type inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) component
 
-This is demonstrated in the below sample code where **Designation** is defined as Dictionary value and it is accessed inside the template property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) using **KeyValuePair** data type. The key value is compared with the **TaskId** column value and based on that the value is displayed.
+This is demonstrated in the below sample code where **Designation** is defined as Dictionary value and it is accessed inside the template property of the `TreeGridColumn` using **KeyValuePair** data type. The key value is compared with the **TaskId** column value and based on that the value is displayed.
 
 
 
@@ -27,7 +27,7 @@ This is demonstrated in the below sample code where **Designation** is defined a
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duation" Width="90"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="90"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="90"></TreeGridColumn>
         <TreeGridColumn Field="Designation" HeaderText="Designation" Width="90">
             <Template>

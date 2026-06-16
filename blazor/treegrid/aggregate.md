@@ -20,7 +20,7 @@ By default, the aggregate value can be displayed in the Tree Grid footer, and fo
 
 ## Built-in aggregate types
 
-The aggregate type should be specified in the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridAggregateColumn_Type) property to configure an aggregate column.
+The aggregate type should be specified in the `Type` property to configure an aggregate column.
 
 The built-in aggregates are,
 * Sum
@@ -229,4 +229,4 @@ To calculate the aggregate value with your own aggregate functions, use the cust
 
 ## Limitations
 
-* By default, Footer Aggregate or total aggregate will be shown only for the current page records and not for the dataSource. To aggregate for all page records, set adaptor in **SfDataManager**.
+* By default, Footer Aggregate or total aggregate will be shown only for the current page records and not for the dataSource. To aggregate for all page records, set adaptor in [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).

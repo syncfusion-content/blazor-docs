@@ -45,7 +45,7 @@ public abstract class DataAdaptor
     public virtual object Remove(DataManager dataManager, object data, string keyField, string key)
 
     /// <summary>
-    /// Performs Remove operation asynchronously..
+    /// Performs Remove operation asynchronously.
     /// </summary>
     public virtual Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key)
 
@@ -453,7 +453,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 ## CRUD operation
 
-The CRUD operations for the custom bounded data in the Tree Grid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
+The CRUD operations for the custom bound data in the Tree Grid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**
@@ -462,7 +462,7 @@ The CRUD operations for the custom bounded data in the Tree Grid component can b
 
 N> While using batch editing in tree grid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
 
-The following sample code demonstrates implementing CRUD operations for the custom bounded data,
+The following sample code demonstrates implementing CRUD operations for the custom bound data,
 
 {% tabs %}
 

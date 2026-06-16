@@ -10,7 +10,7 @@ documentation: ug
 # PDF Export in Blazor TreeGrid Component
 
 The PDF export feature enables users to convert TreeGrid data into a downloadable PDF document. To perform the export, use the
- **ExportToPdfAsync** method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
+ [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExportToPdfAsync) method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPdfExport) as true.
 
 For a visual walkthrough of PDF export in the Blazor TreeGrid component, refer to the following video:
 
@@ -100,7 +100,7 @@ PDF export provides an option to customize mapping of TreeGrid to exported PDF d
 
 ### Set File Name for Exported PDF
 
-The file name can be assigned for the exported document by defining **fileName** property in **PdfExportProperties**.
+The file name can be assigned for the exported document by defining [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property in **PdfExportProperties**.
 
 {% tabs %}
 
@@ -379,7 +379,7 @@ public class TreeData
 
 ### Export Only the Current Page
 
-PDF export provides an option to export the current page into PDF. To export current page, define the **exportType** to **CurrentPage**.
+PDF export provides an option to export the current page into PDF. To export current page, define the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExportType.html) to **CurrentPage**.
 
 {% tabs %}
 
@@ -462,7 +462,7 @@ public class TreeData
 
 ### Include Hidden Columns in Exported PDF
 
-PDF export provides an option to export hidden columns of the TreeGrid by defining the **includeHiddenColumn** as **true**.
+PDF export provides an option to export hidden columns of the TreeGrid by defining the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) as **true**.
 
 {% tabs %}
 
@@ -547,7 +547,7 @@ public class TreeData
 
 PDF export provides an option to include theme for exported PDF document.
 
-To apply theme in exported PDF, define the **theme** in export properties.
+To apply theme in exported PDF, define the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) in export properties.
 
 {% tabs %}
 

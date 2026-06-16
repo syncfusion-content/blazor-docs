@@ -88,7 +88,7 @@ Some print settings such as layout, paper size, and margins must be configured u
 
 ## Printing Using an External Button
 
-To trigger printing from an external button, invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method on the TreeGrid instance.
+To trigger printing from an external button, invoke the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method on the TreeGrid instance.
 
 {% tabs %}
 

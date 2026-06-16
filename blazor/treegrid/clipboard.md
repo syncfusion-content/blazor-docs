@@ -87,7 +87,7 @@ namespace TreeGridComponent.Data {
 
 ## Copy to clipboard by external buttons
 
-To copy the data of the selected rows or cells into the clipboard with help of external buttons, invoke the `copyAsync` method.
+To copy the data of the selected rows or cells into the clipboard with help of external buttons, invoke the [copyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_CopyAsync_System_Nullable_System_Boolean__) method.
 
 {% tabs %}
 
@@ -394,4 +394,4 @@ Events are triggered when performing a copy or paste action on TreeGrid.
 
 * [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : This event is triggered before pasting the copied cell value for each cell, and you can cancel the pasting action for a particular cell or change the value by using this event.
 
-> To know more, you can refer the [BeforeCopyPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecopypaste) and [BeforeCellPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecellpaste) events.
+> To know more, you can refer the `BeforeCopyPaste` and `BeforeCellPaste` events.

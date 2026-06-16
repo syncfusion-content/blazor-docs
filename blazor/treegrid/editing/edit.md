@@ -83,8 +83,6 @@ public class TreeData
 
 {% endtabs %}
 
-The editing feature can be disabled for a particular column by setting [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing) to **false**.
-
 N> For strong typing and validation, specify the model type via TValue on the TreeGrid or ensure the DataSource is a typed list (for example, List<TreeData.BusinessObject>).
 
 ```csharp
@@ -241,7 +239,7 @@ public class TreeData
 
 ## Disable editing for a particular column
 
-Disable editing for a specific column using [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing).
+The editing feature can be disabled for a particular column by setting [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing) to **false**.
 
 In the following example, editing is disabled for the **Duration** column.
 
@@ -692,11 +690,11 @@ The following GIF shows Add, Update, and Delete operations in the TreeGrid.
 
 ## Cancel CRUD operations based on a condition
 
-Use the `Canceling` event to conditionally cancel default CRUD operations.
+Use the [Canceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Canceling) event to conditionally cancel default CRUD operations.
 
 ### Cancel CRUD operations in Row/Dialog edit mode
 
-For Row or Dialog edit modes, use the [Canceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Canceling) event.
+For Row or Dialog edit modes, use the `Canceling` event.
 
 {% tabs %}
 
@@ -929,7 +927,7 @@ The following GIF shows the TreeGrid with a custom external form for editing.
 
 Edit enum type data in a TreeGrid column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
 
-In the following example, the `SfDropDownList` component is rendered in the `EditTemplate` for the **Priority** column, and the enum values are bound using two-way binding (**@bind-Value**).
+In the following example, the [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component is rendered in the `EditTemplate` for the **Priority** column, and the enum values are bound using two-way binding (**@bind-Value**).
 
 {% tabs %}
 

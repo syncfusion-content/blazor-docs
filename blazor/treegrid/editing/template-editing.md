@@ -16,7 +16,7 @@ To know about customizing the Dialog Template in Blazor tree grid component, you
 {% youtube
 "youtube:https://www.youtube.com/watch?v=TxHrtyVwY4A"%}
 
-The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, render your own editors by defining the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Dialog** and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Template) using the **Template** of the **TreeGridEditSettings**.
+The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, render your own editors by defining the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Dialog** and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Template) using the `Template` of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
 
 In some cases, the new field editors must be added in the dialog which are not present in the column model. In that situation, the dialog template will help to customize the default edit dialog.
 
@@ -267,7 +267,7 @@ The following image represents the dialog template of the tree grid component wi
 
 By default, the first input element in the dialog will be focused while opening it. If the first input element is in a disabled or hidden state, set focus to the required input element in the corresponding components [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Created) or [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
-In the following sample code, the first input element is in a disabled state. So the **TaskName** edit field is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's `DataBound` event.
+In the following sample code, the first input element is in a disabled state. So the **TaskName** edit field is focused by invoking its [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
 {% tabs %}
 
@@ -293,7 +293,7 @@ In the following sample code, the first input element is in a disabled state. So
                         <SfNumericTextBox ID="TaskId" @bind-Value="@(employee.TaskId)" Enabled="@((employee.TaskId == null) ? true : false)" Placeholder="Task ID"></SfNumericTextBox>
                     </div>
                     <div class="form-group col-md-6">
-                        <SfAutoComplete TItem="TreeData" ID="TaskName" @bind-Value="@(employee.TaskName)" TValue="string" DataSource="@TreeGridData" FloatLabelType="FloatLabelType.Always" Placeholder="Task Name">
+                        <SfAutoComplete TItem="TreeData" @ref="AutoComplete" ID="TaskName" @bind-Value="@(employee.TaskName)" TValue="string" DataSource="@TreeGridData" FloatLabelType="FloatLabelType.Always" Placeholder="Task Name">
                             <AutoCompleteFieldSettings Value="TaskName"></AutoCompleteFieldSettings>
                             <AutoCompleteEvents TValue="string" TItem="TreeData" DataBound="FocusAutoComplete"></AutoCompleteEvents>
                         </SfAutoComplete>
@@ -337,7 +337,7 @@ In the following sample code, the first input element is in a disabled state. So
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
     private async Task FocusAutoComplete() {
-        await this.AutoComplete.FocusIn();
+        await this.AutoComplete.FocusAsync();
     }
 }
 
