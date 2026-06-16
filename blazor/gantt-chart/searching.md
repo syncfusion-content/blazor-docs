@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about searching in Syncfusion Blazor Gantt Chart component and much more.
+title: Searching in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all the features about searching in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Search in Blazor Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
+The Blazor Gantt Chart component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
 
 To enable this feature, add the **Search** option to the `Toolbar` configuration.
 
@@ -65,7 +65,7 @@ To enable this feature, add the **Search** option to the `Toolbar` configuration
 
 ## Initial search
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows applying search criteria during initial load using the [GanttSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSearchSettings.html) property.  
+The Blazor Gantt Chart component allows applying search criteria during initial load using the [GanttSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSearchSettings.html) property.  
 
 To configure this feature, define the following properties:
 
@@ -232,7 +232,7 @@ The following operators are supported in searching:
 
 ## Search by external button
 
-To perform a search from an external button in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component, call the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method programmatically with the desired keyword.
+To perform a search from an external button in the Blazor Gantt Chart component, call the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method programmatically with the desired keyword.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -369,7 +369,7 @@ N> In above sample, you can search only `TaskName` and `Duration` column values.
 
 ## Clear search by external button
 
-To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart from an external button, you can invoke the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method with an empty string to reset the search. 
+To clear the search results in the Blazor Gantt Chart from an external button, you can invoke the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method with an empty string to reset the search. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
