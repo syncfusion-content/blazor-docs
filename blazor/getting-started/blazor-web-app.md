@@ -22,7 +22,7 @@ To get started quickly with a Blazor Web App, watch the following video.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-### Using Templates
+## Using Templates
 
 Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://helpstaging.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
 
