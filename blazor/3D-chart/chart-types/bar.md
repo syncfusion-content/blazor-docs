@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bar Chart in Blazor 3D Chart Component | Syncfusion®
-description: Checkout and learn here all features about the Bar Charts in Blazor 3D Chart component and much more.
+title: Bar Chart in Blazor 3D Chart Component | Syncfusion
+description: Checkout and learn here all about the Bar Charts in Syncfusion Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart 
 documentation: ug
@@ -48,7 +48,7 @@ To render a bar series, set series `Type` as `Bar`.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBnZnsDfHZIbiFi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bar 3D Chart](../images/chart-types-images/blazor-bar-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhJXxsKslDavsMW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bar 3D Chart](../images/chart-types-images/blazor-bar-chart.webp)" %}
 
 ## Bar space and width
 
@@ -90,7 +90,7 @@ The `ColumnSpacing` and `ColumnWidth` properties are used to customize the space
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLRNHCNfnWNAjRE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bar 3D Chart with Space and Width](../images/chart-types-images/blazor-bar-chart-space-and-width.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhTXHMgilipfRPo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bar 3D Chart with Space and Width](../images/chart-types-images/blazor-bar-chart-space-and-width.webp)" %}
 
 ## Grouped bar
 
@@ -131,7 +131,7 @@ The data points can be grouped in the bar type charts by using the `GroupName` p
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLxZxiNzRsfHAuY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Grouping in Blazor Grouped Bar 3D Chart](../images/chart-types-images/blazor-column-chart-grouped-bar.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLfZRMUMlsmhOBI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Grouped Bar 3D Chart](../images/chart-types-images/blazor-column-chart-grouped-bar.webp)" %}
 
 ## Cylindrical column chart
 
@@ -170,7 +170,7 @@ To render a cylindrical column chart, set the `ColumnFacet` property to `Cylinde
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBRNdWtfxsvqqWk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Cylindrical Bar 3D Chart](../images/chart-types-images/blazor-cylindricaal-bar-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBfDdMAilBDiXzS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Cylindrical Bar 3D Chart](../images/chart-types-images/blazor-cylindricaal-bar-chart.webp)" %}
 
 ## Series customization
 
@@ -214,4 +214,4 @@ The following properties can be used to customize the `Bar` series.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrxNxiXzxBLftbv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-bar-chart-custom-series.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBTZdMKWvrLOzmq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-bar-chart-custom-series.webp)" %}
