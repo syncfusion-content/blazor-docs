@@ -108,7 +108,7 @@ The **JWT** configuration specifies how the server signs and validates authentic
 {% endhighlight %}
 {% endtabs %}
 
-N> For production environments, do not store secrets directly in `appsettings.json`. Use environment variables or a secure secret store such as **Azure Key Vault** to protect sensitive information.
+N> For production environments, do not store secrets directly in `appsettings.json`. Use [environment variables](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0&tabs=windows%2Cpowershell) or a secure secret store such as [Azure Key Vault](https://learn.microsoft.com/en-us/aspnet/core/security/key-vault-configuration?view=aspnetcore-10.0) to protect sensitive information.
 
 ## Generating a JWT token
 
