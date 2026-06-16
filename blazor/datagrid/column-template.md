@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Template in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about column template in the Syncfusion Blazor DataGrid component and much more details.
+title: Column Template in Blazor DataGrid Component | Syncfusion®
+description: Checkout and learn here all about column template in the Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -190,11 +190,11 @@ public class EmployeeDetails
 
 ## Render other components in a column
 
-The Blazor DataGrid supports rendering other Syncfusion components inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This allows embedding interactive elements for advanced customization.
+The Blazor DataGrid supports rendering other components inside a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This allows embedding interactive elements for advanced customization.
 
 ### Render LineChart in a column
 
-The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp) provided by Syncfusion<sup style="font-size:70%">&reg;</sup> offers an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends.
+The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp) offers an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

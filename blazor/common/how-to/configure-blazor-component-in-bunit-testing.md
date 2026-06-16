@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with bUnit Testing for Blazor Components | Syncfusion
+title: Getting Started with bUnit Testing for Blazor Components | Syncfusion®
 description: Learn how to configure and write bUnit tests for Blazor components using xUnit, NUnit, and MSTest with step-by-step setup instructions.
 platform: Blazor
 control: Common
