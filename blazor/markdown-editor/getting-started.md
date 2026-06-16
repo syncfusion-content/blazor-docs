@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started Blazor Markdown Editor in Blazor WASM App| Syncfusion
-description: Checkout and learn about getting started with the Markdown Editor in Blazor WebAssembly Application.
+description: Check out and learn about getting started with the Markdown Editor in Blazor WebAssembly Application.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
@@ -184,7 +184,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Ma
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Markdown Editor component will render in your default web browser.
 
 {% endtabcontent %}
 
