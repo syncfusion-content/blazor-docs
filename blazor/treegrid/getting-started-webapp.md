@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor TreeGrid in Blazor Web App | Syncfusion
+title: Getting Started with Blazor TreeGrid in Blazor Web App | Syncfusion
 description: Learn how to set up and integrate Blazor TreeGrid in a Blazor Web App using Visual Studio, VS Code, and .NET CLI.
 platform: Blazor
 control: TreeGrid
@@ -143,15 +143,15 @@ builder.Services.AddSyncfusionBlazor();
 ### Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
- 
+
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
- 
+
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
- 
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -254,5 +254,3 @@ dotnet run
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid).
-
-
