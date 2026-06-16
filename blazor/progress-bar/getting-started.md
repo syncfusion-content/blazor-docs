@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Stared Blazor ProgressBar in Blazor WASM App | Syncfusion
-description: Learn here all about getting started with Syncfusion Blazor ProgressBar in Blazor WebAssembly Application.
+description: Checkout and learn here all about getting started with Blazor ProgressBar in Blazor WebAssembly Application.
 platform: Blazor
 control: ProgressBar
 documentation: ug
