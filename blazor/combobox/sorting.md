@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Sorting functionality in Syncfusion Blazor ComboBox component and much more.
+title: Sorting in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Sorting functionality in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug

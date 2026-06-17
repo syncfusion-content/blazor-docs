@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Button Appearance in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Customize Button Appearance in Syncfusion Blazor Button component and more.
+title: Customize Button Appearance in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all about Customize Button Appearance in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -32,4 +32,4 @@ You can customize the appearance of the Button by using the Cascading Style Shee
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKMBBBsmGcZMPJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Button Appearance](./../images/blazor-button-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBRNHWBVKvJGNlP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Button Appearance](./../images/blazor-button-customization.webp)" %}

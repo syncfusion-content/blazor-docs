@@ -5,65 +5,65 @@
 <div class="control-section">
     @if (!IsPreview)
     {
-    <SfMention TItem="PersonData" ID="RT_Editor_mention" Target="#MD_Editor_editable-content" DataSource="@EmailData" SortOrder="SortOrder.Ascending" AllowSpaces="true" PopupHeight="200px" PopupWidth="250px">
-        <ItemTemplate>
-            <div class="editor-mention-item-template">
-                <div class="em-header">
-                    <div class="em-avatar" style="background-color: @((context as PersonData).BgColor); color: @((context as PersonData).Color);">
-                        <div class="em-initial">@((context as PersonData).Initial)</div>
+        <SfMention TItem="PersonData" ID="RT_Editor_mention" Target="#MD_Editor_editable-content" DataSource="@EmailData" SortOrder="SortOrder.Ascending" AllowSpaces="true" PopupHeight="200px" PopupWidth="250px">
+            <ItemTemplate>
+                <div class="editor-mention-item-template">
+                    <div class="em-header">
+                        <div class="em-avatar" style="background-color: @((context as PersonData).BgColor); color: @((context as PersonData).Color);">
+                            <div class="em-initial">@((context as PersonData).Initial)</div>
+                        </div>
+                    </div>
+                    <div class="em-content">
+                        <div class="em-name">@((context as PersonData).Name)</div>
+                        <div class="em-email">@((context as PersonData).Email)</div>
                     </div>
                 </div>
-                <div class="em-content">
-                    <div class="em-name">@((context as PersonData).Name)</div>
-                    <div class="em-email">@((context as PersonData).Email)</div>
-                </div>
-            </div>
-        </ItemTemplate>
-        <DisplayTemplate>
-            [@@@((context as PersonData).Name)](mailto:@((context as PersonData).Email))
-        </DisplayTemplate>
-        <ChildContent>
-            <MentionFieldSettings Text="Name"></MentionFieldSettings>
-        </ChildContent>
-    </SfMention>
-    <SfRichTextEditor ID="MD_Editor" Width="700px" Height="250px" EditorMode="EditorMode.Markdown" SaveInterval="1" @bind-Value="@MarkdownValue">
-        <RichTextEditorToolbarSettings Items="@Tools">
-            <RichTextEditorCustomToolbarItems>
-                <RichTextEditorCustomToolbarItem Name="Preview">
-                    <Template>
-                        <button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" @onclick="PreviewClick">
-                            <span class="e-btn-icon e-md-preview e-icons"></span>
-                        </button>
-                    </Template>
-                </RichTextEditorCustomToolbarItem>
-            </RichTextEditorCustomToolbarItems>
-        </RichTextEditorToolbarSettings>
-        <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" />
-        <RichTextEditorEvents ValueChange="@OnValueChange" />
-    </SfRichTextEditor>
+            </ItemTemplate>
+            <DisplayTemplate>
+                [@@@((context as PersonData).Name)](mailto:@((context as PersonData).Email))
+            </DisplayTemplate>
+            <ChildContent>
+                <MentionFieldSettings Text="Name"></MentionFieldSettings>
+            </ChildContent>
+        </SfMention>
+        <SfRichTextEditor ID="MD_Editor" Width="700px" Height="250px" EditorMode="EditorMode.Markdown" SaveInterval="1" @bind-Value="@MarkdownValue">
+            <RichTextEditorToolbarSettings Items="@Tools">
+                <RichTextEditorCustomToolbarItems>
+                    <RichTextEditorCustomToolbarItem Name="Preview">
+                        <Template>
+                            <button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" @onclick="PreviewClick">
+                                <span class="e-btn-icon e-md-preview e-icons"></span>
+                            </button>
+                        </Template>
+                    </RichTextEditorCustomToolbarItem>
+                </RichTextEditorCustomToolbarItems>
+            </RichTextEditorToolbarSettings>
+            <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" />
+            <RichTextEditorEvents ValueChange="@OnValueChange" />
+        </SfRichTextEditor>
     }
     else
     {
-    <SfRichTextEditor Readonly="true" @bind-Value="@HtmlValue">
-        <RichTextEditorToolbarSettings Items="@Items">
-            <RichTextEditorCustomToolbarItems>
-                <RichTextEditorCustomToolbarItem Name="code">
-                    <Template>
-                        <button id="MD_Preview" class="e-tbar-btn e-control e-btn e-icon-btn" @onclick="CodeClick">
-                            <span class="e-btn-icon e-preview e-icons"></span>
-                        </button>
-                    </Template>
-                </RichTextEditorCustomToolbarItem>
-            </RichTextEditorCustomToolbarItems>
-        </RichTextEditorToolbarSettings>
-    </SfRichTextEditor>
+        <SfRichTextEditor Readonly="true" @bind-Value="@HtmlValue">
+            <RichTextEditorToolbarSettings Items="@Items">
+                <RichTextEditorCustomToolbarItems>
+                    <RichTextEditorCustomToolbarItem Name="code">
+                        <Template>
+                            <button id="MD_Preview" class="e-tbar-btn e-control e-btn e-icon-btn" @onclick="CodeClick">
+                                <span class="e-btn-icon e-preview e-icons"></span>
+                            </button>
+                        </Template>
+                    </RichTextEditorCustomToolbarItem>
+                </RichTextEditorCustomToolbarItems>
+            </RichTextEditorToolbarSettings>
+        </SfRichTextEditor>
     }
 </div>
-@code{
+@code {
     private bool IsPreview { get; set; }
     private string HtmlValue { get; set; }
     private MarkdownPipeline Pipeline { get; set; }
-    private string MarkdownValue { get; set; } =@"Hello [@Albert](mailto:albert@gmail.com)
+    private string MarkdownValue { get; set; } = @"Hello [@Albert](mailto:albert@gmail.com)
     Welcome to the mention integration with markdown editor demo. Type @ character and tag user from the suggestion list.";
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {

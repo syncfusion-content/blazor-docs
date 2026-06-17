@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animations in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Animations in Syncfusion Blazor Accordion component and much more.
+title: Animations in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features for handling Animations in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -91,4 +91,4 @@ The following example demonstrates various animation types that can be applied t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqWBsqAJzMiZJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRDdiWilSZPJDq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.gif)" %}

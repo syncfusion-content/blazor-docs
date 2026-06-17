@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Accordion Component | Syncfusion
+title: Getting Started with Blazor Accordion Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor Accordion component in Blazor WebAssembly Application.
 platform: Blazor
 control: Accordion
@@ -190,7 +190,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfZMDKrVnxBgsm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component](images/blazor-accordion-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLHZnWCMwmUySjR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component](images/blazor-accordion-component.png)" %}
 
 ## Initialize Blazor Accordion using template
 
@@ -204,12 +204,12 @@ The following code explains how to initialize Blazor Accordion using header and 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVoisjQKaKacVAK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBxXxMWWmPLNxjK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
 
 
 ## See also
 
-1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 N> You can also explore our [Blazor Accordion example](https://blazor.syncfusion.com/demos/accordion/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Accordion.

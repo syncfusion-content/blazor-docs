@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scatter in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Scatter Chart in Syncfusion Blazor Charts component and much more.
+title: Scatter in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Scatter Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -50,7 +50,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfXFhZrfpVHHMy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scatter Chart](../images/chart-types-images/blazor-scatter-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBdjxiSzymgPeku?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Scatter Chart](../images/chart-types-images/blazor-scatter-chart.webp)" %}
 
 N> Refer to the [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap5) to know how to plot data with two numeric parameters.
 
@@ -95,7 +95,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfXFhZrfpVHHMy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhdZnsepecGWwBX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Series customization
 
@@ -142,7 +142,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrfXbhXVJoqDDfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhdXdsSfylBdcFe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the scatter series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -203,7 +203,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVftlhXLzbEWQlQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBxtnMSJIlIgsQI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Opacity**
 
@@ -250,7 +250,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhTjFhNLoCriEer?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLdtnCITSvcEUKe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Shape**
 
@@ -295,7 +295,7 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLptlrZVoTGBDGT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVRjHMIToEtOwxC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Empty points
 
@@ -346,7 +346,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLJXvLDrSGcnrLx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLxXdsSzSkgnaRb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Fill**
 
@@ -393,7 +393,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBJDbBjrelxszvS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVdDRMezIuReXth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Border**
 
@@ -444,7 +444,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBpjbrXVSOoenjQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBdjHWeJnDNJsoD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -500,7 +500,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBpNvrDVRtfleFJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdDxCypRtLEDhI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -551,7 +551,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthJDPhDUwdAWIyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVxZdiyTnteGhgD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
