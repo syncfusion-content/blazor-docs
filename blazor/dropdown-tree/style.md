@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Dropdown Tree component and more.
+title: Style and appearance in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Style and appearance in Blazor Dropdown Tree component and more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -101,7 +101,7 @@ Some of the predefined values are
 
 ## Show the custom icon in dropdown icon
 
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddt-icon::before`, which indicates the icon element displayed within the Dropdown Tree component, and set the desired icon to the `content` property.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons#material) by targeting its CSS class `.e-ddt-icon::before`, which indicates the icon element displayed within the Dropdown Tree component, and set the desired icon to the `content` property.
 
 ```cshtml
 .e-ddt.e-input-group.e-control-wrapper .e-ddt-icon::before {
@@ -155,7 +155,7 @@ You can customize the dropdown icon for the particular component using the [CssC
 
 ## Customizing the dropdown icon’s color
 
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the Dropdown Tree component, and setting the desired color to the `color` property.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the Dropdown Tree component, and setting the desired color to the `color` property.
 
 ```cshtml
 .e-ddt .e-input-group-icon.e-ddt-icon.e-icons, 
@@ -343,7 +343,7 @@ Add the additional html attributes such as styles, class, and more to the root e
     {
         {"class", "e-employee" },
         {"style", "background-color: #0bebd6; text-align: right" },
-        {"title", "Syncfusion DropDownTree" }
+        {"title", "DropDownTree" }
     };
     
     class EmployeeData
