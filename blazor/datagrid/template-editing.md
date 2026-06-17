@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template Editing in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure template editing in Syncfusion Blazor DataGrid including inline and dialog modes, custom editors, focus, complex fields, and events.
+title: Template Editing in Blazor DataGrid Component | Syncfusion®
+description: Learn how to configure template editing in Blazor DataGrid including inline and dialog modes, custom editors, focus, complex fields, and events.
 platform: Blazor
 control: DataGrid
 documentation: ug
