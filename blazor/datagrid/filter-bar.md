@@ -753,7 +753,7 @@ The filter bar dynamically renders input controls based on the corresponding col
 | DateOnly | Date picker |
 | TimeOnly | Time picker |
 | DateTime | DateTime picker |
-| Boolean | Dropdown(True/False) |
+| Boolean | Dropdown (True/False) |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -834,3 +834,5 @@ public class OrderData
 
 {% endhighlight %}
 {% endtabs %}
+
+> The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 
