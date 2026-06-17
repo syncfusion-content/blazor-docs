@@ -18,7 +18,7 @@ This guide briefly explains about how to include [Blazor Pivot Table](https://ww
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
 
-### Create a new Blazor WASM App
+## Create a new Blazor WASM App
 
 {% tabcontents %}
 
@@ -60,7 +60,7 @@ dotnet new blazorwasm -o BlazorApp
 
 {% endtabcontents %}
 
-### Install the required Blazor packages
+## Install the required Blazor packages
 
 Install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces
+## Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.PivotView` namespaces.
 
@@ -129,7 +129,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
@@ -145,7 +145,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add stylesheet and script resources
+## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
@@ -162,9 +162,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-### Add Blazor Pivot Table component
+## Add Blazor Pivot Table component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component inside the razor file.
+Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component inside the razor file.
 
 Use the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) component with the specified data type.
 
@@ -279,7 +279,7 @@ dotnet run
 
 {% endtabcontents %}
 
-### Handling exceptions
+## Handling exceptions
 
 You can handle errors that occur during Pivot Table actions without stopping your application. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event to capture error messages or details from the server. We recommend binding this event while building your app, as it helps you identify issues early. You can share these error details with our support team to get help quickly.
 
@@ -341,7 +341,7 @@ The following code example shows how to display a server-side error message to t
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable)
 
-### See also
+## See also
 
 * [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Blazor for Client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
