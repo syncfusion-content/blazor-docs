@@ -112,7 +112,9 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
-N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+N> 
+- The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+- If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, add these namespaces in both the server and client project **~/_Imports.razor** files.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -203,17 +205,18 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Accumulation Chart component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Accumulation Chart component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the `.Client` project folder, and run the following command.
+Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -223,11 +226,12 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the `.Client` project folder, and run the following command.
+Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Items in Blazor DataForm Component | Syncfusion
+title: Form Items in Blazor DataForm Component | Syncfusion®
 description: Checkout and learn here about how to configure Form Item and its customization in Blazor DataForm component.
 platform: Blazor
 control: DataForm
