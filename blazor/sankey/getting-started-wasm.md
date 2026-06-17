@@ -13,7 +13,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) in a Blazor WASM App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-### Create a new Blazor WASM App
+## Create a new Blazor WASM App
 
 {% tabcontents %}
 
@@ -55,7 +55,7 @@ dotnet new blazorwasm -o BlazorApp
 
 {% endtabcontents %}
 
-### Install the required Blazor packages
+## Install the required Blazor packages
 
 Install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Blazor.Sankey/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -108,7 +108,7 @@ dotnet add package Syncfusion.Blazor.Sankey -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces
+## Add import namespaces
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Sankey` namespaces.
 
@@ -121,7 +121,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
@@ -137,7 +137,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add script resources
+## Add script resources
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
@@ -151,7 +151,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-### Add Blazor Sankey Diagram component
+## Add Blazor Sankey Diagram component
 
 Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) component inside the razor file.
 
@@ -252,7 +252,7 @@ dotnet run
 
 ![Blazor Sankey Diagram](images/getting-started/blazor-sankey.webp)
 
-### Populate Blazor Sankey with data
+## Populate Blazor Sankey with data
 
 To bind data for the sankey diagram, you can assign an IEnumerable object to the `Nodes` and `Links` properties. These properties define the structure of the nodes and the relationships between them.
 
@@ -310,7 +310,7 @@ To bind data for the sankey diagram, you can assign an IEnumerable object to the
 {% endhighlight %}
 {% endtabs %}
 
-### Add title
+## Add title
 
 Using the `Title` property, you can add a title to the sankey diagram to provide the user with quick information about the data plotted in the sankey diagram.
 
@@ -327,7 +327,7 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 
 ![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.webp)
 
-### Add node labels
+## Add node labels
 
 You can add data labels to improve the readability of the sankey diagram. This can be achieved by setting the `Visible` property to **true** in the `SankeyLabelSettings`.
 
@@ -345,7 +345,7 @@ You can add data labels to improve the readability of the sankey diagram. This c
 
 ![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.webp)
 
-### Enable tooltip
+## Enable tooltip
 
 The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSettings` to **true**. However, the tooltip is enabled by default in the sankey diagram.
 
@@ -363,7 +363,7 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 
 ![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.webp)
 
-### Enable legend
+## Enable legend
 
 You can use legend for the sankey diagram by setting the `Visible` property to **true** in `SankeyLegendSettings`. However, the legend is enabled by default in the sankey diagram.
 
@@ -381,7 +381,7 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 
 ![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.webp)
 
-### See also
+## See also
 
 * [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
