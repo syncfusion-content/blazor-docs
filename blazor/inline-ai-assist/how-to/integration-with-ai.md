@@ -17,7 +17,7 @@ N> The Microsoft AI extension libraries are currently in preview and may include
 
 ### Getting started with Inline AI Assist
 
-Before integrating `Inline AI Assist` with `Microsoft.Extensions.AI`, ensure the `SfAIAssistView` component is rendered by following the appropriate project guidelines:
+Before integrating `Inline AI Assist` with `Microsoft.Extensions.AI`, ensure the `SfInlineAIAssist` component is rendered by following the appropriate project guidelines:
 
 * [Blazor Web App](../getting-started-webapp)
 * [Blazor WASM App](../getting-started)
@@ -101,7 +101,7 @@ In the following example, user input is sent to the injected `IChatClient`.
 @inject IChatClient ChatClient
 
 <div style="height: 350px; width: 650px;">
-    <SfAIAssistView PromptRequested="@OnPromptRequested"></SfAIAssistView>
+    <SfInlineAIAssist PromptRequested="@OnPromptRequested"></SfInlineAIAssist>
 </div>
 
 @code {

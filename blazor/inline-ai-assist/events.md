@@ -13,60 +13,72 @@ This section describes the Inline AI Assist events that will be triggered when a
 
 ## Created
 
-The Inline AI Assist control triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Created) event when the control rendering is completed.
+The Inline AI Assist control triggers the `Created` event when the control rendering is completed.
 
-```cshtml
-<div class="container">
-    <ejs-inlineaiassist id="inline-assist" Created="onCreated"></ejs-inlineaiassist>
+```razor
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="container" style="height: 350px; width: 650px;">
+    <SfInlineAIAssist Created="OnCreated"></SfInlineAIAssist>
 </div>
-<script>
-    function Created() {
+@code {
+    private void OnCreated(object args)
+    {
         // Your required actions here
     }
-</script>
+}
 ```
 
-## PromptRequest
+## PromptRequested
 
-The `PromptRequest` event is triggered when the prompt request is made in the Inline AI Assist control.
+The `PromptRequested` event is triggered when the prompt request is made in the Inline AI Assist control.
 
-```cshtml
-<div class="container">
-    <ejs-inlineaiassist id="inline-assist" PromptRequest="onPromptRequest"></ejs-inlineaiassist>
+```razor
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="container" style="height: 350px; width: 650px;">
+    <SfInlineAIAssist PromptRequested="OnPromptRequested"></SfInlineAIAssist>
 </div>
-<script>
-    function onPromptRequest() {
+@code {
+    private void OnPromptRequested(PromptRequestedEventArgs args)
+    {
         // Your required actions here
     }
-</script>
+}
 ```
 
-## Open
+## Opened
 
-The `Open` event is triggered when the Inline AI Assist popup is opened.
+The `Opened` event is triggered when the Inline AI Assist popup is opened.
 
-```cshtml
-<div class="container">
-    <ejs-inlineaiassist id="inline-assist" Open="onOpen"></ejs-inlineaiassist>
+```razor
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="container" style="height: 350px; width: 650px;">
+    <SfInlineAIAssist Opened="OnOpened"></SfInlineAIAssist>
 </div>
-<script>
-    function onOpen() {
+@code {
+    private void OnOpened(OpenEventArgs args)
+    {
         // Your required actions here
     }
-</script>
+}
 ```
 
-### Close
+### Closed
 
-The `Close` event is triggered when the Inline AI Assist popup is closed.
+The `Closed` event is triggered when the Inline AI Assist popup is closed.
 
-```cshtml
-<div class="container">
-    <ejs-inlineaiassist id="inline-assist" Close="onClose"></ejs-inlineaiassist>
+```razor
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="container" style="height: 350px; width: 650px;">
+    <SfInlineAIAssist Closed="OnClosed"></SfInlineAIAssist>
 </div>
-<script>
-    function onClose() {
+@code {
+    private void OnClosed(CloseEventArgs args)
+    {
         // Your required actions here
     }
-</script>
+}
 ```
