@@ -413,13 +413,17 @@ The following example demonstrates how to customize the transform, inline code, 
 @using Syncfusion.Blazor.BlockEditor.Models
 
 <div id="container">
-    <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
+    <SfBlockEditor Blocks="@BlockData"
+                   TransformSettings="@TransformOptions"
+                   InlineToolbarSettings="@InlineToolbarOptions">
+    </SfBlockEditor>
 </div>
 
 @code {
+
     private List<BlockModel> BlockData = new()
     {
-        // Transform (Heading)
+        // Heading Block
         new BlockModel
         {
             BlockType = BlockType.Heading,
@@ -434,7 +438,7 @@ The following example demonstrates how to customize the transform, inline code, 
             }
         },
 
-        //  Paragraph with inline code + link
+        // Paragraph with inline elements
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
@@ -464,7 +468,7 @@ The following example demonstrates how to customize the transform, inline code, 
             }
         },
 
-        // Another transform (Quote)
+        // Quote Block
         new BlockModel
         {
             BlockType = BlockType.Quote,
@@ -473,9 +477,32 @@ The following example demonstrates how to customize the transform, inline code, 
                 new ContentModel
                 {
                     ContentType = ContentType.Text,
-                    Content = "This is a quote block (transform example)."
+                    Content = "This is a quote block."
                 }
             }
+        }
+    };
+
+    // Transform Settings 
+    private TransformSettings TransformOptions = new()
+    {
+        Items = new List<TransformItem>
+        {
+            new TransformItem { BlockType = BlockType.Paragraph, Label = "Paragraph" },
+            new TransformItem { BlockType = BlockType.Heading, Label = "Heading" },
+            new TransformItem { BlockType = BlockType.Quote, Label = "Quote" }
+        }
+    };
+
+    // Inline Toolbar Settings
+    private InlineToolbarSettings InlineToolbarOptions = new()
+    {
+        Items = new List<InlineToolbarItem>
+        {
+            InlineToolbarItem.Bold,
+            InlineToolbarItem.Italic,
+            InlineToolbarItem.InlineCode,
+            InlineToolbarItem.Link
         }
     };
 }
