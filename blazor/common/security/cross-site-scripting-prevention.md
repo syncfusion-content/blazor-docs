@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Preventing Cross-Site Scripting (XSS) in Blazor Apps | Syncfusion
+title: Preventing Cross-Site Scripting (XSS) in Blazor Apps | Syncfusion®
 description: Protect Blazor components from XSS using built‑in sanitization, server-side validation, and essential security best practices.
 platform: Blazor
 control: Common
@@ -550,7 +550,7 @@ using BlazorApp.Services;
 ...
 // Registers the sanitizer service for dependency injection.
 builder.Services.AddSingleton<HtmlSanitizerService>();
-// Required to enable all Syncfusion Blazor components.
+// Required to enable all Blazor components.
 builder.Services.AddSyncfusionBlazor();
 ...
 
