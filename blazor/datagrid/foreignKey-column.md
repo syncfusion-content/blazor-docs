@@ -1009,14 +1009,11 @@ The Blazor DataGrid supports customizing the edit template for foreign key colum
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@page "/"
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @using EditTemplate.Models
-@rendermode InteractiveServer
 
 
 <SfGrid TValue="OrdersDetails" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Width="650">
