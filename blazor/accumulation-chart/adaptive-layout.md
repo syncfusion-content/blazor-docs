@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adaptive Layout in Blazor Accumulation Chart Component | Syncfusion
-description: Check out and learn how to configure and utilize the Adaptive Layout in Syncfusion Blazor Accumulation Chart component.
+title: Adaptive Layout in Blazor Accumulation Chart Component | Syncfusion®
+description: Check out and learn how to configure and utilize the Adaptive Layout in Blazor Accumulation Chart component and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Adaptive Layout in Blazor Accumulation Chart Component
 
-When viewing the accumulation chart on mobile devices, some elements may not display properly due to limited screen space. The **Syncfusion<sup style="font-size:70%">&reg;</sup> Accumulation Chart Adaptive Layout** feature dynamically adjusts chart elements for optimal display based on screen size and orientation. Enable the `EnableAdaptiveRendering` property to allow the chart to automatically adapt to container size changes, ensuring clear alignment and visibility of elements such as the legend, data labels, chart title, and more.
+When viewing the accumulation chart on mobile devices, some elements may not display properly due to limited screen space. The **Accumulation Chart Adaptive Layout** feature dynamically adjusts chart elements for optimal display based on screen size and orientation. Enable the `EnableAdaptiveRendering` property to allow the chart to automatically adapt to container size changes, ensuring clear alignment and visibility of elements such as the legend, data labels, chart title, and more.
 
 ```cshtml
 
