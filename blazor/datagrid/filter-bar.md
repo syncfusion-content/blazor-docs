@@ -731,9 +731,9 @@ public class OrderData
 
 The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar using the **ShowFilterBarOperator** property.
 
-When this property is enabled, an operator dropdown is displayed in each filter bar cell when the filter icon is clicked. Users can select the required filtering operator based on the column type, eliminating the need to manually enter filter expressions.
+When enabled, clicking the filter icon within a filter bar cell opens an operator dropdown, allowing users to choose a filtering condition. Users can select a filtering operator appropriate to the column type, eliminating the need to manually enter filter expressions.
 
-Each filter bar cell also includes a **clear filter icon** that is rendered individually for every column and behaves based on the filter state of that specific column. The clear filter icon is **enabled** when a filter is applied to the corresponding column and remains **disabled** when no filter is active. This column-specific behavior provides better control and improves visibility when managing filters across multiple columns.
+Each filter bar cell also includes a **clear filter icon** that is rendered individually for every column and behaves based on the filter state of that specific column. This icon is **enabled** only when a filter is applied to that column and **disabled** otherwise, helping users quickly identify and clear active filters. This column-specific behavior provides better control and improves visibility when managing filters across multiple columns.
 
 **Benefits of operator-based filtering**
 
@@ -746,23 +746,23 @@ Each filter bar cell also includes a **clear filter icon** that is rendered indi
 
 The filter bar dynamically renders input controls based on the corresponding column data type, ensuring type-safe and intuitive interaction.
 
-| Column Type | Filter Control |
+| Data Type | Filter Control |
 |-------------|----------------|
-| String | Text input fields |
-| Numeric | Numeric input controls |
-| Date | Date picker controls |
-| Time | Time picker controls |
-| DateTime | DateTime picker controls |
-| Boolean | Dropdown with True/False options |
+| String | Text input |
+| Numeric | Numeric input |
+| DateOnly | Date picker |
+| TimeOnly | Time picker |
+| DateTime | DateTime picker |
+| Boolean | Dropdown(True/False) |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px">
+<SfGrid DataSource="@GridData" AllowFiltering="true" AllowPaging="true" Height="273px">
     <GridPageSettings PageSize="5"></GridPageSettings>
-    <GridFilterSettings  ShowFilterBarOperator="true"></GridFilterSettings>
+    <GridFilterSettings Type="FilterType.FilterBar" ShowFilterBarOperator="true"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -776,8 +776,6 @@ The filter bar dynamically renders input controls based on the corresponding col
 @code {
 
     public List<OrderData> GridData { get; set; }
-
-    SfGrid<OrderData> Grid;
 
     protected override void OnInitialized()
     {
