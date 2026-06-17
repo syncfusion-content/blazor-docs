@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multi-column in Blazor AutoComplete component | Syncfusion
-description: Checkout and learn here all about AutoComplete in Syncfusion Blazor AutoComplete component and more.
+title: Multi-column in Blazor AutoComplete component | Syncfusion®
+description: Checkout and learn here all about AutoComplete in Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

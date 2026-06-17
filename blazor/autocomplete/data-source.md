@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Source in Blazor AutoComplete Component | Syncfusion
-description: Learn how to bind data sources in the Syncfusion Blazor AutoComplete component using local collections or remote services with DataManager and adaptors.
+title: Data Source in Blazor AutoComplete Component | Syncfusion®
+description: Learn how to bind data sources in the Blazor AutoComplete component using local collections or remote services with DataManager and adaptors.
 platform: Blazor
 control: AutoComplete
 documentation: ug

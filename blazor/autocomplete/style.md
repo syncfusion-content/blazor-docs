@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and appearance in Blazor AutoComplete Component | Syncfusion
+title: Style and appearance in Blazor AutoComplete Component | Syncfusion®
 description: Checkout and learn here all about Style and appearance in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete

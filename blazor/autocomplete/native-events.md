@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Native events in Blazor AutoComplete component | Syncfusion
+title: Native events in Blazor AutoComplete component | Syncfusion®
 description: Check out how to use native events with the Syncfusion Blazor AutoComplete component, including @on{event} binding and passing event argument data.
 platform: Blazor
 control: AutoComplete
@@ -96,7 +96,7 @@ In the following example, the keypress handler receives `KeyboardEventArgs`. The
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgCVWTAdxsbIip?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Lambda expressions can also pass event data to the event handler as shown above. Native events can be used alongside Syncfusion component events (such as `ValueChange`), depending on the use case.
+Lambda expressions can also pass event data to the event handler as shown above. Native events can be used alongside Blazor component events (such as `ValueChange`), depending on the use case.
 
 ## List of native events supported
 

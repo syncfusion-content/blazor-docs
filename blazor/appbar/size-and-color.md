@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Size and Color with Blazor AppBar Component | Syncfusion
+title: Size and Color with Blazor AppBar Component | Syncfusion®
 description: Check out and learn about Size and Color with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
@@ -138,7 +138,7 @@ This color mode is the default one in which the AppBar can be displayed with a l
 
 <div class="control-container">
     <SfAppBar>
-        <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="Syncfusion blazor components">
+        <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="blazor components">
             <div class="syncfusion-logo"></div>
          </a>
         <AppBarSpacer></AppBarSpacer>
@@ -229,7 +229,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Inherit">
-         <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="Syncfusion blazor components">
+         <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="blazor components">
             <div class="syncfusion-logo"></div>
          </a>
         <AppBarSpacer></AppBarSpacer>
