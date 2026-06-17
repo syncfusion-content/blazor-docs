@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Validation in Blazor DataGrid | Syncfusion
-description: Learn about Column Validation in Syncfusion Blazor DataGrid, including setup, validation types, and customization options.
+title: Column Validation in Blazor DataGrid | Syncfusion®
+description: Learn about Column Validation in Blazor DataGrid, including setup, validation types, and customization options.
 platform: Blazor
 control: DataGrid
 documentation: ug
