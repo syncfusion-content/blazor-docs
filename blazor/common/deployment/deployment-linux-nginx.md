@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy a Blazor Web App to Linux with NGINX | Syncfusion
-description: Learn here all about deploying the Blazor Web App with Syncfusion Blazor Components to Linux server using NGINX.
+title: Deploy a Blazor Web App to Linux with NGINX | Syncfusion®
+description: Learn here all about deploying the Blazor Web App with Blazor Components to Linux server using NGINX.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Deploy Blazor Web App to Linux with NGINX
 
-This section provides information about deploying a Blazor Web applications with the Syncfusion Blazor components to Linux server using NGINX as a reverse proxy.
+This section provides information about deploying a Blazor Web applications with the Blazor components to Linux server using NGINX as a reverse proxy.
 
 Refer to [Host ASP.NET Core on Linux with NGINX](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-9.0&tabs=linux-ubuntu) topic for more information.
 
@@ -17,7 +17,7 @@ Refer to [Host ASP.NET Core on Linux with NGINX](https://learn.microsoft.com/en-
 
 * Linux Server – Ubuntu 20.04, Red Hat Enterprise (RHEL) 8.0 and SUSE Linux Enterprise Server 12.
 * [.NET runtime](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk) installed on the server.
-* An existing Blazor Web App with Syncfusion components or create a new one.
+* An existing Blazor Web App with components or create a new one.
 
 ## Install and Start NGINX
 
@@ -32,9 +32,9 @@ sudo systemctl status nginx
 
 **Verification**: Open `http://your-server-ip` in a browser — you should see the NGINX welcome page.
 
-## Create and publish Your Blazor Web App with Syncfusion Components
+## Create and publish Your Blazor Web App with Components
 
-* You can create a Blazor Web App using the .NET CLI commands with Syncfusion components by referring [here](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli).
+* You can create a Blazor Web App using the .NET CLI commands with components by referring [here](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli).
 
 * Publish your Blazor Web application in Release configuration using the following command and run it:
 
@@ -100,7 +100,7 @@ From your Windows machine or any other device, open a browser and navigate to:
 http://<your-vm-ip>/
 ```
 
-You should now see your Blazor Web app running successfully with Syncfusion components!
+You should now see your Blazor Web app running successfully with components!
 
 ![Output-Linux](../images/output-linux.webp)
 
