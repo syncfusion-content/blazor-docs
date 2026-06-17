@@ -20,7 +20,6 @@ By settings ToolbarPosition as `Bottom`, footer items will be rendered at the bo
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
 
-```razor
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
 
@@ -138,7 +137,6 @@ Below sample demonstrates the usage of custom toolbar items in Inline Assist con
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
 
-```razor
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
 
@@ -228,7 +226,9 @@ Below sample demonstrates the usage of custom toolbar items in Inline Assist con
 
 The `ItemClick` event is triggered when the inline toolbar item is clicked.
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="razor" %}
+
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="container" style="height: 350px; width: 650px;">
@@ -246,4 +246,6 @@ The `ItemClick` event is triggered when the inline toolbar item is clicked.
         // Your required actions here
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
