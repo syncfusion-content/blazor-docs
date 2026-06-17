@@ -367,6 +367,121 @@ The Inline Toolbar includes the following built-in formatting options:
 - **Text Color**: Changes the color of the selected text.
 - **Background Color**: Changes the background color of the selected text.
 
+
+## Optional items
+
+The inline toolbar can handle custom items like `Transform`, `InlineCode`, and `Link` by passing an array of string values in the `Items` property of `InlineToolbarSettings`.
+
+### Transform block options
+
+The inline toolbar now includes `transform` options to quickly convert blocks between different types. You can use the `TransformSettings` property to handle customization of the transform menu in the inline toolbar. This allows you to configure available block transformations, define custom menu items with text and icons.
+
+### Built-in default transform block options
+
+Below are the built-in transform block options available:
+
+| Built-in transform Block Types |
+|--------------------------------|
+| Paragraph |
+| Heading1 to Heading4 |
+| Checklist |
+| BulletList |
+| NumberedList |
+
+> For blocks such as `code`, `callout`, `quote`, `divider`, `image`, `table`, and `collapsible`, transform options are not available. Instead, they will be added as a new block.
+
+### Events
+
+The following events are available for the transform toolbar item menu:
+
+| Name | Args | Description |
+|------|------|-------------|
+| ItemSelect | TransformItemSelectEventArgs | Triggers when a command item is clicked. |
+
+### Inline code support
+
+Added inline code formatting in the toolbar, with light syntax highlighting and seamless integration with other text formatting options.
+
+### Inline link support
+
+Added inline link formatting in the toolbar. By clicking the link item, a dialog opens and, after proper value input, the link can be inserted into the text.
+
+The following example demonstrates how to customize the transform, inline code, and link items.
+
+```razor
+@using Syncfusion.Blazor.BlockEditor
+@using Syncfusion.Blazor.BlockEditor.Models
+
+<div id="container">
+    <SfBlockEditor Blocks="@BlockData"></SfBlockEditor>
+</div>
+
+@code {
+    private List<BlockModel> BlockData = new()
+    {
+        // Transform (Heading)
+        new BlockModel
+        {
+            BlockType = BlockType.Heading,
+            Properties = new HeadingBlockSettings { Level = 1 },
+            Content = new()
+            {
+                new ContentModel
+                {
+                    ContentType = ContentType.Text,
+                    Content = "Block Editor Demo"
+                }
+            }
+        },
+
+        //  Paragraph with inline code + link
+        new BlockModel
+        {
+            BlockType = BlockType.Paragraph,
+            Content = new()
+            {
+                new ContentModel
+                {
+                    ContentType = ContentType.Text,
+                    Content = "This is normal text. "
+                },
+                new ContentModel
+                {
+                    ContentType = ContentType.InlineCode,
+                    Content = "console.log('Hello');"
+                },
+                new ContentModel
+                {
+                    ContentType = ContentType.Text,
+                    Content = " and visit "
+                },
+                new ContentModel
+                {
+                    ContentType = ContentType.Link,
+                    Content = "Syncfusion",
+                    Url = "https://www.syncfusion.com"
+                }
+            }
+        },
+
+        // Another transform (Quote)
+        new BlockModel
+        {
+            BlockType = BlockType.Quote,
+            Content = new()
+            {
+                new ContentModel
+                {
+                    ContentType = ContentType.Text,
+                    Content = "This is a quote block (transform example)."
+                }
+            }
+        }
+    };
+}
+```
+
+
 ### Customize inline toolbar
 
 Use the [BlockEditorInlineToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorInlineToolbar.html) tag directive to customize the Inline Toolbar by adding or removing formatting options based on application needs.
