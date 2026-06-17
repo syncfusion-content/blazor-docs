@@ -33,7 +33,7 @@ GitHub Codespaces automatically detects and applies settings from the `.devconta
 
 ### Create the devcontainer configuration
 
-**Step 1: Clone your repository**
+#### Step 1: Clone your repository
 
 Clone your GitHub repository to your local machine:
 
@@ -48,7 +48,7 @@ cd <your-repo>
 
 You can also create files directly in GitHub by navigating to your repository and selecting **Add file → Create new file**.
 
-**Step 2: Create the `.devcontainer` folder**
+#### Step 2: Create the `.devcontainer` folder
 
 Create a folder named `.devcontainer` at the root level of your repository.
 
@@ -60,7 +60,7 @@ mkdir .devcontainer
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Add the `devcontainer.json` file**
+#### Step 3: Add the `devcontainer.json` file
 
 Inside the `.devcontainer` folder, create a file named `devcontainer.json` and add the following configuration.
 
@@ -131,13 +131,14 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
 * **Features**: Includes GitHub CLI for repository operations within Codespaces
 * **VS Code extensions**: Installs C# development tools, Blazor tools, and Docker support automatically
 * **Dual-port forwarding**: Exposes both HTTP (5000) and HTTPS (5001) for maximum compatibility
-* **WASM tools**: Installs Blazor WebAssembly development tools via `workload install`
+* **WebAssembly (WASM) tools**: Installs Blazor WebAssembly development tools via `workload install`
 * **Environment variables**: Configures .NET globalization, development environment, and both protocol URLs
 * **Post-create command**: Automatically restores NuGet packages and installs required workloads after container setup
+* **Post-start restoration**: Runs `dotnet restore` on each container start, and the `|| true` ensures the container startup succeeds even if the restore encounters warnings or conflicts.
 
 This configuration ensures your Codespaces environment is fully ready to build and run Blazor applications without any manual setup.
 
-**Step 4: Commit and push to GitHub**
+#### Step 4: Commit and push to GitHub
 
 Commit the `.devcontainer` folder to your repository.
 
@@ -330,53 +331,7 @@ The Blazor application will load with the DataGrid.
 * The DataGrid loads with 10 order records
 * Fully interactive UI runs inside the browser
 
-## Codespaces configuration details
-
-Ensure your repository includes a `.devcontainer/devcontainer.json` file as described in the [Configure a Development Container](#configure-a-development-container-for-net-10-and-blazor) section above. The configuration should include:
-
-* .NET 10 SDK installation
-* Port forwarding configuration (5000, 5001)
-* Recommended VS Code extensions for C# and Blazor
-
-## Benefits of using Codespaces
-
-### No local setup required
-
-Develop and run Blazor applications directly in the browser.
-
-### Consistent development environment
-
-All developers work with the same configuration.
-
-### Faster onboarding
-
-New developers can start instantly without environment setup.
-
-### Cloud-based execution
-
-Access your project from anywhere without dependency issues.
-
-## Use cases
-
-Using the Blazor DataGrid with GitHub Codespaces enables:
-
-### Rapid development
-
-Build and test DataGrid features instantly in a cloud environment.
-
-### Team collaboration
-
-Share repository access and allow others to launch identical environments.
-
-### Training and demos
-
-Provide ready-to-use environments for learning and demonstrations.
-
-### Cloud-first development
-
-Integrate easily with GitHub workflows and CI/CD pipelines.
-
 ## See also
 
-* [Getting Started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [GitHub Codespaces Documentation](https://docs.github.com/en/codespaces)
+* [Getting Started with Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
+* [Getting Started with Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
