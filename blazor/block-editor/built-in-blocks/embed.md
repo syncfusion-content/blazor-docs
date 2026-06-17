@@ -116,10 +116,7 @@ Upload the selected image to a server endpoint using the `SaveUrl` property. Use
 
 ```razor
 <SfBlockEditor Blocks="BlockData">
-    <BlockEditorImageBlock 
-        SaveUrl="/api/upload"
-        Path="/images/uploads"
-        SaveFormat="SaveFormat.Blob" />
+    <BlockEditorImageBlock SaveUrl="/api/upload" Path="/images/uploads" SaveFormat="SaveFormat.Blob" />
 </SfBlockEditor>
 ```
 
