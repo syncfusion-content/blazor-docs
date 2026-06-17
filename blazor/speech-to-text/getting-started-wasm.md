@@ -13,7 +13,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor SpeechToText](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-### Create a new Blazor WASM App
+## Create a new Blazor WASM App
 
 {% tabcontents %}
 
@@ -55,7 +55,7 @@ dotnet new blazorwasm -o BlazorApp
 
 {% endtabcontents %}
 
-### Install the required Blazor packages
+## Install the required Blazor packages
 
 Install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -108,7 +108,7 @@ dotnet add package Syncfusion.Blazor.Inputs -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces
+## Add import namespaces
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
@@ -121,7 +121,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
@@ -137,7 +137,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add script resources
+## Add script resources
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
@@ -151,7 +151,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-### Add Blazor SpeechToText component
+## Add Blazor SpeechToText component
 
 Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor SpeechToText](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component inside the razor file.
 
@@ -226,7 +226,7 @@ dotnet run
 
 > The [SpeechToText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html) component requires an internet connection and a browser that supports the [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) Web Speech API.
 
-### Add button content
+## Add button content
 
 Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property to display the start listening text and [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property to display the stop listening text by using the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) property.
 
@@ -265,7 +265,7 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sp
 ![Blazor SpeechToText with Button Content Start text](images/btn-content-start.webp)
 ![Blazor SpeechToText with Button Content Stop text](images/btn-content-stop.webp)
 
-### See also
+## See also
 
 * [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
