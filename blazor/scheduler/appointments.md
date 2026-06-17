@@ -752,8 +752,7 @@ In the Scheduler, you can limit the number of concurrent events displayed in eac
 In the Scheduler, the default behavior is to display concurrent events based on cell height, with each new event represented as
 `+N more` characters. However, you may want to improve the quality of the presentation by limiting the number of concurrent events. This can be accomplished by using the [MaxEventsPerRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property, which is defaulted to the [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) property.
 
-The maxEventsPerRow property is specific to the month, timeline month, and timeline year views, allowing you to view events visually in these rows. Below is a code example that demonstrates how to use this constraint and the events displayed in a cell have been created:
-The [MaxEventsPerRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property is specific to the **Month**, **TimelineMonth**, and **TimelineYear** views, allowing you to limit the number of events displayed in each row. Below is a code example that demonstrates how to use this constraint.
+The [MaxEventsPerRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property is specific to the **Month**, **TimelineMonth**, and **TimelineYear** views, allowing you to view events visually in these rows. Below is a code example that demonstrates how to use this constraint and the events displayed in a cell have been created:
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -808,7 +807,7 @@ By default, the Scheduler shows all overlapping events without any restrictions.
 
 #### Limit the number of visible events
 
-To set a maximum limit for visible events per time slot, configure the `MaxEventStack` property on each [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) with a specific numeric value. When the number of overlapping events exceeds this limit, the `+N` indicator appears, allowing users to click and view the remaining events in a popup window.
+To set a maximum limit for visible events per time slot, configure the `MaxEventStack` property on each [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) with a specific numeric value. When the number of overlapping events exceeds this limit, the `+N` indicator appears, allowing users to click and view the remaining events in a popup window. Below is a code example that demonstrates how to use this constraint:
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
