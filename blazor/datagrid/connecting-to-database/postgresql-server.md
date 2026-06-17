@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid with PostgreSQL via Entity Framework | Syncfusion
+title: Blazor Data Grid with PostgreSQL via Entity Framework | Syncfusion®
 description: Bind PostgreSQL data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
@@ -676,7 +676,7 @@ app.Run();
 
 **Explanation:**
 
-- **`AddSyncfusionBlazor()`**: Registers Syncfusion Blazor components (DataGrid, themes, etc.).
+- **`AddSyncfusionBlazor()`**: Registers Blazor components (DataGrid, themes, etc.).
 - **`AddDbContext<PurchaseOrderDbContext>`**: Registers the DbContext with PostgreSQL as the database provider using `UseNpgsql()`.
 - **Connection String Validation**: Ensures the connection string is configured before attempting to connect.
 - **`EnableSensitiveDataLogging()`**: Enabled in development to log detailed information about database operations (useful for debugging).
@@ -688,7 +688,7 @@ The service registration has been completed successfully.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -707,18 +707,18 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Grid_PostgreSQL.Data
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting-started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting-started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -740,7 +740,7 @@ The `Home.razor` component will display the purchase order data in a Blazor Data
         <h1 class="mb-4 text-3xl font-bold">Purchase Order Management System</h1>
         <p class="mb-3 text-gray-600">Manage and view all purchase orders from the database.</p>
         
-        <!-- Syncfusion Blazor DataGrid Component -->
+        <!-- Blazor DataGrid Component -->
         <SfGrid TValue="PurchaseOrder" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
             <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
             
@@ -1733,7 +1733,7 @@ Now that all the CustomAdaptor methods are implemented for CRUD operations, the 
         <h1 class="mb-4 text-3xl font-bold">Purchase Order Management System</h1>
         <p class="mb-3 text-gray-600">Manage and view all purchase orders from the PostgreSQL database with full CRUD, search, filter, sort, and grouping capabilities.</p>
         
-        <!-- Syncfusion Blazor DataGrid Component -->
+        <!-- Blazor DataGrid Component -->
         <SfGrid TValue="PurchaseOrder" 
                 AllowPaging="true" 
                 AllowSorting="true" 

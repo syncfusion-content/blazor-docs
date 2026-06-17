@@ -174,7 +174,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Chart component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRjRiBKleQGqKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
 
 ## Populate Blazor chart with data
 
@@ -218,9 +218,9 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTNiLezckHqsGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRZdMVgPGhfPSi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart). Looking for the full Blazor Charts overview, features, pricing, and documentation? Visit the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) page.
 
 ## See also
 
