@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Batch Editing in Blazor DataGrid | Syncfusion
-description: Learn how batch editing enables multiple cell updates in Syncfusion Blazor DataGrid with dynamic columns, events, and bulk operations.
+title: Batch Editing in Blazor DataGrid | Syncfusion®
+description: Learn how batch editing enables multiple cell updates in Blazor DataGrid with dynamic columns, events, and bulk operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
