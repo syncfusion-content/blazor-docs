@@ -228,18 +228,22 @@ Below sample demonstrates the usage of custom toolbar items in Inline Assist con
 
 The `ItemClick` event is triggered when the inline toolbar item is clicked.
 
-```cshtml
+```razor
+@using Syncfusion.Blazor.InteractiveChat
 
-<div class="container">
-    <ejs-inlineaiassist id="inline-assist" Created="onCreated">
-        <e-inlineaiassist-inlinetoolbarsettings ItemClick="onToolbarItemClick"></e-inlineaiassist-inlinetoolbarsettings>
-    </ejs-inlineaiassist>
+<div class="container" style="height: 350px; width: 650px;">
+    <SfInlineAIAssist Created="OnCreated">
+        <InlineToolbar ItemClick="OnToolbarItemClick"></InlineToolbar>
+    </SfInlineAIAssist>
 </div>
-
-<script>
-    function onToolbarItemClick() {
+@code {
+    private void OnCreated(object args)
+    {
         // Your required actions here
     }
-</script>
-
+    private void OnToolbarItemClick(ToolbarItemClickEventArgs args)
+    {
+        // Your required actions here
+    }
+}
 ```
