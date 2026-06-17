@@ -1010,17 +1010,20 @@ The Blazor DataGrid supports customizing the edit template for foreign key colum
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using EditTemplate.Models
 @using Syncfusion.Blazor.DropDowns
+@using EditTemplate.Models
+@rendermode InteractiveServer
 
 
-<SfGrid TValue="OrdersDetails" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-
-    <SfDataManager Url="https://localhost:xxxx/api/grid"
-                   InsertUrl="https://localhost:xxxx/api/grid/Insert"
-                   UpdateUrl="https://localhost:xxxx/api/grid/Update"
-                   RemoveUrl="https://localhost:xxxx/api/grid/Remove"
+<SfGrid TValue="OrdersDetails" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Width="650">
+    <SfDataManager Url="http://localhost:XXXX/api/grid"
+                   InsertUrl="http://localhost:XXXX/api/grid/Insert"
+                   UpdateUrl="http://localhost:XXXX/api/grid/Update"
+                   RemoveUrl="http://localhost:XXXX/api/grid/Remove"
                    Adaptor="Adaptors.UrlAdaptor">
     </SfDataManager>
 
@@ -1030,14 +1033,14 @@ The Blazor DataGrid supports customizing the edit template for foreign key colum
         <GridColumn Field="@nameof(OrdersDetails.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="150"></GridColumn>
         <GridForeignColumn TValue="EmployeeData" Field="@nameof(OrdersDetails.EmployeeID)" HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
             <ChildContent>
-                <SfDataManager Url="https://localhost:xxxx/api/employees" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+                <SfDataManager Url="http://localhost:XXXX/api/employees" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
             </ChildContent>
             <EditTemplate>
                 @{
                     var data = context as OrdersDetails;
                 }
                 <SfAutoComplete TValue="int?" TItem="EmployeeData" @bind-Value="data.EmployeeID">
-                    <SfDataManager Url="https://localhost:xxxx/api/employees" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+                    <SfDataManager Url="http://localhost:XXXX/api/employees" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
                     <AutoCompleteFieldSettings Text="FirstName" Value="EmployeeID"></AutoCompleteFieldSettings>
                 </SfAutoComplete>
             </EditTemplate>
@@ -1048,21 +1051,268 @@ The Blazor DataGrid supports customizing the edit template for foreign key colum
     </GridColumns>
 </SfGrid>
 
-@code {
+{% endhighlight %}
+
+{% highlight c# tabtitle="GridController.cs" %}
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Data;
+using System.Text.Json;
+using EditTemplate.Models;
+
+namespace EditTemplate.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class GridController : ControllerBase
+    {
+        private static List<OrdersDetails> Data = new();
+
+        private static List<OrdersDetails> GetOrderData()
+        {
+            if (Data.Count == 0)
+            {
+                int code = 10001;
+
+                for (int i = 1; i <= 50; i++)
+                {
+                    Data.Add(new OrdersDetails
+                    {
+                        OrderID = code + i,
+                        EmployeeID = i % 10 + 1,
+                        ShipName = $"Shipping {i}",
+                        ShipCountry = i % 2 == 0 ? "USA" : "UK",
+                        OrderDate = DateTime.Now.AddDays(-i),
+                        Freight = (decimal)(i * 10.5)
+                    });
+                }
+            }
+
+            return Data;
+        }
+
+        [HttpGet]
+        public IActionResult Get([FromQuery] int? skip = 0, [FromQuery] int? take = 10)
+        {
+            var dataSource = GetOrderData();
+            int totalRecordsCount = dataSource.Count;
+
+            var result = dataSource
+                .Skip(skip ?? 0)
+                .Take(take ?? 10)
+                .ToList();
+
+            return Ok(new { result, count = totalRecordsCount });
+        }
+
+        [HttpPost]
+        public object Post([FromBody] DataManagerRequest dm)
+        {
+            IEnumerable<OrdersDetails> query = GetOrderData();
+
+            int count = query.Count();
+
+            if (dm.Skip > 0)
+            {
+                query = DataOperations.PerformSkip(query, dm.Skip);
+            }
+
+            if (dm.Take > 0)
+            {
+                query = DataOperations.PerformTake(query, dm.Take);
+            }
+
+            var result = query.ToList();
+
+            return dm.RequiresCounts
+                ? new { result, count }
+                : result;
+        }
+
+        [HttpPost("Insert")]
+        public object Insert([FromBody] CRUDModel<OrdersDetails> value)
+        {
+            var newRecord = value.Value;
+
+            if (newRecord != null)
+            {
+                var data = GetOrderData();
+                newRecord.OrderID = data.Max(x => x.OrderID) + 1;
+                data.Insert(0, newRecord);
+            }
+
+            return newRecord!;
+        }
+
+        [HttpPost("Update")]
+        public object Update([FromBody] CRUDModel<OrdersDetails> value)
+        {
+            var updated = value.Value;
+
+            if (updated != null)
+            {
+                var data = GetOrderData();
+                var record = data.FirstOrDefault(x => x.OrderID == updated.OrderID);
+
+                if (record != null)
+                {
+                    record.EmployeeID = updated.EmployeeID;
+                    record.ShipName = updated.ShipName;
+                    record.ShipCountry = updated.ShipCountry;
+                }
+            }
+
+            return updated!;
+        }
+
+        [HttpPost("Remove")]
+        public object Remove([FromBody] CRUDModel<OrdersDetails> value)
+        {
+            if (value.Key != null)
+            {
+                int id = value.Key is JsonElement element
+                    ? element.GetInt32()
+                    : Convert.ToInt32(value.Key);
+
+                var data = GetOrderData();
+                var record = data.FirstOrDefault(x => x.OrderID == id);
+
+                if (record != null)
+                {
+                    data.Remove(record);
+                }
+            }
+
+            return value;
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="EmployeesController.cs" %}
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.Blazor;
+using EditTemplate.Models;
+
+namespace EditTemplate.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class EmployeesController : ControllerBase
+    {
+        private static List<EmployeeData> GetEmployeeData()
+        {
+            return new List<EmployeeData>
+            {
+                new EmployeeData { EmployeeID = 1, FirstName = "Nancy", LastName = "Davolio" },
+                new EmployeeData { EmployeeID = 2, FirstName = "Andrew", LastName = "Fuller" },
+                new EmployeeData { EmployeeID = 3, FirstName = "Janet", LastName = "Leverling" },
+                new EmployeeData { EmployeeID = 4, FirstName = "Margaret", LastName = "Hammersley" },
+                new EmployeeData { EmployeeID = 5, FirstName = "Steven", LastName = "Buchanan" },
+                new EmployeeData { EmployeeID = 6, FirstName = "Michael", LastName = "Suyama" },
+                new EmployeeData { EmployeeID = 7, FirstName = "Robert", LastName = "King" },
+                new EmployeeData { EmployeeID = 8, FirstName = "Laura", LastName = "Callahan" },
+                new EmployeeData { EmployeeID = 9, FirstName = "Anne", LastName = "Dodsworth" },
+                new EmployeeData { EmployeeID = 10, FirstName = "Ina", LastName = "Bahan" }
+            };
+        }
+
+        [HttpGet]
+        public IActionResult Get([FromQuery] int? skip = 0, [FromQuery] int? take = 10)
+        {
+            var employees = GetEmployeeData();
+
+            return Ok(new
+            {
+                result = employees,
+                count = employees.Count
+            });
+        }
+
+        [HttpPost]
+        public object Post([FromBody] DataManagerRequest dm)
+        {
+            IEnumerable<EmployeeData> dataSource = GetEmployeeData();
+
+            if (dm.Where?.Count > 0)
+            {
+                foreach (var filter in dm.Where)
+                {
+                    var value = filter.value?.ToString()?.ToLower();
+
+                    if (!string.IsNullOrEmpty(value))
+                    {
+                        dataSource = dataSource.Where(e =>
+                            (!string.IsNullOrEmpty(e.FirstName) && e.FirstName.ToLower().Contains(value)) ||
+                            (!string.IsNullOrEmpty(e.LastName) && e.LastName.ToLower().Contains(value))
+                        );
+                    }
+                }
+            }
+
+            var query = dataSource;
+            var count = query.Count();
+
+            if (dm.Skip > 0)
+            {
+                query = DataOperations.PerformSkip(query, dm.Skip);
+            }
+
+            if (dm.Take > 0)
+            {
+                query = DataOperations.PerformTake(query, dm.Take);
+            }
+
+            var result = query.ToList();
+
+            return dm.RequiresCounts
+                ? new { result, count }
+                : result;
+        }
+    }
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrdersDetails.cs" %}
+namespace EditTemplate.Models
+{
     public class OrdersDetails
     {
         public int? OrderID { get; set; }
         public int? EmployeeID { get; set; }
-        public string? ShipCountry { get; set; }
         public string? ShipName { get; set; }
+        public string? ShipCountry { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public decimal? Freight { get; set; }
     }
+}
+{% endhighlight %}
 
+{% highlight c# tabtitle="EmployeeData.cs" %}
+namespace EditTemplate.Models
+{
     public class EmployeeData
     {
         public int EmployeeID { get; set; }
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
     }
 }
+{% endhighlight %}
+
+{% highlight c# tabtitle="Program.cs" %}
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Other service registrations may be present here
+
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddControllers();
+
+// Other middleware and configuration code may be present here
+
+app.MapControllers();
 
 {% endhighlight %}
 {% endtabs %}
