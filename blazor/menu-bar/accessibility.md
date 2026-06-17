@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Menu Bar Component | Syncfusion®
-description: Checkout and learn here all about accessibility in Blazor Menu Bar component and much more details.
+description: Checkout and learn here all the features about accessibility in Blazor Menu Bar component and much more details.
 platform: Blazor
 control: Menu Bar
 documentation: ug

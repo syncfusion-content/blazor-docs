@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Mention Component in Blazor Server App | Syncfusion®
+title: Getting started with Mention in Blazor Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Mention Components in Server App and much more details.
 platform: Blazor
 control: Mention

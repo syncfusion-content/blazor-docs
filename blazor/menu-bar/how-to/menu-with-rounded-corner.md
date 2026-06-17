@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Menu Bar with Rounded Corner in Blazor Menu Bar Component | Syncfusion®
+title: Menu Bar with Rounded Corner in Blazor Menu Bar | Syncfusion®
 description: Checkout and learn here all about menu bar with rounded corner in Blazor Menu Bar component and much more details.
 platform: Blazor
 control: Menu Bar 
