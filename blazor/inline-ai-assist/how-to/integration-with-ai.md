@@ -106,12 +106,10 @@ In the following example, user input is sent to the injected `IChatClient`.
 
 @code {
     
-    private async Task OnPromptRequested(AssistViewPromptRequestedEventArgs args)
+    private async Task OnPromptRequested(PromptRequestedEventArgs args)
     {
         // Send the user’s prompt to the AI model
         var chatResponse = await ChatClient.GetResponseAsync(args.Prompt, new ChatOptions());
-        // Convert markdown to HTML
-        var htmlContent = Markdown.ToHtml(chatResponse.Text);
         // Clean up extra whitespace
         htmlContent = Regex.Replace(htmlContent, @"\s+", " ").Trim();
         // Set the cleaned HTML as the response
