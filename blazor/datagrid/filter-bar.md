@@ -744,7 +744,7 @@ Each filter bar cell also includes a **clear filter icon** that is rendered indi
 
 **Column-specific filter controls**
 
-The filter bar dynamically renders input controls based on the corresponding column data type, ensuring type-safe and intuitive interaction.
+The filter bar dynamically generates input controls when the **ShowFilterBarOperator** property is enabled, based on each column’s data type, ensuring a type-safe and user-friendly experience.
 
 | Data Type | Filter Control |
 |-------------|----------------|
