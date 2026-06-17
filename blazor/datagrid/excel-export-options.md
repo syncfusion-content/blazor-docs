@@ -1138,20 +1138,28 @@ public class OrderData
 
 ## Encoding support for CSV Exporting
 
-The Syncfusion Blazor DataGrid provides support for specifying encoding in exported CSV documents. This capability enables customization of the character encoding format to meet specific requirements. To configure encoding, include the **System.Text** namespace in the application. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the official Microsoft documentation [here](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-10.0).
+The Syncfusion Blazor DataGrid supports specifying encoding for exported CSV documents. This capability enables customization of the character encoding format to meet specific requirements. To configure encoding, include the **System.Text** namespace in the application. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the official Microsoft documentation [here](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-10.0).
+
+### When to use custom encoding
+
+- When exporting data with special characters or symbols.
+
+- When integrating with legacy systems requiring specific encodings.
+
+- When opening CSV files in software that does not default to UTF-8.
 
 > By default, the **Encoding.UTF8** type is used to export the CSV document.
 
-To customize the encoding type, use the **Encoding** property inside the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class, and provide the customization using the Encoding Enum which derives from the System.Text namespace. Please refer the below sample for implementation.
+To customize the encoding type, use the **Encoding** property inside the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class, and provide the customization using the **System.Text.Encoding** class which derives from the System.Text namespace. Refer to the following example.
 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-
 @using Syncfusion.Blazor.Grids
+@using System.Text
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport", "PdfExport" })" AllowExcelExport="true" AllowPdfExport="true">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" AllowExcelExport="true" AllowPdfExport="true">
     <GridEvents OnToolbarClick="ToolbarClick" TValue="OrdersDetails"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -1176,11 +1184,7 @@ To customize the encoding type, use the **Encoding** property inside the [ExcelE
     {
         if (this.Grid != null)
         {
-            if (args.Item.Id == "Grid_pdfexport")
-            {
-                this.Grid.ExportToPdfAsync();
-            }
-            else if (args.Item.Id == "Grid_excelexport")
+            if (args.Item.Id == "Grid_excelexport")
             {
                 this.Grid.ExportToExcelAsync();
             }
@@ -1250,6 +1254,8 @@ To customize the encoding type, use the **Encoding** property inside the [ExcelE
 
 {% endhighlight %}
 {% endtabs %}
+
+
 
 ## Conditional cell formatting
 
