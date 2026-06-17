@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Google Maps in Blazor Maps Component | Syncfusion
-description: Check out and learn how to display Google Maps tiles in the Syncfusion Blazor Maps component and much more details.
+title: Google Maps in Blazor Maps Component | Syncfusion®
+description: Check out and learn how to display Google Maps tiles in the Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Google Maps in Blazor Maps component
 
-Google Maps is an online map provider owned by Google. It provides map tile images based on requests. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Maps component composes these tiles into a single view to render the map. Google Maps tiles can be displayed by specifying the tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
+Google Maps is an online map provider owned by Google. It provides map tile images based on requests. The Blazor Maps component composes these tiles into a single view to render the map. Google Maps tiles can be displayed by specifying the tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
 
 ## Displaying Google Maps
 
@@ -26,13 +26,13 @@ These placeholders map to **level**, **tileX**, and **tileY**, respectively, to 
 
 N> Refer to the Google documentation at https://developers.google.com/maps/documentation/tile/roadmap for the latest Google Maps URL template.
 
-Below are the steps to integrate Google Maps tiles into the Syncfusion<sup style="font-size:70%">&reg;</sup> Maps component.
+Below are the steps to integrate Google Maps tiles into the Maps component.
 
 1. Generate an API key from Google Cloud Platform.
 2. Generate a session token to retrieve Google Maps tiles.
-3. Initialize the Syncfusion<sup style="font-size:70%">&reg;</sup> Maps component using the Google Maps tile service URL, including the session token and API key.
+3. Initialize the Maps component using the Google Maps tile service URL, including the session token and API key.
 
-The following walkthrough explains how to integrate Google Maps tiles into the Syncfusion<sup style="font-size:70%">&reg;</sup> Maps component using the provided code.
+The following walkthrough explains how to integrate Google Maps tiles into the Maps component using the provided code.
 
 **STEP 1**: Generate an API key from Google Cloud Platform by enabling the necessary APIs, such as the Google Maps Tile API and Google Maps API. This key is required for authentication and must be included in each API call. Follow the steps in https://developers.google.com/maps/documentation/tile/get-api-key to generate an API key.
 
@@ -123,7 +123,7 @@ private class ErrorDetails
 
 ```
 
-**STEP 3**: To initialize the Syncfusion<sup style="font-size:70%">&reg;</sup> Maps component, invoke **FetchSessionToken** in **OnInitializedAsync**. After retrieving the session token, append both the session token and the API key to the `UrlTemplate` property of the Maps component. This enables authenticated access to map tiles, allowing the Syncfusion<sup style="font-size:70%">&reg;</sup> Maps component to render the map with the required data.
+**STEP 3**: To initialize the Maps component, invoke **FetchSessionToken** in **OnInitializedAsync**. After retrieving the session token, append both the session token and the API key to the `UrlTemplate` property of the Maps component. This enables authenticated access to map tiles, allowing the Maps component to render the map with the required data.
 
 ```cshtml
 
