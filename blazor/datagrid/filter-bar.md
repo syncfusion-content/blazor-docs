@@ -737,7 +737,7 @@ Each filter bar cell also includes a **clear filter icon** that is rendered indi
 
 **Benefits of operator-based filtering**
 
-* Eliminates need for manual operator expression input
+* Eliminates the need for manual operator expression input
 * Provides type-safe input controls based on column data type
 * Improves filtering precision and consistency
 * Delivers a structured and user-friendly filtering experience
