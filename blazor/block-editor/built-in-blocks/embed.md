@@ -110,8 +110,6 @@ This sample demonstrates the configuration of the `Image` block in the Block Edi
 
 To insert an image from your local machine, render the `Image` block. A popup will appear where you can browse and select an image to insert.
 
-
-
 ## Saving images to server
 
 Upload the selected image to a server endpoint using the `SaveUrl` property. Use the `Path` property to specify the storage location and `SaveFormat` to define whether the image is saved as Blob or Base64.
@@ -156,9 +154,6 @@ public void SaveImage(IList<IFormFile> UploadFiles)
     }
 }
 ```
-
-
-
 ## Inserting images from web URLs
 
 To insert an image from an online source, render the `Image` block. Switch to the `Embed Link` tab containing an input field where you can provide the image URL from the web to insert the image.
