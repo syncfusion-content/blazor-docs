@@ -714,7 +714,7 @@ The `Home.razor` component will display the expense data in a Blazor DataGrid wi
 - **`<GridColumns>`**: Defines individual columns in the DataGrid.
 - **`<GridPageSettings>`**: Configures pagination with 10 records per page.
 - **`<GridEditSettings>`**: Enable editing functionality directly within the Grid by setting the AllowEditing, AllowAdding, and AllowDeleting properties within the GridEditSettings to **true**.
-- **`<Template>`**:  Allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog..
+- **`<Template>`**:  Allows customization of the default dialog editing behavior by defining custom editors for grid rows within a dialog.
 
 The `SfDataManager` component connects the DataGrid to the GraphQL backend using the adaptor options configured below:
 
@@ -1014,7 +1014,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The paging feature is already partially enabled in the `<SfGrid>` component by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**.
 * The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 * No additional code changes are required from the previous steps.
 
@@ -1187,7 +1187,7 @@ Sorting enables organizing records by selecting column headers, arranging the da
 
 **Instructions:**
 
-* Ensure the `<SfGrid>` component has [AllowSorting="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting).
+* Ensure the `<SfGrid>` component has the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property set to **true**.
 
 ```cshtml
 <SfGrid TValue="ExpenseRecord"
@@ -1274,7 +1274,7 @@ The backend resolver receives this and processes the sort specification in the `
  
  **Instructions:**
  
- * Ensure the ``<SfGrid>`` component has [AllowFiltering="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering).
+ * Ensure the ``<SfGrid>`` component has the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property set to **true**.
  
  ```cshtml
  <SfGrid TValue="ExpenseRecord"
@@ -1475,7 +1475,7 @@ Grouping enables organizing and displaying records based on column values. This 
 
 **Instructions:**
 
-* Ensure the `<SfGrid>` component has [AllowGrouping="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping).
+* Ensure the `<SfGrid>` component has the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property set to **true**.
 
 ```cshtml
 <SfGrid TValue="ExpenseRecord"
