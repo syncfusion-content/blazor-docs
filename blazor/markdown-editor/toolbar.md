@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar Configuration in Blazor Markdown Editor Component | Syncfusion®
+title: Toolbar Configuration in Blazor Markdown Editor | Syncfusion®
 description: Checkout and learn here all about Toolbar Configuration in Blazor Markdown Editor component and much more details.
 platform: Blazor
 control: MarkdownEditor
