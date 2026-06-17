@@ -729,9 +729,9 @@ public class OrderData
 
 ### Show filter operators in filter bar cell
 
-The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar using the **ShowFilterBarOperator** property.
+The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
-When enabled, clicking the filter icon within a filter bar cell opens an operator dropdown, allowing users to choose a filtering condition. Users can select a filtering operator appropriate to the column type, eliminating the need to manually enter filter expressions.
+When this property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown. Users can select a filtering condition appropriate to the column type, eliminating the need to manually enter filter expressions.
 
 Each filter bar cell also includes a **clear filter icon** that is rendered individually for every column and behaves based on the filter state of that specific column. This icon is **enabled** only when a filter is applied to that column and **disabled** otherwise, helping users quickly identify and clear active filters. This column-specific behavior provides better control and improves visibility when managing filters across multiple columns.
 
