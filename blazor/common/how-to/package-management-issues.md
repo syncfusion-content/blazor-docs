@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resolving NuGet Package Management Issues in Blazor | Syncfusion
+title: Resolving NuGet Package Management Issues in Blazor | Syncfusion®
 description: Guide to resolving Blazor package management issues including NuGet conflicts, version mismatches, and dependency management
 platform: Blazor
 control: Common
@@ -22,7 +22,7 @@ N> This guide is intended for Blazor components version 33.2.3 or later, targeti
 
 ## Issue 1: Installing redundant NuGet packages  
 
-**Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling Syncfusion APIs, for example:
+**Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling APIs, for example:
 
 {% tabs %}
 {% highlight text tabtitle="Error Message" %}
@@ -80,7 +80,7 @@ dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
 
 ### Best practices
 
-* Never mix [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (comprehensive) with individual Syncfusion component packages in the same project.
+* Never mix [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (comprehensive) with individual component packages in the same project.
 * Audit your `.csproj` file regularly to identify redundant packages
 * Use individual packages unless you are using 5 or more component types
 * Document your package strategy in team guidelines
