@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add and remove list items in Blazor ListView Component | Syncfusion
-description: Learn here all about adding and removing list items in Syncfusion Blazor ListView component and more.
+title: Add and remove list items in Blazor ListView Component | Syncfusion®
+description: Learn here all about adding and removing list items in Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
