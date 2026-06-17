@@ -40,7 +40,7 @@ N> If you want to insert many tiny images in the editor and don't want a specifi
 
 The selected image can be uploaded to or removed from the required destination using the controller action below. Map the respective method names into [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) and [RichTextEditorImageSettings.RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_RemoveUrl) properties. Also, specify the required destination path using the [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property.
 
-N> [View sample on GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
+N> [View sample on GitHub](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
 
 {% tabs %}
 {% highlight razor %}
@@ -533,7 +533,7 @@ The Rich Text Editor has built-in image inserting support. The resize points wil
 
 By using the `RichTextEditorImageSettings` property, the server handler can be specified to upload and rename the selected image. Then, the `OnImageUploadSuccess` event could be bound, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
  
-N> [View sample in GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-rename-image)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-richtexteditor-rename-image).
 
 {% tabs %}
 {% highlight razor %}

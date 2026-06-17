@@ -49,7 +49,7 @@ WPF and Blazor follow different application models. The following table maps com
 | `ICommand` and `RelayCommand` | Event handlers, `EventCallback`, component methods, or custom services | Implements user action handling and validation logic in Blazor using event callbacks or service methods |
 | `INotifyPropertyChanged` | Component state and re-rendering | Updates the UI when state changes |
 
-## Migrating components from WPF to Blazor
+## Common setup and configuration
 
 Create a Blazor project using one of the following getting started guides.
 
