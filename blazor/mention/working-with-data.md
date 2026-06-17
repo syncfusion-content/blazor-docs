@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with data in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about working with data in Syncfusion Blazor Mention component and more.
+title: Working with data in Blazor Mention Component | Syncfusion®
+description: Checkout and learn here all the features about working with data in Blazor Mention component and much more details.
 platform: Blazor
 control: Mention
 documentation: ug
