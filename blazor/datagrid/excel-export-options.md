@@ -1136,7 +1136,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxNHZhrfXTmOyO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Encoding support for CSV Export
+## Encoding support for CSV export
 
 The Syncfusion Blazor DataGrid supports specifying encoding for exported CSV documents. This capability enables customization of the character encoding format to meet specific requirements. To configure encoding, include the **System.Text** namespace in the application. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the official Microsoft documentation [here](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-10.0).
 
