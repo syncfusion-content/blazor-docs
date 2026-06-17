@@ -11,25 +11,57 @@ documentation: ug
 
 This article provides step by step instructions for building and securing a Blazor WebAssembly Standalone App and integrate the [Blazor components](https://www.syncfusion.com/blazor-components) for authenticated users.
 
-## Create a new Blazor Web App 
+## Create a new Blazor WASM App 
 
-To create a new Blazor Web App, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code).
+To create a new Blazor WASM App, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code).
 
-Ensure the **Configure for HTTPS** option is enabled, and select **Individual Accounts** as the authentication type. This enables authentication support without persisting user data in a local database.
+{% tabcontents %}
 
-![Project-setting](images/project-setting.webp)
+{% tabcontent Visual Studio %}
 
-If using Visual Studio Code, run the following commands in your command line interface (CLI):
+Create a Blazor WebAssembly App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+- Ensure the **Configure for HTTPS** option is enabled.
+- Select **Individual Accounts** as the authentication type.  
+  This enables authentication support without persisting user data in a local database.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command to create a new Blazor WASM App with authentication support.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight bash tabtitle="Terminal" %}
 
-dotnet new blazor -o BlazorAppAuthentication --interactivity Server --auth Individual
+dotnet new blazorwasm -o BlazorAppAuthentication --auth Individual
 cd BlazorAppAuthentication
 dotnet run
 
 {% endhighlight %}
 {% endtabs %}
+
+Alternatively, you can create the project using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Run the following command to create and run a Blazor WASM App with authentication support.
+
+{% tabs %}
+{% highlight bash tabtitle="Command Prompt" %}
+
+dotnet new blazorwasm -o BlazorAppAuthentication --auth Individual
+cd BlazorAppAuthentication
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Configure the application with Google OAuth 2.0 (OIDC)
 
