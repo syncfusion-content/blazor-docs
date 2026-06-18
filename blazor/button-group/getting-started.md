@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started | Blazor ButtonGroup in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor ButtonGroup in WASM App | Syncfusion
 description: Checkout and learn here all about getting started with Blazor ButtonGroup component in Blazor WebAssembly App.
 platform: Blazor
 control: ButtonGroup
