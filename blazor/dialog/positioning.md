@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Positioning in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Positioning in Syncfusion Blazor Dialog component and much more details.
+title: Positioning in Blazor Dialog Component | Syncfusion®
+description: Checkout and learn here all the features about Positioning in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug
