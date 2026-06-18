@@ -15,13 +15,13 @@ The Syncfusion Blazor TreeGrid is a powerful and versatile UI component designed
 
 ## Quick Start
 
-To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-started.md) documentation.
+To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-started) documentation.
 
 ## Core Features
 
 ### **Data Management**
 
-- **[Data Binding](./data-binding.md)**
+- **[Data Binding](./data-binding)**
   - List binding (local data)
   - Remote service binding
   - Self-Referential data binding (Flat Data with IdMapping and ParentIdMapping)
@@ -29,85 +29,85 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
   - Multiple data source adapters
 
 - **Data Operations**
-  - [Sorting](./sorting.md) (single and multi-column)
+  - [Sorting](./sorting) (single and multi-column)
   - [Filtering](./filter)
-    - [Filter Bar](./filtering/filter-bar.md)
-    - [Filter Menu](./filtering/filter-menu.md)
-    - [Excel-like Filter](./filtering/excel-like-filter.md)
-  - [Paging](./paging.md) and [Virtual Scrolling](./scrolling.md)
-  - [Aggregates](./aggregate.md) (footer, custom)
-  - [Searching](./searching.md)
-  - [State Management](./state-management.md) (save/load grid configuration)
+    - [Filter Bar](./filtering/filter-bar)
+    - [Filter Menu](./filtering/filter-menu)
+    - [Excel-like Filter](./filtering/excel-like-filter)
+  - [Paging](./paging) and [Virtual Scrolling](./scrolling)
+  - [Aggregates](./aggregate) (footer, custom)
+  - [Searching](./searching)
+  - [State Management](./state-management) (save/load grid configuration)
 
 ### **Editing & CRUD**
 
 - **Multiple editing modes:**
-  - [Cell Editing](./editing/cell-editing.md)
-  - [Row Editing](./editing/row-editing.md)
-  - [Dialog Editing](./editing/dialog-editing.md)
-  - [Batch Editing](./editing/batch-editing.md)
-  - [Template Editing](./editing/template-editing.md)
-- [Add, Edit, and Delete operations](./editing/edit.md)
-- [Built-in validation with Data Annotations](./editing/column-validation.md)
-- [Cascading dropdown support](./editing/cell-edit-types.md)
-- [ORM integration (CRUD in Entity Framework)](./editing/entity-frame-work.md)
+  - [Cell Editing](./editing/cell-editing)
+  - [Row Editing](./editing/row-editing)
+  - [Dialog Editing](./editing/dialog-editing)
+  - [Batch Editing](./editing/batch-editing)
+  - [Template Editing](./editing/template-editing)
+- [Add, Edit, and Delete operations](./editing/edit)
+- [Built-in validation with Data Annotations](./editing/column-validation)
+- [Cascading dropdown support](./editing/cell-edit-types)
+- [ORM integration (CRUD in Entity Framework)](./editing/entity-frame-work)
 
 ### **Columns & Layout**
 
 - **Column Features:**
-  - [Rich column features (formatting, resizing, reordering)](./column.md)
-  - [Frozen (locked) columns](./column.md)
-  - [Column Menu (visibility, filtering, sorting)](./columns/column-menu.md)
-  - [Column Chooser](./columns/column-chooser.md)
-  - [Column Resizing](./columns/column-resizing.md)
-  - [Column Reordering](./columns/column-reorder.md)
-  - [Column Spanning](./columns/column-spanning.md)
-  - [Column Templates](./columns/column-template.md)
-- [Adaptive responsive layout](./adaptive-layout.md)
+  - [Rich column features (formatting, resizing, reordering)](./column)
+  - [Frozen (locked) columns](./column)
+  - [Column Menu (visibility, filtering, sorting)](./columns/column-menu)
+  - [Column Chooser](./columns/column-chooser)
+  - [Column Resizing](./columns/column-resizing)
+  - [Column Reordering](./columns/column-reorder)
+  - [Column Spanning](./columns/column-spanning)
+  - [Column Templates](./columns/column-template)
+- [Adaptive responsive layout](./adaptive-layout)
 
 ### **Rows & Templates**
 
-- [Custom row templates](./rows/row-template.md)
-- [Detail templates (expand rows for additional content)](./rows/detail-template.md)
-- [Row drag and drop](./rows/row-drag-and-drop.md)
-- [Row height customization](./rows/row-height.md)
-- [Row selection (single/multiple, checkbox-based)](./selection.md)
-- [Row spanning](./rows/row-spanning.md)
-- [Template features](./templates.md)
+- [Custom row templates](./rows/row-template)
+- [Detail templates (expand rows for additional content)](./rows/detail-template)
+- [Row drag and drop](./rows/row-drag-and-drop)
+- [Row height customization](./rows/row-height)
+- [Row selection (single/multiple, checkbox-based)](./selection)
+- [Row spanning](./rows/row-spanning)
+- [Template features](./templates)
 
 ### **Performance & Scale**
 
-- [Row and Column Virtualization](./virtualization.md)
-- [Virtual scrolling for large datasets](./scrolling.md)
+- [Row and Column Virtualization](./virtualization)
+- [Virtual scrolling for large datasets](./scrolling)
 - Optimized performance for WebAssembly
-- [Overscan](./virtualization.md#managing-records-count) in virtualization support for smooth scrolling
+- [Overscan](./virtualization#managing-records-count) in virtualization support for smooth scrolling
 
 ### **User Experience**
 
-- [Extensive templating (cells, rows, headers, footers, editors, detail rows)](./templates.md)
-- [Selection options (single/multiple rows, checkbox selection)](./selection.md)
-- [Row drag and drop](./rows/row-drag-and-drop.md)
-- [Context menu support](./context-menu.md)
-- [Customizable toolbar](./toolbar.md) with predefined and custom items
+- [Extensive templating (cells, rows, headers, footers, editors, detail rows)](./templates)
+- [Selection options (single/multiple rows, checkbox selection)](./selection)
+- [Row drag and drop](./rows/row-drag-and-drop)
+- [Context menu support](./context-menu)
+- [Customizable toolbar](./toolbar) with predefined and custom items
 - Column drag-and-drop reordering
 - [Accessibility (WCAG compliant)]f(#accessibility--standards)
 - [Full keyboard navigation](#accessibility--standards)
-- [Right-to-Left (RTL) support](./globalization.md)
+- [Right-to-Left (RTL) support](./globalization)
 
 ### **Export & Reporting**
 
-- [Excel export with templates](./excel-export.md)
-- [PDF export with templates](./exporting.md)
-- [Print functionality](./print.md)
+- [Excel export with templates](./excel-export)
+- [PDF export with templates](./exporting)
+- [Print functionality](./print)
 
 ### **Advanced Features**
 
-- [State management (save/load grid configuration)](./state-management.md)
+- [State management (save/load grid configuration)](./state-management)
 - Custom toolbars
 - Custom sorting logic
-- [Auto-fill support (Excel-like)](./auto-fill-like-excel.md)
-- [Clipboard operations (copy/paste)](./clipboard.md)
-- [Custom data binding](./custom-binding.md)
+- [Auto-fill support (Excel-like)](./auto-fill-like-excel)
+- [Clipboard operations (copy/paste)](./clipboard)
+- [Custom data binding](./custom-binding)
 
 ---
 
@@ -115,14 +115,14 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
 
 The TreeGrid component supports multiple data source adapters and integrations:
 
-- [List binding (in-memory data)](./data-binding.md)
-- [ORM integration (Entity Framework)](./data-binding.md#entity-framework)
+- [List binding (in-memory data)](./data-binding)
+- [ORM integration (Entity Framework)](./data-binding#entity-framework)
 - Supported data sources:
-  - [GraphQL Binding](./graphql.md)
+  - [GraphQL Binding](./graphql)
 
 ## Accessibility & Standards
 
-The [Blazor TreeGrid component](./accessibility.md) is built with accessibility at its core, ensuring compliance with:
+The [Blazor TreeGrid component](./accessibility) is built with accessibility at its core, ensuring compliance with:
 
 - WCAG 2.2 (AA level)
 - Section 508 standards
