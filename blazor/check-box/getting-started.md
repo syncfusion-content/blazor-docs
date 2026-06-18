@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor CheckBox in Blazor WASM App| Syncfusion
-description: Checkout and learn about getting started with Blazor CheckBox component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Checkbox in Blazor WASM App| Syncfusion
+description: Checkout and learn about getting started with Blazor Checkbox component in Blazor WebAssembly Application.
 platform: Blazor
 control: Checkbox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor CheckBox Component in Blazor WASM App
+# Getting Started with Blazor Checkbox Component in Blazor WASM App
 
 This section briefly explains about how to include [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -217,7 +217,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Checkbox Component](./images/blazor-checkbox-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CheckBox).
 
