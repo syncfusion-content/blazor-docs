@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started | Blazor DateRangePicker in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor DateRangePicker in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor DateRangePicker component in Blazor WebAssembly Application.
 platform: Blazor
 control: DateRangePicker
