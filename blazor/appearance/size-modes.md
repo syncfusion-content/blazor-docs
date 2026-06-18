@@ -113,7 +113,7 @@ You can dynamically toggle between touch and normal modes at runtime using [Java
 Add the `.e-bigger` CSS class in the `~/wwwroot/css/app.css` or `~/wwwroot/app.css` file.
 
 {% tabs %}
-{% highlight css tabtitle="~/wwwroot/css/app.css or ~/wwwroot/app.css" %}
+{% highlight css tabtitle=".css" %}
 
 /* Applies touch-friendly size mode to the application. */
 .e-bigger {
@@ -137,7 +137,7 @@ Add the following JavaScript methods to toggle the size mode. Place the script i
 - **Blazor WebAssembly Standalone App**: `~/wwwroot/index.html`
 
 {% tabs %}
-{% highlight html tabtitle="App.razor or index.html" %}
+{% highlight html tabtitle="App.razor / index.html" %}
 
 <script>
     function onTouch() {
@@ -285,7 +285,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-bl
 You can customize the font size and font family for all components by overriding the CSS for the `.e-control` class:
 
 {% tabs %}
-{% highlight css tabtitle="~/wwwroot/css/app.css or ~/wwwroot/app.css" %}
+{% highlight css tabtitle=".css" %}
 
 .e-control, [class^="e-"] *:not([class*="e-icon"]) {
     font-size: 1rem !important;

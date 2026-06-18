@@ -221,7 +221,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching
 
 ## Change theme dynamically in Blazor WebAssembly (WASM) standalone app
 
-The following steps demonstrate how to dynamically switch themes in a Blazor WebAssembly (WASM) standalone application using Blazor themes with the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component. Unlike Blazor Web App, standalone WASM apps use JavaScript interop to dynamically change themes without requiring a full page reload, as they run entirely in the browser without server-side rendering capabilities.
+The following steps demonstrate how to dynamically switch themes in a Blazor WebAssembly (WASM) standalone application using Blazor themes with the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component. Unlike Blazor Web App, standalone WASM apps use [JavaScript interop](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-10.0) to dynamically change themes without requiring a full page reload, as they run entirely in the browser without server-side rendering capabilities.
 
 ### 1. Configure theme switching with JavaScript
 
