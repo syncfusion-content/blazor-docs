@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started | Blazor DateRangePicker Blazor WASM App | Syncfusion
+title: Get Started | Blazor DateRangePicker in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor DateRangePicker component in Blazor WebAssembly Application.
 platform: Blazor
 control: DateRangePicker
@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-### Create a new Blazor WebAssembly (Standalone) App
+## Create a new Blazor WebAssembly (Standalone) App
 
 {% tabcontents %}
 
@@ -54,7 +54,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-### Install the required Blazor packages
+## Install the required Blazor packages
 
 Install the [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
