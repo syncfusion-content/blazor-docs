@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Localization in Syncfusion Blazor Charts component and much more.
+title: Localization in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Localization in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -10,7 +10,7 @@ documentation: ug
 # Localization in Blazor Charts Component
 
 The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component supports localization, enabling you to adapt the UI elements such as labels, tooltips, legends, and other text-based content to different languages and cultures. Localization is an essential feature for building globally accessible applications, as it ensures that users can interact with charts in their preferred language and regional settings.
-Localization in Syncfusion Blazor components is handled through the common localization framework provided by Syncfusion. By configuring localization properly, you can display translated text for chart elements and ensure consistent formatting based on cultural preferences such as date formats, number formats, and currency symbols.
+Localization in Blazor components is handled through the common localization framework provided by Syncfusion. By configuring localization properly, you can display translated text for chart elements and ensure consistent formatting based on cultural preferences such as date formats, number formats, and currency symbols.
 To implement localization in the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic. This documentation provides detailed steps for configuring localization in your application, including setting up resource files, defining culture settings.
 
 By applying localization, the chart component can automatically adapt to the selected culture. For example, date values displayed on the axis will follow the regional format, and numeric values will be shown with appropriate separators and symbols.
