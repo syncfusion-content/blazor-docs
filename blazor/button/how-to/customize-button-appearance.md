@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Button Appearance in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Customize Button Appearance in Syncfusion Blazor Button component and more.
+itle: Customize Button Appearance in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all about Customize Button Appearance in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
