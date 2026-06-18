@@ -146,7 +146,7 @@ builder.Services.AddSyncfusionBlazor();
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight html tabtitle="index.html" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
