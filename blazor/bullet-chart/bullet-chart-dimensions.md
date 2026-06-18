@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bullet Chart Dimensions in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Bullet Chart Dimensions in Syncfusion Blazor Bullet Chart component and more.
+title: Bullet Chart Dimensions in Blazor Bullet Chart Component | Syncfusion®
+description: Checkout and learn here all about Bullet Chart Dimensions in Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -41,7 +41,7 @@ The size of the [Blazor Bullet Chart](https://help.syncfusion.com/cr/blazor/Sync
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrgsVVCzqENDzfI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBxZnMipcWLvBSR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Size for Bullet Chart
 
@@ -63,7 +63,7 @@ N> If the size is not specified, the Bullet Chart will be rendered with a heigh
     </SfBulletChart>
 </div>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrgWhLCJqkfMCtE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrxZdiWpQWHZCuo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
 
@@ -90,4 +90,4 @@ The [BulletChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 N> Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBACrrWzKabABVG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart with Margin](images/blazor-bullet-chart-margin.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLdtnsMfcCkPVlE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bullet Chart with Margin](images/blazor-bullet-chart-margin.webp)" %}

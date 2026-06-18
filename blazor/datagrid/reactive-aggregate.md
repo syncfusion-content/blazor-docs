@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Reactive aggregates in Blazor DataGrid Component | Syncfusion
-description: Learn how reactive aggregates in the Syncfusion Blazor DataGrid auto-update summary values in the footer, group footer, and group caption during batch editing.
+title:  Reactive aggregates in Blazor DataGrid Component | Syncfusion®
+description: Learn how reactive aggregates in the Blazor DataGrid auto-update summary values in the footer, group footer, and group caption during batch editing.
 platform: Blazor
 control: DataGrid
 documentation: ug
