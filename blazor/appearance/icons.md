@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor icons library
 
-The Blazor library provides a set of base64-formatted font icons used across Blazor components. Icons can be used via the `SfIcon` component or the `e-icons` CSS class.
+The Syncfusion® Blazor library provides a set of base64-formatted font icons used across Blazor components. Icons can be used via the `SfIcon` component or the `e-icons` CSS class.
 
 Watch a quick-start video for the Blazor Icon component:
 

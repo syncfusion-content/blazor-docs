@@ -82,7 +82,7 @@ If you need to change your application theme and UI design in the future, do not
 
 ## Common Variables
 
-The following list of common variables is used in the Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
+The following list of common variables is used in the Syncfusion® Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 
 ### Material 3 Theme
 
