@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about styles and appearance in Syncfusion Blazor File Manager component and more.
+title: Styles and Appearance in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about styles and appearance in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug

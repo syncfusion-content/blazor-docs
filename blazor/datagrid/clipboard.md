@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Clipboard in Blazor DataGrid Component | Syncfusion
-description: Learn how to copy, paste, and autofill data in the Syncfusion Blazor DataGrid using keyboard shortcuts, buttons, and batch editing.
+title: Clipboard in Blazor DataGrid Component | Syncfusion®
+description: Learn how to copy, paste, and autofill data in the Blazor DataGrid using keyboard shortcuts, buttons, and batch editing.
 platform: Blazor
 control: DataGrid
 documentation: ug
