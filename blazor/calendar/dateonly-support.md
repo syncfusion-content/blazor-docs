@@ -21,4 +21,4 @@ The following example demonstrates configuring the Calendar with `TValue=DateOnl
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKsVBrLeKgEwxS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar with DateOnly](./images/CalendarDateOnly.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVRjdCrhFnyfOpB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Calendar with DateOnly](./images/CalendarDateOnly.gif)" %}

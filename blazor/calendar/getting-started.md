@@ -210,7 +210,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVpNsVIpTDiqybO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar Component](./images/blazor-calendar-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrHjnsVBcxOkeWD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Calendar Component](./images/blazor-calendar-component.webp)" %}
 
 ## Setting the Value, Min, and Max dates
 
@@ -234,7 +234,7 @@ Here, the Calendar allows selecting a date from the 5th to the 27th of the curre
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzjMLSzUEDfIGE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Selection in Blazor Calendar Component](./images/blazor-calendar-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdZHsVVmcdCwgj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Selection in Blazor Calendar Component](./images/blazor-calendar-selection.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
 

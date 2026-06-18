@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create an Order Management Dashboard in Blazor with Syncfusion
+title: Create an Order Management Dashboard in Blazor | Syncfusion
 description: Step-by-step guide to build a Blazor order management dashboard using Blazor components with models, services, grids, charts, KPIs, carts, and refunds.
 platform: Blazor
 control: Common
@@ -11,31 +11,22 @@ documentation: ug
 
 ## Overview
 
-This guide explains how to create an order management dashboard in a Blazor Web App using the Interactive Server render mode with [Blazor components](https://www.syncfusion.com/blazor-components). It walks through the core building blocks for a typical e-commerce back-office application, including defining data models, managing application state with dependency-injected services, and building pages for KPI metrics, order tracking, abandoned cart analysis, and return and refund management.
+This guide explains how to create an order management dashboard using [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card), [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list), [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) and [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) components. It walks through the core building blocks for a typical e-commerce back-office application, including defining data models, managing application state with dependency-injected services, and building pages for KPI metrics, order tracking, abandoned cart analysis, and return and refund management.
 
 ## Prerequisites
 
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Create the Blazor project
 
-To create a Blazor application, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio).
+To create a Blazor application, follow the [Blazor Server App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code).
 
-## Install required Blazor packages
+### Install required Blazor packages
 
-To add the required Blazor components to your application, install the NuGet packages listed below.
+To install the required Blazor packages, open a terminal in your project root and run the following commands.
 
-**Using Visual Studio**
-
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search for each required NuGet package and install it.
-
-**Using Visual Studio Code or .NET CLI**
-
-Click each package link in the table below to view the NuGet installation command. You can copy the command and run it in the terminal to install the required package.
-
-| Component Name | Package |
+| Component | Package |
 |----------------|---------|
 | Button | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
 | Card | [Syncfusion.Blazor.Cards](https://www.nuget.org/packages/Syncfusion.Blazor.Cards) |
@@ -46,7 +37,24 @@ Click each package link in the table below to view the NuGet installation comman
 | Dialog | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
 | Themes | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
 
-## Add required namespaces
+{% tabs %}
+{% highlight bash tabtitle="Terminal" %}
+
+dotnet add package Syncfusion.Blazor.Buttons --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Cards --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Charts --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.DropDowns --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Navigations --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Popups --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+
+### Add required namespaces
 
 Open the `Components/_Imports.razor` file and import the following Blazor components, order management models and services namespaces.
 
@@ -67,9 +75,7 @@ Open the `Components/_Imports.razor` file and import the following Blazor compon
 {% endhighlight %}
 {% endtabs %}
 
-N> The required namespaces are typically defined in the `_Imports.razor` file, so they do not need to be included in each component individually. If not already added, ensure the necessary namespaces are imported in `_Imports.razor`.
-
-## Register Blazor service
+### Register Blazor service
 
 Add the Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
 
@@ -91,9 +97,9 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+### Add stylesheet and script resources
 
-Add the Blazor theme CSS and required scripts to the `~/Components/App.razor` file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -111,8 +117,6 @@ Add the Blazor theme CSS and required scripts to the `~/Components/App.razor` fi
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The example uses `fluent2.css`. Other available theme options include `bootstrap5.css`, `fabric.css`, `highcontrast.css`, `tailwind.css`. See the [theming documentation](https://blazor.syncfusion.com/documentation/appearance/themes) for customization details.
 
 ## Configure routing
 
@@ -188,7 +192,7 @@ This structure helps keep the application maintainable and scalable by clearly s
 
 ## Define data models
 
-### Order model
+### `Order` model
 
 Defines the data model used to represent an order in the management dashboard.
 
@@ -234,7 +238,7 @@ namespace OrderManagementDashboard.Models
 {% endhighlight %}
 {% endtabs %}
 
-### Abandoned cart model
+### `Abandoned cart` model
 
 Defines the data model used to represent a customer's abandoned shopping cart.
 
@@ -255,7 +259,7 @@ namespace OrderManagementDashboard.Models
 {% endhighlight %}
 {% endtabs %}
 
-### Dashboard KPI model
+### `Dashboard KPI` model
 
 Defines the data model used to represent a key performance indicator displayed on the dashboard.
 
@@ -286,7 +290,7 @@ namespace OrderManagementDashboard.Models
 {% endhighlight %}
 {% endtabs %}
 
-### Return and refund model
+### `Return and refund` model
 
 Defines the data model used to represent a return or refund request submitted by a customer.
 
@@ -351,15 +355,17 @@ namespace OrderManagementDashboard.Services
 {% endhighlight %}
 {% endtabs %}
 
-N> This static data source provides sample data for demonstration purposes only. It allows the application to function without a backend service. **For production applications**, replace these services with actual database implementations using Entity Framework Core or another data access technology. Note that the static collections are thread-safe due to the singleton service registration and initialization lock.
+N> This static data source provides sample data for demonstration purposes only. It allows the application to function without a backend service. **For production applications**, replace these services with actual database implementations using Entity Framework Core or another data access technology. Note that the static collections are initialized once and shared across scoped service instances, with thread-safe initialization ensured by the initialization lock.
 
 ## Create the services
 
 In a Blazor application, services are used to handle business logic and maintain shared state across components. They are registered with dependency injection and allow multiple pages and components to access the same data in a consistent and controlled manner.
 
-### Order service interface
+The application uses three scoped services to provide in-memory sample data and business logic for orders, abandoned carts, and return/refund requests. Each service below contains both the service interface and its implementation.
 
-This interface defines the operations required to manage and retrieve order information throughout the application.
+### Order service
+
+Provides paged and searchable order data and delivers aggregated KPI and profit margin time series for dashboard charts while exposing methods to retrieve individual orders.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/IOrderService.cs" %}
@@ -381,15 +387,6 @@ namespace OrderManagementDashboard.Services
 }
 
 {% endhighlight %}
-{% endtabs %}
-
-It exposes order data and summary methods needed for both the orders page and the dashboard KPI charts.
-
-### Order service implementation
-
-This class implements the order management logic using the shared in-memory data source.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/OrderService.cs" %}
 
 using OrderManagementDashboard.Models;
@@ -590,11 +587,9 @@ namespace OrderManagementDashboard.Services
 {% endhighlight %}
 {% endtabs %}
 
-The service provides filtered and aggregated order data to support grid views, status updates, and chart data on the dashboard.
+### Abandoned cart service
 
-### Abandoned cart service interface
-
-This interface defines the operations required to retrieve and manage abandoned cart records.
+Provides paged, searchable access to generated abandoned-cart sample data and reuses existing customer emails to generate realistic demo entries.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/IAbandonedCartService.cs" %}
@@ -611,15 +606,6 @@ namespace OrderManagementDashboard.Services
 }
 
 {% endhighlight %}
-{% endtabs %}
-
-It separates abandoned cart retrieval and recovery tracking from the UI layer and allows the implementation to be swapped independently.
-
-### Abandoned cart service implementation
-
-This class implements abandoned cart management using shared sample data.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/AbandonedCartService.cs" %}
 
 using OrderManagementDashboard.Models;
@@ -701,11 +687,9 @@ namespace OrderManagementDashboard.Services
 {% endhighlight %}
 {% endtabs %}
 
-The service supports listing, filtering, and tracking of abandoned carts to support customer recovery workflows.
+### Return and refund service
 
-### Return and refund service interface
-
-This interface defines the operations required to manage customer return and refund requests.
+Manages paged and searchable return and refund requests and supports approve and reject operations while calculating refunded totals for dashboard KPIs.
 
 {% tabs %}
 {% highlight cs tabtitle="Services/IReturnRefundService.cs" %}
@@ -724,15 +708,6 @@ namespace OrderManagementDashboard.Services
 }
 
 {% endhighlight %}
-{% endtabs %}
-
-It provides a consistent way to access and update return and refund records across pages and components.
-
-### Return and refund service implementation
-
-This class implements return and refund management using in-memory shared data.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/ReturnRefundService.cs" %}
 
 using OrderManagementDashboard.Models;
@@ -1081,7 +1056,7 @@ Update the navigation menu to include links to all dashboard pages.
 
 ## Create the application pages
 
-### Create the Dashboard page
+### Create the `Dashboard` page
 
 This page demonstrates how the Dashboard page integrates multiple Blazor components to present an interactive overview of order data. It displays key performance indicators using **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)**, visualizes earnings and total profit trends using **[Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts)**, and renders a comprehensive order list using **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with built-in filtering and search.
 
@@ -1434,34 +1409,6 @@ The page binds data collections and state variables to these components, enablin
 </SfDialog>
 
 <style>
-    .dashboard-container {
-        padding: 24px;
-        background-color: #f5f7fa;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        min-height: 100vh;
-    }
-
-    .dashboard-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
-    }
-
-    .page-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin: 0;
-    }
-
-    .kpi-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-        margin-bottom: 30px;
-    }
-
     .kpi-card {
         border-radius: 12px;
         box-shadow: none;
@@ -1473,57 +1420,7 @@ The page binds data collections and state variables to these components, enablin
         border: none;
         box-shadow: none;
     }
-
-    .kpi-card-horizontal {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        padding: 20px;
-    }
-
-    .kpi-icon-wrapper {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.9);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    .kpi-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #333;
-    }
-
-    .kpi-icon svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    .kpi-text {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .kpi-label {
-        font-size: 13px;
-        color: #1a1a1a;
-        font-weight: 400;
-        line-height: 1.2;
-    }
-
-    .kpi-value {
-        font-size: 28px;
-        font-weight: 700;
-        color: #1a1a1a;
-        line-height: 1;
-    }
-
+    
     .kpi-blue {
         background: linear-gradient(135deg, #B8D4F1 0%, #A0C5EE 100%);
     }
@@ -1550,157 +1447,6 @@ The page binds data collections and state variables to these components, enablin
 
     .kpi-lightblue {
         background: linear-gradient(135deg, #D4E8F5 0%, #C0DEF0 100%);
-    }
-
-    .chart-container {
-        background: white;
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 30px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .chart-wrapper {
-        margin-top: 20px;
-    }
-
-    .chart-wrapper .e-control,
-    .chart-wrapper .e-chart,
-    .chart-wrapper .e-svg-chart,
-    .chart-wrapper svg {
-        width: 100% !important;
-    }
-
-    .chart-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-    }
-
-    .chart-header h4 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: 600;
-        color: #1f2937;
-    }
-
-    .chart-filters {
-        display: flex;
-        gap: 8px;
-    }
-
-    .chart-filters .e-btn {
-        padding: 6px 16px;
-        border-radius: 6px;
-    }
-
-    .grid-container {
-        background: white;
-        border-radius: 12px;
-        padding: 24px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .grid-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
-    }
-
-    .grid-toolbar {
-        margin-bottom: 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .filter-dropdowns {
-        display: flex;
-        gap: 12px;
-        flex: 1;
-        justify-content: flex-end;
-    }
-
-    .e-grid {
-        border: none;
-    }
-
-    .e-grid .e-gridheader {
-        background-color: #f9fafb;
-        border-bottom: 2px solid #e5e7eb;
-    }
-
-    .e-grid .e-headercell {
-        font-weight: 600;
-        color: #374151;
-        font-size: 13px;
-        padding: 12px 8px;
-    }
-
-    .e-grid .e-rowcell {
-        padding: 12px 8px;
-        font-size: 13px;
-        color: #4b5563;
-        border-bottom: 1px solid #f3f4f6;
-    }
-
-    .status-badge {
-        display: inline-block;
-        padding: 4px 12px;
-        border-radius: 12px;
-        font-size: 12px;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .status-paid { background-color: #d1fae5; color: #065f46; }
-    .status-pending { background-color: #fef3c7; color: #92400e; }
-    .status-unpaid { background-color: #fee2e2; color: #991b1b; }
-    .status-delivered { background-color: #d1fae5; color: #065f46; }
-    .status-processing { background-color: #dbeafe; color: #1e40af; }
-    .status-shipped { background-color: #e0e7ff; color: #3730a3; }
-    .status-cancelled { background-color: #fee2e2; color: #991b1b; }
-    .status-returned { background-color: #fef3c7; color: #92400e; }
-
-    .action-button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 6px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: #6b7280;
-        transition: all 0.2s;
-        border-radius: 4px;
-    }
-
-    .action-button:hover {
-        background-color: #f3f4f6;
-        color: #3b82f6;
-    }
-
-    .action-button svg {
-        width: 16px;
-        height: 16px;
-    }
-
-    .e-pager {
-        padding: 16px 0;
-        border-top: 1px solid #e5e7eb;
-    }
-
-    .e-pager .e-numericitem {
-        min-width: 32px;
-        height: 32px;
-        border-radius: 6px;
-    }
-
-    .e-pager .e-currentitem {
-        background-color: #3b82f6;
-        color: white;
     }
 </style>
 
@@ -1846,9 +1592,241 @@ The page binds data collections and state variables to these components, enablin
 }
 
 {% endhighlight %}
+{% highlight css tabtitle="Components/Pages/Dashboard.razor.css" %}
+
+.dashboard-container {
+    padding: 24px;
+    background-color: #f5f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.kpi-card-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.kpi-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.kpi-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.kpi-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.kpi-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.kpi-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.kpi-label {
+    font-size: 13px;
+    color: #1a1a1a;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-wrapper {
+    margin-top: 20px;
+}
+
+.chart-wrapper .e-control,
+.chart-wrapper .e-chart,
+.chart-wrapper .e-svg-chart,
+.chart-wrapper svg {
+    width: 100% !important;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.chart-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.chart-filters {
+    display: flex;
+    gap: 8px;
+}
+
+.chart-filters .e-btn {
+    padding: 6px 16px;
+    border-radius: 6px;
+}
+
+.grid-container {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.grid-toolbar {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-dropdowns {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.e-grid {
+    border: none;
+}
+
+.e-grid .e-gridheader {
+    background-color: #f9fafb;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.e-grid .e-headercell {
+    font-weight: 600;
+    color: #374151;
+    font-size: 13px;
+    padding: 12px 8px;
+}
+
+.e-grid .e-rowcell {
+    padding: 12px 8px;
+    font-size: 13px;
+    color: #4b5563;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-paid { background-color: #d1fae5; color: #065f46; }
+.status-pending { background-color: #fef3c7; color: #92400e; }
+.status-unpaid { background-color: #fee2e2; color: #991b1b; }
+.status-delivered { background-color: #d1fae5; color: #065f46; }
+.status-processing { background-color: #dbeafe; color: #1e40af; }
+.status-shipped { background-color: #e0e7ff; color: #3730a3; }
+.status-cancelled { background-color: #fee2e2; color: #991b1b; }
+.status-returned { background-color: #fef3c7; color: #92400e; }
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+.action-button:hover {
+    background-color: #f3f4f6;
+    color: #3b82f6;
+}
+
+.action-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.e-pager {
+    padding: 16px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.e-pager .e-numericitem {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.e-pager .e-currentitem {
+    background-color: #3b82f6;
+    color: white;
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-### Create the Abandoned Cart page
+### Create the `Abandoned Cart` page
 
 This page demonstrates how the Abandoned Cart page uses Blazor components to present a searchable and filterable list of abandoned shopping carts. It displays the cart data in a **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)** layout and renders the records in a **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with paging, sorting, filtering, and search support.
 
@@ -1893,34 +1871,6 @@ The page binds the abandoned cart collection to the grid, allowing users to sear
     </CardContent>
 </SfCard>
 
-<style>
-    .abandoned-cart-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        width: 100%;
-    }
-
-    .abandoned-cart-title {
-        margin: 0;
-        line-height: 1.2;
-    }
-
-    .abandoned-cart-total {
-        color: #6b7280;
-        font-size: 14px;
-        white-space: nowrap;
-    }
-
-    .page-card-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin: 0;
-    }
-</style>
-
 @code {
     private SfGrid<Models.AbandonedCart>? grid;
     private List<Models.AbandonedCart> Items = new();
@@ -1938,9 +1888,38 @@ The page binds the abandoned cart collection to the grid, allowing users to sear
 }
 
 {% endhighlight %}
+{% highlight css tabtitle="Components/Pages/AbandonedCart.razor.css" %}
+
+.abandoned-cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+.abandoned-cart-title {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.abandoned-cart-total {
+    color: #6b7280;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.page-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-### Create the Return and Refund page
+### Create the `Return and Refund` page
 
 This page demonstrates how the Return and Refund page uses Blazor components to manage customer return and refund requests. It displays the requests in a **[Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card)** layout and renders them in a **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with paging, sorting, filtering, and search support.
 
@@ -2022,68 +2001,6 @@ The page binds return and refund records to the grid, showing order details, req
     </CardContent>
 </SfCard>
 
-<style>
-    .return-refund-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        width: 100%;
-    }
-
-    .return-refund-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin: 0;
-    }
-
-    .return-refund-total {
-        color: #6b7280;
-        font-size: 14px;
-        white-space: nowrap;
-    }
-
-    .status-badge {
-        display: inline-block;
-        padding: 4px 12px;
-        border-radius: 12px;
-        font-size: 12px;
-        font-weight: 600;
-        text-align: center;
-        line-height: 1;
-    }
-
-    .status-pending { background-color: #fef3c7; color: #92400e; }
-    .status-approved { background-color: #d1fae5; color: #065f46; }
-    .status-rejected { background-color: #fee2e2; color: #991b1b; }
-    .status-processing { background-color: #dbeafe; color: #1e40af; }
-    .status-refunded { background-color: #e0e7ff; color: #3730a3; }
-
-    .action-buttons {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .action-button {
-        min-width: 30px;
-        width: 30px;
-        height: 30px;
-        padding: 0;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .action-button .e-btn-icon,
-    .action-button .e-icons {
-        margin: 0;
-        font-size: 14px;
-        line-height: 1;
-    }
-</style>
-
 @code {
     private SfGrid<Models.ReturnRefund>? grid;
     private List<Models.ReturnRefund> Items = new();
@@ -2131,6 +2048,69 @@ The page binds return and refund records to the grid, showing order details, req
             _ => ""
         };
     }
+}
+
+{% endhighlight %}
+{% highlight css tabtitle="Components/Pages/ReturnRefund.razor.css" %}
+
+.return-refund-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+.return-refund-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.return-refund-total {
+    color: #6b7280;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+}
+
+.status-pending { background-color: #fef3c7; color: #92400e; }
+.status-approved { background-color: #d1fae5; color: #065f46; }
+.status-rejected { background-color: #fee2e2; color: #991b1b; }
+.status-processing { background-color: #dbeafe; color: #1e40af; }
+.status-refunded { background-color: #e0e7ff; color: #3730a3; }
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-button {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button .e-btn-icon,
+.action-button .e-icons {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1;
 }
 
 {% endhighlight %}
