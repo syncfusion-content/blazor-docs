@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy a Blazor Web App to Azure App Service | Syncfusion
-description: Learn here all about deploying the Blazor application with Syncfusion Blazor Components to Azure App Service.
+title: Deploy a Blazor Web App to Azure App Service | Syncfusion®
+description: Learn here all the features about deploying the Blazor application with Blazor Components to Azure App Service.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Deploy Blazor Web App to Azure App Service
 
-This section provides information about deploying a Blazor Web applications with the Syncfusion Blazor components to Azure App Service.
+This section provides information about deploying a Blazor Web applications with the Blazor components to Azure App Service.
 
 Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio) topic for more information.
 

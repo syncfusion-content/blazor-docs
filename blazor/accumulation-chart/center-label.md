@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Center Label in Blazor Pie and Donut Chart Component | Syncfusion
-description: Checkout and learn here all about Center Label in Syncfusion Blazor Pie and Donut Chart component and more.
+title: Center Label in Blazor Pie and Donut Chart Component | Syncfusion®
+description: Checkout and learn here all about Center Label in Blazor Pie and Donut Chart component and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
