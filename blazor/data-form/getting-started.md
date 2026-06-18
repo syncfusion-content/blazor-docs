@@ -7,7 +7,7 @@ control: Data Form
 documentation: ug
 ---
 
-# Getting Started with Blazor Data Form Component
+# Getting Started with Blazor Data Form Component in Blazor WASM App
 
 This section briefly explains how to include [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
