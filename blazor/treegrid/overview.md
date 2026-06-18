@@ -78,7 +78,6 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
 ### **Performance & Scale**
 
 - [Row and Column Virtualization](./virtualization.md)
-- Lazy-load support for hierarchical data
 - [Virtual scrolling for large datasets](./scrolling.md)
 - Optimized performance for WebAssembly
 - Overscan support for smooth scrolling
@@ -106,10 +105,8 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
 ### **Advanced Features**
 
 - [State management (save/load grid configuration)](./state-management.md)
-- [Foreign key columns](./column.md)
 - Custom toolbars
-- Global and local formatting
-- Custom filtering and sorting logic
+- Custom sorting logic
 - [Auto-fill support (Excel-like)](./auto-fill-like-excel.md)
 - [Clipboard operations (copy/paste)](./clipboard.md)
 - [Custom data binding](./custom-binding.md)
@@ -122,7 +119,7 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
 The TreeGrid component supports multiple data source adapters and integrations:
 
 - [List binding (in-memory data)](./data-binding.md)
-- [ORM integration (Entity Framework, Dapper)](./editing/entity-frame-work.md)
+- [ORM integration (Entity Framework)](./editing/entity-frame-work.md)
 - Backend integrations
 - Supported data sources:
   - [GraphQL Binding](./graphql.md)
