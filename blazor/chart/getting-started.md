@@ -15,7 +15,7 @@ This section briefly explains how to include [Blazor Charts](https://www.syncfus
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
-### Create a new Blazor Server App 
+## Create a new Blazor Server App 
 
 {% tabcontents %}
 
@@ -59,7 +59,7 @@ dotnet new blazor -o BlazorApp --interactivity Server
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-### Install the required Blazor packages 
+## Install the required Blazor packages 
 
 Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -112,7 +112,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces
+## Add import namespaces
 
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
@@ -127,7 +127,7 @@ N> The `~/` notation represents the root directory of your project. This file is
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
@@ -143,7 +143,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add script resources
+## Add script resources
  
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
@@ -157,7 +157,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-### Add Blazor Charts component
+## Add Blazor Charts component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component inside the razor file.
 
@@ -217,7 +217,7 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRjRiBKleQGqKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
 
-### Populate Blazor chart with data
+# Populate Blazor chart with data
 
 To bind data for the chart component, you can assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -263,7 +263,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
-### See also
+## See also
 
 * [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
