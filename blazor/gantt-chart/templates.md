@@ -9,7 +9,7 @@ documentation: ug
 
 # Templates in Blazor Gantt Chart component
 
-Blazor supports templated components that accept one or more UI segments as input, which are rendered as part of the component during execution. The Gantt Chart is a templated Razor component that allows customization of various UI elements using template parameters. This allows rendering of custom content or components based on application logic.
+Blazor supports templated components that accept one or more UI segments as input, which are rendered as part of the component during execution. The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) is a templated Razor component that allows customization of various UI elements using template parameters. This allows rendering of custom content or components based on application logic.
 
 The Gantt Chart provides several template options for customization, such as:
 

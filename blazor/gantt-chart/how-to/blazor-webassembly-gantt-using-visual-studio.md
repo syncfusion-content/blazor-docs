@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Gantt Chart Component in WebAssembly App using Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor Gantt Chart component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -87,7 +87,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Gantt Chart component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component in the **~/Pages/Index.razor** file.
+Add the Blazor Gantt Chart component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}

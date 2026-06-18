@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Gantt Chart Component
 
-The Selection feature provides the ability to highlight a row or cell in the Gantt component. Selection can be performed using arrow keys or mouse clicks.
+The Selection feature provides the ability to highlight a row or cell in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component. Selection can be performed using arrow keys or mouse clicks.
 
 By default, selection is enabled. To disable selection, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSelection) property to **false**.
 
@@ -20,7 +20,7 @@ The Gantt component supports two types of selection that can be set by using the
 
 ## Selection mode
 
-The Syncfusion Blazor Gantt Chart component supports three selection modes, configured using [SelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionMode.html) property. They are:
+The Blazor Gantt Chart component supports three selection modes, configured using [SelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionMode.html) property. They are:
 
 - **Row:** Selects only rows. This is the default mode.
 - **Cell:** Selects only individual cells.
@@ -310,7 +310,7 @@ To clear selected rows and cells in the Gantt component, use the [ClearSelection
 
 ## Touch interaction
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component supports touch interaction, allowing you to intuitively navigate and interact with chart elements on touch-enabled devices like smart phones and tablets. This feature enhances usability by allowing intuitive gestures for selecting and managing tasks.
+The Blazor Gantt Chart component supports touch interaction, allowing you to intuitively navigate and interact with chart elements on touch-enabled devices like smart phones and tablets. This feature enhances usability by allowing intuitive gestures for selecting and managing tasks.
 
 [Single Row selection](https://blazor.syncfusion.com/documentation/gantt-chart/selection): Tapping a row on a touch screen automatically selects it, offering a straightforward way to interact with the chart.
 

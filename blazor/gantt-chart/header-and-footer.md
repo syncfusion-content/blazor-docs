@@ -9,11 +9,11 @@ documentation: ug
 
 # Header and Footer of PDF Exporting in Blazor Gantt Chart Component
 
-Customizing headers and footers in PDF exports of the Blazor Gantt Chart component allows adding text, lines, page numbers, and images to enhance document professionalism for projects. Use [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) with [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) to define content arrays, specifying `Type` (e.g., Text, Line), `Value`, `Position`, `Style`, or `Src` for images with `Base64` encoding.
+Customizing headers and footers in PDF exports of the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component allows adding text, lines, page numbers, and images to enhance document professionalism for projects. Use [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) with [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) to define content arrays, specifying `Type` (e.g., Text, Line), `Value`, `Position`, `Style`, or `Src` for images with `Base64` encoding.
 
 ## Adding text in header and footer
 
-The Syncfusion Blazor Gantt Chart allows you to add custom text to the header and footer sections when exporting the Gantt content to PDF.
+The Blazor Gantt Chart allows you to add custom text to the header and footer sections when exporting the Gantt content to PDF.
 
 * The **header** appears at the top of each exported page and is typically used to display a document title, company branding, logos, dates, or other identifying information.
 * The **footer** appears at the bottom of each page and commonly includes page numbers, copyright notices, disclaimers, or similar supporting details.

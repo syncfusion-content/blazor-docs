@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Menu in Blazor Gantt Chart Component
 
-The column menu in the Blazor Gantt component offers built-in actions including sorting, filtering, column chooser, and autofit. It appears when the column header icon is clicked.
+The column menu in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component offers built-in actions including sorting, filtering, column chooser, and autofit. It appears when the column header icon is clicked.
 
 To enable this feature, set [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnMenu) to **true** in the Gantt configuration. Also enable [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering), and [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowResizing) to support the corresponding actions.
 

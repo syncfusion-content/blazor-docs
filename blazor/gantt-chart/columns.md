@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor Gantt component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component displays task data in a tabular format using columns. Columns organize task data efficiently and enable user interactions such as sorting, filtering, and formatting within the Gantt chart.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component displays task data in a tabular format using columns. Columns organize task data efficiently and enable user interactions such as sorting, filtering, and formatting within the Gantt chart.
 
 Each column is defined using the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field) property, which maps values from the data source. This mapping ensures accurate data binding and enables formatting and customization for each column.
 
@@ -174,7 +174,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component lets
 
 ## Column formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for Blazor supports column formatting to customize data presentation. You can format numbers, dates, or apply templates based on specific requirements. Use the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property to define the desired format for each column.
+The Blazor Gantt Chart  component for Blazor supports column formatting to customize data presentation. You can format numbers, dates, or apply templates based on specific requirements. Use the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property to define the desired format for each column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -241,7 +241,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for B
 
 ### Number formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for Blazor supports number formatting through the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where standard format strings define numeric value presentation including currency, percentage, and decimal formats. The following standard format strings are available:
+The Blazor Gantt Chart  component for Blazor supports number formatting through the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where standard format strings define numeric value presentation including currency, percentage, and decimal formats. The following standard format strings are available:
 
 | Format | Description        | Remarks                                                                 |
 |--------|--------------------|-------------------------------------------------------------------------|
@@ -583,7 +583,7 @@ The Syncfusion<sup style="font-size:70%">®</sup> Blazor Gantt Chart component d
 
 ## Show or hide columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows dynamic control over column visibility using built-in properties and methods.
+The Blazor Gantt Chart component allows dynamic control over column visibility using built-in properties and methods.
 
 ### Using methods
 
@@ -754,7 +754,7 @@ The following example demonstrates hiding and showing the **TaskName** and **Dur
 
 ## Controlling Gantt actions
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows fine-grained control over column-level actions such as editing, filtering, sorting, resizing, and reordering. These actions can be enabled or disabled individually using the following properties in the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) configuration:
+The Blazor Gantt Chart component allows fine-grained control over column-level actions such as editing, filtering, sorting, resizing, and reordering. These actions can be enabled or disabled individually using the following properties in the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) configuration:
 
 | Property | Description |
 |----------|-------------|

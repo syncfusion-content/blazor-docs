@@ -9,7 +9,7 @@ documentation: ug
 
 # Multi-Page PDF Export with Scaling in Blazor Gantt Chart
 
-The Syncfusion Blazor Gantt Chart provides support for exporting content across multiple PDF pages with configurable scaling options. These settings allow the Gantt Chart layout to be distributed across pages while maintaining appropriate readability and structure. Multi‑page export behavior can be customized using the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) provides support for exporting content across multiple PDF pages with configurable scaling options. These settings allow the Gantt Chart layout to be distributed across pages while maintaining appropriate readability and structure. Multi‑page export behavior can be customized using the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
 
 ## Enabling multi-page PDF export
 
@@ -80,7 +80,7 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
 
 ## PDF export scaling in Blazor Gantt Chart
 
-The Syncfusion Blazor Gantt Chart supports two scaling options during PDF export to control how the chart content is resized to fit the generated PDF pages. These options are configured using the [GanttPdfExportScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) enumeration.
+The Blazor Gantt Chart supports two scaling options during PDF export to control how the chart content is resized to fit the generated PDF pages. These options are configured using the [GanttPdfExportScaleMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) enumeration.
 
 * **FitToPages:** The [FitToPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportScaleMode.html) mode compresses the Gantt Chart content so that it fits within a specified number of PDF pages.
   * This mode is used when the exported output must be restricted to a particular page count.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Gantt Chart Component
 
-In this section, the list of events of the Gantt Chart component has been provided which will be triggered for appropriate Gantt Chart actions.
+In this section, the list of events of the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has been provided which will be triggered for appropriate Gantt Chart actions.
 
 The events should be provided to the Gantt Chart using the GanttEvents component. When using events of the Gantt Chart, TValue must be provided in the GanttEvents component.
 

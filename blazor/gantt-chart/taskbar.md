@@ -10,7 +10,7 @@ documentation: ug
 
 ## Taskbar template
 
-You can design your taskbars to view the tasks in Gantt Chart by using [GanttTemplates.TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. It is also possible to customize the parent taskbars and milestones with custom templates by using [GanttTemplates.ParentTaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_ParentTaskbarTemplate) and [GanttTemplates.MilestoneTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_MilestoneTemplate) properties.
+You can design your taskbars to view the tasks in [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) by using [GanttTemplates.TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. It is also possible to customize the parent taskbars and milestones with custom templates by using [GanttTemplates.ParentTaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_ParentTaskbarTemplate) and [GanttTemplates.MilestoneTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_MilestoneTemplate) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

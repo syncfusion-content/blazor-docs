@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance tips for Blazor Gantt Chart component
 
-This guide provides practical strategies to enhance the loading performance of the Blazor Gantt Chart component, especially when dealing with large datasets and multiple columns. It provides valuable insights into effective strategies and best practices for binding extensive data sources without encountering performance degradation. It includes actionable tips to ensure smooth data binding and a responsive user experience.
+This guide provides practical strategies to enhance the loading performance of the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component, especially when dealing with large datasets and multiple columns. It provides valuable insights into effective strategies and best practices for binding extensive data sources without encountering performance degradation. It includes actionable tips to ensure smooth data binding and a responsive user experience.
 
 ## How to improve loading performance when binding large dataset?
 
@@ -31,7 +31,7 @@ For the most comprehensive performance optimization, combining row, column, and 
 
 ## How to improve performance of Gantt chart in Blazor WASM application?
 
-This section provides performance guidelines for using the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+This section provides performance guidelines for using the Blazor Gantt Chart  component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 1.	[Avoid unnecessary component renders](https://blazor.syncfusion.com/documentation/gantt-chart/webassembly-performance#avoid-unnecessary-component-renders)
 2.	[Avoid unnecessary initial auto-scheduling validation](https://blazor.syncfusion.com/documentation/gantt-chart/webassembly-performance#avoid-unnecessary-initial-auto-scheduling-validation)
@@ -84,7 +84,7 @@ The Blazor Gantt Chart supports various adaptors (OData, ODataV4, WebAPI, URL, e
 
 ## Strategic approaches to addressing latency challenges
 
-Understanding the concerns related to latency in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component, several factors contributing to responsiveness issues have been identified. Notably, when using features like filtering, taskbar resizing, and dialog edit in the Gantt Chart, delays may occur due to client-server interactions, if the server is located far from the client.
+Understanding the concerns related to latency in the Blazor Gantt Chart component, several factors contributing to responsiveness issues have been identified. Notably, when using features like filtering, taskbar resizing, and dialog edit in the Gantt Chart, delays may occur due to client-server interactions, if the server is located far from the client.
 
 ### Potential solutions to mitigate delay
 

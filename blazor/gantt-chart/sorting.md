@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component provides sorting functionality to arrange task data in ascending or descending order based on column values.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides sorting functionality to arrange task data in ascending or descending order based on column values.
 
 To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to **true**. You can configure sorting option using the [GanttSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSortSettings.html) property.
 
@@ -71,7 +71,7 @@ Sorting is applied by clicking a column header. For multi-column sorting, hold t
 
 ## Initial sorting
 
-You can configure sorting during the initial render of the Syncfusion Blazor Gantt Chart by setting the [GanttSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSortSettings.html) property. Within this configuration, define each column in the `GanttSortSettings.GanttSortDescriptors` collection using the `Field` and `Direction` properties to ensure the Gantt Chart loads with the desired sort order applied to the specified columns.
+You can configure sorting during the initial render of the Blazor Gantt Chart by setting the [GanttSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSortSettings.html) property. Within this configuration, define each column in the `GanttSortSettings.GanttSortDescriptors` collection using the `Field` and `Direction` properties to ensure the Gantt Chart loads with the desired sort order applied to the specified columns.
 
 The following code example shows how to add sorted columns during Gantt initialization, with `Field` set to **TaskID** and `Direction` to **Descending**, and another with `Field` as **TaskName** and `Direction` as **Ascending**.
 
@@ -134,7 +134,7 @@ The following code example shows how to add sorted columns during Gantt initiali
 
 ## Sort columns externally
 
-You can externally sort columns, clear all sorting in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component using button clicks.
+You can externally sort columns, clear all sorting in the Blazor Gantt Chart component using button clicks.
 
 ### Add sort columns
 

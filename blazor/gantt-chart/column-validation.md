@@ -11,7 +11,7 @@ documentation: ug
 
 Column validation ensures that edited or newly added row data meets defined criteria before it is saved. This support is useful for enforcing rules or constraints on individual columns to maintain data integrity. When validation rules are applied, error messages are displayed for invalid fields, and saving is prevented until all validations pass.
 
-The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to perform column validation. Validation rules can be specified using the [GanttColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) property to define criteria for validating column values.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component uses the Form Validator library to perform column validation. Validation rules can be specified using the [GanttColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) property to define criteria for validating column values.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -95,7 +95,7 @@ The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to
 
 ## Data annotation
 
-The Syncfusion® Blazor Gantt Chart component supports data annotation validation attributes to validate fields in the underlying data model during add and edit operations. These attributes provide a declarative approach to enforce rules directly on model properties, ensuring data integrity without requiring additional validation logic.
+The Blazor Gantt Chart component supports data annotation validation attributes to validate fields in the underlying data model during add and edit operations. These attributes provide a declarative approach to enforce rules directly on model properties, ensuring data integrity without requiring additional validation logic.
 
 **Applying data annotation**
 
@@ -172,7 +172,7 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 
 ## Custom validation
 
-The Syncfusion® Blazor Gantt Chart component supports custom validation for scenarios where built-in rules or data annotations do not meet specific requirements. This option is useful for enforcing business-specific constraints, performing dependent-field checks, or applying conditional validations during add and edit operations.
+The Blazor Gantt Chart component supports custom validation for scenarios where built-in rules or data annotations do not meet specific requirements. This option is useful for enforcing business-specific constraints, performing dependent-field checks, or applying conditional validations during add and edit operations.
 
 **Implementing custom validation**
 
@@ -288,7 +288,7 @@ The following example demonstrates how to implement custom validation for the **
 
 ## Custom validator component
 
-The Syncfusion® Blazor Gantt Chart component supports custom validator components for scenarios that require validation beyond built-in [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) and `ValidationAttribute` classes. This approach allows overriding the default validation logic and implementing complex, application-specific rules.
+The Blazor Gantt Chart component supports custom validator components for scenarios that require validation beyond built-in [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) and `ValidationAttribute` classes. This approach allows overriding the default validation logic and implementing complex, application-specific rules.
 
 **Injecting a custom validator**
 

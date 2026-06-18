@@ -9,7 +9,7 @@ documentation: ug
 
 # Touch Interaction in Blazor Gantt Chart Component
 
-The Gantt Chart component supports to perform user interactions in mobile and tablet devices. This section explains how to interact with the Gantt features in touch-enabled devices.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component supports to perform user interactions in mobile and tablet devices. This section explains how to interact with the Gantt features in touch-enabled devices.
 
 ## Tooltip
 

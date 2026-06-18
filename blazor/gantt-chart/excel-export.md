@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Export in Blazor Gantt Chart Component
 
-The Syncfusion Blazor Gantt Chart component supports exporting project data to Excel and CSV formats, enabling seamless sharing, reporting, and offline analysis.  
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)t component supports exporting project data to Excel and CSV formats, enabling seamless sharing, reporting, and offline analysis.  
  
 To enable Excel or CSV export functionality, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowExcelExport) property to **true**.
 

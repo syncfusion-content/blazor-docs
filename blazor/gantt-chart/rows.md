@@ -9,11 +9,11 @@ documentation: ug
 
 # Rows in Blazor Gantt Chart Component
 
-Each row in the Blazor Gantt Chart Component represents a record from the data source and displays its associated field values in both tabular and timeline views. Rows support various interactions such as selection, cell editing, taskbar manipulation, sorting, filtering, and event triggering.
+Each row in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) Component represents a record from the data source and displays its associated field values in both tabular and timeline views. Rows support various interactions such as selection, cell editing, taskbar manipulation, sorting, filtering, and event triggering.
 
 ## Row height
 
-You can customize row height in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
+You can customize row height in the Blazor Gantt Chart  by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -386,7 +386,7 @@ The following example demonstrates how to apply custom styles to rows and cells 
 
 ### Using CSS
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows row-level customization through CSS. Each row is assigned specific class names, enabling precise styling to improve readability and visual presentation.
+The Blazor Gantt Chart component allows row-level customization through CSS. Each row is assigned specific class names, enabling precise styling to improve readability and visual presentation.
 
 **Customize selected row:**
 

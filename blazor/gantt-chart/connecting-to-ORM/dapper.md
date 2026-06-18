@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQL Server to Blazor Gantt Chart Using Dapper
 
-The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) supports binding data from SQL Server using the lightweight Dapper micro‑ORM. This modern approach provides a simpler, more direct alternative where raw SQL control is preferred.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) supports binding data from SQL Server using the lightweight Dapper micro‑ORM. This modern approach provides a simpler, more direct alternative where raw SQL control is preferred.
 
 **What is Dapper?**
 

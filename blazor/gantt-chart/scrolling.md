@@ -9,7 +9,7 @@ documentation: ug
 
 # Scrolling in Blazor Gantt Chart component
 
-Scrolling in the Blazor Gantt Chart component enables smooth navigation across extensive project datasets and long timelines. It ensures taskbars, grid rows, and timeline cells remain visible within the viewport. Scrollbars automatically appear when content exceeds the component’s defined [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Width), supporting vertical scrolling for rows, horizontal scrolling for columns, and timeline scrolling for extended chart areas.
+Scrolling in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component enables smooth navigation across extensive project datasets and long timelines. It ensures taskbars, grid rows, and timeline cells remain visible within the viewport. Scrollbars automatically appear when content exceeds the component’s defined [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Width), supporting vertical scrolling for rows, horizontal scrolling for columns, and timeline scrolling for extended chart areas.
 
 Virtual scrolling enhances performance by rendering only the visible portion of the dataset. Scrollbars are equipped with ARIA labels for accessibility, making them compatible with screen readers. They also adapt to responsive layouts, although horizontal scrolling may be required on narrow screens with wide timelines.
 
@@ -154,7 +154,7 @@ You can make the Gantt Chart component responsive by setting its [Height](https:
 
 ## Auto focus taskbar on row click 
 
-You can enable automatic scrolling to the corresponding taskbar in the timeline when a row is clicked in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt chart by using the [ScrollToTaskbarOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarOnClick) property. This feature ensures that the selected task is brought into view within the timeline area, improving navigation and focus during interaction.
+You can enable automatic scrolling to the corresponding taskbar in the timeline when a row is clicked in the Blazor Gantt Chart by using the [ScrollToTaskbarOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarOnClick) property. This feature ensures that the selected task is brought into view within the timeline area, improving navigation and focus during interaction.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

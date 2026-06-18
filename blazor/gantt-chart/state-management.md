@@ -9,7 +9,7 @@ documentation: ug
 
 # State Management in Blazor Gantt Chart Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component supports state management by retaining its configuration and data in browser local storage after a refresh within the same session. It also provides options to save and load the Gantt state manually.
+The Blazor Gantt Chart component supports state management by retaining its configuration and data in browser local storage after a refresh within the same session. It also provides options to save and load the Gantt state manually.
 
 The properties below can be saved and loaded into a Gantt chart:
 
