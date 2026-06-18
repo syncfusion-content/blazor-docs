@@ -408,37 +408,18 @@ Added inline link formatting in the toolbar. By clicking the link item, a dialog
 
 The following example demonstrates how to customize the transform, inline code, and link items.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.BlockEditor
 @using Syncfusion.Blazor.BlockEditor.Models
-
 <div id="container">
-    <SfBlockEditor Blocks="@BlockData"
-                   TransformSettings="@TransformOptions"
-                   InlineToolbarSettings="@InlineToolbarOptions">
+    <SfBlockEditor Blocks="@blockData" InlineToolbarSettings="@InlineToolbarOptions">
+        <BlockEditorTransform Items="@TransformItems"></BlockEditorTransform>
     </SfBlockEditor>
 </div>
 
 @code {
-
-    private List<BlockModel> BlockData = new()
+    private List<BlockModel> blockData = new()
     {
-        // Heading Block
-        new BlockModel
-        {
-            BlockType = BlockType.Heading,
-            Properties = new HeadingBlockSettings { Level = 1 },
-            Content = new()
-            {
-                new ContentModel
-                {
-                    ContentType = ContentType.Text,
-                    Content = "Block Editor Demo"
-                }
-            }
-        },
-
-        // Paragraph with inline elements
         new BlockModel
         {
             BlockType = BlockType.Paragraph,
@@ -447,63 +428,29 @@ The following example demonstrates how to customize the transform, inline code, 
                 new ContentModel
                 {
                     ContentType = ContentType.Text,
-                    Content = "This is normal text. "
-                },
-                new ContentModel
-                {
-                    ContentType = ContentType.InlineCode,
-                    Content = "console.log('Hello');"
-                },
-                new ContentModel
-                {
-                    ContentType = ContentType.Text,
-                    Content = " and visit "
-                },
-                new ContentModel
-                {
-                    ContentType = ContentType.Link,
-                    Content = "Syncfusion",
-                    Url = "https://www.syncfusion.com"
-                }
-            }
-        },
-
-        // Quote Block
-        new BlockModel
-        {
-            BlockType = BlockType.Quote,
-            Content = new()
-            {
-                new ContentModel
-                {
-                    ContentType = ContentType.Text,
-                    Content = "This is a quote block."
+                    Content = "Sample text for inline toolbar demo."
                 }
             }
         }
     };
-
-    // Transform Settings 
-    private TransformSettings TransformOptions = new()
-    {
-        Items = new List<TransformItem>
-        {
-            new TransformItem { BlockType = BlockType.Paragraph, Label = "Paragraph" },
-            new TransformItem { BlockType = BlockType.Heading, Label = "Heading" },
-            new TransformItem { BlockType = BlockType.Quote, Label = "Quote" }
-        }
-    };
-
-    // Inline Toolbar Settings
     private InlineToolbarSettings InlineToolbarOptions = new()
     {
-        Items = new List<InlineToolbarItem>
+        Items = new List<InlineToolbarItemModel>
         {
-            InlineToolbarItem.Bold,
-            InlineToolbarItem.Italic,
-            InlineToolbarItem.InlineCode,
-            InlineToolbarItem.Link
+            new InlineToolbarItemModel { Command = CommandName.Transform },
+            new InlineToolbarItemModel { Command = CommandName.Bold },
+            new InlineToolbarItemModel { Command = CommandName.Italic },
+            new InlineToolbarItemModel { Command = CommandName.InlineCode },
+            new InlineToolbarItemModel { Command = CommandName.Link }
         }
+    };
+    private List<TransformItemModel> TransformItems = new()
+    {
+        new TransformItemModel { Type = BlockType.Paragraph },
+        new TransformItemModel { Type = BlockType.Heading },
+        new TransformItemModel { Type = BlockType.Checklist },
+        new TransformItemModel { Type = BlockType.BulletList },
+        new TransformItemModel { Type = BlockType.NumberedList }
     };
 }
 ```
