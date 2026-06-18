@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sorting in Blazor AutoComplete component | Syncfusion
+title: Sorting in Blazor AutoComplete component | Syncfusion®
 description: Checkout and learn here all about the Sorting feature in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete

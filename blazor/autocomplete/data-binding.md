@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
+title: Data Binding in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all features about Data Binding in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
