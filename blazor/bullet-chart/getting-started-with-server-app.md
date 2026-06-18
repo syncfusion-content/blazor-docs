@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Bullet Chart in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Bullet Chart in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Bullet Chart Component in Blazor Server App.
 platform: Blazor
 component: Bullet Chart
@@ -55,7 +55,7 @@ dotnet new blazor -o BlazorApp --interactivity Server
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install the [Syncfusion.Blazor.BulletChart](https://www.nuget.org/packages/Syncfusion.Blazor.BulletChart/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
