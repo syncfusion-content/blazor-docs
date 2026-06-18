@@ -277,7 +277,7 @@ You can render the chips items from collection using for loop in Blazor Chips co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chips Component](./images/blazor-chip-sample.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chip).
 
