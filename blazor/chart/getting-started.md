@@ -217,7 +217,7 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRjRiBKleQGqKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
 
-# Populate Blazor chart with data
+## Populate Blazor chart with data
 
 To bind data for the chart component, you can assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
