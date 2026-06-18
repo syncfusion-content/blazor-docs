@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor File Upload in Blazor Server App | Syncfusion
+title: Getting Started with Blazor File Upload in Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor File Upload component in Blazor Server Application.
 platform: Blazor
 control: File Upload
