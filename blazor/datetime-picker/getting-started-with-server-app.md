@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started | Blazor DateTime Picker in Blazor Server App | Syncfusion
+title: Getting Started with Blazor DateTime Picker in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor DateTime Picker Component in Blazor Server App.
 platform: Blazor
 component: DateTime Picker
