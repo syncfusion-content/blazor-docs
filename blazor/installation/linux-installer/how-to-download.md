@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Download the Syncfusion Blazor Linux installer | Syncfusion
-description: Learn how to download Blazor Linux installer for trial or licensed use from your Syncfusion account, including Start trials and License and Downloads options.
+title: Download the Blazor Linux installer | Syncfusion®
+description: Learn how to download Blazor Linux installer for trial or licensed use from your account, including Start trials and License and Downloads options.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Download the Syncfusion® Blazor Linux installer
 
-Download the Syncfusion Blazor Linux installer from the Syncfusion website. Download options depend on the account status: trial or licensed.
+Download the Blazor Linux installer from the Syncfusion website. Download options depend on the account status: trial or licensed.
 
 - Trial installer
 - Licensed installer
@@ -32,7 +32,7 @@ Our 30-day trial can be downloaded in two ways.
    ![Trial confirmation page showing Blazor Linux installer download](images/trial-confirmation.webp)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
-4. An unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux trial installer.
+4. An unlock key is not required to install the Blazor Linux trial installer.
 5. Before the trial expires, download the trial installer at any time from the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot).
  
    ![Trials and Downloads page with Download button for the Blazor Linux installer](images/trial-download.webp)
@@ -71,7 +71,7 @@ Start an evaluation if components were obtained through [NuGet.org](https://www.
 
    ![License and Downloads page showing More download options for the Blazor Linux installer](images/license-download.webp)
    
-4. An unlock key is not required to install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Linux licensed installer.
+4. An unlock key is not required to install the Blazor Linux licensed installer.
 5. For Linux, the installer is available in ZIP format (offline installer).
    
    ![License and Downloads page listing Blazor Linux ZIP download](images/Linux_Download.webp)

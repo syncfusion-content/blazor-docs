@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Media Query in Blazor WASM App | Syncfusion
+title: Getting Started Blazor Media Query in Blazor WASM App | Syncfusion®
 description: Checkout and learn about getting started with Blazor Media Query component in Blazor WebAssembly Application.
 platform: Blazor
 control: Media Query
