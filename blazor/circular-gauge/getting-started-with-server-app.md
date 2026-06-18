@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started | Blazor Circular Gauge in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Circular Gauge in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Circular Gauge Component in Blazor Server App.
 platform: Blazor
 component: Circular Gauge
