@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upload in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about available Upload in Syncfusion Blazor File Manager component and much more.
+title: Upload in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about available Upload in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -13,7 +13,7 @@ The Blazor File Manager component provides a [FileManagerUploadSettings](https:/
 
 ## Directory Upload
 
-The [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion Blazor File Manager component. 
+The [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) property controls whether users can browse and upload entire directories (folders) in the Blazor File Manager component. 
 
 To enable directory upload, set the `DirectoryUpload` property to `true` in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) configuration.
 
