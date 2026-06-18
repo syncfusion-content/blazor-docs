@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Data Form in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Data Form in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Data Form Component in Blazor Server App.
 platform: Blazor
 component: Data Form
