@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor DataManager in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor DataManager in WASM App | Syncfusion
 description: Learn how to configure and use the Syncfusion Blazor DataManager component in a Blazor WebAssembly application.
 platform: Blazor
 control: DataManager
