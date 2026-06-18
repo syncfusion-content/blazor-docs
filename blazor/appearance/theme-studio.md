@@ -7,9 +7,9 @@ control: Common
 documentation: ug
 ---
 
-# Customize Blazor component themes with Theme Studio
+# Customize Blazor Component Themes with Theme Studio
 
-Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), Range Navigator, and [Maps](https://www.syncfusion.com/blazor-components/blazor-map).
+Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map), and [Blazor Range Navigator](https://www.syncfusion.com/blazor-components/blazor-range-selector).
 
 ## Customize theme colors from Theme Studio
 
@@ -27,9 +27,9 @@ The Blazor themes are developed under the SCSS environment. Each theme has a uni
 
 Using the theme studio, you can apply custom themes to a list of specific components. This option is used when you integrate a selective list of [Blazor components](https://www.syncfusion.com/blazor-components) in your application. The theme studio will filter the selected components and customize the final output for the components’ styles alone by reducing the final output file size.
 
-1. Click the Filter icon at the top-right corner, and select the components whose theme you want to customize.
+1. Click the **Filter** icon at the top-right corner, and select the components whose theme you want to customize.
 ![Theme Studio filter-icon](images/filter-icon.webp)
-2. Click the Apply button in the Filter dialog. Now, only the selected components will be rendered in the components preview section.
+2. Click the **Apply** button in the Filter dialog. Now, only the selected components will be rendered in the components preview section.
 ![Theme Studio filter-dialog](images/filter-dialog.webp)
 3. Now, you can customize the colors in the theme customization section for the components selected.
 ![Theme Studio filter-customized](images/filter-customized.webp)
@@ -38,15 +38,15 @@ Using the theme studio, you can apply custom themes to a list of specific compon
 
 You can download the custom styles after customizing the theme colors.
 
-1. Click the Download button at the top-right corner, and the Download dialog will appear.
+1. Click the **Download** button at the top-right corner, and the Download dialog will appear.
 ![Theme Studio download-icon](images/download-icon.webp)
-2. Assign a theme name in the File Name field, and click the Download button.
+2. Assign a theme name in the **File Name** field, and click the Download button.
 ![Theme Studio download-dialog](images/download-dialog.webp)
-3. The download styles will come as a zip file that contains SCSS and CSS files for the selected [Blazor components](https://www.syncfusion.com/blazor-components). The current settings are stored in the `settings.json` file.
+3. The download styles will come as a zip file that contains `SCSS` and `CSS` files for the selected [Blazor components](https://www.syncfusion.com/blazor-components). The current settings are stored in the `settings.json` file.
 
 ![Theme Studio output-files](images/output-files.webp)
 
-N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS files without Google Fonts dependencies. Lightweight theme files, such as `fluent2-lite.css`, improve performance by excluding larger styles. When using a customized CSS file, remove any other Syncfusion base theme references (CDN or local) to avoid duplicate or conflicting styles.
+N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS files without Google Fonts dependencies. Lightweight theme files, such as `fluent2-lite.css`, improve performance by excluding larger styles. When using a customized CSS file, remove any other Blazor base theme references (CDN or local) to avoid duplicate or conflicting styles.
 
 ### Use a customized theme in a web application
 
@@ -67,11 +67,11 @@ Before applying a custom theme, ensure you have created a Blazor project. For gu
 
 If you need to change your application theme and UI design in the future, do not customize the Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
 
-1. Click the Import icon at the top-right corner.
+1. Click the **Import** icon at the top-right corner.
 ![Theme Studio import-icon](images/import-icon.webp)
-2. The Import Theme dialog will open. Click the Browse button and select the `settings.json` file you exported previously.
+2. The Import Theme dialog will open. Click the **Browse** button and select the `settings.json` file you exported previously.
 ![Theme Studio import dialog](images/import-dialog.webp)
-3. Click the Import button.
+3. Click the **Import** button.
 ![Theme Studio imported-settings](images/imported-settings.webp)
 4. The stored data will be reflected in the Theme Studio application. Now, you can change the theme colors based on your latest design and export the theme again.
 ![Theme Studio filter-customized](images/filter-customized.webp)
