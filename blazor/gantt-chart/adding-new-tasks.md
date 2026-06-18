@@ -26,7 +26,7 @@ Enable task addition through the toolbar by setting [EditSettings.AllowAdding](h
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -48,14 +48,14 @@ Enable task addition through the toolbar by setting [EditSettings.AllowAdding](h
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
-            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21) },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 09), Progress = 40, ParentId = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21) },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), Progress = 30, ParentId = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), Progress = 40, ParentId = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -64,7 +64,7 @@ Enable task addition through the toolbar by setting [EditSettings.AllowAdding](h
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIjkMxqOcLSDUD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLHXniVCaQbAxXK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Note**: A unique `TaskID` is required to avoid silent failures. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event to handle errors like invalid input or duplicate IDs.
 
@@ -82,7 +82,7 @@ Enable context menu task addition by setting [EnableContextMenu](https://help.sy
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -105,14 +105,14 @@ Enable context menu task addition by setting [EnableContextMenu](https://help.sy
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
-            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 30, Predecessor = "2", ParentId = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Predecessor = "6", ParentId = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 21) },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 07), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 07), Duration = "3", Progress = 30, Predecessor = "2", ParentId = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 08), EndDate = new DateTime(2026, 04, 21) },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 08), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 08), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 08), Duration = "0", Progress = 30, Predecessor = "6", ParentId = 5 }
         };
         return Tasks;
     }
@@ -121,7 +121,7 @@ Enable context menu task addition by setting [EnableContextMenu](https://help.sy
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhIjYMHJtqJyIRP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRDnMVBZWApGQq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Note**: The context menu supports keyboard navigation (e.g., <kbd>Enter</kbd> to select "Add Above"). Refer to the [Accessibility in Blazor Gantt Chart](https://blazor.syncfusion.com/documentation/gantt-chart/accessibility) for keyboard shortcuts.
 
@@ -143,14 +143,14 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
 
 @code {
     public SfGantt<TaskData> Gantt;
-    public TaskData record = new TaskData() { TaskID = 9, TaskName = "New Added Record", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 50};
+    public TaskData record = new TaskData() { TaskID = 9, TaskName = "New Added Record", StartDate = new DateTime(2026, 04, 05), Duration = "3", Progress = 50};
 
     public async Task AddRow()
     {
         await this.Gantt.AddRecordAsync(record, 2, RowPosition.Below);
     }
 
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -172,14 +172,14 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
-            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 05), EndDate = new DateTime(2026, 04, 21) },
+            new TaskData() { TaskID = 2, TaskName = "Identify site location", StartDate = new DateTime(2026, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21) },
+            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -187,7 +187,7 @@ Tasks can be added programmatically using the [AddRecordAsync](https://help.sync
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVejYiHpDyFanTO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLdDxMVrZHVObxK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
                            
 > **Note**: Ensure the `TaskID` is unique to prevent runtime errors. Use try-catch blocks with `AddRecordAsync` to handle exceptions, such as invalid data or missing dependencies. For keyboard accessibility, use <kbd>Ctrl</kbd> + <kbd>Insert</kbd> (Windows) or <kbd>⌘</kbd> + <kbd>Insert</kbd> (Mac) to open the add dialog programmatically.
 
