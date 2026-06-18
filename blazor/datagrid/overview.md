@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Blazor DataGrid Component | Syncfusion®
-description: Checkout and learn about Syncfusion Blazor DataGrid component features, capabilities and more.
+description: Learn about Syncfusion Blazor DataGrid component featuring advanced data operations, seamless CRUD operations, virtualization, and extensive customization.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -101,7 +101,7 @@ The Blazor DataGrid delivers a comprehensive user experience with extensive cust
 
 ## Export & Reporting
 
-The Blazor DataGrid supports multiple export formats and reporting capabilities, enabling users to extract and share grid data in various document formats. Excel and PDF export functionality with customizable templates provides flexible options for generating professional reports and data analyses.
+The Blazor DataGrid supports multiple export formats and reporting capabilities, enabling users to extract and share grid data in various document formats. Excel and PDF export functionality with customizable templates provides flexible options for generating professional reports and data analysis.
 
 - [Excel Export](./excel-exporting)
 - [PDF Export](./pdf-export)
