@@ -67,3 +67,4 @@ The Blazor Block Editor component's accessibility levels are ensured through an 
 ## See also
 
 * [Accessibility in Blazor components](../common/accessibility)
+
