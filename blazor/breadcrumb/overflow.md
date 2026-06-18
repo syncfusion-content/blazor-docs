@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Breadcrumb Overflow with Blazor Breadcrumb component | Syncfusion
+title: Breadcrumb Overflow with Blazor Breadcrumb component | Syncfusion®
 description: Overflow section in Blazor Breadcrumb explains how to limit the number of Breadcrumb items to be displayed.
 platform: Blazor
 control: Breadcrumb

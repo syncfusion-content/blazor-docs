@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Block Editor in WASM
+title: Getting Started with Blazor Block Editor in WASM | Syncfusion®
 description: Get started with Blazor Block Editor in Blazor WebAssembly App using Visual Studio, Visual Studio Code, or .NET CLI.
 platform: Blazor
 control: BlockEditor
@@ -215,7 +215,7 @@ public class EditorBlockData
 {% endhighlight %}
 {% endtabs %}
 
-To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor Block Editor component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Blazor Block Editor component in the default web browser.
 
 {% previewsample "(https://blazorplayground.syncfusion.com/embed/LNLIsrhAgbKCOpbZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor BlockEditor Default.](images/blazor-block-editor-default.webp)" %}
 
