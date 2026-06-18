@@ -969,20 +969,20 @@ The product catalog page is the main entry point of the application. It uses the
 }
 
 .e-grid .e-headercontent {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
 }
 
 .e-grid .e-headercell {
-    color: #fff !important;
+    color: #fff;
     font-weight: 600;
     padding: 1rem 0.5rem;
-    background: transparent !important;
+    background: transparent;
     border-bottom: 2px solid rgba(255,255,255,0.3);
 }
 
 .e-grid .e-columnheader {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .e-grid .e-rowcell {
@@ -1299,30 +1299,30 @@ The **Wishlist** page displays all products the user has saved. It uses a Blazor
 }
 
 .add-cart-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
-    font-size: 0.875rem !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
 }
 
 .add-cart-btn.in-cart {
-    background: #48bb78 !important;
+    background: #48bb78;
 }
 
 .remove-btn {
-    background: #fff !important;
-    border: 1px solid #e53e3e !important;
-    color: #e53e3e !important;
-    padding: 0.5rem 0.75rem !important;
-    border-radius: 8px !important;
+    background: #fff;
+    border: 1px solid #e53e3e;
+    color: #e53e3e;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
 }
 
 .remove-btn:hover {
-    background: #e53e3e !important;
-    color: #fff !important;
+    background: #e53e3e;
+    color: #fff;
 }
 
 .wishlist-actions {
@@ -1332,31 +1332,31 @@ The **Wishlist** page displays all products the user has saved. It uses a Blazor
 }
 
 .continue-btn {
-    background: #fff !important;
-    color: #4a5568 !important;
-    border: 2px solid #e2e8f0 !important;
-    padding: 0.875rem 2rem !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
+    background: #fff;
+    color: #4a5568;
+    border: 2px solid #e2e8f0;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 .continue-btn:hover {
-    border-color: #667eea !important;
-    color: #667eea !important;
+    border-color: #667eea;
+    color: #667eea;
 }
 
 .clear-btn {
-    background: #fff !important;
-    color: #e53e3e !important;
-    border: 2px solid #e53e3e !important;
-    padding: 0.875rem 2rem !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
+    background: #fff;
+    color: #e53e3e;
+    border: 2px solid #e53e3e;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 .clear-btn:hover {
-    background: #e53e3e !important;
-    color: #fff !important;
+    background: #e53e3e;
+    color: #fff;
 }
 
 .empty-wishlist {
@@ -1384,15 +1384,15 @@ The **Wishlist** page displays all products the user has saved. It uses a Blazor
 }
 
 .browse-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    padding: 1rem 2rem !important;
-    border-radius: 12px !important;
-    font-weight: 600 !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
 }
 
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
     .wishlist-container {
         padding: 1rem;
     }
@@ -1696,7 +1696,7 @@ The **Cart** page provides an order summary view. It displays all cart items in 
     color: #2d3748;
 }
 
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
     .cart-container {
         padding: 1rem;
     }
