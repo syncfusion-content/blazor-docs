@@ -15,7 +15,7 @@ The Syncfusion Blazor DataGrid is a powerful and feature-rich UI component desig
 
 ## Quick Start
 
-To get started with Blazor DataGrid, refer to the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+To get started with Blazor DataGrid, refer to the [Getting Started](./getting-started-with-web-app) documentation.
 
 ## Data Management
 
@@ -23,56 +23,56 @@ To get started with Blazor DataGrid, refer to the [Getting Started](https://blaz
 
 Data binding is a fundamental technique that empowers the Blazor DataGrid to integrate data into its interface, enabling dynamic and interactive Grid views. The DataGrid utilizes the SfDataManager, which supports both RESTful JSON data service binding and IEnumerable binding through the DataSource property. This can be assigned to a SfDataManager instance or list of business objects for flexible data management.
 
-- Supports [LocalData](https://blazor.syncfusion.com/documentation/datagrid/data-binding/local-data) and [RemoteData](https://blazor.syncfusion.com/documentation/datagrid/data-binding/remote-data) sources
+- Supports [LocalData](./data-binding/local-data) and [RemoteData](./data-binding/remote-data) sources
 - Data source adaptors
 
 ### Data Operations
 
 The Blazor DataGrid supports all fundamental data operations:
 
-- [Paging](https://blazor.syncfusion.com/documentation/datagrid/paging) and [Virtual Scrolling](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling)
-- [Sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting)
-- [Filtering](https://blazor.syncfusion.com/documentation/datagrid/filtering)
-   - [Filter Bar](https://blazor.syncfusion.com/documentation/datagrid/filter-bar)
-   - [Filter Menu](https://blazor.syncfusion.com/documentation/datagrid/filter-menu)
-   - [Excel Like Filter](https://blazor.syncfusion.com/documentation/datagrid/excel-like-filter)
-- [Grouping](https://blazor.syncfusion.com/documentation/datagrid/grouping)
-- [Aggregates](https://blazor.syncfusion.com/documentation/datagrid/aggregates)
-   - [Footer Aggregate](https://blazor.syncfusion.com/documentation/datagrid/footer-aggregate)
-   - [Group Caption Aggregate](https://blazor.syncfusion.com/documentation/datagrid/group-and-caption-aggregate)
-   - [Custom Aggregate](https://blazor.syncfusion.com/documentation/datagrid/custom-aggregate)
-   - [Reactive Aggregate](https://blazor.syncfusion.com/documentation/datagrid/reactive-aggregate)
+- [Paging](./paging) and [Virtual Scrolling](./virtual-scrolling)
+- [Sorting](./sorting)
+- [Filtering](./filtering)
+   - [Filter Bar](./filter-bar)
+   - [Filter Menu](./filter-menu)
+   - [Excel Like Filter](./excel-like-filter)
+- [Grouping](./grouping)
+- [Aggregates](./aggregates)
+   - [Footer Aggregate](./footer-aggregate)
+   - [Group Caption Aggregate](./group-and-caption-aggregate)
+   - [Custom Aggregate](./custom-aggregate)
+   - [Reactive Aggregate](./reactive-aggregate)
 
 ## Editing & CRUD
 
 The Blazor DataGrid provides powerful options for dynamically inserting, deleting, and updating records, enabling seamless CRUD (Create, Read, Update, and Delete) operations directly within the Grid. To enable editing functionality, configure the AllowEditing, AllowAdding, and AllowDeleting properties within **GridEditSettings** to **true**, and set the primary key column using Columns.IsPrimaryKey to identify records uniquely.
 
-- [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing)
-  - [Inline Editing](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing)
-  - [Dialog Editing](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing)
-  - [Batch Editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing)
-  - [Template Editing](https://blazor.syncfusion.com/documentation/datagrid/template-editing)
+- [Editing](./editing)
+  - [Inline Editing](./in-line-editing)
+  - [Dialog Editing](./dialog-editing)
+  - [Batch Editing](./batch-editing)
+  - [Template Editing](./template-editing)
 - Add, Edit, and Delete operations
-- Built-in validation with [Data Annotations](https://blazor.syncfusion.com/documentation/datagrid/column-validation#data-annotation)
+- Built-in validation with [Data Annotations](./column-validation#data-annotation)
 
 ## Columns & Layout
 
 The Blazor DataGrid offers rich column customization capabilities that enhance data presentation and user interaction. Columns can be formatted, resized, reordered, and frozen to provide flexible layouts that adapt to various data viewing needs and responsive design requirements.
 
 - Rich column features (formatting, resizing, reordering)
-- [Frozen Columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column)
-- [Column Spanning](https://blazor.syncfusion.com/documentation/datagrid/column-spanning)
-- [Column Menu](https://blazor.syncfusion.com/documentation/datagrid/column-menu) (visibility, filtering, sorting)
-- [Column chooser](https://blazor.syncfusion.com/documentation/datagrid/column-chooser)
-- [Adaptive responsive layout](https://blazor.syncfusion.com/documentation/datagrid/adaptive-layout)
+- [Frozen Columns](./frozen-column)
+- [Column Spanning](./column-spanning)
+- [Column Menu](./column-menu) (visibility, filtering, sorting)
+- [Column chooser](./column-chooser)
+- [Adaptive responsive layout](./adaptive-layout)
 
 ## Performance & Scale
 
 The Blazor DataGrid is engineered for exceptional performance and scalability, handling large datasets efficiently without compromising user experience. Advanced virtualization techniques, lazy-loading capabilities, and WebAssembly optimizations ensure smooth interactions even with thousands of rows and complex operations.
 
-- [Row Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#row-virtualization) and [Column Virtualization](https://blazor.syncfusion.com/documentation/datagrid/virtual-scrolling#column-virtualization)
-- [Lazy-load Grouping](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping)
-- [Infinite Scrolling](https://blazor.syncfusion.com/documentation/datagrid/infinite-scrolling)
+- [Row Virtualization](./virtual-scrolling#row-virtualization) and [Column Virtualization](./virtual-scrolling#column-virtualization)
+- [Lazy-load Grouping](./lazy-load-grouping)
+- [Infinite Scrolling](./infinite-scrolling)
 - Optimized performance for WebAssembly
 - Overscan support for smooth scrolling
 
@@ -81,36 +81,36 @@ The Blazor DataGrid is engineered for exceptional performance and scalability, h
 The Blazor DataGrid delivers a comprehensive user experience with extensive customization options and accessibility features. Rich templating support, flexible selection modes, intuitive interactions, and full keyboard navigation make the grid accessible to all users while maintaining high levels of personalization.
 
 - Extensive templating (cells, rows, headers, footers, editors)
-- [Selection](https://blazor.syncfusion.com/documentation/datagrid/selection)
-   - [Row Selection](https://blazor.syncfusion.com/documentation/datagrid/row-selection)
-   - [Checkbox Selection](https://blazor.syncfusion.com/documentation/datagrid/checkbox-selection)
-   - [Cell Selection](https://blazor.syncfusion.com/documentation/datagrid/cell-selection)
-- [Row Drag and Drop](https://blazor.syncfusion.com/documentation/datagrid/row-drag-and-drop)
-- [Context Menu](https://blazor.syncfusion.com/documentation/datagrid/context-menu)
+- [Selection](./selection)
+   - [Row Selection](./row-selection)
+   - [Checkbox Selection](./checkbox-selection)
+   - [Cell Selection](./cell-selection)
+- [Row Drag and Drop](./row-drag-and-drop)
+- [Context Menu](./context-menu)
 - Customizable toolbar
 - Loading indicators
-- [Column Reordering](https://blazor.syncfusion.com/documentation/datagrid/column-reorder)
-- [Accessibility](https://blazor.syncfusion.com/documentation/datagrid/accessibility) (WCAG compliant)
+- [Column Reordering](./column-reorder)
+- [Accessibility](./accessibility) (WCAG compliant)
 - Full keyboard navigation
 
 ## Export & Reporting
 
 The Blazor DataGrid supports multiple export formats and reporting capabilities, enabling users to extract and share grid data in various document formats. Excel and PDF export functionality with customizable templates provides flexible options for generating professional reports and data analyses.
 
-- [Excel Export](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting)
-- [PDF Export](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting)
-- [Print](https://blazor.syncfusion.com/documentation/datagrid/print) functionality
+- [Excel Export](./excel-exporting)
+- [PDF Export](./pdf-export)
+- [Print](./print) functionality
 
 ## Advanced Features
 
 The Blazor DataGrid includes advanced capabilities designed for complex data scenarios and enterprise-level applications. From sophisticated state management and hierarchical data relationships to AI-driven interactions and custom formatting, these features enable developers to build powerful, feature-rich data management solutions.
 
-- [State management](https://blazor.syncfusion.com/documentation/datagrid/state-management) (save/load grid configuration)
+- [State management](./state-management) (save/load grid configuration)
 - Hierarchical grids (parent-child relationships)
 - AI-driven natural language commands
 - Row spanning
-- [Detail Templates](https://blazor.syncfusion.com/documentation/datagrid/detail-template)
-- [Foreign key Columns](https://blazor.syncfusion.com/documentation/datagrid/foreignkey-column)
+- [Detail Templates](./detail-template)
+- [Foreign key Columns](./foreignkey-column)
 - Custom toolbars
 - Global and local formatting
 
@@ -120,18 +120,18 @@ The Blazor DataGrid provides extensive data connectivity options with support fo
 
 - Multiple Data Source Adapters
 - ORM integration
-   - [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework)
-   - [Dapper](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/dapper)
+   - [Entity Framework](./connecting-to-orm/entityframework)
+   - [Dapper](./connecting-to-orm/dapper)
 - Backend integrations
-   - [SignalR](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-backends/signalr)
-   - [ElasticSearch](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-backends/elasticsearch)
+   - [SignalR](./connecting-to-backends/signalr)
+   - [ElasticSearch](./connecting-to-backends/elasticsearch)
 
 ### Supported Data Sources
 
-- [Firebase](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-database/firebase-firestore)
-- [MongoDB Server](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-database/mongodb-server)
-- [MySQL Server](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-database/mysql-server)
-- [PostgreSQL Server](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-database/postgresql-server)
-- [SQLite Server](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-database/sqlite-server)
-- [Microsoft SQL Server](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-database/microsoft-sql-server)
-- [GraphQL Binding](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/graphql-adaptor)
+- [Microsoft SQL Server](./connecting-to-database/microsoft-sql-server)
+- [MySQL Server](./connecting-to-database/mysql-server)
+- [SQLite Server](./connecting-to-database/sqlite-server)
+- [PostgreSQL Server](./connecting-to-database/postgresql-server)
+- [MongoDB Server](./connecting-to-database/mongodb-server)
+- [Firebase](./connecting-to-database/firebase-firestore)
+- [GraphQL Binding](./connecting-to-adaptors/graphql-adaptor)
