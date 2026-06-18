@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Dropdown Menu in Blazor Web App | Syncfusion
+title: Getting Started with Blazor Dropdown Menu in Web App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Dropdown Menu Component in Blazor Web App.
 platform: Blazor
 component: Dropdown Menu
