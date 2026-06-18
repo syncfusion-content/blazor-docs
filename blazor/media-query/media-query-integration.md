@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Media Query component Integration with other components | Syncfusion
+title: Media Query component Integration with other components | Syncfusion®
 description: Checkout and learn here all about how to integrate the Media Query with other component like Chart and much more details.
 platform: Blazor
 control: Media Query
