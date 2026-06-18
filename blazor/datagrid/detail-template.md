@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Detail Template in Blazor DataGrid | Syncfusion
-description: Learn how to use detail templates in Syncfusion Blazor DataGrid to display expandable content, hierarchical grids, template columns, and aggregates.
+title: Detail Template in Blazor DataGrid | Syncfusion®
+description: Learn how to use detail templates in Blazor DataGrid to display expandable content, hierarchical grids, template columns, and aggregates.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Detail Template in Blazor DataGrid
 
-The detail template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Syncfusion<sup style="font-size:70%">&reg;</sup> components, or custom Blazor components.
+The detail template in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) displays expandable sections for each row to show additional, context-specific information. This is useful when rows contain nested or supplementary data that would otherwise clutter the main grid view. Define the template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property, which supports any HTML content, Blazor components, or custom Blazor components.
 
 > Review the [templates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates) topic before adding a detail template to configure required settings.
 
@@ -1849,7 +1849,7 @@ In this example, the `.e-currentitem` class targets the current page numeric ite
 
 ### Sorting
 
-Customize sorting icons and multi-sorting indicators in the detail grid using CSS. Icon glyphs can vary by theme; refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://blazor.syncfusion.com/documentation/appearance/icons#bootstrap-5) for theme-specific codes.
+Customize sorting icons and multi-sorting indicators in the detail grid using CSS. Icon glyphs can vary by theme; refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons#bootstrap-5) for theme-specific codes.
 
 **Customizing the Detail Grid Sorting Icon**
 
@@ -2061,7 +2061,7 @@ To customize the appearance of the group expand/collapse icons in the detail Gri
 }
 ```
 
-In this example, the `.e-icon-gdownarrow` and `.e-icon-grightarrow` classes target the expand and collapse icons, respectively. Modify the `content` property to change the icon displayed. [Syncfusion<sup style="font-size:70%">&reg;</sup> icons](https://blazor.syncfusion.com/documentation/appearance/icons) sets can be used based on the selected theme.
+In this example, the `.e-icon-gdownarrow` and `.e-icon-grightarrow` classes target the expand and collapse icons, respectively. Modify the `content` property to change the icon displayed. [icons](https://blazor.syncfusion.com/documentation/appearance/icons) sets can be used based on the selected theme.
 
 ![Detail Grid group expand or collapse icons in Blazor](images/hierarchy-grid/grid-child-group-expand-or-collapse-icons.webp)
 

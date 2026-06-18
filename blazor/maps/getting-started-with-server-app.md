@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Maps in Blazor Server App | Syncfusion
+title: Getting Started with Maps in Blazor Server App | Syncfusion®
 description: Checkout and learn about getting started with the Blazor Maps component in Blazor Server Application.
 platform: Blazor
 component: Maps
