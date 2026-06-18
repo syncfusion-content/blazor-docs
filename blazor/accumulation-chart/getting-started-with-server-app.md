@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Blazor Accumulation Chart Blazor Server App Syncfusion
-description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor Server App.
+title: Accumulation Chart with Blazor Server App | Syncfusion®
+description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor Server App and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -244,5 +244,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 ## See also
 
 
-1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
