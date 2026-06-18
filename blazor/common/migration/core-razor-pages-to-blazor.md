@@ -90,7 +90,7 @@ In the `Program.cs` file, add the Blazor namespace and register the required ser
 using Syncfusion.Blazor;
 ...
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSyncfusionBlazor();  // Register Syncfusion services
+builder.Services.AddSyncfusionBlazor();  // Register services
 var app = builder.Build();
 ...
 

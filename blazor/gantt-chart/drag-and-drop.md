@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Rows Drag and Drop in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Row Drag and Drop in Syncfusion Blazor Gantt Chart component and much more details.
+title: Rows Drag and Drop in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Row Drag and Drop in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Row drag and drop in Blazor Gantt Chart component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component includes built-in support for row drag and drop, enabling rows to be rearranged within the Gantt chart or dropped into custom components. 
+The Blazor Gantt Chart component includes built-in support for row drag and drop, enabling rows to be rearranged within the Gantt chart or dropped into custom components. 
 
 To enable this feature, set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowRowDragAndDrop) property to **true**.
 
