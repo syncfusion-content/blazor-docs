@@ -1708,6 +1708,175 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLSXTVBKnztlkUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Detail row events
+
+The Blazor DataGrid provides several events related to detail row expand and collapse that allow control over detail row behavior. These events enable implementation of logic before and after expand or collapse detail row actions.
+
+* [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound): Triggered after a detail row is expanded. Use this event to bind or modify the content displayed in the detail template based on the corresponding row data.
+
+* [DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding): Triggered before a detail row expands. Use this event to control the expand operation or prevent it based on specific conditions.
+
+* [DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded): Triggered after a detail row has been successfully expanded. This event is useful for executing actions that depend on the expanded detail view.
+
+* [DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing): Triggered before a detail row collapses. Use this event to control the collapse operation or prevent it when required.
+
+* [DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed): Triggered after a detail row has been fully collapsed. This event can be used to perform cleanup actions or update the UI after the detail content is hidden.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+
+<div style="text-align: center; color: red">
+    <span>@DetailDataBoundMessage</span>
+</div>
+<div style="text-align: center; color: red">
+    <span>@DetailTemplateMessage</span>
+</div>
+<SfGrid @ref="grid" DataSource="@Employees" Height="265px">
+    <GridEvents DetailDataBound="DetailDataBoundHandler" DetailsExpanding="DetailsExpandingHandler" DetailsExpanded="DetailsExpandedHandler" DetailsCollapsing="DetailsCollapsingHandler" DetailsCollapsed="DetailsCollapsedHandler" TValue="EmployeeData"></GridEvents>
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+            }
+            <SfGrid DataSource="@Orders" Query="@(new Query().Where("EmployeeID", "equal", employee.EmployeeID))">
+                <GridColumns>
+                    <GridColumn Field="@nameof(OrderData.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="110" />
+                    <GridColumn Field="@nameof(OrderData.CustomerID)" HeaderText="Customer ID" Width="110" />
+                    <GridColumn Field="@nameof(OrderData.ShipCity)" HeaderText="Ship City" Width="110" />
+                    <GridColumn Field="@nameof(OrderData.ShipName)" HeaderText="Ship Name" Width="110" />
+                </GridColumns>
+            </SfGrid>
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field="@nameof(EmployeeData.EmployeeID)" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="110" />
+        <GridColumn Field="@nameof(EmployeeData.FirstName)" HeaderText="First Name" Width="110" />
+        <GridColumn Field="@nameof(EmployeeData.LastName)" HeaderText="Last Name" Width="110" />
+        <GridColumn Field="@nameof(EmployeeData.Country)" HeaderText="Country" Width="110" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<EmployeeData> grid;
+    public List<OrderData> Orders { get; set; }
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = EmployeeData.GetAllRecords();
+        Orders = OrderData.GetAllRecords();
+    }
+    public string DetailTemplateMessage;
+    public string DetailDataBoundMessage;
+
+    public void DetailDataBoundHandler(DetailDataBoundEventArgs<EmployeeData> args)
+    {
+        DetailDataBoundMessage = $"DetailDataBound event triggered for Employee ID: {args.Data.EmployeeID}";
+    }
+
+    public void DetailsExpandingHandler(DetailsExpandingEventArgs<EmployeeData> args)
+    {
+        if (args.Data.FirstName == "Andrew")
+        {
+            args.Cancel = true;
+            DetailDataBoundMessage = string.Empty;
+            DetailTemplateMessage = "DetailsExpanding event is triggered. Expanding is prevented for the FirstName column value 'Andrew'.";
+        }
+    }
+
+    public void DetailsExpandedHandler(DetailsExpandedEventArgs<EmployeeData> args)
+    {
+        DetailTemplateMessage = "DetailsExpanded event is triggered.";
+    }
+
+    public void DetailsCollapsingHandler(DetailsCollapsingEventArgs<EmployeeData> args)
+    {
+        if ((args.Data.EmployeeID) % 2 == 0)
+        {
+            args.Cancel = true;
+            DetailTemplateMessage = "DetailsCollapsing event is triggered. Collapsing is prevented for EmployeeID column even values";
+        }
+    }
+
+    public void DetailsCollapsedHandler(DetailsCollapsedEventArgs<EmployeeData> args)
+    {
+        DetailTemplateMessage = "DetailsCollapsed event is triggered.";
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="EmployeeData.cs" %}
+
+public class EmployeeData
+{
+    public int EmployeeID { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Country { get; set; }
+
+    public static List<EmployeeData> GetAllRecords()
+    {
+        return new List<EmployeeData>
+        {
+            new EmployeeData { EmployeeID = 1, FirstName = "Nancy", LastName = "Davolio", Country = "USA" },
+            new EmployeeData { EmployeeID = 2, FirstName = "Andrew", LastName = "Fuller", Country = "UK" },
+            new EmployeeData { EmployeeID = 3, FirstName = "Janet", LastName = "Leverling", Country = "USA" },
+            new EmployeeData { EmployeeID = 4, FirstName = "Margaret", LastName = "Peacock", Country = "Canada" },
+            new EmployeeData { EmployeeID = 5, FirstName = "Steven", LastName = "Buchanan", Country = "USA" },
+            new EmployeeData { EmployeeID = 6, FirstName = "Michael", LastName = "Suyama", Country = "Japan" },
+            new EmployeeData { EmployeeID = 7, FirstName = "Robert", LastName = "King", Country = "UK" },
+            new EmployeeData { EmployeeID = 8, FirstName = "Laura", LastName = "Callahan", Country = "USA" },
+            new EmployeeData { EmployeeID = 9, FirstName = "Anne", LastName = "Dodsworth", Country = "Germany" },
+            new EmployeeData { EmployeeID = 10, FirstName = "Paul", LastName = "Henriot", Country = "France" },
+            new EmployeeData { EmployeeID = 11, FirstName = "Thomas", LastName = "Hardy", Country = "UK" },
+            new EmployeeData { EmployeeID = 12, FirstName = "Maria", LastName = "Anders", Country = "Germany" }
+        };
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public int EmployeeID { get; set; }
+    public static List<OrderData> GetAllRecords()
+    {
+        return new List<OrderData>
+        {
+            new OrderData { OrderID = 10248, CustomerID = "VINET", ShipCity = "Reims", ShipName = "Vins et alcools Chevalier", EmployeeID = 5 },
+            new OrderData { OrderID = 10249, CustomerID = "TOMSP", ShipCity = "Münster", ShipName = "Toms Spezialitäten", EmployeeID = 6 },
+            new OrderData { OrderID = 10250, CustomerID = "HANAR", ShipCity = "Rio de Janeiro", ShipName = "Hanari Carnes", EmployeeID = 4 },
+            new OrderData { OrderID = 10251, CustomerID = "VICTE", ShipCity = "Lyon", ShipName = "Victuailles en stock", EmployeeID = 3 },
+            new OrderData { OrderID = 10252, CustomerID = "SUPRD", ShipCity = "Charleroi", ShipName = "Suprêmes délices", EmployeeID = 2 },
+            new OrderData { OrderID = 10253, CustomerID = "HANAR", ShipCity = "Rio de Janeiro", ShipName = "Hanari Carnes", EmployeeID = 7 },
+            new OrderData { OrderID = 10254, CustomerID = "CHOPS", ShipCity = "Bern", ShipName = "Chop-suey Chinese", EmployeeID = 5 },
+            new OrderData { OrderID = 10255, CustomerID = "RICSU", ShipCity = "Genève", ShipName = "Richter Supermarkt", EmployeeID = 9 },
+            new OrderData { OrderID = 10256, CustomerID = "WELLI", ShipCity = "Resende", ShipName = "Wellington Importadora", EmployeeID = 3 },
+            new OrderData { OrderID = 10257, CustomerID = "HILAA", ShipCity = "San Cristóbal", ShipName = "HILARION-Abastos", EmployeeID = 4 },
+            new OrderData { OrderID = 10258, CustomerID = "ERNSH", ShipCity = "Graz", ShipName = "Ernst Handel", EmployeeID = 1 },
+            new OrderData { OrderID = 10259, CustomerID = "CENTC", ShipCity = "México D.F.", ShipName = "Centro comercial Moctezuma", EmployeeID = 4 },
+            new OrderData { OrderID = 10260, CustomerID = "OTTIK", ShipCity = "Köln", ShipName = "Ottilies Käseladen", EmployeeID = 4 },
+            new OrderData { OrderID = 10261, CustomerID = "QUEDE", ShipCity = "Rio de Janeiro", ShipName = "Que Delícia", EmployeeID = 4 },
+            new OrderData { OrderID = 10262, CustomerID = "RATTC", ShipCity = "Albuquerque", ShipName = "Rattlesnake Canyon Grocery", EmployeeID = 8 }
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLRZdMbLiqPshcC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Customize the detail Blazor DataGrid
 
 The Blazor DataGrid offers multiple ways to customize the detail grid appearance using CSS or themes. Target detail grid elements with the `.e-detailcell` class selector.
