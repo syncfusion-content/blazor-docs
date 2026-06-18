@@ -135,10 +135,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor RichTextEditor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRichTextEditor>
 <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
