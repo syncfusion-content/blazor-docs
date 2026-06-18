@@ -90,6 +90,7 @@ The Blazor DataGrid delivers a comprehensive user experience with extensive cust
    - [Row Selection](./row-selection)
    - [Checkbox Selection](./checkbox-selection)
    - [Cell Selection](./cell-selection)
+   - [Persist Selection](./selection#persist-selection)
 - [Row Drag and Drop](./row-drag-and-drop)
 - [Context Menu](./context-menu)
 - [Customizable toolbar](./custom-toolbar)
