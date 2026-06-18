@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quick Access Toolbar with Blazor Image Editor Component | Syncfusion
+title: Quick Access Toolbar with Blazor Image Editor | Syncfusion®
 description: Explore the Quick Access Toolbar in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor
