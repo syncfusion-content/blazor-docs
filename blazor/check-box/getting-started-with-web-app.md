@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor CheckBox in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor CheckBox Component in Blazor Web App.
+title: Getting Started with Blazor Checkbox in Blazor Web App | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor Checkbox Component in Blazor Web App.
 platform: Blazor
-component: CheckBox
+component: Checkbox
 documentation: ug
 ---
 
-# Getting Started with Blazor CheckBox Component in Blazor Web App
+# Getting Started with Blazor Checkbox Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -222,9 +222,9 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Checkbox Component](./images/blazor-checkbox-component.webp)" %}
 
-N> You can also explore our [Blazor CheckBox example](https://blazor.syncfusion.com/demos/buttons/checkbox) that shows how to render and configure the CheckBox.
+N> You can also explore our [Blazor Checkbox example](https://blazor.syncfusion.com/demos/buttons/checkbox) that shows how to render and configure the CheckBox.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CheckBox).
 
