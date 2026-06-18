@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Stock Chart in Blazor WASM App | Syncfusion
+title: Get Started with Blazor Stock Chart in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Stock Chart component in Blazor WebAssembly Application.
 platform: Blazor
 component: Stock Chart
@@ -159,7 +159,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Stock Chart component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) component inside the razor file.
+Open a Razor file located in the **~/Pages/Index.razor** and add the [Blazor Stock Chart](https://www.syncfusion.com/blazor-components/blazor-stock-chart) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
