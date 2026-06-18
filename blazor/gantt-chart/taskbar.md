@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Taskbar in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Taskbar editing in Syncfusion Blazor Gantt Chart component and more.
+title: Taskbar in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all the features about Taskbar editing in Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

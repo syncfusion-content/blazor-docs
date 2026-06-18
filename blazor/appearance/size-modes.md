@@ -11,42 +11,6 @@ documentation: ug
 
 Blazor components support two size modes: **normal** and **touch** (bigger theme). The touch mode provides larger, touch-friendly UI elements for better accessibility on touch devices.
 
-## Prerequisites
-
-Before applying the size modes, ensure you have created your Blazor application.
-
-* **Blazor Web App**: Follow the [Blazor getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide
-* **Blazor WebAssembly Standalone App**: Follow the [Blazor getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) guide
-
-### Install the required NuGet packages
-
-Install the following NuGet packages to use Blazor components and apply size modes.
-
-1. **[Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars)**
-2. **[Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)**
-3. **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)**
-
-You can install these packages using the Package Manager Console or the .NET CLI.
-
-{% tabs %}
-{% highlight bash tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Buttons --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
-
 ## Set the size mode for the application
 
 You can enable touch mode for the entire application by adding the `.e-bigger` class to the `body` element.
@@ -56,7 +20,7 @@ You can enable touch mode for the entire application by adding the `.e-bigger` c
 Add the `.e-bigger` CSS class to your application stylesheet (`~/wwwroot/css/app.css` or `~/wwwroot/app.css`).
 
 {% tabs %}
-{% highlight css tabtitle="~/wwwroot/css/app.css or ~/wwwroot/app.css" %}
+{% highlight css tabtitle=".css" %}
 
 .e-bigger {
     font-size: x-large;
@@ -73,7 +37,7 @@ Add the `.e-bigger` class to the `body` element.
 - For **Blazor WebAssembly Standalone App**: Add to `~/wwwroot/index.html`
 
 {% tabs %}
-{% highlight html tabtitle="App.razor or index.html" %}
+{% highlight html tabtitle="App.razor / index.html" %}
 
 <body class="e-bigger">
     ...
@@ -149,7 +113,7 @@ You can dynamically toggle between touch and normal modes at runtime using [Java
 Add the `.e-bigger` CSS class in the `~/wwwroot/css/app.css` or `~/wwwroot/app.css` file.
 
 {% tabs %}
-{% highlight css tabtitle="~/wwwroot/css/app.css or ~/wwwroot/app.css" %}
+{% highlight css tabtitle=".css" %}
 
 /* Applies touch-friendly size mode to the application. */
 .e-bigger {
@@ -173,7 +137,7 @@ Add the following JavaScript methods to toggle the size mode. Place the script i
 - **Blazor WebAssembly Standalone App**: `~/wwwroot/index.html`
 
 {% tabs %}
-{% highlight html tabtitle="App.razor or index.html" %}
+{% highlight html tabtitle="App.razor / index.html" %}
 
 <script>
     function onTouch() {
@@ -321,7 +285,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-bl
 You can customize the font size and font family for all components by overriding the CSS for the `.e-control` class:
 
 {% tabs %}
-{% highlight css tabtitle="~/wwwroot/css/app.css or ~/wwwroot/app.css" %}
+{% highlight css tabtitle=".css" %}
 
 .e-control, [class^="e-"] *:not([class*="e-icon"]) {
     font-size: 1rem !important;
