@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add custom minimize/maximize buttons to Syncfusion Blazor Dialog
-description: Learn how to implement minimize and maximize functionality with custom header buttons in Syncfusion Blazor Dialog component
+title: Add custom minimize/maximize buttons to Blazor Dialog | Syncfusion®
+description: Learn how to implement minimize and maximize functionality with custom header buttons in Blazor Dialog component
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Implement minimize and maximize functionality in Blazor Dialog 
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dialog component supports adding custom minimize and maximize operations via buttons in the dialog header. This implementation requires:
+The Blazor Dialog component supports adding custom minimize and maximize operations via buttons in the dialog header. This implementation requires:
 
 1. Custom buttons in the dialog [`headerTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header)
 2. JavaScript interop for UI manipulation
