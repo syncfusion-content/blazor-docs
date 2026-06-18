@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Spanning in Blazor DataGrid Component | Syncfusion
-description: Learn here all about row spanning in Syncfusion Blazor DataGrid component of Syncfusion Essential Studio and more.
+title: Row Spanning in Blazor DataGrid Component | Syncfusion®
+description: Learn here all about row spanning in Blazor DataGrid component of Essential Studio and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

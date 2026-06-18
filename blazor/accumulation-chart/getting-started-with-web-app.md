@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Accumulation Chart Blazor Web App | Syncfusion
+title: Getting Started with Accumulation Chart Blazor Web App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor Accumulation Chart Component in Blazor Web App.
 platform: Blazor
 component: Accumulation Chart
@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains how to include [Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-### Create a new Blazor Web App
+## Create a new Blazor Web App
 
 {% tabcontents %}
 
@@ -55,7 +55,7 @@ dotnet new blazor -o BlazorWebApp --interactivity Auto
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-### Install the required Blazor packages
+## Install the required Blazor packages
 
 Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
@@ -108,11 +108,13 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces
+## Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
-N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+N> 
+- The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
+- If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, add these namespaces in both the server and client project **~/_Imports.razor** files.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -123,7 +125,7 @@ N> The `~/` notation represents the root directory of your project. This file is
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
@@ -139,7 +141,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add script resources
+## Add script resources
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
@@ -153,7 +155,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-### Add Blazor Accumulation Chart component
+## Add Blazor Accumulation Chart component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component inside the razor file.
 
@@ -203,17 +205,18 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Accumulation Chart component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Accumulation Chart component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the `.Client` project folder, and run the following command.
+Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -223,11 +226,12 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the `.Client` project folder, and run the following command.
+Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -241,7 +245,7 @@ dotnet run
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AccumulationChart)
 
-### See also
+## See also
 
-1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

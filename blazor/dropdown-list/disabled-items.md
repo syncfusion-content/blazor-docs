@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disabled Items in Blazor DropDownList Component | Syncfusion
-description: Checkout and learn here all about Disabled Items in Syncfusion Blazor DropDownList component and much more.
+title: Disabled Items in Blazor DropDownList Component | Syncfusion®
+description: Checkout and learn here all about Disabled Items in Blazor DropDownList component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug

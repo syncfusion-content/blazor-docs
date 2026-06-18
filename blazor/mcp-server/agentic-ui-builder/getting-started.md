@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with Blazor Agentic UI Builder | Syncfusion
-description: Learn how to set up and use the Syncfusion Blazor UI Builder MCP Server for AI-powered assistance in building Blazor applications with Syncfusion components.
-control: Getting started with Syncfusion Blazor UI Builder MCP Server
+title: Getting Started with Blazor Agentic UI Builder | Syncfusion®
+description: Learn how to set up and use the Blazor UI Builder MCP Server for AI-powered assistance in building Blazor applications with components.
+control: Getting started with Blazor UI Builder MCP Server
 platform: blazor
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,28 +10,28 @@ domainurl: ##DomainURL##
 
 # Getting Started with Agentic UI Builder
 
-The **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI Builder** uses AI to help you build Blazor applications with natural language commands. Simply describe what you want to create, and it generates complete UI implementations with Syncfusion components.
+The **Blazor UI Builder** uses AI to help you build Blazor applications with natural language commands. Simply describe what you want to create, and it generates complete UI implementations with Blazor components.
 
 ## Prerequisites
 
 Before you begin, ensure you have:
 
 * Required [Node.js](https://nodejs.org/en/) version >= 18
-* A **compatible MCP client** (VS Code, Visual Studio, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, etc.)
-* Active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
+* A **compatible MCP client** (VS Code, Visual Studio, Code Studio, Cursor, etc.)
+* Active [API key](https://syncfusion.com/account/api-key)
 * Blazor application (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-* Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
+* Active license (any of the following):  
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ## Installation
 
-This section guides you through installing and configuring the Syncfusion MCP Server in your development environment.
+This section guides you through installing and configuring the MCP Server in your development environment.
 
 ### Getting your API Key
 
-Before proceeding with the MCP installation, generate your Syncfusion API key from the [API Key page](https://www.syncfusion.com/account/api-key) and store it in a `.txt` or `.key` file:
+Before proceeding with the MCP installation, generate your API key from the [API Key page](https://www.syncfusion.com/account/api-key) and store it in a `.txt` or `.key` file:
 
 ```json
 "env": {
@@ -187,7 +187,7 @@ Provides a catalog of pre-built, responsive UI layout templates and blocks for c
 
 ### Component Tool (`#sf_blazor_component`)
 
-Provides quick reference guidelines for Syncfusion Blazor components, including properties, event handlers, methods, and usage examples.
+Provides quick reference guidelines for Blazor components, including properties, event handlers, methods, and usage examples.
 
 **When to use:** To get basic component API information and structure details for implementing specific components correctly.
 
@@ -198,13 +198,13 @@ Provides quick reference guidelines for Syncfusion Blazor components, including 
 
 ### Style Tool (`#sf_blazor_style`)
 
-Provides theme configuration, styling setup, and icon integration for Syncfusion Blazor components. Supports multiple themes (Tailwind3 CSS, Bootstrap 5.3, Material 3, Fluent 2), light/dark mode implementation, and icon patterns for consistent UI styling.
+Provides theme configuration, styling setup, and icon integration for Blazor components. Supports multiple themes (Tailwind3 CSS, Bootstrap 5.3, Material 3, Fluent 2), light/dark mode implementation, and icon patterns for consistent UI styling.
 
 **When to use:** To apply themes, customize colors, modify the visual design of components, or integrate icons into your UI.
 
 **Example:**
 ```
-#sf_blazor_style How do I apply the Syncfusion Tailwind 3 dark theme and add a communication icon inside a button?
+#sf_blazor_style How do I apply the Tailwind 3 dark theme and add a communication icon inside a button?
 ```
 
 ## Best Practices
@@ -229,7 +229,7 @@ If you encounter issues during installation or while using the MCP server, refer
 |-------|----------|
 | **Clear npm cache** | Run `npx clear-npx-cache` and restart your IDE to resolve package caching issues |
 | **Server failed to start** | Update to Node.js 18+, verify JSON syntax in config file, and restart your IDE |
-| **Invalid API key** | Verify your key is active at [Syncfusion Account Page](https://syncfusion.com/account/api-key) |
+| **Invalid API key** | Verify your key is active at [Account Page](https://syncfusion.com/account/api-key) |
 | **Incorrect API key config** | For the file path: Verify file location and content. For inline key: Check key is properly updated |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` <br/> CodeStudio: `.codestudio/mcp.json` <br/> Cursor: `.cursor/mcp.json` in the workspace root |
 | **Check IDE logs** | VS Code/CodeStudio: Output panel → "MCP" • Cursor: Developer Console for MCP errors |
@@ -240,4 +240,4 @@ Now that you've set up the Agentic UI Builder, explore these resources:
 
 * **[Prompt Library](./prompt-library)** - Ready-to-use prompts for common scenarios
 * **[Showcase Sample Projects](https://www.syncfusion.com/showcase-apps/blazor)** - Full application examples
-* **[Component Examples](https://blazor.syncfusion.com/demos/)** - Interactive demos of all Syncfusion Blazor components
+* **[Component Examples](https://blazor.syncfusion.com/demos/)** - Interactive demos of all Blazor components
