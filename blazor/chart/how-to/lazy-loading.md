@@ -94,7 +94,7 @@ else
 }
 ```
 
-![LazyLoad Line](../images/lazyload-line.png)
+![LazyLoad Line](../images/lazyload-line.webp)
 
 ### Line 
 
