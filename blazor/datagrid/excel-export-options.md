@@ -1254,7 +1254,7 @@ To configure the encoding, handle the [OnToolbarClick](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-> Note: The `ExcelExportProperties` class is also used for configuring CSV export options, including encoding
+> Note: The `ExcelExportProperties` class is also used for configuring CSV export options, including encoding.
 
 ## Conditional cell formatting
 
