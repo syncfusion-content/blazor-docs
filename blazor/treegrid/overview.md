@@ -1,3 +1,12 @@
+---
+layout: post
+title: Overview of Blazor TreeGrid Component | Syncfusion
+description: Checkout and learn about Syncfusion Blazor TreeGrid component features, capabilities and more.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Overview of Syncfusion Blazor TreeGrid Component
 
 ## What is Syncfusion Blazor TreeGrid?
@@ -17,7 +26,6 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
   - Remote service binding
   - Self-Referential data binding (Flat Data with IdMapping and ParentIdMapping)
   - Hierarchical data binding (Parent-Child relationships)
-  - Complex data binding with dot notation
   - Multiple data source adapters
 
 - **Data Operations**
