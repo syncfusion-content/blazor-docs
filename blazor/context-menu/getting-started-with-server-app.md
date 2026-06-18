@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Context Menu in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Context Menu in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Context Menu Component in Blazor Server App.
 platform: Blazor
 component: Context Menu
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Context Menu in Blazor Server App
 
-This section briefly explains about how to include [Blazor ContextMenu](https://www.syncfusion.com/blazor-components/blazor-context-menu) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-context-menu) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -169,7 +169,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 @rendermode InteractiveServer
 @using Syncfusion.Blazor.Navigations
 
-<div id="target">Right click/Touch hold to open the ContextMenu </div>
+<div id="target">Right click/Touch hold to open the Context Menu </div>
 <SfContextMenu Target="#target" TValue="MenuItem">
     <MenuItems>
         <MenuItem Text="Cut"></MenuItem>
@@ -233,7 +233,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu Component](./images/blazor-contextmenu-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Context Menu Component](./images/blazor-contextmenu-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ContextMenu).
 
