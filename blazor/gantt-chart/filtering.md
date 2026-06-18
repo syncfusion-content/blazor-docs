@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor Gantt Chart component and much more.
+title: Filtering in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all the features about Filtering in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -163,7 +163,7 @@ The Blazor Gantt Chart component supports multiple filtering modes, which can be
 
 ## Initial filter
 
-To apply filtering during the initial render of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component, define the filter conditions using a collection of `PredicateModel` objects within the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
+To apply filtering during the initial render of the Blazor Gantt Chart component, define the filter conditions using a collection of `PredicateModel` objects within the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
 
 The following sample demonstrates how to apply an initial filter where **TaskName** starts with **Identify** and **TaskID** equals **2**, using a `Predicate` condition set to **and**.
 
@@ -247,7 +247,7 @@ N> By default, the `GanttFilterSettings.Columns.Operator` value is `equal`
 
 ## Diacritics
 
-By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component ignores diacritic characters during filtering. To enable filtering with diacritic sensitivity, set the [GanttFilterSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_IgnoreAccent) property to **true**.
+By default, the Blazor Gantt Chart component ignores diacritic characters during filtering. To enable filtering with diacritic sensitivity, set the [GanttFilterSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_IgnoreAccent) property to **true**.
 
 The following sample demonstrates this behavior: when filtering the **TaskName** column, entries containing diacritic characters (e.g., “Próject”, “Projéct”) will be matched if you enter the base text **Project**.
 
@@ -304,7 +304,7 @@ The following sample demonstrates this behavior: when filtering the **TaskName**
 
 ## Filtering a specific column by method
 
-You can filter columns dynamically in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__) method.
+You can filter columns dynamically in the Blazor Gantt Chart component by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__) method.
 
 The example below demonstrates how to filter the **TaskName** and **TaskID** columns using a single value. Filtering is triggered by an external button click, which invokes the `FilterByColumnAsync` method.
 
@@ -440,7 +440,7 @@ You can clear all the filtering conditions applied in the Gantt Chart component 
 
 ## Enable different filter for a column
 
-You can enable different filter types for individual columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component by setting the[GanttColumn.FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property.
+You can enable different filter types for individual columns in the Gantt Chart component by setting the[GanttColumn.FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

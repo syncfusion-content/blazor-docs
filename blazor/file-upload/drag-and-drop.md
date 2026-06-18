@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop in Blazor File Upload Component | Syncfusion
-description: Learn about drag-and-drop file selection, configuring an external drop area, and related behaviors in the Syncfusion Blazor File Upload component.
+title: Drag and Drop in Blazor File Upload Component | Syncfusion®
+description: Learn about drag-and-drop file selection, configuring an external drop area, and related behaviors in the Blazor File Upload component.
 platform: Blazor
 control: File Upload
 documentation: ug

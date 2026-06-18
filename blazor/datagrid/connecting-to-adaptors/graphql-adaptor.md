@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid with GraphQL using Custom Adaptor | Syncfusion
+title: Blazor Data Grid with GraphQL using Custom Adaptor | Syncfusion®
 description: Build Blazor apps with GraphQL and Syncfusion Data Grid to enable CRUD, filtering, sorting, paging, and grouping for seamless data operations.
 control: DataGrid
 platform: blazor
@@ -44,7 +44,7 @@ For this guide, a Blazor application named **Grid_GraphQLAdaptor** has been crea
 
 **Install NuGet Packages**
 
-NuGet packages are software libraries that add functionality to applications. The following packages enable GraphQL server functionality+ and Syncfusion DataGrid components.
+NuGet packages are software libraries that add functionality to applications. The following packages enable GraphQL server functionality+ and DataGrid components.
 
 **Required Packages:**
 
@@ -631,7 +631,7 @@ The GraphQL Mutation class has been successfully created and is ready to handle 
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components with GraphQL
 
@@ -653,18 +653,18 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Grid_GraphQLAdaptor.Models
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component’s [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -686,7 +686,7 @@ The `Home.razor` component will display the expense data in a Blazor DataGrid wi
         <h1 class="mb-4 text-3xl font-bold">Expense Tracker System</h1>
         <p class="mb-3 text-gray-600">Manage and view all expenses from the database.</p>
         
-        <!-- Syncfusion Blazor DataGrid Component -->
+        <!-- Blazor DataGrid Component -->
         <SfGrid TValue="ExpenseRecord" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
             <SfDataManager Url="http://localhost:5272/graphql" GraphQLAdaptorOptions="@adaptorOptions" Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
             <GridPageSettings PageSize="10"></GridPageSettings>
