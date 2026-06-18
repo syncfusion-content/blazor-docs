@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Predefined Dialogs in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Predefined Dialogs in WASM App | Syncfusion
 description: Check out and learn about getting started with the predefined dialogs in the Blazor WebAssembly Application.
 platform: Blazor
 control: Predefined Dialogs
