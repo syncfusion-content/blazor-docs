@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor File Manager in Blazor Server App | Syncfusion
+title: Getting Started with Blazor File Manager in Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor File Manager component in Blazor Server Application.
 platform: Blazor
 control: File Manager
