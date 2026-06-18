@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resolving Setup and Configuration Issues in Blazor | Syncfusion
+title: Resolving Setup and Configuration Issues in Blazor | Syncfusion®
 description: Guide to fixing Blazor setup and configuration issues including styles, scripts, services, and render mode settings
 platform: Blazor
 control: Common
@@ -9,7 +9,7 @@ documentation: ug
 
 # Resolving Setup and Configuration Issues in Blazor
 
-This guide covers essential setup and configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper configuration is critical for components to render correctly and function interactively.
+This guide explains how to resolve common setup and configuration issues when building Blazor applications with **[Blazor components](https://www.syncfusion.com/blazor-components)**. Proper configuration is critical for components to render correctly and function interactively.
 
 Common setup issues relate to:
 
@@ -175,7 +175,7 @@ Apply an appropriate render mode to pages or components that use Blazor componen
 
 **Symptom**: JavaScript interop errors in browser console such as `Syncfusion is not defined` or `syncfusion.blazor is not a function`. Components fail to initialize, interactive features don't work, or the application shows blank areas where components should render.
 
-**Root cause**: Required Syncfusion JavaScript files are either missing, referenced in the wrong order, or placed in incorrect locations within the HTML structure.
+**Root cause**: Required JavaScript files are either missing, referenced in the wrong order, or placed in incorrect locations within the HTML structure.
 
 **Solution**: Ensure proper script references in the correct order and location.
 
@@ -234,7 +234,7 @@ In addition to the core script, specific Blazor components such as the [Blazor P
 ### Script loading order requirements
 
 1. **Blazor framework script** (`blazor.web.js` or `blazor.webassembly.js`) - Always load first
-2. **Syncfusion core script** (`syncfusion-blazor.min.js`) - Load second, after Blazor framework
+2. **Core script** (`syncfusion-blazor.min.js`) - Load second, after Blazor framework
 3. **Component-specific scripts** (if required) - Load after the core script
 
 ### Best practices
@@ -242,7 +242,7 @@ In addition to the core script, specific Blazor components such as the [Blazor P
 * Always place scripts at the end of the `<body>` tag, not in `<head>`
 * Verify script paths match your installed package versions
 * Check the browser developer console for 404 errors indicating missing scripts
-* Use `type="text/javascript"` attribute for Syncfusion scripts to ensure proper MIME type
+* Use `type="text/javascript"` attribute for scripts to ensure proper MIME type
 * Avoid using CDN script references in production. Instead, use NuGet package scripts for version consistency
 
 ### Common script reference mistakes
@@ -250,7 +250,7 @@ In addition to the core script, specific Blazor components such as the [Blazor P
 * Placing scripts in `<head>` instead of at the end of `<body>`
 * Incorrect script paths (for example, using old paths from .NET 6 documentation)
 * Missing component-specific scripts for Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)
-* Loading the Syncfusion script before the Blazor framework script
+* Loading the script before the Blazor framework script
 * Using outdated script references from previous Blazor versions
 
 ### Verification steps
@@ -264,9 +264,9 @@ If you encounter `Failed to load resource` errors for `_content/Syncfusion.Blazo
 
 ## Issue 4: Missing service registration
 
-**Symptom**: Runtime exception `Unable to resolve service for type 'Syncfusion.Blazor.SyncfusionBlazorService'` when attempting to render Syncfusion components. The application may build successfully but crash during component initialization.
+**Symptom**: Runtime exception `Unable to resolve service for type 'Syncfusion.Blazor.SyncfusionBlazorService'` when attempting to render components. The application may build successfully but crash during component initialization.
 
-A common concrete error when the Syncfusion service is not registered is:
+A common concrete error when the service is not registered is:
 
 {% tabs %}
 {% highlight text tabtitle="Error Message" %}
@@ -280,7 +280,7 @@ System.InvalidOperationException: Cannot provide a value for property 'Localizer
 
 **Root cause**: The Blazor service is not registered in the application's dependency injection (DI) container (missing call to `builder.Services.AddSyncfusionBlazor()`).
 
-**Solution**: Register the Blazor service in `~/Program.cs`.
+**Solution**: Register the Blazor service in `~/Program.cs`. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto` in a Blazor Web App, register the Blazor service in the `Program.cs` files of both the server and client projects.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Web App (.NET 8+)" hl_lines="2 11" %}
@@ -380,5 +380,5 @@ The `AddSyncfusionBlazor()` service registration is mandatory for all Blazor com
 | Error Message | Likely Cause | Solution |
 |---------------|-------------|----------|
 | `Syncfusion is not defined` | Missing or incorrectly ordered script reference | Add `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` after the Blazor framework script |
-| `Unable to resolve service for type 'SyncfusionBlazorService'` | Missing Syncfusion service registration | Add `builder.Services.AddSyncfusionBlazor()` in Program.cs |
+| `Unable to resolve service for type 'SyncfusionBlazorService'` | Missing service registration | Add `builder.Services.AddSyncfusionBlazor()` in Program.cs |
 | `Component is not interactive` | Missing render mode on the page/component | Add `@rendermode InteractiveServer` / `@rendermode InteractiveWebAssembly` or configure global render mode in Program.cs |

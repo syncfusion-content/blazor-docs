@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Empty Record Template in the Blazor DataGrid | Syncfusion
-description: Learn how to customize the EmptyRecordTemplate in the Syncfusion Blazor DataGrid to show a custom message or content when no records are available.
+title: Customize Empty Record Template in the Blazor DataGrid | Syncfusion®
+description: Learn how to customize the EmptyRecordTemplate in the Blazor DataGrid to show a custom message or content when no records are available.
 platform: Blazor
 control: DataGrid
 documentation: ug

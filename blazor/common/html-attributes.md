@@ -1,7 +1,7 @@
 ---
 layout: post
-title: HTML attributes and DOM events in Blazor - Syncfusion
-description: Learn how to use standard HTML attributes and DOM events with Syncfusion Blazor components on input and root elements, and see equivalent component APIs.
+title: HTML attributes and DOM events in Blazor | Syncfusion®
+description: Learn how to use standard HTML attributes and DOM events with Blazor components on input and root elements, and see equivalent component APIs.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Default HTML attributes and DOM events
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) for component implementation and customization. Apart from this public API, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-8.0) in the root element of its component.
+The Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) for component implementation and customization. Apart from this public API, the Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-8.0) in the root element of its component.
 
 ## Use HTML attributes and DOM events on input elements
 
-The following is a list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The following is a list of Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Blazor components.
 
 * [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)
 * [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started)
@@ -30,9 +30,9 @@ The following is a list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blaz
 * [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started)
 * [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started)
 
-### Syncfusion<sup style="font-size:70%">&reg;</sup> properties equivalent to HTML attributes
+### Syncfusion properties equivalent to HTML attributes
 
-The following table illustrates the HTML attributes and their equivalent Syncfusion<sup style="font-size:70%">&reg;</sup> API.
+The following table illustrates the HTML attributes and their equivalent API.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -180,7 +180,7 @@ The following table illustrates the HTML attributes and their equivalent Syncfus
 </table>
 <!-- markdownlint-enable MD033 -->
 
-N> If both an HTML attribute and a Syncfusion<sup style="font-size:70%">&reg;</sup> API are specified, the Syncfusion API takes precedence and is applied to the DOM element.
+N> If both an HTML attribute and a API are specified, the API takes precedence and is applied to the DOM element.
 
 ```cshtml
 <SfTextBox ID="textbox" name="first-name" title="First name." minlength="15" Autocomplete="AutoComplete.Off"></SfTextBox>
@@ -210,7 +210,7 @@ The textbox will be rendered with the following output.
 
 ### Input DOM events
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support binding native [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling) on input elements.
+Blazor components support binding native [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling) on input elements.
 
 ```cshtml
 <div class="form-group">

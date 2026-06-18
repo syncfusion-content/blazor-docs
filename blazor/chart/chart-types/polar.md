@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Polar in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Polar Chart in Syncfusion Blazor Charts component and much more.
+title: Polar in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Polar Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -51,7 +51,7 @@ To render a [polar](https://www.syncfusion.com/blazor-components/blazor-charts/c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Polar Chart](../images/polar-radar/blazor-polar-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrnDdiSJqrCwMSK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Polar Chart](../images/polar-radar/blazor-polar-chart.webp)" %}
 
 N> Refer to our [Blazor Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Polar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Polar type chart.
 
@@ -91,7 +91,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVdtxsyzKrTFWGn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Draw types
 
@@ -134,7 +134,7 @@ To render a [line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzDbVjfMVssote?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVRNdCIJghGmvro?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Spline
 
@@ -173,7 +173,7 @@ To render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthpNlLZTCqugtIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBRNHiyzgKtsCBO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Area
 
@@ -212,7 +212,7 @@ To render an [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBzjlBXTWSRXqYZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhRXdiIJqgrYZwf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Stacked Area
 
@@ -266,7 +266,7 @@ To render a [stacking area](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhJNvrtTiQtUrwf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhxDdiofAgoWzIA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Column
 
@@ -305,7 +305,7 @@ To render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJZbhZfivRPCTM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRDdsITATVQMOT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Stacked column
 
@@ -356,7 +356,7 @@ To render a [stacking column](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJXbBDTLZKLCRn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrnjdsyzApeUTnS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Range column
 
@@ -403,7 +403,7 @@ To render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLpjlhZfVAjIYyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhRZnieJUzQwlAV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Scatter
   
@@ -444,7 +444,7 @@ To render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthfNlrDfBJUztOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhRDxMIzAetNcOQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Series customization
 
@@ -487,7 +487,7 @@ To customize the start angle of the [Polar Chart](https://help.syncfusion.com/cr
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTDPBZphQtaNHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLHZnieJAImsbzI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Radius
 
@@ -528,7 +528,7 @@ To customize the radius of the [Polar Chart](https://help.syncfusion.com/cr/blaz
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJjFLZfLwTKJNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBRNHsIJgyOncQJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Empty points
 
@@ -572,7 +572,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBztbVZJhErYnKm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhnjRWepAHrgWIx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Fill**
 
@@ -612,7 +612,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBJjFBjzqNSgVGn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLnZxWyTUHfdPob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Border**
 
@@ -654,7 +654,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhJtbhjTKiJHKjz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhHDniopAHxuFeT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -700,7 +700,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLTNPhDfKqtDxKX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrnZHWSfKxuAHZh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -745,7 +745,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLJDFBtfUpPvAFQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVxNnMSpKGilirT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

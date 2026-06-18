@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid connected to SQL Server via Dapper | Syncfusion
+title: Blazor Data Grid connected to SQL Server via Dapper | Syncfusion®
 description: Bind SQL Server data to Blazor Data Grid using Dapper with complete CRUD, filtering, sorting, paging, grouping, and advanced data operations.
 platform: Blazor
 control: DataGrid
@@ -403,7 +403,7 @@ app.Run();
 **Explanation:**
 - **`AddScoped<IDbConnection>`**: Dapper requires an ADO.NET connection object, registered as a scoped service so each request gets its own connection.
 - **`AddScoped<ReservationRepository>`**: Makes the ReservationRepository available for dependency injection throughout the application.
-- **`AddSyncfusionBlazor()`**: Registers Syncfusion Blazor components.
+- **`AddSyncfusionBlazor()`**: Registers Blazor components.
 - **`AddRazorComponents()` and `AddInteractiveServerComponents()`**: Enables Blazor server-side rendering with interactive components.
 
 
@@ -411,7 +411,7 @@ The service registration has been completed successfully.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -429,18 +429,18 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Syncfusion.Blazor.DropDowns
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor/Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
@@ -460,7 +460,7 @@ The `Home.razor` component will display the reservation data in a Blazor DataGri
 
 <div class="container-fluid p-4">
 
-    <!-- Syncfusion Blazor DataGrid Component -->
+    <!-- Blazor DataGrid Component -->
     <SfGrid TValue="Reservation" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
         <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
         
@@ -1487,7 +1487,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
 <div class="container-fluid p-4">
     
-    <!-- Syncfusion Blazor DataGrid Component -->
+    <!-- Blazor DataGrid Component -->
     <SfGrid TValue="Reservation" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true"
         Height="500px" Width="100%" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
         <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>

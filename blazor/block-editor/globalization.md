@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Globalization with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+title: Globalization in Blazor Block Editor Component | Syncfusion®
+description: Checkout and learn about Globalization with Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Block Editor Component
 
-The Syncfusion Blazor Block Editor component supports globalization features like `Localization` and `Right-to-Left (RTL)` alignment, enabling it to be adapted for different cultures and languages.
+The Blazor Block Editor component supports globalization features like `Localization` and `Right-to-Left (RTL)` alignment, enabling it to be adapted for different cultures and languages.
 
 ## Localization
 
@@ -47,7 +47,7 @@ Block Editor can be localized for any culture by translating its static text lab
 |`linkCancel`|Cancel|
 |`codeCopyTooltip`|Copy code|
 
-Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation for detailed steps on implementing localization in Syncfusion Blazor components.
+Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation for detailed steps on implementing localization in Blazor components.
 
 ## Right-to-Left (RTL)
 

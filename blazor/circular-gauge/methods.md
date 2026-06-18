@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Methods in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Methods in Syncfusion Blazor Circular Gauge component and much more.
+title: Methods in Blazor Circular Gauge Component | Syncfusion®
+description: Checkout and learn here all about the Methods in Blazor Circular Gauge component and much more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

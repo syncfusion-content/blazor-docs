@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Blazor Agentic UI Builder Prompt Library | Syncfusion
+title: Blazor Agentic UI Builder Prompt Library | Syncfusion®
 description: Explore the Agentic UI Builder Prompt Library to enhance Blazor productivity with layout blocks, component guidance, styling, and icons.
-control: Syncfusion Blazor Agentic UI Builder Prompt Library
+control: Blazor Agentic UI Builder Prompt Library
 platform: blazor
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,7 +14,7 @@ Speed up Blazor development with ready-made prompts for common scenarios. Use th
 
 ## How to Use
 
-Ensure that the Syncfusion MCP Server is configured and running before executing prompts.
+Ensure that the MCP Server is configured and running before executing prompts.
 
 * Select a prompt that aligns with your development requirements.
 * Copy the complete prompt, including the tool (e.g., #sf_blazor_ui_builder).
@@ -72,7 +72,7 @@ The Layout tool orchestrates page structure, element positioning, and responsive
 
 ### Component Tool
 
-The Component tool implements specific Syncfusion Blazor components with configured properties and event handlers. Use #sf_blazor_component for targeted component integration.
+The Component tool implements specific Blazor components with configured properties and event handlers. Use #sf_blazor_component for targeted component integration.
 
 {% promptcards %}
 {% promptcard Advanced Data Grid Setup %}
@@ -95,16 +95,16 @@ The Styling tool applies custom themes, color schemes, visual treatments, and ic
 
 {% promptcards %}
 {% promptcard Tailwind3 Dark Mode Setup %}
-#sf_blazor_style Apply the Syncfusion Tailwind 3 dark theme to the application. Configure CSS variables for the dark mode color scheme and enable theme toggle functionality.
+#sf_blazor_style Apply the Tailwind 3 dark theme to the application. Configure CSS variables for the dark mode color scheme and enable theme toggle functionality.
 {% endpromptcard %}
 {% promptcard Bootstrap5.3 Theme Customization %}
-#sf_blazor_style Customize the Syncfusion Bootstrap 5.3 theme using CSS variables. Modify primary colors, component spacing, and typography to match brand guidelines.
+#sf_blazor_style Customize the Bootstrap 5.3 theme using CSS variables. Modify primary colors, component spacing, and typography to match brand guidelines.
 {% endpromptcard %}
 {% promptcard Fluent2 Responsive Styling %}
-#sf_blazor_style Apply the Syncfusion Fluent 2 theme with responsive adjustments. Customize component sizes, spacing, and layout breakpoints for mobile, tablet, and desktop views.
+#sf_blazor_style Apply the Fluent 2 theme with responsive adjustments. Customize component sizes, spacing, and layout breakpoints for mobile, tablet, and desktop views.
 {% endpromptcard %}
 {% promptcard Material3 CSS Variables %}
-#sf_blazor_style Configure the Syncfusion Material 3 theme CSS variables for a custom color palette, elevation shadows, border radius, and component-specific styling properties.
+#sf_blazor_style Configure the Material 3 theme CSS variables for a custom color palette, elevation shadows, border radius, and component-specific styling properties.
 {% endpromptcard %}
 {% promptcard User Actions & Navigation %}
 #sf_blazor_style Add appropriate icons for common user interactions in the application toolbar, including editing capabilities, navigation controls, and accessing various options.
