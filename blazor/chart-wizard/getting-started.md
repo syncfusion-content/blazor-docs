@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Chart Wizard in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Chart Wizard in Server App | Syncfusion
 description: Check out and learn about getting started with Blazor Chart Wizard component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Chart Wizard
