@@ -55,7 +55,7 @@ dotnet new blazorwasm -o BlazorApp
 
 {% endtabcontents %}
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Blazor.Sankey/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -63,8 +63,8 @@ Install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Bla
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Sankey`) and install it.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
+2. Search the required NuGet package (`Syncfusion.Blazor.Sankey`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
 
@@ -153,7 +153,7 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Blazor Sankey Diagram component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) component inside the razor file.
+Open a Razor file located in the **~/Pages/Index.razor** and add the [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started Blazor Sankey Diagram in Blazor Server App | Syncfusion
+title: Get Started with Sankey Diagram in Blazor Server App | Syncfusion
 description: Checkout and learn about getting started with Blazor Sankey diagram in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Sankey
@@ -57,7 +57,7 @@ dotnet new blazor -o BlazorApp --interactivity Server
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Blazor.Sankey/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -65,8 +65,8 @@ Install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Bla
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Sankey`) and install it.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
+2. Search the required NuGet package (`Syncfusion.Blazor.Sankey`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
 
@@ -221,7 +221,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler Diagram component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Sankey Diagram component will render in your default web browser.
 
 {% endtabcontent %}
 
