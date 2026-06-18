@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started | Blazor Dropdown Tree in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Dropdown Tree in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Dropdown Tree component in Blazor WebAssembly Application.
 platform: Blazor
 control: Dropdown Tree
