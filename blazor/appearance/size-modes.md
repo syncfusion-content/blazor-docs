@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Size modes for Blazor components - Syncfusion
-description: Learn here how to enable touch-friendly sizing with the .e-bigger class in Syncfusion Blazor, apply it app-wide or per component, and toggle at runtime.
+title: Enable Touch-Friendly Size Modes in Blazor | Syncfusion®
+description: Learn how to enable touch-friendly sizing with the .e-bigger class in Blazor, apply it app-wide or per component, and toggle at runtime.
 platform: Blazor
 control: Appearance
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Size modes for Syncfusion® Blazor components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support two size modes: normal and touch (bigger theme). The following sections show how to enable them.
+Blazor components support two size modes: normal and touch (bigger theme). The following sections show how to enable them.
 
 ## Size mode for the application
 
@@ -42,7 +42,7 @@ You can enable touch mode (bigger theme) for an application by adding the `.e-bi
 
 You can enable touch mode (bigger theme) for a control by adding `.e-bigger` class and assign to the `div` which contains the control.
 
-If the Blazor Web App uses interactivity location `Per page/component`, ensure a render mode is defined at the top of the page that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component, as follows:
+If the Blazor Web App uses interactivity location `Per page/component`, ensure a render mode is defined at the top of the page that includes the Blazor component, as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -240,7 +240,7 @@ You can change the font-size and font-family for all the components by overridin
 
 ## See Also
 
-Refer below topics to learn about responsiveness components based on available size in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components.
+Refer below topics to learn about responsiveness components based on available size in Blazor Components.
 
 * [Sidebar Responsiveness](https://blazor.syncfusion.com/documentation/sidebar/auto-close)
 * [DataGrid Responsiveness](https://blazor.syncfusion.com/documentation/datagrid/columns#responsive-columns)

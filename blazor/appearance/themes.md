@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Blazor themes | Bootstrap, Fluent, Tailwind, Material | Syncfusion
-description: Learn how to use Syncfusion Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
+title: Apply Blazor Themes and Switch Dynamically | Syncfusion®
+description: Learn how to use Blazor themes via static web assets, CDN, LibMan, or NPM, optimize with lite CSS, switch theme dynamically. Explore to more details.
 platform: Blazor
 component: Appearance
 documentation: ug
 ---
 
-# Blazor themes in Syncfusion® components
+# Blazor themes in Blazor components
 
-The following themes are included in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library.
+The following themes are included in the Blazor components library.
 
 |Theme	|Style Sheet Name|
 |--------|--------|
@@ -38,11 +38,11 @@ The following themes are included in the Syncfusion<sup style="font-size:70%">&r
 
 The Bootstrap 3 theme is designed based on Bootstrap v3.
 
-N> The Bootstrap 4 theme is designed based on Bootstrap v4, specifically version 4.3. It remains compatible with Bootstrap v4.6 applications. There are no significant differences between v4.3 and v4.6 that affect Syncfusion<sup style="font-size:70%">&reg;</sup> components. Therefore, using Bootstrap v4.3 will not impact functionality, as it performs equivalently to Bootstrap v4.6.
+N> The Bootstrap 4 theme is designed based on Bootstrap v4, specifically version 4.3. It remains compatible with Bootstrap v4.6 applications. There are no significant differences between v4.3 and v4.6 that affect components. Therefore, using Bootstrap v4.3 will not impact functionality, as it performs equivalently to Bootstrap v4.6.
 
 ## Optimized CSS themes
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available in two variants to help optimize application performance:
+Blazor themes are available in two variants to help optimize application performance:
  
 **Standard Theme Files:**
 
@@ -60,7 +60,7 @@ Optimized lite theme files (<theme_name>-lite.css):
 
 * Choose the lite theme variant when the application doesn't require the bigger size mode. Reference the `-lite.css` version instead of the standard theme file.
 
-Comparison of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button Component in **normal** and **bigger** size modes:
+Comparison of the Blazor Button Component in **normal** and **bigger** size modes:
 
 ![bigger-sized-button](./images/bigger-theme-button.webp)
 
@@ -91,7 +91,7 @@ Refer to the comparison below for the default and optimized theme file sizes:
 
 ## Reference themes in a Blazor application
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes can be used in your Blazor application by referencing the style sheet.
+Blazor themes can be used in your Blazor application by referencing the style sheet.
 
 * For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, reference the stylesheet in the `<head>` of **~/Components/App.razor** file.
 * For **Blazor WebAssembly App**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
@@ -116,7 +116,7 @@ N> For **Blazor Web App with interaction mode as Auto & Blazor WASM App**, call 
 
 ### Refer theme style sheet from static web assets
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
+Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
 * For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, reference the stylesheet in the `<head>` of **~/Components/App.razor** file.
 
@@ -156,7 +156,7 @@ To reference optimized CSS files from [Syncfusion.Blazor](https://www.nuget.org/
 
 Instead of using a local resource on your server, you can use a cloud CDN to reference the theme style sheets. CDN Stands for "Content Delivery Network". A CDN is a group of servers distributed in different locations. While CDNs are often used to host websites, they are commonly used to provide other types of downloadable data as well. Examples include software programs, images, videos, and streaming media.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Package you are using.
+Blazor Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Package you are using.
 
  ```html
 <head>
@@ -575,13 +575,13 @@ LibMan offers the following advantages,
 
 ![Client side library dialog](images/theme-client-side.webp)
 
-2.Select the **unpkg** in the provider dropdown to get the Syncfusion<sup style="font-size:70%">&reg;</sup> control themes.
+2.Select the **unpkg** in the provider dropdown to get the blazor control themes.
 
 ![Select unpkg provider](images/client-library-unpkg.webp)
 
 3.You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
 
-![Specify Syncfusion library](images/library-unpkg.webp)
+![Specify library](images/library-unpkg.webp)
 
 4.You can choose to select specific files or include all library files, as shown below.
 
@@ -655,7 +655,7 @@ N> If you use individual component styles, you should install the styles of thei
 
 <head>
     ...
-    <!-- Syncfusion Blazor components' styles -->
+    <!-- Blazor components' styles -->
     <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -668,7 +668,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-libman)
 
 ## NPM package reference
 
-The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
+The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
 You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
@@ -680,7 +680,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     ![Web Compiler 2022+](images/web_compiler.webp)
 
-* Install the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
+* Install the [Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
     ```
     npm install @syncfusion/blazor-themes
@@ -757,7 +757,7 @@ It is important to note that the Material 3 theme uses CSS variables. To overrid
 }
 ```
 
-N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
+N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
 
 The following shows the importing theme path for the overall theme.
 
@@ -1036,7 +1036,7 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 ### Change theme dynamically in Blazor Web app
 
-The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes using Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown component.
+The following example demonstrates how to change a theme dynamically in Blazor application using Blazor themes using Dropdown component.
 
 * For **Blazor Web App using any interactive render mode (Server, WebAssembly, or Auto)**, the theme is changed based on query string at the **~/Components/App.razor** file
 
@@ -1063,7 +1063,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 {% endhighlight %}
 {% endtabs %}
 
-* Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion<sup style="font-size:70%">&reg;</sup> DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
+* Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 ```cshtml
 @rendermode InteractiveAuto
@@ -1153,7 +1153,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 
 ### Change theme dynamically in Blazor server app
 
-The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes using Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown component.
+The following example demonstrates how to change a theme dynamically in Blazor application using Blazor themes using Dropdown component.
 
 1. For **Blazor Server application**, the theme is changed based on query string at the **~/Components/App.razor** file.
 
@@ -1180,7 +1180,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 {% endhighlight %}
 {% endtabs %}
 
-2.Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion<sup style="font-size:70%">&reg;</sup> DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
+2.Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 ```cshtml
 @rendermode InteractiveServer
@@ -1268,7 +1268,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching
 
 ### Change theme dynamically in blazor WASM Standalone app
 
-The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes using Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown component.
+The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Blazor themes using Dropdown component.
 
 1. Add the below function code in the  **index.html** file to set the theme as selected in dropdown by using its `id` value.
 
@@ -1354,7 +1354,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
 
     N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
 
-## Render Syncfusion<sup style="font-size:70%">&reg;</sup> Components in offline with Material and Tailwind Themes
+## Render Components in offline with Material and Tailwind Themes
 
 Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offline scenarios.
 
@@ -1404,4 +1404,4 @@ Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are availab
 
 ## See also
 
-[How to change background of browser based on Syncfusion<sup style="font-size:70%">&reg;</sup> Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes)
+[How to change background of browser based on Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes)
