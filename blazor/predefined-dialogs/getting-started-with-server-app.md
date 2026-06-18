@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started | Predefined Dialogs in Blazor Server App | Syncfusion
+title: Getting started with Predefined Dialogs in Server App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor Predefined Dialogs Components in Blazor Server App.
 platform: Blazor
 control: Predefined Dialogs
