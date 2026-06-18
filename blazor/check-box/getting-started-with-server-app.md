@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor CheckBox in Blazor Server App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor CheckBox Component in Blazor Server App.
+title: Getting Started with Blazor Checkbox in Blazor Server App | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor Checkbox Component in Blazor Server App.
 platform: Blazor
-component: CheckBox
+component: Checkbox
 documentation: ug
 ---
 
-# Getting Started with Blazor CheckBox Component in Blazor Server App
+# Getting Started with Blazor Checkbox Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -219,7 +219,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Checkbox Component](./images/blazor-checkbox-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CheckBox).
 
