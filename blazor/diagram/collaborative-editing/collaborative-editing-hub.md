@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SignalR Hub for Real-Time Collaboration in Blazor Diagram | Syncfusion
-description: Checkout and learn to implement SignalR hub services with Redis for real-time collaborative editing in Syncfusion Blazor Diagram.
+title: SignalR Hub for Real-Time Collaboration in Diagram | Syncfusion®
+description: Checkout and learn to implement SignalR hub services with Redis for real-time collaborative editing in Blazor Diagram.
 platform: Blazor
 control: Diagram
 documentation: ug

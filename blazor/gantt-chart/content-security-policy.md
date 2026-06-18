@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gantt Chart - Strict CSP Feature Limitations - Syncfusion
-description: Details on Syncfusion Blazor features in Gantt Chart that require Content Security Policy (CSP) relaxation.
+title: Gantt Chart - Strict CSP Feature Limitations | Syncfusion®
+description: Details on Blazor features in Gantt Chart that require Content Security Policy (CSP) relaxation and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -81,4 +81,4 @@ Include `'unsafe-inline'` if you want to use rich text formatting in the Notes f
 
 ## See also
 
-* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
+* [Content security policy in Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)

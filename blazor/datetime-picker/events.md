@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor DateTimePicker Component | Syncfusion
-description: Learn about events in the Syncfusion Blazor DateTimePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, and more.
+title: Events in Blazor DateTimePicker Component | Syncfusion®
+description: Learn about events in the Blazor DateTimePicker component, including ValueChange, OnOpen, OnClose, OnRenderDayCell, and more.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
@@ -203,4 +203,4 @@ The `OnRenderDayCell` event is triggered when each day cell of the calendar is r
 }
 ```
 
-N> The DateTimePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.
+N> The DateTimePicker currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion® Blazor WASM App in JetBrains Rider
+title: Getting Started with Blazor WASM App in JetBrains Rider | Syncfusion®
 description: Step-by-step guide to integrate Syncfusion® Blazor DataGrid in Blazor WASM applications in JetBrains Rider.
 platform: Blazor
 control: common
