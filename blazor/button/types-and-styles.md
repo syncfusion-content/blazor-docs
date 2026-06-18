@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Types and Styles in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Types and Styles in Syncfusion Blazor Button component and much more.
+title: Types and Styles in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all features about Types and Styles in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -37,7 +37,7 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgChrhiGfocEOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button Component with different Styles](./images/blazor-button-with-different-style.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Component with different Styles](./images/blazor-button-with-different-style.webp)" %}
 
 N> Predefined Button styles provide only the visual indication. So, Button content should define the Button style for the users of assistive technologies such as screen readers.
 
@@ -77,7 +77,7 @@ A Round Button is circular in shape. Usually, it contains an icon representing i
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUsBLBsQJYnPIv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with different Types](./images/blazor-button-types.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVxXRiVhUSIxYKT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Types](./images/blazor-button-types.webp)" %}
 
 ### Primary Button
 
@@ -89,7 +89,7 @@ The primary button is styled with background color and it is used to represent a
 <SfButton IsPrimary="true">Primary</SfButton>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhgCVrLWmyJUodV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Primary Button](./images/blazor-primary-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdtxiLhUevkqAx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Primary Button](./images/blazor-primary-button.webp)" %}
 
 ### Toggle Button
 
@@ -134,7 +134,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAiVVrMGexGnCy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toggle Button](./images/blazor-toggle-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHDHCLLAdhgrHC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Button](./images/blazor-toggle-button.webp)" %}
 
 ## Icons
 
@@ -159,7 +159,7 @@ The Button can have an icon to provide the visual representation of the action. 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUCVrVscdsTwUD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with Icon](./images/blazor-button-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVdDxsrVqxyfOQa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with Icon](./images/blazor-button-icon.webp)" %}
 
 ## Button size
 
@@ -173,4 +173,4 @@ The two types of Button sizes are default and small. To change the size of the d
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLAWLVrWcxyVIJP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with different Size](./images/blazor-button-with-different-size.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrdNdMLLUHbxlMP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Size](./images/blazor-button-with-different-size.webp)" %}

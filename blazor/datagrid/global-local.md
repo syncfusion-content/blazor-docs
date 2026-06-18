@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor DataGrid | Syncfusion
-description: Learn all about globalization and right-to-left text support in the Syncfusion Blazor DataGrid component.
+title: Globalization in Blazor DataGrid | Syncfusion®
+description: Learn all about globalization and right-to-left text support in the Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -165,7 +165,7 @@ Grid_DeleteRecord | Delete Record | ![Locale delete record](images/globalization
 
 **Step 1: Create a Blazor Web App**
  
-Create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs#interactivity-location).
+Create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022. Use either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs#interactivity-location).
 
 **Step 2: Install Blazor DataGrid NuGet Packages**
  
@@ -185,9 +185,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
 ```
  
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) documentation for a complete list of available packages.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) documentation for a complete list of available packages.
  
-**Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service**
+**Step 3: Register Blazor Service**
  
 Open the **~/_Imports.razor** file and import the required namespaces.
  
@@ -197,7 +197,7 @@ Open the **~/_Imports.razor** file and import the required namespaces.
 @using Syncfusion.Blazor.Buttons
 ```
 
-- Register the Syncfusion Blazor service in **Program.cs**:
+- Register the Blazor service in **Program.cs**:
 
 ```cs
     builder.Services.AddServerSideBlazor();
@@ -259,7 +259,7 @@ namespace LocalizationSample.Client
 **Step 6: Configure Program.cs**
 
 - **Set the culture of the application:** In the client-side **~/Program.cs**, use JavaScript interop to retrieve the user's culture from local storage. If none is found, set the default to en-US.
-- **Register services:** Register the SyncfusionLocalizer and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in **~/Program.cs**.
+- **Register services:** Register the SyncfusionLocalizer and Blazor services in **~/Program.cs**.
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -272,10 +272,10 @@ using System.Globalization;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-// Register the Syncfusion Blazor services.
+// Register the Blazor services.
 builder.Services.AddSyncfusionBlazor();
 
-// Register the Syncfusion locale service to localize Syncfusion Blazor components.
+// Register the locale service to localize Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 var host = builder.Build();
@@ -469,7 +469,7 @@ Complete **steps 1** through **5** from the [Switching Localization](https://bla
 
 **Step 2: Configure ~/Program.cs**
 
-Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor and localization services in **~/Program.cs**:
+Register Blazor and localization services in **~/Program.cs**:
 
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
