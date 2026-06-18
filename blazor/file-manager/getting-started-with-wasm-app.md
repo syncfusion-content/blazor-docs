@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor File Manager in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor File Manager in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor File Manager component in Blazor WebAssembly App.
 platform: Blazor
 control: File Manager
