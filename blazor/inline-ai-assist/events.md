@@ -15,7 +15,7 @@ This section describes the Inline AI Assist events that will be triggered when a
 
 The Inline AI Assist control triggers the `Created` event when the control rendering is completed.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="container" style="height: 350px; width: 650px;">
@@ -33,7 +33,7 @@ The Inline AI Assist control triggers the `Created` event when the control rende
 
 The `PromptRequested` event is triggered when the prompt request is made in the Inline AI Assist control.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="container" style="height: 350px; width: 650px;">
@@ -51,7 +51,7 @@ The `PromptRequested` event is triggered when the prompt request is made in the 
 
 The `Opened` event is triggered when the Inline AI Assist popup is opened.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="container" style="height: 350px; width: 650px;">
@@ -65,11 +65,11 @@ The `Opened` event is triggered when the Inline AI Assist popup is opened.
 }
 ```
 
-### Closed
+## Closed
 
 The `Closed` event is triggered when the Inline AI Assist popup is closed.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="container" style="height: 350px; width: 650px;">

@@ -17,10 +17,7 @@ You can use the `ToolbarPosition` property to customize footer toolbar position.
 
 By settings ToolbarPosition as `Bottom`, footer items will be rendered at the bottom with a dedicated footer area.
 
-{% tabs %}
-{% highlight razor tabtitle="razor" %}
-
-```razor
+```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
 
@@ -104,9 +101,6 @@ By settings ToolbarPosition as `Bottom`, footer items will be rendered at the bo
 }
 ```
 
-{% endhighlight %}
-{% endtabs %}
-
 ![ToolbarPosition](images/toolbar-position.webp)
 
 ## Built-in toolbar items
@@ -135,10 +129,7 @@ Each toolbar item object can include the following properties:
 
 Below sample demonstrates the usage of custom toolbar items in Inline Assist control.
 
-{% tabs %}
-{% highlight razor tabtitle="razor" %}
-
-```razor
+```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
 
@@ -219,16 +210,13 @@ Below sample demonstrates the usage of custom toolbar items in Inline Assist con
 }
 ```
 
-{% endhighlight %}
-{% endtabs %}
-
 ![InlineToolbarSettings](images/toolbar-settings.webp)
 
 ## Toolbar ItemClick event
 
 The `ItemClick` event is triggered when the inline toolbar item is clicked.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="container" style="height: 350px; width: 650px;">
