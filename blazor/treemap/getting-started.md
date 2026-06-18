@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor TreeMap in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor TreeMap in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor TreeMap component in Blazor WebAssembly Application.
 platform: Blazor
 control: TreeMap
@@ -53,7 +53,7 @@ dotnet new blazorwasm -o BlazorWASMApp
 
 {% endtabcontents %}
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install [Syncfusion.Blazor.TreeMap](https://www.nuget.org/packages/Syncfusion.Blazor.TreeMap/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -61,10 +61,10 @@ Install [Syncfusion.Blazor.TreeMap](https://www.nuget.org/packages/Syncfusion.Bl
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.TreeMap`) and install them.
 
-Alternatively, you can install the same package using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -151,7 +151,7 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Blazor TreeMap component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component inside the razor file.
+Open a Razor file located in the **~/Pages/Index.razor** and add the [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component inside the razor file.
 
 * You can use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property to load the car sales details in the TreeMap component. Specify a field name from the data source in the [WeightValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_WeightValuePath) property to calculate the TreeMap item size.
 

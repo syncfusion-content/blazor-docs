@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Blazor TreeMap in Blazor Web App | Syncfusion
+title: Getting Started with Blazor TreeMap in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Blazor TreeMap Component Components in Blazor Web App.
 platform: Blazor
 control: TreeMap
@@ -63,10 +63,10 @@ Install [Syncfusion.Blazor.TreeMap](https://www.nuget.org/packages/Syncfusion.Bl
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.TreeMap`) and install them.
 
-Alternatively, you can install the same package using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
