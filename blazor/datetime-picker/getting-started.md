@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor DateTime Picker in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor DateTime Picker in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Datetime Picker component in Blazor WebAssembly Application.
 platform: Blazor
 control: Datetime Picker
