@@ -21,10 +21,10 @@ To get started with Blazor DataGrid, refer to the [Getting Started](./getting-st
 
 ### Data Binding
 
-Data binding is a fundamental technique that empowers the Blazor DataGrid to integrate data into its interface, enabling dynamic and interactive Grid views. The DataGrid utilizes the SfDataManager, which supports both RESTful JSON data service binding and IEnumerable binding through the DataSource property. This can be assigned to a SfDataManager instance or list of business objects for flexible data management.
+The Blazor DataGrid supports multiple data binding approaches to integrate data into its interface, enabling dynamic and interactive Grid views. The DataGrid utilizes the `SfDataManager`, which supports both RESTful JSON data service binding and IEnumerable binding through the DataSource property. This can be assigned to a `SfDataManager` instance or list of business objects for flexible data management.
 
 - Supports [LocalData](./data-binding/local-data) and [RemoteData](./data-binding/remote-data) sources
-- Data source adaptors
+- [Multiple Data Source Adaptors](./connecting-to-adaptors/url-adaptor)
 
 ### Data Operations
 
@@ -36,6 +36,7 @@ The Blazor DataGrid supports all fundamental data operations:
    - [Filter Bar](./filter-bar)
    - [Filter Menu](./filter-menu)
    - [Excel Like Filter](./excel-like-filter)
+- [Searching](./searching)
 - [Grouping](./grouping)
 - [Aggregates](./aggregates)
    - [Footer Aggregate](./footer-aggregate)
@@ -68,30 +69,35 @@ The Blazor DataGrid offers rich column customization capabilities that enhance d
 
 ## Performance & Scale
 
-The Blazor DataGrid is engineered for exceptional performance and scalability, handling large datasets efficiently without compromising user experience. Advanced virtualization techniques, lazy-loading capabilities, and WebAssembly optimizations ensure smooth interactions even with thousands of rows and complex operations.
+The Blazor DataGrid is designed for exceptional performance and scalability, handling large datasets efficiently without compromising user experience. Advanced virtualization techniques, lazy-loading capabilities, and WebAssembly optimizations ensure smooth interactions even with thousands of rows and complex operations.
 
 - [Row Virtualization](./virtual-scrolling#row-virtualization) and [Column Virtualization](./virtual-scrolling#column-virtualization)
 - [Lazy-load Grouping](./lazy-load-grouping)
 - [Infinite Scrolling](./infinite-scrolling)
 - Optimized performance for WebAssembly
-- Overscan support for smooth scrolling
+- [Overscan support for smooth scrolling](./virtual-scrolling#render-buffered-data-using-overscan-count)
 
 ## User Experience
 
 The Blazor DataGrid delivers a comprehensive user experience with extensive customization options and accessibility features. Rich templating support, flexible selection modes, intuitive interactions, and full keyboard navigation make the grid accessible to all users while maintaining high levels of personalization.
 
-- Extensive templating (cells, rows, headers, footers, editors)
+- Extensive templating
+   - [Header Template](./column-headers#header-template)
+   - [Column Template](./column-template)
+   - [Row Template](./row-template) 
+   - [Edit Template](./template-editing)
+   - [Footer Template](./footer-aggregate)
 - [Selection](./selection)
    - [Row Selection](./row-selection)
    - [Checkbox Selection](./checkbox-selection)
    - [Cell Selection](./cell-selection)
 - [Row Drag and Drop](./row-drag-and-drop)
 - [Context Menu](./context-menu)
-- Customizable toolbar
+- [Customizable toolbar](./custom-toolbar)
 - Loading indicators
 - [Column Reordering](./column-reorder)
 - [Accessibility](./accessibility) (WCAG compliant)
-- Full keyboard navigation
+- [Keyboard Interaction](./accessibility#keyboard-interaction)
 
 ## Export & Reporting
 
@@ -106,19 +112,17 @@ The Blazor DataGrid supports multiple export formats and reporting capabilities,
 The Blazor DataGrid includes advanced capabilities designed for complex data scenarios and enterprise-level applications. From sophisticated state management and hierarchical data relationships to AI-driven interactions and custom formatting, these features enable developers to build powerful, feature-rich data management solutions.
 
 - [State management](./state-management) (save/load grid configuration)
-- Hierarchical grids (parent-child relationships)
+- [Hierarchical grids](./detail-template#creating-custom-componenthierarchical-datagrid)
 - AI-driven natural language commands
-- Row spanning
+- [Row spanning](./row-spanning)
 - [Detail Templates](./detail-template)
 - [Foreign key Columns](./foreignkey-column)
-- Custom toolbars
-- Global and local formatting
+- [Global and local formatting](./global-local)
 
 ## Data Connectivity
 
 The Blazor DataGrid provides extensive data connectivity options with support for multiple data source adapters and backend integrations. Seamless integration with popular databases, ORMs, and cloud services enables developers to connect to virtually any data source and build flexible, scalable applications.
 
-- Multiple Data Source Adapters
 - ORM integration
    - [Entity Framework](./connecting-to-orm/entityframework)
    - [Dapper](./connecting-to-orm/dapper)
@@ -128,10 +132,19 @@ The Blazor DataGrid provides extensive data connectivity options with support fo
 
 ### Supported Data Sources
 
+**Relational Databases**
 - [Microsoft SQL Server](./connecting-to-database/microsoft-sql-server)
 - [MySQL Server](./connecting-to-database/mysql-server)
 - [SQLite Server](./connecting-to-database/sqlite-server)
 - [PostgreSQL Server](./connecting-to-database/postgresql-server)
+ 
+**NoSQL & Cloud**
 - [MongoDB Server](./connecting-to-database/mongodb-server)
 - [Firebase](./connecting-to-database/firebase-firestore)
-- [GraphQL Binding](./connecting-to-adaptors/graphql-adaptor)
+ 
+**Query Languages & Adaptors**
+- [GraphQL Adaptor](./connecting-to-adaptors/graphql-adaptor)
+- [Web API Adaptor](./connecting-to-adaptors/web-api-adaptor)
+- [OData V4 Adaptor](./connecting-to-adaptors/odatav4-adaptor)
+- [URL Adaptor](./connecting-to-adaptors/url-adaptor)
+- [Custom Adaptor](./connecting-to-adaptors/custom-adaptor)
