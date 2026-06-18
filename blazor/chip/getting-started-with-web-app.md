@@ -223,9 +223,9 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chips Component](./images/blazor-chip-component.webp)" %}
 
-N> You can also explore our [Blazor Chip example](https://blazor.syncfusion.com/demos/chips/default-functionalities) that shows how to render and configure the Chip.
+N> You can also explore our [Blazor Chips example](https://blazor.syncfusion.com/demos/chips/default-functionalities) that shows how to render and configure the Chips.
 
 ## Render chips items from collection
 
