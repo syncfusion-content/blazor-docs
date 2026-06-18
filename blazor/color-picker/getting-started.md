@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | Blazor Color Picker in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Color Picker in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Color Picker component in and Blazor WebAssembly Application.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Getting Started with Blazor Color Picker Component
+# Getting Started with Blazor Color Picker component in Blazor WASM App
 
 This section explains how to add the [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
