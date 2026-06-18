@@ -15,7 +15,6 @@ The Syncfusion Blazor DataGrid is a powerful and feature-rich UI component desig
 
 ## Quick Start
 
-To get started with Blazor DataGrid, refer to the [Getting Started](./getting-started-with-web-app) documentation.
 
 ## Data Management
 
@@ -63,7 +62,7 @@ The Blazor DataGrid offers rich column customization capabilities that enhance d
 - Rich column features (formatting, resizing, reordering)
 - [Frozen Columns](./frozen-column)
 - [Column Spanning](./column-spanning)
-- [Column Menu](./column-menu) (visibility, filtering, sorting)
+- [Column Menu](./column-menu) (visibility, filtering, sorting, grouping, autofit)
 - [Column chooser](./column-chooser)
 - [Adaptive responsive layout](./adaptive-layout)
 
@@ -74,7 +73,7 @@ The Blazor DataGrid is designed for exceptional performance and scalability, han
 - [Row Virtualization](./virtual-scrolling#row-virtualization) and [Column Virtualization](./virtual-scrolling#column-virtualization)
 - [Lazy-load Grouping](./lazy-load-grouping)
 - [Infinite Scrolling](./infinite-scrolling)
-- Optimized performance for WebAssembly
+- [Optimized performance for WebAssembly](./webassembly-performance)
 - [Overscan support for smooth scrolling](./virtual-scrolling#render-buffered-data-using-overscan-count)
 
 ## User Experience
@@ -86,7 +85,7 @@ The Blazor DataGrid delivers a comprehensive user experience with extensive cust
    - [Column Template](./column-template)
    - [Row Template](./row-template) 
    - [Edit Template](./template-editing)
-   - [Footer Template](./footer-aggregate)
+   - [Detail Template](./detail-template)
 - [Selection](./selection)
    - [Row Selection](./row-selection)
    - [Checkbox Selection](./checkbox-selection)
