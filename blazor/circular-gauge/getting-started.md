@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Circular Gauge in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Circular Gauge in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Circular Gauge component in Blazor WebAssembly Application.
 platform: Blazor
 control: Circular Gauge
