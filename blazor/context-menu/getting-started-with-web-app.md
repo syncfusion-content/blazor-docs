@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Context Menu in Blazor Web App | Syncfusion
+title: Getting Started with Blazor Context Menu in Web App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Context Menu Component in Blazor Web App.
 platform: Blazor
 component: Context Menu
@@ -170,7 +170,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 @rendermode InteractiveAuto
 @using Syncfusion.Blazor.Navigations
 
-<div id="target">Right click/Touch hold to open the ContextMenu </div>
+<div id="target">Right click/Touch hold to open the Context Menu </div>
 <SfContextMenu Target="#target" TValue="MenuItem">
     <MenuItems>
         <MenuItem Text="Cut"></MenuItem>
@@ -236,7 +236,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu Component](./images/blazor-contextmenu-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Context Menu Component](./images/blazor-contextmenu-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ContextMenu).
 
