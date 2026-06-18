@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Context Menu in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Context Menu in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Context Menu component in Blazor WebAssembly Application.
 platform: Blazor
 control: Context Menu
@@ -165,7 +165,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Co
 
 @using Syncfusion.Blazor.Navigations
 
-<div id="target">Right click/Touch hold to open the ContextMenu </div>
+<div id="target">Right click/Touch hold to open the Context Menu </div>
 <SfContextMenu Target="#target" TValue="MenuItem">
     <MenuItems>
         <MenuItem Text="Cut"></MenuItem>
@@ -229,7 +229,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu Component](./images/blazor-contextmenu-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Context Menu Component](./images/blazor-contextmenu-component.png)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ContextMenu).
 
