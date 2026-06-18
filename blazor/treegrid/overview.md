@@ -30,7 +30,7 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
 
 - **Data Operations**
   - [Sorting](./sorting.md) (single and multi-column)
-  - Filtering
+  - [Filtering](./filter)
     - [Filter Bar](./filtering/filter-bar.md)
     - [Filter Menu](./filtering/filter-menu.md)
     - [Excel-like Filter](./filtering/excel-like-filter.md)
@@ -90,9 +90,8 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
 - [Row drag and drop](./rows/row-drag-and-drop.md)
 - [Context menu support](./context-menu.md)
 - [Customizable toolbar](./toolbar.md) with predefined and custom items
-- Loading indicators
 - Column drag-and-drop reordering
-- [Accessibility (WCAG compliant)](#accessibility--standards)
+- [Accessibility (WCAG compliant)]f(#accessibility--standards)
 - [Full keyboard navigation](#accessibility--standards)
 - [Right-to-Left (RTL) support](./globalization.md)
 
@@ -110,7 +109,6 @@ To get started with Blazor TreeGrid, refer to the [Getting Started](./getting-st
 - [Auto-fill support (Excel-like)](./auto-fill-like-excel.md)
 - [Clipboard operations (copy/paste)](./clipboard.md)
 - [Custom data binding](./custom-binding.md)
-- [GraphQL Binding](./graphql.md)
 
 ---
 
@@ -120,7 +118,6 @@ The TreeGrid component supports multiple data source adapters and integrations:
 
 - [List binding (in-memory data)](./data-binding.md)
 - [ORM integration (Entity Framework)](./editing/entity-frame-work.md)
-- Backend integrations
 - Supported data sources:
   - [GraphQL Binding](./graphql.md)
 
