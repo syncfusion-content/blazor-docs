@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Calendar Views in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Calendar Views in Syncfusion Blazor Calendar component and much more.
+title: Calendar Views in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Calendar Views in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug

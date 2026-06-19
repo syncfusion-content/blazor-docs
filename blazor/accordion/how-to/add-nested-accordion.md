@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Nested Accordion in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about how to add Nested Accordion in Syncfusion Blazor Accordion component and more.
+title: Add Nested Accordion in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all about how to add Nested Accordion in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -60,4 +60,4 @@ The Accordion component supports to render the nested level of Accordion by usin
 </SfAccordion>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUWLWUAyOkHSnV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component with Nested Item](../images/blazor-accordion-with-nested-item.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBdZRiCWvwrpSLi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component with Nested Item](../images/blazor-accordion-with-nested-item.webp)" %}

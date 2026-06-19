@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Breadcrumb Items with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn here all about data binding with Blazor Breadcrumb component of Syncfusion and more.
+title: Breadcrumb Items with Blazor Breadcrumb component | Syncfusion®
+description: Checkout and learn here all features about data binding with Blazor Breadcrumb component and much more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug

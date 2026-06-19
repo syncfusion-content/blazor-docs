@@ -29,7 +29,7 @@ The following native event support has been provided to the Progress Button comp
 |ondblclick|onkeydown|onkeyup|onkeypress|
 |ontouchend|onfocusin|onmouseup|ontouchstart|
 
-## How to bind click event to Progress Button
+## How to bind click event to ProgressButton
 
 The `onclick` attribute is used to bind the click event for Progress Button. Here, the sample code snippets of Progress Button has been explained.
 
@@ -45,5 +45,45 @@ The `onclick` attribute is used to bind the click event for Progress Button. Her
         //onclick Event triggered
     }
 }
-
 ```
+
+## Trace Events in Blazor ProgressButton 
+
+The ProgressButton component triggers lifecycle events that can be used as extension points to perform custom logic and update the UI.
+
+The events available in ProgressButton are [OnFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnFailure), [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin), [Progressing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_Progressing), and [OnEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd). OnBegin fires when progress starts, Progressing fires while the progress updates, OnEnd fires when progress completes, and OnFailure fires if the operation fails.
+
+The following example wires the OnBegin, Progressing, and OnEnd events and displays the most recently triggered event in the UI. OnFailure is available but not shown in this sample.
+
+```cshtml
+@using Syncfusion.Blazor.SplitButtons
+
+<div id="preview">@eventName Event Triggered</div>
+<SfProgressButton Content="Progress">
+    <ProgressButtonEvents OnBegin="Begin" OnEnd="End" Progressing="Progressing"></ProgressButtonEvents>
+</SfProgressButton>
+
+@code {
+    private string eventName = "No";
+    public void Begin(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
+    {
+        eventName = "Begin";
+    }
+    public void End(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
+    {
+        eventName = "End";
+    }
+    public void Progressing(Syncfusion.Blazor.SplitButtons.ProgressEventArgs args)
+    {
+        eventName = "Progressing";
+    }
+}
+
+<style>
+    #preview {
+        float: right;
+        padding: 0 350px 0 0;
+    }
+</style>
+```
+![Tracing Events in Blazor ProgressButton](./images/blazor-progressbutton-trace-event.png)
