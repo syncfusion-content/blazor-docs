@@ -106,15 +106,15 @@ To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazo
 
 <style>
     .e-play-icon::before {
-        content: '\e324';
+        content: '\e70c';
     }
     .e-pause-icon::before {
-        content: '\e326';
+        content: '\e77b';
     }
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrRXRWBLRUsGJHR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with Icon](./images/blazor-buttongroup-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRNxiFhfBAtUDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with Icon](./images/blazor-buttongroup-icon.webp)" %}
 
 ## ButtonGroup size
 
