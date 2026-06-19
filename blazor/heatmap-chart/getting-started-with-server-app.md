@@ -72,7 +72,6 @@ Alternatively, you can install the same package using the Package Manager Consol
 {% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.HeatMap -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +86,6 @@ Open the terminal and run the following commands.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.HeatMap -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +100,6 @@ Open the command prompt and run the following commands.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.HeatMap -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
