@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Setting in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion BlazorComboBox component and much more.
+title: Popup Setting in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Popup Setting in BlazorComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
