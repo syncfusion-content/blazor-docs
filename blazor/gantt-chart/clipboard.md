@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Clipboard in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about clipboard in Syncfusion Blazor Gantt Chart component and much more details.
+title: Clipboard in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all the features about clipboard in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

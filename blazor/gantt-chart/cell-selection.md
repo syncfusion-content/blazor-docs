@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell Selection in Blazor Gantt Chart Component | Syncfusion
-description: Learn how to configure and customize cell selection in the Syncfusion Blazor Gantt Chart, including single, multiple, and dynamic selection.
+title: Cell Selection in Blazor Gantt Chart Component | Syncfusion®
+description: Learn how to configure and customize cell selection in the Blazor Gantt Chart, including single, multiple, and dynamic selection.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

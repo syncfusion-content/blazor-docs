@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion AI Coding Assistant Prompt Library | Syncfusion
+title: Syncfusion AI Coding Assistant Prompt Library | Syncfusion®
 description: Explore the AI Coding Assistant Prompt Library to enhance Blazor development productivity with code generation, configuration examples, and contextual guidance.
 control: Syncfusion AI Coding Assistant Prompt Library
 platform: Blazor
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prompt Library - AI Coding Assistant
 
-Speed up your Blazor projects using these ready-made prompts for popular Syncfusion components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
+Speed up your Blazor projects using these ready-made prompts for popular Blazor components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
 ## How to use
 
@@ -26,17 +26,17 @@ Before starting, make sure your MCP Server is set up and running.
 
 ### Grid
 
-The Syncfusion Blazor Data Grid delivers fast, flexible tables for large datasets with built-in interactivity.
+The Blazor Data Grid delivers fast, flexible tables for large datasets with built-in interactivity.
 
 {% promptcards %}
 {% promptcard Paging and Sorting %}
-#sf_blazor_assistant How do I enable paging and sorting in the Syncfusion Blazor Grid?
+#sf_blazor_assistant How do I enable paging and sorting in the Blazor Grid?
 {% endpromptcard %}
 {% promptcard Grouping and Filtering %}
 #sf_blazor_assistant Show me an example of grouping and filtering data in the Grid component.
 {% endpromptcard %}
 {% promptcard CRUD Operations %}
-#sf_blazor_assistant What’s the code to implement full CRUD operations in Syncfusion Blazor Grid?
+#sf_blazor_assistant What’s the code to implement full CRUD operations in Blazor Grid?
 {% endpromptcard %}
 {% promptcard Grid Export to PDF and Excel %}
 #sf_blazor_assistant How can I add PDF and Excel export options to the Grid toolbar?
@@ -48,7 +48,7 @@ The Syncfusion Blazor Data Grid delivers fast, flexible tables for large dataset
 #sf_blazor_assistant Create a multicolumn Grid to display product details with sorting and filtering.
 {% endpromptcard %}
 {% promptcard Chat Integration %}
-#sf_blazor_assistant How can I integrate a chat widget inside each row of the Syncfusion Grid?
+#sf_blazor_assistant How can I integrate a chat widget inside each row of the Grid?
 {% endpromptcard %}
 {% promptcard Advanced Grid Features %}
 #sf_blazor_assistant Show me a Grid with paging, sorting, grouping, filtering, and virtual scrolling
@@ -69,17 +69,17 @@ The Syncfusion Blazor Data Grid delivers fast, flexible tables for large dataset
 
 ### Chart
 
-The Syncfusion Blazor Chart suite offers versatile visualization tools across various series types for insightful data representation.
+The Blazor Chart suite offers versatile visualization tools across various series types for insightful data representation.
 
 {% promptcards %}
 {% promptcard Local and Remote Data %}
-#sf_blazor_assistant How do I bind both local and remote data sources to a Syncfusion Chart?
+#sf_blazor_assistant How do I bind both local and remote data sources to a Chart?
 {% endpromptcard %}
 {% promptcard Range Selection %}
-#sf_blazor_assistant Show me how to enable range selection in a Syncfusion Blazor Chart.
+#sf_blazor_assistant Show me how to enable range selection in a Blazor Chart.
 {% endpromptcard %}
 {% promptcard Chart Types Overview %}
-#sf_blazor_assistant What chart types are available in Syncfusion Blazor Chart and how to configure them?
+#sf_blazor_assistant What chart types are available in Blazor Chart and how to configure them?
 {% endpromptcard %}
 {% promptcard Markers and Data Labels %}
 #sf_blazor_assistant How can I display markers and data labels on a line chart?
@@ -88,19 +88,19 @@ The Syncfusion Blazor Chart suite offers versatile visualization tools across va
 #sf_blazor_assistant Add custom annotations to highlight specific data points in a chart.
 {% endpromptcard %}
 {% promptcard Chart Export to Image or PDF %}
-#sf_blazor_assistant How do I export a Syncfusion Chart to PDF or image format?
+#sf_blazor_assistant How do I export a Chart to PDF or image format?
 {% endpromptcard %}
 {% promptcard Print Support %}
-#sf_blazor_assistant Enable print functionality for a Syncfusion Blazor Chart component.
+#sf_blazor_assistant Enable print functionality for a Blazor Chart component.
 {% endpromptcard %}
 {% promptcard Dynamic Chart with Remote Data %}
 #sf_blazor_assistant Create a chart that updates dynamically with remote API data.
 {% endpromptcard %}
 {% promptcard Multiple Series Types %}
-#sf_blazor_assistant How do I combine bar and line chart types in a single Syncfusion Chart?
+#sf_blazor_assistant How do I combine bar and line chart types in a single Chart?
 {% endpromptcard %}
 {% promptcard Troubleshooting Chart Data Binding %}
-#sf_blazor_assistant Why isn’t my remote data showing up in the Syncfusion Chart?
+#sf_blazor_assistant Why isn’t my remote data showing up in the Chart?
 {% endpromptcard %}
 {% promptcard Interactive Range Selector %}
 #sf_blazor_assistant Configure a range selector for zooming and filtering in a time-series chart.
@@ -112,7 +112,7 @@ The Syncfusion Blazor Chart suite offers versatile visualization tools across va
 
 ### Schedule
 
-The Syncfusion Blazor Schedule component helps manage events, resources, and timelines with powerful views and customization.
+The Blazor Schedule component helps manage events, resources, and timelines with powerful views and customization.
 
 {% promptcards %}
 {% promptcard Remote Data Binding %}
@@ -125,7 +125,7 @@ The Syncfusion Blazor Schedule component helps manage events, resources, and tim
 #sf_blazor_assistant Enable virtual scrolling for large event datasets in the Schedule view.
 {% endpromptcard %}
 {% promptcard Timezone Support %}
-#sf_blazor_assistant How can I configure timezone support in the Syncfusion Blazor Schedule?
+#sf_blazor_assistant How can I configure timezone support in the Blazor Schedule?
 {% endpromptcard %}
 {% promptcard Export Schedule to PDF or Excel %}
 #sf_blazor_assistant Add export functionality to download the Schedule view as PDF or Excel.
@@ -146,11 +146,11 @@ The Syncfusion Blazor Schedule component helps manage events, resources, and tim
 
 ### Kanban
 
-The Syncfusion Blazor Kanban organizes tasks in columns with drag-and-drop, swimlanes, and templating for agile workflows.
+The Blazor Kanban organizes tasks in columns with drag-and-drop, swimlanes, and templating for agile workflows.
 
 {% promptcards %}
 {% promptcard Data Binding %}
-#sf_blazor_assistant How do I bind local or remote data to the Syncfusion Blazor Kanban board?
+#sf_blazor_assistant How do I bind local or remote data to the Blazor Kanban board?
 {% endpromptcard %}
 {% promptcard Sorting %}
 #sf_blazor_assistant Enable sorting of cards within columns in the Kanban component.
@@ -189,11 +189,11 @@ The Syncfusion Blazor Kanban organizes tasks in columns with drag-and-drop, swim
 
 ### RichTextEditor
 
-The Syncfusion Blazor RichTextEditor offers a modern WYSIWYG editor with extensive formatting, media, and integration features.
+The Blazor RichTextEditor offers a modern WYSIWYG editor with extensive formatting, media, and integration features.
 
 {% promptcards %}
 {% promptcard Toolbar Configuration %}
-#sf_blazor_assistant How do I customize the toolbar options in the Syncfusion RichTextEditor?
+#sf_blazor_assistant How do I customize the toolbar options in the RichTextEditor?
 {% endpromptcard %}
 {% promptcard Link Manipulation %}
 #sf_blazor_assistant Show me how to add, edit, and remove hyperlinks in RichTextEditor content.
@@ -223,11 +223,11 @@ The Syncfusion Blazor RichTextEditor offers a modern WYSIWYG editor with extensi
 
 ### Calendar
 
-The Syncfusion Blazor Calendar supports flexible date selection, localization, and custom rendering.
+The Blazor Calendar supports flexible date selection, localization, and custom rendering.
 
 {% promptcards %}
 {% promptcard Date Range Selection %}
-#sf_blazor_assistant How do I enable date range selection in the Syncfusion Blazor Calendar?
+#sf_blazor_assistant How do I enable date range selection in the Blazor Calendar?
 {% endpromptcard %}
 {% promptcard Globalization Support %}
 #sf_blazor_assistant Configure the Calendar to support multiple cultures and languages.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: WebAssembly Performance in Blazor DataGrid Component | Syncfusion
-description: Boost Blazor WebAssembly performance in Syncfusion DataGrid using PreventRender, paging, virtualization, and key optimization techniques.
+title: WebAssembly Performance in Blazor DataGrid Component | Syncfusion®
+description: Boost Blazor WebAssembly performance in DataGrid using PreventRender, paging, virtualization, and key optimization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
