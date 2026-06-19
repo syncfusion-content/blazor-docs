@@ -15,14 +15,26 @@ This guide explains how to create a Blazor Web App with authentication enabled. 
 
 To create a new Blazor Web App, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code).
 
-Ensure the **Configure for HTTPS** option is enabled, and select **Individual Accounts** as the authentication type. This enables authentication support without persisting user data in a local database.
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Create a Blazor WebAssembly App using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+- Ensure the **Configure for HTTPS** option is enabled.
+- Select **Individual Accounts** as the authentication type.  
+  This enables authentication support without persisting user data in a local database.
 
 ![Project-setting](images/project-setting.webp)
 
-If using Visual Studio Code, run the following commands in your command line interface (CLI):
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Run the following command to create a new Blazor Web App with authentication support.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorAppAuthentication --interactivity Server --auth Individual
 cd BlazorAppAuthentication
@@ -30,6 +42,28 @@ dotnet run
 
 {% endhighlight %}
 {% endtabs %}
+
+Alternatively, you can create the project using [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Run the following command to create and run a Blazor Web App with authentication support.
+
+{% tabs %}
+{% highlight bash tabtitle="Command Prompt" %}
+
+dotnet new blazor -o BlazorAppAuthentication --interactivity Server --auth Individual
+cd BlazorAppAuthentication
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Register a User
 
@@ -55,18 +89,59 @@ Once migrations are complete, refresh the page. You should see your email addres
 
 ### Install NuGet packages
 
-To add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to your application, open the NuGet Package Manager in Visual Studio **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**. Search and install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) packages.
+Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-Alternatively, install the required packages by using the following .NET CLI commands.
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+1. Go to **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes`) and install them.
+
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight razor tabtitle="Package Manager Console" %}
+
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Open the terminal and run the following commands.
+
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Open the command prompt and run the following commands.
+
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ### Register Blazor Service
 
