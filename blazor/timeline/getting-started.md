@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Timeline in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Timeline component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Timeline component in Blazor WebAssembly Application.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -158,10 +158,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Timeline component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Timeline](https://www.syncfusion.com/blazor-components/blazor-timeline) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Timeline](https://www.syncfusion.com/blazor-components/blazor-timeline) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Layouts
 
