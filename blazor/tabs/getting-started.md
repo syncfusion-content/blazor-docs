@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Tabs in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Tabs component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Tabs component in Blazor WebAssembly Application.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -157,10 +157,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Tabs component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -240,7 +240,7 @@ N> `ContentTemplate` property supports `RenderFragment` type to render content.
 The following code explains how to initialize tab content using `ContentTemplate`.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -283,7 +283,7 @@ The following code explains how to initialize tab content using `ContentTemplate
 The property [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) supports two way property binding, in the following code example if either the value is changed in numeric text box or selected tab item is changed, it will reflect in both the value of numeric text box and selected tab item.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Navigations
