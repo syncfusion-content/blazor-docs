@@ -52,7 +52,7 @@ Choice Chip allows you to select a single chip from the set of Chip/ChipItems. I
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrHtxCHfTrRPhGu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Single Selection in Blazor Chip](./images/blazor-chip-single-selection.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrHtxCHfTrRPhGu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Single Selection in Blazor Chip](./images/blazor-chip-single-selection.webp)" %}
 
 ## Filter Chip
 
@@ -71,7 +71,7 @@ Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNRMdffVaXBNI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNRMdffVaXBNI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.webp)" %}
 
 ## Action Chip
 
