@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting ASP.NET Core Minimal API to Scheduler Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component supports binding data from ASP.NET Core [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis) endpoints hosted within the same application. This approach enables seamless integration of appointment data with full CRUD (Create, Read, Update, Delete) functionality without requiring a separate backend project.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component supports binding data from ASP.NET Core [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis) endpoints hosted within the same application. This approach enables seamless integration of appointment data with full CRUD (Create, Read, Update, Delete) functionality without requiring a separate backend project.
 
 This documentation explains how to create a Blazor Server application that hosts Minimal API endpoints in the same project, enabling the Scheduler component to perform CRUD operations on in-memory appointment data through RESTful HTTP requests.
 
@@ -26,7 +26,7 @@ Install the following software and packages before starting the process:
 
 ## Binding data from Minimal API endpoints
 
-This section explains how to create an ASP.NET Core Minimal API backend within a Blazor Server application and bind appointment data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. The following steps demonstrate the actual project creation flow.
+This section explains how to create an ASP.NET Core Minimal API backend within a Blazor Server application and bind appointment data to the Blazor Scheduler component. The following steps demonstrate the actual project creation flow.
 
 ### Step 1: Create a Blazor Web App
 

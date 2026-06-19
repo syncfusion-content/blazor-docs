@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Scheduler Component
 
-The Scheduler uses [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which supports both RESTful data service binding and datasource collections to bind data to the Scheduler. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property of Scheduler can be assigned either with the instance of `DataManager` or list of datasource collection.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which supports both RESTful data service binding and datasource collections to bind data to the Scheduler. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property of Scheduler can be assigned either with the instance of `DataManager` or list of datasource collection.
 
 It supports the following kinds of data binding methods:
 * List binding
@@ -417,7 +417,7 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
-N> You can find the complete procedures to perform CRUD actions with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
+N> You can find the complete procedures to perform CRUD actions with the Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
 ## Remote data
 
@@ -1379,5 +1379,5 @@ N> The runnable sample for the above code will be available [here](https://githu
 
 ## See also
 
-* [How to Access Microsoft Graph Calendar Events with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
+* [How to Access Microsoft Graph Calendar Events with Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
 * [Easy Steps to Synchronize JIRA Calendar Tasks with the Blazor Scheduler](https://www.syncfusion.com/blogs/post/easy-steps-to-synchronize-jira-calendar-tasks-with-the-blazor-scheduler.aspx)

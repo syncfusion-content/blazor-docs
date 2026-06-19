@@ -9,7 +9,7 @@ documentation: ug
 
 # Editor Window Customization in Blazor Scheduler Component
 
-Scheduler makes use of popups and dialog to display the required notifications, as well as includes an editor window with event fields for making the appointment creation and editing process easier. You can also easily customize the editor window and the fields present in it, and can also apply validations on those fields.
+[Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) makes use of popups and dialog to display the required notifications, as well as includes an editor window with event fields for making the appointment creation and editing process easier. You can also easily customize the editor window and the fields present in it, and can also apply validations on those fields.
 
 ## Event editor
 

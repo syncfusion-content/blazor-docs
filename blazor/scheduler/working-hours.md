@@ -9,7 +9,7 @@ documentation: ug
 
 # Working Days and Hours in Blazor Scheduler Component
 
-The Scheduler can be customized on various aspects as well as it inherits almost all the calendar-specific features such as options,
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) can be customized on various aspects as well as it inherits almost all the calendar-specific features such as options,
 
 - To set custom time range display on Scheduler
 - To set different working hours

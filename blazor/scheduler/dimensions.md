@@ -9,7 +9,7 @@ documentation: ug
 
 # Scheduler Dimensions in Blazor Scheduler Component
 
-The Scheduler dimensions refers to both height and width of the entire layout and it accepts 3 types of values.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) dimensions refers to both height and width of the entire layout and it accepts 3 types of values.
 
 * auto
 * pixel
