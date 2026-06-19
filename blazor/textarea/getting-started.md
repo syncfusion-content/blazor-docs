@@ -157,10 +157,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor TextArea component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor TextArea](https://www.syncfusion.com/blazor-components/blazor-textarea) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TextArea](https://www.syncfusion.com/blazor-components/blazor-textarea) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfTextArea Placeholder='Add your Comments'></SfTextArea>
 
@@ -174,7 +174,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Te
 The floating label displays the placeholder as a label above the TextArea when focused or when a value is present. Configure this behavior using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
 
