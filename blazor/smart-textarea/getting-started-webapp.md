@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Smart TextArea in Blazor Web App | Syncfusion
+title: Getting Started with Blazor Smart TextArea in Web App | Syncfusion
 description: Checkout and learn here all about Getting started with Blazor Smart TextArea component in Blazor Webapp and more.
 platform: Blazor
 platform: Blazor
@@ -465,12 +465,12 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Smart TextArea component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Index.razor**) and add the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component inside the razor file.
 
 N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
 
