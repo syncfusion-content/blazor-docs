@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Date Format in Blazor DatePicker Component | Syncfusion®
+title: Date Format in Blazor DatePicker Component | Syncfusion®
 description: Checkout and learn here all the features about Date Format in Blazor DatePicker component and much more.
 platform: Blazor
 control: DatePicker
