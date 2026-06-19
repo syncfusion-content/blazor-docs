@@ -48,7 +48,7 @@ Blazor themes are available in two variants to help optimize application perform
 
 ### Standard theme files
 
-The default theme files (for example, `<theme_name>.css`) include styling for both normal and bigger size modes. This provides full UI flexibility but results in a larger file size.
+The default theme files (for example, `<theme_name>.css`) include styling for both **normal** and **bigger** size modes. This provides full UI flexibility but results in a larger file size.
 
 ### Lite theme files
 
@@ -1027,7 +1027,7 @@ Below table lists the importing theme path for the individual components.
 
 ## Render Blazor components offline using Material and Tailwind themes
 
-Material and Tailwind themes use the online Roboto font by default. If your application needs to work offline or in a local network without internet access, follow these steps to use offline fonts.
+**Material** and **Tailwind** themes use the online `Roboto` font by default. If your application needs to work offline or in a local network without internet access, follow these steps to use offline fonts.
 
 ### Download customized styles using Custom Resource Generator (CRG)
 
@@ -1037,7 +1037,7 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
    
    ![Select styles folder](images/crg-styles.webp)
 
-3. Navigate to the styles folder. For Material and Tailwind themes, you'll find CSS files and a **customized** folder. The CSS files in the **customized** folder don't contain online Google Font dependencies.
+3. Navigate to the **styles** folder. For Material and Tailwind themes, you'll find CSS files and a **customized** folder. The CSS files in the **customized** folder don't contain online Google Font dependencies.
    
    ![Open customized folder](images/customized-folder-crg.webp)
 
@@ -1053,10 +1053,10 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
     * For **Blazor WebAssembly Standalone App**, add the reference in `~/wwwroot/index.html`.
 
     ```html
-        <head>
-            ....
-            <link href="material.min.css" rel="stylesheet" />
-        </head>
+    <head>
+        ....
+        <link href="material.min.css" rel="stylesheet" />
+    </head>
     ```
 
 ### Use customized styles from the `Syncfusion.Blazor.Themes` package and CDN
