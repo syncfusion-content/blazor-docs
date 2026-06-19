@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor AppBar Component
 
-To modify the AppBar appearance, you need to override the default CSS of the AppBar component. Find the list of CSS classes and their corresponding sections in the AppBar component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the AppBar appearance, you need to override the default CSS of the AppBar component. The following table lists the CSS classes and their purposes in the AppBar component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class |
 |-----|----- |
@@ -18,14 +18,14 @@ To modify the AppBar appearance, you need to override the default CSS of the App
 |.e-appbar.e-dense|To customize the dense appbar.|
 |.e-appbar.e-light|To customize the light appbar.|
 |.e-appbar.e-dark|To customize the dark appbar.|
-|.e-appbar.e-primary|To customize the dark appbar.|
+|.e-appbar.e-primary|To customize the primary appbar.|
 |.e-appbar.e-inherit|To customize the inherit appbar.|
 
 N> You can change the prominent AppBar height if larger titles, images, or texts are used.
 
 ## CssClass
 
-CssClass is used for AppBar customization based on the custom class. In the example below, the AppBar background and color are customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_CssClass) property.
+Use the CssClass property to apply custom styles to the AppBar. In the example below, the AppBar background and color are customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

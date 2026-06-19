@@ -11,9 +11,9 @@ documentation: ug
 
 ## Spacer
 
-[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html)  is used to provide spacing between the AppBar contents which gives additional space to the content layout.
+[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html)  is used to add spacing between AppBar items, improving layout alignment.
 
-The following example depicts the code to provide spacing between the home and pan buttons in the AppBar:
+The following example shows the code to provide spacing between the home and pan buttons in the AppBar:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -69,7 +69,7 @@ The following example depicts the code to provide a vertical line between a grou
 
 ## Media Query
 
-Media Query is used to adjusting the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
+Media query is used to adjust the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -154,7 +154,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
         </SfMenu>
         <SfMenu CssClass="e-inherit" TValue="MenuItem">
             <MenuItems>
-                <MenuItem Text="Carrers"></MenuItem>
+                <MenuItem Text="Careers"></MenuItem>
             </MenuItems>
         </SfMenu>
         <AppBarSpacer></AppBarSpacer>
@@ -206,7 +206,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLHDxCMLcgrSrvt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Buttons.](./images/blazor-appbar-buttons.webp)" %}
 
-## Designing AppBar with SideBar
+## Designing AppBar with Sidebar
 
 AppBar toggle button used to control the expand and collapse state of **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
 
