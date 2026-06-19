@@ -162,7 +162,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TreeView][Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
