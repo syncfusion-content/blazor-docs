@@ -12,7 +12,9 @@ keywords: Blazor Chart series label, series label, chart labels, inline series l
 
 The series label feature displays the name of each series directly within the chart area. This improves readability by helping users identify series inline and reduces reliance on the legend.
 
-This feature is especially useful in multi-series visualizations and exported charts, where quick in-chart identification is important. It is currently supported for Line, Area, Scatter, Column, and Bar series, as well as Polar Line and Radar Line series. Series labels can be enabled and customized using the `SeriesLabelSettings` property.
+This feature is especially useful in multi-series visualizations and exported charts, where quick in-chart identification is important.Series labels can be enabled and customized using the `SeriesLabelSettings` property.
+
+N> **Supported Series Types:** Series labels are available for Line, Area, Scatter, Column, Bar, Polar Line, and Radar Line chart types.
 
 ## Enable series labels
 
@@ -81,7 +83,7 @@ To display series labels, set the `Visible` property of `SeriesLabelSettings` to
 
 ```
 
-Need to add the preview sample
+<!-- TODO: Add Blazor Playground sample after release -->
 ![Blazor line chart displaying inline series labels](images/series-label/blazor-line-chart-series-label.webp)
 
 ## Customization
@@ -96,7 +98,7 @@ In the `SeriesLabelSettings`:
 * `Visible`: Enables or disables the display of series labels. Set to `true` to display the label for the corresponding series.
 * `Text`: Specifies the custom text to be displayed in the series label. If this property is not set, the label displays the corresponding series name by default.
 * `Background`: Specifies the background color of the series label. This helps the label stand out clearly within the chart area.
-* `Opacity`: Specifies the transparency level of the series label. The accepted range is from 0 to 1, where 0 represents full transparency and 1 represents full opacity.
+* `Opacity`: Specifies the transparency level of the series label. The accepted range is from 0 to 1, where 0 represents full transparency and 1 represents full opacity. For example, set `Opacity="0.5"` for 50% transparency.
 * `ShowOverlapText`: Determines whether overlapping series labels should be displayed. This is useful when labels overlap because the corresponding series are positioned close to one another.
 
 In the `SeriesLabelBorder`:
@@ -107,7 +109,7 @@ In the `SeriesLabelFont`:
 * `Size`: Specifies the font size of the label text.
 * `Color`: Specifies the font color of the label text.
 * `FontFamily`: Specifies the font family of the label text.
-* `FontWeight`: Specifies the font weight of the label text.
+* `FontWeight`: Specifies the font weight of the label text. Valid values include `normal`, `bold`, `600`, `700`, etc. (CSS font-weight format).
 
 ```cshtml
 
@@ -181,7 +183,7 @@ In the `SeriesLabelFont`:
 
 ```
 
-Need to add the preview sample
+<!-- TODO: Add Blazor Playground sample after release -->
 ![Blazor line chart with customized series label background, font, and border](images/series-label/blazor-line-chart-series-label-customization.webp)
 
 ## See also
