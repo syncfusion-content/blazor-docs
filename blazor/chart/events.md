@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Charts Component
 
-This section provides a list of chart component events that are triggered by corresponding chart actions.
+This section provides a list of [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component events that are triggered by corresponding chart actions.
 
 The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Multiple Panes in Blazor Charts Component
 
-The chart area can be divided into multiple panes using [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) settings.
+The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) area can be divided into multiple panes using [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html) and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html) settings.
 
 ## Rows
 

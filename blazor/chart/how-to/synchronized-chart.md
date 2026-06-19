@@ -11,7 +11,7 @@ documentation: ug
 
 # Synchronized Chart in Blazor Charts Component
 
-A synchronized chart has the ability to access and interact with two or more charts at the same time. This means that actions performed on one chart, such as positioning a cursor, clicking on a specific point, or activating a tooltip, are reflected simultaneously on corresponding positions or data points across other synchronized charts based on their X-Y coordinates. 
+A synchronized [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) has the ability to access and interact with two or more charts at the same time. This means that actions performed on one chart, such as positioning a cursor, clicking on a specific point, or activating a tooltip, are reflected simultaneously on corresponding positions or data points across other synchronized charts based on their X-Y coordinates. 
 
 ## Tooltip synchronization
 

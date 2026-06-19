@@ -23,7 +23,7 @@ N>
 
 ## Size for container
 
-The chart can be scaled to fit the container. As shown in the below example, the size can be set using CSS.
+The [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) can be scaled to fit the container. As shown in the below example, the size can be set using CSS.
 
 ```cshtml
 

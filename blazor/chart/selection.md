@@ -11,7 +11,7 @@ documentation: ug
 
 # Selection in Blazor Charts Component
 
-The chart provides selection support for the series and its data points on mouse or touch action.
+The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) provides selection support for the series and its data points on mouse or touch action.
 
 N> When clicked on the data points, the corresponding series legend will also be selected.
 
