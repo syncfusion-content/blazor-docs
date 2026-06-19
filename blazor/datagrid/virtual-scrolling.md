@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor DataGrid | Syncfusion
-description: Learn how to implement virtualization in the Syncfusion Blazor DataGrid, including virtual scrolling, paging, and performance optimization techniques.
+title: Virtualization in Blazor DataGrid | Syncfusion®
+description: Learn how to implement virtualization in the Blazor DataGrid, including virtual scrolling, paging, and performance optimization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
