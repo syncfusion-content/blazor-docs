@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started Blazor Toggle Switch Button in Blazor Web App | Syncfusion
+title: Get Started with Blazor Toggle Switch Button in Web App | Syncfusion
 description: Check out and learn the documentation for getting started with Blazor Toggle Switch Button Components in Blazor Web App.
 platform: Blazor
 control: Toggle Switch Button
