@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor File Manager Component in Server App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -176,7 +176,9 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Manager component in the default web browser.
+
+N> Looking for the full Blazor File Manager Component component overview, features, pricing, and documentation? Visit the [Blazor File Manager Component](https://www.syncfusion.com/blazor-components/blazor-file-manager) page.
 
 ## See Also
 
@@ -185,3 +187,4 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
 [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+

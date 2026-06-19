@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor FileManager component
 
-This section explains you through the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component into your Blazor MAUI application using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section explains you through the step-by-step process of integrating the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component into your Blazor MAUI application using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -153,3 +153,5 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor File Manager Component](images/blazor-filemanager-component.webp)
+
+N> Looking for the full Blazor File Manager Component component overview, features, pricing, and documentation? Visit the [Blazor File Manager Component](https://www.syncfusion.com/blazor-components/blazor-file-manager) page.

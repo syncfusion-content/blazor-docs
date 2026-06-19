@@ -11,11 +11,11 @@ documentation: ug
 
 ## Introduction to Azure Blob Storage
 
-Azure Blob Storage is Microsoft Azure's object storage solution for the cloud, optimized for storing massive amounts of unstructured data. In this guide, the Syncfusion Blazor File Manager connects to Blob Storage through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
+Azure Blob Storage is Microsoft Azure's object storage solution for the cloud, optimized for storing massive amounts of unstructured data. In this guide, the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) connects to Blob Storage through an ASP.NET Core backend so you can securely browse and perform file operations in the File Manager component.
 
 ## Prerequisites
 
-Before you integrate Azure Blob Storage with the Syncfusion Blazor File Manager, ensure you have:
+Before you integrate Azure Blob Storage with the Blazor File Manager, ensure you have:
 - An active Microsoft Azure subscription
 - A Storage Account with Blob service enabled
 - A Blob Container and an optional root folder inside that container
@@ -34,7 +34,7 @@ Clone the [Azure File Provider](https://github.com/SyncfusionExamples/azure-aspc
 git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider ej2-azure-aspcore-file-provider
 ```
 
-N> This Azure Blob Storage provider for the Syncfusion Blazor File Manager is intended for demonstration and evaluation only. Before using it in production, consult your security team and complete a security review.
+N> This Azure Blob Storage provider for the Blazor File Manager is intended for demonstration and evaluation only. Before using it in production, consult your security team and complete a security review.
 
 To initialize a local service with the above-mentioned file operations, create a folder named `Controllers` in the server project. Then, create a `.cs` file in the `Controllers` folder and add the required file operation code from [AzureProviderController.cs](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs). You can also find the method-level details for this provider in the same repository.
 
@@ -91,7 +91,7 @@ Now, build and run the Azure File Service provider project. It will be hosted in
 </SfFileManager>
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Azure cloud file system provider, initialize the Azure cloud provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Blazor File Manager component using the Azure cloud file system provider, initialize the Azure cloud provider in the controller.
 
 ## Supported File Operations
 

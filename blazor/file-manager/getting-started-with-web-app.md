@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor File Manager Component in Blazor Web App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -156,7 +156,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component
+## Add Blazor File Manager component
 
 * Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor File Manager component inside the razor file.
 * If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
@@ -195,6 +195,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
     dotnet run
     ```
 3. The application will start and display in your default web browser.
+
+N> Looking for the full Blazor File Manager Component component overview, features, pricing, and documentation? Visit the [Blazor File Manager Component](https://www.syncfusion.com/blazor-components/blazor-file-manager) page.
 
 ## See also
 

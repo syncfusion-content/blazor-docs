@@ -9,7 +9,7 @@ documentation: ug
 
 # Nested items in Blazor File Manager Component
 
-The File Manager component can be rendered within other components, such as Dialog, Tab, and more.
+The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component can be rendered within other components, such as Dialog, Tab, and more.
 
 * [Adding File Manager inside the Dialog](#adding-file-manager-inside-the-dialog)
 * [Adding File Manager inside the Tab](#adding-file-manager-inside-the-tab)
@@ -180,7 +180,7 @@ The following example shows how to render the SfFileManager component inside the
 
 ```
 
-![Syncfusion Blazor File Manager displayed inside a dialog](../images/blazor-filemanager-inside-dialog.webp)
+![Blazor File Manager displayed inside a dialog](../images/blazor-filemanager-inside-dialog.webp)
 
 ## Adding File Manager inside the Tab
 
@@ -231,4 +231,4 @@ The following example demonstrates how to integrate the Blazor File Manager comp
 
 ```
 
-![Syncfusion Blazor File Manager displayed inside a tab](../images/blazor-filemanager-inside-tab.webp)
+![Blazor File Manager displayed inside a tab](../images/blazor-filemanager-inside-tab.webp)

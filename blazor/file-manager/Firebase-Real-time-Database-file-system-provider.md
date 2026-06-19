@@ -9,7 +9,7 @@ documentation: ug
 
 # Firebase file system provider
 
-The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the File Manager file system in a cloud database as JSON representation.
+The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) file system in a cloud database as JSON representation.
 
 ### Generate Secret access key from service account
 
@@ -135,7 +135,7 @@ After configuring the Firebase Real time Database service link, build and run th
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Firebase file system provider, you need to initialize the Firebase file system provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Blazor File Manager component using the Firebase file system provider, you need to initialize the Firebase file system provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FirebaseProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider/blob/master/Controllers/FirebaseProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

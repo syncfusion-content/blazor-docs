@@ -9,7 +9,7 @@ documentation: ug
 
 # Views in Blazor File Manager component
 
-The Blazor File Manager component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
+The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
 
 ## Large Icons View
 
