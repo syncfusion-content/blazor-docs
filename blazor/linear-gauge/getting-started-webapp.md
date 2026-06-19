@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor Linear Gauge in Web App | Syncfusion
-description: Check out the documentation for getting started with Blazor Linear Gauge Component Components in Web App.
+description: Check out the documentation for getting started with Blazor Linear Gauge Component in Blazor Web Application.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
