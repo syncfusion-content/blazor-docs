@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Smith Chart in Blazor WASM App | Syncfusion
+title: Get Started with Blazor Smith Chart in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Smith Chart component in Blazor WebAssembly Application.
 platform: Blazor
 control: Smith Chart
@@ -53,7 +53,7 @@ dotnet new blazorwasm -o BlazorApp
 
 {% endtabcontents %}
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install [Syncfusion.Blazor.SmithChart](https://www.nuget.org/packages/Syncfusion.Blazor.SmithChart/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -61,7 +61,7 @@ Install [Syncfusion.Blazor.SmithChart](https://www.nuget.org/packages/Syncfusion
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.SmithChart`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
@@ -151,10 +151,10 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Blazor Smith Chart component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Smith Chart](https://www.syncfusion.com/blazor-components/blazor-smith-chart) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Smith Chart](https://www.syncfusion.com/blazor-components/blazor-smith-chart) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
@@ -179,7 +179,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 * Second series `Transmission2` shows `Points` bound series.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
@@ -284,7 +284,7 @@ dotnet run
 Title can be added to the Smith Chart to provide a quick information to the users about the context of the rendered component. Add a title by using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html#Syncfusion_Blazor_Charts_SmithChartTitle_Text) property in the [SmithChartTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
@@ -315,7 +315,7 @@ N> Refer to the [code block](#adding-series-to-smith-chart) to know about the pr
 To display marker for particular series, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithChartSeriesMarker_Visible) property to **true** in the [SmithChartSeriesMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
@@ -347,7 +347,7 @@ N> Refer to the [code block](#adding-series-to-smith-chart) to know about the pr
 To display data label for particular marker series, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Visible) property to **true** in the [SmithChartSeriesDatalabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
@@ -381,7 +381,7 @@ N> Refer to the [code block](#adding-series-to-smith-chart) to know the property
 Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Visible) property to **true** in the [SmithChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html). The legend name can be changed by using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Name) property in the [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 
@@ -415,7 +415,7 @@ N> Refer to the [code block](#adding-series-to-smith-chart) to know the property
 When space constraints prevents from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in the [SmithChartSeriesTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html).
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Charts
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Smith Chart in Blazor Web App | Syncfusion
+title: Get Started with Blazor Smith Chart in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Blazor Smith Chart Component Components in Blazor Web App.
 platform: Blazor
 control: Smith Chart
@@ -55,7 +55,7 @@ dotnet new blazor -o BlazorWebApp --interactivity Auto
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install the [Syncfusion.Blazor.SmithChart](https://www.nuget.org/packages/Syncfusion.Blazor.SmithChart) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
@@ -63,7 +63,7 @@ Install the [Syncfusion.Blazor.SmithChart](https://www.nuget.org/packages/Syncfu
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.SmithChart`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
