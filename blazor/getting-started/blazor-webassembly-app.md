@@ -159,7 +159,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
+...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -212,13 +214,13 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor DataGrid component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor DataGrid component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and run the following command.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -232,7 +234,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and run the following command.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
