@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open a Dialog on Item click in Blazor ContextMenu | Syncfusion
-description: Learn here all about Open a dialog on Context Menu item click in Syncfusion Blazor ContextMenu component and more.
+title: Open a Dialog on Item click in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Open a dialog on Context Menu item click in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
