@@ -238,7 +238,7 @@ You can place the `<sf-grid>` HTML tag directly inside any `.razor` (e.g `Index.
 {% endhighlight %}
 {% endtabs %}
 
-N> `<sf-grid>` is the wrapper web component, not the Syncfusion grid tag itself.
+N> `<sf-grid>` is the wrapper web component, not the grid tag itself.
 
 ## Run the application
 
@@ -258,7 +258,7 @@ Once the compilation is complete, open your browser and navigate to the hosted l
 
 ### Angular build fails (Bundle Budget Exceeded)
 
-If the Angular build fails due to the bundle size exceeding the configured budget, consider importing only the *required Syncfusion modules, removing unused Angular features, avoiding wildcard imports, and enabling lazy loading* wherever possible. If the issue persists after these optimizations, increase the bundle budget limits in the `angular.json` file to accommodate the application size.
+If the Angular build fails due to the bundle size exceeding the configured budget, consider importing only the *required modules, removing unused Angular features, avoiding wildcard imports, and enabling lazy loading* wherever possible. If the issue persists after these optimizations, increase the bundle budget limits in the `angular.json` file to accommodate the application size.
 
 ## See also
 
