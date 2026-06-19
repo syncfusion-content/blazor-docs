@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Image Editor in Web App | Syncfusion
-description: Learn how to add and configure the Syncfusion Blazor Image Editor component in a Blazor Web App using Visual Studio or Visual Studio Code.
+description: Learn how to add and configure the Blazor Image Editor component in a Blazor Web App using Visual Studio or Visual Studio Code.
 platform: Blazor
 component: Image Editor
 documentation: ug
