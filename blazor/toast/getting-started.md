@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor Toast in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Toast component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Toast component in Blazor WebAssembly Application.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Getting Started with Blazor Toast in Blazor WASM App
+# Getting Started with Blazor Toast Component in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -157,10 +157,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Toast component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Notifications
 
