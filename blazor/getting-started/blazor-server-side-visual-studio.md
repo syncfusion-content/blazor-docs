@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Server App in Visual Studio | Syncfusion®
+title: Getting started with Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
