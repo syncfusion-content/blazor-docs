@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Started Smart Rich Text Editor in Blazor Server App | Syncfusion
-description: Checkout and learn here all about Getting started with Blazor Smart Rich Text Editor component in Blazor Server App and more.
+title: Getting Started with Blazor Smart Rich Text Editor | Syncfusion
+description: Check out and learn here all about Getting started with Blazor Smart Rich Text Editor component in Blazor Server App and more.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -207,7 +207,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 * For **OpenAI**, obtain an API key from [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) and specify the desired model (e.g., `gpt-3.5-turbo`, `gpt-4`). Store the API key securely in a configuration file.
 
-* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
+* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 13 14 15 16 17 18 19" %}
@@ -304,7 +304,7 @@ dotnet add package Azure.AI.OpenAI
 
 * For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAIKey`, `azureOpenAIEndpoint` and `azureOpenAIModel` will all be provided to you.
 
-* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Web app.
+* To configure the AI service, add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="3 4 5 6 14 15 16 17 18 19 20 21 22 23 24" %}

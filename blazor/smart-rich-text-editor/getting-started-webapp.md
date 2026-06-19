@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Smart Rich Text Editor in Blazor Web App | Syncfusion
-description: Learn how to create and run Blazor Smart Rich Text Editor component in Blazor Web App with server interactivity.
+title: Getting Started with Blazor Smart Rich Text Editor | Syncfusion
+description: Learn how to create, configure, and run the Blazor Smart Rich Text Editor component in a Blazor Web application.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
