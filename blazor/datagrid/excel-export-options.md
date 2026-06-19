@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Export options in Blazor DataGrid | Syncfusion
-description: Learn about Excel export options in Syncfusion Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
+title: Excel Export options in Blazor DataGrid | Syncfusion®
+description: Learn about Excel export options in Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1693,7 +1693,7 @@ public class OrderData
 
 ### Enable filtering in exported file
 
-The Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [Syncfusion XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
+The Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
 
 This method is helpful when the exported **Excel** file needs to support data analysis, sorting, and filtering immediately after download, without requiring any additional manual setup.
 

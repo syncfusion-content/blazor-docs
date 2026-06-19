@@ -235,7 +235,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBJZMreLmNLRbiw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor AutoComplete Component](./images/blazor-autocomplete-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxNnWWrbWyxKcC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor AutoComplete Component](./images/blazor-autocomplete-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AutoComplete)
 
@@ -286,7 +286,7 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhfjCLSBGLRJZjX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVdNnMMrlMFklCA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.webp)" %}
 
 ## Configure the suggestion list
 
@@ -302,7 +302,7 @@ By default, the suggestion list width automatically matches the AutoComplete inp
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVJXCByVQxticee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVnZHssrPhBeVyl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.webp)" %}
 
 ## See also
 

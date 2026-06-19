@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cascading in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Cascading in Syncfusion Blazor DropDown List component and much more.
+title: Cascading in Blazor DropDown List Component | Syncfusion®
+description: Checkout and learn here all about Cascading in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug
