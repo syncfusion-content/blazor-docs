@@ -160,10 +160,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor TreeGrid component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.TreeGrid;
 
