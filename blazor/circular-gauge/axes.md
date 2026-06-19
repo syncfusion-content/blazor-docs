@@ -189,7 +189,7 @@ The labels can be moved using the [Offset](https://help.syncfusion.com/cr/blazor
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRZnMHpHVnXAbO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Position of Blazor Circular Gauge](./images/blazor-circulargauge-label-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLdXHWYLJaMUneN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Position of Blazor Circular Gauge](./images/blazor-circulargauge-label-position.webp)" %}
 
 ### Auto angle
 
@@ -236,7 +236,7 @@ When an axis makes a complete circle, then the first and last labels of the axis
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBRtninzRgjYqwt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Smart Labels](./images/blazor-circulargauge-smart-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhxtRskrSXoTExk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Smart Labels](./images/blazor-circulargauge-smart-label.webp)" %}
 
 ### Label format
 
@@ -253,7 +253,7 @@ The axis labels can be formatted using the [Format](https://help.syncfusion.com/
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBxZdixJnKHPExq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Format in Blazor Circular Gauge](./images/blazor-circulargauge-label-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVxtnWuBeMLiDJa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Format in Blazor Circular Gauge](./images/blazor-circulargauge-label-format.webp)" %}
 
 The following table describes the result of applying some commonly used label formats on numeric values.
 
