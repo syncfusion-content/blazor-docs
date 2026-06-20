@@ -209,7 +209,7 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRZdMVgPGhfPSi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.webp)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart). Looking for the full Blazor Charts overview, features, pricing, and documentation? Visit the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) page.
 
 ## See also
 
