@@ -5,6 +5,7 @@ description: Checkout and learn about the documentation for getting started with
 platform: Blazor
 control: Diagram Component
 documentation: ug
+canonical_url: "https://www.syncfusion.com/blazor-components/blazor-diagram"
 ---
 
 # Getting Started with Diagram Component in the Blazor WASM App
