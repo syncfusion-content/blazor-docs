@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor Accordion component and more.
+title: Style and Appearance in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about Style and Appearance in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -87,7 +87,7 @@ Use the following CSS to customize the selected accordion item and focus state.
 
 ```CSS
 
-.e-accordion .e-acrdn-item.e-select.e-selected.e-expand-state>.e-acrdn-header, 
+.e-accordion .e-acrdn-item.e-select.e-selected.e-expand-state>.e-acrdn-header,
 .e-accordion .e-acrdn-item.e-select.e-expand-state>.e-acrdn-header,
 .e-accordion .e-acrdn-item.e-selected.e-select>.e-acrdn-header,
 .e-accordion .e-acrdn-item.e-selected.e-select.e-expand-state>.e-acrdn-header:focus {
@@ -144,4 +144,4 @@ You can customize each accordion item header by setting [AccordionItem.CssClass]
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqWBsAATytYBFq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhRDxCWsbylvYtX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.webp)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Nested blocks in Blazor Block Editor Component | Syncfusion
-description: Learn about nested blocks in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
+title: Nested blocks in Blazor Block Editor Component | Syncfusion®
+description: Learn about nested blocks in the Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
