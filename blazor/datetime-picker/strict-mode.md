@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Strict Mode in Blazor Datetime Picker Component | Syncfusion
-description: Learn how StrictMode works in the Syncfusion Blazor DateTimePicker, including behavior for invalid and out-of-range input with Min and Max date-time limits.
+title: Strict Mode in Blazor Datetime Picker Component | Syncfusion®
+description: Learn how StrictMode works in the Blazor DateTimePicker, including behavior for invalid and out-of-range input with Min and Max date-time limits.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
