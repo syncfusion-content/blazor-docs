@@ -227,7 +227,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Carousel component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRZHsVUrMKRirX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Component.](images/blazor-carousel-getting-started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRZHsVUrMKRirX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Component.](images/blazor-carousel-getting-started.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
 
