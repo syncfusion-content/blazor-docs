@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Diagram Component in Blazor Server App|Syncfusion
+title: Getting Started with Diagram in Blazor Server App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor Server App.
 platform: Blazor
 control: Diagram Component
@@ -10,9 +10,9 @@ canonical_url: "https://www.syncfusion.com/blazor-components/blazor-diagram"
 
 # Getting Started with Diagram Component in the Blazor Server App.
 
-This section explains the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component into your Blazor Server app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
+This section explains the step-by-step process of integrating the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component into your Blazor Server app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 
@@ -24,10 +24,10 @@ This section explains the step-by-step process of integrating the [Syncfusion<su
 
 ## Create a new Blazor App in Visual Studio
 
-Create a **Blazor Server App** using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+Create a **Blazor Server App** using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
 N> Configure the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) is **Server** and Choose the appropriate [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a project.
-<br/> If you use the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), a sample application can be generated automatically.
+<br/> If you use the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), a sample application can be generated automatically.
 
 {% endtabcontent %}
 
@@ -39,10 +39,10 @@ N> Configure the [Interactive render mode](https://learn.microsoft.com/en-us/asp
 
 ## Create a new Blazor App in Visual Studio Code
 
-Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
+Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
 
 N> Configure the [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) is **Server** and Choose the appropriate [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a project.
-<br/> If you use the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), a sample application can be generated automatically.
+<br/> If you use the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio), a sample application can be generated automatically.
 
 {% endtabcontent %}
 
@@ -81,7 +81,7 @@ N> See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet
 
 {% endtabcontents %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install required Blazor packages
 
 {% tabcontents %}
 
@@ -139,9 +139,9 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file.
+Register the Blazor service in the **Program.cs** file.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -189,7 +189,7 @@ If your create application uses `Per page/component` interactivity, add this at 
 N> If the render mode is set to **None**, the diagram will not render.
 <br/> If the `Interactivity Location` is set to **Global**, this step is not required.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component
+## Add Blazor Diagram component
 
 Add the DiagramComponent to create an empty diagram.
 
@@ -309,7 +309,7 @@ In this example:
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application in Visual Studio. 
 * Run the application using `dotnet run` command in Command prompt.
-* This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
+* This will render the Blazor Diagram component in the default web browser.
 
 The output will appear as follows:
 
