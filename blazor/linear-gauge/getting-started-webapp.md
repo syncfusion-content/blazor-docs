@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Linear Gauge in Blazor Web App
 
-The Blazor Linear Gauge is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
+The Blazor [Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 
 This section briefly explains about how to include [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -31,6 +31,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -47,6 +49,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +104,6 @@ Open the command prompt and run the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
-
 
 dotnet add package Syncfusion.Blazor.LinearGauge -v {{ site.releaseversion }}
 
@@ -194,6 +197,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd..
 cd BlazorWebApp
 dotnet run
 
@@ -209,6 +213,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd..
 cd BlazorWebApp
 dotnet run
 
