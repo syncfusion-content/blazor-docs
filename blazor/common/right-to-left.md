@@ -9,11 +9,11 @@ documentation: ug
 
 # Right-to-left Support in Syncfusion® Blazor Components
 
-Right-to-left (RTL) support can be enabled for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by setting the `EnableRtl` property to `true`. This renders supported Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a right-to-left layout.
+Right-to-left (RTL) support can be enabled for Blazor components by setting the `EnableRtl` property to `true`. This renders supported Blazor components in a right-to-left layout.
 
 ## Enable RTL for all components
 
-Enable right-to-left (RTL) globally for all Syncfusion<sup style="font-size:70%">&reg;</sup> components by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option to `true` when adding Syncfusion Blazor via `AddSyncfusionBlazor()`.
+Enable right-to-left (RTL) globally for all components by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option to `true` when adding Syncfusion Blazor via `AddSyncfusionBlazor()`.
 
 ### Blazor Web App
 
@@ -53,7 +53,7 @@ await builder.Build().RunAsync();
 
 {% endtabs %}
 
-The above configuration enables RTL globally for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. For illustration, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component is displayed with Right-To-Left (RTL).
+The above configuration enables RTL globally for all Blazor components. For illustration, the Blazor DataGrid component is displayed with Right-To-Left (RTL).
 
 ![Blazor DataGrid rendered in a right-to-left layout](images/rtegrid.webp)
 
