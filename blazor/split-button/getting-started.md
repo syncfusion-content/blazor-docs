@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Split Button in Blazor WASM App | Syncfusion
+title: Get Started with Blazor Split Button in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Split Button component in Blazor WebAssembly Application.
 platform: Blazor
 control: Split Button
@@ -159,10 +159,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Split Button component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Split Button](https://www.syncfusion.com/blazor-components/blazor-split-button) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Split Button](https://www.syncfusion.com/blazor-components/blazor-split-button) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSplitButton Content="Paste">
     <DropDownMenuItems>

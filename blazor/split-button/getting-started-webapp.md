@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Split Button in Blazor Web App | Syncfusion
+title: Get Started with Blazor Split Button in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Blazor Split Button Components in Blazor Web App.
 platform: Blazor
 control: Split Button
@@ -29,6 +29,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +47,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -168,6 +172,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
+@using Syncfusion.Blazor.SplitButtons
+
 <SfSplitButton Content="Paste">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
@@ -196,6 +202,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -211,6 +218,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
