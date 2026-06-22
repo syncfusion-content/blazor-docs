@@ -1098,7 +1098,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-N> This behavior applies only to **Batch** editing and does not impact other edit modes such as Normal or Dialog editing..
+N> The **AllowEditOnSingleClick** property applies only to **Batch** editing mode. Normal and Dialog editing modes are not affected by this setting.
 
 ## Supported events for batch editing
 
