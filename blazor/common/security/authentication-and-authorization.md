@@ -1,5 +1,5 @@
 ---
-title: Authentication and Authorization in Blazor Components | Syncfusion
+title: Authentication and Authorization in Blazor Components | Syncfusion®
 description: Learn how to secure Blazor components with authentication and authorization in Blazor Server and WebAssembly applications.
 platform: blazor
 component: common
@@ -58,7 +58,7 @@ Open the `~/_Imports.razor` file and add the required Blazor namespaces.
 
 ## Add stylesheet and script resources
 
-Add the Blazor theme CSS and required scripts to the `/App.razor` file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor"  %}

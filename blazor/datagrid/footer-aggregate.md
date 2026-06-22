@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Footer aggregates in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure and display footer aggregates in the Syncfusion Blazor DataGrid using FooterTemplate, AggregateTemplateContext, and formatting options.
+title:  Footer aggregates in Blazor DataGrid Component | Syncfusion®
+description: Learn how to configure and display footer aggregates in the Blazor DataGrid using FooterTemplate, AggregateTemplateContext, and formatting options.
 platform: Blazor
 control: DataGrid
 documentation: ug

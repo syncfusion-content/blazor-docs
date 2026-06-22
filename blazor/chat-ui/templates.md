@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Templates with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Templates in Blazor Chat UI Component | Syncfusion®
+description: Checkout and learn here all about Templates with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug
