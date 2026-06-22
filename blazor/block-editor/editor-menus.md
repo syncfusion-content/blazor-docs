@@ -412,11 +412,11 @@ The following example demonstrates how to customize the transform, inline code, 
 @using Syncfusion.Blazor.BlockEditor
 @using Syncfusion.Blazor.BlockEditor.Models
 <div id="container">
-    <SfBlockEditor Blocks="@blockData" InlineToolbarSettings="@InlineToolbarOptions">
+    <SfBlockEditor Blocks="@blockData">
         <BlockEditorTransform Items="@TransformItems"></BlockEditorTransform>
+        <BlockEditorInlineToolbar Items="@InlineToolbarOptions"></BlockEditorInlineToolbar>
     </SfBlockEditor>
 </div>
-
 @code {
     private List<BlockModel> blockData = new()
     {
@@ -433,24 +433,21 @@ The following example demonstrates how to customize the transform, inline code, 
             }
         }
     };
-    private InlineToolbarSettings InlineToolbarOptions = new()
+    private List<InlineToolbarItemModel> InlineToolbarOptions = new()
     {
-        Items = new List<InlineToolbarItemModel>
-        {
             new InlineToolbarItemModel { Command = CommandName.Transform },
             new InlineToolbarItemModel { Command = CommandName.Bold },
             new InlineToolbarItemModel { Command = CommandName.Italic },
             new InlineToolbarItemModel { Command = CommandName.InlineCode },
             new InlineToolbarItemModel { Command = CommandName.Link }
-        }
     };
     private List<TransformItemModel> TransformItems = new()
     {
-        new TransformItemModel { Type = BlockType.Paragraph },
-        new TransformItemModel { Type = BlockType.Heading },
-        new TransformItemModel { Type = BlockType.Checklist },
-        new TransformItemModel { Type = BlockType.BulletList },
-        new TransformItemModel { Type = BlockType.NumberedList }
+        new TransformItemModel { Type = BlockType.Paragraph, Label = "Paragraph", Tooltip="Paragraph block" },
+        new TransformItemModel { Type = BlockType.Heading, Label ="Heading", Tooltip="Heading block" },
+        new TransformItemModel { Type = BlockType.Checklist, Label= "CheckList", Tooltip="CheckList Block"},
+        new TransformItemModel { Type = BlockType.BulletList, Label="BulletList", Tooltip="BulletList Block"  },
+        new TransformItemModel { Type = BlockType.NumberedList, Label="NumberList",Tooltip="NumberList Block" }
     };
 }
 ```
