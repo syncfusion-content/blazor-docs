@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimizing Blazor DataGrid Performance | Syncfusion
+title: Optimizing Blazor DataGrid Performance | Syncfusion®
 description: Learn best practices to optimize Blazor DataGrid performance when handling large datasets and multiple columns.
 platform: Blazor
 control: DataGrid
