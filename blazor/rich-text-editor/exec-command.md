@@ -9,7 +9,7 @@ documentation: ug
 
 # Execute Command Programmatically
 
-In the Rich Text Editor, the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method runs HTML and Markdown commands programmatically to manipulate content in the current editable area.
+In the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method runs HTML and Markdown commands programmatically to manipulate content in the current editable area.
 
 ## HTML editor commands
 

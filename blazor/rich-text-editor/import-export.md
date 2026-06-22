@@ -11,7 +11,7 @@ documentation: ug
 
 ## Import to HTML file
 
-The Rich Text Editor allows you to load an external HTML file in the editor's content, which contains the text with styling and images. Read the HTML file from your path using the [Stream Reader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) allows you to load an external HTML file in the editor's content, which contains the text with styling and images. Read the HTML file from your path using the [Stream Reader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}

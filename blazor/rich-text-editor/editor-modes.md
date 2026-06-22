@@ -9,7 +9,7 @@ documentation: ug
 
 # Editor Modes in Syncfusion Blazor Rich Text Editor
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component allows users to create and edit content, returning valid HTML markup or Markdown (MD). It supports two editing modes:
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component allows users to create and edit content, returning valid HTML markup or Markdown (MD). It supports two editing modes:
 
 * HTML Editor
 * Markdown Editor

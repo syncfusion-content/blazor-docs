@@ -9,7 +9,7 @@ documentation: ug
 
 # Resizable Editor in Blazor Rich Text Editor Component
 
-The Rich Text Editor supports dynamic resizing, allowing users to adjust the editor's dimensions based on their needs. You can enable or disable this feature using the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property. When `EnableResize` is set to `true`, a resize handle appears at the bottom-right corner of the editor, enabling diagonal resizing.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) supports dynamic resizing, allowing users to adjust the editor's dimensions based on their needs. You can enable or disable this feature using the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property. When `EnableResize` is set to `true`, a resize handle appears at the bottom-right corner of the editor, enabling diagonal resizing.
 
 {% tabs %}
 {% highlight razor %}
