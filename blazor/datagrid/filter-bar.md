@@ -731,15 +731,15 @@ public class OrderData
 
 The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
-When this property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown. Users can select a filtering condition appropriate to the column type, eliminating the need to manually enter filter expressions.
+When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. A filtering condition appropriate to the column type can be selected, eliminating manual operator expression input.
 
-Each filter bar cell also includes a **clear filter icon** that is rendered individually for every column and behaves based on the filter state of that specific column. This icon is **enabled** only when a filter is applied to that column and **disabled** otherwise, helping users quickly identify and clear active filters. This column-specific behavior provides better control and improves visibility when managing filters across multiple columns.
+Each filter bar cell also includes a **clear filter icon** that is rendered individually for every column and behaves based on the filter state of that specific column. This icon is **enabled** only when a filter is applied to that column and **disabled** otherwise, enabling quick identification and removal of active filters. Column-specific behavior provides improved control and visibility when managing filters across multiple columns
 
 **Benefits of operator-based filtering**
 
 * Eliminates the need for manual operator expression input
 * Provides type-safe input controls based on column data type
-* Improves filtering precision and consistency
+* Improves filtering accuracy and consistency across data types
 * Delivers a structured and user-friendly filtering experience
 
 **Column-specific filter controls**
