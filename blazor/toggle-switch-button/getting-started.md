@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Start Blazor Toggle Switch Button in Blazor WASM App | Syncfusion
+title: Get Started with Blazor Toggle Switch Button in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Toggle Switch Button component in Blazor webAssembly Application.
 platform: Blazor
 control: Toggle Switch Button
@@ -30,7 +30,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +47,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,10 +161,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Toggle Switch Button component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -224,7 +226,7 @@ dotnet run
 On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OnLabel) and [OffLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OffLabel) properties of Toggle Switch Button component. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
