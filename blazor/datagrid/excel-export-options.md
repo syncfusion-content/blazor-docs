@@ -1138,7 +1138,10 @@ public class OrderData
 
 ## Encoding support for CSV export
 
-The Syncfusion Blazor DataGrid supports specifying encoding for exported CSV documents. This capability enables customization of the character encoding format to meet specific requirements. To configure encoding, include the **System.Text** namespace in the application. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the official Microsoft documentation [here](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-10.0).
+The Blazor DataGrid supports specifying custom encoding when exporting data to CSV documents. This capability enables customization of character encoding formats to meet specific requirements for integration with legacy systems or software that does not support UTF-8.
+
+To configure custom encoding, include the **System.Text** namespace in the component. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the Microsoft System.Text [documentation](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-10.0).
+
 
 ### When to use custom encoding
 
@@ -1159,7 +1162,7 @@ To configure the encoding, handle the [OnToolbarClick](https://help.syncfusion.c
 @using System.Text
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" AllowExcelExport="true">
-    <GridEvents OnToolbarClick="ToolbarClick" TValue="OrdersDetails"></GridEvents>
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrdersDetails"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
@@ -1179,17 +1182,18 @@ To configure the encoding, handle the [OnToolbarClick](https://help.syncfusion.c
         GridData = OrdersDetails.GetAllRecords();
     }
 
-    public void ToolbarClick(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (this.Grid != null)
         {
             if (args.Item.Id == "Grid_excelexport")
             {
-                this.Grid.ExportToExcelAsync();
+                await this.Grid.ExportToExcelAsync();
             }
             else if (args.Item.Id == "Grid_csvexport")
             {
-                this.Grid.ExportToCsvAsync(new ExcelExportProperties
+                // Explicitly set UTF-8 encoding. Use other encodings (e.g., Encoding.Latin1) for legacy system compatibility.
+                await this.Grid.ExportToCsvAsync(new ExcelExportProperties
                 {
                     Encoding = System.Text.Encoding.UTF8,
                 });
