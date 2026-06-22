@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Version compatibility for Syncfusion Blazor components
-description: Supported .NET and .NET Core versions for Syncfusion Blazor components, with minimum package versions and compatibility guidance.
+title: Version compatibility for Blazor components | Syncfusion®
+description: Supported .NET and .NET Core versions for Blazor components, with minimum package versions and compatibility guidance.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Version compatibility for Syncfusion® Blazor components
 
-The following table shows the supported .NET and .NET Core versions for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component releases.
+The following table shows the supported .NET and .NET Core versions for Blazor component releases.
 
-| Version | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Version |
+| Version | Blazor Components Version |
 | ------------- | ------------- |
 | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) | 31.2.10 and above |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |

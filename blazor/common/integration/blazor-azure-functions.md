@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor components with Azure Functions | Syncfusion
+title: Blazor components with Azure Functions | Syncfusion®
 description: Step-by-step guide to integrate Azure Functions as a serverless backend for Blazor WebAssembly with Blazor components (Grid, Scheduler, DatePicker).
 platform: Blazor
 control: Common

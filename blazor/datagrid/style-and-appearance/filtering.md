@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize filtering in Blazor DataGrid | Syncfusion
+title: Customize filtering in Blazor DataGrid | Syncfusion®
 description: Learn how to style and customize the Blazor DataGrid filter UI using CSS—filter bar, dialog, icons, buttons, and menus.
 platform: Blazor
 control: DataGrid

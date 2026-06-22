@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Floating Panels in Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn here all about Floating Panels in Syncfusion Blazor Dashboard Layout component and more.
+title: Floating Panels in Blazor Dashboard Layout Component | Syncfusion®
+description: Checkout and learn here all about Floating Panels in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
