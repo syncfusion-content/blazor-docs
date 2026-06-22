@@ -144,4 +144,4 @@ You can customize each accordion item header by setting [AccordionItem.CssClass]
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhRDxCWsbylvYtX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhRDxCWsbylvYtX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.webp)" %}
