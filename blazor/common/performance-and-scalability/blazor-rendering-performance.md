@@ -14,11 +14,11 @@ This section explains how rendering works in Blazor and shows practical ways to 
 
 [Rendering in Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0) is the process of generating UI output from a component’s current state. Instead of directly updating HTML elements, Blazor builds an internal representation of the UI called a render tree and compares it with the previous version to determine what changed.
 
-This model helps Blazor update only the necessary parts of the interface. For components, this means rendering remains efficient when parameters are stable and state updates are intentional.
+This model helps Blazor update only the necessary parts of the interface. For Blazor components, this means rendering remains efficient when parameters are stable and state updates are intentional.
 
 ## Why rendering optimization matters?
 
-Most commonly used components are interactive and operate based on data. A [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) may respond to paging, sorting, filtering, and editing, while a [Chart](https://www.syncfusion.com/blazor-components/blazor-charts) may refresh when a dashboard filter changes or when live data arrives.
+Most commonly used Blazor components are interactive and operate based on data. A [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) may respond to paging, sorting, filtering, and editing, while a [Chart](https://www.syncfusion.com/blazor-components/blazor-charts) may refresh when a dashboard filter changes or when live data arrives.
 
 If component state changes more frequently than necessary or if child components receive new object references unnecessarily, Blazor performs more rendering work than required. Over time, this leads to slower interactions, increased CPU usage, and reduced UI smoothness.
 
@@ -49,7 +49,7 @@ When analyzing a page that contains a Grid or Chart, focus on how often the UI u
 
 Blazor determines whether child components should update based on state and parameter changes. If a parent component creates new objects or collections during every render, the child component receives those values as changed parameters, even if the content is logically identical.
 
-Keeping parameter values stable reduces unnecessary diffing and avoids render work in components. This is especially important for grids, charts, and dropdown controls that often receive collections and configuration objects.
+Keeping parameter values stable reduces unnecessary diffing and avoids render work in Blazor components. This is especially important for grids, charts, and dropdown controls that often receive collections and configuration objects.
 
 ## Syncfusion® DataGrid example with stable data binding
 
