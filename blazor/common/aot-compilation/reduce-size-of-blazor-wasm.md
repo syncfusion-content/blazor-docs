@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Reduce size of Blazor WebAssembly Applications - Syncfusion
-description: Learn here all about how to reduce Syncfusion Blazor WebAssembly (WASM) App size using trimming and linker configuration. Explore here to more details.
+title: Reduce size of Blazor WebAssembly Applications | Syncfusion®
+description: Learn here all about how to reduce Blazor WebAssembly (WASM) App size using trimming and linker configuration. Explore here to more details.
 platform: Blazor
 control: Common
 documentation: ug

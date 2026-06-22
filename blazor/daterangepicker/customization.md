@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor DateRangePicker component and more.
+title: Customization in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about Customization in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug

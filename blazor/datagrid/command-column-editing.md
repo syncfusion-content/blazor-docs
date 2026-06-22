@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Command Column Editing in Blazor DataGrid | Syncfusion
-description: Learn how to configure Command Column Editing in Syncfusion Blazor DataGrid with setup, usage, and customization tips.
+title: Command Column Editing in Blazor DataGrid | Syncfusion®
+description: Learn how to configure Command Column Editing in Blazor DataGrid with setup, usage, and customization tips.
 platform: Blazor
 control: DataGrid
 documentation: ug

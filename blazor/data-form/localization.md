@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization in Blazor DataForm Component | Syncfusion
+title: Localization in Blazor DataForm Component | Syncfusion®
 description: Checkout and learn here about how to localize the label text and error messages in Blazor DataForm component.
 platform: Blazor
 control: DataForm

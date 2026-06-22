@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Column Menu in Blazor DataGrid Component | Syncfusion
-description: Learn how to use and customize the column menu in Syncfusion Blazor DataGrid, including events, actions, and advanced options for better control.
+
+title: Column Menu in Blazor DataGrid Component | Syncfusion®
+description: Learn how to use and customize the column menu in Blazor DataGrid, including events, actions, and advanced options for better control.
 platform: Blazor
 control: DataGrid
 documentation: ug

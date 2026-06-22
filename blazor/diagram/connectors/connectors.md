@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Actions of Connectors in Syncfusion Diagram Component | Syncfusion
-description: Checkout and learn here all about actions of connectors in Syncfusion Blazor Diagram component and much more details.
+title: Actions of Connectors in Diagram Component | Syncfusion®
+description: Checkout and learn here all about actions of connectors in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -626,14 +626,14 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [Why save and load functionality for nodes and connectors in Blazor Diagram?](https://support.syncfusion.com/kb/article/16008/why-save-and-load-functionality-for-nodes-and-connectors-in-blazor-diagram) 
 
-* [How to Add Nodes or Connectors by Clicking on the Diagram in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component?](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
+* [How to Add Nodes or Connectors by Clicking on the Diagram in Blazor Diagram Component?](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
 
 * [How to add nodes and connectors at runtime asynchronously in Blazor Diagram Component?](https://support.syncfusion.com/kb/article/17285/how-to-add-nodes-and-connectors-at-runtime-asynchronously-in-blazor-diagram-component)
 
 * [How to render the Freehand connector in symbol palette?](https://support.syncfusion.com/kb/article/17236/how-to-render-the-freehand-connector-in-symbol-palette)
 
-* [How to Select and Highlight Ports and Connect Selected Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)  
+* [How to Select and Highlight Ports and Connect Selected Elements in Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)  
 
-* [How to Dynamically Create and Connect Diagram Nodes with Annotations via Ports in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram)
+* [How to Dynamically Create and Connect Diagram Nodes with Annotations via Ports in Blazor Diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram)
 
 * [How to Provide IDs for Diagram Elements in Blazor Diagrams](https://support.syncfusion.com/kb/article/17898/how-to-provide-ids-for-diagram-elements-in-blazor-diagrams)
