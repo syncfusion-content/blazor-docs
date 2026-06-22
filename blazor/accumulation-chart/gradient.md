@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gradient in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn about applying linear and radial gradients to Accumulation Charts in Syncfusion Blazor Charts
+title: Gradient in Blazor Accumulation Chart Component | Syncfusion®
+description: Checkout and learn about applying linear and radial gradients to Accumulation Charts in Blazor Charts and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

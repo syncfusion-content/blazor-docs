@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Views in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about available Views module in Syncfusion Blazor File Manager component and much more.
+title: Views in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about available Views module in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
