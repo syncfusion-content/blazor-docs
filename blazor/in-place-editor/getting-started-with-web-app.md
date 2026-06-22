@@ -219,7 +219,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-cd..
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -235,7 +235,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-cd..
+cd ..
 cd BlazorWebApp
 dotnet run
 
