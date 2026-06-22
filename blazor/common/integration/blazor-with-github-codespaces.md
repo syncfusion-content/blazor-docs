@@ -18,24 +18,22 @@ GitHub Codespaces provides a cloud-based development environment that eliminates
 Before getting started, ensure you have the following:
 
 * A [GitHub](https://github.com/) account
-* Access to [GitHub Codespaces](https://docs.github.com/en/codespaces)
+* Access to [GitHub Codespaces](https://docs.github.com/en/codespaces/about-codespaces)
 
-## Configure a Development Container for .NET 10 and Blazor
+## Configure a development container for .NET 10 and Blazor
 
-To run the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) seamlessly in GitHub Codespaces, you need to configure a development container with the **.NET 10 SDK** and support for **ASP.NET Core and Blazor development**.
+To run Blazor applications in GitHub Codespaces, configure a development container with the **.NET 10 SDK** and support for **ASP.NET Core and Blazor development**.
 
-GitHub Codespaces automatically detects and applies settings from the `.devcontainer/devcontainer.json` file when launching a codespace. To ensure the environment is configured correctly, include this file in your repository before creating a codespace.
+### Prerequisites for dev container setup
 
-### Prerequisites for devcontainer setup
+* A local [Git](https://git-scm.com/) client installed on your machine
+* Your repository cloned locally or access to create files through the [GitHub web interface](https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files)
 
-* A local Git client installed on your machine
-* Your repository cloned locally or access to create files via GitHub web interface
-
-### Create the devcontainer configuration
+### Create the dev container configuration
 
 #### Step 1: Clone your repository
 
-Clone your GitHub repository to your local machine:
+Clone your GitHub repository to your local machine.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -62,7 +60,7 @@ mkdir .devcontainer
 
 #### Step 3: Add the `devcontainer.json` file
 
-Inside the `.devcontainer` folder, create a file named `devcontainer.json` and add the following configuration.
+Inside the `.devcontainer` folder, create a file named `devcontainer.json` and add the following configuration. GitHub Codespaces automatically applies the settings from this file when a codespace starts. Add it to your repository before launching Codespaces so the environment is configured correctly.
 
 {% tabs %}
 {% highlight json tabtitle=".devcontainer/devcontainer.json" %}
@@ -89,17 +87,12 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
     }
   },
 
-  "forwardPorts": [5000, 5001],
+  "forwardPorts": [5000],
 
   "portsAttributes": {
     "5000": {
       "label": "Blazor HTTP",
       "onAutoForward": "openBrowser",
-      "requireLocalPort": false
-    },
-    "5001": {
-      "label": "Blazor HTTPS",
-      "onAutoForward": "silent",
       "requireLocalPort": false
     }
   },
@@ -115,7 +108,7 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
   "remoteEnv": {
     "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "false",
     "ASPNETCORE_ENVIRONMENT": "Development",
-    "ASPNETCORE_URLS": "http://0.0.0.0:5000;https://0.0.0.0:5001",
+    "ASPNETCORE_URLS": "http://0.0.0.0:5000",
     "DOTNET_CLI_TELEMETRY_OPTOUT": "true"
   },
 
@@ -128,15 +121,15 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
 ### Key configuration details
 
 * **Base image**: Uses the official .NET 10 development container image
-* **Features**: Includes GitHub CLI for repository operations within Codespaces
-* **VS Code extensions**: Installs C# development tools, Blazor tools, and Docker support automatically
-* **Dual-port forwarding**: Exposes both HTTP (5000) and HTTPS (5001) for maximum compatibility
+* **Features**: Includes [GitHub CLI](https://cli.github.com/) for repository operations within Codespaces
+* **VS Code extensions**: Installs [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit), Blazor tools, and [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) support automatically
+* **Port forwarding**: Uses `forwardPorts` to expose the HTTP port (5000), enabling external access to the application running inside the Codespaces container
 * **WebAssembly (WASM) tools**: Installs Blazor WebAssembly development tools via `workload install`
-* **Environment variables**: Configures .NET globalization, development environment, and both protocol URLs
+* **Environment variables**: Configures [.NET globalization](https://learn.microsoft.com/en-us/dotnet/core/extensions/globalization), development environment, and both protocol URLs
 * **Post-create command**: Automatically restores NuGet packages and installs required workloads after container setup
-* **Post-start restoration**: Runs `dotnet restore` on each container start, and the `|| true` ensures the container startup succeeds even if the restore encounters warnings or conflicts.
+* **Post-start restoration**: Runs `dotnet restore` on each container start, and the `|| true` ensures the container starts successfully even if restore produces non-critical warnings
 
-This configuration ensures your Codespaces environment is fully ready to build and run Blazor applications without any manual setup.
+This configuration ensures your Codespaces environment is ready to build and run Blazor applications without any manual setup.
 
 #### Step 4: Commit and push to GitHub
 
@@ -146,7 +139,7 @@ Commit the `.devcontainer` folder to your repository.
 {% highlight bash tabtitle="Terminal" %}
 
 git add .devcontainer/devcontainer.json
-git commit -m "Add devcontainer configuration for Blazor development with Syncfusion"
+git commit -m "Add dev container configuration for Blazor development with Syncfusion"
 git push origin main
 
 {% endhighlight %}
@@ -154,31 +147,38 @@ git push origin main
 
 ## Launch GitHub Codespaces
 
-Now that the devcontainer configuration is available in your repository, launch GitHub Codespaces:
+After adding the dev container configuration to your repository, launch GitHub Codespaces:
 
 1. Open your GitHub repository in the browser.
-2. Click on the **Code** button.
+2. Click the **Code** button.
 3. Select the **Codespaces** tab.
 4. Click **Create codespace on main**.
 
-GitHub Codespaces will automatically:
+GitHub Codespaces automatically performs the following actions:
 
-* Provision a cloud-based development environment
-* Detect the `.devcontainer/devcontainer.json` configuration
-* Install and configure the .NET 10 development container
-* Install required VS Code extensions (C#, Blazor tools, Docker, and GitHub CLI)
-* Execute the post-create command to restore NuGet packages
-* Install Blazor WebAssembly workload tools
-* Launch Visual Studio Code in the browser
+* Provisions a cloud-based development environment
+* Detects the `.devcontainer/devcontainer.json` configuration
+* Installs and configures the .NET 10 development container
+* Installs required VS Code extensions for [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp), Blazor tools, [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker), and [GitHub CLI](https://cli.github.com/)
+* Executes the post-create command to restore NuGet packages
+* Installs Blazor WebAssembly workload tools
+* Launches [Visual Studio Code](https://code.visualstudio.com/) in the browser
 
-After Codespaces has finished initializing, open the terminal and ensure there are no setup errors. In some cases, the output of the post-create command may not be visible. To confirm that the setup completed successfully, you can run the application or verify that the required workloads have been installed.
+After Codespaces finishes initializing, verify the setup:
 
-## Create a Blazor project
+1. Open the terminal in Codespaces.
+2. Run `dotnet --list-sdks` to confirm that the .NET 10 SDK is installed.
+3. Run `dotnet workload list` to verify that the `wasm-tools` workload is present.
+4. Check the terminal output for any errors from the post-create command.
 
-Once the Codespaces environment has fully loaded, open the terminal and navigate to the root directory of your repository. Then run the following commands to create a new **Blazor Web App (Interactive Server)**.
+If the setup encounters errors, review the container logs or rebuild the codespace.
+
+## Create a Blazor Web App
+
+In the Codespaces root terminal, run the following commands to create a new **Blazor Web App (Interactive Server)**.
 
 {% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
@@ -186,25 +186,22 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-## Install Blazor NuGet packages
+## Install required NuGet packages
 
 Install the [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabs %}
-
-{% highlight bash tabtitle=".NET CLI" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Add required namespaces
 
-After the packages are installed, open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
+After the packages are installed, open the `~/_Imports.razor` file in Blazor Web App and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -217,7 +214,7 @@ After the packages are installed, open the `~/_Imports.razor` file and import th
 
 ## Register Blazor service
 
-Open the `~/Program.cs` file in Blazor Web App and register the Blazor service to enable Blazor components in the application.
+Open the `~/Program.cs` file in Blazor Web App and register the Blazor service to enable [Blazor components](https://www.syncfusion.com/blazor-components) in the application.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="1 9" %}
@@ -235,7 +232,6 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Add stylesheet and script resources
@@ -254,6 +250,20 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     ...
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Configure render mode (Server)
+
+For Server render mode, if your app's interactivity location is set to `Per page/component`, add the following directive at the top of each `~/Pages/*.razor` file that requires interactive Server components.
+
+**Per-page directive (Server)**
+
+{% tabs %}
+{% highlight razor %}
+
+@rendermode InteractiveServer
 
 {% endhighlight %}
 {% endtabs %}
@@ -307,13 +317,11 @@ Open a Razor file located in the `~/Pages/*.razor` (for example, `Home.razor`) a
 In the Codespaces terminal, run:
 
 {% tabs %}
+{% highlight bash tabtitle="Terminal" %}
 
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet run --urls=http://0.0.0.0:5000;https://0.0.0.0:5001
+dotnet run --urls=http://0.0.0.0:5000
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ### Access the application
@@ -324,14 +332,13 @@ After running:
 2. Open the **Ports** panel in the VS Code bottom panel.
 3. Click **Open in Browser** on the HTTP port (5000) for the best experience.
 
-The Blazor application will load with the DataGrid.
+The Blazor application loads with the DataGrid displaying 10 order records. The grid is fully interactive and runs within the Codespaces browser environment.
 
-## Expected behavior
-
-* The DataGrid loads with 10 order records
-* Fully interactive UI runs inside the browser
+![Blazor DataGrid with Github Codespaces](images/datagrid-with-codespace.webp)
 
 ## See also
 
 * [Getting Started with Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Getting Started with Blazor DataGrid in Blazor WASM](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Integrating Blazor DataGrid with PDF Viewer](https://blazor.syncfusion.com/documentation/common/integration/blazor-with-pdf-viewer)
+* [Integrating Blazor DataGrid with Spreadsheet](https://blazor.syncfusion.com/documentation/common/integration/blazor-grid-with-spreadsheet)
+* [Integrating Blazor DataGrid with Bold Report Viewer](https://blazor.syncfusion.com/documentation/common/integration/blazor-datagrid-boldreports)
