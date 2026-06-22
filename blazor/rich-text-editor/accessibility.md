@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Rich Text Editor Accessibility | Syncfusion
-description: Learn about the accessibility features in the Blazor Rich Text Editor component and more.
+description: Learn about the accessibility features in the Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
