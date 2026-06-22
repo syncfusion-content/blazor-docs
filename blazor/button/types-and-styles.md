@@ -68,13 +68,8 @@ A Round Button is circular in shape. Usually, it contains an icon representing i
 
 <SfButton CssClass="e-flat">Flat</SfButton>
 <SfButton CssClass="e-outline">Outline</SfButton>
-<SfButton CssClass="e-round" IconCss="e-icons e-plus-icon" IsPrimary="true"></SfButton>
+<SfButton CssClass="e-round" IconCss="e-icons e-plus" IsPrimary="true"></SfButton>
 
-<style>
-    .e-plus-icon::before {
-        content: '\e823';
-    }
-</style>
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVxXRiVhUSIxYKT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Types](./images/blazor-button-types.webp)" %}
@@ -127,7 +122,7 @@ A toggle Button allows you to change between the two states. The Button is activ
     }
 
     .e-pause::before {
-        content: '\e326';
+        content: '\e77b';
     }
 
 </style>
