@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Toolbar in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Toolbar component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Toolbar component in Blazor WebAssembly Application.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -28,11 +28,11 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
-
 
 Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
@@ -45,7 +45,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -163,12 +164,14 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Navigations
+
 <SfToolbar>
     <ToolbarItems>
         <ToolbarItem Text="Cut"></ToolbarItem>
         <ToolbarItem Text="Copy"></ToolbarItem>
         <ToolbarItem Text="Paste"></ToolbarItem>
-        //To separate the Toolbar items
+        @* To separate the Toolbar items *@
         <ToolbarItem></ToolbarItem>
         <ToolbarItem Text="Bold"></ToolbarItem>
         <ToolbarItem Text="Underline"></ToolbarItem>
