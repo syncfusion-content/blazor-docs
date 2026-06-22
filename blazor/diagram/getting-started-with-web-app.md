@@ -5,6 +5,7 @@ description: Checkout and learn about the documentation for getting started with
 platform: Blazor
 component: Diagram
 documentation: ug
+canonical_url: "https://www.syncfusion.com/blazor-components/blazor-diagram"
 ---
 
 # Getting Started with Blazor Diagram Component in Web App

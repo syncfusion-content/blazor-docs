@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Splitting and merging tasks in Syncfusion Blazor Gantt Chart component
-description: Learn how to split and merge tasks in the Syncfusion Blazor Gantt Chart component for flexible task management in project timelines.
+title: Splitting and merging tasks in Blazor Gantt Chart | Syncfusion®
+description: Learn how to split and merge tasks in the Blazor Gantt Chart component for flexible task management in project timelines.
 platform: Blazor
 control: Splitting and merging tasks
 documentation: ug
