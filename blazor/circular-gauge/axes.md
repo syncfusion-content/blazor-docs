@@ -79,7 +79,7 @@ You can set the radius of the Circular Gauge in pixel as shown below.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhnXdWHzykJFBxU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Custom Radius](./images/blazor-circulargauge-custom-radius.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhRXxiuLAHwttvd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Custom Radius](./images/blazor-circulargauge-custom-radius.webp)" %}
 
 ### In percentage
 
