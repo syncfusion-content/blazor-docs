@@ -17,15 +17,15 @@ Common configuration issues relate to:
 * Namespace imports and component resolution
 * Type safety and field mapping in data-bound components
 
-N> This guide is intended for Blazor components version 33.2.3 or later, targeting .NET 8, .NET 9, or .NET 10. Some details may differ in earlier versions or older .NET releases.
+N> This guide is intended for Blazor components version 33.2.3 or later. Some details may differ in earlier versions or older .NET releases.
 
 ## Issue 1: Incorrect SignalR configuration for large data
 
-**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer), or [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) fail to load large amounts of data. The browser console may show errors like `Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'` These issues can cause data loading failures, frequent connection drops, poor user experience, and limited functionality for data-intensive components.
+**Symptom**: SignalR connection errors, timeouts, or exceptions when working with large datasets in Server render mode. Components like [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) may fail to load large amounts of data. The browser console may show errors like `Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'` These issues can cause data loading failures, frequent connection drops, poor user experience, and limited functionality for data-intensive components.
 
-**Root cause**: Default SignalR message size limits are too small for large data transfers. The default limit is 32KB, which is insufficient for components handling large files, images, or datasets.
+**Root cause**: The default SignalR maximum incoming message size is 32 KB, which is too small for large data transfers.
 
-**Solution**: Configure SignalR with appropriate message size limits and hub options in `~/Program.cs`.
+**Solution**: Configure SignalR with an appropriate message size limit in `~/Program.cs`.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Web App (.NET 8+) - Server" %}
@@ -35,9 +35,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Configure SignalR with increased message size
 builder.Services.AddSignalR(options =>
 {
-    // Set maximum message size to 100MB (adjust based on your needs)
-    options.MaximumReceiveMessageSize = 104857600; // 100MB in bytes (100 * 1024 * 1024)
-    
+    // Default is 32 KB. Increase only as needed for your scenario.
+    options.MaximumReceiveMessageSize = 104857600; // 100 MB in bytes
+
     // Optional: Configure other SignalR options
     options.EnableDetailedErrors = builder.Environment.IsDevelopment();
     options.HandshakeTimeout = TimeSpan.FromSeconds(30);
@@ -57,13 +57,10 @@ var app = builder.Build();
 
 ### Component-specific recommendations
 
-| Component | Recommended Message Size | Reason |
-|-----------|------------------------|--------|
-| [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | 50MB - 100MB | Large datasets with thousands of rows |
-| [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) | 100MB - 200MB | Large PDF documents |
-| [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) | 100MB - 500MB | File uploads and downloads |
-| [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor?utm_source=nuget&utm_medium=listing&utm_campaign=blazor-spreadsheet-editor-nuget) | 50MB - 100MB | Excel files with multiple worksheets |
-| [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) | 50MB - 100MB | High-resolution images |
+| Component | Guidance | Reason |
+|-----------|----------|--------|
+| [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | Increase the limit only as required by the size of the payload being transferred | Large datasets can exceed the default 32 KB SignalR limit |
+| [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) | Use chunked uploads and transfer only the required data | Large file operations are better handled in smaller chunks |
 
 ### Advanced SignalR configuration
 
@@ -75,19 +72,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR(options =>
 {
     // Maximum message size (required)
-    options.MaximumReceiveMessageSize = 104857600; // 100MB in bytes (100 * 1024 * 1024)
-    
+    options.MaximumReceiveMessageSize = 104857600; // 100 MB in bytes
+
     // Enable detailed errors in development
     options.EnableDetailedErrors = builder.Environment.IsDevelopment();
-    
+
     // Timeout configurations
     options.HandshakeTimeout = TimeSpan.FromSeconds(30);
     options.KeepAliveInterval = TimeSpan.FromSeconds(15);
     options.ClientTimeoutInterval = TimeSpan.FromSeconds(60);
-    
+
     // Parallel hub invocations
     options.MaximumParallelInvocationsPerClient = 10;
-    
+
     // Streaming buffer size
     options.StreamBufferCapacity = 10;
 });
@@ -111,7 +108,7 @@ var app = builder.Build();
 ### Best practices
 
 * Set `MaximumReceiveMessageSize` based on expected data transfer sizes
-* Balance between functionality and security (larger sizes increase memory usage)
+* Balance between functionality and security because larger sizes increase memory usage and DoS risk
 * Configure timeout values appropriate for network latency
 * Enable detailed errors only in development environments
 * Monitor SignalR connection metrics in production
@@ -414,4 +411,4 @@ This issue is usually a data-model mismatch, not a Syncfusion defect. In most ca
 | Error Message | Likely Cause | Solution |
 |---------------|-------------|----------|
 | `The type or namespace name 'Syncfusion' could not be found` | Missing namespace import | Add `@using Syncfusion.Blazor` (and component namespaces as needed) to `_Imports.razor` |
-| `Connection disconnected with error` | SignalR message size limit or timeout | Increase `options.MaximumReceiveMessageSize` and adjust SignalR timeouts in Program.cs; consider paging/virtualization or chunked transfers |
+| `Connection disconnected with error` | SignalR message size limit or timeout | Increase `options.MaximumReceiveMessageSize` and adjust SignalR timeouts in Program.cs. Consider using paging/virtualization or chunked transfers |
