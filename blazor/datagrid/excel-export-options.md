@@ -1140,7 +1140,7 @@ public class OrderData
 
 The Blazor DataGrid supports specifying custom encoding when exporting data to CSV documents. This capability enables customization of character encoding formats to meet specific requirements for integration with legacy systems or software that does not support UTF-8.
 
-To configure custom encoding, include the **System.Text** namespace in the component. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the Microsoft System.Text [documentation](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-10.0).
+To configure custom encoding, include the **System.Text** namespace in the component. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the Microsoft System.Text [documentation](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?).
 
 
 ### When to use custom encoding
