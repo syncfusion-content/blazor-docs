@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about columns in Syncfusion Blazor Kanban component and much more details.
+title: Columns in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all the features about columns in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
 ---
 
-# Columns in Syncfusion Blazor Kanban Component
+# Columns in Blazor Kanban Component
 
 The **Kanban** columns represent each stage of workflow process.Column definitions serve as the schema for the Kanban board's **DataSource**. The Operations such as drag-and-drop, swimlane grouping, and column toggling are driven by these column definitions.
 

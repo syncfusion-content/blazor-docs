@@ -204,7 +204,7 @@ private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
 
 To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor AI AssistView component in the default web browser.
 
-{% previewsample "(https://blazorplayground.syncfusion.com/embed/BjhTCNsCMKFGRhuU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor AI AssistView default prompt](./images/default-prompt.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrHXdMMBjwCHccZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AI AssistView default prompt](./images/default-prompt.webp)" %}
 
 > **Note:** Starting from version 33.1x, when a user submits a prompt to the AI AssistView, the component automatically scrolls and focuses on the latest prompt and response. This behavior eliminates the need for users to manually scroll down to see the new response, ensuring they always view the most recent AI response without interruption. Prior to version 33.1x, the previous responses remained visible when new responses were added.
 

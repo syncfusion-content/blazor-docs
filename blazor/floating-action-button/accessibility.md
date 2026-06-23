@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Floating Action Button | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Floating Action Button component and much more.
+title: Accessibility in Blazor Floating Action Button | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor Floating Action Button component and much more.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
@@ -61,4 +61,5 @@ The accessibility compliance of the Blazor Floating Action Button component is s
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+
