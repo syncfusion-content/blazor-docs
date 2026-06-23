@@ -234,7 +234,7 @@ N> * In the dialog control, max-height is calculated based on the dialog target 
 N> * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, you can set the CSS style for the html and body to get the dialog height.
 
 {% tabs %}
-{% highlight cs %}
+{% highlight cs tabtitle="app.css" %}
 
 html, body {
    height: 100%;
