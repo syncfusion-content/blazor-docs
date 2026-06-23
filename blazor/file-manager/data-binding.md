@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor File Manager Component | Syncfusion
-description: Discover how to configure data binding in the Blazor File Manager component with clear steps, examples, and guidance.
+description: Learn how to configure and use data binding in the Blazor File Manager component with practical examples and implementation guidance.
 platform: Blazor
 control: File Manager
 documentation: ug
