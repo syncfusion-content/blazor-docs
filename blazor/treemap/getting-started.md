@@ -28,7 +28,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +45,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +64,7 @@ Install [Syncfusion.Blazor.TreeMap](https://www.nuget.org/packages/Syncfusion.Bl
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.TreeMap`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.TreeMap`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
 
