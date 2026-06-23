@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -158,10 +159,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor DateTime Picker component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor DateTime Picker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DateTime Picker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Calendars
 
@@ -217,7 +218,7 @@ dotnet run
 Define the minimum and maximum selectable dates using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Calendars
 
@@ -238,6 +239,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
