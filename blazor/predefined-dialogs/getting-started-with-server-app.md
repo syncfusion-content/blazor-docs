@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Predefined Dialogs in Server App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Predefined Dialogs Components in Blazor Server App.
+description: Check out the documentation for getting started with Blazor Predefined Dialogs Components in Blazor Server App.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
