@@ -52,7 +52,7 @@ The following ARIA attributes are used in the Scheduler:
 | aria-describedby | It indicates editor dialog content description to the user through assistive technologies. |
 | aria-disabled | Attribute is set to the appointment element to indicates the disabled state of the Scheduler. |
 
-The Syncfusion® Blazor Scheduler component uses a complex table structure to render calendar views (such as day, week, and month). As a result, automated accessibility tools (such as IBM Equal Access Accessibility Checker) may report the following warnings:
+The Blazor Scheduler component uses a complex table structure to render calendar views (such as day, week, and month). As a result, automated accessibility tools (such as IBM Equal Access Accessibility Checker) may report the following warnings:
 
 - **Table has no headers identified:** Some tables rendered by the Scheduler do not have headers explicitly identified, which may trigger warnings in accessibility checkers.
 - **Complex table does not have headers for each cell properly defined with 'header' or 'scope':** The Scheduler's internal table structure may not define headers for every cell using the `header` or `scope` attributes, leading to additional warnings.
