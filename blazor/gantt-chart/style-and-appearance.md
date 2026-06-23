@@ -323,7 +323,7 @@ Below is a complete example demonstrating how to customize multiple aspects of t
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px" RenderBaseline="true">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentID" BaselineStartDate="BaselineStartDate"
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId" BaselineStartDate="BaselineStartDate"
                      BaselineEndDate="BaselineEndDate">
     </GanttTaskFields>
     <GanttLabelSettings RightLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
@@ -394,8 +394,8 @@ Below is a complete example demonstrating how to customize multiple aspects of t
     }
 </style>
 @code {
-    private List<TaskData> TaskCollection { get; set; }
-    public DateTime Event = new DateTime(2022, 01, 16);
+    public List<TaskData> TaskCollection { get; set; }
+    public DateTime Event = new DateTime(2026, 01, 16);
 
     protected override void OnInitialized()
     {
@@ -404,7 +404,7 @@ Below is a complete example demonstrating how to customize multiple aspects of t
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -413,21 +413,21 @@ Below is a complete example demonstrating how to customize multiple aspects of t
         public DateTime? BaselineStartDate { get; set; }
         public DateTime? BaselineEndDate { get; set; }
         public string Predecessor { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1, },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 07), Duration = "4", Progress = 40, ParentID = 1, Predecessor="2", },
-            new TaskData() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", BaselineStartDate = new DateTime(2022, 01, 05, 08, 00, 00), BaselineEndDate = new DateTime(2022, 01, 05, 08, 00, 00), Progress = 30, ParentID = 1, Predecessor="3", },
-            new TaskData() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5, Predecessor="4", },
-            new TaskData() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), BaselineStartDate = new DateTime(2022, 01, 09), BaselineEndDate = new DateTime(2022, 01, 14), Duration = "3", Progress = 40, ParentID = 5, Predecessor="6", },
-            new TaskData() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5, Predecessor="7", }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 06), EndDate = new DateTime(2026, 01, 09), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 06), BaselineStartDate = new DateTime(2026, 01, 06), BaselineEndDate = new DateTime(2026, 01, 07), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", BaselineStartDate = new DateTime(2026, 01, 05, 08, 00, 00), BaselineEndDate = new DateTime(2026, 01, 05, 08, 00, 00), Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06), BaselineStartDate = new DateTime(2026, 01, 09), BaselineEndDate = new DateTime(2026, 01, 14), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
         };
         return Tasks;
     }
@@ -436,7 +436,7 @@ Below is a complete example demonstrating how to customize multiple aspects of t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeNaVoAMMmqlIy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVRNRCuJftaTUCM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![style and appearance](./images/style-and-appearance.webp)
 
@@ -465,12 +465,12 @@ N> By default, the `GridLines` property is set to **Horizontal** type.
     </SfDropDownList>
 </div>
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="800px" GridLines="@SelectedGridLine">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code {
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     private Syncfusion.Blazor.Gantt.GridLine SelectedGridLine { get; set; } = Syncfusion.Blazor.Gantt.GridLine.Both;
 
     public class GridLineOption
@@ -499,27 +499,27 @@ N> By default, the `GridLines` property is set to **Horizontal** type.
 
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         return new List<TaskData>
         {
-            new TaskData { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 07) },
-            new TaskData { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentID = 1 },
-            new TaskData { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentID = 1 },
-            new TaskData { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 10) },
-            new TaskData { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentID = 5 },
-            new TaskData { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentID = 5 },
-            new TaskData { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentID = 5 }
+            new TaskData { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09) },
+            new TaskData { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 1 },
+            new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 10) },
+            new TaskData { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 01, 06), EndDate = new DateTime(2026, 01, 09), Progress = 30, ParentId = 5 },
+            new TaskData { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 06),EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 5 },
+            new TaskData { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 06), Duration = "0", Progress = 30, ParentId = 5 }
         };
     }
 }
@@ -527,7 +527,7 @@ N> By default, the `GridLines` property is set to **Horizontal** type.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSMthBSWqrszaT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBxNxCaJTlhelFQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 

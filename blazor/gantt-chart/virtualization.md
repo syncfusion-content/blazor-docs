@@ -24,10 +24,10 @@ The following example enables row virtualization for a large dataset:
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" AutoCalculateDateScheduling="@autoCalculateDateScheduling" TreeColumnIndex="1" EnableRowVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate" Toolbar="@(new List<string>() { "Add", "Delete", "Edit", "ZoomIn", "ZoomOut" })" ScrollToTaskbarOnClick="true">
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-    <GanttTaskFields ParentID="ParentID" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    <GanttTaskFields ParentID="ParentId" Work="Work" Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType">
     </GanttTaskFields>
     <GanttColumns>
-    <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+    <GanttColumn Field="TaskId" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
     <GanttColumn Field="TaskName" HeaderText="TaskName"></GanttColumn>
     <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
     <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
@@ -41,11 +41,10 @@ The following example enables row virtualization for a large dataset:
     <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
 </SfGantt>
 @code {
-    private SfGantt<TaskData> Obj { get; set; }
-    private DateTime ProjectStartDate = new DateTime(2000, 1, 1);
-    private DateTime ProjectEndDate = new DateTime(2025, 12, 31);
+    private DateTime ProjectStartDate = new DateTime(2026, 1, 1);
+    private DateTime ProjectEndDate = new DateTime(2026, 12, 31);
     private bool autoCalculateDateScheduling = false;
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = VirtualData.GetTreeVirtualData(1000);
@@ -59,8 +58,8 @@ The following example enables row virtualization for a large dataset:
             Random rand = new Random();
             var x = 0;
             int duration = 0;
-            DateTime startDate = new DateTime(2000, 1, 5);
-            DateTime endDate = new DateTime(2000, 1, 12);
+            DateTime startDate = new DateTime(2026, 1, 5);
+            DateTime endDate = new DateTime(2026, 1, 12);
             string[] assignee = { "Allison Janney", "Bryan Fogel", "Richard King", "Alex Gibson" };
             string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
             for (var i = 1; i <= count / 5; i++)
@@ -68,7 +67,7 @@ The following example enables row virtualization for a large dataset:
                 var name = rand.Next(0, 100);
                 TaskData Parent = new TaskData()
                     {
-                        ID = ++x,
+                        TaskId = ++x,
                         TaskName = "Task " + x,
                         StartDate = startDate,
                         EndDate = startDate.AddDays(26),
@@ -84,7 +83,7 @@ The following example enables row virtualization for a large dataset:
                     duration = 5;
                     DataCollection.Add(new TaskData()
                         {
-                            ID = ++x,
+                            TaskId = ++x,
                             TaskName = "Task " + x,
                             StartDate = startDate,
                             EndDate = startDate.AddDays(5),
@@ -92,7 +91,7 @@ The following example enables row virtualization for a large dataset:
                             Assignee = assignee[j - 1],
                             Reporter = reporter[j - 1],
                             Progress = 50,
-                            ParentID = Parent.ID,
+                            ParentId = Parent.TaskId,
                         });
                 }
             }
@@ -101,7 +100,7 @@ The following example enables row virtualization for a large dataset:
     }
     public class TaskData
     {
-        public int ID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -109,15 +108,15 @@ The following example enables row virtualization for a large dataset:
         public string Assignee { get; set; }
         public string Reporter { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
-        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+        
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBeDasmfrkOvUON?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnDHLLIfJOxhob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Managing records count
 
@@ -137,13 +136,13 @@ By default, the number of records rendered per page will be twice the Gantt char
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="GanttChart" PageSize="15" OverscanCount="5" ID="GanttContainer" EnableContextMenu="true" AllowFiltering="true" AllowSorting="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" EnableRowVirtualization="true" EnableTimelineVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate"
+<SfGantt PageSize="15" OverscanCount="5" ID="GanttContainer" EnableContextMenu="true" AllowFiltering="true" AllowSorting="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" EnableRowVirtualization="true" EnableTimelineVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate"
          Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Cancel","ExpandAll","CollapseAll" })" ScrollToTaskbarOnClick="true">
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-    <GanttTaskFields ParentID="ParentID" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    <GanttTaskFields ParentID="ParentId" Work="Work" Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttColumns>
-        <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+        <GanttColumn Field="TaskId" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="TaskName"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
@@ -158,11 +157,10 @@ By default, the number of records rendered per page will be twice the Gantt char
 </SfGantt>       
          
  @code {
-    SfGantt<TaskData> GanttChart { get; set; }
-    private DateTime ProjectStartDate = new DateTime(2000, 1, 1);
-    private DateTime ProjectEndDate = new DateTime(2021, 12, 31);
+    private DateTime ProjectStartDate = new DateTime(2026, 1, 1);
+    private DateTime ProjectEndDate = new DateTime(2026, 12, 31);
     public int Value { get; set; } = 1000;
-    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = VirtualData.GetTreeVirtualData(500);
@@ -176,8 +174,8 @@ By default, the number of records rendered per page will be twice the Gantt char
             Random rand = new Random();
             var x = 0;
             int duration = 0;
-            DateTime startDate = new DateTime(2000, 1, 5);
-            DateTime endDate = new DateTime(2000, 1, 12);
+            DateTime startDate = new DateTime(2026, 1, 5);
+            DateTime endDate = new DateTime(2026, 1, 12);
             string[] assignee = { "Allison Janney", "Bryan Fogel", "Richard King", "Alex Gibson" };
             string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
             for (var i = 1; i <= count / 5; i++)
@@ -185,7 +183,7 @@ By default, the number of records rendered per page will be twice the Gantt char
                 var name = rand.Next(0, 100);
                 TaskData Parent = new TaskData()
                     {
-                        ID = ++x,
+                        TaskId = ++x,
                         TaskName = "Task " + x,
                         StartDate = startDate,
                         EndDate = startDate.AddDays(26),
@@ -202,7 +200,7 @@ By default, the number of records rendered per page will be twice the Gantt char
                     duration = 5;
                     DataCollection.Add(new TaskData()
                         {
-                            ID = ++x,
+                            TaskId = ++x,
                             TaskName = "Task " + x,
                             StartDate = startDate,
                             EndDate = startDate.AddDays(5),
@@ -210,7 +208,7 @@ By default, the number of records rendered per page will be twice the Gantt char
                             Assignee = assignee[j - 1],
                             Reporter = reporter[j - 1],
                             Progress = rand.Next(100),
-                            ParentID = Parent.ID,
+                            ParentId = Parent.TaskId,
                             Predecessor = j > 1 ? (x - 1) + "FS" : ""
                         });
                 }
@@ -220,7 +218,7 @@ By default, the number of records rendered per page will be twice the Gantt char
     }
     public class TaskData
     {
-        public int ID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
@@ -228,7 +226,7 @@ By default, the number of records rendered per page will be twice the Gantt char
         public string Assignee { get; set; }
         public string Reporter { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
         public string Predecessor { get; set; }
     }
 }
@@ -236,7 +234,7 @@ By default, the number of records rendered per page will be twice the Gantt char
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSjuWwppImKWKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrRNRBLSTmNlXHM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Configure column virtualization
 
@@ -291,8 +289,8 @@ Column virtualization, enabled by setting [EnableRowVirtualization](https://help
                 {
                     ProjectId = ++x,
                     ProjectName = "Task " + x,
-                    ProjectStartDate = new DateTime(2022, 1, 9),
-                    ProjectEndDate = new DateTime(2022, 1, 13),
+                    ProjectStartDate = new DateTime(2026, 1, 9),
+                    ProjectEndDate = new DateTime(2026, 1, 13),
                     ProjectDuration = "10",
                     ProjectProgress = 50,
                     ParentID = null,
@@ -306,8 +304,8 @@ Column virtualization, enabled by setting [EnableRowVirtualization](https://help
                     {
                         ProjectId = ++x,
                         ProjectName = "Task " + x,
-                        ProjectStartDate = new DateTime(2022, 1, 9),
-                        ProjectEndDate = new DateTime(2022, 1, 13),
+                        ProjectStartDate = new DateTime(2026, 1, 9),
+                        ProjectEndDate = new DateTime(2026, 1, 13),
                         ProjectDuration = "10",
                         ProjectProgress = 50,
                         ParentID = Parent.ProjectId,
@@ -358,7 +356,7 @@ Column virtualization, enabled by setting [EnableRowVirtualization](https://help
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDryXYCmpzdIEKPs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhdZnLreflsbmai?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) is required for column virtualization. If the column's width is not defined, then the Gantt Chart will consider its value as **150px**.
 
@@ -408,7 +406,7 @@ The following example enables timeline virtualization for a wide timeline:
 
 @code {
     public SfGantt<TaskData> Gantt;
-    public DateTime ProjectStart = new DateTime(2000, 2, 6);
+    public DateTime ProjectStart = new DateTime(2026, 2, 6);
     public DateTime ProjectEnd = new DateTime(2100, 12, 31);
 
     public List<TaskData> TaskCollection { get; set; }
@@ -431,8 +429,8 @@ The following example enables timeline virtualization for a wide timeline:
                 {
                     ProjectId = ++x,
                     ProjectName = "Task " + x,
-                    ProjectStartDate = new DateTime(2017, 1, 9),
-                    ProjectEndDate = new DateTime(2017, 1, 13),
+                    ProjectStartDate = new DateTime(2026, 1, 9),
+                    ProjectEndDate = new DateTime(2026, 1, 13),
                     ProjectDuration = "10",
                     ProjectProgress = 50,
                     ParentID = null,
@@ -446,8 +444,8 @@ The following example enables timeline virtualization for a wide timeline:
                     {
                         ProjectId = ++x,
                         ProjectName = "Task " + x,
-                        ProjectStartDate = j <= 3 ? new DateTime(2000, 2, 10) : j > 3 && j <= 6 ? new DateTime(2031, 5, 1) : new DateTime(2061, 8, 1),
-                        ProjectEndDate = new DateTime(2021, 1, 13),
+                        ProjectStartDate = j <= 3 ? new DateTime(2026, 2, 10) : j > 3 && j <= 6 ? new DateTime(2031, 5, 1) : new DateTime(2061, 8, 1),
+                        ProjectEndDate = new DateTime(2026, 1, 13),
                         ProjectDuration = "10650",
                         ProjectProgress = 50,
                         ParentID = Parent.ProjectId,
@@ -494,10 +492,11 @@ The following example enables timeline virtualization for a wide timeline:
     }
 }
 
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLSZYsmJzvPFSdf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhdZRrrIyXilQTc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations for virtualization
 

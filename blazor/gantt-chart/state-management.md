@@ -34,46 +34,47 @@ N> The state will be persisted based on the **ID** property. So, it is recommend
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Navigations
 
-<SfGantt ID="Persist" @ref="Gantt" DataSource="@TaskCollection" Width="750px" AllowReordering="true" AllowFiltering="true" AllowSorting="true" AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-    ParentID="ParentID"></GanttTaskFields>
+
+<SfGantt DataSource="@TaskCollection" Width="750px" AllowReordering="true" AllowFiltering="true" AllowSorting="true" AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+    ParentID="ParentId"></GanttTaskFields>
 </SfGantt>
 @code{
-    private SfGantt<TaskData> Gantt;
-    private List<TaskData> TaskCollection { get; set; }
+    
+    public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 05), EndDate = new DateTime(2021, 04, 21), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = "2", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Concept approval", StartDate = new DateTime(2021, 04, 08), EndDate = new DateTime(2021, 04, 08), Duration="0", ParentID = 1 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 09), Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 09), Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2026, 04, 08), EndDate = new DateTime(2026, 04, 08), Duration="0", ParentId = 1 }
         };
         return Tasks;
     }
 }
 
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLosXtaAqKJScjD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBHtxWkJXadAlhg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Handling gantt state manually
 
@@ -89,11 +90,11 @@ To manually manage the Gantt chart’s persisted state, use the following method
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 
-<SfGantt ID="Persist" @ref="Gantt" DataSource="@TaskCollection" Width="750px"
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Width="750px"
                 Toolbar="Toolbaritems" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
                 AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                    Dependency="Predecessor" ParentID="ParentID"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
@@ -109,8 +110,8 @@ To manually manage the Gantt chart’s persisted state, use the following method
     }
 </style>
 @code{
-    private SfGantt<TaskData> Gantt;
-    private List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData> Gantt;
+    public List<TaskData> TaskCollection { get; set; }
     private string PersistedState = null; 
     private List<Object> Toolbaritems = new List<Object>() {
          "ZoomIn", "ZoomOut", "ZoomToFit",
@@ -139,22 +140,22 @@ To manually manage the Gantt chart’s persisted state, use the following method
     }
     public class TaskData
     {
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
+        public int? ParentId { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 05), EndDate = new DateTime(2021, 04, 21), },
-            new TaskData() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentID = 1 },
-            new TaskData() { TaskID = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = "2", Progress = 30, ParentID = 1 },
-            new TaskData() { TaskID = 5, TaskName = "Concept approval", StartDate = new DateTime(2021, 04, 08), EndDate = new DateTime(2021, 04, 08), Duration="0", ParentID = 1 }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 09), Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 09), Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2026, 04, 08), EndDate = new DateTime(2026, 04, 08), Duration="0", ParentId = 1 }
         };
         return Tasks;
     }
@@ -163,6 +164,6 @@ To manually manage the Gantt chart’s persisted state, use the following method
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLysDXYUAfEzjAE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLntxWapiiwjpeN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
