@@ -167,6 +167,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+@using Syncfusion.Blazor.LinearGauge
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
