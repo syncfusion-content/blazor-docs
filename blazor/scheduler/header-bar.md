@@ -46,7 +46,7 @@ By default, the header bar holds the date and view navigation options, through w
 }
 ```
 
-![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-hide-header-bar.png)
+![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-hide-header-bar.webp)
 
 ## Toolbar customization
 
@@ -203,7 +203,7 @@ In this comprehensive example, we create a custom toolbar that enhances navigati
 }
 ```
 
-![Blazor Scheduler with a Custom Toolbar](images/blazor-scheduler-toolbar-template.png)
+![Blazor Scheduler with a Custom Toolbar](images/blazor-scheduler-toolbar-template.webp)
 
 ## How to display the view options within the header bar popup
 
@@ -346,7 +346,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 </style>
 ```
 
-![Date Header Customization in Blazor Scheduler](images/blazor-scheduler-customize-dateheader.png)
+![Date Header Customization in Blazor Scheduler](images/blazor-scheduler-customize-dateheader.webp)
 
 ### Customization using OnRenderCell event
 

@@ -517,7 +517,7 @@ This method greatly improves the component's performance by reducing the data th
 ```
 
 The following image represents how the parameters are passed using ODataV4 filter.
-![ODataV4 filter](images/blazor-odatav4-filter.jpg)
+![ODataV4 filter](images/blazor-odatav4-filter.webp)
 
 ### Web API adaptor
 
