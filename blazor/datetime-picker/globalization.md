@@ -7,7 +7,7 @@ control: Datetime Picker
 documentation: ug
 ---
 
-# Globalization in Blazor Datetime Picker Component
+# Globalization in Blazor DateTime Picker Component
 
 The [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) component supports localization and culture-specific formatting. For configuration details, see the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic for Blazor components. When a Locale is set, the component reflects the culture’s date and time formats, month and day names, and other culture-specific settings. Ensure that the required culture data is loaded before rendering the component.
 

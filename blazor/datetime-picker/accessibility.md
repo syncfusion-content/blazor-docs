@@ -102,7 +102,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 
-N> The “t” key behavior in the following example is custom to the sample and not a built-in shortcut. For additional information about native events, see the [Native events](https://blazor.syncfusion.com/documentation/datetime-picker/native-events) topic.
+N> To demonstrate custom keyboard interaction, press the `t` key (lowercase) to move focus out of the DateTimePicker component. This is a user-defined example and not a built-in shortcut. For additional information about native events, see the [Native events](https://blazor.syncfusion.com/documentation/datetime-picker/native-events) topic.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

@@ -7,7 +7,7 @@ control: Datetime Picker
 documentation: ug
 ---
 
-# Islamic Calendar in Blazor Datetime Picker  Component
+# Islamic Calendar in Blazor DateTime Picker  Component
 
 In addition to the Gregorian calendar, the DateTimePicker component supports the Islamic (Hijri) calendar. The Islamic calendar is a lunar calendar consisting of 12 months in a year of 354 or 355 days. Users can select a date from the Islamic calendar or manually enter a date. Additionally, helper methods such as ConvertToHijri and ConvertToGregorian can be used to convert dates between calendar systems.
 
