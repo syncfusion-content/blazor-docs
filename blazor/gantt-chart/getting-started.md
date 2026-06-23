@@ -161,7 +161,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 </SfGantt>
 
 @code{
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -170,10 +170,10 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
     public class TaskData
     {
         public int TaskID { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentID { get; set; }
     }
