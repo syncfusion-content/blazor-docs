@@ -66,7 +66,7 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
 {% highlight json tabtitle=".devcontainer/devcontainer.json" %}
 
 {
-  "name": ".NET 10 Blazor + Syncfusion",
+  "name": "Blazor (.NET 10) Codespaces Development Container",
 
   "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
 
@@ -139,7 +139,7 @@ Commit the `.devcontainer` folder to your repository.
 {% highlight bash tabtitle="Terminal" %}
 
 git add .devcontainer/devcontainer.json
-git commit -m "Add dev container configuration for Blazor development with Syncfusion"
+git commit -m "Add dev container configuration for Blazor development in GitHub Codespaces"
 git push origin main
 
 {% endhighlight %}
