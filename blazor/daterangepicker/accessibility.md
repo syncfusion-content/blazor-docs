@@ -95,7 +95,7 @@ N> To demonstrate custom keyboard interaction, press the `t` key (lowercase) to 
 <SfDateRangePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="RangeObj"></SfDateRangePicker>
 
 @code {
-    public SfDateRangePicker RangeObj;
+    public SfDateRangePicker<DateTime?> RangeObj;
     public void KeyPressed(KeyboardEventArgs args)
     {
         if (args.Key == "t")
