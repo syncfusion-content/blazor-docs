@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -161,7 +162,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Diagram component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
