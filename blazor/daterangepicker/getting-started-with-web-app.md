@@ -105,7 +105,6 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-
 dotnet add package Syncfusion.Blazor.Calendars -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
@@ -167,7 +166,6 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component inside the razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
