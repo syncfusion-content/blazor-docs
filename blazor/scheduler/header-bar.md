@@ -247,7 +247,7 @@ By default, the header bar holds the view navigation options, through which the 
 
 The Scheduler with view options within the header bar popup will be rendered as shown in the following image.
 
-![Displaying Header Bar Popup in Blazor Scheduler](images/blazor-scheduler-header-bar-popup.png)
+![Displaying Header Bar Popup in Blazor Scheduler](images/blazor-scheduler-header-bar-popup.webp)
 
 N> Refer [here](./resources#adaptive-ui-in-desktop) to know more about adaptive UI in resources scheduler.
 
