@@ -118,7 +118,7 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
 {% endhighlight %}
 {% endtabs %}
 
-### Key configuration details
+#### Key configuration details
 
 * **Base image**: Uses the official .NET 10 development container image
 * **Features**: Includes [GitHub CLI](https://cli.github.com/) for repository operations within Codespaces
