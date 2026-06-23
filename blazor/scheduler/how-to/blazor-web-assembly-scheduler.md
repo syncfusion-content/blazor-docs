@@ -87,7 +87,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Scheduler component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in the **~/Pages/Index.razor** file.
+Add the Blazor Scheduler component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -128,7 +128,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler compon
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Scheduler component in your default web browser.
 
 ![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.png)
 

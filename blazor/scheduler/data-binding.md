@@ -15,7 +15,7 @@ It supports the following kinds of data binding methods:
 * List binding
 * Remote data
 
-Please take a moment to watch this video to learn about data binding in the Blazor Scheduler.
+Please take a moment to watch this video to learn about data binding in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler).
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=EwfxPrqxma8"%}
@@ -417,7 +417,7 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
-N> You can find the complete procedures to perform CRUD actions with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
+N> You can find the complete procedures to perform CRUD actions with the Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
 ## Remote data
 
