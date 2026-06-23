@@ -5,7 +5,6 @@ description: Checkout and learn here all the features and Overview of the Blazor
 platform: Blazor
 control: Diagram Component
 documentation: ug
-canonical_url: "https://www.syncfusion.com/blazor-components/blazor-diagram"
 ---
 
 # Diagram Component Overview
