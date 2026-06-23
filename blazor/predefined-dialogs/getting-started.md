@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Predefined Dialogs in WASM App | Syncfusion
+title: Get Started with Predefined Dialogs in Blazor WASM App | Syncfusion
 description: Check out and learn about getting started with the predefined dialogs in the Blazor WebAssembly Application.
 platform: Blazor
 control: Predefined Dialogs
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,7 +160,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Predefined Dialogs component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the Blazor Predefined Dialogs component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the Blazor Predefined Dialogs component inside the razor file.
 
 `SfDialogProvider` opens predefined dialogs based on `SfDialogService` settings from anywhere in the application. Add `SfDialogProvider` in `MainLayout.razor` or in a specific page, but include it only once in the app. When added to `MainLayout.razor`, predefined dialogs can be opened from anywhere in the application. When added to a specific page, dialogs can be opened only within that page.
 
@@ -184,7 +185,7 @@ An alert dialog is used to display errors, warnings, or informational messages t
 In the following example, an alert dialog is displayed when a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) is clicked.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 {% include_relative code-snippet/alert-dialog.razor %}
 
@@ -240,7 +241,7 @@ A confirm dialog displays a specified message along with `OK` and `Cancel` butto
 In the following example, the confirm dialog is displayed and returns a value based on the `OK` or `Cancel` button click.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 {% include_relative code-snippet/confirm-dialog.razor %}
 
@@ -256,7 +257,7 @@ A prompt dialog is used to get input from the user using the [DialogService.Prom
 In the following example, the prompt dialog is displayed and returns a value based on the `OK` or `Cancel` button click.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 {% include_relative code-snippet/prompt-dialog.razor %}
 
