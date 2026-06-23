@@ -87,7 +87,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | <kbd>Alt</kbd> + <kbd>→</kbd> | <kbd>⌥</kbd> + <kbd>→</kbd> | Focuses through out the pop-up container in forward direction. |
 | <kbd>Alt</kbd> + <kbd>←</kbd> | <kbd>⌥</kbd> + <kbd>←</kbd> | Focuses through out the pop-up container in backward direction. |
 
-N> To focus out the DateRangePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/daterangepicker/native-events) here.
+N> To demonstrate custom keyboard interaction, press the `t` key (lowercase) to move focus out of the DateRangePicker component. This is a user-defined example and not a built-in shortcut. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/daterangepicker/native-events) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
