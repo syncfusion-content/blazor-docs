@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Blazor File Manager component and much more.
+description: Discover how to configure data binding in the Blazor File Manager component with clear steps, examples, and guidance.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -624,7 +624,7 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
 {% endhighlight %}
 {% endtabs %}
 
-N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data?theme=fluent).
+N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data).
 
 ### Injected service
 
