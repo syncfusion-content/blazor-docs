@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection and Nesting in Blazor ButtonGroup Component
 
-Blazor ButtonGroup component provided two-way binding support in both single and multiple selection modes through the `Selected` property of `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties.
+Blazor ButtonGroup component provides two-way binding support in both single and multiple selection modes through the `Selected` property of `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties.
 
 ## Single selection
 
@@ -93,7 +93,7 @@ Nesting with other components can be possible in ButtonGroup. The following comp
 
 ### DropDownButton
 
-In the following example, the DropDownButton component can be added in ButtonGroup tag.
+In the following example, the DropDownButton component can be added to the ButtonGroup tag.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -116,7 +116,7 @@ In the following example, the DropDownButton component can be added in ButtonGro
 
 ### SplitButton
 
-In the following example, SplitButton component can be added in ButtonGroup tag.
+In the following example, SplitButton component can be added to the ButtonGroup tag.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

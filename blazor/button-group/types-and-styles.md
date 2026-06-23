@@ -44,6 +44,84 @@ The Blazor ButtonGroup has the following predefined styles that can be defined u
 
 N> Predefined ButtonGroup styles provide only the visual indication. So, ButtonGroup content should define the ButtonGroup style for the users of assistive technologies such as screen readers.
 
+### CSS Customization Classes
+
+To modify the ButtonGroup appearance, you need to override the default CSS of the ButtonGroup component. Find the list of CSS classes and their corresponding section in ButtonGroup. You can also create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+
+| CSS Class | Purpose of Class |
+| --------- | ---------------- |
+| `.e-btn` | To customize the ButtonGroup. |
+| `.e-btn:hover` | To customize the ButtonGroup on hover. |
+| `.e-btn:focus` | To customize the ButtonGroup on focus. |
+| `.e-btn:active` | To customize the ButtonGroup on active. |
+
+The following example demonstrates how to apply a custom styles using CSS classes for various properties like color, background color, font, border, padding, margin, and more:
+
+```cshtml
+
+@using Syncfusion.Blazor.SplitButtons
+
+<SfButtonGroup>
+    <ButtonGroupButton>Left</ButtonGroupButton>
+    <ButtonGroupButton>Center</ButtonGroupButton>
+    <ButtonGroupButton>Right</ButtonGroupButton>
+</SfButtonGroup>
+
+<style>
+    .e-btn {
+        /* Color properties */
+        color: #ffffff;
+        background-color: #007bff;
+        border-color: #0056b3;
+
+        /* Border properties */
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 6px;
+        outline: none;
+
+        /* Effects */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 1;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    /* Hover state styling */
+    .e-btn:hover {
+        color: #e0e0e0;
+        background-color: #0056b3;
+        border-color: #004494;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+        opacity: 0.95;
+    }
+
+    /* Focus state styling */
+    .e-btn:focus {
+        color: #ffffff;
+        background-color: #004494;
+        border-color: #003366;
+        box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.4);
+        outline: 2px solid #007bff;
+        outline-offset: 2px;
+    }
+
+    /* Active state styling */
+    .e-btn:active {
+        color: #ffffff;
+        background-color: #003366;
+        border-color: #002244;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        transform: translateY(0);
+    }
+
+</style>
+
+```
+
 ## ButtonGroup types
 
 The types of Blazor ButtonGroup are as follows:
@@ -51,7 +129,6 @@ The types of Blazor ButtonGroup are as follows:
 * Flat ButtonGroup
 * Outline ButtonGroup
 * Round ButtonGroup
-* Toggle ButtonGroup
 
 ### Flat ButtonGroup
 
@@ -64,6 +141,8 @@ An outline ButtonGroup has a border with transparent background. To create an ou
 ### Round ButtonGroup
 
 A round ButtonGroup is shaped like a circle. Usually, it contains an icon representing its action. To create a round ButtonGroup, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-round-corner`.
+
+The following example demonstrates the types of Blazor ButtonGroup:
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -114,7 +193,7 @@ To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazo
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRNxiFhfBAtUDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with Icon](./images/blazor-buttongroup-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRNxiFhfBAtUDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "Blazor ButtonGroup with Icon" %}
 
 ## ButtonGroup size
 
