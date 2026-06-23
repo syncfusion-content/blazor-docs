@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Value Binding in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Value Binding in Syncfusion Blazor Dropdown Tree component and much more.
+title: Value Binding in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Value Binding in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
