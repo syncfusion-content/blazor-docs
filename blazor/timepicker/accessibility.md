@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Accessibility in Blazor TimePicker Component | Syncfusion
+title: Accessibility in Blazor TimePicker Component | Syncfusion
 description: Checkout and learn here all about the accessibility in Syncfusion Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
@@ -9,7 +9,7 @@ documentation: ug
 
 #  Accessibility in Blazor TimePicker Component
 
-The web accessibility makes web applications and its content more accessible to people with disabilities without any barriers. It especially tracks the dynamic value changes and DOM changes.
+Web accessibility makes web applications and its content more accessible to people with disabilities without any barriers. It especially tracks the dynamic value changes and DOM changes.
 
 The [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -81,7 +81,7 @@ N> It supports the following list of shortcut keys to interact with the TimePick
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 
-N> To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/timepicker/native-events) here.
+N> To demonstrate custom keyboard interaction, press the `t` key (lowercase) to move focus out of the TimePicker component. This is a user-defined example and not a built-in shortcut. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/timepicker/native-events) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

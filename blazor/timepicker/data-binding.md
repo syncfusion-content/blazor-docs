@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor TimePicker Component
 
-This section briefly explains how to bind the value to the TimePicker component in the below different ways.
+This section briefly explains how to bind the value to the TimePicker component in the following different ways.
 
 * One-Way Data Binding
 * Two-Way Data Binding
@@ -17,7 +17,7 @@ This section briefly explains how to bind the value to the TimePicker component 
 
 ## One-Way Binding
 
-We can bind the value to the TimePicker component directly for `Value` property as mentioned in the following code example. In one-way binding, we need to pass property or variable name along with `@` (For Ex: "@DateValue").
+You can bind the value to the TimePicker component directly for `Value` property as mentioned in the following code example. In one-way binding, we need to pass property or variable name along with `@` (For Ex: "@DateValue").
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
