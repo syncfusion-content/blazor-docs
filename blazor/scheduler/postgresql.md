@@ -747,7 +747,7 @@ The database schema has been created successfully.
 
 ### Step 3: Create the Scheduler Component
 
-The Scheduler component will display appointment data in a Blazor Scheduler with full CRUD (Create, Read, Update, Delete) capabilities and multiple calendar views.
+The Scheduler component will display appointment data in a Syncfusion Blazor Scheduler with full CRUD (Create, Read, Update, Delete) capabilities and multiple calendar views.
 
 #### Instructions:
 
@@ -978,10 +978,10 @@ All operations are automatically saved to the PostgreSQL database.
 
 ## Output Preview
 ![Frontend Preview](./images/blazor-scheduler-postgresql-frontend.png)
-*Image illustrating the Blazor Scheduler*
+*Image illustrating the Syncfusion Blazor Scheduler*
 
 ![Database Preview](./images/blazor-scheduler-postgresql-database.png)
-*Image illustrating the events of the Blazor Scheduler stored in PostgreSQL*
+*Image illustrating the events of the Syncfusion Blazor Scheduler stored in PostgreSQL*
 
 ## Complete Sample Repository
 

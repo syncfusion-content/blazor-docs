@@ -417,7 +417,7 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
-N> You can find the complete procedures to perform CRUD actions with the Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
+N> You can find the complete procedures to perform CRUD actions with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
 ## Remote data
 

@@ -26,7 +26,7 @@ Install the following software and packages before starting the process:
 
 ## Binding data from Minimal API endpoints
 
-This section explains how to create an ASP.NET Core Minimal API backend within a Blazor Server application and bind appointment data to the Blazor Scheduler component. The following steps demonstrate the actual project creation flow.
+This section explains how to create an ASP.NET Core Minimal API backend within a Blazor Server application and bind appointment data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. The following steps demonstrate the actual project creation flow.
 
 ### Step 1: Create a Blazor Web App
 
@@ -576,7 +576,7 @@ http://localhost:5175
 
 ## Output Preview
 ![Frontend Preview](./images/blazor-minimalAPI-frontend.png)
-*Image illustrating the Blazor Scheduler with Minimal API*
+*Image illustrating the Syncfusion Blazor Scheduler with Minimal API*
 
 ## Complete Sample Repository
 

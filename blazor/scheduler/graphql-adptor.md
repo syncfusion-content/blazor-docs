@@ -638,7 +638,7 @@ The data model has been successfully created.
 
 ### Step 4: Update the Blazor Scheduler
 
-The `Home.razor` component will display the appointment data in a Blazor Scheduler with CRUD operations capabilities.
+The `Home.razor` component will display the appointment data in a Syncfusion Blazor Scheduler with CRUD operations capabilities.
 
 **Instructions:**
 
@@ -706,7 +706,7 @@ In the `Home.razor`, `SfDataManager` component connects the Scheduler to the Gra
 
 ### Step 5: Configure GraphQL Adaptor and Data Binding
 
-The GraphQL adaptor is a bridge that connects the Blazor Scheduler with the GraphQL backend. The adaptor translates Scheduler operations into GraphQL queries and mutations. When the user interacts with the Scheduler, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the Scheduler display.
+The GraphQL adaptor is a bridge that connects the Syncfusion Blazor Scheduler with the GraphQL backend. The adaptor translates Scheduler operations into GraphQL queries and mutations. When the user interacts with the Scheduler, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the Scheduler display.
 
 **What is a GraphQL Adaptor?**
 

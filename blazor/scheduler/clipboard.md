@@ -17,7 +17,7 @@ N> The [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Cut, copy and paste using keyboard
 
-The Blazor Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
 
 These keyboard shortcuts enable users to efficiently manage their schedules:
 
@@ -115,7 +115,7 @@ N> For Mac users, use **Cmd** instead of **Ctrl** for copy, cut, and paste opera
 
 You can programmatically manage appointments by using the public methods **cut**, **copy**, and **paste**. These methods allow you to perform the same actions as the context menu or external buttons.
 
-Utilize these public methods to manage appointments programmatically in Blazor Scheduler:
+Utilize these public methods to manage appointments programmatically in Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule:
 
 | Method          | Parameters                            | Description                                                        |
 |-----------------|---------------------------------------|--------------------------------------------------------------------|
