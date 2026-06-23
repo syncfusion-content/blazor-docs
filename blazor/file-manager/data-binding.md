@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor File Manager component and much more.
+description: Checkout and learn here all about Data Binding in Blazor File Manager component and much more.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -109,7 +109,7 @@ To access the above File Operations, you need some model class files that have f
 
 Add your required files and folders under the `wwwroot\Files` directory.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Manager component in your default web browser.
 
 ![Blazor File Manager Component](images/blazor-filemanager-component.png)
 
