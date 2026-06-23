@@ -75,3 +75,4 @@ The accessibility compliance of the Blazor Menu Bar component is shown in the fo
 ## See also
 
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+
