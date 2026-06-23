@@ -176,6 +176,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
+@using Syncfusion.Blazor.Charts
+
 <SfStockChart>
 
 </SfStockChart>
@@ -189,6 +191,8 @@ To bind data for the Stock Chart component, assign a `IEnumerable` object to the
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Charts
 
 <SfStockChart>
     <StockChartSeriesCollection>
