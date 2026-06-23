@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Baseline in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Baseline in Syncfusion Blazor Gantt Chart component and much more.
+title: Baseline in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all the features about Baseline in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

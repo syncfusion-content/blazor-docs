@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Template in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Column Template in Syncfusion Blazor Gantt Chart component and much more details.
+title: Column Template in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Column Template in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Column Template in Blazor Gantt Chart component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component supports column templates, allowing custom content to be displayed in a column instead of the default field value. You can render custom components or HTML elements using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Template) property to include elements such as images, buttons, or other UI controls within a column.
+The Blazor Gantt Chart component supports column templates, allowing custom content to be displayed in a column instead of the default field value. You can render custom components or HTML elements using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Template) property to include elements such as images, buttons, or other UI controls within a column.
 
 > When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for gantt actions like sorting, filtering, editing unless [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field) property of the column is specified.
 
 ## Render Button in a column
 
-You can render the Syncfusion<sup style="font-size:70%">&reg;</sup> [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) component inside a Gantt column by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Template) property.
+You can render the blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) component inside a Gantt column by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Template) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
