@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with TreeView in Blazor Server App | Syncfusion
+title: Getting Started with Blazor TreeView in Server App | Syncfusion
 description: Check out and learn about getting started with Blazor TreeView component in Blazor Server Application.
 platform: Blazor
 control: TreeView
@@ -28,7 +28,8 @@ Run the following command to create a new Blazor Server App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazor -o BlazorServerApp --interactivity Server
+dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +45,8 @@ Run the following command to create a new Blazor Server App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazor -o BlazorServerApp --interactivity Server
+dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
