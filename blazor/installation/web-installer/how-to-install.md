@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Install the Syncfusion Blazor web installer | Syncfusion
-description: Learn here about how to install the Syncfusion Blazor web installer, configure products, and manage the uninstall options. Explore here to more details.
+title: Install the Syncfusion Blazor web installer  | Syncfusion®
+description: Learn here about how to install the Blazor web installer, configure products, and manage the uninstall options. Explore here to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -63,7 +63,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ***Additional settings***
 
-   * Select **Install demos** to install Syncfusion samples, or clear it to skip sample installation.
+   * Select **Install demos** to install Blazor samples, or clear it to skip sample installation.
 
    * Select **Configure Syncfusion extensions in Visual Studio** to configure extensions, or clear it to skip configuration.
 
