@@ -130,4 +130,4 @@ The underlying grid structure of the Dashboard Layout is initially hidden. This 
 
 The following output illustrates the visible gridlines, indicating the cell division of the layout, with data containers (panels) placed over these cells:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVRDxLUfXIkXBCM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with GridLines](images/blazor-dashboard-layout-gridlines.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVRDxLUfXIkXBCM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with GridLines](images/blazor-dashboard-layout-gridlines.webp)" %}
