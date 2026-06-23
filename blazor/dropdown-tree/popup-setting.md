@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Setting in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion Blazor Dropdown Tree component and much more.
+title: Popup Setting in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Popup Setting in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug

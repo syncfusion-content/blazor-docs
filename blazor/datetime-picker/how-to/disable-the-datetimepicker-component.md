@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disable the Blazor DateTimePicker Component | Syncfusion
-description: Learn how to disable the Syncfusion Blazor DateTimePicker component using the Enabled property to prevent focus, typing, and opening the popup.
+title: Disable the Blazor DateTimePicker Component | Syncfusion®
+description: Learn how to disable the Blazor DateTimePicker component using the Enabled property to prevent focus, typing, and opening the popup.
 platform: Blazor
 control: DateTimePicker
 documentation: ug
