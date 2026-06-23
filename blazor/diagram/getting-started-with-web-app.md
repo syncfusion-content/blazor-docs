@@ -139,6 +139,7 @@ Open the **Program.cs** file in Blazor Web App and register the Blazor service. 
 using Syncfusion.Blazor;
 ....
 builder.Services.AddSyncfusionBlazor();
+....
 
 {% endhighlight %}
 {% endtabs %}
