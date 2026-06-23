@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -158,10 +159,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Dialog component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 
@@ -239,7 +240,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 - The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Destroyed) event triggers when the dialog component is removed from the DOM. These lifecycle events allow executing custom code at specific points in the component's existence.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 
@@ -270,7 +271,7 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 * When AllowPrerender is set to true, the dialog elements remain in the DOM even when hidden, which improves performance for frequently accessed dialogs but uses more memory.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
@@ -305,7 +306,7 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) property allows rendering a dialog with custom text header.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 
@@ -321,7 +322,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property allows rendering a dialog with custom text content.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 
@@ -334,10 +335,8 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfD
 
 ## See also
 
-* [Getting Started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-
-* [Getting Started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-
-* [Getting Started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-web-app)
 
 N> You can also explore our [Blazor Dialog example](https://blazor.syncfusion.com/demos/dialog/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Dialog.
