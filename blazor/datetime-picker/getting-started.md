@@ -211,7 +211,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLzDsBOKWcNOSex?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DateTimePicker Component](./images/blazor-datetimepicker-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHNxBTWORrsSVK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DateTimePicker Component](./images/blazor-datetimepicker-component.webp)" %}
 
 ## Setting the Value, Min and Max
 
@@ -233,7 +233,7 @@ Define the minimum and maximum selectable dates using the [Min](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBpNWhaqiwoBshR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Setting Minimum and Maximum Value in Blazor DateTimePicker](./images/blazor-datetimepicker-min-max-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBHjHrzCkGjtUvz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Setting Minimum and Maximum Value in Blazor DateTimePicker](./images/blazor-datetimepicker-min-max-value.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DateTimePicker).
 

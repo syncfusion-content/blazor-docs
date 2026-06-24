@@ -144,8 +144,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
-
 ## Add Blazor Kanban component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component inside the razor file.
@@ -168,7 +166,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     <KanbanCardSettings HeaderField="Title" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
 
-@code {
+@code 
+{
     public class TasksModel
     {
         public string Id { get; set; }
@@ -234,8 +233,6 @@ dotnet run
 {% endtabcontent %}
 
 {% endtabcontents %}
-
-N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the Kanban Board.
 
 ## See also
 
