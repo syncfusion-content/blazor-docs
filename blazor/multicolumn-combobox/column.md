@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about columns in the Syncfusion Blazor MultiColumn ComboBox component and much more details.
+title: Columns in Blazor MultiColumn ComboBox Component | Syncfusion®
+description: Checkout and learn here all about columns in Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
