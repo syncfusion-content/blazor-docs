@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install the Syncfusion Blazor web installer  | Syncfusion®
+title: Install the Syncfusion Blazor web installer | Syncfusion®
 description: Learn here about how to install the Blazor web installer, configure products, and manage the uninstall options. Explore here to more details.
 platform: Blazor
 control: Common

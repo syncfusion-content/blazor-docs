@@ -151,7 +151,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Register Blazor service
 
-Register the [Syncfusion® Blazor Extension]Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
