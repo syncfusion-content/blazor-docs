@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Add Edit Dialog in Blazor Gantt Chart Component | Syncfusion
-description: Learn how to open add and edit dialogs programmatically in the Syncfusion Blazor Gantt Chart component for efficient task creation and modification.
+title: Open Add Edit Dialog in Blazor Gantt Chart Component | Syncfusion®
+description: Learn how to open add and edit dialogs programmatically in the Blazor Gantt Chart component for efficient task creation and modification.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

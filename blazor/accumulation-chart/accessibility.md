@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Accumulation Chart component and more.
+title: Accessibility in Blazor Accumulation Chart Component | Syncfusion®
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Accumulation Chart component and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -75,4 +75,4 @@ The accessibility compliance of the Blazor Accumulation Chart component is shown
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
