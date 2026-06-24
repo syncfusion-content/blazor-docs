@@ -234,4 +234,4 @@ The following code example demonstrates how to customize the layout and design o
 
 ```
 
-![Template in Blazor Chip component](./images/blazor-chip-template.png)
+![Template in Blazor Chip component](./images/blazor-chip-template.webp)
