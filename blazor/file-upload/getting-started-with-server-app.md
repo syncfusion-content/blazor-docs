@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,8 +157,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
-
 ## Add Blazor File Upload component
 
 The Blazor File Upload component allows you to seamlessly integrate file upload functionalities into your Blazor applications. It supports various features like asynchronous and synchronous uploads, file type validation, progress tracking, and custom templates. A common use case is enabling users to upload documents, images, or other files to a server, or process them directly within the client-side application.
@@ -239,7 +239,8 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
       <UploaderEvents ValueChange="@OnChange"></UploaderEvents>
 </SfUploader>
 
-@code {
+@code
+{
     private async Task OnChange(UploadChangeEventArgs args)
     {
         try
@@ -279,7 +280,6 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
 N> When saving files directly in a Blazor Server application using [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) and [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload), the files are saved on the server where the Blazor Server app is running, not on the client's machine. You need appropriate file system permissions for the server process to write to the specified directory. Also, ensure the target directory (`wwwroot/uploads` in this example) exists or is created programmatically. In a production environment, consider secure storage solutions for uploaded files.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVyZkrqBvaSlvht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 ## Memory stream
 
@@ -366,7 +366,8 @@ This example shows how to use the [`Created`](https://help.syncfusion.com/cr/bla
 
 <p>@statusMessage</p>
 
-@code {
+@code
+{
     private string statusMessage = "Uploader not yet created.";
 
     private void OnUploaderCreated()
@@ -385,7 +386,6 @@ N> The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLyNuVUBGtPZrdo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 ## File Selected Event
 
 The [`FileSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) event is triggered when files are chosen from the file explorer dialog, but **before** the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event. This event provides an opportunity to perform validations on the selected files (e.g., file size, type, count) and decide whether to proceed with the upload/value change or cancel the selection. It's ideal for immediate client-side feedback or preventative actions.
@@ -403,7 +403,8 @@ This example demonstrates how to use the [FileSelected](https://help.syncfusion.
 </SfUploader>
 <p>@validationMessage</p>
 
-@code {
+@code 
+{
     private string validationMessage = "";
     private readonly long MaxFileSize = 1024 * 1024; // 1 MB
 
@@ -436,7 +437,6 @@ N> Setting `args.Cancel = true` in the `FileSelected` event will prevent the fil
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLIZuBUVwEJoJpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 ## OnFileListRender
 
 The [`OnFileListRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnFileListRender) event allows you to customize individual file list items before they are rendered in the uploader's UI. This is highly useful for scenarios where you need to display additional information alongside each file, such as a custom preview, metadata, or actions.
@@ -453,7 +453,8 @@ This example demonstrates how to use [`OnFileListRender`](https://help.syncfusio
     <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save" RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
 </SfUploader>
 
-@code {
+@code 
+{
     SfUploader fileobj;
     private void OnFileListRenderHandler(FileListRenderingEventArgs args)
     {
@@ -463,7 +464,6 @@ This example demonstrates how to use [`OnFileListRender`](https://help.syncfusio
 
 {% endhighlight %}
 {% endtabs %}
-
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload).
 
