@@ -18,7 +18,7 @@ GitHub Codespaces provides a cloud-based development environment that eliminates
 Before getting started, ensure you have the following:
 
 * A [GitHub](https://github.com/) account
-* Access to [GitHub Codespaces](https://docs.github.com/en/codespaces/about-codespaces)
+* Access to [GitHub Codespaces](https://docs.github.com/en/codespaces/about-codespaces/what-are-codespaces)
 
 ## Configure a development container for .NET 10 and Blazor
 
@@ -67,13 +67,10 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
 
 {
   "name": "Blazor (.NET 10) Codespaces Development Container",
-
   "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
-
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-
   "customizations": {
     "vscode": {
       "extensions": [
@@ -86,9 +83,7 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
       ]
     }
   },
-
   "forwardPorts": [5000],
-
   "portsAttributes": {
     "5000": {
       "label": "Blazor HTTP",
@@ -96,22 +91,16 @@ Inside the `.devcontainer` folder, create a file named `devcontainer.json` and a
       "requireLocalPort": false
     }
   },
-
   "postCreateCommand": "dotnet workload install wasm-tools",
-
   "postStartCommand": "dotnet restore || true",
-
   "updateContentCommand": "dotnet workload update",
-
   "remoteUser": "vscode",
-
   "remoteEnv": {
     "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "false",
     "ASPNETCORE_ENVIRONMENT": "Development",
     "ASPNETCORE_URLS": "http://0.0.0.0:5000",
     "DOTNET_CLI_TELEMETRY_OPTOUT": "true"
   },
-
   "waitFor": "postCreateCommand"
 }
 
