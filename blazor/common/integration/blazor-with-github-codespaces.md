@@ -283,7 +283,7 @@ Open a Razor file located in the `~/Pages/*.razor` (for example, `Home.razor`) a
 <SfGrid DataSource="@Orders" />
 
 @code {
-    public List<Order> Orders { get; set; }
+    public List<Order> Orders { get; set; } = new List<Order>();
 
     protected override void OnInitialized()
     {
@@ -302,8 +302,8 @@ Open a Razor file located in the `~/Pages/*.razor` (for example, `Home.razor`) a
 
     public class Order {
         public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public string ShipCity { get; set; }
+        public string CustomerName { get; set; } = string.Empty;
+        public string ShipCity { get; set; } = string.Empty;
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
