@@ -9,7 +9,7 @@ documentation: ug
 
 # Table in Blazor RichTextEditor Component
 
-[Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) allows to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorTableSettings`
+Rich Text Editor allows to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorTableSettings`
 
 | Options | Description | Default Value |
 |----------------|---------|-----------------------------|
