@@ -155,8 +155,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Dialog component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component inside the razor file.
@@ -247,8 +245,8 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 <SfDialog>
     <DialogEvents Created="@CreatedHandler" Destroyed="@DestroyedHandler"></DialogEvents>
 </SfDialog>
-@code {
-
+@code
+{
     public void CreatedHandler(Object args)
     {
         // Here, you can customize your code.
@@ -288,7 +286,8 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
         height: 500px;
     }
 </style>
-@code {
+@code
+{
     private bool Visibility { get; set; } = false;
     private void OnBtnClick()
     {
@@ -338,5 +337,3 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfD
 1. [Getting Started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
 3. [Getting Started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-web-app)
-
-N> You can also explore our [Blazor Dialog example](https://blazor.syncfusion.com/demos/dialog/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Dialog.
