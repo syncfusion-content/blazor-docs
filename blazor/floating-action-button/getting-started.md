@@ -226,8 +226,8 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
     <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
 </div>
 
-@code{
-    
+@code
+{    
     public void EventClick()
     {
         // Here, you can call your desired action.
