@@ -155,8 +155,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor Linear Gauge component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component inside the razor file.
@@ -168,6 +166,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 @using Syncfusion.Blazor.LinearGauge
+
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
