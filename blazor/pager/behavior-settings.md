@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Behavior Settings in Blazor Pager Component | Syncfusion®
-description: Learn about the basic functionalities of rendering the Blazor Pager component and more.
+description: Learn about the basic functionalities of rendering the Blazor Pager component and much more details.
 platform: Blazor
 control: Pager
 documentation: ug

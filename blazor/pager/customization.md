@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Pager Component | Syncfusion®
-description: Learn how to customize the Blazor Pager component, including custom text and styling options.
+description: Learn how to customize the Blazor Pager component, including custom text and styling options and much more details.
 platform: Blazor
 control: Pager
 documentation: ug

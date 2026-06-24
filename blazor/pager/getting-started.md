@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Pager Component | Syncfusion®
-description: Learn about getting started with Blazor Pager component in Blazor WebAssembly Application.
+description: Learn about getting started with Blazor Pager component in Blazor WebAssembly Application and much more details.
 platform: Blazor
 control: Pager
 documentation: ug

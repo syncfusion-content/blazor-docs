@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pager with Template in Blazor Pager Component | Syncfusion®
-description: Learn how to render custom elements using the Template property in Blazor Pager component.
+description: Learn how to render custom elements using the Template property in Blazor Pager component  and much more details.
 platform: Blazor
 control: Pager
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Pager Component | Syncfusion®
-description: Learn how the Blazor Pager component segments local or remote data collections into paged views.
+description: Learn how the Blazor Pager component segments local or remote data collections into paged views and much more details.
 platform: Blazor
 control: Pager
 documentation: ug

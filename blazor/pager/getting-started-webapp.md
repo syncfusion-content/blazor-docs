@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Pager Component in Blazor Web App | Syncfusion®
+title: Getting Started with Blazor Pager in Blazor Web App | Syncfusion®
 description: Learn how to configure and use Blazor Pager component in a Blazor Web App for efficient navigation and paging.
 platform: Blazor
 control: Pager

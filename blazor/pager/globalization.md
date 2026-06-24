@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Pager Component | Syncfusion®
-description: Learn how to configure localization and right-to-left (RTL) rendering in Blazor Pager component.
+description: checkout and learn about how to configure localization and right-to-left (RTL) rendering in Blazor Pager component and much more details.
 platform: Blazor
 control: Pager
 documentation: ug

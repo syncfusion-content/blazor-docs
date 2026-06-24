@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor OTP Input in Blazor Server App | Syncfusion®
+title: Getting Started with OTP Input in Blazor Server App | Syncfusion®
 description: Learn how to get started with the Blazor OTP Input component in a Blazor Server App with installation and configuration steps.
 platform: Blazor
 control: OTP Input
