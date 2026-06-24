@@ -159,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor Floating Action Button component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component inside the razor file.
@@ -241,7 +239,8 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
     <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
 </div>
 
-@code{
+@code{ 
+    
     public void EventClick()
     {
         // Here, you can call your desired action.
