@@ -105,7 +105,6 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-
 dotnet add package Syncfusion.Blazor.Kanban -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
@@ -171,8 +170,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
     <KanbanCardSettings HeaderField="Title" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
 
-@code {
-
+@code 
+{
     public class TasksModel
     {
         public string Id { get; set; }
