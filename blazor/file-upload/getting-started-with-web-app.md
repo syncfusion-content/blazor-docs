@@ -159,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor File upload component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component inside the razor file.
@@ -171,6 +169,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+
 <SfUploader></SfUploader>
 
 {% endhighlight %}
@@ -238,7 +237,8 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
       <UploaderEvents ValueChange="@OnChange"></UploaderEvents>
 </SfUploader>
 
-@code {
+@code 
+{
     private async Task OnChange(UploadChangeEventArgs args)
     {
         try
@@ -301,7 +301,8 @@ This example demonstrates how to read the content of an uploaded file into a [Me
     <img src="@($"data:image/png;base64,{base64Image}")" style="max-width: 300px; height: auto;" />
 }
 
-@code {
+@code 
+{
     private string base64Image;
 
     private async Task OnValueChangeMemoryStream(UploadChangeEventArgs args)
@@ -399,7 +400,8 @@ This example demonstrates how to use the [FileSelected](https://help.syncfusion.
 </SfUploader>
 <p>@validationMessage</p>
 
-@code {
+@code 
+{
     private string validationMessage = "";
     private readonly long MaxFileSize = 1024 * 1024; // 1 MB
 
@@ -448,7 +450,8 @@ This example demonstrates how to use [`OnFileListRender`](https://help.syncfusio
     <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save" RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
 </SfUploader>
 
-@code {
+@code 
+{
     SfUploader fileobj;
     private void OnFileListRenderHandler(FileListRenderingEventArgs args)
     {
