@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Value in Blazor MultiSelect Dropdown | Syncfusion®
-description: Enable and use custom values in the Blazor MultiSelect Dropdown, including type handling, CustomValueSpecifier, filtering, and display modes and much more details.
+description: Enable and use custom values in the Blazor MultiSelect Dropdown, including type handling, CustomValueSpecifier, filtering and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

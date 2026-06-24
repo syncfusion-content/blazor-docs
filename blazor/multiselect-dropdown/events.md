@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor MultiSelect Dropdown Component | Syncfusion®
-description: Learn about events in the Blazor MultiSelect Dropdown component for data actions, popup control, selection, filtering, and chip management and much more details.
+description: Learn about events in the Blazor MultiSelect Dropdown component for data actions, popup control, selection, filtering, and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
