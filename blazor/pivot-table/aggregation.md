@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Aggregation in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about aggregation in Syncfusion Blazor Pivot Table component and much more.
+title: Aggregation in Blazor Pivot Table Component | Syncfusion®
+description: Learn about aggregation types in Blazor Pivot Table component for value field calculations and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
