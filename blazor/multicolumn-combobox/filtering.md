@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor MultiColumn ComboBox Component | Syncfusion®
-description: Checkout and learn here all about Filtering in Blazor MultiColumn ComboBox component and much more.
+description: Checkout and learn here all the features about Filtering in Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

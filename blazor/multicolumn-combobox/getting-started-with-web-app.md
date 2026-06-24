@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiColumn ComboBox in Web App | Syncfusion®
+title: Getting Started with MultiColumn ComboBox in Web App | Syncfusion®
 description: Checkout and learn here all about getting started with Blazor MultiColumn ComboBox component in Blazor Web App and much more.
 platform: Blazor
 component: MultiColumn ComboBox
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor MultiColumn ComboBox Component in Web App
 
-This section briefly explains about how to include Blazor MultiColumn ComboBox component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 
 To get started quickly with Blazor MultiColumn ComboBox component, you can check the video below.

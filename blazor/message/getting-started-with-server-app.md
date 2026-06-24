@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Message Component in Blazor Server App | Syncfusion®
+title: Getting started with Message in Blazor Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Message Components in Blazor Server App and much more.
 platform: Blazor
 control: Message
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Message Component in Blazor Server App
 
-This section briefly explains about how to include Blazor Message component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Message](https://www.syncfusion.com/blazor-components/blazor-message) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 

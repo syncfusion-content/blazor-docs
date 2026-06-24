@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Message Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor Message component and much more.
+description: Checkout and learn here all the features about Accessibility in Blazor Message component and much more details.
 platform: Blazor
 control: Message
 documentation: ug
