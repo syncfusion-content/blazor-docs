@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor ProgressBar in Blazor Web App | Syncfusion®
+title: Getting Started with ProgressBar in Blazor Web App | Syncfusion®
 description: Learn how to get started with Blazor ProgressBar in Blazor Web App with examples and much more details.
 platform: Blazor
 control: ProgressBar

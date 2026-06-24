@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Predefined Dialogs in Web App | Syncfusion®
+title: Getting Started with Predefined Dialogs in Web App | Syncfusion®
 description: Step-by-step guide to integrate and configure Blazor Predefined Dialogs (Alert, Confirm, Prompt) in a Blazor Web App using Visual Studio or .NET CLI.
 platform: Blazor
 control: Predefined Dialogs
