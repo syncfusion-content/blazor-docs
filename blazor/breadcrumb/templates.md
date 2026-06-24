@@ -77,7 +77,7 @@ In the following example, the separators are customized with icons using [Separa
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRZdCCpxDqpuWZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBntHMMzHDnPVbH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.webp)" %}
 
 ## Customize Specific Item Template
 
@@ -144,4 +144,4 @@ The specific breadcrumb item can be customizable by adding the custom element as
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRZdCCpxDqpuWZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHXRWipdWiDWGo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.webp)" %}
