@@ -83,7 +83,7 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrxXxMrBHIUsMVJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with Multiple Selection](./images/blazor-buttongroup-multiple-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrdXnMrrdnbElhh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with Multiple Selection](./images/blazor-buttongroup-multiple-selection.webp)" %}
 
 ## Nesting
 
@@ -112,7 +112,7 @@ In the following example, the DropDownButton component can be added in ButtonGro
 </SfButtonGroup>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrxXxMrBHIUsMVJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with DropDown Button](./images/blazor-buttongroup-with-dropdown.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrnDxCLhHwqCfKF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with DropDown Button](./images/blazor-buttongroup-with-dropdown.webp)" %}
 
 ### SplitButton
 
@@ -134,4 +134,4 @@ In the following example, SplitButton component can be added in ButtonGroup tag.
         </SfSplitButton>
 </SfButtonGroup>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrxXxMrBHIUsMVJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with SplitButton](./images/blazor-buttongroup-with-splitbutton.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLdXRiVLRwlWzov?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with SplitButton](./images/blazor-buttongroup-with-splitbutton.webp)" %}

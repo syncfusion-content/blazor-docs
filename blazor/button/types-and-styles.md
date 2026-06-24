@@ -77,7 +77,7 @@ A Round Button is circular in shape. Usually, it contains an icon representing i
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Types](./images/blazor-button-types.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVxXRiVhUSIxYKT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Types](./images/blazor-button-types.webp)" %}
 
 ### Primary Button
 
@@ -89,7 +89,7 @@ The primary button is styled with background color and it is used to represent a
 <SfButton IsPrimary="true">Primary</SfButton>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Primary Button](./images/blazor-primary-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdtxiLhUevkqAx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Primary Button](./images/blazor-primary-button.webp)" %}
 
 ### Toggle Button
 
@@ -134,7 +134,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Button](./images/blazor-toggle-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHDHCLLAdhgrHC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Button](./images/blazor-toggle-button.webp)" %}
 
 ## Icons
 
@@ -159,7 +159,7 @@ The Button can have an icon to provide the visual representation of the action. 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with Icon](./images/blazor-button-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrHDRCFrVtZElQa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with Icon](./images/blazor-button-icon.webp)" %}
 
 ## Button size
 
@@ -173,4 +173,4 @@ The two types of Button sizes are default and small. To change the size of the d
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhxDxMVVgeLgsiF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Size](./images/blazor-button-with-different-size.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrdNdMLLUHbxlMP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with different Size](./images/blazor-button-with-different-size.webp)" %}
