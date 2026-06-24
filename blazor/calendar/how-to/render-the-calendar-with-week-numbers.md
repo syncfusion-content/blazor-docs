@@ -33,11 +33,11 @@ FirstFullWeek |Set the first week of the year's week number to be started from 5
 FirstFourDayWeek | Set the week number based on the majority of dates present in the week for the respected months. If January dates are presented in the week more than December, the first week of the year's week number will be started from 1. If December dates are presented in the week more than January, the first week of the year's week number will be started from 52 or 53.
 
 
-![Blazor Calendar with WeekRule set to FirstDay](../images/blazor-calendar-first-day.png)
+![Blazor Calendar with WeekRule set to FirstDay](../images/blazor-calendar-first-day.webp)
 Week numbers shown when the FirstDay rule is applied.
 
-![Blazor Calendar with WeekRule set to FirstFullWeek](../images/blazor-calendar-first-full-week.png)
+![Blazor Calendar with WeekRule set to FirstFullWeek](../images/blazor-calendar-first-full-week.webp)
 Week numbers shown when the FirstFullWeek rule is applied.
 
-![Blazor Calendar with WeekRule set to FirstFourDayWeek](../images/blazor-calendar-first-four-Day-Week.png)
+![Blazor Calendar with WeekRule set to FirstFourDayWeek](../images/blazor-calendar-first-four-Day-Week.webp)
 Week numbers shown when the FirstFourDayWeek rule is applied.
