@@ -502,7 +502,7 @@ A mutation resolver is a C# method decorated with GraphQL attributes that:
 | **Delete**      | User selects appointment and clicks "Delete"     | `DeleteAppointment`         | `primaryColumnValue` (Id), `primaryColumnName`  |
 | **BatchUpdate** |Editing/deleting **single occurrence** of recurring event<br>| `BatchAppointment`          | `added`: [AppointmentInput!]<br>`changed`: [AppointmentInput!]<br>`deleted`: [AppointmentInput!]<br>`action`: String (optional, e.g. "batch")<br>`primaryColumnName`: String (optional)<br>`additionalParameters`: Any (optional) |
 
-The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the Syncfusion Blazor Scheduler.
+The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler).
 
 ---
 
@@ -1034,4 +1034,4 @@ This guide demonstrates how to:
 3. Running the Application. [🔗](#running-the-application)
 4. Complete Sample Repository. [🔗](#complete-sample-repository)
 
-The application now provides a complete solution for managing Appointments with a modern Syncfusion Blazor Scheduler integrated with a Hot Chocolate GraphQL backend.
+The application now provides a complete solution for managing Appointments with a modern [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) integrated with a Hot Chocolate GraphQL backend.

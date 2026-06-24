@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor In-place Editor Blazor Server App | Syncfusion
+title: Getting Started with Blazor In-place Editor in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor In-place Editor Component in Blazor Server App.
 platform: Blazor
 component: In-place Editor
@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-### Create a new Blazor Server App 
+## Create a new Blazor Server App 
 
 {% tabcontents %}
 
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +57,7 @@ dotnet new blazor -o BlazorApp --interactivity Server
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-### Install the required Blazor packages
+## Install the required Blazor packages
 
 Install the [Syncfusion.Blazor.InPlaceEditor](https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -111,7 +113,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces
+## Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InPlaceEditor` namespaces.
 
@@ -124,7 +126,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
@@ -140,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add stylesheet and script resources
+## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
@@ -155,9 +157,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
-
-### Add Blazor In-place Editor component
+## Add Blazor In-place Editor component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component inside the razor file.
 
@@ -187,7 +187,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     </tr>
 </table>
 
-@code {
+@code
+{
     public string TextValue = "Andrew";
 }
 
@@ -269,7 +270,8 @@ The following code explains how to initialize a simple In-place Editor with popu
     </tr>
 </table>
 
-@code {
+@code 
+{
     public string AutoValue = "Australia";
 
     public class Countries
@@ -312,7 +314,8 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code 
+{
     public string DropdownValue = "Game4";
 
     public class Games
@@ -353,9 +356,9 @@ Render the Blazor `DatePicker` by changing the `Type` property to `Date` and con
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
 }
 
 {% endhighlight %}
@@ -410,27 +413,28 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 </div>
 
 <style>
-    #container {
-        text-align: center;
-        margin-top: 50px;
-    }
+       #container {
+         text-align: center;
+         margin-top: 50px;
+       }
 
-        #container table {
-            width: 400px;
-            margin: auto;
-        }
+       #container table {
+          width: 400px;
+          margin: auto;
+       }
 
-            #container table td {
-                height: 70px;
-                width: 150px;
-            }
+       #container table td {
+           height: 70px;
+           width: 150px;
+       }
 
-            #container table .left {
-                text-align: left;
-            }
+       #container table .left {
+            text-align: left;
+       }
 </style>
 
-@code {
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
     public string TextValue = "Andrew";
     public string DropdownValue = "Male";
@@ -520,7 +524,8 @@ After submit, the edited data is sent to the server, and the updated value is re
     }
 </style>
 
-@code {
+@code 
+{    
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";

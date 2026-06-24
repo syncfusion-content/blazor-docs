@@ -7,7 +7,7 @@ control: Tooltip
 documentation: ug
 ---
 
-# Getting Started with Blazor Tooltip in Blazor WASM App
+# Getting Started with Blazor Tooltip Component in Blazor WASM App
 
 This section briefly explains about how to include [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -28,7 +28,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +45,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,10 +159,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Tooltip component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) with the [Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) with the [Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
@@ -212,10 +214,6 @@ dotnet run
 
 {% endhighlight %}
 {% endtabs %}
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 {% endtabcontent %}
 

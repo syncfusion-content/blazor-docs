@@ -859,7 +859,7 @@ This CSS selector targets the regular appointments that appear in these vertical
 
 ### All day Appointment in vertical views of scheduler
 
-This CSS selector targets the all-day appointments that appear in the vertical views (Day, Week, and WorkWeek) of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. All-day appointments are events that span an entire day or multiple days without specific start and end times within those days.
+This CSS selector targets the all-day appointments that appear in the vertical views (Day, Week, and WorkWeek) of the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component. All-day appointments are events that span an entire day or multiple days without specific start and end times within those days.
 
 ```cshtml
 
