@@ -20,7 +20,7 @@ You can customize the filter menu in the Syncfusion<sup style="font-size:70%">&r
 Here is a sample code demonstrating how to render a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) for the **TaskName** column:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -106,7 +106,7 @@ To remove the default filter icon from the UI, apply the following CSS:
 You can perform filtering programmatically using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__) method, and reset it using [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearFilteringAsync) through button actions.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
@@ -200,7 +200,7 @@ You can customize the input components in the filter menu of the Syncfusion Blaz
 The following sample demonstrates how to disable the autofill feature by setting the `Autofill` parameter to **false** for the **TaskName** column, and how to configure a `NumericTextBox` without a spin button (`ShowSpinButton` set to **false**) for the **TaskID** column.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Inputs

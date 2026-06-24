@@ -23,7 +23,7 @@ We can customize labels with [TaskLabelTemplate](https://help.syncfusion.com/cr/
 The following example configures labels for task names, IDs, and progress:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

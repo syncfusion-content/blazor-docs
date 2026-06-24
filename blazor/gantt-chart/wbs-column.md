@@ -24,7 +24,7 @@ To render WBS and WBS Predecessor columns, bind the [WbsCode](https://help.syncf
 WBS codes follow a hierarchical structure: parent tasks use sequential numbers (e.g., 1, 2, 3), and child tasks use decimal notation (e.g., 1.1, 1.2, 1.1.1). Codes are recalculated automatically when the task hierarchy changes due to operations like indenting, outdenting, or reordering.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -104,7 +104,7 @@ To improve performance with large datasets, control WBS code recalculation using
 The example below demonstrates how WBS auto-update is conditionally triggered during row drag-and-drop, avoiding unnecessary recalculations during other interactions.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

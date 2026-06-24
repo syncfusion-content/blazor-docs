@@ -51,7 +51,7 @@ To implement task dependencies in the Blazor Gantt Chart, follow these steps:
 The following code snippets demonstrate how to define and configure task dependencies in the Gantt Chart component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns
@@ -224,7 +224,7 @@ Here's a detailed explanation of each component:
 The Gantt Chart component allows you to configure complex task dependencies to handle intricate project workflows. The following code snippets demonstrate how to define and set up such dependencies.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -290,7 +290,7 @@ In this example:
 Tasks can have multiple dependencies, allowing for complex project structures. Specify multiple dependencies by separating them with commas.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -356,7 +356,7 @@ To customize the appearance of dependency lines in the Gantt Chart:
 These properties help visually distinguish task relationships and improve chart readability.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" ConnectorLineBackground="#ff0000" ConnectorLineWidth="2" Height="450px" Width="750px">

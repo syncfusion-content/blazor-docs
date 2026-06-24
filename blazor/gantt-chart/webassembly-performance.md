@@ -26,7 +26,7 @@ In the following example:
 * As a result, the Gantt Chart component will be excluded from the rendering triggered by the click event and **currentCount** alone will get updated.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -101,7 +101,7 @@ The Blazor Gantt Chart uses [auto-scheduling](https://blazor.syncfusion.com/docu
 To improve load time, set [AutoCalculateDateScheduling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoCalculateDateScheduling) to **false** to disable date scheduling validation, and [EnablePredecessorValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) to **false** to disable dependency validation. These validations can be enabled later during dynamic actions using the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Created) event.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AutoCalculateDateScheduling=@autoCalculateDateScheduling EnablePredecessorValidation=@enablePredecessorValidation>

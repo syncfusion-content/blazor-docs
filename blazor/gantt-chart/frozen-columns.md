@@ -16,7 +16,7 @@ To enable frozen columns, use the [FrozenColumns](https://help.syncfusion.com/cr
 The following example demonstrates setting the `FrozenColumns` value to 2, which keeps the first two columns fixed during horizontal scrolling.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -73,7 +73,7 @@ To freeze a specific column in the Gantt Chart, set the [IsFrozen](https://help.
 The following example demonstrates that the **TaskID** and **TaskName** columns are frozen.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -143,7 +143,7 @@ The following two freeze direction options are supported:
 The following example demonstrates that the **TaskID** column is frozen on the left and the **TaskName** column is frozen on the right.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -208,7 +208,7 @@ Frozen columns can be added or removed by dragging the column separator in the G
 To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFreezeLineMoving) property to **true**.  If no columns are configured as frozen, the separator appears at both the left and right edges of the grid.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -273,7 +273,7 @@ You can customize the color of the default frozen line in the Gantt Chart by app
 The following example demonstrates how to change the frozen line color to blue.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

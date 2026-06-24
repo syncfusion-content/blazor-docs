@@ -18,7 +18,7 @@ Row virtualization, enabled by setting [EnableRowVirtualization](https://help.sy
 The following example enables row virtualization for a large dataset:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -132,7 +132,7 @@ By default, the number of records rendered per page will be twice the Gantt char
     •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the current page area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -241,7 +241,7 @@ By default, the number of records rendered per page will be twice the Gantt char
 Column virtualization, enabled by setting [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) to **true**, renders only the columns visible in the viewport while other columns are loaded on-demand during horizontal scrolling. This approach ensures high-performance rendering when working with a large number of columns.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -367,7 +367,7 @@ Timeline virtualization, enabled by setting [EnableTimelineVirtualization](https
 The following example enables timeline virtualization for a wide timeline:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

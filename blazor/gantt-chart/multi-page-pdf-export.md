@@ -18,7 +18,7 @@ The Blazor Gantt Chart supports exporting large or wide project timelines to PDF
 To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` property to **true** when calling the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToPdfAsync_Syncfusion_Blazor_Gantt_GanttPdfExportProperties_System_Boolean_) method.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -109,7 +109,7 @@ To enable this behavior during PDF export:
 These properties provide precise control over scaling and pagination, enabling clean and readable multi‑page PDF exports for large Gantt Charts.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -191,7 +191,7 @@ To configure percentage-based scaling during PDF export:
 This approach provides precise control over the overall Gantt Chart size while preserving layout consistency across exported PDF pages.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

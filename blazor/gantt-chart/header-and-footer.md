@@ -40,7 +40,7 @@ The appearance of the header or footer text can be customized using the `Style` 
 These style options allow full control over text color, size, alignment, and appearance. The [HAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfContentStyle.html#Syncfusion_Blazor_Grids_PdfContentStyle_HAlign) property is especially useful for aligning text horizontally within the header or footer area, ensuring a consistent and professional layout in the exported PDF.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -138,7 +138,7 @@ Customize lines in headers or footers using the [Header](https://help.syncfusion
 These options provide flexibility for adding separators or visual structure to the header and footer areas in the exported PDF.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

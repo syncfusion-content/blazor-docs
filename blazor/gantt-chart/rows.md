@@ -16,7 +16,7 @@ Each row in the Blazor Gantt Chart Component represents a record from the data s
 You can customize row height in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -76,7 +76,7 @@ You can expand or collapse parent tasks in the Gantt Chart using expand/collapse
 You can collapse all parent rows during initial rendering by setting the [CollapseAllParentTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_CollapseAllParentTasks)  property in the Gantt Chart component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -132,7 +132,7 @@ You can collapse all parent rows during initial rendering by setting the [Collap
 You can retain the expand or collapse state of parent rows in the Gantt Chart during initial rendering by specifying the expand status in the data source and assigning it to [GanttTaskFields.ExpandState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ExpandState) property. This property defines whether a parent row is displayed as expanded or collapsed when the component loads.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -193,7 +193,7 @@ The following example demonstrates how to:
 - Cancel the collapse action when the **TaskID** column value is 5.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -280,7 +280,7 @@ The following example demonstrates how to apply custom styles to rows and cells 
 - If the **Progress** column value is 30, a custom style is applied to the grid cell.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -409,7 +409,7 @@ To create visual separation between consecutive rows, style alternate rows using
 ```
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -477,7 +477,7 @@ You can access task model information in the Blazor Gantt Chart using the [GetRo
 The following example demonstrates how the `GetRowTaskModel` method is used within the [RowSelected](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowselected) event to retrieve task model details for the selected record.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids;
@@ -570,7 +570,7 @@ The following example demonstrates how the `GetRowTaskModel` method is used with
 To highlight the current row when the mouse hovers over it, set the [EnableRowHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowHover) property to **true**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
@@ -647,7 +647,7 @@ The following are three types of `ClipMode`:
 You can enable the Grid cell tooltip by setting the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property to **EllipsisWithTooltip**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

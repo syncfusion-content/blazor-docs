@@ -34,7 +34,7 @@ Event markers render as vertical lines positioned at specific dates across the e
 The following implementation demonstrates event marker integration within a Gantt chart, showcasing timeline-wide event highlighting:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">

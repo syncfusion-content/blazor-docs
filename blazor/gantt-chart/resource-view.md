@@ -18,7 +18,7 @@ Enable resource view by setting [ViewType](https://help.syncfusion.com/cr/blazor
 The following example configures resource view:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -162,7 +162,7 @@ Overallocation occurs when tasks exceed a resource’s daily capacity, calculate
 The following example toggles overallocation visibility:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -300,7 +300,7 @@ Tasks not assigned to any resource are termed unassigned tasks. These tasks are 
 When a resource is subsequently assigned to an unassigned task, the task automatically moves to become a child of the respective resource node.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -434,7 +434,7 @@ For a compact view, multiple tasks assigned to each resource can be visualized i
 > When a resource has multiple tasks scheduled on the same date, these tasks will be overlapped on each other, and overallocation indicator will be shown when [ShowOverallocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowOverallocation) property is enabled.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -611,7 +611,7 @@ namespace BlazorGanttChart.Data
 Enable taskbar drag-and-drop between resources with [AllowTaskbarDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings.html#Syncfusion_Blazor_Gantt_GanttTaskbarSettings_AllowTaskbarDragAndDrop) set to **true**. This allows vertical taskbar movement for reassignment, triggered by the [RowDragStarting](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdragstarting) and [RowDropping](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdropping) events.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -791,7 +791,7 @@ In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/d
 In the resource view, you can easily change task resources. If the dialog box's resource tab has multiple resources, you can add one resource, make individual changes, or remove assigned resources as needed, all done efficiently.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data
@@ -934,7 +934,7 @@ You can manipulate task resources programmatically by using the following method
 These methods offer a convenient way to efficiently manage task resources in your Gantt chart, allowing you to add, remove, and update resources as needed. In the following code snippet, when an external button is clicked, the following actions are performed: clicking the **Add Assignment** button adds resource ID 2 for task 9, the **Update Assignment** button updates the resource ID from 8 to 7 for task 9, and the **Delete Assignment** button removes the assigned resource 1 from task 3.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using BlazorGanttChart.Data

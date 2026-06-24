@@ -14,7 +14,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
 Column width can be adjusted by dragging the right edge of the header, changes are applied immediately. 
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -75,7 +75,7 @@ To enable this, set the [GanttColumn.MinWidth](https://help.syncfusion.com/cr/bl
 The following example demonstrates how the **TaskName** column can be configured with a minimum width of 150 pixels and a maximum of 250 pixels, while the **Duration** column can be set between 50 and 200 pixels.  
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

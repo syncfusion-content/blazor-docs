@@ -318,7 +318,7 @@ Properties such as `background-color`, `color`, `border`, `border-radius`, and `
 Below is a complete example demonstrating how to customize multiple aspects of the Gantt Chart using CSS classes:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -452,7 +452,7 @@ Grid lines on the Tree Grid and chart sections can be shown or hidden using the 
 N> By default, the `GridLines` property is set to **Horizontal** type.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns

@@ -34,7 +34,7 @@ Holidays are defined using the [GanttHolidays](https://help.syncfusion.com/cr/bl
 The following example configures single and multi-day holidays:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">

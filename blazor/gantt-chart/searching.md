@@ -14,7 +14,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
 To enable this feature, add the **Search** option to the `Toolbar` configuration.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -81,7 +81,7 @@ To configure this feature, define the following properties:
 The following sample demonstrates an initial search where `Fields` is set to **TaskName**, `Operator` is **Contains**, `Key` is **Product**, and `IgnoreCase` is **true**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -149,7 +149,7 @@ The following operators are supported in searching:
 > The default value for `GanttSearchSettings.Operator` is `contains`.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns
@@ -235,7 +235,7 @@ The following operators are supported in searching:
 To perform a search from an external button in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component, call the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method programmatically with the desired keyword.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Inputs
@@ -314,7 +314,7 @@ To search specific columns in the Gantt Chart component, use the [GanttSearchSet
 This following sample demonstrates searching only within the **TaskName** and **Duration** columns.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -372,7 +372,7 @@ N> In above sample, you can search only `TaskName` and `Duration` column values.
 To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart from an external button, you can invoke the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method with an empty string to reset the search. 
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons

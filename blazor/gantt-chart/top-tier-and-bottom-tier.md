@@ -20,7 +20,7 @@ The Blazor Gantt Chart component supports a two-tier timeline layout, enabling c
 These properties allow precise control over how time intervals are displayed, enhancing the readability and usability of the Gantt chart across various project scales.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -83,7 +83,7 @@ In the Blazor Gantt Chart component, timeline cells in the top and bottom tiers 
 By adjusting these values, the timeline can display broader or more granular intervals, improving visibility for long-term or short-term project views.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -146,7 +146,7 @@ In the Blazor Gantt Chart component, the values displayed in the top and bottom 
 These options provide flexibility in presenting timeline data according to project requirements or localization needs.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd">
@@ -230,7 +230,7 @@ The width of the top tier cells is automatically calculated based on the bottom 
 This configuration allows precise control over the visual density of the timeline, supporting both detailed and high-level project views.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px">

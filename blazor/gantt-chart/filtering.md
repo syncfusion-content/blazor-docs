@@ -17,7 +17,7 @@ To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/
 > The filter menu is enabled by default. To disable the filtering option for a specific column, set the `AllowFiltering` property of the `GanttColumn` to **false**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -80,7 +80,7 @@ The Blazor Gantt Chart component supports multiple filtering modes, which can be
 - **None**: Displays only the filtered records without any parent or child context.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns
@@ -168,7 +168,7 @@ To apply filtering during the initial render of the Syncfusion<sup style="font-s
 The following sample demonstrates how to apply an initial filter where **TaskName** starts with **Identify** and **TaskID** equals **2**, using a `Predicate` condition set to **and**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor
@@ -252,7 +252,7 @@ By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Ch
 The following sample demonstrates this behavior: when filtering the **TaskName** column, entries containing diacritic characters (e.g., “Próject”, “Projéct”) will be matched if you enter the base text **Project**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -309,7 +309,7 @@ You can filter columns dynamically in the Syncfusion<sup style="font-size:70%">&
 The example below demonstrates how to filter the **TaskName** and **TaskID** columns using a single value. Filtering is triggered by an external button click, which invokes the `FilterByColumnAsync` method.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
@@ -372,7 +372,7 @@ The example below demonstrates how to filter the **TaskName** and **TaskID** col
 You can clear all the filtering conditions applied in the Gantt Chart component by using the [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearFilteringAsync) method.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Gantt
@@ -443,7 +443,7 @@ You can clear all the filtering conditions applied in the Gantt Chart component 
 You can enable different filter types for individual columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component by setting the[GanttColumn.FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Gantt
@@ -570,7 +570,7 @@ You can enable different filter types for individual columns in the Syncfusion<s
 You can retrieve filtered records from the Gantt Chart component using the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetFilteredRecordsAsync) method. 
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
@@ -679,7 +679,7 @@ You can customize the filtering behavior in the Gantt Chart component using the 
 The following `Filtering` event cancels the filter action for the **TaskName** column.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

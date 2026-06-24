@@ -19,7 +19,7 @@ To enable indent and outdent functionality, set [GanttEditSettings.AllowEditing]
 The following example shows how to enable built-in indent and outdent actions using the `Toolbar` property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

@@ -24,7 +24,7 @@ Additionally, the start date, end date, and duration field mappings of the segme
 The following code snippet demonstrates how to visualize task segments in the Gantt Chart.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
@@ -133,7 +133,7 @@ Right-clicking on a taskbar or segment element in the Gantt Chart displays the c
 Segmented taskbars can be merged using the **Merge Task** context menu item. Its sub-menu includes **Right** and **Left** options. Selecting **Right** merges the current segment with the one to its right, while selecting **Left** merges it with the segment to its left.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt TValue="TaskData" EnableContextMenu="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
@@ -235,7 +235,7 @@ Segmented taskbars can be merged using the **Merge Task** context menu item. Its
 In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing), taskbars can be split or merged by providing segments details such as the start date, end date, and duration. However, It is important to note that a segment's start and end dates must fall within the task's overall start and end dates..
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
@@ -344,7 +344,7 @@ Taskbars can be split or merged externally using the [SplitTaskAsync](https://he
 In the following code snippet, clicking an external button merges the segments of the taskbar at index 1 into a single segment and splits the taskbar at index 2 into two segments.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
@@ -466,7 +466,7 @@ The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ga
 In the below code snippet, using the `SegmentChanging` event a customized message is displayed when doing split or merge actions. Moreover, segment deletion is prevented to the 1st index task.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <span class="text-primary">@segmentEventMessage</span>
@@ -597,7 +597,7 @@ In the Blazor Gantt Chart, the appearance of segments can be customized by using
 In the code snippet below, the segments are customized based on template context data, and the segment count text is added inside each segment. 
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

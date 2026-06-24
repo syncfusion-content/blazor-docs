@@ -14,7 +14,7 @@ Column validation ensures that edited or newly added row data meets defined crit
 The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to perform column validation. Validation rules can be specified using the [GanttColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ValidationRules) property to define criteria for validating column values.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt  TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
@@ -101,7 +101,7 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 * Validation messages are displayed using the built-in tooltip in the Gantt Chart.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
@@ -180,7 +180,7 @@ The Syncfusion® Blazor Gantt Chart component supports custom validation for sce
 The following example demonstrates how to implement custom validation for the **ActivityName** and **Progress** fields.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
@@ -305,7 +305,7 @@ In the following example:
 * Errors are displayed using the built-in validation tooltip via the [ValidatorTemplateContext.ShowValidationMessage(fieldName, isValid, message)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html#Syncfusion_Blazor_Grids_ValidatorTemplateContext_ShowValidationMessage) method.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

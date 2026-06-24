@@ -27,7 +27,7 @@ The Syncfusion Blazor Gantt Chart component supports three selection modes, conf
 - **Both:** Enables selection of both rows and cells at the same time.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -111,7 +111,7 @@ Toggle selection allows you to select and deselect a specific row or cell with r
 When enabled, clicking a selected row or cell will deselect it, and clicking it again will reselect it—vice versa. By default, the `EnableToggle` property is set to **false**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -184,7 +184,7 @@ The Gantt Chart component allows to select range of cells or rows by mouse or to
 >* When cell selection is enabled, it works with both **Flow** and **Box** types defined by [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_CellSelectionMode) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -240,7 +240,7 @@ The Gantt Chart component allows to select range of cells or rows by mouse or to
 To clear selected rows and cells in the Gantt component, use the [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearSelectionAsync) method.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

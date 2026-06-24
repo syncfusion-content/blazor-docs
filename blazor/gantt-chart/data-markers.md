@@ -35,7 +35,7 @@ Data markers represent schedule events for specific tasks through visual indicat
 The following implementation demonstrates comprehensive data marker integration within a Gantt chart, showcasing multiple markers per task with varied styling and tooltip configurations:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 
 @using Syncfusion.Blazor.Gantt

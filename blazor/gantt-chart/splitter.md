@@ -18,7 +18,7 @@ Set the splitter position using [GanttSplitterSettings.Position](https://help.sy
 The following example sets a percentage-based splitter position. This configuration allocates 80% width to the TreeGrid panel.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -76,7 +76,7 @@ Change the splitter position using the [SetSplitterPositionAsync](https://help.s
 The following example adjusts the splitter dynamically:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns

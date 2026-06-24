@@ -84,7 +84,7 @@ To bind list binding to the Gantt component, you can assign a IEnumerable object
 Hierarchical data binding organizes complex parent-child relationships through nested object structures. Each parent task contains multiple child tasks through the `Child` field mapping, creating natural tree structures that represent project hierarchies.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -136,7 +136,7 @@ Self-referential data binding uses flat data structures where tasks reference th
 This approach enables the component to reconstruct hierarchical tree structures from relational data, making it ideal for database-driven applications where parent-child relationships are maintained through foreign key references.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -186,7 +186,7 @@ To handle scenarios where the data model is not defined at compile time, the Gan
 > The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of the `DynamicObject` class must be overridden to return the property names required for rendering, data operations, editing, and other related functionalities when using **DynamicObject** with the Gantt Chart.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using System.Dynamic
@@ -290,7 +290,7 @@ To handle scenarios where the data model is not defined at compile time, the Gan
 To handle scenarios where the model type is unknown at compile time, the Gantt Chart can be bound to a list of **ExpandoObject** using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property. This enables full support for rendering, data operations, editing, and other related functionalities without requiring a strongly typed model.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using System.Dynamic
@@ -370,7 +370,7 @@ The Gantt chart supports to automatically update data based on `INotifyCollectio
 To handle dynamic changes in the data source, the Gantt Chart supports binding to an [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0). This collection implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) interface, which automatically notifies the UI when items are added, removed, moved, or cleared.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
@@ -491,7 +491,7 @@ The Gantt chart provides support to update its data automatically when an item's
 This interface is used to notify that a property value has changed. For example, `TaskData` raises the `PropertyChanged` event when **TaskName** is updated, allowing Gantt to reflect the change without a manual refresh.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
@@ -593,7 +593,7 @@ To bind remote data to the Gantt component, assign service data as an instance o
 The Gantt Chart component utilizes the **WebApiAdaptor**, an extension of the **ODataAdaptor**, for seamless integration with Web API services, including OData V4 endpoints. This adaptor supports efficient data retrieval and operations such as sorting, filtering, searching, and paging. It communicates with Web API endpoints using HTTP requests in JSON format, ensuring compatibility with OData-formatted queries for stable connectivity to remote data sources.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Gantt
@@ -1090,7 +1090,7 @@ N>You can find the sample for load on demand [here](https://github.com/Syncfusio
 To specify custom parameters in a data request, use the `addParams` method of the `Query` class. The configured `Query` object with additional parameters should be assigned to the Gantt component’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property to include them in server communication.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

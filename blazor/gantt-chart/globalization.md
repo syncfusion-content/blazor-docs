@@ -365,7 +365,7 @@ You can customize the culture settings of Syncfusion® Blazor UI components usin
 You can enable right-to-left layout and text direction in the Gantt component using the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRtl) property, which improves accessibility and user experience for languages such as Arabic, Farsi, and Urdu.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

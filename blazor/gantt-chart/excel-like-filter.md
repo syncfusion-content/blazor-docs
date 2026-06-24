@@ -14,7 +14,7 @@ The Excel-like filter in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor
 To enable this feature, configure [GanttFilterSettings.FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_FilterType) as **Excel** and set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -75,7 +75,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
 To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpenedEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpenedEventArgs_FilterChoiceCount) property can be configured within the[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening) event to increase or decrease the number of distinct values displayed, depending on the dataset size and filtering requirements.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -142,7 +142,7 @@ You can customize the text shown in the filter dialog of the Syncfusion<sup styl
 In the example below, the filter checkbox list for the **Status** column is customized by defining a `FilterItemTemplate` within the column configuration. The **FilterItemTemplateContext** is used to conditionally render descriptive labels: **Completed** when the value is **true**, and **In Progress** when the value is **false**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -226,7 +226,7 @@ To remove the context menu from the filter dialog, apply the following CSS rule 
 ```
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -288,7 +288,7 @@ To remove the context menu from the filter dialog, apply the following CSS rule 
 You can adjust the height and width of the filter dialog for each column using CSS styles within the  [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening) event. This event is triggered before the filter dialog opens, allowing you to apply styles conditionally based on the column name.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -386,7 +386,7 @@ You can adjust the height and width of the filter dialog for each column using C
 When a column is filtered, the Gantt Chart displays a default icon with predefined styles. You can customize this icon using the **.e-gantt .e-filtered::before** CSS class for enhanced project visualization.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

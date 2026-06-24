@@ -16,7 +16,7 @@ Customizing PDF export in the Blazor Gantt Chart component allows tailoring expo
 Set the exported PDF file name using the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property in [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html), such as **ProjectSchedule.pdf**, for personalized document naming.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -88,7 +88,7 @@ This property allows you to choose between [Portrait](https://help.syncfusion.co
 The following code snippet demonstrates how to set the page orientation to `Landscape` for the exported PDF document:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -173,7 +173,7 @@ The supported page sizes are:
 * Ledger
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -246,7 +246,7 @@ The PDF export functionality allows you to export only the records that are curr
 The following code demonstrates how to use the `PdfExporting` event to export the current view data of the Gantt chart to a PDF document:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -366,7 +366,7 @@ The `RangeStart` property specifies the start date, and the `RangeEnd` property 
 The following code demonstrates how to use the `PdfExporting` event to export a custom timeline range of the Gantt chart to a PDF document:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -481,7 +481,7 @@ The following code demonstrates how to use the `PdfExporting` event to export a 
 PDF export provides an option to export hidden columns of Gantt by defining the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) to **true**.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -558,7 +558,7 @@ PDF export provides an option to export hidden columns of Gantt by defining the 
 To customize column widths in the exported PDF document, set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) property for each column using the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html#Syncfusion_Blazor_Gantt_GanttPdfExportProperties_Columns) property of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -646,7 +646,7 @@ The PDF export functionality enables you to export only specific columns from th
 The following code snippet demonstrates how to configure the `Columns` property to export specific columns from the Gantt chart to a PDF document:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -732,7 +732,7 @@ The PDF export functionality allows you to export only specific columns from the
 The following code demonstrates how to use the `PdfExporting` event to export specific columns of the Gantt chart to a PDF document,
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -831,7 +831,7 @@ The PDF export functionality allows you to customize the appearance of taskbars 
 The following code snippet demonstrates how to customize taskbar colors in the exported PDF document:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -922,7 +922,7 @@ The PDF export functionality allows you to customize the appearance of taskbars 
 The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` event to customize taskbar appearance in the exported PDF document:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -1017,7 +1017,7 @@ The PDF export functionality allows for advanced customization of Gantt chart co
 The following code snippet demonstrates how to use the `PdfQueryCellInfo` event to export Gantt columns with custom text and different cell background colors,
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -1123,7 +1123,7 @@ In the following sample, header template with images and text are exported to PD
 > PDF Export supports base64 string to export the images.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -1229,7 +1229,7 @@ In the following sample, task label template with images and text are exported t
 > PDF Export supports base64 string to export the images.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids

@@ -26,7 +26,7 @@ This support is used to increase the timeline width and timeline unit from minut
 This support is used to view all the tasks available in a project within available area on the chart part of Gantt. When users click the `ZoomToFit` icon, then all the tasks are rendered within the available chart container width.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "ZoomIn", "ZoomOut", "ZoomToFit" })" Height="450px" Width="700px">
@@ -81,7 +81,7 @@ This support is used to view all the tasks available in a project within availab
 Zoom actions are governed by predefined zooming levels specified in the [CustomZoomingLevels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_CustomZoomingLevels) property. These levels can be customized by assigning a collection of zoom configurations to the `CustomZoomingLevels` property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" CustomZoomingLevels=zoomingLevel Toolbar="@(new List<string>() { "ZoomIn", "ZoomOut", "ZoomToFit" })" Height="450px" Width="700px">
@@ -149,7 +149,7 @@ Zooming actions can be triggered dynamically or through external controls using 
 * **Zoom To Fit** - Use `ZoomToFitAsync` When `Fit To Project` external button was clicked then all the tasks are rendered within the available chart container width.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
@@ -221,7 +221,7 @@ Zooming actions can be triggered dynamically or through external controls using 
 In Gantt chart, you can reset the zoom level to its initial state, as configured during the initial rendering, after performing zooming actions like **ZoomIn**, **ZoomOut**, and **ZoomToFit**, using [ResetZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResetZoomAsync) method.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 

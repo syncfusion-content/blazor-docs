@@ -40,7 +40,7 @@ The critical path recalculates automatically when task properties change, includ
 The following example demonstrates enabling critical path analysis:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" EnableCriticalPath Toolbar="@(new List<string>() { "Add", "Cancel", "Delete", "Edit","CriticalPath" })" Height="450px" Width="900px">
@@ -101,7 +101,7 @@ You can change the default behavior of critical tasks by using the [SlackValue](
 By adjusting the `SlackValue`, you can control which tasks are critical and ensure that potential issues are identified and addressed in a timely manner.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" EnableCriticalPath Toolbar="@(new List<string>() { "Add", "Cancel", "Delete", "Edit","CriticalPath" })" Height="450px" Width="900px">
@@ -160,7 +160,7 @@ The taskbar in critical path can be customized by using [QueryChartRowInfo](http
 The following code snippet demonstrates how to customize the appearance of critical path taskbars in a Gantt Chart:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
 
