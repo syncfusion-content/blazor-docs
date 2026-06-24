@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customizations in Blazor Avatar Component | Syncfusion®
-description: Learn how to use different content types, shapes, and sizes in Blazor Avatar component.
+description: Checkout and learn about the documentation of how to use different content types, shapes, and sizes in Blazor Avatar component.
 platform: Blazor
 control: Avatar
 documentation: ug
@@ -107,11 +107,11 @@ The Blazor Avatar component provides five size options to customize the Avatar a
 
 | Size | Class | Description |
 |------|-------|-------------|
-| Extra Small | e-avatar-xsmall | Displays an extra small sized Avatar. |
-| Small | e-avatar-small | Displays a small sized Avatar. |
-| Medium | e-avatar-medium | Displays a medium sized Avatar. This is the default size. |
-| Large | e-avatar-large | Displays a large sized Avatar. |
-| Extra Large | e-avatar-xlarge | Displays an extra large sized Avatar. |
+| Extra Small | `e-avatar-xsmall` | Displays an extra small sized Avatar. |
+| Small | `e-avatar-small` | Displays a small sized Avatar. |
+| Medium | `e-avatar-medium` | Displays a medium sized Avatar. This is the default size. |
+| Large | `e-avatar-large` | Displays a large sized Avatar. |
+| Extra Large | `e-avatar-xlarge` | Displays an extra large sized Avatar. |
 
 ```cshtml
 
