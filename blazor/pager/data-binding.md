@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor Pager Component | Syncfusion
-description: Learn how the Syncfusion Blazor Pager component segments local or remote data collections into paged views.
+title: Data Binding in Blazor Pager Component | Syncfusion®
+description: Learn how the Blazor Pager component segments local or remote data collections into paged views.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Pager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component divides **local** or **remote** data collections into paged views. It provides navigation controls to manage large datasets efficiently.
+The Blazor Pager component divides **local** or **remote** data collections into paged views. It provides navigation controls to manage large datasets efficiently.
 
 **When to Use:**
 
@@ -18,7 +18,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component divi
 
 ## Local Data Binding
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component can segment an in-memory data collection into multiple pages. The [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property defines the number of items displayed per page. The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event updates the displayed subset when navigating between pages.
+The Blazor Pager component can segment an in-memory data collection into multiple pages. The [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property defines the number of items displayed per page. The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event updates the displayed subset when navigating between pages.
 
 ```csharp
 @using Syncfusion.Blazor.Data
@@ -99,7 +99,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component can 
 
 ## Remote Data Binding
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supports paging for data retrieved from remote services. The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component manages remote operations such as **querying**, **filtering**, and **paging**. The [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property specifies the number of items displayed per page. The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event updates query parameters to fetch the correct subset of data.
+The Blazor Pager component supports paging for data retrieved from remote services. The [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component manages remote operations such as **querying**, **filtering**, and **paging**. The [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property specifies the number of items displayed per page. The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event updates query parameters to fetch the correct subset of data.
 
 ```csharp
 @using Syncfusion.Blazor.Lists

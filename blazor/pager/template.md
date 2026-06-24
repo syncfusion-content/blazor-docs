@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pager with Template in Blazor Pager Component | Syncfusion
-description: Learn how to render custom elements using the Template property in the Syncfusion Blazor Pager component.
+title: Pager with Template in Blazor Pager Component | Syncfusion®
+description: Learn how to render custom elements using the Template property in Blazor Pager component.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Pager Component with Template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component divides large data collections into manageable pages and provides built-in navigation controls. The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Template) property extends this functionality by allowing any Blazor content such as **buttons**, **hyperlinks**, or **drop-down lists** to be rendered inside the pager area, enabling fully customized paging experiences that align with application requirements and design guidelines.
+The Blazor Pager component divides large data collections into manageable pages and provides built-in navigation controls. The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Template) property extends this functionality by allowing any Blazor content such as **buttons**, **hyperlinks**, or **drop-down lists** to be rendered inside the pager area, enabling fully customized paging experiences that align with application requirements and design guidelines.
 
 This configuration renders two **anchor** elements for navigating to **previous** and **next** pages, with page information displayed between them. Navigation elements are dynamically enabled or disabled based on the current page using Pager APIs.
 

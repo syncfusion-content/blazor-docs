@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about available methods in Syncfusion Blazor Pager component and much more.
+title: Navigation in Blazor Pager Component | Syncfusion®
+description: Learn about available methods in Blazor Pager component for navigation.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Navigation in Pager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides built-in methods for programmatically controlling navigation and updating pager settings. These methods allow external actions such as navigating to specific pages, moving to the first or last page, updating page size, and refreshing the component. Each method can be invoked asynchronously to ensure smooth interaction within Blazor applications.
+The Blazor Pager component provides built-in methods for programmatically controlling navigation and updating pager settings. These methods allow external actions such as navigating to specific pages, moving to the first or last page, updating page size, and refreshing the component. Each method can be invoked asynchronously to ensure smooth interaction within Blazor applications.
 
 ## Navigate to a Specific Page
 

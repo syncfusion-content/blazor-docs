@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility Support in the Blazor Pager Component | Syncfusion
-description: Learn about accessibility features and compliance in the Syncfusion Blazor Pager component, including WAI-ARIA roles and keyboard navigation.
+title: Accessibility Support in Blazor Pager Component | Syncfusion®
+description: Learn about accessibility features in Blazor Pager component, including WAI-ARIA roles and keyboard navigation.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Pager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component is designed to meet widely recognized accessibility standards, ensuring compatibility with assistive technologies and delivering an inclusive experience. It adheres to the following guidelines:
+The Blazor Pager component is designed to meet widely recognized accessibility standards, ensuring compatibility with assistive technologies and delivering an inclusive experience. It adheres to the following guidelines:
 
 - [ADA](https://www.ada.gov/) – Americans with Disabilities Act compliance for accessible digital content.
 - [Section 508](https://www.section508.gov/) – U.S. federal accessibility requirements for software applications.
@@ -18,7 +18,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component is d
 
 ## Accessibility Compliance
 
-The table below lists the accessibility features supported by the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component:
+The table below lists the accessibility features supported by the Blazor Pager component:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -48,7 +48,7 @@ The table below lists the accessibility features supported by the Syncfusion<sup
 
 ## WAI-ARIA
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component applies Accessible Rich Internet Applications ([WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/)) roles and attributes to improve interoperability with assistive technologies.
+The Blazor Pager component applies Accessible Rich Internet Applications ([WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/)) roles and attributes to improve interoperability with assistive technologies.
 
 | **Element**         | **Purpose**                                      | **Applied Role / Attribute**       |
 |----------------------|--------------------------------------------------|-------------------------------------|
@@ -60,7 +60,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component appl
 
 ## Keyboard navigation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supports keyboard interactions to ensure accessibility for individuals relying on assistive technologies or keyboard navigation. The available shortcuts are:
+The Blazor Pager component supports keyboard interactions to ensure accessibility for individuals relying on assistive technologies or keyboard navigation. The available shortcuts are:
 
 | **Windows**                     | **Mac**                          | **Action**                                |
 |---------------------------------|----------------------------------|-------------------------------------------|
@@ -77,7 +77,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supp
 
 ## Ensuring accessibility
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component’s accessibility compliance is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests. This automated testing ensures adherence to accessibility standards and identifies potential issues.
+The Blazor Pager component's accessibility compliance is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) integrated with Playwright tests. This automated testing ensures adherence to accessibility standards and identifies potential issues.
 
 An interactive sample is available to evaluate the component’s accessibility using standard tools:
 
@@ -85,4 +85,4 @@ An interactive sample is available to evaluate the component’s accessibility u
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

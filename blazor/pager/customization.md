@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor Pager Component | Syncfusion
-description: Learn how to customize the Syncfusion Blazor Pager component, including custom text and styling options.
+title: Customization in Blazor Pager Component | Syncfusion®
+description: Learn how to customize the Blazor Pager component, including custom text and styling options.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization in Pager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component provides options to customize its appearance and behavior. Customization can include modifying numeric item text and applying custom styles through CSS classes.
+The Blazor Pager component provides options to customize its appearance and behavior. Customization can include modifying numeric item text and applying custom styles through CSS classes.
 
 ## Custom text for numeric items
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component allows adding a custom prefix to numeric items using the [NumericItemPrefix](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemPrefix) property. This property accepts a string value that appears before each numeric item in the pager.
+The Blazor Pager component allows adding a custom prefix to numeric items using the [NumericItemPrefix](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemPrefix) property. This property accepts a string value that appears before each numeric item in the pager.
 
 ```csharp
 
@@ -31,7 +31,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component allo
 
 ## Apply custom CSS
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component supports customizing its appearance by applying custom CSS classes. This customization is enabled through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_CssClass) property. Assign a class name to this property and define the required styles in the CSS file.
+The Blazor Pager component supports customizing its appearance by applying custom CSS classes. This customization is enabled through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_CssClass) property. Assign a class name to this property and define the required styles in the CSS file.
 
 ```csharp
 
