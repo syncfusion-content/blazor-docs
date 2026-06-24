@@ -49,7 +49,7 @@ The sample above demonstrates both dragging and the automatic pushing of panels.
 
 The following output illustrates the dragging functionality of the dashboard component:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBeMsigAIcgTaPQ?appbar=false&editor=true&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-and-drop.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBeMsigAIcgTaPQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-and-drop.webp)" %}
 
 ## Customizing the Drag Handle
 
