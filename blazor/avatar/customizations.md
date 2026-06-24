@@ -105,13 +105,13 @@ The Blazor Avatar component supports two shapes: **Square** and **Circular**. By
 
 The Blazor Avatar component provides five size options to customize the Avatar appearance based on your UI requirements.
 
-| Size | Class | Description |
-|------|-------|-------------|
-| Extra Small | `e-avatar-xsmall` | Displays an extra small sized Avatar. |
-| Small | `e-avatar-small` | Displays a small sized Avatar. |
-| Medium | `e-avatar-medium` | Displays a medium sized Avatar. This is the default size. |
-| Large | `e-avatar-large` | Displays a large sized Avatar. |
-| Extra Large | `e-avatar-xlarge` | Displays an extra large sized Avatar. |
+| Size | Description |
+|------| -------------|
+| Extra Small | Displays an extra small sized Avatar. |
+| Small | Displays a small sized Avatar. |
+| Medium | Displays a medium sized Avatar. This is the default size. |
+| Large | Displays a large sized Avatar. |
+| Extra Large | Displays an extra large sized Avatar. |
 
 ```cshtml
 
