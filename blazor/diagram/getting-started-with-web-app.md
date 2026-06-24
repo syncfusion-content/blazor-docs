@@ -220,10 +220,6 @@ dotnet run
 
 {% endtabcontents %}
 
-The output will appear as follows:
-
-![Getting Started in Blazor Diagram](images/blazor-diagram-getting-started.webp)
-
 ## Create your first Diagram with nodes and connectors
 
 This section explains how to create a simple flowchart by adding nodes, customizing their appearance, and connecting them using connectors.
@@ -328,3 +324,7 @@ In this example:
 * [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceID) and [`TargetID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetID) connect one node to another.
 * [`NodeCreating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) applies common width, height, fill color, and stroke color to all nodes.
 * [`ConnectorCreating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) applies common connector settings, such as orthogonal routing.
+
+The output will appear as follows:
+
+![Getting Started in Blazor Diagram](images/blazor-diagram-getting-started.webp)
