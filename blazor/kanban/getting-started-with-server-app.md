@@ -166,8 +166,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     <KanbanCardSettings HeaderField="Title" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
 
-@code {
-
+@code 
+{
     public class TasksModel
     {
         public string Id { get; set; }
