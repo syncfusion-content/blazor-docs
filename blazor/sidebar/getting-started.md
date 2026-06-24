@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -47,6 +48,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,10 +161,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Sidebar component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -241,7 +243,7 @@ Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -296,7 +298,7 @@ N> Class can be added to the Sidebar element using `HtmlAttributes` property. In
 Animation transitions can be set while expanding or collapsing the Sidebar using the `Animate` property. By default, `Animate` property is set to true. `EnableRTL` will display the Sidebar in the right-to-left direction.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -351,7 +353,7 @@ Any HTML element can be placed in the Sidebar content area. Sidebar supports all
 In the following example, the Sidebar is rendered with Accordion component in its content for navigation between the pages in a portal.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
