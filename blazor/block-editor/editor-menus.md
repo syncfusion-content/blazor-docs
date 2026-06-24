@@ -443,11 +443,11 @@ The following example demonstrates how to customize the transform, inline code, 
     };
     private List<TransformItemModel> TransformItems = new()
     {
-        new TransformItemModel { Type = BlockType.Paragraph, Label = "Paragraph", Tooltip="Paragraph block" },
-        new TransformItemModel { Type = BlockType.Heading, Label ="Heading", Tooltip="Heading block" },
-        new TransformItemModel { Type = BlockType.Checklist, Label= "CheckList", Tooltip="CheckList Block"},
-        new TransformItemModel { Type = BlockType.BulletList, Label="BulletList", Tooltip="BulletList Block"  },
-        new TransformItemModel { Type = BlockType.NumberedList, Label="NumberList",Tooltip="NumberList Block" }
+            new TransformItemModel { ID="para" , Type = BlockType.Paragraph, IconCss = "e-icons e-be-paragraph", Label = "Paragraph", Tooltip="Paragraph block" },
+            new TransformItemModel { ID="heading1", Type = BlockType.Heading, IconCss = "e-icons e-be-h1", Label ="Heading 1", Tooltip="Heading block" },
+            new TransformItemModel { ID="checklist" ,Type = BlockType.Checklist, IconCss = "e-icons e-check-box", Label= "CheckList", Tooltip="CheckList Block"},
+            new TransformItemModel { ID="bullet" ,Type = BlockType.BulletList, IconCss = "e-icons e-list-unordered", Label="BulletList", Tooltip="BulletList Block"  },
+            new TransformItemModel { ID="number" ,Type = BlockType.NumberedList, IconCss = "e-icons e-list-ordered", Label="NumberList",Tooltip="NumberList Block" }
     };
 }
 ```
