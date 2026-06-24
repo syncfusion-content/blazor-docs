@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Checkbox in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Checkbox in Syncfusion Blazor Dropdown Tree component and much more.
+title: Checkbox in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Checkbox in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
