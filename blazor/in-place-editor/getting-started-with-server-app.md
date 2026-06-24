@@ -187,8 +187,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     </tr>
 </table>
 
-@code {
-
+@code
+{
     public string TextValue = "Andrew";
 }
 
@@ -270,8 +270,8 @@ The following code explains how to initialize a simple In-place Editor with popu
     </tr>
 </table>
 
-@code {
-
+@code 
+{
     public string AutoValue = "Australia";
 
     public class Countries
@@ -314,8 +314,8 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
-
+@code 
+{
     public string DropdownValue = "Game4";
 
     public class Games
@@ -356,10 +356,9 @@ Render the Blazor `DatePicker` by changing the `Type` property to `Date` and con
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
-
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
 }
 
 {% endhighlight %}
@@ -414,28 +413,28 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 </div>
 
 <style>
-    #container {
-        text-align: center;
-        margin-top: 50px;
-    }
+       #container {
+         text-align: center;
+         margin-top: 50px;
+       }
 
-        #container table {
-            width: 400px;
-            margin: auto;
-        }
+       #container table {
+          width: 400px;
+          margin: auto;
+       }
 
-            #container table td {
-                height: 70px;
-                width: 150px;
-            }
+       #container table td {
+           height: 70px;
+           width: 150px;
+       }
 
-            #container table .left {
-                text-align: left;
-            }
+       #container table .left {
+            text-align: left;
+       }
 </style>
 
-@code {
-
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
     public string TextValue = "Andrew";
     public string DropdownValue = "Male";
@@ -525,8 +524,8 @@ After submit, the edited data is sent to the server, and the updated value is re
     }
 </style>
 
-@code {
-    
+@code 
+{    
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";
