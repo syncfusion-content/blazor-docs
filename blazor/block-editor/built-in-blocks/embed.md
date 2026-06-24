@@ -21,12 +21,15 @@ You can render an [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 #### Global image settings
 
-You can configure global settings for image blocks using the [BlockEditorImageBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorImageBlock.html) tag directive. This ensures consistent behavior for all images in the editor.
+You can configure global settings for image blocks using the [BlockEditorImageBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorImageBlock.html) tag directive. This ensures consistent behavior for image uploads, resizing, and display.
 
 The [BlockEditorImageBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.BlockEditorImageBlock.html) tag directive supports the following options:
 
 | Property | Description | Default Value |
 |----------|-------------|---------------|
+| SaveUrl | Specifies the server endpoint URL for uploading images. When empty, server upload functionality is disabled. | `''` |
+| MaxFileSize | Specifies the maximum file size allowed for image uploads in bytes. Files exceeding this size will be rejected during validation. | `30000000` |
+| Path | Specifies the base path for storing and displaying images on the server. | `''` |
 | SaveFormat | Specifies the format to save the image. | `Base64` |
 | AllowedTypes | Specifies allowed image file types for upload. | `['.jpg', '.jpeg', '.png']` |
 | Width | Specifies the default display width of the image. | `auto` |
@@ -48,6 +51,33 @@ The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.
 | Height | Specifies the display height of the image. | `''` |
 | AltText | Specifies the alternative text to display when the image cannot be loaded. | `''` |
 
+## Block type & properties
+
+The following example demonstrates how to configure an `Image` block.
+
+```razor
+@using Syncfusion.Blazor.BlockEditor
+
+<SfBlockEditor Blocks="BlockData"></SfBlockEditor>
+
+@code {
+    private List<BlockModel> BlockData = new()
+    {
+        new BlockModel
+        {
+            BlockType = BlockType.Image,
+            Properties = new ImageBlockSettings
+            {
+                Src = "https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png",
+                Width = "200px",
+                Height = "100px",
+                AltText = "Sample image"
+            }
+        }
+    };
+}
+```
+This sample demonstrates the configuration of the `Image` block in the Block Editor.
 ```cshtml
 
 @using Syncfusion.Blazor.BlockEditor
@@ -75,6 +105,56 @@ The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.
 ```
 
 ![Blazor Block Editor Image Block](./../images/image-block.webp)
+
+## Uploading images from local machine
+
+To insert an image from your local machine, render the `Image` block. A popup will appear where you can browse and select an image to insert.
+
+## Saving images to server
+
+Upload the selected image to a server endpoint using the `SaveUrl` property. Use the `Path` property to specify the storage location and `SaveFormat` to define whether the image is saved as Blob or Base64.
+
+```razor
+<SfBlockEditor Blocks="BlockData">
+    <BlockEditorImageBlock SaveUrl="/api/upload" Path="/images/uploads" SaveFormat="SaveFormat.Blob" />
+</SfBlockEditor>
+```
+
+## Image upload controller sample
+
+```csharp
+[AcceptVerbs("Post")]
+public void SaveImage(IList<IFormFile> UploadFiles)
+{
+    try
+    {
+        foreach (IFormFile file in UploadFiles)
+        {
+            string path = Path.Combine("wwwroot/Uploads", file.FileName);
+
+            if (!Directory.Exists("wwwroot/Uploads"))
+            {
+                Directory.CreateDirectory("wwwroot/Uploads");
+            }
+
+            using (FileStream fs = System.IO.File.Create(path))
+            {
+                file.CopyTo(fs);
+                fs.Flush();
+            }
+        }
+        Response.StatusCode = 200;
+    }
+    catch (Exception)
+    {
+        Response.StatusCode = 204;
+    }
+}
+```
+## Inserting images from web URLs
+
+To insert an image from an online source, render the `Image` block. Switch to the `Embed Link` tab containing an input field where you can provide the image URL from the web to insert the image.
+
 
 ## Image resizing
 
