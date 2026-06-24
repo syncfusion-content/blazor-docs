@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Diagram Events in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Diagram events in Syncfusion Blazor Diagram component and much more.
+title: Diagram Events in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about Diagram events in Blazor Diagram component and much more.
 platform: Blazor
 control: DiagramComponent
 documentation: ug
@@ -470,7 +470,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See also
 
-* [How to Identify the Clicked Diagram Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+* [How to Identify the Clicked Diagram Elements in Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
 
 * [How to Notify the Double-Click Event in Blazor Diagram](https://support.syncfusion.com/kb/article/16014/how-to-notify-the-double-click-event-in-blazor-diagram)
 
