@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and appearance in Blazor Rich Text Editor Component | Syncfusion®
+title: Style and appearance in Blazor Rich Text Editor | Syncfusion®
 description: Checkout and learn here all about Style and appearance in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
