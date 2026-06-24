@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor Dropdown Tree component and much more.
+title: Filtering in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Filtering in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
