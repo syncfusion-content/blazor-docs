@@ -208,5 +208,5 @@ Animation for the Range Selector is enabled by default. The speed of the animati
 
 ## See Also
 
-* [Grid and Tick Lines](./grid-tick/)
-* [Labels](./labels/)
+* [Grid and Tick Lines](./grid-tick)
+* [Labels](./labels)
