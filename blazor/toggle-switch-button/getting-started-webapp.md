@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Started Blazor Toggle Switch Button in Blazor Web App | Syncfusion
+title: Get Started with Blazor Toggle Switch Button in Web App | Syncfusion
 description: Check out and learn the documentation for getting started with Blazor Toggle Switch Button Components in Blazor Web App.
 platform: Blazor
 control: Toggle Switch Button
@@ -29,6 +29,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +47,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -198,6 +202,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -213,6 +218,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
