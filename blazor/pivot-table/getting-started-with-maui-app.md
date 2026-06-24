@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with PivotTable in Blazor MAUI App | Syncfusion®
-description: Learn how to get started with Blazor PivotTable component in Blazor MAUI App and much more details.
+description: checkout and learn all about how to get started with Blazor PivotTable component in Blazor MAUI App and much more details.
 platform: Blazor
 control: PivotTable
 documentation: ug

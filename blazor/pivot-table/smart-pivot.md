@@ -794,7 +794,7 @@ namespace SyncfusionAISamples.Components.Pages.PivotTable
 
 In this example, we added a custom button called **AI Assistant** to the Pivot Table toolbar. Here's how to use the AI-driven features:
 
-![AI Assistant Button](images/ai-assistant-button.jpeg)
+![AI Assistant Button](images/ai-assistant-button.webp)
 
 #### Step 1: Click the AI Assistant button
 
@@ -820,7 +820,7 @@ Choose a future year to predict values for that time period. After you click Sub
 
 Choose one or more fields from your data and pick an aggregation type (such as Sum or Count). After you click Submit, the AI arranges your data using only the fields you selected and applies the aggregation type you chose. The original data does not change.
 
-![Intelligent Report Dropdown](images/intelligent-report-dropdown.jpeg)
+![Intelligent Report Dropdown](images/intelligent-report-dropdown.webp)
 
 ![Intelligent Report Aggregation Dropdown](images/intelligent-report-aggregation-dropdown.webp)
 

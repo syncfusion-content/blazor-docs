@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export in Blazor Pivot Table Component | Syncfusion®
-description: Learn about PDF export feature in Blazor Pivot Table component with examples and much more details.
+description: checkout and learn all about PDF export feature in Blazor Pivot Table component with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

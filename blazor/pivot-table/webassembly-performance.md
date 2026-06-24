@@ -1,7 +1,7 @@
 ---
 layout: post
-title: WebAssembly Performance in Blazor Pivot Table Component | Syncfusion®
-description: Learn performance guidelines for using Blazor Pivot Table in WebAssembly applications with examples and much more details.
+title: WebAssembly Performance in Blazor Pivot Table Component | Syncfusion
+description: Checkout and learn here all about WebAssembly Performance in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # WebAssembly Performance in Blazor Pivot Table Component
 
-This section provides performance guidelines for using the Pivot Table component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
+This section provides performance guidelines for using the Syncfusion<sup style="font-size:70%">&reg;</sup> Pivot Table component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
 
 N> You can refer to our Getting Started with [Blazor Server-Side Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#blazor-server-app) and [Blazor WebAssembly Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#blazor-webassembly-app) documentation pages for configuration specifications.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table in Blazor Web App | Syncfusion®
-description: Learn how to get started with Blazor Pivot Table component in Blazor Web App and much more details.
+title: Getting Started with Pivot Table in Blazor Web App | Syncfusion®
+description: checkout and learn all about how to get started with Blazor Pivot Table component in Blazor Web App and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
