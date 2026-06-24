@@ -120,7 +120,7 @@ In the following example, the `Country.CountryID` column from complex data is ma
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdDRisUdexKHOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrHDHCsUdRnPlvQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.webp)" %}
 
 ## Bind to remote data
 
@@ -161,7 +161,7 @@ The following sample displays the first 6 contacts from the Customers table of t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdDRisUdexKHOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLHZHMdszeQAZrF?appbar=true&editor=false&result=true&errorlist=true&theme=fluent2" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.webp)" %}
 
 ### Web API Adaptor
 
@@ -194,7 +194,7 @@ Use the `WebApiAdaptor` to bind AutoComplete with a Web API that supports OData-
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdDRisUdexKHOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVnXnWCgROKdChq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.webp)" %}
 
 
 ### Custom adaptor
@@ -299,7 +299,7 @@ Refer to the following example for remote data binding with offline mode enabled
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdDRisUdexKHOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLxtnsiUQXKJCfy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.webp)" %}
 
 ### ValueTuple data binding
 
@@ -315,7 +315,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 </SfAutoComplete>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdDRisUdexKHOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnXdMigcBXEYDD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.webp)" %}
 
 ## Binding ExpandoObject
 
@@ -438,7 +438,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdDRisUdexKHOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVxDHWsAmZElAJx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.webp)" %}
 
 ## Entity Framework
 

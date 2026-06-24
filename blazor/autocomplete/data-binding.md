@@ -95,7 +95,7 @@ Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/commo
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHDRisBbvrerTk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhdNxMWVFbSlkRk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Dynamic object binding
 
@@ -139,7 +139,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHDRisBbvrerTk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLnjxWWhPuXrDJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnActionComplete event
 

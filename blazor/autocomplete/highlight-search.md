@@ -34,7 +34,7 @@ Use the `HighLightSearch` method within an item template to highlight matched te
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhRjdCihuACMIFn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVnZRsiBYPeDMld?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.webp)" %}
 
 ## Change the highlight style
 

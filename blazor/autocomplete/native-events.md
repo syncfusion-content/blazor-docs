@@ -94,7 +94,7 @@ In the following example, the keypress handler receives `KeyboardEventArgs`. The
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthHXdsiKvplRtfK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrHZdsiKbeUmifq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 Lambda expressions can also pass event data to the event handler as shown above. Native events can be used alongside Syncfusion component events (such as `ValueChange`), depending on the use case.
 

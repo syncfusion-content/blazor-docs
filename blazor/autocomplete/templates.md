@@ -37,7 +37,7 @@ In the following sample, employees are grouped according to their country.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxXHiiANsgDgsO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with GroupTemplate](./images/blazor-autocomplete-group-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVdZdisKDMePutR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with GroupTemplate](./images/blazor-autocomplete-group-template.webp)" %}
 
 ## Header template
 
@@ -51,7 +51,7 @@ In the following sample, the list items and their headers are designed and displ
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxXHiiANsgDgsO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBdjxWMUDrXZivE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.webp)" %}
 
 ## Footer template
 
@@ -65,7 +65,7 @@ In the following sample, the footer displays the total number of list items pres
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxXHiiANsgDgsO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLnjxiCAZBgCXiz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.webp)" %}
 
 ## No records template
 
@@ -79,7 +79,7 @@ In the following sample, the suggestion list displays a notification when no dat
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxXHiiANsgDgsO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete without Data](./images/blazor-autocomplete-without-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVRZdiMqDBRMPju?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete without Data](./images/blazor-autocomplete-without-data.webp)" %}
 
 ## Action failure template
 
@@ -93,4 +93,4 @@ In the following sample, when the data fetch request fails, the AutoComplete dis
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxXHiiANsgDgsO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrRNnWsUjfHFbAF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
