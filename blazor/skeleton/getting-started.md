@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Skeleton in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Skeleton in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Skeleton component in Blazor WebAssembly Application.
 platform: Blazor
 control: Skeleton
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,10 +159,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Skeleton component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Notifications
 
@@ -217,7 +219,7 @@ dotnet run
 The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Notifications
 
