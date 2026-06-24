@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about toolbar in Syncfusion Blazor Pivot Table component and much more details.
+title: Toolbar in Blazor Pivot Table Component | Syncfusion®
+description: Learn about toolbar in Blazor Pivot Table component for quick access to common features with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

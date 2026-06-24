@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Building AI-Powered Smart Pivot Tables with Blazor | Syncfusion
-description: Learn how to use the Syncfusion Blazor Pivot Table with AI services for smart data aggregation, predictive modeling, and adaptive filtering.
+title: AI-Powered Smart Pivot Table in Blazor | Syncfusion®
+description: Learn how to use Blazor Pivot Table with AI services for smart data aggregation and predictive modeling.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor Pivot Table, Syncfusion Blazor AI, Smart Data Aggregation, Predictive Modeling and Adaptive Filtering
+keywords: Blazor Pivot Table, Blazor AI, Smart Data Aggregation, Predictive Modeling and Adaptive Filtering
 ---
 
 # Building an AI-Powered Smart Pivot Table in Blazor
 
-The Syncfusion Blazor Pivot Table can be enhanced with AI-driven features by using the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide helps you add AI features to your Pivot Table, including Smart Data Aggregation, Predictive Modeling, and Adaptive Filtering. You can use different AI services such as OpenAI, Azure OpenAI, or Ollama. With these features, you can interact with the Pivot Table in a smarter way to understand your data better.
+The Blazor Pivot Table can be enhanced with AI-driven features by using the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide helps you add AI features to your Pivot Table, including Smart Data Aggregation, Predictive Modeling, and Adaptive Filtering. You can use different AI services such as OpenAI, Azure OpenAI, or Ollama. With these features, you can interact with the Pivot Table in a smarter way to understand your data better.
 
 In this guide
 - Prerequisites
 - Add Stylesheet and Script Resources
 - Configure your AI service (OpenAI, Azure OpenAI, Ollama)
-- Register the Syncfusion Blazor service
+- Register the Blazor service
 - Razor component: AI-driven features for your Pivot Table
 - How the sample works
 - Error Handling and Troubleshooting
@@ -205,9 +205,9 @@ var app = builder.Build();
 
 - **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (e.g., `http://localhost:11434`) before starting the application.
 
-## Register the Syncfusion Blazor service
+## Register the Blazor service
 
-Add the Syncfusion Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
+Add the Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
 
 - **Server Mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto Mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -243,7 +243,7 @@ await builder.Build().RunAsync();
 
 ### AI-driven features for your Pivot Table
 
-This section shows you how to create a Syncfusion Blazor Pivot Table with AI-driven features. The AI features help you explore your data in new ways:
+This section shows you how to create a Blazor Pivot Table with AI-driven features. The AI features help you explore your data in new ways:
 
 - **Predictive Modeling**: The AI uses your past data to predict what might happen in the future. You select a year, and the AI shows you what values might look like in that year.
 - **Smart Data Aggregation**: The AI analyzes your data based on what you ask it to do. It automatically adjusts how the data is summarized and calculated to show you the most useful insights.
@@ -265,7 +265,7 @@ The following example shows how to set up these features in your Blazor applicat
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
 
-<title>Syncfusion - Smart Pivot Table</title>
+<title>Smart Pivot Table</title>
 
 <h4 style="text-align:center;">Smart Pivot Table</h4>
 
@@ -861,7 +861,7 @@ When handling large datasets, ensure the Ollama server has sufficient resources 
 
 ## Sample Code
 
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ## Live Demo
 

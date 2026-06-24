@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about grouping in Syncfusion Blazor Pivot Table component and much more.
+title: Grouping in Blazor Pivot Table Component | Syncfusion®
+description: Learn about grouping feature in Blazor Pivot Table component for date, number, and custom grouping with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
