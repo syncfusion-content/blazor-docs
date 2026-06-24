@@ -20,7 +20,7 @@ You can enable `WeekNumber` in the Calendar by using the [WeekNumber](https://he
 ```
 This example shows the Calendar displaying a week number column at the left.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLAWBrVhoxzJZmT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Calendar displays Week Numbers](../images/blazor-calendar-week-number.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrxZHiBLustErAF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Calendar displays Week Numbers](../images/blazor-calendar-week-number.webp)" %}
 
 ## Week rule
 
