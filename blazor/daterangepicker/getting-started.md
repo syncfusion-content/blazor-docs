@@ -110,20 +110,6 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endtabcontent %}
 
 {% endtabcontents %}
-Install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
-
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
@@ -168,8 +154,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
 ## Add Blazor DateRangePicker component
 
@@ -238,7 +222,8 @@ The minimum and maximum date range can be defined with the help of [Min](https:/
 
 <SfDateRangePicker TValue="DateTime?" Placeholder="Choose a Range" Min="@MinDate" Max="@MaxDate"></SfDateRangePicker>
 
-@code {
+@code 
+{
     public DateTime MinDate {get;set;} = new DateTime(2017, 01, 05);
     public DateTime MaxDate {get;set;} = new DateTime(2017, 12, 20);
 }
