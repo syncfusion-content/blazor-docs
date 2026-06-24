@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Signature in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Signature component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Signature component in Blazor WebAssembly Application.
 platform: Blazor
 control: Signature
 documentation: ug
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,10 +159,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Signature component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfSignature></SfSignature>
 
