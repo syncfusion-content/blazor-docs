@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PostgreSQL Data Binding in Blazor Pivot Table Component | Syncfusion®"
+title: "PostgreSQL Data Binding in Blazor Pivot Table | Syncfusion®"
 component: "Pivot Table"
 description: Learn how to connect a PostgreSQL database to the Blazor Pivot Table component using the Npgsql.EntityFrameworkCore.PostgreSQL library.
 platform: Blazor
