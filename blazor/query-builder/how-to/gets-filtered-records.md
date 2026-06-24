@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gets the filtered record in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about gets the filtered records in Syncfusion Blazor QueryBuilder component and more.
+title: Gets the Filtered Record in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about gets the filtered records in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

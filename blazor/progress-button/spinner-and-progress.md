@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spinner and Progress in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about spinner and progress in Syncfusion Blazor ProgressButton component and more.
+title: Spinner and Progress in Blazor ProgressButton Component | Syncfusion®
+description: Learn about spinner and progress in Blazor ProgressButton component with examples and much more details.
 platform: Blazor
 control: Progress Button
 documentation: ug
