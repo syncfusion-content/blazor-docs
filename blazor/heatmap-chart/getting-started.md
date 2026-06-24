@@ -128,18 +128,9 @@ Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor s
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
 
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
+....
 builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
