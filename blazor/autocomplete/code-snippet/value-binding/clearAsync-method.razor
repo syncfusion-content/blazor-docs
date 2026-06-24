@@ -7,14 +7,14 @@
 
 @code {
 
-    SfAutoComplete<string, Games> GameField;
+    SfAutoComplete<string, Games>? GameField;
 
     public string GameValue { get; set; } = "Football";
 
     public class Games
     {
-        public string ID { get; set; }
-        public string Name { get; set; }
+        public string? ID { get; set; }
+        public string? Name { get; set; }
     }
 
     List<Games> LocalData = new List<Games> {
@@ -32,7 +32,7 @@
 
     public async Task Clear()
     {
-        this.GameField.ClearAsync();
+        this.GameField?.ClearAsync();
     }
 
 }

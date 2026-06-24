@@ -167,7 +167,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-@using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />
@@ -245,8 +244,6 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />

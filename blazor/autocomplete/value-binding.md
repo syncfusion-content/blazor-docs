@@ -9,16 +9,16 @@ documentation: ug
 
 # Value Binding in AutoComplete
 
-Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
+Value binding is the process of passing data between a component and its parent. There are two methods for binding values:
 
-* bind-Value Binding 
-* bind-Index Binding
+* @bind-Value
+* @bind-Index
 
-## Bind value binding
+## Value binding
 
-The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value)
+The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. When the component value changes, it updates all places where the variable is bound using the @bind-Value attribute. In order for the binding to work properly, the value assigned to the `@bind-Value` attribute should be based on the field mapped to [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value)
 
-* **TValue** - Specifies the type of each list item on the suggestion list.
+* **TValue** - Specifies the type of the value bound to the component.
 
 {% highlight cshtml %}
 
@@ -28,7 +28,7 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
 
 ![Blazor AutoComplete with Bind Value](./images/value-binding/blazor-autocomplete-bind-value.webp)
 
-## Index value binding
+## Index binding
 
 Bind the selected item by index using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_Index) attribute, which supports `int` and nullable `int`. This binds to the zero-based index of the selected item.
 
@@ -120,7 +120,7 @@ The following sample demonstrates the `string` used as `TValue`. So, clear the v
 
 ## Dynamically change TItem
 
-The `TItem` property can be changed dynamically by defining the datasource type of the AutoComplete component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The `TItem` property can be changed dynamically by defining the datasource type of the AutoComplete component with the help of the `@typeparam` directive. The following sample demonstration explains how to change the TItem dynamically with different type of datasource.
 
 ### Creating generic AutoComplete component
 
@@ -155,9 +155,9 @@ First, create a `AutoComplete.razor` file as a parent component in the `/Pages` 
 
 Render the generic AutoComplete component with the required `TValue` and `TItem` in the corresponding Razor components.
 
-Here, the AutoComplete component uses `TValue` as `string` in `/Index.razor` and `TValue` as nullable `int` in `/Counter.razor`.
+Here, the AutoComplete component uses `TValue` as `string` in `/Home.razor` and `TValue` as nullable `int` in `/Counter.razor`.
 
-**[Index.razor]**
+**[Home.razor]**
 
 {% tabs %}
 {% highlight razor %}

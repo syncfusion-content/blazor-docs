@@ -1,6 +1,6 @@
 @using Syncfusion.Blazor.DropDowns
 
-<p>Selected Value is: @SelectedValue.Name</p>
+<p>Selected Value is: @SelectedValue?.Name</p>
 
 <SfAutoComplete TValue="Games" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData" @bind-Value="@SelectedValue">
     <AutoCompleteFieldSettings Value="Name"/>
