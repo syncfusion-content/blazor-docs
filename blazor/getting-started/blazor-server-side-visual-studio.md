@@ -39,6 +39,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,6 +56,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,14 +156,16 @@ builder.Services.AddSyncfusionBlazor();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Blazor DataGrid component
 
@@ -177,6 +181,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 <SfGrid DataSource="@Orders" />
 
 @code {
+    
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()

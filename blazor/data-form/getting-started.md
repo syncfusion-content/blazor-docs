@@ -194,6 +194,6 @@ Add the Blazor DataForm component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor DataForm component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfXCLaBIvJBwaZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataForm getting started example](images/blazor-dataform.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNxVKTJFKGNAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DataForm getting started example](images/blazor-dataform.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataForm).
