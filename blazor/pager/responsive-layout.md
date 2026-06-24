@@ -25,13 +25,13 @@ For medium-sized devices like tablets, the Pager provides a balanced layout. It 
 
 **Medium-Sized devices**
 
-![Blazor Pager with Responsive](./images/blazor-pager-mediumsized-devices.png)
+![Blazor Pager with Responsive](./images/blazor-pager-mediumsized-devices.webp)
 
 On larger screens, such as desktops and laptops, the Pager fully utilizes the available width to display all features. Users can access a complete set of numeric page links, full navigation controls, page size options, and detailed page information. This expanded layout enhances productivity by providing quick access to all paging functionalities in a single view.
 
 **Larger screens**
 
-![Blazor Pager with Responsive](./images/blazor-pager-largerscreen.png)
+![Blazor Pager with Responsive](./images/blazor-pager-largerscreen.webp)
 
 ### Adaptive element management
 
