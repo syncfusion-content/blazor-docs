@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Ribbon | Syncfusion®
-description: Learn to configure Style and Appearance properties, dimensions, layout modes, minimization, and custom styling in Blazor Ribbon with examples and much more details.
+description: Learn to configure Style and Appearance properties, dimensions, layout modes, minimization, and custom styling in Blazor Ribbon with examples.
 platform: Blazor
 control: Ribbon
 documentation: ug
