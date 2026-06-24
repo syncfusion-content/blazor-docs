@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown Menu in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Dropdown Menu in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Dropdown Menu component in Blazor WebAssembly Application.
 platform: Blazor
 control: Dropdown Menu
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Blazor Dropdown Menu in  Blazor WASM App
+# Getting started with Blazor Dropdown Menu in Blazor WASM App
 
 This guide briefly explains how to include [Blazor Dropdown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,10 +161,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Dropdown Menu component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Dropdown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dropdown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.SplitButtons
 
@@ -224,8 +225,8 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting started with Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting started with Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 N> Explore the [Blazor Dropdown Menu example](https://blazor.syncfusion.com/demos/buttons/dropdown-menu?theme=bootstrap5) to learn how to render and configure the dropdown menu.
