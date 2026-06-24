@@ -179,7 +179,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
 
    public class BusinessObject
     {

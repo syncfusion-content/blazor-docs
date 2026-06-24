@@ -175,7 +175,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
 
    public class BusinessObject
     {

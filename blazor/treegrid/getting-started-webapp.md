@@ -181,7 +181,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
     
    public class BusinessObject
     {
