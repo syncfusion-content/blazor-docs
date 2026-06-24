@@ -167,7 +167,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
 </SfHeatMap>
 
-@code{
+@code
+{
     int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
