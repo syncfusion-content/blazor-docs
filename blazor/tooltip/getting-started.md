@@ -219,6 +219,8 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLJNWgNzHwucLWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip.gif)" %}
 
+N> The Tooltip component in our system uses the HTML element's id or class name to identify the target for the tooltip. However, when using a GUID as the target ID, it is not able to recognize IDs that start with a digit.
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip).
 
 ## See also
