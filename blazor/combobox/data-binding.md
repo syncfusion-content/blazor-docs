@@ -56,7 +56,7 @@ Bind by index using the `bind-Index` attribute (supports int and nullable int). 
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqshBGgdWoItJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRjRBKrMMUsYzE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### DataBound event
 
