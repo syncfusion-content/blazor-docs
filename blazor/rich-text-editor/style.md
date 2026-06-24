@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Rich Text Editor Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Rich Text Editor component and more.
+title: Style and appearance in Blazor Rich Text Editor Component | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -181,7 +181,7 @@ Include the script reference in the `<head>` of the **~/Pages/_Host.cshtml** fil
 {% endhighlight %}
 {% endtabs %}
 
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor component in the razor file. The RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Now, add the RichTextEditor component in the razor file. The RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.Razor" %}

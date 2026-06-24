@@ -1,7 +1,7 @@
 ---
 layout: post
-title: WebAssembly Performance in Blazor Rich Text Editor | Syncfusion
-description: This topic helps improve performance of Web Assembly Application when using Syncfusion Blazor RichTextEditor components with some tips.
+title: WebAssembly Performance in Blazor Rich Text Editor | Syncfusion®
+description: This topic helps improve performance of Web Assembly Application when using Blazor RichTextEditor components with tips and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # WebAssembly Performance in Blazor Rich Text Editor Component
 
-This section outlines performance best practices for using Syncfusion<sup style="font-size:70%">&reg;</sup> Rich Text Editor component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
+This section outlines performance best practices for using Rich Text Editor component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
 N> You can refer to our Getting Started with [Blazor Server-Side RichTextEditor](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/how-to/blazor-web-assembly) documentation pages for configuration specifications.
 
