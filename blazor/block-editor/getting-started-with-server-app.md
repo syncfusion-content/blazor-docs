@@ -236,6 +236,6 @@ public class EditorBlockData
 
 To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Blazor Block Editor component in the default web browser.
 
-{% previewsample "(https://blazorplayground.syncfusion.com/embed/LNLIsrhAgbKCOpbZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor BlockEditor Default.](images/blazor-block-editor-default.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBnZdMizKUQWADq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor BlockEditor Default.](images/blazor-block-editor-default.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/BlockEditor)
