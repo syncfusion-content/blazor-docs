@@ -34,4 +34,4 @@ The disableItem method can be used to change the disabled state of a specific it
 
 To disable the entire component, set the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Enabled) property to false.
 
-![AutoComplete component in a disabled state](./images/autocomplete-disable.png)
+![AutoComplete component in a disabled state](./images/autocomplete-disable.webp)

@@ -396,7 +396,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor AutoComplete with dynamic object data binding](./images/blazor_autocomplete_dynamic-object.png)
+![Blazor AutoComplete with dynamic object data binding](./images/blazor_autocomplete_dynamic-object.webp)
 
 ## Binding ObservableCollection
 
