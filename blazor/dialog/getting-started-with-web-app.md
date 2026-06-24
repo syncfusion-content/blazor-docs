@@ -105,7 +105,6 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-
 dotnet add package Syncfusion.Blazor.Popups -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
@@ -159,8 +158,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Dialog component
 
@@ -257,8 +254,8 @@ html, body {
 <SfDialog>
     <DialogEvents Created="@CreatedHandler" Destroyed="@DestroyedHandler"></DialogEvents>
 </SfDialog>
-@code {
-
+@code 
+{
     public void CreatedHandler(Object args)
     {
         // Here, you can customize your code.
@@ -298,7 +295,8 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
         height: 500px;
     }
 </style>
-@code {
+@code
+{
     private bool Visibility { get; set; } = false;
     private void OnBtnClick()
     {
