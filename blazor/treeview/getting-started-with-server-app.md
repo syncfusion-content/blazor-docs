@@ -174,7 +174,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
-@code{
+@code {
 
     public class MailItem
     {

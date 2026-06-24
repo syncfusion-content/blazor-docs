@@ -170,7 +170,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
-@code{
+@code {
 
     public class MailItem
     {
