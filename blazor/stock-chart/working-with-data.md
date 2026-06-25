@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Stock Chart Component | Syncfusion®
-description: Learn how to bind data to the Blazor Stock Chart using lists, Dynamic Objects,  and much more details.
+description: Learn how to bind data to the Blazor Stock Chart using lists, Dynamic Objects and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
