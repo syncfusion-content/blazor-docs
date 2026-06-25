@@ -60,7 +60,7 @@ In default type, the Stepper displays steps with a combination of both indicator
 
 ```
 
-![Blazor Stepper Component with Default type](./images/Blazor-default-type.png)
+![Blazor Stepper Component with Default type](./images/Blazor-default-type.webp)
 
 ## Label type
 
@@ -113,7 +113,7 @@ In label type, the Stepper displays the steps with only the step labels by setti
 
 ```
 
-![Blazor Stepper Component with Label type](./images/Blazor-label-type.png)
+![Blazor Stepper Component with Label type](./images/Blazor-label-type.webp)
 
 ### Label positions
 
@@ -200,7 +200,7 @@ The following label positions are supported in Stepper:
 
 ```
 
-![Blazor Stepper Component with LabelPosition](./images/Blazor-labelposition.png)
+![Blazor Stepper Component with LabelPosition](./images/Blazor-labelposition.webp)
 
 ## Indicator type
 
@@ -242,4 +242,4 @@ In indicator type, the Stepper displays steps with only the step indicators  by 
 
 ```
 
-![Blazor Stepper Component with Indicator type](./images/Blazor-indicator.png)
+![Blazor Stepper Component with Indicator type](./images/Blazor-indicator.webp)

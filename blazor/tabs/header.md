@@ -105,7 +105,7 @@ N> If the above custom style classes are not included in the root element, the d
 </style>
 ```
 
-![Blazor Tabs with Header](./images/blazor-tabs-header.png)
+![Blazor Tabs with Header](./images/blazor-tabs-header.webp)
 
 ## Icon positions
 
@@ -244,7 +244,7 @@ The position of the Tab header icons can be customized using the [IconPosition](
 }
 ```
 
-![Blazor Tabs with Icon](./images/blazor-tabs-icon.png)
+![Blazor Tabs with Icon](./images/blazor-tabs-icon.webp)
 
 
 ## Add floating button to the right of existing tabs
@@ -292,7 +292,7 @@ Here, New tab items added when user clicks on the `Button` inside `HeaderTemplat
 }
 ```
 
-![Blazor Tabs with Floating button](./images/blazor-tabs-floating-button.png)
+![Blazor Tabs with Floating button](./images/blazor-tabs-floating-button.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-add-floating-button-to-the-right-of-tabs-in-Blazor-Tab)
 

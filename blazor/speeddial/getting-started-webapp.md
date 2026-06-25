@@ -170,6 +170,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 @using Syncfusion.Blazor.Buttons
 
+@using Syncfusion.Blazor.Buttons
+
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfSpeedDial Target="#target" Content="Edit">
         <SpeedDialItems>

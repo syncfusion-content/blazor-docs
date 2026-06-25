@@ -62,7 +62,7 @@ Splitter is a layout based container component. The pane contents can be rendere
 
 ```
 
-![Blazor Splitter Content with HTML Markup](./images/blazor-splitter-content-html-markup.png)
+![Blazor Splitter Content with HTML Markup](./images/blazor-splitter-content-html-markup.webp)
 
 ## Blazor UI components
 
@@ -114,7 +114,7 @@ The plain text can be added as a pane contents using either inner HTML or `Conte
 
 ```
 
-![Blazor Splitter with Plain Content](./images/blazor-splitter-plain-content.png)
+![Blazor Splitter with Plain Content](./images/blazor-splitter-plain-content.webp)
 
 ## Integrate other Blazor component inside the pane of the Splitter
 
@@ -226,4 +226,4 @@ Other SplitterContent.razor page.
 
 ```
 
-![Blazor Splitter with Other Components](./images/blazor-splitter-other-components.png)
+![Blazor Splitter with Other Components](./images/blazor-splitter-other-components.webp)

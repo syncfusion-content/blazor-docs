@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with TextBox in Blazor Web App | Syncfusion®
+title: Getting Started with Blazor TextBox in Blazor Web App | Syncfusion
 description: Check out and learn the documentation for getting started with Blazor TextBox Components in Blazor Web App.
 platform: Blazor
 control: TextBox
@@ -279,5 +279,5 @@ The floating label moves the label above the TextBox when the control is focused
 
 ## See also
 
-* [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)

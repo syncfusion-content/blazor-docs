@@ -23,7 +23,7 @@ Use the following CSS to customize the Tab.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-customize.png)
+![Customize Tab](./images/blazor-tabs-customize.webp)
 
 ## Customizing the Tab items
 
@@ -38,7 +38,7 @@ Use the following CSS to customize the header items of Tab.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-customize-items.png)
+![Customize Tab](./images/blazor-tabs-customize-items.webp)
 
 Use the following CSS to customize the content items of Tab.
 
@@ -51,7 +51,7 @@ Use the following CSS to customize the content items of Tab.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-customize-content.png)
+![Customize Tab](./images/blazor-tabs-customize-content.webp)
 
 ## Customizing Tab's header
 
@@ -65,7 +65,7 @@ Use the following CSS to customize the header of Tab control.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-header-customization.png)
+![Customize Tab](./images/blazor-tabs-header-customization.webp)
 
 ## Customizing Tab's header icon
 
@@ -79,7 +79,7 @@ Use the following CSS to customize the header item icon of Tab control.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-header-icon-customization.png)
+![Customize Tab](./images/blazor-tabs-header-icon-customization.webp)
 
 ## Customizing Tab's content
 
@@ -93,7 +93,7 @@ Use the following CSS to customize the content of Tab control.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-customize-content-background.png)
+![Customize Tab](./images/blazor-tabs-customize-content-background.webp)
 
 ## Customizing the hover state of Tab control
 
@@ -107,7 +107,7 @@ Use the following CSS to customize the tab item when hovering.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-hover-customization.png)
+![Customize Tab](./images/blazor-tabs-hover-customization.webp)
 
 Use the following CSS to customize the tab item popup icon when hovering.
 
@@ -132,7 +132,7 @@ Use the following CSS to customize the selected tab item.
 
 ```
 
-![Customize Tab](./images/blazor-tabs-hover-customization.png)
+![Customize Tab](./images/blazor-tabs-hover-customization.webp)
 
 Use the following CSS to customize the selected tab item text and icon.
 
@@ -145,4 +145,4 @@ Use the following CSS to customize the selected tab item text and icon.
 
 ```
 
-![Customize Tab](./images/blazor-active-tabs-textIcon-customize.png)
+![Customize Tab](./images/blazor-active-tabs-textIcon-customize.webp)

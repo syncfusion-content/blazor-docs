@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DeepSeek AI Integration with Blazor Smart Paste Button | Syncfusion®
-description: Learn how to integrate the Blazor Smart Paste Button with DeepSeek AI services in a Blazor App and much more details.
+title: DeepSeek AI Integration with Blazor Smart Paste Button | Syncfusion
+description: Learn how to integrate the Syncfusion Blazor Smart Paste Button with DeepSeek AI services in a Blazor App.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # DeepSeek AI Integration with Blazor Smart Paste Button
 
-The Blazor SmartPaste Button component enables AI-powered, context-aware content pasting into forms, typically using OpenAI or Azure OpenAI.  This guide explains how to integrate the DeepSeek AI service with the Smart Paste Button using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
+The Syncfusion Blazor SmartPaste Button component enables AI-powered, context-aware content pasting into forms, typically using OpenAI or Azure OpenAI.  This guide explains how to integrate the DeepSeek AI service with the Smart Paste Button using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
 ## Setting Up DeepSeek
 
@@ -250,7 +250,7 @@ Add the Smart Paste Button to a form in the **~/Pages/Home.razor** file to test 
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure the [Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) package is installed for form integration.
+N> Ensure the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) package is installed for form integration.
 
 ## Testing the Integration
 
@@ -260,7 +260,7 @@ N> Ensure the [Blazor DataForm](https://blazor.syncfusion.com/documentation/data
 4. Copy the sample content provided in the Razor file.
 5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the Groq AI service.
 
-![Blazor Smart Paste Button with Groq AI](images/smart-paste.webp)
+![Syncfusion Blazor Smart Paste Button with Groq AI](images/smart-paste.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
@@ -273,5 +273,5 @@ If the DeepSeek AI integration does not work, try the following:
 
 ## See Also
 
-- [Getting Started with Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+- [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
 - [Customizing Smart Paste Button Suggestions](https://blazor.syncfusion.com/documentation/smart-paste/customization)

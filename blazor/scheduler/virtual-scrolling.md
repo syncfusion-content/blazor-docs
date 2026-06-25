@@ -112,7 +112,7 @@ To get start quickly about virtual scrolling in our Scheduler, you can check on 
 }
 ```
 
-![Displaying Virtual Scrolling in Blazor Scheduler](images/blazor-scheduler-virtualscrolling.gif)
+![Displaying Virtual Scrolling in Blazor Scheduler](images/blazor-scheduler-virtualscrolling.webp)
 
 ## Virtual scrolling with templates
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom AI Service Integration with Syncfusion Smart Paste
-description: Learn how to integrate custom AI services with the Blazor Smart Paste Button using the IChatInferenceService interface for AI-driven form filling.
+description: Learn how to integrate custom AI services with the Syncfusion Blazor Smart Paste Button using the IChatInferenceService interface for AI-driven form filling.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom AI Service Integration with Blazor Smart Paste Button
 
-The Blazor Smart Paste Button leverages AI to parse clipboard content and populate form fields, enhancing user productivity. By default, it supports OpenAI and Azure OpenAI services, but you can integrate custom AI services using the `IChatInferenceService` interface. This interface facilitates communication between the Smart Paste Button and your custom AI provider, enabling precise mapping of clipboard data to form fields.
+The Syncfusion Blazor Smart Paste Button leverages AI to parse clipboard content and populate form fields, enhancing user productivity. By default, it supports OpenAI and Azure OpenAI services, but you can integrate custom AI services using the `IChatInferenceService` interface. This interface facilitates communication between the Smart Paste Button and your custom AI provider, enabling precise mapping of clipboard data to form fields.
 
 ## IChatInferenceService Interface
 
@@ -71,7 +71,7 @@ var app = builder.Build();
 4. Copy the sample content provided in the Razor file.
 5. Click the **Smart Paste** button to verify that the form fields are populated correctly using the custom AI service.
 
-![Blazor Smart Paste Button with Custom AI](images/smart-paste.webp)
+![Syncfusion Blazor Smart Paste Button with Custom AI](images/smart-paste.webp)
 
 ## Implemented AI Services
 
@@ -93,5 +93,5 @@ If the custom AI integration does not work as expected, try the following:
 
 ## See Also
 
-- [Getting Started with Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
-- [Blazor DataForm Documentation](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app)
+- [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+- [Syncfusion Blazor DataForm Documentation](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app)

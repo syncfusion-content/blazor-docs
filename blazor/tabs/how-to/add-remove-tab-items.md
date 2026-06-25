@@ -88,7 +88,7 @@ In the following demo, initially there are three tabs as the **TabItems** has th
 }
 ```
 
-![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-item.png)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-item.webp)
 
 ## Using public methods
 
@@ -149,4 +149,4 @@ In the following demo, a tab item can be added as first tab and removed as the l
 </style>
 ```
 
-![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-tabitems.png)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-tabitems.webp)

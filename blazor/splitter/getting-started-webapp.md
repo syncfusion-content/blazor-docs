@@ -170,6 +170,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 @using Syncfusion.Blazor.Layouts
 
+@using Syncfusion.Blazor.Layouts
+
 <div>Horizontal Splitter</div>
 
 <SfSplitter Height="240px" Width="100%">
@@ -220,7 +222,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
     ```
 3. The application will start and display in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.webp)" %}
 
 ## See also
 

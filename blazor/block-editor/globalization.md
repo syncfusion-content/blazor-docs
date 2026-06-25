@@ -51,4 +51,4 @@ Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/c
 
 ## Right-to-Left (RTL)
 
-The Right-to-Left (RTL) feature reverses the component's layout and text direction to support languages that are read from right to left, such as Arabic or Hebrew. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The Right-to-Left (RTL) feature reverses the component's layout and text direction to support languages that are read from right to left, such as Arabic or Hebrew. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Blazor components.

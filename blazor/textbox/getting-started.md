@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with TextBox in Blazor WASM App | Syncfusion®
+title: Getting Started with Blazor TextBox in Blazor WASM App | Syncfusion
 description: Check out and learn about getting started with Blazor TextBox component in Blazor WebAssembly Application.
 platform: Blazor
 control: TextBox
@@ -267,6 +267,6 @@ The floating label lifts above the input when the TextBox is focused or contains
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)

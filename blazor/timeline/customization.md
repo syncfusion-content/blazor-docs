@@ -59,7 +59,7 @@ Define styles applicable to all Timeline item connectors. The CSS selector `.e-t
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSsXCtVJSVQymc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Common Customized Connector](./images/Blazor-connector-common.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSsXCtVJSVQymc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Common Customized Connector](./images/Blazor-connector-common.webp)" %}
 
 ### Individual Styling
 
@@ -111,7 +111,7 @@ Apply unique styles to individual connectors to differentiate specific items wit
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVIijCXVzSGcbwr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Individual Customized Connector](./images/Blazor-connector-individual.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVIijCXVzSGcbwr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Individual Customized Connector](./images/Blazor-connector-individual.webp)" %}
 
 ## Dot Styling
 
@@ -173,7 +173,7 @@ Modify the color of the dots to highlight specific Timeline items. The `.e-dot` 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBosDWNVzniYHpT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot color](./images/Blazor-custom-dot-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBosDWNVzniYHpT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot color](./images/Blazor-custom-dot-color.webp)" %}
 
 ### Dot Size
 
@@ -237,7 +237,7 @@ Adjust the dot size using the `--dot-size` CSS variable, making it larger or sma
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhoMDCZhJdwIyCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot size](./images/Blazor-custom-dot-size.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhoMDCZhJdwIyCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot size](./images/Blazor-custom-dot-size.webp)" %}
 
 ### Dot Shadow
 
@@ -292,7 +292,7 @@ Add shadow effects to Timeline dots for visual engagement using the `--dot-outer
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrIsDWZVzchTIyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot shadow](./images/Blazor-custom-dot-shadow.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrIsDWZVzchTIyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot shadow](./images/Blazor-custom-dot-shadow.webp)" %}
 
 ### Dot Variant
 
@@ -368,7 +368,7 @@ Achieve desired dot variants by customizing the border, outline, and background 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIMjWjrJQutWVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot variant](./images/Blazor-custom-dot-variant.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIMjWjrJQutWVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot variant](./images/Blazor-custom-dot-variant.webp)" %}
 
 ### Dot Outline
 
@@ -416,4 +416,4 @@ Adding the `e-outline` class to the Timeline's [`CssClass`](https://help.syncfus
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryCZitBflzyNaY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot outline](./images/Blazor-custom-dot-outline.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryCZitBflzyNaY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot outline](./images/Blazor-custom-dot-outline.webp)" %}

@@ -170,6 +170,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 @using Syncfusion.Blazor.Notifications
 
+@using Syncfusion.Blazor.Notifications
+
 <SfSkeleton Height="15px" Width="200px"></SfSkeleton><br/>
 <SfSkeleton Height="15px" Width="100px"></SfSkeleton>
 

@@ -67,4 +67,4 @@ The example demonstrates the functionality of both linear and non-linear flow in
 
 ```
 
-![Blazor Stepper Component with Linear Flow](./images/Blazor-linear.png)
+![Blazor Stepper Component with Linear Flow](./images/Blazor-linear.webp)

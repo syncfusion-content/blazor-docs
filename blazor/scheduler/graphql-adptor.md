@@ -1016,7 +1016,7 @@ In your Scheduler app:
 2. Navigate to `https://localhost:5194` (or the port shown in the terminal).
 3. The Scheduler Application is now running and ready to use.
 
-    ![Basic Scheduler displaying appointments from the GraphQL Server](./images/blazor-scheduler-graphql-frontend.png)
+    ![Basic Scheduler displaying appointments from the GraphQL Server](./images/blazor-scheduler-graphql-frontend.webp)
 
 ---
 

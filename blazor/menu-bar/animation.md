@@ -60,4 +60,4 @@ The following sample illustrates how to open Context Menu with `FadeIn` effect w
 
 ```
 
-![Blazor Menubar with Style and Appearance](./images/blazor-menubar-animation.gif)
+![Blazor Menubar with Style and Appearance](./images/blazor-menubar-animation.webp)

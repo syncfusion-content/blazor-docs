@@ -52,7 +52,7 @@ Define string content for the Timeline items.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhoiXitLINuEmVQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with String Content](./images/Blazor-content-string.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhoiXitLINuEmVQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with String Content](./images/Blazor-content-string.webp)" %}
 
 ### Template Content
 
@@ -146,7 +146,7 @@ Specify template content for items within the [`Content`](https://help.syncfusio
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoiZWNBIsugdwp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Template Content](./images/Blazor-content-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoiZWNBIsugdwp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Template Content](./images/Blazor-content-template.webp)" %}
 
 ## Adding Opposite Content
 
@@ -189,7 +189,7 @@ Additional information can be added to each Timeline item using the [`OppositeCo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhesNCtVIBdFQVq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Opposite Content](./images/Blazor-oppositecontent.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhesNCtVIBdFQVq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Opposite Content](./images/Blazor-oppositecontent.webp)" %}
 
 ## Dot Item
 
@@ -253,7 +253,7 @@ Display text for Timeline items using the `DotCss` property by adding text to th
 }
 
 ```
-![Blazor Timeline Component with Dot Item](./images/Blazor-dot-item.png)
+![Blazor Timeline Component with Dot Item](./images/Blazor-dot-item.webp)
 
 ## Disabling Items
 
@@ -295,7 +295,7 @@ Use the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lay
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVSiXsNrenzQvuQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Disabled Item](./images/Blazor-disabled.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVSiXsNrenzQvuQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Disabled Item](./images/Blazor-disabled.webp)" %}
 
 ## CSS Class
 

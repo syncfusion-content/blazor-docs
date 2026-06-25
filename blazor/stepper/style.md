@@ -22,7 +22,7 @@ Use the following CSS to customize the overall progress bar container of the Ste
         border-radius: 3px;
     }
 ```
-![Stepper progress bar value](./images/Blazor-progress-bar.png)
+![Stepper progress bar value](./images/Blazor-progress-bar.webp)
 
 ## Customizing the stepper progress bar value
 
@@ -38,7 +38,7 @@ The progress bar value in the Stepper component automatically increases as each 
 
 
 ```
-![Stepper progress bar](./images/blazor-progressbar.png)
+![Stepper progress bar](./images/blazor-progressbar.webp)
 
 ## Customizing stepper label content
 
@@ -87,7 +87,7 @@ You can customize the label text that appears next to each step in the Stepper b
 
 ```
 
-![Stepper content](./images/blazor-stepper-content.png)
+![Stepper content](./images/blazor-stepper-content.webp)
 
 ## Customizing selected stepper item
 
@@ -113,7 +113,7 @@ Use the following CSS to highlight the selected step item.
 
 ```
 
-![Stepper selected item](./images/blazor-selected-step.png)
+![Stepper selected item](./images/blazor-selected-step.webp)
 
 
 ## Customizing hover state of stepper indicators
@@ -131,7 +131,7 @@ Use the following CSS to customize the hover state of step indicators when the S
     }
 ```
 
-![Stepper hover state](./images/blazor-stepper-hover.png)
+![Stepper hover state](./images/blazor-stepper-hover.webp)
 
 ## Customize each step item
 
@@ -247,4 +247,4 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 
 ```
-![Stepper each item](./images/blazor-stepper-each-item.png)
+![Stepper each item](./images/blazor-stepper-each-item.webp)

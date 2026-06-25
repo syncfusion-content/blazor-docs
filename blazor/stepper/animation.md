@@ -33,4 +33,4 @@ The example demonstrates the animation `Duration` and `Delay` settings for the S
 </SfStepper>
 ```
 
-![Blazor Stepper Component with Animation](./images/Blazor-animation.png)
+![Blazor Stepper Component with Animation](./images/Blazor-animation.webp)

@@ -57,7 +57,7 @@ In horizontal orientation, the steps are displayed in a side-by-side manner by s
 
 ```
 
-![Blazor Stepper Component with Horizontal Orientation](./images/Blazor-horizontal.png)
+![Blazor Stepper Component with Horizontal Orientation](./images/Blazor-horizontal.webp)
 
 ## Vertical
 
@@ -111,4 +111,4 @@ You can display the steps one below the other vertically by setting the [Orienta
 
 ```
 
-![Blazor Stepper Component with Vertical Orientation](./images/Blazor-vertical.png)
+![Blazor Stepper Component with Vertical Orientation](./images/Blazor-vertical.webp)

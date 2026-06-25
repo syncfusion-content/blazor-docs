@@ -68,7 +68,7 @@ The Stepper component allows you to set the validation state for each step, disp
 
 ```
 
-![Blazor Stepper Component with Validation](./images/Blazor-validation.png)
+![Blazor Stepper Component with Validation](./images/Blazor-validation.webp)
 
 ## Validating fields
 
@@ -378,4 +378,4 @@ You can validate the fields within the stepper component. In the below shared ex
 
 ```
 
-![Validation using editform](./images/edit-form.png)
+![Validation using editform](./images/edit-form.webp)
