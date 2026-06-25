@@ -129,7 +129,7 @@ For instance, the data source item consists of `FirstName` as `Nancy` and `LastN
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsLVmKwTcWkyh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxNHrAhsLxHtkd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Prevent popup opening when filtering
 
