@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearances in Blazor Smart TextArea | Syncfusion®
-description: Checkout and learn here all about Styles and Appearances in Blazor Smart TextArea component and more.
+description: Checkout and learn here all about Styles and Appearances in Blazor Smart TextArea component and much more details.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
