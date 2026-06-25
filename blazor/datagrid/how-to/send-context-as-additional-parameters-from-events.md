@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Send Context as Parameters in Blazor DataGrid | Syncfusion
+title: Send Context as Parameters in Blazor DataGrid | Syncfusion®
 description: Learn how to Pass current row context from Blazor DataGrid events using edit templates to update bound fields instantly.
 platform: Blazor
 control: DataGrid

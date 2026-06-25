@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Block Editor Component | Syncfusion
-description: Learn about handling lifecycle, interaction, and content change events in Syncfusion Blazor Block Editor component.
+title: Events in Blazor Block Editor Component | Syncfusion®
+description: Learn about handling lifecycle, interaction, and content change events in Blazor Block Editor component.
 platform: Blazor
 control: BlockEditor
 documentation: ug

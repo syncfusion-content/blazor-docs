@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize grouping in Blazor DataGrid | Syncfusion
-description: Learn how to style and customize the grouping UI in Syncfusion Blazor DataGrid—group headers, icons, caption rows, and indent cells with CSS tips.
+title: Customize grouping in Blazor DataGrid | Syncfusion®
+description: Learn how to style and customize the grouping UI in Blazor DataGrid—group headers, icons, caption rows, and indent cells with CSS tips.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Grouping customization in Syncfusion Blazor DataGrid
+# Grouping customization in Blazor DataGrid
 
 The appearance of grouping elements in the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) can be customized using CSS. Styling options are available for different parts of the grouping interface:
 
@@ -44,7 +44,7 @@ The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand
 }
 ```
 
-Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [Syncfusion icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
+Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
 
 ![Expand and collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.webp)
 
