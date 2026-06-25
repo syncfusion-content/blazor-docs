@@ -161,8 +161,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor In-place Editor component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component inside the razor file.
@@ -193,7 +191,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
     </tr>
 </table>
 
-@code {
+@code 
+{
     public string TextValue = "Andrew";
 }
 
@@ -279,7 +278,8 @@ The following code explains how to initialize a simple In-place Editor with popu
     </tr>
 </table>
 
-@code {
+@code
+{
     public string AutoValue = "Australia";
 
     public class Countries
@@ -302,8 +302,6 @@ The following code explains how to initialize a simple In-place Editor with popu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhIXOjhAIsuBPDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.gif)" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZryjkXLAeqHmuVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.gif)" %}
-
 ## Configuring DropDownList
 
 Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property to `DropDownList` and configuring the `DropDownList` component inside the editor component.
@@ -322,7 +320,8 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code
+{
     public string DropdownValue = "Game4";
 
     public class Games
@@ -363,9 +362,9 @@ Render the Blazor `DatePicker` by changing the `Type` property to `Date` and con
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
 }
 
 {% endhighlight %}
@@ -440,7 +439,8 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
             }
 </style>
 
-@code {
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
     public string TextValue = "Andrew";
     public string DropdownValue = "Male";
@@ -530,7 +530,8 @@ After submit, the edited data is sent to the server, and the updated value is re
     }
 </style>
 
-@code {
+@code
+{    
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";
