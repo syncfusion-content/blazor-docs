@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about axis in Syncfusion Blazor Smith Chart component and much more details.
+title: Axis in Blazor Smith Chart Component | Syncfusion®
+description: Checkout and learn here all about axis in Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug

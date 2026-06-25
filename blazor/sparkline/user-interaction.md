@@ -1,7 +1,7 @@
 ---
 layout: post
-title: User Interaction in Blazor Sparkline Component | Syncfusion
-description: Check out and learn here all about user interaction in Syncfusion Blazor Sparkline component and more.
+title: User Interaction in Blazor Sparkline Component | Syncfusion®
+description: Check out and learn here all about user interaction in Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

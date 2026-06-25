@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in Blazor Sparkline Component | Syncfusion
-description: Check out and learn here all about appearance customization in the Syncfusion Blazor Sparkline component.
+title: Appearance in Blazor Sparkline Component | Syncfusion®
+description: Check out and learn here all about appearance customization in the Blazor Sparkline component.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

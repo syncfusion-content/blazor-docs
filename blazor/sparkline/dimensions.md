@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dimensions in Blazor Sparkline Component | Syncfusion
-description: Check out and learn how to set and customize dimensions in the Syncfusion Blazor Sparkline component.
+title: Dimensions in Blazor Sparkline Component | Syncfusion®
+description: Check out and learn how to set and customize dimensions in the Blazor Sparkline component.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
