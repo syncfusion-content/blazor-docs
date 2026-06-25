@@ -11,7 +11,7 @@ documentation: ug
 
 ## Vertical chart
 
-One can draw a vertical Chart by changing the axis orientation, and all series types support this option. To render a chart vertically, use the [IsTransposed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsTransposed) property.
+One can draw a vertical chart by changing the axis orientation, and all series types support this option. To render a chart vertically, use the [IsTransposed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsTransposed) property.
 
 ```cshtml
 
