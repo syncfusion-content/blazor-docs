@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component in the Blazor Server App.
 
-This section explains the step-by-step process of integrating the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component into your Blazor Server app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
+This section explains the step-by-step process of integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component into your Blazor Server app using Visual Studio, Visual Studio Code and .NET CLI. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
@@ -188,7 +188,7 @@ If your create application uses `Per page/component` interactivity, add this at 
 N> If the render mode is set to **None**, the diagram will not render.
 <br/> If the `Interactivity Location` is set to **Global**, this step is not required.
 
-## Add Blazor Diagram component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component
 
 Add the DiagramComponent to create an empty diagram.
 
@@ -308,10 +308,8 @@ In this example:
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application in Visual Studio. 
 * Run the application using `dotnet run` command in Command prompt.
-* This will render the Blazor Diagram component in the default web browser.
+* This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in the default web browser.
 
 The output will appear as follows:
 
 ![Getting Started in Blazor Diagram](images/blazor-diagram-getting-started.webp)
-
-N> Looking for the full Blazor Diagram component overview, features, pricing, and documentation? Visit the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) page.
