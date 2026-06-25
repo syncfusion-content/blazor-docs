@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Edit Types in Blazor DataGrid | Syncfusion
-description: Learn about edit types in Syncfusion Blazor DataGrid, including customization options, supported events, and editing configurations.
+title: Edit Types in Blazor DataGrid | Syncfusion®
+description: Learn about edit types in Blazor DataGrid, including customization options, supported events, and editing configurations.
 platform: Blazor
 control: DataGrid
 documentation: ug

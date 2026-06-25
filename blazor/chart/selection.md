@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Selection feature in Syncfusion Blazor Charts component and much more.
+title: Selection in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Selection feature in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -372,7 +372,7 @@ A point or series can be selected programmatically on a chart using the [Selecte
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtgBxfkYWmfSE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhnDnCLItVmzuTx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.webp)" %}
 
 ## Legend Selection
 

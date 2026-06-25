@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Tooltip and its customization in Syncfusion Blazor 3D Chart component and much more.
+title: Tooltip in Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn here all features about Tooltip and its customization in Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -54,7 +54,7 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the `E
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfXHiKipfupKhA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhdZRWjTpGBlNUX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.webp)" %}
 
 ## Fixed tooltip
 
@@ -99,7 +99,7 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBzNHiACfySnnZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Fixed Tooltip](images/tooltip/blazor-column-chart-fixed-tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVxDRMjffGmocFW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Fixed Tooltip](images/tooltip/blazor-column-chart-fixed-tooltip.webp)" %}
 
 ## Format the tooltip
 
@@ -145,7 +145,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBpNnsgspnNkiNQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVdtRWNTTPBEuKj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.webp)" %}
 
 <!-- markdownlint-disable MD013 -->
 
@@ -202,7 +202,7 @@ Any HTML elements can be displayed within the tooltip by using the `Chart3DToolt
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhpDnCUWTxpwqMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Tooltip Template](images/tooltip/blazor-column-chart-tooltip-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhRDnsjpTFPCtHh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Tooltip Template](images/tooltip/blazor-column-chart-tooltip-template.webp)" %}
 
 ## Customize the appearance of tooltip
 
@@ -247,4 +247,4 @@ The `Fill` and `Border` properties are used to customize the background color an
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrTXxsgsfmibwll?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhHjRsNJpEqBTda?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.webp)" %}
