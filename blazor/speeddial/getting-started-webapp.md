@@ -159,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor SpeedDial component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the razor file.
@@ -286,7 +284,7 @@ The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
     </SfSpeedDial>
 </div>
 
-@code{
+@code {
     public void ItemEventClick(SpeedDialItemEventArgs args)
     {
         // Here, you can call your desired action.
@@ -296,5 +294,3 @@ The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBpjWAjTARQyWoC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.webp)" %}
-
-N> Explore the [Blazor Speed Dial Button example](https://blazor.syncfusion.com/demos/speeddial/defaultfunctionalities) that shows how to render and configure the button.
