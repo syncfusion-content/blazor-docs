@@ -170,6 +170,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 @using System.ComponentModel.DataAnnotations
+@using Syncfusion.Blazor.DataForm
 
 <SfDataForm ID="MyForm"
             Model="@EmployeeDetail">
