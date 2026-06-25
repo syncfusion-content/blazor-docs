@@ -55,7 +55,9 @@ The [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.
 
 The following example demonstrates how to configure an `Image` block.
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="razor" %}
+
 @using Syncfusion.Blazor.BlockEditor
 
 <SfBlockEditor Blocks="BlockData"></SfBlockEditor>
@@ -76,7 +78,10 @@ The following example demonstrates how to configure an `Image` block.
         }
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 This sample demonstrates the configuration of the `Image` block in the Block Editor.
 ```cshtml
 
@@ -114,11 +119,15 @@ To insert an image from your local machine, render the `Image` block. A popup wi
 
 Upload the selected image to a server endpoint using the `SaveUrl` property. Use the `Path` property to specify the storage location and `SaveFormat` to define whether the image is saved as Blob or Base64.
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="razor" %}
+
 <SfBlockEditor Blocks="BlockData">
     <BlockEditorImageBlock SaveUrl="/api/upload" Path="/images/uploads" SaveFormat="SaveFormat.Blob" />
 </SfBlockEditor>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Image upload controller sample
 
