@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Appearance in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn how to customize the appearance of annotation in the Syncfusion Blazor Diagram component and much more details.
+title: Annotation Appearance in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn how to customize the appearance of annotation in the Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

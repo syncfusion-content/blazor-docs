@@ -1,7 +1,7 @@
 ---
 layout: post
-title: End User Capabilities in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about End User Capabilities in Syncfusion Blazor File Manager component and more.
+title: End User Capabilities in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about End User Capabilities in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -137,7 +137,7 @@ In the Blazor File Manager component, you can [**move**](https://blazor.syncfusi
 
 To learn more, you can refer to the [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/toolbar), [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu), and [Drag and Drop](https://blazor.syncfusion.com/documentation/file-manager/drag-and-drop) sections.
 
-![Moving file or folder in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)
+![Moving file or folder in Blazor FileManager](images/blazor-filemanager-drag-and-drop.webp)
 
 ### Upload or Download a File
 
