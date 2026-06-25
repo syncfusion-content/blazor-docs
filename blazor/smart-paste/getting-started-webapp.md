@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Started with Blazor Smart Paste Button | Syncfusion
-description: Learn how to integrate the Syncfusion Blazor Smart Paste Button in a Blazor Web App Server with step-by-step instructions.
+title: Get Started with Blazor Smart Paste Button | Syncfusion®
+description: Learn how to integrate the Blazor Smart Paste Button in a Blazor Web App Server with step-by-step instructions.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug
@@ -27,13 +27,13 @@ To get started quickly with the Blazor Smart Paste Button component, watch this 
 - OpenAI or Azure OpenAI account
 - [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
+N> Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
 ## Create a New Blazor Web App Server in Visual Studio
 
-Create a **Blazor Web App** using Visual Studio 2022 with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the app with the Server interactive render mode.
+Create a **Blazor Web App** using Visual Studio 2022 with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Configure the app with the Server interactive render mode.
 
-## Install Syncfusion Blazor SmartComponents and Themes NuGet Packages
+## Install Blazor SmartComponents and Themes NuGet Packages
 
 To add the **Blazor Smart Paste Button** component, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install the following packages:
 - [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartComponents)
@@ -50,7 +50,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list of available packages and component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list of available packages and component details.
 
 {% endtabcontent %}
 
@@ -63,11 +63,11 @@ N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.o
 - OpenAI or Azure OpenAI account
 - [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-N> Syncfusion Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
+N> Blazor Smart Components support both OpenAI and Azure OpenAI and are compatible with Blazor Server Interactivity mode.
 
 ## Create a New Blazor Web App Server in Visual Studio Code
 
-Create a **Blazor Web App** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). Configure the app with the Server interactive render mode using the following commands:
+Create a **Blazor Web App** using Visual Studio Code with [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). Configure the app with the Server interactive render mode using the following commands:
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App Server" %}
@@ -81,7 +81,7 @@ dotnet restore
 
 N> For details on creating a Blazor Web App with various interactive render modes, refer to [Blazor Web App Render Modes](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-## Install Syncfusion Blazor SmartComponents and Themes NuGet Packages
+## Install Blazor SmartComponents and Themes NuGet Packages
 
 1. Open the integrated terminal in Visual Studio Code (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 2. Ensure you are in the project root directory where the `.csproj` file is located.
@@ -97,13 +97,13 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list of available packages and component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a complete list of available packages and component details.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Register Syncfusion Blazor Service
+## Register Blazor Service
 
 For Server interactive render mode, open the **~/Components/_Imports.razor** file and add the following namespaces:
 
@@ -116,7 +116,7 @@ For Server interactive render mode, open the **~/Components/_Imports.razor** fil
 {% endhighlight %}
 {% endtabs %}
 
-Register the Syncfusion Blazor service in the **~/Program.cs** file:
+Register the Blazor service in the **~/Program.cs** file:
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Web App Server" hl_lines="3 10" %}
@@ -360,7 +360,7 @@ Add the Syncfusion® **Blazor Smart Paste Button** component with form component
 1. Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application, rendering the Syncfusion® Blazor Smart Paste Button component in your default web browser.
 2. Copy the `Sample Content` and click the `Smart Paste` button to see the form fields automatically populated.
 
-![Syncfusion Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.webp)
+![Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
