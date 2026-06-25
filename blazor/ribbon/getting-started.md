@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Ribbon in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Ribbon component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Ribbon component in Blazor WebAssembly Application.
 platform: Blazor
 control: Ribbon
 documentation: ug
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -153,18 +155,16 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Ribbon component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component inside the razor file.
 
 ### Adding ribbon tab
 
 In Ribbon component, options are organized into tabs for easy access. You can use the [RibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTabs.html) tag directive to group all the tabs and [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) tag directive to define each ribbon tab as shown below:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRibbon>
     <RibbonTabs>
@@ -180,7 +180,7 @@ In Ribbon component, options are organized into tabs for easy access. You can us
 To define a ribbon group under each tab, you can use the [RibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroups.html) tag directive like below. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRibbon>
     <RibbonTabs>
@@ -200,7 +200,7 @@ To define a ribbon group under each tab, you can use the [RibbonGroups](https://
 You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCollection.html) tag directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) tag directive with the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property to specify the type of item to be rendered, using the [RibbonItemType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) such as Button, a DropDown, a ComboBox, and more.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Ribbon;
 @using Syncfusion.Blazor.SplitButtons;
@@ -238,7 +238,7 @@ You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfus
     </RibbonTabs>
 </SfRibbon>
 
-@code{
+@code {
     List<DropDownMenuItem> formatItems = new List<DropDownMenuItem>()
     {
         new DropDownMenuItem{ Text = "Keep Source Format" },
