@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item Configuration in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about item configuration in Syncfusion Blazor Toolbar component and more.
+title: Item Configuration in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about item configuration in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -186,7 +186,7 @@ This property defines single or multiple classes, separated by space, used to sp
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVoMZsjpDEcZVJO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar displays Icon in Suffix Item](./images/blazor-toolbar-icon-in-suffix-item.png)" %}
 
-N> Refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate Syncfusion icons in the Toolbar component.
+N> Refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate Blazor icons in the Toolbar component.
 
 ## TabIndex
 
@@ -233,7 +233,7 @@ It specifies the types of Items to be rendered in the Toolbar. Supported types a
 
 2. **Separator**: Adds a horizontal line that separates the Toolbar Items.
 
-3. **Input**: Creates an input element that is applicable to template rendering with Syncfusion<sup style="font-size:70%">&reg;</sup> controls like DropDownList, AutoComplete, etc.
+3. **Input**: Creates an input element that is applicable to template rendering with Blazor controls like DropDownList, AutoComplete, etc.
 
 4. **Spacer**: Adds a space within the Toolbar item. [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) can be used to align the Toolbar items to the left, center, and right.
 
