@@ -222,10 +222,14 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.png)" %}
 
+N> **Resources**
+   * [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Splitter).
+   * Explore our [Blazor Splitter example](https://blazor.syncfusion.com/demos/splitter/default-functionalities) that shows you how to render and configure the Splitter.
+
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-N> You can also explore our [Blazor Splitter example](https://blazor.syncfusion.com/demos/splitter/default-functionalities) that shows you how to render and configure the Splitter.
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
