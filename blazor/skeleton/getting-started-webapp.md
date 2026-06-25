@@ -117,7 +117,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Notifications` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Notifications` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
