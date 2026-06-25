@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Icons And Separator in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all about icons and separator in Blazor SplitButton component and more.
+description: Checkout and learn here all the features about icons and separator in Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug

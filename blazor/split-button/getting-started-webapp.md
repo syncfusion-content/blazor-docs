@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Split Button in Blazor Web App | Syncfusion®
+title: Getting Started with Split Button in Blazor Web App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Split Button Components in Blazor Web App.
 platform: Blazor
 control: Split Button

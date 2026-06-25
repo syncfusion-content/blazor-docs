@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor SplitButton Component | Syncfusion®
-description: Checkout and learn here all about accessibility in Blazor SplitButton component and more.
+description: Checkout and learn here all the features about accessibility in Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
