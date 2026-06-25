@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  TimeOnly Support in Blazor DatePicker Component | Syncfusion®
-description: Checkout and learn here all about TimeOnly Support in Blazor TimePicker component and much more.
+description: Checkout and learn here all the features about TimeOnly Support in Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug

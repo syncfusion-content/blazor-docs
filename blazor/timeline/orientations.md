@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orientations in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here all about orientations in Blazor Timeline component and more details.
+description: Checkout and learn here all the features about orientations in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug

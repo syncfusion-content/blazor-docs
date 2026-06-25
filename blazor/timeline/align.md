@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Alignment in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here all about alignment in Blazor Timeline component and more details.
+description: Checkout and learn here all the features about alignment in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug

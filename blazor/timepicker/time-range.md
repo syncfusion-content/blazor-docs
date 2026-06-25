@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Time Range in Blazor TimePicker Component | Syncfusion®
-description: Checkout and learn here all about Time Range in Blazor TimePicker component and much more.
+description: Checkout and learn here all the features about Time Range in Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -42,6 +42,6 @@ When the `Min` and `Max` properties are configured and the selected time value i
 }
 ```
 
-![Blazor TimePicker Value without Time Range](./images/blazor-timepicker-value-without-range.png)
+![Blazor TimePicker Value without Time Range](./images/blazor-timepicker-value-without-range.webp)
 
 N> If the value of `Min` or `Max` property is changed through code behind, you have to update the `Value` property to set within the range.

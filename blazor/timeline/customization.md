@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Timeline Component | Syncfusion®
-description: Checkout and learn here all about customization in Blazor Timeline component and more details.
+description: Checkout and learn here all the features about customization in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
