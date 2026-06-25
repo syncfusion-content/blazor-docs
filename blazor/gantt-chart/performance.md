@@ -31,7 +31,7 @@ For the most comprehensive performance optimization, combining row, column, and 
 
 ## How to improve performance of Gantt chart in Blazor WASM application?
 
-This section provides performance guidelines for using the Blazor Gantt Chart  component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+This section provides performance guidelines for using the Blazor Gantt Chart component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 1.	[Avoid unnecessary component renders](https://blazor.syncfusion.com/documentation/gantt-chart/webassembly-performance#avoid-unnecessary-component-renders)
 2.	[Avoid unnecessary initial auto-scheduling validation](https://blazor.syncfusion.com/documentation/gantt-chart/webassembly-performance#avoid-unnecessary-initial-auto-scheduling-validation)
