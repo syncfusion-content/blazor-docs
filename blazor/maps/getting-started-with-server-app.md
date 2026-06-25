@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Maps in Blazor Server App | Syncfusion®
-description: Checkout and learn about getting started with the Blazor Maps component in Blazor Server Application.
+title: Getting Started with Blazor Maps in Blazor Server App | Syncfusion®
+description: Check out and learn about getting started with the Blazor Maps component in Blazor Server Application.
 platform: Blazor
 component: Maps
 documentation: ug
@@ -28,7 +28,8 @@ Run the following command to create a new Blazor Server App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazor -o BlazorServerApp --interactivity Server
+dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +57,7 @@ dotnet new blazor -o BlazorApp --interactivity Server
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install the [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -63,8 +65,8 @@ Install the [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.B
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Maps`) and install it.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
+2. Search the required NuGet package (`Syncfusion.Blazor.Maps`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
 
@@ -112,8 +114,6 @@ dotnet add package Syncfusion.Blazor.Maps -v {{ site.releaseversion }}
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Maps` namespaces.
 
-N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
-
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
 
@@ -150,8 +150,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
  
 {% endhighlight %}
 {% endtabs %}
-
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
 ## Add Blazor Maps component with GeoJSON data
 
@@ -329,8 +327,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting Started with Blazor for WebAssembly application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-
-* [Getting Started with Blazor for server-side application in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-
-* [Getting Started with Blazor for server-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor for WebAssembly application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+2. [Getting Started with Blazor for server-side application in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for server-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
