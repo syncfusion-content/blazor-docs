@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open and close Context Menu in Blazor ContextMenu | Syncfusion
-description: Learn here all about Open and close Context Menu in Syncfusion Blazor ContextMenu component and more.
+title: Open and close Context Menu in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Open and close Context Menu in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -38,4 +38,4 @@ To manually close the Context Menu, [Close](https://help.syncfusion.com/cr/blazo
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrUMLrGUuEEhxVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu displays Dialog Menu](./../images/blazor-contextmenu-dialog.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHZRCYfOmvpisg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu displays Dialog Menu](./../images/blazor-contextmenu-dialog.webp)" %}

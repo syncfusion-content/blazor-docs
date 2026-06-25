@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editor Menus in Blazor Block Editor Component | Syncfusion
-description: Learn to configure Slash Command menu, Context menu, Block Action menu, and Inline Toolbar in Syncfusion Blazor Block Editor.
+title: Editor Menus in Blazor Block Editor Component | Syncfusion®
+description: Learn to configure Slash Command menu, Context menu, Block Action menu, and Inline Toolbar in Blazor Block Editor.
 platform: Blazor
 control: BlockEditor
 documentation: ug
@@ -366,6 +366,92 @@ The Inline Toolbar includes the following built-in formatting options:
 - **Case Conversion**: Changes text to uppercase or lowercase.
 - **Text Color**: Changes the color of the selected text.
 - **Background Color**: Changes the background color of the selected text.
+
+
+## Optional items
+
+The inline toolbar can handle custom items like `Transform`, `InlineCode`, and `Link` by passing an array of string values in the `Items` property of `InlineToolbarSettings`.
+
+### Transform block options
+
+The inline toolbar now includes `transform` options to quickly convert blocks between different types. You can use the `TransformSettings` property to handle customization of the transform menu in the inline toolbar. This allows you to configure available block transformations, define custom menu items with text and icons.
+
+### Built-in default transform block options
+
+Below are the built-in transform block options available:
+
+| Built-in transform Block Types |
+|--------------------------------|
+| Paragraph |
+| Heading1 to Heading4 |
+| Checklist |
+| BulletList |
+| NumberedList |
+
+> For blocks such as `code`, `callout`, `quote`, `divider`, `image`, `table`, and `collapsible`, transform options are not available. Instead, they will be added as a new block.
+
+### Events
+
+The following events are available for the transform toolbar item menu:
+
+| Name | Args | Description |
+|------|------|-------------|
+| ItemSelect | TransformItemSelectEventArgs | Triggers when a command item is clicked. |
+
+### Inline code support
+
+Added inline code formatting in the toolbar, with light syntax highlighting and seamless integration with other text formatting options.
+
+### Inline link support
+
+Added inline link formatting in the toolbar. By clicking the link item, a dialog opens and, after proper value input, the link can be inserted into the text.
+
+The following example demonstrates how to customize the transform, inline code, and link items.
+
+```cshtml
+@using Syncfusion.Blazor.BlockEditor
+@using Syncfusion.Blazor.BlockEditor.Models
+<div id="container">
+    <SfBlockEditor Blocks="@blockData">
+        <BlockEditorTransform Items="@TransformItems"></BlockEditorTransform>
+        <BlockEditorInlineToolbar Items="@InlineToolbarOptions"></BlockEditorInlineToolbar>
+    </SfBlockEditor>
+</div>
+@code {
+    private List<BlockModel> blockData = new()
+    {
+        new BlockModel
+        {
+            BlockType = BlockType.Paragraph,
+            Content = new()
+            {
+                new ContentModel
+                {
+                    ContentType = ContentType.Text,
+                    Content = "Sample text for inline toolbar demo."
+                }
+            }
+        }
+    };
+    private List<InlineToolbarItemModel> InlineToolbarOptions = new()
+    {
+            new InlineToolbarItemModel { Command = CommandName.Transform },
+            new InlineToolbarItemModel { Command = CommandName.Bold },
+            new InlineToolbarItemModel { Command = CommandName.Italic },
+            new InlineToolbarItemModel { Command = CommandName.InlineCode },
+            new InlineToolbarItemModel { Command = CommandName.Link }
+    };
+    private List<TransformItemModel> TransformItems = new()
+    {
+            new TransformItemModel { ID="para" , Type = BlockType.Paragraph, IconCss = "e-icons e-be-paragraph", Label = "Paragraph", Tooltip="Paragraph block" },
+            new TransformItemModel { ID="heading1", Type = BlockType.Heading, IconCss = "e-icons e-be-h1", Label ="Heading 1", Tooltip="Heading block" },
+            new TransformItemModel { ID="checklist" ,Type = BlockType.Checklist, IconCss = "e-icons e-check-box", Label= "CheckList", Tooltip="CheckList Block"},
+            new TransformItemModel { ID="bullet" ,Type = BlockType.BulletList, IconCss = "e-icons e-list-unordered", Label="BulletList", Tooltip="BulletList Block"  },
+            new TransformItemModel { ID="number" ,Type = BlockType.NumberedList, IconCss = "e-icons e-list-ordered", Label="NumberList",Tooltip="NumberList Block" }
+    };
+}
+```
+
 
 ### Customize inline toolbar
 

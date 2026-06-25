@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scrolling in Blazor DataGrid | Syncfusion
-description: Learn how to configure scrolling and explore various customization options in the Syncfusion Blazor DataGrid component for enhanced user experience.
+title: Scrolling in Blazor DataGrid | Syncfusion®
+description: Learn how to configure scrolling and explore various customization options in the Blazor DataGrid component for enhanced user experience.
 platform: Blazor
 control: DataGrid
 documentation: ug

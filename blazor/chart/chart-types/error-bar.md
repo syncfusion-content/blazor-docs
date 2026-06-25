@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Error Bar in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Error Bar Chart in Syncfusion Blazor Charts component and much more.
+title: Error Bar in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Error Bar Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -49,7 +49,7 @@ Error bars are graphical representations of the variability of data that are use
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrJXvLtoGKlZQco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Error Bar](../images/othertypes/blazor-error-bar-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVRjdCeAakdQhfU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Line Chart with Error Bar](../images/othertypes/blazor-error-bar-chart.webp)" %}
 
 ## Error bar type
 
@@ -91,7 +91,7 @@ To change the error bar rendering type, set [Type](https://help.syncfusion.com/c
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVptlLDSQfSIQbX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdtdMeTtjZdXEM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Customizing error bar type
 
@@ -134,7 +134,7 @@ To customize the error bar type, specify the [Type](https://help.syncfusion.com/
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpjbVteQTEHUBm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLxDdieptNJZxUC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Error bar mode
 
@@ -176,7 +176,7 @@ Error bar mode is used to define whether the error bar line should be drawn hori
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrJXlrZemozoWbI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtdMIzNWtKKBe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Error bar direction
 
@@ -218,7 +218,7 @@ To change the error bar direction to plus, minus, or both sides, use [Direction]
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVfjbBNSQIYbupQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrRNnioJZiBGwUC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Customizing error bar cap
 
@@ -261,7 +261,7 @@ To customize the error bar cap [Length](https://help.syncfusion.com/cr/blazor/Sy
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVJXbVDIGdTeIOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBdNxsozXMSwmCb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -312,7 +312,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBJjPrtyQcdqASQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVdNHWoJtWGkuwQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -362,7 +362,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVzXbhXScaLsKPU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBdZdWoJtBNIRrS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

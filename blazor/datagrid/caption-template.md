@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Caption template in Blazor DataGrid | Syncfusion
-description: Learn how to customize group caption rows in Syncfusion Blazor DataGrid using CaptionTemplate and CaptionTemplateContext.
+title: Caption template in Blazor DataGrid | Syncfusion®
+description: Learn how to customize group caption rows in Blazor DataGrid using CaptionTemplate and CaptionTemplateContext.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -357,7 +357,7 @@ The Blazor DataGrid offers flexibility to render custom components within the gr
 
 Define the custom UI in the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) and use `CaptionTemplateContext` to access the current group’s details. This feature enables the replacement of plain text with a custom component in the group caption, enhancing both customization and interactivity.
 
-The sample below shows how to render a chip with the group key in the Syncfusion Blazor [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) component.
+The sample below shows how to render a chip with the group key in the Blazor [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) component.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

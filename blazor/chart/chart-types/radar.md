@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Radar in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Radar Chart in Syncfusion Blazor Charts component and much more.
+title: Radar in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Radar Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -54,7 +54,7 @@ To render a radar chart, set the series [Type](https://help.syncfusion.com/cr/bl
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhfXbrXfzZtZPkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Radar Chart with Line Series](../images/polar-radar/blazor-radar-chart-line-series.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVnjdMIfqQPknwH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Radar Chart with Line Series](../images/polar-radar/blazor-radar-chart-line-series.webp)" %}
 
 N> Refer to the [Blazor Radar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Radar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Radar type chart.
 
@@ -97,7 +97,7 @@ Similar to the polar chart, use the [`DrawType`](https://help.syncfusion.com/cr/
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhfXbrXfzZtZPkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxXnsopAlLnwmd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Binding data with series
 
@@ -138,7 +138,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhfXbrXfzZtZPkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLnNRWepgvQLxld?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Series customization
 
@@ -181,7 +181,7 @@ To customize the start angle of the [Radar Chart](https://help.syncfusion.com/cr
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBpZPhtzpLTqzjV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVxjHiSzgaKIFvi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Coefficient in axis
   
@@ -222,7 +222,7 @@ To customize the radius of the [Radar Chart](https://help.syncfusion.com/cr/blaz
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLJNPVjfzqCoYbb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLxtxCepqudAajV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 ## Empty points
@@ -267,7 +267,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhpXlLtzzpCwIHl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLRtnWSzfCCnrqO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Fill**
 
@@ -307,7 +307,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLftFLZzTzHMHqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdDdWoJpMcePDn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Border**
 
@@ -349,7 +349,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBTDFBNpJSRZBjo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrnZnWoffVsrkvy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Events
 
@@ -394,7 +394,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJZFhjfzHWXEmy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrRZHMIzfhJuWQY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Point render
 
@@ -439,7 +439,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrpNlrjpJdmOFva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVHXRCyzpVwogJB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

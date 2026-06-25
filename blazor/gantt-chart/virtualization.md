@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor Gantt Chart component and more.
+title: Virtualization in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Virtualization in Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
