@@ -235,7 +235,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 {% endhighlight %}
 {% endtabs %}
 
-N> Class can be added to the Sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of Sidebar element.
+N> Class can be added to the Sidebar element using [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_HtmlAttributes) property. In that class, you have to add new styles or override existing styles of Sidebar element.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTjsAXUHEgsGGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)" %}
 
@@ -481,10 +481,12 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 11. The component provides smooth transitions when expanding or collapsing the sidebar.
 12. Seamless support for RTL languages using [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnableRtl) property, making the component suitable for international applications.
 
+N> You can also explore our [Blazor Sidebar example](https://blazor.syncfusion.com/demos/sidebar/default-functionalities?theme=bootstrap5) that shows you how to render and configure the sidebar.
+
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-N> You can also explore our [Blazor Sidebar example](https://blazor.syncfusion.com/demos/sidebar/default-functionalities?theme=bootstrap5) that shows you how to render and configure the sidebar.
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
