@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Signature in Blazor Web App | Syncfusion®
-description: Check out the documentation for getting started with Blazor Signature Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor Signature Components in Blazor Web App and much more details.
 platform: Blazor
 control: Signature
 documentation: ug
