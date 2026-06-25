@@ -90,7 +90,7 @@ N> `Auto` value cannot be used with any combination for multiple values.
 </style>
 ```
 
-![Blazor Tooltip in Open Mode](images/blazor-tooltip-in-open-mode.gif)
+![Blazor Tooltip in Open Mode](images/blazor-tooltip-in-open-mode.webp)
 
 ## Sticky mode
 
@@ -122,7 +122,7 @@ With this mode set to `true`, Tooltips can be made to show up on the screen as l
 
 ```
 
-![Blazor Tooltip in Sticky Mode](images/blazor-tooltip-sticky-mode.gif)
+![Blazor Tooltip in Sticky Mode](images/blazor-tooltip-sticky-mode.webp)
 
 ## Open or Close Tooltip with delay
 
@@ -153,4 +153,4 @@ The Tooltips can be opened or closed after some delay by using the [`OpenDelay`]
 </style>
 ```
 
-![Blazor Tooltip with Delay](images/blazor-tooltip-delay.gif)
+![Blazor Tooltip with Delay](images/blazor-tooltip-delay.webp)

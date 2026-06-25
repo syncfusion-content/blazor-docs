@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set Item-Wise Custom Template in Blazor Toolbar Component | Syncfusion®
+title: Set Item-Wise Custom Template in Toolbar | Syncfusion®
 description: Checkout and learn here all the features about how to set item-wise custom template in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar

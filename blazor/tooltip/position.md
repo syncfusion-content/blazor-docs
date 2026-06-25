@@ -40,7 +40,7 @@ N> By default, Tooltip is placed at the **TopCenter** of the target element.
 }
 ```
 
-![Changing Blazor Tooltip Position](images/blazor-tooltip-position.gif)
+![Changing Blazor Tooltip Position](images/blazor-tooltip-position.webp)
 
 ## Mouse trailing
 
@@ -71,7 +71,7 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 </style>
 ```
 
-![Blazor Tooltip with Mouse Trail](images/blazor-tooltip-mouse-trail.gif)
+![Blazor Tooltip with Mouse Trail](images/blazor-tooltip-mouse-trail.webp)
 
 N> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
 
@@ -108,7 +108,7 @@ Offset values are set to specify the distance between the target and Tooltip ele
 
 ```
 
-![Blazor Tooltip with Offset Value](images/blazor-tooltip-offset-value.gif)
+![Blazor Tooltip with Offset Value](images/blazor-tooltip-offset-value.webp)
 
 N> By default, collision is handled automatically and therefore when collision is detected the Tooltip fits horizontally and flips vertically.
 
