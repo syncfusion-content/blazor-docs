@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Gantt Chart component and more.
+title: Globalization in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Globalization in Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Gantt Chart component
 
-The Syncfusion Blazor Gantt Chart component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
+The Blazor Gantt Chart component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 
 Add **UseRequestLocalization** middle-ware in the **Program.cs** file to get browser Culture Info.
 
@@ -258,7 +258,7 @@ namespace ClientApplication
             builder.Services.AddSyncfusionBlazor();
 
 
-            // Register the Syncfusion locale service to customize the SyncfusionBlazor component locale culture.
+            // Register the locale service to customize the SyncfusionBlazor component locale culture.
             builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
             // Set the default culture of the application.
@@ -419,4 +419,4 @@ N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-c
 
 ## See also
 
-* [How to enable RTL based on Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service?](https://blazor.syncfusion.com/documentation/common/right-to-left#enable-rtl-for-all-components)
+* [How to enable RTL based on Blazor service?](https://blazor.syncfusion.com/documentation/common/right-to-left#enable-rtl-for-all-components)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor DropDown List component and much more.
+title: Filtering in Blazor DropDown List Component | Syncfusion®
+description: Checkout and learn here all about Filtering in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug
@@ -110,7 +110,7 @@ In the following example, the data is filtered by matching text in both the `Fir
 
 ## Multi column filtering 
 
-To enable multi-column layout in the built-in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes, add the `e-multi-column` class via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
+To enable multi-column layout in the built-in Blazor themes, add the `e-multi-column` class via the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
 
 {% highlight cshtml %}
 
