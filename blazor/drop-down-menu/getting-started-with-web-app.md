@@ -159,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods (Static Web Assets, CDN, and CRG) for referencing themes in your Blazor application. Also see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references).
-
 ## Add Blazor Dropdown Menu component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dropdown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component inside the razor file.
@@ -229,8 +227,6 @@ dotnet run
 {% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTjshOAyMLHrtb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownMenu Component](./images/blazor-dropdownmenu-component.webp)" %}
-
-N> You can also explore our [Blazor Dropdown Menu example](https://blazor.syncfusion.com/demos/buttons/dropdown-menu?theme=bootstrap5) that shows how to render and configure the component.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownMenu).
 
