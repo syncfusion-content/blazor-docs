@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles in Blazor SpeedDial Component | Syncfusion®
-description: Checkout and learn here all about styles and icons in Blazor Speed Dial component and much more.
+description: Checkout and learn here all the features about styles and icons in Blazor Speed Dial component and much more details.
 platform: Blazor
 control: SpeedDial
 documentation: ug
