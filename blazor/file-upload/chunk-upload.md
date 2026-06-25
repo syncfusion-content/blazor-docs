@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Chunk Upload in Blazor File Upload Component | Syncfusion
-description: Checkout and learn here all about Chunk Upload in Syncfusion Blazor File Upload component and much more.
+title: Chunk Upload in Blazor File Upload Component | Syncfusion®
+description: Checkout and learn here all about Chunk Upload in Blazor File Upload component and and much more details.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ### Description 
 
-Chunk Upload in the Syncfusion Blazor File Upload component allows you to upload large files by splitting them into smaller, manageable chunks. This process significantly improves reliability, especially over unreliable networks, by reducing the impact of network interruptions. If a part of the file fails to upload, only that specific chunk needs to be re-transmitted, rather than the entire file. This feature is particularly useful for handling large media files, database backups, or any other substantial data transfers where interruptions are a concern. The Uploader sends these chunks to the server using AJAX, enabling the ability to pause, resume, and retry failed chunk uploads.
+Chunk Upload in the Blazor File Upload component allows you to upload large files by splitting them into smaller, manageable chunks. This process significantly improves reliability, especially over unreliable networks, by reducing the impact of network interruptions. If a part of the file fails to upload, only that specific chunk needs to be re-transmitted, rather than the entire file. This feature is particularly useful for handling large media files, database backups, or any other substantial data transfers where interruptions are a concern. The Uploader sends these chunks to the server using AJAX, enabling the ability to pause, resume, and retry failed chunk uploads.
 
 **Use Case:** Imagine a user uploading a 2GB video file. Without chunking, a network hiccup or browser crash during the upload would require the user to restart the entire upload from the beginning. With chunk upload, the file is broken into smaller pieces (e.g., 10MB each). If the upload fails at the 500MB mark, only the 51st chunk (and subsequent chunks) needs to be re-uploaded, saving significant time and improving user experience.
 

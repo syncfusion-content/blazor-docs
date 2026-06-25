@@ -39,12 +39,12 @@ Below is an example of how to configure the `RichTextEditorCodeBlockSettings` us
 
 @code {
     private List<CodeBlockLanguageModel> languages = new List<CodeBlockLanguageModel>
-         {
-             new CodeBlockLanguageModel { Label = "HTML", Language = "html" },
-             new CodeBlockLanguageModel { Label = "JavaScript", Language = "javascript" },
-             new CodeBlockLanguageModel { Label = "CSS", Language = "css" },
-             new CodeBlockLanguageModel { Label = "Plain Text", Language = "plaintext" }
-         };
+    {
+        new CodeBlockLanguageModel { Label = "HTML", Language = "html" },
+        new CodeBlockLanguageModel { Label = "JavaScript", Language = "javascript" },
+        new CodeBlockLanguageModel { Label = "CSS", Language = "css" },
+        new CodeBlockLanguageModel { Label = "Plain Text", Language = "plaintext" }
+    };
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Undo },

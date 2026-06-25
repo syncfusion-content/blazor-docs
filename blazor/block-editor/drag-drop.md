@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop in Blazor Block Editor Component | Syncfusion
-description: Checkout and learn about Drag and Drop with Syncfusion Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
+title: Drag and Drop in Blazor Block Editor Component | Syncfusion®
+description: Checkout and learn about Drag and Drop with Blazor Block Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: BlockEditor
 documentation: ug

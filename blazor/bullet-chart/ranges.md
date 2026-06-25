@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ranges in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about the ranges in Syncfusion Blazor Bullet Chart component and much more.
+title: Ranges in Blazor Bullet Chart Component | Syncfusion®
+description: Checkout and learn here all features about the ranges in Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -34,7 +34,7 @@ Ranges represent the quality of a specific range such as **Good**, **Bad** and *
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUiLLiTfIkQhfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHZniLrCyJeDQw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.webp)" %}
 
 ## Color customization
 
@@ -68,4 +68,4 @@ Enhance the readability of ranges with color and opacity. It can be applied usin
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBUWBrWJJHrSIXJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Ranges with Color in Blazor Bullet Chart](images/blazor-bullet-chart-range-customization.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnDHCLBCIkyJWS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Ranges with Color in Blazor Bullet Chart](images/blazor-bullet-chart-range-customization.webp)" %}

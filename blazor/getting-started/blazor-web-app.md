@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Web App | Syncfusion
+title: Getting Started with Blazor Web App | Syncfusion®
 description: Learn how to get started with the Blazor DataGrid component in a Blazor Web App using Visual Studio, Visual Studio Code, and the .NET CLI.
 platform: Blazor
 component: Common
@@ -48,6 +48,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,6 +66,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,6 +192,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 <SfGrid DataSource="@Orders" />
 
 @code {
+
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -223,17 +228,19 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor DataGrid component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor DataGrid component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the `.Client` project folder, and run the following command.
+Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}
@@ -243,11 +250,13 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the `.Client` project folder, and run the following command.
+Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
+cd BlazorWebApp
 dotnet run
 
 {% endhighlight %}

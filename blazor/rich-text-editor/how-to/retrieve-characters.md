@@ -19,14 +19,10 @@ To retrieve the number of characters in the Rich Text Editor content, use the [G
 @using Syncfusion.Blazor.Popups
 
 <SfButton @onclick="@GetCharCount">Get Char Count</SfButton>
-
-<br />
-<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px"
-          Width="400px" ShowCloseIcon="true">
+<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px" Width="400px" ShowCloseIcon="true">
     <DialogButtons>
         <DialogButton Content="Ok" IsPrimary="true" OnClick="@DlgButtonClick" />
     </DialogButtons>
-
 </SfDialog>
 <SfRichTextEditor @ref="RteObj" @bind-Value="@RteValue"/>
 
