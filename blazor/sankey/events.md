@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events for Blazor Sankey Component | Syncfusion
-description: Learn about the events supported by the Syncfusion Blazor Sankey component and how to use them for interactivity and customization.
+title: Events for Blazor Sankey Component | Syncfusion®
+description: Learn about the events supported by the Blazor Sankey component and how to use them for interactivity and customization.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey Diagram component provides a comprehensive set of events to handle user interactions and key lifecycle moments. These events enable responsive behaviors, targeted customization, and coordinated updates across application features.
+The Blazor Sankey Diagram component provides a comprehensive set of events to handle user interactions and key lifecycle moments. These events enable responsive behaviors, targeted customization, and coordinated updates across application features.
 
 ## Events
 
