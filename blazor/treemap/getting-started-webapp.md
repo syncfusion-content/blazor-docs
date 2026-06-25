@@ -153,8 +153,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor TreeMap component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component inside the razor file.
@@ -290,8 +288,6 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVJNWgtfGUUNerG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Title](images/blazor-treemap-with-title.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeMap).
@@ -319,8 +315,6 @@ The color mapping supports customization of item colors based on the underlying 
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBpZWAjTGKvLKSK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Color Mapping](images/blazor-treemap-color-mapping.webp)" %}
 
 ## Enable legend
@@ -346,8 +340,6 @@ Legend items are used to denote the color mapping categories and show the legend
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBpDCqDJcJzjaSL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Legend](images/blazor-treemap-legend.webp)" %}
 
@@ -376,16 +368,14 @@ When space constraints prevents from displaying information using data labels, t
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJXCUDJGTEuBNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.webp)" %}
 
 N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=bootstrap5) that shows you how to render and configure the treemap.
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
-* [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
