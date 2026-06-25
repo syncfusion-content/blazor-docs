@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style Customization for active item in Blazor Tabs | Syncfusion
-description: Learn here all about style customization for active item in Syncfusion Blazor Tabs component, it's elements and more.
+title: Style Customization for active item in Blazor Tabs | Syncfusion®
+description: Learn here all about style customization for active item in Blazor Tabs component, it's elements and more.
 platform: Blazor
 control: Tabs
 documentation: ug

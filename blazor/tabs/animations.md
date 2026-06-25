@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animations in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about animations in Syncfusion Blazor Tabs component and much more details.
+title: Animations in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about animations in Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug

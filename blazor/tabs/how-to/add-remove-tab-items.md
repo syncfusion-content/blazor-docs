@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add/Remove Tab items in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to add or remove tab items in Syncfusion Blazor Tabs component and more.
+title: Add/Remove Tab items in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about how to add or remove tab items in Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug

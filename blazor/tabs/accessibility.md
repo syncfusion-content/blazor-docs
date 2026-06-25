@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Tabs component and much more details.
+title: Accessibility in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about accessibility in Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -79,4 +79,4 @@ The accessibility compliance of the Tabs component is shown in the following sam
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in  Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

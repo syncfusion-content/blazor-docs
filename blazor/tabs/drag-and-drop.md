@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about drag and drop in Syncfusion Blazor Tabs component and much more details.
+title: Drag and Drop in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about drag and drop in Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug

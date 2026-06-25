@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add nested tabs in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to add nested tabs in Syncfusion Blazor Tabs component and much more.
+title: Add nested tabs in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about how to add nested tabs in Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug

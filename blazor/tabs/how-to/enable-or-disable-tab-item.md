@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable/Disable Tab item in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to enable/disable tab item in Syncfusion Blazor Tabs component and more.
+title: Enable/Disable Tab item in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about how to enable/disable tab item in Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
