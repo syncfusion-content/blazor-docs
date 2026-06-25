@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Blazor Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Agent Skills to enhance AI assistants with accurate Syncfusion Blazor component guidance.
+title: Blazor Agent Skills for AI Assistants | Syncfusion®
+description: Learn how to install and use Agent Skills to enhance AI assistants with accurate Blazor component guidance.
 platform: Blazor
 control: Skills
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Syncfusion® Blazor Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion Blazor Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
+This guide introduces **Blazor Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Blazor code using official APIs, patterns, and theming guidelines.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> component usage patterns, API structures, supported features, and project‑specific configuration.
 
 ## Prerequisites
 
-Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Agent Skills, ensure the following:
+Before installing Syncfusion® Blazor Agent Skills, ensure the following:
 
 - Required [Node.js](https://nodejs.org/en/) version >= 16
 - Blazor application (existing or new); see [Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
@@ -23,7 +23,7 @@ Before installing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Agent 
 
 ## Installation
 
-Install [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components skills](https://github.com/syncfusion/blazor-ui-components-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
+Install [Blazor components skills](https://github.com/syncfusion/blazor-ui-components-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
 
 ### Install all skills
 
@@ -54,7 +54,7 @@ The terminal will display a list of available skills. Use the arrow keys to navi
 {% highlight bash tabtitle="CMD" %}
 
  Select skills to install (space to toggle)
-│  ◻ syncfusion-blazor-accumulation-chart (Implement Syncfusion Blazor Accumulation Chart component...)
+│  ◻ syncfusion-blazor-accumulation-chart (Implement Blazor Accumulation Chart component...)
 │  ◻ syncfusion-blazor-ai-assistview
 │  ◻ syncfusion-blazor-charts
 │  ◻ syncfusion-blazor-datagrid
@@ -117,7 +117,7 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills Work
 
-1. **Reads relevant Skill files based on queries**, retrieving component usage patterns, APIs, and best‑practice guidance from the installed Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Skills. The assistant initially loads only skill names and descriptions, then dynamically loads the required skill and reference files as needed to provide accurate Syncfusion guidance.
+1. **Reads relevant Skill files based on queries**, retrieving component usage patterns, APIs, and best‑practice guidance from the installed Blazor Skills. The assistant initially loads only skill names and descriptions, then dynamically loads the required skill and reference files as needed to provide accurate Syncfusion guidance.
 2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
 
    - Using the required NuGet packages for each component.
