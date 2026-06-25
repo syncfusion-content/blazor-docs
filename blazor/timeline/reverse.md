@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Reverse in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about the reverse in Syncfusion Blazor Timeline component and more details.
+title: Reverse in Blazor Timeline Component | Syncfusion®
+description: Checkout and learn here all about the reverse in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug

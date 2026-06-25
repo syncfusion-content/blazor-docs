@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open the Blazor TimePicker Picker popup on Focus | Syncfusion
-description: Learn here all about opening the Syncfusion Blazor TimePicker Picker popup upon focusing input and much more.
+title: Open the Blazor TimePicker Picker popup on Focus | Syncfusion®
+description: Learn here all about opening the Blazor TimePicker Picker popup upon focusing input and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native Events in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about native events in Syncfusion Blazor TimePicker component and much more.
+title: Native Events in Blazor TimePicker Component | Syncfusion®
+description: Checkout and learn here all about native events in Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug

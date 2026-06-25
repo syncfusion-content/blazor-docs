@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about the template in Syncfusion Blazor Timeline component and more details.
+title: Template in Blazor Timeline Component | Syncfusion®
+description: Checkout and learn here all about the template in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug

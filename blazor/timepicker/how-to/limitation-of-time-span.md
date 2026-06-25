@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Limitations of TimeSpan DataType in Blazor TimePicker | Syncfusion
-description: Learn here all about Limitations of TimeSpan DataType in Syncfusion Blazor TimePicker component and more.
+title: Limitations of TimeSpan DataType in Blazor TimePicker | Syncfusion®
+description: Learn here all about Limitations of TimeSpan DataType in Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug

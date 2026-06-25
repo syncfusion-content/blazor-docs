@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Time Format in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about Time Format in Syncfusion Blazor TimePicker component and much more.
+title: Time Format in Blazor TimePicker Component | Syncfusion®
+description: Checkout and learn here all about Time Format in Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug
