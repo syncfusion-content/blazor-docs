@@ -43,6 +43,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -59,6 +60,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -179,6 +181,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 <SfGrid DataSource="@Orders" />
 
 @code {
+    
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
