@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent closing of Modal Blazor Dialog | Syncfusion
-description: Learn here all about how to prevent modal dialog from closing in Syncfusion Blazor Dialog component and more.
+title: Prevent closing of Modal Blazor Dialog | Syncfusion®
+description: Learn here all about how to prevent modal dialog from closing in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

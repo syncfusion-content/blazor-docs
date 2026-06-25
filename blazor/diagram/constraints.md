@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Constraints in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram Constraints in Syncfusion Blazor Diagram component and much more details.
+title: Constraints in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about diagram Constraints in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

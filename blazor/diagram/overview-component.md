@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in Blazor Diagram Component | Syncfusion
-description: Check out and learn here all about Overview Control in Syncfusion Blazor Diagram component and much more.
+title: Overview in Blazor Diagram Component | Syncfusion®
+description: Check out and learn here all the features and Overview Control in Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

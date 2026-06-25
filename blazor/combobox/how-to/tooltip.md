@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DropDownList options with tooltip in Blazor ComboBox | Syncfusion
-description: Learn here all about DropDownList options with tooltip in Syncfusion Blazor ComboBox component and more.
+title: DropDownList options with tooltip in Blazor ComboBox | Syncfusion®
+description: Learn here all the features about DropDownList options with tooltip in Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug

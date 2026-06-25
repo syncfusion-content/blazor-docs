@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Serialization in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about how to save and load the diagram elements in Syncfusion Blazor Diagram component and more.
+title: Serialization in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to save and load the diagram elements in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

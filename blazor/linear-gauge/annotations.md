@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotations in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about annotations in Syncfusion Blazor Linear Gauge component and much more.
+title: Annotations in Blazor Linear Gauge Component | Syncfusion®
+description: Checkout and learn here all the features about annotations in Blazor Linear Gauge component and much more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug

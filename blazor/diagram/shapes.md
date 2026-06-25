@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shapes in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Shapes in Syncfusion Blazor Diagram component and much more details.
+title: Shapes in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about Shapes in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -218,7 +218,7 @@ HTML elements can be embedded in the diagram by setting the node Shape type to [
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Add a Namespace for a Syncfusion<sup style="font-size:70%">&reg;</sup> control used in Diagrm HTML node *@
+@* Add a Namespace for a Blazor control used in Diagrm HTML node *@
 @using Syncfusion.Blazor.CircularGauge
 
 @* Initialize Diagram with node template *@

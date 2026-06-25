@@ -112,11 +112,11 @@ To get start quickly about virtual scrolling in our Scheduler, you can check on 
 }
 ```
 
-![Displaying Virtual Scrolling in Blazor Scheduler](images/blazor-scheduler-virtualscrolling.gif)
+![Displaying Virtual Scrolling in Blazor Scheduler](images/blazor-scheduler-virtualscrolling.webp)
 
 ## Virtual scrolling with templates
 
-In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property is enabled. In the following code, templates were applied to resources and appointments.
+In [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), templates can be applied when [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property is enabled. In the following code, templates were applied to resources and appointments.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

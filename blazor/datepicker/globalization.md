@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about globalization support in Syncfusion Blazor DatePicker component, it's elements and more.
+title: Globalization in Blazor DatePicker Component | Syncfusion®
+description: Checkout and learn here all the features about globalization support in Blazor DatePicker component, it's elements and more.
 platform: Blazor
 control: DatePicker
 documentation: ug

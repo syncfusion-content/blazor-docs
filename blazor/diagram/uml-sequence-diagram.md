@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sequence diagram model in Blazor Diagram Component | Syncfusion
-description: Check out and learn here all about Sequence diagram model support in Syncfusion Blazor Diagram component and more.
+title: Sequence diagram model in Blazor Diagram Component | Syncfusion®
+description: Check out and learn here all about Sequence diagram model support in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Sequence Diagram Model in Blazor diagram component
 
-A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html)  in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor suite supports the creation and visualization of UML sequence diagrams through the dedicated [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html) class.
+A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) in the Blazor suite supports the creation and visualization of UML sequence diagrams through the dedicated [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html) class.
 
 To enable this functionality, assign an instance of `UmlSequenceDiagramModel` to the [Model](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Model) property of the SfDiagramComponent. This `Model` encapsulates all necessary elements—such as lifelines, messages, activation boxes, and fragments—required to render a complete sequence diagram.
 

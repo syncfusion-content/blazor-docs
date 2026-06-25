@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Resource Generator (CRG) for Syncfusion Blazor
-description: Generate custom Syncfusion Blazor script and style bundles with CRG to optimize load time and include only required components.
+title: Custom Resource Generator (CRG) for Blazor | Syncfusion®
+description: Generate custom Blazor script and style bundles with CRG to optimize load time and include only required components.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Custom Resource Generator
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool to generate component-specific interop scripts and styles for Blazor. Using CRG reduces bundle size and improves load performance by including only the required resources instead of the full library.
+Syncfusion provides the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool to generate component-specific interop scripts and styles for Blazor. Using CRG reduces bundle size and improves load performance by including only the required resources instead of the full library.
 
 ![CRG preview showing component and theme selection](images/custom-resource-generator-preview.webp)
 
 ## Search and select the component list
 
-Select the required Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in CRG to generate a specific set of resources.
+Select the required Blazor components in CRG to generate a specific set of resources.
 
 Follow these steps to choose components in CRG:
 
-1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) app.
+1. Open the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) app.
 2. Type the component name in the search box, then select its checkbox. CRG automatically resolves dependencies; manual selection of dependent components is not required.
 ![CRG search with component selection](images/search-non-injectable.webp)
 3. Select one or more built-in themes from **Select Themes**.
@@ -64,7 +64,7 @@ N> Ensure the generated bundle version matches the installed Syncfusion Blazor N
 
 ## Import previously generated settings into CRG
 
-To add more components or update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor resources, it is not necessary to start from scratch. Import the existing **import.json**, make changes, and download it again from the CRG application.
+To add more components or update to the latest Blazor resources, it is not necessary to start from scratch. Import the existing **import.json**, make changes, and download it again from the CRG application.
 
 Follow these steps to import previous settings in CRG:
 

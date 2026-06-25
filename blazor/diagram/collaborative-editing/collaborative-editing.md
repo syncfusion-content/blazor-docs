@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Collaborative Editing in Syncfusion Blazor Diagram | Syncfusion
-description: Checkout and learn to set up real-time collaborative editing in Syncfusion Blazor Diagram using SignalR and Redis.
+title: Collaborative Editing in Blazor Diagram | Syncfusion®
+description: Checkout and learn to set up real-time collaborative editing in Blazor Diagram using SignalR and Redis.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -37,4 +37,4 @@ Collaboration applies to actions that raise the [HistoryChanged](https://help.sy
 
 ## Sample code
 
-A complete working example is available in the [Syncfusion Blazor Collaborative Editing GitHub repository](https://github.com/syncfusion/blazor-showcase-diagram-collaborative-editing)
+A complete working example is available in the [Blazor Collaborative Editing GitHub repository](https://github.com/syncfusion/blazor-showcase-diagram-collaborative-editing)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Interaction in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn how to interact with annotations in the Syncfusion Blazor Diagram component and much more details.
+title: Annotation Interaction in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn how to interact with annotations in the Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

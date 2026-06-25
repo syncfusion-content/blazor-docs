@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dialog Editing in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Dialog Editing in Syncfusion Blazor DataGrid and much more details.
+title: Dialog Editing in Blazor DataGrid | Syncfusion®
+description: Checkout and learn here all the features about Dialog Editing in Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

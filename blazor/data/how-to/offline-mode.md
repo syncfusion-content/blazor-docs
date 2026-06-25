@@ -11,7 +11,7 @@ documentation: ug
 
 # Working in Offline Mode in Blazor DataManager Component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataManager component provides **offline mode** to execute query operations on the client without additional server requests. When data is sourced from a remote service, enabling offline mode retrieves the complete collection during initialization and processes all subsequent operations locally. The cached data is maintained in the **Json** property.
+The Blazor DataManager component provides **offline mode** to execute query operations on the client without additional server requests. When data is sourced from a remote service, enabling offline mode retrieves the complete collection during initialization and processes all subsequent operations locally. The cached data is maintained in the **Json** property.
 
 To enable offline mode, set the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property to **true** on the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 

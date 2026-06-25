@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with data in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about working with data in Syncfusion Blazor Mention component and more.
+title: Working with data in Blazor Mention Component | Syncfusion®
+description: Checkout and learn here all the features about working with data in Blazor Mention component and much more details.
 platform: Blazor
 control: Mention
 documentation: ug
@@ -122,7 +122,7 @@ The following sample displays the first 6 contacts from `Customers` table of the
 
 ### Web API adaptor
 
-The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
+The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
 
 {% highlight razor %}
 
@@ -134,7 +134,7 @@ The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ### Offline mode
 
-The `Offline` property of `DataManager` allows you to specify whether the data should be loaded from the server or from the local cache. If `Offline` is set to `true`, the `DataManager` will try to load data from the local cache first, and if that is not possible, it will try to load it from the server. This can be useful in situations where you want to minimise the number of requests to the server and improve its performance.
+The `Offline` property of `DataManager` allows you to specify whether the data should be loaded from the server or from the local cache. If `Offline` is set to `true`, the `DataManager` will try to load data from the local cache first, and if that is not possible, it will try to load it from the server. This can be useful in situations where you want to minimize the number of requests to the server and improve its performance.
 
 The following example is for remote data binding and enabled `Offline` mode.
 
@@ -172,7 +172,7 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_OnActionFailure) event is a built-in event of Mention component that is triggered when an error occurs while fetching data from a remote server. This event can be used to handle errors that may occur during the data fetch process and take appropriate action, such as displaying an error message or retrying the request.
 
-In the following example, the `Url` is set to an incorrect value, So the server is unable to fulfil the data fetch request, and it will triggers the `OnActionFailure` event.
+In the following example, the `Url` is set to an incorrect value, So the server is unable to fulfill the data fetch request, and it will triggers the `OnActionFailure` event.
 
 {% highlight razor %}
 
