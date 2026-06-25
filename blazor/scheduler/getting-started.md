@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Scheduler Blazor in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Scheduler component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Scheduler component in Blazor WebAssembly Application.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -47,6 +48,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,6 +177,7 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
+
 @code {
     public class AppointmentData
     {
@@ -256,7 +259,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
     </ScheduleViews>
 </SfSchedule>
 
-@code{
+@code {
     DateTime CurrentDate = new DateTime(2025, 2, 14);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -299,7 +302,8 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-@code{
+
+@code {
     DateTime CurrentDate = new DateTime(2020, 1, 10);
     public class AppointmentData
     {
@@ -354,7 +358,8 @@ You can configure only the required views as needed, and include additional view
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-@code{
+
+@code {
     View CurrentView = View.Month;
     public class AppointmentData
     {
