@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Methods in Blazor SpeechToText Component | Syncfusion
+title: Methods in Blazor SpeechToText Component | Syncfusion®
 description: Checkout and learn about Methods in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeechToText
