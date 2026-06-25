@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maximum Length in Blazor TextArea Component | Syncfusion®
-description: Limiting the maximum number of characters of the Blazor Textarea component and much more.
+description: Checkout and learn how to limiting the maximum number of characters of the Blazor Textarea component and much more details.
 platform: Blazor
 control: TextArea
 documentation: ug

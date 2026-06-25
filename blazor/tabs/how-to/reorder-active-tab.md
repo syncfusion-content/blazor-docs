@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reorder Active Tab in Blazor Tabs Component | Syncfusion®
-description: Checkout and learn here all about Reorder Active Tab in Blazor Tabs component and much more.
+description: Checkout and learn here all the features about Reorder Active Tab in Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug

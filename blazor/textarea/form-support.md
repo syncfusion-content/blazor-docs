@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Support in Blazor TextArea Component | Syncfusion®
-description: Checkout and learn about the Form support of the Blazor Textarea component and much more.
+description: Checkout and learn the features about the Form support of the Blazor Textarea component and much more details.
 platform: Blazor
 control: TextArea
 documentation: ug
