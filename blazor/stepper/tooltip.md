@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in Blazor Stepper Component | Syncfusion
+title: Tooltip in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Tooltip with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper

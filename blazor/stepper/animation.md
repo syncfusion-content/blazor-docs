@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Animation in Blazor Stepper Component | Syncfusion
+title: Animation in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Animation with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
