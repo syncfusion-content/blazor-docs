@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Skeleton Component | Syncfusion®
-description: Checkout and learn here all about accessibility in Blazor Skeleton component and much more.
+description: Checkout and learn here all the features about accessibility in Blazor Skeleton component and much more.
 platform: Blazor
 control: Skeleton
 documentation: ug
