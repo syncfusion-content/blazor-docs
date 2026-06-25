@@ -155,8 +155,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor TimePicker component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component inside the razor file.
@@ -239,8 +237,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
-
-N> You can also explore our [Blazor TimePicker Example](https://blazor.syncfusion.com/demos/timepicker/default-functionalities?theme=bootstrap5) that shows you how to render and configure the TimePicker.
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
