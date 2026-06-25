@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Sparkline Component | Syncfusion®
-description: Learn about accessibility, keyboard navigation, and compliance in the Blazor Sparkline component.
+description: Learn about accessibility, keyboard navigation, and compliance in the Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline
 documentation: ug

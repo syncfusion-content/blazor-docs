@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Special Points Customization in Blazor Sparkline | Syncfusion®
-description: Learn here all about special points customization in Blazor Sparkline component and more.
+description: Learn here all the features about special points customization in Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart Types in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn about the different chart types available in the Blazor Sparkline component.
+description: Check out and learn the features about the different chart types available in the Blazor Sparkline component.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

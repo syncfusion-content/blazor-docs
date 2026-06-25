@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn about available events and event handling in the Blazor Sparkline component.
+description: Check out and learn about available events and event handling in the Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

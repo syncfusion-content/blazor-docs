@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series in Blazor Smith Chart Component | Syncfusion®
-description: Checkout and learn here all about series in Blazor Smith Chart component and much more details.
+description: Checkout and learn here all the features about series in Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug

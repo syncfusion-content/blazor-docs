@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Labels in Blazor Sparkline Component | Syncfusion®
-description: Check out and learn how to configure and customize Data Labels in Blazor Sparkline component.
+description: Check out and learn how to configure and customize Data Labels in Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
