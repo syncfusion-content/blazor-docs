@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about drag and drop in Syncfusion Blazor File Manager component and more.
+description: Checkout and learn here all about drag and drop in Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -125,7 +125,7 @@ For example, if you are currently viewing `~/Documents/Projects/2024`, you can d
 
 ## Preventing Drag and Drop in the Drag Start Event
 
-The `OnFileDragStart` event can be used to prevent dragging of specific folders. This is useful when you want to restrict users from moving specific files or folders. By setting the `Cancel` property to **true**, you can prevent the drag operation before it starts.
+The [`OnFileDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileDragStart) event can be used to prevent dragging of specific folders. This is useful when you want to restrict users from moving specific files or folders. By setting the `Cancel` property to **true**, you can prevent the drag operation before it starts.
 
 The following example demonstrates how to prevent dragging of the "Documents" folder:
 
@@ -156,7 +156,7 @@ The following example demonstrates how to prevent dragging of the "Documents" fo
 
 ## Preventing Drag and Drop Based on Drop Target
 
-The `OnFileDragStop` event fires just before the drop operation completes, allowing you to validate the target destination. This is useful when you want to prevent dropping files into specific folders based on business logic or permission rules. By setting the `Cancel` property to **true** in this event, you can cancel the drop operation at the target location.
+The [`OnFileDragStop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileDragStop) event fires just before the drop operation completes, allowing you to validate the target destination. This is useful when you want to prevent dropping files into specific folders based on business logic or permission rules. By setting the `Cancel` property to **true** in this event, you can cancel the drop operation at the target location.
 
 The following example demonstrates how to prevent dropping items into the "Music" folder:
 
