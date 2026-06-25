@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Rich Text Editor in WASM App | Syncfusion
-canonical_url: "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"
+canonical_url: "https://www.syncfusion.com/blazor-components/blazor-rich-text-editor"
 description: Check out and learn about getting started with the Rich Text Editor in Blazor WebAssembly Application.
 platform: Blazor
 control: RichTextEditor
