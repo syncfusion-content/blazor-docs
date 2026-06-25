@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change Blazor Toggle SwitchButton state using toggle method | Syncfusion®
+title: Change Blazor Toggle SwitchButton state | Syncfusion®
 description: Learn here all about changing button state using toggle method in Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 

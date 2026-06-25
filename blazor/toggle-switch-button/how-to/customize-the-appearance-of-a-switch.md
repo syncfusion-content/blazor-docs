@@ -212,4 +212,4 @@ N> For this customization you need to refer the `bootstrap.css` file. This could
 
 ```
 
-![Blazor Toggle Switch Button with Custom Color](./../images/blazor-toggle-switch-button-custom-color.png)
+![Blazor Toggle Switch Button with Custom Color](./../images/blazor-toggle-switch-button-custom-color.webp)
