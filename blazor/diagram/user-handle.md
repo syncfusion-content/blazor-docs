@@ -1,7 +1,7 @@
 ---
 layout: post
-title: User Handle in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create the user handles in Syncfusion Blazor Diagram component and more.
+title: User Handle in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create the user handles in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -83,10 +83,10 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIiNjPeXLREtrf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)" %}
 
 ## How to Customize User Handle Actions
-User handles in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component can be customized to perform specific actions when clicked. By default, user handles provide basic functionality; they can also be configured to execute custom logic such as cloning, deleting, or triggering other actions.
+User handles in the Blazor Diagram component can be customized to perform specific actions when clicked. By default, user handles provide basic functionality; they can also be configured to execute custom logic such as cloning, deleting, or triggering other actions.
 
 ### How to Handle User Handle Click Actions
-To customize user handle actions in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component, you need to define a custom tool that implements the required behavior and map the user handle to this tool using the [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) method, ensuring that the appropriate action is executed when the handle is clicked.
+To customize user handle actions in the Blazor Diagram component, you need to define a custom tool that implements the required behavior and map the user handle to this tool using the [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) method, ensuring that the appropriate action is executed when the handle is clicked.
 
 The following code explains how to customize user handle click actions.
 
