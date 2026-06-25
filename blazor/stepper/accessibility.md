@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Stepper Component | Syncfusion
+title: Accessibility in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Accessibility and Keyboard interaction with Blazor Stepper component and more details.
 platform: Blazor
 control: Stepper
@@ -69,4 +69,4 @@ The accessibility compliance of the Blazor Stepper component is shown in the fol
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
