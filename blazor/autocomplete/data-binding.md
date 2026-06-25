@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
+title: Data Binding in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all features about Data Binding in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -71,7 +71,7 @@ In the following example, the `Country.CountryID` column is mapped to the [AutoC
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMhCzLUzZpqxv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHDRisBbvrerTk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Expando object binding
 
@@ -95,7 +95,7 @@ Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/commo
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthgsVWzBToAePUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhdNxMWVFbSlkRk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Dynamic object binding
 
@@ -139,7 +139,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKiBsTKmrEVfKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLnjxWWhPuXrDJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnActionComplete event
 

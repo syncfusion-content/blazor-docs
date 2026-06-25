@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating WPF Controls to Blazor Components | Syncfusion
-description: Step-by-step guide to migrate WPF controls to Blazor components on .NET 8+, including setup, configuration, and code examples.
+description: Step-by-step guide to migrate WPF controls to Blazor components on .NET 8+, including setup, configuration, code examples, and migration limitations.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating WPF Controls to Blazor Components
 
-Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a structured, step-by-step migration approach for **[WPF Controls](https://www.syncfusion.com/wpf-controls)** to their corresponding **[Blazor components](https://www.syncfusion.com/blazor-components)**.
+Migrating enterprise applications from **[WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)** to **[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/)** involves a significant architectural transition, moving from a rich, XAML-based desktop client framework to a component-driven, cross-platform web framework running on .NET. This guide provides a structured, step-by-step migration approach for **[WPF Controls](https://www.syncfusion.com/wpf-controls)** to their corresponding **[Blazor components](https://www.syncfusion.com/blazor-components)** with the **Blazor Web App (Interactive Server)** rendering mode.
 
 ## Why migrate from WPF to Blazor?
 
@@ -49,13 +49,15 @@ WPF and Blazor follow different application models. The following table maps com
 | `ICommand` and `RelayCommand` | Event handlers, `EventCallback`, component methods, or custom services | Implements user action handling and validation logic in Blazor using event callbacks or service methods |
 | `INotifyPropertyChanged` | Component state and re-rendering | Updates the UI when state changes |
 
-## Migrating components from WPF to Blazor
+## Common setup and configuration
 
 Create a Blazor project using one of the following getting started guides.
 
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+
+This migration guide focuses on the **Blazor Web App (Interactive Server)** approach, which provides the most direct migration path from WPF by maintaining server-side logic and state management similar to traditional desktop applications. The interactive server rendering mode enables real-time server-client communication through SignalR, making it suitable for enterprise applications that require complex business logic and real-time updates.
 
 The following shared setup applies to all components and covers the common configuration required before proceeding to the [component-specific migration steps](#component-specific-migration-steps).
 
@@ -73,12 +75,12 @@ Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packa
 
 In WPF, controls are usually declared in XAML and initialized in code-behind, so you do not need to register them explicitly. Application services are typically configured manually or through an external DI container.
 
-Blazor uses the built-in .NET dependency injection (DI) system, so required services must be registered in the application’s service container to enable component communication and framework functionality.
+Blazor uses the built-in .NET dependency injection (DI) system, so required services must be registered in the application's service container to enable component communication and framework functionality. When using **Blazor Web App (Interactive Server)**, ensure that services are registered with the appropriate lifetime scope to support interactive components and server-side state management.
 
 In the `Program.cs` file, add the following namespace and register the required services.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" hl_lines="2 8" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="2 8" %}
 
 ...
 using Syncfusion.Blazor;
@@ -153,7 +155,137 @@ In Blazor, the theme stylesheet and script can be accessed from NuGet through [S
 {% endhighlight %}
 {% endtabs %}
 
-## Component specific migration steps
+## Understanding Data Binding Between DataContext and Blazor Parameters
+
+Data binding is a fundamental concept in both WPF and Blazor, but the implementation approaches differ significantly.
+
+### WPF DataContext approach
+
+In WPF, the `DataContext` property is a powerful mechanism that enables declarative data binding. You set the `DataContext` to a view model instance that typically implements `INotifyPropertyChanged`, and XAML bindings automatically resolve against this object. This allows UI elements to automatically update when the underlying data changes.
+
+When the data source implements [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-10.0) (such as [ObservableCollection<T>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0)), the [SfDataGrid](https://www.syncfusion.com/wpf-controls/datagrid) control automatically refreshes the UI when items are added, removed, or when the list is cleared. However, when using a standard `List<T>`, the grid will not automatically refresh when the collection is modified.
+
+{% tabs %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
+
+using System.ComponentModel;
+using System.Collections.ObjectModel;
+
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+        // Set the DataContext to bind XAML elements to the view model
+        this.DataContext = new OrderViewModel();
+    }
+}
+
+public class OrderViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<Order> orders;
+    
+    public ObservableCollection<Order> Orders
+    {
+        get { return orders; }
+        set
+        {
+            if (orders != value)
+            {
+                orders = value;
+                OnPropertyChanged(nameof(Orders));
+            }
+        }
+    }
+    
+    public OrderViewModel()
+    {
+        Orders = new ObservableCollection<Order>
+        {
+            new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+            new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+            new Order { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+        };
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    
+    private void OnPropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
+
+public class Order
+{
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor parameter and binding approach
+
+In Blazor, data flows through component parameters and the `@bind` directive. Instead of a global `DataContext`, each component explicitly defines its data dependencies through parameters. This approach provides more explicit data flow, better component composition, and type-safe binding.
+
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) supports binding to any `IEnumerable` collection such as `List<T>`, [ObservableCollection<T>](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0), collections of [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0), [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0), or `DataTable`, directly to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid. When using `ObservableCollection<T>`, the component automatically reflects changes made externally. For standard `List<T>`, call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method to reflect externally made changes to avoid tracking changes for performance considerations.
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+@page "/orders"
+@rendermode InteractiveServer
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private List<Order> Orders = new();
+    
+    protected override void OnInitialized()
+    {
+        // Component state is initialized with data
+        Orders = new List<Order>
+        {
+            new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+            new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+            new Order { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+        };
+    }
+    
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Key differences in data binding**
+
+| Aspect | WPF DataContext | Blazor Parameters |
+|---|---|---|
+| Scope | Global to window/control hierarchy | Explicit per component |
+| Binding declaration | `{Binding PropertyName}` in XAML | `@PropertyName` or `@bind` in Razor |
+| Property changes | `INotifyPropertyChanged` triggers UI updates | Component state changes trigger re-renders |
+| Collection type | `ObservableCollection<T>` for automatic notifications | `List<T>` or `ObservableCollection<T>` (for `ObservableCollection<T>`, automatic notifications; for `List<T>`, call [Refresh()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method) |
+| Type safety | Resolved at runtime | Type-safe at compile time |
+| Two-way binding | `{Binding PropertyName, Mode=TwoWay}` | `@bind-Value="@PropertyName"` |
+| Update notification | Automatic via `PropertyChanged` event | Automatic for `ObservableCollection<T>` or manual via `Refresh()` or re-assignment for `List<T>` |
+| Data sources supported | Collections implementing `INotifyCollectionChanged` or `IEnumerable` | `IEnumerable` collections: `List<T>`, `ObservableCollection<T>`, `ExpandoObject`, `DynamicObject`, `DataTable` |
+
+## Component-specific migration steps
 
 ### DataGrid
 
@@ -252,7 +384,7 @@ namespace WpfDataGridApp
 
 **Blazor equivalent**
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component is declared in Razor markup, and it receives data through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) parameter. When using **Blazor Web App (Interactive Server)**, the component runs on the server and updates the UI through interactive re-rendering.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -294,297 +426,213 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 {% endhighlight %}
 {% endtabs %}
 
-### Charts
+## Migration limitations and considerations
 
-[WPF Charts](https://www.syncfusion.com/wpf-controls/charts) is a flexible XAML charting control for rich desktop visualizations, while [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) is the Razor-based component for creating responsive, interactive charts on the web. 
+Migrating from WPF to Blazor requires understanding key architectural differences that will impact how you design and structure your applications. While Blazor offers many advantages as a modern web framework, certain WPF-specific features and patterns have no direct equivalents in the web environment.
 
-For additional details, refer to the [WPF Charts getting started guide](https://help.syncfusion.com/wpf/charts/getting-started) and [Blazor Charts getting started guide](https://blazor.syncfusion.com/documentation/chart/getting-started).
-
-| Aspect | WPF (SfChart) | Blazor (SfChart) |
-|---|---|---|
-| Package (NuGet) | [Syncfusion.SfChart.WPF](https://www.nuget.org/packages/Syncfusion.SfChart.WPF) | [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts) |
-| Component declaration | `<syncfusion:SfChart>` | `<SfChart>` |
-| Data binding | [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) with [XBindingPath](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.XyDataSeries.html?tabs=tabid-1#Syncfusion_UI_Xaml_Charts_XyDataSeries_YBindingPath) | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) with [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) |
-| Axis and series | Nested axis and series elements | [ChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html), [ChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html), and [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) |
-| Series types | [ColumnSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ColumnSeries.html), [LineSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.LineSeries.html), and similar series types | [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) with `Type="ChartSeriesType.*"` |
-| Markers and tooltips | Series-level settings and adornments | [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html) and [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) |
-| Events | CLR events | Event callbacks such as point and tooltip events |
-| Responsiveness | Window-based layout | CSS-based responsive layout |
-
-#### Component rendering
+### UI layout differences: Pixel-based WPF vs. responsive CSS
 
 **WPF approach**
 
-The [WPF Charts](https://www.syncfusion.com/wpf-controls/charts) control is defined using nested XAML elements, and data is assigned through the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_ItemsSource) property using binding paths for the X and Y values.
+WPF uses a device-independent pixel (DIP) measurement system with fixed positioning, providing pixel-perfect control over element dimensions, spacing, and layout. Elements maintain consistent sizes regardless of viewing context, relying on hardware-accelerated GPU rendering through the native WPF engine.
 
 {% tabs %}
-{% highlight xml tabtitle="MainWindow.xaml" %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
 
-<Window x:Class="WpfChart.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-        Title="Sales Analysis" Height="450" Width="800">
-
-    <syncfusion:SfChart Header="Sales Analysis">
-
-        <syncfusion:SfChart.PrimaryAxis>
-            <syncfusion:CategoryAxis Header="Month" />
-        </syncfusion:SfChart.PrimaryAxis>
-
-        <syncfusion:SfChart.SecondaryAxis>
-            <syncfusion:NumericalAxis Header="Sales" />
-        </syncfusion:SfChart.SecondaryAxis>
-
-        <syncfusion:SfChart.Legend>
-            <syncfusion:ChartLegend Visibility="Visible" />
-        </syncfusion:SfChart.Legend>
-
-        <syncfusion:ColumnSeries ItemsSource="{Binding SalesData}"
-                                 XBindingPath="Month"
-                                 YBindingPath="Sales"
-                                 Label="Sales 2024"
-                                 ShowTooltip="True">
-            <syncfusion:ColumnSeries.AdornmentsInfo>
-                <syncfusion:ChartAdornmentInfo ShowMarker="True" 
-                                               Symbol="Circle"
-                                               SymbolInterior="White"
-                                               SymbolStroke="{Binding Interior, RelativeSource={RelativeSource Mode=Self}}" />
-            </syncfusion:ColumnSeries.AdornmentsInfo>
-        </syncfusion:ColumnSeries>
-
-    </syncfusion:SfChart>
-
-</Window>
-
-{% endhighlight %}
-{% highlight cs tabtitle="MainWindow.xaml.cs" %}
-
-using Syncfusion.UI.Xaml.Charts;
-using System.Collections.ObjectModel;
-using System.Windows;
-
-namespace WpfChart
-{
-    public partial class MainWindow : Window
-    {
-        public ObservableCollection<SalesInfo> SalesData { get; set; }
-
-        public MainWindow()
-        {
-            InitializeComponent();
-            SalesData = new ObservableCollection<SalesInfo>
-            {
-                new SalesInfo { Month = "Jan", Sales = 35 },
-                new SalesInfo { Month = "Feb", Sales = 28 },
-                new SalesInfo { Month = "Mar", Sales = 34 },
-                new SalesInfo { Month = "Apr", Sales = 32 },
-                new SalesInfo { Month = "May", Sales = 40 }
-            };
-            DataContext = this;
-        }
-    }
-
-    public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double Sales { get; set; }
-    }
-}
+<StackPanel>
+    <TextBlock Width="200" Height="50" Margin="10,10,10,10" Text="Sample Text"/>
+    <Button Width="100" Height="40" Margin="5,5,5,5" Content="Click Me"/>
+</StackPanel>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor equivalent**
+**Blazor approach**
 
-The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component is declared in Razor markup, with axes and series configured using child components, and data supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) parameter.
+Blazor components render as standard HTML and CSS in the browser, requiring a shift to responsive design principles. Dimensions are typically specified in flexible units (percentages, em, rem) rather than fixed pixels, allowing layouts to adapt seamlessly across different screen sizes and viewports. The browser's rendering engine handles layout calculations, with built-in DPI scaling support through CSS media queries and zoom levels.
 
 {% tabs %}
-{% highlight razor tabtitle="Sales.razor" %}
+{% highlight html tabtitle="Layout.razor" %}
 
-@page "/sales"
-@rendermode InteractiveServer
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Sales Analysis">
-    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Sales"></ChartPrimaryYAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesData" 
-                     XName="Month" 
-                     YName="Sales" 
-                     Type="ChartSeriesType.Column"
-                     Name="Sales 2024">
-            <ChartMarker Visible="true"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-    <ChartLegendSettings Visible="true"></ChartLegendSettings>
-    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
-</SfChart>
-
-@code {
-    public List<SalesInfo> SalesData { get; set; } = new();
-    
-    protected override void OnInitialized()
-    {
-        SalesData = new List<SalesInfo>
-        {
-            new SalesInfo { Month = "Jan", Sales = 35 },
-            new SalesInfo { Month = "Feb", Sales = 28 },
-            new SalesInfo { Month = "Mar", Sales = 34 },
-            new SalesInfo { Month = "Apr", Sales = 32 },
-            new SalesInfo { Month = "May", Sales = 40 }
-        };
-    }
-    
-    public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double Sales { get; set; }
-    }
-}
+<div style="display: flex; flex-direction: column;">
+    <span style="width: 200px; height: 50px; margin: 10px; padding: 5px;">Sample Text</span>
+    <button style="width: 100px; height: 40px; margin: 5px; padding: 5px;">Click Me</button>
+</div>
 
 {% endhighlight %}
 {% endtabs %}
 
-### Scheduler
+**Key differences**
 
-[WPF Scheduler](https://www.syncfusion.com/wpf-controls/scheduler) is a feature-rich desktop scheduling control for managing appointments and resources, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications. 
-
-For additional details, refer to the [WPF Scheduler getting started guide](https://help.syncfusion.com/wpf/scheduler/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
-
-| Aspect | WPF (SfScheduler) | Blazor (SfSchedule<TValue>) |
+| Aspect | WPF | Blazor |
 |---|---|---|
-| Package (NuGet) | [Syncfusion.SfScheduler.WPF](https://www.nuget.org/packages/Syncfusion.SfScheduler.WPF) | [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) |
-| Component declaration | `<syncfusion:SfScheduler>` | `<SfSchedule TValue="TModel">` |
-| Appointment model | Built-in [ScheduleAppointment](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.ScheduleAppointment.html) | Custom model mapped with [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) |
-| View configuration | [ViewType](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ViewType) | [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) and [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) |
-| Date and time binding | [DisplayDate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_DisplayDate) and related properties | [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) and `CurrentDate` |
-| Data source | [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ItemsSource) | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) |
-| Resources and grouping | [ResourceCollection](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ResourceCollection) with mappings | [ScheduleResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResources.html) and [ScheduleResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) |
-| Events | CLR events | Event callbacks such as action and cell events |
-| Large data handling | Native desktop behavior | Virtualization and lazy loading are commonly used |
+| Layout model | Absolute positioning with layout panels | Flow-based CSS layout (Flexbox, Grid) |
+| Responsive design | Limited and requires manual handling  | Native browser support |
+| Units | Device-independent pixels (DIPs) | Pixels, percentages, em, rem |
+| Scaling | Hardware-accelerated DPI scaling | Browser zoom and CSS media queries |
+| Overflow handling | Controlled by layout panels (StackPanel, Grid, DockPanel) | CSS overflow properties |
+| Rendering | GPU rendering via native engine | Browser rendering engine (hardware-accelerated) |
 
-#### Component rendering
+**Migration strategy**
 
-**WPF approach**
+* Replace fixed pixel dimensions with flexible CSS units (percentages, em, rem) where appropriate
+* Use CSS Flexbox or CSS Grid in place of WPF layout panels (StackPanel, Grid, DockPanel)
+* Implement CSS media queries for responsive layouts across different screen sizes
+* Test your layouts across multiple browsers and device sizes
+* Consider adopting CSS frameworks (Bootstrap, Tailwind CSS) to accelerate responsive design implementation
 
-The [WPF Scheduler](https://www.syncfusion.com/wpf-controls/scheduler) control is defined in XAML, with the active view and display date configured through properties, and appointments are assigned programmatically using the [ItemsSource](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ItemsSource) property.
+### Different lifecycle and event models
+
+**WPF lifecycle**
+
+WPF controls usually follow a synchronous lifecycle. Events like `Loaded` and `Unloaded` are used to start work, clean up resources, and respond to user actions directly on the UI thread. This approach is straightforward, but long-running tasks can block the interface if they are not handled carefully.
 
 {% tabs %}
-{% highlight xml tabtitle="MainWindow.xaml" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
 
-<Window x:Class="WpfScheduler.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Scheduler;assembly=Syncfusion.SfScheduler.WPF"
-        Title="Scheduler" Height="650" Width="1000">
-
-    <syncfusion:SfScheduler x:Name="scheduler"
-                            ViewType="Week"
-                            DisplayDate="{Binding CurrentDate, Mode=TwoWay}" />
-
-</Window>
-
-{% endhighlight %}
-{% highlight cs tabtitle="MainWindow.xaml.cs" %}
-
-using Syncfusion.UI.Xaml.Scheduler;
-using System;
-using System.Windows;
-
-namespace WpfScheduler
+public class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public DateTime CurrentDate { get; set; } = DateTime.Today;
+        InitializeComponent();
+        this.Loaded += MainWindow_Loaded;
+        this.Unloaded += MainWindow_Unloaded;
+    }
 
-        public MainWindow()
-        {
-            InitializeComponent();
-            DataContext = this;
+    private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+    {
+        // Called when the window is fully loaded and visible
+        LoadData();
+    }
 
-            // Create appointments
-            scheduler.ItemsSource = new SchedulerAppointmentCollection
-            {
-                new ScheduleAppointment
-                {
-                    Subject = "Project Meeting",
-                    StartTime = DateTime.Today.AddHours(10),
-                    EndTime = DateTime.Today.AddHours(11),
-                    AppointmentBackground = System.Windows.Media.Brushes.LightBlue
-                },
-                new ScheduleAppointment
-                {
-                    Subject = "Client Call",
-                    StartTime = DateTime.Today.AddHours(14),
-                    EndTime = DateTime.Today.AddHours(15),
-                    AppointmentBackground = System.Windows.Media.Brushes.LightGreen
-                }
-            };
-        }
+    private void MainWindow_Unloaded(object sender, RoutedEventArgs e)
+    {
+        // Called when the window is being unloaded; cleanup here
+        CleanupResources();
+    }
+
+    private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        // Synchronous event execution
+        ProcessSelection(e.AddedItems);
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Blazor equivalent**
+**Blazor lifecycle**
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
+Blazor uses an asynchronous lifecycle that fits browser rendering and server communication. Common lifecycle methods include `OnInitializedAsync`, `OnParametersSetAsync`, and `OnAfterRenderAsync`. Event handling is also flexible, so component logic can run synchronously or asynchronously depending on the task.
 
 {% tabs %}
-{% highlight razor tabtitle="Calendar.razor" %}
+{% highlight razor tabtitle="Sample.razor" %}
 
-@page "/calendar"
+@page "/sample"
 @rendermode InteractiveServer
-@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Grids
 
-<SfSchedule TValue="Meeting" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleViews>
-        <ScheduleView Option="View.Day"></ScheduleView>
-        <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
-    </ScheduleViews>
-    <ScheduleEventSettings DataSource="@Appointments"></ScheduleEventSettings>
-</SfSchedule>
+<SfGrid @ref="gridRef" DataSource="@Orders" OnActionBegin="@OnActionBegin">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
 @code {
-    private DateTime CurrentDate = DateTime.Today;
-    public List<Meeting> Appointments { get; set; } = new();
-    
-    protected override void OnInitialized()
+    private SfGrid<Order> gridRef;
+    private List<Order> Orders = new();
+
+    protected override async Task OnInitializedAsync()
     {
-        Appointments = new List<Meeting>
+        // Called once when the component is first initialized
+        await LoadDataAsync();
+    }
+
+    protected override void OnParametersSet()
+    {
+        // Called when the component receives new parameters
+        RefreshData();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Called after the component is rendered to the DOM
+        if (firstRender)
         {
-            new Meeting 
-            { 
-                Id = 1,
-                Subject = "Project Meeting", 
-                StartTime = DateTime.Today.AddHours(10), 
-                EndTime = DateTime.Today.AddHours(11)
-            },
-            new Meeting 
-            { 
-                Id = 2,
-                Subject = "Client Call", 
-                StartTime = DateTime.Today.AddHours(14), 
-                EndTime = DateTime.Today.AddHours(15)
-            }
+            await InitializeAsync();
+        }
+    }
+
+    private async Task OnActionBegin(ActionEventArgs<Order> args)
+    {
+        // Asynchronous event handling using EventCallback
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
+        {
+            await SaveDataAsync(args.Data);
+        }
+    }
+
+    private async Task LoadDataAsync()
+    {
+        // Async data loading from a service or database
+        await Task.Delay(100);
+        Orders = new List<Order>
+        {
+            new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 }
         };
     }
-    
-    public class Meeting
+
+    private void RefreshData()
     {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        // Data refresh logic
+    }
+
+    private async Task InitializeAsync()
+    {
+        // Post-render initialization (e.g., JavaScript interop)
+        await Task.CompletedTask;
+    }
+
+    private async Task SaveDataAsync(Order order)
+    {
+        // Async save operation
+        await Task.Delay(100);
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+**Key differences**
+
+| Aspect | WPF | Blazor |
+|---|---|---|
+| Initialization | Synchronous `Loaded` event | Asynchronous `OnInitializedAsync` |
+| Parameter changes | `DependencyProperty` change notifications | `OnParametersSetAsync` |
+| Post-render operations | Direct event handler execution | `OnAfterRenderAsync` |
+| Event handling | Synchronous routed events and delegates | Direct `EventCallback` properties such as `OnActionBegin` and `OnActionComplete` |
+| Cleanup | `Unloaded` event | `IAsyncDisposable` interface |
+| Rendering model | Immediate, blocking in UI thread | Server-side with SignalR client updates |
+| Performance implications | Blocking operations freeze the UI | Async/await prevents server blocking |
+
+**Migration strategy**
+
+* Convert synchronous event handlers to asynchronous `EventCallback` methods
+* Move initialization logic from `Loaded` to `OnInitializedAsync`
+* Use `OnParametersSetAsync` for responding to parameter changes instead of `DependencyProperty` handlers
+* Leverage `OnAfterRenderAsync` for DOM-dependent logic and JavaScript interop
+* Implement `IAsyncDisposable` and use the `@implements` directive for proper resource cleanup
+* Always use `async`/`await` in event handlers and lifecycle methods to prevent blocking the interactive server connection
+* Test thoroughly for race conditions that may occur due to asynchronous re-rendering
 
 ## Run the application
 

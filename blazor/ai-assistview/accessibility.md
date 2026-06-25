@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor AI AssistView Component | Syncfusion
+title: Accessibility in Blazor AI AssistView Component | Syncfusion®
 description: Checkout and learn about Accessibility and Keyboard interaction with Blazor AI AssistView component and more details.
 platform: Blazor
 control: AI AssistView
@@ -72,4 +72,4 @@ The Blazor AI AssistView component's accessibility levels are ensured through an
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor 3D Chart component and more.
+title: Accessibility in Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor 3D Chart component and more.
 platform: Blazor
 control: 3D Chart
 documentation: ug
@@ -79,4 +79,4 @@ The Blazor 3D Chart component followed the [keyboard interaction](https://www.w3
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
