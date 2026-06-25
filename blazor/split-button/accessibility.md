@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor SplitButton Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor SplitButton component and more.
+title: Accessibility in Blazor SplitButton Component | Syncfusion®
+description: Checkout and learn here all about accessibility in Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
@@ -72,4 +72,4 @@ The accessibility compliance of the Blazor SplitButton component is shown in the
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

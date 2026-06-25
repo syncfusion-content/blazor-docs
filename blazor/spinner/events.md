@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Spinner Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor Spinner component and much more details.
+title: Events in Blazor Spinner Component | Syncfusion®
+description: Checkout and learn here all about events in Blazor Spinner component and much more details.
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Spinner Component
 
-The Syncfusion Blazor Spinner component exposes a set of lifecycle events that hook into key moments of the Spinner's existence — from its initial creation to its final destruction, as well as before it is shown or hidden. These events provide full control over the Spinner's behavior, enabling custom logic execution, application state updates, operation cancellation, or integration with logging and monitoring systems.
+The Blazor Spinner component exposes a set of lifecycle events that hook into key moments of the Spinner's existence — from its initial creation to its final destruction, as well as before it is shown or hidden. These events provide full control over the Spinner's behavior, enabling custom logic execution, application state updates, operation cancellation, or integration with logging and monitoring systems.
 
 All Spinner events are configured through the [SpinnerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spinner.SpinnerEventArgs.html#properties) child component, which must be nested inside the Spinner component. The `SpinnerEvents` tag accepts event callback attributes for each supported event.
 
