@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor Numeric TextBox Component | Syncfusion®
-description: Learn how to customize the Blazor Numeric TextBox with read-only input, disabled interactions, and styling options for a tailored user experience.
+title: Customization in Blazor Numeric TextBox Component | Syncfusion
+description: Checkout and learn here all about data binding in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

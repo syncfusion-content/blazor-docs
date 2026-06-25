@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor NumericTextBox in Blazor Web App | Syncfusion®
+title: Getting Started with NumericTextBox in Blazor Web App | Syncfusion®
 description: Learn how to get started with the Blazor NumericTextBox in a Blazor Web App with installation and configuration steps.
 platform: Blazor
 control: NumericTextBox
