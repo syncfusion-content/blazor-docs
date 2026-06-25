@@ -162,6 +162,8 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Inputs
+
 <SfTextArea Placeholder='Add your Comments'></SfTextArea>
 
 {% endhighlight %}
@@ -175,6 +177,8 @@ The floating label displays the placeholder as a label above the TextArea when f
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Inputs
 
 <SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
 
@@ -223,8 +227,14 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTjdiKszhkOkia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.webp)" %}
 
+N> **Resources**
+   * [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextArea).
+   * Explore our [Blazor TextArea example](https://blazor.syncfusion.com/demos/textarea/default-functionalities) that shows how to render and configure the TextArea.
+
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
+
+* [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+
+* [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
