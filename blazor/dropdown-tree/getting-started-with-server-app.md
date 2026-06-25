@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +59,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/)  and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
@@ -142,7 +144,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
- The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -154,8 +156,6 @@ builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
 
 ## Add Blazor Dropdown Tree component
 
@@ -175,7 +175,8 @@ The `TValue` parameter specifies the type for the [Value](https://help.syncfusio
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" Id="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
 </SfDropDownTree>
 
-@code {
+@code 
+{
     List<EmployeeData> Data = new List<EmployeeData>
     {
         new EmployeeData() {Id="1", Name = "Steven Buchanan", HasChild=true, Expanded=true},
