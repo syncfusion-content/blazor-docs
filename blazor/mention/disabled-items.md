@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disabled Items in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Disabled Items in Syncfusion Blazor Mention component and much more.
+title: Disabled Items in Blazor Mention Component | Syncfusion®
+description: Checkout and learn here all about how to Disabled Items in Blazor Mention component and much more details.
 platform: Blazor
 control: Mention
 documentation: ug

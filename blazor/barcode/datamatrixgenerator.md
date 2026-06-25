@@ -19,7 +19,7 @@ The [DataMatrix](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Barcode
 <SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBnDRWCfBWXhspH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBnDRWCfBWXhspH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.webp)" %}
 
 ## Customizing the Barcode color
 
@@ -31,7 +31,7 @@ A page or printed media with barcode often appears colorful in the backgrounds a
 <SfDataMatrixGenerator Width="200" ForeColor="red" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrnjxCCTVsAdGMu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrnjxCCTVsAdGMu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.webp)" %}
 
 ## Customizing the Barcode dimension
 
@@ -57,7 +57,7 @@ Customize the barcode text by using the display [Text](https://help.syncfusion.c
 </SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLxZnsWJrhASleB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLxZnsWJrhASleB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.webp)" %}
 
 ## Event
 
