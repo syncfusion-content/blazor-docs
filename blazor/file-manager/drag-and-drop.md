@@ -33,7 +33,7 @@ To disable multiple file selection and enable drag-drop operations in a Blazor F
 
 After successful compilation of the application, simply press `F5` to run the application.
 
-![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)
+![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.webp)
 
 ## Events
 

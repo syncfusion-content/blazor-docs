@@ -62,7 +62,7 @@ The following example shows adding a custom item in the context menu. The `Conte
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-![Blazor File Manager with Custom Context Menu](../images/blazor-filemanager-custom-context-menu.png)
+![Blazor File Manager with Custom Context Menu](../images/blazor-filemanager-custom-context-menu.webp)
 
 ## Handling Custom Menu Item Clicks
 
