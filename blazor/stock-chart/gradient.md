@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gradient in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn about applying linear and radial gradients to series, trendlines and indicators in the Syncfusion Blazor Stock Chart component.
+title: Gradient in Blazor Stock Chart Component | Syncfusion®
+description: Checkout and learn about applying linear and radial gradients to series, trendlines and indicators in the Blazor Stock Chart component.
 platform: Blazor
 control: Stock Chart
 documentation: ug
