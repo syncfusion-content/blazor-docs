@@ -434,7 +434,7 @@ Migrating from WPF to Blazor requires understanding key architectural difference
 
 **WPF approach**
 
-WPF uses a device-independent pixel (DIP) measurement system with fixed positioning, providing pixel-perfect control over element dimensions, spacing, and layout. Elements maintain consistent sizes regardless of viewing context, relying on hardware-accelerated GPU rendering through the native WPF engine.
+WPF uses a **device-independent pixel (DIP)** measurement system with fixed positioning, providing **pixel-perfect control** over element dimensions, spacing, and layout. Elements maintain consistent sizes regardless of viewing context, relying on **hardware-accelerated GPU rendering** through the native WPF engine.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
@@ -449,7 +449,7 @@ WPF uses a device-independent pixel (DIP) measurement system with fixed position
 
 **Blazor approach**
 
-Blazor components render as standard HTML and CSS in the browser, requiring a shift to responsive design principles. Dimensions are typically specified in flexible units (percentages, em, rem) rather than fixed pixels, allowing layouts to adapt seamlessly across different screen sizes and viewports. The browser's rendering engine handles layout calculations, with built-in DPI scaling support through CSS media queries and zoom levels.
+Blazor components render as standard **HTML and CSS** in the browser, requiring a shift to **responsive design principles**. Dimensions are typically specified in flexible units (percentages, em, rem) rather than fixed pixels, allowing layouts to adapt seamlessly across different screen sizes and viewports. The browser's rendering engine handles layout calculations, with built-in DPI scaling support through **CSS media queries** and zoom levels.
 
 {% tabs %}
 {% highlight html tabtitle="Layout.razor" %}
@@ -466,26 +466,26 @@ Blazor components render as standard HTML and CSS in the browser, requiring a sh
 
 | Aspect | WPF | Blazor |
 |---|---|---|
-| Layout model | Absolute positioning with layout panels | Flow-based CSS layout (Flexbox, Grid) |
-| Responsive design | Limited and requires manual handling  | Native browser support |
-| Units | Device-independent pixels (DIPs) | Pixels, percentages, em, rem |
-| Scaling | Hardware-accelerated DPI scaling | Browser zoom and CSS media queries |
-| Overflow handling | Controlled by layout panels (StackPanel, Grid, DockPanel) | CSS overflow properties |
-| Rendering | GPU rendering via native engine | Browser rendering engine (hardware-accelerated) |
+| Layout model | Absolute positioning with layout panels | **Flow-based CSS layout** (`Flexbox`, `Grid`) |
+| Responsive design | Limited and requires manual handling  | **Native browser support** |
+| Units | **Device-independent pixels (DIPs)** | Pixels, percentages, em, rem |
+| Scaling | **Hardware-accelerated DPI scaling** | **Browser zoom** and `CSS media queries` |
+| Overflow handling | Controlled by layout panels (`StackPanel`, `Grid`, `DockPanel`) | `CSS overflow` properties |
+| Rendering | GPU rendering via native engine | **Browser rendering engine** (hardware-accelerated) |
 
 **Migration strategy**
 
 * Replace fixed pixel dimensions with flexible CSS units (percentages, em, rem) where appropriate
-* Use CSS Flexbox or CSS Grid in place of WPF layout panels (StackPanel, Grid, DockPanel)
-* Implement CSS media queries for responsive layouts across different screen sizes
+* Use **CSS Flexbox** or **CSS Grid** in place of WPF layout panels (`StackPanel`, `Grid`, `DockPanel`)
+* Implement **CSS media queries** for responsive layouts across different screen sizes
 * Test your layouts across multiple browsers and device sizes
-* Consider adopting CSS frameworks (Bootstrap, Tailwind CSS) to accelerate responsive design implementation
+* Consider adopting CSS frameworks (**Bootstrap**, **Tailwind CSS**) to accelerate responsive design implementation
 
 ### Different lifecycle and event models
 
 **WPF lifecycle**
 
-WPF controls usually follow a synchronous lifecycle. Events like `Loaded` and `Unloaded` are used to start work, clean up resources, and respond to user actions directly on the UI thread. This approach is straightforward, but long-running tasks can block the interface if they are not handled carefully.
+WPF controls usually follow a **synchronous lifecycle**. Events like `Loaded` and `Unloaded` are used to start work, clean up resources, and respond to user actions directly on the **UI thread**. This approach is straightforward, but long-running tasks can block the interface if they are not handled carefully.
 
 {% tabs %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" %}
@@ -523,7 +523,7 @@ public class MainWindow : Window
 
 **Blazor lifecycle**
 
-Blazor uses an asynchronous lifecycle that fits browser rendering and server communication. Common lifecycle methods include `OnInitializedAsync`, `OnParametersSetAsync`, and `OnAfterRenderAsync`. Event handling is also flexible, so component logic can run synchronously or asynchronously depending on the task.
+Blazor uses an **asynchronous lifecycle** that fits browser rendering and server communication. Common **lifecycle methods** include `OnInitializedAsync`, `OnParametersSetAsync`, and `OnAfterRenderAsync`. Event handling is also flexible, so component logic can run synchronously or asynchronously depending on the task.
 
 {% tabs %}
 {% highlight razor tabtitle="Sample.razor" %}
@@ -621,18 +621,18 @@ Blazor uses an asynchronous lifecycle that fits browser rendering and server com
 | Post-render operations | Direct event handler execution | `OnAfterRenderAsync` |
 | Event handling | Synchronous routed events and delegates | Direct `EventCallback` properties such as `OnActionBegin` and `OnActionComplete` |
 | Cleanup | `Unloaded` event | `IAsyncDisposable` interface |
-| Rendering model | Immediate, blocking in UI thread | Server-side with SignalR client updates |
-| Performance implications | Blocking operations freeze the UI | Async/await prevents server blocking |
+| Rendering model | **Immediate, blocking** in UI thread | Server-side with [SignalR](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction) **client updates** |
+| Performance implications | **Blocking operations** freeze the UI | **Async/await** prevents server blocking |
 
 **Migration strategy**
 
-* Convert synchronous event handlers to asynchronous `EventCallback` methods
+* Convert synchronous event handlers to **asynchronous** `EventCallback` methods
 * Move initialization logic from `Loaded` to `OnInitializedAsync`
 * Use `OnParametersSetAsync` for responding to parameter changes instead of `DependencyProperty` handlers
-* Leverage `OnAfterRenderAsync` for DOM-dependent logic and JavaScript interop
+* Leverage `OnAfterRenderAsync` for DOM-dependent logic and [JavaScript interop](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-10.0)
 * Implement `IAsyncDisposable` and use the `@implements` directive for proper resource cleanup
-* Always use `async`/`await` in event handlers and lifecycle methods to prevent blocking the interactive server connection
-* Test thoroughly for race conditions that may occur due to asynchronous re-rendering
+* Always use `async`/`await` in event handlers and **lifecycle methods** to prevent blocking the interactive server connection
+* Test thoroughly for **race conditions** that may occur due to asynchronous re-rendering
 
 ## Run the application
 
