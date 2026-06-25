@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DeepSeek AI Integration with Blazor Smart TextArea | Syncfusion
-description: Learn how to integrate the Syncfusion Blazor Smart TextArea with DeepSeek AI services in a Blazor App.
+title: DeepSeek AI Integration with Blazor Smart TextArea | Syncfusion®
+description: Learn how to integrate the Blazor Smart TextArea with DeepSeek AI services in a Blazor App.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # DeepSeek AI Integration with Blazor Smart TextArea
 
-The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the DeepSeek AI service with the Smart TextArea using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
+The Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the DeepSeek AI service with the Smart TextArea using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
 ## Setting Up DeepSeek
 
@@ -237,5 +237,5 @@ If the DeepSeek AI integration does not work, try the following:
 
 ## See Also
 
-- [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+- [Getting Started with Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
 - [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AssistViewSettings Properties in Syncfusion Smart Rich Text Editor
+title: AssistViewSettings Properties in Blazor Smart Rich Text Editor | Syncfusion®
 description: AssistViewSettings reference with concise definitions and examples for configuring AI commands, popup sizing, placeholders, prompts, toolbars and history.
 platform: Blazor
 control: Smart Rich Text Editor
@@ -21,7 +21,7 @@ Use the `Commands` property to configure each `AICommands` entry, including its 
 @using Syncfusion.Blazor.SmartRichTextEditor
 
 <SfSmartRichTextEditor>
-    <p>The <strong>AssistViewSettings</strong> properties in the Syncfusion Smart Rich Text Editor enable you to configure and customize the behavior and features of the AssistView. These settings allow you to control toolbar actions, manage user interactions, and tailor the overall assistance experience within the editor.</p>
+    <p>The <strong>AssistViewSettings</strong> properties in the Blazor Smart Rich Text Editor enable you to configure and customize the behavior and features of the AssistView. These settings allow you to control toolbar actions, manage user interactions, and tailor the overall assistance experience within the editor.</p>
     <AssistViewSettings Commands="@MyCommands" />
 </SfSmartRichTextEditor>
 
