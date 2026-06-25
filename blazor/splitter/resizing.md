@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about how to resize in Syncfusion Blazor Splitter component and much more details.
+title: Resize in Blazor Splitter Component | Syncfusion®
+description: Checkout and learn here all about how to resize in Blazor Splitter component and much more details.
 platform: Blazor
 control: Splitter
 documentation: ug

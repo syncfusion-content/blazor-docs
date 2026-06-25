@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pane Sizing in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about pane sizing in Syncfusion Blazor Splitter component and much more.
+title: Pane Sizing in Blazor Splitter Component | Syncfusion®
+description: Checkout and learn here all about pane sizing in Blazor Splitter component much more details.
 platform: Blazor
 control: Splitter
 documentation: ug
