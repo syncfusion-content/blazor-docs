@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor ColorPicker in Web App | Syncfusion®
-description: Checkout and learn about the documentation for getting started with Blazor ColorPicker Component in Blazor Web App.
+title: Getting Started with Blazor Color Picker in Web App | Syncfusion®
+description: Checkout and learn about the documentation for getting started with Blazor Color Picker Component in Blazor Web App.
 platform: Blazor
-component: ColorPicker
+component: Color Picker
 documentation: ug
 ---
 
-# Getting Started with Blazor ColorPicker Component in Blazor Web App
+# Getting Started with Blazor Color Picker Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor ColorPicker](https://www.syncfusion.com/blazor-components/blazor-color-picker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -151,9 +151,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor ColorPicker component
+## Add Blazor Color Picker component
 
-Add the Blazor ColorPicker component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Blazor Color Picker component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -174,16 +174,15 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor ColorPicker component in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Color Picker component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHjdsEfhSURByW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ColorPicker Component](./images/blazor-colorpicker-component.webp)" %}
-
-N> You can also explore our [Blazor ColorPicker example](https://blazor.syncfusion.com/demos/colorpicker/default-functionalities) that shows how to render and configure the ColorPicker.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHjdsEfhSURByW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Color Picker Component](./images/blazor-colorpicker-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ColorPicker).
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](../getting-started/blazor-server-side-visual-studio)
 
+N> You can also explore our [Blazor Color Picker example](https://blazor.syncfusion.com/demos/color-picker/default-functionalities?theme=fluent2) that shows how to render and configure the Color Picker.

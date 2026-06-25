@@ -172,3 +172,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AppBar component
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AppBar component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxtRsWhoSLRrCg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar Component](images/getting_started.png)" %}
+
+## See also
+
+1. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
+N> You can also explore our [Blazor AppBar example](https://blazor.syncfusion.com/demos/appbar/default-functionalities?theme=fluent2) that shows you how to render and configure the AppBar.

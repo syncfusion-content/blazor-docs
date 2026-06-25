@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor ColorPicker | Syncfusion®
-description: Checkout and learn about getting started with Blazor ColorPicker component in and Blazor WebAssembly Application.
+title: Getting Started with Blazor Color Picker | Syncfusion®
+description: Checkout and learn about getting started with Blazor Color Picker component in and Blazor WebAssembly Application.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Getting Started with Blazor ColorPicker Component
+# Getting Started with Blazor Color Picker Component
 
 This section explains how to add the [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -161,6 +161,7 @@ Add the Blazor Color Picker component in the **~/Pages/Index.razor** file.
 
 ## See also
 
-* [Getting started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting started with Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Blazor Server App in Visual Studio or .NET CLI](../getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+
+N> You can also explore our [Blazor Color Picker example](https://blazor.syncfusion.com/demos/color-picker/default-functionalities?theme=fluent2) that shows how to render and configure the Color Picker.

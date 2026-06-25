@@ -176,7 +176,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHZdiHfAktzSyb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.webp)" %}
 
-## Render chip items from collection
+## Render Chip Items from collection
 
 You can render the chip items from collection using for loop in Blazor Chip component as follows.
 
@@ -239,5 +239,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+
+N> You can also explore our [Blazor Chips example](https://blazor.syncfusion.com/demos/chips/default-functionalities?theme=fluent2) that shows you how to render and configure the Chips

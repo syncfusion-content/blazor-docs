@@ -200,7 +200,24 @@ N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 Breadcrumb component enables or disables built-in URL navigation based on the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property. By default, the navigation will be enabled when setting the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Url) property. To prevent Breadcrumb item navigation, set the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false` in Breadcrumb.
 
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+<SfBreadcrumb EnableNavigation="false">
+    <BreadcrumbItems>
+        <BreadcrumbItem IconCss="e-icons e-home" Url="https://blazor.syncfusion.com/demos/"/>
+        <BreadcrumbItem Text="Components" Url="https://blazor.syncfusion.com/demos/datagrid/overview"/>
+        <BreadcrumbItem Text="Navigations" Url="https://blazor.syncfusion.com/demos/menu-bar/default-functionalities"/>
+        <BreadcrumbItem Text="Breadcrumb" Url="./breadcrumb/default-functionalities"/>
+    </BreadcrumbItems>
+</SfBreadcrumb>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+
+N> You can also explore our [Blazor Breadcrumb example](https://blazor.syncfusion.com/demos/breadcrumb/default-functionalities?theme=fluent2) that shows you how to render and configure the Breadcrumb.

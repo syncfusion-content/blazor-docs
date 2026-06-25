@@ -306,3 +306,5 @@ By default, the suggestion list width automatically matches the AutoComplete inp
 
 * [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
 * [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+
+N> You can also explore our [Blazor AutoComplete example](https://blazor.syncfusion.com/demos/autocomplete/default-functionalities?theme=fluent2) that shows you how to render and configure the AutoComplete.

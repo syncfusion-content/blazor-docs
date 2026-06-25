@@ -189,7 +189,7 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhRXnCVLupGVFFQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Card Component](images/blazor-card-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrnjxVoSZpQXeBY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Card Component](images/blazor-card-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card).
 
@@ -197,3 +197,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+
+N> Explore the [Blazor Card Example](https://blazor.syncfusion.com/demos/card/basic-card?theme=fluent2) that shows how to render and configure the Card.

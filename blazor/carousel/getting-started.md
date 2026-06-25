@@ -216,3 +216,10 @@ Add the Blazor Carousel component in the **~/Pages/Index.razor** file.
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRZHsVUrMKRirX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Component](images/blazor-carousel-getting-started.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
+
+## See also
+
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
+N> Explore the [Blazor Carousel Example](https://blazor.syncfusion.com/demos/carousel/default-functionalities?theme=fluent2) that shows how to render and configure the Carousel.

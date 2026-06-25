@@ -163,7 +163,7 @@ Add the Blazor Chip component in the **~/Pages/Index.razor** file.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHZdiHfAktzSyb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.webp)" %}
 
-## Render chip items from collection
+## Render Chip Items from collection
 
 You can render the chip items from collection using for loop in Blazor Chip component as follows.
 
@@ -225,7 +225,7 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 
 ## See also
 
-* [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Chips example](https://blazor.syncfusion.com/demos/chips/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Chips.
+N> You can also explore our [Blazor Chips example](https://blazor.syncfusion.com/demos/chips/default-functionalities?theme=fluent2) that shows you how to render and configure the Chips.

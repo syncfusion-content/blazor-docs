@@ -186,7 +186,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 N> You can also explore our [Blazor Chip example](https://blazor.syncfusion.com/demos/chips/default-functionalities) that shows how to render and configure the Chip.
 
-## Render chip items from collection
+## Render Chip Items from collection
 
 You can render the chip items from collection using for loop in Blazor Chip component as follows.
 
@@ -250,5 +250,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 ## See also
 
 1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
+N> You can also explore our [Blazor Chips example](https://blazor.syncfusion.com/demos/chips/default-functionalities?theme=fluent2) that shows you how to render and configure the Chips

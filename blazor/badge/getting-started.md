@@ -128,3 +128,10 @@ Add the Blazor Badge component in the **~/Pages/Index.razor** file.
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBRtxCkJXGQFNql?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Badge Component](images/blazor-badge-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Badge).
+
+
+## See also
+
+1. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
+N> You can also explore our [Blazor Badge example](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=fluent2) that shows you how to render and configure the Badge.

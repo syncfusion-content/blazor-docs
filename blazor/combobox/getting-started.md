@@ -233,6 +233,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-* [Getting started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-web-app)
+* [Getting Started with Blazor Server App in Visual Studio or .NET CLI](../getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+
+N> You can also explore our [Blazor Color Picker example](https://blazor.syncfusion.com/demos/color-picker/default-functionalities?theme=fluent2) that shows how to render and configure the Color Picker.
