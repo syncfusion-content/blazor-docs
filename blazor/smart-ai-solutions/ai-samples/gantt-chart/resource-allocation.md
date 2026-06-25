@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Resource allocation with Blazor Gantt Chart and AI models | Syncfusion
-description: Learn how to use the Syncfusion Blazor Gantt Chart with OpenAI, Azure OpenAI, or Ollama for automatic resource allocation. Explore to more details.
+title: Resource allocation with Blazor Gantt Chart and AI models | Syncfusion®
+description: Learn how to use the Blazor Gantt Chart with OpenAI, Azure OpenAI, or Ollama for automatic resource allocation. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor Gantt Chart, AI resource allocation, Syncfusion Blazor AI
+keywords: Blazor Gantt Chart, AI resource allocation, Blazor AI
 ---
 
 # Resource allocation with Blazor Gantt Chart and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatic resource reallocation in a Syncfusion Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatic resource reallocation in a Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
 
 ## Prerequisites
 
@@ -195,9 +195,9 @@ var app = builder.Build();
 
 - **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
+Add the Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
 
 - **Server mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -609,6 +609,6 @@ When handling large datasets, ensure the Ollama server has sufficient resources 
 
 ## Sample code
 
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ![Resource allocation](../../ai/images/resource-allocation.webp)

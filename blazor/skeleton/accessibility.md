@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Skeleton Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Skeleton component and much more.
+title: Accessibility in Blazor Skeleton Component | Syncfusion®
+description: Checkout and learn here all about accessibility in Blazor Skeleton component and much more.
 platform: Blazor
 control: Skeleton
 documentation: ug
@@ -56,4 +56,4 @@ The accessibility compliance of the Blazor Skeleton component is shown in the fo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
