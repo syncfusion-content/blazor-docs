@@ -11,7 +11,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-When the mouse is moved over a point on the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), the tooltip will provide information about that point.
+When the mouse is moved over a point on the [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts), the tooltip will provide information about that point.
 
 A detailed walkthrough demonstrating how to add and customize tooltip in the chart is presented in the video below.
 

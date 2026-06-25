@@ -11,7 +11,7 @@ documentation: ug
 
 # Trendlines in Blazor Charts Component
 
-Trendlines are used to show the price's direction and pace. Except for bar series, trendlines can be generated for Cartesian series like Line, Column, Scatter, Area, Candle, Hilo, and so on. In addition, a series can have multiple trendlines. There are six different types of trendlines that can be used on the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts). They are as follows:
+Trendlines are used to show the price's direction and pace. Except for bar series, trendlines can be generated for Cartesian series like Line, Column, Scatter, Area, Candle, Hilo, and so on. In addition, a series can have multiple trendlines. There are six different types of trendlines that can be used on the [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts). They are as follows:
 
 ## Linear
 

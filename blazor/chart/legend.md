@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Blazor Charts Component
 
-The [legend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) provides information on the series shown in the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts).
+The [legend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) provides information on the series shown in the [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts).
 
 A detailed walkthrough demonstrating how to add and customize legend in the chart is presented in the video below.
 

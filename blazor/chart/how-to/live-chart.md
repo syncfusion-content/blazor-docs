@@ -11,7 +11,7 @@ documentation: ug
 
 # Live Chart in Blazor Charts Component
 
-Live update in a [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) can be achieved using the timer to update the datasource with real-time data and refresh the chart. Follow the steps below to update a chart with real-time data.
+Live update in a [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) can be achieved using the timer to update the datasource with real-time data and refresh the chart. Follow the steps below to update a chart with real-time data.
 
 **Step 1:**
 

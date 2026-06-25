@@ -9,7 +9,7 @@ documentation: ug
 
 # Lazy Loading in Blazor Charts Component
 
-The lazy loading loads data for the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) on demand. The  [OnScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event will be fired by the chart, allowing us to get the minimum and maximum ranges of the axes and then upload the data to the chart.
+The lazy loading loads data for the [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) on demand. The  [OnScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event will be fired by the chart, allowing us to get the minimum and maximum ranges of the axes and then upload the data to the chart.
 
 ```cshtml
 <ChartEvents OnScrollChanged="@ScrollChange"></ChartEvents>
