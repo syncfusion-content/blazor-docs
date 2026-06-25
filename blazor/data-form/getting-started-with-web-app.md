@@ -180,8 +180,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
         <FormAutoGenerateItems></FormAutoGenerateItems>
     </FormItems>
 </SfDataForm>
-
-
 @code 
 {
     public class EmployeeDetails
