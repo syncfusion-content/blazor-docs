@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appointment customization in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about appointment customization in Syncfusion Blazor Scheduler component.
+title: Appointment customization in Blazor Scheduler Component | Syncfusion®
+description: Checkout and learn here all about appointment customization in Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
