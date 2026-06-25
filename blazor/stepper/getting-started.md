@@ -230,7 +230,7 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 
 N> **Resources**
    * [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Stepper).
-   * Explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/stepper/default-functionalities) that shows how to render and configure the Stepper.
+   * Explore our [Blazor Stepper example](https://blazor.syncfusion.com/demos/stepper/default-functionalities) that shows how to render and configure the Stepper.
 
 ## See also
 

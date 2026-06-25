@@ -241,7 +241,9 @@ N> Switch does not have text support for material themes, and does not support l
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLzZiKtzdAdnBzy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.webp)" %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ToggleSwitchButton).
+N> **Resources**
+   * [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ToggleSwitchButton).
+   * Explore our [Blazor Toggle Switch Button example](https://blazor.syncfusion.com/demos/buttons/toggle-switch-button) that shows how to render and configure the Toggle Switch Button.
 
 ## See also
 

@@ -253,6 +253,10 @@ N> Switch does not have text support for material themes, and does not support l
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ToggleSwitchButton).
 
+N> **Resources**
+   * [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ToggleSwitchButton).
+   * Explore our [Blazor Toggle Switch Button example](https://blazor.syncfusion.com/demos/buttons/toggle-switch-button) that shows how to render and configure the Toggle Switch Button.
+
 ## See also
 
 1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
