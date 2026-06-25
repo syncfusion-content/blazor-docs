@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Smart TextArea Component | Syncfusion®
+title: Styles and Appearances in Blazor Smart TextArea | Syncfusion®
 description: Checkout and learn here all about Styles and Appearances in Blazor Smart TextArea component and more.
 platform: Blazor
 control: Smart TextArea
@@ -19,7 +19,6 @@ The Blazor Smart TextArea component fully inherits all the properties, features,
 
 ## See also
 
-* [Getting Started with Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
 * [Getting Started with Blazor TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp)
 * [Getting Started with Blazor TextArea in Blazor App](https://blazor.syncfusion.com/documentation/textarea/getting-started)

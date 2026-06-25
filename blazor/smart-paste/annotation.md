@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotaions in Blazor Smart Paste Button Component | Syncfusion®
-description: Checkout and learn here about Annotaions in Blazor Smart Paste Button component and much more.
+description: Checkout and learn here the features about Annotaions in Blazor Smart Paste Button component and much more.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug

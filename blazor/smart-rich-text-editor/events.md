@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AssistViewSettings Events in Blazor Smart Rich Text Editor | Syncfusion®
+title: AssistViewSettings Events in Smart RichTextEditor | Syncfusion®
 description: Reference for AssistViewSettings events, arguments, and examples to handle prompt submissions, streaming responses, popup lifecycle, and toolbar actions.
 platform: Blazor
 control: Smart Rich Text Editor
