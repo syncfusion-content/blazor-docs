@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Recurring events in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about recurring events and features in Syncfusion Blazor Scheduler component.
+title: Recurring events in Blazor Scheduler Component | Syncfusion®
+description: Checkout and learn here all about recurring events and features in Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
