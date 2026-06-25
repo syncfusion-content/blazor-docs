@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Different Layouts in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all about different layouts in Blazor Splitter component much more details.
+description: Checkout and learn here all the features about different layouts in Blazor Splitter component much more details.
 platform: Blazor
 control: Splitter
 documentation: ug

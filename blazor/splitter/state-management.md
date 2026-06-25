@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Management in Blazor Splitter Component | Syncfusion®
-description: Checkout and learn here all about state management in Blazor Splitter component much more details.
+description: Checkout and learn here all the features about state management in Blazor Splitter component much more details.
 platform: Blazor
 control: Splitter
 documentation: ug
