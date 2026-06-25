@@ -150,6 +150,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Split Button com
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.SplitButtons
+
 <SfSplitButton Content="Paste">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
@@ -165,12 +167,12 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Split Button com
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzDWqZppKquUiR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Split Button Component](./images/blazor-splitbutton.webp)" %}
 
+N> **Resources**
+   * [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SplitButton).
+   * Explore the [Blazor Split Button example](https://blazor.syncfusion.com/demos/buttons/split-button?theme=bootstrap5) that shows how to render and configure the Split Button.
+
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SplitButton).
-
-N> Explore the [Blazor Split Button example](https://blazor.syncfusion.com/demos/buttons/split-button?theme=bootstrap5) that shows how to render and configure the Split Button.

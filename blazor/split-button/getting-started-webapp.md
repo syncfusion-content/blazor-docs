@@ -168,6 +168,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 @rendermode InteractiveAuto
 
+@using Syncfusion.Blazor.SplitButtons
+
 <SfSplitButton Content="Paste">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Cut" ></DropDownMenuItem>
@@ -197,11 +199,14 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzDWqZppKquUiR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Split Button Component](./images/blazor-splitbutton.webp)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SplitButton).
+N> **Resources**
+   * [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SplitButton).
+   * Explore the [Blazor Split Button example](https://blazor.syncfusion.com/demos/buttons/split-button?theme=bootstrap5) for rendering and configuration options.
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-N> Also explore the [Blazor Split Button example](https://blazor.syncfusion.com/demos/buttons/split-button?theme=bootstrap5) for rendering and configuration options.
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
