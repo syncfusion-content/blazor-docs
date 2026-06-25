@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "PostgreSQL Data Binding in Blazor Pivot Table Component | Syncfusion"
+title: "PostgreSQL Data Binding in Blazor Pivot Table | Syncfusion®"
 component: "Pivot Table"
-description: "Learn how to connect a PostgreSQL database to the Syncfusion Blazor Pivot Table using the Npgsql.EntityFrameworkCore.PostgreSQL library."
+description: Learn how to connect a PostgreSQL database to the Blazor Pivot Table component using the Npgsql.EntityFrameworkCore.PostgreSQL library.
 platform: Blazor
 documentation: ug
 ---
@@ -11,7 +11,7 @@ documentation: ug
 
 This guide explains how to connect a PostgreSQL database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display PostgreSQL data.
 
-## Connecting a PostgreSQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
+## Connecting a PostgreSQL to a Blazor Pivot Table
 
 This section explains how to connect a PostgreSQL database to the Blazor Pivot Table by directly retrieving data using the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) library.
 
@@ -106,7 +106,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [Npgsql.E
 
 ![Blazor Pivot Table bound with PostgreSQL data](../images/blazor-pivottable-postgreSQL-databinding.webp)
 
-## Connecting a PostgreSQL Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API Service
+## Connecting a PostgreSQL Database to a Blazor Pivot Table via Web API Service
 
 This section explains how to create a Web API service to fetch data from a PostgreSQL database and connect it to the Blazor Pivot Table.
 
