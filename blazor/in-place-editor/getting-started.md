@@ -158,8 +158,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor In-place Editor component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component inside the razor file.
@@ -187,7 +185,8 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
     </tr>
 </table>
 
-@code {
+@code 
+{
     public string TextValue = "Andrew";
 }
 
@@ -269,7 +268,8 @@ The following example shows how to initialize a simple In-place Editor with a po
     </tr>
 </table>
 
-@code {
+@code 
+{
     public string AutoValue = "Australia";
 
     public class Countries
@@ -312,7 +312,8 @@ Render the Blazor DropDownList by setting the [Type](https://help.syncfusion.com
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code 
+{
     public string DropdownValue = "Game4";
 
     public class Games
@@ -353,9 +354,9 @@ Render the Blazor `DatePicker` by setting the `Type` property to `Date` and conf
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
 }
 
 {% endhighlight %}
@@ -430,7 +431,8 @@ In the following code, the `DatePicker`, `DropDownList`, and `TextBox` component
             }
 </style>
 
-@code {
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
     public string TextValue = "Andrew";
     public string DropdownValue = "Male";
@@ -520,7 +522,8 @@ After submission, the edited data is sent to the server, and the updated value i
     }
 </style>
 
-@code {
+@code
+{    
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";
