@@ -302,3 +302,5 @@ In this example:
 The output will appear as follows:
 
 ![Getting Started in Blazor Diagram](images/blazor-diagram-getting-started.webp)
+
+N> Looking for the full Blazor Diagram component overview, features, pricing, and documentation? Visit the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) page.

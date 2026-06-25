@@ -738,6 +738,8 @@ This guide demonstrates how to:
 
 The application now provides a complete solution for visualizing organizational chart data from PostgreSQL.
 
+N> Looking for the full Blazor Diagram component overview, features, pricing, and documentation? Visit the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) page.
+
 ## See Also
 
 - [Data Binding](https://blazor.syncfusion.com/documentation/diagram/data-binding#how-to-specify-parent-child-relationship-in-data-source)

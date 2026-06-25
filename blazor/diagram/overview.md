@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Diagram Component Overview
- The Blazor Diagram component is a high-performance and versatile library designed for visualizing, creating, and editing interactive diagrams. With comprehensive support for flowcharts, organizational charts, mind maps, and other diagram types, this component empowers users to create sophisticated visual representations of data and processes with ease.
+ The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component is a high-performance and versatile library designed for visualizing, creating, and editing interactive diagrams. With comprehensive support for flowcharts, organizational charts, mind maps, and other diagram types, this component empowers users to create sophisticated visual representations of data and processes with ease.
 
  {% youtube "youtube:https://www.youtube.com/watch?v=LIlVk9iOo2U" %}
 
@@ -53,3 +53,5 @@ documentation: ug
 * **Mermaid:** Support for creating, importing, and exporting diagrams using the Mermaid syntax, allowing users to define flowcharts and mind maps through a simple text-based format. This feature enables easy visualization of complex ideas and processes without manual drawing.
 * **CRUD:** The Diagram component supports real-time CRUD actions, enabling dynamic manipulation of the DataSource. This allows seamless addition, modification, and removal of nodes, connectors, and other diagram elements during runtime, enhancing interactivity and data management capabilities.
 * **Chunk Message:** The Blazor Diagram component introduces the `EnableChunkMessages` property to address potential connection issues when processing large data sets. This feature is particularly useful when calculating the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls.
+
+N> Looking for the full Blazor Diagram component overview, features, pricing, and documentation? Visit the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) page.
