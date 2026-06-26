@@ -56,7 +56,7 @@ To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBnXxiyqOWhYDOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor column Chart.](../images/chart-types-images/blazor-column-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVTDasqTXEkwQxd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor column Chart.](../images/chart-types-images/blazor-column-chart.webp)" %}
 
 N> Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap5) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
@@ -101,7 +101,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrHjHWSgYMeNwKb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVTDasqTXEkwQxd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
@@ -148,7 +148,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhRNHCygYCmymvy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhzZaMUpCssORCj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -198,7 +198,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBRjnMIUarXbVfv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrpDYWUTiWFhKiA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Opacity**
 
@@ -241,7 +241,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVRDxieAOBLuoUJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhfXOMUzCryhKbs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DashArray**
 
@@ -285,7 +285,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrHDHsIAaVPmprP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVpDOCgzizWIYnW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Series Border**
 
@@ -331,7 +331,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrxjnsoKEUsCbux?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVptaigJiSoAyNW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Corner radius
 
@@ -370,7 +370,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthnDxiSAEqgSxbl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZretpNTBvfSKfSg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.webp)" %}
 
 Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -420,7 +420,7 @@ Customize the corner radius for individual points in the chart series using the 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVRtRWogkzZfEYn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor column chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-column-chart-corner-radius-onPointRender.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLetfjzLvFuJDKv?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor column chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-column-chart-corner-radius-onPointRender.webp)" %}
 
 ## Column space and width
 
@@ -466,7 +466,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhHNnCyguJUqTKF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVJZuWgzrbsWdYi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Column width
 
@@ -510,7 +510,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhnXRiygYJnCXlr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBTjaiKzKALphJK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Column width in pixel
 
@@ -552,7 +552,7 @@ The [ColumnWidthInPixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrnZRiyAufvOXUR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with column width set in pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNxBxzUFmUfTx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with column width set in pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.webp)" %}
 
 ## Grouped column
 
@@ -597,7 +597,7 @@ Group series using [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVxZxsIUEoCEiyh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAWrVdzxoVOMsL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
 
@@ -645,7 +645,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLHNHCSAuolbvrE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrfZkMKzMEIFjsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
 
@@ -689,7 +689,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhnjRMIAuHrtIby?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVJXYMKfhAQSZgW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
@@ -735,7 +735,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrxNRMeAOnfcDoR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBzDYCgTVpYKdZP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -786,7 +786,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLxDxMyAOdwSFjV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhTtkMAzUToYLEu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Point render
 
@@ -835,7 +835,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLRDRWIKkcsfKSD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhJXOCAfqywAsbM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

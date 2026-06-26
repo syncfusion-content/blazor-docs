@@ -155,7 +155,7 @@ public void Remove(IList<IFormFile> UploadFiles)
 
 ## Events
 
-The File Upload component provides several events to help you control and customize the upload process. Below is detailed documentation for each event including their usage scenarios and sample code.
+The Blazor File Upload component provides several events to help you control and customize the upload process. Below is detailed documentation for each event including their usage scenarios and sample code.
 
 ### BeforeUpload
 

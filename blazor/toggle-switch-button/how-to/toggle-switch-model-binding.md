@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Model binding in Blazor Toggle Switch Button Component | Syncfusion
-description: Learn here all about model binding in Syncfusion Blazor Toggle Switch Button component and much more.
+title: Model binding in Blazor Toggle Switch Button Component | Syncfusion®
+description: Learn here all the features about model binding in Blazor Toggle Switch Button component and much more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

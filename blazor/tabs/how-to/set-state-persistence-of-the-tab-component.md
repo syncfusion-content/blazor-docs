@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set state persistence in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to set state persistence in Syncfusion Blazor Tabs component and more.
+title: Set state persistence in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about how to set state persistence in Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
