@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor RichTextEditor in Server App | Syncfusion®
+title: Getting Started with Blazor Rich Text Editor in Server App | Syncfusion®
 canonical_url: "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app"
 description: Learn how to get started with Blazor Rich Text Editor component in a Blazor Server Application with examples and details.
 platform: Blazor

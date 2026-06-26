@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about columns in Syncfusion Blazor QueryBuilder component and much more.
+title: Columns in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about columns in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
