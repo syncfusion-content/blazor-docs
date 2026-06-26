@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about globalization in Syncfusion Blazor Pivot Table component and more.
+title: Globalization in Blazor Pivot Table Component | Syncfusion®
+description: Learn about globalization in Blazor Pivot Table component including localization and RTL support with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-[Blazor PivotTable](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor PivotTable](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right-to-left (RTL)
 
