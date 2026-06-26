@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector Annotation Position in Blazor Diagram | Syncfusion
-description: Checkout and Learn how to position and align annotations on connectors in the Syncfusion Blazor Diagram component and much more details.
+title: Connector Annotation Position in Blazor Diagram | Syncfusion®
+description: Checkout and Learn how to position and align annotations on connectors in the Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -21,7 +21,7 @@ Connector annotations can be precisely positioned using several properties of th
 
 ## How to Update Offset Position for Annotations
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property positions an annotation along the length of the connector segment. It accepts a fractional value from **0** to **1**, where **0** represents the beginning of the segment, **1** represents the end, and **0.5** represents the center.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property positions an annotation along the length of the connector segment. It accepts a fractional value from **0 to 1**, where **0** represents the beginning of the segment, **1** represents the end, and **0.5** represents the center.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

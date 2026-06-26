@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Groq AI Integration with Blazor Smart TextArea | Syncfusion
-description: Learn how to implement a custom AI service using the Groq API with the Syncfusion Blazor Smart TextArea component in a Blazor App.
+title: Groq AI Integration with Blazor Smart TextArea | Syncfusion®
+description: Learn how to implement a custom AI service using the Groq API with the Blazor Smart TextArea component in a Blazor App.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Groq AI Integration with Blazor Smart TextArea
 
-The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the Groq AI service with the Smart TextArea using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
+The Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the Groq AI service with the Smart TextArea using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
 ## Setting Up Groq
 
@@ -240,5 +240,5 @@ If the Groq AI integration does not work, try the following:
 
 ## See Also
 
-- [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+- [Getting Started with Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
 - [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interaction in Syncfusion Blazor Diagram Component | Syncfusion
+title: Interaction in Blazor Diagram Component | Syncfusion®
 description: Checkout and learn here all about connector interaction in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
@@ -295,7 +295,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### Routing Types
 
-Determines the routing strategy used for connectors in the diagram. It can be set to either [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic) for faster routing or [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Advanced) for more accurate routing with better obstacle avoidance. The routing algorithm can be specified by using [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property of [LineRoutingSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html) class.
+Determines the routing strategy used for connectors in the diagram. It can be set to either **Classic** for faster routing or **Advanced** for more accurate routing with better obstacle avoidance. The routing algorithm can be specified by using [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property of [LineRoutingSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html) class.
 
 #### Classic Routing
 
@@ -390,7 +390,7 @@ The [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.R
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/LineRouting.razor)
 
-**Note:** The default value of [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) is **Classic**.
+**Note:** The default value of `RoutingType` is **Classic**.
 
 ### How to Enable or Disable Node Routing
 
@@ -800,7 +800,7 @@ The following table shows the various obstacle padding.
 | 12 | ![Blazor Diagram ObstaclePadding12 ](../images/blazor-diagram-obstacle-padding12.webp) |
 | 20 | ![Blazor Diagram ObstaclePadding20 ](../images/blazor-diagram-obstacle-padding20.webp) |
 
-**Note:** [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property is only applicable when the [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property is set to [RoutingTypes.Advanced]. Default value of [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) is **12**.
+**Note:** [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property is only applicable when the [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property is set to [RoutingTypes.Advanced]. Default value of `ObstaclePadding` is **12**.
 
 ## How to Avoid Line Overlapping
 The diagram can prevent connectors from overlapping to enhance clarity and readability. This feature intelligently adjusts connector paths to minimise stacking orthogonal connectors on top of each other, reducing visual clutter and enhancing diagram structure. It is especially useful in complex diagrams with multiple orthogonal connectors, where overlapping lines can make interpretation difficult.

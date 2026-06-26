@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Circular Gauge component and more.
+title: Globalization in Blazor Circular Gauge Component | Syncfusion®
+description: Checkout and learn here all the features about Globalization in Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

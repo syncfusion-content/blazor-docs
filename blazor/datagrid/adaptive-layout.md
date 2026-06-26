@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adaptive Layout in Blazor DataGrid Component | Syncfusion
-description: Learn how to use adaptive layout in Syncfusion Blazor DataGrid to render filter, sort, and edit dialogs in full screen for better user experience.
+title: Adaptive Layout in Blazor DataGrid Component | Syncfusion®
+description: Learn how to use adaptive layout in Blazor DataGrid to render filter, sort, and edit dialogs in full screen for better user experience.
 platform: Blazor
 control: DataGrid
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor DateRangePicker component and more.
+title: Customization in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about Customization in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -22,6 +22,6 @@ Start day in a week will differ based on the culture, but you can also customize
 ```
 
 
-![Customization in Blazor DateRangePicker](./images/blazor-daterangepicker-customization.webp)
+![Customization in Blazor DateRangePicker](./images/blazor-daterangepicker-customization.png)
 
 N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
