@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started Blazor Range Slider in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor Range Slider in WASM App | Syncfusion
 description: Checkout and learn about the documentation getting started with Blazor Range Slider component, and more details.
 platform: Blazor
 control: Range Slider
@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -47,6 +48,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,14 +157,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Range Slider component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Inputs
 
@@ -217,18 +217,11 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-[Slider Types](./types)
-
-[Slider Formatting](./format)
-
-[Orientation Slider](./orientation)
-
-[Ticks in Slider](./ticks)
-
-[Tooltip in Slider](./tooltip)
-
-[Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-
-[Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-
-[Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Slider Types](./types)
+2. [Slider Formatting](./format)
+3. [Orientation Slider](./orientation)
+4. [Ticks in Slider](./ticks)
+5. [Tooltip in Slider](./tooltip)
+6. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+7. [Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+8. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
