@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get Stared with Blazor SpeechToText in Blazor WASM App | Syncfusion
+title: Get Started with Blazor SpeechToText in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor SpeechToText in Blazor WASM App using Visual Studio and more.
 platform: Blazor
 control: SpeechToText
