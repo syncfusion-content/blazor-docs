@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Get Started with Blazor SpeechToText in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor SpeechToText in Blazor WASM App using Visual Studio and more.
+title: Get Started with Blazor Speech To Text in Blazor WASM App | Syncfusion
+description: Checkout and learn about getting started with Blazor Speech To Text in Blazor WASM App using Visual Studio and more.
 platform: Blazor
-control: SpeechToText
+control: Speech To Text
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor SpeechToText in Blazor WASM App
+# Getting Started with Blazor Speech To Text in Blazor WASM App
 
-This section briefly explains about how to include [Blazor SpeechToText](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Speech To Text](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -157,9 +157,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor SpeechToText component
+## Add Blazor Speech To Text component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor SpeechToText](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Speech To Text](https://www.syncfusion.com/blazor-components/blazor-speech-to-text) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -194,7 +194,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor SpeechToText component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Speech To Text component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -228,9 +228,9 @@ dotnet run
 
 {% endtabcontents %}
 
-![Blazor SpeechToText Component](images/getting-started.webp)
+![Blazor Speech To Text Component](images/getting-started.webp)
 
-> The [SpeechToText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html) component requires an internet connection and a browser that supports the [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) Web Speech API.
+> The [Speech To Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html) component requires an internet connection and a browser that supports the [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) Web Speech API.
 
 ## Add button content
 
@@ -268,8 +268,8 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sp
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText with Button Content Start text](images/btn-content-start.webp)
-![Blazor SpeechToText with Button Content Stop text](images/btn-content-stop.webp)
+![Blazor Speech To Text with Button Content Start text](images/btn-content-start.webp)
+![Blazor Speech To Text with Button Content Stop text](images/btn-content-stop.webp)
 
 ## See also
 
