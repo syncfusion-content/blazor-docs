@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Lock Group/ Rule in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Lock Group/ Rule in Syncfusion Blazor QueryBuilder component and much more.
+title: Lock Group/ Rule in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about Lock Group/ Rule in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

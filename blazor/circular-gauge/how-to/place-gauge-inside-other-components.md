@@ -403,7 +403,7 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBRZxMdIgGcYqWh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSZkicrHnxtFdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.webp)" %}
 
 
 ## Circular Gauge component inside Accordion
