@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing with template column in Blazor TreeGrid Component | Syncfusion®
+title: Editing with template column in Blazor TreeGrid | Syncfusion®
 description: Checkout and learn here all about editing with template column in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
