@@ -20,4 +20,4 @@ You can customize a Button into a Block Button that will span the entire width o
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrKWVVBMmGAcBTQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Block Button](./../images/blazor-block-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxDHsrBgmaYJkA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Block Button](./../images/blazor-block-button.webp)" %}

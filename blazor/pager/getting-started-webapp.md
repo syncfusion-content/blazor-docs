@@ -179,7 +179,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-The Syncfusion Blazor Pager component can be integrated with other components to enable page navigation for large data collections. This configuration shows how to use the Pager with the ListView component.
+The Blazor Pager component can be integrated with other components to enable page navigation for large data collections. This configuration shows how to use the Pager with the ListView component.
 
 **1. Add ListView Component**
 
