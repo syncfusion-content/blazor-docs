@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrade Blazor components to the latest version | Syncfusion®
+title: Upgrade Blazor components to latest version | Syncfusion®
 description: Learn how to upgrade Blazor components to latest version with the Blazor migration add-in for Visual Studio, including version selection and licensing notes.
 platform: Blazor
 control: Common

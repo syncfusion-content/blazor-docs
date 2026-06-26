@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Essential UI Kit for Blazor | Syncfusion®
-description: Checkout and learn about getting started with the Essential UI Kit for Blazor and more details.
+description: Checkout and learn about the getting started with the Essential UI Kit for Blazor component and much more details.
 platform: Blazor
 control: UI Kit
 documentation: ug

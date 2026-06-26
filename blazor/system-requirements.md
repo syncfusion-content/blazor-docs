@@ -19,7 +19,7 @@ Blazor applications can be developed using the following IDEs. Development is al
 
 * [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/#visual-studio-professional-2026)
 * [Visual Studio 2022](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2022-and-other-products)
-* [Visual Studio Code](https://code.visualstudio.com/download)
+* [Visual Studio Code](https://code.visualstudio.com/download?_exp_download=fb315fc982)
 * [JetBrains Rider](https://www.jetbrains.com/rider/)
 
 ## .NET SDK
