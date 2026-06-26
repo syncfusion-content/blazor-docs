@@ -1,19 +1,59 @@
 ---
 layout: post
-title: Blazor Rendering Performance Optimization | Syncfusion
+title: Blazor Rendering Performance Optimization | Syncfusion®
 description: Learn techniques to optimize Blazor rendering performance, including data binding, ShouldRender control, EventCallback usage, and efficient component design.
-platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Blazor Rendering Performance Optimization
+# Syncfusion® Blazor Rendering and Performance Optimization
 
-This guide explains how rendering works in Blazor and provides practical techniques for [rendering performance optimization](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0) when using [Blazor components](https://www.syncfusion.com/blazor-components). It focuses on reducing unnecessary re-renders, minimizing the work needed to check for UI changes, and improving UI update efficiency.
+This section explains how rendering works in Blazor and shows practical ways to optimize rendering efficiency, reducing unnecessary re-renders, diffing overhead, and UI update latency when authoring components with [Blazor components](https://www.syncfusion.com/blazor-components). The focus is on writing components that remain efficient as data volume, user interaction, and layout complexity increase.
 
-## Blazor DataGrid example with stable data binding
+## What is rendering in Blazor?
 
-The following example demonstrates a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
+[Rendering in Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0) is the process of generating UI output from a component’s current state. Instead of directly updating HTML elements, Blazor builds an internal representation of the UI called a render tree and compares it with the previous version to determine what changed.
+
+This model helps Blazor update only the necessary parts of the interface. For Blazor components, this means rendering remains efficient when parameters are stable and state updates are intentional.
+
+## Why rendering optimization matters?
+
+Most commonly used Blazor components are interactive and operate based on data. A [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) may respond to paging, sorting, filtering, and editing, while a [Chart](https://www.syncfusion.com/blazor-components/blazor-charts) may refresh when a dashboard filter changes or when live data arrives.
+
+If component state changes more frequently than necessary or if child components receive new object references unnecessarily, Blazor performs more rendering work than required. Over time, this leads to slower interactions, increased CPU usage, and reduced UI smoothness.
+
+N> Rendering issues often remain unnoticed in small samples and become visible only when the application starts handling larger datasets and real user interaction patterns.
+
+## How rendering works in Blazor?
+
+Blazor represents the UI as a **render tree**, which is an internal structure describing elements, attributes, child content, and nested components. Every time a component renders, Blazor creates a new render tree for that component.
+
+It then performs **diffing**, which means it compares the new render tree with the previous one and identifies the exact differences. These differences are grouped into a **batch** and applied efficiently to the UI, which avoids rebuilding the entire page and limits updates to only the affected components.
+
+N> Blazor rendering is scoped to individual components. When state changes in a component, Blazor re-renders only that component and its descendants. The framework does not refresh the entire page unless the change affects the root component or alters the parent component hierarchy.
+
+## Measuring rendering overhead
+
+Rendering overhead becomes noticeable when actions such as scrolling, filtering, resizing, or refreshing data begin to feel less responsive. The most practical way to identify rendering overhead is to use browser DevTools:
+
+1. Open browser DevTools (F12 on most browsers).
+2. Go to the Performance or Profiler tab.
+3. Start recording user interactions (scroll, filter, resize).
+4. Stop recording and inspect the results for long tasks, layout recalculations, and paint events.
+
+For Blazor Server or ASP.NET Core hosting environments, also consider using [dotnet-trace](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-trace) for server-side performance analysis.
+
+When analyzing a page that contains a Grid or Chart, focus on how often the UI updates and whether updates are triggered by real data changes or by repeated object creation. In many cases, performance improvements come not from changing the component itself, but from reducing how often the parent component causes it to re-render.
+
+## Render tree stability and parameter changes
+
+Blazor determines whether child components should update based on state and parameter changes. If a parent component creates new objects or collections during every render, the child component receives those values as changed parameters, even if the content is logically identical.
+
+Keeping parameter values stable reduces unnecessary diffing and avoids render work in Blazor components. This is especially important for grids, charts, and dropdown controls that often receive collections and configuration objects.
+
+## Syncfusion® DataGrid example with stable data binding
+
+The following example shows a simple [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with a stable data source. The data collection is created once and reused, which helps prevent unnecessary internal rendering when the component updates for unrelated reasons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -55,46 +95,31 @@ The following example demonstrates a [Blazor DataGrid](https://www.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthdtoWPgPQkxKtj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
+In this pattern, the grid receives the same `Orders` reference unless the data actually changes. This allows Blazor to avoid treating the parameter as new on every render, which reduces the amount of diffing and internal component work.
 
-In this pattern, the grid receives the same `Orders` reference unless the data actually changes. This allows Blazor to avoid treating the parameter as new on every render, which reduces the work involved in checking for UI changes and internal component processing.
-
-N>  Reassigning a new list instance with the same items still counts as a parameter change and will cause the component to re-render unnecessarily.
+N> Reassigning a new list instance with the same items still counts as a parameter change and may trigger unnecessary re-rendering.
 
 ## Managing re-renders with ShouldRender
 
 There are cases where state changes occur but the visual output does not actually need to change. In such cases, the `ShouldRender` method can be used to explicitly control whether the component proceeds with rendering.
 
-```csharp
+```c#
 
 private bool isUiUpdateRequired;
-private string data = string.Empty;
 
-// Controls whether the component should re-render
 protected override bool ShouldRender()
 {
-    // Only re-render when UI actually needs updating
+    // Render only when the visual state has changed.
     return isUiUpdateRequired;
 }
 
-// Simulates a data refresh operation
-private async Task RefreshDataAsync()
-{
-    await Task.Delay(1000); // Simulate async work
-    data = $"Updated at {DateTime.Now}";
-}
-
-// Called when data needs to be refreshed
 private async Task OnDataRefreshAsync()
 {
-    // Perform background work
-    await RefreshDataAsync();
-    // Enable rendering before updating UI
     isUiUpdateRequired = true;
     StateHasChanged();
-    // Disable rendering after update
-    isUiUpdateRequired = false;
-    StateHasChanged(); // No render occurs if ShouldRender returns false
+    await RefreshDataAsync();
+    isUiUpdateRequired = false; // Reset for next cycle
+    StateHasChanged();
 }
 
 ```
@@ -105,37 +130,17 @@ N> `ShouldRender` is most effective when the render conditions are clear, predic
 
 ## Efficient event handling with EventCallback
 
-Event handling plays an important role in Blazor rendering because UI actions trigger state updates. Using `EventCallback` allows child components to notify parent components in a structured and efficient way, avoiding unnecessary delegate allocations.
+Event handling contributes directly to rendering behavior because UI events often trigger state changes. Using `EventCallback` helps keep events aligned with the component model and avoids unnecessary lambda or delegate allocations that can occur when multiple delegate instances are created repeatedly during rendering cycles.
 
-The following example separates the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) into a child component that exposes an `EventCallback`, making the pattern explicit.
+The following example uses a button to refresh grid data only when the user explicitly requests an update.
 
 {% tabs %}
-{% highlight razor tabtitle="RefreshButton.razor" %}
-
-@using Syncfusion.Blazor.Buttons
-
-<SfButton Content="Refresh Orders" OnClick="OnClickHandler"></SfButton>
-
-@code {
-    // Explicit EventCallback definition
-    [Parameter]
-    public EventCallback OnRefresh { get; set; }
-
-    private async Task OnClickHandler()
-    {
-        // Trigger parent callback
-        await OnRefresh.InvokeAsync();
-    }
-}
-
-{% endhighlight %}
-
 {% highlight razor tabtitle="Index.razor" %}
 
-@page "/"
+@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-<RefreshButton OnRefresh="HandleRefreshAsync"></RefreshButton>
+<SfButton Content="Refresh Orders" OnClick="RefreshDataAsync"></SfButton>
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
@@ -149,18 +154,30 @@ The following example separates the [Blazor Button](https://www.syncfusion.com/b
     private List<Order> Orders = new()
     {
         new Order { OrderId = 2001, Customer = "Alpine", Total = 900 },
-        new Order { OrderId = 2002, Customer = "Blue Yonder", Total = 1450 }
+        new Order { OrderId = 2002, Customer = "Blue Yonder", Total = 1450 },
+        new Order { OrderId = 2003, Customer = "Contoso", Total = 2100 },
+        new Order { OrderId = 2004, Customer = "Fabrikam", Total = 1700 },
+        new Order { OrderId = 2005, Customer = "Northwind", Total = 3200 },
+        new Order { OrderId = 2006, Customer = "Tailspin Toys", Total = 800 },
+        new Order { OrderId = 2007, Customer = "Adventure Works", Total = 4100 },
+        new Order { OrderId = 2008, Customer = "Litware", Total = 2950 },
+        new Order { OrderId = 2009, Customer = "Wide World Importers", Total = 2500 }
     };
 
-    private async Task HandleRefreshAsync()
+    private async Task RefreshDataAsync()
     {
+        // Simulate a data refresh.
         await Task.Delay(300);
-
+        // Replace the collection when new data is available.
         Orders = new List<Order>
-        {
-            new Order { OrderId = 2010, Customer = "Updated Alpine", Total = 950 },
-            new Order { OrderId = 2011, Customer = "Updated Blue", Total = 1500 }
-        };
+        {   
+            new Order { OrderId = 2010, Customer = "Alpine", Total = 950 },
+            new Order { OrderId = 2011, Customer = "Blue Yonder", Total = 1500 },
+            new Order { OrderId = 2012, Customer = "Contoso", Total = 2250 },
+            new Order { OrderId = 2013, Customer = "Fabrikam", Total = 1850 },
+            new Order { OrderId = 2014, Customer = "Northwind", Total = 3400 },
+            new Order { OrderId = 2015, Customer = "Tailspin Toys", Total = 875 },
+          };
     }
 
     private sealed class Order
@@ -170,69 +187,29 @@ The following example separates the [Blazor Button](https://www.syncfusion.com/b
         public decimal Total { get; set; }
     }
 }
-{% endhighlight %}
 
+{% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxDSCFqFoocyLn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
-
-In the above example, `EventCallback` allows a child component to notify the parent, which updates data and refreshes the UI efficiently.
+Here, the data source changes only when new data is intentionally assigned. This keeps rendering predictable and avoids repeated updates that are unrelated to user action.
 
 ## Component splitting and child component patterns
 
-As Razor components grow larger, it is recommended to split them into smaller, focused child components instead of placing all UI logic in a single `.razor` file. For example, a page that contains a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), and summary UI becomes easier to manage when each part is implemented as a separate component.
+As pages become larger, it is useful to split them into focused child components rather than keeping all UI sections in one file. A page that contains a grid, chart, filter panel, and summary cards performs better when each section manages its own render tree.
 
-This approach improves code readability and maintainability. It also helps reduce unnecessary UI updates by isolating different parts of the interface.
+This improves render isolation. If a chart filter changes, only the chart section needs to update, while the grid and other sections can remain unchanged.
 
-**Parent component**
+### Parent component
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@page "/"
+{% highlight razor %}
 
 <OrdersGrid Orders="@Orders" />
-
-@code {
-    private List<Order> Orders = new();
-    private static readonly Random rand = Random.Shared;
-
-    private string[] customers = new[]
-    {
-        "Michael Smith", "Emma Johnson", "Liam Brown", "Olivia Davis",
-        "Noah Wilson", "Sophia Martinez", "James Anderson",
-        "Isabella Taylor", "William Thomas", "Mia Garcia"
-    };
-
-    private string[] products = new[]
-    {
-        "Laptop", "Smartphone", "Headphones", "Smart TV",
-        "Tablet", "Gaming Console", "Camera", "Smartwatch",
-        "Bluetooth Speaker", "Monitor"
-    };
-
-    protected override void OnInitialized()
-    {
-        LoadInitialData();
-    }
-
-    private void LoadInitialData()
-    {
-        Orders = Enumerable.Range(1, 10).Select(i => new Order
-        {
-            OrderId = i,
-            Customer = customers[i - 1],
-            Product = products[i - 1],
-            Quantity = rand.Next(1, 5),
-            Total = rand.Next(200, 2000)
-        }).ToList();
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-**Child Blazor DataGrid component**
+### Child DataGrid component
 
 {% tabs %}
 {% highlight razor tabtitle="OrdersGrid.razor" %}
@@ -241,37 +218,26 @@ This approach improves code readability and maintainability. It also helps reduc
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field="OrderId" HeaderText="Order ID" Width="100" />
-        <GridColumn Field="Customer" HeaderText="Customer" Width="150" />
-        <GridColumn Field="Product" HeaderText="Product" Width="150" />
-        <GridColumn Field="Quantity" HeaderText="Qty" Width="100" />
-        <GridColumn Field="Total" HeaderText="Total ($)" Width="120" />
+        <GridColumn Field="OrderId" HeaderText="Order ID" Width="120" />
+        <GridColumn Field="Customer" HeaderText="Customer" Width="180" />
     </GridColumns>
 </SfGrid>
 
 @code {
     [Parameter]
     public IEnumerable<Order> Orders { get; set; } = Enumerable.Empty<Order>();
-}
-{% endhighlight %}
 
-{% highlight razor tabtitle="Order.cs" %}
-
-public sealed class Order
-{
-    public int OrderId { get; set; }
-    public string Customer { get; set; } = string.Empty;
-    public string Product { get; set; } = string.Empty;
-    public int Quantity { get; set; }
-    public int Total { get; set; }
+    public sealed class Order
+    {
+        public int OrderId { get; set; }
+        public string Customer { get; set; } = string.Empty;
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHXohZVnVqXvpX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
-
-The UI is organized into smaller components, where the parent handles data management and the child component focuses on rendering the grid. When the `Orders` data changes in the parent, the updated values are passed to the child, triggering a grid refresh. This separation keeps the code clean and helps Blazor perform efficient UI updates.
+In this arrangement, each child component renders only when its own parameters change. This reduces the render impact of unrelated updates and makes the page easier to maintain.
 
 ## Avoiding expensive work during rendering
 
@@ -316,14 +282,13 @@ protected override void OnInitialized()
 
 This keeps the render path simple and avoids repeated computation during every UI update.
 
-## Blazor Chart example with render-efficient updates
+## Syncfusion® Chart example with render-efficient updates
 
-[Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
+[Charts](https://www.syncfusion.com/blazor-components/blazor-charts) are frequently used in dashboards where filters or live data can trigger repeated updates. Keeping the chart data stable and updating it only when required reduces redraw cost and avoids unnecessary layout recalculations.
 
 {% tabs %}
 {% highlight razor tabtitle="Charts.razor" %}
 
-@page "/charts"
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Monthly Sales">
@@ -359,131 +324,68 @@ This keeps the render path simple and avoids repeated computation during every U
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBxNyClJWszeZqL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
-
 This approach keeps chart rendering predictable. If the chart is part of a larger dashboard, isolating it in its own component further reduces the impact of unrelated page updates.
 
-## Stable collection references in the Blazor DropDownList
+## Example of before and after rendering behavior
 
-A common performance issue in Blazor occurs when collections are created during each render cycle. This typically happens when methods are called directly in markup or properties that are evaluated during rendering. In such cases, a new collection instance is generated every time the component renders.
-
-In the following example, the [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) receives a new data source on every render.
+A common inefficient pattern is to create collections directly inside markup or properties that are evaluated during render. In the following example, the component produces a new data source each time it renders.
 
 {% tabs %}
 {% highlight razor tabtitle="Dropdown.razor" %}
 
 @using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Buttons
-
-<h4>Inefficient Example (New List Every Render)</h4>
 
 <SfDropDownList TValue="string" TItem="string"
                 DataSource="@GetCountries()"
                 Placeholder="Select a country">
 </SfDropDownList>
 
-<SfButton @onclick="TriggerRender">Trigger Re-render</SfButton>
-
-<h5>Logs:</h5>
-<ul>
-    @foreach (var log in Logs)
-    {
-        <li>@log</li>
-    }
-</ul>
-
 @code {
-    private List<string> Logs = new();
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        AddLog("Component rendered");
-    }
-
     private List<string> GetCountries()
     {
-        AddLog("GetCountries() called - new list created");
-        return new List<string> { "India", "Germany", "USA", "Japan" };
-    }
-
-    private void TriggerRender()
-    {
-        AddLog("Button clicked - forcing render");
-    }
-
-    private void AddLog(string message)
-    {
-        Logs.Add($"{message}");
+        // A new list is created on every render.
+        return new List<string> { "India", "Germany", "United States", "Japan" };
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhHZeCbztldiiGC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
+Although the displayed values remain the same, the component receives a new collection reference on every render. This causes unnecessary diffing and can increase render cost over time.
 
-Although the displayed values remain unchanged, the component receives a new collection reference each time it renders. This causes unnecessary UI comparisons and increases rendering overhead.
-
-A more efficient approach is to create the collection once and reuse it.
+A more efficient version creates the collection once and reuses it.
 
 {% tabs %}
 {% highlight razor tabtitle="Dropdown.razor" %}
 
 @using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Buttons
 
 <SfDropDownList TValue="string" TItem="string"
                 DataSource="@Countries"
                 Placeholder="Select a country">
 </SfDropDownList>
 
-<SfButton @onclick="TriggerRender">Trigger Re-render</SfButton>
-
-<h5>Logs:</h5>
-<ul>
-    @foreach (var log in Logs)
-    {
-        <li>@log</li>
-    }
-</ul>
-
 @code {
-    private List<string> Logs = new();
-
+    // The list is created once and reused.
     private readonly List<string> Countries = new()
     {
-        "India", "Germany", "USA", "Japan"
+        "India",
+        "Germany",
+        "United States",
+        "Japan"
     };
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        AddLog("Component rendered");
-    }
-
-    private void TriggerRender()
-    {
-        AddLog("Button clicked - forcing render");
-    }
-
-    private void AddLog(string message)
-    {
-        Logs.Add($"{message}");
-    }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdNyWPTCNsZWPJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
-
-By maintaining a stable collection reference, Blazor can detect that the data has not changed and avoid unnecessary rendering work. This improves performance and ensures more efficient UI updates.
+This difference is not about code style and directly impacts rendering efficiency. Stable references allow Blazor to recognize when a child component’s data has not changed unnecessarily.
 
 ## See also
 
-* [Explore the fundamentals of Razor component rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0)
-* [Understand the flow of the Razor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
+* [Razor component rendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/rendering?view=aspnetcore-10.0)
+* [Razor component lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0)
 * [Blazor rendering performance best practices](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/rendering?view=aspnetcore-10.0)
-* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-* [Getting started with Blazor Chart](https://blazor.syncfusion.com/documentation/chart/getting-started)
-* [Getting started with Blazor DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
+* [DataGrid getting started](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
+* [Chart getting started](https://blazor.syncfusion.com/documentation/chart/getting-started)
+* [DropDownList getting started](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
 

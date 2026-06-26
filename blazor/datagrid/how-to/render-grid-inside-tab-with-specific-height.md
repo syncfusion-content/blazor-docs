@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor DataGrid Inside the Tab with Specific Height | Syncfusion
-description: Learn to render Syncfusion Blazor DataGrid inside a Tab with fixed header and scrollable content using a specific tab height.
+title: Blazor DataGrid Inside the Tab with Specific Height | Syncfusion®
+description: Learn to render Blazor DataGrid inside a Tab with fixed header and scrollable content using a specific tab height.
 platform: Blazor
 control: DataGrid
 documentation: ug

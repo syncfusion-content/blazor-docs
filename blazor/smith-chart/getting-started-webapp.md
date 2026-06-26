@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion Smith Chart in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor Smith Chart Component Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor Smith Chart Component Components in Blazor Web App.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -109,7 +109,7 @@ dotnet add package Syncfusion.Blazor.SmithChart -v {{ site.releaseversion }}
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+N> All Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
