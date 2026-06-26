@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Syncfusion® Blazor components showcase samples
+# Blazor components showcase samples
 
 The following showcase applications demonstrate Blazor components in real-world scenarios.
 
