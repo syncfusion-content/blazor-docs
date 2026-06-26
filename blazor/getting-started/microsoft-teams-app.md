@@ -210,4 +210,4 @@ Now, add the Blazor Kanban component in the `Tab.razor` page under the `~/Compon
 
 ![Microsoft Teams application with Syncfusion Blazor controls](images/MSTeams/output-msteams-syncfusion.webp)
 
-N> [View the complete Microsoft Teams application with Blazor controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
+N> [View the complete Microsoft Teams application with Blazor components on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
