@@ -71,61 +71,6 @@ If you switch themes during development, clear your browser cache (Ctrl+F5 or Ct
 This applies when interactivity location is set to **Per page/component**. Add the render mode directive at the top of your `.razor` page.
 
 {% tabs %}
-{% highlight razor tabtitle="Counter.razor" hl_lines="2" %}
-
-@page "/counter"
-@rendermode InteractiveServer
-
-<PageTitle>Counter</PageTitle>
-
-<h1>Counter</h1>
-
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### For Global Interactivity configuration
-
-In `~/Program.cs`, configure global render mode.
-
-{% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Registers Razor Components and enables interactive Server and WebAssembly components
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
-    .AddInteractiveWebAssemblyComponents();
-
-var app = builder.Build();
-
-// Maps the root component and enables the corresponding render modes globally
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode()
-    .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
-
-{% endhighlight %}
-{% endtabs %}
-
-### For Blazor components
-
-Apply an appropriate render mode to pages or components that use Blazor components.
-
-{% tabs %}
 {% highlight razor tabtitle="DataGridPage.razor" hl_lines="2" %}
 
 @page "/datagrid"
@@ -159,6 +104,31 @@ Apply an appropriate render mode to pages or components that use Blazor componen
         public string CustomerName { get; set; } = "";
     }
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+### For Global Interactivity configuration
+
+In `~/Program.cs`, configure global render mode.
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Registers Razor Components and enables interactive Server and WebAssembly components
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
+
+var app = builder.Build();
+
+// Maps the root component and enables the corresponding render modes globally
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
 
 {% endhighlight %}
 {% endtabs %}

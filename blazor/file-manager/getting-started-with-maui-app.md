@@ -142,7 +142,7 @@ Add the Blazor FileManager component in the **~/Pages/Home.razor** file.
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Blazor File Manager Component](images/blazor-filemanager-maui-app.png)
+![Blazor File Manager Component](images/blazor-filemanager-maui-app.webp)
 
 ### How to run the sample on Android
 
@@ -152,4 +152,4 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor File Manager Component](images/blazor-filemanager-component.png)
+![Blazor File Manager Component](images/blazor-filemanager-component.webp)
