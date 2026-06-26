@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Predefined Dialogs in Server App | Syncfusion
-description: Check out the documentation for getting started with Blazor Predefined Dialogs Components in Blazor Server App.
+title: Getting Started with Predefined Dialogs in Server App | Syncfusion®
+description: Step-by-step guide to integrate and configure Blazor Predefined Dialogs (Alert, Confirm, Prompt) in a Blazor Server App using Visual Studio or .NET CLI.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug

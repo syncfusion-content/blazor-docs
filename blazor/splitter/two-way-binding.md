@@ -48,7 +48,7 @@ In the following example, if either the value is changed in checkbox or splitter
 
 ```
 
-![Data Binding in Blazor Splitter](./images/blazor-splitter-data-binding.png)
+![Data Binding in Blazor Splitter](./images/blazor-splitter-data-binding.webp)
 
 ## See Also
 

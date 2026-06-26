@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about virtualization in Syncfusion Blazor ListView component and much more.
+title: Virtualization in Blazor ListView Component | Syncfusion®
+description: Checkout and learn here all the features about virtualization in Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug

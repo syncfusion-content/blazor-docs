@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Predefined Dialogs in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Blazor Predefined Dialogs Components in Blazor Web App.
+title: Getting Started with Predefined Dialogs in Web App | Syncfusion®
+description: Step-by-step guide to integrate and configure Blazor Predefined Dialogs (Alert, Confirm, Prompt) in a Blazor Web App using Visual Studio or .NET CLI.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
@@ -190,7 +190,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
-In the following example, an alert dialog is displayed upon clicking a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
+In the following example, an alert dialog is displayed upon clicking a [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
