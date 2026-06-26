@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Aggregation in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about aggregation in Syncfusion Blazor Pivot Table component and much more.
+title: Aggregation in Blazor Pivot Table Component | Syncfusion®
+description: Learn about aggregation types in Blazor Pivot Table component for value field calculations and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -31,6 +31,7 @@ N> Numeric fields support all aggregation types listed below, except **Calculate
 | PopulationVar| Displays the variance of the population for the selected field.|
 | SampleVar| Displays the sample variance for the selected field.|
 | RunningTotals| Displays the running total for the selected field values.|
+| PercentageOfRunningTotals| Cumulative percentage of running totals (client-side engine only).|
 | DifferenceFrom| Displays the pivot table values with difference from the value of the base item in the base field.|
 | PercentageOfDifferenceFrom| Displays the pivot table values with percentage difference from the value of the base item in the base field.|
 | PercentageOfGrandTotal| Displays the pivot table values with percentage of grand total of all values.|

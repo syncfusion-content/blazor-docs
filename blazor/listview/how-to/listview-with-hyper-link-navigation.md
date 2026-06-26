@@ -94,4 +94,4 @@ The `anchor` tag can be used along with `href` attribute in the ListView [`Templ
 </style>
 ```
 
-![Blazor ListView with Hyperlink](../images/list/blazor-listview-with-hyperlink.png)
+![Blazor ListView with Hyperlink](../images/list/blazor-listview-with-hyperlink.webp)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor TextBox component and much more.
+title: Data Binding in Blazor TextBox Component | Syncfusion®
+description: Checkout and learn here all the features about data binding in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
