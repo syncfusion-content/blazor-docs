@@ -82,7 +82,7 @@ N> See the [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/cor
 
 {% endtabcontents %}
 
-## Install Blazor packages
+## Install required Blazor packages
 
 Install the [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 

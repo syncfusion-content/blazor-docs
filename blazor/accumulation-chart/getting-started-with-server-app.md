@@ -11,19 +11,32 @@ documentation: ug
 
 This section briefly explains how to include [Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor Server App 
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio
+
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
 {% endtabcontent %}
 
-{% tabcontent Visual Studio Code %}
+dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
-Run the following command to create a new Blazor Server App.
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio Code
+
+Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
+
+Alternatively, create a Server application using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -32,23 +45,7 @@ dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
 
 {% endhighlight %}
-{% endtabs %}
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Run the following command to create a new Blazor Server App.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet new blazor -o BlazorApp --interactivity Server
-cd BlazorApp
-
-{% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}
@@ -65,43 +62,27 @@ Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.Charts`) and install them.
+## Prerequisites
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-Open the terminal and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Terminal" %}
-
-dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
+dotnet --version
 
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
+## Create a Blazor Server App using .NET CLI
 
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following commands.
+Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
+dotnet new blazor -o BlazorApp -int Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -109,6 +90,24 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+## Install required Blazor packages
+
+Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package Syncfusion.Blazor.Charts --version {{ site.releaseversion }}), or the .NET CLI.
+
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
@@ -125,9 +124,9 @@ N> The `~/` notation represents the root directory of your project. This file is
 {% endhighlight %}
 {% endtabs %}
 
-## Register the Blazor service
+## Register Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Register the Blazor service in the **Program.cs** file of your Blazor Server App. This step enables the Syncfusion components to work in your application.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -143,26 +142,31 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file (this is the root layout file of your application).
 
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
+```html
 
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+```
+
+## Add Blazor Accumulation Chart component
+
+Add the Blazor Accumulation Chart component in the **~/Components/Pages/Home.razor** file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the `~Pages/Home.razor` file.
+
+N> If the Interactivity Location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+
+{% tabs %}
+{% highlight razor %}
+
+@* desired render mode defined here *@
+@rendermode InteractiveServer
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor Accumulation Chart component
-
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component inside the razor file.
-
-N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
-
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@rendermode InteractiveServer
 
 <!-- SfAccumulationChart is the root container component for the accumulation chart -->
 <SfAccumulationChart>
@@ -198,45 +202,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Accumulation Chart component will render in your default web browser.
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-Open the terminal and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Terminal" %}
-
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet run
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% endtabcontents %}
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Accumulation Chart component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart](images/getting-started/blazor-pie-chart-webapp.webp)" %}
 
