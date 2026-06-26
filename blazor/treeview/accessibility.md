@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor TreeView Component | Syncfusion®
-description: Checkout and learn here all about Accessibility in Blazor TreeView component and much more.
+description: Checkout and learn here all the features about Accessibility in Blazor TreeView component and much more details
 platform: Blazor
 control: TreeView
 documentation: ug
