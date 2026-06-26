@@ -1,27 +1,59 @@
 ---
 layout: post
-title: Maps - Strict CSP Feature Limitations | Syncfusion®
-description: Details on features in Blazor Maps Component that require Content Security Policy (CSP) relaxation and much more details.
+title: Chat UI - Strict CSP Feature Limitations | Syncfusion®
+description: Details on features in Blazor Chat UI Component that require Content Security Policy (CSP) relaxation and much more details.
 platform: Blazor
-control: Maps
+control: Chat UI
 documentation: ug
 ---
 
-# Maps - Content Security Policy Limitations
+# Chat UI - Content Security Policy Limitations
 
 ## What's supported under strict CSP ?
 
 The Syncfusion® Blazor **Chat UI** component supports most features under strict Content Security Policy without needing `'unsafe-inline'`. You can safely use:
 
-- Virtualization
+- Sending and receiving messages
+- Rendering text, rich text, and custom message templates
+- User and author details (avatar, name, timestamp)
+- Typing indicator
+- Suggested/quick reply actions
+- Theming and static customizations
 
 ## What requires *'unsafe-inline'* ?
 
-The following features require the `style-src 'unsafe-inline'` directive:
+The following feature requires the `style-src 'unsafe-inline'` directive:
 
-### Relaxed CSP (with Virtualization features)
+### 1. Load on demand
 
-Include `'unsafe-inline'` if you need OSM with toolbar, click interactions, or highlight customizations:
+The **Load on demand** feature internally uses the `Virtualize` component to render chat messages efficiently for large conversation lists. The `Virtualize` component dynamically applies inline styles to manage item placeholders, spacing, and scroll positioning while loading data on demand, which requires `'unsafe-inline'` to function correctly.
+
+> **Note:** Core features including message rendering, templates, typing indicator, suggestions, and theming operate fully under strict CSP without requiring `'unsafe-inline'`. Only the **Load on demand** feature is impacted under strict CSP.
+
+## Recommended CSP configurations
+
+### Strict CSP (without Load on demand)
+
+Use this configuration if you don't need the **Load on demand** feature:
+
+```html
+<meta http-equiv="Content-Security-Policy"
+      content="base-uri 'self';
+               default-src 'self';
+               connect-src 'self' https: ws: wss:;
+               img-src 'self' data: https:;
+               object-src 'none';
+               script-src 'self';
+               style-src 'self';
+               font-src 'self' data:;
+               upgrade-insecure-requests;">
+```
+
+This configuration maintains full security for the Chat UI component's messaging experience.
+
+### Relaxed CSP (with Load on demand)
+
+Include `'unsafe-inline'` if you need the **Load on demand** feature:
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -36,9 +68,7 @@ Include `'unsafe-inline'` if you need OSM with toolbar, click interactions, or h
                upgrade-insecure-requests;">
 ```
 
-> Use this only when interactive features like OSM, toolbar, click behavior, or highlight effects are essential to your application.
-
-> **Note:** Core features—including static shape rendering, data-bound color mapping, legends, tooltips, multiple layers, basic zoom/pan, and export—work fully under strict CSP.
+> Use this only when **Load on demand** (virtualized message loading) is essential to your application.
 
 ## See also
 

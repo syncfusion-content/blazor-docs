@@ -211,3 +211,4 @@ This allows inline styles while keeping the rest of your security policy strict.
 * [Content security policy in Syncfusion® Maps component](https://blazor.syncfusion.com/documentation/maps/content-security-policy)
 * [Content security policy in Syncfusion® Pivot Table component](https://blazor.syncfusion.com/documentation/pivot-table/content-security-policy)
 * [Content security policy in Syncfusion® TreeView component](https://blazor.syncfusion.com/documentation/treeview/content-security-policy)
+* [Content security policy in Syncfusion® Chat UI component](../chat-ui/content-security-policy)
