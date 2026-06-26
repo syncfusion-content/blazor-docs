@@ -45,7 +45,7 @@ CssClass is used for AppBar customization based on the custom class. In the exam
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhnDxMCLmTfSmJh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with CssClass customization](./images/cssclass_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhnDxMCLmTfSmJh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with CssClass customization](./images/cssclass_appbar.webp)" %}
 
 ## HtmlAttributes
 
