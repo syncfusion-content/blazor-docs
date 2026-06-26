@@ -24,7 +24,6 @@ Customize the appearance of the ProgressButton by overriding the built-in CSS se
 Change the button text and styles during the progress state by updating the Content and the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) parameters in the [OnBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin) and [OnEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd) event handlers.
 
 ```cshtml
-
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton Content="@Content" EnableProgress="true" CssClass="@CssClass" Duration="4000">
@@ -50,8 +49,7 @@ Change the button text and styles during the progress state by updating the Cont
 }
 
 ```
-
-![Changing Text Content and Style of Blazor ProgressButton](./images/blazor-progressbutton-change-text.webp)
+![Changing Text Content and Style of Blazor ProgressButton](./images/blazor-progressbutton-change-text.png)
 
 ## Customize progress using cssClass in Blazor ProgressButton
 
@@ -63,7 +61,6 @@ Customize the progress indicator (filler) by using the [CssClass](https://help.s
 Reverse progress can also be shown by adding a custom class through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.
 
 ```cshtml
-
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton EnableProgress="true" CssClass="e-hide-spinner e-vertical" Duration="4000" Content="Vertical Progress"></SfProgressButton>
@@ -76,11 +73,8 @@ Reverse progress can also be shown by adding a custom class through the [CssClas
         left: auto;
     }
 </style>
-
 ```
-
-![Customizing Progress in Blazor ProgressButton](./images/blazor-progressbutton-customization.webp)
-
+![Customizing Progress in Blazor ProgressButton](./images/blazor-progressbutton-customization.png)
 
 ## Stop Progress Indicator in Blazor ProgressButton
 
@@ -101,8 +95,7 @@ Stop the active progress programmatically by calling the [EndProgressAsync](http
     }
 }
 ```
-
-![Stop Progress Indicator in ProgressButton](./images/blazor-progressbutton-stop-indicator.webp)
+![Stop Progress Indicator in ProgressButton](./images/blazor-progressbutton-stop-indicator.png)
 
 ## Hide Spinner in Blazor ProgressButton
 
@@ -112,7 +105,5 @@ Hide the spinner in the ProgressButton by applying the built-in e-hide-spinner C
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton EnableProgress="true" CssClass="e-hide-spinner" Content="Progress"></SfProgressButton>
-
 ```
-
-![Hide Spinner in Blazor ProgressButton](./images/blazor-progressbutton-hide-spinner.webp)
+![Hide Spinner in Blazor ProgressButton](./images/blazor-progressbutton-hide-spinner.png)
