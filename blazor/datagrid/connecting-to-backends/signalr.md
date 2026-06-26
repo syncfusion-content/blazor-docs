@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid with Real-time Updates Using SignalR | Syncfusion
+title: Blazor Data Grid with Real-time Updates Using SignalR | Syncfusion®
 description: Bind real-time stock market data to Blazor Data Grid using SignalR hub with complete bidirectional communication, live updates, and in-memory data operations.
 platform: Blazor
 control: DataGrid
@@ -449,7 +449,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
     
-// Register Syncfusion Blazor components
+// Register Blazor components
 builder.Services.AddSyncfusionBlazor();
 
 // Register custom services
@@ -504,7 +504,7 @@ Service registration is now complete.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -522,23 +522,23 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Syncfusion.Blazor.Data
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor DataGrid
 
-The `Home.razor` component displays the stock market data in a Syncfusion DataGrid and establishes a SignalR connection for real-time updates.
+The `Home.razor` component displays the stock market data in a DataGrid and establishes a SignalR connection for real-time updates.
 
 **Instructions:**
 
@@ -558,7 +558,7 @@ The `Home.razor` component displays the stock market data in a Syncfusion DataGr
     <div class="card shadow-lg">
         <div class="card-body">
 
-            <!-- Syncfusion DataGrid -->
+            <!-- DataGrid -->
             <SfGrid @ref="grid" TValue="Stock" Height="500" AllowSorting="true" AllowFiltering="true" Toolbar=@ToolbarItems>
                 <SfDataManager AdaptorInstance="@typeof(StockAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
                 <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
@@ -589,7 +589,7 @@ The `Home.razor` component displays the stock market data in a Syncfusion DataGr
 
 ### Step 3: Create the CustomAdaptor for SignalR
 
-The CustomAdaptor bridges the Syncfusion DataGrid with SignalR by implementing the DataAdaptor interface. It handles data retrieval, searching, filtering, and sorting operations required by the DataGrid.
+The CustomAdaptor bridges the DataGrid with SignalR by implementing the DataAdaptor interface. It handles data retrieval, searching, filtering, and sorting operations required by the DataGrid.
 
 **Instructions:**
 
@@ -605,7 +605,7 @@ using Syncfusion.Blazor.Data;
 namespace Grid_SignalR.Services;
 
 /// <summary>
-/// Custom adaptor for Syncfusion DataGrid that handles data operations for real-time stock data.
+/// Custom adaptor for DataGrid that handles data operations for real-time stock data.
 /// Implements reading, searching, filtering, and sorting operations.
 /// </summary>
 public class StockAdaptor : DataAdaptor
@@ -1150,7 +1150,7 @@ This strategy prevents overwhelming the server during network issues.
     <div class="card shadow-lg">
         <div class="card-body">
 
-            <!-- Syncfusion DataGrid -->
+            <!-- DataGrid -->
             <SfGrid @ref="grid" TValue="Stock" Height="500" AllowSorting="true" AllowFiltering="true" Toolbar=@ToolbarItems>
                 <SfDataManager AdaptorInstance="@typeof(StockAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
                 <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
@@ -1405,7 +1405,7 @@ The application now provides a complete solution for displaying real-time stock 
 ## Reference Links
 
 - [SignalR Documentation](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction)
-- [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)
+- [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)
 - [ASP.NET Core Background Services](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services)
 
 ## Troubleshooting Common SignalR + Blazor DataGrid Issues
