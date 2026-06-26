@@ -80,3 +80,4 @@ The accessibility compliance of the MultiSelect Dropdown component is shown in t
 ## See also
 
 * [Accessibility in Blazor components](../common/accessibility)
+
