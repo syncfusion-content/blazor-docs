@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scheduler Dimensions in Blazor Scheduler Component | Syncfusion
-description: This article demonstrates how to set the height and width of Syncfusion Blazor Scheduler component in pixels, percentage or auto values.
+title: Scheduler Dimensions in Blazor Scheduler Component | Syncfusion®
+description: This article demonstrates how to set the height and width of Blazor Scheduler component in pixels, percentage or auto values.
 platform: Blazor
 control: Scheduler
 documentation: ug

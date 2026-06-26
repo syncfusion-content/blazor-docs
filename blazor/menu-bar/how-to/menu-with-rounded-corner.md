@@ -62,4 +62,4 @@ The rounded corner can be achieved by using the [CssClass](https://help.syncfusi
 
 ```
 
-![Blazor MenuBar with Rounded Corner](./../images/blazor-menubar-with-rounded-corner.png)
+![Blazor MenuBar with Rounded Corner](./../images/blazor-menubar-with-rounded-corner.webp)

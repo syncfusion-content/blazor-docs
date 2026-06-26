@@ -114,7 +114,7 @@ dotnet add package Syncfusion.Blazor.TreeMap -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.TreeMap` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.TreeMap` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -249,6 +249,8 @@ Add label text to the leaf items in the TreeMap component by setting the field n
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.TreeMap
+
 <SfTreeMap DataSource="GrowthReport"
             WeightValuePath="GDP"
             TValue="Country">
@@ -268,6 +270,8 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReport"
             WeightValuePath="GDP"
@@ -289,6 +293,8 @@ The color mapping supports customization of item colors based on the underlying 
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReport"
             WeightValuePath="GDP"
@@ -315,6 +321,8 @@ Legend items are used to denote the color mapping categories and show the legend
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.TreeMap
+
 <SfTreeMap DataSource="GrowthReport"
             WeightValuePath="GDP"
             TValue="Country"
@@ -340,6 +348,8 @@ When space constraints prevents from displaying information using data labels, t
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReport"
             WeightValuePath="GDP"
