@@ -184,6 +184,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
+* [Getting Started with Blazor Server App in Visual Studio or .NET CLI](../getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+
+N> You can also explore our [Blazor DateRangePicker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=fluent2) that shows how to render and configure the DateRangePicker.

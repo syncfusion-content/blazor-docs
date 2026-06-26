@@ -404,5 +404,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](../getting-started/blazor-server-side-visual-studio)
+
+N> You can also explore our [Blazor DashboardLayout example](https://blazor.syncfusion.com/demos/dashboard-layout/overview?theme=fluent2) that shows how to render and configure the DashboardLayout.
