@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotations in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Annotations in Syncfusion Blazor Circular Gauge component and more.
+title: Annotations in Blazor Circular Gauge Component | Syncfusion®
+description: Checkout and learn here all the features about Annotations in Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

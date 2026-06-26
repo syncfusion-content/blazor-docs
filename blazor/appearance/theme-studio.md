@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Customize Blazor Component Themes with Theme Studio | Syncfusion
+title: Customize Blazor Component Themes with Theme Studio | Syncfusion®
 description: Create custom themes for Blazor components using Theme Studio. Customize colors, filter components, download CSS/SCSS, and import settings.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Customize Blazor component themes with Theme Studio
+# Theme Studio for Blazor components
 
-Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), Range Navigator, and [Maps](https://www.syncfusion.com/blazor-components/blazor-map).
+Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps.
 
-## Customize theme colors from Theme Studio
+## Customize theme colors from theme studio
 
-The Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the [Blazor components](https://www.syncfusion.com/blazor-components). All Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
+The Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Blazor components. All Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
 1. Open [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3) application.
-2. The Theme Studio application page can be divided into two sections: the components preview section on the left, and the theme customization section on the right.
+2. The Theme Studio application page can be divided into two sections: the controls preview section on the left, and the theme customization section on the right.
 ![Theme Studio two-sections](images/two-pane.webp)
 3. Click the color pickers in the theme customization section to select your desired colors.
 ![Theme Studio color picker](images/colorpicker.webp)
@@ -25,13 +25,13 @@ The Blazor themes are developed under the SCSS environment. Each theme has a uni
 
 ### Filter a specific list of components
 
-Using the theme studio, you can apply custom themes to a list of specific components. This option is used when you integrate a selective list of [Blazor components](https://www.syncfusion.com/blazor-components) in your application. The theme studio will filter the selected components and customize the final output for the components’ styles alone by reducing the final output file size.
+Using the theme studio, you can apply custom themes to a list of specific controls. This option is used when you integrate a selective list of Blazor components in your application. The theme studio will filter the selected controls and customize the final output for the controls’ styles alone by reducing the final output file size.
 
-1. Click the Filter icon at the top-right corner, and select the components whose theme you want to customize.
+1. Click the Filter icon at the top-right corner, and select the controls whose theme you want to customize.
 ![Theme Studio filter-icon](images/filter-icon.webp)
-2. Click the Apply button in the Filter dialog. Now, only the selected components will be rendered in the components preview section.
+2. Click the Apply button in the Filter dialog. Now, only the selected controls will be rendered in the controls preview section.
 ![Theme Studio filter-dialog](images/filter-dialog.webp)
-3. Now, you can customize the colors in the theme customization section for the components selected.
+3. Now, you can customize the colors in the theme customization section for the controls selected.
 ![Theme Studio filter-customized](images/filter-customized.webp)
 
 ### Download the customized theme
@@ -42,24 +42,27 @@ You can download the custom styles after customizing the theme colors.
 ![Theme Studio download-icon](images/download-icon.webp)
 2. Assign a theme name in the File Name field, and click the Download button.
 ![Theme Studio download-dialog](images/download-dialog.webp)
-3. The download styles will come as a zip file that contains SCSS and CSS files for the selected [Blazor components](https://www.syncfusion.com/blazor-components). The current settings are stored in the `settings.json` file.
+3. The download styles will come as a zip file that contains SCSS and CSS files for the selected Blazor components. The current settings are stored in the `settings.json` file.
 
 ![Theme Studio output-files](images/output-files.webp)
 
-N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS files without Google Fonts dependencies. Lightweight theme files, such as `fluent2-lite.css`, improve performance by excluding larger styles. When using a customized CSS file, remove any other Syncfusion base theme references (CDN or local) to avoid duplicate or conflicting styles.
+N> The Material and Tailwind themes use the online Roboto font. For offline or restricted networks, the downloaded package includes CSS without Google Fonts dependencies. Lightweight theme files (for example, fluent2-lite.css) optimize performance by excluding larger styles. When using a customized CSS file, remove other base theme references (CDN or local) to avoid duplicate or conflicting styles.
 
 ### Use a customized theme in a web application
 
-Before applying a custom theme, ensure you have created a Blazor project. For guidance, see [Getting Started with Blazor](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app). You can use the customized CSS file directly in the web application.
+You can directly use the customized CSS file in the web application.
 
-1. Copy the customized CSS file from the download folder to the app’s `wwwroot` folder. You can place it directly under `wwwroot` or in a subfolder such as `wwwroot/styles/`.
+1. Copy and paste the customized CSS file from the download folder into any folder, e.g., `~/wwwroot/styles/{file-name}.css`.
 2. Reference the customized CSS file in the appropriate host page:
-   * For **Blazor Web App**, add the reference in the `<head>` section of `~/Components/App.razor`.
-   * For **standalone Blazor WebAssembly App**, add the reference in the `<head>` section of `~/wwwroot/index.html`.
+    * For **Blazor Web App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file.
+    * For **Blazor WebAssembly App**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
+    * For **Blazor Server App**, refer style sheet inside the `<head>` of
+        * **~/Pages/_Host.cshtml** file for .NET 7.
+        * **~/Pages/_Layout.cshtml**  file for .NET 6.
 
     ```html
     <head>
-        <link href="/styles/{file-name}.css" rel="stylesheet" />
+        <link href="styles/{file-name}.css" rel="stylesheet"/>
     </head>
     ```
 
@@ -77,11 +80,11 @@ If you need to change your application theme and UI design in the future, do not
 ![Theme Studio filter-customized](images/filter-customized.webp)
 5. The exported file contains your latest changes. You can just replace the older custom style with a new style to refresh your application.
 
-## Common variables
+## Common Variables
 
-The following list of common variables is used in the Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
+The following list of common variables is used in the Syncfusion® Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 
-### Material 3 theme
+### Material 3 Theme
 
 <table>
     <style>
@@ -506,7 +509,7 @@ The following list of common variables is used in the Blazor library themes for 
     </tbody>
 </table>
 
-### Bootstrap 5 theme
+### Bootstrap 5 Theme
 
 <table>
     <style>
@@ -724,7 +727,7 @@ The following list of common variables is used in the Blazor library themes for 
     </tbody>
 </table>
 
-### Fluent theme
+### Fluent Theme
 
 <table>
     <style>
@@ -1014,7 +1017,7 @@ The following list of common variables is used in the Blazor library themes for 
     </tbody>
 </table>
 
-### Bootstrap 4 theme
+### Bootstrap 4 Theme
 
 <table>
     <style>
@@ -1639,7 +1642,7 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-### Material theme
+### Material Theme
 
 <table>
     <style>
@@ -1984,7 +1987,7 @@ Design based on Bootstrap 3 theme.
         </tr>
     </tbody>
 </table>
-### Tailwind CSS theme
+### Tailwind CSS Theme
 
 <table>
     <style>
@@ -2427,7 +2430,7 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-### Microsoft Office Fabric theme
+### Microsoft Office Fabric Theme
 
 <table>
     <style>
@@ -3020,42 +3023,33 @@ Design based on Bootstrap 3 theme.
     </tbody>
 </table>
 
-## Overriding Blazor Theme Studio variables using Sass `@use` and `with()`
+## Overriding Syncfusion Blazor Theme Studio Variables Using Sass `@use` + `with()`
 
-When working with Blazor Theme Studio, you may want to override predefined theme variables without editing the generated theme files directly.
+When using Syncfusion Blazor Theme Studio, you may want to override predefined theme variables without directly editing the generated theme files.
+The cleanest and most Sass‑compliant way to do this is to pair CSS custom properties with Sass variable overrides using:
 
-The recommended Sass approach is to use the module system with `@use` and `with()`.
+`@use 'theme.scss' with (...)`
 
-### Define the value as a CSS custom property
+### Define your color as a CSS custom property
 
-Create or update your `Custom.scss` file, or any other global stylesheet:
+Create or update your `Custom.scss` (or any global Sass file):
 
-{% tabs %}
-{% highlight scss %}
-
+```css
 :root {
   --color-test-primary: 124, 86, 118;
 }
+```
+### Override Theme Studio variables using `@use`, `with()`
 
-{% endhighlight %}
-{% endtabs %}
+Import your generated Theme Studio file (e.g., material3.scss) and override variables via with():
 
-### Override the Theme Studio variable
-
-Import the generated Theme Studio stylesheet, such as `material3.scss`, and configure the variable with `with()`:
-
-{% tabs %}
-{% highlight scss %}
-
+```css
 @use 'material3.scss' with (
-  $primary: var(--color-test-primary)
+  $primary: var(#{'--color-test-primary'})
 );
-
-{% endhighlight %}
-{% endtabs %}
-
+```
 ### Why this pattern works
 
-- `@use` is the modern Sass module system and is the recommended replacement for `@import`.
-- `with()` lets you configure Sass variables before the stylesheet is compiled.
-- `var(--color-test-primary)` allows the compiled CSS to read the value from a CSS custom property.
+- `@use` is the modern, recommended Sass import system, ensuring variables are scoped and safely overridden.
+- `with()` injects your custom values before the Theme Studio file compiles, giving you full control without editing generated code.
+- `var(#{…})` enables passing a CSS custom property into a Sass variable, something Sass normally prevents without interpolation.

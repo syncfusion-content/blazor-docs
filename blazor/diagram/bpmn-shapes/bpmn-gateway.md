@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BPMN Gateway in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create the BPMN gateway in Syncfusion Blazor Diagram component and more.
+title: BPMN Gateway in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create the BPMN gateway in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # BPMN Gateway in Diagram Component
 
-A [BpmnGateway](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnGateway.html) is used to control the flow of a process and it is represented in diamond shape. The [GatewayType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnGateway.html#Syncfusion_Blazor_Diagram_BpmnGateway_GatewayType) property of the `BpmnGateway` can be set with any of the appropriate gateways. By default, the value of `GatewayType` is `None`. The following code example explains how to create a `BPMNGateway`.
+A [BpmnGateway](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnGateway.html) is used to control the flow of a process and it is represented in diamond shape. The [GatewayType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnGateway.html#Syncfusion_Blazor_Diagram_BpmnGateway_GatewayType) property of the `BpmnGateway` can be set with any of the appropriate gateways. By default, the value of `GatewayType` is **None**. The following code example explains how to create a `BPMNGateway`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
