@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upload large file in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about uploading large files in Syncfusion Blazor File Manager component and much more.
+title: Upload large file in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about uploading large files in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
