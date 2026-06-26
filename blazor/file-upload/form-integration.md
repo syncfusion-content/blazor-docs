@@ -148,4 +148,4 @@ When the `DataForm` is submitted, the [OnSubmit](https://help.syncfusion.com/cr/
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheWNXGeJtxWIXQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor File Upload component within a DataForm.](./images/blazor-uploader-dataform.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheWNXGeJtxWIXQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor File Upload component within a DataForm](./images/blazor-uploader-dataform.gif)" %}
