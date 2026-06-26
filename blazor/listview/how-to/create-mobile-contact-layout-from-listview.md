@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create mobile contact layout using Blazor ListView | Syncfusion
-description: Checkout and learn here all about creating mobile contact layout using syncfusion blazor listview and much more.
+title: Create mobile contact layout using Blazor ListView | Syncfusion®
+description: Checkout and learn here all about creating mobile contact layout using blazor listview and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -185,4 +185,4 @@ ListDataModel item = context as ListDataModel;
 
 ```
 
-![Blazor ListView with Mobile Contact Layout](../images/list/blazor-listview-mobile-contact-layout.png)
+![Blazor ListView with Mobile Contact Layout](../images/list/blazor-listview-mobile-contact-layout.webp)

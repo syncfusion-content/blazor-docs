@@ -45,7 +45,6 @@ The `onclick` attribute is used to bind the click event for Progress Button. Her
         //onclick Event triggered
     }
 }
-
 ```
 
 ## Trace Events in Blazor ProgressButton 
@@ -57,7 +56,6 @@ The events available in ProgressButton are [OnFailure](https://help.syncfusion.c
 The following example wires the OnBegin, Progressing, and OnEnd events and displays the most recently triggered event in the UI. OnFailure is available but not shown in this sample.
 
 ```cshtml
-
 @using Syncfusion.Blazor.SplitButtons
 
 <div id="preview">@eventName Event Triggered</div>
@@ -87,7 +85,5 @@ The following example wires the OnBegin, Progressing, and OnEnd events and displ
         padding: 0 350px 0 0;
     }
 </style>
-
 ```
-
-![Tracing Events in Blazor ProgressButton](./images/blazor-progressbutton-trace-event.webp)
+![Tracing Events in Blazor ProgressButton](./images/blazor-progressbutton-trace-event.png)
