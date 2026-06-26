@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter Bar in Blazor Tree Grid Component | Syncfusion®
-description: Checkout and learn here all about Filter Bar in Blazor Tree Grid component and much more details.
+description: Checkout and learn here all the features about Filter Bar in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
