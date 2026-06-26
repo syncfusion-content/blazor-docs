@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Blazor TreeView as Accordion | Syncfusion
-description: Learn here all about how to Customize TreeView as accordion in Syncfusion Blazor TreeView component and more.
+title: Customize Blazor TreeView as Accordion | Syncfusion®
+description: Learn here all the features about how to Customize TreeView as accordion in Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
