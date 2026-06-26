@@ -91,7 +91,7 @@ Using the pivot table's built-in grouping feature to group date, number, and str
 
 Here is an example below of how the [PivotViewGroupSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) tag has been used to configure grouping for the available fields using code-behind. The date and number grouping have been set to the fields "TimeLine" and "Id", respectively.
 
-It obviously impacts the overall performance during pivot table rendering because it always consumes the input raw data, splits, reframes, and provides modified input raw data based on the fields in the report that will be used for further pivot calculations.
+It obviously impacts the overall performance during pivot table rendering because it always consumes the input raw data, splits, restructures, and provides modified input raw data based on the fields in the report that will be used for further pivot calculations.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
