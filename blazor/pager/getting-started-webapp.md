@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Pager in Blazor Web App | Syncfusion
-description: Checkout and learn how to configure and use the Blazor Pager component in a Blazor Web App for efficient navigation and paging.
+description: Check out and learn how to configure and use the Blazor Pager component in a Blazor Web App for efficient navigation and paging.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -29,6 +29,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +47,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +117,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -155,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor Pager component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component inside the razor file.
@@ -168,6 +170,11 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @* desired render mode define here *@
 @rendermode InteractiveAuto
+
+@using Syncfusion.Blazor.Navigations
+
+<SfPager PageSize="5" NumericItemsCount="4" TotalItemsCount="25">
+</SfPager>
 
 {% endhighlight %}
 {% endtabs %}
@@ -232,7 +239,7 @@ Add the [Blazor ListView](https://blazor.syncfusion.com/documentation/listview/g
 
 **2. Add Pager component**
 
-Add the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in the same file (**Pages/Index.razor**) below the **ListView**. Configure the essential properties:
+Add the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in the same file **~/Pages/*.razor** (for example, **Home.razor**) below the **ListView**. Configure the essential properties:
 
 * [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) – defines the number of items displayed per page.
 * [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) – specifies the count of numeric pager buttons.
@@ -264,7 +271,7 @@ The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
 @using Syncfusion.Blazor.Lists
 
 <div class="col-lg-12 control-section sb-property-border">
- @{
+ @ {
     var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
     <SfListView @ref="@List" DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
@@ -341,6 +348,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -356,6 +364,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 

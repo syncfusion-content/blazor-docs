@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Pager in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Pager component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Pager component in Blazor WebAssembly Application.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -153,14 +155,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Pager component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -172,10 +172,10 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Pa
 
 **1. Render ListView component**
 
-Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the **Pages/Index.razor** file and bind it to a collection:
+Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the **Pages/Home.razor** file and bind it to a collection:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Lists
@@ -228,14 +228,14 @@ Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-
 
 **2. Add Pager component**
 
-Add the `Pager` component in the same file (**Pages/Index.razor**) below the **ListView**. Configure the essential properties:
+Add the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in the same file **~/Pages/*.razor** (for example, **Home.razor**) below the **ListView**. Configure the essential properties:
 
 * [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) – defines the number of items displayed per page.
 * [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) – specifies the count of numeric pager buttons.
 * [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) – indicates the total number of records in the data source.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Navigations
 
@@ -254,14 +254,14 @@ To enable paging functionality, bind the **ListView** data for the current page 
 The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event is triggered when a pager item is clicked. This event updates the **Skip** and **Take** values dynamically according to the selected page, ensuring that the correct subset of data is displayed in the ListView.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Lists
 
 <div class="col-lg-12 control-section sb-property-border">
- @{
+ @ {
     var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
     <SfListView @ref="@List" DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
