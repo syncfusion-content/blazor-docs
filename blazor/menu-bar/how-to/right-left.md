@@ -51,4 +51,4 @@ The following example illustrates how to enable right-to-left support in Menu Ba
 
 ```
 
-![Right to Left in Blazor MenuBar](./../images/blazor-menubar-right-to-left.png)
+![Right to Left in Blazor MenuBar](./../images/blazor-menubar-right-to-left.webp)

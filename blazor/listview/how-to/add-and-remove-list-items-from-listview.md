@@ -102,4 +102,4 @@ Refer to the following steps to add or remove a list item.
 </style>
 ```
 
-![Add or Remove List Items in Blazor ListView](../images/list/blazor-listview-add-and-remove-list-items.png)
+![Add or Remove List Items in Blazor ListView](../images/list/blazor-listview-add-and-remove-list-items.webp)
