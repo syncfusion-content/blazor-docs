@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Editing in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Data Editing in Syncfusion Blazor Charts component and much more.
+title: Data Editing in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Data Editing in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

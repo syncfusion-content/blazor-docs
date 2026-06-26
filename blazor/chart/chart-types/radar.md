@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Radar in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Radar Chart in Syncfusion Blazor Charts component and much more.
+title: Radar in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Radar Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
