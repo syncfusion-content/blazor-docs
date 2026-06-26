@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State Persistence in Blazor Dashboard Layout Component | Syncfusion
+title: State Persistence in Blazor Dashboard Layout Component | Syncfusion®
 description: Checkout and learn about State Persistence in Blazor Dashboard Layout component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Dashboard Layout
@@ -55,11 +55,11 @@ N> The Dashboard Layout component's [`ID`](https://help.syncfusion.com/cr/blazor
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoNuhoTaPLpvwa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxjRLqprnQbPuC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The following output demonstrates the use of `HeaderTemplate` and `ContentTemplate` to define the header and content of panels:
 
-![Blazor Dashboard Layout.](images/blazor-admin-template-layout-with-header.png)
+![Blazor Dashboard Layout.](images/blazor-admin-template-layout-with-header.webp)
 
 ## Handling Blazor Dashboard Layout State Manually
 
@@ -130,6 +130,6 @@ The Blazor Dashboard Layout component provides built-in methods to manage its st
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVyZkBIfEuZVDNy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLdZdrqfrwvNnKZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor Dashboard Layout.](images/presistence-sample.png)
+![Blazor Dashboard Layout.](images/presistence-sample.webp)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor AutoComplete component and more.
+title: Placeholder/FloatLabel in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all about Placeholder and FloatLabel in Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -67,7 +67,7 @@ The `FloatLabelType` set to `Auto` is demonstrated in the following example.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with floating label moving above on focus and input](./images/placeholder-and-floatlabel/blazor_autocomplete_floatlabel.gif)
+![Blazor AutoComplete with floating label moving above on focus and input](./images/placeholder-and-floatlabel/blazor_autocomplete_floatlabel.webp)
 
 ## Customizing the float label element’s focusing color
 
