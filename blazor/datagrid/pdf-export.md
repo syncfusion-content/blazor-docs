@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PDF export in Blazor DataGrid | Syncfusion
-description: Learn how to export data to PDF from Syncfusion Blazor DataGrid with custom sources, aggregates, date formats, and server-side options.
+title: PDF export in Blazor DataGrid | Syncfusion®
+description: Learn how to export data to PDF from Blazor DataGrid with custom sources, aggregates, date formats, and server-side options.
 platform: Blazor
 control: DataGrid
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Event handlers in Blazor DataForm Component | Syncfusion
+title: Event handlers in Blazor DataForm Component | Syncfusion®
 description: Checkout and learn here about how to bound event handlers and recieve necessary arguments in Blazor DataForm component.
 platform: Blazor
 control: DataForm

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DropDownList options with tooltip in Blazor ComboBox | Syncfusion
-description: Learn here all about DropDownList options with tooltip in Syncfusion Blazor ComboBox component and more.
+title: DropDownList options with tooltip in Blazor ComboBox | Syncfusion®
+description: Learn here all the features about DropDownList options with tooltip in Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -64,4 +64,4 @@ The following example shows how to display a tooltip when hovering over ComboBox
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrqMBVwKYqDMxaA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Combobox displays Tooltip for Dropdown Items](../images/blazor-combobox-tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBRDxrqUDmKEzhO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Combobox displays Tooltip for Dropdown Items](../images/blazor-combobox-tooltip.webp)" %}

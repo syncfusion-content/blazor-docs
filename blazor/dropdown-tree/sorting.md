@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor Dropdown Tree component and much more.
+title: Sorting in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Sorting in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -63,4 +63,4 @@ In the following example, the [SortOrder](https://help.syncfusion.com/cr/blazor/
 }
 ```
 
-![Blazor Dropdown Tree with sortOrder descending.](./images/blazor-dropdowntree-component-sort-order.png)
+![Blazor Dropdown Tree with sortOrder descending.](./images/blazor-dropdowntree-component-sort-order.webp)
