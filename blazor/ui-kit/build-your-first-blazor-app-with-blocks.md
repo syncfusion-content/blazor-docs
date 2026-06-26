@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Build your first Blazor app with our blocks | Syncfusion
-description: Learn all about building your first Blazor app using our blocks from the Essential Blazor UI Kit in Syncfusion Essential Studio and more.
+title: Build your first Blazor app with our blocks | Syncfusion®
+description: Learn all about building your first Blazor app using our blocks from the Essential Blazor UI Kit and more.
 platform: Blazor
 control: UI Kit
 documentation: ug
@@ -70,9 +70,9 @@ If you choose **Tailwind CSS** theme, follow these steps to configure it.
       }
     </script>
     ```
-    > The Syncfusion Blazor components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
+    > The Blazor components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
 
-3. In **Components -> App.razor** file, add the style oriented CDN link for Syncfusion Blazor components in the `<head>` tag.
+3. In **Components -> App.razor** file, add the style oriented CDN link for Blazor components in the `<head>` tag.
 
    - For **light mode**:
 
@@ -122,7 +122,7 @@ If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
      ```
 
-3. In **Components -> App.razor**  file, add the style oriented CDN link for Syncfusion Blazor components in the `<head>` tag.
+3. In **Components -> App.razor**  file, add the style oriented CDN link for Blazor components in the `<head>` tag.
 
    - For **light mode**:
 
@@ -187,13 +187,13 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 > 1. In the Razor file, the **Tailwind CSS** and **Bootstrap 5.3** design code is placed in their respective if-else statements. You can copy and paste as per your requirement.
 > 2. Ignore the code within the **"SB Code - Start"** and **"SB Code - End"** comments, as it is intended solely for sample browser purposes.
 
-## Steps to install and configure Syncfusion Blazor components
+## Steps to install and configure Blazor components
 
-While copying and pasting the Razor (HTML) code, you'll notice that Syncfusion Blazor components are used. To incorporate them into **MyBlazorApp**, install the necessary packages and import the corresponding namespaces to the **Components -> _Imports.razor** file for the app to run.
+While copying and pasting the Razor (HTML) code, you'll notice that Blazor components are used. To incorporate them into **MyBlazorApp**, install the necessary packages and import the corresponding namespaces to the **Components -> _Imports.razor** file for the app to run.
 
-In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting Razor (HTML) code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Syncfusion Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
+In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting Razor (HTML) code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
 
-![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.webp)
+![Adding required packages for components](images/adding-required-packages-for-syncfusion-components.webp)
 
 Once the necessary packages are added, run the following command via the terminal to install those packages.
 
@@ -201,9 +201,9 @@ Once the necessary packages are added, run the following command via the termina
 dotnet restore
 ```
 
-After restoring the packages, import the required namespaces `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs` in the _Imports.razor file to enable Syncfusion components in the application.
+After restoring the packages, import the required namespaces `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs` in the _Imports.razor file to enable Blazor components in the application.
 
-![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.webp)
+![Importing Namespaces](images/import-syncfusion-namespaces.webp)
 
 Finally, again check the [online demo](https://blazor.syncfusion.com/essential-ui-kit) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
 

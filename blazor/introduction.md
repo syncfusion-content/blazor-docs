@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Introduction to Syncfusion Blazor Components
+title: Introduction to Blazor Components | 
 description: Overview of Syncfusion’s native Blazor UI components for building responsive, lightweight Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Welcome to Syncfusion® Blazor Components
+# Welcome to Blazor Components
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is an enterprise-grade, native UI components library for creating Blazor Web, Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications. The library is engineered for performance, keyboard-first accessibility, and global reach, with rich data visualization and productivity components.
+Blazor Components is an enterprise-grade, native UI components library for creating Blazor Web, Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications. The library is engineered for performance, keyboard-first accessibility, and global reach, with rich data visualization and productivity components.
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** Discover the full potential of Blazor components with AI Coding Assistant. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistant](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 ## Why teams choose us?
 
@@ -574,17 +574,17 @@ padding-top: 20px;
     * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
 * Visual Studio
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+    * [Getting started with Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+    * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
 * .NET CLI
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app-dotnet-cli)
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+    * [Getting started with Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app-dotnet-cli)
+    * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
 * Visual Studio for Mac
 
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
+    * [Getting started with Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
 
-    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)
+    * [Getting started with Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)

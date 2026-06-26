@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Build a Blazor stay reservation app - Syncfusion
-description: Learn here about step-by-step tutorial to build a Blazor stay reservation application using Syncfusion Blazor components like Scheduler, Sidebar, and Toast.
+title: Build a Blazor stay reservation app | Syncfusion®
+description: Learn here about step-by-step tutorial to build a Blazor stay reservation application using Blazor components like Scheduler, Sidebar, and Toast.
 platform: Blazor
 control: Tutorials
 documentation: ug
@@ -9,10 +9,10 @@ documentation: ug
 
 # Build a Blazor stay reservation app with Syncfusion® Blazor components
 
-This tutorial explains how to build a stay reservation application. It demonstrates how to use the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler** component as the centerpiece of a booking system, with filtering, a booking form, and a responsive layout.
+This tutorial explains how to build a stay reservation application. It demonstrates how to use the **Blazor Scheduler** component as the centerpiece of a booking system, with filtering, a booking form, and a responsive layout.
 
 By the end of this tutorial, the reader will be able to:
-* Set up a Blazor project with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+* Set up a Blazor project with components.
 * Configure the Blazor Scheduler for a reservation system.
 * Manage application state using a dependency-injected service.
 * Build a filterable sidebar with checkboxes and accordions.
@@ -35,7 +35,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-## Add and configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
+## Add and configure Blazor components
 
 Next, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor libraries to the project. Packages are required for the Scheduler, navigation elements (such as Sidebar and Accordion), and input components.
 
@@ -53,11 +53,11 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-Configure the app to recognize and style the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
+Configure the app to recognize and style the components.
 
-1.  **Register Syncfusion<sup style="font-size:70%">&reg;</sup> services**
+1.  **Register Blazor services**
 
-    In `Program.cs`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service.
+    In `Program.cs`, register the Blazor service.
 
     ```csharp
     // Add the following line before builder.Build()
@@ -66,7 +66,7 @@ Configure the app to recognize and style the Syncfusion<sup style="font-size:70%
 
 2.  **Add theme and script references**
 
-    Open `Components/App.razor`. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet and the script reference for component interactivity. This example uses the `tailwind.css` theme.
+    Open `Components/App.razor`. Add the theme stylesheet and the script reference for component interactivity. This example uses the `tailwind.css` theme.
 
     ```html
     <head>
@@ -618,6 +618,6 @@ Try the live demo: [https://blazor.syncfusion.com/showcase/stay-reservation](htt
 
 ## Summary
 
-This guide demonstrates how to build a functional and interactive stay reservation application. It shows how to compose a complex UI by combining Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as **Scheduler**, **Sidebar**, **AppBar**, **Accordion**, **Inputs**, and **DropDowns**.
+This guide demonstrates how to build a functional and interactive stay reservation application. It shows how to compose a complex UI by combining Blazor components such as **Scheduler**, **Sidebar**, **AppBar**, **Accordion**, **Inputs**, and **DropDowns**.
 
 A clean state management pattern is implemented using a singleton service, allowing the components to communicate and share data seamlessly. This architecture is scalable and makes the application easier to maintain and extend with new features.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: System requirements for Syncfusion Blazor
-description: Requirements to develop and run Syncfusion Blazor components, including supported IDEs and .NET SDK versions.
+title: System requirements for Blazor Components | Syncfusion®
+description: Requirements to develop and run Blazor components, including supported IDEs and .NET SDK versions and much more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Blazor applications can be developed using the following IDEs or the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications (Blazor Server and Blazor WebAssembly) can be developed, hosted, and run on all major [platforms supported by Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-9.0), including Windows, Linux, and macOS.
+Blazor applications (Blazor Server and Blazor WebAssembly) can be developed, hosted, and run on all major [platforms supported by Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-9.0), including Windows, Linux, and macOS.
 
 ## Integrated Development Environment
 
@@ -26,7 +26,7 @@ Blazor applications can be developed using the following IDEs. Development is al
 
 One of the following .NET SDKs is required to develop and run Blazor applications.
 
-| .NET SDK | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Version |
+| .NET SDK | Blazor Components Version |
 | ------------- | ------------- |
 | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) | 31.2.10 and above |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |

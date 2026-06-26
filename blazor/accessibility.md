@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor - Syncfusion
-description: Check out and learn here all about the accessibility support of syncfusion blazor component and more.
+title: Accessibility in Blazor | Syncfusion®
+description: Check out and learn here all the features about the accessibility support of blazor component and much more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript UI controls follows WAI-ARIA accessibility standard by default. This enables you to build accessible web application which are fully navigable by users with disabilities.
+The JavaScript UI controls follows WAI-ARIA accessibility standard by default. This enables you to build accessible web application which are fully navigable by users with disabilities.
 
 ## Keyboard navigation
 
