@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show or Hide columns in Dialog editing in Blazor TreeGrid | Syncfusion
-description: Learn here all about how to show or hide columns in Dialog editing in Syncfusion Blazor TreeGrid component and more.
+title: Show or Hide columns in Dialog editing in Blazor TreeGrid | Syncfusion®
+description: Learn here all about how to show or hide columns in Dialog editing in Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug

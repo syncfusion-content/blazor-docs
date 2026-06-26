@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Spanning in Blazor Tree Grid Component | Syncfusion
-description: Check out here and learn more details about the row spanning in the Syncfusion Blazor Tree Grid component.
+title: Row Spanning in Blazor Tree Grid Component | Syncfusion®
+description: Check out here and learn more details about the row spanning in the Blazor Tree Grid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -1045,4 +1045,4 @@ The following list outlines the features that are not compatible with row spanni
 
 ## See also
 
-* [Column Spanning in Syncfusion<sup style="font-size:70%">&reg;</sup> TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/columns/column-spanning)
+* [Column Spanning in TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/columns/column-spanning)
