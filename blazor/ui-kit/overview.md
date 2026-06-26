@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Essential UI Kit for Blazor | Syncfusion®
-description: Learn all about the overview of the Essential UI Kit for Blazor and more here.
+description: Learn all about the overview of the Essential UI Kit for Blazor in Essential Studio and more here.
 platform: Blazor
 control: UI Kit 
 documentation: ug

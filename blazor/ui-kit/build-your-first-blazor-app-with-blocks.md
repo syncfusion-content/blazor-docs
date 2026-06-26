@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Build your first Blazor app with our blocks | Syncfusion®
-description: Learn all about building your first Blazor app using our blocks from the Essential Blazor UI Kit and more.
+description: Learn all about building your first Blazor app using our blocks from the Essential Blazor UI Kit in Essential Studio and more.
 platform: Blazor
 control: UI Kit
 documentation: ug
@@ -193,7 +193,7 @@ While copying and pasting the Razor (HTML) code, you'll notice that Blazor compo
 
 In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting Razor (HTML) code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
 
-![Adding required packages for components](images/adding-required-packages-for-syncfusion-components.webp)
+![Adding required packages for Blazor components](images/adding-required-packages-for-syncfusion-components.webp)
 
 Once the necessary packages are added, run the following command via the terminal to install those packages.
 

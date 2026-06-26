@@ -7,7 +7,7 @@ control: Tutorials
 documentation: ug
 ---
 
-# Build a Blazor stay reservation app with Syncfusion® Blazor components
+# Build a Blazor stay reservation app with  Blazor components
 
 This tutorial explains how to build a stay reservation application. It demonstrates how to use the **Blazor Scheduler** component as the centerpiece of a booking system, with filtering, a booking form, and a responsive layout.
 
@@ -39,7 +39,7 @@ cd BlazorApp
 
 Next, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor libraries to the project. Packages are required for the Scheduler, navigation elements (such as Sidebar and Accordion), and input components.
 
-Install the following essential Syncfusion® Blazor NuGet packages:
+Install the following essential  Blazor NuGet packages:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -53,7 +53,7 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-Configure the app to recognize and style the components.
+Configure the app to recognize and style the Blazor components.
 
 1.  **Register Blazor services**
 

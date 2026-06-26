@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to Blazor Components | 
+title: Introduction to Blazor Components | Syncfusion®
 description: Overview of Syncfusion’s native Blazor UI components for building responsive, lightweight Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Common

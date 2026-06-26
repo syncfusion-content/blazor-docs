@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for
 
 Use the following steps to upgrade the Syncfusion version in a Blazor application using Visual Studio 2022 or Visual Studio 2026:
 
-N> Before use the Blazor Project Migration, check whether the Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
+N> Before use the Blazor Project Migration, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
 
 1. Open the Blazor application that uses Blazor components.
 
