@@ -87,4 +87,4 @@ The accessibility compliance of the Calendar component is shown in the following
 
 ## See also
 
-* [Accessibility in components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
