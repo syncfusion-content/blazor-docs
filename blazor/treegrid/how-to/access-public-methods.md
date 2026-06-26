@@ -59,6 +59,7 @@ The following example shows how to invoke the [PrintAsync](https://help.syncfusi
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Sample data model
 
