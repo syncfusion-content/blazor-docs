@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Message Component | Syncfusion
+title: Getting Started with Blazor Message Component | Syncfusion®
 description: Check out and learn about getting started with the Blazor Message component in Blazor WebAssembly Application.
 platform: Blazor
 control: Message
@@ -111,9 +111,9 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor service
+## Register Blazor service
 
-Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
+Register the Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
