@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Generate AI insights with Blazor DataGrid and AI models | Syncfusion®
-description: Learn how to use Blazor DataGrid with Azure OpenAI or Ollama to analyze sales orders, generate AI insights, and highlight flagged records.
+title: Generate AI insights with Blazor DataGrid and AI models | Syncfusion
+description: Learn how to use Syncfusion Blazor DataGrid with Azure OpenAI or Ollama to analyze sales orders, generate AI insights, and highlight flagged records.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor DataGrid, AI insights, sales order analysis, Blazor AI
+keywords: Blazor DataGrid, AI insights, sales order analysis, Syncfusion Blazor AI
 ---
 
 # Generate AI insights with Blazor DataGrid and AI models
@@ -16,7 +16,7 @@ If you have not created a Blazor application yet, refer to the [Blazor getting s
 
 ## Prerequisites
 
-Install the required Blazor and AI service NuGet packages based on the selected AI service.
+Install the required Syncfusion and AI service NuGet packages based on the selected AI service.
 
 ### For Azure OpenAI
 
