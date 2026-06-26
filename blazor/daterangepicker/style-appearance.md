@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about style and appearance in Syncfusion Blazor DateRangePicker component and more.
+title: Style and appearance in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about style and appearance in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug

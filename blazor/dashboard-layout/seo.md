@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SEO Analysis in Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn here all about SEO Analysis Dashboard in Syncfusion Blazor Dashboard Layout component and more.
+title: SEO Analysis in Blazor Dashboard Layout Component | Syncfusion®
+description: Checkout and learn here all about SEO Analysis Dashboard in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # SEO Analysis in Blazor Dashboard Layout Component
 
-The Blazor Dashboard Layout component is highly effective for creating dynamic and responsive dashboards in Blazor applications. This guide demonstrates how to build a real-time SEO (Search Engine Optimization) data analysis dashboard by integrating various Syncfusion Blazor components within the Dashboard Layout.
+The Blazor Dashboard Layout component is highly effective for creating dynamic and responsive dashboards in Blazor applications. This guide demonstrates how to build a real-time SEO (Search Engine Optimization) data analysis dashboard by integrating various Blazor components within the Dashboard Layout.
 
 This complex example showcases how to combine an `SfDashboardLayout` with `SfSidebar`, `SfAccumulationChart`, `SfChart`, and `SfGrid` components to present a comprehensive view of SEO metrics.
 
