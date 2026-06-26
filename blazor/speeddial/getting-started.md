@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor SpeedDial in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor SpeedDial component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Speed Dial in Blazor WASM App | Syncfusion
+description: Checkout and learn about getting started with Blazor Speed Dial component in Blazor WebAssembly Application.
 platform: Blazor
-control: SpeedDial
+control: Speed Dial
 documentation: ug
 ---
 
-# Getting Started with Blazor SpeedDial in Blazor WASM App
+# Getting Started with Blazor Speed Dial in Blazor WASM App
 
-This section briefly explains about how to include [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component to a Blazor WebAssembly application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component to a Blazor WebAssembly application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -155,9 +155,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor SpeedDial component
+## Add Blazor Speed Dial component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -182,7 +182,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor SpeedDial component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Speed Dial component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -254,7 +254,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons
 
 ## Item clicked event
 
-The SpeedDial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) when an action item is clicked. Use this event to perform the required action.
+The Speed Dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) when an action item is clicked. Use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

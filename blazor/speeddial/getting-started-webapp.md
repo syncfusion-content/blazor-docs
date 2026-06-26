@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Blazor SpeedDial in Blazor Web App | Syncfusion
-description: Checkout and learn the documentation for getting started with Blazor SpeedDial Components in Blazor Web App.
+title: Getting Started with Blazor Speed Dial in Blazor Web App | Syncfusion
+description: Checkout and learn the documentation for getting started with Blazor Speed Dial Components in Blazor Web App.
 platform: Blazor
-control: SpeedDial
+control: Speed Dial
 documentation: ug
 ---
 
-# Getting Started with Blazor SpeedDial in Blazor Web App
+# Getting Started with Blazor Speed Dial in Blazor Web App
 
-This section briefly explains about how to include [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -159,9 +159,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor SpeedDial component
+## Add Blazor Speed Dial component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -193,7 +193,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor SpeedDial component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Speed Dial component will render in your default web browser.
 
 {% endtabcontent %}
 
