@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Labels in Syncfusion Blazor TreeMap component and much more details.
+title: Labels in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features Labels in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layout in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Layout in Syncfusion Blazor TreeMap component and much more details.
+title: Layout in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features Layout in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug

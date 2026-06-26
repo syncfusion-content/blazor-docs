@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor TreeMap component and much more.
+title: Data Binding in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features Data Binding in Blazor TreeMap component and much more.
 platform: Blazor
 control: TreeMap
 documentation: ug

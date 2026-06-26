@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Levels in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Levels in Syncfusion Blazor TreeMap component and much more details.
+title: Levels in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features Levels in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
