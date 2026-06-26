@@ -214,7 +214,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
     ```
 3. The application will start and display in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhJjsKXKHvqsDGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar Component](./images/blazor-sidebar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhJjsKXKHvqsDGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar Component](./images/blazor-sidebar.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sidebar).
 
@@ -273,7 +273,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 
 N> Class can be added to the Sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of Sidebar element.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTjsAXUHEgsGGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTjsAXUHEgsGGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.webp)" %}
 
 ## Enable Animation
 
@@ -326,7 +326,7 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJNCKjKGsidAEC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar with Animation](./images/blazor-sidebar-animation.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJNCKjKGsidAEC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar with Animation](./images/blazor-sidebar-animation.webp)" %}
 
 ## Navigation with Blazor Sidebar
 
@@ -498,7 +498,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBzXCKZgcBckYGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBzXCKZgcBckYGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.webp)" %}
 
 ## Advantages of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sidebar
 

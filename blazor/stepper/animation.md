@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Animation in Blazor Stepper Component | Syncfusion
+title: Animation in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Animation with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -33,4 +33,4 @@ The example demonstrates the animation `Duration` and `Delay` settings for the S
 </SfStepper>
 ```
 
-![Blazor Stepper Component with Animation](./images/Blazor-animation.png)
+![Blazor Stepper Component with Animation](./images/Blazor-animation.webp)

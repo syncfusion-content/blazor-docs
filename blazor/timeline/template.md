@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about the template in Syncfusion Blazor Timeline component and more details.
+title: Template in Blazor Timeline Component | Syncfusion®
+description: Checkout and learn here all the features about the template in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -169,4 +169,4 @@ The `Template` context receives the following information:
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIitWNVdDBCoBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Template](./images/Blazor-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBIitWNVdDBCoBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Template](./images/Blazor-template.webp)" %}

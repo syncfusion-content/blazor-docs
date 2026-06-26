@@ -105,7 +105,7 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet add package Syncfusion.Blazor.LinearGauge -v {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.LinearGauge -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +155,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor Linear Gauge component
+## Add Blazor LinearGauge component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component inside the razor file.
 
