@@ -50,7 +50,7 @@ cd MauiBlazorApp
 
 {% endtabcontents %}
 
-## Install the required Blazor packages
+## Install required Blazor packages
 
 Install the [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package Syncfusion.Blazor.Maps --version {{ site.releaseversion }}).
 
@@ -83,7 +83,7 @@ N> The `~/` notation represents the root directory of your project. This file is
 
 ## Register Blazor service
 
-Register the Blazor service in the **~/MauiProgram.cs** file. This step enables the Blazor components to work in your application.
+Register the Blazor service in the **~/MauiProgram.cs** file. This step enables the Syncfusion components to work in your application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" %}
@@ -108,7 +108,7 @@ public static class MauiProgram
 
 ## Add script resources
 
-The JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file (this is the root HTML file of your application).
+The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file (this is the root HTML file of your application).
 
 ```html
 

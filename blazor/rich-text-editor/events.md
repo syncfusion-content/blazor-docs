@@ -23,6 +23,7 @@ This section explains the list of events of the Rich Text Editor component which
 <SfRichTextEditor>
    <RichTextEditorEvents OnActionBegin="@OnActionBeginHandler" ></RichTextEditorEvents>
 </SfRichTextEditor>
+
 @code{
     public void OnActionBeginHandler(ActionBeginEventArgs args)
     {
@@ -57,7 +58,7 @@ This section explains the list of events of the Rich Text Editor component which
 
 ## OnDialogOpen
 
-[OnDialogOpen]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnDialogOpen)) event triggers when the dialog is being opened.
+[OnDialogOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnDialogOpen) event triggers when the dialog is being opened.
 
 {% tabs %}
 {% highlight razor %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set the Read-only TextBox in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about how to set the read-only TextBox in Syncfusion Blazor TextBox component and more.
+title: Set the Read-only TextBox in Blazor TextBox Component | Syncfusion®
+description: Checkout and learn here all about how to set the read-only TextBox in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
