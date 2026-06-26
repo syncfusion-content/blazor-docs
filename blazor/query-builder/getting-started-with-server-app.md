@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Getting Started with Blazor Query Builder in Server App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor QueryBuilder Components in Blazor Server App.
+description: Check out and learn the documentation for getting started with Blazor Query Builder Components in Blazor Server App.
 platform: Blazor
-control: QueryBuilder
+control: Query Builder
 documentation: ug
 ---
 
@@ -239,7 +239,7 @@ dotnet run
 
 {% endtabcontents %}
 
-![Blazor QueryBuilder Component](./images/blazor-querybuilder-component.webp)
+![Blazor Query Builder Component](./images/blazor-querybuilder-component.webp)
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/QueryBuilder)
 

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Getting Started with Blazor Query Builder in WASM App | Syncfusion
-description: Check out and learn about getting started with Blazor QueryBuilder component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Query Builder component in Blazor WebAssembly Application.
 platform: Blazor
-control: QueryBuilder
+control: Query Builder
 documentation: ug
 ---
 
@@ -155,7 +155,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor QueryBuilder component
+## Add Blazor Query Builder component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component inside the razor file.
 
