@@ -221,7 +221,7 @@ A basic Dashboard Layout panel can display simple data. The panel's header is de
 
 The Dashboard Layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHNxhgKwFngyBq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLRtHLxzqwJlAsL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
 
 ### Panels with Components
 
