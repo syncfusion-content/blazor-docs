@@ -111,7 +111,7 @@ Replace `../path/to/YourBlazorApp/YourBlazorApp.csproj` with the actual relative
 
 ### Write a bUnit test
 
-Create a `TestBase` class that serves as the base for all test classes. It registers the Syncfusion Blazor service, enables options support, and sets the JS interop to Loose mode so that JavaScript calls from Blazor components are accepted without throwing errors during testing.
+Create a `TestBase` class that serves as the base for all test classes. It registers the Blazor service, enables options support, and sets the JS interop to Loose mode so that JavaScript calls from Blazor components are accepted without throwing errors during testing.
 
 The `TestBase` base class differs by framework: `xUnit` inherits bUnit's `TestContext`, whereas `NUnit` and `MSTest` inherit bUnit's `BunitContext`.
 

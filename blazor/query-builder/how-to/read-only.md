@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Readonly in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Readonly in Syncfusion Blazor QueryBuilder component and much more.
+title: Readonly in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about Readonly in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
