@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Blazor ListView Component to Grid Layout | Syncfusion
-description: Learn here all about customizing listview as grid layout in Syncfusion Blazor ListView component and more.
+title: Customize Blazor ListView Component to Grid Layout | Syncfusion®
+description: Learn here all about customizing listview as grid layout in Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -474,4 +474,4 @@ The below code explains adding, removing, searching and sorting within a list of
 </style>
 ```
 
-![Blazor ListView with Grid Layout](../images/list/blazor-listview-with-grid-layout.png)
+![Blazor ListView with Grid Layout](../images/list/blazor-listview-with-grid-layout.webp)

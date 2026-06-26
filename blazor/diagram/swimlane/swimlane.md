@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Swimlane in Blazor Diagram Component | Syncfusion
-description: Check out and learn here all about swimlane support in Syncfusion Blazor Diagram component and more.
+title: Swimlane in Blazor Diagram Component | Syncfusion®
+description: Check out and learn here all about swimlane support in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -323,7 +323,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 Define custom spacing between a lane or phase header and its child elements (nodes, connectors, or groups) using the [ChildrenSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_ChildrenSpacing) property, which accepts a `DiagramThickness` with `Top`, `Bottom`, `Left`, and `Right` values.
 
-By default, `ChildrenSpacing` is 20 pixels on all sides. Adjust these values to control padding between the header and its children within the `Swimlane`.
+By default, `ChildrenSpacing` is **20 pixels** on all sides. Adjust these values to control padding between the header and its children within the `Swimlane`.
 
 The following example shows how to apply custom spacing using `ChildrenSpacing` property.
 
