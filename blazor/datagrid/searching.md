@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in Blazor DataGrid | Syncfusion
-description: Learn search options in Syncfusion Blazor DataGrid including toolbar, initial, external search, operators, multi-keyword, and accent-insensitive support.
+title: Searching in Blazor DataGrid | Syncfusion®
+description: Learn search options in Blazor DataGrid including toolbar, initial, external search, operators, multi-keyword, and accent-insensitive support.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -720,7 +720,7 @@ The search-on-keystroke approach enables real-time results while typing in the s
 
 ## Perform search operation in Grid using multiple keywords
 
-The DataGrid can also be searched using multiple criteria. Build compound predicates with the grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Syncfusion Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
+The DataGrid can also be searched using multiple criteria. Build compound predicates with the grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis Labels in Blazor 3D Chart Component | Syncfusion
+title: Axis Labels in Blazor 3D Chart Component Syncfusion®
 description: Checkout and learn here all features about the Axis Labels in Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
