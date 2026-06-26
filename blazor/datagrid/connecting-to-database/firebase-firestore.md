@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid connected to Firebase Firestore | Syncfusion
+title: Blazor Data Grid connected to Firebase Firestore | Syncfusion®
 description: Bind Firebase Firestore data to Blazor Data Grid using Google.Cloud.Firestore with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid
@@ -152,7 +152,7 @@ Required APIs are now enabled for the application.
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template.
 This template automatically generates essential starter files—such as **Program.cs, appsettings.json, the wwwroot folder, and the Components folder**.
 
-For this guide, a Blazor application named **Grid_Firebase_Firestore** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and Syncfusion DataGrid components.
+For this guide, a Blazor application named **Grid_Firebase_Firestore** has been created. Once the project is set up, the next step involves installing the required NuGet packages. NuGet packages are software libraries that add functionality to the Blazor application. These packages enable Firebase Firestore integration and DataGrid components.
 
 **Method 1: Using Package Manager Console**
 
@@ -830,7 +830,7 @@ public async Task<bool> BulkImportBooksAsync(List<Book> books)
 
 ### Step 9: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Firestore service and Syncfusion components.
+The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Firestore service and components.
 
 **Instructions:**
 
@@ -848,7 +848,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register Syncfusion Blazor services
+// Register Blazor services
 builder.Services.AddSyncfusionBlazor();
 
 // Register Firebase Firestore service for dependency injection
@@ -877,14 +877,14 @@ app.Run();
 **Explanation:**
 
 - **`using Grid_Firebase_Firestore.Services;`**: Imports the namespace to access the `FirebaseService` class
-- **`builder.Services.AddSyncfusionBlazor();`**: Registers Syncfusion Blazor services globally
+- **`builder.Services.AddSyncfusionBlazor();`**: Registers Blazor services globally
 - **`builder.Services.AddScoped<FirebaseService>();`**: Registers `FirebaseService` with scoped lifetime (creates a new instance per HTTP request)
 
 The service registration has been completed successfully in `Program.cs`.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Install and Configure Blazor DataGrid Components
 
@@ -903,20 +903,20 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Syncfusion.Blazor.DropDowns
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
 
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-> For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+> For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-> Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+> Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor DataGrid | Syncfusion
-description: Learn how to group data, manage drop area visibility, persist group state, and sort or format grouped columns in the Syncfusion Blazor DataGrid.
+title: Grouping in Blazor DataGrid | Syncfusion®
+description: Learn how to group data, manage drop area visibility, persist group state, and sort or format grouped columns in the Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
