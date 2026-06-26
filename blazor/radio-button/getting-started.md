@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Blazor Radio Button in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor RadioButton component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Radio Button in WASM App | Syncfusion
+description: Check out and learn about getting started with Blazor RadioButton component in Blazor WebAssembly Application.
 platform: Blazor
 control: Radio Button
 documentation: ug
@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -47,6 +48,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,10 +161,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Radio Button component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Radio Button](https://www.syncfusion.com/blazor-components/blazor-radio-button) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Radio Button](https://www.syncfusion.com/blazor-components/blazor-radio-button) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -222,8 +224,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-
-N> Explore the [Blazor Radio Button example](https://blazor.syncfusion.com/demos/buttons/radio-button) that demonstrates rendering and configuration of the Radio Button.
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
