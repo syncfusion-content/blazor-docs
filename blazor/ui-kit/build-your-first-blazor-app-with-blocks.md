@@ -1,623 +1,226 @@
 ---
 layout: post
-title: Build a Blazor stay reservation app - Syncfusion
-description: Learn here about step-by-step tutorial to build a Blazor stay reservation application using Syncfusion Blazor components like Scheduler, Sidebar, and Toast.
+title: Build your first Blazor app with our blocks | Syncfusion
+description: Learn all about building your first Blazor app using our blocks from the Essential Blazor UI Kit in Syncfusion Essential Studio and more.
 platform: Blazor
-control: Tutorials
+control: UI Kit
 documentation: ug
 ---
 
-# Build a Blazor stay reservation app with Syncfusion® Blazor components
+# Build your first Blazor App with our blocks
 
-This tutorial explains how to build a stay reservation application. It demonstrates how to use the **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler** component as the centerpiece of a booking system, with filtering, a booking form, and a responsive layout.
+This tutorial guides you through building a Blazor Web App using Syncfusion's UI Kit blocks. It demonstrates how to set up a new Blazor Server project, choose between Tailwind CSS or Bootstrap 5.3 themes, and add a sign-in block in your application. The goal is to help developers quickly build responsive, modern web apps using a variety of prebuilt blocks with minimal effort.
 
-By the end of this tutorial, the reader will be able to:
-* Set up a Blazor project with Syncfusion<sup style="font-size:70%">&reg;</sup> components.
-* Configure the Blazor Scheduler for a reservation system.
-* Manage application state using a dependency-injected service.
-* Build a filterable sidebar with checkboxes and accordions.
-* Combine multiple components to create a polished application.
+## Create a new Blazor App
+A Blazor Web App is used for this example. To create a new app, follow the official setup guide [here](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named **MyBlazorApp**.
 
-## Prerequisites
+> This tutorial focuses on using Blazor Server rendering mode rather than Blazor WebAssembly.
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+![New Blazor App](images/new-blazor-app.webp)
 
-## Create the Blazor Web App
+## Setting up Tailwind CSS or Bootstrap 5.3 theme in the app
 
-Create a new Blazor Web App (**Server** rendering) by using the following command in the integrated terminal or command prompt.
+After creating the new Blazor app named **MyBlazorApp**, open it in Visual Studio Code (which will be used throughout this walkthrough). The next step is to choose a theme, either Tailwind CSS or Bootstrap 5.3, in either light or dark mode, and configure the app accordingly.
 
-{% tabs %}
-{% highlight c# %}
+### Tailwind CSS configuration
 
-dotnet new blazor -o StayReservation -int Server
-cd BlazorApp
+If you choose **Tailwind CSS** theme, follow these steps to configure it.
 
-{% endhighlight %}
-{% endtabs %}
+1. In **Components -> App.razor** file, add the following code for light mode (`class="light"`) and dark mode (`class="dark"`) in the `<html>` tag.
 
-## Add and configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
-
-Next, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor libraries to the project. Packages are required for the Scheduler, navigation elements (such as Sidebar and Accordion), and input components.
-
-Install the following essential Syncfusion® Blazor NuGet packages:
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-dotnet add package Syncfusion.Blazor.Schedule --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Notifications --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Navigations --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Inputs --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-Configure the app to recognize and style the Syncfusion<sup style="font-size:70%">&reg;</sup> components.
-
-1.  **Register Syncfusion<sup style="font-size:70%">&reg;</sup> services**
-
-    In `Program.cs`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service.
-
-    ```csharp
-    // Add the following line before builder.Build()
-    builder.Services.AddSyncfusionBlazor();
-    ```
-
-2.  **Add theme and script references**
-
-    Open `Components/App.razor`. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> theme stylesheet and the script reference for component interactivity. This example uses the `tailwind.css` theme.
+    - For **light mode**:
 
     ```html
-    <head>
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
-        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-        ....
-    </head>
-    ....
-    
+    <html lang="en" class="light">
     ```
 
-3.  **Add namespace imports**
+    - For **dark mode**:
 
-    Open the **~/_Imports.razor** file and import the following namespaces.
-
-    ```csharp
-    @using Syncfusion.Blazor.Schedule
-    @using Syncfusion.Blazor.Navigations
-    @using Syncfusion.Blazor.Buttons
-    @using Syncfusion.Blazor.Calendars
-    @using Syncfusion.Blazor.Inputs
-    @using Syncfusion.Blazor.DropDowns
+    ```html
+    <html lang="en" class="dark">
     ```
 
-## Define the data and state management service
+2. In **Components -> App.razor** file, add the following scripts in the `<head>` tag. The main purpose of these scripts is to dynamically generate the appropriate Tailwind CSS classes at runtime based on the styles used in the application, and to replace the primary (highlight) color in the CSS with a custom indigo color palette.
 
-A real-world app needs a way to manage its data and state. Create an `AppointmentService` to act as a central hub for reservation data and UI state. Inject this service into components that need to share information.
-
-A real-world app needs a way to manage its data and state. For this, we'll create an `AppointmentService` to act as a central hub for our reservation data and UI state. This service will be injected into the components that need to share information.
-
-First, define your data model in `Data/AppointmentData.cs`:
-
-```csharp
-public class AppointmentData
-{
-    public int Id { get; set; }
-    [Required]
-    public string Subject { get; set; }
-    public DateTime StartTime { get; set; }
-    public DateTime EndTime { get; set; }
-    public bool IsAllDay { get; set; } = false;
-    public string RecurrenceRule { get; set; }
-    public string RecurrenceException { get; set; }
-    public Nullable<int> RecurrenceID { get; set; }
-    public int FloorId { get; set; } // Represents the resource
-    public int RoomId { get; set; }
-    public string Price { get; set; }
-    public int Nights { get; set; }
-    public int Adults { get; set; }
-    public int Children { get; set; }
-    [Required]
-    public string Purpose { get; set; }
-    [Required]
-    public int Proof { get; set; }
-    [Required]
-    public string ProofNumber { get; set; }
-    [Required]
-    [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Invalid email address")]
-    public string Email { get; set; }
-    [Required]
-    [RegularExpression("^[0-9]{10}$", ErrorMessage = "Invalid Phone Number")]
-    public string Phone { get; set; }
-    public string BorderColor { get; set; }
-}
-```
-
-Create `AppointmentService.cs` in the `Data` folder. This service holds the appointment list and references to components.
-
-The complete code for `AppointmentService.cs` is available in the GitHub repository at the following link: [`AppointmentService.cs`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Data/AppointmentService.cs). You may reuse the full code as needed.
-
-```csharp
-public class AppointmentService
-{
-    // Holds all reservation data
-    public List<AppointmentData> appointmentData { get; set; } = new List<AppointmentData>();
-
-    // References to UI components to allow interaction
-    public SfSchedule<AppointmentData> ScheduleRef { get; set; }
-    public SfSidebar SidebarRef { get; set; }
-
-    // State for filters
-    public DateTime CurrentDate { get; set; } = DateTime.Now;
-    public bool SelectAllChecked { get; set; } = true;
-    public bool GroundFloorChecked { get; set; } = true;
-    // ... add bools for other floors
-}
-```
-
-Register this service as a singleton in `Program.cs`:
-
-```csharp
-builder.Services.AddSingleton<AppointmentService>();
-```
-
-## Build the UI components
-
-The application has three main UI parts: the sidebar for calendar date navigation and filtering rooms (`Sidebar.razor`), the scheduler view (`Schedule.razor`), and the main page (`Index.razor`) that assembles them.
-
-### The Filtering Sidebar (`Sidebar.razor`)
-
-This component uses an `<SfSidebar>` to contain the calendar and filters. An `<SfCalendar>` allows the user to select the desired date in the scheduler. An `<SfAccordion>` organizes the filters, `<SfCheckBox>` component which floors are displayed. `<SfSlider>` filters the price range.
-
-```html
-@using StayReservation.Data
-@inject AppointmentService Service
-
-<SfSidebar id="default-sidebar" class="app-sidebar" @ref="Service.SidebarRef">
-    <ChildContent>
-        <div class="sidebar-header">
-            <div class="sidebar-title">Filter By</div>
-            <SfButton CssClass="sidebar-close e-flat e-small e-round" IconCss="e-icons e-close"
-                OnClick="SidebarClose" />
-        </div>
-        <Calendar></Calendar>
-        <div class="filter-container">
-            <SfAccordion class="app-filters">
-                <AccordionItems>
-                    <AccordionItem Header="Floors">
-                        <ContentTemplate>
-                            <div class="checkbox-filter-container">
-                                <div class="floor-filter">
-                                    <SfCheckBox Label="Select All" @bind-Checked="Service.SelectAllChecked"></SfCheckBox>
-                                </div>
-                                <div class="floor-filter">
-                                    <SfCheckBox Label="Ground Floor" @bind-Checked="Service.GroundFloorChecked"></SfCheckBox>
-                                </div>
-                                <!-- Repeat for other floors -->
-                            </div>
-                        </ContentTemplate>
-                    </AccordionItem>
-                    <AccordionItem Header="Price">
-                        <ContentTemplate>
-                            <div class="price-filter-container">
-                            <SfSlider Type=SliderType.Range Value="Service.Range" CssClass="app-slider" Min="0" Max="500" @ref="Service.RangeSliderRef">
-                            <SliderEvents TValue="int[]" OnTooltipChange="@OnSliderValueChanged" Created="OnSliderCreated "></SliderEvents>
-                             <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" ShowOn="TooltipShowOn.Always"></SliderTooltip>
-                            </SfSlider>
-                                <div class="slider-price">
-                                    <span class="slider-label-start">$0</span>
-                                    <span class="slider-label-end">$500</span>
-                                </div>
-                            </div>
-                            </ContentTemplate>
-                        </AccordionItem>
-                        <AccordionItem Header="Features">
-                            <ContentTemplate>
-                                <div class="checkbox-filter-container">
-                                    <div class="filter-checkbox">
-                                    <SfCheckBox TChecked="bool" Label="Television" @bind-Checked="Service.TelevisionChecked" Value="@Service.TelevisionId" ValueChange="@((Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args) => onFeaturesChecked(args))"></SfCheckBox>
-                                    </div>
-                                    <!-- Repeat for other features in room -->
-                                </div>
-                            </ContentTemplate>
-                        </AccordionItem>
-                </AccordionItems>
-            </SfAccordion>
-        </div>
-    </ChildContent>
-</SfSidebar>
-
-```
-
-When a checkbox is clicked, its state is updated in the `AppointmentService`. We'll use this shared state in our main page to filter the floor resources shown in the scheduler.
-
-### The Scheduler View (`Schedule.razor`)
-
-This is the core of the application. Configure the `<SfSchedule>` component to display reservations grouped by floor.
-
-Create a new Razor component file at `Components/Pages/Schedule.razor`.
-
-The Scheduler needs two main pieces of data:
-1.  A list of **resources**—in our case, the hotel floors.
-2.  A list of **events** (or appointments)—the actual reservations.
-
-The appointment and resource data come from `AppointmentService`.
-
-The complete `Schedule.razor` code is available in the GitHub repository at the following link: [`Schedule.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Schedule.razor). You may reuse the full code as needed.
-
-```html
-@inject AppointmentService Service
-
-<div class="schedule-container">
-    <SfSchedule TValue="AppointmentData" Height="507px" @bind-SelectedDate="Service.CurrentDate" CssClass="@cssClass" @ref="Service.ScheduleRef" ShowHeaderBar="false" ShowQuickInfo="Service.Mobile ? true : false" EnableAutoRowHeight="true" AllowDragAndDrop="false" AllowResizing="false">
-            <ScheduleTimeScale Enable="false"></ScheduleTimeScale>
-            <ScheduleEvents TValue="AppointmentData" EventRendered="OnEventRendered" ActionCompleted="OnActionCompleted" OnActionBegin="OnActionBegin" OnRenderCell="OnCellRendered" OnPopupOpen="OnPopupOpen" Created="OnCreated" OnCellDoubleClick="CellDoubleClick" OnCellClick="CellClick" OnEventDoubleClick="EventDoubleClick"></ScheduleEvents>
-            <ScheduleGroup Resources="Service.Resources" EnableCompactView="false"></ScheduleGroup>
-            <ScheduleResources>
-                <ScheduleResource TItem="ResourceData" TValue="int" Query="@Service.ResourceQuery" DataSource="Service.FloorData" Field="FloorId" Title="Floors" Name="Floors" TextField="FloorText" IdField="Id" ColorField="FloorColor" AllowMultiple="false"></ScheduleResource>
-                <ScheduleResource TItem="ResourceData" TValue="int[]" Query="@Service.FilterQuery" DataSource="Service.RoomData" Field="RoomId" Title="Rooms" Name="Rooms" TextField="RoomText" IdField="Id" GroupIDField="RoomsId" ColorField="RoomColor" AllowMultiple="true"></ScheduleResource>
-            </ScheduleResources>
-            <ScheduleEventSettings DataSource=@Service.appointmentData IgnoreWhitespace="true">
-            </ScheduleEventSettings>
-            <ScheduleViews>
-                <ScheduleView Option="View.TimelineMonth"></ScheduleView>
-            </ScheduleViews>
-            <ScheduleTemplates>
-                <DateHeaderTemplate>
-                    <div class="date-header">
-                        <div class="date-header-text" style="display:flex; justify-content: center">
-                            @context.Date.ToString("dd",CultureInfo.InvariantCulture)
-                        </div>
-                        <div class="date-header-text" style="display:flex; justify-content: center">
-                            @context.Date.ToString("ddd",CultureInfo.InvariantCulture)
-                        </div>
-                    </div>
-                </DateHeaderTemplate>
-                <CellTemplate>
-                    @if ((ElementType)(context as TemplateContext).Type == ElementType.MonthCells)
-                    {
-                        <div class="template-wrap">
-                            <span class="price-tag">$@GetRoomPrice((context as TemplateContext)?.GroupIndex ?? 0)</span>
-                        </div>
-                    }
-                </CellTemplate>
-                <ResourceHeaderTemplate>
-                    @{
-                        var resourceData = (context as TemplateContext).ResourceData as ResourceData;
-                        <div class='template-wrap'>
-                            <div class="resource-details">
-                                <div class="resource-name">@(resourceData.FloorText)</div>
-                            </div>
-                            <div class="room-details">
-                                <div class="resource-room">@(resourceData.RoomText)</div>
-                                <div class="resource-description">@(resourceData.Description)</div>
-                            </div>
-                        </div>
-                    }
-                </ResourceHeaderTemplate>
-            </ScheduleTemplates>
-        </SfSchedule>
-</div>
-
-```
-
-Key configuration points:
-* `<ScheduleEventSettings>`: Binds the scheduler's events to the list in `AppointmentService`.
-* `<ScheduleGroup>`: Groups by the resource named "Floors".
-* `<ScheduleResource>`: Defines the "Floors" resource. This maps the `FloorId` field in `AppointmentData` to the `FloorId` in the `floorData` list, assigning colors and text to resource group headers.
-* `<ScheduleTemplates>`: Uses templates to customize the date header, cell, and resource header.
-
-## Assemble the Main Page
-
-Bring it together in the main `Index.razor` page. This component hosts the sidebar and the schedule, along with a header to control the UI.
-
-Update `Components/Pages/Index.razor` with the following code:
-
-```html
-@page "/"
-
-<div class="app-main-container" style="visibility:@(Service.Visible); opacity:@(Service.Opacity)">
-    <SfAppBar cssClass="app-header">
-        <h1 class="header-title">BookmyRooms</h1>
-        <AppBarSpacer></AppBarSpacer>
-         <div class="avatar-container">
-        <img class="avatar-image" src="images/user.svg" alt="avatar" />
-            <span class="avatar-name">Hi, John David</span>
-        </div>
-    </SfAppBar>
-    <main class="main-container"> 
-        <div class="sidebar-container">
-            <Sidebar></Sidebar>
-        </div>
-         <div class="content-container"> 
-            <Header></Header>
-            <Schedule></Schedule>
-        </div>
-    </main>
- </div>
-```
-
-## Implement the filtering logic
-
-Connect the checkboxes in the sidebar to the data displayed in the scheduler. Since `AppointmentService` holds the state, detect changes to the checkbox and slider values, form the filter query, and update the resource data.
-
-Use the following code to implement the filtering logic in `Components/Pages/Sidebar.razor`:
-
-The complete `Sidebar.razor` code is available in the GitHub repository at the following link: [`Sidebar.razor`](https://github.com/syncfusion/blazor-showcase-stay-reservation/blob/master/webapp/Stay-Reservation/Components/Pages/Sidebar.razor). You may reuse the full code as needed.
-
-```csharp
-@code {
-    // ... existing code ...
-
-     public void FloorHandler()
-    {
-        dynamic predicate = null;
-        if (Service.GroundFloorChecked)
-        {
-            if (predicate != null)
-            {
-                predicate = predicate.Or("Id", "equal", Convert.ToInt32(Service.GroundFloorId));
+    ```html
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              // NOTE: In this demo, different shades of "Indigo" are used as primary colors.
+              primary: {
+                "50": "#eef2ff",
+                "100": "#e0e7ff",
+                "200": "#c7d2fe",
+                "300": "#a5b4fc",
+                "400": "#818cf8",
+                "500": "#6366f1",
+                "600": "#4f46e5",
+                "700": "#4338ca",
+                "800": "#3730a3",
+                "900": "#312e81",
+                "950": "#1e1b4b"
+              }
             }
-            else
-            {
-                predicate = new WhereFilter() { Field = "Id", Operator = "equal", value = Convert.ToInt32(Service.GroundFloorId) };
-            }
+          }
         }
-        if (Service.FirstFloorChecked)
-        {
-            if (predicate != null)
-            {
-                predicate = predicate.Or("Id", "equal", Convert.ToInt32(Service.FirstFloorId));
-            }
-            else
-            {
-                predicate = new WhereFilter() { Field = "Id", Operator = "equal", value = Convert.ToInt32(Service.FirstFloorId) };
-            }
-        }
-        if (Service.SecondFloorChecked)
-        {
-            if (predicate != null)
-            {
-                predicate = predicate.Or("Id", "equal", Convert.ToInt32(Service.SecondFloorId));
-            }
-            else
-            {
-                predicate = new WhereFilter() { Field = "Id", Operator = "equal", value = Convert.ToInt32(Service.SecondFloorId) };
-            }
-        }
-        if (Service.ThirdFloorChecked)
-        {
-            if (predicate != null)
-            {
-                predicate = predicate.Or("Id", "equal", Convert.ToInt32(Service.ThirdFloorId));
-            }
-            else
-            {
-                predicate = new WhereFilter() { Field = "Id", Operator = "equal", value = Convert.ToInt32(Service.ThirdFloorId) };
-            }
-        }
-        if (Service.FourthFloorChecked)
-        {
-            if (predicate != null)
-            {
-                predicate = predicate.Or("Id", "equal", Convert.ToInt32(Service.FourthFloorId));
-            }
-            else
-            {
-                predicate = new WhereFilter() { Field = "Id", Operator = "equal", value = Convert.ToInt32(Service.FourthFloorId) };
-            }
-        }
-        if (predicate == null)
-        {
-            predicate = new WhereFilter() { Field = "Id", Operator = "notequal", value = Convert.ToInt32(Service.GroundFloorId) }.And("Id", "notequal", Convert.ToInt32(Service.FirstFloorId)).And("Id", "notequal", Convert.ToInt32(Service.SecondFloorId)).And("Id", "notequal", Convert.ToInt32(Service.ThirdFloorId)).And("Id", "notequal", Convert.ToInt32(Service.FourthFloorId));
-        }
-        Service.ResourceQuery = new Query().Where(predicate);
-        Service.SchedulerPageRef?.StateChanged();
-    }
+      }
+    </script>
+    ```
+    > The Syncfusion Blazor components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
+
+3. In **Components -> App.razor** file, add the style oriented CDN link for Syncfusion Blazor components in the `<head>` tag.
+
+   - For **light mode**:
+
+     ```html
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/tailwind.css" rel="stylesheet"/>
+     ```
+
+   - For **dark mode**:
+
+     ```html
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/tailwind.css" rel="stylesheet" />
+     ```
+
+4. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind CSS**, you can include the following CDN link:
+
+    ```html
+    <link href="https://cdn.syncfusion.com/blazor/ui-kit/font-icons/tailwind-icons.css" rel="stylesheet" />
+    ```
+     
+You can refer to the consolidated screenshot below for more details.
+
+![Tailwind CSS configuration](images/tailwind-configuration.webp)
+
+Now that the **Tailwind CSS** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
+
+### Bootstrap 5.3 configuration
+
+If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
+
+1. In **Components -> App.razor** file, add the following code for light mode (`data-bs-theme="light"`) and dark mode (`data-bs-theme="dark"`) in the `<html>` tag.
+
+    - For **light mode**:
+
+    ```html
+    <html lang="en" data-bs-theme="light">
+    ```
+
+    - For **dark mode**:
+
+    ```html
+    <html lang="en" data-bs-theme="dark">
+    ```
+
+2. In **Components -> App.razor**  file, add the style oriented CDN link for **Bootstrap 5.3** theme in the `<head>` tag.
+
+     ```html
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+     ```
+
+3. In **Components -> App.razor**  file, add the style oriented CDN link for Syncfusion Blazor components in the `<head>` tag.
+
+   - For **light mode**:
+
+     ```html
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/bootstrap5.3.css" rel="stylesheet">
+     ```
+
+   - For **dark mode**:
+
+     ```html
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/bootstrap5.3-dark.css" rel="stylesheet" />
+     ```
+
+4. **OPTIONAL**: If you wish to use our font icons prepared for **Bootstrap 5.3**, you can include the following CDN link:
+
+    ```html
+    <link href="https://cdn.syncfusion.com/blazor/ui-kit/font-icons/bootstrap5.3-icons.css" rel="stylesheet" />
+    ```
+
+You can refer to the consolidated screenshot below for more details.
+
+![Bootstrap 5.3 configuration](images/bootstrap-5.3-configuration.webp)
+
+Now that the **Bootstrap 5.3** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
+
+## Steps to explore and copy block code snippets
+
+Now that **MyBlazorApp** is set up with the desired theme configuration, the next step is to copy and paste the pre-built simple sign-in block code into the app for quick development. Here are a couple of ways to achieve this.
+
+### Steps to explore and copy block code snippets from the online demo
+
+1. In the [online demo](https://blazor.syncfusion.com/essential-ui-kit), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
+
+    ![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.webp)
+
+2. On the demo page, go to the first demo, which showcases a simple sign-in block. Choose the desired theme, then switch from the **Preview** tab to the **Code** tab.
+
+    ![Choose Tailwind CSS or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.webp)
+
+3. In the **Code** tab, copy the Razor (HTML) code using the **Copy to Clipboard** option and paste it into the **Components -> Pages -> Home.razor** file, replacing its content with the provided "Hello, world!" example.
+
+    ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.webp)
+
+>  Ensure that you do not remove the `@page` directive and `<PageTitle>` element while replacing the content. These are essential for routing and setting the page title.
+
+
+4. If CSS is provided, copy the CSS code, create a new file **Components -> Pages -> Home.razor.css**, and paste the code into it. Similarly, if a C# code is provided, create a new file **Components -> Pages -> Home.razor.cs** and paste the C# code into it. Otherwise, you can ignore this step.
+
+### Steps to explore and copy block code snippets from the GitHub source
+
+1. On [downloading](https://github.com/syncfusion/essential-ui-kit-for-blazor) and opening the GitHub source in Visual Studio Code, navigate to the following folder: **Components -> Pages -> BlocksSection**.
+
+    ![Downloaded GitHub app in Visual Studio Code](images/downloaded-github-app-in-visual-studio-code.webp)
+
+2. Inside, you'll find a list of folders, each corresponding to a specific block. Open the **SignIn** block folder, where you'll see the demo arranged sequentially.
+
+3. Go to the first folder, **Components/Pages/BlocksSection/SignIn/SignIn1**, where you'll find the Razor (HTML) file of the simple sign-in block. You can copy the code directly from this file.
+
+    ![View the sign-in block demo files](images/view-the-sign-in-block-demo-files.webp)
+
+> **Note:**
+> 1. In the Razor file, the **Tailwind CSS** and **Bootstrap 5.3** design code is placed in their respective if-else statements. You can copy and paste as per your requirement.
+> 2. Ignore the code within the **"SB Code - Start"** and **"SB Code - End"** comments, as it is intended solely for sample browser purposes.
+
+## Steps to install and configure Syncfusion Blazor components
+
+While copying and pasting the Razor (HTML) code, you'll notice that Syncfusion Blazor components are used. To incorporate them into **MyBlazorApp**, install the necessary packages and import the corresponding namespaces to the **Components -> _Imports.razor** file for the app to run.
+
+In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting Razor (HTML) code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Syncfusion Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
+
+![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.webp)
+
+Once the necessary packages are added, run the following command via the terminal to install those packages.
+
+```bash
+dotnet restore
 ```
 
-When a user clicks a checkbox, it triggers the `OnChange` event, which calls the `FloorHandler` method. This method updates the `ResourceQuery` property on the `Service` object to filter resources in the scheduler. The `StateChanged` method refreshes the scheduler with the new resource data.
+After restoring the packages, import the required namespaces `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs` in the _Imports.razor file to enable Syncfusion components in the application.
 
-Build and run the app by executing the `dotnet watch run` command in the command shell from the `StayReservation` folder.
+![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.webp)
 
-## Implement the appointment booking form
-Bind the Scheduler's Editor Template to a custom form for creating and editing appointments. This form includes fields for the appointment subject, start and end times, and a drop-down list for selecting the room. The form is displayed when a user double-clicks an empty cell in the scheduler or an existing appointment, in a popup window.
+Finally, again check the [online demo](https://blazor.syncfusion.com/essential-ui-kit) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
 
-Validate the form fields using the `ValidationMessage` component. The `ValidationMessage` component displays an error message when validation fails. It is bound to the `Subject` property of the `AppointmentData` object, which is required, so an error message appears when the `Subject` property is empty.
+## Steps to download and add assets to the app
 
-Apply the following code to the `Schedule.razor` file to create the custom form.
+If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor/tree/master/UI_Blocks/wwwroot/assets), place it inside the **wwwroot** folder of **MyBlazorApp**, and modify the image URLs in the Razor (HTML) if necessary.
 
-```html
-<SfSchedule>
-    <ScheduleTemplates>
-    <EditorTemplate>
-        <div class="custom-event-editor @((Service.Mobile) ? "e-device" : "")">
-            <div class="flex-prop">
-                <SfTextBox ID="guestName" FloatLabelType="FloatLabelType.Always" Placeholder="Guest Name *" @bind-Value="@((context as AppointmentData).Subject)"></SfTextBox>
-                <ValidationMessage For="()=>((context as AppointmentData).Subject)" />
-            </div>
-            <div class="flex-prop">
-                @{
-                    if (UpdateStartTime)
-                    {
-                        (context as AppointmentData).StartTime = (context as AppointmentData).StartTime.AddHours(12);
-                        (context as AppointmentData).EndTime = (context as AppointmentData).EndTime.AddHours(12);
-                        UpdateStartTime = false;
-                    }
-                }
-                <SfDateTimePicker ID="checkIn" TValue="DateTime" Placeholder="Check In *" FloatLabelType="FloatLabelType.Always" @bind-Value="@((context as AppointmentData).StartTime)">
-                    <DateTimePickerEvents TValue="DateTime" OnRenderDayCell="@DisableDate" ValueChange="@OnStartTimeValueChanged"></DateTimePickerEvents>
-                </SfDateTimePicker>
-            </div>
-            <div class="flex-prop">
-                <SfDropDownList TValue="int" TItem="ResourceData" Placeholder="Floors" DataSource="Service.FloorData" Query="@Service.ResourceQuery" FloatLabelType="FloatLabelType.Always" @bind-Value="@((context as AppointmentData).FloorId)">
-                    <DropDownListEvents TItem="ResourceData" TValue="int" ValueChange="FloorDropDownChanged" />
-                    <DropDownListFieldSettings Value="Id" Text="FloorText"></DropDownListFieldSettings>
-                </SfDropDownList>
-            </div>
-            <div class="flex-prop">
-                @{
-                    if (IsFloorDropDownChanged)
-                    {
-                        (context as AppointmentData).RoomId = Service.RoomsDdlValue;
-                        IsFloorDropDownChanged = false;
-                    }
-                }
-                <SfDropDownList TValue="int" TItem="ResourceData" Placeholder="Select Room" DataSource="Service.RoomData" Query="@Service.DropDownQuery" FloatLabelType="FloatLabelType.Always" @bind-Value="@((context as AppointmentData).RoomId)" @ref="Service.DropDownRef">
-                    <DropDownListEvents TItem="ResourceData" TValue="int" ValueChange="RoomDropDownChanged" />
-                    <DropDownListFieldSettings Value="Id" Text="RoomText"></DropDownListFieldSettings>
-                </SfDropDownList>
-            </div>
-            <div class="flex-prop">
-                @{
-                    TimeSpan differenceInDays = (context as AppointmentData).EndTime.Subtract((context as AppointmentData).StartTime);
-                    int noOfDays = Convert.ToInt32(differenceInDays.TotalDays);
-                    (context as AppointmentData).Price = (Service.RoomPrice * noOfDays).ToString();
-                }
-                <SfTextBox ID="roomPrice" FloatLabelType="FloatLabelType.Always" Placeholder="Price per night (USD) *" Enabled="false" @bind-Value="@((context as AppointmentData).Price)"></SfTextBox>
-            </div>
-            <div class="flex-prop">
-                @{
-                    TimeSpan difference = (context as AppointmentData).EndTime.Subtract((context as AppointmentData).StartTime);
-                    int totalDays = Convert.ToInt32(difference.TotalDays);
-                    (context as AppointmentData).Nights = totalDays;
-                }
-                <SfNumericTextBox TValue="int" ID="nights" Placeholder="Nights *" FloatLabelType="FloatLabelType.Always"
-                              Enabled="false" Min="1" Max="9" @bind-Value="@((context as AppointmentData).Nights)"></SfNumericTextBox>
-            </div>
-            <div class="flex-prop">
-                <SfNumericTextBox TValue="int" ID="adults" Placeholder="Adults *" FloatLabelType="FloatLabelType.Always"
-                              Min="1" Max="30" @bind-Value="@((context as AppointmentData).Adults)"></SfNumericTextBox>
-            </div>
-            <div class="flex-prop">
-                <SfNumericTextBox TValue="int" ID="children" Placeholder="Children *" FloatLabelType="FloatLabelType.Always"
-                              Min="1" Max="10" @bind-Value="@((context as AppointmentData).Children)"></SfNumericTextBox>
-            </div>
-            <div class="flex-prop">
-                @{
-                    if (IsStartTimeUpdated || IsintialLoad)
-                    {
-                        if((context as AppointmentData).Id < 1)
-                        {
-                            (context as AppointmentData).EndTime = (context as AppointmentData).StartTime.AddDays(1);
-                            IsStartTimeUpdated = false;
-                            IsintialLoad = false;
-                        } 
-                        
-                    }
-                }
-                <SfDateTimePicker ID="checkOut" Placeholder="Check Out *" FloatLabelType="FloatLabelType.Always" @bind-Value="@((context as AppointmentData).EndTime)">
-                    <DateTimePickerEvents TValue="DateTime" OnRenderDayCell="@EndTimeDisableDate" ValueChange="@OnEndTimeValueChanged"></DateTimePickerEvents>
-                </SfDateTimePicker>
-            </div>
-            <div class="flex-prop">
-                <SfTextBox ID="purpose" FloatLabelType="FloatLabelType.Always" Placeholder="Purpose" @bind-Value="@((context as AppointmentData).Purpose)"></SfTextBox>
-                <ValidationMessage For="()=>((context as AppointmentData).Purpose)" />
-            </div>
-            <div class="flex-prop">
-                @{
-                    if (IsProofDropDownChanged)
-                    {
-                        (context as AppointmentData).Proof = Service.ProofDdlValue;
-                        IsProofDropDownChanged = false;
-                    }
+## Steps to run the app
 
-                }
-                <SfDropDownList TValue="int" TItem="Proof" Placeholder="Select Proof" DataSource="@Proofs" FloatLabelType="FloatLabelType.Always" @bind-Value="@((context as AppointmentData).Proof)">
-                    <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
-                    <DropDownListEvents TItem="Proof" TValue="int" ValueChange="ProofDropDownChanged" />
-                </SfDropDownList>
-                <ValidationMessage For="()=>((context as AppointmentData).Proof)" />
-            </div>
-            <div class="flex-prop">
-                <SfTextBox ID="proofNumber" FloatLabelType="FloatLabelType.Always" Placeholder="Proof Number" @bind-Value="@((context as AppointmentData).ProofNumber)"></SfTextBox>
-                <ValidationMessage For="()=>((context as AppointmentData).ProofNumber)" />
-            </div>
-            <div class="flex-prop">
-                <SfTextBox ID="email" FloatLabelType="FloatLabelType.Always" Placeholder="Email" @bind-Value="@((context as AppointmentData).Email)"></SfTextBox>
-                <ValidationMessage For="()=>((context as AppointmentData).Email)" />
-            </div>
-            <div class="flex-prop">
-                <SfTextBox ID="contactNumber" FloatLabelType="FloatLabelType.Always" Placeholder="Contact Number" @bind-Value="@((context as AppointmentData).Phone)"></SfTextBox>
-                <ValidationMessage For="()=>((context as AppointmentData).Phone)" />
-            </div>
-        </div>
-    </EditorTemplate>
-    </ScheduleTemplates>
-</SfSchedule>
-```
-More details about the editor template are available in the [Editor Template](https://blazor.syncfusion.com/documentation/scheduler/editor-template#customizing-event-editor-using-template) documentation.
+Now that everything is set up in **MyBlazorApp** — including the Razor (HTML), CSS (if applicable), C# (if applicable), and assets (optional) — you are ready to build and launch the app. Type the following command in the terminal, and you will see a localhost URL provided by the Blazor development server.
 
-## Add toast notifications
-
-Integrate `SfToast` for user notifications throughout the application. When a user creates or deletes a reservation, a toast notification appears.
-
-```csharp
-    <SfToast ID="toast_default" @ref="Service.ToastObj" Content="@Service.ToastContent" Timeout="5000" Icon="e-meeting" ShowCloseButton="true" Height="70px" Width="400px">
-        <ToastPosition X="@Service.ToastPositionXValue" Y="@Service.ToastPositionYValue"></ToastPosition>
-    </SfToast>
+```bash
+dotnet run
 ```
 
-Bind the `OnActionBegin` event of the `SfSchedule` component to a method that handles toast notifications.
+![Build and launch the app](images/build-and-launch-the-app.webp)
 
-```csharp
-    public async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
-    {
-        bool availability = true;
-        if (args.ActionType == ActionType.EventCreate || args.ActionType == ActionType.EventChange || args.ActionType == ActionType.EventRemove)
-        {
-            var records = args.AddedRecords ?? args.ChangedRecords ?? args.DeletedRecords;
-            if (records == null)
-            {
-                return;
-            }
-            availability = await Service.ScheduleRef.IsSlotAvailableAsync(records.First());
-            if (availability)
-            {
-                if (args.ActionType == ActionType.EventCreate)
-                {
-                    Service.ToastContent = "Reservation booked successfully";
-                    Service.ToastObj.CssClass = "e-toast-success";
-                    StateChanged();
-                    await Service.ToastObj.ShowAsync();
-                }
-                else if (args.ActionType == ActionType.EventChange)
-                {
-                    Service.ToastContent = "Reservation updated successfully";
-                    Service.ToastObj.CssClass = "e-toast-success";
-                    StateChanged();
-                    await Service.ToastObj.ShowAsync();
-                }
-                else if (args.ActionType == ActionType.EventRemove)
-                {
-                    Service.ToastContent = "Reservation removed successfully";
-                    Service.ToastObj.Content= "Reservation removed successfully";
-                    Service.ToastObj.CssClass = "e-toast-success";
-                    StateChanged();
-                    await Service.ToastObj.ShowAsync();
-                }
-            }
-            else
-            {
-                Service.ToastContent = "Room not available for reservation on the selected Dates.";
-                Service.ToastObj.CssClass = "e-toast-warning";
-                StateChanged();
-                await Service.ToastObj.ShowAsync();
-            }
-        }
-        args.Cancel = !availability;
-    }
-```
+To view the app in your browser, simply **Ctrl + Click** (or **Cmd + Click** on macOS) on the localhost URL displayed in the terminal. This will open the app in your default browser, allowing you to view and experience the simple sign-in block.
 
-## GitHub and demo references
-
-The complete code for this example is available in the [GitHub repository](https://github.com/syncfusion/blazor-showcase-stay-reservation).
-
-Try the live demo: [https://blazor.syncfusion.com/showcase/stay-reservation](https://blazor.syncfusion.com/showcase/stay-reservation)
-
-## Summary
-
-This guide demonstrates how to build a functional and interactive stay reservation application. It shows how to compose a complex UI by combining Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as **Scheduler**, **Sidebar**, **AppBar**, **Accordion**, **Inputs**, and **DropDowns**.
-
-A clean state management pattern is implemented using a singleton service, allowing the components to communicate and share data seamlessly. This architecture is scalable and makes the application easier to maintain and extend with new features.
+![View the app in the browser using the localhost URL](images/view-the-app-in-the-browser-using-the-localhost-URL.webp)
