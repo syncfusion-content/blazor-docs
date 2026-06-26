@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor AppBar Component | Syncfusion
+title: Getting Started with Blazor AppBar Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor AppBar component in Blazor WebAssembly Application.
 platform: Blazor
 control: AppBar
@@ -171,4 +171,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AppBar component
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AppBar component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBfNCLSLdCUQyHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar Component](images/getting_started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxtRsWhoSLRrCg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar Component](images/getting_started.png)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Commands in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram Commands in Syncfusion Blazor Diagram component and much more details.
+title: Commands in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about diagram Commands in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -1097,7 +1097,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) commands repositions selected objects by a specified delta in the given direction.
 
-[Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html) nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
+[Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html) nudge command moves the selected elements towards the specified direction by **1 pixel**, by default.
 
 The accepted values of the argument direction are as follows:
 
