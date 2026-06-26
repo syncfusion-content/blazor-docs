@@ -233,7 +233,7 @@ dotnet run
 
 {% endtabcontents %}
 
-![Blazor Query Builder component](./images/blazor-querybuilder-component.webp)
+![Blazor Query Builder component](./images/blazor-querybuilder-component.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/QueryBuilder).
 
