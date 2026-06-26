@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a Blazor Application Using VS Code Extension | Syncfusion®
-description: Learn how to create a Blazor application using the Blazor extension for Visual Studio Code.
+description: Learn how to create a Blazor application using the Blazor extension for Visual Studio Code and much more details.
 platform: Blazor
 control: Common
 documentation: ug

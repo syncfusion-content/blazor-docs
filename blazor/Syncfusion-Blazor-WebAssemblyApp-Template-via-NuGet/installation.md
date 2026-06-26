@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-How to install and create a Balzor application using Syncfusion® WebAssembly App Template
+How to install and create a Blazor application using Syncfusion® WebAssembly App Template
 
 > **Note:** Refer to the .NET SDK support for Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
