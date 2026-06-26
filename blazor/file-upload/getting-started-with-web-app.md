@@ -105,8 +105,8 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet add package Syncfusion.Blazor.Inputs -v {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -166,7 +166,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
+{% highlight razor %}
 
 @rendermode InteractiveAuto
 @using Syncfusion.Blazor.Inputs

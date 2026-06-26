@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CSS Customization in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about CSS customization in Syncfusion Blazor Pivot Table component and more.
+title: CSS Customization in Blazor Pivot Table Component | Syncfusion®
+description: Learn how to customize CSS styling in Blazor Pivot Table component with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
