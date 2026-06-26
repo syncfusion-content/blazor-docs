@@ -85,7 +85,7 @@ cd BlazorWebApp.Client
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-### Install required Blazor packages
+### Install the required Blazor packages
 
 Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -200,7 +200,7 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhnDnMMTTOPBAiY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-items.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhnDnMMTTOPBAiY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-items.webp)" %}
 
 ## Enable or disable navigation
 
