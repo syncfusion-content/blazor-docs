@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Microsoft Teams App in Visual Studio | Syncfusion
-description: Check out the documentation for getting started with Microsoft Teams App using Syncfusion Blazor Components in Visual Studio and much more.
+title: Getting Started with Microsoft Teams App in VS | Syncfusion®
+description: Check out the documentation for getting started with Microsoft Teams App using Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Microsoft Teams Application
 
-This section explains how to create and run a Microsoft Teams application (Tab App) with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run a Microsoft Teams application (Tab App) with Blazor components.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ This section explains how to create and run a Microsoft Teams application (Tab A
 5. Click Open to create the new Microsoft application with a personal tab.
 ![New Teams application with a personal tab](images/MSTeams/new-app-personal-tab.webp)
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban and Themes NuGet in the App
+## Install Blazor Kanban and Themes NuGet in the App
 
 Here's an example of how to add **Blazor Kanban** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Kanban](https://www.nuget.org/packages/Syncfusion.Blazor.Kanban) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -68,9 +68,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Kanban` namespace.
 
@@ -81,7 +81,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Buttons` and `S
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the created Microsoft Teams tab app. Open the `~/Program.cs` file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service as follows
+Now, register the Blazor Service in the created Microsoft Teams tab app. Open the `~/Program.cs` file and register the Blazor service as follows
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="2 16" %}
@@ -128,9 +128,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
+## Add Blazor component
 
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the `Tab.razor` page under the `~/Components/Pages/Tab.razor` folder.
+Now, add the Blazor Kanban component in the `Tab.razor` page under the `~/Components/Pages/Tab.razor` folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Components/Pages/Tab.razor" %}
@@ -208,6 +208,6 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban comp
 {% endhighlight %}
 {% endtabs %}
 
-![Microsoft Teams application with Syncfusion Blazor controls](images/MSTeams/output-msteams-syncfusion.webp)
+![Microsoft Teams application with Blazor controls](images/MSTeams/output-msteams-syncfusion.webp)
 
-N> [View the complete Microsoft Teams application with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
+N> [View the complete Microsoft Teams application with Blazor controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)

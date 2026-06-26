@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scroll Settings in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Scroll Setting in Syncfusion Blazor Diagram component and much more.
+title: Scroll Settings in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about Scroll Setting in Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -315,7 +315,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scroll Padding support for node](images/ScrollPadding.webp)" %}
 
 ## How to Restrict Scrollable Area
-Scrolling beyond any particular rectangular area can be restricted using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as “limited.” The following code example illustrates how to customize the scrollable area.
+Scrolling beyond any particular rectangular area can be restricted using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as **limited**. The following code example illustrates how to customize the scrollable area.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -355,13 +355,13 @@ Scrolling beyond any particular rectangular area can be restricted using the [Sc
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollableArea.razor)
 ## How to Handle Scroll Settings Property Changes Using Callback Methods
 
-* CurrentZoomChanged : Specifies the callback to be triggered when the current zoom value changes.
-* HorizontalOffsetChanged : Specifies the callback to be triggered when the horizontal offset changes.
-* VerticalOffsetChanged : Specifies the callback to be triggered when the vertical offset changes.
-* MaxZoomChanged : Specifies the callback to trigger when the maximum zoom changes.
-* MinZoomChanged : Specifies the callback to trigger when the minimum zoom changes.
-* ScrollableAreaChanged : Specifies the callback to trigger when the scrollable area changes.
-* ScrollLimitChanged : Specifies the callback to trigger when the scroll limit changes.
+* **CurrentZoomChanged** : Specifies the callback to be triggered when the current zoom value changes.
+* **HorizontalOffsetChanged** : Specifies the callback to be triggered when the horizontal offset changes.
+* **VerticalOffsetChanged** : Specifies the callback to be triggered when the vertical offset changes.
+* **MaxZoomChanged** : Specifies the callback to trigger when the maximum zoom changes.
+* **MinZoomChanged** : Specifies the callback to trigger when the minimum zoom changes.
+* **ScrollableAreaChanged** : Specifies the callback to trigger when the scrollable area changes.
+* **ScrollLimitChanged** : Specifies the callback to trigger when the scroll limit changes.
 
 
 ```cshtml
@@ -384,4 +384,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See also
 
-* [How to Detect Nodes That Cross Page Breaks in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)
+* [How to Detect Nodes That Cross Page Breaks in Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)

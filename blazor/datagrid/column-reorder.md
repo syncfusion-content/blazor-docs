@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Reorder in Blazor DataGrid Component | Syncfusion
-description: Learn how to reorder columns in Syncfusion Blazor DataGrid using methods and events for single, multiple, and interactive reordering.
+title: Column Reorder in Blazor DataGrid Component | Syncfusion®
+description: Learn how to reorder columns in Blazor DataGrid using methods and events for single, multiple, and interactive reordering.
 platform: Blazor
 control: DataGrid
 documentation: ug

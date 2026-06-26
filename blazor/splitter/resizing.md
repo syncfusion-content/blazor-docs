@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about how to resize in Syncfusion Blazor Splitter component and much more details.
+title: Resize in Blazor Splitter Component | Syncfusion®
+description: Checkout and learn here all the features about how to resize in Blazor Splitter component and much more details.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -66,7 +66,7 @@ Splitter allows to set the minimum and maximum sizes for each pane. Resizing wil
 
 ```
 
-![Changing Blazor Splitter Size](./images/blazor-splitter-size.png)
+![Changing Blazor Splitter Size](./images/blazor-splitter-size.webp)
 
 ## Prevent resizing
 
@@ -121,7 +121,7 @@ N> Splitter resizing will be enabled only when the target of the adjacent pane's
 
 ```
 
-![Prevent Resizing in Blazor Splitter](./images/blazor-splitter-prevent-resizing.png)
+![Prevent Resizing in Blazor Splitter](./images/blazor-splitter-prevent-resizing.webp)
 
 ## Refresh content on resizing
 
@@ -188,7 +188,7 @@ The resize gripper icon and cursor can be customized in css level.
 
 ```
 
-![Blazor Splitter with Custom Gripper](./images/blazor-splitter-custom-gripper.png)
+![Blazor Splitter with Custom Gripper](./images/blazor-splitter-custom-gripper.webp)
 
 ## See Also
 

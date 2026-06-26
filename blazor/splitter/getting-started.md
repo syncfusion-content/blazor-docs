@@ -240,7 +240,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Splitter).
 
