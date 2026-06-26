@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Orientations in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about orientations in Syncfusion Blazor Timeline component and more details.
+title: Orientations in Blazor Timeline Component | Syncfusion®
+description: Checkout and learn here all the features about orientations in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -55,7 +55,7 @@ Display items vertically by setting the [`Orientation`](https://help.syncfusion.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrICNiXVyQMOUAm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Vertical Orientation](./images/Blazor-orientation-vertical.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrICNiXVyQMOUAm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Vertical Orientation](./images/Blazor-orientation-vertical.webp)" %}
 
 ## Horizontal
 
@@ -99,4 +99,4 @@ In horizontal orientation, items are displayed side-by-side by setting the [`Ori
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVyMjsZheQuYAQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Horizontal Orientation](./images/Blazor-orientation-horizontal.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVyMjsZheQuYAQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Horizontal Orientation](./images/Blazor-orientation-horizontal.webp)" %}

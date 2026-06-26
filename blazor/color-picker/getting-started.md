@@ -157,7 +157,7 @@ Add the Blazor Color Picker component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Blazor Color Picker component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrztMhkhMtJdbVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Color Picker component](./images/blazor-colorpicker-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHjdsEfhSURByW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Color Picker component](./images/blazor-colorpicker-component.webp)" %}
 
 ## See also
 

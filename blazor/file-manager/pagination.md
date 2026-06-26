@@ -38,7 +38,7 @@ The following example demonstrates how to change the page size of a File Manager
 ````
 Below is a screenshot illustrating the `PageSize` property in the File Manager component.
 
-![Pagination in Blazor File Manager](images/blazor-filemanager-pagesize.png)
+![Pagination in Blazor File Manager](images/blazor-filemanager-pagesize.webp)
 
 ### Change the page count
 
@@ -59,7 +59,7 @@ The [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 Below is a screenshot illustrating the `NumericItemsCount` property in the File Manager component.
 
-![Pagination in Blazor File Manager](images/blazor-filemanager-numericitemcount.png)
+![Pagination in Blazor File Manager](images/blazor-filemanager-numericitemcount.webp)
 
 ### Change the current page
 
@@ -86,7 +86,7 @@ The following example demonstrates how to implement the `CurrentPage` property.
 ````
 Below is a screenshot illustrating the `CurrentPage` property in the File Manager component.
 
-![Pagination in Blazor File Manager](images/blazor-filemanager-currentpage.png)
+![Pagination in Blazor File Manager](images/blazor-filemanager-currentpage.webp)
 
 
 ## Pager Template in Blazor File Manager
@@ -127,7 +127,7 @@ Below is an example on how to customize pagination in the File Manager by adding
 
 The screenshot below shows the Blazor File Manager component with a custom pagination button.
 
-![Pager Template in Blazor File Manager](images/blazor-filemanager-page-template.png)
+![Pager Template in Blazor File Manager](images/blazor-filemanager-page-template.webp)
 
 ### Pager with Page Sizes dropdown
 
@@ -152,7 +152,7 @@ Here is a sample demonstrating how `PageSizes` property is used when Pagination 
 
 The screenshot below shows the page sizes dropdown in the File Manager.
 
-![Pagination in Blazor File Manager](images/blazor-filemanager-pagesize-dropdown.png)
+![Pagination in Blazor File Manager](images/blazor-filemanager-pagesize-dropdown.webp)
 
 ## Events in Pagination
 
