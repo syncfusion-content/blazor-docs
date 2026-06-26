@@ -111,9 +111,9 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
 ## What’s included
 
-1. **Component Usage & API Knowledge** — Curated, Skill‑based guidance that captures how to add, configure, and compose Syncfusion® Blazor components, including key parameters, events, services to register (where applicable), and common integration patterns for Blazor Server, WebAssembly, Web App, and MAUI environments.
-2. **Patterns & Best Practices** — Practical recommendations for component configuration, data binding approaches, and feature‑implementation workflows (for example, paging, sorting, filtering, editing, and validation for data components). All guidance is authored directly within the Skill file rather than being fetched from documentation.
-3. **Design‑System Guidance** — Includes information related to themes, styling customization, and Syncfusion® Blazor component best practices across different application types.
+1. **Component Usage & API Knowledge** - Curated, Skill‑based guidance that captures how to add, configure, and compose Syncfusion® Blazor components, including key parameters, events, services to register (where applicable), and common integration patterns for Blazor Server, WebAssembly, Web App, and MAUI environments.
+2. **Patterns & Best Practices** - Practical recommendations for component configuration, data binding approaches, and feature‑implementation workflows (for example, paging, sorting, filtering, editing, and validation for data components). All guidance is authored directly within the Skill file rather than being fetched from documentation.
+3. **Design‑System Guidance** - Includes information related to themes, styling customization, and Syncfusion® Blazor component best practices across different application types.
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills Work
 

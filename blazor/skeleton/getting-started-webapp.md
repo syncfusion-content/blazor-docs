@@ -172,6 +172,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @using Syncfusion.Blazor.Notifications
 
+@using Syncfusion.Blazor.Notifications
+
 <SfSkeleton Height="15px" Width="200px"></SfSkeleton><br/>
 <SfSkeleton Height="15px" Width="100px"></SfSkeleton>
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor ContextMenu Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor ContextMenu component and much more.
+title: Data Binding in Blazor ContextMenu Component | Syncfusion®
+description: Checkout and learn here all the features about Data Binding in Blazor ContextMenu component and much more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -51,4 +51,4 @@ To bind local data source to the Context Menu, menu items are populated from dat
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLAWhrcKOGPagPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor ContextMenu](./../images/blazor-contextmenu-databinding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLAWhrcKOGPagPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor ContextMenu](./../images/blazor-contextmenu-databinding.webp)" %}
