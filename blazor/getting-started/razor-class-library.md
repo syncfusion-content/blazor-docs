@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Razor Class Library in VS | Syncfusion®
+title: Get Start with Razor Class Library in Visual Studio | Syncfusion
 description: Check out the documentation for Creating Razor Class Library (RCL) using Blazor components and much more details. 
 platform: Blazor
 component: Common
@@ -50,7 +50,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components packages are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Importing Blazor component in Razor Class Library
 
@@ -140,7 +140,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Importing Blazor component in Razor Class Library
 
