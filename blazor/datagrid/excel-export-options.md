@@ -1138,22 +1138,22 @@ public class OrderData
 
 ## Encoding support for CSV export
 
-The Blazor DataGrid supports specifying custom encoding when exporting data to CSV documents. This capability enables customization of character encoding formats to meet specific requirements for integration with legacy systems or software that does not support UTF-8.
+The Blazor DataGrid supports specifying a custom character encoding when exporting data to CSV documents. This capability ensures compatibility with legacy systems or software that does not support UTF-8.
 
-To configure custom encoding, include the **System.Text** namespace in the component. This namespace provides access to various encoding types. For detailed information about supported encoding formats, refer to the Microsoft System.Text [documentation](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?).
+To configure a custom encoding, include the **System.Text** namespace in the component. This namespace provides access to the available encoding types. For details about the supported encoding formats, refer to the Microsoft System.Text [documentation](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?).
 
 
 ### When to use custom encoding
 
-- When exporting data with special characters or symbols.
+- When exporting data that contains special characters or symbols.
 
-- When integrating with legacy systems requiring specific encodings.
+- When integrating with legacy systems that require a specific encoding.
 
 - When opening CSV files in software that does not default to UTF-8.
 
-> By default, the **Encoding.UTF8** type is used to export the CSV document.
+> By default, **Encoding.UTF8** is applied when exporting the CSV document.
 
-To configure the encoding, handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and invoke the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method with the **Encoding** property set in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object and provide the customization using the **System.Text.Encoding** class which derives from the **System.Text** namespace. Refer to the following example.
+To configure a custom encoding, handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and invoke the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. Set the **Encoding** property of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object using the **System.Text.Encoding** class from the **System.Text** namespace, as shown in the following example.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1174,7 +1174,7 @@ To configure the encoding, handle the [OnToolbarClick](https://help.syncfusion.c
 
 @code 
 {
-    SfGrid<OrdersDetails>? Grid;
+    public SfGrid<OrdersDetails>? Grid;
     public List<OrdersDetails>? GridData { get; set; }
 
     protected override void OnInitialized()
