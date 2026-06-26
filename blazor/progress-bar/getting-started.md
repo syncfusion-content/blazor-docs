@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Stared Blazor ProgressBar in Blazor WASM App | Syncfusion
-description: Checkout and learn here all about getting started with Blazor ProgressBar in Blazor WebAssembly Application.
+title: Getting Stared with Blazor Progress Bar in WASM App | Syncfusion
+description: Checkout and learn here all about getting started with Blazor Progress Bar in Blazor WebAssembly Application.
 platform: Blazor
-control: ProgressBar
+control: Progress Bar
 documentation: ug
 ---
 
-# Getting Started with Blazor ProgressBar in Blazor WASM App
+# Getting Started with Blazor Progress Bar in Blazor WASM App
 
-This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Progress Bar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -153,14 +155,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+## Add Blazor Progress Bar component
 
-## Add Blazor ProgressBar component
-
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Progress Bar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfProgressBar Value="50" Minimum="0" Maximum="100" TrackThickness="12" ProgressThickness="12">
 </SfProgressBar>
@@ -174,7 +174,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Pr
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor ProgressBar component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Progress Bar component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -214,10 +214,10 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Circular Progress Bar Type
 
-Change the type of the ProgressBar by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property. By default, the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear) type of ProgressBar will be rendered. In the following example, view the [Circular](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular) type.
+Change the type of the Progress Bar by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property. By default, the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear) type of ProgressBar will be rendered. In the following example, view the [Circular](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular) type.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfProgressBar Type="ProgressType.Circular" Value="70" Minimum="0" Maximum="100" TrackThickness="8" ProgressThickness="8">
 </SfProgressBar>
@@ -226,5 +226,3 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpDMUZLacfZQlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
-
-N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear) that shows you how to render and configure the ProgressBar.
