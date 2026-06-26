@@ -100,7 +100,7 @@ After executing this script, the records are stored in the `TaskData` table with
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files such as **Program.cs**, **appsettings.json**, **wwwroot**, and **Components**.
 
-For this guide, a Blazor application named **GanttEFUrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add UI components.
+For this guide, a Blazor application named **GanttEFUrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add Blazor UI components.
 
 **Method 1: Using Package Manager Console**
 
