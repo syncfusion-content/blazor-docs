@@ -1,6 +1,6 @@
 ---
 layout: post
-itle: "Oracle Data Binding in Blazor Pivot Table | Syncfusion®"
+title: "Oracle Data Binding in Blazor Pivot Table | Syncfusion®"
 component: "Pivot Table"
 description: "Learn how to connect an Oracle database to the Blazor Pivot Table component using the Oracle.ManagedDataAccess library and much more details."
 platform: Blazor
