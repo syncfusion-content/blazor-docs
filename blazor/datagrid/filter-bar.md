@@ -731,20 +731,20 @@ public class OrderData
 
 The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
-When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. A filtering condition appropriate to the column type can be selected, eliminating manual operator expression input.
+When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. A filtering condition appropriate to the column type can be selected, removing the need to type operator expressions manually.
 
-Each filter bar cell also includes a **clear filter icon** that is rendered individually for every column and behaves based on the filter state of that specific column. This icon is **enabled** only when a filter is applied to that column and **disabled** otherwise, enabling quick identification and removal of active filters. Column-specific behavior provides improved control and visibility when managing filters across multiple columns
+Each filter bar cell also includes a **clear filter icon** that reflects the filter state of its column. The icon is **enabled** when a filter is applied to the column and **disabled** otherwise, allowing active filters to be identified and removed quickly. This column-specific behavior improves control and visibility when managing filters across multiple columns.
 
 **Benefits of operator-based filtering**
 
-* Eliminates the need for manual operator expression input
-* Provides type-safe input controls based on column data type
-* Improves filtering accuracy and consistency across data types
-* Delivers a structured and user-friendly filtering experience
+* Removes the need to enter operator expressions manually.
+* Provides type-safe input controls based on column data type.
+* Improves filtering accuracy and consistency across data types.
+* Offers a structured filtering interface with dedicated controls for each column.
 
 **Column-specific filter controls**
 
-The filter bar dynamically generates input controls when the **ShowFilterBarOperator** property is enabled, based on each column’s data type, ensuring a type-safe and user-friendly experience.
+When the **ShowFilterBarOperator** property is enabled, the filter bar dynamically generates input controls based on the data type of each column, ensuring a type-safe filtering experience.
 
 | Data Type | Filter Control |
 |-------------|----------------|
