@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Height in Blazor Tree Grid Component | Syncfusion®
-description: Check out here and learn more details about the Row Height in the Blazor Tree Grid component.
+description: Check out here and learn more details about the Row Height in the Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
