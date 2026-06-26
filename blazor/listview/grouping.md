@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about grouping in Syncfusion Blazor ListView component and much more details.
+title: Grouping in Blazor ListView Component | Syncfusion®
+description: Checkout and learn here all the features about grouping in Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
