@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placeholder in Blazor OTP Input Component | Syncfusion
-description: Checkout and learn here all about Placeholder with Syncfusion Blazor OTP Input component in Blazor Server App and Blazor WebAssembly App.
+title: Placeholder in Blazor OTP Input Component | Syncfusion®
+description: Learn how to use placeholder in Blazor OTP Input component to display hint text for guiding users on expected input.
 platform: Blazor
 control: OTP Input
 documentation: ug
