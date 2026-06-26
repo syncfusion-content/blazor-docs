@@ -168,6 +168,8 @@ The most basic way to render the File Upload component is by adding the `<SfUplo
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Inputs
+
 <SfUploader></SfUploader>
 
 {% endhighlight %}
@@ -213,7 +215,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" "[Blazor FileUpload Component Initial load](./images/blazor-fileupload-initialload.webp)" %}
 
 ## Use ValueChange event
 
@@ -230,13 +232,16 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
 <SfUploader AutoUpload="true">
       <UploaderEvents ValueChange="@OnChange"></UploaderEvents>
 </SfUploader>
+<br>
+<p>@validationMessage</p>
 
-@code
-{
+@code {
+    private string validationMessage = "";
     private async Task OnChange(UploadChangeEventArgs args)
     {
         try
         {
+            validationMessage = "";
             foreach (var fileEntry in args.Files)
             {
                 // Define a path where you want to save the file.
@@ -257,6 +262,7 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
                 }
                 Console.WriteLine($"File '{fileEntry.FileInfo.Name}' saved successfully to '{filePath}'");
             }
+            validationMessage = "ValueChange event triggered successfully!";
         }
         catch (Exception ex)
         {
@@ -270,13 +276,13 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
 
 N> When saving files directly in a Blazor Server application using [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) and [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload), the files are saved on the server where the Blazor Server app is running, not on the client's machine. You need appropriate file system permissions for the server process to write to the specified directory. Also, ensure the target directory (`wwwroot/uploads` in this example) exists or is created programmatically. In a production environment, consider secure storage solutions for uploaded files.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVyZkrqBvaSlvht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVdZHLniAvOLHSx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" "[Blazor FileUpload ValueChange](./images/blazor-fileupload-valuechange-event.webp)" %}
 
 ## Memory stream
 
 When you need to process uploaded files in memory—perhaps for resizing images, reading content, or sending them to another service without saving them to disk first—using a `MemoryStream` is an efficient approach. This is particularly useful for temporary processing or when dealing with sensitive data that shouldn't persist on the file system.
 
-This example demonstrates how to read the content of an uploaded file into a [MemoryStream Class](https://learn.microsoft.com/en-us/dotnet/api/system.io.memorystream)`. This allows you to perform in-memory operations on the file, such as converting an image to a Base64 string, without requiring disk I/O.
+This example demonstrates how to read the content of an uploaded file into a [MemoryStream Class](https://learn.microsoft.com/en-us/dotnet/api/system.io.memorystream). This allows you to perform in-memory operations on the file, such as converting an image to a Base64 string, without requiring disk I/O.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -354,7 +360,7 @@ This example shows how to use the [`Created`](https://help.syncfusion.com/cr/bla
 <SfUploader>
     <UploaderEvents Created="@OnUploaderCreated"></UploaderEvents>
 </SfUploader>
-
+<br>
 <p>@statusMessage</p>
 
 @code 
@@ -375,7 +381,7 @@ This example shows how to use the [`Created`](https://help.syncfusion.com/cr/bla
 
 N> The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Created) event is useful for client-side JavaScript interop if you need to manipulate the DOM elements of the uploader component immediately after it's ready. However, for most Blazor-specific customizations (like custom templates), you should use the built-in Blazor features.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLyNuVUBGtPZrdo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhHDRhyrnckqToK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor FileUpload Created Event](./images/blazor-fileupload-created-event.webp)" %}
 
 ## File Selected event
 
@@ -392,6 +398,7 @@ This example demonstrates how to use the [FileSelected](https://help.syncfusion.
 <SfUploader >
     <UploaderEvents FileSelected="@OnFileSelected"></UploaderEvents>
 </SfUploader>
+<br>
 <p>@validationMessage</p>
 
 @code 
@@ -426,7 +433,7 @@ This example demonstrates how to use the [FileSelected](https://help.syncfusion.
 
 N> Setting `args.Cancel = true` in the `FileSelected` event will prevent the file (or files if `args.Files` contains multiple) from being added to the uploader's internal file list. This is a client-side validation and should be complemented with server-side validation for robust security and data integrity.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLIZuBUVwEJoJpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBnDHBdsjFbgdTU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor FileUpload FileSelected Event](./images/blazor-fileupload-fileselected-event.webp)" %}
 
 ## OnFileListRender
 
@@ -455,6 +462,8 @@ This example demonstrates how to use [`OnFileListRender`](https://help.syncfusio
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVHDHBRMZrLbvcS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor FileUpload OnFileListRender](./images/blazor-fileupload-onfilelistrender.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload).
 
