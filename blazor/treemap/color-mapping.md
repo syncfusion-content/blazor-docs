@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Color Mapping in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features Color Mapping in Blazor TreeMap component and much more.
+description: Checkout and learn here all the features about Color Mapping in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug

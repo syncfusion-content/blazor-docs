@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features Events in Blazor TreeMap component and much more details.
+description: Checkout and learn here all the features about the Events in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor TreeMap Component | Syncfusion®
-description: Checkout and learn here all the features Accessibility in Blazor TreeMap component and much more.
+description: Checkout and learn here all the features about Accessibility in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
