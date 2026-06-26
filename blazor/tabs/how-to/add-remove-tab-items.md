@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add/Remove Tab items in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to add or remove tab items in Syncfusion Blazor Tabs component and more.
+title: Add/Remove Tab items in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about how to add or remove tab items in Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -88,7 +88,7 @@ In the following demo, initially there are three tabs as the **TabItems** has th
 }
 ```
 
-![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-item.png)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-item.webp)
 
 ## Using public methods
 
@@ -149,4 +149,4 @@ In the following demo, a tab item can be added as first tab and removed as the l
 </style>
 ```
 
-![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-tabitems.png)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-tabitems.webp)

@@ -58,10 +58,11 @@ The following code illustrates how to create a text node.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVeMjjvpHHwFbIZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/TextNodeSample.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVeMjjvpHHwFbIZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Text Node in Blazor Diagram](images/blazor-diagram-TextNode.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVeMjjvpHHwFbIZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Text Node in Blazor Diagram](images/blazor-diagram-TextNode.png)" %}
 
 ## How to Create a Image Node
 
@@ -102,10 +103,11 @@ The following code illustrates how an image node is created.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByCDZOBKhUldMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/ImageShapeSample.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByCDZOBKhUldMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Image Node in Blazor Diagram](images/blazor-diagram-image-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByCDZOBKhUldMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Image Node in Blazor Diagram](images/blazor-diagram-image-node.png)" %}
 
 ### How to Add a Base64 Encoded Image to an Image Node
 
@@ -145,10 +147,11 @@ The following code illustrates how to add a Base64 image to the image node.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBICDtlzdkNlPxo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/Base64image.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBICDtlzdkNlPxo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Base64 Image Node in Blazor Diagram](images/blazor-diagram-base64-image-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBICDtlzdkNlPxo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Base64 Image Node in Blazor Diagram](images/blazor-diagram-base64-image-node.png)" %}
 
 N> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
 
@@ -200,13 +203,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 |Scale |ImageAlign |Result|
 |---|---|---|
-|   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmin-ymax.webp)|
-|Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xin-ymin.webp)|
-|Meet|XMaxYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmax-ymax.webp)|
-|None|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymax.webp)|
-|None|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymin.webp)|
-|Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymax.webp)|
-|Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymin.webp)|
+|   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmin-ymax.png)|
+|Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xin-ymin.png)|
+|Meet|XMaxYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmax-ymax.png)|
+|None|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymax.png)|
+|None|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymin.png)|
+|Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymax.png)|
+|Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymin.png)|
 
 ## How to Create HTML Template Shapes
 
@@ -215,7 +218,7 @@ HTML elements can be embedded in the diagram by setting the node Shape type to [
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Add a Namespace for a control used in Diagrm HTML node *@
+@* Add a Namespace for a Blazor control used in Diagrm HTML node *@
 @using Syncfusion.Blazor.CircularGauge
 
 @* Initialize Diagram with node template *@
@@ -299,10 +302,11 @@ HTML elements can be embedded in the diagram by setting the node Shape type to [
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheMZZvpQZVXgoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/HTMLShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheMZZvpQZVXgoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[HTML Node Template in Blazor Diagram](images/blazor-diagram-html-node-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheMZZvpQZVXgoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[HTML Node Template in Blazor Diagram](images/blazor-diagram-html-node-template.png)" %}
 
 N> HTML nodes cannot be exported to image format, like JPEG and PNG. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
 
@@ -348,6 +352,7 @@ The following code example illustrates how to create a basic shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrosZDvfQBMblZv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/BasicShapeSample.razor)
 
@@ -357,7 +362,7 @@ N> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 The list of basic shapes are as follows.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrosZDvfQBMblZv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[BasicShape Node in Blazor Diagram](images/blazor-diagram-basic-shape-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrosZDvfQBMblZv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[BasicShape Node in Blazor Diagram](images/blazor-diagram-basic-shape-node.png)" %}
 
 ## How to Create a Path Shape Node
 
@@ -401,10 +406,11 @@ To create a path node, set the shape as **Path**. The geometry of the path is de
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSiXNFzQVQgiZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/PathShapeSample.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSiXNFzQVQgiZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSiXNFzQVQgiZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)" %}
 
 ## How to Create a Flow Shape Node
 
@@ -443,12 +449,13 @@ The [FlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrSitZPfwqrXoFd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/FlowShapeSample.razor)
 
 The list of flow shapes are as follows.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrSitZPfwqrXoFd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[FlowShape Node in Blazor Diagram](images/blazor-diagram-flow-shapes-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrSitZPfwqrXoFd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[FlowShape Node in Blazor Diagram](images/blazor-diagram-flow-shapes-node.png)" %}
 
 ## How to Create a SVG Template Shape
 
@@ -501,10 +508,11 @@ The diagram provides support to embed [SVG](https://help.syncfusion.com/cr/blazo
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBeWXXlpcUFFGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/SVGShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBeWXXlpcUFFGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBeWXXlpcUFFGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)" %}
 
 N> Similar to HTML node, SVG nodes cannot be exported to image format. The fill color of an SVG node can be overridden by inline style or fill of the SVG element specified in the template.
 
@@ -549,10 +557,11 @@ The following code example illustrates how to create a BPMN shape.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryCXjbzmprSCAB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/BPMNShapeSample.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryCXjbzmprSCAB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[BPMN Node in Blazor Diagram](images/BPMNShape.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryCXjbzmprSCAB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[BPMN Node in Blazor Diagram](images/BPMNShape.png)" %}
 
 ## See also
 

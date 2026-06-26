@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Accessibility in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about the accessibility in Syncfusion Blazor TimePicker component and much more.
+title:  Accessibility in Blazor TimePicker Component | Syncfusion®
+description: Checkout and learn here all the features about the accessibility in Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -108,4 +108,4 @@ The accessibility compliance of the TimePicker component is shown in the followi
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
