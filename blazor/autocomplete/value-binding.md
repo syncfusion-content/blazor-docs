@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
+title:  Value Binding in Blazor AutoComplete Component | Syncfusion
+description: Checkout and learn here all about Value Binding in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
 
-* bind-Value Binding 
+* bind-Value Binding
 * bind-Index Binding
 
 ## Bind value binding
@@ -235,6 +235,6 @@ Clear the value programmatically by calling [ClearAsync()](https://help.syncfusi
 
 {% include_relative code-snippet/value-binding/clearAsync-method.razor %}
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ![Blazor AutoComplete with clear button](./images/value-binding/blazor-autocomplete-clearAsync-method.gif)
