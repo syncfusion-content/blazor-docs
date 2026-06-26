@@ -9,7 +9,7 @@ documentation: ug
 
 # Prevent the Expand or Collapse Item in Blazor Accordion Component
 
-You can prevent the expand and collapse actions of an accordion item for specific conditions. For example, if there is a button in the accordion header, clicking on it should prevent the accordion item from expanding or collapsing. 
+You can prevent the expand and collapse actions of an accordion item for specific conditions. For example, if there is a button in the accordion header, clicking on it should prevent the accordion item from expanding or collapsing.
 
 This can be achieved by adding conditional logic in the Accordion's [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanding) and [Collapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Collapsing) events.
 
@@ -117,4 +117,4 @@ The following code example demonstrates how to prevent expand and collapse actio
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthAChWqgyaWwIZu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVnjnMWCYGBhotU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.webp)" %}

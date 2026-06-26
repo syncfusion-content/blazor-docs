@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and Appearance in Blazor DataForm Component | Syncfusion
+title: Style and Appearance in Blazor DataForm Component | Syncfusion®
 description: Learn how to apply basic styling, colors, fonts, and text formatting to customize the appearance of the Blazor DataForm component and its elements.
 platform: Blazor
 control: DataForm
@@ -70,7 +70,7 @@ Customize the DataForm appearance using CSS selectors to style the form backgrou
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdXTriJTArYaVM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdtxrqfIZPdoSD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Layout & Spacing Customization
 
@@ -132,7 +132,7 @@ Control spacing, padding, margins, and layout of form items to create well-organ
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLHNJrCTfpfSzgF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxjnBKTSCKsHVK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Input Styling
 
@@ -205,7 +205,7 @@ Style input fields with custom borders, focus states, and visual effects to crea
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBdXzhiTpICsBUl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVnDRBUzSMSGrgm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Validation Styling
 
@@ -318,7 +318,7 @@ Apply custom styling to validation messages, error states, and valid states to p
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLxXJViJTdLXqQW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLdXRBATyWPDFGw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Advanced Animations
 
@@ -497,7 +497,7 @@ Create modern user experiences with advanced CSS animations, transitions, glass-
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdDzrspTGEusmS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRZRhUJIKNJwDR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Responsive Design
 
@@ -675,4 +675,4 @@ Create mobile-friendly forms that adapt to different screen sizes with flexible 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrRZJVCffbmYvBB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVnDxrqTSqVIGeD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

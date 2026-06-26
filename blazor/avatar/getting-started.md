@@ -83,7 +83,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-## Install required Blazor packages
+## Install the required Blazor packages
 
 Install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -144,4 +144,4 @@ Add the Blazor Avatar component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Avatar component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.webp)" %}

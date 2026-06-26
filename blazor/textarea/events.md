@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor TextArea Component | Syncfusion
-description: Handling events triggered by user interactions or changes of the Syncfusion Blazor Textarea component and much more.
+title: Events in Blazor TextArea Component | Syncfusion®
+description: Handling events triggered by user interactions or changes of the Blazor Textarea component and much more.
 platform: Blazor
 control: TextArea
 documentation: ug
