@@ -38,22 +38,22 @@ N> The state will be persisted based on the **ID** property. So, it is recommend
 
 <SfGantt DataSource="@TaskCollection" Width="750px" AllowReordering="true" AllowFiltering="true" AllowSorting="true" AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-    ParentID="ParentId"></GanttTaskFields>
+                     ParentID="ParentId"></GanttTaskFields>
 </SfGantt>
-@code{
-    
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -91,28 +91,30 @@ To manually manage the Gantt chart’s persisted state, use the following method
 @using Syncfusion.Blazor.Navigations
 
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Width="750px"
-                Toolbar="Toolbaritems" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
-                AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
+         Toolbar="Toolbaritems" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
+         AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 <style>
-.e-savestate::before {
-       content: '\e74d';
+    .e-savestate::before {
+        content: '\e74d';
     }
+
     .e-setstate::before {
-       content: '\e75d';
+        content: '\e75d';
     }
+
     .e-resetstate::before {
-       content: '\e710';
+        content: '\e710';
     }
 </style>
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
-    private string PersistedState = null; 
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    private string? PersistedState = null;
     private List<Object> Toolbaritems = new List<Object>() {
          "ZoomIn", "ZoomOut", "ZoomToFit",
          new ToolbarItem() { Text = "Save state", TooltipText = "Save state", Id = "GetPersistence", PrefixIcon= "e-savestate" },
@@ -121,30 +123,30 @@ To manually manage the Gantt chart’s persisted state, use the following method
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     private async void ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "GetPersistence")
+        if (args.Item.Id == "GetPersistence" && Gantt!=null)
         {
             PersistedState = await Gantt.GetPersistDataAsync();
         }
-        else if (args.Item.Id == "SetPersistence")
+        else if (args.Item.Id == "SetPersistence" && Gantt != null && PersistedState!=null)
         {
-            await Gantt.SetPersistDataAsync(PersistedState);  
+            await Gantt.SetPersistDataAsync(PersistedState);
         }
-        else if (args.Item.Id == "ClearPersistence")
+        else if (args.Item.Id == "ClearPersistence" && Gantt != null)
         {
-            await Gantt.ResetPersistDataAsync();  
+            await Gantt.ResetPersistDataAsync();
         }
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

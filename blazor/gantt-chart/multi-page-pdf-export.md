@@ -37,13 +37,13 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -64,11 +64,11 @@ To export the Gantt Chart across multiple PDF pages, set the `enableMultiPage` p
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args?.Item?.Id == "PdfExport")
+        if (args?.Item?.Id == "PdfExport" && Gantt!=null)
         {
-            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
+            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties { };
             // enables multi-page mode during PDF export.
-            await Gantt.ExportToPdfAsync(pdfExportProperties, true); 
+            await Gantt.ExportToPdfAsync(pdfExportProperties, true);
         }
     }
 }
@@ -112,7 +112,7 @@ These properties provide precise control over scaling and pagination, enabling c
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
+
 @using Syncfusion.Blazor.Navigations
 
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" Toolbar="toolbarItem">
@@ -129,13 +129,13 @@ These properties provide precise control over scaling and pagination, enabling c
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -156,9 +156,9 @@ These properties provide precise control over scaling and pagination, enabling c
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args?.Item?.Id == "PdfExport")
+        if (args?.Item?.Id == "PdfExport" && Gantt!=null)
         {
-            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
+            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties { };
             await Gantt.ExportToPdfAsync(pdfExportProperties, true);
         }
     }
@@ -211,13 +211,13 @@ This approach provides precise control over the overall Gantt Chart size while p
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -238,17 +238,21 @@ This approach provides precise control over the overall Gantt Chart size while p
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args?.Item?.Id == "PdfExport")
+        if (args?.Item?.Id == "PdfExport" && Gantt!=null)
         {
-            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties{};
+            GanttPdfExportProperties pdfExportProperties = new GanttPdfExportProperties { };
             await Gantt.ExportToPdfAsync(pdfExportProperties, true);
         }
     }
     public async Task PdfExportingHandler(PdfExportEventArgs args)
     {
-        args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.Percentage;
-        args.MultiPageSettings.ScalePercentage = 50;
-        await Task.CompletedTask;
+        if(args!=null)
+        {
+            args.MultiPageSettings.ScaleMode = GanttPdfExportScaleMode.Percentage;
+            args.MultiPageSettings.ScalePercentage = 50;
+            await Task.CompletedTask;
+        }
+        
     }
 }
 

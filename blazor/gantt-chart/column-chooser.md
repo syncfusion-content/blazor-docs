@@ -20,17 +20,18 @@ You can add a custom column chooser option to the toolbar using the [Toolbar](ht
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="GanttInstance" DataSource="@TaskCollection" Toolbar="@ToolbarItems" ShowColumnChooser="true" Height="450px" Width="700px">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Toolbar="@ToolbarItems" ShowColumnChooser="true" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickAsync" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> GanttInstance;
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     public List<Object> ToolbarItems = new List<Object>() {
-        new Syncfusion.Blazor.Navigations.ToolbarItem() { 
+        new Syncfusion.Blazor.Navigations.ToolbarItem() {
+          
             Text = "Column Chooser", TooltipText = "Column Chooser", Id = "columnchooser"
         }
     };
@@ -39,29 +40,33 @@ You can add a custom column chooser option to the toolbar using the [Toolbar](ht
     {
         if (args.Item.Id == "columnchooser")
         {
-            await GanttInstance.OpenColumnChooser(100, 40);
+            if (Gantt != null)
+            {
+                await Gantt.OpenColumnChooser(100, 40);
+            }
+            
         }
     }
-    
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -98,7 +103,7 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
 
 <div style="height: 100%; width: 100%">
     <div style="position: relative; border: 1px solid red; height: 100%; width: 100%; min-height: 450px; min-width: 800px">
-        <SfGantt @ref="Gantt" DataSource="@Orders" ShowColumnChooser="true" ProjectStartDate="new DateTime(2022, 4, 1)" ID="GanttChart" Width="1200px" Height="450px" HighlightWeekends="true" AllowReordering="true" TreeColumnIndex="1" GridLines="Syncfusion.Blazor.Gantt.GridLine.None">
+        <SfGantt @ref="Gantt" DataSource="@Orders" ShowColumnChooser="true" ProjectStartDate="new DateTime(2026, 4, 1)" ID="GanttChart" Width="1200px" Height="450px" HighlightWeekends="true" AllowReordering="true" TreeColumnIndex="1" GridLines="Syncfusion.Blazor.Gantt.GridLine.None">
             <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" ParentID="ParentID" Dependency="Predecessor"></GanttTaskFields>
             <GanttColumnChooserSettings>
                 <Template>
@@ -182,8 +187,8 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
 </style>
 
 @code {
-    public List<TaskData> Orders { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? Orders { get; set; }
+    public SfGantt<TaskData>? Gantt;
     public CustomColumnChooser ins;
 
     public async void AfterCompletion(string[] hideColumns, string[] showColumns)
@@ -207,10 +212,14 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
     }
     private async Task OpenColumnChooser(MouseEventArgs e, string columnName)
     {
-        var columns = Gantt.Columns;
-        var columnIndex = columns.Select(c => c.Field).ToList().IndexOf(columnName);
-        var xOffset = columnIndex == columns.Count - 1 ? e.ClientX - 450 : e.ClientX - 300;
-        await Gantt.OpenColumnChooser(xOffset, e.ClientY - 100);
+        var columns = Gantt?.Columns;
+        var columnIndex = columns?.Select(c => c.Field).ToList().IndexOf(columnName);
+        var xOffset = columnIndex == columns?.Count - 1 ? e.ClientX - 450 : e.ClientX - 300;
+        if (Gantt != null)
+        {
+            await Gantt.OpenColumnChooser(xOffset, e.ClientY - 100);
+        }
+        
     }
 
 
@@ -269,17 +278,17 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
 </SfListView>
 
 @code {
-    public List<DataModel> DataSourceCopy { get; set; } = new();
-    public SfListView<DataModel> ListView { get; set; }
+    public List<DataModel>? DataSourceCopy { get; set; } = new();
+    public SfListView<DataModel>? ListView { get; set; }
 
     [Parameter]
-    public SfGantt<TaskData> CustomGantt { get; set; }
+    public SfGantt<TaskData>? CustomGantt { get; set; }
 
     [Parameter]
-    public Action<string[], string[]> ActionCompleted { get; set; }
+    public Action<string[], string[]>? ActionCompleted { get; set; }
 
     [Parameter]
-    public ColumnChooserTemplateContext ColumnContext { get; set; }
+    public ColumnChooserTemplateContext? ColumnContext { get; set; }
 
     private static readonly List<DataModel> DataSource = new()
     {
@@ -313,7 +322,7 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
 
         string searchText = args.Value?.ToLower() ?? "";
         DataSourceCopy = DataSource
-            .Where(e => e.Text.ToLower().Contains(searchText))
+            .Where(e => e.Text != null && e.Text.ToLower().Contains(searchText))
             .ToList();
         await PreselectVisibleColumns();
     }
@@ -328,8 +337,8 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
             .Select(c => c.Field)
             .ToList();
 
-        var itemsToCheck = DataSourceCopy
-            .Where(item => visibleFields.Contains(item.Text))
+        var itemsToCheck = DataSourceCopy?
+            .Where(item => item.Text != null && visibleFields.Contains(item.Text))
             .ToList();
 
         await ListView.CheckItemsAsync(itemsToCheck);
@@ -349,19 +358,22 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
             var fieldsToHide = allFields.Except(checkedFields).ToList();
 
             // Show checked columns
-            if (checkedFields.Any())
+            if (checkedFields.Any() && checkedFields != null)
             {
                 await CustomGantt.ShowColumnsAsync(checkedFields.ToArray(), "Field");
+                
             }
+            if (fieldsToHide != null && fieldsToHide.ToArray() != null && checkedFields.ToArray()!=null)
+        {
+                // Hide unchecked columns
+                if (fieldsToHide.Any())
+                {
+                    await CustomGantt.HideColumnsAsync(fieldsToHide.ToArray(), "Field");
+                }
 
-            // Hide unchecked columns
-            if (fieldsToHide.Any())
-            {
-                await CustomGantt.HideColumnsAsync(fieldsToHide.ToArray(), "Field");
+                // Notify parent component
+                ActionCompleted?.Invoke(fieldsToHide.ToArray(), checkedFields.ToArray());
             }
-
-            // Notify parent component
-            ActionCompleted?.Invoke(fieldsToHide.ToArray(), checkedFields.ToArray());
         }
         catch (Exception ex)
         {
@@ -371,9 +383,9 @@ The following sample renders a [ListView](https://blazor.syncfusion.com/document
 
     public class DataModel
     {
-        public string Id { get; set; }
-        public string Text { get; set; }
-        public string Type { get; set; }
+        public string? Id { get; set; }
+        public string? Text { get; set; }
+        public string? Type { get; set; }
     }
 }
 
@@ -390,17 +402,17 @@ public class DataModel
 
 public class TaskData
 {
-    public int TaskID { get; set; }
-    public string TaskName { get; set; }
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
-    public string Duration { get; set; }
-    public int Progress { get; set; }
-    public string Predecessor { get; set; }
+    public int? TaskID { get; set; }
+    public string? TaskName { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public string? Duration { get; set; }
+    public int? Progress { get; set; }
+    public string? Predecessor { get; set; }
     public int? ParentID { get; set; }
-    public bool IsExpanded { get; set; }
-    public string Done { get; set; }
-    public bool IsMilestone { get; set; }
+    public bool? IsExpanded { get; set; }
+    public string? Done { get; set; }
+    public bool? IsMilestone { get; set; }
 }
 
 {% endhighlight %}

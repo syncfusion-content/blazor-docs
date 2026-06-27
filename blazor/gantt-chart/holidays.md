@@ -39,33 +39,33 @@ The following example configures single and multi-day holidays:
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-             Duration="Duration" Progress="Progress" ParentID="ParentId">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttHolidays>
         <GanttHoliday From="@Holiday1" To="@Holiday2" Label="Public holidays"
-              CssClass="e-custom-holiday"></GanttHoliday>
+                      CssClass="e-custom-holiday"></GanttHoliday>
         <GanttHoliday From="@Holiday3" To="@Holiday4" Label="Public holiday"
-              CssClass="e-custom-holiday"></GanttHoliday>
+                      CssClass="e-custom-holiday"></GanttHoliday>
     </GanttHolidays>
 </SfGantt>
-@code{
+@code {
     private DateTime Holiday1 = new DateTime(2026, 01, 13);
-    private DateTime Holiday2 = new DateTime(2062, 01, 09);
-    private DateTime Holiday3 = new DateTime(2062, 01, 17);
-    private DateTime Holiday4 = new DateTime(2062, 01, 15);
-    public List<TaskData> TaskCollection { get; set; }
+    private DateTime Holiday2 = new DateTime(2026, 01, 09);
+    private DateTime Holiday3 = new DateTime(2026, 01, 17);
+    private DateTime Holiday4 = new DateTime(2026, 01, 15);
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

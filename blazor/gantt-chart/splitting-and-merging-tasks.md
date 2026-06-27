@@ -46,11 +46,11 @@ The following code snippet demonstrates how to visualize task segments in the Ga
 @code {
     private DateTime projectStart = new DateTime(2026, 03, 23);
     private DateTime projectEnd = new DateTime(2026, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<SegmentModel> SegmentCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    public List<SegmentModel>? SegmentCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
         this.SegmentCollection = GetSegmentCollection();
     }
     public class SegmentModel
@@ -59,18 +59,18 @@ The following code snippet demonstrates how to visualize task segments in the Ga
         public int TaskId { get; set; }
         public DateTime SegmentStartDate { get; set; }
         public DateTime SegmentEndDate { get; set; }
-        public string SegmentDuration { get; set; }
+        public string? SegmentDuration { get; set; }
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
@@ -136,7 +136,7 @@ Segmented taskbars can be merged using the **Merge Task** context menu item. Its
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-<SfGantt TValue="TaskData" EnableContextMenu="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
+<SfGantt TValue="TaskData" EnableContextMenu="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update", "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
@@ -156,11 +156,11 @@ Segmented taskbars can be merged using the **Merge Task** context menu item. Its
 @code {
     private DateTime projectStart = new DateTime(2026, 03, 23);
     private DateTime projectEnd = new DateTime(2026, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<SegmentModel> SegmentCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    public List<SegmentModel>? SegmentCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
         this.SegmentCollection = GetSegmentCollection();
     }
     public class SegmentModel
@@ -169,18 +169,18 @@ Segmented taskbars can be merged using the **Merge Task** context menu item. Its
         public int TaskId { get; set; }
         public DateTime SegmentStartDate { get; set; }
         public DateTime SegmentEndDate { get; set; }
-        public string SegmentDuration { get; set; }
+        public string? SegmentDuration { get; set; }
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
@@ -240,7 +240,7 @@ In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/docum
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
 
-<SfGantt TValue="TaskData" EnableContextMenu="true" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
+<SfGantt TValue="TaskData" EnableContextMenu="true" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update", "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
@@ -260,11 +260,11 @@ In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/docum
 @code {
     private DateTime projectStart = new DateTime(2026, 03, 23);
     private DateTime projectEnd = new DateTime(2026, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<SegmentModel> SegmentCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    public List<SegmentModel>? SegmentCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
         this.SegmentCollection = GetSegmentCollection();
     }
     public class SegmentModel
@@ -276,18 +276,18 @@ In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/docum
         [Display(Name = "End Date")]
         public DateTime SegmentEndDate { get; set; }
         [Display(Name = "Duration")]
-        public string SegmentDuration { get; set; }
+        public string? SegmentDuration { get; set; }
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
@@ -350,46 +350,53 @@ In the following code snippet, clicking an external button merges the segments o
 @using Syncfusion.Blazor.Buttons
 
 <SfButton IsPrimary OnClick="MergeTaskHandler">Merge Task</SfButton>
- <SfButton IsPrimary OnClick="SplitTaskHandler">Split Task</SfButton>
+<SfButton IsPrimary OnClick="SplitTaskHandler">Split Task</SfButton>
 
- <SfGantt @ref="Gantt" TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
-     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
-     </GanttTaskFields>
-     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-     <GanttSegmentFields PrimaryKey="Id" ForeignKey="TaskId" StartDate="SegmentStartDate" EndDate="SegmentEndDate" Duration="SegmentDuration" TValue="TaskData" TSegments="SegmentModel" DataSource="SegmentCollection"></GanttSegmentFields>
-     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-     <GanttColumns>
-         <GanttColumn Field="TaskId" Width="100" Visible="false"></GanttColumn>
-         <GanttColumn Field="TaskName" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-         <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-         <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-         <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-         <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
-         <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
-     </GanttColumns>
- </SfGantt>
+<SfGantt @ref="Gantt" TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update", "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttSegmentFields PrimaryKey="Id" ForeignKey="TaskId" StartDate="SegmentStartDate" EndDate="SegmentEndDate" Duration="SegmentDuration" TValue="TaskData" TSegments="SegmentModel" DataSource="SegmentCollection"></GanttSegmentFields>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100" Visible="false"></GanttColumn>
+        <GanttColumn Field="TaskName" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
+        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
 
- @code {
-    public SfGantt<TaskData> Gantt { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt { get; set; }
     private DateTime projectStart = new DateTime(2026, 03, 23);
     private DateTime projectEnd = new DateTime(2026, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<SegmentModel> SegmentCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    public List<SegmentModel>? SegmentCollection { get; set; }
 
     private async Task MergeTaskHandler()
     {
         List<ValueTuple<int, int>> mergeIndexes = new List<ValueTuple<int, int>>();
         mergeIndexes.Add((0, 1));
-        await Gantt.MergeTaskAsync(2, mergeIndexes);
+        if(Gantt!=null)
+        {
+            await Gantt.MergeTaskAsync(2, mergeIndexes);
+        }
+
     }
     private async Task SplitTaskHandler()
     {
-        await Gantt.SplitTaskAsync(3, new List<DateTime> { new DateTime(2026, 04, 08) });
+        if (Gantt != null)
+        {
+            await Gantt.SplitTaskAsync(3, new List<DateTime> { new DateTime(2026, 04, 08) });
+        }
     }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
         this.SegmentCollection = GetSegmentCollection();
     }
     public class SegmentModel
@@ -398,18 +405,18 @@ In the following code snippet, clicking an external button merges the segments o
         public int TaskId { get; set; }
         public DateTime SegmentStartDate { get; set; }
         public DateTime SegmentEndDate { get; set; }
-        public string SegmentDuration { get; set; }
+        public string? SegmentDuration { get; set; }
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
@@ -470,7 +477,7 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
 
 @using Syncfusion.Blazor.Gantt
 <span class="text-primary">@segmentEventMessage</span>
-<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="800px" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="800px" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update", "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
@@ -490,9 +497,9 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
 @code {
     private DateTime projectStart = new DateTime(2026, 03, 23);
     private DateTime projectEnd = new DateTime(2026, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<SegmentModel> SegmentCollection { get; set; }
-    private string segmentEventMessage { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    public List<SegmentModel>? SegmentCollection { get; set; }
+    private string? segmentEventMessage { get; set; }
 
     private async Task SegmentEventHandler(SegmentEventArgs<SegmentModel> args)
     {
@@ -502,7 +509,7 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
         }
         if (args.DeletedSegments != null && args.DeletedSegments.Any())
         {
-            foreach(SegmentModel segment in args.DeletedSegments)
+            foreach (SegmentModel segment in args.DeletedSegments)
             {
                 if (segment.TaskId == 2)
                 {
@@ -520,7 +527,7 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
         this.SegmentCollection = GetSegmentCollection();
     }
     public class SegmentModel
@@ -529,18 +536,18 @@ In the below code snippet, using the `SegmentChanging` event a customized messag
         public int TaskId { get; set; }
         public DateTime SegmentStartDate { get; set; }
         public DateTime SegmentEndDate { get; set; }
-        public string SegmentDuration { get; set; }
+        public string? SegmentDuration { get; set; }
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
@@ -601,14 +608,14 @@ In the code snippet below, the segments are customized based on template context
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="gantt" TValue="TaskData" DataSource="@taskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
-    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentID" Dependency="Predecessor">
+<SfGantt @ref="gantt" TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update", "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" EnableContextMenu="true" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
     <GanttSegmentFields PrimaryKey="Id" ForeignKey="TaskID" StartDate="SegmentStartDate" EndDate="SegmentEndDate" Duration="SegmentDuration" TValue="TaskData" TSegments="SegmentModel" DataSource="segmentCollection"></GanttSegmentFields>
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
     <GanttColumns>
-        <GanttColumn Field="TaskID" Width="100" Visible="false"></GanttColumn>
+        <GanttColumn Field="TaskId" Width="100" Visible="false"></GanttColumn>
         <GanttColumn Field="TaskName" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
@@ -670,14 +677,14 @@ In the code snippet below, the segments are customized based on template context
     }
 </style>
 @code {
-    private SfGantt<TaskData> gantt;
-    private DateTime projectStart = new DateTime(2022, 03, 23);
-    private DateTime projectEnd = new DateTime(2022, 05, 10);
-    private List<TaskData> taskCollection { get; set; }
-    private List<SegmentModel> segmentCollection { get; set; }
+    private SfGantt<TaskData>? gantt;
+    private DateTime projectStart = new DateTime(2026, 03, 23);
+    private DateTime projectEnd = new DateTime(2026, 05, 10);
+    private List<TaskData>? TaskCollection { get; set; }
+    private List<SegmentModel>? segmentCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.taskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
         this.segmentCollection = GetSegmentCollection();
     }
     public class SegmentModel
@@ -686,18 +693,18 @@ In the code snippet below, the segments are customized based on template context
         public int TaskID { get; set; }
         public DateTime SegmentStartDate { get; set; }
         public DateTime SegmentEndDate { get; set; }
-        public string SegmentDuration { get; set; }
+        public string? SegmentDuration { get; set; }
     }
     public class TaskData
     {
-        public int TaskID { get; set; }
-        public string TaskName { get; set; }
+        public int TaskId { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public int? ParentID { get; set; }
-        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+        public string? Predecessor { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
     {
@@ -723,21 +730,21 @@ In the code snippet below, the segments are customized based on template context
     private List<SegmentModel> GetSegmentCollection()
     {
         List<SegmentModel> segments = new List<SegmentModel>();
-        segments.Add(new SegmentModel() { Id = 1, TaskId = 2, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "1" });
-        segments.Add(new SegmentModel() { Id = 2, TaskId = 2, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
-        segments.Add(new SegmentModel() { Id = 3, TaskId = 3, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "2" });
-        segments.Add(new SegmentModel() { Id = 4, TaskId = 3, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
-        segments.Add(new SegmentModel() { Id = 5, TaskId = 3, SegmentStartDate = new DateTime(2026, 04, 04), SegmentDuration = "3" });
-        segments.Add(new SegmentModel() { Id = 6, TaskId = 4, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "1" });
-        segments.Add(new SegmentModel() { Id = 7, TaskId = 4, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
-        segments.Add(new SegmentModel() { Id = 8, TaskId = 8, SegmentStartDate = new DateTime(2026, 04, 01), SegmentEndDate = new DateTime(2026, 04, 03) });
-        segments.Add(new SegmentModel() { Id = 9, TaskId = 8, SegmentStartDate = new DateTime(2026, 04, 05), SegmentDuration = "1" });
-        segments.Add(new SegmentModel() { Id = 10, TaskId = 9, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
-        segments.Add(new SegmentModel() { Id = 11, TaskId = 9, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "1" });
-        segments.Add(new SegmentModel() { Id = 12, TaskId = 12, SegmentStartDate = new DateTime(2026, 04, 05), SegmentDuration = "1" });
-        segments.Add(new SegmentModel() { Id = 13, TaskId = 12, SegmentStartDate = new DateTime(2026, 04, 07), SegmentDuration = "1" });
-        segments.Add(new SegmentModel() { Id = 14, TaskId = 14, SegmentStartDate = new DateTime(2026, 04, 01), SegmentEndDate = new DateTime(2026, 04, 02) });
-        segments.Add(new SegmentModel() { Id = 15, TaskId = 14, SegmentStartDate = new DateTime(2026, 04, 04), SegmentDuration = "2" });
+        segments.Add(new SegmentModel() { Id = 1, TaskID = 2, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "1" });
+        segments.Add(new SegmentModel() { Id = 2, TaskID = 2, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
+        segments.Add(new SegmentModel() { Id = 3, TaskID = 3, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "2" });
+        segments.Add(new SegmentModel() { Id = 4, TaskID = 3, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
+        segments.Add(new SegmentModel() { Id = 5, TaskID = 3, SegmentStartDate = new DateTime(2026, 04, 04), SegmentDuration = "3" });
+        segments.Add(new SegmentModel() { Id = 6, TaskID = 4, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "1" });
+        segments.Add(new SegmentModel() { Id = 7, TaskID = 4, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
+        segments.Add(new SegmentModel() { Id = 8, TaskID = 8, SegmentStartDate = new DateTime(2026, 04, 01), SegmentEndDate = new DateTime(2026, 04, 03) });
+        segments.Add(new SegmentModel() { Id = 9, TaskID = 8, SegmentStartDate = new DateTime(2026, 04, 05), SegmentDuration = "1" });
+        segments.Add(new SegmentModel() { Id = 10, TaskID = 9, SegmentStartDate = new DateTime(2026, 03, 29), SegmentEndDate = new DateTime(2026, 03, 31) });
+        segments.Add(new SegmentModel() { Id = 11, TaskID = 9, SegmentStartDate = new DateTime(2026, 04, 01), SegmentDuration = "1" });
+        segments.Add(new SegmentModel() { Id = 12, TaskID = 12, SegmentStartDate = new DateTime(2026, 04, 05), SegmentDuration = "1" });
+        segments.Add(new SegmentModel() { Id = 13, TaskID = 12, SegmentStartDate = new DateTime(2026, 04, 07), SegmentDuration = "1" });
+        segments.Add(new SegmentModel() { Id = 14, TaskID = 14, SegmentStartDate = new DateTime(2026, 04, 01), SegmentEndDate = new DateTime(2026, 04, 02) });
+        segments.Add(new SegmentModel() { Id = 15, TaskID = 14, SegmentStartDate = new DateTime(2026, 04, 04), SegmentDuration = "2" });
         return segments;
     }
 }

@@ -40,29 +40,29 @@ The following implementation demonstrates comprehensive data marker integration 
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" 
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Progress="Progress" ParentID="ParentId" Indicators="Indicators">
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public List<GanttIndicator> Indicators { get; set; }
+        public List<GanttIndicator>? Indicators { get; set; }
     }
-   
+
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {

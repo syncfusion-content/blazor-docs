@@ -25,7 +25,7 @@ In the Gantt Chart component, you can hide chart part and display Tree Grid part
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData

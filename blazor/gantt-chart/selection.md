@@ -47,11 +47,11 @@ The Syncfusion Blazor Gantt Chart component supports three selection modes, conf
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     public Syncfusion.Blazor.Grids.SelectionMode SelectionModeValue { get; set; } = Syncfusion.Blazor.Grids.SelectionMode.Both;
     public class DropDownOrder
     {
-        public string Text { get; set; }
+        public string? Text { get; set; }
         public Syncfusion.Blazor.Grids.SelectionMode Value { get; set; }
     }
     List<DropDownOrder> DropDownData = new List<DropDownOrder>
@@ -63,7 +63,7 @@ The Syncfusion Blazor Gantt Chart component supports three selection modes, conf
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public void OnChange(ChangeEventArgs<Syncfusion.Blazor.Grids.SelectionMode, DropDownOrder> Args)
@@ -74,10 +74,10 @@ The Syncfusion Blazor Gantt Chart component supports three selection modes, conf
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -118,7 +118,7 @@ When enabled, clicking a selected row or cell will deselect it, and clicking it 
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom:20px">
-  <SfButton @onclick="ToggleSelection">@buttonText</SfButton>
+    <SfButton @onclick="ToggleSelection">@buttonText</SfButton>
 </div>
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
@@ -126,7 +126,7 @@ When enabled, clicking a selected row or cell will deselect it, and clicking it 
     <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" EnableToggle="@toggle"></GanttSelectionSettings>
 </SfGantt>
 
-@code{
+@code {
     private bool toggle = true;
     private string buttonText = "Disable Toggle";
 
@@ -136,26 +136,26 @@ When enabled, clicking a selected row or cell will deselect it, and clicking it 
         buttonText = toggle ? "Disable Toggle" : "Enable Toggle";
     }
 
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -192,30 +192,30 @@ The Gantt Chart component allows to select range of cells or rows by mouse or to
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttSelectionSettings  Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" AllowDragSelection="true"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" AllowDragSelection="true"></GanttSelectionSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -257,37 +257,39 @@ To clear selected rows and cells in the Gantt component, use the [ClearSelection
     <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    private List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    private List<TaskData>? TaskCollection { get; set; }
 
     public void select()
     {
-        this.Gantt.SelectRowsAsync(new int[] {1,2,3});
+          
+       Gantt?.SelectRowsAsync(new int[] { 1, 2, 3 });
     }
-    public void clear() {
-        this.Gantt.ClearSelectionAsync();
+    public void clear()
+    {
+        Gantt?.ClearSelectionAsync();
     }
-   
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
-    
+
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },

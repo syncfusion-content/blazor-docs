@@ -21,33 +21,33 @@ You can enable single row selection in the Gantt Chart component by setting [Sel
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSelection="true">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
-        </GanttTaskFields>
-        <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Single"></GanttSelectionSettings>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Single"></GanttSelectionSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
-    
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -85,28 +85,28 @@ You can enable multiple row selection in the Gantt Chart component by setting  [
     <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
-    
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -137,33 +137,33 @@ The following example selects the row at index 3 during initial load:
 
 @using Syncfusion.Blazor.Gantt
 
-    <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSelection="true" SelectedRowIndex="3">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
-        </GanttTaskFields>
-    </SfGantt>
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSelection="true" SelectedRowIndex="3">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+</SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -211,36 +211,40 @@ Select a single row in the Gantt Chart component by calling the [SelectRowAsync]
         <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Single"></GanttSelectionSettings>
     </SfGantt>
 </div>
- 
-@code{
-    public SfGantt<TaskData> Gantt;
+
+@code {
+    public SfGantt<TaskData>? Gantt;
     public int RowIndexValue;
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
 
     public async Task SelectRow()
     {
-        await Gantt.SelectRowAsync(RowIndexValue);
+        if(Gantt!=null)
+        {
+            await Gantt.SelectRowAsync(RowIndexValue);
+        }
+        
     }
-   
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -271,7 +275,7 @@ Select multiple rows in the Gantt Chart component by using the [SelectRowsAsync]
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding: 10px 0px 20px 0px">
-    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 1,3 })">Select [1, 3]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 1, 3 })">Select [1, 3]</SfButton>
     <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 0, 2 })">Select [0, 2]</SfButton>
     <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 2, 4 })">Select [2, 4]</SfButton>
     <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 0, 5 })">Select [0, 5]</SfButton>
@@ -289,34 +293,38 @@ Select multiple rows in the Gantt Chart component by using the [SelectRowsAsync]
     <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
 
     public async Task SelectMultipleRows(int[] rowIndexes)
     {
-        await Gantt.SelectRowsAsync(rowIndexes);
+        if(Gantt!=null)
+        {
+            await Gantt.SelectRowsAsync(rowIndexes);
+        }
+        
     }
-    
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -347,7 +355,7 @@ To access selected row details in the Blazor Gantt Chart component:
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom:20px">
     <SfButton CssClass="action-button" @onclick="GetSelectedRowInfo">Show Selected Tasks</SfButton>
@@ -422,8 +430,8 @@ To access selected row details in the Blazor Gantt Chart component:
 </style>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     public List<TaskData> SelectedRecords { get; set; } = new();
     public List<int> SelectedIndexes { get; set; } = new();
 
@@ -434,17 +442,21 @@ To access selected row details in the Blazor Gantt Chart component:
 
     private async Task GetSelectedRowInfo()
     {
-        SelectedIndexes = await Gantt.GetSelectedRowIndexesAsync();
-        SelectedRecords = await Gantt.GetSelectedRecordsAsync();
+        if(Gantt!=null)
+        {
+            SelectedIndexes = await Gantt.GetSelectedRowIndexesAsync();
+            SelectedRecords = await Gantt.GetSelectedRecordsAsync();
+        }
+        
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

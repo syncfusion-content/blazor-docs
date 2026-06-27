@@ -20,23 +20,23 @@ The **Undo** in the Blazor Gantt Chart reverts the most recent action, such as m
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="500px" Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
-            Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
-        TreeColumnIndex="1" EnableContextMenu="true" AllowSorting="true" ShowColumnMenu="true" AllowResizing="true" AllowReordering="true" AllowFiltering="true">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-            Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
-        <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-        <GanttColumns>
-            <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
-            <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-            <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-            <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-            <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-            <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
-        </GanttColumns>
-        <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
+         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
+         TreeColumnIndex="1" EnableContextMenu="true" AllowSorting="true" ShowColumnMenu="true" AllowResizing="true" AllowReordering="true" AllowFiltering="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
+    </GanttColumns>
+    <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
     <GanttLabelSettings RightLabel="TaskName" TValue="TaskModel"></GanttLabelSettings>
 </SfGantt>
-@code{
+@code {
     public List<TaskModel> TaskCollection { get; set; } = new();
     private List<GanttUndoRedoAction> undoRedoActions = new List<GanttUndoRedoAction> {
         GanttUndoRedoAction.Sort, GanttUndoRedoAction.Add, GanttUndoRedoAction.ColumnReorder, GanttUndoRedoAction.TaskbarEdit,
@@ -45,17 +45,17 @@ The **Undo** in the Blazor Gantt Chart reverts the most recent action, such as m
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetUndoRedoData();
+        TaskCollection = GetUndoRedoData();
     }
     public class TaskModel
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
     public static List<TaskModel> GetUndoRedoData()
@@ -122,23 +122,23 @@ The following table lists the built-in actions that can be included for undo and
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="500px" Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
-            Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
-        TreeColumnIndex="1" EnableContextMenu="true"  AllowFiltering="true">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-            Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
-        <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-        <GanttColumns>
-            <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
-            <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-            <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-            <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-            <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-            <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
-        </GanttColumns>
-        <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
+         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
+         TreeColumnIndex="1" EnableContextMenu="true" AllowFiltering="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
+    </GanttColumns>
+    <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
     <GanttLabelSettings RightLabel="TaskName" TValue="TaskModel"></GanttLabelSettings>
 </SfGantt>
-@code{
+@code {
     public List<TaskModel> TaskCollection { get; set; } = new();
     private List<GanttUndoRedoAction> undoRedoActions = new List<GanttUndoRedoAction> { GanttUndoRedoAction.Add, GanttUndoRedoAction.TaskbarEdit,
         GanttUndoRedoAction.Edit, GanttUndoRedoAction.Filter, GanttUndoRedoAction.NextTimeSpan, GanttUndoRedoAction.PreviousTimeSpan,GanttUndoRedoAction.Delete,
@@ -146,7 +146,7 @@ The following table lists the built-in actions that can be included for undo and
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetUndoRedoData();
+        TaskCollection = GetUndoRedoData();
     }
     public class TaskModel
     {
@@ -194,23 +194,23 @@ The following example illustrates how to configure the maximum number of undo an
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="500px" Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
-            Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
+         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
          TreeColumnIndex="1" EnableContextMenu="true" AllowFiltering="true" MaxUndoRedoSteps="5">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-            Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
-        <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-        <GanttColumns>
-            <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
-            <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-            <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-            <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-            <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-            <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
-        </GanttColumns>
-        <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
+    </GanttColumns>
+    <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
     <GanttLabelSettings RightLabel="TaskName" TValue="TaskModel"></GanttLabelSettings>
 </SfGantt>
-@code{
+@code {
     public List<TaskModel> TaskCollection { get; set; } = new();
     private List<GanttUndoRedoAction> undoRedoActions = new List<GanttUndoRedoAction> { GanttUndoRedoAction.Add, GanttUndoRedoAction.TaskbarEdit,
         GanttUndoRedoAction.Edit, GanttUndoRedoAction.Filter, GanttUndoRedoAction.NextTimeSpan, GanttUndoRedoAction.PreviousTimeSpan,GanttUndoRedoAction.Delete,
@@ -218,7 +218,7 @@ The following example illustrates how to configure the maximum number of undo an
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetUndoRedoData();
+        TaskCollection = GetUndoRedoData();
     }
     public class TaskModel
     {
@@ -270,23 +270,23 @@ In the following example, clicking an external button invokes the `UndoAsync` me
 <SfButton OnClick="@UndoHandler">Undo</SfButton>
 <SfButton OnClick="@RedoHandler">Redo</SfButton>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="500px" Width="100%" HighlightWeekends="true" EnableUndoRedo="true" UndoRedoActions="@undoRedoActions"
-            Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
+         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Undo", "Redo", "ZoomIn", "ZoomOut", "ZoomToFit", "PrevTimeSpan", "NextTimeSpan" })"
          TreeColumnIndex="1" EnableContextMenu="true" AllowFiltering="true" MaxUndoRedoSteps="5">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
-        <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-        <GanttColumns>
-            <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
-            <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-            <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-            <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-            <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-            <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
-        </GanttColumns>
-        <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
+    </GanttColumns>
+    <GanttSplitterSettings ColumnIndex="2"></GanttSplitterSettings>
     <GanttLabelSettings RightLabel="TaskName" TValue="TaskModel"></GanttLabelSettings>
 </SfGantt>
-@code{
-    public SfGantt<TaskModel> Gantt;
+@code {
+    public SfGantt<TaskModel>? Gantt;
     public List<TaskModel> TaskCollection { get; set; } = new();
     private List<GanttUndoRedoAction> undoRedoActions = new List<GanttUndoRedoAction> { GanttUndoRedoAction.Add, GanttUndoRedoAction.TaskbarEdit,
         GanttUndoRedoAction.Edit, GanttUndoRedoAction.Filter, GanttUndoRedoAction.NextTimeSpan, GanttUndoRedoAction.PreviousTimeSpan,GanttUndoRedoAction.Delete,
@@ -294,7 +294,7 @@ In the following example, clicking an external button invokes the `UndoAsync` me
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetUndoRedoData();
+        TaskCollection = GetUndoRedoData();
     }
 
     /// <summary>
@@ -302,7 +302,11 @@ In the following example, clicking an external button invokes the `UndoAsync` me
     /// </summary>
     private async Task UndoHandler()
     {
-        await Gantt.UndoAsync();
+        if(Gantt!=null)
+        {
+            await Gantt.UndoAsync();
+        }
+        
     }
 
     /// <summary>
@@ -310,7 +314,11 @@ In the following example, clicking an external button invokes the `UndoAsync` me
     /// </summary>
     private async Task RedoHandler()
     {
-        await Gantt.RedoAsync();
+        if(Gantt!=null)
+        {
+            await Gantt.RedoAsync();
+        }
+        
     }
     public class TaskModel
     {

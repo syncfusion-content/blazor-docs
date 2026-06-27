@@ -196,7 +196,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData

@@ -32,7 +32,7 @@ The following example sets fixed dimensions:
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Add","Edit" })">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Add", "Edit" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttColumns>
@@ -45,12 +45,12 @@ The following example sets fixed dimensions:
     <GanttEditSettings AllowEditing="true" AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -72,10 +72,10 @@ The following example sets fixed dimensions:
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -111,11 +111,11 @@ You can make the Gantt Chart component responsive by setting its [Height](https:
     }
 </style>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -137,10 +137,10 @@ You can make the Gantt Chart component responsive by setting its [Height](https:
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -234,9 +234,9 @@ To scroll directly to a specific task within the timeline, use the [ScrollToTask
 <div style="display: flex; gap: 15px; margin-bottom: 20px;">
     <!-- Scroll Position -->
     <div>
-        <label style="font-weight:20px" for="columnIndex">Scroll Row:</label> 
+        <label style="font-weight:20px" for="columnIndex">Scroll Row:</label>
         <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
-            <SfTextBox @bind-Value="ColumnIndex" Placeholder="Column Index (e.g., 1)"  Width="160px" />
+            <SfTextBox @bind-Value="ColumnIndex" Placeholder="Column Index (e.g., 1)" Width="160px" />
             <SfTextBox @bind-Value="RowIndex" Placeholder="Row Index (e.g., 1)" Width="150px" />
             <SfButton OnClick="SelectRow">Scroll Position</SfButton>
         </div>
@@ -283,12 +283,12 @@ To scroll directly to a specific task within the timeline, use the [ScrollToTask
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     public List<TaskData> TaskCollection { get; set; } = new();
-    public string RowIndex { get; set; }
-    public string ScrollDate { get; set; }
-    public string ScrollTaskId { get; set; }
-    public string ColumnIndex { get; set; }
+    public string? RowIndex { get; set; }
+    public string? ScrollDate { get; set; }
+    public string? ScrollTaskId { get; set; }
+    public string? ColumnIndex { get; set; }
 
     protected override void OnInitialized()
     {
@@ -297,27 +297,27 @@ To scroll directly to a specific task within the timeline, use the [ScrollToTask
 
     public async Task SelectRow()
     {
-        if (int.TryParse(RowIndex, out var rowIndex) && int.TryParse(ColumnIndex, out var columnIndex))
+        if (int.TryParse(RowIndex, out var rowIndex) && int.TryParse(ColumnIndex, out var columnIndex) && Gantt != null)
         {
-            await this.Gantt.SelectRowAsync(rowIndex);
-            await this.Gantt.ScrollIntoViewAsync(columnIndex, rowIndex);
+            await Gantt.SelectRowAsync(rowIndex);
+            await Gantt.ScrollIntoViewAsync(columnIndex, rowIndex);
         }
     }
 
 
     public async Task ScrollToDate()
     {
-        if (DateTime.TryParse(ScrollDate, out var date))
+        if (DateTime.TryParse(ScrollDate, out var date)&&Gantt!=null)
         {
-            await this.Gantt.ScrollToTimelineAsync(date);
+            await Gantt.ScrollToTimelineAsync(date);
         }
     }
 
     public async Task ScrollToTask()
     {
-        if (int.TryParse(ScrollTaskId, out var taskId))
+        if (int.TryParse(ScrollTaskId, out var taskId) && Gantt != null)
         {
-            await this.Gantt.ScrollToTaskbarAsync(taskId);
+            await Gantt.ScrollToTaskbarAsync(taskId);
         }
     }
 
@@ -377,14 +377,14 @@ To scroll directly to a specific task within the timeline, use the [ScrollToTask
     public class TaskData
     {
         public int ProjectId { get; set; }
-        public string ProjectName { get; set; }
+        public string? ProjectName { get; set; }
         public DateTime? ProjectStartDate { get; set; }
         public DateTime? ProjectEndDate { get; set; }
-        public string ProjectDuration { get; set; }
+        public string? ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentID { get; set; }
-        public string Predecessor { get; set; }
-        public string Field1 { get; set; }
+        public string? Predecessor { get; set; }
+        public string? Field1 { get; set; }
         public int FIELD2 { get; set; }
         public int FIELD3 { get; set; }
         public int FIELD4 { get; set; }

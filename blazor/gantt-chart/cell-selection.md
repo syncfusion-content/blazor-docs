@@ -19,7 +19,7 @@ Single cell selection in the Gantt chart is enabled by setting [GanttSelectionSe
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
+
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
@@ -28,20 +28,20 @@ Single cell selection in the Gantt chart is enabled by setting [GanttSelectionSe
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -85,20 +85,20 @@ Multiple cell selection in the Gantt Chart is enabled by setting [GanttSelection
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -145,27 +145,31 @@ Select a specific cell in the Gantt Chart by calling the  [SelectCellAsync](http
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
 
     public async Task SelectCellAsync()
     {
-        await Gantt.SelectCellAsync(new ValueTuple<int, int>(1, 2));
+        if(Gantt!=null)
+        {
+            await Gantt.SelectCellAsync(new ValueTuple<int, int>(1, 2));
+        }
+        
     }
 
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -211,14 +215,14 @@ The following sample demonstrates selection is canceled in the `cellSelecting` e
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
- <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
     <GanttEvents TValue="TaskData" CellSelecting="CellSelectingAsync" CellSelected="CellSelectedAsync" CellDeselecting="CellDeselectingAsync" CellDeselected="CellDeselectedAsync">
     </GanttEvents>
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    private string message;
+    public List<TaskData>? TaskCollection { get; set; }
+    private string? message;
     private bool showMessage;
 
     protected override void OnInitialized()
@@ -266,10 +270,10 @@ The following sample demonstrates selection is canceled in the `cellSelecting` e
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -289,7 +293,6 @@ The following sample demonstrates selection is canceled in the `cellSelecting` e
         };
     }
 }
-
 
 {% endhighlight %}
 {% endtabs %}

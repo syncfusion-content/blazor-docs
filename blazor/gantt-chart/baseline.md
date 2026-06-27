@@ -14,31 +14,31 @@ The baseline feature enables users to view the deviation between the planned dat
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" RenderBaseline="true"
-        ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" Height="450px" Width="700px">
+         ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-          Duration="Duration" Progress="Progress" ParentID="ParentId" BaselineStartDate="BaselineStartDate"
-          BaselineEndDate="BaselineEndDate">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId" BaselineStartDate="BaselineStartDate"
+                     BaselineEndDate="BaselineEndDate">
     </GanttTaskFields>
 </SfGantt>
 
-@code{
+@code {
     private DateTime ProjectStart = new DateTime(2026, 04, 01);
-    private DateTime ProjectEnd = new DateTime(2026, 04, 30); 
-    public List<TaskData> TaskCollection { get; set; }
+    private DateTime ProjectEnd = new DateTime(2026, 04, 30);
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public DateTime? BaselineStartDate { get; set; }
         public DateTime? BaselineEndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

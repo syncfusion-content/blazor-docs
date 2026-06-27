@@ -35,22 +35,22 @@ This support is used to view all the tasks available in a project within availab
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
 </SfGantt>
 
-@code{
-    private List<TaskData> TaskCollection { get; set; }
+@code {
+    private List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskID { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentID { get; set; }
     }
 
@@ -89,7 +89,7 @@ Zoom actions are governed by predefined zooming levels specified in the [CustomZ
     </GanttTaskFields>
 </SfGantt>
 
-@code{
+@code {
     private GanttZoomTimelineSettings[] zoomingLevel = new GanttZoomTimelineSettings[]
     {
             new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Month, Format = "MMM yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Week, Format = "MMM yy", Count = 1 }, TimelineUnitSize = 66, TimelineViewMode = TimelineViewMode.Month, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 0 },
@@ -100,21 +100,21 @@ Zoom actions are governed by predefined zooming levels specified in the [CustomZ
             new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Day, Format = "MMM dd yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Hour, Format = "hh tt", Count = 12 }, TimelineUnitSize = 66, TimelineViewMode = TimelineViewMode.Day, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 5 },
             new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Day, Format = "MMM dd yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Hour, Format = "hh tt", Count = 6 }, TimelineUnitSize = 99, TimelineViewMode = TimelineViewMode.Day, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 6 },
     };
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -164,33 +164,45 @@ Zooming actions can be triggered dynamically or through external controls using 
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     private async void ZoomIn()
     {
-        await Gantt.ZoomInAsync();
+        if(Gantt!=null)
+        {
+            await Gantt.ZoomInAsync();
+        }
+        
     }
     private async void ZoomOut()
     {
-        await Gantt.ZoomOutAsync();
+        if (Gantt != null)
+        {
+           await Gantt.ZoomOutAsync();
+        }
+       
     }
     private async void ZoomToFit()
     {
-        await Gantt.ZoomToFitAsync();
+        if (Gantt != null)
+        {
+            await Gantt.ZoomToFitAsync();
+        }
+        
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -234,25 +246,29 @@ In Gantt chart, you can reset the zoom level to its initial state, as configured
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     private async void ResetZoomingLevels()
     {
-        await Gantt.ResetZoomAsync();
+        if (Gantt != null)
+        {
+            await Gantt.ResetZoomAsync();
+        }
+        
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 

@@ -28,25 +28,26 @@ Enable task deletion through the toolbar by setting [GanttEditSettings.AllowDele
     <GanttEditSettings AllowDeleting="true"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
+@code {
+    public SfGantt<TaskData>? Gantt;
     public void DeleteRow()
     {
-        Gantt.DeleteRecordAsync(2);
+
+        Gantt?.DeleteRecordAsync(2);
     }
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -89,20 +90,20 @@ Enable a confirmation dialog for task deletion by setting [GanttEditSettings.Sho
     <GanttEditSettings AllowDeleting="true" ShowDeleteConfirmDialog="true"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

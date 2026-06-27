@@ -23,22 +23,22 @@ The following code example demonstrates editing in the Gantt component.
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string ?Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -105,9 +105,9 @@ Below is the combined content from the provided markdown sections in bullet poin
     <GanttEditSettings AllowEditing="true" AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+
+    public List<TaskData>? TaskCollection { get; set; }
     public Syncfusion.Blazor.Grids.NumericEditCellParams NumericParams = new Syncfusion.Blazor.Grids.NumericEditCellParams()
     {
         Params = new Syncfusion.Blazor.Inputs.NumericTextBoxModel<object>() { Format = "N2" }
@@ -119,15 +119,15 @@ Below is the combined content from the provided markdown sections in bullet poin
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -190,38 +190,41 @@ The following code example demonstrates how to define an edit template for a spe
     <GanttEvents OnCellSave="CellSaveHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code{
-    SfDropDownList<string, string> dropdown;
+@code {
+    SfDropDownList<string, string>? dropdown;
 
     private void CellSaveHandler(CellSaveArgs<TaskData> args)
     {
         if (args.ColumnName == "TaskName")
         {
-            args.Value = dropdown.Value;
+            args.Value = dropdown?.Value;
         }
     }
-    public List<TaskData> TaskCollection { get; set; }
-    private List<string> DropDownData { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    private List<string>? DropDownData { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
-        this.DropDownData = TaskCollection.Select(s => s.TaskName).Distinct().ToList();
+        TaskCollection = GetTaskCollection();
+        DropDownData = TaskCollection
+    .Select(s => s.TaskName ?? string.Empty)
+    .Distinct()
+    .ToList();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
@@ -264,26 +267,26 @@ In the following demo, editing is disabled for the **TaskName** column.
     <GanttEditSettings AllowEditing="true"></GanttEditSettings>
 </SfGantt>
 
-@code{    
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
-        {
-            List<TaskData> Tasks = new List<TaskData>()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
             {
                 new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 01, 05), EndDate = new DateTime(2026, 01, 08), },
                 new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 01, 05), Duration = "0", Progress = 30, ParentId = 1, },
@@ -294,8 +297,8 @@ In the following demo, editing is disabled for the **TaskName** column.
                 new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 01, 07), EndDate = new DateTime(2026, 01, 09), Progress = 40, ParentId = 5, },
                 new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 01, 07), Duration = "0", Progress = 30, ParentId = 5, }
             };
-            return Tasks;
-        }
+        return Tasks;
+    }
 }
 
 {% endhighlight %}
@@ -347,30 +350,30 @@ The taskbar editing tooltip can be integrated in Gantt chart by using the [Gantt
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1"
-    Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "Search", "Update" , "Indent" , "Outdent"})">
+         Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "Search", "Update" , "Indent" , "Outdent"})">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-        Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId" Notes="Notes">
+                     Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId" Notes="Notes">
     </GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true" AllowDeleting="true">
     </GanttEditSettings>
     <GanttTooltipSettings ShowTooltipOnEditing="true" TValue="TaskData"></GanttTooltipSettings>
 </SfGantt>
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
-        public string Notes { get; set; }
+        public string? Predecessor { get; set; }
+        public string? Notes { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -403,9 +406,9 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"    Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"
-        AllowDeleting="true"  ShowDeleteConfirmDialog="true">
+                       AllowDeleting="true" ShowDeleteConfirmDialog="true">
     </GanttEditSettings>
     <GanttTooltipSettings ShowTooltip="true" TValue="TaskData">
         <EditingTemplate>
@@ -416,7 +419,7 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
                     {
                         <tr> <td style="padding:3px">@(template.StartDate.ToString("MMM dd, yyyy"))</td> </tr>
                         <tr> <td style="padding:6px">@(template.Duration) days</td> </tr>
-                    } 
+                    }
                     else if (TaskbarEditAction == "RightResizing")
                     {
                         <tr> <td style="padding:3px">@(template.EndDate.ToString("MMM dd, yyyy"))</td> </tr>
@@ -433,28 +436,28 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
                     }
                 }
             </table>
-            </EditingTemplate>
-        </GanttTooltipSettings>
-        <GanttEvents TaskbarEditing="TaskbarEditingHandler" TValue="TaskData"></GanttEvents>
+        </EditingTemplate>
+    </GanttTooltipSettings>
+    <GanttEvents TaskbarEditing="TaskbarEditingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    private string TaskbarEditAction { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    private string? TaskbarEditAction { get; set; }
     private void TaskbarEditingHandler(TaskbarEditingEventArgs<TaskData> args)
     {
         TaskbarEditAction = args.Action;
     }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

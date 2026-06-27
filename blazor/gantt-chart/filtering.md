@@ -26,12 +26,12 @@ To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
-    
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -53,10 +53,10 @@ To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -86,11 +86,11 @@ The Blazor Gantt Chart component supports multiple filtering modes, which can be
 @using Syncfusion.Blazor.DropDowns
 
 <div style="padding-bottom:20px">
-<label style="font-weight:bold">Hierarchy Mode</label>
-<SfDropDownList TValue="string" TItem="DropDownItem" Width="150px" DataSource="@filterModesData" Placeholder="Select Mode" @bind-Value="@SelectedMode">
-    <DropDownListFieldSettings Text="mode" Value="id" />
-    <DropDownListEvents TValue="string" TItem="DropDownItem" ValueChange="OnModeChange" />
-</SfDropDownList>
+    <label style="font-weight:bold">Hierarchy Mode</label>
+    <SfDropDownList TValue="string" TItem="DropDownItem" Width="150px" DataSource="@filterModesData" Placeholder="Select Mode" @bind-Value="@SelectedMode">
+        <DropDownListFieldSettings Text="mode" Value="id" />
+        <DropDownListEvents TValue="string" TItem="DropDownItem" ValueChange="OnModeChange" />
+    </SfDropDownList>
 </div>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" />
@@ -98,8 +98,8 @@ The Blazor Gantt Chart component supports multiple filtering modes, which can be
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     public string SelectedMode { get; set; } = "None";
     public Syncfusion.Blazor.Gantt.FilterHierarchyMode HierarchyMode { get; set; } = Syncfusion.Blazor.Gantt.FilterHierarchyMode.None;
 
@@ -116,11 +116,11 @@ The Blazor Gantt Chart component supports multiple filtering modes, which can be
         TaskCollection = GetTaskCollection();
     }
 
-   private void OnModeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs< string, DropDownItem> args)
-   {
+    private void OnModeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownItem> args)
+    {
         SelectedMode = args.Value;
         HierarchyMode = Enum.Parse<Syncfusion.Blazor.Gantt.FilterHierarchyMode>(SelectedMode);
-        Gantt.ClearFilteringAsync();
+        Gantt?.ClearFilteringAsync();
     }
 
     public List<TaskData> GetTaskCollection()
@@ -141,18 +141,18 @@ The Blazor Gantt Chart component supports multiple filtering modes, which can be
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public class DropDownItem
     {
-        public string id { get; set; }
-        public string mode { get; set; }
+        public string? id { get; set; }
+        public string? mode { get; set; }
     }
 }
 
@@ -181,7 +181,7 @@ The following sample demonstrates how to apply an initial filter where **TaskNam
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     public List<PredicateModel> FilterColumns { get; set; } = new List<PredicateModel>
     {
         new PredicateModel() { Field = "TaskName", MatchCase = false, Operator = Operator.StartsWith, Predicate = "and", Value = "Identify" },
@@ -190,7 +190,7 @@ The following sample demonstrates how to apply an initial filter where **TaskNam
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public List<TaskData> GetTaskCollection()
@@ -211,10 +211,10 @@ The following sample demonstrates how to apply an initial filter where **TaskNam
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -263,19 +263,19 @@ The following sample demonstrates this behavior: when filtering the **TaskName**
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -320,18 +320,22 @@ The example below demonstrates how to filter the **TaskName** and **TaskID** col
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
 
     public async void Filter()
     {
-        await this.Gantt.FilterByColumnAsync("TaskName", "startswith", "Iden", "or", true, false);
+        if(Gantt!=null)
+        {
+            await Gantt.FilterByColumnAsync("TaskName", "startswith", "Iden", "or", true, false);
+        }
+        
     }
-    
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -353,10 +357,10 @@ The example below demonstrates how to filter the **TaskName** and **TaskID** col
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -386,23 +390,27 @@ You can clear all the filtering conditions applied in the Gantt Chart component 
     <GanttFilterSettings Columns="@FilterColumns"></GanttFilterSettings>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     public List<PredicateModel> FilterColumns { get; set; } = new List<PredicateModel>
     {
         new PredicateModel() { Field = "TaskName", MatchCase = false, Operator = Operator.StartsWith, Predicate = "and", Value = "Identify" },
         new PredicateModel() { Field = "TaskID", MatchCase = false, Operator = Operator.Equal, Predicate = "and", Value = 2 }
     };
-    
+
     public async Task ClearFilter()
     {
-        await this.Gantt.ClearFilteringAsync();
+        if(Gantt!=null)
+        {
+            await Gantt.ClearFilteringAsync();
+        }
+        
     }
-   
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -424,10 +432,10 @@ You can clear all the filtering conditions applied in the Gantt Chart component 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -475,11 +483,11 @@ You can enable different filter types for individual columns in the Syncfusion<s
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     public List<TaskData> TaskCollection { get; set; } = GetTaskCollection();
     public bool flag = false;
-    public string SelectedColumn { get; set; }
-    public string SelectedOperator { get; set; }
+    public string? SelectedColumn { get; set; }
+    public string? SelectedOperator { get; set; }
     List<string> LocalData = new List<string>() { "Menu", "Excel" };
     List<string> ColumnData = new List<string>() { "TaskID", "TaskName", "StartDate", "EndDate", "Duration", "Progress", "ParentID" };
 
@@ -529,9 +537,12 @@ You can enable different filter types for individual columns in the Syncfusion<s
                 ProgressFilterSettings.Type = filterType;
                 break;
         }
-
-        await Gantt.RefreshAsync();
-     }
+        if(Gantt!=null)
+        {
+            await Gantt.RefreshAsync();
+        }
+        
+    }
 
     public static List<TaskData> GetTaskCollection()
     {
@@ -551,10 +562,10 @@ You can enable different filter types for individual columns in the Syncfusion<s
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -602,7 +613,7 @@ You can retrieve filtered records from the Gantt Chart component using the [GetF
 }
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     public List<TaskData> TaskCollection { get; set; } = GetTaskCollection();
     public List<TaskData> FilteredTasks { get; set; } = new();
     public bool showRecords = false;
@@ -613,7 +624,7 @@ You can retrieve filtered records from the Gantt Chart component using the [GetF
 
     public async Task click()
     {
-        if (flag)
+        if (flag && Gantt!=null)
         {
             var filteredRecords = await Gantt.GetFilteredRecordsAsync();
             FilteredTasks = filteredRecords.Cast<TaskData>().ToList();
@@ -634,10 +645,14 @@ You can retrieve filtered records from the Gantt Chart component using the [GetF
 
     public async Task clear()
     {
-        await Gantt.ClearFilteringAsync();
-        showRecords = false;
-        message = string.Empty;
-        flag = false;
+        if (Gantt != null)
+        {
+            await Gantt.ClearFilteringAsync();
+            showRecords = false;
+            message = string.Empty;
+            flag = false;
+        }
+        
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -658,10 +673,10 @@ You can retrieve filtered records from the Gantt Chart component using the [GetF
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -710,7 +725,7 @@ The following `Filtering` event cancels the filter action for the **TaskName** c
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     public List<TaskData> TaskCollection { get; set; } = new();
     private bool Show = false;
     private string BeginMessage = string.Empty;
@@ -767,10 +782,10 @@ The following `Filtering` event cancels the filter action for the **TaskName** c
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

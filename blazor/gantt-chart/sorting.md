@@ -25,21 +25,21 @@ Sorting is applied by clicking a column header. For multi-column sorting, hold t
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -92,20 +92,20 @@ The following code example shows how to add sorted columns during Gantt initiali
     </GanttSortSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -155,26 +155,26 @@ You can externally sort a column in the Gantt Chart component using the [SortByC
 </SfGantt>
 
 @code{
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     public List<TaskData> TaskCollection { get; set; }
 
     public void Sorting()
     {
-        this.Gantt.SortByColumnAsync("TaskName", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
+       Gantt?.SortByColumnAsync("TaskName", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
     }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string ?Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -225,25 +225,25 @@ You can clear all sorted columns in the Gantt Chart component using the [ClearSo
     </GanttSortSettings>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
+@code {
+    public SfGantt<TaskData>? Gantt;
     public void ClearSorting()
     {
-        this.Gantt.ClearSortingAsync();
+        Gantt?.ClearSortingAsync();
     }
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -292,8 +292,8 @@ The following sample demonstrates how to cancel sorting on the **TaskID** column
 </SfGantt>
 
 @code {
-    private string SortMessage { get; set; }
-    public List<TaskData> TaskCollection { get; set; }
+    private string? SortMessage { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     
     public void SortingHandler(SortingEventArgs args)
@@ -313,16 +313,16 @@ The following sample demonstrates how to cancel sorting on the **TaskID** column
    
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -376,27 +376,27 @@ The following sample demonstrates sorting a custom column using an external butt
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    private List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    private List<TaskData>? TaskCollection { get; set; }
 
     public void Sorting()
     {
-        this.Gantt.SortByColumnAsync("CustomColumn", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
+       Gantt?.SortByColumnAsync("CustomColumn", Syncfusion.Blazor.Grids.SortDirection.Descending, false);
     }
-    
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
         public int CustomColumn { get; set; }

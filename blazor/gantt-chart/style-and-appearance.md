@@ -332,7 +332,7 @@ Below is a complete example demonstrating how to customize multiple aspects of t
     </GanttEventMarkers>
 </SfGantt>
 <style>
-     .e-split-bar, .e-headercell {
+    .e-split-bar, .e-headercell {
         background: #add8e6 !important; /* Set splitter and header cell background color */
     }
 
@@ -368,12 +368,12 @@ Below is a complete example demonstrating how to customize multiple aspects of t
         border-left-color: #05088f !important; /* Set event marker color */
     }
 
-    .e-event-markers .e-span-label {
-        background-color: #f3e5f5 !important; /* Set event marker label background color */
-        color: #6a1b9a !important; /* Set event marker label text color */
-    }
+        .e-event-markers .e-span-label {
+            background-color: #f3e5f5 !important; /* Set event marker label background color */
+            color: #6a1b9a !important; /* Set event marker label text color */
+        }
 
-    .e-baseline-gantt-milestone-container{
+    .e-baseline-gantt-milestone-container {
         background-color: #fdb9c9 !important; /* Set baseline milestone color */
     }
 
@@ -394,25 +394,25 @@ Below is a complete example demonstrating how to customize multiple aspects of t
     }
 </style>
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     public DateTime Event = new DateTime(2026, 01, 16);
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public DateTime? BaselineStartDate { get; set; }
         public DateTime? BaselineEndDate { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -461,7 +461,7 @@ N> By default, the `GridLines` property is set to **Horizontal** type.
     <label style="font-weight:20px">Select Grid Line Type:</label>
     <SfDropDownList TValue="Syncfusion.Blazor.Gantt.GridLine" TItem="GridLineOption" DataSource="@GridLineOptions" Placeholder="Select Grid Line Type" Value="@SelectedGridLine" Width="250px">
         <DropDownListFieldSettings Text="Text" Value="Value" />
-        <DropDownListEvents TValue="Syncfusion.Blazor.Gantt.GridLine" TItem="GridLineOption" ValueChange="OnGridLineChange" />                 
+        <DropDownListEvents TValue="Syncfusion.Blazor.Gantt.GridLine" TItem="GridLineOption" ValueChange="OnGridLineChange" />
     </SfDropDownList>
 </div>
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="800px" GridLines="@SelectedGridLine">
@@ -470,12 +470,12 @@ N> By default, the `GridLines` property is set to **Horizontal** type.
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     private Syncfusion.Blazor.Gantt.GridLine SelectedGridLine { get; set; } = Syncfusion.Blazor.Gantt.GridLine.Both;
 
     public class GridLineOption
     {
-        public string Text { get; set; }
+        public string? Text { get; set; }
         public Syncfusion.Blazor.Gantt.GridLine Value { get; set; }
     }
 
@@ -494,16 +494,16 @@ N> By default, the `GridLines` property is set to **Horizontal** type.
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

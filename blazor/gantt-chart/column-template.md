@@ -31,7 +31,7 @@ You can render the Syncfusion<sup style="font-size:70%">&reg;</sup> [Button](htt
                 @{
                     @if (context != null)
                     {
-                        <SfButton CssClass="e-bigger" Content="@((context as TaskData).TaskName)"></SfButton>
+                        <SfButton CssClass="e-bigger" Content="@((context as TaskData)?.TaskName)"></SfButton>
                     }
                 }
             </Template>
@@ -42,23 +42,23 @@ You can render the Syncfusion<sup style="font-size:70%">&reg;</sup> [Button](htt
     </GanttTaskFields>
 </SfGantt>
 
-@code{
+@code {
     private DateTime ProjectStart = new DateTime(2026, 4, 01);
     private DateTime ProjectEnd = new DateTime(2026, 7, 28);
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

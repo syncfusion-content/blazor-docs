@@ -20,7 +20,8 @@ Interaction keys |Description
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
+@page "/"
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px">
@@ -28,22 +29,22 @@ Interaction keys |Description
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -79,7 +80,7 @@ To copy selected rows or cells to the clipboard using external buttons, invoke t
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 
-<SfGantt DataSource="@TaskCollection" @ref="GanttObject" Height="450px" Width="1000px">
+<SfGantt DataSource="@TaskCollection" @ref="Gantt" Height="450px" Width="1000px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId">
     </GanttTaskFields>
     <SfToolbar ID="Gantt_Gantt_Toolbar">
@@ -90,18 +91,20 @@ To copy selected rows or cells to the clipboard using external buttons, invoke t
     </SfToolbar>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> GanttObject;
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public async void ToolbarClick(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        var SelectedRecords = await this.GanttObject.GetSelectedRecordsAsync();
+        if(Gantt!=null)
+        {
+            var SelectedRecords = await Gantt.GetSelectedRecordsAsync();
         if (SelectedRecords.Count() > 0)
         {
             var WithHeader = false;
@@ -109,19 +112,21 @@ To copy selected rows or cells to the clipboard using external buttons, invoke t
             {
                 WithHeader = true;
             }
-            await this.GanttObject.CopyAsync(WithHeader);
+            await Gantt.CopyAsync(WithHeader);
         }
+        }
+        
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -171,9 +176,9 @@ The Gantt Chart component supports multiple copy modes using the [CopyHierarchyM
     <DropDownListEvents TValue="string" TItem="DropdownData" ValueChange="OnTypeChange"></DropDownListEvents>
     <DropDownListFieldSettings Text="Mode" Value="Id"></DropDownListFieldSettings>
 </SfDropDownList>
-<SfGantt DataSource="@TaskCollection" @ref="GanttObject" CopyHierarchyMode="@CopyType"  Height="450px" Width="1000px">
+<SfGantt DataSource="@TaskCollection" @ref="Gantt" CopyHierarchyMode="@CopyType" Height="450px" Width="1000px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <SfToolbar ID="Gantt_Gantt_Toolbar">
         <ToolbarItems>
             <ToolbarItem Id="copyHeader" Text="Copy With Header" OnClick="ToolbarClick" PrefixIcon="e-copy"></ToolbarItem>
@@ -182,21 +187,21 @@ The Gantt Chart component supports multiple copy modes using the [CopyHierarchyM
     </SfToolbar>
 </SfGantt>
 
-@code{
-    private List<TaskData> TaskCollection { get; set; }
-    private SfGantt<TaskData> GanttObject;
+@code {
+    private List<TaskData>? TaskCollection { get; set; }
+    private SfGantt<TaskData>? Gantt;
     public string CopyMode { get; set; } = "Parent";
     public CopyHierarchyType CopyType { get; set; } = CopyHierarchyType.Parent;
     public List<DropdownData> CopyModes { get; set; } = new List<DropdownData>();
     public class DropdownData
     {
-        public string Id { get; set; }
-        public string Mode { get; set; }
+        public string? Id { get; set; }
+        public string? Mode { get; set; }
     }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
         this.CopyModes.Add(new DropdownData() { Id = "Parent", Mode = "Parent" });
         this.CopyModes.Add(new DropdownData() { Id = "Child", Mode = "Child" });
         this.CopyModes.Add(new DropdownData() { Id = "Both", Mode = "Both" });
@@ -217,7 +222,7 @@ The Gantt Chart component supports multiple copy modes using the [CopyHierarchyM
         {
             CopyType = CopyHierarchyType.Both;
         }
-        else if(Args.Value == "None")
+        else if (Args.Value == "None")
         {
             CopyType = CopyHierarchyType.None;
         }
@@ -225,7 +230,9 @@ The Gantt Chart component supports multiple copy modes using the [CopyHierarchyM
 
     public async void ToolbarClick(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        var SelectedRecords = await this.GanttObject.GetSelectedRecordsAsync();
+        if(Gantt!=null)
+        {
+            var SelectedRecords = await this.Gantt.GetSelectedRecordsAsync();
         if (SelectedRecords.Count() > 0)
         {
             var WithHeader = false;
@@ -233,19 +240,21 @@ The Gantt Chart component supports multiple copy modes using the [CopyHierarchyM
             {
                 WithHeader = true;
             }
-            await this.GanttObject.CopyAsync(WithHeader);
+            await this.Gantt.CopyAsync(WithHeader);
         }
+        }
+        
     }
-
+    
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -285,9 +294,9 @@ You can use the [RowSelected](https://blazor.syncfusion.com/documentation/gantt-
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
-<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeyup="KeyUp" Height="350px" Width="750px">
+<SfGantt @ref=Gantt DataSource="@TaskCollection" @onkeyup="KeyUp" Height="350px" Width="750px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        ParentID="ParentId">
+                     ParentID="ParentId">
     </GanttTaskFields>
     <GanttSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
     <GanttEditSettings AllowAdding="true"> </GanttEditSettings>
@@ -296,8 +305,8 @@ You can use the [RowSelected](https://blazor.syncfusion.com/documentation/gantt-
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> GanttChart;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     public List<TaskData> CopiedRecords { get; set; } = new List<TaskData>();
     public double SelectedIndex { get; set; }
 
@@ -307,38 +316,54 @@ You can use the [RowSelected](https://blazor.syncfusion.com/documentation/gantt-
     }
     private async void BeforeCopyHandler(Syncfusion.Blazor.Gantt.BeforeCopyEventArgs args)
     {
-        var columns = GanttChart.GetColumnsAsync().Result;
-        var clip = args.ClipboardText;
-        if (clip != "" || clip != null)
+        if(Gantt!=null)
         {
-            var record = clip.Split("\n");
-            int index = 0;
-            foreach (var rec in record)
+            var columns = Gantt.GetColumnsAsync().Result;
+            var clip = args.ClipboardText;
+            if (clip != "" || clip != null)
             {
-                var colVal = rec.Split("\t");
-                int colIndex = 0;
-                int id = TaskCollection.Max(a => a.TaskId) + 1;
-                TaskData ganttData = new TaskData() { };
-                foreach (var col in columns)
+                var record = clip.Split("\n");
+                int index = 0;
+                foreach (var rec in record)
                 {
-                    if (col.Field == GanttChart.TaskFields.Id)
+                    var colVal = rec.Split("\t");
+                    int colIndex = 0;
+                    if (TaskCollection != null)
                     {
-                        ganttData.GetType().GetProperty(col.Field).SetValue(ganttData, id + index);
+                        int id = TaskCollection.Max(a => a.TaskId) + 1;
+                        TaskData ganttData = new TaskData() { };
+                        foreach (var col in columns)
+                        {
+
+                            if (col.Field == Gantt.TaskFields.Id)
+                            {
+                                ganttData?.GetType()?.GetProperty(col.Field)?.SetValue(ganttData, id + index);
+                            }
+                            else if (col.Type == Syncfusion.Blazor.Grids.ColumnType.Date)
+                            {
+                                ganttData?.GetType()?.GetProperty(col.Field)?.SetValue(ganttData, Convert.ToDateTime(colVal[colIndex]));
+                            }
+                            else if (col.Type == Syncfusion.Blazor.Grids.ColumnType.String)
+                            {
+                                ganttData?.GetType()?.GetProperty(col.Field)?.SetValue(ganttData, colVal[colIndex]);
+                            }
+                            colIndex++;
+
+
+                        }
+                        index++;
+                        if (ganttData != null)
+                        {
+                            CopiedRecords.Add(ganttData);
+                        }
+
                     }
-                    else if (col.Type == Syncfusion.Blazor.Grids.ColumnType.Date)
-                    {
-                        ganttData.GetType().GetProperty(col.Field).SetValue(ganttData, Convert.ToDateTime(colVal[colIndex]));
-                    }
-                    else if (col.Type == Syncfusion.Blazor.Grids.ColumnType.String)
-                    {
-                        ganttData.GetType().GetProperty(col.Field).SetValue(ganttData, colVal[colIndex]);
-                    }
-                    colIndex++;
+
+
                 }
-                index++;
-                CopiedRecords.Add(ganttData);
             }
         }
+
     }
 
     public void RowSelect(RowSelectEventArgs<TaskData> Args)
@@ -348,18 +373,22 @@ You can use the [RowSelected](https://blazor.syncfusion.com/documentation/gantt-
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     private async Task KeyUp(KeyboardEventArgs Args)
     {
         if (Args.CtrlKey && Args.Code == "KeyV" && CopiedRecords.Count > 0 && SelectedIndex > -1)
         {
-            var parentID = TaskCollection[(int)SelectedIndex].ParentId;
+            var parentID = TaskCollection?[(int)SelectedIndex].ParentId;
             for (var i = 0; i < CopiedRecords.Count; i++)
             {
                 CopiedRecords[i].ParentId = parentID;
-                GanttChart.AddRecordAsync(CopiedRecords[i],(int)SelectedIndex, Syncfusion.Blazor.Gantt.RowPosition.Above);
+                if(Gantt!=null)
+                {
+                    await Gantt.AddRecordAsync(CopiedRecords[i], (int)SelectedIndex, Syncfusion.Blazor.Gantt.RowPosition.Above);
+                }
+                
             }
             CopiedRecords = new List<TaskData>();
         }
@@ -368,10 +397,10 @@ You can use the [RowSelected](https://blazor.syncfusion.com/documentation/gantt-
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -415,7 +444,7 @@ You can use the [CellSelected](https://blazor.syncfusion.com/documentation/gantt
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeydown="KeyDown" @onkeyup="KeyUp" Height="450px" Width="1000px">
+<SfGantt @ref=Gantt DataSource="@TaskCollection" @onkeydown="KeyDown" @onkeyup="KeyUp" Height="450px" Width="1000px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
@@ -424,10 +453,10 @@ You can use the [CellSelected](https://blazor.syncfusion.com/documentation/gantt
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> GanttChart;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     public int SelectedIndex { get; set; }
-    private List<ValueTuple<int, int>> clonedRecordIndex;
+    private List<ValueTuple<int, int>>? clonedRecordIndex;
 
     public void CellDeSelected(CellDeselectEventArgs<TaskData> Args)
     {
@@ -439,54 +468,66 @@ You can use the [CellSelected](https://blazor.syncfusion.com/documentation/gantt
     }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     private async Task KeyDown(KeyboardEventArgs Args)
     {
         if (Args.CtrlKey && Args.Code == "KeyC")
         {
-            clonedRecordIndex = await GanttChart.GetSelectedRowCellIndexesAsync();
+            if (Gantt != null)
+            {
+                clonedRecordIndex = await Gantt.GetSelectedRowCellIndexesAsync();
+            }
+
         }
     }
     private async Task KeyUp(KeyboardEventArgs Args)
     {
-        if (Args.CtrlKey && Args.Code == "KeyV" && clonedRecordIndex.Count>0 && SelectedIndex > -1)
+        if (Args.CtrlKey && Args.Code == "KeyV" && clonedRecordIndex?.Count > 0 && SelectedIndex > -1)
         {
-            var columns = GanttChart.GetColumnsAsync().Result;
-            var currentRecords = GanttChart.GetCurrentViewRecords();
-            IDictionary<double, List<double>> clonedRecords = new Dictionary<double, List<double>>(); ;
-            for (int i = 0; i < clonedRecordIndex.Count; i++)
+            if (Gantt != null)
             {
-                if (!clonedRecords.ContainsKey(clonedRecordIndex[i].Item1))
+                var columns = Gantt.GetColumnsAsync().Result;
+
+                var currentRecords = Gantt.GetCurrentViewRecords();
+                IDictionary<double, List<double>> clonedRecords = new Dictionary<double, List<double>>(); ;
+                for (int i = 0; i < clonedRecordIndex.Count; i++)
                 {
-                    List<double> cellIndex = new List<double>();
-                    cellIndex.Add(clonedRecordIndex[i].Item2);
-                    clonedRecords[clonedRecordIndex[i].Item1] = cellIndex;
-                }
-                else
-                {
-                    List<double> cellIndex = (List<double>)clonedRecords[clonedRecordIndex[i].Item1];
-                    cellIndex.Add(clonedRecordIndex[i].Item2);
-                }
-            }
-            for (int i = 0; i < clonedRecords.Count; i++)
-            {
-                double clonedRecRowIndex = clonedRecords.ElementAt(i).Key;
-                List<double> clonedRecCellIndex = clonedRecords.ElementAt(i).Value;
-                TaskData clonedRec = currentRecords[Convert.ToInt32(clonedRecRowIndex)];
-                if (SelectedIndex + i < currentRecords.Count)
-                {
-                    TaskData updatedRec = currentRecords[SelectedIndex + i];
-                    for (int j = 0; j < clonedRecCellIndex.Count; j++)
+                    if (!clonedRecords.ContainsKey(clonedRecordIndex[i].Item1))
                     {
-                        GanttColumn col = columns[Convert.ToInt32(clonedRecCellIndex[j])];
-                        if (!col.IsPrimaryKey)
-                        {
-                            var clonedValue = clonedRec.GetType().GetProperty(col.Field).GetValue(clonedRec);
-                            updatedRec.GetType().GetProperty(col.Field).SetValue(updatedRec, clonedValue);
-                        }
+                        List<double> cellIndex = new List<double>();
+                        cellIndex.Add(clonedRecordIndex[i].Item2);
+                        clonedRecords[clonedRecordIndex[i].Item1] = cellIndex;
                     }
-                    GanttChart.UpdateRecordByIDAsync(updatedRec);
+                    else
+                    {
+                        List<double> cellIndex = (List<double>)clonedRecords[clonedRecordIndex[i].Item1];
+                        cellIndex.Add(clonedRecordIndex[i].Item2);
+                    }
+                }
+                for (int i = 0; i < clonedRecords.Count; i++)
+                {
+                    double clonedRecRowIndex = clonedRecords.ElementAt(i).Key;
+                    List<double> clonedRecCellIndex = clonedRecords.ElementAt(i).Value;
+                    TaskData clonedRec = currentRecords[Convert.ToInt32(clonedRecRowIndex)];
+                    if (SelectedIndex + i < currentRecords.Count)
+                    {
+                        TaskData updatedRec = currentRecords[SelectedIndex + i];
+                        for (int j = 0; j < clonedRecCellIndex.Count; j++)
+                        {
+                            GanttColumn col = columns[Convert.ToInt32(clonedRecCellIndex[j])];
+                            if (!col.IsPrimaryKey)
+                            {
+                                var clonedValue = clonedRec?.GetType()?.GetProperty(col.Field)?.GetValue(clonedRec);
+                                updatedRec?.GetType()?.GetProperty(col.Field)?.SetValue(updatedRec, clonedValue);
+                            }
+                        }
+                        if (updatedRec != null)
+                        {
+                            Gantt?.UpdateRecordByIDAsync(updatedRec);
+                        }
+                        
+                    }
                 }
             }
         }
@@ -495,10 +536,10 @@ You can use the [CellSelected](https://blazor.syncfusion.com/documentation/gantt
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -557,29 +598,33 @@ This customization enables users to quickly update multiple cells, improving dat
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
-<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeyup="KeyUp" Height="450px" Width="1000px">
+<SfGantt @ref=Gantt DataSource="@TaskCollection" @onkeyup="KeyUp" Height="450px" Width="1000px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" AllowDragSelection="true" CellSelectionMode="CellSelectionMode.Box"></GanttSelectionSettings>
     <GanttEditSettings AllowEditing="true"> </GanttEditSettings>
-    <GanttEvents CellSelected="CellSelectedHandler"  CellDeselected="CellDeSelectedHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents CellSelected="CellSelectedHandler" CellDeselected="CellDeSelectedHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> GanttChart;
+    public SfGantt<TaskData>? Gantt;
 
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
-    private object Value { get; set; }
+    private object? Value { get; set; }
 
-    private string ColumnField { get; set; }
+    private string? ColumnField { get; set; }
 
     private void CellSelectedHandler(CellSelectEventArgs<TaskData> args)
     {
         if (Value == null)
         {
-            ColumnField = GanttChart.GetColumnsAsync().Result[Convert.ToInt32(args.CellIndex)].Field;
-            Value = args.Data.GetType().GetProperty(ColumnField).GetValue(args.Data);
+            ColumnField = Gantt?.GetColumnsAsync().Result[Convert.ToInt32(args.CellIndex)].Field;
+            if (ColumnField != null)
+            {
+                Value = args?.Data?.GetType()?.GetProperty(ColumnField)?.GetValue(args.Data);
+            }
+            
         }
     }
 
@@ -590,24 +635,39 @@ This customization enables users to quickly update multiple cells, improving dat
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     private async Task KeyUp(KeyboardEventArgs args)
     {
         if (args.Code == "AltLeft" || args.Code == "AltRight")
         {
-            var data = GanttChart.GetSelectedRowCellIndexesAsync();
+            var data = Gantt?.GetSelectedRowCellIndexesAsync();
             List<TaskData> AutofillData = new List<TaskData>();
-            for (var i = 0; i < data.Result.Count; i++)
+            for (var i = 0; i < data?.Result.Count; i++)
             {
-                TaskData currentRecord = GanttChart.GetCurrentViewRecords().ElementAt(Convert.ToInt32(data.Result[i].Item1));
-                AutofillData.Add(currentRecord);
+                if (Gantt != null)
+                {
+                    TaskData currentRecord = Gantt.GetCurrentViewRecords().ElementAt(Convert.ToInt32(data.Result[i].Item1));
+                    if (currentRecord != null)
+                    {
+                        AutofillData.Add(currentRecord);
+                    }
+                }
+
             }
             for (var j = 0; j < AutofillData.Count; j++)
             {
-                AutofillData[j].GetType().GetProperty(ColumnField).SetValue(AutofillData[j], Value);
-                await GanttChart.UpdateRecordByIDAsync(AutofillData[j]);
+                if (ColumnField!=null)
+                {
+                    AutofillData[j]?.GetType()?.GetProperty(ColumnField)?.SetValue(AutofillData[j], Value);
+                }
+                
+                if (Gantt != null)
+                {
+                    await Gantt.UpdateRecordByIDAsync(AutofillData[j]);
+                }
+                
             }
         }
     }
@@ -615,10 +675,10 @@ This customization enables users to quickly update multiple cells, improving dat
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

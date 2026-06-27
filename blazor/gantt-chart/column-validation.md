@@ -17,47 +17,48 @@ The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-<SfGantt  TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
-            Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
+         Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
     <GanttTaskFields Id="TaskId" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GanttEditSettings>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true"
-                        Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+                     Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </GanttColumn>
         <GanttColumn Field="ActivityName" HeaderText="Task Name" Width="160"
-        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules {
-            Required = true,
-            RangeLength = new object[] { 5, 10 },
-            Messages = new Dictionary<string, object>() {
-                { "required", "Task Name is required." },
-                { "rangelength", "Task Name must be between 5 and 10 characters." }
-            }
-        })" />
+                     ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules
+                     {
+                         Required = true,
+                         RangeLength = new object[] { 5, 10 },
+                         Messages = new Dictionary<string, object>() {
+                             { "required", "Task Name is required." },
+                             { "rangelength", "Task Name must be between 5 and 10 characters." }
+                         }
+                     })" />
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"
-                        Format="d" EditType="Syncfusion.Blazor.Grids.EditType.DateTimePickerEdit"
-                        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true,Range = new object[] { new DateTime(2020, 1, 1), DateTime.Now }, Messages = new Dictionary<string, object>() { { "required", "Start Date is required." } } })">
+                     Format="d" EditType="Syncfusion.Blazor.Grids.EditType.DateTimePickerEdit"
+                     ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true,Range = new object[] { new DateTime(2020, 1, 1), DateTime.Now }, Messages = new Dictionary<string, object>() { { "required", "Start Date is required." } } })">
         </GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="150"
-                        Format="g" EditType="Syncfusion.Blazor.Grids.EditType.DateTimePickerEdit"
-                        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true, Range = new object[] { new DateTime(2020, 1, 1), DateTime.Now }, Messages = new Dictionary<string, object>() { { "required", "End Date is required." } } })">
+                     Format="g" EditType="Syncfusion.Blazor.Grids.EditType.DateTimePickerEdit"
+                     ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true, Range = new object[] { new DateTime(2020, 1, 1), DateTime.Now }, Messages = new Dictionary<string, object>() { { "required", "End Date is required." } } })">
         </GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration" Width="100" 
-                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"
-        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true, Range = new object[] { 2, 10 },})">
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="100"
+                     TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"
+                     ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true, Range = new object[] { 2, 10 },})">
         </GanttColumn>
         <GanttColumn Field="Progress" HeaderText="Progress" Width="100" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit"
-                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"
-                        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true,Number = true, Min = 5,Max = 50, Messages = new Dictionary<string, object>() { { "required", "Progress is required." }, { "min", "Progress must be greater than 5" }, { "max", "Progress must be lesser than 50" } } })">
+                     TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"
+                     ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true,Number = true, Min = 5,Max = 50, Messages = new Dictionary<string, object>() { { "required", "Progress is required." }, { "min", "Progress must be greater than 5" }, { "max", "Progress must be lesser than 50" } } })">
         </GanttColumn>
-    </GanttColumns>             
+    </GanttColumns>
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
@@ -66,7 +67,7 @@ The Syncfusion® Blazor Gantt Chart component uses the Form Validator library to
         public DateTime? StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int? Duration { get; set; }
-        public int Progress { get; set; }           
+        public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
     public static List<TaskData> GetTaskCollection()
@@ -105,7 +106,7 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
-<SfGantt  TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
     <GanttTaskFields Id="TaskId" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
                      ParentID="ParentId"></GanttTaskFields>
@@ -129,11 +130,11 @@ The Syncfusion® Blazor Gantt Chart component supports data annotation validatio
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    
+    public List<TaskData>? TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+       TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
@@ -184,7 +185,7 @@ The following example demonstrates how to implement custom validation for the **
 
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
-<SfGantt  TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="1400px" HighlightWeekends="true"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel"})" TreeColumnIndex="1">
     <GanttTaskFields Id="TaskId" Name="ActivityName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GanttEditSettings>
@@ -208,17 +209,17 @@ The following example demonstrates how to implement custom validation for the **
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    
+    public List<TaskData>? TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
         [CustomValidationActivityName]
-        public string ActivityName { get; set; }
+        public string? ActivityName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int? Duration { get; set; }
@@ -233,7 +234,7 @@ The following example demonstrates how to implement custom validation for the **
     /// </summary>
     public class CustomValidationActivityName : ValidationAttribute
     {
-        protected override System.ComponentModel.DataAnnotations.ValidationResult IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext)
+        protected override System.ComponentModel.DataAnnotations.ValidationResult? IsValid(object? value, System.ComponentModel.DataAnnotations.ValidationContext validationContext)
         {
             var str = value as string;
             if (string.IsNullOrWhiteSpace(str))
@@ -250,7 +251,7 @@ The following example demonstrates how to implement custom validation for the **
     /// </summary>
     public class CustomValidationProgress : ValidationAttribute
     {
-        protected override System.ComponentModel.DataAnnotations.ValidationResult IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext context)
+        protected override System.ComponentModel.DataAnnotations.ValidationResult? IsValid(object? value, System.ComponentModel.DataAnnotations.ValidationContext context)
         {
             if (value == null)
                 return new System.ComponentModel.DataAnnotations.ValidationResult("Progress is required.");
@@ -319,8 +320,9 @@ In the following example:
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true">
         <Validator>
             @{
-                ValidatorTemplateContext txt = context as ValidatorTemplateContext;
+                ValidatorTemplateContext? txt = context as ValidatorTemplateContext;
             }
+            
             <GanttCustomValidator context="@txt"></GanttCustomValidator>
         </Validator>
     </GanttEditSettings>
@@ -345,10 +347,10 @@ In the following example:
     </GanttColumns>
 </SfGantt>
 @code {
-    public List<GanttData.TaskData> TaskCollection { get; set; }
+    public List<GanttData.TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GanttData.GetTaskCollection();
+        TaskCollection = GanttData.GetTaskCollection();
     }
 }
 

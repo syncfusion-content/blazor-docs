@@ -17,30 +17,30 @@ By default, Gantt task date values are validated based on predecessor values. Yo
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" ProjectStartDate="ProjectStart" ProjectEndDate="ProjectEnd"
- Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})" EnablePredecessorValidation="false">
+         Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})" EnablePredecessorValidation="false">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
                      Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     private DateTime ProjectStart = new DateTime(2026, 03, 31);
     private DateTime ProjectEnd = new DateTime(2026, 07, 06);
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
-        public string Predecessor { get; set; }
+        public string? Duration { get; set; }
+        public string? Predecessor { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -97,10 +97,10 @@ The following code example explains enabling the [RespectLink](https://help.sync
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public void TaskbarEditing(TaskbarEditingEventArgs<TaskData> args)
     {
@@ -112,12 +112,12 @@ The following code example explains enabling the [RespectLink](https://help.sync
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -157,27 +157,27 @@ The taskbar can be moved above the specified predecessor offset value, but if it
          Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })" AutoUpdatePredecessorOffset="false">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
                      Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
-    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>    
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
 @code {
-    
+
     private DateTime ProjectStart = new DateTime(2026, 03, 31);
     private DateTime ProjectEnd = new DateTime(2026, 07, 06);
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
-        public string Predecessor { get; set; }
+        public string? Duration { get; set; }
+        public string? Predecessor { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -216,7 +216,7 @@ In the following code example, the connector line connected from task ID 2 to ta
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
                      Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>
@@ -224,28 +224,28 @@ In the following code example, the connector line connected from task ID 2 to ta
 </SfGantt>
 
 @code {
-  
+
     private DateTime ProjectStart = new DateTime(2026, 3, 24);
     private DateTime ProjectEnd = new DateTime(2026, 7, 6);
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public void TaskbarEditingHandler(TaskbarEditingEventArgs<TaskData> args)
     {
-       args.EnablePredecessorValidation = true;
+        args.EnablePredecessorValidation = true;
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
-        public string Predecessor { get; set; }
+        public string? Duration { get; set; }
+        public string? Predecessor { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

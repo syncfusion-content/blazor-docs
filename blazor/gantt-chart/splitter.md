@@ -29,20 +29,20 @@ The following example sets a percentage-based splitter position. This configurat
 </SfGantt>
 
 @code{
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -92,12 +92,12 @@ The following example adjusts the splitter dynamically:
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
+@code {
+    public SfGantt<TaskData>? Gantt;
     public class SplitterView
     {
-        public string ID { get; set; }
-        public string Text { get; set; }
+        public string? ID { get; set; }
+        public string? Text { get; set; }
     }
     public List<SplitterView> SplitterViews = new List<SplitterView>
     {
@@ -109,39 +109,39 @@ The following example adjusts the splitter dynamically:
     {
         if (args.Value == "Grid")
         {
-            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Grid);
+            Gantt?.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Grid);
         }
         else if (args.Value == "Chart")
         {
-            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Chart);
+            Gantt?.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Chart);
         }
         else
         {
-            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Default);
+            Gantt?.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Default);
         }
     }
     public void UpdateSplitterByPosition()
     {
-        this.Gantt.SetSplitterPositionAsync("70%");
+        Gantt?.SetSplitterPositionAsync("70%");
     }
     public void UpdateSplitterByIndex()
     {
-        this.Gantt.SetSplitterPositionAsync(0);
+        Gantt?.SetSplitterPositionAsync(0);
     }
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

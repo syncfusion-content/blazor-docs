@@ -44,7 +44,7 @@ These style options allow full control over text color, size, alignment, and app
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
+
 
 <SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
@@ -54,8 +54,8 @@ These style options allow full control over text color, size, alignment, and app
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
     private List<object> toolbarItem = new List<Object>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     public List<PdfHeaderFooterContent> HeaderContent = new List<PdfHeaderFooterContent>
     {
@@ -67,7 +67,7 @@ These style options allow full control over text color, size, alignment, and app
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -75,33 +75,37 @@ These style options allow full control over text color, size, alignment, and app
         {
             GanttPdfExportProperties exportProperties = new GanttPdfExportProperties();
             PdfHeader Header = new PdfHeader()
-                {
-                    FromTop = 0,
-                    Height = 100,
-                    Contents = HeaderContent
-                };
+            {
+                FromTop = 0,
+                Height = 100,
+                Contents = HeaderContent
+            };
             PdfFooter Footer = new PdfFooter()
-                {
-                    FromBottom = 250,
-                    Height = 100,
-                    Contents = FooterContent
-                };
+            {
+                FromBottom = 250,
+                Height = 100,
+                Contents = FooterContent
+            };
             exportProperties.Header = Header;
             exportProperties.Footer = Footer;
-            await Gantt.ExportToPdfAsync(exportProperties);
+            if(Gantt!=null)
+            {
+                await Gantt.ExportToPdfAsync(exportProperties);
+            }
+            
         }
     }
-   
+
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -142,8 +146,6 @@ These options provide flexibility for adding separators or visual structure to t
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
-
 <SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
@@ -152,8 +154,8 @@ These options provide flexibility for adding separators or visual structure to t
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
     private List<object> toolbarItem = new List<Object>() { new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     public List<PdfHeaderFooterContent> HeaderContent = new List<PdfHeaderFooterContent>
     {
@@ -165,7 +167,7 @@ These options provide flexibility for adding separators or visual structure to t
     };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -173,33 +175,33 @@ These options provide flexibility for adding separators or visual structure to t
         {
             GanttPdfExportProperties exportProperties = new GanttPdfExportProperties();
             PdfHeader Header = new PdfHeader()
-                {
-                    FromTop = 0,
-                    Height = 100,
-                    Contents = HeaderContent
-                };
+            {
+                FromTop = 0,
+                Height = 100,
+                Contents = HeaderContent
+            };
             PdfFooter Footer = new PdfFooter()
-                {
-                    FromBottom = 250,
-                    Height = 100,
-                    Contents = FooterContent
-                };
+            {
+                FromBottom = 250,
+                Height = 100,
+                Contents = FooterContent
+            };
             exportProperties.Header = Header;
             exportProperties.Footer = Footer;
             await Gantt.ExportToPdfAsync(exportProperties);
         }
     }
-   
+
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()

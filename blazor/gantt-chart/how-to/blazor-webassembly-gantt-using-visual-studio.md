@@ -125,7 +125,7 @@ Bind data with the Gantt Chart component by using the `DataSource` property. It 
 private List<TaskData> TaskCollection { get; set; }
 protected override void OnInitialized()
 {
-    this.TaskCollection = GetTaskCollection();
+    TaskCollection = GetTaskCollection();
 }
 
 public class TaskData
@@ -170,7 +170,7 @@ The data source fields that are required to render the tasks are mapped to the G
 private List<TaskData> TaskCollection { get; set; }
 protected override void OnInitialized()
 {
-    this.TaskCollection = GetTaskCollection();
+    TaskCollection = GetTaskCollection();
 }
 
 public class TaskData
@@ -231,7 +231,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
     public string NumberFormat = "C";
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -279,7 +279,7 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -328,7 +328,7 @@ The filtering feature enables you to view the reduced amount of records based on
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -375,7 +375,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -429,7 +429,7 @@ You can show the relationship in tasks by using the `Dependency` property as sho
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData

@@ -23,21 +23,21 @@ To enable this feature, set the [AllowRowDragAndDrop](https://help.syncfusion.co
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -71,34 +71,33 @@ You can drag and drop multiple rows simultaneously in the Gantt Chart component.
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
 </SfGantt>
 
-@code{
-    private List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
@@ -135,42 +134,41 @@ In the example below, the row at index 2 is moved below the row at index 6 using
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
-
 <div style="margin-bottom: 20px;">
     <SfButton CssClass="e-primary" Content="Dynamic drag and drop" OnClick="drag"></SfButton>
 </div>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-    ParentID="ParentId">
+                     ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public void drag()
     {
-        this.Gantt.ReorderRowAsync(2, 6, "Below");
+        Gantt?.ReorderRowAsync(2, 6, "Below");
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
@@ -216,8 +214,8 @@ In this example, the row drop action is canceled when the **TaskID** is 2.
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     private string message = string.Empty;
 
     protected override void OnInitialized()
@@ -227,7 +225,7 @@ In this example, the row drop action is canceled when the **TaskID** is 2.
 
     public void RowDropping(RowDroppingEventArgs<TaskData> args)
     {
-        var draggedTask = args.Data.FirstOrDefault();
+        var draggedTask = args?.Data?.FirstOrDefault();
         if (draggedTask != null && draggedTask.TaskId == 2)
         {
             message = $"Drop cancelled for Task: {draggedTask.TaskName} (ID: {draggedTask.TaskId})";
@@ -238,15 +236,15 @@ In this example, the row drop action is canceled when the **TaskID** is 2.
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         return new List<TaskData>
         {

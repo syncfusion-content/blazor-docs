@@ -40,17 +40,17 @@ The following code snippet demonstrates how to use the `PdfQueryCellInfo` event 
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
     private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "PdfExport")
-        {
+        if (args.Item.Id == "PdfExport" && Gantt != null)
+    {
             await Gantt.ExportToPdfAsync();
         }
     }
@@ -83,13 +83,13 @@ The following code snippet demonstrates how to use the `PdfQueryCellInfo` event 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -107,6 +107,7 @@ The following code snippet demonstrates how to use the `PdfQueryCellInfo` event 
         };
         return Tasks;
     }
+ 
 }
 ```
 
@@ -139,8 +140,8 @@ The following code snippet demonstrates how to use the `PdfColumnHeaderQueryCell
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
     private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     private static WebClient webClient = new WebClient();
     private static byte[] imageBytes = webClient.DownloadData("https://cdn.syncfusion.com/content/images/landing-page/yes.webp");
@@ -148,11 +149,11 @@ The following code snippet demonstrates how to use the `PdfColumnHeaderQueryCell
     public static PdfImage image = PdfImage.FromStream(imageStream);
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "PdfExport")
+        if (args.Item.Id == "PdfExport" &&Gantt!=null)
         {
             await Gantt.ExportToPdfAsync();
         }
@@ -162,19 +163,19 @@ The following code snippet demonstrates how to use the `PdfColumnHeaderQueryCell
         if (args.Column.Field == "TaskName")
         {
             args.Cell.Value = "Updated Value";
-            args.Cell.CellStyle = new PdfElementStyle() { Image = image};
+            args.Cell.CellStyle = new PdfElementStyle() { Image = image };
         }
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -279,7 +280,7 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
     public static PdfImage image = PdfImage.FromStream(imageStream);
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -296,7 +297,7 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
         }
         else
         {
-            args.LabelSettings.LeftLabelValue = args.Data.TaskName;
+            args.LabelSettings.LeftLabelValue = args.Data.TaskName ?? "";
         }
 
         if (args.Data.TaskId == 5)
@@ -305,7 +306,7 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
         }
         else
         {
-            args.LabelSettings.RightLabelValue = args.Data.TaskName;
+            args.LabelSettings.RightLabelValue = args.Data.TaskName ?? "";
         }
         if (args.Data.TaskId == 3)
         {
@@ -319,13 +320,13 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()

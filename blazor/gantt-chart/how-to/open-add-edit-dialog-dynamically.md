@@ -36,7 +36,7 @@ Gantt Chart add and edit dialogs can be opened dynamically by using [OpenAddDial
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData

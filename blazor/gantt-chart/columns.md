@@ -36,21 +36,21 @@ You can define columns using the [GanttColumns](https://help.syncfusion.com/cr/b
         <GanttColumn Field="Progress" HeaderText="Progress" Width="150"></GanttColumn>
         <GanttColumn Field="StartDateOnly" HeaderText="Start Date Only" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.DateOnly" Width="152" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
         <GanttColumn Field="StartTimeOnly" HeaderText="Start Time Only" Type="Syncfusion.Blazor.Grids.ColumnType.TimeOnly" Width="150" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
-        <GanttColumn Field="Status" HeaderText="Status" Width="150" ></GanttColumn>
-        <GanttColumn Field="WorkersCount" HeaderText="Workers Count" Width="150" ></GanttColumn>
+        <GanttColumn Field="Status" HeaderText="Status" Width="150"></GanttColumn>
+        <GanttColumn Field="WorkersCount" HeaderText="Workers Count" Width="150"></GanttColumn>
     </GanttColumns>
 </SfGantt>
 
-@code{
-    private List<TaskData> TaskCollection { get; set; }
+@code {
+    private List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), Status="Progress", WorkersCount=20, StartDateOnly = new DateOnly(2026, 03, 02), StartTimeOnly = new TimeOnly(10, 00, 00)},
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 5, Status="Progress", WorkersCount=10, ParentId = 1, StartDateOnly = new DateOnly(2026, 03, 04), StartTimeOnly = new TimeOnly(11, 30, 00)},
@@ -67,14 +67,14 @@ You can define columns using the [GanttColumns](https://help.syncfusion.com/cr/b
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public DateOnly? StartDateOnly { get; set; }
         public TimeOnly? StartTimeOnly { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
         public int WorkersCount { get; set; }
         public int? ParentId { get; set; }
     }
@@ -120,7 +120,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component lets
         <GanttColumn Field="StartDate" HeaderText="Start Date" Format="dd/MM/yyyy hh:mm" Width="150" Type="Syncfusion.Blazor.Grids.ColumnType.DateTime"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="150"></GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration" Width="150"></GanttColumn>
-        <GanttColumn Field="Progress" HeaderText="Progress"  Type="Syncfusion.Blazor.Grids.ColumnType.Integer" Format="P2" Width="150"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Type="Syncfusion.Blazor.Grids.ColumnType.Integer" Format="P2" Width="150"></GanttColumn>
         <GanttColumn Field="StartDateOnly" HeaderText="Start Date Only" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.DateOnly" Width="152" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
         <GanttColumn Field="StartTimeOnly" HeaderText="Start Time Only" Type="Syncfusion.Blazor.Grids.ColumnType.TimeOnly" Width="150" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
         <GanttColumn Field="Status" HeaderText="Status" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean" Width="150"></GanttColumn>
@@ -128,16 +128,16 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component lets
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), Status="Progress", WorkersCount=20, StartDateOnly = new DateOnly(2026, 03, 02), StartTimeOnly = new TimeOnly(10, 00, 00)},
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 5, Status="Progress", WorkersCount=10, ParentId = 1, StartDateOnly = new DateOnly(2026, 03, 04), StartTimeOnly = new TimeOnly(11, 30, 00)},
@@ -154,14 +154,14 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component lets
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public DateOnly? StartDateOnly { get; set; }
         public TimeOnly? StartTimeOnly { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
         public int WorkersCount { get; set; }
         public int? ParentId { get; set; }
     }
@@ -192,28 +192,28 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart component for B
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     private string NumberFormat = "C";
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -269,28 +269,28 @@ The following example code demonstrates the formatting of data for the **TaskID*
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -338,29 +338,29 @@ Format | Formatted value
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     private string DateFormat = "MM/dd/yyyy";
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -407,14 +407,14 @@ The Syncfusion<sup style="font-size:70%">®</sup> Gantt component for Blazor sup
 </SfGantt>
 
 @code {
-    
-    public List<TaskData> TaskCollection { get; set; }
+
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
-   
+
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
@@ -434,14 +434,14 @@ The Syncfusion<sup style="font-size:70%">®</sup> Gantt component for Blazor sup
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public DateOnly? StartDateOnly { get; set; }
         public TimeOnly? StartTimeOnly { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
         public int WorkersCount { get; set; }
         public int? ParentId { get; set; }
     }
@@ -480,29 +480,33 @@ You can resize a column in Gantt Chart to fit its content using the [AutoFitColu
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     private async void DataBoundHandler(object args)
     {
-        await Gantt.AutoFitColumnsAsync(new string[] { "TaskName", "StartDate", "EndDate" });
+        if (Gantt != null)
+        {
+            await Gantt.AutoFitColumnsAsync(new string[] { "TaskName", "StartDate", "EndDate" });
+        }
+        
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public DateOnly? StartDateOnly { get; set; }
         public TimeOnly? StartTimeOnly { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
         public int WorkersCount { get; set; }
         public int? ParentId { get; set; }
     }
@@ -537,31 +541,31 @@ The Syncfusion<sup style="font-size:70%">®</sup> Blazor Gantt Chart component d
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-    <SfGantt DataSource="@TaskCollection" TreeColumnIndex="2" Height="450px" Width="700px">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-              Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
-    </SfGantt>
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+<SfGantt DataSource="@TaskCollection" TreeColumnIndex="2" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+</SfGantt>
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -620,37 +624,46 @@ The following example demonstrates hiding and showing the **Duration** column us
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
-    private string[] ColumnList = {"Duration"};
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    private string[] ColumnList = { "Duration" };
 
-    public async Task show() {
-        await Gantt.ShowColumnsAsync(ColumnList, "HeaderText");
+    public async Task show()
+    {
+        if(Gantt != null)
+        {
+            await Gantt.ShowColumnsAsync(ColumnList, "HeaderText");
+        }
+
     }
 
-    public async Task hide() {
-        await Gantt.HideColumnsAsync(ColumnList, "HeaderText");
+    public async Task hide()
+    {
+        if (Gantt != null)
+        {
+            await Gantt.HideColumnsAsync(ColumnList, "HeaderText");
+        }
     }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -659,7 +672,7 @@ The following example demonstrates hiding and showing the **Duration** column us
             new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Progress = 30, ParentId = 5 },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }   
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -701,38 +714,40 @@ The following example demonstrates hiding and showing the **TaskName** and **Dur
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
-    private string[] ColumnList = {"TaskName", "Duration"};
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    private string[] ColumnList = { "TaskName", "Duration" };
 
-    public void show() {
-        this.Gantt.ShowColumnsAsync(ColumnList, "Field");
+    public void show()
+    {
+        Gantt?.ShowColumnsAsync(ColumnList, "Field");
     }
 
-    public void hide() {
-        this.Gantt.HideColumnsAsync(ColumnList, "Field");
+    public void hide()
+    {
+        Gantt?.HideColumnsAsync(ColumnList, "Field");
     }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -741,7 +756,7 @@ The following example demonstrates hiding and showing the **TaskName** and **Dur
             new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Progress = 30, ParentId = 5 },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }   
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -771,7 +786,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true" AllowFiltering="true" AllowReordering="true"  AllowResizing="true">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true" AllowFiltering="true" AllowReordering="true" AllowResizing="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttColumns>
@@ -784,22 +799,22 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
     <GanttEditSettings AllowEditing="true"></GanttEditSettings>
 </SfGantt>
 
-@code{
-   
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public bool Verified { get; set; }
         public int? ParentId { get; set; }
@@ -807,7 +822,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), Verified = true, },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Verified = true, Progress = 30, ParentId = 1 },
@@ -816,7 +831,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart componen
             new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 21), Verified = false, },
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Verified = true, Progress = 30, ParentId = 5 },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 07), EndDate = new DateTime(2026, 04, 09), Verified = false, Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Verified = true, Progress = 30, ParentId = 5 }, 
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 07), Duration = "0", Verified = true, Progress = 30, ParentId = 5 },
         };
         return Tasks;
     }
@@ -840,7 +855,7 @@ The following example demonstrates a Gantt chart where the **Job Name** column i
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-             Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+                     Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskId" Width="150" HideAtMedia="(min-width: 700px)"></GanttColumn>
         <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250"></GanttColumn>
@@ -848,28 +863,28 @@ The following example demonstrates a Gantt chart where the **Job Name** column i
         <GanttColumn Field="Duration" HideAtMedia="(min-width: 500px)"></GanttColumn>
     </GanttColumns>
 </SfGantt>
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },

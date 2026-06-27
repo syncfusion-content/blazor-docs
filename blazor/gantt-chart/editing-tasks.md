@@ -25,20 +25,20 @@ Enable cell editing by setting [GanttEditSettings.AllowEditing](https://help.syn
     <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -81,20 +81,20 @@ Enable dialog editing by setting [GanttEditSettings.AllowEditing](https://help.s
     <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -155,8 +155,8 @@ Customize the edit dialog by defining tabs with [GanttAddDialogFields](https://h
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceInfoModel> ResourceCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    public List<ResourceInfoModel>? ResourceCollection { get; set; }
     public static List<AssignmentModel> AssignmentCollection { get; set; } = new();
     protected override void OnInitialized()
     {
@@ -168,14 +168,14 @@ Customize the edit dialog by defining tabs with [GanttAddDialogFields](https://h
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Notes { get; set; }
-        public string Predecessor { get; set; }
+        public string? Notes { get; set; }
+        public string? Predecessor { get; set; }
     }
     public class ResourceInfoModel
     {
@@ -274,7 +274,7 @@ Restrict fields in the dialog’s General tab using [GanttAddDialogFields](https
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         TaskCollection = GetTaskCollection();
@@ -283,16 +283,16 @@ Restrict fields in the dialog’s General tab using [GanttAddDialogFields](https
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Notes { get; set; }
-        public string Predecessor { get; set; }
+        public string? Notes { get; set; }
+        public string? Predecessor { get; set; }
     }
-    
+
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
@@ -341,22 +341,22 @@ Enable dependency editing by mapping the [GanttTaskFields.Dependency](https://he
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    private List<TaskData> TaskCollection { get; set; }
+@code {
+    private List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -397,25 +397,25 @@ Update tasks programmatically using the [UpdateRecordByIDAsync](https://help.syn
     <GanttEditSettings AllowEditing="true"></GanttEditSettings>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
+@code {
+    public SfGantt<TaskData>? Gantt;
     public void UpdateRecord()
     {
-        this.Gantt.UpdateRecordByIDAsync(new TaskData() { TaskId = 3, TaskName = "Updated by ID value", Progress = 60});
+        Gantt?.UpdateRecordByIDAsync(new TaskData() { TaskId = 3, TaskName = "Updated by ID value", Progress = 60 });
     }
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -435,6 +435,7 @@ Update tasks programmatically using the [UpdateRecordByIDAsync](https://help.syn
         return Tasks;
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}

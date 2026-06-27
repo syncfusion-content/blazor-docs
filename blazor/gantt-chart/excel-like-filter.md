@@ -18,6 +18,8 @@ To enable this feature, configure [GanttFilterSettings.FilterType](https://help.
 
 @using Syncfusion.Blazor.Gantt
 
+@using Syncfusion.Blazor.Gantt
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -51,10 +53,10 @@ To enable this feature, configure [GanttFilterSettings.FilterType](https://help.
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -119,7 +121,7 @@ To customize this behavior, the [FilterChoiceCount](https://help.syncfusion.com/
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Duration { get; set; }
@@ -164,7 +166,7 @@ In the example below, the filter checkbox list for the **Status** column is cust
                 @itemTemplateValue
             </FilterItemTemplate>
         </GanttColumn>
-        
+
     </GanttColumns>
 </SfGantt>
 
@@ -193,7 +195,7 @@ In the example below, the filter checkbox list for the **Status** column is cust
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Progress { get; set; }
@@ -269,10 +271,10 @@ To remove the context menu from the filter dialog, apply the following CSS rule 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -291,63 +293,28 @@ You can adjust the height and width of the filter dialog for each column using C
 {% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
 
-<SfGantt ID="Gantt" AllowFiltering="true" DataSource="@TaskCollection" Height="450px" Width="700px">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="TaskData"></GanttEvents>
     <GanttFilterSettings FilterType="Syncfusion.Blazor.Gantt.FilterType.Excel"></GanttFilterSettings>
 </SfGantt>
 
-@if (IsLarge)
-{
-    <style>
-        #Gantt .e-excelfilter.e-popup.e-popup-open {
-            height: 400px;
-            width: 350px !important;
-        }
-    </style>
-}
-@if (IsSmall)
-{
-    <style>
-        #Gantt .e-excelfilter.e-popup.e-popup-open {
-            height: 450px;
-            width: 280px !important;
-        }
-    </style>
-}
+<style>
+    .e-excelfilter .e-contextmenu-container.e-sfcontextmenu.e-grid-filter-menu {
+        display: none;
+    }
+</style>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; } = new();
-    public bool IsLarge;
-    public bool IsSmall;
+    private List<TaskData> TaskCollection { get; set; } = new();
+
     protected override void OnInitialized()
     {
         TaskCollection = GetTaskCollection();
     }
 
-    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
-    {
-        if (args.ColumnName == "TaskName")
-        {
-            IsLarge = true;
-            IsSmall = false;
-        }
-        else if (args.ColumnName == "TaskId")
-        {
-            IsSmall = true;
-            IsLarge = false;
-        }
-        else
-        {
-            IsLarge = false;
-            IsSmall = false;
-        }
-    }
-    
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
@@ -366,10 +333,10 @@ You can adjust the height and width of the filter dialog for each column using C
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -464,10 +431,10 @@ When a column is filtered, the Gantt Chart displays a default icon with predefin
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

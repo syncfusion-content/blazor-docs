@@ -30,11 +30,11 @@ N> When the work field is mapped from the data source, the default task type wil
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     private DateTime ProjectStart = new DateTime(2026, 03, 25);
     private DateTime ProjectEnd = new DateTime(2026, 05, 10);
-    private List<TaskData> TaskCollection { get; set; }
-    private List<ResourceInfoModel> ResourceCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
+    private List<ResourceInfoModel>? ResourceCollection { get; set; }
     private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
     protected override void OnInitialized()
     {
@@ -46,11 +46,11 @@ N> When the work field is mapped from the data source, the default task type wil
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public string TaskType { get; set; }
+        public string? TaskName { get; set; }
+        public string? TaskType { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
         public double? Work { get; set; }
@@ -148,8 +148,8 @@ The work, duration and resource unit fields of a task depends upon each other an
 @code {
     private DateTime ProjectStart = new DateTime(2026, 03, 25);
     private DateTime ProjectEnd = new DateTime(2026, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceInfoModel> ResourceCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
+    public List<ResourceInfoModel>? ResourceCollection { get; set; }
     public static List<AssignmentModel> AssignmentCollection { get; set; } = new();
     protected override void OnInitialized()
     {
@@ -161,14 +161,14 @@ The work, duration and resource unit fields of a task depends upon each other an
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public TaskType TaskType { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public double Progress { get; set; }
         public int? ParentId { get; set; }
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
         public double? Work { get; set; }
     }
 

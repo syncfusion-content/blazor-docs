@@ -48,21 +48,21 @@ The following table shows built-in toolbar items and its actions.
     </GanttEditSettings>
 </SfGantt>
 
-@code{
+@code {
     public string[] Searchfields = new string[] { "TaskID", "TaskName", "StartDate", "EndDate", "Duration", "Progress" };
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -108,39 +108,39 @@ By default, custom toolbar items are aligned to the left. However, you can chang
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
-    public List<Syncfusion.Blazor.Navigations.ToolbarItem> Toolbaritems = new List<Syncfusion.Blazor.Navigations.ToolbarItem>() 
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<Syncfusion.Blazor.Navigations.ToolbarItem> Toolbaritems = new List<Syncfusion.Blazor.Navigations.ToolbarItem>()
         {
          new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "Expand All",TooltipText = "Expand All", Id = "ExpandAll" },
-         new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "Collapse All",TooltipText = "Collapse All", Id = "CollapseAll", Align = Syncfusion.Blazor.Navigations.ItemAlign.Right } 
+         new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "Collapse All",TooltipText = "Collapse All", Id = "CollapseAll", Align = Syncfusion.Blazor.Navigations.ItemAlign.Right }
         };
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "ExpandAll")
         {
-            this.Gantt.ExpandAllAsync();
+            Gantt?.ExpandAllAsync();
         }
-        if(args.Item.Id == "CollapseAll")
+        if (args.Item.Id == "CollapseAll")
         {
-            this.Gantt.CollapseAllAsync();
+           Gantt?.CollapseAllAsync();
         }
     }
-    
+
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -186,31 +186,31 @@ The Gantt component supports using both built-in and custom toolbar items simult
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code{
+@code {
     public List<Object> Toolbaritems = new List<Object>() { "ExpandAll", "CollapseAll", new Syncfusion.Blazor.Navigations.ToolbarItem() { Text = "Test", TooltipText = "Test", Id = "Test" } };
-    public List<TaskData> TaskCollection { get; set; }
-    public string Message;
+    public List<TaskData>? TaskCollection { get; set; }
+    public string? Message;
 
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Test")
         {
-           this.Message = "Custom Toolbar Clicked";
+            this.Message = "Custom Toolbar Clicked";
         }
     }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -218,7 +218,7 @@ The Gantt component supports using both built-in and custom toolbar items simult
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
-        {   
+        {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
             new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 02), EndDate = new DateTime(2026, 04, 06), Progress = 40, ParentId = 1 },
@@ -249,18 +249,18 @@ You can control toolbar items dynamically using the [EnableItems](https://help.s
 @using Syncfusion.Blazor.Buttons
 
 <div style="margin-bottom: 20px;">
-<label style="margin-right: 10px;font-weight: bold;">Enable or disable toolbar items</label>
-<SfSwitch @bind-Checked="isChecked" ValueChange="OnSwitchChange" TChecked="bool?" ></SfSwitch>
+    <label style="margin-right: 10px;font-weight: bold;">Enable or disable toolbar items</label>
+    <SfSwitch @bind-Checked="isChecked" ValueChange="OnSwitchChange" TChecked="bool?"></SfSwitch>
 </div>
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Toolbar="Toolbaritems" Height="450px" Width="900px" AllowFiltering = "true">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Toolbar="Toolbaritems" Height="450px" Width="900px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-          Duration="Duration" Progress="Progress" ParentID="ParentId">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
+@code {
+    public SfGantt<TaskData>? Gantt;
     private bool? isChecked = true;
     public List<ToolbarItem> Toolbaritems = new List<ToolbarItem>() { new ToolbarItem() { Text = "Quick Filter", TooltipText = "Quick Filter", Id = "quickfilter" },
     new ToolbarItem() { Text = "Clear Filter", TooltipText = "Clear Filter", Id = "clearfilter" } };
@@ -268,31 +268,31 @@ You can control toolbar items dynamically using the [EnableItems](https://help.s
     {
         if (args.Item.Id == "quickfilter")
         {
-            this.Gantt.FilterByColumnAsync("TaskName", "startswith", "Identify");
+            Gantt?.FilterByColumnAsync("TaskName", "startswith", "Identify");
         }
         if (args.Item.Id == "clearfilter")
         {
-            this.Gantt.ClearFilteringAsync();
+            Gantt?.ClearFilteringAsync();
         }
     }
     private void OnSwitchChange(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
         this.isChecked = args.Checked;
-        this.Gantt.EnableItems(new List<int>() { 0, 1 }, isChecked ?? true);
+        Gantt?.EnableItems(new List<int>() { 0, 1 }, isChecked ?? true);
     }
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -300,7 +300,7 @@ You can control toolbar items dynamically using the [EnableItems](https://help.s
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
-        {   
+        {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
             new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 04, 02), EndDate = new DateTime(2026, 04, 06), Progress = 40, ParentId = 1 },

@@ -27,7 +27,7 @@ To enable this feature, add the **Search** option to the `Toolbar` configuration
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -96,7 +96,7 @@ The following sample demonstrates an initial search where `Fields` is set to **T
     public Syncfusion.Blazor.Operator SearchOperator { get; set; } = Syncfusion.Blazor.Operator.Contains;
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -329,7 +329,7 @@ This following sample demonstrates searching only within the **TaskName** and **
         
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -391,7 +391,7 @@ To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</s
     public Syncfusion.Blazor.Operator SearchOperator { get; set; } = Syncfusion.Blazor.Operator.Contains;
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public void Clear()

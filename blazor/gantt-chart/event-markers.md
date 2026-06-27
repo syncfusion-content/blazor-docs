@@ -39,29 +39,29 @@ The following implementation demonstrates event marker integration within a Gant
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-            Duration="Duration" Progress="Progress" ParentID="ParentId">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEventMarkers>
         <GanttEventMarker Day="@Event" Label="Project approval and kick-off"
-            CssClass="e-custom-event-marker"></GanttEventMarker>
+                          CssClass="e-custom-event-marker"></GanttEventMarker>
     </GanttEventMarkers>
 </SfGantt>
 
-@code{
+@code {
     private DateTime Event = new DateTime(2026, 04, 03);
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

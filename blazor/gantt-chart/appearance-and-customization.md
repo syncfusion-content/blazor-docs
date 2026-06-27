@@ -18,25 +18,25 @@ Height of child taskbars and parent taskbars can be customized by using [Taskbar
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" RowHeight=60 TaskbarHeight=50>
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="900px" RowHeight=60 TaskbarHeight=50>
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -69,38 +69,43 @@ In the Gantt Chart component, the appearance can be customized based on the Hier
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
+<SfGantt @ref="Gantt" TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttEvents TValue="TaskData" QueryChartRowInfo="GanttChartRowInfo"></GanttEvents>
+    <GanttEvents TValue="TaskData" QueryChartRowInfo="GanttChartRowInfo"></GanttEvents> 
 </SfGantt>
 
-@code{
-    SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     private void GanttChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
     {
-        dynamic data = Gantt.GetHierarchicalData(args.Data.TaskId);
-        if (data.Level == 0 && data.HasChildRecords == true)
+        if (Gantt != null)
         {
-            args.Row.AddClass(new string[] { "customize-parent" });
+            var data = Gantt.GetRowTaskModel(args.Data); 
+            if (data.Level == 0 && data.HasChildRecords == true)
+            {
+                args.Row.AddClass(new string[] { "customize-parent" });
+            }
+            else
+            {
+                args.Row.AddClass(new string[] { "customize-child" });
+            }
         }
-        else
-        {
-            args.Row.AddClass(new string[] { "customize-child" });
-        }
+        
     }
+    
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -142,7 +147,7 @@ The Gantt Chart component maps any data source fields to [GanttLabelSettings](ht
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -160,21 +165,21 @@ The Gantt Chart component maps any data source fields to [GanttLabelSettings](ht
     </GanttLabelSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+      TaskCollection = GetTaskCollection();
     }
-    
+
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -211,28 +216,28 @@ The width and background color of connector lines in Gantt Chart can be customiz
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="800px" ConnectorLineWidth="3" ConnectorLineBackground="red">
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="800px" ConnectorLineWidth="3" ConnectorLineBackground="red">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -263,8 +268,8 @@ While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://he
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
- 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
+
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -291,42 +296,42 @@ While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://he
         background-color: #20B2AA;
     }
 </style>
-@code{
+@code {
     public void QueryCellInfo(QueryCellInfoEventArgs<TaskData> args)
     {
-        if (args.Column.Field == "Progress")
+        if (args?.Column?.Field == "Progress")
         {
-            if (args.Data.Progress == 30)
+            if (args?.Data?.Progress == 30)
             {
-                args.Cell.AddClass(new string[] { "yellow-cell" });
+                args?.Cell?.AddClass(new string[] { "yellow-cell" });
             }
             else
             {
-                args.Cell.AddClass(new string[] { "red-cell" });
+                args?.Cell?.AddClass(new string[] { "red-cell" });
             }
         }
     }
     public void RowDataBound(RowDataBoundEventArgs<TaskData> args)
     {
-        if (args.Data.TaskId == 4)
+        if (args?.Data?.TaskId == 4)
         {
-            args.Row.AddClass(new string[] { "custom-row" });
+            args?.Row?.AddClass(new string[] { "custom-row" });
         }
     }
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -367,26 +372,26 @@ N> By default, the `GridLines` property is set to `Horizontal` type.
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="800px" GridLines="Syncfusion.Blazor.Gantt.GridLine.Both">
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="800px" GridLines="Syncfusion.Blazor.Gantt.GridLine.Both">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -409,6 +414,7 @@ N> By default, the `GridLines` property is set to `Horizontal` type.
 }
 
 
+
 ```
 
 ![Hiding Grid Lines in Blazor Gantt Chart](images/blazor-gantt-chart-hide-grid-lines.png)
@@ -426,27 +432,27 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="800px">
+<SfGantt TValue="TaskData" DataSource="@TaskCollection" Height="450px" Width="800px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttSplitterSettings Position="80%"></GanttSplitterSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+       TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -493,12 +499,12 @@ The following code example shows how to use this method.
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> Gantt;
+@code {
+    public SfGantt<TaskData>? Gantt;
     public class SplitterView
     {
-        public string ID { get; set; }
-        public string Text { get; set; }
+        public string? ID { get; set; }
+        public string? Text { get; set; }
     }
     public List<SplitterView> SplitterViews = new List<SplitterView>
     {
@@ -506,43 +512,63 @@ The following code example shows how to use this method.
         new SplitterView() { ID= "Grid", Text= "Grid" },
         new SplitterView() { ID= "Chart", Text= "Chart" },
     };
-    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, SplitterView> args)
+    public async Task OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, SplitterView> args)
     {
         if (args.Value == "Grid")
         {
-            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Grid);
+            if(Gantt!=null)
+            {
+                await Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Grid);
+            }
+
         }
         else if (args.Value == "Chart")
         {
-            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Chart);
+            if (Gantt != null)
+            {
+                await Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Chart);
+            }
+
         }
         else
         {
-            this.Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Default);
+            if (Gantt != null)
+            {
+                await Gantt.SetSplitterPositionAsync(Syncfusion.Blazor.Gantt.SplitterView.Default);
+            }
+
         }
     }
-    public void UpdateSplitterByPosition()
+    public async Task UpdateSplitterByPosition()
     {
-        this.Gantt.SetSplitterPositionAsync("70%");
+        if(Gantt!=null)
+        {
+            await Gantt.SetSplitterPositionAsync("70%");
+        }
+        
     }
-    public void UpdateSplitterByIndex()
+    public async Task UpdateSplitterByIndex()
     {
-        this.Gantt.SetSplitterPositionAsync(0);
+        if (Gantt != null)
+        {
+            await Gantt.SetSplitterPositionAsync(0);
+        }
+        
     }
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

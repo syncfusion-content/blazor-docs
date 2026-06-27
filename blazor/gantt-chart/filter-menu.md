@@ -78,10 +78,10 @@ Here is a sample code demonstrating how to render a [DropDownList](https://blazo
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -129,13 +129,13 @@ You can perform filtering programmatically using the [FilterByColumnAsync](https
 
 <style>
     .e-filtermenudiv.e-icons.e-icon-filter {
-      display: none;
+        display: none;
     }
 </style>
 
 @code {
     public List<TaskData> TaskCollection { get; set; } = new();
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
 
     protected override void OnInitialized()
     {
@@ -144,12 +144,19 @@ You can perform filtering programmatically using the [FilterByColumnAsync](https
 
     private async Task PerformFilter()
     {
-        await Gantt.FilterByColumnAsync("TaskName", "startswith", "Project");
+        if(Gantt!=null)
+        {
+            await Gantt.FilterByColumnAsync("TaskName", "startswith", "Project");
+        }
+
     }
 
     private async Task ClearFilter()
     {
-        await Gantt.ClearFilteringAsync();
+        if (Gantt != null)
+        {
+            await Gantt.ClearFilteringAsync();
+        }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -171,10 +178,10 @@ You can perform filtering programmatically using the [FilterByColumnAsync](https
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -229,7 +236,7 @@ The following sample demonstrates how to disable the autofill feature by setting
                     var contextModel = context as PredicateModel<string>;
                 }
                 <SfAutoComplete TValue="string" TItem="string" ID="TaskNameFilter" @bind-Value="contextModel.Value"
-                Placeholder="Select Task Name" DataSource="@CustomerData">
+                                Placeholder="Select Task Name" DataSource="@CustomerData">
                 </SfAutoComplete>
             </FilterTemplate>
         </GanttColumn>
@@ -247,7 +254,10 @@ The following sample demonstrates how to disable the autofill feature by setting
     protected override void OnInitialized()
     {
         TaskCollection = GetTaskCollection();
-        CustomerData = TaskCollection.Select(t => t.TaskName).Distinct().ToList();
+        CustomerData = TaskCollection?
+    .Select(t => t.TaskName ?? string.Empty)
+    .Distinct()
+    .ToList() ?? new List<string>();
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -269,10 +279,10 @@ The following sample demonstrates how to disable the autofill feature by setting
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

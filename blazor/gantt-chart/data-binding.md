@@ -36,24 +36,24 @@ This following sample shows self-referential data binding in the Gantt Chart by 
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
-    private static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
@@ -93,21 +93,21 @@ Hierarchical data binding organizes complex parent-child relationships through n
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public List<TaskData>? SubTasks { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
@@ -144,23 +144,23 @@ This approach enables the component to reconstruct hierarchical tree structures 
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
-    
+
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
@@ -206,13 +206,13 @@ To handle scenarios where the data model is not defined at compile time, the Gan
 @code {
     private string NumberFormat = "C";
     private static List<DynamicDictionary> Data = new List<DynamicDictionary>();
-    private List<DynamicDictionary> GanttDynamicData { get; set; }
+    private List<DynamicDictionary>? GanttDynamicData { get; set; }
     private static int ParentRecordID { get; set; }
     private static int ChildRecordID { get; set; }
 
     protected override void OnInitialized()
     {
-        this.GanttDynamicData = GetData().ToList();
+        GanttDynamicData = GetData().ToList();
     }
 
     public static List<DynamicDictionary> GetData()
@@ -230,7 +230,7 @@ To handle scenarios where the data model is not defined at compile time, the Gan
             ParentRecord.TaskId = ++ParentRecordID;
             ParentRecord.TaskName = "Parent Task " + i;
             ParentRecord.StartDate = startingDate;
-            ParentRecord.Progress = ran.Next(10, 100);
+            ParentRecord.Progress = ran?.Next(10, 100);
             ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
             ParentRecord.ParentId = null;
             Data.Add(ParentRecord);
@@ -251,7 +251,7 @@ To handle scenarios where the data model is not defined at compile time, the Gan
             ChildRecord.TaskId = ++ParentRecordID;
             ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
             ChildRecord.StartDate = startingDate;
-            ChildRecord.Progress = ran.Next(10, 100);
+            ChildRecord.Progress = ran?.Next(10, 100);
             ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
             ChildRecord.ParentId = ParentId;
             Data.Add(ChildRecord);
@@ -261,21 +261,25 @@ To handle scenarios where the data model is not defined at compile time, the Gan
     public class DynamicDictionary : DynamicObject
     {
         Dictionary<string, object> dictionary = new Dictionary<string, object>();
-        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        public override bool TryGetMember(GetMemberBinder binder, out object? result)
         {
             string name = binder.Name;
             return dictionary.TryGetValue(name, out result);
         }
 
-        public override bool TrySetMember(SetMemberBinder binder, object value)
+        public override bool TrySetMember(SetMemberBinder? binder, object? value)
         {
-            dictionary[binder.Name] = value;
+            if (binder != null && value != null)
+            {
+                dictionary[binder.Name] = value;
+            }
             return true;
+            
         }
 
         public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
         {
-            return this.dictionary?.Keys;
+            return dictionary?.Keys;
         }
     }
 }
@@ -297,18 +301,18 @@ To handle scenarios where the model type is unknown at compile time, the Gantt C
 
 <SfGantt TValue="ExpandoObject" DataSource="@TreeData" @ref="Gantt" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentId">
+                     Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
 
 @code {
-    SfGantt<ExpandoObject> Gantt;
-    private List<ExpandoObject> TreeData { get; set; }
+    SfGantt<ExpandoObject>? Gantt;
+    private List<ExpandoObject>? TreeData { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TreeData = GetData().ToList();
+        TreeData = GetData().ToList();
     }
     private static List<ExpandoObject> Data = new List<ExpandoObject>();
     private static int ParentRecordID { get; set; }
@@ -393,7 +397,7 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
 </div>
 
 @code {
-    public ObservableCollection<TaskData> ObservableData { get; set; }
+    public ObservableCollection<TaskData>? ObservableData { get; set; }
     public string StatusMessage { get; set; } = "";
 
     protected override void OnInitialized()
@@ -404,40 +408,43 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
 
     public void AddRecord()
     {
-        int newId = ObservableData.Any() ? ObservableData.Max(t => t.TaskId) + 1 : 1;
-        Random rand = new Random();
+          int newId = ObservableData.Any() ? ObservableData.Max(t => t.TaskId) + 1 : 1;
+            Random rand = new Random();
 
-        int randomProgress = rand.Next(0, 101);
-        int randomDuration = rand.Next(1, 6);
+            int randomProgress = rand.Next(0, 101);
+            int randomDuration = rand.Next(1, 6);
 
-        ObservableData.Add(new TaskData()
-        {
-            TaskId = newId,
-            TaskName = $"New Task {newId}",
-            StartDate = DateTime.Now,
-            Duration = randomDuration.ToString(),
-            Progress = randomProgress
-        });
+            ObservableData.Add(new TaskData()
+            {
+                TaskId = newId,
+                TaskName = $"New Task {newId}",
+                StartDate = DateTime.Now,
+                Duration = randomDuration.ToString(),
+                Progress = randomProgress
+            });
     }
 
     public void DeleteRecord()
     {
-        if (ObservableData.Count != 0)
-        {
-            int deleteRecordTaskID = ObservableData.First().TaskId;
-            ObservableData.Remove(ObservableData.First());
-            RemoveChild(deleteRecordTaskID);
-        }
+       
+            if (ObservableData.Count != 0)
+            {
+                int deleteRecordTaskID = ObservableData.First().TaskId;
+                ObservableData.Remove(ObservableData.First());
+                RemoveChild(deleteRecordTaskID);
+            }
+        
     }
 
     public void RemoveChild(int id)
     {
-        var childRecords = ObservableData.Where(t => t.ParentId == id).ToList();
-        foreach (var child in childRecords)
-        {
-            RemoveChild(child.TaskId);
-            ObservableData.Remove(child);
-        }
+            var childRecords = ObservableData.Where(t => t.ParentId == id).ToList();
+            foreach (var child in childRecords)
+            {
+                RemoveChild(child.TaskId);
+                ObservableData.Remove(child);
+            }
+        
     }
 
     public ObservableCollection<TaskData> ProjectNewData()
@@ -471,9 +478,9 @@ To handle dynamic changes in the data source, the Gantt Chart supports binding t
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -511,7 +518,7 @@ This interface is used to notify that a property value has changed. For example,
 </div>
 
 @code {
-    public ObservableCollection<TaskData> ObservableData { get; set; }
+    public ObservableCollection<TaskData>? ObservableData { get; set; }
 
     protected override void OnInitialized()
     {
@@ -546,7 +553,7 @@ This interface is used to notify that a property value has changed. For example,
     {
         public int TaskId { get; set; }
 
-        private string taskName;
+        private string? taskName;
         public string TaskName
         {
             get => taskName;
@@ -561,11 +568,11 @@ This interface is used to notify that a property value has changed. For example,
         }
 
         public DateTime StartDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         private void NotifyPropertyChanged(string propertyName)
         {
@@ -605,16 +612,16 @@ The Gantt Chart component utilizes the **WebApiAdaptor**, an extension of the **
     </GanttTaskFields>
 </SfGantt>
 
-@code{
+@code {
     public class GanttRemoteData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public int? Duration { get; set; }
         public int Progress { get; set; }
-        public string Predecessor { get; set; }
-        public List<GanttRemoteData>SubTasks { get; set; }
+        public string? Predecessor { get; set; }
+        public List<GanttRemoteData>? SubTasks { get; set; }
     }
 }
 {% endhighlight %}
@@ -1092,33 +1099,29 @@ To specify custom parameters in a data request, use the `addParams` method of th
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Gantt
- 
 <SfGantt TValue="TaskData" Height="450px" Width="700px" Query=@GanttQuery>
-<SfDataManager Url="/api/Home" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
-<GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+    <SfDataManager Url="/api/Home" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
                      Progress="Progress" ParentID="ParentID">
-</GanttTaskFields>
-<GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
- 
+
 @code {
-    private Query GanttQuery { get; set; }
- 
+    private Query? GanttQuery { get; set; }
+
     protected override void OnInitialized()
     {
         GanttQuery = new Query().AddParams("TaskID", 1);
     }
- 
+
     public class TaskData
     {
         public int TaskID { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentID { get; set; }
     }
@@ -1280,33 +1283,36 @@ The following sample code demonstrates notifying user when server-side exception
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
+
 
 <label class="error" style="display:block; color: red; margin-bottom: 20px;">@ErrorDetails</label>
 <SfGantt TValue="TaskData" Height="450px" Width="700px">
-     <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentId">
+                     Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents TValue="TaskData" OnActionFailure="ActionFailure"></GanttEvents>
 </SfGantt>
 
-@code{
+@code {
     private string ErrorDetails = "";
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public void ActionFailure(Syncfusion.Blazor.Grids.FailureEventArgs args)
     {
-        this.ErrorDetails = args.Error.Message.ToString();
+        if (args != null && args.Error != null)
+        {
+            this.ErrorDetails = args.Error.Message.ToString();
+        }
         StateHasChanged();
     }
 }
@@ -1346,36 +1352,38 @@ The following sample code demonstrates notifying user when server-side exception
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
-
 <label class="error" style="display:block; color: red; margin-bottom: 20px;">@ErrorDetails</label>
 <SfGantt TValue="TaskData" Height="450px" Width="700px">
-     <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentId">
+                     Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents TValue="TaskData" OnActionFailure="ActionFailure"></GanttEvents>
 </SfGantt>
 
-@code{
+@code {
     private string ErrorDetails = "";
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public void ActionFailure(Syncfusion.Blazor.Grids.FailureEventArgs args)
     {
-        this.ErrorDetails = args.Error.Message.ToString();
+        if (args != null && args.Error != null)
+        {
+            this.ErrorDetails = args.Error.Message.ToString();
+        }
         StateHasChanged();
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}

@@ -38,27 +38,27 @@ Items| Description
 
 <SfGantt DataSource="@TaskCollection" Height="450px" EnableContextMenu="true" AllowSorting="true" AllowResizing="true" Width="900px" HighlightWeekends="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-        Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GanttEditSettings>
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public double Progress { get; set; }
-        public string Predecessor { get; set; }
+        public string? Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -100,7 +100,7 @@ You can configure custom context menu items by assigning a collection of `Contex
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     public SfGantt<TaskData> Gantt;
 
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
@@ -110,21 +110,21 @@ You can configure custom context menu items by assigning a collection of `Contex
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     private async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        if(args.Item.Id == "Refresh")
+        if (args?.Item?.Id == "Refresh")
         {
-            await  Gantt.RefreshAsync();
+            await Gantt.RefreshAsync();
         }
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
@@ -163,10 +163,10 @@ You can configure built-in and custom context menu items at the same time in the
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" 
-    ContextMenuItems="@(new List<Object>() { "Add", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px"
+         ContextMenuItems="@(new List<Object>() { "Add", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-        Duration="Duration" Progress="Progress" ParentID="ParentId">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true"></GanttEditSettings>
     <GanttEvents ContextMenuItemClicked=ContextMenuItemClickedHandler TValue="TaskData">
@@ -174,17 +174,17 @@ You can configure built-in and custom context menu items at the same time in the
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     private async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        if (args.Item.Id == "copywithheader")
+        if (args?.Item?.Id == "copywithheader")
         {
             await Gantt.CopyAsync(true);
         }
@@ -192,10 +192,10 @@ You can configure built-in and custom context menu items at the same time in the
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -245,43 +245,49 @@ The following example demonstrates how to configure a sub-context menu titled **
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
         new ContextMenuItemModel{
             Text="Gantt Action",Target=".e-content",Id="GanttAction",
             Items=new List<MenuItem>(){
                 new MenuItem {Text="Copy with headers",Id= "copywithheader"},
-                new MenuItem {Text="Edit",Id= "Edit"} 
-            } 
+                new MenuItem {Text="Edit",Id= "Edit"}
+            }
         }
     };
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        if (args.Item.Id == "copywithheader")
+        if (args?.Item?.Id == "copywithheader")
         {
-            await Gantt.CopyAsync(true);
+            if(Gantt!=null)
+            {
+                await Gantt.CopyAsync(true);
+            }
         }
-        if (args.Item.Id == "Edit")
+        if (args?.Item?.Id == "Edit")
         {
-            await Gantt.OpenEditDialogAsync();
+            if (Gantt != null)
+            {
+                await Gantt.OpenEditDialogAsync();
+            }
         }
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -326,12 +332,12 @@ The following sample code demonstrates how to disable the context menu for the *
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
@@ -349,19 +355,23 @@ The following sample code demonstrates how to disable the context menu for the *
 
     private async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        if (args.Item.Id == "refresh")
+        if (args?.Item?.Id == "refresh")
         {
-            await Gantt.RefreshAsync();
+            if(Gantt!=null)
+            {
+                await Gantt.RefreshAsync();
+            }
+            
         }
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -409,8 +419,8 @@ The following sample code demonstrates how to disable the context menu items for
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
-    public SfGantt<TaskData> Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    public SfGantt<TaskData>? Gantt;
     private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
     {
         new ContextMenuItemModel{Text="Gantt Action",Target=".e-content",Id="GanttAction",
@@ -423,25 +433,33 @@ The following sample code demonstrates how to disable the context menu items for
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public async void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        if (args.Item.Id == "Refresh")
+        if (args?.Item?.Id == "Refresh")
         {
-            await Gantt.RefreshAsync();
+            if(Gantt!=null)
+            {
+                await Gantt.RefreshAsync();
+            }
+
         }
-        if (args.Item.Id == "Edit")
+        if (args?.Item?.Id == "Edit")
         {
-            await Gantt.OpenEditDialogAsync();
+            if (Gantt != null)
+            {
+                 await Gantt.OpenEditDialogAsync();
+            }
+           
         }
     }
-    
+
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
-        if (Args.Column != null && Args.Column.Field == "Duration")  
-        {
+        if (Args.Column != null && Args.Column.Field == "Duration")
+        {   
             Args.ContextMenu.Items[0].Disabled = true; // To disable edit context menu item.
         }
         else
@@ -453,10 +471,10 @@ The following sample code demonstrates how to disable the context menu items for
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

@@ -26,21 +26,21 @@ You can customize row height in the Syncfusion<sup style="font-size:70%">&reg;</
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -86,21 +86,21 @@ You can collapse all parent rows during initial rendering by setting the [Collap
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -142,21 +142,21 @@ You can retain the expand or collapse state of parent rows in the Gantt Chart du
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
         public bool isExpand { get; set; }
@@ -204,37 +204,37 @@ The following example demonstrates how to:
     <GanttEvents Collapsing="Collapsing" Expanding="Expanding" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code{
+@code {
 
     public void Collapsing(Syncfusion.Blazor.TreeGrid.RowCollapsingEventArgs<TaskData> args)
     {
-        if (args.Data.TaskId == 1)
+        if (args?.Data?.TaskId == 1)
         {
             args.Cancel = true;
         }
     }
     public void Expanding(Syncfusion.Blazor.TreeGrid.RowExpandingEventArgs<TaskData> args)
     {
-        if (args.Data.TaskId == 5)
+        if (args?.Data?.TaskId == 5)
         {
             args.Cancel = true;
         }
     }
 
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -284,7 +284,7 @@ The following example demonstrates how to apply custom styles to rows and cells 
 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
- 
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -312,27 +312,27 @@ The following example demonstrates how to apply custom styles to rows and cells 
     }
 </style>
 
-@code{
+@code {
     public void QueryCellInfo(Syncfusion.Blazor.Grids.QueryCellInfoEventArgs<TaskData> args)
     {
-        if (args.Column.Field == "Progress")
+        if (args?.Column?.Field == "Progress")
         {
-            if (args.Data.Progress == 30)
+            if (args?.Data?.Progress == 30)
             {
-                args.Cell.AddClass(new string[] { "yellow-cell" });
+                args?.Cell?.AddClass(new string[] { "yellow-cell" });
             }
             else
             {
-                args.Cell.AddClass(new string[] { "green-cell" });
+                args?.Cell?.AddClass(new string[] { "green-cell" });
             }
         }
     }
 
     public void RowDataBound(RowDataBoundEventArgs<TaskData> args)
     {
-        if (args.Data.TaskId == 4)
+        if (args?.Data?.TaskId == 4)
         {
-            args.Row.AddClass(new string[] { "custom-row" });
+            args?.Row?.AddClass(new string[] { "custom-row" });
         }
     }
 
@@ -344,20 +344,20 @@ The following example demonstrates how to apply custom styles to rows and cells 
         }
     }
 
-    private List<TaskData> TaskCollection { get; set; }
+    private List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -424,26 +424,26 @@ To create visual separation between consecutive rows, style alternate rows using
         background-color: #f2f2f2;
     }
 
-    .e-gantt .e-selectionbackground, .e-gantt .e-active  {
-      background-color: #f9920b !important;
+    .e-gantt .e-selectionbackground, .e-gantt .e-active {
+        background-color: #f9920b !important;
     }
 </style>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -495,12 +495,12 @@ The following example demonstrates how the `GetRowTaskModel` method is used with
         </div>
     </div>
 </div>
-    <SfGantt @ref=Gantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" EnableCriticalPath="true">
-        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                         ParentID="ParentId">
-        </GanttTaskFields>
-        <GanttEvents TValue="TaskData" RowSelected="RowSelect"></GanttEvents>
-    </SfGantt>
+<SfGantt @ref=Gantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" EnableCriticalPath="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents TValue="TaskData" RowSelected="RowSelect"></GanttEvents>
+</SfGantt>
 
 <style>
     .showhide {
@@ -508,37 +508,41 @@ The following example demonstrates how the `GetRowTaskModel` method is used with
     }
 </style>
 @code {
-    public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
-    private int Level{ get; set; } 
-    private bool ExpandStatus{ get; set; }
-    private bool ChildRecords{ get; set; }
-    private bool IsCritical{ get; set; }
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
+    private int Level { get; set; }
+    private bool ExpandStatus { get; set; }
+    private bool ChildRecords { get; set; }
+    private bool IsCritical { get; set; }
     private double? Slack { get; set; }
     private double ProgressWidth { get; set; }
     private string Visible { get; set; } = "hidden";
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public void RowSelect(RowSelectEventArgs<TaskData> args)
     {
-        var ganttItem = Gantt.GetRowTaskModel(args.Data);
-        Level = ganttItem.Level;
-        ExpandStatus = ganttItem.IsExpanded;
-        ChildRecords = ganttItem.HasChildRecords;
-        IsCritical = ganttItem.IsCritical;
-        Slack = ganttItem.Slack;
-        ProgressWidth = ganttItem.ProgressWidth;
-        Visible = "visible";
+        var ganttItem = Gantt?.GetRowTaskModel(args.Data);
+        if(ganttItem!=null)
+        {
+            Level = ganttItem.Level;
+            ExpandStatus = ganttItem.IsExpanded;
+            ChildRecords = ganttItem.HasChildRecords;
+            IsCritical = ganttItem.IsCritical;
+            Slack = ganttItem.Slack;
+            ProgressWidth = ganttItem.ProgressWidth;
+            Visible = "visible";
+        }
+        
     }
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -576,22 +580,22 @@ To highlight the current row when the mouse hovers over it, set the [EnableRowHo
 @using Syncfusion.Blazor.Buttons
 
 <div style="margin-bottom:10px">
-<SfButton CssClass="e-primary" @onclick="ToggleRowHover">
-    @(IsRowHoverEnabled ? "Disable Row Hover" : "Enable Row Hover")
-</SfButton>
+    <SfButton CssClass="e-primary" @onclick="ToggleRowHover">
+        @(IsRowHoverEnabled ? "Disable Row Hover" : "Enable Row Hover")
+    </SfButton>
 </div>
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" EnableRowHover="@IsRowHoverEnabled">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     private bool IsRowHoverEnabled { get; set; } = true;
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     private void ToggleRowHover()
@@ -602,17 +606,17 @@ To highlight the current row when the mouse hovers over it, set the [EnableRowHo
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -665,20 +669,20 @@ You can enable the Grid cell tooltip by setting the [GanttColumn.ClipMode](https
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

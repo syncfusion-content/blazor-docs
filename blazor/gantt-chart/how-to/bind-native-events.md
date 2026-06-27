@@ -53,7 +53,7 @@ Interaction Keys |Description
     }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     private async Task KeyDown(KeyboardEventArgs Args)
     {

@@ -23,27 +23,27 @@ To enable column reordering, set the [AllowReordering](https://help.syncfusion.c
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -82,9 +82,9 @@ The following demonstrates how to reorder columns by placing **Progress** before
 
 <SfButton @onclick="ReorderBtn" CssClass="e-primary" Style="Margin-left:10px" IsPrimary="true" Content="Reorder Duration"></SfButton>
 <SfButton CssClass="e-primary" @onclick="ReorderColumn">Reorder TaskName and StartDate</SfButton>
-<SfGantt Style="Margin-top:10px" DataSource="@TaskCollection" @ref="GanttInstance" Height="450px" Width="700px" AllowReordering="true">
+<SfGantt Style="Margin-top:10px" DataSource="@TaskCollection" @ref="Gantt" Height="450px" Width="700px" AllowReordering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-             Duration="Duration" Progress="Progress" ParentID="ParentId">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Task Id" Width="150"></GanttColumn>
@@ -95,28 +95,35 @@ The following demonstrates how to reorder columns by placing **Progress** before
     </GanttColumns>
 </SfGantt>
 
-@code{
-    public SfGantt<TaskData> GanttInstance;
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public SfGantt<TaskData>? Gantt;
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public async void ReorderBtn()
     {
-        await this.GanttInstance.ReorderColumnsAsync(new List<string>() { "Duration" }, "Progress");
+        if (Gantt != null)
+        {
+            await Gantt.ReorderColumnsAsync(new List<string>() { "Duration" }, "Progress");
+        }
+
     }
 
     public async Task ReorderColumn()
     {
-        await GanttInstance.ReorderColumnsAsync(new List<string>(){"TaskName", "StartDate"},"Duration");
+        if (Gantt != null)
+        {
+            await Gantt.ReorderColumnsAsync(new List<string>() { "TaskName", "StartDate" }, "Duration");
+        }
     }
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 04, 06), EndDate = new DateTime(2026, 04, 08), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 04, 06), Duration = "0", Progress = 30, ParentId = 1 },
@@ -133,10 +140,10 @@ The following demonstrates how to reorder columns by placing **Progress** before
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

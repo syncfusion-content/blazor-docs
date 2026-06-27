@@ -54,7 +54,7 @@ In the following example:
 
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -121,7 +121,7 @@ To improve load time, set [AutoCalculateDateScheduling](https://help.syncfusion.
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
-        this.TaskCollection = GetTaskCollection();
+        TaskCollection = GetTaskCollection();
     }
     public class TaskData
     {
