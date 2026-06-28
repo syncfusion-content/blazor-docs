@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Methods in Blazor Sparkline Component | Syncfusion
-description: Learn about available methods in the Syncfusion Blazor Sparkline component, including how to refresh the chart.
+title: Methods in Blazor Sparkline Component | Syncfusion®
+description: Learn about available methods in the Blazor Sparkline component, including how to refresh the chart.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

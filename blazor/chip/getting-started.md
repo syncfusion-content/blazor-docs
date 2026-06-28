@@ -214,7 +214,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chips Component](./images/blazor-chip-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHZdiHfAktzSyb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.webp)" %}
 
 ## Render chips items from collection
 
@@ -274,7 +274,7 @@ You can render the chips items from collection using for loop in Blazor Chips co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chips Component](./images/blazor-chip-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdjRMRfTtLXFXA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip Component](./images/blazor-chip-sample.webp)" %}
 
 ## See also
 
