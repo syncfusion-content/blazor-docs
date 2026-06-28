@@ -47,5 +47,5 @@ By default `ShowSuggestionOnPopup` is `false`.
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea with in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea with in Blazor Server App](https://blazor.syncfusion.com/documentation)

@@ -28,7 +28,7 @@ To reduce CSS payload and improve rendering speed, use optimized CSS themes that
 
 ## Lazy loading in Blazor WebAssembly App
 
-If using a Blazor WebAssembly App, implement lazy loading to reduce initial load time. See [WebAssembly lazy load assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies) and the blog on [lazy loading Blazor assemblies](https://www.syncfusion.com/blogs/post/lazy-loading-syncfusion-blazor-assemblies-in-a-blazor-webassembly-application.aspx).
+If using a Blazor WebAssembly App, implement lazy loading to reduce initial load time. See [WebAssembly lazy load assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies) and the Syncfusion blog on [lazy loading Blazor assemblies](https://www.syncfusion.com/blogs/post/lazy-loading-syncfusion-blazor-assemblies-in-a-blazor-webassembly-application.aspx).
 
 ## Use PreventRender in Blazor WebAssembly App
 

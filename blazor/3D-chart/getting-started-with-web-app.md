@@ -16,40 +16,36 @@ To get started quickly with Blazor 3D Charts component, check on the following v
 {% youtube
 "youtube:https://www.youtube.com/watch?v=iCWdoRnu-6s" %}
 
-## Create a new Blazor Web App
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor Web App in Visual Studio
+
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-Run the following command to create a new Blazor Web App.
-
-{% tabs %}
-{% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
 cd BlazorWebApp.Client
 
-{% endhighlight %}
-{% endtabs %}
+## Prerequisites
 
-Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-{% endtabcontent %}
+## Create a new Blazor Web App in Visual Studio Code
 
-{% tabcontent .NET CLI %}
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
-Run the following command to create a new Blazor Web App.
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight c# tabtitle="Blazor Web App" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
@@ -72,54 +68,63 @@ Install the [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusio
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.Chart3D`) and install them.
+## Prerequisites
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+## Create a Blazor Web App using .NET CLI
+
+Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
+
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Web App" %}
+
+dotnet new blazor -o BlazorWebApp -int Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
+
+{% endhighlight %}
+{% endtabs %}
+
+This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) topics for more details.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+## Install the required Blazor packages
+
+Install [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package in the project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+
+Alternatively, run the following commands in the Package Manager Console to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Chart3D -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
+If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
 
-{% tabcontent Visual Studio Code %}
-
-Open the terminal and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Terminal" %}
-
-dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% endtabcontents %}
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
-After the package is installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
+After the package is installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -130,9 +135,9 @@ After the package is installed, open the **~/_Imports.razor** file in the `.Clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register the Blazor service
+## Register Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Register the Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -146,32 +151,29 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
+N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~/Components/App.razor** file.
 
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
+```html
 
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Add Blazor 3D Charts component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component inside the razor file.
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
+{% highlight razor %}
 
+@* desired render mode define here *@
 @rendermode InteractiveAuto
-
-<SfChart3D>
-
-</SfChart3D>
 
 {% endhighlight %}
 {% endtabs %}
@@ -206,8 +208,7 @@ dotnet run
 
 Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+<SfChart3D>
 
 cd ..
 cd BlazorWebApp
@@ -216,9 +217,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
-
-{% endtabcontents %}
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor 3D Chart component in the default web browser.
 
 ## Populate Blazor 3D Charts with data
 
@@ -268,7 +267,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVdZRDPqtvqaKUr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLfNRsgCVjHdioT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable legend
 
@@ -289,7 +288,7 @@ You can use legend for the 3D Charts by setting the `Visible` property to **true
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLHDHtbAZEPsbwD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpDRiKMriVAFPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add data label
 
@@ -310,7 +309,7 @@ You can add data labels to improve the readability of the 3D Charts. This can be
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVRXRNvqMCiUPzs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDxCqCLizaoKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable tooltip
 
@@ -332,7 +331,7 @@ The tooltip is useful when you cannot display information by using the data labe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrxDHXlgCsuGojA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzXHWUiVMwxISt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 

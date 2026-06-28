@@ -13,44 +13,42 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor WebAssembly (Standalone) App
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio
+
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
 {% endtabcontent %}
 
-{% tabcontent Visual Studio Code %}
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
-Run the following command to create a new Blazor WebAssembly App.
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio Code
+
+Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code) documentation.
+
+Alternatively, create a WebAssembly application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+
+{% highlight c# tabtitle="Blazor WASM App" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
-{% endtabs %}
 
-Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
-
-{% endtabcontent %}
-
-{% tabcontent .NET CLI %}
-
-Run the following command to create a new Blazor WebAssembly App.
-
-{% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}
@@ -71,37 +69,22 @@ Install the [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusio
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
-Install-Package Syncfusion.Blazor.Chart3D -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-Open the terminal and run the following commands.
-
-{% tabs %}
-{% highlight razor tabtitle="Terminal" %}
-
-dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
+dotnet --version
 
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
+## Create a Blazor WebAssembly App using .NET CLI
 
-{% tabcontent .NET CLI %}
-
-Open the command prompt and run the following commands.
+Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -109,6 +92,22 @@ dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+## Install the required Blazor packages
+
+Install [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package in the project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+
+Alternatively, run the following command in the Package Manager Console to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Chart3D -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add import namespaces
 
@@ -125,10 +124,10 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Register the Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -141,7 +140,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -270,7 +269,7 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBdjRtvqQtKlaTl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLJZHCKiVjCNqCE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add 3D Charts title
 
@@ -291,7 +290,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVdZRNlqwsNPTdn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLfNRsgCVjHdioT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable legend
 
@@ -312,7 +311,7 @@ You can use legend for the 3D Charts by setting the `Visible` property to **true
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthnNdZFKQBsJBtI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpDRiKMriVAFPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add data label
 
@@ -333,7 +332,7 @@ You can add data labels to improve the readability of the 3D Charts. This can be
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLRtdjPgGVPYKIZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDxCqCLizaoKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable tooltip
 
@@ -355,7 +354,7 @@ The tooltip is useful when you cannot display information by using the data labe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrdDnNPqGqIbvpP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzXHWUiVMwxISt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 

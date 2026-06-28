@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Retrieve the Content in Blazor Markdown Editor | Syncfusion
-description: Checkout and learn about how to retrieve the formatted content in Blazor Markdown Editor component of Syncfusion, and more details.
+title: How to Retrieve the Content in Blazor Markdown Editor | Syncfusion®
+description: Checkout and learn about how to retrieve the formatted content in Blazor Markdown Editor component and much more details.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
