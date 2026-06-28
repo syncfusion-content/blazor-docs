@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,8 +157,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
-
 ## Add Blazor Checkbox component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component inside the razor file.
@@ -219,7 +219,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthHtdMhJwnQDxaK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthHtdMhJwnQDxaK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Checkbox Component](./images/blazor-checkbox-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CheckBox).
 

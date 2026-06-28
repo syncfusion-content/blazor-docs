@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Checkbox Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor CheckBox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,8 +157,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Checkbox component
 
 Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component inside the razor file.
@@ -217,14 +216,14 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthHtdMhJwnQDxaK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthHtdMhJwnQDxaK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Checkbox Component](./images/blazor-checkbox-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CheckBox).
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 N> You can also explore our [Blazor Checkbox example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Checkbox.
