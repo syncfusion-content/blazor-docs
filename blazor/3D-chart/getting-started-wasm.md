@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Stared with Blazor 3D Chart in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor 3D Chart in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Stared with Blazor 3D Charts in Blazor WASM App | Syncfusion
+description: Checkout and learn about getting started with Blazor 3D Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
-control: 3D Chart
+control: 3D Charts
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor 3D Chart Component in Blazor WASM App
+# Getting Started with Blazor 3D Charts Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +57,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install the [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -65,9 +66,9 @@ Install the [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusio
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Chart3D`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.Chart3D`) and install them.
 
-Alternatively, you can install the same packages using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -150,14 +151,12 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+## Add Blazor 3D Charts component
 
-## Add Blazor 3D Chart component
-
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfChart3D>
 
@@ -172,7 +171,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor 3D
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor 3D Chart component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor 3D Charts component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -206,9 +205,9 @@ dotnet run
 
 {% endtabcontents %}
 
-## Populate Blazor 3D Chart with data
+## Populate Blazor 3D Charts with data
 
-To bind data for the 3D chart component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
+To bind data for the 3D charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -248,7 +247,8 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code {
+@code 
+{
     public class SalesInfo
     {
         public string Month { get; set;}
@@ -272,7 +272,7 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBdjRtvqQtKlaTl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-## Add 3D Chart title
+## Add 3D Charts title
 
 Using the `Title` property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
@@ -295,7 +295,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 
 ## Enable legend
 
-You can use legend for the 3D Chart by setting the `Visible` property to **true** in `Chart3DLegendSettings`. The legend name can be changed by using the `Name` property in the series.
+You can use legend for the 3D Charts by setting the `Visible` property to **true** in `Chart3DLegendSettings`. The legend name can be changed by using the `Name` property in the series.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -316,7 +316,7 @@ You can use legend for the 3D Chart by setting the `Visible` property to **true*
 
 ## Add data label
 
-You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the `Visible` property to **true** in the `Chart3DDataLabel`. Now, the data labels are arranged smartly based on series.
+You can add data labels to improve the readability of the 3D Charts. This can be achieved by setting the `Visible` property to **true** in the `Chart3DDataLabel`. Now, the data labels are arranged smartly based on series.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -359,6 +359,6 @@ The tooltip is useful when you cannot display information by using the data labe
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
