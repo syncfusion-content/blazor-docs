@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +126,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
@@ -154,8 +156,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
 
 ## Add Blazor Chips component
 
@@ -218,7 +218,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHZdiHfAktzSyb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHZdiHfAktzSyb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chips Component](./images/blazor-chip-component.webp)" %}
 
 ## Render chips items from collection
 
@@ -239,8 +239,8 @@ You can render the chips items from collection using for loop in Blazor Chips co
 </SfChip>
 }
 
-@code{
-
+@code
+{
     public List<ChipCollection> ChipData = new List<ChipCollection>();
     public class ChipCollection
     {
@@ -277,7 +277,7 @@ You can render the chips items from collection using for loop in Blazor Chips co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdjRMRfTtLXFXA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip Component](./images/blazor-chip-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrdjRMRfTtLXFXA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chips Component](./images/blazor-chip-sample.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chip).
 
