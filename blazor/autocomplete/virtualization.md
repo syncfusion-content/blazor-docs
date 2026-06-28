@@ -23,7 +23,7 @@ N> Virtualization accuracy depends on consistent item heights. Using templates t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhqsLsJUSqMNRqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with virtualization](./images/blazor_autocomplete_virtualization.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLHZdMCgNjeZHKz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with virtualization](./images/blazor_autocomplete_virtualization.webp)" %}
 
 ## Remote data
 

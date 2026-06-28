@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Conditional Formatting in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about conditional formatting in Syncfusion Blazor Pivot Table component and more.
+title: Conditional Formatting in Blazor Pivot Table Component | Syncfusion®
+description: Learn how to apply conditional formatting in Blazor Pivot Table component with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

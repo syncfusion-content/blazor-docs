@@ -222,7 +222,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpNsLuinxRTsQp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Checkbox Component](./images/blazor-checkbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthHtdMhJwnQDxaK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor CheckBox Component](./images/blazor-checkbox-component.webp)" %}
 
 N> You can also explore our [Blazor Checkbox example](https://blazor.syncfusion.com/demos/buttons/checkbox) that shows how to render and configure the CheckBox.
 
