@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about Accessibility in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
+title: Accessibility in Blazor Ribbon Component | Syncfusion®
+description: Checkout and learn about Accessibility in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Ribbon
 documentation: ug
@@ -116,4 +116,4 @@ The Ribbon component's accessibility levels are ensured through an [accessibilit
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

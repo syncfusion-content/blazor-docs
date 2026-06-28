@@ -211,7 +211,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLzXMhasGnmeXvK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor  Gauge Component](./images/blazor-circulargauge-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLdZRBngtsbDeQj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor CircularGauge Component](./images/blazor-circulargauge-component.webp)" %}
 
 ## Set pointer value
 
@@ -236,7 +236,7 @@ N> In CircularGauge, you can configure multiple axes. On each axis, you can add 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrzDMLuMckdRZoX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor CircularGauge with Pointer Value](./images/blazor-circulargauge-pointer-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhnDRrxKDLSrSno?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor CircularGauge with Pointer Value](./images/blazor-circulargauge-pointer-value.webp)" %}
 
 ## Adding title for Blazor Circular Gauge
 
@@ -260,7 +260,7 @@ Title can be added to the Circular Gauge to provide a quick information to the u
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVJtiLkMltHgGJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Title](./images/blazor-circulargauge-title.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrHtHLnANUBDZUD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor CircularGauge with Title](./images/blazor-circulargauge-title.webp)" %}
 
 ## Adding ranges in the Blazor Circular Gauge
 
@@ -283,7 +283,7 @@ Range is used to specify a group of scale values in the gauge. You can set the r
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhJNCraiFVWtmxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Custom Range](./images/blazor-circulargauge-custom-range.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVnNRBdKDUmiTMt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor CircularGauge with Custom Range](./images/blazor-circulargauge-custom-range.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CircularGauge).
 
