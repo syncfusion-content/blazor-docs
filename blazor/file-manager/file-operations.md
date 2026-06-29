@@ -9,7 +9,7 @@ documentation: ug
 
 # File Operations in Blazor File Manager Component
 
-The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
+The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
 
 The following table represents the basic operations available in the File Manager and their corresponding functions.
 

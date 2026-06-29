@@ -9,7 +9,7 @@ documentation: ug
 
 # Pagination in Blazor File Manager Component
 
-Pagination provides an option to display files and folders in segmented pages, making it easier to navigate through large directories. This feature is particularly useful when dealing with extensive file systems in the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component.
+Pagination provides an option to display files and folders in segmented pages, making it easier to navigate through large directories. This feature is particularly useful when dealing with extensive file systems in the File Manager component.
 
 To enable pagination, you need to set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the File Manager. When `AllowPaging` is enabled, a pager control rendered at the bottom of the File Manager, allowing you to navigate through different pages.
 

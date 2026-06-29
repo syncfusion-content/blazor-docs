@@ -9,7 +9,7 @@ documentation: ug
 
 # Firebase file system provider
 
-The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) file system in a cloud database as JSON representation.
+The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the File Manager file system in a cloud database as JSON representation.
 
 ### Generate Secret access key from service account
 

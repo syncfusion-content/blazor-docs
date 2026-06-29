@@ -9,7 +9,7 @@ documentation: ug
 
 # File System Providers in Blazor File Manager Component
 
-The file system provider allows the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting, uploading, and downloading the files or folders in the file system.
+The file system provider allows the File Manager component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting, uploading, and downloading the files or folders in the file system.
 
 The following file providers are added in Blazor File Manager component.
 

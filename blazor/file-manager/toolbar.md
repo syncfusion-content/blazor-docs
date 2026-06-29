@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar in Blazor File Manager Component
 
-The Toolbar in the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) provides a user-friendly interface for performing various file operations. It contains pre-defined items that correspond to specific actions. Here are some key points about the toolbar.
+The Toolbar in the File Manager provides a user-friendly interface for performing various file operations. It contains pre-defined items that correspond to specific actions. Here are some key points about the toolbar.
 
 ## Built-in Toolbar items
 

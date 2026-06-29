@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor File Manager Component
 
-The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) uses [SfFileManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html), which supports both RESTful JSON data services binding and IEnumerable binding. It provides the option to load data either with the [AjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property or list of objects by providing the response within the corresponding events.
+The File Manager uses [SfFileManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html), which supports both RESTful JSON data services binding and IEnumerable binding. It provides the option to load data either with the [AjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property or list of objects by providing the response within the corresponding events.
 
 It supports the following kinds of data binding method:
 * AjaxSettings
