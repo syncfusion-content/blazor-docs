@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,14 +155,13 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor ComboBox component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**)
+and add the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.DropDowns
 
@@ -217,7 +217,7 @@ dotnet run
 After initialization, populate the ComboBox with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. In the following example, a list of objects (with ID and Text fields) is bound to the ComboBox.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.DropDowns
 
@@ -225,7 +225,8 @@ After initialization, populate the ComboBox with data using the [DataSource](htt
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
 </SfComboBox>
 
-@code {
+@code
+{
   public class Games
   {
     public string ID { get; set; }
@@ -255,7 +256,7 @@ After initialization, populate the ComboBox with data using the [DataSource](htt
 The ComboBox supports custom values that are not present in the predefined list. This behavior is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this mode, the typed text is treated as both the display text and the value, and the custom value is posted with the form on submit.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfComboBox TValue="string"  TItem="Games" AllowCustom=true Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
@@ -271,7 +272,7 @@ The ComboBox supports custom values that are not present in the predefined list.
 By default, the popup list width automatically adjusts to the ComboBox input width, and the popup height is `350px`. The height and width of the popup list can be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfComboBox TValue="string" TItem="Games"PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
@@ -286,6 +287,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Getting started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-* [Getting started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-web-app)
+1. [Getting started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-app)
+2. [Getting started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+3. [Getting started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-web-app)
