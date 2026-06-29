@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Range Selector Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -65,4 +65,4 @@ The accessibility compliance of the Blazor Range Selector component is shown in 
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

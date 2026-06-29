@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range in Blazor Range Selector Component | Syncfusion
-description: Checkout and learn here all about range in Syncfusion Blazor Range Selector component and much more.
+description: Checkout and learn here all about range in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector
 documentation: ug

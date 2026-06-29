@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in the Predefined Dialogs in Blazor | Syncfusion
-description: Check out and learn here all about animation in the predefined dialogs in Blazor and much more details.
+title: Animation in Predefined Dialogs in Blazor | Syncfusion®
+description: Explore how to configure animation settings like Delay, Duration, and Effect for predefined dialogs (Alert, Confirm, Prompt) in Blazor applications.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug

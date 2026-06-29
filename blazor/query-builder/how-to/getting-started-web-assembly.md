@@ -17,10 +17,10 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 
 ## Create a Blazor WebAssembly App in Visual Studio
 
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor QueryBuilder and Themes NuGet in the App
+## Install QueryBuilder and Themes NuGet packages
 
 To add the Query Builder component to the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install [Syncfusion.Blazor.QueryBuilder](https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, use the following Package Manager commands.
 
@@ -34,8 +34,8 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on NuGet. See the [Syncfusion Blazor packages on NuGet](https://www.nuget.org/packages?q=syncfusion.blazor) and the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a list of packages and component details.
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+N> Blazor components are available on NuGet. See the [Blazor packages on NuGet](https://www.nuget.org/packages?q=syncfusion.blazor) and the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a list of packages and component details.
+## Register Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.QueryBuilder` namespaces.
 
@@ -48,7 +48,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in **~/Program.cs** of the Blazor WebAssembly app.
+Now, register the Blazor services in **~/Program.cs** of the Blazor WebAssembly app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
@@ -87,7 +87,7 @@ N> Choose one theme stylesheet (Bootstrap, Fluent, Material, or Tailwind). See [
 
 ## Add Blazor QueryBuilder component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor QueryBuilder component in the **~/Pages/Index.razor** file.
+Add the Blazor QueryBuilder component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -122,6 +122,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor QueryBuilder com
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor QueryBuilder component in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor QueryBuilder component in the default web browser.
 
 ![Blazor Query Builder](../images/blazor-querybuilder.gif)

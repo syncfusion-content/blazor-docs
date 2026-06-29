@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Severities with Blazor Message Component | Syncfusion
+title: Severities with Blazor Message Component | Syncfusion®
 description: Checkout and learn about Severities with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Message
