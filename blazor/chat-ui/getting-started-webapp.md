@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor Chat UI in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Chat UI Components in Blazor Web App.
+description: Check out the documentation for getting started with Blazor Chat UI Components in Blazor Web App.
 platform: Blazor
 control: Chat UI
 documentation: ug
@@ -109,7 +109,6 @@ Open the command prompt and run the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
-
 
 dotnet add package Syncfusion.Blazor.InteractiveChat -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
