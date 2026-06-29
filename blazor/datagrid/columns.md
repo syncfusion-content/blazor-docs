@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in Blazor DataGrid Component | Syncfusion
-description: Learn about configuring and customizing columns in Syncfusion Blazor DataGrid for better data presentation and interaction.
+title: Columns in Blazor DataGrid Component | Syncfusion®
+description: Learn about configuring and customizing columns in Blazor DataGrid for better data presentation and interaction.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -123,7 +123,7 @@ The DataGrid supports the following column types:
 
 ### Difference Between Boolean and CheckBox Column Types
 
-The Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid provides two distinct column types for handling boolean values and row selection:
+The Blazor DataGrid provides two distinct column types for handling boolean values and row selection:
 
 * [Boolean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Boolean): Binds to boolean data fields and supports editing of boolean property values.
 * [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox): Enables row selection and deselection. When a column is set to `ColumnType.CheckBox`, the Grid uses **multiple** selection mode by default.
@@ -415,7 +415,7 @@ public class OrderData
 
 ### Date formatting
 
-Date formatting in Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid columns customizes how date values appear. Standard date format strings such as **"d"**, **"D"**, **"MMM dd, yyyy"**, or custom formats can be applied using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property.
+Date formatting in Blazor DataGrid columns customizes how date values appear. Standard date format strings such as **"d"**, **"D"**, **"MMM dd, yyyy"**, or custom formats can be applied using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property.
 
 The following table shows examples of custom date formats and their output:
 
@@ -498,7 +498,7 @@ public class OrderData
 
 ### Format the date column based on localization
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid, date columns can be formatted according to the application’s locale settings. By configuring localization and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property, dates are displayed in a format appropriate for the selected culture.
+In Blazor DataGrid, date columns can be formatted according to the application’s locale settings. By configuring localization and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property, dates are displayed in a format appropriate for the selected culture.
 
 **Steps to Enable Localization**
 
@@ -506,11 +506,11 @@ To enable localization in a Blazor application:
 
 1. **Download Locale Files**
 
-    Obtain locale files from the [Syncfusion Blazor Locale Repository](https://github.com/syncfusion/blazor-locale).
+    Obtain locale files from the [Blazor Locale Repository](https://github.com/syncfusion/blazor-locale).
 
 2. **Register Locale Files**
 
-    Follow the localization setup guidelines in the [Syncfusion Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization) to register and configure the locale files in the project.
+    Follow the localization setup guidelines in the [Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization) to register and configure the locale files in the project.
 
 3. **Set Application Culture**
 
@@ -606,11 +606,11 @@ Once localization is enabled, apply a custom date format using the `Format` prop
 
 ![Format the date column based on localization](./images/blazor-datagrid-format-localization.webp)
 
-> [Syncfusion<sup style="font-size:70%">&reg;</sup> GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
+> [GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
 
 ### Format template column value
 
-In Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid, template columns provide flexibility to customize how data is displayed. This approach is useful for improving readability and presenting values such as dates or numbers in a specific format.
+In Blazor DataGrid, template columns provide flexibility to customize how data is displayed. This approach is useful for improving readability and presenting values such as dates or numbers in a specific format.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -710,7 +710,7 @@ public class OrderData
 
 ### Custom formatting
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid supports custom formatting for numeric and date columns, allowing data to be displayed in a specific format based on application requirements. The Format property can be assigned a custom format string or a variable containing the format pattern.
+The Blazor DataGrid supports custom formatting for numeric and date columns, allowing data to be displayed in a specific format based on application requirements. The Format property can be assigned a custom format string or a variable containing the format pattern.
 
 In this configuration, **numberFormatOptions** is used to format the **Freight** column with four decimal places, and **dateFormatOptions** is used to format the **OrderDate** column to display the day of the week, month abbreviation, day, and two-digit year (e.g., Sun, May 8, 23).
 
@@ -802,7 +802,7 @@ The Blazor DataGrid provides options to align both column content and header tex
 
 ### Text Alignment
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid allows aligning text within columns using the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property supports below options:
+The Blazor DataGrid allows aligning text within columns using the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property supports below options:
 
 * **None** – No specific alignment; defaults to **Left**.
 * **Left** – Aligns text to the left side of the column.
@@ -1305,7 +1305,7 @@ The [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ### AutoFit via GridColumn
 
-The Syncfusion <sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports AutoFit the specific columns during initial rendering by enabling the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AutoFit) property on the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. When `AutoFit` is enabled at the column level, the column width is calculated dynamically based on the content it contains.
+The Blazor DataGrid supports AutoFit the specific columns during initial rendering by enabling the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AutoFit) property on the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) definition. When `AutoFit` is enabled at the column level, the column width is calculated dynamically based on the content it contains.
 
 This behavior allows the column to expand or shrink automatically so that cell values are fully visible without being truncated. When `AutoFit` is applied, the content‑driven width takes precedence over any predefined width values, ensuring optimal display for columns that contain variable or unpredictable data.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Value Binding in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Value Binding in Syncfusion Blazor Dropdown Tree component and much more.
+title: Value Binding in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Value Binding in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -116,7 +116,7 @@ In this example, the selected value is obtained through two-way binding using th
 }
 ```
 
-![Get selected value in Blazor DropDownTree](./images/selection/blazor-dropdowntree-get-selected-value.png)
+![Get selected value in Blazor DropDownTree](./images/selection/blazor-dropdowntree-get-selected-value.webp)
 
 ## Clear Selection
 

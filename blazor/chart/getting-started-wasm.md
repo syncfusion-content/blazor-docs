@@ -118,7 +118,7 @@ N> The `~/` notation represents the root directory of your project. This file is
 
 ## Register Blazor service
 
-Register the Blazor service in the **Program.cs** file of your Blazor WebAssembly App. This step enables the components to work in your application.
+Register the Blazor service in the **Program.cs** file of your Blazor WebAssembly App. This step enables the Blazor components to work in your application.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}

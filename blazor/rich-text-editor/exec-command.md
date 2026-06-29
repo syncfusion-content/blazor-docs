@@ -240,7 +240,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);
 
 <tr>
 <td><p>Redo</p></td>
-<td><p>Allows you to redo your actions. </p></td>
+<td><p>Allows you to redo your actions.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Redo);

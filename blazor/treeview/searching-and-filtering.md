@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching and Filtering in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Searching and Filtering in Syncfusion Blazor TreeView component and much more details.
+title: Searching and Filtering in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Searching and Filtering in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -299,4 +299,4 @@ The Blazor TreeView component supports filtering its nodes through an external i
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIsXMKhVJFHvwP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Searching and Filtering in Blazor TreeView Component](./images/blazor-treeview-searching-and-filtering.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIsXMKhVJFHvwP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Searching and Filtering in Blazor TreeView Component](./images/blazor-treeview-searching-and-filtering.webp)" %}
