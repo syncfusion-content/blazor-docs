@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about the navigation in Syncfusion Blazor TreeView component and much more.
+title: Navigation in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about the navigation in Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
