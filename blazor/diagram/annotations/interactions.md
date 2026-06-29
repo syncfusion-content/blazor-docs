@@ -246,4 +246,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to add an annotation for a Connector](./connector-annotation)
 
-* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram)
+* [How to animate connectors using annotation template in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram)
