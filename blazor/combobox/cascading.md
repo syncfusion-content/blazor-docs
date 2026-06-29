@@ -25,7 +25,7 @@ In the following example, selecting a country in the first ComboBox loads its st
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxXHBAraxYWUoo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Cascading in Blazor ComboBox](./images/cascading/blazor_combobox_cascading.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxXHBAraxYWUoo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Cascading in Blazor ComboBox](./images/cascading/blazor_combobox_cascading.webp)" %}
 
 ## Cascading with other form field 
 
