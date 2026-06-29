@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with WPF Blazor App in Visual Studio | Syncfusion
-description: Check out the documentation for getting started with WPF Blazor App and Syncfusion Blazor Components in Visual Studio and much more.
+description: Check out the documentation for getting started with WPF Blazor App and Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with WPF Blazor Application
 
-This section describes how to create and run a WPF Blazor application (.NET WPF Blazor) that integrates Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section describes how to create and run a WPF Blazor application (.NET WPF Blazor) that integrates Blazor components.
 
 To get started quickly with a WPF Blazor app, watch the following video.
 
@@ -31,7 +31,7 @@ Visual Studio provides the **WPF Application** template to create WPF Blazor App
 
 To create a **WPF Blazor App** using Visual Studio, follow the comprehensive steps in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-8.0) documentation. Ensuring and understanding each step in the official guide establishes the foundation required to continue with this documentation.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in the App
+## Install Blazor Grid and Themes NuGet in the App
 
 To add the **Blazor DataGrid** component in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes). Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
@@ -48,7 +48,7 @@ N> Ensure the package [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.
 
 ![WPF Blazor App NuGet package reference](images/wpf/wpf-blazor-package-reference.webp)
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components packages are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Add Import Namespaces
 
@@ -63,9 +63,9 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor Service
+## Register Blazor Service
 
-Register the Syncfusion Blazor service in the `MainWindow.xaml.cs` file of the WPF Blazor App.
+Register the Blazor service in the `MainWindow.xaml.cs` file of the WPF Blazor App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MainWindow.xaml.cs" hl_lines="1 3" %}
@@ -96,9 +96,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Syncfusion Blazor component
+## Add Blazor component
 
-Add a Syncfusion Blazor component to any Razor file in the Blazor project. The example below adds the Blazor Grid component into `~/Counter.razor` file.
+Add a Blazor component to any Razor file in the Blazor project. The example below adds the Blazor Grid component into `~/Counter.razor` file.
 
 {% tabs %}
 {% highlight razor %}
@@ -135,6 +135,6 @@ In the Visual Studio toolbar, click the Start button (or press <kbd>F5</kbd>) to
 
 ![Build and run WPF Blazor App](images/wpf/start-button.webp)
 
-![WPF Blazor App with Syncfusion Blazor Components](images/wpf/wpf-blazor-datagrid.webp)
+![WPF Blazor App with Blazor Components](images/wpf/wpf-blazor-datagrid.webp)
 
 N> View Sample in [GitHub](https://github.com/SyncfusionExamples/blazor-general-cross-platform-wpf)
