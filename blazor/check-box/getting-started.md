@@ -159,10 +159,10 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Checkbox component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkbox) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
