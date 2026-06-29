@@ -31,7 +31,7 @@ The following properties are available on `UmlClassifierShape` regardless of the
 |---|---|---|
 | [Classifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_Classifier) | `ClassifierShape` | Specifies the type of UML shape to render. Default: `ClassifierShape.Class` |
 | [ClassShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_ClassShape) | `UmlClass` | Defines the class name, attributes, and methods when `Classifier` is `ClassifierShape.Class` |
-| [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) | `UmlInterface` | Defines the interface name and methods when `Classifier` is `ClassifierShape.Interface` |
+| [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) | `UmlInterface` | Defines the interface name, attributes and methods when `Classifier` is `ClassifierShape.Interface` |
 | [EnumerationShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_EnumerationShape) | `UmlEnumeration` | Defines the enumeration name and members when `Classifier` is `ClassifierShape.Enumeration` |
 | [HeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_HeaderStyle) | `TextStyle` | Customizes the appearance of the classifier name header (the top compartment) |
 
@@ -102,15 +102,6 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 | [AttributeHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_AttributeHeaderSettings) | `UmlSectionHeaderSettings` | Configuration for the attributes section header |
 | [MethodHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_MethodHeaderSettings) | `UmlSectionHeaderSettings` | Configuration for the methods section header |
 | [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html) | `TextStyle` | Text style applied to class member rows |
-
-## UmlTypedElement
-
-Each entry in the `Parameters` collection of a `UmlClassMethod` is a `UmlTypedElement`, which defines a single method parameter by its name and data type. The rendered signature uses the format `name : type` for each parameter (e.g., `speed : int`).
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter name |
-| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter data type (e.g., `"int"`, `"string"`) |
 
 ## UML Interface
 
@@ -362,6 +353,15 @@ The following code example shows how to add methods with parameters to a class.
 | [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | `UmlScope` | Visibility of the method. Default: `UmlScope.Public` |
 | [Parameters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html#Syncfusion_Blazor_Diagram_UmlClassMethod_Parameters) | `DiagramObjectCollection<UmlTypedElement>` | Collection of method parameters |
 | [IsSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | bool | When `true`, renders a horizontal divider in the methods compartment |
+
+## UmlTypedElement
+
+Each entry in the `Parameters` collection of a `UmlClassMethod` is a `UmlTypedElement`, which defines a single method parameter by its name and data type. The rendered signature uses the format `name : type` for each parameter (e.g., `speed : int`).
+
+| Property | Type | Description |
+|---|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter name |
+| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter data type (e.g., `"int"`, `"string"`) |
 
 ## Using Separators
 
@@ -645,7 +645,7 @@ Configure the relationship between classes using the following options:
 | Property | Type | Description |
 |---|---|---|
 | [RelationshipShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_RelationshipShape) | `Relationship` | Specifies the type of relationship (Association, Aggregation, Composition, Inheritance, etc.). Default: `Relationship.Aggregation` |
-| [AssociationType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_AssociationType) | `AssociationFlow?` | Sets the direction of the relationship (Unidirectional, Bidirectional, etc.). Default is null. |
+| [AssociationType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_AssociationType) | `AssociationFlow?` | Sets the direction of the relationship (Directional, BiDirectional, etc.). Default is null. |
 | [Multiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_Multiplicity) | `ClassifierMultiplicity?` | Defines the cardinality (how many instances) at the source and target ends of the relationship. |
 
 ### Association Directionality
@@ -668,6 +668,22 @@ Shape = new RelationShip()
 ### Multiplicity
 
 [ClassifierMultiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) defines the cardinality labels rendered at both ends of a relationship connector.
+
+**ClassifierMultiplicity**
+
+Defines the multiplicity labels displayed at both ends of a relationship connector.
+
+[Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) - Specifies the multiplicity label at the source end of the relationship.
+
+[Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) - Specifies the multiplicity label at the target end of the relationship.
+
+**MultiplicityLabel**
+
+Define the cardinality range for each end:
+
+[LowerBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) - The minimum number of instances allowed (e.g., `"0"` for zero or more, `"1"` for one or more).
+
+[UpperBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) - The maximum number of instances allowed (e.g., `"1"` for one, `"*"` for many).
 
 The following code example demonstrates applying multiplicity to a connector.
 
@@ -723,26 +739,6 @@ The following code example demonstrates applying multiplicity to a connector.
     }
 }
 ```
-
-### ClassifierMultiplicity
-
-Set the multiplicity labels on each end of the relationship:
-
-| Property | Type | Description |
-|---|---|---|
-| [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) | `MultiplicityLabel` | The cardinality label at the starting point of the relationship. |
-| [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) | `MultiplicityLabel` | The cardinality label at the ending point of the relationship. |
-
-### MultiplicityLabel
-
-Define the cardinality range for each end:
-
-| Property | Type | Description |
-|---|---|---|
-| [LowerBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) | string | The minimum number of instances allowed (e.g., `"0"` for zero or more, `"1"` for one or more). |
-| [UpperBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) | string | The maximum number of instances allowed (e.g., `"1"` for one, `"*"` for many). |
-
-![MultiplicityLabel in Blazor Diagram](../images/UmlClassShapes/Multiplicity.png)
 
 ## Adding UML Class Shapes to Symbol Palette
 
