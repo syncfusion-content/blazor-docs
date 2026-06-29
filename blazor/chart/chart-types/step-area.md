@@ -47,7 +47,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdjnixrYNIReGk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Step Area Chart](../images/chart-types-images/blazor-step-area-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsBhHTngrkaFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Step Area Chart](../images/chart-types-images/blazor-step-area-chart.webp)" %}
 
 N> Refer to the [Blazor Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Step Area Chart Example](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap5) to know how to render and configure the Step Area type chart.
 
@@ -89,7 +89,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLnZHinBaXwgvDs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsBhHTngrkaFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
@@ -133,7 +133,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLxjninhYsthOhS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBpjlCufmZYLVMX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the step area series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -180,7 +180,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrRZxMdhOMUCFUq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrztPMEzcTnzOXU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Opacity**
 
@@ -220,7 +220,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLdjdsRLusPRRgx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrzXbMuTcIuVPvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DashArray**
 
@@ -260,7 +260,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthHtxWnVEVhLtCi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWhBxpxgIqdqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Series Border**
 
@@ -300,7 +300,64 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLHXxMnVOLpRtAj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWhBxpxgIqdqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Show Risers**
+
+The `ShowRisers` property determines whether vertical riser lines are displayed between consecutive data points in the series. Set this property to `true` to show the riser lines or `false` to hide them. Hiding risers can simplify the chart appearance and make the overall trend easier to follow. 
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="England - Run Rate">
+    <ChartPrimaryXAxis Title="Overs"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Runs"></ChartPrimaryYAxis>
+    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ChartData" XName="X" YName="Y" Type="ChartSeriesType.StepArea"
+                Opacity="0.1" ShowRisers="false">
+            <ChartSeriesBorder Width="1.5"></ChartSeriesBorder>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartPoint
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartPoint> ChartData = new()
+    {
+        new() { X = 1,  Y = 7  },
+        new() { X = 2,  Y = 1  },
+        new() { X = 3,  Y = 1  },
+        new() { X = 4,  Y = 14 },
+        new() { X = 5,  Y = 1  },
+        new() { X = 6,  Y = 10 },
+        new() { X = 7,  Y = 8  },
+        new() { X = 8,  Y = 6  },
+        new() { X = 9,  Y = 10 },
+        new() { X = 10, Y = 10 },
+        new() { X = 11, Y = 16 },
+        new() { X = 12, Y = 6  },
+        new() { X = 13, Y = 14 },
+        new() { X = 14, Y = 7  },
+        new() { X = 15, Y = 5  },
+        new() { X = 16, Y = 2  },
+        new() { X = 17, Y = 14 },
+        new() { X = 18, Y = 7  },
+        new() { X = 19, Y = 7  },
+        new() { X = 20, Y = 10 }
+    };
+}
+
+```
+
+<!-- TODO: Add preview sample after release -->
+![Blazor Step Area Chart NoRiser Series](../images/chart-types-images/blazor-step-area-chart-noriser-series.webp)
 
 ## Empty points
 
@@ -345,7 +402,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrxtxCxVkVcBhUx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBpNYiKqFybwcxy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
 
@@ -387,7 +444,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhRjRMnVEKigbJh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBftkMqAPbZoJkr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
@@ -431,7 +488,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBdZxCdVuKpIPRW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzXuMqKvEjAFVY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -479,7 +536,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrRDdiHBOAmvwJi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVfjbMEJFUSbqGV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -525,7 +582,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLxXnWnruJjtkFK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVfZaWgUFkdqzow?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

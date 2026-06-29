@@ -5,7 +5,6 @@ description: Checkout and learn about the documentation for getting started with
 platform: Blazor
 component: Diagram
 documentation: ug
-canonical_url: "https://www.syncfusion.com/blazor-components/blazor-diagram"
 ---
 
 # Getting Started with Blazor Diagram Component in Web App
@@ -83,7 +82,7 @@ N> See the [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/cor
 
 {% endtabcontents %}
 
-## Install Blazor packages
+## Install required Blazor packages
 
 Install the [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using one of the following methods.
 

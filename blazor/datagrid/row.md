@@ -2,7 +2,6 @@
 layout: post
 title: Row in Blazor DataGrid | Syncfusion®
 description: Learn how to set row styles, heights, hover effects, pinning, and more in the Blazor DataGrid component for enhanced row customization.
-control: DataGrid
 documentation: ug
 ---
 
