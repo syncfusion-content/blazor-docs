@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis Customization in Blazor Charts Component
 
-This section provides a brief explanation on how to customize the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) axis.
+This section provides a brief explanation on how to customize the Blazor Charts axis.
 
 A detailed walkthrough for customizing the chart axis is provided in the video below.
 

@@ -11,7 +11,7 @@ documentation: ug
 
 # Technical Indicators in Blazor Charts Component
 
-A technical indicator is a mathematical calculation that forecasts financial market direction using historical price, volume, or open interest data. There are 10 different types of technical indicators that can be used with the [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts).
+A technical indicator is a mathematical calculation that forecasts financial market direction using historical price, volume, or open interest data. There are 10 different types of technical indicators that can be used with the chart.
 
 ## Accumulation Distribution
 

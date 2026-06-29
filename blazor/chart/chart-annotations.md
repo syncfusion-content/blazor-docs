@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation in Blazor Charts Component
 
-Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts).
+Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart.
 
 A detailed walkthrough demonstrating how to add and customize annotations in the chart is presented in the video below.
 

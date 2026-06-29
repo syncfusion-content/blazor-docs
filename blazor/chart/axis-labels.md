@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis Labels in Blazor Charts Component
 
-This section provides a brief explanation on how to customize the [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) axis labels.
+This section provides a brief explanation on how to customize the Blazor Charts axis labels.
 
 A detailed walkthrough for customizing the chart axis labels is provided in the video below.
 

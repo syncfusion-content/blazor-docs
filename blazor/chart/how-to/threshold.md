@@ -11,7 +11,7 @@ documentation: ug
 
 # Threshold in Chart in Blazor Charts Component
 
-The threshold level can be indicated in the [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) using the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html). Follow the steps below to add a threshold to the chart.
+The threshold level can be indicated in the chart using the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html). Follow the steps below to add a threshold to the chart.
 
 **Step 1:**
 
