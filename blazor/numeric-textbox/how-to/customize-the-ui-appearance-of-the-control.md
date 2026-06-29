@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the UI appearance of Blazor Numeric TextBox | Syncfusion
-description: Learn here all about customizing the UI appearance of Syncfusion Blazor Numeric TextBox component and more.
+title: Customize the UI appearance of Numeric TextBox | Syncfusion®
+description: Checkout and learn how to customize the UI appearance of Blazor Numeric TextBox using CSS classes, styles and much more details.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

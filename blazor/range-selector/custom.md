@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Range Selector Component | Syncfusion
-description: Checkout and learn here all about customization in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about customization in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -208,5 +208,5 @@ Animation for the Range Selector is enabled by default. The speed of the animati
 
 ## See Also
 
-* [Grid and Tick Lines](./grid-tick/)
-* [Labels](./labels/)
+* [Grid and Tick Lines](./grid-tick)
+* [Labels](./labels)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about data binding in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

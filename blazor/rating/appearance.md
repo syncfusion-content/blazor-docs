@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Appearance with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn here all about Appearance with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating
 documentation: ug
@@ -29,7 +29,7 @@ In this example, the rating component displays 8 rating items. The `Value` prope
 
 ## Disabled
 
-Disable the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
+Disable the Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
 
 ```cshtml
 
