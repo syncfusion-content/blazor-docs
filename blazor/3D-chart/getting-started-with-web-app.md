@@ -195,6 +195,10 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
+<SfChart3D>
+
+</SfChart3D>
+
 {% endhighlight %}
 {% endtabs %}
 
