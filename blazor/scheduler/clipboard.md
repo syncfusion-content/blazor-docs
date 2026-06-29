@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Blazor Scheduler Component
 
-The Clipboard functionality in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
+The Clipboard functionality in the [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
 
 To activate the clipboard feature in the scheduler, simply set the [`AllowClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowKeyboardInteraction) property to **true**.
 

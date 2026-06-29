@@ -260,7 +260,7 @@ N> The above code example uses `Access-Control-Allow- : *` for development conve
 
 ## Integrating Blazor components in the application
 
-This example demonstrates the use of components, including a [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) to select a date range, a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display orders, and a [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) to present events.
+This example demonstrates the use of components, including a [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) to select a date range, a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display orders, and a [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) to present events.
 
 The page expects `HttpClient` to be configured with the Azure Functions host URL as its BaseAddress. It uses JSON data returned from the Functions API to populate both the grid and the scheduler. The sample injects the `HttpClient` instance that was registered earlier in `Program.cs` where the `BaseAddress` points to the Azure Functions host.
 
