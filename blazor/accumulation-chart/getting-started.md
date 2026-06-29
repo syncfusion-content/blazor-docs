@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Accumulation Chart in WASM App | Syncfusion
+title: Getting Started with Accumulation Chart in WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor WebAssembly App.
 platform: Blazor
 control: Accumulation Chart
@@ -66,7 +66,7 @@ Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.Grid`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.Charts`) and install them.
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
