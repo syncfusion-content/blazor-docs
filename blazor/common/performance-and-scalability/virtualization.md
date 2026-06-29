@@ -18,7 +18,7 @@ With virtualization enabled, large datasets become easier to handle, even when t
 The following Blazor components provide built-in virtualization support for efficiently handling large datasets.
 
 * **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** - Supports row virtualization, column virtualization, overscan buffering, virtual loading placeholders (mask rows), frozen columns with virtualization, and infinite scrolling.
-* **[Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler)** - Supports virtual scrolling to efficiently render large appointment collections and improve timeline performance.
+* **[Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler)** - Supports virtual scrolling to efficiently render large appointment collections and improve timeline performance.
 * **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)** - Supports UI virtualization with window or container scrolling modes.
 * **[File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)** - Supports UI virtualization in both Details and Large Icons views.
 * **[TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview)** - Supports UI virtualization to render only visible nodes, significantly improving performance in large hierarchical structures.
@@ -45,7 +45,7 @@ For complete virtualization guidance, see:
 
 ## Scheduler virtualization
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) supports virtual scrolling to efficiently render large appointment collections and improve timeline performance. This helps reduce DOM size and keeps the scheduler responsive when working with extensive schedules.
+The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) supports virtual scrolling to efficiently render large appointment collections and improve timeline performance. This helps reduce DOM size and keeps the scheduler responsive when working with extensive schedules.
 
 For complete virtualization guidance, see:
 

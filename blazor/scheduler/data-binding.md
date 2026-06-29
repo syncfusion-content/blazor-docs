@@ -15,7 +15,7 @@ It supports the following kinds of data binding methods:
 * List binding
 * Remote data
 
-Please take a moment to watch this video to learn about data binding in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler).
+Please take a moment to watch this video to learn about data binding in the [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler).
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=EwfxPrqxma8"%}

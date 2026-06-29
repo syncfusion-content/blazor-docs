@@ -357,7 +357,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Migrate to Blazor Scheduler component
 
-The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler) is a comprehensive event calendar for managing time-based activities, while  [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) provides a modern, high performance component for building interactive scheduling user interfaces.
+The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler) is a comprehensive event calendar for managing time-based activities, while  [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) provides a modern, high performance component for building interactive scheduling user interfaces.
 
 For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [ASP.NET Core MVC Scheduler getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/schedule/getting-started).
 
@@ -432,7 +432,7 @@ public class Meeting
 
 **Blazor equivalent**
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
+The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
