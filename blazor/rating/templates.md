@@ -245,9 +245,9 @@ Use SVG icons as rating symbols by specifying them as template content within th
 
 ![Blazor Rating component with SVG icon](./images/blazor-rating-svg-icon.webp)
 
-## Using webp image as rating symbol
+## Using webP image as rating symbol
 
-Use webp images as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
+Use webP images as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 
