@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion Rich Text Editor in Blazor Web App
-canonical_url: "https://www.syncfusion.com/blazor-components/blazor-rich-text-editor"
+canonical_url: "https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor"
 description: Check out the documentation for getting started with Syncfusion Blazor Rich Text Editor Components in Blazor Web App.
 platform: Blazor
 control: RichTextEditor
@@ -10,7 +10,7 @@ documentation: ug
 
 # Getting Started with Blazor Rich Text Editor in Blazor Web App
 
-This section explains how to add the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to add the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 > **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 

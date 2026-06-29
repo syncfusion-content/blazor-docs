@@ -9,14 +9,14 @@ documentation: ug
 
 # Editor Modes in Syncfusion Blazor Rich Text Editor
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component allows users to create and edit content, returning valid HTML markup or Markdown (MD). It supports two editing modes:
+The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) component allows users to create and edit content, returning valid HTML markup or Markdown (MD). It supports two editing modes:
 
 * HTML Editor
 * Markdown Editor
 
 ## HTML editor
 
-The Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) that enables users to format content as HTML. This is the default editing mode, allowing content formatting through toolbar options and returning valid HTML markup.
+The Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) that enables users to format content as HTML. This is the default editing mode, allowing content formatting through toolbar options and returning valid HTML markup.
 
 To enable HTML mode, set the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html) property to `HTML`.
 
