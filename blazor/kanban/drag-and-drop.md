@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Use Drag and Drop in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about drag and drop the cards in the Syncfusion Blazor Kanban component.
+title: How to Use Drag and Drop in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all about drag and drop the cards in the Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

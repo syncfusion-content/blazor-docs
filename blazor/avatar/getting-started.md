@@ -194,4 +194,4 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.webp)" %}

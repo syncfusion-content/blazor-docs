@@ -180,7 +180,7 @@ The following table illustrates the HTML attributes and their equivalent API.
 </table>
 <!-- markdownlint-enable MD033 -->
 
-N> If both an HTML attribute and a API are specified, the API takes precedence and is applied to the DOM element.
+N> If both an HTML attribute and a API are specified, the Syncfusion API takes precedence and is applied to the DOM element.
 
 ```cshtml
 <SfTextBox ID="textbox" name="first-name" title="First name." minlength="15" Autocomplete="AutoComplete.Off"></SfTextBox>
