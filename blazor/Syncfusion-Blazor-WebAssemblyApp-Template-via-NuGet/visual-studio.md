@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor WebAssembly App Template | Syncfusion®
-description: Learn here about how to create the Blazor application using Syncusion® Blazor Components with the help of Blazor WebAssembly App Template.
+title: Syncfusion Blazor WebAssembly App Template - Syncfusion
+description: Learn here about how to create the Blazor application using Syncusion® Blazor Components with the help of Syncfusion Blazor WebAssembly App Template.
 platform: extension
 control: Syncfusion Extensions
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion® Blazor WebAssembly App Template
 
-Syncfusion® provides the Blazor WebAssembly App Template, which allows you to create a Blazor application using Syncfusion® components. The Syncfusion® Blazor app is created with the required Syncfusion® NuGet references, namespaces, styles, and component render code. The Template includes an easy-to-use project wizard that guides you through the process of creating an application with Syncfusion® components.
+Syncfusion® provides the Blazor WebAssembly App Template, which allows you to create a Syncfusion Blazor application using Syncfusion® components. The Syncfusion® Blazor app is created with the required Syncfusion® NuGet references, namespaces, styles, and component render code. The Template includes an easy-to-use project wizard that guides you through the process of creating an application with Syncfusion® components.
 
 The steps below will assist you to create your **Syncfusion® Blazor Application** through **Visual Studio 2022 or 2026**:
 
@@ -27,7 +27,7 @@ The steps below will assist you to create your **Syncfusion® Blazor Application
      ![CreateNewProject](images/createnewproject.png)
 5. Configure the project options (project type, progressive web application support, and https configuration) in the wizard as needed.
 
-     > **Note:** Refer to the .NET SDK support for Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
+     > **Note:** Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
      **Project type section**
 

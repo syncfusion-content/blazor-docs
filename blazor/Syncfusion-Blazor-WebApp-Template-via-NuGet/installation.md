@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Web App Template Installation | Syncfusion®
-description: Learn here more about how to How to install and create a Blazor application using Web App Template and much more details.
+title: Syncfusion Web App Template Installation | Syncfusion
+description: Learn here more about how to How to install and create a Syncfusion Blazor application using Syncfusion Web App Template.
 platform: extension
 control: Syncfusion Extensions
 documentation: ug
 ---
 
-# Syncfusion® Web App Template Installation
+# Syncfusion Web App Template Installation
 
 ## Overview
 
-How to install and create a Blazor application using Syncfusion® Web App Template
+How to install and create a Syncfusion Blazor application using Syncfusion Web App Template
 
-> **Note:** Refer to the .NET SDK support for Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
+> **Note:** Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
-The fastest way to get started is with the official Syncfusion® Web App Template. It creates a fully configured Blazor app with all dependencies, theming, and blazor components.
+The fastest way to get started is with the official Syncfusion Web App Template. It creates a fully configured Blazor app with all dependencies, theming, and syncfusion blazor components.
 
 ### Install the template
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Blazor WebAssembly App Template via NuGet | Syncfusion®
-description: Learn all about the Blazor WebAssembly App Template via NuGet for Visual Studio and Visual Studio Code, which simplifies integration.
+title: Overview of Syncfusion Blazor WebAssembly App Template via NuGet for Visual Studio and Visual Studio Code | Syncfusion
+description: Learn all about the Syncfusion Blazor WebAssembly App Template via NuGet for Visual Studio and Visual Studio Code, which simplifies integration.
 platform: extension
 control: Syncfusion Extensions
 documentation: ug
