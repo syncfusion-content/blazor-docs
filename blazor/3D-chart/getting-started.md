@@ -190,26 +190,6 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 @rendermode InteractiveServer
 
-{% endhighlight %}
-{% endtabs %}
-
-**Run the application**
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor 3D charts component will render in your default web browser.
-
-{% endtabcontent %}
-
-{% tabcontent Visual Studio Code %}
-
-Open the terminal and run the following command.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
 <SfChart3D>
 
 </SfChart3D>
