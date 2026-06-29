@@ -157,8 +157,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Calendar component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**)
- and add the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
