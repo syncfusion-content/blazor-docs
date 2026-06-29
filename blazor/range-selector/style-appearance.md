@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Range Selector Component | Syncfusion
-description: Check out and learn about Style and Appearance customization in Syncfusion Blazor Range Selector component.
+title: Style and Appearance in Blazor Range Selector | Syncfusion®
+description: Check out and learn about Style and Appearance customization in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector
 documentation: ug

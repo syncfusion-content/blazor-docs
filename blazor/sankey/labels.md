@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labels for Blazor Sankey Diagram | Syncfusion
+title: Labels for Blazor Sankey Diagram | Syncfusion®
 description: Learn how to configure and customize labels in the Blazor Sankey Diagram to enhance data visualization.
 platform: Blazor
 control: Sankey
