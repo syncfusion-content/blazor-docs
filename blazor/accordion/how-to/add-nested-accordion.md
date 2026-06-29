@@ -60,4 +60,4 @@ The Accordion component supports to render the nested level of Accordion by usin
 </SfAccordion>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBdZRiCWvwrpSLi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component with Nested Item](../images/blazor-accordion-with-nested-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBdZRiCWvwrpSLi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component with Nested Item](../images/blazor-accordion-with-nested-item.webp)" %}

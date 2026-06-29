@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in Blazor Menu Bar Component | Syncfusion
-description: Checkout and learn here all about Change animation settings in Syncfusion Blazor ContextMenu component and more.
+title: Animation in Blazor Menu Bar Component | Syncfusion®
+description: Checkout and learn here all about Change animation settings in Blazor ContextMenu component and much more details.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -60,4 +60,4 @@ The following sample illustrates how to open Context Menu with `FadeIn` effect w
 
 ```
 
-![Blazor Menubar with Style and Appearance](./images/blazor-menubar-animation.gif)
+![Blazor Menubar with Style and Appearance](./images/blazor-menubar-animation.webp)

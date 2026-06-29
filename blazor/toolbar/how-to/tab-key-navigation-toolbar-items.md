@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tab key navigation in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about how to Tab key navigation toolbar item in Syncfusion Blazor Toolbar component and more.
+title: Tab key navigation in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about how to Tab key navigation toolbar item in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -66,4 +66,4 @@ If [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
     </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSWXCDJtDTYouf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar with TabIndex](../images/blazor-toolbar-item-tabindex.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSWXCDJtDTYouf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar with TabIndex](../images/blazor-toolbar-item-tabindex.webp)" %}
