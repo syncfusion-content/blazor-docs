@@ -638,14 +638,24 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Relationship Example](./images/UmlClassShapes/UMLRelationShip.png)" %}
 
+### RelationShip
+
+Configure the relationship between classes using the following options:
+
+| Property | Type | Description |
+|---|---|---|
+| [RelationshipShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_RelationshipShape) | `Relationship` | Specifies the type of relationship (Association, Aggregation, Composition, Inheritance, etc.). Default: `Relationship.Aggregation` |
+| [AssociationType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_AssociationType) | `AssociationFlow?` | Sets the direction of the relationship (Unidirectional, Bidirectional, etc.). Default is null. |
+| [Multiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_Multiplicity) | `ClassifierMultiplicity?` | Defines the cardinality (how many instances) at the source and target ends of the relationship. |
+
 ### Association Directionality
 
 When `RelationshipShape` is set to `Relationship.Association`, the [AssociationType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_AssociationType) property controls the arrow direction using [AssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AssociationFlow.html).
 
-| Value | Description |
-|---|---|
-| `AssociationFlow.UniDirectional` | Arrow points from source to target |
-| `AssociationFlow.BiDirectional` | Arrows point in both directions |
+| Value | Description | Example |
+|---|---|---|
+| `AssociationFlow.Directional` | Arrow points from source to target | ![Directional](images/UmlClassShapes/Directional.png) |
+| `AssociationFlow.BiDirectional` | Arrows point in both directions | ![BiDirectional](images/UmlClassShapes/BiDirectional.png) |
 
 ```cshtml
 Shape = new RelationShip()
@@ -714,16 +724,6 @@ The following code example demonstrates applying multiplicity to a connector.
 }
 ```
 
-### RelationShip
-
-Configure the relationship between classes using the following options:
-
-| Property | Type | Description |
-|---|---|---|
-| [RelationshipShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_RelationshipShape) | `Relationship` | Specifies the type of relationship (Association, Aggregation, Composition, Inheritance, etc.). Default: `Relationship.Aggregation` |
-| [AssociationType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_AssociationType) | `AssociationFlow?` | Sets the direction of the relationship (Unidirectional, Bidirectional, etc.). Default is null. |
-| [Multiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_Multiplicity) | `ClassifierMultiplicity?` | Defines the cardinality (how many instances) at the source and target ends of the relationship. |
-
 ### ClassifierMultiplicity
 
 Set the multiplicity labels on each end of the relationship:
@@ -741,6 +741,8 @@ Define the cardinality range for each end:
 |---|---|---|
 | [LowerBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) | string | The minimum number of instances allowed (e.g., `"0"` for zero or more, `"1"` for one or more). |
 | [UpperBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) | string | The maximum number of instances allowed (e.g., `"1"` for one, `"*"` for many). |
+
+![MultiplicityLabel in Blazor Diagram](../images/UmlClassShapes/Multiplicity.png)
 
 ## Adding UML Class Shapes to Symbol Palette
 
