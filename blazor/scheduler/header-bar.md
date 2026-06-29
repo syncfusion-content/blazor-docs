@@ -9,7 +9,7 @@ documentation: ug
 
 # Header Customization in Blazor Scheduler Component
 
-The header part of [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) can be customized easily with the built-in options available.
+The header part of Scheduler can be customized easily with the built-in options available.
 
 ## Show or Hide header bar
 

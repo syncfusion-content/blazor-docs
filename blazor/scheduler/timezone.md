@@ -9,7 +9,7 @@ documentation: ug
 
 # Timezone in Blazor Scheduler
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) renders events based on current system time zone of server in server side application and in WASM application the events are rendered based on UTC timezone by default.
+The Scheduler renders events based on current system time zone of server in server side application and in WASM application the events are rendered based on UTC timezone by default.
 
 * You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property. For more information, refer to the [section](#display-appointments-based-on-scheduler-time-zone).
 

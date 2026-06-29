@@ -9,7 +9,7 @@ documentation: ug
 
 # Style And Appearance in Blazor Scheduler Component
 
-To modify the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) appearance, you need to override the default CSS of Scheduler. Also, there is an option to create our own custom theme using [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material). Find the list of CSS classes in Scheduler.
+To modify the Scheduler appearance, you need to override the default CSS of Scheduler. Also, there is an option to create our own custom theme using [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material). Find the list of CSS classes in Scheduler.
 
 | CSS class | Purpose |
 |-------|---------|

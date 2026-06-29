@@ -9,7 +9,7 @@ documentation: ug
 
 # Scheduler Interactions in Blazor Scheduler Component
 
-The following table describes the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) actions and also illustrates how those actions are carried out through mouse and touch interactions on Scheduler.
+The following table describes the Scheduler actions and also illustrates how those actions are carried out through mouse and touch interactions on Scheduler.
 
 | Actions | Mouse interaction | Touch interaction |
 |-------|---------| --------------- |
