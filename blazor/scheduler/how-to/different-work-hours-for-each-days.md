@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Different work hours for each days in blazor schedule | Syncfusion
-description: Learn here all about Set different work hours for each days of the each resource in Syncfusion Blazor Scheduler component using methods and events.
+description: Learn here all about Set different work hours for each days of the each resource in Blazor Scheduler component using methods and events.
 platform: Blazor
 control: Scheduler
 documentation: ug
