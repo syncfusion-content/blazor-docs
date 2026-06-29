@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Define events in Blazor DataGrid Component | Syncfusion
-description: Learn how to define GridEvents programmatically in the Syncfusion Blazor DataGrid using a component reference and EventCallbackFactory.
+title: Define events in Blazor DataGrid Component | Syncfusion®
+description: Learn how to define GridEvents programmatically in the Blazor DataGrid using a component reference and EventCallbackFactory.
 platform: Blazor
 control: DataGrid
 documentation: ug

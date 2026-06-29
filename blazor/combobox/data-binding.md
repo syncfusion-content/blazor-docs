@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor ComboBox component and much more.
+title: Data Binding in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Data Binding in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -56,7 +56,7 @@ Bind by index using the `bind-Index` attribute (supports int and nullable int). 
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqshBGgdWoItJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRjRBKrMMUsYzE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### DataBound event
 
