@@ -76,4 +76,4 @@ In the following sample, more than one Sidebar is rendered based on `Position` p
 
 ```
 
-![Blazor Multiple Sidebars](./../images/blazor-multiple-sidebars.png)
+![Blazor Multiple Sidebars](./../images/blazor-multiple-sidebars.webp)
