@@ -48,7 +48,7 @@ Data labels are fields that includes information about the sample point connecte
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLnXnWNzUBPQRLc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor 3D Chart with Data Label](images/data-label/blazor-chart-data-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBzZdWrfVZpBXMM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with Data Label](images/data-label/blazor-chart-data-label.webp)" %}
 
 ## Position
 
@@ -91,7 +91,7 @@ The `Position` property is used to place the label either on `Top`, `Middle`, or
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBRXnCZfAAABpvw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Label Position in Blazor 3D Chart](images/data-label/blazor-chart-label-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLJtxCBfBjQyAbW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Label Position in Blazor 3D Chart](images/data-label/blazor-chart-label-position.webp)" %}
 
 ## Template
 
@@ -141,7 +141,7 @@ Label content can be formatted by using the template option. Inside the template
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdtHMNTqqcYdzC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor 3D Chart Label with Template](images/data-label/blazor-chart-datalabel-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBJNRWBJVChojGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart Label with Template](images/data-label/blazor-chart-datalabel-template.webp)" %}
 
 ## Text mapping
 
@@ -179,7 +179,7 @@ Text from the data source can be mapped using the `NameField` property.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrHDnitzqTVeNKr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor 3D Chart Label with Text Mapping](images/data-label/blazor-chart-label-with-text-mapping.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVJNxsrfBWdyERK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart Label with Text Mapping](images/data-label/blazor-chart-label-with-text-mapping.webp)" %}
 
 ## Format
 
@@ -217,7 +217,7 @@ Data label for the chart can be formatted using the `Format` property. The globa
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhHDdWDfqyifuVW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor 3D Chart Label with Format](images/data-label/blazor-chart-label-with-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrJNnWhzrCaQgqM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart Label with Format](images/data-label/blazor-chart-label-with-format.webp)" %}
 
 The table below shows the results of applying various commonly used label formats to numeric data.
 
@@ -319,7 +319,7 @@ The `Margin` option can be applied to the data label to create space around the 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxZnMXJAoxRvsw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor 3D Chart Label with Margin](images/data-label/blazor-chart-label-with-margin.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLpNHihJhLAjJdx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart Label with Margin](images/data-label/blazor-chart-label-with-margin.webp)" %}
 
 ## Customization
 
@@ -359,7 +359,7 @@ The `stroke` and `border` of data label can be customized using `Fill` and `Char
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBdtdMNpUxBDRQl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor 3D Chart with Custom Label](images/data-label/blazor-chart-custom-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrJXnCrfBBywLmC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with Custom Label](images/data-label/blazor-chart-custom-label.webp)" %}
 
 ## Customizing specific label
 
@@ -416,4 +416,4 @@ A specific label can be customized by using the `TextRender` event. The `TextR
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBdZHCZpKxHpcIN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor 3D Chart with Custom Speci Label](images/data-label/blazor-chart-custom-specific-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVzNxihTVLOVTJZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor 3D Chart with Custom Speci Label](images/data-label/blazor-chart-custom-specific-label.webp)" %}
