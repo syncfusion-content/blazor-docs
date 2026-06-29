@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor RadioButton Component | Syncfusion
-description: Checkout and learn here all about native events in Syncfusion Blazor RadioButton component and more.
+description: Checkout and learn here all about native events in Blazor RadioButton component with examples and much more details.
 platform: Blazor
 control: Radio Button
 documentation: ug
