@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and drop in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Drag and drop in Syncfusion Blazor QueryBuilder component and much more.
+title: Drag and Drop in Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn here all about Drag and Drop in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

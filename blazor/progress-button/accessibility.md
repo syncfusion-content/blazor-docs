@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor ProgressButton component and more.
+description: Learn about accessibility in Blazor ProgressButton component with WAI-ARIA support and keyboard navigation examples.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -63,4 +63,4 @@ The accessibility compliance of the Blazor ProgressButton component is shown in 
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
