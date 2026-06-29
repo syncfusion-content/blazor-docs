@@ -105,7 +105,6 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-
 dotnet add package Syncfusion.Blazor.DropDowns -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
@@ -170,6 +169,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+@using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="string" Placeholder="Select a game"></SfComboBox>
 
