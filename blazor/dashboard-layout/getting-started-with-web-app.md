@@ -222,7 +222,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVpXihOLKRGIhFf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Component](images/blazor-dashboard-layout-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxtRLUKlzqHcwQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout Component](images/blazor-dashboard-layout-component.webp)" %}
 
 ## Defining Panels
 
@@ -264,7 +264,7 @@ A basic Dashboard panel can display simple data. The panel's header is defined b
 
 The Dashboard with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzXChErUwBJvMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard with Single Data](images/blazor-dashboard-layout-single-content.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHNxhgKwFngyBq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
 
 ## Panels with Components
 
@@ -432,7 +432,7 @@ These components are placed as panel content by assigning the corresponding Blaz
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSDIVjTEDbFVUJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard displays Chart Component](images/blazor-dashboard-layout-with-chart-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout displays Chart Component](images/blazor-dashboard-layout-with-chart-component.webp)" %}
 
 N> When using the **SfRangeNavigator** component in this sample, ensure that the [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) NuGet package is installed in your project. You can install the package from [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor).
 
