@@ -194,6 +194,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+@using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
 
@@ -248,6 +249,8 @@ To bind data for the 3D charts component, you can assign a IEnumerable object to
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@code
+{
 public class SalesInfo
 {
     public string Month { get; set; }
@@ -264,6 +267,7 @@ public List<SalesInfo> Sales = new List<SalesInfo>
     new SalesInfo { Month = "Jun", SalesValue = 32 },
     new SalesInfo { Month = "Jul", SalesValue = 35 }
 };
+}
 
 {% endhighlight %}
 {% endtabs %}
