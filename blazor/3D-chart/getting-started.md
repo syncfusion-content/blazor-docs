@@ -244,6 +244,8 @@ To bind data for the 3D charts component, you can assign a IEnumerable object to
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@code
+{
 public class SalesInfo
 {
     public string Month { get; set; }
@@ -260,6 +262,7 @@ public List<SalesInfo> Sales = new List<SalesInfo>
     new SalesInfo { Month = "Jun", SalesValue = 32 },
     new SalesInfo { Month = "Jul", SalesValue = 35 }
 };
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -314,7 +317,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 <SfChart3D Title="Sales Analysis">
     <Chart3DPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
     
-     <Chart3DPrimaryYAxis Title="Sales in Dollar"><Chart3DPrimaryYAxis>
+     <Chart3DPrimaryYAxis Title="Sales in Dollar"></Chart3DPrimaryYAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="Chart3DSeriesType.Column">
         </Chart3DSeries>
