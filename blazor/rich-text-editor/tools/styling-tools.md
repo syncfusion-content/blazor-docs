@@ -60,7 +60,6 @@ The following font style links are referred in the page.
 * For **.NET 10** app, refer style in the `<head>` of the **~/Components/App.razor** file.
 
 {% tabs %}
-
 {% highlight cshtml tabtitle=".NET 10 (~/App.razor)" %}
 
 <head>

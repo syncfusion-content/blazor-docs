@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Render Scrollable Context Menu in Blazor ContextMenu | Syncfusion
-description: Checkout and learn here all about Render Scrollable Context Menu in Syncfusion Blazor ContextMenu component and more.
+title: Render Scrollable Context Menu in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Render Scrollable Context Menu in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -60,4 +60,4 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
 
 ```
 
-![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.png)
+![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.webp)

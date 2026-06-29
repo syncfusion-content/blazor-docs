@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor DataGrid Component in Web App
-description: Checkout and learn about the documentation for getting started with Syncfusion Blazor DataGrid in Blazor Web App.
+title: Getting Started with Blazor DataGrid in Web App | Syncfusion®
+description: Checkout and learn about the documentation for getting started with Blazor DataGrid in Blazor Web App.
 platform: Blazor
 component: DataGrid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor DataGrid Component in Blazor Web App
 
-This guide explains how to integrate the [Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This guide explains how to integrate the [ Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 
@@ -23,7 +23,7 @@ This guide explains how to integrate the [Syncfusion<sup style="font-size:70%">&
 
 ## Create a new Blazor Web App in Visual Studio
 
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
 
@@ -35,7 +35,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 ## Create a new Blazor Web App in Visual Studio Code
 
-Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
 
 For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
 
@@ -87,7 +87,7 @@ This command creates a new Blazor Web App and places it in a new directory calle
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install required Blazor packages
 
 Install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -119,9 +119,9 @@ After the packages are installed, open the **~/_Imports.razor** file in the **Cl
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -135,7 +135,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 ## Add stylesheet and script resources
 
@@ -153,7 +153,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor DataGrid component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Blazor DataGrid component in the **~/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 {% tabs %}
 {% highlight razor %}
@@ -220,11 +220,11 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdteMnJfRLuDhc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrHZdNkKnhrXYsw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Run the Application**
 
-* **Visual Studio** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component in the default web browser.
+* **Visual Studio** → <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Grid component in the default web browser.
 
-* **VS Code / CLI** → Run **dotnet run** in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component.
+* **VS Code / CLI** → Run **dotnet run** in the project directory using the terminal. This will build and launch the application, and you can open the displayed localhost URL in your browser to view the Blazor Grid component.
 

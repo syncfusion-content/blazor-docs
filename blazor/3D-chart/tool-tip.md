@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Tooltip and its customization in Syncfusion Blazor 3D Chart component and much more.
+title: Tooltip in Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn here all features about Tooltip and its customization in Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug

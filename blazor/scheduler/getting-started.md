@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with Blazor Scheduler Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Scheduler component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Scheduler Blazor in WASM App | Syncfusion
+description: Check out and learn about getting started with Blazor Scheduler component in Blazor WebAssembly Application.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Getting Started with Blazor Scheduler Component in WASM App
+# Getting Started with Blazor Scheduler in Blazor WASM App
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 ## Create a new Blazor WASM App
 
@@ -27,9 +27,14 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 
 Run the following command to create a new Blazor WebAssembly App.
 
-```bash
-dotnet new blazorwasm -o BlazorWASMApp
-```
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
 
 Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
@@ -39,9 +44,14 @@ Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via 
 
 Run the following command to create a new Blazor WebAssembly App.
 
-```bash
-dotnet new blazorwasm -o BlazorWASMApp
-```
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -62,10 +72,14 @@ Install the [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusi
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Package Manager Console" %}
+
 Install-Package Syncfusion.Blazor.Schedule -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -73,10 +87,14 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 Open the terminal and run the following commands.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -84,10 +102,14 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 Open the command prompt and run the following commands.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
 dotnet add package Syncfusion.Blazor.Schedule -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -107,6 +129,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endtabs %}
 
 ## Register the Blazor service
+
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
@@ -123,7 +146,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -154,6 +177,7 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
+
 @code {
     public class AppointmentData
     {
@@ -179,27 +203,35 @@ N> If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the
 
 {% tabcontent Visual Studio %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Scheduler component will render in your default web browser.
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-* Open the terminal and navigate to the Blazor WebAssembly App project folder, and run the following command.
+Open the terminal and run the following command.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-* Open the command prompt and navigate to the Blazor WebAssembly App project folder, and run the following command.
+Open the command prompt and run the following command.
 
-```bash
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
 dotnet run
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -227,7 +259,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
     </ScheduleViews>
 </SfSchedule>
 
-@code{
+@code {
     DateTime CurrentDate = new DateTime(2025, 2, 14);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -270,7 +302,8 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-@code{
+
+@code {
     DateTime CurrentDate = new DateTime(2020, 1, 10);
     public class AppointmentData
     {
@@ -325,7 +358,8 @@ You can configure only the required views as needed, and include additional view
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-@code{
+
+@code {
     View CurrentView = View.Month;
     public class AppointmentData
     {
@@ -347,6 +381,6 @@ You can configure only the required views as needed, and include additional view
 
 ## See also
 
-1. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
