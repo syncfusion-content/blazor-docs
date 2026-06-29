@@ -224,4 +224,4 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBfNCLSLdCUQyHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar Component](images/getting_started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxtRsWhoSLRrCg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar Component](images/getting_started.webp)" %}

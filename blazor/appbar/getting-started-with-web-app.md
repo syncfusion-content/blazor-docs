@@ -230,7 +230,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthnjRsWhSSFlgoQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar Component](images/getting_started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthnjRsWhSSFlgoQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar Component](images/getting_started.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AppBar)
 
