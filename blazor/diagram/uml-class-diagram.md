@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UML Class Diagram in Blazor Diagram Component | Syncfusion
-description: Check out and learn here all about UML Class Diagram support in Syncfusion Blazor Diagram component and more.
+description: Learn how to create and customize UML class diagrams in the Syncfusion Blazor Diagram component, including classes, interfaces, enumerations, relationships, and symbol palette integration.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -20,8 +20,20 @@ The [Classifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 | Classifier | Description |
 |---|---|
 | `ClassifierShape.Class` | Renders a UML class with compartments for attributes and operations |
-| `ClassifierShape.Interface` | Renders a UML interface with a `«interface»` stereotype and operations |
-| `ClassifierShape.Enumeration` | Renders a UML enumeration with a `«enumeration»` stereotype and members |
+| `ClassifierShape.Interface` | Renders a UML interface with the **«interface»** stereotype and an operations compartment |
+| `ClassifierShape.Enumeration` | Renders a UML enumeration with the **«enumeration»** stereotype and a members compartment |
+
+### UmlClassifierShape Properties
+
+The following properties are available on `UmlClassifierShape` regardless of the classifier type selected:
+
+| Property | Type | Description |
+|---|---|---|
+| [Classifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_Classifier) | `ClassifierShape` | Specifies the type of UML shape to render. Default: `ClassifierShape.Class` |
+| [ClassShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_ClassShape) | `UmlClass` | Defines the class name, attributes, and methods when `Classifier` is `ClassifierShape.Class` |
+| [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) | `UmlInterface` | Defines the interface name and methods when `Classifier` is `ClassifierShape.Interface` |
+| [EnumerationShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_EnumerationShape) | `UmlEnumeration` | Defines the enumeration name and members when `Classifier` is `ClassifierShape.Enumeration` |
+| [HeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_HeaderStyle) | `TextStyle` | Customizes the appearance of the classifier name header (the top compartment) |
 
 ## UML Class
 
@@ -76,6 +88,9 @@ The following code example shows how to create a UML class node.
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLClassShape.razor).
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML CLass Example](./images/UmlClassShapes/UMLClassShape.png)" %}
 
 ### UmlClass Properties
 
@@ -154,7 +169,7 @@ The `UmlScope` enum controls the visibility prefix symbol rendered next to each 
 
 ## Methods
 
-[UmlClassMethod](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) represents an operation in a UML class. Methods are displayed in the **Operations** compartment with their full signature, including visibility symbol, name, parameter list, and return type (e.g., `+ move(speed : int) : void`).
+[UmlClassMethod](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) represents an operation in a UML class. Methods are displayed in the **Operations** compartment with their full signature, including visibility symbol, name, parameter list, and return type (e.g., `+ Add(x : int, y : int) : int`).
 
 The following code example shows how to add methods with parameters to a class.
 
@@ -220,18 +235,29 @@ The following code example shows how to add methods with parameters to a class.
 
 ### UmlTypedElement Properties
 
-The following properties define method parameters in `UmlTypedElement`:
+Each entry in the `Parameters` collection of a `UmlClassMethod` is a `UmlTypedElement`, which defines a single method parameter by its name and data type. The rendered signature uses the format `name : type` for each parameter (e.g., `speed : int`).
 
 | Property | Type | Description |
 |---|---|---|
 | [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter name |
-| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter data type |
+| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter data type (e.g., `"int"`, `"string"`) |
 
 ## UML Interface
 
-A UML interface is rendered with the `«interface»` stereotype above its name, followed by an operations compartment. Define an interface node using the [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) property with a [UmlInterface](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html).
+A UML interface is rendered with the **«interface»** stereotype above its name, followed by an operations compartment. Define an interface node using the [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) property with a [UmlInterface](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html).
 
-`UmlInterface` supports `Attributes`, `Methods`, and header configuration properties as `UmlClass`.
+`UmlInterface` supports the same `Attributes`, `Methods`, and header configuration properties as `UmlClass`.
+
+### UmlInterface Properties
+
+| Property | Type | Description |
+|---|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | string | The interface name displayed in the header compartment. Default: `"InterfaceName"` |
+| [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `DiagramObjectCollection<UmlClassAttribute>` | Collection of attributes for the interface |
+| [Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `DiagramObjectCollection<UmlClassMethod>` | Collection of operations for the interface |
+| [AttributeHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `UmlSectionHeaderSettings` | Configuration for the attributes section header |
+| [MethodHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `UmlSectionHeaderSettings` | Configuration for the methods section header |
+| [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `TextStyle` | Text style applied to interface member rows |
 
 The following code example shows how to create a UML interface node.
 
@@ -271,10 +297,13 @@ The following code example shows how to create a UML interface node.
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLInterfaceShape.razor).
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Interface Example](./images/UmlClassShapes/UMLInterfaceShape.png)" %}
 
 ## UML Enumeration
 
-A UML enumeration is rendered with the `«enumeration»` stereotype above its name and a **Members** compartment listing its literals. Define an enumeration node using the [EnumerationShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_EnumerationShape) property with a [UmlEnumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html).
+A UML enumeration is rendered with the **«enumeration»** stereotype above its name and a **Members** compartment listing its literals. Define an enumeration node using the [EnumerationShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_EnumerationShape) property with a [UmlEnumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html).
 
 The following code example shows how to create a UML enumeration node.
 
@@ -314,6 +343,9 @@ The following code example shows how to create a UML enumeration node.
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlEnumerationShape.razor).
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Enumeration Example](./images/UmlClassShapes/UMLEnumeration.png)" %}
 
 ### UmlEnumeration Properties
 
@@ -333,7 +365,7 @@ The following code example shows how to create a UML enumeration node.
 
 ## Customizing Section Headers
 
-Each compartment section (Attributes, Operations, Members) has a configurable header row controlled by [UmlSectionHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html). Use the `AttributeHeaderSettings`, `MethodHeaderSettings`, and `MemberHeaderSettings` properties to customize section behavior.
+Every compartment — **Attributes**, **Operations**, and **Members** — has a configurable header row represented by [UmlSectionHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html). Assign an instance of this class to `AttributeHeaderSettings`, `MethodHeaderSettings`, or `MemberHeaderSettings` to control the label text, style, add/remove buttons, and expand/collapse behavior for that section.
 
 The following code example shows how to configure section headers.
 
@@ -357,31 +389,37 @@ The following code example shows how to configure section headers.
             Shape = new UmlClassifierShape()
             {
                 Classifier = ClassifierShape.Class,
+                HeaderStyle = new TextStyle() { Fill = "#334155", Color = "#FFFFFF", Bold = true },
                 ClassShape = new UmlClass()
                 {
                     Name = "Customer",
+
                     AttributeHeaderSettings = new UmlSectionHeaderSettings()
                     {
                         HeaderText = "Properties",
-                        ShowExpandCollapseIcon = true,
+                        ShowExpandCollapseIcon = false,
                         IsExpanded = true,
-                        Style = new TextStyle() { Fill = "#FFFDE7" }
+                        Style = new TextStyle() { Fill = "#475569", Color = "#FFFFFF", Bold = true }
                     },
                     MethodHeaderSettings = new UmlSectionHeaderSettings()
                     {
                         HeaderText = "Operations",
+                        ShowExpandCollapseIcon = true,
                         EnableAddAction = true,
                         EnableRemoveAction = true,
-                        IsExpanded = false
+                        IsExpanded = true,
+                        Style = new TextStyle() { Fill = "#64748B", Color = "#FFFFFF", Bold = true }
                     },
                     Attributes = new DiagramObjectCollection<UmlClassAttribute>()
                     {
-                        new UmlClassAttribute() { Name = "CustomerId", Type = "int",    Scope = UmlScope.Public },
-                        new UmlClassAttribute() { Name = "Email",      Type = "string", Scope = UmlScope.Private }
+                        new UmlClassAttribute() { Name = "CustomerId", Type = "int", Scope = UmlScope.Public, Style = new TextStyle() { Fill = "#E2E8F0", Color = "#334155" } },
+                        new UmlClassAttribute() { Name = "Email", Type = "string", Scope = UmlScope.Private, Style = new TextStyle() { Fill = "#E2E8F0", Color = "#334155" } }
                     },
                     Methods = new DiagramObjectCollection<UmlClassMethod>()
                     {
-                        new UmlClassMethod() { Name = "PlaceOrder", Type = "void", Scope = UmlScope.Public }
+                        new UmlClassMethod() { Name = "PlaceOrder", Type = "void", Scope = UmlScope.Public, Style = new TextStyle() { Fill = "#F8FAFC", Color = "#475569" } },
+                        new UmlClassMethod() { Name = "UpdateProfile", Type = "bool", Scope = UmlScope.Public, Style = new TextStyle() { Fill = "#F8FAFC", Color = "#475569" } },
+                        new UmlClassMethod() { Name = "GetOrderHistory", Type = "List<Order>", Scope = UmlScope.Public, Style = new TextStyle() { Fill = "#F8FAFC", Color = "#475569" } }
                     }
                 }
             }
@@ -389,14 +427,73 @@ The following code example shows how to configure section headers.
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLClassHeaderProperties.razor).
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML ClassHeader Example](./images/UmlClassShapes/UMLClassHeader.png)" %}
 
 ### UmlSectionHeaderSettings Properties
 
 The `UmlSectionHeaderSettings` class provides the following public properties to control section header appearance and behavior:
 
-**Add/Remove Icons**: The `EnableAddAction` and `EnableRemoveAction` properties display interactive buttons in the header. The **+** (add) button allows users to insert new rows into the compartment, while the **–** (remove) button removes selected rows. Both are enabled by default. When the add or remove icon is clicked, the `CollectionChanging` and `CollectionChanged` events are triggered on the respective collection (`Attributes`, `Methods`, or `Members`). The `args.Element` property contains the `UmlClassAttribute`, `UmlClassMethod`, or `UmlEnumerationMember` that was added or removed.
+**Add/Remove Icons**: The `EnableAddAction` and `EnableRemoveAction` properties display interactive buttons in the section header. The **+** button inserts a new row into the compartment, and the **–** button removes the selected row. Both are enabled by default. Clicking either button triggers the `CollectionChanging` and `CollectionChanged` events on the corresponding collection (`Attributes`, `Methods`, or `Members`). The `args.Element` property exposes the `UmlClassAttribute`, `UmlClassMethod`, or `UmlEnumerationMember` that was added or removed.
 
-**Expand/Collapse Icon**: The `ShowExpandCollapseIcon` property displays a **▼** toggle icon in the header, allowing users to expand or collapse the section content. The `IsExpanded` property controls the initial state and reflects the current visibility of the compartment.
+**Expand/Collapse Icon**: The `ShowExpandCollapseIcon` property displays a **▼** toggle in the section header, allowing users to expand or collapse the compartment content. The `IsExpanded` property sets the initial state and reflects the current visibility of the section.
+
+### Collection Change Events
+
+When a row is added or removed through the **+** or **–** buttons, the `CollectionChanging` and `CollectionChanged` events fire on the affected collection (`Attributes`, `Methods`, or `Members`). Use these events to respond to user-initiated changes at runtime.
+
+The following code example shows how to handle the `CollectionChanged` event on a class node's attributes.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes"
+    CollectionChange="@OnCollectionChanged">
+</SfDiagramComponent>
+
+@code {
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes.Add(new Node()
+        {
+            ID = "personNode",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 200,
+            Shape = new UmlClassifierShape()
+            {
+                Classifier = ClassifierShape.Class,
+                ClassShape = new UmlClass()
+                {
+                    Name = "Person",
+                    AttributeHeaderSettings = new UmlSectionHeaderSettings()
+                    {
+                        EnableAddAction    = true,
+                        EnableRemoveAction = true
+                    },
+                    Attributes = new DiagramObjectCollection<UmlClassAttribute>()
+                    {
+                        new UmlClassAttribute() { Name = "Id", Type = "int", Scope = UmlScope.Public }
+                    }
+                }
+            }
+        });
+    }
+
+    private void OnCollectionChanged(CollectionChangedEventArgs args)
+    {
+        if (args.Element is UmlClassAttribute attribute)
+        {
+            Console.WriteLine($"Attribute changed: {attribute.Name}, Action: {args.Action}");
+        }
+    }
+}
+```
+
+> **Note:** The `args.Action` property indicates whether the change was an `Add` or `Remove` operation. The `args.Element` property holds the `UmlClassAttribute`, `UmlClassMethod`, or `UmlEnumerationMember` that was affected.
 
 | Property | Type | Description |
 |---|---|---|
@@ -409,28 +506,57 @@ The `UmlSectionHeaderSettings` class provides the following public properties to
 
 ## Customizing Header Style
 
-The [HeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_HeaderStyle) property of `UmlClassifierShape` accepts a [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of the classifier's name header (the top compartment).
+The [HeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_HeaderStyle) property of `UmlClassifierShape` accepts a [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of the classifier's name header (the top compartment). Use `Fill` to set the background color and `Color` to set the text color.
+
+The following code example shows how to apply a custom header style to a class node.
 
 ```cshtml
-Shape = new UmlClassifierShape()
-{
-    Classifier = ClassifierShape.Class,
-    HeaderStyle = new TextStyle()
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes">
+</SfDiagramComponent>
+
+@code {
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
     {
-        Fill  = "#1565C0",
-        Color = "white"
-    },
-    ClassShape = new UmlClass() { Name = "Vehicle" }
+        nodes.Add(new Node()
+        {
+            ID = "vehicleNode",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 200,
+            Shape = new UmlClassifierShape()
+            {
+                Classifier = ClassifierShape.Class,
+                HeaderStyle = new TextStyle()
+                {
+                    Fill  = "#1565C0",
+                    Color = "white"
+                },
+                ClassShape = new UmlClass()
+                {
+                    Name = "Vehicle",
+                    Attributes = new DiagramObjectCollection<UmlClassAttribute>()
+                    {
+                        new UmlClassAttribute() { Name = "make",  Type = "string", Scope = UmlScope.Private },
+                        new UmlClassAttribute() { Name = "model", Type = "string", Scope = UmlScope.Private }
+                    }
+                }
+            }
+        });
+    }
 }
 ```
 
 ## Editing UML Classifier Members
 
-UML class diagrams support inline editing of classifier members. You can modify attribute names and types, method names and return types, and enumeration member names directly on the canvas.
+UML class diagrams support inline editing of classifier members, allowing you to update attribute names and types, method names and return types, and enumeration member names directly on the canvas without writing any code.
 
 ### How to Edit
 
-- **Double-click** on the row which needs to be edited, or press **F2** while it's selected, then edit the values in the input field.
+- **Double-click** a row to edit it, or select it and press **F2**, then update the values in the input field.
 
 | Member Type | Editable Fields |
 |---|---|
@@ -462,52 +588,78 @@ The following code example shows how to create various relationship connectors.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
+<SfDiagramComponent Height="800px" Connectors="@connectors">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code {
-    DiagramObjectCollection<Node>      nodes      = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        // Class: Animal
-        nodes.Add(new Node()
-        {
-            ID = "Animal", OffsetX = 150, OffsetY = 200, Width = 180,
-            Shape = new UmlClassifierShape()
-            {
-                Classifier = ClassifierShape.Class,
-                ClassShape = new UmlClass() { Name = "Animal" }
-            }
-        });
-
-        // Class: Dog
-        nodes.Add(new Node()
-        {
-            ID = "Dog", OffsetX = 450, OffsetY = 200, Width = 180,
-            Shape = new UmlClassifierShape()
-            {
-                Classifier = ClassifierShape.Class,
-                ClassShape = new UmlClass() { Name = "Dog" }
-            }
-        });
-
-        // Inheritance: Dog → Animal
         connectors.Add(new Connector()
         {
-            ID = "rel1",
-            SourceID = "Dog",
-            TargetID = "Animal",
+            ID = "inheritance",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Inheritance }
+        });
+        connectors.Add(new Connector()
+        {
+            ID = "realization",
+            SourcePoint = new DiagramPoint() { X = 250, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 350, Y = 200 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Realization }
+        });
+        connectors.Add(new Connector()
+        {
+            ID = "aggregation",
+            SourcePoint = new DiagramPoint() { X = 400, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 500, Y = 200 },
             Type = ConnectorSegmentType.Straight,
             Shape = new RelationShip()
             {
-                RelationshipShape = Relationship.Inheritance
+                RelationshipShape = Relationship.Aggregation,
+            }
+        });
+        connectors.Add(new Connector()
+        {
+            ID = "composition",
+            SourcePoint = new DiagramPoint() { X = 550, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 650, Y = 200 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip()
+            {
+                RelationshipShape = Relationship.Composition,
+            }
+        });
+        connectors.Add(new Connector()
+        {
+            ID = "dependency",
+            SourcePoint = new DiagramPoint() { X = 700, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 800, Y = 200 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Dependency }
+        });
+        connectors.Add(new Connector()
+        {
+            ID = "association",
+            SourcePoint = new DiagramPoint() { X = 850, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 950, Y = 200 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip()
+            {
+                RelationshipShape = Relationship.Association,
             }
         });
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlRelationshipShape.razor).
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Relationship Example](./images/UmlClassShapes/UMLRelationShip.png)" %}
 
 ### Association Directionality
 
@@ -609,7 +761,7 @@ The following code example demonstrates applying multiplicity to a connector.
 
 ## Using Separators
 
-Both `UmlClassAttribute`, `UmlClassMethod`, and `UmlEnumerationMember` support a visual separator row. Set `IsSeparator = true` on any item to render a horizontal divider line in that compartment. The separator style can be customized using the `SeparatorStyle` property.
+`UmlClassAttribute`, `UmlClassMethod`, and `UmlEnumerationMember` all support a visual separator row. Set `IsSeparator = true` on any item to render a horizontal divider line in that compartment. Customize the separator's appearance using the `SeparatorStyle` property.
 
 ```cshtml
 Attributes = new DiagramObjectCollection<UmlClassAttribute>()
@@ -628,78 +780,195 @@ UML class shapes can be added to the [Symbol Palette](https://help.syncfusion.co
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
 
-<SfSymbolPaletteComponent Palettes="@palettes" />
-
+<div style="float:left">
+    <SfSymbolPaletteComponent @ref="@palette" Width="320px" Height="900px" Palettes="@palettes" SymbolHeight="@symbolHeight" SymbolWidth="@symbolWidth"
+        SymbolDragPreviewSize="@symbolDragPreviewSize" GetSymbolInfo="GetSymbolInfo">
+    </SfSymbolPaletteComponent>
+</div>
+<div style="float:left">
+        <SfDiagramComponent @ref="@Diagram" Height="700px" Width="600px"></SfDiagramComponent>
+</div>
 @code {
-    DiagramObjectCollection<Palette> palettes = new DiagramObjectCollection<Palette>();
-
+    private SfDiagramComponent Diagram;
+    private DiagramSize symbolDragPreviewSize;
+    private SymbolInfo SymbolInfo = new SymbolInfo();
+    private SfSymbolPaletteComponent palette;
+    private DiagramObjectCollection<Palette> palettes;
+    double symbolHeight = 130;
+    double symbolWidth = 130;
+    private DiagramObjectCollection<NodeBase> umlClassNodes { get; set; }
+    private DiagramObjectCollection<NodeBase> umlConnectors { get; set; }
     protected override void OnInitialized()
     {
-        // Create a palette group for UML shapes
-        Palette umlPalette = new Palette() { Id = "uml", Title = "UML Shapes", IsExpanded = true };
-
-        // Add UML Class shape
-        umlPalette.Symbols.Add(new Node()
+        symbolDragPreviewSize = new DiagramSize();
+        symbolDragPreviewSize.Width = 160;
+        symbolDragPreviewSize.Height = 160;
+        InitializePalatte();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        palette.Targets = new DiagramObjectCollection<SfDiagramComponent>
         {
-            ID = "umlClass",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 150,
+            Diagram
+        };
+    }
+    private void InitializePalatte()
+    {
+        palettes = new DiagramObjectCollection<Palette>();
+        umlClassNodes = new DiagramObjectCollection<NodeBase>();
+        umlClassNodes.Add(new Node
+        {
+            ID = "Class",
+            OffsetX = 160,
+            OffsetY = 200,
+            Width = 200,
+            Height = 200,
             Shape = new UmlClassifierShape()
             {
                 Classifier = ClassifierShape.Class,
+                HeaderStyle = new TextStyle() { Fill = "#E3F2FD", StrokeColor = "#1976D2", Bold = true, Color = "#0D47A1" },
                 ClassShape = new UmlClass()
                 {
-                    Name = "Class",
-                    Attributes = new DiagramObjectCollection<UmlClassAttribute>(),
-                    Methods = new DiagramObjectCollection<UmlClassMethod>()
+                    Name = "ClassName",
                 }
             }
         });
-
-        // Add UML Interface shape
-        umlPalette.Symbols.Add(new Node()
+        umlClassNodes.Add(new Node
         {
-            ID = "umlInterface",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 150,
+            ID = "Interface",
+            OffsetX = 420,
+            OffsetY = 200,
+            Width = 200,
+            Height = 200,
             Shape = new UmlClassifierShape()
             {
                 Classifier = ClassifierShape.Interface,
-                InterfaceShape = new UmlInterface()
+                HeaderStyle = new TextStyle() { Fill = "#E3F2FD", StrokeColor = "#1976D2", Bold = true, Color = "#0D47A1" },
+                InterfaceShape = new UmlInterface
                 {
-                    Name = "Interface",
-                    Methods = new DiagramObjectCollection<UmlClassMethod>()
+                    Name = "InterfaceName",
                 }
             }
         });
-
-        // Add UML Enumeration shape
-        umlPalette.Symbols.Add(new Node()
+        umlClassNodes.Add(new Node
         {
-            ID = "umlEnum",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 150,
+            ID = "Enumeration",
+            OffsetX = 680,
+            OffsetY = 200,
+            Width = 200,
+            Height = 200,
             Shape = new UmlClassifierShape()
             {
                 Classifier = ClassifierShape.Enumeration,
-                EnumerationShape = new UmlEnumeration()
+                HeaderStyle = new TextStyle()
                 {
-                    Name = "Enumeration",
-                    Members = new DiagramObjectCollection<UmlEnumerationMember>()
+                    Fill = "#E3F2FD",
+                    StrokeColor = "#1976D2",
+                    Bold = true,
+                    Color = "#0D47A1"
+                },
+                EnumerationShape = new UmlEnumeration
+                {
+                    Name = "EnumName",
                 }
             }
         });
-
-        palettes.Add(umlPalette);
+        umlConnectors = new DiagramObjectCollection<NodeBase>();
+        umlConnectors.Add(new Connector
+        {
+            ID = "Association",
+            SourcePoint = new DiagramPoint() { X = 110, Y = 0 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 110 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Association }
+        });
+        umlConnectors.Add(new Connector
+        {
+            ID = "Aggregation",
+            SourcePoint = new DiagramPoint() { X = 0, Y = 0 },
+            TargetPoint = new DiagramPoint() { X = 100, Y = 100 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Aggregation }
+        });
+        umlConnectors.Add(new Connector
+        {
+            ID = "Composition",
+            SourcePoint = new DiagramPoint() { X = 230, Y = 120 },
+            TargetPoint = new DiagramPoint() { X = 320, Y = 230 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Composition }
+        });
+        umlConnectors.Add(new Connector
+        {
+            ID = "Inheritance",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 300 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 400 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Inheritance }
+        });
+        umlConnectors.Add(new Connector
+        {
+            ID = "Multiplicity",
+            SourcePoint = new DiagramPoint() { X = 400, Y = 300 },
+            TargetPoint = new DiagramPoint() { X = 500, Y = 400 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip()
+            {
+                RelationshipShape = Relationship.Dependency,
+                Multiplicity = new ClassifierMultiplicity()
+                {
+                    Source = new MultiplicityLabel() { LowerBounds = "1", UpperBounds = "*" },
+                    Target = new MultiplicityLabel() { LowerBounds = "0", UpperBounds = "1" }
+                }
+            }
+        });
+        umlConnectors.Add(new Connector
+        {
+            ID = "BiDirectional",
+            SourcePoint = new DiagramPoint() { X = 120, Y = 120 },
+            TargetPoint = new DiagramPoint() { X = 220, Y = 220 },
+            Type = ConnectorSegmentType.Straight,
+            Shape = new RelationShip() { RelationshipShape = Relationship.Association, AssociationType = AssociationFlow.BiDirectional }
+        });
+        palettes.Add(
+           new Palette()
+           {
+               ID = "BasicShape",
+               Symbols = umlClassNodes,
+               Title = "UML Class Shapes",
+           }
+        );
+        palettes.Add(
+           new Palette()
+           {
+               ID = "ConnectorShape",
+               Symbols = umlConnectors,
+               Title = "UML Class Connector",
+           }
+        );
+    }
+    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
+    {
+        SymbolInfo symbolInfo = new SymbolInfo();
+        string text = string.Empty;
+        text = (symbol as NodeBase).ID;
+        symbolInfo.Width = 75;
+        symbolInfo.Height = 40;
+        symbolInfo.Description = new SymbolDescription()
+        {
+            Text = text,
+            Margin = new DiagramThickness() { Top = 10, Bottom = 10 }
+        };
+        return symbolInfo;
     }
 }
 ```
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLCLassSymlbolShapes.razor).
 
-Users can now drag these predefined UML shapes from the Symbol Palette onto the diagram canvas, then customize them with specific class names, attributes, methods, and relationships.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Message Example](./images/UmlClassShapes/UMLClassSymbolShapes.png)" %}
+
+You can now drag these predefined UML shapes from the Symbol Palette onto the diagram canvas and customize them with specific class names, attributes, methods, and relationships.
 
 > **Note:** The `UmlClassifierShape` automatically computes the node height based on the number of rows in each compartment. Setting an explicit `Height` is not required.
 
-> **Note:** UML classifier nodes only support resizing from the right (East) and bottom (South) edges. Rotation and corner handles are disabled for all classifier types.
+> **Note:** UML classifier nodes only support resizing from the right (East). Rotation and corner handles are disabled for all classifier types.
