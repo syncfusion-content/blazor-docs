@@ -18,8 +18,6 @@ To get started quickly with Blazor 3D Charts component, check on the following v
 
 {% tabcontents %}
 
-{% tabcontent %}
-
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
@@ -31,8 +29,6 @@ To get started quickly with Blazor 3D Charts component, check on the following v
 Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
-
-{% tabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
@@ -57,8 +53,6 @@ cd BlazorWebApp.Client
 {% endtabs %}
 
 {% endtabcontent %}
-
-{% tabcontent %}
 
 {% tabcontent .NET CLI %}
 
