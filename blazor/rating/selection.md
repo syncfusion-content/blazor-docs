@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Selection with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn here all about Selection with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating
 documentation: ug
