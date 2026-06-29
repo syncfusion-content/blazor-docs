@@ -209,7 +209,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrztMhkhMtJdbVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Color Picker component](./images/blazor-colorpicker-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHjdsEfhSURByW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Color Picker component](./images/blazor-colorpicker-component.webp)" %}
 
 ## See also
 

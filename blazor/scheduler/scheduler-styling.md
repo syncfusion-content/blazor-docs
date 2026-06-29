@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style And Appearance in Blazor Scheduler Component | Syncfusion
-description: This section shows classes available to add customized CSS to Syncfusion Blazor scheduler component by overriding the default CSS.
+title: Style And Appearance in Blazor Scheduler Component | Syncfusion®
+description: This section shows classes available to add customized CSS to Blazor scheduler component by overriding the default CSS.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -859,7 +859,7 @@ This CSS selector targets the regular appointments that appear in these vertical
 
 ### All day Appointment in vertical views of scheduler
 
-This CSS selector targets the all-day appointments that appear in the vertical views (Day, Week, and WorkWeek) of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. All-day appointments are events that span an entire day or multiple days without specific start and end times within those days.
+This CSS selector targets the all-day appointments that appear in the vertical views (Day, Week, and WorkWeek) of the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component. All-day appointments are events that span an entire day or multiple days without specific start and end times within those days.
 
 ```cshtml
 
@@ -915,7 +915,7 @@ This CSS selector targets the all-day appointments that appear in the vertical v
 
 ### Appointment in month view of scheduler
 
-This CSS selector targets appointment elements in the month view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. This selector is crucial for customizing how appointments appear in the calendar-style month view, which presents unique visualization challenges due to the compact nature of displaying an entire month at once.
+This CSS selector targets appointment elements in the month view of the Blazor Scheduler component. This selector is crucial for customizing how appointments appear in the calendar-style month view, which presents unique visualization challenges due to the compact nature of displaying an entire month at once.
 
 ```cshtml
 
@@ -968,7 +968,7 @@ This CSS selector targets appointment elements in the month view of the Syncfusi
 
 ### Appointment in timeline views of scheduler
 
-This CSS selector targets appointment elements in the timeline views of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. Timeline views (TimelineDay, TimelineWeek, TimelineWorkWeek) present a unique horizontal orientation of appointments that differs significantly from the traditional vertical or month views.
+This CSS selector targets appointment elements in the timeline views of the Blazor Scheduler component. Timeline views (TimelineDay, TimelineWeek, TimelineWorkWeek) present a unique horizontal orientation of appointments that differs significantly from the traditional vertical or month views.
 
 ```cshtml
 
@@ -1020,7 +1020,7 @@ This CSS selector targets appointment elements in the timeline views of the Sync
 
 ### Appointment in timeline month view of scheduler
 
-This CSS selector targets appointment elements specifically in the timeline month view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. This specialized view combines the horizontal time-based layout of timeline views with the monthly calendar perspective, creating a unique visualization for planning and scheduling.
+This CSS selector targets appointment elements specifically in the timeline month view of the Blazor Scheduler component. This specialized view combines the horizontal time-based layout of timeline views with the monthly calendar perspective, creating a unique visualization for planning and scheduling.
 
 ```cshtml
 
@@ -1073,7 +1073,7 @@ This CSS selector targets appointment elements specifically in the timeline mont
 
 ### Appointment in timeline year view of scheduler
 
-This CSS selector targets appointment elements specifically in the timeline year view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. The Timeline Year view in Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler is designed to display events across an entire year in a horizontal, scrollable layout.
+This CSS selector targets appointment elements specifically in the timeline year view of the Blazor Scheduler component. The Timeline Year view in Blazor Scheduler is designed to display events across an entire year in a horizontal, scrollable layout.
 
 ```cshtml
 
@@ -1125,7 +1125,7 @@ This CSS selector targets appointment elements specifically in the timeline year
 
 ### Appointment in year view of scheduler
 
-This CSS selector targets appointment elements specifically in the year view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. In a year view of a scheduler, appointments are displayed across all 12 months of the year, offering a high-level overview of scheduled events. 
+This CSS selector targets appointment elements specifically in the year view of the Blazor Scheduler component. In a year view of a scheduler, appointments are displayed across all 12 months of the year, offering a high-level overview of scheduled events. 
 
 ```cshtml
 
@@ -1173,7 +1173,7 @@ This CSS selector targets appointment elements specifically in the year view of 
 
 ### Appointment in agenda view of scheduler
 
-This CSS selector targets appointment elements specifically in the agenda view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. An appointment in the agenda view of a scheduler is shown as a simple list of events sorted by date and time.
+This CSS selector targets appointment elements specifically in the agenda view of the Blazor Scheduler component. An appointment in the agenda view of a scheduler is shown as a simple list of events sorted by date and time.
 
 ```cshtml
 
@@ -1224,7 +1224,7 @@ This CSS selector targets appointment elements specifically in the agenda view o
 
 ### Appointment in month agenda view of scheduler
 
-This CSS selector targets appointment elements specifically in the month agenda view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. An appointment in the month agenda view of a scheduler is shown as a list of events organized by day within a selected month. 
+This CSS selector targets appointment elements specifically in the month agenda view of the Blazor Scheduler component. An appointment in the month agenda view of a scheduler is shown as a list of events organized by day within a selected month. 
 
 ```cshtml
 
@@ -1278,7 +1278,7 @@ This CSS selector targets appointment elements specifically in the month agenda 
 
 ### Block appointment in scheduler
 
-This CSS selector targets appointment elements specifically designated as blocked appointments in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. A blocked appointment refers to a reserved time slot during which no other appointments or events can be scheduled.
+This CSS selector targets appointment elements specifically designated as blocked appointments in the Blazor Scheduler component. A blocked appointment refers to a reserved time slot during which no other appointments or events can be scheduled.
 
 ```cshtml
 
@@ -1334,7 +1334,7 @@ This CSS selector targets appointment elements specifically designated as blocke
 
 ### Read only appointment in scheduler.
 
-This CSS selector targets appointment elements that are specifically marked as read-only in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. A read-only appointment in a scheduler refers to an event or time slot that is visible to users but cannot be modified, deleted, or rescheduled through the user interface.
+This CSS selector targets appointment elements that are specifically marked as read-only in the Blazor Scheduler component. A read-only appointment in a scheduler refers to an event or time slot that is visible to users but cannot be modified, deleted, or rescheduled through the user interface.
 
 ```cshtml
 
@@ -1388,7 +1388,7 @@ This CSS selector targets appointment elements that are specifically marked as r
 
 ### Selected Appointments in scheduler.
 
-This CSS selector targets appointment elements that are specifically marked as selected in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. A selected appointment in a scheduler refers to an event that a user has actively clicked on or interacted with. 
+This CSS selector targets appointment elements that are specifically marked as selected in the Blazor Scheduler component. A selected appointment in a scheduler refers to an event that a user has actively clicked on or interacted with. 
 
 ```cshtml
 
@@ -1443,7 +1443,7 @@ This CSS selector targets appointment elements that are specifically marked as s
 
 ### Selected Cells in scheduler.
 
-This CSS selector targets the cells that are specifically marked as selected in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. A selected cell in a scheduler refers to a time slot that a user has actively clicked on or interacted with. 
+This CSS selector targets the cells that are specifically marked as selected in the Blazor Scheduler component. A selected cell in a scheduler refers to a time slot that a user has actively clicked on or interacted with. 
 
 ```cshtml
 
@@ -1497,7 +1497,7 @@ This CSS selector targets the cells that are specifically marked as selected in 
 
 ### Header Cells in scheduler.
 
-This CSS selector targets the cells that are specifically marked as header cells in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. Header cells in a scheduler refer to the top row that display contextual information such as dates and day labels.
+This CSS selector targets the cells that are specifically marked as header cells in the Blazor Scheduler component. Header cells in a scheduler refer to the top row that display contextual information such as dates and day labels.
 
 ```cshtml
 
@@ -1548,7 +1548,7 @@ This CSS selector targets the cells that are specifically marked as header cells
 
 ### Resource cells in vertical views of scheduler.
 
-This CSS selector targets the cells that are specifically marked as resource cells in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. Resource cells in the vertical views of a scheduler are the sections that display the names or labels of resources such as people, rooms, equipment, or services. These cells are usually shown on the top of the scheduler and help organize appointments by resource.
+This CSS selector targets the cells that are specifically marked as resource cells in the Blazor Scheduler component. Resource cells in the vertical views of a scheduler are the sections that display the names or labels of resources such as people, rooms, equipment, or services. These cells are usually shown on the top of the scheduler and help organize appointments by resource.
 
 ```cshtml
 
@@ -1620,7 +1620,7 @@ This CSS selector targets the cells that are specifically marked as resource cel
 
 ### Resource cells in month views of scheduler.
 
-This CSS selector targets the resource cells in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler Month view. These cells show names of resources in month view.
+This CSS selector targets the resource cells in the Blazor Scheduler Month view. These cells show names of resources in month view.
 
 ```cshtml
 
@@ -1693,7 +1693,7 @@ This CSS selector targets the resource cells in the Syncfusion<sup style="font-s
 
 ### Resource cells in timeline views of scheduler.
 
-This CSS selector targets the cells that are specifically marked as resource cells in timeline views of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. Resource cells in the timeline views of a scheduler are usually shown on the left side of the scheduler.
+This CSS selector targets the cells that are specifically marked as resource cells in timeline views of the Blazor Scheduler component. Resource cells in the timeline views of a scheduler are usually shown on the left side of the scheduler.
 
 ```cshtml
 
@@ -1767,7 +1767,7 @@ This CSS selector targets the cells that are specifically marked as resource cel
 
 ### Resource cells in timeline month views of scheduler.
 
-This CSS selector targets the cells that are specifically marked as resource cells in timeline month views of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component.
+This CSS selector targets the cells that are specifically marked as resource cells in timeline month views of the Blazor Scheduler component.
 
 ```cshtml
 
@@ -1839,7 +1839,7 @@ This CSS selector targets the cells that are specifically marked as resource cel
 
 ### Resource cells in timeline month views of scheduler.
 
-This CSS selector targets the cells that are specifically marked as resource cells in timeline month views of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component.
+This CSS selector targets the cells that are specifically marked as resource cells in timeline month views of the Blazor Scheduler component.
 
 ```cshtml
 
@@ -1911,7 +1911,7 @@ This CSS selector targets the cells that are specifically marked as resource cel
 
 ### Parent and child resource cells in timeline views of scheduler.
 
-This CSS selector targets the parent and child resource cells in the timeline views of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. These cells display both parent and child resources (like rooms and individuals) and help organize appointments based on resource hierarchy.
+This CSS selector targets the parent and child resource cells in the timeline views of the Blazor Scheduler component. These cells display both parent and child resources (like rooms and individuals) and help organize appointments based on resource hierarchy.
 
 ```cshtml
 

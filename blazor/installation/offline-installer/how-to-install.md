@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Install the Syncfusion Blazor offline installer | Syncfusion
-description: Learn how to install the Syncfusion Blazor offline installer (EXE or ZIP), unlock with a key or account login, and perform silent installs and uninstalls.
+title: Install the Blazor offline installer | Syncfusion®
+description: Learn how to install the Blazor offline installer (EXE or ZIP), unlock with a key or account login, and perform silent installs and uninstalls.
 platform: Blazor
 control: Common
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor offline installer.
 
-1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor offline installer file(.exe) from the download location by double‑clicking it. The installer wizard opens and extracts the package.
+1. Open the Blazor offline installer file(.exe) from the download location by double‑clicking it. The installer wizard opens and extracts the package.
 
    ![Offline installer setup extracting package](images/webofflineinstaller-1.webp)
 
@@ -26,7 +26,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    **Login to install:**
 
-   Enter the Syncfusion<sup style="font-size:70%">&reg;</sup> account email address and password. If you don’t already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can sign up for one by clicking "**Create an account**". If you have forgotten your password, click on "**Forgot Password**" to create a new one. Once you’ve entered your Syncfusion<sup style="font-size:70%">&reg;</sup> email and password, click Next.
+   Enter the account email address and password. If you don’t already have a account, you can sign up for one by clicking "**Create an account**". If you have forgotten your password, click on "**Forgot Password**" to create a new one. Once you’ve entered your Syncfusion<sup style="font-size:70%">&reg;</sup> email and password, click Next.
 
    ![Offline installer Login to install wizard](images/webofflineinstaller-2.webp)
 
@@ -52,15 +52,15 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    * Select **Configure Syncfusion Extensions controls in Visual Studio** to configure extensions, or clear it to skip configuration.
 
-   * Select **Create Desktop Shortcut** to add a shortcut for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
+   * Select **Create Desktop Shortcut** to add a shortcut for Control Panel.
 
-   * Select **Create Start menu shortcut** to add a shortcut to the Start menu entry for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
+   * Select **Create Start menu shortcut** to add a shortcut to the Start menu entry for Control Panel.
 
 5. If previous versions of the current product is installed, the Uninstall previous versions wizard opens. Select **Uninstall** to remove the previous versions, then select **Proceed**.
 
    ![Offline installer Uninstall previous versions wizard](images/webofflineinstaller-5.webp)
 
-   N> From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version. <br /> <br /> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
+   N> From the 2021 Volume 1 release, has added the option to uninstall previous versions from 18.1 while installing the new version. <br /> <br /> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
 
    **Confirmation alert:**
 
@@ -78,19 +78,19 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
    ![Web Offline Installer Summary Wizard](images/webofflineinstaller-9.webp)
 
-6. After installation, select **Launch Control Panel** to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
+6. After installation, select **Launch Control Panel** to open the Control Panel.
 
-7. Select **Finish**. The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor product is installed.
+7. Select **Finish**. The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor product is installed.
 
 ## Install in silent mode
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor installer supports installation and uninstallation via the command line.
+The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor installer supports installation and uninstallation via the command line.
 
 ***Command-line installation***
 
 To install through the Command Line in Silent mode, follow the steps below.
 
-1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Run the Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
 2. The file syncfusionessentialblazor_(version).exe file will be extracted into the Temp directory.
 
@@ -114,7 +114,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 ## Command-line uninstallation
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Blazor can be uninstalled silently using the Command Line.
+Essential<sup style="font-size:70%">&reg;</sup> Blazor can be uninstalled silently using the Command Line.
 
 1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
