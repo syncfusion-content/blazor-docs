@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize AI Assistant Popup in Syncfusion Smart Rich Text Editor
-description: Customize the AI Assistant popup CSS selectors, animation examples, responsive sizing, and processing-state styles for consistent theming.
+title: Customize AI Assistant Popup in Smart Rich Text Editor | Syncfusion®
+description: Customize the AI Assistant popup CSS selectors, animation examples, responsive sizing, and processing-state styles for consistent theming and much more details.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug

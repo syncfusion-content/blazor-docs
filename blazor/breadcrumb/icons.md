@@ -27,7 +27,7 @@ To place the font icon on the Breadcrumb item, set the [IconCss](https://help.sy
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLRDniWfSAqnGJs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLRDniWfSAqnGJs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-items.webp)" %}
 
 N> By default, the icon is positioned to the left side of the item.
 
@@ -118,4 +118,4 @@ To show icon only for the first item in the Breadcrumb component, add icons to t
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdZxMMfoJYQwyj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdZxMMfoJYQwyj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-items.webp)" %}

@@ -144,7 +144,7 @@ The DialogButton element allows you to define action buttons in the dialog foote
 
 ## Using FooterTemplate Property
 
-Alternatively, you can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_FooterTemplate) property to fully customize the footer layout and include buttons with icons manually using Button.
+Alternatively, you can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_FooterTemplate) property to fully customize the footer layout and include buttons with icons manually using Blazor Button.
 
 ```cshtml
 
