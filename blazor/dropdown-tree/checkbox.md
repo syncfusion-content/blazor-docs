@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Checkbox in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Checkbox in Syncfusion Blazor Dropdown Tree component and much more.
+title: Checkbox in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Checkbox in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -122,4 +122,4 @@ In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/bla
 }
 ```
 
-![MultiSelection in Blazor Dropdown Tree.](./images/blazor-dropdowntree-component-selectall.PNG)
+![MultiSelection in Blazor Dropdown Tree.](./images/blazor-dropdowntree-component-selectall.webp)

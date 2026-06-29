@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Get selected items from Blazor ListView Component | Syncfusion
-description: Learn here all about getting the selected items in Syncfusion Blazor ListView component and much more.
+title: Get selected items from Blazor ListView Component | Syncfusion®
+description: Learn here all the features about getting the selected items in Blazor ListView component and much more details.
 platform: Blazor
 control: ListView
 documentation: ug
 ---
 
-# Retrieving Selected Items in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView
+# Retrieving Selected Items in Blazor ListView
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView component allows users to choose multiple items from a list. To retrieve these selected items, you can refer the below implementation in ListView component. This functionality is especially useful for applications that need to process or display data based on user selections.
+The Blazor ListView component allows users to choose multiple items from a list. To retrieve these selected items, you can refer the below implementation in ListView component. This functionality is especially useful for applications that need to process or display data based on user selections.
 
 ## Get selected items from ListView Component
 
-The ListView component in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor allows to select multiple items. The [`GetCheckedItemsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GetCheckedItemsAsync) method is utilized to retrieve these selected items. Below are the details of this API:
+The ListView component in Blazor allows to select multiple items. The [`GetCheckedItemsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GetCheckedItemsAsync) method is utilized to retrieve these selected items. Below are the details of this API:
 
 | Return type | Purpose |
 |------------|-------------------|
@@ -108,7 +108,7 @@ Here's a code snippet illustrating the implementation:
 </style>
 ```
 
-![Getting Selected Item in Blazor ListView](../images/list/get-selected-items-from-listview.png)
+![Getting Selected Item in Blazor ListView](../images/list/get-selected-items-from-listview.webp)
 
 
 ## Get selected items from custom template in Blazor ListView Component
@@ -198,5 +198,5 @@ In scenarios where you build custom templates in Blazor ListView Component, you 
 </style>
 ```
 
-![Getting Selected Item from Blazor ListView](../images/list/blazor-listview-display-seleted-item.png)
+![Getting Selected Item from Blazor ListView](../images/list/blazor-listview-display-seleted-item.webp)
 
