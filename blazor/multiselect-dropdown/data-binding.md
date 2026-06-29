@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Data Binding in Blazor MultiSelect Dropdown Component | Syncfusion®
+description: Checkout and learn here all about data binding in Blazor MultiSelect Dropdown component and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
