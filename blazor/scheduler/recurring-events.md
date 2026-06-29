@@ -212,7 +212,7 @@ N>To edit/delete following recurrence events into the scheduler, set [`AllowEdit
 }
 ```
 
-![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.png)
+![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.webp)
 
 ## Daily Frequency
 
