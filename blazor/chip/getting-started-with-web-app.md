@@ -226,8 +226,6 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHZdiHfAktzSyb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chips Component](./images/blazor-chip-component.webp)" %}
 
-N> You can also explore our [Blazor Chips example](https://blazor.syncfusion.com/demos/chips/default-functionalities) that shows how to render and configure the Chips.
-
 ## Render chips items from collection
 
 You can render the chips items from collection using for loop in Blazor Chips component as follows.
