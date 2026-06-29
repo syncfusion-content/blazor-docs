@@ -196,7 +196,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
     ```
 3. The application will start and display in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTjshOAyMLHrtb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownMenu Component](./images/blazor-dropdownmenu-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLHNRBOKPQgifpF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DropDownMenu Component](./images/blazor-dropdownmenu-component.webp)" %}
 
 N> You can also explore our [Blazor Dropdown Menu example](https://blazor.syncfusion.com/demos/buttons/dropdown-menu?theme=bootstrap5) that shows how to render and configure the component.
 

@@ -58,4 +58,4 @@ In this sample, three different SfDropDownButton instances are rendered, each sh
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVTWhizMQTMfCYP?appbar=false&editor=false&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Changing Blazor DropDownMenu Animation](./images/blazor-dropdownmenu-animation.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBxjdVkgGcuguUV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor DropDownMenu Animation](./images/blazor-dropdownmenu-animation.webp)" %}
