@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in Blazor Stepper Component | Syncfusion
+title: Tooltip in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Tooltip with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -55,7 +55,7 @@ The tooltip appears when the user hovers over the step, providing the informatio
 
 ```
 
-![Blazor Stepper Component with Tooltip](./images/Blazor-tooltip.png)
+![Blazor Stepper Component with Tooltip](./images/Blazor-tooltip.webp)
 
 ## Tooltip template
 
@@ -138,4 +138,4 @@ When hovering over the step, the current step model is passed in the template co
 
 ```
 
-![Blazor Stepper Component with Tooltip Template](./images/Blazor-tooltip-template.png)
+![Blazor Stepper Component with Tooltip Template](./images/Blazor-tooltip-template.webp)
