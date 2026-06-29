@@ -10,7 +10,7 @@ documentation: ug
 
 # Exporting PDF with templates
 
-The Gantt Chart export functionality allows you to export both column and header templates to a PDF document. These templates can include various customizations such as images, formatted text, and custom cell styles within the header and columns. 
+The Gantt chart export functionality allows you to export both column and header templates to a PDF document. These templates can include various customizations such as images, formatted text, and custom cell styles within the header and columns. 
 
 ## Exporting with column template
 
