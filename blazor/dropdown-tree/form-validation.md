@@ -167,4 +167,4 @@ When the Dropdown Tree input is valid, the form is ready to be submitted. If the
 }
 ```
 
-![Blazor Dropdown Tree inside editform](./images/blazor-dropdowntree-component-validation.PNG)
+![Blazor Dropdown Tree inside editform](./images/blazor-dropdowntree-component-validation.webp)

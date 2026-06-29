@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about the accessibility in Syncfusion Blazor Kanban component and much more.
+title: Accessibility in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all about the accessibility in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -86,4 +86,4 @@ The accessibility compliance of the Kanban component is shown in the following s
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
