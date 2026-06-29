@@ -9,27 +9,27 @@ documentation: ug
 
 # Customize Blazor Component Themes with Theme Studio
 
-Theme Studio for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), and Range Navigator.
+[Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=fluent2) for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map), and [Blazor Range Navigator](https://www.syncfusion.com/blazor-components/blazor-range-selector).
 
 ## Customize theme colors from Theme Studio
 
 The Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the [Blazor components](https://www.syncfusion.com/blazor-components). All Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
-1. Open [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3) application.
+1. Open [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=fluent2) application.
 2. The Theme Studio application page can be divided into two sections: the components preview section on the left, and the theme customization section on the right.
 ![Theme Studio two-sections](images/two-pane.webp)
 3. Click the color pickers in the theme customization section to select your desired colors.
 ![Theme Studio color picker](images/colorpicker.webp)
-4. The Blazor components are rendered with the newly selected colors in the preview section after selecting a custom color from the picker.
+4. The Blazor components are rendered with the newly selected colors in the preview section after selecting a custom color from the color picker.
 ![Theme Studio customized](images/customized.webp)
 
 ### Filter a specific list of components
 
 Using the theme studio, you can apply custom themes to a list of specific components. This option is used when you integrate a selective list of [Blazor components](https://www.syncfusion.com/blazor-components) in your application. The theme studio will filter the selected components and customize the final output for the components’ styles alone by reducing the final output file size.
 
-1. Click the Filter icon at the top-right corner, and select the components whose theme you want to customize.
+1. Click the **Filter** icon at the top-right corner, and select the components whose theme you want to customize.
 ![Theme Studio filter-icon](images/filter-icon.webp)
-2. Click the Apply button in the Filter dialog. Now, only the selected components will be rendered in the components preview section.
+2. Click the **Apply** button in the Filter dialog. Now, only the selected components will be rendered in the components preview section.
 ![Theme Studio filter-dialog](images/filter-dialog.webp)
 3. Now, you can customize the colors in the theme customization section for the components selected.
 ![Theme Studio filter-customized](images/filter-customized.webp)
@@ -38,11 +38,11 @@ Using the theme studio, you can apply custom themes to a list of specific compon
 
 You can download the custom styles after customizing the theme colors.
 
-1. Click the Download button at the top-right corner, and the Download dialog will appear.
+1. Click the **Download** button at the top-right corner, and the Download dialog will appear.
 ![Theme Studio download-icon](images/download-icon.webp)
-2. Assign a theme name in the File Name field, and click the Download button.
+2. Assign a theme name in the **File Name** field, and click the **Download** button.
 ![Theme Studio download-dialog](images/download-dialog.webp)
-3. The download styles will come as a zip file that contains SCSS and CSS files for the selected [Blazor components](https://www.syncfusion.com/blazor-components). The current settings are stored in the `settings.json` file.
+3. The download styles will come as a zip file that contains `SCSS` and `CSS` files for the selected [Blazor components](https://www.syncfusion.com/blazor-components). The current settings are stored in the `settings.json` file.
 
 ![Theme Studio output-files](images/output-files.webp)
 
@@ -65,13 +65,13 @@ Before applying a custom theme, ensure you have created a Blazor project. For gu
 
 ## Import previous settings into Theme Studio
 
-If you need to change your application theme and UI design in the future, do not customize the Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
+If you need to change your application theme and UI design in the future, do not customize the [Blazor components](https://www.syncfusion.com/blazor-components) from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=fluent2) application.
 
-1. Click the Import icon at the top-right corner.
+1. Click the **Import** icon at the top-right corner.
 ![Theme Studio import-icon](images/import-icon.webp)
-2. The Import Theme dialog will open. Click the Browse button and select the `settings.json` file you exported previously.
+2. The Import Theme dialog will open. Click the **Browse** button and select the `settings.json` file you exported previously.
 ![Theme Studio import dialog](images/import-dialog.webp)
-3. Click the Import button.
+3. Click the **Import** button.
 ![Theme Studio imported-settings](images/imported-settings.webp)
 4. The stored data will be reflected in the Theme Studio application. Now, you can change the theme colors based on your latest design and export the theme again.
 ![Theme Studio filter-customized](images/filter-customized.webp)
@@ -3022,7 +3022,7 @@ Design based on Bootstrap 3 theme.
 
 ## Overriding Blazor Theme Studio variables using Sass `@use` and `with()`
 
-When working with Blazor Theme Studio, you may want to override predefined theme variables without editing the generated theme files directly.
+When working with [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=fluent2), you may want to override predefined theme variables without editing the generated theme files directly.
 
 The recommended Sass approach is to use the module system with `@use` and `with()`.
 
@@ -3042,7 +3042,7 @@ Create or update your `Custom.scss` file, or any other global stylesheet:
 
 ### Override the Theme Studio variable
 
-Import the generated Theme Studio stylesheet, such as `material3.scss`, and configure the variable with `with()`:
+Import the generated [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=fluent2) stylesheet, such as `material3.scss`, and configure the variable with `with()`:
 
 {% tabs %}
 {% highlight scss %}
