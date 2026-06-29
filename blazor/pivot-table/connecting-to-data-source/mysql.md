@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "MySQL Data Binding in Blazor Pivot Table Component | Syncfusion"
+title: "MySQL Data Binding in Blazor Pivot Table Component | Syncfusion®"
 component: "Pivot Table"
-description: "Learn how to connect a MySQL database to the Syncfusion Blazor Pivot Table using the MySql.Data library."
+description: "Learn how to connect a MySQL database to the Blazor Pivot Table component using the MySql.Data library and much more details."
 platform: Blazor
 documentation: ug
 ---
@@ -11,7 +11,7 @@ documentation: ug
 
 This guide explains how to connect a MySQL database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display MySQL data.
 
-## Connecting a MySQL Database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
+## Connecting a MySQL Database to a Blazor Pivot Table
 
 This section describes how to connect the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) to a MySQL database by directly retrieving data using the [MySql.Data](https://www.nuget.org/packages/MySql.Data) library.
 
@@ -104,7 +104,7 @@ The following code connects to a MySQL database, retrieves data, and binds it to
 
 ![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.webp)
 
-## Connecting a MySQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
+## Connecting a MySQL to a Blazor Pivot Table via Web API service
 
 This section explains how to create a Web API service to fetch data from a MySQL database and connect it to the Blazor Pivot Table.
 
