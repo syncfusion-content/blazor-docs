@@ -174,7 +174,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component lets
 
 ## Column formatting
 
-The Blazor Gantt Chart  component for Blazor supports column formatting to customize data presentation. You can format numbers, dates, or apply templates based on specific requirements. Use the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property to define the desired format for each column.
+The Gantt Chart component for Blazor supports column formatting to customize data presentation. You can format numbers, dates, or apply templates based on specific requirements. Use the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property to define the desired format for each column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -241,7 +241,7 @@ The Blazor Gantt Chart  component for Blazor supports column formatting to custo
 
 ### Number formatting
 
-The Blazor Gantt Chart  component for Blazor supports number formatting through the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where standard format strings define numeric value presentation including currency, percentage, and decimal formats. The following standard format strings are available:
+The Gantt Chart component for Blazor supports number formatting through the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where standard format strings define numeric value presentation including currency, percentage, and decimal formats. The following standard format strings are available:
 
 | Format | Description        | Remarks                                                                 |
 |--------|--------------------|-------------------------------------------------------------------------|

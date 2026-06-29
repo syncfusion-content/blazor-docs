@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor Gantt Chart Component
 
-Filtering allows you to view specific or related records based on defined criteria. The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component supports options like filter menu, Excel-like filtering, and toolbar search to narrow down visible data.
+Filtering allows you to view specific or related records based on defined criteria. The Gantt Chart component supports options like filter menu, Excel-like filtering, and toolbar search to narrow down visible data.
 
 To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true** in the Gantt Chart configuration. You can define filter options using `GanttFilterSettings` and configure toolbar search using `GanttSearchSettings` property.
 

@@ -154,7 +154,7 @@ You can make the Gantt Chart component responsive by setting its [Height](https:
 
 ## Auto focus taskbar on row click 
 
-You can enable automatic scrolling to the corresponding taskbar in the timeline when a row is clicked in the Blazor Gantt Chart by using the [ScrollToTaskbarOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarOnClick) property. This feature ensures that the selected task is brought into view within the timeline area, improving navigation and focus during interaction.
+You can enable automatic scrolling to the corresponding taskbar in the timeline when a row is clicked in the Blazor Gantt chart by using the [ScrollToTaskbarOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarOnClick) property. This feature ensures that the selected task is brought into view within the timeline area, improving navigation and focus during interaction.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

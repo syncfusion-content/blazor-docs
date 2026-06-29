@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Blazor Gantt Chart component
 
-The clipboard feature allows copying selected row or cell data from the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component.
+The clipboard feature allows copying selected row or cell data from the Gantt Chart component.
 
 The following keyboard shortcut is supported for clipboard operations:
 
