@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mail merge in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about Mail merge in Syncfusion Blazor RichTextEditor control and much more.
+description: Learn how to perform mail merge operations in Blazor Rich Text Editor to generate personalized content.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Image in Syncfusion Blazor RichTextEditor component and much more.
+description: Checkout and learn here all the features about Image in Blazor RichTextEditor component and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

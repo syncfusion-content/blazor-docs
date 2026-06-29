@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HttpClientInstance in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about HttpClientInstance in Syncfusion Blazor RichTextEditor component and much more.
+description: Learn how to configure and use HttpClient instance in Blazor Rich Text Editor for HTTP requests and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
