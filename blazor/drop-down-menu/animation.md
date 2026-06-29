@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about Customize popup width in in Blazor Dropdown Menu component and more.
+description: Check out and learn here all about Customize popup width in Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
