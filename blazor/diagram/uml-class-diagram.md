@@ -90,7 +90,7 @@ The following code example shows how to create a UML class node.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLClassShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML CLass Example](./images/UmlClassShapes/UMLClassShape.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML CLass Example](./images/UmlClassShapes/UMLClassShape.webp)" %}
 
 **UmlClass Properties**
 
@@ -160,7 +160,7 @@ The following code example shows how to create a UML interface node.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLInterfaceShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Interface Example](./images/UmlClassShapes/UMLInterfaceShape.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Interface Example](./images/UmlClassShapes/UMLInterfaceShape.webp)" %}
 
 ## UML Enumeration
 
@@ -206,7 +206,7 @@ The following code example shows how to create a UML enumeration node.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlEnumerationShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Enumeration Example](./images/UmlClassShapes/UMLEnumeration.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Enumeration Example](./images/UmlClassShapes/UMLEnumeration.webp)" %}
 
 **UmlEnumeration Properties**
 
@@ -533,7 +533,7 @@ The following code example shows how to configure section headers and handle col
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLClassHeaderProperties.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML ClassHeader Example](./images/UmlClassShapes/UMLClassHeader.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML ClassHeader Example](./images/UmlClassShapes/UMLClassHeader.webp)" %}
 
 ## Editing UML Classifier Members
 
@@ -553,12 +553,12 @@ The [RelationshipShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 | Relationship | Description | Example |
 |---|---|--|
-| `Association` | A general navigable link between classifiers | ![Association](images/UmlClassShapes/AssociationConnector.png) |
-| `Aggregation` | A "has-a" relationship with a hollow diamond at the source | ![Aggregation](images/UmlClassShapes/AggregationConnector.png) |
-| `Composition` | A strong "owns-a" relationship with a filled diamond at the source | ![Composition](images/UmlClassShapes/CompositionConnector.png) |
-| `Inheritance` | An "is-a" relationship with an open triangle arrowhead at the target | ![Inheritance](images/UmlClassShapes/InheritanceConnector.png) |
-| `Dependency` | A dashed arrow expressing a usage dependency | ![Dependency](images/UmlClassShapes/MultiplicityConnector.png) |
-| `Realization` | A dashed line with an open triangle (interface implementation) | ![Realization](images/UmlClassShapes/RealizationConnector.png) |
+| `Association` | A general navigable link between classifiers | ![Association](images/UmlClassShapes/AssociationConnector.webp) |
+| `Aggregation` | A "has-a" relationship with a hollow diamond at the source | ![Aggregation](images/UmlClassShapes/AggregationConnector.webp) |
+| `Composition` | A strong "owns-a" relationship with a filled diamond at the source | ![Composition](images/UmlClassShapes/CompositionConnector.webp) |
+| `Inheritance` | An "is-a" relationship with an open triangle arrowhead at the target | ![Inheritance](images/UmlClassShapes/InheritanceConnector.webp) |
+| `Dependency` | A dashed arrow expressing a usage dependency | ![Dependency](images/UmlClassShapes/MultiplicityConnector.webp) |
+| `Realization` | A dashed line with an open triangle (interface implementation) | ![Realization](images/UmlClassShapes/RealizationConnector.webp) |
 
 The following code example shows how to create various relationship connectors.
 
@@ -636,7 +636,7 @@ The following code example shows how to create various relationship connectors.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlRelationshipShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Relationship Example](./images/UmlClassShapes/UMLRelationShip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Relationship Example](./images/UmlClassShapes/UMLRelationShip.webp)" %}
 
 ### RelationShip
 
@@ -654,8 +654,8 @@ When `RelationshipShape` is set to `Relationship.Association`, the [AssociationT
 
 | Value | Description | Example |
 |---|---|---|
-| `AssociationFlow.Directional` | Arrow points from source to target | ![Directional](images/UmlClassShapes/Directional.png) |
-| `AssociationFlow.BiDirectional` | Arrows point in both directions | ![BiDirectional](images/UmlClassShapes/BiDirectional.png) |
+| `AssociationFlow.Directional` | Arrow points from source to target | ![Directional](images/UmlClassShapes/Directional.webp) |
+| `AssociationFlow.BiDirectional` | Arrows point in both directions | ![BiDirectional](images/UmlClassShapes/BiDirectional.webp) |
 
 ```cshtml
 Shape = new RelationShip()
@@ -711,7 +711,7 @@ The following code example demonstrates applying multiplicity to a connector.
 
         nodes.Add(new Node()
         {
-            ID = "Product", OffsetX = 450, OffsetY = 200, Width = 180,
+            ID = "Product", OffsetX = 250, OffsetY = 350, Width = 180,
             Shape = new UmlClassifierShape()
             {
                 Classifier = ClassifierShape.Class,
@@ -721,10 +721,10 @@ The following code example demonstrates applying multiplicity to a connector.
 
         connectors.Add(new Connector()
         {
-            ID = "rel1",
+            ID = "relation",
             SourceID = "Order",
             TargetID = "Product",
-            Type = ConnectorSegmentType.Straight,
+            Type = ConnectorSegmentType.Orthogonal,
             Shape = new RelationShip()
             {
                 RelationshipShape = Relationship.Aggregation,
@@ -739,6 +739,7 @@ The following code example demonstrates applying multiplicity to a connector.
     }
 }
 ```
+![ClassifierMultiplicity in Blazor Diagram](images/UmlClassShapes/ClassifierMultiplicity.webp)
 
 ## Adding UML Class Shapes to Symbol Palette
 
@@ -933,7 +934,7 @@ UML class shapes can be added to the [Symbol Palette](https://help.syncfusion.co
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLCLassSymlbolShapes.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Message Example](./images/UmlClassShapes/UMLClassSymbolShapes.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Class Symbol Example](./images/UmlClassShapes/UMLClassSymbolShapes.webp)" %}
 
 You can now drag these predefined UML shapes from the Symbol Palette onto the diagram canvas and customize them with specific class names, attributes, methods, and relationships.
 
