@@ -21,7 +21,7 @@ cd ej2-aspcore-file-provider
 
 After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, you need to set the root directory of the physical file system in the File Manager controller.
 
-After setting the root directory of the file system, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component to the appropriate controller methods allows to manage the files in the physical file system.
+After setting the root directory of the file system, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the File Manager component to the appropriate controller methods allows to manage the files in the physical file system.
 
 ```cshtml
 
