@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Index in Blazor Gantt Chart Component | Syncfusion
-description: Explore the overview of the Syncfusion Blazor Gantt Chart component, covering key concepts, functionalities, and usage guidelines.
+title: Index in Blazor Gantt Chart Component | Syncfusion®
+description: Explore the overview of the Blazor Gantt Chart component, covering key concepts, functionalities, and usage guidelines.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

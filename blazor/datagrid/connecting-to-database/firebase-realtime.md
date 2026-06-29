@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid connected to Firebase Realtime Database | Syncfusion
+title: Blazor Data Grid connected to Firebase Realtime Database | Syncfusion®
 description: Bind Firebase Realtime Database data to Blazor Data Grid using REST API with complete CRUD, filtering, sorting, paging, and real-time synchronization.
 platform: Blazor
 control: DataGrid
@@ -229,7 +229,7 @@ Security rules control read/write access to the Realtime Database paths.
 
 ### Step 5: Install Required NuGet Packages
 
-NuGet packages are software libraries that add functionality to the Blazor application. For Realtime Database integration, only Syncfusion components are required (HttpClient is built-in).
+NuGet packages are software libraries that add functionality to the Blazor application. For Realtime Database integration, only Blazor components are required (HttpClient is built-in).
 
 **Prerequisites for this step:**
 - A new Blazor Web Application created using the default template
@@ -588,7 +588,7 @@ The Firebase service class has been successfully created in `Services/FirebaseSe
 
 ### Step 9: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable HttpClient, Firebase service, and Syncfusion components.
+The `Program.cs` file is where application services are registered and configured. This file must be updated to enable HttpClient, Firebase service, and Blazor components.
 
 **Instructions:**
 
@@ -606,7 +606,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register Syncfusion Blazor services
+// Register Blazor services
 builder.Services.AddSyncfusionBlazor();
 
 // Register HttpClient for Firebase REST API calls
@@ -644,7 +644,7 @@ The service registration has been completed successfully in `Program.cs`.
 
 ---
 
-## Integrating Syncfusion Blazor DataGrid
+## Integrating Blazor DataGrid
 
 ### Step 1: Configure Blazor DataGrid Components
 
@@ -663,19 +663,19 @@ Syncfusion is a library that provides pre-built UI components like DataGrid, whi
 @using Syncfusion.Blazor.DropDowns
 ```
 
-* Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+* Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Grid component's [getting‑started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation.
 
 ---
 

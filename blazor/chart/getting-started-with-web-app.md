@@ -139,7 +139,7 @@ N>
 
 ## Register Blazor service
 
-Register the Blazor service in the **Program.cs** file of your Blazor Web App. This step enables the components to work in your application.
+Register the Blazor service in the **Program.cs** file of your Blazor Web App. This step enables the Blazor components to work in your application.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -157,7 +157,7 @@ N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, registe
 
 ## Add script resources
 
-The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file (this is the root layout file of your application).
+The JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file (this is the root layout file of your application).
 
 ```html
 

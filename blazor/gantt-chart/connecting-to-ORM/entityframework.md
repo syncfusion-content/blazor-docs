@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Gantt Chart with SQL using Entity Framework | Syncfusion
+title: Blazor Gantt Chart with SQL using Entity Framework | Syncfusion®
 description: Bind SQL Server data to Blazor Gantt Chart using Entity Framework core with CRUD, filtering and sorting.
 platform: Blazor
 control: Gantt Chart
@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQL Server to Blazor Gantt Chart via Entity Framework
 
-The Syncfusion Blazor Gantt Chart supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
+The Blazor Gantt Chart supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
 
 **What is Entity Framework Core?**
 
@@ -100,7 +100,7 @@ After executing this script, the records are stored in the `TaskData` table with
 
 Before installing the necessary NuGet packages, a new Blazor Web Application must be created using the default template. This template automatically generates essential starter files such as **Program.cs**, **appsettings.json**, **wwwroot**, and **Components**.
 
-For this guide, a Blazor application named **GanttEFUrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add Syncfusion UI components.
+For this guide, a Blazor application named **GanttEFUrlAdaptor** has been created. Once the project is set up, the next step involves installing the required NuGet packages. These packages enable Entity Framework Core with SQL Server provider and add Blazor UI components.
 
 **Method 1: Using Package Manager Console**
 
@@ -280,7 +280,7 @@ The controller has been created with basic endpoint.
 
 ### Step 7: Register services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This step enables Entity Framework Core, controllers, Syncfusion Blazor, and maps controller routes.
+The `Program.cs` file is where application services are registered and configured. This step enables Entity Framework Core, controllers, Blazor, and maps controller routes.
 
 **Instructions:**
 
@@ -337,9 +337,9 @@ app.Run();
 - `AddControllers()` registers MVC controllers for REST endpoints.
 - `AddDbContext<TaskDbContext>()` configures Entity Framework core to use SQL Server with the `ConnectionString` from appsettings.json.
 - `MapControllers()` exposes routes like `/api/Gantt`.
-- Syncfusion Blazor and Razor components are registered for the UI.
+- Blazor and Razor components are registered for the UI.
 
-## Integrating Syncfusion Blazor Gantt Chart with UrlAdaptor
+## Integrating Blazor Gantt Chart with UrlAdaptor
 
 ### Step 1: Install and configure Blazor Gantt Chart Components
 
@@ -355,19 +355,19 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 @using Syncfusion.Blazor.Data
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+3. Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Theme Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/fluent.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the **fluent** theme is used. A different theme can be selected or customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the **fluent** theme is used. A different theme can be selected or customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor Gantt Chart
 
