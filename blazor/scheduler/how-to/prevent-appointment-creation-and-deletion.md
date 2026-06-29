@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent EventCreation and Deletion in Blazor Scheduler | Syncfusion
-description: Learn here all about preventing specific CRUD actions instead of setting read only in Syncfusion Blazor Scheduler component and more.
+description: Learn here all about preventing specific CRUD actions instead of setting read only in Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
