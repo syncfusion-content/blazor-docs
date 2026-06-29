@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Auto Height in Blazor Scheduler Component | Syncfusion
-description: Learn the way to auto-adjust the height of the work cells of Syncfusion Blazor Scheduler based on the number of events present in those time ranges.
+description: Learn the way to auto-adjust the height of the work cells of Blazor Scheduler based on the number of events present in those time ranges.
 platform: Blazor
 control: Scheduler
 documentation: ug
