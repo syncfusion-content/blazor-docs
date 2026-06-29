@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about localization in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Localization in Blazor MultiSelect Dropdown Component | Syncfusion®
+description: Checkout and learn here all about localization in Blazor MultiSelect Dropdown component and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) supports localization of built-in UI text (for example, select all, no records, clear). Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to configure culture files and resource keys for Syncfusion components.
+The [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) supports localization of built-in UI text (for example, select all, no records, clear). Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to configure culture files and resource keys for Blazor components.
 ## Globalization
 
 ### Enable right-to-left (RTL) mode

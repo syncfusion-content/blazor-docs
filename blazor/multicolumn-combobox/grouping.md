@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about grouping support in Syncfusion Blazor MultiColumn ComboBox component, it's elements and more.
+title: Grouping in Blazor MultiColumn ComboBox Component | Syncfusion®
+description: Checkout and learn here all about grouping support in Blazor MultiColumn ComboBox component, it's elements and more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

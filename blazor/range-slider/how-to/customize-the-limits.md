@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the limits in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about how to customize the limits in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about how to customize the limits in Blazor Range Slider component with examples and much more details.
 platform: Blazor
 control: Range Slider
 documentation: ug

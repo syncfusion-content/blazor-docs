@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Switching to older themes style in Blazor Pivot Table | Syncfusion
-description: Learn here all about switching to older themes style in Syncfusion Blazor Pivot Table component and more.
+title: Switching to Older Themes Style in Blazor Pivot Table | Syncfusion®
+description: Learn how to switch to older themes style in Blazor Pivot Table component with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -12,7 +12,7 @@ documentation: ug
 
 # Switching to older themes style in Blazor Pivot Table Component
 
-Since Volume 1, 2020, Syncfusion<sup style="font-size:70%">&reg;</sup> has revised the theming and layout of the Pivot Table. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
+Since Volume 1, 2020, the Pivot Table theming and layout has been revised. If you prefer the appearance of the earlier theme, you can revert to it by making specific changes. This guide explains how to restore the older theme's style by modifying the CSS to adjust cell background colors and set the row height to match the previous layout.
 
 ## CSS Selectors
 

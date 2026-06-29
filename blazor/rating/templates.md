@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Templates with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn here all about Templates with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating
 documentation: ug
@@ -75,7 +75,7 @@ N> The current value of the rating item is available in the template context (`R
 
 ## Full (rated) symbol template
 
-To customize the appearance of **rated** items in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
+To customize the appearance of **rated** items in the Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
 The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the rated item, such as its `Value` and `Index`.
 
 ```cshtml

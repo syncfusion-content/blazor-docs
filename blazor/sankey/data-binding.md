@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding for Blazor Sankey Diagram | Syncfusion
-description: Learn how to bind nodes and links to the Syncfusion Blazor Sankey Diagram, including data models, REST API binding and JSON response format.
+description: Learn how to bind nodes and links to the Blazor Sankey Diagram, including data models, REST API binding and JSON response format.
 platform: Blazor
 control: Sankey
 documentation: ug
