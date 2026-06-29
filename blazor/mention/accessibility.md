@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Mention Component | Syncfusion®
-description: Checkout and learn here all the features about accessibility in Blazor Mention component and much more details.
+description: Checkout and learn here all the features about accessibility in Blazor Mention component and much more details. 
 platform: Blazor
 control: Mention
 documentation: ug

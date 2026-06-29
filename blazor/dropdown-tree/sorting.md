@@ -63,4 +63,4 @@ In the following example, the [SortOrder](https://help.syncfusion.com/cr/blazor/
 }
 ```
 
-![Blazor Dropdown Tree with sortOrder descending.](./images/blazor-dropdowntree-component-sort-order.png)
+![Blazor Dropdown Tree with sortOrder descending.](./images/blazor-dropdowntree-component-sort-order.webp)

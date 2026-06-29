@@ -83,4 +83,4 @@ The active breakpoint is @activeBreakPoint
 {% endhighlight %}
 {% endtabs %}
 
-![Reusable Blazor Media Query Component](images/blazor-media-query-reusable.gif)
+![Reusable Blazor Media Query Component](images/blazor-media-query-reusable.webp)

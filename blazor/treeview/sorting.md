@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor TreeView component and much more details.
+title: Sorting in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Sorting in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug

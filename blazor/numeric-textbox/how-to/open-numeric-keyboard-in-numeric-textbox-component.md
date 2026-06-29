@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Numeric Keyboard in Numeric TextBox Component | Syncfusion
-description: Learn how to configure the Numeric TextBox component to display the numeric keyboard in web applications.
+title: Open Numeric Keyboard in Numeric TextBox | Syncfusion®
+description: Learn how to configure Blazor Numeric TextBox to display the numeric keyboard on mobile and touch devices.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -15,7 +15,7 @@ On mobile and touch devices, providing a numeric keyboard improves data entry fo
 
 A practical way to suggest a numeric keypad on many mobile browsers is to set the input type to "tel", which often triggers a number-centric keypad. Behavior varies by device and browser.
 
-Here is an example code snippet using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Numeric TextBox component:
+Here is an example code snippet using the Blazor Numeric TextBox component:
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
@@ -37,7 +37,7 @@ It is important to note that not all browsers support the `type="tel"` attribute
 
 To see a live example of the Numeric TextBox configured for the numeric keyboard, visit the following link:
 
-[Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Playground - Numeric Textbox](https://blazorplayground.syncfusion.com/embed/rDLpjJrOLrHzOprq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+[Blazor Playground - Numeric Textbox](https://blazorplayground.syncfusion.com/embed/rDLpjJrOLrHzOprq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
 
 **Additional References:**
 - [MDN Web Docs: input type="tel"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel)
