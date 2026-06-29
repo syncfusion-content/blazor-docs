@@ -392,7 +392,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Migrate to Blazor Scheduler component
 
-The [ASP.NET Core Razor Pages Scheduler](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler), is a fully featured event calendar component that helps users manage their time efficiently. The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) is a flexible and high-performance event calendar component built for managing time-based data and resources in Blazor applications.
+The [ASP.NET Core Razor Pages Scheduler](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler), is a fully featured event calendar component that helps users manage their time efficiently. The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is a flexible and high-performance event calendar component built for managing time-based data and resources in Blazor applications.
 
 For detailed guidance, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and the [ASP.NET Core Razor Scheduler getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/schedule/getting-started).
 
@@ -468,7 +468,7 @@ namespace ScheduleSample.Pages
 
 **Blazor approach**
 
-The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) uses [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to bind a local event list, allowing the component to handle updates internally.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to bind a local event list, allowing the component to handle updates internally.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -544,7 +544,7 @@ The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler
 
 ### Migrate to Blazor Rich Text Editor component
 
-The [ASP.NET Core Razor Pages Rich Text Editor](https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor) is a feature-rich WYSIWYG HTML editor and WYSIWYG Markdown editor. [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
+The [ASP.NET Core Razor Pages Rich Text Editor](https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor) is a feature-rich WYSIWYG HTML editor and WYSIWYG Markdown editor. [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
 
 For detailed guidance, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and the [ASP.NET Core Razor Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/getting-started).
 
@@ -631,7 +631,7 @@ namespace RichTextEditorSample.Pages
 
 **Blazor approach**
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) binds editor content to a variable and configures tools using component settings for interactive editing.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) binds editor content to a variable and configures tools using component settings for interactive editing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

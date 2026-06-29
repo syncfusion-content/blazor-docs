@@ -256,7 +256,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Migrate to Blazor Scheduler component
 
-**ASP.NET Web Forms Scheduler** is used to organize and manage events across different calendar views in web applications, while [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) is a modern component that offers a more dynamic and user friendly way to handle appointments and scheduling. 
+**ASP.NET Web Forms Scheduler** is used to organize and manage events across different calendar views in web applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is a modern component that offers a more dynamic and user friendly way to handle appointments and scheduling. 
 
 For additional details, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started).
 
@@ -327,7 +327,7 @@ namespace WebFormsScheduler
 
 **Blazor equivalent**
 
-The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [ScheduleEventSettings.Datasource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [ScheduleEventSettings.Datasource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
@@ -369,7 +369,7 @@ N> The event class (`Meeting` in this example) property names match the Schedule
 
 ### Migrate to Blazor Rich Text Editor component
 
-**ASP.ET Web Forms Rich Text Editor**  is a component used for creating and formatting content such as text, images, tables, and links with various editing tools. [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) is a modern component that offers a more dynamic and user-friendly way to create rich content with support for HTML, Markdown, and responsive design. 
+**ASP.ET Web Forms Rich Text Editor**  is a component used for creating and formatting content such as text, images, tables, and links with various editing tools. [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is a modern component that offers a more dynamic and user-friendly way to create rich content with support for HTML, Markdown, and responsive design. 
 
 For additional details, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started).
 
@@ -402,7 +402,7 @@ The Rich Text Editor content is defined directly within the markup using the `RT
 
 **Blazor equivalent**
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
 
 {% tabs %}
 {% highlight razor tabtitle="Editor.razor" %}
