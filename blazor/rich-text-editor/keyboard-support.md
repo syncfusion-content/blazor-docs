@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard support in Blazor RichTextEditor Component | Syncfusion
+title: Keyboard support in Blazor Rich Text Editor Component | Syncfusion
 description: Learn about keyboard navigation and shortcuts in Blazor Rich Text Editor for efficient content editing.
 platform: Blazor
 control: RichTextEditor
