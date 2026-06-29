@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQL Server to Blazor Gantt Chart Using Entity Framework
 
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) supports binding data from a SQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
+The [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt) supports binding data from a SQL Server database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries.
 
 **What is Entity Framework Core?**
 

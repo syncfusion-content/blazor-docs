@@ -10,7 +10,7 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling manual operations on data. It is useful for implementing custom data binding and editing operations in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling manual operations on data. It is useful for implementing custom data binding and editing operations in the [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt).
 
 To implement custom data binding in the Gantt Chart, the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class is used. This abstract class serves as a base class for the custom adaptor.
 

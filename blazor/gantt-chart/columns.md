@@ -234,7 +234,7 @@ The Gantt Chart component for Blazor supports column formatting to customize dat
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVICZWpUlnjXERR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* The Gantt uses the `Internalization` library to format values based on the specified format and culture.
->* By default, the number and date values are formatted in **en-US** locale. You can localize the currency and date to a different locale as explained [here](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
+>* By default, the number and date values are formatted in **en-US** locale. You can localize the currency and date to a different locale as explained [here](https://www.syncfusion.com/gantt-sdk/blazor-gantt).
 >* The available format codes may vary depending on the data type of the column.
 >* You can also customize the formatting further by providing a custom function to the `GanttColumn.Format` property, instead of a format string.
 >* Make sure that the format string is valid and compatible with the data type of the column, to avoid unexpected results.

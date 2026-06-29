@@ -760,4 +760,4 @@ To assign a custom name to the exported Excel or CSV file in the Gantt Chart com
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSijCGoXwGiALV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

@@ -220,7 +220,7 @@ Lazy loading defers data retrieval until it is actually required. Instead of loa
 
 For example, when a component becomes visible, a node expands, or additional details are requested. Lazy loading improves perceived performance by reducing initial load time.
 
-For an example of implementing the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) pattern in hierarchical [Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) components, refer to the [Gantt Chart data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
+For an example of implementing the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) pattern in hierarchical [Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt) components, refer to the [Gantt Chart data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
 
 ## Choosing the right approach
 

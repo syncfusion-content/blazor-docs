@@ -415,7 +415,7 @@ You can enable right-to-left layout and text direction in the Gantt component us
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBesDVrThGvRASc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the gantt.
 
 ## See also
 

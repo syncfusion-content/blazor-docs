@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor GanttChart
 
-This section explains you through the step-by-step process of integrating the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component into your Blazor MAUI application using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section explains you through the step-by-step process of integrating the [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt) component into your Blazor MAUI application using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
 

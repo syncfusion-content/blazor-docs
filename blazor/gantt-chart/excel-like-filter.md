@@ -480,4 +480,4 @@ When a column is filtered, the Gantt Chart displays a default icon with predefin
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBSWNtATpopODgg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page provides comprehensive feature representations. The [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/overview?theme=bootstrap4) demonstrates how to present and manipulate project data effectively.
+> The [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt) feature tour page provides comprehensive feature representations. The [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/overview?theme=bootstrap4) demonstrates how to present and manipulate project data effectively.
