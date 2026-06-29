@@ -16,7 +16,7 @@ This guide explains how to create an order management dashboard using [Blazor Da
 ## Prerequisites
 
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
-* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Create the Blazor project
 
@@ -24,7 +24,7 @@ To create a Blazor application, follow the [Blazor Server App getting started gu
 
 ### Install required Blazor packages
 
-To install the required Blazor packages, open a terminal in your project root and run the following commands.
+The following table lists the components used in this application and their corresponding NuGet packages.
 
 | Component | Package |
 |----------------|---------|
@@ -36,6 +36,8 @@ To install the required Blazor packages, open a terminal in your project root an
 | Accordion | [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) |
 | Dialog | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
 | Themes | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
+
+Open a terminal in the project root and run the following commands to install these packages.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -192,9 +194,7 @@ This structure helps keep the application maintainable and scalable by clearly s
 
 ## Define data models
 
-### `Order` model
-
-Defines the data model used to represent an order in the management dashboard.
+The dashboard uses four models to organize the core application data. The **Order** model stores order details and status information, the **AbandonedCart** model tracks abandoned shopping carts, the **DashboardKpi** model defines summary metrics and chart data, and the **ReturnRefund** model represents customer return and refund requests. Together, these models provide the structured data used across the dashboard pages, services, and visual components.
 
 {% tabs %}
 {% highlight cs tabtitle="Models/Order.cs" %}
@@ -236,13 +236,6 @@ namespace OrderManagementDashboard.Models
 }
 
 {% endhighlight %}
-{% endtabs %}
-
-### `Abandoned cart` model
-
-Defines the data model used to represent a customer's abandoned shopping cart.
-
-{% tabs %}
 {% highlight cs tabtitle="Models/AbandonedCart.cs" %}
 
 namespace OrderManagementDashboard.Models
@@ -257,13 +250,6 @@ namespace OrderManagementDashboard.Models
 }
 
 {% endhighlight %}
-{% endtabs %}
-
-### `Dashboard KPI` model
-
-Defines the data model used to represent a key performance indicator displayed on the dashboard.
-
-{% tabs %}
 {% highlight cs tabtitle="Models/DashboardKpi.cs" %}
 
 namespace OrderManagementDashboard.Models
@@ -288,13 +274,6 @@ namespace OrderManagementDashboard.Models
 }
 
 {% endhighlight %}
-{% endtabs %}
-
-### `Return and refund` model
-
-Defines the data model used to represent a return or refund request submitted by a customer.
-
-{% tabs %}
 {% highlight cs tabtitle="Models/ReturnRefund.cs" %}
 
 namespace OrderManagementDashboard.Models
@@ -361,7 +340,7 @@ N> This static data source provides sample data for demonstration purposes only.
 
 In a Blazor application, services are used to handle business logic and maintain shared state across components. They are registered with dependency injection and allow multiple pages and components to access the same data in a consistent and controlled manner.
 
-The application uses three scoped services to provide in-memory sample data and business logic for orders, abandoned carts, and return/refund requests. Each service below contains both the service interface and its implementation.
+The application uses three scoped services to provide in-memory sample data and business logic for **orders**, **abandoned carts**, and **return/refund requests**. Each service below contains both the service interface and its implementation.
 
 ### Order service
 
@@ -867,6 +846,11 @@ Update the navigation menu to include links to all dashboard pages.
     </div>
 
     <SfAccordion>
+        <AccordionAnimationSettings>
+            <AccordionAnimationCollapse Effect="AnimationEffect.SlideUp" Duration="200" Easing="ease-in-out"></AccordionAnimationCollapse>
+            <AccordionAnimationExpand Effect="AnimationEffect.SlideDown" Duration="250" Easing="ease-in-out"></AccordionAnimationExpand>
+        </AccordionAnimationSettings>
+
         <AccordionItems>
             <AccordionItem Expanded="true">
                 <HeaderTemplate>
@@ -879,11 +863,6 @@ Update the navigation menu to include links to all dashboard pages.
                             </svg>
                         </span>
                         <span>Orders</span>
-                        <span class="dropdown-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" focusable="false" role="img">
-                                <path d="M6 9l6 6 6-6"></path>
-                            </svg>
-                        </span>
                     </div>
                 </HeaderTemplate>
                 <ContentTemplate>
@@ -929,127 +908,133 @@ Update the navigation menu to include links to all dashboard pages.
     </SfAccordion>
 </div>
 
-<style>
-    .nav-menu {
-        background-color: #16535E;
-        color: white;
-        height: 100vh;
-        width: 250px;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
+{% endhighlight %}
+{% highlight css tabtitle="Components/Layout/NavMenu.razor.css" %}
 
-    .nav-header {
-        padding: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+.nav-menu {
+    background-color: #16535E;
+    color: white;
+    height: 100vh;
+    width: 250px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
 
-    .nav-header h3 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-    }
+.nav-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-    .e-accordion {
-        background: transparent;
-        border: none;
-    }
+.nav-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
 
-    .e-accordion .e-acrdn-item {
-        border: none;
-        background: transparent;
-    }
+::deep .e-accordion {
+    background: transparent;
+    border: none;
+}
 
-    .e-accordion .e-acrdn-header {
-        background: transparent;
-        color: white;
-        border: none;
-        padding: 15px 20px;
-    }
+::deep .e-accordion .e-acrdn-item {
+    border: none;
+    background: transparent;
+}
 
-    .e-accordion .e-acrdn-header:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
+::deep .e-accordion .e-acrdn-header {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+}
 
-    .e-accordion .e-acrdn-panel {
-        background: transparent;
-        border: none;
-    }
+::deep .e-accordion .e-acrdn-panel {
+    background: transparent;
+    border: none;
+    overflow: hidden;
+}
 
-    .menu-item-header {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: white;
-        width: 100%;
-        line-height: 1;
-    }
+::deep .e-accordion .e-acrdn-header .e-icons,
+::deep .e-accordion .e-acrdn-header:hover .e-icons,
+::deep .e-accordion .e-acrdn-header .e-icons:hover {
+    color: white !important;
+    fill: white !important;
+    opacity: 1;
+}
 
-    .menu-icon,
-    .dropdown-icon,
-    .submenu-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
+.menu-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    width: 100%;
+    line-height: 1;
+}
 
-    .menu-icon {
-        width: 18px;
-        height: 18px;
-    }
+.menu-icon,
+.dropdown-icon,
+.submenu-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 
-    .menu-icon svg,
-    .dropdown-icon svg,
-    .submenu-icon svg {
-        width: 100%;
-        height: 100%;
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
+.menu-icon {
+    width: 18px;
+    height: 18px;
+}
 
-    .dropdown-icon {
-        margin-left: auto;
-        width: 14px;
-        height: 14px;
-        opacity: 0.9;
-    }
+.menu-icon svg,
+.dropdown-icon svg,
+.submenu-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
 
-    .submenu {
-        padding: 0;
-    }
+.dropdown-icon {
+    margin-left: auto;
+    width: 14px;
+    height: 14px;
+    opacity: 0.9;
+}
 
-    .submenu-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 20px 12px 50px;
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        transition: all 0.2s;
-        line-height: 1;
-    }
+.submenu {
+    padding: 0;
+}
 
-    .submenu-icon {
-        width: 16px;
-        height: 16px;
-    }
+::deep .submenu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px 12px 50px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s;
+    line-height: 1;
+}
 
-    .submenu-item:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-    }
+.submenu-icon {
+    width: 16px;
+    height: 16px;
+}
 
-    .submenu-item.active {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-    }
-</style>
+::deep .submenu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+::deep .submenu-item.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1408,48 +1393,6 @@ The page binds data collections and state variables to these components, enablin
     </DialogButtons>
 </SfDialog>
 
-<style>
-    .kpi-card {
-        border-radius: 12px;
-        box-shadow: none;
-        border: none;
-        overflow: hidden;
-    }
-
-    .kpi-card .e-card {
-        border: none;
-        box-shadow: none;
-    }
-    
-    .kpi-blue {
-        background: linear-gradient(135deg, #B8D4F1 0%, #A0C5EE 100%);
-    }
-
-    .kpi-cyan {
-        background: linear-gradient(135deg, #C8E6E6 0%, #B0DCDC 100%);
-    }
-
-    .kpi-orange {
-        background: linear-gradient(135deg, #FFD7C4 0%, #FFC8B0 100%);
-    }
-
-    .kpi-pink {
-        background: linear-gradient(135deg, #F5D4E0 0%, #F0C5D5 100%);
-    }
-
-    .kpi-lightorange {
-        background: linear-gradient(135deg, #FFDDB8 0%, #FFD0A0 100%);
-    }
-
-    .kpi-green {
-        background: linear-gradient(135deg, #D4F1D4 0%, #C0E8C0 100%);
-    }
-
-    .kpi-lightblue {
-        background: linear-gradient(135deg, #D4E8F5 0%, #C0DEF0 100%);
-    }
-</style>
-
 @code {
     private SfGrid<Order>? grid;
     private List<Order> orders = new List<Order>();
@@ -1670,6 +1613,46 @@ The page binds data collections and state variables to these components, enablin
     color: #1a1a1a;
     font-weight: 400;
     line-height: 1.2;
+}
+
+::deep .kpi-card {
+    border-radius: 12px;
+    box-shadow: none;
+    border: none;
+    overflow: hidden;
+}
+
+::deep .kpi-card .e-card {
+    border: none;
+    box-shadow: none;
+}
+
+::deep .kpi-blue {
+    background: linear-gradient(135deg, #B8D4F1 0%, #A0C5EE 100%);
+}
+
+::deep .kpi-cyan {
+    background: linear-gradient(135deg, #C8E6E6 0%, #B0DCDC 100%);
+}
+
+::deep .kpi-orange {
+    background: linear-gradient(135deg, #FFD7C4 0%, #FFC8B0 100%);
+}
+
+::deep .kpi-pink {
+    background: linear-gradient(135deg, #F5D4E0 0%, #F0C5D5 100%);
+}
+
+::deep .kpi-lightorange {
+    background: linear-gradient(135deg, #FFDDB8 0%, #FFD0A0 100%);
+}
+
+::deep .kpi-green {
+    background: linear-gradient(135deg, #D4F1D4 0%, #C0E8C0 100%);
+}
+
+::deep .kpi-lightblue {
+    background: linear-gradient(135deg, #D4E8F5 0%, #C0DEF0 100%);
 }
 
 .chart-container {
@@ -2132,15 +2115,15 @@ dotnet run
 
 **Expected behavior**
 
-* The application launches and displays the navigation menu on the left side with expandable order management sections.
-* The application redirects to `/dashboard` and displays the **All Orders** dashboard page, showing:
+* The application launches and displays the **navigation menu** on the left side with expandable order management sections.
+* The application redirects to `/dashboard` and displays the **All Orders dashboard page**, showing:
   - Seven KPI cards showing order status metrics (Total Orders, Processing, Shipped, Delivered, Cancelled, Returned, Failed)
-  - A profit margin line chart with toggleable 6-month and 12-month views
-  - A comprehensive data grid showing all orders with filtering options for payment status, received status, and date ranges
+  - A profit margin line chart with toggleable `6-month` and `12-month` views
+  - A comprehensive **DataGrid** showing all orders with filtering options for payment status, received status, and date ranges
   - Search functionality to find orders by ID, customer name, order number, or email
-  - A "View Details" action button that opens a dialog showing complete order information
-* The Abandoned Carts page displays all abandoned carts in a filterable, searchable grid with ID, date, customer email, and cart amount.
-* The Returns and Refunds page displays all return requests with approve/reject action buttons and status badges.
+  - A **View Details** action button that opens a dialog showing complete order information
+* The **Abandoned Carts page** displays all abandoned carts in a filterable, searchable grid with ID, date, customer email, and cart amount.
+* The **Returns and Refunds page** displays all return requests with approve/reject action buttons and status badges.
 * All grids support pagination, sorting, filtering, and searching.
 * The application uses in-memory data services, so no backend database is required for demonstration purposes.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Pivot Table component and more.
+title: Accessibility in Blazor Pivot Table Component | Syncfusion®
+description: Learn about accessibility features in Blazor Pivot Table component, including WAI-ARIA roles and keyboard navigation.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -228,4 +228,4 @@ The accessibility compliance of the pivot table component is shown in the follow
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
