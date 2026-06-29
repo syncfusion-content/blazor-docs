@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor ListBox in Blazor WASM App | Syncfusion®
 description: Check out and learn about getting started with Blazor ListBox component in Blazor WebAssembly Application.
 platform: Blazor
-control: List Box
+control: ListBox
 documentation: ug
 ---
 
