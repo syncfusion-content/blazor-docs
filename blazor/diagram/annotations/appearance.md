@@ -160,8 +160,7 @@ By default, the `OpenMode` is set to `Self`, which opens the link in the same br
 
 @code
 {
-    // Defines diagram's node collection.
-    DiagramObjectCollection<Node> _nodes;
+    private DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
     {
@@ -205,6 +204,55 @@ The following table shows the available options for the `OpenMode` property:
 | [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkOpenMode.html#Syncfusion_Blazor_Diagram_HyperlinkOpenMode_Self) | Opens the hyperlink in the same browser tab, replacing the current page. | The application in the current tab navigates to the specified URL. |
 | [Blank](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkOpenMode.html#Syncfusion_Blazor_Diagram_HyperlinkOpenMode_Blank) | Opens the hyperlink in a new browser tab. | A new tab is opened with the specified URL. |
 
+The hyperlink behavior can be updated dynamically as needed, allowing navigation either within the current tab or in a new tab based on user interaction.
+
+The following example demonstrates how to change the hyperlink open mode at runtime.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Change Open Mode" OnClick="@ChangeOpenMode" />
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes" />
+
+@code
+{
+    SfDiagramComponent _diagram;
+    DiagramObjectCollection<Node> _nodes;
+
+    protected override void OnInitialized()
+    {
+        _nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
+                {
+                    Hyperlink = new HyperlinkSettings
+                    {
+                        Content = "Open Syncfusion",
+                        Url = "https://www.syncfusion.com",
+                        OpenMode = HyperlinkOpenMode.Self
+                    }
+                }
+            }
+        };
+        _nodes.Add(node);
+    }
+
+    public void ChangeOpenMode()
+    {
+        HyperlinkSettings hyperlink = _diagram.Nodes[0].Annotations[0].Hyperlink as HyperlinkSettings;
+        hyperlink.OpenMode = hyperlink.OpenMode == HyperlinkOpenMode.Self ? HyperlinkOpenMode.Blank : HyperlinkOpenMode.Self;
+    }
+}
+```
 >**Note:** Browser security policies and popup blockers may restrict opening links in new tabs. Ensure that your application handles such scenarios appropriately.
 
 ## How to Wrap Text Using Text Wrapping
@@ -326,7 +374,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 | Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.webp) |
 | Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.webp) |
 
-N> All overflow customizations are also applicable to connector annotations.
+>**Note:** All overflow customizations are also applicable to connector annotations.
 
 ## How to Customize the Appearance of an Annotation
 
@@ -773,7 +821,7 @@ The following code demonstrates how to set a value for the `AdditionalInfo` prop
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AdditionalInfoProperty.razor)
 
-N> The `AdditionalInfo` property accepts any type of object as its value.
+**Note:** The `AdditionalInfo` property accepts any type of object as its value.
 
 
 ## See also

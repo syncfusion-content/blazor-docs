@@ -13,7 +13,7 @@ Diagram provides extensive support for annotation interactions. Annotations can 
 
 ## How to Enable Annotation Interaction
 
-Annotation interaction is controlled by the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html) flags enum. Specific interactions or a combination of interactions can be enabled using this property.
+Annotation interaction is controlled by the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html) enumeration. Specific interactions or a combination of interactions can be enabled using this property.
 
 Annotation interaction can be enabled either by using the Interaction flag to turn on all behaviors or by enabling individual constraints such as Select, Drag, Resize, and Rotate.
 
@@ -39,7 +39,6 @@ The following code illustrates how to enable interactive mode for annotations:
 
 @code
 {
-    // Defines diagram's node collection.
     DiagramObjectCollection<Node> _nodes;
 
     protected override void OnInitialized()
@@ -80,7 +79,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Set a Drag Limit for Connector Annotations
 
-The diagram control supports defining a [DragLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_DragLimit) to constrain connector label movement. The `DragLimit` property allows boundaries to be set for annotation dragging along a connector and snaps the position to the nearest segment offset.
+The diagram supports defining a [DragLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_DragLimit) to constrain connector label movement. The `DragLimit` property allows boundaries to be set for annotation dragging along a connector and snaps the position to the nearest segment offset.
 
 Values for the `DragLimit` properties for `Left`, `Right`, `Top`, and `Bottom` can be set to restrict connector label dragging within a user-defined boundary. By default, the drag limit is disabled for connectors. It can be enabled by setting the connector constraint to `Drag`.
 
@@ -93,7 +92,6 @@ The following code illustrates how to set a `DragLimit` for connector annotation
 
 @code
 {
-    // Defines diagram's connector collection.
     DiagramObjectCollection<Connector> _connectors;
 
     protected override void OnInitialized()
@@ -132,7 +130,7 @@ The following code illustrates how to set a `DragLimit` for connector annotation
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/DragLimitForAnnotation.razor)
 
->**Note**: The `DragLimit` property is only applicable to `PathAnnotation` (connector annotations). It defines the boundary within which the connector label can be dragged relative to the connector path.
+>**Note**: The `DragLimit` property is only applicable to `PathAnnotation` (connector annotations).
 
 ## How to Rotate Annotations
 
