@@ -627,7 +627,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// ========== SYNCFUSION BLAZOR CONFIGURATION ==========
+// ========== BLAZOR CONFIGURATION ==========
 builder.Services.AddSyncfusionBlazor();
 
 // ========== ENTITY FRAMEWORK CORE CONFIGURATION ==========
