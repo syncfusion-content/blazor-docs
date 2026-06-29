@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dashboard Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Dashboard](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,8 +157,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
-
 ## Add Blazor Dashboard component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dashboard](https://www.syncfusion.com/blazor-components/blazor-dashboard) component inside the razor file.
@@ -219,7 +219,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxtRLUKlzqHcwQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout Component](images/blazor-dashboard-layout-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxtRLUKlzqHcwQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Component](images/blazor-dashboard-layout-component.webp)" %}
 
 ## Defining Panels
 
@@ -261,7 +261,7 @@ A basic Dashboard panel can display simple data. The panel's header is defined b
 
 The Dashboard with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHNxhgKwFngyBq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHNxhgKwFngyBq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
 
 ## Panels with Components
 
@@ -430,7 +430,7 @@ These components are placed as panel content by assigning the corresponding Blaz
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.webp)" %}
 
 N> When using the **SfRangeNavigator** component in this sample, ensure that the [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) NuGet package is installed in your project. You can install the package from [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor).
 
