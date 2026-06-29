@@ -17,7 +17,7 @@ N> The [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Cut, copy and paste using keyboard
 
-The Blazor Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
+The Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
 
 These keyboard shortcuts enable users to efficiently manage their schedules:
 
