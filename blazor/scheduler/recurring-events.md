@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Recurring events in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about recurring events and features in Syncfusion Blazor Scheduler component.
+description: Checkout and learn here all about recurring events and features in Blazor Scheduler component and much more details.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -212,7 +212,7 @@ N>To edit/delete following recurrence events into the scheduler, set [`AllowEdit
 }
 ```
 
-![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.png)
+![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.webp)
 
 ## Daily Frequency
 
