@@ -68,7 +68,7 @@ The Signature component saves the signature as base64, blob, and image like webP
 
 ### Save as Base64
 
-The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the webp, JPEG, and SVG format as base64.
+The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the webP, JPEG, and SVG format as base64.
 
 ```cshtml
 
