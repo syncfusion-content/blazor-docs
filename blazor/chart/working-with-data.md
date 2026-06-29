@@ -54,7 +54,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrHNnCrgFYTMqKl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKCrrVgRsckQvf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.webp)" %}
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -172,7 +172,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 </SfChart>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdZnWhUuDQBhXs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAihBrgvFhnbIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.webp)" %}
 
 ### Binding with OData services
 
@@ -201,7 +201,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
     </ChartSeriesCollection>
 </SfChart>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLnNHsLqurpOmXI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLxXVDKBZhqezPa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.webp)" %}
 
 ### Sending additional parameters to the server
 
@@ -234,7 +234,7 @@ The following sample code shows how to send parameters using the Query property 
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLRDdsrqEeGltNy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBKCBBLKbOUqsQL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Entity Framework
 
@@ -503,7 +503,7 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBxjdCrgYnhNxJu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/observable-collection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUiLBLAkpRpchN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with Web API Binding](images/working-data/observable-collection.webp)" %}
 
 ## Empty points
 
@@ -552,7 +552,7 @@ Empty points are defined as data points having NaN values. Empty points can be c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhHNdCVUkHSFMPH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUWVrBKOfaDiKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Customizing empty point**
 
@@ -602,7 +602,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBHtdWhgEmNMoif?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgMVhLAaIiyPBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.webp)" %}
 
 ## Handling No Data
 
@@ -664,7 +664,7 @@ When no data is available to render in the chart, the [NoDataTemplate](https://h
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRXdWrgOwvpoNS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[No Data Template in Blazor Chart](images/working-data/blazor-chart-no-data-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrSZEZbBiUMPlvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[No Data Template in Blazor Chart](images/working-data/blazor-chart-no-data-template.gif)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

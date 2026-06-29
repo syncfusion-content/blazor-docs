@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add/Remove Toolbar Items in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about how to add or remove Toolbar items in Syncfusion Blazor Toolbar component and more.
+title: Add/Remove Toolbar Items in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all about how to add or remove Toolbar items in Blazor Toolbar component and more details.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -91,4 +91,4 @@ In the following demo, the `ToolbarItems` collection initially contains five ite
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheWZitquTDHMDs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding or Removing Blazor Toolbar Items](../images/blazor-toolbar-add-or-remove-item.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheWZitquTDHMDs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding or Removing Blazor Toolbar Items](../images/blazor-toolbar-add-or-remove-item.webp)" %}
