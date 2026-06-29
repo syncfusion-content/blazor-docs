@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Scheduler with GraphQL using Hot Chocolate | Syncfusion
+title: Blazor Scheduler with GraphQL using Hot Chocolate | Syncfusion®
 description: Connect Syncfusion’s Blazor Scheduler to a Hot Chocolate GraphQL backend for optimized CRUD, typed queries, and a responsive, scalable .NET application.
 control: Scheduler
 platform: blazor
 documentation: ug
 ---
 
-# Connect Syncfusion Blazor Scheduler with GraphQL using Hot Chocolate
+# Connect Blazor Scheduler with GraphQL using Hot Chocolate
 
 [GraphQL](https://graphql.org/learn/introduction/) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
@@ -506,7 +506,7 @@ The GraphQL Mutation class has been successfully created and is ready to handle 
 
 ---
 
-## Integrating Syncfusion Blazor Scheduler
+## Integrating Blazor Scheduler
 
 ### Step 1: Create a Blazor Web App using Visual Studio
 
@@ -560,25 +560,25 @@ All required packages are now installed.
 @using Syncfusion.Blazor.Data
 ```
 
-#### Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and `<body>`section to add:
+#### Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and `<body>`section to add:
 
 ```html
 <head>
-    <!-- Syncfusion Blazor Stylesheet -->
+    <!-- Blazor Stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
 </head>
 <body>
 
-    <!-- Syncfusion Blazor Scripts -->
+    <!-- Blazor Scripts -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 </body>
 ```
-For this project, the bootstrap5.3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the bootstrap5.3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-#### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+#### Register Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of your Blazor Web App.
+Register the Blazor Service in the **Program.cs** file of your Blazor Web App.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -596,7 +596,7 @@ var app = builder.Build();
 
 ```
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Scheduler component’s [getting‑started](https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Scheduler component’s [getting‑started](https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp) documentation.
 
 ### Step 3: Create the Data Model
 
@@ -638,7 +638,7 @@ The data model has been successfully created.
 
 ### Step 4: Update the Blazor Scheduler
 
-The `Home.razor` component will display the appointment data in a Syncfusion Blazor Scheduler with CRUD operations capabilities.
+The `Home.razor` component will display the appointment data in a Blazor Scheduler with CRUD operations capabilities.
 
 **Instructions:**
 
@@ -706,7 +706,7 @@ In the `Home.razor`, `SfDataManager` component connects the Scheduler to the Gra
 
 ### Step 5: Configure GraphQL Adaptor and Data Binding
 
-The GraphQL adaptor is a bridge that connects the Syncfusion Blazor Scheduler with the GraphQL backend. The adaptor translates Scheduler operations into GraphQL queries and mutations. When the user interacts with the Scheduler, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the Scheduler display.
+The GraphQL adaptor is a bridge that connects the Blazor Scheduler with the GraphQL backend. The adaptor translates Scheduler operations into GraphQL queries and mutations. When the user interacts with the Scheduler, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the Scheduler display.
 
 **What is a GraphQL Adaptor?**
 
@@ -1016,7 +1016,7 @@ In your Scheduler app:
 2. Navigate to `https://localhost:5194` (or the port shown in the terminal).
 3. The Scheduler Application is now running and ready to use.
 
-    ![Basic Scheduler displaying appointments from the GraphQL Server](./images/blazor-scheduler-graphql-frontend.png)
+    ![Basic Scheduler displaying appointments from the GraphQL Server](./images/blazor-scheduler-graphql-frontend.webp)
 
 ---
 
@@ -1030,7 +1030,7 @@ A complete, working sample implementation is available in the [GitHub repository
 This guide demonstrates how to:
 
 1. Setting Up the GraphQL Backend. [🔗](#setting-up-the-graphql-backend)
-2. Integrating Syncfusion Blazor Scheduler. [🔗](#integrating-syncfusion-blazor-scheduler)
+2. Integrating Blazor Scheduler. [🔗](#integrating-syncfusion-blazor-scheduler)
 3. Running the Application. [🔗](#running-the-application)
 4. Complete Sample Repository. [🔗](#complete-sample-repository)
 

@@ -95,7 +95,7 @@ Specific nodes can be programmatically expanded upon TreeView initialization by 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSWNCrTNHHeZFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Expand nodes through data binding](./images/blazor-treeview-expand-nodes-through-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSWNCrTNHHeZFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Expand nodes through data binding](./images/blazor-treeview-expand-nodes-through-data-binding.webp)" %}
 
 ## Expand Nodes through API
 
@@ -334,7 +334,7 @@ The Blazor TreeView component provides the `ExpandedNodes` property for two-way 
         }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLSMDCVfjcEkxgQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Get expanded nodes](./images/blazor-treeview-get-expanded-nodes.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLSMDCVfjcEkxgQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Get expanded nodes](./images/blazor-treeview-get-expanded-nodes.webp)" %}
 
 ## Expand or Collapse a Node Programmatically
 
