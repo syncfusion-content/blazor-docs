@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a Shopping Cart with Blazor components | Syncfusion®
+title: Creating a Shopping Cart with Blazor components | Syncfusion
 description: Step-by-step guide to build a shopping cart in Blazor app, covering product listings, cart management, and checkout with Blazor components.
 platform: Blazor
 control: Common
@@ -771,7 +771,7 @@ Serves as the landing page and provides quick navigation to key sections of the 
     <!-- HERO SECTION -->
     <SfCard CssClass="hero-card">
         <CardContent>
-            <h2>Welcome to Blazor Shopping Cart</h2>
+            <h2>Welcome to Syncfusion Blazor Shopping Cart</h2>
             <p>Discover amazing products, add to wishlist, and shop smarter.</p>
            <img src="images/banner.png" alt="Shopping cart banner showcasing products" />
         </CardContent>
