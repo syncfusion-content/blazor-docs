@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor ListBox in Blazor Web App | Syncfusion®
 description: Check out the documentation for getting started with Blazor ListBox Component in Blazor Web App and much more details.
 platform: Blazor
-control: List Box
+control: ListBox
 documentation: ug
 ---
 
