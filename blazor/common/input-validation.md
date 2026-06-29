@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Input form validation in Blazor | Syncfusion®
-description: Learn how to validate Blazor input components using data annotations with EditForm, DataAnnotationsValidator, ValidationMessage, ValidationSummary.
+title: Input form validation in Blazor - Syncfusion
+description: Learn how to validate Syncfusion Blazor input components using data annotations with EditForm, DataAnnotationsValidator, ValidationMessage, ValidationSummary.
 platform: Blazor
 control: Common
 documentation: ug
@@ -47,7 +47,7 @@ The Blazor UI input and editor components can be validated by the standards defi
 N> [DataAnnotationsValidator](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-8.0): Attaches validation support to the `EditContext` using data annotations.
 <br/>[ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-8.0): Displays a summarized list of all validation messages.
 
-3. Add any desired [Components](#blazor-form-validation-supported-components) inside the `EditForm` and provide values via the appropriate `@bind-` parameter.
+3. Add any desired [components](#blazor-form-validation-supported-components) inside the `EditForm` and provide values via the appropriate `@bind-` parameter.
 
     ```cshtml
     <EditForm Model="@employeeModel">
