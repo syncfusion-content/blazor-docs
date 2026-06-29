@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orientation in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about Orientation in Syncfusion Blazor Range Slider component and much more.
+description: Checkout and learn here all the features about Orientation in Blazor Range Slider component and much more details.
 platform: Blazor
 control: Range Slider
 documentation: ug
