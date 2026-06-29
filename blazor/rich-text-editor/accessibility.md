@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Rich Text Editor Accessibility | Syncfusion
-description: Learn about the accessibility features in the Syncfusion Blazor Rich Text Editor component and more.
+description: Learn about the accessibility features in the Blazor Rich Text Editor component, including keyboard navigation and screen reader support.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -85,4 +85,4 @@ N> You can explore the [Blazor Rich Text Editor feature tour page](https://www.s
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
