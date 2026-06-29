@@ -86,7 +86,7 @@ N> In the following sample, pressing the <kbd>t</kbd> key toggles the disabled s
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUCrMzKHwTMpln?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBnZRruVYVgLKsV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Ensuring accessibility
 

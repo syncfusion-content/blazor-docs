@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Numeric TextBox component and more.
+title: Accessibility in Blazor Numeric TextBox Component | Syncfusion®
+description: Learn about accessibility features in the Blazor Numeric TextBox component including WAI-ARIA support, keyboard navigation, and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -80,4 +80,4 @@ The accessibility compliance of the Numeric TextBox component is shown in the fo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Sorting functionality in Syncfusion Blazor MultiSelect component and much more.
+title: Sorting in Blazor MultiSelect Component | Syncfusion®
+description: Checkout and learn here all about Sorting functionality in Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug
