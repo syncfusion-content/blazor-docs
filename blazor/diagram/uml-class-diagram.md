@@ -23,21 +23,28 @@ The [Classifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 | `ClassifierShape.Interface` | Renders a UML interface with the **«interface»** stereotype and an operations compartment |
 | `ClassifierShape.Enumeration` | Renders a UML enumeration with the **«enumeration»** stereotype and a members compartment |
 
-**UmlClassifierShape Properties**
-
 The following properties are available on `UmlClassifierShape` regardless of the classifier type selected:
 
-| Property | Type | Description |
-|---|---|---|
-| [Classifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_Classifier) | `ClassifierShape` | Specifies the type of UML shape to render. Default: `ClassifierShape.Class` |
-| [ClassShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_ClassShape) | `UmlClass` | Defines the class name, attributes, and methods when `Classifier` is `ClassifierShape.Class` |
-| [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) | `UmlInterface` | Defines the interface name, attributes and methods when `Classifier` is `ClassifierShape.Interface` |
-| [EnumerationShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_EnumerationShape) | `UmlEnumeration` | Defines the enumeration name and members when `Classifier` is `ClassifierShape.Enumeration` |
-| [HeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_HeaderStyle) | `TextStyle` | Customizes the appearance of the classifier name header (the top compartment) |
+| UmlClassifierShape Properties | Description |
+|---|---|
+| [Classifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_Classifier) | Specifies the type of UML shape to render. Default: `ClassifierShape.Class` |
+| [ClassShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_ClassShape) | Defines the class name, attributes, and methods when `Classifier` is `ClassifierShape.Class` |
+| [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) | Defines the interface name, attributes and methods when `Classifier` is `ClassifierShape.Interface` |
+| [EnumerationShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_EnumerationShape) | Defines the enumeration name and members when `Classifier` is `ClassifierShape.Enumeration` |
+| [HeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_HeaderStyle) | Customizes the appearance of the classifier name header (the top compartment) |
 
 ## UML Class
 
 A UML class is rendered with three compartments: the class name header, an attributes section, and a methods (operations) section.
+
+| UmlClass Properties | Description |
+|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_Name) | The class name displayed in the header compartment. Default: `"ClassName"` |
+| [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_Attributes) | Collection of attributes for the class |
+| [Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_Methods) | Collection of methods (operations) for the class |
+| [AttributeHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_AttributeHeaderSettings) | Configuration for the attributes section header |
+| [MethodHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_MethodHeaderSettings) | Configuration for the methods section header |
+| [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html) | Text style applied to class member rows |
 
 The following code example shows how to create a UML class node.
 
@@ -92,33 +99,20 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML CLass Example](./images/UmlClassShapes/UMLClassShape.webp)" %}
 
-**UmlClass Properties**
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_Name) | string | The class name displayed in the header compartment. Default: `"ClassName"` |
-| [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_Attributes) | `DiagramObjectCollection<UmlClassAttribute>` | Collection of attributes for the class |
-| [Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_Methods) | `DiagramObjectCollection<UmlClassMethod>` | Collection of methods (operations) for the class |
-| [AttributeHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_AttributeHeaderSettings) | `UmlSectionHeaderSettings` | Configuration for the attributes section header |
-| [MethodHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html#Syncfusion_Blazor_Diagram_UmlClass_MethodHeaderSettings) | `UmlSectionHeaderSettings` | Configuration for the methods section header |
-| [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClass.html) | `TextStyle` | Text style applied to class member rows |
-
 ## UML Interface
 
 A UML interface is rendered with the **«interface»** stereotype above its name, followed by an operations compartment. Define an interface node using the [InterfaceShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_InterfaceShape) property with a [UmlInterface](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html).
 
 `UmlInterface` supports the same `Attributes`, `Methods`, and header configuration properties as `UmlClass`.
 
-**UmlInterface Properties**
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | string | The interface name displayed in the header compartment. Default: `"InterfaceName"` |
-| [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `DiagramObjectCollection<UmlClassAttribute>` | Collection of attributes for the interface |
-| [Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `DiagramObjectCollection<UmlClassMethod>` | Collection of operations for the interface |
-| [AttributeHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `UmlSectionHeaderSettings` | Configuration for the attributes section header |
-| [MethodHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `UmlSectionHeaderSettings` | Configuration for the methods section header |
-| [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | `TextStyle` | Text style applied to interface member rows |
+| UmlInterface Properties | Description |
+|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | The interface name displayed in the header compartment. Default: `"InterfaceName"` |
+| [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | Collection of attributes for the interface |
+| [Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | Collection of operations for the interface |
+| [AttributeHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | Configuration for the attributes section header |
+| [MethodHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | Configuration for the methods section header |
+| [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlInterface.html) | Text style applied to interface member rows |
 
 The following code example shows how to create a UML interface node.
 
@@ -166,6 +160,18 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 A UML enumeration is rendered with the **«enumeration»** stereotype above its name and a **Members** compartment listing its literals. Define an enumeration node using the [EnumerationShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html#Syncfusion_Blazor_Diagram_UmlClassifierShape_EnumerationShape) property with a [UmlEnumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html).
 
+| UmlEnumeration Properties | Description |
+|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html#Syncfusion_Blazor_Diagram_UmlEnumeration_Name) | The enumeration name. Default: `"EnumerationName"` |
+| [Members](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html#Syncfusion_Blazor_Diagram_UmlEnumeration_Members) | Collection of enumeration literals |
+| [MemberHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html) | Configuration for the members section header |
+
+| UmlEnumerationMember Properties | Description |
+|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumerationMember.html#Syncfusion_Blazor_Diagram_UmlEnumerationMember_Name) | The literal name displayed in the members compartment. Default: `"Member"` |
+| [IsSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumerationMember.html) | When `true`, renders a horizontal divider in the members compartment |
+| [SeparatorStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumerationMember.html) | Style applied to the separator line |
+
 The following code example shows how to create a UML enumeration node.
 
 ```cshtml
@@ -208,23 +214,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Enumeration Example](./images/UmlClassShapes/UMLEnumeration.webp)" %}
 
-**UmlEnumeration Properties**
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html#Syncfusion_Blazor_Diagram_UmlEnumeration_Name) | string | The enumeration name. Default: `"EnumerationName"` |
-| [Members](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html#Syncfusion_Blazor_Diagram_UmlEnumeration_Members) | `DiagramObjectCollection<UmlEnumerationMember>` | Collection of enumeration literals |
-| [MemberHeaderSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumeration.html) | `UmlSectionHeaderSettings` | Configuration for the members section header |
-
-### UmlEnumerationMember Properties
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumerationMember.html#Syncfusion_Blazor_Diagram_UmlEnumerationMember_Name) | string | The literal name displayed in the members compartment. Default: `"Member"` |
-| [IsSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumerationMember.html) | bool | When `true`, renders a horizontal divider in the members compartment |
-| [SeparatorStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlEnumerationMember.html) | `ShapeStyle` | Style applied to the separator line |
-
-## UmlScope Values
+## Visibility Scope
 
 The `UmlScope` enum controls the visibility prefix symbol rendered next to each attribute or method in a UML classifier.
 
@@ -235,9 +225,17 @@ The `UmlScope` enum controls the visibility prefix symbol rendered next to each 
 | `Private` | `-` | Accessible only within the classifier |
 | `Package` | `~` | Accessible within the same package |
 
-## UmlClassAttribute
+## Class Attributes
 
 [UmlClassAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html) represents a structural feature of a UML classifier (class or interface). Each attribute is rendered as a row in the **Attributes** compartment, displaying its visibility symbol, name, and type (e.g., `- name : string`).
+
+| UmlClassAttribute Properties | Description |
+|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html) | The attribute name |
+| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html) | The data type of the attribute (e.g., `"int"`, `"string"`) |
+| [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html#Syncfusion_Blazor_Diagram_UmlClassAttribute_Scope) | Visibility of the attribute. Default: `UmlScope.Public` |
+| [IsSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html#Syncfusion_Blazor_Diagram_UmlClassAttribute_IsSeparator) | When `true`, renders a horizontal divider line instead of an attribute row |
+| [SeparatorStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html) | Style applied to the separator line |
 
 The following code example shows how to add attributes to a class.
 
@@ -278,19 +276,24 @@ The following code example shows how to add attributes to a class.
 }
 ```
 
-**UmlClassAttribute Properties**
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html) | string | The attribute name |
-| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html) | string | The data type of the attribute (e.g., `"int"`, `"string"`) |
-| [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html#Syncfusion_Blazor_Diagram_UmlClassAttribute_Scope) | `UmlScope` | Visibility of the attribute. Default: `UmlScope.Public` |
-| [IsSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html#Syncfusion_Blazor_Diagram_UmlClassAttribute_IsSeparator) | bool | When `true`, renders a horizontal divider line instead of an attribute row |
-| [SeparatorStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassAttribute.html) | `ShapeStyle` | Style applied to the separator line |
-
-## UmlClassMethod
+## Class Methods
 
 [UmlClassMethod](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) represents an operation in a UML classifier (class or interface). Methods are displayed in the **Operations** compartment with their full signature, including visibility symbol, name, parameter list, and return type (e.g., `+ Add(x : int, y : int) : int`).
+
+| UmlClassMethod Properties | Description |
+|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | The method name |
+| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | The return type of the method |
+| [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | Visibility of the method. Default: `UmlScope.Public` |
+| [Parameters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html#Syncfusion_Blazor_Diagram_UmlClassMethod_Parameters) | Collection of method parameters |
+| [IsSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | When `true`, renders a horizontal divider in the methods compartment |
+
+Each entry in the `Parameters` collection of a `UmlClassMethod` is a `UmlTypedElement`, which defines a single method parameter by its name and data type. The rendered signature uses the format `name : type` for each parameter (e.g., `speed : int`).
+
+| UmlTypedElement Properties | Description |
+|---|---|
+| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | The parameter name |
+| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | The parameter data type (e.g., `"int"`, `"string"`) |
 
 The following code example shows how to add methods with parameters to a class.
 
@@ -341,38 +344,6 @@ The following code example shows how to add methods with parameters to a class.
             }
         });
     }
-}
-```
-
-**UmlClassMethod Properties**
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | string | The method name |
-| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | string | The return type of the method |
-| [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | `UmlScope` | Visibility of the method. Default: `UmlScope.Public` |
-| [Parameters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html#Syncfusion_Blazor_Diagram_UmlClassMethod_Parameters) | `DiagramObjectCollection<UmlTypedElement>` | Collection of method parameters |
-| [IsSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassMethod.html) | bool | When `true`, renders a horizontal divider in the methods compartment |
-
-## UmlTypedElement
-
-Each entry in the `Parameters` collection of a `UmlClassMethod` is a `UmlTypedElement`, which defines a single method parameter by its name and data type. The rendered signature uses the format `name : type` for each parameter (e.g., `speed : int`).
-
-| Property | Type | Description |
-|---|---|---|
-| [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter name |
-| [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlTypedElement.html) | string | The parameter data type (e.g., `"int"`, `"string"`) |
-
-## Using Separators
-
-`UmlClassAttribute`, `UmlClassMethod`, and `UmlEnumerationMember` all support a visual separator row. Set `IsSeparator = true` on any item to render a horizontal divider line in that compartment. Customize the separator's appearance using the `SeparatorStyle` property.
-
-```cshtml
-Attributes = new DiagramObjectCollection<UmlClassAttribute>()
-{
-    new UmlClassAttribute() { Name = "PublicId", Type = "Guid", Scope = UmlScope.Public },
-    new UmlClassAttribute() { IsSeparator = true, SeparatorStyle = new ShapeStyle() { StrokeColor = "#BDBDBD", StrokeWidth = 1 } },
-    new UmlClassAttribute() { Name = "InternalData", Type = "byte[]", Scope = UmlScope.Private }
 }
 ```
 
@@ -428,14 +399,14 @@ Every compartment - **Attributes**, **Operations**, and **Members** - has a conf
 
 The `UmlSectionHeaderSettings` class provides the following properties to control section header appearance and behavior:
 
-| Property | Type | Description |
-|---|---|---|
-| [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | string | Text label for the section header (e.g., `"Attributes"`, `"Operations"`) |
-| [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | `TextStyle` | Visual style for the header row |
-| [EnableAddAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | bool | Shows or hides the `+` (add) button in the header. Default: `true` |
-| [EnableRemoveAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | bool | Shows or hides the `–` (remove) button in the header. Default: `true` |
-| [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | bool | Determines whether the section content is visible. Default: `true` |
-| [ShowExpandCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | bool | Shows or hides the toggle icon. Default: `true` |
+| Property | Description |
+|---|---|
+| [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | Text label for the section header (e.g., `"Attributes"`, `"Operations"`) |
+| [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | Visual style for the header row |
+| [EnableAddAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | Shows or hides the `+` (add) button in the header. Default: `true` |
+| [EnableRemoveAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | Shows or hides the `–` (remove) button in the header. Default: `true` |
+| [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | Determines whether the section content is visible. Default: `true` |
+| [ShowExpandCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSectionHeaderSettings.html) | Shows or hides the toggle icon. Default: `true` |
 
 **Add/Remove Icons**: The `EnableAddAction` and `EnableRemoveAction` properties display interactive buttons in the section header. The **+** button inserts a new row into the compartment, and the **-** button removes the selected row. Both are enabled by default. Clicking either button triggers the [CollectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanging) and [CollectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanged) events on the corresponding collection (`Attributes`, `Methods`, or `Members`).
 
@@ -638,15 +609,15 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Relationship Example](./images/UmlClassShapes/UMLRelationShip.webp)" %}
 
-### RelationShip
+### Relationship Properties
 
 Configure the relationship between classes using the following options:
 
-| Property | Type | Description |
-|---|---|---|
-| [RelationshipShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_RelationshipShape) | `Relationship` | Specifies the type of relationship (Association, Aggregation, Composition, Inheritance, etc.). Default: `Relationship.Aggregation` |
-| [AssociationType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_AssociationType) | `AssociationFlow?` | Sets the direction of the relationship (Directional, BiDirectional, etc.). Default is null. |
-| [Multiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_Multiplicity) | `ClassifierMultiplicity?` | Defines the cardinality (how many instances) at the source and target ends of the relationship. |
+| Property | Description |
+|---|---|
+| [RelationshipShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_RelationshipShape) | Specifies the type of relationship (Association, Aggregation, Composition, Inheritance, etc.). Default: `Relationship.Aggregation` |
+| [AssociationType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_AssociationType) | Sets the direction of the relationship (Directional, BiDirectional, etc.). Default is null. |
+| [Multiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html#Syncfusion_Blazor_Diagram_RelationShip_Multiplicity) | Defines the cardinality (how many instances) at the source and target ends of the relationship. |
 
 ### Association Directionality
 
@@ -667,23 +638,14 @@ Shape = new RelationShip()
 
 ### Multiplicity
 
-[ClassifierMultiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) defines the cardinality labels rendered at both ends of a relationship connector.
+[ClassifierMultiplicity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) defines the cardinality labels rendered at both ends of a relationship connector. Use [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) and [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) to configure each end, and set the cardinality range on each using [MultiplicityLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html).
 
-**ClassifierMultiplicity**
-
-Defines the multiplicity labels displayed at both ends of a relationship connector.
-
-[Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) - Specifies the multiplicity label at the source end of the relationship.
-
-[Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) - Specifies the multiplicity label at the target end of the relationship.
-
-**MultiplicityLabel**
-
-Define the cardinality range for each end:
-
-[LowerBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) - The minimum number of instances allowed (e.g., `"0"` for zero or more, `"1"` for one or more).
-
-[UpperBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) - The maximum number of instances allowed (e.g., `"1"` for one, `"*"` for many).
+| Property | Description |
+|---|---|
+| [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) | Specifies the multiplicity label at the source end of the relationship |
+| [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClassifierMultiplicity.html) | Specifies the multiplicity label at the target end of the relationship |
+| [LowerBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) | The minimum number of instances allowed (e.g., `"0"` for zero or more, `"1"` for one or more) |
+| [UpperBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.MultiplicityLabel.html) | The maximum number of instances allowed (e.g., `"1"` for one, `"*"` for many) |
 
 The following code example demonstrates applying multiplicity to a connector.
 
