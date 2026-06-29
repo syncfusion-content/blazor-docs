@@ -46,4 +46,4 @@ In the following sample, **mediaQuery** has been used for specific resolution to
 
 ```
 
-![Displaying Auto close in Blazor Sidebar](./images/blazor-sidebar-auto-close.gif)
+![Displaying Auto close in Blazor Sidebar](./images/blazor-sidebar-auto-close.webp)
