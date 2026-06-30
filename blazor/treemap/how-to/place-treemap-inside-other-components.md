@@ -276,7 +276,7 @@ When you drag and resize the Dashboard Layout panel or resize the window, the Tr
 }
 
 ```
-![Blazor TreeMap inside Dashboard Layout component](../images/blazor-TreeMap-with-dashboard-layout.png)
+![Blazor TreeMap inside Dashboard Layout component](../images/blazor-TreeMap-with-dashboard-layout.webp)
 
 ## TreeMap component inside Tab
 
@@ -520,7 +520,7 @@ When the TreeMap component renders within the Tab component, its rendering begin
 }
 
 ```
-![Blazor TreeMap inside Tab component](../images/blazor-TreeMap-with-tab.png)
+![Blazor TreeMap inside Tab component](../images/blazor-TreeMap-with-tab.webp)
 
 
 ## TreeMap component inside Dialog
@@ -647,7 +647,7 @@ When you drag and resize the Dialog component, the TreeMap component is not noti
 }
 
 ```
-![Blazor TreeMap inside Dialog component](../images/blazor-TreeMap-with-dialog.png)
+![Blazor TreeMap inside Dialog component](../images/blazor-TreeMap-with-dialog.webp)
 
 
 ## TreeMap component inside Accordion
@@ -931,4 +931,4 @@ When you expand the Accordion component, the TreeMap component is not notified, 
 }
 
 ```
-![Blazor TreeMap inside Accordion component](../images/blazor-TreeMap-with-accordion.png)
+![Blazor TreeMap inside Accordion component](../images/blazor-TreeMap-with-accordion.webp)
