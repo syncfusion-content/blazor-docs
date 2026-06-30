@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Barcode in Blazor Server App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Barcode Component in Blazor Server App.
+title: Getting Started with Blazor Barcode Generator in Server App | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor Barcode Generator Component in Blazor Server App.
 platform: Blazor
-component: Barcode
+component: Barcode Generator
 documentation: ug
 ---
 
-# Getting Started with Blazor Barcode Component in Blazor Server App
+# Getting Started with Blazor Barcode Generator Component in Server App
 
-This section briefly explains about how to include [Blazor Barcode](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,11 +157,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+## Add Blazor Barcode Generator component
 
-## Add Blazor Barcode component
-
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Barcode](https://www.syncfusion.com/blazor-components/blazor-barcode) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component inside the razor file.
 
 N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -179,7 +179,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Barcode component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Barcode Generator component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -219,7 +219,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Adding QR Generator control
 
-Add a QR code in our barcode generator component.
+Add a QR code in our Barcode Generator component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -229,11 +229,11 @@ Add a QR code in our barcode generator component.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhdZHiCAkFGfEhf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[QR Code Generator in Blazor Barcode Component](images/blazor-barcode-with-qr-code.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhdZHiCAkFGfEhf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[QR Code Generator in Blazor Barcode Generator Component](images/blazor-barcode-with-qr-code.webp)" %}
 
 ## Adding Data Matrix Generator control
 
-Add a Data Matrix code in our barcode generator component.
+Add a Data Matrix code in our Barcode Generator component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -243,9 +243,7 @@ Add a Data Matrix code in our barcode generator component.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxtRCMgOYkAfqU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Matrix Generator in Blazor Barcode Component](images/blazor-barcode-with-data-matrix.webp)" %}
-
-N> Explore the [Blazor Barcode Generator example](https://blazor.syncfusion.com/demos/barcodes/default-functionalities?theme=bootstrap5) that shows you how to render and configure the barcode.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxtRCMgOYkAfqU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Matrix Generator in Blazor Barcode Generator Component](images/blazor-barcode-with-data-matrix.webp)" %}
 
 ## See also
 
