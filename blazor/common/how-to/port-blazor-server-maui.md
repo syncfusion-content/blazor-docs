@@ -30,7 +30,7 @@ In the solution, add a new project using the [Razor Class Library](https://blazo
 ### 3. Migrate static assets, references, NuGet packages, and Razor pages
 
 - Move all static assets (such as CSS, JavaScript, and images) from the Blazor Web App’s `wwwroot` folder to the Razor Class Library’s `wwwroot` directory. Then, update asset references in the .NET MAUI Blazor Hybrid App to use the RCL assets via the `_content/RazorClassLibrary/` path.
-- Move Syncfusion Blazor NuGet package references from the Blazor Web App `.csproj` to the RCL `.csproj`.
+- Move Blazor NuGet package references from the Blazor Web App `.csproj` to the RCL `.csproj`.
 - Move `Components/Pages` and `Components/Layouts` to the Razor Class Library. Add the necessary namespaces in the RCL’s `_Imports.razor` file.
 
 ![Folders to move into the RCL](images/server-folders.webp)

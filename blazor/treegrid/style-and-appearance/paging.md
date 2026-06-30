@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Pager styling and customization in Blazor TreeGrid | Syncfusion
-description: Learn how to style the Syncfusion Blazor TreeGrid pager using CSS—customize container, buttons, numeric items, and page indicator.
+title: Pager styling and customization in Blazor TreeGrid | Syncfusion®
+description: Learn how to style the Blazor TreeGrid pager using CSS—customize container, buttons, numeric items, and page indicator.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Paging customization in Syncfusion Blazor TreeGrid
+# Paging customization in Blazor TreeGrid
 
-The appearance of paging elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the pager interface:
+The appearance of paging elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the pager interface:
 
 - **Root container:** The outermost wrapper that holds all pager content.
 - **Pager container:** The inner layout that positions the controls.
@@ -34,7 +34,7 @@ Properties like **font-family**, **background-color**, and spacing-related style
 
 ## Customize the pager container element
 
-The **.e-pagercontainer** class styles the pager container in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid. Apply CSS to modify its look:
+The **.e-pagercontainer** class styles the pager container in the Blazor TreeGrid. Apply CSS to modify its look:
 
 ```css
 .e-treegrid .e-pagercontainer {

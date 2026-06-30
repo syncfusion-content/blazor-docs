@@ -38,9 +38,7 @@ The following themes are available in the [Blazor components](https://www.syncfu
 |---|---|---|
 | High Contrast | `highcontrast.css` | Designed for accessibility-focused experiences |
 
-The `Bootstrap 3` theme is based on Bootstrap v3.
-
-N> The `Bootstrap 4` theme is based on Bootstrap v4, specifically v4.3. It is compatible with Bootstrap v4.6 applications, as there are no significant differences between v4.3 and v4.6 that affect Blazor components.
+N> The `Bootstrap 3` theme is based on Bootstrap v3. The `Bootstrap 4` theme is based on Bootstrap v4, specifically v4.3. It is compatible with Bootstrap v4.6 applications, as there are no significant differences between v4.3 and v4.6 that affect Blazor components.
 
 ## Optimized CSS themes
 
@@ -48,7 +46,7 @@ Blazor themes are available in two variants to help optimize application perform
 
 ### Standard theme files
 
-The default theme files (for example, `<theme_name>.css`) include styling for both normal and bigger size modes. This provides full UI flexibility but results in a larger file size.
+The default theme files (for example, `<theme_name>.css`) include styling for both **normal** and **bigger** size modes. This provides full UI flexibility but results in a larger file size.
 
 ### Lite theme files
 
@@ -667,7 +665,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-libman)
 
 ## NPM package reference
 
-The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
+The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by [Blazor components](https://www.syncfusion.com/blazor-components). These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
 You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
@@ -1027,7 +1025,7 @@ Below table lists the importing theme path for the individual components.
 
 ## Render Blazor components offline using Material and Tailwind themes
 
-Material and Tailwind themes use the online Roboto font by default. If your application needs to work offline or in a local network without internet access, follow these steps to use offline fonts.
+**Material** and **Tailwind** themes use the online `Roboto` font by default. If your application needs to work offline or in a local network without internet access, follow these steps to use offline fonts.
 
 ### Download customized styles using Custom Resource Generator (CRG)
 
@@ -1037,7 +1035,7 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
    
    ![Select styles folder](images/crg-styles.webp)
 
-3. Navigate to the styles folder. For Material and Tailwind themes, you'll find CSS files and a **customized** folder. The CSS files in the **customized** folder don't contain online Google Font dependencies.
+3. Navigate to the **styles** folder. For Material and Tailwind themes, you'll find CSS files and a **customized** folder. The CSS files in the **customized** folder don't contain online Google Font dependencies.
    
    ![Open customized folder](images/customized-folder-crg.webp)
 
@@ -1053,10 +1051,10 @@ Material and Tailwind themes use the online Roboto font by default. If your appl
     * For **Blazor WebAssembly Standalone App**, add the reference in `~/wwwroot/index.html`.
 
     ```html
-        <head>
-            ....
-            <link href="material.min.css" rel="stylesheet" />
-        </head>
+    <head>
+        ....
+        <link href="material.min.css" rel="stylesheet" />
+    </head>
     ```
 
 ### Use customized styles from the `Syncfusion.Blazor.Themes` package and CDN

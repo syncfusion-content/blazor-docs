@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dialog Editing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Dialog Editing in Syncfusion Blazor Tree Grid component and much more details.
+title: Dialog Editing in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about Dialog Editing in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

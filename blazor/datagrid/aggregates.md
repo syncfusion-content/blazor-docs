@@ -2,7 +2,6 @@
 layout: post
 title: Aggregates in Blazor DataGrid Component | Syncfusion®
 description: Learn how to configure and display aggregates in Blazor DataGrid using templates for footer, group footer, and caption.
-
 platform: Blazor
 control: DataGrid
 documentation: ug
