@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export TreeGrid Data to PDF in Blazor | Syncfusion
-description: Checkout and learn here all about PDF Export in Syncfusion Blazor TreeGrid component and much more details.
+title: Export TreeGrid Data to PDF in Blazor | Syncfusion®
+description: Checkout and learn here all the features about PDF Export in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
