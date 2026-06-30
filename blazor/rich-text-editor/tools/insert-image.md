@@ -37,7 +37,7 @@ The selected image can be uploaded to the required destination using the control
 N> [View sample on GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -46,9 +46,6 @@ N> [View sample on GitHub.](https://github.com/SyncfusionExamples/blazor-richtex
 </SfRichTextEditor>
 
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight cshtml tabtitle="ImageController.cs" %}
 
 using System;
@@ -282,10 +279,8 @@ To explicitly remove images from the server, use the [ImageDelete](https://help.
 
 The following sample demonstrates how to use the `ImageDelete` event in Rich Text Editor to delete images from the server after they are removed from the editor content:
 
-`Index.razor`
-
-```cshtml
-
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
@@ -324,7 +319,40 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
 
 }
 
-```
+{% endhighlight %}
+{% highlight cs tabtitle="RichTextEditorController.cs" %}
+
+[HttpPost("[action]")]
+[Route("api/RichTextEditor/DeleteFile")]
+public IActionResult DeleteFile(IList<IFormFile> UploadFiles)
+{
+    try
+    {
+        foreach (IFormFile uploadFile in UploadFiles)
+        {
+            string? fileName = ContentDispositionHeaderValue.Parse(uploadFile.ContentDisposition).FileName?.Trim('"');
+            string filePath = Path.Combine(_webHostEnvironment.WebRootPath, "RichTextEditor/", fileName!);
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+                return Ok($"File '{fileName}' has been deleted.");
+            }
+            else
+            {
+                // Return 404 status if file not found
+                return NotFound($"File '{fileName}' not found.");
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, $"An error occurred: {ex.Message}");
+    }
+    return StatusCode(500, $"No file processed.");
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set image dimensions
 
@@ -376,7 +404,7 @@ The Rich Text Editor has built-in image inserting support. The resize points wil
 
 ![Image Resizing in Blazor RichTextEditor](../images/blazor-richtexteditor-image-resize.png)
 
-### Renaming images before inserting
+## Renaming images before inserting
 
 By using the `RichTextEditorImageSettings` property, the server handler can be specified to upload and rename the selected image. Then, the `OnImageUploadSuccess` event could be bound, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
  
@@ -491,6 +519,51 @@ namespace RenameImage.Controllers
             }
         }
     }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Secure image upload with authentication in Blazor
+
+You can add additional headers, such as authorization tokens, to image upload requests initiated by the Rich Text Editor. On the client side, use the [OnImageSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageSelected) event to modify the outgoing request and append any required headers before the upload begins. On the server side, you can then retrieve these values from the request’s header collection to perform authentication or additional validation.
+
+N> By default, it doesn’t support the UseDefaultCredentials property, you can manually append the default credentials with the upload request.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Inputs
+
+<SfRichTextEditor>
+    <RichTextEditorImageSettings SaveUrl="/api/Image/SaveFiles" Path="/Files/" />
+    <RichTextEditorEvents OnImageSelected="@OnImageSelected" />
+</SfRichTextEditor>
+
+@code {
+    private List<object> ToolbarItems = new List<object> { "Image" };
+
+    private async Task OnImageSelected(SelectedEventArgs args)
+    {
+        // Add custom headers (e.g., Authorization)
+        args.CurrentRequest = new List<object>
+        {
+            new { Authorization = "Bearer your-jwt-token-here" }  // or "Syncfusion" for testing
+            // Add more headers if needed: new { "X-Custom-Header" = "value" }
+        };
+    }
+}
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="ImageController.cs" %}
+
+[HttpPost]
+[Route("api/Image/SaveFiles")]
+public IActionResult SaveFiles(List<IFormFile> UploadFiles)
+{
+    // Access custom headers
+    string authHeader = Request.Headers["Authorization"].ToString();
 }
 
 {% endhighlight %}
