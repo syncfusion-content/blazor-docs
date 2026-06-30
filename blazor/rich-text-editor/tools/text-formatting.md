@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Formatting in Blazor Rich Text Editor Component | Syncfusion
+title: Text Formatting in Blazor Rich Text Editor Component | Syncfusion®
 description: Checkout and learn here all about Text Formatting in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

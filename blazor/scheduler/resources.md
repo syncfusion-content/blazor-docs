@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resources and Grouping in Blazor Scheduler Component | Syncfusion
+title: Resources and Grouping in Blazor Scheduler Component | Syncfusion®
 description: This article demonstrates how to assign resources and also shows how to group them with customizations in Blazor Scheduler component.
 platform: Blazor
 control: Scheduler

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Update Value in Blazor RichTextEditor Component | Syncfusion
+title: How to Update Value in Blazor RichTextEditor | Syncfusion®
 description: Learn how to update the value in Blazor RichTextEditor component programmatically with examples and detailed steps.
 platform: Blazor
 control: RichTextEditor
