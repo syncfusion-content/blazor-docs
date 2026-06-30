@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Query Builder Component | Syncfusion
+title: Accessibility in Blazor Query Builder Component | Syncfusion®
 description: Checkout and learn here all about Accessibility in Blazor Query Builder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder

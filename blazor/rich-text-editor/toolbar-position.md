@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar position in Blazor Rich Text Editor | Syncfusion
-description: Checkout and learn here all about Toolbar position in Syncfusion Blazor Rich Text Editor component and much more.
+description: Checkout and learn here all about Toolbar position in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

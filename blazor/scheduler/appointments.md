@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointments in Blazor Scheduler Component | Syncfusion
-description: Learn here all about the types of events, recurring events, customizing events, and also drag and resize options in Syncfusion Blazor Scheduler component.
+description: Learn here all about the types of events, recurring events, customizing events, and also drag and resize options in Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -302,7 +302,7 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 }
 ```
 
-![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-block-events.png)
+![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-block-events.webp)
 
 Block events can also be defined to repeat on several days as shown in the following code example.
 
@@ -344,7 +344,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 }
 ```
 
-![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-multiple-block-events.png)
+![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-multiple-block-events.webp)
 
 ## Readonly
 
@@ -478,7 +478,7 @@ By default, the scheduler will render the overlapping events based on the start 
     }
 }
 ```
-![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
+![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.webp)
 
 ## Preventing Overlapping Events
 
@@ -739,7 +739,7 @@ More indicator can be shown if more than one appointment is available in a same 
 }
 ```
 
-![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-entirecell.png)
+![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-entirecell.webp)
 
 N> The [`EnableIndicator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableIndicator) property will work, only when the [`EnableMaxHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableMaxHeight) property value is set to true.
 
@@ -790,7 +790,7 @@ The tooltip can be displayed for appointments by setting `true` to the [EnableTo
 }
 ```
 
-![Built-in Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip.png)
+![Built-in Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip.webp)
 
 ### Customizing event tooltip using template
 
@@ -841,7 +841,7 @@ After enabling the default tooltip, it is possible to customize the display of n
 }
 ```
 
-![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip-template.png)
+![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip-template.webp)
 
 N> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
 

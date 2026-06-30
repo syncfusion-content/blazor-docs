@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CRUD actions in Blazor Scheduler Component | Syncfusion
-description: Learn here all about possible methods available on Syncfusion Blazor Scheduler component to perform CRUD actions on the events.
+description: Learn here all about possible methods available on Blazor Scheduler component to perform CRUD actions on the events.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -148,7 +148,7 @@ if (param.action == "insert" || (param.action == "batch" && param.added != null)
 }
 ```
 
-![Adding Events in Blazor Scheduler](images/blazor-scheduler-add-events.png)
+![Adding Events in Blazor Scheduler](images/blazor-scheduler-add-events.webp)
 
 ### Restricting add action based on specific criteria
 
@@ -396,7 +396,7 @@ if (param.action == "update" || (param.action == "batch" && param.changed != nul
 }
 ```
 
-![Updating Blazor Scheduler Events](images/blazor-scheduler-updating-events.png)
+![Updating Blazor Scheduler Events](images/blazor-scheduler-updating-events.webp)
 
 ### How to edit a single occurrence or entire series and update it in database at server-side
 
@@ -726,7 +726,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-![Removing Blazor Scheduler Event](images/blazor-scheduler-remove-events.png)
+![Removing Blazor Scheduler Event](images/blazor-scheduler-remove-events.webp)
 
 ### How to delete a single occurrence or entire series from Scheduler and update it in database at server-side
 
