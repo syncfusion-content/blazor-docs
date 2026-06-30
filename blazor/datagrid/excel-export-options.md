@@ -347,7 +347,7 @@ The Blazor DataGrid supports exporting columns that are hidden in the UI but req
 
 To include hidden columns in the export:
 
-1. Set [ExcelExportProperties.includeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) to **true**.
+1. Set [ExcelExportProperties.IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) to **true**.
 2. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 3. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
@@ -1499,7 +1499,7 @@ To include header and footer content:
                             {
                                 FontColor = "#C67878",
                                 FontSize = 15,
-                                HAlign =ExcelHorizontalAlign.Center,
+                                HAlign = ExcelHorizontalAlign.Center,
                                 Bold = true
                             }
                         }
@@ -1929,8 +1929,6 @@ In this configuration, the memory stream is converted and saved as a file named 
 
 @using Syncfusion.Blazor.Grids
 @using System.IO;
-@using Syncfusion.XlsIO
-@using Syncfusion.ExcelExport;
 @inject IJSRuntime JSRuntime
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
@@ -1963,7 +1961,7 @@ In this configuration, the memory stream is converted and saved as a file named 
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc.ToArray());
 
             //For creating the exporting location with file name, for this need to specify the physical exact path of the file.
-            string filePaths = "C:Users/abc/Downloads/SampleTestExcel.xlsx";
+            string filePaths = "C:/Users/abc/Downloads/SampleTestExcel.xlsx";
 
             // Create a FileStream to write the memory stream contents to a file.
             using (FileStream fileStream = File.Create(filePaths))

@@ -929,7 +929,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-* The paging feature is already enabled in the `<SfGrid>` component with `AllowPaging="true"`.
+* The paging feature is already enabled in the `<SfGrid>` component by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**.
 * The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 
 ```cshtml

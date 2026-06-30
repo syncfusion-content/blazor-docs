@@ -682,7 +682,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-* The paging feature is already partially enabled in the `<SfGrid>` component with [AllowPaging="true"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging).
+* The paging feature is already partially enabled in the `<SfGrid>` component by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**.
 * The page size is configured with [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 * No additional code changes are required from the previous steps.
 
@@ -1742,6 +1742,6 @@ This guide demonstrates how to:
 4. Configure connection strings for SQL Server. [🔗](#step-4-configure-the-connection-string)
 5. Implement the repository pattern with Dapper for efficient data access. [🔗](#step-5-create-the-repository-class)
 6. Create a Blazor component with a DataGrid that supports searching, filtering, sorting, paging, and CRUD operations. [🔗](#step-1-install-and-configure-blazor-datagrid-components)
-7. Handle bulk operations and batch updates. [🔗](#step-10-perform-crud-operations)
+7. Handle bulk operations and batch updates. [🔗](#step-11-perform-crud-operations)
 
 The application now provides a complete solution for managing reservation data with a modern, user-friendly interface using Dapper for high-performance database access.

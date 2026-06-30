@@ -23,7 +23,7 @@ This is implemented by using the `Template` property, which provides extensive c
             <SfToolbar>
                 <ToolbarEvents Clicked="ToolbarClickHandler"></ToolbarEvents>
                 <ToolbarItems>
-                    <ToolbarItem Type="@ItemType.Button" PrefixIcon="e-chevron-up icon" Id="collapseall" Text="Collapse All"></ToolbarItem>
+                    <ToolbarItem Type="@ItemType.Button" PrefixIcon="e-chevron-up icon" Id="CollapseAll" Text="Collapse All"></ToolbarItem>
                     <ToolbarItem Type="@ItemType.Button" PrefixIcon="e-chevron-down icon" Id="ExpandAll" Text="Expand All"></ToolbarItem>
                 </ToolbarItems>
             </SfToolbar>
@@ -50,11 +50,11 @@ This is implemented by using the `Template` property, which provides extensive c
     {
         if (args.Item.Text == "Collapse All")
         {
-            this.Grid.CollapseAllGroupAsync();
+            await this.Grid.CollapseAllGroupAsync();
         }
         if (args.Item.Text == "Expand All")
         {
-            this.Grid.ExpandAllGroupAsync();
+            await this.Grid.ExpandAllGroupAsync();
         }
     }
 }
@@ -111,7 +111,7 @@ This is implemented by using the `Template` property, which provides extensive c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBUsZBuSRVoiYtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdZRMIqxXdTZFN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render image with text in custom Toolbar
 

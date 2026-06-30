@@ -1395,7 +1395,7 @@ This guide demonstrates how to:
 4. Create a background service for continuous updates. [🔗](#step-5-create-the-background-service)
 5. Develop a CustomAdaptor for DataGrid operations. [🔗](#step-3-create-the-customadaptor-for-signalr)
 6. Register services in the application configuration. [🔗](#step-6-register-services-in-programcs)
-7. Build a Blazor component with real-time data binding. [🔗](#step-2-create-the-blazor-component-with-signalr-integration)
+7. Build a Blazor component with real-time data binding. [🔗](#Integrating-Blazor-DataGrid)
 8. Implement bidirectional SignalR communication. [🔗](#how-signalr-real-time-updates-work)
 
 The application now provides a complete solution for displaying real-time stock market data with a modern, user-friendly interface using SignalR for high-performance bidirectional communication.

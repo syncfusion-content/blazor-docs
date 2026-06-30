@@ -95,7 +95,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details. If a project requires a license key, see the [licensing](https://blazor.syncfusion.com/documentation/common/essential-studio/licensing/overview) topic to register it at startup.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of available packages and component details. If a project requires a license key, see the [licensing](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic to register it at startup.
 
 ### Register Blazor service
 
@@ -690,8 +690,8 @@ public class OrderData
 
 ## See also
 
-* [Getting Started with DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with DataGrid in Blazor WebAssembly using Visual Studio 2022](../getting-started)
 
-* [Getting Started with DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app.md)
+* [Getting Started with DataGrid in Blazor Server using Visual Studio 2022](../getting-started-with-server-app)
 
 * [Getting Started with DataGrid in Blazor Server using .NET Core CLI](./server-side-using-cli)

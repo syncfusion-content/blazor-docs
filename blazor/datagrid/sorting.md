@@ -400,7 +400,7 @@ public class OrderData
 
 ## Custom sorting 
 
-The Blazor DataGrid allows customizing the default sort logic for a column by setting the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of a column. This property accepts an IComparer &lt;object&gt; implementation, which can be created by defining a comparer class that implements the .NET [IComparer&lt;T&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
+The Blazor DataGrid allows customizing the default sort logic for a column by setting the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property of a column. This property accepts an IComparer &lt;object&gt; implementation, which can be created by defining a comparer class that implements the .NET [IComparer&lt;T&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
 In this configuration, a custom comparer is assigned to the **CustomerID** column:
 
@@ -487,19 +487,6 @@ public class OrderData
     - **1** if `a` should appear after `b`
 > * The **SortComparer** property is supported only when using `local data`.
 > * When using a `column template`, ensure the [GridColumn.Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property is defined so that SortComparer can access the corresponding field value.
-
-## Touch interaction
-
-The Blazor DataGrid supports sorting through touch gestures. On touch-enabled devices, tapping a column header sorts that column. A popup icon
-![Sorting in Blazor DataGrid.](./images/blazor-datagrid-sorting.webp) appears to enable multi-column sorting.
-To sort multiple columns, tap the popup
-![Multiple sorting in Blazor DataGrid.](./images/blazor-datagrid-multiple-sorting.webp), and then tap the desired column headers.
-
-> Both [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) must be true for the popup to appear.
-
-This screenshot illustrates touch-based sorting in the Grid:
-
-![Sorting in Blazor DataGrid](./images/blazor-datagrid-touch-sorting.webp)
 
 ## Sort foreign key column
 

@@ -599,7 +599,7 @@ Paging divides large datasets into smaller pages to improve performance and usab
 
 **Instructions:**
 
-* Ensure the grid has paging enabled with `AllowPaging="true"`.
+* Ensure the grid has paging enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**.
 * Configure the page size using [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html).
 
 ```cshtml
@@ -1101,9 +1101,9 @@ This guide demonstrates how to:
 3. Create data models and DbContext for database communication. [🔗](#step-3-create-the-data-model)
 4. Configure connection strings and register services in Program.cs. [🔗](#step-5-configure-the-connection-string)
 5. Create REST API endpoints in a controller for CRUD operations. [🔗](#step-6-create-the-grid-api-controller)
-6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-5-implement-searching-feature)
-7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-8-perform-crud-operations)
-8. Handle batch operations for bulk data modifications. [🔗](#step-8-perform-crud-operations)
+6. Implement searching, filtering, and sorting in the REST API. [🔗](#step-6-implement-searching-feature)
+7. Perform complete CRUD operations (Create, Read, Update, Delete) via REST API. [🔗](#step-9-perform-crud-operations)
+8. Handle batch operations for bulk data modifications. [🔗](#step-9-perform-crud-operations)
 
 The application now provides a complete solution for managing orders with a modern, user-friendly interface using Entity Framework Core with SQL Server and REST API endpoints via UrlAdaptor.
 

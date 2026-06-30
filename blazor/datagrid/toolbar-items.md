@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) offers a flexible toolbar that enables the addition of custom toolbar items or modification of existing ones. The toolbar appears above the DataGrid, providing convenient access to common actions and custom functionality.
 
-## Built-in Toolbar item
+## Built-in Toolbar Items
 
 Built-in toolbar items in the Blazor DataGrid use predefined actions to perform standard operations.
 
@@ -527,9 +527,9 @@ By default, custom toolbar items are aligned on the left. Modify the position by
         {
 
         }
-        public OrderData(int? EmployeeId,string FirstName,string Country,string PostalCode)
+        public OrderData(int? EmployeeID,string FirstName,string Country,string PostalCode)
         {
-           this.EmployeeID = EmployeeId;
+           this.EmployeeID = EmployeeID;
            this.FirstName = FirstName;
            this.Country = Country;
            this.PostalCode = PostalCode;
