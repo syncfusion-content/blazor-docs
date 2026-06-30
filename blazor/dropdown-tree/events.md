@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Dropdown Tree component and much more details.
+title: Events in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features and Events in Blazor Dropdown Tree component and much more details.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -265,7 +265,7 @@ The Blazor Dropdown Tree component's [ValueChanging](https://help.syncfusion.com
 }
 ```
 
-![MultiSelection in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-valuechanging.png)
+![MultiSelection in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-valuechanging.webp)
 
 ## ValueChanged 
 

@@ -1,7 +1,12 @@
 ---
 layout: post
+<<<<<<< BLAZ-rating-getting-started
 title: Getting Started with Blazor Rating in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Blazor Rating Components in Blazor Web Application.
+=======
+title: Getting Started with Rating Component in Blazor Web App | Syncfusion®
+description: Check out the documentation for getting started with Blazor Rating Components in Blazor Web App with examples and much more details.
+>>>>>>> development
 platform: Blazor
 control: Rating
 documentation: ug
@@ -10,8 +15,11 @@ documentation: ug
 # Getting Started with Blazor Rating in Blazor Web App
 
 This section briefly explains about how to include [Blazor Rating](https://www.syncfusion.com/blazor-components/blazor-rating) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+<<<<<<< BLAZ-rating-getting-started
 
 ## Create a new Blazor Web App
+=======
+>>>>>>> development
 
 {% tabcontents %}
 
@@ -23,7 +31,11 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 {% tabcontent Visual Studio Code %}
 
+<<<<<<< BLAZ-rating-getting-started
 Run the following command to create a new Blazor Web App.
+=======
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+>>>>>>> development
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -39,7 +51,11 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 
 {% endtabcontent %}
 
+<<<<<<< BLAZ-rating-getting-started
 {% tabcontent .NET CLI %}
+=======
+Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
+>>>>>>> development
 
 Run the following command to create a new Blazor Web App.
 
@@ -98,7 +114,17 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontent %}
 
+<<<<<<< BLAZ-rating-getting-started
 {% tabcontent .NET CLI %}
+=======
+{% endtabcontents %}
+
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+
+## Install required Blazor packages
+
+Install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+>>>>>>> development
 
 Open the command prompt and run the following commands.
 
@@ -128,9 +154,15 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< BLAZ-rating-getting-started
 ## Register the Blazor service
 
 Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+=======
+## Register Blazor service
+
+Register the Blazor service in the **Program.cs** file of your Blazor Web App.
+>>>>>>> development
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -144,6 +176,11 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< BLAZ-rating-getting-started
+=======
+N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+
+>>>>>>> development
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
@@ -161,7 +198,11 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Rating component
 
+<<<<<<< BLAZ-rating-getting-started
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Rating](https://www.syncfusion.com/blazor-components/blazor-rating) component inside the razor file.
+=======
+Add the Blazor Rating component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+>>>>>>> development
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -215,9 +256,13 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< BLAZ-rating-getting-started
 {% endtabcontent %}
 
 {% endtabcontents %}
+=======
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Rating component in the default web browser.
+>>>>>>> development
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htBpNMqZALaYvkYW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rating Component](images/blazor-rating-component.webp)" %}
 

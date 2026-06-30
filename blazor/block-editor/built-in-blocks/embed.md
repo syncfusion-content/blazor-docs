@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Embed in Blazor Block Editor Component | Syncfusion
-description: Learn about embedding images and visual content in the Syncfusion Blazor Block Editor component for Blazor Server and WebAssembly applications.
+title: Embed in Blazor Block Editor Component | Syncfusion®
+description: Learn about embedding images and visual content in the Blazor Block Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: BlockEditor
 documentation: ug
