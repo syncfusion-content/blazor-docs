@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Blazor Range Selector Component | Syncfusion
+title: Events in Blazor Range Selector Component | Syncfusion®
 description: Checkout and learn here all about events in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector

@@ -11,7 +11,7 @@ documentation: ug
 
 This guide explains how to connect an Oracle database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [Oracle.ManagedDataAccess](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display Oracle data.
 
-## Connecting an Oracle Database to a Blazor Pivot Table
+## Connecting an Oracle database to a Blazor Pivot Table
 
 This section describes how to connect the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) to an Oracle database by directly retrieving data using the [Oracle.ManagedDataAccess](https://www.nuget.org/packages/Oracle.ManagedDataAccess) library.
 
@@ -113,7 +113,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [Oracle.M
 
 ![Blazor Pivot Table bound with Oracle data](../images/blazor-pivottable-oracledb-databinding.webp)
 
-## Connecting an Oracle Database to a Blazor Pivot Table via Web API Service
+## Connecting an Oracle database to a Blazor Pivot Table via Web API service
 
 This section explains how to create a Web API service to fetch data from an Oracle database and connect it to the Blazor Pivot Table.
 

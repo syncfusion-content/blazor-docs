@@ -19,7 +19,7 @@ The Blazor Pager component supports localization, allowing text and UI elements 
 
 ## Right to left (RTL)
 
-The Blazor Pager component supports right-to-left (RTL) rendering for languages such as **Arabic**, **Farsi**, and **Urdu**. **RTL** can be enabled by configuring the **Syncfusion Blazor service** during application startup.
+The Blazor Pager component supports right-to-left (RTL) rendering for languages such as **Arabic**, **Farsi**, and **Urdu**. **RTL** can be enabled by configuring the **Blazor service** during application startup.
 
 **Register the `EnableRtl` option in Program.cs**:
 

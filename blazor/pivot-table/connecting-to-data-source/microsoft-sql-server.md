@@ -11,7 +11,7 @@ documentation: ug
 
 This guide explains how to connect a Microsoft SQL Server database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) library. It covers two methods: directly retrieving and binding data to the Pivot Table and using a Web API service to fetch and display Microsoft SQL data.
 
-## Connecting a Microsoft SQL Database to a Blazor Pivot Table
+## Connecting a Microsoft SQL database to a Blazor Pivot Table
 
 This section describes how to connect the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) to a Microsoft SQL database by directly retrieving data using the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) library.
 
@@ -99,7 +99,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [System.D
 
 ![Blazor Pivot Table bound with Microsoft SQL data](../images/blazor-pivottable-Ms-SQL-databinding.webp)
 
-## Connecting a Microsoft SQL Database to a Blazor Pivot Table via Web API Service
+## Connecting a Microsoft SQL to a Blazor Pivot Table via Web API service
 
 This section explains how to create a Web API service to fetch data from a Microsoft SQL database and connect it to the Blazor Pivot Table.
 

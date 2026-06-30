@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with WPF Blazor App in Visual Studio | Syncfusion
+title: Getting Started with WPF Blazor App in Visual Studio | Syncfusion®
 description: Check out the documentation for getting started with WPF Blazor App and Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
@@ -48,7 +48,7 @@ N> Ensure the package [Microsoft.AspNetCore.Components.WebView.Wpf](https://www.
 
 ![WPF Blazor App NuGet package reference](images/wpf/wpf-blazor-package-reference.webp)
 
-N> Blazor components packages are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Add Import Namespaces
 

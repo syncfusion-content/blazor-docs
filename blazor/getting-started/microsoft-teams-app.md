@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Microsoft Teams App in Visual Studio | Syncfusion
+title: Getting Started with Microsoft Teams App in VS | Syncfusion®
 description: Check out the documentation for getting started with Microsoft Teams App using Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
@@ -68,7 +68,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available package list with component details.
 
 ## Register Blazor Service
 
@@ -208,6 +208,6 @@ Now, add the Blazor Kanban component in the `Tab.razor` page under the `~/Compon
 {% endhighlight %}
 {% endtabs %}
 
-![Microsoft Teams application with Syncfusion Blazor controls](images/MSTeams/output-msteams-syncfusion.webp)
+![Microsoft Teams application with Blazor controls](images/MSTeams/output-msteams-syncfusion.webp)
 
-N> [View the complete Microsoft Teams application with Blazor components on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
+N> [View the complete Microsoft Teams application with Blazor controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
