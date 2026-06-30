@@ -136,7 +136,7 @@ The following code example represents how to create a TextAnnotation and connect
 }
 
 ```
-{% previewsample "h[ttps://blazorplayground.syncfusion.com/embed/VNrIWNXnKpTiBXyn?appbar=false&editor=true&result=true&errorlist=false&theme=bootstrap5](https://blazorplayground.syncfusion.com/embed/VtrRXxBIforKpQCJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrRXxBIforKpQCJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnTextAnnotation/TextAnnotationTargetSample.razor)
 
