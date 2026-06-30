@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code generator for the Blazor extension | Syncfusion
-description: Learn how to add Syncfusion Blazor component markup using the Code Generator in the Syncfusion Blazor extension for Visual Studio. Explore to more details.
+title: Code generator for the Blazor extension | Syncfusion®
+description: Learn how to add Blazor component markup using the Code Generator in the Blazor extension for Visual Studio. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
