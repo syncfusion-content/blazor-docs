@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor Numeric TextBox component and much more details.
+title: Events in Blazor Numeric TextBox Component | Syncfusion®
+description: Learn about events in the Blazor Numeric TextBox component including Blur, Created, Destroyed, Focus, and ValueChange events.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
