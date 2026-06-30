@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis Types in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn about all the available axis types in the Syncfusion Blazor Stock Chart component.
+title: Axis Types in Blazor Stock Chart Component | Syncfusion®
+description: Check out and learn about all the available axis types in the Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug

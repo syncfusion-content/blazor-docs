@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tree Grid customization in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Tree Grid customization in Syncfusion Blazor TreeGrid component and more.
+title: Tree Grid customization in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all about Tree Grid customization in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

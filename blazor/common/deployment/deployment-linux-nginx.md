@@ -17,7 +17,7 @@ Refer to [Host ASP.NET Core on Linux with NGINX](https://learn.microsoft.com/en-
 
 * Linux Server – Ubuntu 20.04, Red Hat Enterprise (RHEL) 8.0 and SUSE Linux Enterprise Server 12.
 * [.NET runtime](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk) installed on the server.
-* An existing Blazor Web App with components or create a new one.
+* An existing Blazor Web App with Blazor components or create a new one.
 
 ## Install and Start NGINX
 
@@ -32,7 +32,7 @@ sudo systemctl status nginx
 
 **Verification**: Open `http://your-server-ip` in a browser — you should see the NGINX welcome page.
 
-## Create and publish Your Blazor Web App with Components
+## Create and publish Your Blazor Web App with Blazor Components
 
 * You can create a Blazor Web App using the .NET CLI commands with components by referring [here](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli).
 
@@ -100,7 +100,7 @@ From your Windows machine or any other device, open a browser and navigate to:
 http://<your-vm-ip>/
 ```
 
-You should now see your Blazor Web app running successfully with components!
+You should now see your Blazor Web app running successfully with Blazor components!
 
 ![Output-Linux](../images/output-linux.webp)
 
