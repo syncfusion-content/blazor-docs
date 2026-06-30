@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Separate Connector in Blazor QueryBuilder Component | Syncfusion
+title: Separate Connector in Blazor QueryBuilder Component | Syncfusion®
 description: Checkout and learn here all about Separate Connector in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
@@ -63,6 +63,6 @@ Use the [`EnableIndividualConditions`](https://help.syncfusion.com/cr/blazor/Syn
 
 ```
 
-![EnableIndividualConditions in Blazor Query Builder](./images/separate-connector.png)
+![EnableIndividualConditions in Blazor Query Builder](./images/separate-connector.webp)
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

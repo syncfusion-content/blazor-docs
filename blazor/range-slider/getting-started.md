@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Range Slider Component | Syncfusion
+title: Getting Started with Blazor Range Slider Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor Range Slider component in Blazor WebAssembly Application with examples and much more details.
 platform: Blazor
 control: Range Slider
