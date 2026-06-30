@@ -66,7 +66,7 @@ Install the [Syncfusion.Blazor.CircularGauge](https://www.nuget.org/packages/Syn
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.CircularGauge`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.CircularGauge`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
@@ -155,7 +155,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) component inside the razor file.
 
-N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
