@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Expand and Collapse in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about how to expand and collapse in Syncfusion Blazor Splitter component and more.
+title: Expand and Collapse in Blazor Splitter Component | Syncfusion®
+description: Checkout and learn here all about how to expand and collapse in Blazor Splitter component much more details.
 platform: Blazor
 control: Splitter
 documentation: ug
