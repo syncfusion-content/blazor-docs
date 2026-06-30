@@ -122,7 +122,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * A segment control point of the Bezier connector is used to change the bezier vectors and points of the connector.
 
-![Editing Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-edit-bezier-segment.gif)
+![Editing Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-edit-bezier-segment.webp)
 
 ## How to Avoid Overlapping with Bezier
 
