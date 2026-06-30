@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Add a Custom Tool in Blazor RichTextEditor | Syncfusion®
+title:  How to Add a Custom Tool in Blazor RichTextEditor | Syncfusion®
 description: Checkout and learn here all about Custom tool in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

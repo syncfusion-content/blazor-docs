@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Slash Commands in Blazor Rich Text Editor | Syncfusion
+title: Slash Commands in Blazor Rich Text Editor | Syncfusion®
 description: Learn how to use slash commands in Blazor Rich Text Editor for quick content insertion and formatting.
 platform: Blazor
 control: RichTextEditor

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor Sidebar Component | Syncfusion
+title: Styles and Appearance in Blazor Sidebar Component | Syncfusion®
 description: Checkout and learn here all the features about styles and appearance in Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar

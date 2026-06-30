@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paste Clean-up in Blazor Rich Text Editor | Syncfusion
+title: Paste Clean-up in Blazor Rich Text Editor | Syncfusion®
 description: Learn how to clean up pasted content in Blazor Rich Text Editor, removing unwanted formatting from MS Word and other sources.
 platform: Blazor
 control: RichTextEditor
