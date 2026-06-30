@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor Pivot Table component and much more details.
+title: Events in Blazor Pivot Table Component | Syncfusion®
+description: Learn about events in Blazor Pivot Table component for customizing behavior with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

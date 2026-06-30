@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize aggregates in Blazor TreeGrid | Syncfusion
-description: Learn how to customize aggregate rows in the Syncfusion Blazor TreeGrid using CSS, including footer containers and summary cells.
+title: Customize aggregates in Blazor TreeGrid | Syncfusion®
+description: Learn how to customize aggregate rows in the Blazor TreeGrid using CSS, including footer containers and summary cells.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Aggregate customization in Syncfusion Blazor TreeGrid
+# Aggregate customization in Blazor TreeGrid
 
 Aggregates are displayed as summary rows in the TreeGrid footer, providing a consolidated view of totals, averages, or counts. These rows can be styled using CSS to match the layout and design of the TreeGrid. Styling options are available for:
 
