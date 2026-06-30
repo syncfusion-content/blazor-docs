@@ -73,7 +73,7 @@ The following code example demonstrates how to handle annotation selection chang
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/SelectionChangeEvent.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
 
 ## How to Handle Annotation Position Change Event
 
@@ -137,7 +137,7 @@ The following events are triggered when dragging an annotation. Use these events
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/PositionChangeEvent.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
 
 ## How to Handle Annotation Size Change Event
 
@@ -203,7 +203,7 @@ The following events are triggered when resizing an annotation. Use these events
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/SizeChangeEvent.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
 
 ## How to Handle Annotation Rotation Change Event
 
@@ -268,7 +268,7 @@ The following events are triggered when rotating an annotation. Use these events
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationChangeEvent.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
 
 ## How to Handle Text Change Event
 

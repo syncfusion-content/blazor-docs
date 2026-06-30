@@ -195,7 +195,7 @@ By default, the `OpenMode` is set to `Self`, which opens the link in the same br
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdZRNOTGCrZiyz?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinkOpenMode.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenMode.razor)
 
 The following table shows the available options for the `OpenMode` property:
 
