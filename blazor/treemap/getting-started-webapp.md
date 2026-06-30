@@ -118,7 +118,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register Blazor service
 
-Register the here all the featuresBlazor service in the **Program.cs** file of your Blazor Web App.
+Register the Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
