@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right to Left in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Right to Left in Syncfusion Blazor QueryBuilder component and more.
+title: Right to Left in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about Right to Left in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

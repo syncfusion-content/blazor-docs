@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export | Blazor ChartWizard Component | Syncfusion
-description: Check out and learn here all about print and export in Syncfusion Blazor Chart Wizard component and much more.
+title: Export | Blazor ChartWizard Component | Syncfusion®
+description: Check out and learn here all the features about print and export in Blazor Chart Wizard component and much more.
 platform: Blazor
 control: Chart Wizard
 documentation: ug

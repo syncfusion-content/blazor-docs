@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Methods in Blazor SpeechToText Component | Syncfusion
+title: Methods in Blazor SpeechToText Component | Syncfusion®
 description: Checkout and learn about Methods in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeechToText
@@ -63,4 +63,4 @@ Below sample demonstrates the SpeechToText component configured with above metho
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText with Start and Stop Listening Methods](images/methods.png)
+![Blazor SpeechToText with Start and Stop Listening Methods](images/methods.webp)

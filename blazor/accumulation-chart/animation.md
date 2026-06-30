@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Animation in Syncfusion Blazor Accumulation Chart component and more.
+title: Animation in Blazor Accumulation Chart Component | Syncfusion®
+description: Checkout and learn here all about Animation in Blazor Accumulation Chart component and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -47,7 +47,7 @@ You can customize animation for a series using [`Animation`](https://help.syncfu
 
 ## Disable animation on programmatic refresh
 
-You can programmatically refrsh chart using [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Refresh_System_Boolean_) method. You can enable or disable animation by passing boolean parameter to `Refresh` method. 
+You can programmatically refresh chart using [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Refresh_System_Boolean_) method. You can enable or disable animation by passing boolean parameter to `Refresh` method. 
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts

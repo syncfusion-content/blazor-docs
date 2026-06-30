@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Export options in Blazor DataGrid | Syncfusion
-description: Learn about Excel export options in Syncfusion Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
+title: Excel Export options in Blazor DataGrid | Syncfusion®
+description: Learn about Excel export options in Blazor DataGrid, including customizing data sources, hidden columns, themes, headers, and footers.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -21,6 +21,7 @@ The export behavior can be customized using the [ExcelExportProperties](https://
 * Exporting multiple Grids.
 * Customizing data using queries.
 * Defining delimiters for CSV export.
+* Encoding support for CSV export.
 * Applying themes.
 
 ## Export current page records
@@ -1029,7 +1030,9 @@ To add additional worksheets during export:
 
 3. Set the [GridSheetIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_GridSheetIndex) property to **0** to specify the worksheet index where the Grid data should be placed.
 
-4. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the additional worksheets.
+4. The Grid exports data to the first worksheet by default, you can customize the sheet name using the **Workbook.Worksheets[0].Name** property. Optionally, you can use the `GridSheetIndex` property to specify the worksheet index used for exporting.
+
+5. Invoke the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to export the Grid with the additional worksheets.
 
 Two extra blank worksheets are added along with the worksheet containing the Grid data in this configuration.
 
@@ -1072,6 +1075,9 @@ Two extra blank worksheets are added along with the worksheet containing the Gri
             ExportProperties.Workbook.Worksheets.Add();
             // Define the Gridsheet index where Grid data must be exported.
             ExportProperties.GridSheetIndex = 0;
+            //Access the first worksheet and assign a custom name
+            // Worksheets collection is available after Workbook initialization
+            ExportProperties.Workbook.Worksheets[0].Name = "My Exported Data";
             await Grid.ExportToExcelAsync(ExportProperties);
         }
     }
@@ -1128,7 +1134,131 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVytTCWguoXpvbV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxNHZhrfXTmOyO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Encoding support for CSV export
+
+The Blazor DataGrid supports specifying a custom character encoding when exporting data to CSV documents. This capability ensures compatibility with legacy systems or software that does not support UTF-8.
+
+To configure a custom encoding, include the **System.Text** namespace in the component. This namespace provides access to the available encoding types. For details about the supported encoding formats, refer to the Microsoft System.Text [documentation](https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?).
+
+
+### When to use custom encoding
+
+- When exporting data that contains special characters or symbols.
+
+- When integrating with legacy systems that require a specific encoding.
+
+- When opening CSV files in software that does not default to UTF-8.
+
+> By default, **Encoding.UTF8** is applied when exporting the CSV document.
+
+To configure a custom encoding, handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and invoke the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. Set the **Encoding** property of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object using the **System.Text.Encoding** class from the **System.Text** namespace, as shown in the following example.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.Text
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" AllowExcelExport="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrdersDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Type="ColumnType.Date" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code 
+{
+    public SfGrid<OrdersDetails>? Grid;
+    public List<OrdersDetails>? GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrdersDetails.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (this.Grid != null)
+        {
+            if (args.Item.Id == "Grid_excelexport")
+            {
+                await this.Grid.ExportToExcelAsync();
+            }
+            else if (args.Item.Id == "Grid_csvexport")
+            {
+                // Explicitly set UTF-8 encoding. Use other encodings (e.g., Encoding.Latin1) for legacy system compatibility.
+                await this.Grid.ExportToCsvAsync(new ExcelExportProperties
+                {
+                    Encoding = System.Text.Encoding.UTF8,
+                });
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+ public class OrdersDetails
+ {
+     public OrdersDetails()
+     {
+     }
+     public OrdersDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, DateTime ShippedDate, string ShipAddress, string Email)
+     {
+         this.OrderID = OrderID;
+         this.CustomerID = CustomerId;
+         this.EmployeeID = EmployeeId;
+         this.Freight = Freight;
+         this.ShipCity = ShipCity;
+         this.Verified = Verified;
+         this.OrderDate = OrderDate;
+         this.ShipName = ShipName;
+         this.ShipCountry = ShipCountry;
+         this.ShippedDate = ShippedDate;
+         this.ShipAddress = ShipAddress;
+         this.Email = Email;
+     }
+     public static List<OrdersDetails> GetAllRecords()
+     {
+         List<OrdersDetails> order = new List<OrdersDetails>();
+         int code = 10000;
+         for (int i = 1; i <= 15; i++)
+         {
+             order.Add(new OrdersDetails(code + 1, "€ ALFKI", i + 0, Math.Round((2.3 * i), 2), false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6", "alfki@domain.com"));
+             order.Add(new OrdersDetails(code + 2, "€ ANATR", i + 2, Math.Round((3.3 * i), 2), true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123", "anatr@domain.com"));
+             order.Add(new OrdersDetails(code + 3, "¤ ANTON", i + 1, Math.Round((4.3 * i), 2), false, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo", "anton@domain.com"));
+             order.Add(new OrdersDetails(code + 4, "¤ BLONP", i + 3, Math.Round((5.3 * i), 2), true, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7", "blonp@domain.com"));
+             order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, Math.Round((6.3 * i), 2), false, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S.", "bolid@domain.com"));
+             code += 5;
+         }
+         return order;
+     }
+     public int? OrderID { get; set; }
+     public string? CustomerID { get; set; }
+     public int? EmployeeID { get; set; }
+     public double? Freight { get; set; }
+     public string? ShipCity { get; set; }
+     public bool Verified { get; set; }
+     public DateTime? OrderDate { get; set; }
+     public string? ShipName { get; set; }
+     public string? ShipCountry { get; set; }
+     public DateTime? ShippedDate { get; set; }
+     public string? ShipAddress { get; set; }
+     public string? Email { get; set; }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+> Note: The `ExcelExportProperties` class is also used for configuring CSV export options, including encoding.
 
 ## Conditional cell formatting
 
@@ -1688,7 +1818,7 @@ public class OrderData
 
 ### Enable filtering in exported file
 
-The Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [Syncfusion XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
+The Blazor DataGrid can export data as a memory stream, allowing modification of the Excel workbook before the file is delivered to the client. With the [XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library, Excel features such as **AutoFilter** can be enabled programmatically so that the exported file opens with filter options already available on each column header.
 
 This method is helpful when the exported **Excel** file needs to support data analysis, sorting, and filtering immediately after download, without requiring any additional manual setup.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open the Blazor DateRangePicker popup on Focus | Syncfusion
-description: Learn here all about opening the Syncfusion Blazor DateRangePicker popup upon focusing input and much more.
+title: Open the Blazor DateRangePicker popup on Focus | Syncfusion®
+description: Learn here all about opening the Blazor DateRangePicker popup upon focusing input and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
