@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Command Column Editing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Command Column Editing in Syncfusion Blazor Tree Grid component and much more details.
+title: Command Column Editing in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about Command Column Editing in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

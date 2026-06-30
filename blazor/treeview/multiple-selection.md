@@ -1,7 +1,7 @@
 ---
 layout: post
-title: MultiSelection in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about MultiSelection in Syncfusion Blazor TreeView component and much more.
+title: MultiSelection in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about MultiSelection in Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -109,4 +109,4 @@ N> Multi selection is not applicable through touch interactions.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthICXWgCerHXKMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[MultiSelection in Blazor TreeView](./images/multiselect.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthICXWgCerHXKMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[MultiSelection in Blazor TreeView](./images/multiselect.webp)" %}

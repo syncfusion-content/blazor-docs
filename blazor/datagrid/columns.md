@@ -123,7 +123,7 @@ The DataGrid supports the following column types:
 
 ### Difference Between Boolean and CheckBox Column Types
 
-The Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid provides two distinct column types for handling boolean values and row selection:
+The Blazor DataGrid provides two distinct column types for handling boolean values and row selection:
 
 * [Boolean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Boolean): Binds to boolean data fields and supports editing of boolean property values.
 * [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_CheckBox): Enables row selection and deselection. When a column is set to `ColumnType.CheckBox`, the Grid uses **multiple** selection mode by default.
@@ -415,7 +415,7 @@ public class OrderData
 
 ### Date formatting
 
-Date formatting in Syncfusion<sup style="font-size:70%">®</sup> Blazor DataGrid columns customizes how date values appear. Standard date format strings such as **"d"**, **"D"**, **"MMM dd, yyyy"**, or custom formats can be applied using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property.
+Date formatting in Blazor DataGrid columns customizes how date values appear. Standard date format strings such as **"d"**, **"D"**, **"MMM dd, yyyy"**, or custom formats can be applied using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property.
 
 The following table shows examples of custom date formats and their output:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right to Left in Blazor Menu Bar Component | Syncfusion
-description: Checkout and learn here all about right to left in Syncfusion Blazor Menu Bar component and much more.
+title: Right to Left in Blazor Menu Bar Component | Syncfusion®
+description: Checkout and learn here all the features about right to left in Blazor Menu Bar component and much more details.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
@@ -51,4 +51,4 @@ The following example illustrates how to enable right-to-left support in Menu Ba
 
 ```
 
-![Right to Left in Blazor MenuBar](./../images/blazor-menubar-right-to-left.png)
+![Right to Left in Blazor MenuBar](./../images/blazor-menubar-right-to-left.webp)
