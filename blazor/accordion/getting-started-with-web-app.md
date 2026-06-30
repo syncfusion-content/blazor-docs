@@ -11,75 +11,47 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
+## Create a new Blazor Web App
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor Web App in Visual Studio
-
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor Web App in Visual Studio Code
-
-Create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code) documentation.
-
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Run the following command to create a new Blazor Web App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazor -o BlazorWebApp -int Auto
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
 cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
+
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
-
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-{% tabs %}
-{% highlight razor tabtitle=".NET CLI" %}
-
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a Blazor Web App using .NET CLI
-
-Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli) documentation.
-
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands:
+Run the following command to create a new Blazor Web App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazor -o BlazorWebApp -int Auto
+dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
 cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
-
-This command creates a new Blazor Web App and places it in a new directory called `BlazorWebApp` inside your current location. See the [Create a Blazor App](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=cli&view=aspnetcore-10.0) topics for more details.
 
 {% endtabcontent %}
 
@@ -145,7 +117,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
