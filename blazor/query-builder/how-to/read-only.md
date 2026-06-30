@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Readonly in Blazor QueryBuilder Component | Syncfusion
+title: Readonly in Blazor QueryBuilder Component | Syncfusion®
 description: Checkout and learn here all about Readonly in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
@@ -43,4 +43,4 @@ The Readonly property disables user interactions in the QueryBuilder, preventing
 
 ```
 
-![Readonly mode in Blazor QueryBuilder](./../images/blazor-querybuilder-readonly.png)
+![Readonly mode in Blazor QueryBuilder](./../images/blazor-querybuilder-readonly.webp)

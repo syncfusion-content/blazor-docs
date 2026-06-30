@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Rating Component | Syncfusion
+title: Accessibility in Blazor Rating Component | Syncfusion®
 description: Checkout and learn here all about accessibility and keyboard interaction in Blazor Rating component with examples and much more details.
 platform: Blazor
 control: Rating
