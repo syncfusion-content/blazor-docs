@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AutoFill in Blazor TreeGrid Component | Syncfusion®
-description: Checkout and learn here the features about auto fill in Blazor TreeGrid component and much more details.
+title: AutoFill in Blazor TreeGrid | Syncfusion®
+description: Checkout and learn here the features about the Autofill in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
