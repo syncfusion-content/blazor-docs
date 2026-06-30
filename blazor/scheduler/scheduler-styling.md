@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style And Appearance in Blazor Scheduler Component | Syncfusion
+title: Style And Appearance in Blazor Scheduler Component | Syncfusion®
 description: This section shows classes available to add customized CSS to Blazor scheduler component by overriding the default CSS.
 platform: Blazor
 control: Scheduler

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Radio Button in Web App | Syncfusion
+title: Getting Started with RadioButton in Blazor Web App | Syncfusion®
 description: Check out and learn the documentation for getting started with Blazor RadioButton Components in Blazor Web App.
 platform: Blazor
 control: Radio Button

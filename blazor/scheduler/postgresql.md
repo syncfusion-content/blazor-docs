@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PostgreSQL Data Binding in Blazor Scheduler Component | Syncfusion
+title: PostgreSQL Data Binding in Blazor Scheduler Component | Syncfusion®
 description: Learn about consuming data from PostgreSQL Server and binding it to Blazor Scheduler Component, and performing CRUD operations.
 platform: Blazor
 control: Scheduler

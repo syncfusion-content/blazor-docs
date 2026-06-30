@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in Blazor Rating Component | Syncfusion
+title: Tooltip in Blazor Rating Component | Syncfusion®
 description: Checkout and learn here all about Tooltip with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Views in Blazor Scheduler Component | Syncfusion
+title: Views in Blazor Scheduler Component | Syncfusion®
 description: This section helps you to learn about available views and view specific customization options for each views in Blazor Scheduler.
 platform: Blazor
 control: Scheduler

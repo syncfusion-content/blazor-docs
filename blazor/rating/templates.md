@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Templates in Blazor Rating Component | Syncfusion
+title: Templates in Blazor Rating Component | Syncfusion®
 description: Checkout and learn here all about Templates with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating

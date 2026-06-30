@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Minimal API Data Binding in Blazor Scheduler Component | Syncfusion
+title: Minimal API Data Binding in Blazor Scheduler Component | Syncfusion®
 description: Learn about consuming data from ASP.NET Core Minimal API and binding it to Blazor Scheduler Component, and performing CRUD operations.
 platform: Blazor
 control: Scheduler

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Scheduler in Blazor Web App | Syncfusion
+title: Getting started with Scheduler in Blazor Web App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Scheduler Components in Blazor Web App and much more details.
 platform: Blazor
 control: Scheduler

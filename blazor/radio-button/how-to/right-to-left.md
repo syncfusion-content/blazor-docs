@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right-To-Left in Blazor RadioButton Component | Syncfusion
+title: Right-To-Left in Blazor RadioButton Component | Syncfusion®
 description: Checkout and learn here all about Right-To-Left in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button

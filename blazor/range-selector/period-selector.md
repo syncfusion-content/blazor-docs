@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Period Selector in Blazor Range Selector Component | Syncfusion
+title: Period Selector in Blazor Range Selector Component | Syncfusion®
 description: Checkout and learn here all about period selector in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector

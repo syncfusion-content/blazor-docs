@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization in Blazor Scheduler Component | Syncfusion
+title: Globalization in Blazor Scheduler Component | Syncfusion®
 description: This section explains how the Blazor Scheduler adapts to various languages and culture by parsing and formatting the date or number appropriately.
 platform: Blazor
 control: Scheduler

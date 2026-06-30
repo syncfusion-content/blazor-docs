@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Blazor RadioButton Appearance | Syncfusion
+title: Customize Blazor RadioButton Appearance | Syncfusion®
 description: Learn here all about how to customize Radio Button Appearance in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Limits in Blazor Range Slider Component | Syncfusion
+title: Limits in Blazor Range Slider Component | Syncfusion®
 description: Checkout and learn here all about limits in Blazor Range Slider component with examples and much more details.
 platform: Blazor
 control: Range Slider

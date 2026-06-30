@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Precision Modes in Blazor Rating Component | Syncfusion
+title: Precision Modes in Blazor Rating Component | Syncfusion®
 description: Checkout and learn here all about Precision Modes with Blazor Rating component in Server App and WebAssembly App with examples.
 platform: Blazor
 control: Rating

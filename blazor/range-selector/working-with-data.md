@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Data in Blazor Range Selector Component | Syncfusion
+title: Working with Data in Blazor Range Selector Component | Syncfusion®
 description: Checkout and learn here all about Working with Data in Blazor Range Selector Component with examples and much more details.
 platform: Blazor
 control: Chart

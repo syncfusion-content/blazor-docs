@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in Blazor Rating Component | Syncfusion
+title: Appearance in Blazor Rating Component | Syncfusion®
 description: Checkout and learn here all about Appearance with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating

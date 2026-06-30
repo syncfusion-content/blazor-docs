@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Radio Button in WASM App | Syncfusion
+title: Getting Started with Blazor Radio Button in WASM App | Syncfusion®
 description: Check out and learn about getting started with Blazor RadioButton component in Blazor WebAssembly Application.
 platform: Blazor
 control: Radio Button

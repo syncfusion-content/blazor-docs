@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Rating Component in Blazor Web App | Syncfusion
+title: Getting Started with Rating Component in Blazor Web App | Syncfusion®
 description: Check out the documentation for getting started with Blazor Rating Components in Blazor Web App with examples and much more details.
 platform: Blazor
 control: Rating
