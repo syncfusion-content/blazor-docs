@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting in Blazor Scheduler Component | Syncfusion
+title: Exporting in Blazor Scheduler Component | Syncfusion®
 description: Learn how to export Blazor Scheduler events to an excel/ICS file, import events from ICS file and print the Scheduler with customization options.
 platform: Blazor
 control: Scheduler

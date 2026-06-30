@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WebAssembly Performance in Blazor Scheduler | Syncfusion
+title: WebAssembly Performance in Blazor Scheduler | Syncfusion®
 description: This topic helps you to improve the performance of Web Assembly Application when using Blazor Scheduler components with some tips.
 platform: Blazor
 control: Scheduler
