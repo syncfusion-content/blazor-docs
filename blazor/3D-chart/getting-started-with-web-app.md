@@ -130,7 +130,7 @@ After the package is installed, open the **~/_Imports.razor** file in the `.Clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
@@ -218,7 +218,7 @@ dotnet run
 
 ## Populate Blazor 3D Charts with data
 
-To bind data for the 3D charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
+To bind data for the 3D Charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
