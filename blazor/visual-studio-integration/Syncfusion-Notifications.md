@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion notifications in Blazor | Syncfusion
-description: Configure and understand Syncfusion notifications in Blazor applications, including trial license alerts, newer NuGet package updates, ES build notifications.
+title: Notifications in Blazor | Syncfusion®
+description: Configure and understand notifications in Blazor applications, including trial license alerts, newer NuGet package updates, ES build notifications.
 platform: Blazor
 control: Syncfusion Extensions
 documentation: ug
