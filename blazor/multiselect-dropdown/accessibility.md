@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Accessibility in Blazor MultiSelect Dropdown Component | Syncfusion®
+description: Checkout and learn here all about accessibility in Blazor MultiSelect Dropdown component and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -79,4 +79,4 @@ The accessibility compliance of the MultiSelect Dropdown component is shown in t
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)
