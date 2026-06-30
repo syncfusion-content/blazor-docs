@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor TreeGrid component and much more.
+title: Accessibility in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about accessibility in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -102,4 +102,4 @@ The accessibility compliance of the Blazor Tree Grid component is shown in the f
 {% previewsample "https://blazor.syncfusion.com/accessibility/treegrid" %}
 
 ## See also
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
