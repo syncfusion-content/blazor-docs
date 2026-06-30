@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scheduler Dimensions in Blazor Scheduler Component | Syncfusion
-description: This article demonstrates how to set the height and width of Syncfusion Blazor Scheduler component in pixels, percentage or auto values.
+description: This article demonstrates how to set the height and width of Blazor Scheduler component in pixels, percentage or auto values.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -149,4 +149,4 @@ In the following example, the application header height (4.6rem) is reduced from
 }
 ```
 
-![Blazor Scheduler with View Port Height](images/blazor-scheduler-view-port-height.png)
+![Blazor Scheduler with View Port Height](images/blazor-scheduler-view-port-height.webp)

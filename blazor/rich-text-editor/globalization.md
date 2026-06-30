@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Rich Text Editor Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor RichTextEditor component and more.
+description: Learn about globalization and localization in Blazor Rich Text Editor to support multiple languages and cultures.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) supports localization. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Syncfusion Blazor components.
+The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) supports localization. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to localize Blazor components.
 
 ## Globalization
 

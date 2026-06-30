@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor RadioButton Component | Syncfusion
+title: Accessibility in Blazor RadioButton Component | Syncfusion®
 description: Checkout and learn here all about Accessibility in Blazor RadioButton component with examples and much more details.
 platform: Blazor
 control: RadioButton

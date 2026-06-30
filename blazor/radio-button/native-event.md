@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native Events in Blazor RadioButton Component | Syncfusion
-description: Checkout and learn here all about native events in Blazor RadioButton component with examples and much more details.
+title: Native Events in Blazor RadioButton Component | Syncfusion®
+description: Checkout and learn here all about native events in Syncfusion Blazor RadioButton component with examples and much more details.
 platform: Blazor
 control: Radio Button
 documentation: ug
@@ -48,4 +48,4 @@ Use the `onchange` attribute to bind the change event for a radio button. The fo
 
 ```
 
-![Blazor RadioButton with Native Event](./images/blazor-radiobutton-native-event.png)
+![Blazor RadioButton with Native Event](./images/blazor-radiobutton-native-event.webp)

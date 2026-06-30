@@ -12,6 +12,7 @@ documentation: ug
 ## Localization
 
 The [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) supports localization of built-in UI text (for example, select all, no records, clear). Refer to the [Blazor localization](https://blazor.syncfusion.com/documentation/common/localization) documentation to configure culture files and resource keys for Blazor components.
+
 ## Globalization
 
 ### Enable right-to-left (RTL) mode

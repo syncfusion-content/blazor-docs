@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sort the Columns in Blazor QueryBuilder Component | Syncfusion
+title: Sort the Columns in Blazor QueryBuilder Component | Syncfusion®
 description: Checkout and learn here all about how to sort the columns in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
@@ -55,4 +55,4 @@ Sort the field list shown in the Query Builder’s field (column) dropdown to im
 
 ```
 
-![Sorting in Blazor Query Builder](./../images/blazor-querybuilder-sorting.png)
+![Sorting in Blazor Query Builder](./../images/blazor-querybuilder-sorting.webp)

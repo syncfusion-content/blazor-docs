@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor ProgressButton Component | Syncfusion
+title: Accessibility in Blazor ProgressButton Component | Syncfusion®
 description: Learn about accessibility in Blazor ProgressButton component with WAI-ARIA support and keyboard navigation examples.
 platform: Blazor
 control: Progress Button

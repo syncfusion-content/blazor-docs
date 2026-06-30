@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Read-Only Mode in Blazor Rich Text Editor | Syncfusion
-description: Checkout and learn here all about Controlling Editor Access in Syncfusion Blazor Rich Text Editor component and more.
+description: Learn how to configure read-only mode in Blazor Rich Text Editor to prevent user edits to content and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

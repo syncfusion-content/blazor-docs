@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with Rich Text Editor | Blazor MAUI App | Syncfusion
-canonical_url : "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-maui-app"
-description: Checkout and learn about the documentation for getting started with Blazor Rich Text Editor Component in Blazor MAUI App.
+title: Getting Started with Blazor Rich Text Editor in MAUI App | Syncfusion
+canonical_url: "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-maui-app"
+description: Learn how to get started with Blazor Rich Text Editor component in a Blazor MAUI App with examples and detailed steps.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -10,9 +10,9 @@ documentation: ug
 
 # Getting Started with Blazor Rich Text Editor
 
-This section provides a step-by-step guide to integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich TextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section provides a step-by-step guide to integrating the [Blazor Rich TextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
-> **Ready to streamline your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?** <br/>Discover the full potential of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio and more. [Explore Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 {% tabcontents %}
 
@@ -53,7 +53,7 @@ cd MauiBlazorApp
 
 {% endtabcontents %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install required Blazor packages
 
 Install the following NuGet packages in your project:
 
@@ -128,9 +128,9 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
+Register the Blazor service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" %}
@@ -166,9 +166,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor component
+## Add Blazor Rich Text Editor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor component in the **~/Pages/Home.razor** file.
+Add the Blazor Rich Text Editor component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -202,11 +202,11 @@ N> If you encounter any errors while using the Android Emulator, refer to the [T
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
 
 * [Blog posting using Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/usecase?theme=bootstrap5)
 
