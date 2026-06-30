@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor Gantt Chart in Server App | Syncfusion
-description: Checkout and learn about getting started with Blazor GanttChart component in Blazor Server Application.
+description: Checkout and learn about getting started with Blazor Gantt Chart component in Blazor Server Application.
 platform: Blazor
-control: GanttChart
+control: Gantt Chart
 documentation: ug
 ---
 
-# Getting started with Blazor Gantt Chart in Blazor server app
+# Getting started with Blazor Gantt Chart in Blazor Server App
 
 This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor server app using Visual Studio and Visual Studio Code.
 
