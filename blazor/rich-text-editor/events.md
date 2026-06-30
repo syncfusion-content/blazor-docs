@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Blazor Rich Text Editor Component | Syncfusion
+title: Events in Blazor Rich Text Editor | Syncfusion®
 description: Learn about the events available in Blazor Rich Text Editor for handling user interactions and content changes.
 platform: Blazor
 control: RichTextEditor

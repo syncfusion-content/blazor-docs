@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Rich Text Editor in MAUI App | Syncfusion
+title: Getting Started with Blazor Rich Text Editor in MAUI App | Syncfusion®
 canonical_url: "https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-maui-app"
 description: Learn how to get started with Blazor Rich Text Editor component in a Blazor MAUI App with examples and detailed steps.
 platform: Blazor

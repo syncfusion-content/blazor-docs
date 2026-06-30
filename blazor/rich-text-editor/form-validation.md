@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form validation in Blazor Rich Text Editor Component | Syncfusion
+title: Form Validation in Blazor Rich Text Editor | Syncfusion®
 description: Learn how to implement form validation in Blazor Rich Text Editor to ensure content meets required criteria.
 platform: Blazor
 control: RichTextEditor
