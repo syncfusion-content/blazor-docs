@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about CheckBox in Syncfusion Blazor TreeView component and much more details.
+title: CheckBox in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about CheckBox in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
