@@ -1548,7 +1548,7 @@ This CSS selector targets the cells that are specifically marked as header cells
 
 ### Resource cells in vertical views of scheduler.
 
-This CSS selector targets the cells that are specifically marked as resource cells in the Blazor Scheduler component. Resource cells in the vertical views of a scheduler are the sections that display the names or labels of resources
+This CSS selector targets the cells that are specifically marked as resource cells in the Blazor Scheduler component. Resource cells in the vertical views of a scheduler are the sections that display the names or labels of resources such as people, rooms, equipment, or services. These cells are usually shown on the top of the scheduler and help organize appointments by resource.
 
 ```cshtml
 

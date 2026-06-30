@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template Studio for Blazor | Syncfusion
-description: Learn here about how to create a Blazor application using Syncfusion Blazor components with the Template Studio in Visual Studio 2026. Explore to more details.
+title: Template Studio for Blazor | Syncfusion®
+description: Learn here about how to create a Blazor application using Blazor components with the Template Studio in Visual Studio 2026. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio creates a new Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor project preconfigured with required NuGet packages, theme styles, namespaces, and initial render code for the components you select. The Template Studio uses a step-by-step wizard so you can quickly scaffold an application with your choices for runtime, theme, authentication, and sample data.
 
-N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extensions for Visual Studio require Essential Studio<sup style="font-size:70%">&reg;</sup> versions 31.2.10 or later.
+N> The The Syncfusion® Blazor extensions for Visual Studio require Essential Studio<sup style="font-size:70%">&reg;</sup> versions 31.2.10 or later.
 
 Quick start
 
@@ -33,14 +33,14 @@ Quick start
 
 4. The Template Studio wizard opens. It guides you through Project Type, Controls, Features, and Configuration.
 
-    > **Note:** Refer to the .NET SDK support for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
+    > **Note:** Refer to the .NET SDK support for Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
     Project type - choose a template that matches your installed .NET SDK.
 
     | .NET SDK version | Application type |
     | ---------------- | ---------------- |
-    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App |
-    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Blazor Web App |
+    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Blazor WebAssembly App |
 
     For the Blazor Web App type you can set Interactivity type (Server, WebAssembly, Auto) and Interactivity location (Global or per page/component).
 
@@ -50,7 +50,7 @@ Quick start
 
     ![WASMTemplate](images/wasmtemplate.webp)
 
-5. Click **Next** or open the **Controls** tab to pick the Syncfusion components to include in the project.
+5. Click **Next** or open the **Controls** tab to pick the Syncfusion Blazor components to include in the project.
 
     ![Controls Section](images/controlssection1.webp)
 
@@ -62,8 +62,8 @@ Quick start
 
     | Application type | Supported authentication types |
     | ---------------- | ------------------------------ |
-    | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App | None, Individual Accounts |
-    | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly App | None, Individual Accounts, Microsoft Identity Platform |
+    | Blazor Web App | None, Individual Accounts |
+    | Blazor WebAssembly App | None, Individual Accounts, Microsoft Identity Platform |
 
     ![WebAppConfiguration](images/webappconfig.webp)
     ![WASMConfiguration](images/wasmconfig.webp)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editor Modes in Blazor Rich Text Editor Component | Syncfusion
+title: Editor Modes in Blazor Rich Text Editor | Syncfusion®
 description: Learn about the different editor modes in Blazor Rich Text Editor, including both Markdown and HTML editing modes.
 platform: Blazor
 control: RichTextEditor

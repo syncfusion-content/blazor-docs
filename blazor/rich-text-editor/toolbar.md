@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar Configuration in Blazor Rich Text Editor | Syncfusion
+title: Toolbar Configuration in Blazor Rich Text Editor | Syncfusion®
 description: Checkout and learn here all about Toolbar in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

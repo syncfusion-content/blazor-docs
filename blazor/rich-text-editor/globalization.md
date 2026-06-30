@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization in Blazor Rich Text Editor Component | Syncfusion
+title: Globalization in Blazor Rich Text Editor | Syncfusion®
 description: Learn about globalization and localization in Blazor Rich Text Editor to support multiple languages and cultures.
 platform: Blazor
 control: RichTextEditor

@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor Range Navigator Component
 
-Style and Appearance provide options to customize the visual design of the **Blazor Range Navigator** component, ensuring consistency with your application’s branding and theme.
+Style and Appearance provide options to customize the visual design of the **Syncfusion Blazor Range Navigator** component, ensuring consistency with your application’s branding and theme.
 
 By using CSS selectors and ID-based styling, you can customize colors, typography, spacing, borders, and other visual properties of TreeMap items, labels, and SVG elements.
 

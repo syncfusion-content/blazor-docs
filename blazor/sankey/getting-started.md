@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Sankey Diagram Component | Syncfusion
+title: Getting Started with Blazor Sankey Diagram Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor Sankey diagram in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Sankey

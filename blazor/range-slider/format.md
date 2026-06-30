@@ -81,4 +81,4 @@ For custom scenarios, use event handlers like [`TicksRendering`](https://help.sy
 
 ```
 
-![Blazor Range Slider events](images/blazor-rangeslider-format-using-events.png)
+![Blazor Range Slider events](images/blazor-rangeslider-format-using-events.webp)

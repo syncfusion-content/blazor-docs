@@ -36,4 +36,4 @@ The Blazor Rating component supports the following precision modes:
 
 ```
 
-![Blazor Rating component with different Precision Types](./images/blazor-rating-precision-types.png)
+![Blazor Rating component with different Precision Types](./images/blazor-rating-precision-types.webp)

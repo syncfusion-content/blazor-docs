@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gallery in Blazor Ribbon Component | Syncfusion
+title: Gallery in Blazor Ribbon Component | Syncfusion®
 description: Checkout and learn about Gallery in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Ribbon

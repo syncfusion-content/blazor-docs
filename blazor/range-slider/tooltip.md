@@ -23,7 +23,7 @@ The slider can display a tooltip that shows the current value when interacting w
 }
 ```
 
-![Blazor Range Slider displaying a tooltip](images/blazor-rangeslider-tooltip.png)
+![Blazor Range Slider displaying a tooltip](images/blazor-rangeslider-tooltip.webp)
 
 ## Buttons
 
@@ -43,4 +43,4 @@ N> After enabling slider buttons, pressing the Tab key moves focus to the handle
 }
 ```
 
-![Blazor Range Slider with buttons](images/blazor-rangeslider-buttons.png)
+![Blazor Range Slider with buttons](images/blazor-rangeslider-buttons.webp)
