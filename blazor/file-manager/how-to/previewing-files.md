@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Previewing Files in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about previewing files in Syncfusion Blazor File Manager component and more.
+title: Previewing Files in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about previewing files in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug

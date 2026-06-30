@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CustomAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion
-description: Learn all about CustomAdaptor in the Syncfusion Blazor Gantt Chart and how to handle data loading, searching, filtering, sorting, and CRUD operations.
+title: CustomAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
+description: Learn all about CustomAdaptor in the Blazor Gantt Chart and how to handle data loading, searching, filtering, sorting, and CRUD operations.
 platform: Blazor
 control: Gantt Chart
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
@@ -10,7 +10,7 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling manual operations on data. It is useful for implementing custom data binding and editing operations in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling manual operations on data. It is useful for implementing custom data binding and editing operations in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
 
 To implement custom data binding in the Gantt Chart, the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class is used. This abstract class serves as a base class for the custom adaptor.
 
@@ -751,7 +751,7 @@ The following example demonstrates how to implement CRUD operations for custom-b
 }
 ```
 
-> You can refer to the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt) feature tour page for its groundbreaking feature representations. You can also explore the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/overview?theme=fluent2) to understand how to present and manipulate data.
+> You can refer to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/overview?theme=fluent2) to understand how to present and manipulate data.
 
 ## How to pass additional parameters to custom adaptor
 
