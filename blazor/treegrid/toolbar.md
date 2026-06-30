@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar in Blazor TreeGrid Component | Syncfusion
-description: Learn how to configure built-in and custom toolbar items in the Syncfusion Blazor TreeGrid component and much more details.
+title: Toolbar in Blazor TreeGrid Component | Syncfusion®
+description: Learn how to configure built-in and custom toolbar items in the Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Toolbar in Syncfusion Blazor TreeGrid Component
+# Toolbar in Blazor TreeGrid Component
 
 The TreeGrid component supports a toolbar that facilitates various grid actions such as printing, searching, exporting, and editing.
 
