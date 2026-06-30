@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Timeline component and more details.
+title: Accessibility in Blazor Timeline Component | Syncfusion®
+description: Checkout and learn here all the features about accessibility in Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -54,4 +54,4 @@ The accessibility compliance of the Blazor Timeline component is shown in the fo
 
 ## See Also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

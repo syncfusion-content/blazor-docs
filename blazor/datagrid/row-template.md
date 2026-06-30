@@ -375,11 +375,11 @@ public class EmployeeData
 
 ![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.webp)
 
-## Render control in row template
+## Render Blazor component in row template
 
-The Blazor DataGrid can render components inside row templates, enabling interactive UI elements within rows.
+The Blazor DataGrid can render Blazor components inside row templates, enabling interactive UI elements within rows.
 
-To render a control in a row template, set the `RowTemplate` property and provide the custom HTML that defines the row layout.
+To render a Blazor component in a row template, set the `RowTemplate` property and provide the custom HTML that defines the row layout.
 
 The following example renders a [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) for `OrderID`, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for `Quantity`, a [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) for `OrderDate`, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for `OrderStatus` in a row template:
 
@@ -510,7 +510,7 @@ public class OrderData
 
 ## Render Chart in row template
 
-The Blazor DataGrid supports embedding other components, such as Charts, in row templates to visualize data directly within rows.
+The Blazor DataGrid supports embedding other Blazor components, such as Charts, in row templates to visualize data directly within rows.
 
 To render a Blazor Chart in a row template, use the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property to define the row layout and include the chart markup within the template.
 
