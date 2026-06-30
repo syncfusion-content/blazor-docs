@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Blazor extension for Visual Studio | Syncfusion
-description: Learn here about the Syncfusion Blazor extension for Visual Studio and how it streamlines integration with Syncfusion components. Explore to more details.
+title: Overview of Blazor extension for Visual Studio | Syncfusion®
+description: Learn here about the Blazor extension for Visual Studio and how it streamlines integration with components. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
