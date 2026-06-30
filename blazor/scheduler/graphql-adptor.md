@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Scheduler with GraphQL using Hot Chocolate | Syncfusion®
-description: Connect Blazor Scheduler to a Hot Chocolate GraphQL backend for optimized CRUD, typed queries, and a responsive, scalable .NET application.
+description: Connect Syncfusion’s Blazor Scheduler to a Hot Chocolate GraphQL backend for optimized CRUD, typed queries, and a responsive, scalable .NET application.
 control: Scheduler
 platform: blazor
 documentation: ug
