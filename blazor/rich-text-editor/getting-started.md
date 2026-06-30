@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Rich Text Editor in Blazor | Syncfusion
-canonical_url: "https://www.syncfusion.com/blazor-components/blazor-rich-text-editor"
+canonical_url: "https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor"
 description: Checkout and learn about getting started with the Rich Text Editor in Blazor WebAssembly Application.
 platform: Blazor
 control: RichTextEditor
@@ -12,7 +12,7 @@ documentation: ug
 
 # Getting Started with Rich Text Editor in Blazor
 
-This guide briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This guide briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 N> Explore the [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) demo to learn how to render and configure the editor tools.
 
