@@ -27,7 +27,7 @@ To create a Blazor application, follow the "Getting Started" documentation for [
 
 ## Install Required NuGet Packages
 
-Installation of the following and AI NuGet packages is required, based on the chosen AI service.
+Installation of the following Blazor and AI NuGet packages is required, based on the chosen AI service.
 
 {% tabcontents %}
 {% tabcontent Syncfusion Packages %}
