@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service Integration with Blazor Smart TextArea | Syncfusion
+title: Custom AI Service Integration with Blazor Smart TextArea | Syncfusion®
 description: Learn how to use IChatInferenceService to integrate custom AI services with the Blazor Smart TextArea component.
 platform: Blazor
 control: Smart TextArea
@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom AI Service Integration with Blazor Smart TextArea
 
-The Syncfusion Blazor Smart TextArea component leverages AI to provide context-aware autocompletion, typically using OpenAI or Azure OpenAI services. Developers can integrate custom AI services using the `IChatInferenceService` interface, which standardizes communication between the Smart TextArea and third-party AI providers. This section explains how to implement and register a custom AI service for the Smart TextArea.
+The Blazor Smart TextArea component leverages AI to provide context-aware autocompletion, typically using OpenAI or Azure OpenAI services. Developers can integrate custom AI services using the `IChatInferenceService` interface, which standardizes communication between the Smart TextArea and third-party AI providers. This section explains how to implement and register a custom AI service for the Smart TextArea.
 
 ## IChatInferenceService Interface
 
-The `IChatInferenceService` interface defines a contract for integrating custom AI services with Syncfusion Smart Components. It enables the Smart TextArea to request and receive AI-generated responses.
+The `IChatInferenceService` interface defines a contract for integrating custom AI services with Smart Components. It enables the Smart TextArea to request and receive AI-generated responses.
 
 ```csharp
 using Syncfusion.Blazor.AI;
@@ -97,5 +97,5 @@ If the custom AI service does not work as expected, try the following:
 
 ## See Also
 
-- [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+- [Getting Started with Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
 - [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)

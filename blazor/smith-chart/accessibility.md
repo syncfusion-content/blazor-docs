@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Smith Chart Component | Syncfusion
+title: Accessibility in Blazor Smith Chart Component | Syncfusion®
 description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
