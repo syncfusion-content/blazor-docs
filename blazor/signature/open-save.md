@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open and Save with Blazor Signature Component | Syncfusion
+title: Open and Save with Blazor Signature Component | Syncfusion®
 description: Checkout and learn about loading and saving the signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature
@@ -13,7 +13,7 @@ The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signa
 
 ## Open Signature
 
-The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the webp, JPEG, and SVG image's base64.
+The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the webP, JPEG, and SVG image's base64.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -64,11 +64,11 @@ The signature component opens a pre-drawn signature as either base64 or hosted/ 
 
 ## Save Signature
 
-The Signature component saves the signature as base64, blob, and image like webp, JPEG, and SVG.
+The Signature component saves the signature as base64, blob, and image like webP, JPEG, and SVG.
 
 ### Save as Base64
 
-The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the webp, JPEG, and SVG format as base64.
+The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the webP, JPEG, and SVG format as base64.
 
 ```cshtml
 
@@ -117,7 +117,7 @@ The signature component saves the signature as Blob using [`SaveAsBlobAsync`](ht
 
 ### Save as Image
 
-The Signature component saves the signature as an image using [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And it accepts file name and file type as parameter. The default file type is webp.
+The Signature component saves the signature as an image using [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And it accepts file name and file type as parameter. The default file type is webP.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

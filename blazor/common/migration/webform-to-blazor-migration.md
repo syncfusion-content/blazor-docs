@@ -13,9 +13,9 @@ Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microso
 
 ## Why migrate from Web Forms to Blazor?
 
-ASP.NET Web Forms follows a **server-side page model** that uses ViewState, postback, and a tightly coupled page lifecycle to process requests and maintain UI state across interactions.
+[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) follows a **server-side page model** that uses ViewState, postback, and a tightly coupled page lifecycle to process requests and maintain UI state across interactions.
 
-Blazor uses a component based architecture with reusable Razor components and **event driven UI updates**, where user interactions trigger handlers that refresh the UI without full page reloads. This modern approach improves maintainability, scalability, and testability, making Blazor the preferred choice for migrating and modernizing Web Forms applications.
+[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) uses a component based architecture with reusable Razor components and **event driven UI updates**, where user interactions trigger handlers that refresh the UI without full page reloads. This modern approach improves maintainability, scalability, and testability, making Blazor the preferred choice for migrating and modernizing Web Forms applications.
 
 | Aspect | Web Forms | Blazor |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Blazor uses a component based architecture with reusable Razor components and **
 
 ## Project structure comparison
 
-ASP.NET Web Forms and Blazor Web Apps follow different application architectures. The following table maps common Web Forms artifacts to their Blazor equivalents and describes their roles in a Blazor Web App.
+[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) and [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) Web Apps follow different application architectures. The following table maps common Web Forms artifacts to their Blazor equivalents and describes their roles in a Blazor Web App.
 
 | Web Forms Artifact | Blazor Web App Equivalent | Description |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ ASP.NET Web Forms and Blazor Web Apps follow different application architectures
 
 ## Migrating components from Web Forms to Blazor
 
-Create a Blazor project using one of the following getting started guides.
+Create a [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) project using one of the following getting started guides.
 
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
@@ -62,17 +62,17 @@ The following shared setup applies to all components and covers the common confi
 
 ### Package installation
 
-In Web Forms applications, components are typically installed using a single package, [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet).
+In [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) applications, components are typically installed using a single package, [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet).
 
-In Blazor applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
 ### Service registration
 
-ASP.NET Web Forms initializes controls automatically as part of the page lifecycle, without requiring explicit service registration.
+[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) initializes controls automatically as part of the page lifecycle, without requiring explicit service registration.
 
-Blazor uses dependency injection (DI), where components must be registered in the service container to enable required functionality such as rendering and interaction.
+[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) uses dependency injection (DI), where components must be registered in the service container to enable required functionality such as rendering and interaction.
 
 In the `Program.cs` file, add the following namespace and register the required services.
 
