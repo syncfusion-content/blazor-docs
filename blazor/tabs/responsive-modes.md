@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Responsive Modes in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about responsive modes in Syncfusion Blazor Tabs component and much more.
+title: Responsive Modes in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about responsive modes in Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug
