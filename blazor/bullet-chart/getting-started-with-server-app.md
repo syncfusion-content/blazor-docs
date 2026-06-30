@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +68,7 @@ Install the [Syncfusion.Blazor.BulletChart](https://www.nuget.org/packages/Syncf
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.BulletChart`) and install them.
 
-Alternatively, you can install the same packages using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -149,8 +151,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Bullet Chart component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component inside the razor file.
@@ -165,7 +165,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
 </SfBulletChart>
 
-@code{
+@code
+{
     public class ChartData
     {
         public double FieldValue { get; set; }
