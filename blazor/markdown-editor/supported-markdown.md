@@ -9,7 +9,7 @@ documentation: ug
 
 # Supported Markdown Syntax in Blazor Markdown Editor Component
 
-The [Blazor Markdown Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor/wysiwyg-markdown-editor) supports a wide range of Markdown syntax for formatting text, creating lists, inserting links and images, and more. This guide provides a comprehensive reference to all supported Markdown commands, their syntax, and usage.
+The [Blazor Markdown Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor/wysiwyg-markdown-editor) supports a wide range of Markdown syntax for formatting text, creating lists, inserting links and images, and more. This guide provides a comprehensive reference to all supported Markdown commands, their syntax, and usage.
 
 ## Markdown Syntax Guide for Blazor Markdown Editor
 

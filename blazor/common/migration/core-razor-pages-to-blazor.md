@@ -544,7 +544,7 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 ### Migrate to Blazor Rich Text Editor component
 
-The [ASP.NET Core Razor Pages Rich Text Editor](https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor) is a feature-rich WYSIWYG HTML editor and WYSIWYG Markdown editor. [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
+The [ASP.NET Core Razor Pages Rich Text Editor](https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor) is a feature-rich WYSIWYG HTML editor and WYSIWYG Markdown editor. [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) provides a modern, feature rich component for building interactive and dynamic text editing user interfaces.
 
 For detailed guidance, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and the [ASP.NET Core Razor Rich Text Editor getting started guide](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/getting-started).
 
@@ -631,7 +631,7 @@ namespace RichTextEditorSample.Pages
 
 **Blazor approach**
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) binds editor content to a variable and configures tools using component settings for interactive editing.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) binds editor content to a variable and configures tools using component settings for interactive editing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
