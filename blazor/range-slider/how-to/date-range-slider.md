@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Range Slider in Blazor Range Slider Component | Syncfusion
+title: Date Range Slider in Blazor Range Slider Component | Syncfusion®
 description: Checkout and learn here all about Date Range Slider in Blazor Range Slider component with examples and much more details.
 platform: Blazor
 control: Range Slider
