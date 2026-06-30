@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in Blazor TreeGrid Component | Syncfusion
-description: Learn how to define and configure columns in the Syncfusion Blazor TreeGrid component and much more details.
+title: Columns in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn how to define and configure columns in the Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug

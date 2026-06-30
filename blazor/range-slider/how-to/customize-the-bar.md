@@ -1,6 +1,5 @@
 ---
 layout: post
-title: Customize the bar in Blazor Range Slider Component | Syncfusion
 title: Customize the bar in Blazor Range Slider Component | Syncfusion®
 description: Checkout and learn here all about customize the bar in Blazor Range Slider component with examples and much more details.
 platform: Blazor
@@ -227,4 +226,4 @@ You can enhance the Blazor Range Slider by defining different track colors for s
 
 ```
 
-![Blazor Range Slider with track color](./../images/blazor-rangeslider-track.png)
+![Blazor Range Slider with track color](./../images/blazor-rangeslider-track.webp)

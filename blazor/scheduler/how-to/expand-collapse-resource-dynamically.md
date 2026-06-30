@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Expand And Collapse Resource in Blazor Scheduler | Syncfusion
+title: Expand And Collapse Resource in Blazor Scheduler | Syncfusion®
 description: Learn here all about how to expand and collapse resource dynamically in timeline views of Blazor Scheduler component.
 platform: Blazor
 control: Scheduler

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Title and Subtitle in Blazor Sankey Diagram | Syncfusion
+title: Title and Subtitle in Blazor Sankey Diagram | Syncfusion®
 description: Learn how to set and customize the title and subtitle in the Blazor Sankey Diagram for better data representation.
 platform: Blazor
 control: Sankey

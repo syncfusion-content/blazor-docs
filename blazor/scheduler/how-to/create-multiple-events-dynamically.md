@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Multi Events in different slots in Blazor Scheduler | Syncfusion
+title: Add Multi Events in different slots in Blazor Scheduler | Syncfusion®
 description: Learn here all about how to create multiple events in different time slots through CTRL key in Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler

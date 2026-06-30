@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Toggle Switch Button | Syncfusion
-description: Learn here all about styles and appearances in Syncfusion Blazor Toggle Switch Button component and more.
+title: Styles and Appearances in Blazor Toggle Switch Button | Syncfusion®
+description: Learn here all the features about styles and appearances in Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

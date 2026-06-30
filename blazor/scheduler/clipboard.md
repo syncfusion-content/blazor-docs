@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in Blazor Scheduler Component | Syncfusion
+title: Clipboard in Blazor Scheduler Component | Syncfusion®
 description: Learn here all about how to integrate the Clipboard manually to a Blazor Scheduler component and use it with required options.
 platform: Blazor
 control: Scheduler

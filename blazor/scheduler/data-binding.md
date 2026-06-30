@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Binding in Blazor Scheduler Component | Syncfusion
+title: Data Binding in Blazor Scheduler Component | Syncfusion®
 description: This section includes the data binding topics explaining how to bind various data sources to Blazor Scheduler component using DataManager adaptors.
 platform: Blazor
 control: Scheduler
