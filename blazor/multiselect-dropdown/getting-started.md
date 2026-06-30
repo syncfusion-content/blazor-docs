@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiSelect DropDown | Syncfusion®
+title: Getting Started | Blazor MultiSelect DropDown | Syncfusion®
 description: Checkout and learn about getting started with Blazor MultiSelect DropDown component in Blazor WebAssembly Application and much more details.
 platform: Blazor
 control: MultiSelect DropDown
