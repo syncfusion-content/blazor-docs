@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Header styling and visibility in Blazor TreeGrid | Syncfusion
-description: Learn how to style and hide the Syncfusion Blazor TreeGrid header using CSS—customize header bar, cells, text, with CSS isolation tips.
+title: Header styling and visibility in Blazor TreeGrid | Syncfusion®
+description: Learn how to style and hide the Blazor TreeGrid header using CSS—customize header bar, cells, text, with CSS isolation tips.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Header customization in Syncfusion Blazor TreeGrid
+# Header customization in Blazor TreeGrid
 
-The appearance of header elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the header interface:
+The appearance of header elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the header interface:
 
 - **Header container**: The outer wrapper that holds all column headers.
 - **Header cells**: Individual containers for each column title and associated icons.
