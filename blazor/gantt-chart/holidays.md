@@ -14,7 +14,7 @@ The Blazor Gantt Chart component supports holidays to define non-working days, s
 ## Understanding holiday effects on tasks
 
 Holidays adjust task scheduling to reflect non-working periods:
-- **Duration adjustments**: Task durations exclude holidays, extending end dates. For example, a task starting December 20, 2024, skips a December 25-26 holiday, adjusting its completion to account for these days.
+- **Duration adjustments**: Task durations exclude holidays, extending end dates. For example, a task starting December 20, 2026, skips a December 25-26 holiday, adjusting its completion to account for these days.
 - **Dependency management**: Successor tasks shift to maintain relationships (e.g., FS), ensuring no work occurs during holidays.
 - **Critical path integration**: Holidays impact slack calculations when using [EnableCriticalPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableCriticalPath), as tasks delayed by holidays may become critical.
 - **Resource allocation**: Holidays reduce resource availability, pausing task progress during these periods.
@@ -26,7 +26,7 @@ The [ProjectStartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 Holidays are defined using the [GanttHolidays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttHolidays.html) property, which accepts an array of holiday objects specifying dates, labels, and styling. Holidays take precedence over settings like `WorkWeek` or `IncludeWeekend`, ensuring tasks do not progress during these periods.
 
 **Holiday configuration properties**
-- `From`: Sets the start date of the holiday (e.g., `new Date('2024-12-25')`).
+- `From`: Sets the start date of the holiday (e.g., `new Date('2026-12-25')`).
 - `To`: Defines the end date for multi-day holidays (optional for single-day holidays).
 - `Label`: Provides a descriptive name (e.g., “Christmas Day”) displayed in the timeline.
 - `CssClass`: Applies custom CSS classes for styling holiday appearances.

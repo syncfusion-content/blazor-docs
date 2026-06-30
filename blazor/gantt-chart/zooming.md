@@ -146,7 +146,7 @@ Zooming actions can be triggered dynamically or through external controls using 
 
 * **Zoom In** - Use `ZoomIn` when `ZoomIn` external button was clicked, the timeline cell width is increased when the cell size exceeds the specified range and the timeline unit is changed based on the current zoom levels.
 * **Zoom Out** - Use `ZoomOut` when the `ZoomOut` external button was clicked, the timeline cell width is decreased when the cell size falls behind the specified range and the timeline view mode is changed based on the current zooming levels.
-* **Zoom To Fit** - Use `ZoomToFitAsync` When `Fit To Project` external button was clicked then all the tasks are rendered within the available chart container width.
+* **Zoom To Fit** - Use `ZoomToFit` When `Fit To Project` external button was clicked then all the tasks are rendered within the available chart container width.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

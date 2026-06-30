@@ -81,7 +81,7 @@ You can trigger export operations using the [ExportToExcelAsync](https://help.sy
 
 ## Binding custom data source while exporting
 
-You can bind a custom data source for Excel or CSV export in the Blazor Gantt component by assigning it dynamically before the export begins. To achieve this, set the required data to the `DataSource` property within the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) configuration.
+You can bind a custom data source for Excel or CSV export in the Blazor Gantt component by assigning it dynamically before the export begins. To achieve this, set the required data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property within the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

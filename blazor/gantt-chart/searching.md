@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt Chart component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
 
-To enable this feature, add the **Search** option to the `Toolbar` configuration.
+To enable this feature, add the **Search** option to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -23,8 +23,8 @@ To enable this feature, add the **Search** option to the `Toolbar` configuration
     </GanttTaskFields>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         TaskCollection = GetTaskCollection();
@@ -49,10 +49,10 @@ To enable this feature, add the **Search** option to the `Toolbar` configuration
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -91,8 +91,8 @@ The following sample demonstrates an initial search where `Fields` is set to **T
     <GanttSearchSettings Fields="@(new string[] { "TaskName" })" Operator=SearchOperator Key="Perförm" IgnoreCase="true" IgnoreAccent="true"></GanttSearchSettings>
 </SfGantt>
 
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
     public Syncfusion.Blazor.Operator SearchOperator { get; set; } = Syncfusion.Blazor.Operator.Contains;
     protected override void OnInitialized()
     {
@@ -118,10 +118,10 @@ The following sample demonstrates an initial search where `Fields` is set to **T
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -171,12 +171,12 @@ The following operators are supported in searching:
 </SfGantt>
 
 @code {
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     public Syncfusion.Blazor.Operator SearchOperator { get; set; } = Syncfusion.Blazor.Operator.StartsWith;
 
     public class DropDownOrder
     {
-        public string Text { get; set; }
+        public string? Text { get; set; }
         public Syncfusion.Blazor.Operator Value { get; set; }
     }
 
@@ -216,10 +216,10 @@ The following operators are supported in searching:
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -251,9 +251,9 @@ To perform a search from an external button in the Syncfusion<sup style="font-si
 </SfGantt>
 
 @code {
-    public SfGantt<TaskData> Gantt;
+    public SfGantt<TaskData>? Gantt;
     private string SearchText { get; set; } = string.Empty;
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -291,10 +291,10 @@ To perform a search from an external button in the Syncfusion<sup style="font-si
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -324,9 +324,9 @@ This following sample demonstrates searching only within the **TaskName** and **
     <GanttSearchSettings Fields="@(new string[] { "TaskName", "Duration" })">
     </GanttSearchSettings>
 </SfGantt>
-@code{
-    public List<TaskData> TaskCollection { get; set; }
-        
+@code {
+    public List<TaskData>? TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
         TaskCollection = GetTaskCollection();
@@ -351,10 +351,10 @@ This following sample demonstrates searching only within the **TaskName** and **
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
@@ -382,12 +382,12 @@ To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</s
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttSearchSettings Fields="@(new string[] { "TaskName" })" Operator=SearchOperator
-          Key="List" IgnoreCase="true"></GanttSearchSettings>
+                         Key="List" IgnoreCase="true"></GanttSearchSettings>
 </SfGantt>
 
-@code{
+@code {
     public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    public List<TaskData>? TaskCollection { get; set; }
     public Syncfusion.Blazor.Operator SearchOperator { get; set; } = Syncfusion.Blazor.Operator.Contains;
     protected override void OnInitialized()
     {
@@ -398,7 +398,7 @@ To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</s
     {
         this.Gantt?.SearchAsync("");
     }
-    
+
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
@@ -418,10 +418,10 @@ To clear the search results in the Syncfusion<sup style="font-size:70%">&reg;</s
     public class TaskData
     {
         public int TaskId { get; set; }
-        public string TaskName { get; set; }
+        public string? TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }

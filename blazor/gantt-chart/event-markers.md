@@ -17,11 +17,11 @@ Understanding event markers implementation enables effective visualization of pr
 
 Event markers utilize specific properties to define their positioning, appearance, and identification within the project timeline:
 
-**Date positioning**: The [Day](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEventMarker.html#Syncfusion_Blazor_Gantt_GanttEventMarker_Day) property establishes the exact timeline date where the marker appears. This date value determines marker placement across the entire vertical timeline, ensuring accurate project event representation.
+**Date positioning**: The `Day` property establishes the exact timeline date where the marker appears. This date value determines marker placement across the entire vertical timeline, ensuring accurate project event representation.
 
-**Descriptive labeling**: The [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEventMarker.html#Syncfusion_Blazor_Gantt_GanttEventMarker_Label) property provides descriptive text that identifies the marker's purpose or significance. Labels enhance user understanding by clearly indicating what project event the marker represents.
+**Descriptive labeling**: The `Label` property provides descriptive text that identifies the marker's purpose or significance. Labels enhance user understanding by clearly indicating what project event the marker represents.
 
-**Visual customization**: The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEventMarker.html#Syncfusion_Blazor_Gantt_GanttEventMarker_CssClass) property enables custom styling through CSS class applications. This property allows distinctive visual treatment for different marker types, supporting color coding, styling variations, and brand consistency.
+**Visual customization**: The `CssClass` property enables custom styling through CSS class applications. This property allows distinctive visual treatment for different marker types, supporting color coding, styling variations, and brand consistency.
 
 ## Event marker configuration
 

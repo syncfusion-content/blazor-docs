@@ -11,7 +11,7 @@ documentation: ug
 
 Filtering allows you to view specific or related records based on defined criteria. The Gantt Chart component supports options like filter menu, Excel-like filtering, and toolbar search to narrow down visible data.
 
-To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true** in the Gantt Chart configuration. You can define filter options using `GanttFilterSettings` and configure toolbar search using `GanttSearchSettings` property.
+To enable filtering, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true** in the Gantt Chart configuration. You can define filter options using [GanttFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html) and configure toolbar search using [GanttSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSearchSettings.html) property.
 
 > The  filtering UI is rendered based on the column type, allowing data to be filtered using appropriate operators.
 > The filter menu is enabled by default. To disable the filtering option for a specific column, set the `AllowFiltering` property of the `GanttColumn` to **false**.

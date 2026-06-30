@@ -16,7 +16,7 @@ It supports the following kinds of data binding method:
 * List binding
 * Remote data
 
-N> When using `DataSource` as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the **TValue** must be provided explicitly in the Gantt component.
+N> When using `DataSource` as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using `SfDataManager` for data binding, the **TValue** must be provided explicitly in the Gantt component.
 
 ## TaskFields mapping
 
@@ -125,7 +125,7 @@ Hierarchical data binding organizes complex parent-child relationships through n
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBnjdiSLMekVXKg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> * Indent/Outdent is not supported for hierarchy data.
+> * Indent/Outdent is not supported for hierarchy data.
 >* ExpandCollapse state maintenance is not supported for hierarchy data.
 >* Row drag and drop feature is not supported for hierarchy data.
 
@@ -1278,7 +1278,7 @@ Exceptions triggered during Gantt operations can be handled effectively without 
 The following sample code demonstrates notifying user when server-side exception has occurred during data operation:
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

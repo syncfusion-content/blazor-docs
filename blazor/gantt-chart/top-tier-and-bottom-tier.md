@@ -75,7 +75,7 @@ These properties allow precise control over how time intervals are displayed, en
 
 ## Combining timeline cells
 
-In the Blazor Gantt Chart component, timeline cells in the top and bottom tiers can be merged by grouping multiple time units into a single cell. This behavior is controlled using the `Count` property in both `TopTier` and `BottomTier` configurations.
+In the Blazor Gantt Chart component, timeline cells in the top and bottom tiers can be merged by grouping multiple time units into a single cell. This behavior is controlled using the `Count` property in both [TopTier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_TopTier) and [BottomTier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_BottomTier) configurations.
 
 - [TopTier.count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Count): Specifies the number of time units to combine in each top-tier cell.
 - [BottomTier.count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Count): Specifies the number of time units to combine in each bottom-tier cell.
@@ -230,7 +230,7 @@ These options provide flexibility in presenting timeline data according to proje
 
 ## Timeline cell width
 
-In the Blazor Gantt Chart component, the width of timeline cells can be configured using the [TimelineSettings.TimelineUnitSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_TimelineUnitSize) property within [TimelineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html). This value directly sets the width of the bottom tier cells.
+In the Blazor Gantt Chart component, the width of timeline cells can be configured using the `TimelineSettings.TimelineUnitSize` property within [TimelineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html). This value directly sets the width of the bottom tier cells.
 
 The width of the top tier cells is automatically calculated based on the bottom tier's unit and the specified `TimelineUnitSize`. This ensures consistent scaling across both tiers while maintaining clarity in the timeline view.
 
