@@ -104,7 +104,7 @@ The following code connects to a MySQL database, retrieves data, and binds it to
 
 ![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.webp)
 
-## Connecting a MySQL Database to a Blazor Pivot Table via Web API Service
+## Connecting a MySQL to a Blazor Pivot Table via Web API service
 
 This section explains how to create a Web API service to fetch data from a MySQL database and connect it to the Blazor Pivot Table.
 

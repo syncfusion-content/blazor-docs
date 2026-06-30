@@ -21,7 +21,7 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnjxhKhVJevbJJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnjxhKhVJevbJJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.webp)" %}
 
 ## Remote data
 

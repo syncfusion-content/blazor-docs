@@ -63,7 +63,7 @@ The following demo depicts the example for `Fade` animation,
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLxZdsrAVfjOACG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel fade animation](images/fade_animation.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLxZdsrAVfjOACG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel fade animation](images/fade_animation.webp)" %}
 
 ### Custom animation
 
@@ -154,7 +154,7 @@ The following demo depicts the example for `parallax` custom animation
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrxDHsVAhpTPgJU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel custom animation](images/custom_animation.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrxDHsVAhpTPgJU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel custom animation](images/custom_animation.webp)" %}
 
 ## Intervals between slides
 
@@ -503,4 +503,4 @@ The following are the different swipe modes available in the carousel:
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthxDnChUBQKMXup?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Swipe Mode](images/swipe.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthxDnChUBQKMXup?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Swipe Mode](images/swipe.webp)" %}

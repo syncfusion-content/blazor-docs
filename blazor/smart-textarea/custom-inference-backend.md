@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom AI Service Integration with Blazor Smart TextArea | Syncfusion
-description: Learn how to use IChatInferenceService to integrate custom AI services with the Syncfusion Blazor Smart TextArea component.
+description: Learn how to use IChatInferenceService to integrate custom AI services with the Blazor Smart TextArea component.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
