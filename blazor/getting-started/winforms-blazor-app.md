@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Razor Class Library in VS | Syncfusion
-description: Check out the documentation for Creating Razor Class Library (RCL) using Blazor components and much more details. 
+title: Getting Started with WinForms Blazor App in VS | Syncfusion®
+description: Check out the documentation for getting started with WinForms Blazor App and Blazor Components in Visual Studio and explore here to more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -43,7 +43,7 @@ N> Ensure that the package [Microsoft.AspNetCore.Components.WebView.WindowsForms
 
 ![Winforms Blazor App NuGet package reference](images/winforms/winforms-blazor-package-reference.webp)
 
-N> Blazor components packages are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Add Import Namespaces
 

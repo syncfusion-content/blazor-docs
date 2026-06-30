@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editor Window Customization in Blazor Scheduler Component | Syncfusion
-description: This topic demonstrates how to customize the editor and quick pop-up using templates and how to prevent popups in Syncfusion Blazor Scheduler component.
+title: Editor Window Customization in Blazor Scheduler | Syncfusion
+description: This topic demonstrates how to customize the editor and quick pop-up using templates and how to prevent popups in Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -23,11 +23,11 @@ N> You can also prevent the editor window from opening, by rendering Scheduler i
 
 You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection in the resx file of your culture file available in the following directory `Project root folder > Resources > SfResources-en-US.resx` like the below image.
 
-![Customizing Local Words in resx file of Blazor Scheduler](images/blazor-scheduler-custom-word-in-resx.png)
+![Customizing Local Words in resx file of Blazor Scheduler](images/blazor-scheduler-custom-word-in-resx.webp)
 
 The editor window opening for creating new event will be displayed as in the following image after changing the localized words.
 
-![Editing Window with Custom Local Words in Blazor Scheduler](images/blazor-scheduler-editing-local-word.png)
+![Editing Window with Custom Local Words in Blazor Scheduler](images/blazor-scheduler-editing-local-word.webp)
 
 ### How to change the label text of default editor fields
 
@@ -78,7 +78,7 @@ To change the default labels such as Title, Location and other field names in th
 }
 ```
 
-![Editor Window with Custom Label in Blazor Scheduler](images/blazor-scheduler-custom-label.png)
+![Editor Window with Custom Label in Blazor Scheduler](images/blazor-scheduler-custom-label.webp)
 
 ### Field validation
 
@@ -131,7 +131,7 @@ It is possible to validate the required fields of the editor window before submi
 }
 ```
 
-![Editor window with Validation in Blazor Scheduler](images/blazor-scheduler-validation.png)
+![Editor window with Validation in Blazor Scheduler](images/blazor-scheduler-validation.webp)
 
 ### Customizing the default time duration in editor window
 
@@ -471,7 +471,7 @@ In this demo, we tailor the editor's header according to the appointment's subje
 </style>
 ```
 
-![Add customize header and footer using template in Blazor Scheduler](images/blazor-scheduler-custom-editor-header-footer.png)
+![Add customize header and footer using template in Blazor Scheduler](images/blazor-scheduler-custom-editor-header-footer.webp)
 
 ### How to add resource options within editor template
 
@@ -569,7 +569,7 @@ The resource field can be added within editor template with the following code e
 }
 ```
 
-![Add Resource Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-resource.png)
+![Add Resource Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-resource.webp)
 
 N> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
 
@@ -671,7 +671,7 @@ N> EditorTemplate is not applicable when we set `AllowMutiple` as true without e
 }
 ```
 
-![Add Recurrence Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-recurrence.png)
+![Add Recurrence Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-recurrence.webp)
 
 ## Apply validations on editor template fields
 
@@ -779,7 +779,7 @@ In the following code example, validation has been added to the `EventType` fiel
 }
 ```
 
-![Editor Template with Validation in Blazor Scheduler](images/blazor-scheduler-custom-window-validation.png)
+![Editor Template with Validation in Blazor Scheduler](images/blazor-scheduler-custom-window-validation.webp)
 
 ## Quick popups
 
@@ -1503,8 +1503,8 @@ The quick popup accepts the template that customizes only event click quick popu
 </style>
 ```
 
-![Quick Popup on Cell in Blazor Scheduler](images/blazor-scheduler-cell-click-quick-popup.png)
-![Quick Popup on Event in Blazor Scheduler](images/blazor-scheduler-event-click-quick-popup.png)
+![Quick Popup on Cell in Blazor Scheduler](images/blazor-scheduler-cell-click-quick-popup.webp)
+![Quick Popup on Event in Blazor Scheduler](images/blazor-scheduler-event-click-quick-popup.webp)
 
 ### How to enable/disable quick popup on selection end
 
@@ -1686,7 +1686,7 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 }
 ```
 
-![More Event Popup in Blazor Scheduler](images/blazor-scheduler-more-event-popup.png)
+![More Event Popup in Blazor Scheduler](images/blazor-scheduler-more-event-popup.webp)
 
 ### How to prevent the display of popup when clicking on the more text indicator
 

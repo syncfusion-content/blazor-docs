@@ -95,4 +95,4 @@ The following example demonstrates a scenario where users can select an existing
 
 N> Custom values can also be committed using the keyboard by pressing **Enter** when the desired text is typed in the input field.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBnjMBqrTWEjiBq?appbar=false&editor=true&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBnjMBqrTWEjiBq?appbar=false&editor=true&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.webp)" %}

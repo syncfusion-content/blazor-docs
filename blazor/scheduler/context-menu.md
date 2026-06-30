@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Blazor Scheduler Component | Syncfusion
-description: Learn here all about how to integrate the context menu manually to a Syncfusion Blazor Scheduler component and use it with required options.
+description: Learn here all about how to integrate the context menu manually to a Blazor Scheduler component and use it with required options.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -197,4 +197,4 @@ N> You can also display custom menu options on Scheduler cells and appointments.
 
 ```
 
-![Context Menu in Blazor Scheduler](images/blazor-scheduler-contextmenu.png)
+![Context Menu in Blazor Scheduler](images/blazor-scheduler-contextmenu.webp)
