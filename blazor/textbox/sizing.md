@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sizing in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Sizing in Syncfusion Blazor TextBox component and much more details.
+description: Checkout and learn here all about Sizing in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
