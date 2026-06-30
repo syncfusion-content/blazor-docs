@@ -1,17 +1,15 @@
 ---
 layout: post
-title: Code snippets for the Syncfusion Blazor extension | Syncfusion
-description: Learn here about that how to use the code snippet utilities in the Syncfusion Blazor extensions for the Visual Studio Code. Explore here to more details.
+title: Code snippets for Blazor Extension in VS code | Syncfusion®
+description: Learn how to use the code snippet feature in the Blazor extension for Visual Studio Code to quickly insert Blazor component.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Add Syncfusion® Blazor component in the Blazor application
+# Add Blazor Components Using Code Snippets
 
-The Syncfusion® Blazor extension for Visual Studio Code speeds up component insertion by providing ready-to-use Razor markup and placeholders for common features.
-
-   N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code snippet feature is available from Essential Studio<sup style="font-size:70%">&reg;</sup> 2021 Volume 1 (`v19.1.0.54`).
+The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) for Visual Studio Code speeds up component insertion by providing ready-to-use Razor markup and placeholders for common features.
 
 ## Quick start
 
@@ -21,13 +19,14 @@ The Syncfusion® Blazor extension for Visual Studio Code speeds up component ins
 
     ```
     sf<Syncfusion component name>-<feature>
-    Example: sfgrid-grouping
+    Example: `sfgrid-grouping` to insert a DataGrid with grouping enabled.
     ```
-4. Choose the snippet from the suggestions and press Enter or Tab. The component markup is inserted with editable placeholders.
 
-    ![Animated demo showing insertion of a Syncfusion Blazor code snippet](images/codesnippet.webp)
+4. Choose the snippet from the suggestions and press **Enter** or **Tab**. The component markup is inserted with editable placeholders.
 
-5. Use Tab to navigate placeholders and fill required values. Inline comments in the snippet highlight required fields.
+    ![Animated demo showing insertion of a Blazor code snippet](images/codesnippet.webp)
+
+5. Use **Tab** to navigate placeholders and fill required values. Inline comments in the snippet highlight required fields.
 
     ![Snippet comments highlighting required placeholders](images/comment.webp)
 
@@ -35,24 +34,36 @@ The Syncfusion® Blazor extension for Visual Studio Code speeds up component ins
 
     ![Help link shown at the top of the inserted snippet](images/help.webp)
 
-## After inserting a snippet — project configuration checklist
+## After inserting a snippet - project configuration checklist
 
-The snippet only adds Razor markup. To render Syncfusion® components correctly, ensure the project is configured as follows:
+The snippet only adds Razor markup. To render [Blazor components](https://www.syncfusion.com/blazor-components) correctly, ensure the project is configured as follows:
 
-- Add the required Syncfusion® NuGet package(s) (individual packages are recommended).Refer to this [section](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages) to learn about the advantages of the individual NuGet packages.
+- Add the required NuGet package(s). Individual packages are recommended. Refer to [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages) for details.
 
     ![NuGet Package](images/nuget-snippet.webp)
 
-- Import Syncfusion® namespaces in `~/_Imports.razor`.
+- Import required namespaces in `~/_Imports.razor`.
 
     ![Namespace](images/namespace-snippet.webp)
 
-- Include a Syncfusion® [theme](https://blazor.syncfusion.com/documentation/appearance/themes) stylesheet in the page head: `~/Components/App.razor` (Blazor Web App), `~/Pages/_Host.cshtml` (Blazor Server), or `~/wwwroot/index.html` (Blazor WebAssembly).
+- Include a [theme](https://blazor.syncfusion.com/documentation/appearance/themes) stylesheet in the page head: 
+    - `~/Components/App.razor` — (Blazor Web App)
+    - `~/Pages/_Host.cshtml` — (Blazor Server)
+    - `~/wwwroot/index.html` — (Blazor WebAssembly)
 
     ![Themes](images/themes-snippet.webp)
 
-- Register the Syncfusion® Blazor service in the appropriate `Program.cs` files. For interactive Web App render modes `WebAssembly` or `Auto`, register in both `Program.cs` files when applicable.
+- Register the Blazor service in the appropriate `Program.cs` files. For interactive Web App render modes `WebAssembly` or `Auto`, register in both `Program.cs` files when applicable.
 
-    ![Registration of the Syncfusion Blazor service](images/configuration-snippet.webp)
+    ![Registration of the Blazor service](images/configuration-snippet.webp)
 
-5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+N> If you installed the trial setup or NuGet packages from [nuget.org](https://www.nuget.org), you must register the license key. Refer to the [licensing overview](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for details on generating and registering your license key. 
+
+## See also
+
+- [Overview of Blazor Extension for Visual Studio Code](overview.md)
+- [Download and Installation for Visual Studio Code](download-and-installation.md)
+- [Create Project Template for Visual Studio Code](create-project.md)
+- [Convert Project for Visual Studio Code](convert-project.md)
+- [Upgrade Project for Visual Studio Code](upgrade-project.md)
+- [Scaffolding for Visual Studio Code](scaffolding.md)

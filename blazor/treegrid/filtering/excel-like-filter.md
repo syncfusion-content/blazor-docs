@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Like Filter in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Excel like filter in Syncfusion Blazor Tree Grid component and much more details.
+title: Excel Like Filter in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about Excel like filter in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

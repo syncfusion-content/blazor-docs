@@ -267,6 +267,8 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.ChartWizard
+
 <div class="control-section">
     <SfChartWizard>
         <ChartSettings DataSource="@OlympicsDataSource"
@@ -330,6 +332,8 @@ The `Theme` property is used to specify the visual theme applied to the chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.ChartWizard
 
 <div class="control-section">
     <SfChartWizard Theme="Theme.Material3">
