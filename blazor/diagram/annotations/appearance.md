@@ -147,6 +147,66 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.webp)
 
+### How to Configure Hyperlink Open Mode
+
+The [OpenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkSettings.html#Syncfusion_Blazor_Diagram_HyperlinkSettings_OpenMode) property of the `Hyperlink` allows you to control how annotation hyperlinks open. You can configure the hyperlink to open in the same tab or a new tab. The `OpenMode` property accepts `HyperlinkOpenMode` enum values: `Self` (same tab) or `Blank` (new tab).
+
+By default, the `OpenMode` is set to `Self`, which opens the link in the same browser tab.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
+
+@code
+{
+    // Defines diagram's node collection.
+    DiagramObjectCollection<Node> _nodes;
+
+    protected override void OnInitialized()
+    {
+        _nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            // Sets the annotation for the Node.
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                // Add hyperlink that opens in a new tab.
+                new ShapeAnnotation 
+                { 
+                    Hyperlink = new HyperlinkSettings
+                    { 
+                        Content = "Open Syncfusion", 
+                        Url = "https://www.syncfusion.com",
+                        // Configures the hyperlink to open in a new tab.
+                        OpenMode = HyperlinkOpenMode.Blank
+                    } 
+                }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+        };
+        _nodes.Add(node);
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdZRNOTGCrZiyz?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinkOpenMode.razor)
+
+The following table shows the available options for the `OpenMode` property:
+
+| OpenMode | Description | Behavior |
+| -------- | -------- | -------- |
+| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkOpenMode.html#Syncfusion_Blazor_Diagram_HyperlinkOpenMode_Self) | Opens the hyperlink in the same browser tab, replacing the current page. | The application in the current tab navigates to the specified URL. |
+| [Blank](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkOpenMode.html#Syncfusion_Blazor_Diagram_HyperlinkOpenMode_Blank) | Opens the hyperlink in a new browser tab. | A new tab is opened with the specified URL. |
+
+N>**Note:** Browser security policies and popup blockers may restrict opening links in new tabs. Ensure that your application handles such scenarios appropriately.
+
 ## How to Wrap Text Using Text Wrapping
 
 The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping) property of an annotation's style defines the wrapping behavior for its text content. When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The following code explains how to wrap a text in a node.
