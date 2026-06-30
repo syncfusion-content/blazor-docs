@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with QueryBuilder in Blazor Server App | Syncfusion
+title: Getting Started with QueryBuilder in Blazor Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor QueryBuilder Components in Blazor Server App with examples.
 platform: Blazor
 control: QueryBuilder
@@ -194,7 +194,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor QueryBuilder component in the default web browser.
 
-![Blazor QueryBuilder Component](./images/blazor-querybuilder-component.png)
+![Blazor QueryBuilder Component](./images/blazor-querybuilder-component.webp)
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/QueryBuilder)
 

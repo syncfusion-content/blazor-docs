@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Blazor Query Builder Component | Syncfusion
+title: Events in Blazor Query Builder Component | Syncfusion®
 description: Learn about the available events in Blazor Query Builder component, including the Destroyed event that fires on component disposal with examples.
 platform: Blazor
 control: Query Builder

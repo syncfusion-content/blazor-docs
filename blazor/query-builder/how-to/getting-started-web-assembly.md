@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor QueryBuilder in WebAssembly | Syncfusion
-description: Checkout and learn about getting started with Blazor WebAssembly and Blazor QueryBuilder Component in Visual Studio and much more.
+title: Getting Started with Blazor QueryBuilder in WebAssembly | Syncfusion®
+description: Checkout and learn about getting started with Blazor WebAssembly and Blazor QueryBuilder Component in Visual Studio with examples.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -20,7 +20,7 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 
-## Install QueryBuilder and Themes NuGet packages
+## Install Blazor QueryBuilder and Themes NuGet in the App
 
 To add the Query Builder component to the app, open the NuGet Package Manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search for and install [Syncfusion.Blazor.QueryBuilder](https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, use the following Package Manager commands.
 
@@ -34,7 +34,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components are available on NuGet. See the [Blazor packages on NuGet](https://www.nuget.org/packages?q=syncfusion.blazor) and the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a list of packages and component details.
+N> Blazor components are available on NuGet. See the [Syncfusion Blazor packages on NuGet](https://www.nuget.org/packages?q=syncfusion.blazor) and the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a list of packages and component details.
 ## Register Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.QueryBuilder` namespaces.

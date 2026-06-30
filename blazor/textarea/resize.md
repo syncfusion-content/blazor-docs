@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize in Blazor TextArea Component | Syncfusion
-description: Check out and learn about the Resize feature of the Syncfusion Blazor TextArea component and explore much more functionality.
+title: Resize in Blazor TextArea Component | Syncfusion®
+description: Check out and learn about the Resize feature of the Blazor TextArea component and explore much more functionality.
 platform: Blazor
 control: TextArea
 documentation: ug
