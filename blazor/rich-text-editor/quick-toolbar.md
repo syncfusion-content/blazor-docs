@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quick toolbars in Blazor Rich Text Editor | Syncfusion
+title: Quick Toolbars in Blazor Rich Text Editor | Syncfusion®
 description: Learn how to use and configure quick toolbars in Blazor Rich Text Editor for fast formatting access.
 platform: Blazor
 control: RichTextEditor

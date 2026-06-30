@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nodes for Blazor Sankey Diagram | Syncfusion
+title: Nodes for Blazor Sankey Diagram | Syncfusion®
 description: Learn how to define, configure and style nodes in the Blazor Sankey Diagram, including IDs, labels, and appearance settings.
 platform: Blazor
 control: Sankey

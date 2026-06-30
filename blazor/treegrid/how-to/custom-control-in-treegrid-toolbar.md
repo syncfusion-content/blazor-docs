@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom control in Blazor TreeGrid Toolbar | Syncfusion
-description: Learn here all about Custom control in Tree Grid toolbar in Syncfusion Blazor TreeGrid component and more.
+title: Custom control in Blazor TreeGrid Toolbar | Syncfusion®
+description: Learn here all about Custom control in Tree Grid toolbar in Blazor TreeGrid component and much more details.   
 platform: Blazor
 control: Tree Grid
 documentation: ug

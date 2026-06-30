@@ -1,7 +1,6 @@
 ---
 layout: post
-
-title: Responsive Sidebar in Blazor Sidebar Component | Syncfusion
+title: Responsive Sidebar in Blazor Sidebar Component | Syncfusion®
 description: Checkout and learn here the features all about responsive Sidebar in Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fullscreen Mode in Blazor RichTextEditor | Syncfusion
+title: Fullscreen Mode in Blazor RichTextEditor | Syncfusion®
 description: Checkout and learn here all about Fullscreen Mode in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

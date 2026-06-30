@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inline Mode in Rich Text Editor in Blazor | Syncfusion
+title: Inline Mode in Blazor Rich Text Editor | Syncfusion®
 description: Learn how to use inline editing mode in Blazor Rich Text Editor for compact, dialog-free content editing.
 platform: Blazor
 control: RichTextEditor

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Signature Component | Syncfusion
+title: Getting Started with Blazor Signature Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor Signature component in Blazor WebAssembly Application.
 platform: Blazor
 control: Signature

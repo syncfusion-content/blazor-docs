@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Built-in tools in Blazor Rich Text Editor Component | Syncfusion
+title: Built-in tools in Blazor Rich Text Editor Component | Syncfusion®
 description: Checkout and learn here all about built-in tools in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
