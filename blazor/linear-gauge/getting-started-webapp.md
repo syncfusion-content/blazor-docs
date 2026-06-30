@@ -70,7 +70,7 @@ Install the [Syncfusion.Blazor.LinearGauge](https://www.nuget.org/packages/Syncf
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.LinearGauge`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.LinearGauge`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
@@ -155,7 +155,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor LinearGauge component
+## Add Blazor Linear Gauge component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component inside the razor file.
 
@@ -232,7 +232,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 Pointers are used to indicate values on an axis. You can change the pointer value using the [PointerValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_PointerValue) property in the [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
 
-N> In LinearGauge, you can configure multiple axes. On each axis, you can add a pointer.
+N> In Linear Gauge, you can configure multiple axes. On each axis, you can add a pointer.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
