@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Position in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about position in Syncfusion Blazor Tooltip component and much more details.
+title: Position in Blazor Tooltip Component | Syncfusion®
+description: Checkout and learn here all the features about position in Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
