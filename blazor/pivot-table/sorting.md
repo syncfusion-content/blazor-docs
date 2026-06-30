@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about sorting in Syncfusion Blazor Pivot Table component and much more details.
+title: Sorting in Blazor Pivot Table Component | Syncfusion®
+description: Learn about sorting options in Blazor Pivot Table component for arranging field members with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
