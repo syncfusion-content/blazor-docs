@@ -13,67 +13,41 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
+## Create a new Blazor Server App 
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor App in Visual Studio
-
-Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+Create a **Blazor Server App** by using the **Blazor Web App** template in Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor App in Visual Studio Code
-
-Create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code) documentation.
-
-Alternatively, create a Server application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-
-{% highlight c# tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
 
 {% endhighlight %}
-
 {% endtabs %}
+
+Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
-
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a Blazor Server App using .NET CLI
-
-Run the following command to create a new Blazor Server App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=.net-cli) documentation.
-
-{% tabs %}
-{% highlight c# tabtitle="Command Prompt" %}
-
-dotnet new blazor -o BlazorApp -int Server
+dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
 
 {% endhighlight %}
@@ -94,7 +68,7 @@ Install the [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusio
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.Chart3D`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.Chart3D`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
@@ -151,7 +125,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
@@ -203,7 +177,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor 3D charts component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor 3D Charts component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -239,7 +213,7 @@ dotnet run
 
 ## Populate Blazor 3D Charts with data
 
-To bind data for the 3D charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
+To bind data for the 3D Charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
