@@ -105,7 +105,6 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-
 dotnet add package Syncfusion.Blazor.Data -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
@@ -188,8 +187,8 @@ Local [JSON](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager
     </GridColumns>
 </SfGrid>
 
-@code {
-
+@code 
+{
     public List<EmployeeData> Employees { get; set; } = new()
     {
         new EmployeeData { EmployeeID = 1, Name = "Nancy Fuller", Title = "Vice President" },
@@ -300,7 +299,7 @@ Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/bla
 
 ## Component binding
 
-The Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component can be integrated with any data-bound component to manage local or remote data operations.
+The Blazor DataManager component can be integrated with any data-bound component to manage local or remote data operations.
 
 This configuration demonstrates how the `DataManager` is bound to the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to enable consistent interaction with local or remote data sources.
 
@@ -358,8 +357,7 @@ Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/bla
 </SfDropDownList>
 
 @code 
-{
-    
+{ 
     public class Contact
     {
         public string? ContactName { get; set; }

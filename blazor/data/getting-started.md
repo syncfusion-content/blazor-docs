@@ -277,7 +277,6 @@ Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documen
 
 @code
 {
-
     public class Order
     {
         public int? OrderID { get; set; }
@@ -292,7 +291,7 @@ Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documen
 
 ## Component binding
 
-The Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component can be integrated with any data-bound component to manage local or remote data operations.
+The Blazor DataManager component can be integrated with any data-bound component to manage local or remote data operations.
 
 This configuration demonstrates how the `DataManager` is bound to the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to enable consistent interaction with local or remote data sources.
 
@@ -331,7 +330,7 @@ Local data can be bound to components such as `SfDropDownList` by assigning a co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthdDHVATdWQWVJr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthdDHVATdWQWVJr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding DropDown List Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.webp)" %}
 
 ## Remote data binding
 
@@ -351,7 +350,6 @@ Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/bla
 
 @code 
 {
-    
     public class Contact
     {
         public string? ContactName { get; set; }
