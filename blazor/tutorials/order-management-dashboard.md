@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create an Order Management Dashboard in Blazor | Syncfusion
+title: Create an Order Management Dashboard in Blazor | Syncfusion®
 description: Step-by-step guide to build a Blazor order management dashboard using Blazor components with models, services, grids, charts, KPIs, carts, and refunds.
 platform: Blazor
 control: Common
