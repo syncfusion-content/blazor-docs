@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Serialization in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about how to save and load the diagram elements in Syncfusion Blazor Diagram component and more.
+title: Serialization in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to save and load the diagram elements in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -170,8 +170,8 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## See also 
 
-* [How to Serialize the HTML Template Value of the NodeTemplate Property in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17218/how-to-serialize-the-html-template-value-of-the-nodetemplate-property-in-syncfusion-blazor-diagram)
+* [How to Serialize the HTML Template Value of the NodeTemplate Property in Blazor Diagram](https://support.syncfusion.com/kb/article/17218/how-to-serialize-the-html-template-value-of-the-nodetemplate-property-in-syncfusion-blazor-diagram)
 
-* [How to Serialize and Deserialize Diagram Objects Using JSON.NET in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/18736/how-to-serialize-and-deserialize-diagram-objects-using-jsonnet-in-syncfusion-blazor-diagram)
+* [How to Serialize and Deserialize Diagram Objects Using JSON.NET in Blazor Diagram](https://support.syncfusion.com/kb/article/18736/how-to-serialize-and-deserialize-diagram-objects-using-jsonnet-in-syncfusion-blazor-diagram)
 
 * [Why Save and Load Functionality for Nodes and Connectors in Blazor Diagram](https://support.syncfusion.com/kb/article/16008/why-save-and-load-functionality-for-nodes-and-connectors-in-blazor-diagram)

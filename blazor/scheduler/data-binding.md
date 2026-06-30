@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor Scheduler Component | Syncfusion
-description: This section includes the data binding topics explaining how to bind various data sources to Syncfusion Blazor Scheduler component using DataManager adaptors.
+title: Data Binding in Blazor Scheduler Component | Syncfusion®
+description: This section includes the data binding topics explaining how to bind various data sources to Blazor Scheduler component using DataManager adaptors.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -15,7 +15,7 @@ It supports the following kinds of data binding methods:
 * List binding
 * Remote data
 
-Please take a moment to watch this video to learn about data binding in the Blazor Scheduler.
+Please take a moment to watch this video to learn about data binding in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler).
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=EwfxPrqxma8"%}
@@ -417,7 +417,7 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
-N> You can find the complete procedures to perform CRUD actions with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
+N> You can find the complete procedures to perform CRUD actions with the Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
 ## Remote data
 
@@ -517,7 +517,7 @@ This method greatly improves the component's performance by reducing the data th
 ```
 
 The following image represents how the parameters are passed using ODataV4 filter.
-![ODataV4 filter](images/blazor-odatav4-filter.jpg)
+![ODataV4 filter](images/blazor-odatav4-filter.webp)
 
 ### Web API adaptor
 
@@ -726,7 +726,7 @@ To send an additional custom parameter to the server-side post, make use of the 
 
 The value passed to the additional parameter is shown in the following image.
 
-![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
+![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.webp)
 
 N> The parameters added using the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) property will be sent along with the data request sent to the server on every scheduler actions.
 
@@ -1379,5 +1379,5 @@ N> The runnable sample for the above code will be available [here](https://githu
 
 ## See also
 
-* [How to Access Microsoft Graph Calendar Events with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
+* [How to Access Microsoft Graph Calendar Events with Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
 * [Easy Steps to Synchronize JIRA Calendar Tasks with the Blazor Scheduler](https://www.syncfusion.com/blogs/post/easy-steps-to-synchronize-jira-calendar-tasks-with-the-blazor-scheduler.aspx)

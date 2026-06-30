@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dock in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn here all about dock in Syncfusion Blazor Sidebar component and much more details.
+title: Dock in Blazor Sidebar Component | Syncfusion®
+description: Checkout and learn here the features all about dock in Blazor Sidebar component and much more details.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -171,4 +171,4 @@ In the following sample, the list item has icon with text representation. On doc
 ```
 
 
-![Docking in Blazor Sidebar](./images/blazor-sidebar-dock.gif)
+![Docking in Blazor Sidebar](./images/blazor-sidebar-dock.webp)

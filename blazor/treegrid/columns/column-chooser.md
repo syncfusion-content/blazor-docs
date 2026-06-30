@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Chooser in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about column chooser in Syncfusion Blazor Tree Grid component and much more details.
+title: Column Chooser in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about column chooser in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with Data in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about working with data in Syncfusion Blazor Charts component, it's elements and more.
+title: Working with Data in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about working with data in Blazor Charts component, it's elements and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -664,7 +664,7 @@ When no data is available to render in the chart, the [NoDataTemplate](https://h
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrSZEZbBiUMPlvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[No Data Template in Blazor Chart](images/working-data/blazor-chart-no-data-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrSZEZbBiUMPlvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[No Data Template in Blazor Chart](images/working-data/blazor-chart-no-data-template.gif)" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
