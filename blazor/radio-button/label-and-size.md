@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Label and Size in Blazor RadioButton Component | Syncfusion
+title: Label and Size in Blazor RadioButton Component | Syncfusion®
 description: Checkout and learn here all about Label and Size in Syncfusion Blazor RadioButton component with examples and much more details.
 platform: Blazor
 control: Radio Button
@@ -27,7 +27,7 @@ Define the RadioButton caption using the [Label](https://help.syncfusion.com/cr/
 
 ```
 
-![Blazor RadioButton with label](./images/blazor-radiobutton-label.png)
+![Blazor RadioButton with label](./images/blazor-radiobutton-label.webp)
 
 ## Size
 
@@ -45,7 +45,7 @@ RadioButton supports two sizes: default and small. To render the small size, set
 
 ```
 
-![Blazor RadioButton with different size](./images/blazor-radiobutton-different-size.png)
+![Blazor RadioButton with different size](./images/blazor-radiobutton-different-size.webp)
 
 ## See Also
 
