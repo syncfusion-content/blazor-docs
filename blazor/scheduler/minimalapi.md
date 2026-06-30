@@ -575,7 +575,7 @@ http://localhost:5175
 
 
 ## Output Preview
-![Frontend Preview](./images/blazor-minimalAPI-frontend.png)
+![Frontend Preview](./images/blazor-minimalAPI-frontend.webp)
 *Image illustrating the Syncfusion Blazor Scheduler with Minimal API*
 
 ## Complete Sample Repository

@@ -312,7 +312,7 @@ The following example code demonstrates the formatting of data for the **TaskID*
 
 ### Date formatting
 
-The Gantt component for Blazor supports date formatting in columns using the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where format strings such as **d**, **D**, **MMM dd, yyyy** can be applied. Both built-in formats like **yMd** and custom formats are supported to define the layout and detail of date and time values based on column requirements. The following custom formats and their corresponding output are listed below:
+The Blazor Gantt component for Blazor supports date formatting in columns using the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where format strings such as **d**, **D**, **MMM dd, yyyy** can be applied. Both built-in formats like **yMd** and custom formats are supported to define the layout and detail of date and time values based on column requirements. The following custom formats and their corresponding output are listed below:
 
 Format | Formatted value
 -----|-----
@@ -829,7 +829,7 @@ The Blazor Gantt Chart component allows fine-grained control over column-level a
 
 ## Responsive columns
 
-The  Blazor Gantt Chart component provides a built-in feature to control column visibility based on media queries using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HideAtMedia) property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
+The Blazor Gantt Chart component provides a built-in feature to control column visibility based on media queries using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HideAtMedia) property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
 
 The following example demonstrates a Gantt chart where the **Job Name** column is set to `(min-width: 700px)`, meaning it will be hidden when the browser width is less than or equal to 700px. Similarly, the **Duration** column is set to `(max-width: 500px)`, so it will be hidden when the browser width exceeds 500px.
 
