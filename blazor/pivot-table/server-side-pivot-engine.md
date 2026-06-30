@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with the Server-Side Engine in Blazor Pivot Table
 
-This section explains how to use the assembly [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine) in a server-side application. The server-side engine performs operations such as aggregation, filtering, sorting, and grouping on the server. Only the information required for the Pivot Table viewport is sent to the client through a web service (Web API), instead of transferring the entire data source. This approach helps reduce network traffic and improves Pivot Table rendering performance when working with large data sets. It works efficiently with the virtual scrolling option and supports all existing features in the Pivot Table.
+This section explains how to use the [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine) assembly in a server-side application. The server-side engine performs operations such as aggregation, filtering, sorting, and grouping on the server. Only the information required for the Pivot Table viewport is sent to the client through a web service (Web API), instead of transferring the entire data source. This approach helps reduce network traffic and improves Pivot Table rendering performance when working with large data sets. It works efficiently with the virtual scrolling option and supports all existing features in the Pivot Table.
 
 ## Quick steps to render the Blazor Pivot Table by using the server-side Pivot Engine
 
@@ -305,7 +305,7 @@ Then, configure the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr
 
 You can also use JSON data from a remote server in the same way as a local JSON file. Both directly downloadable *.json files and web service URLs are supported. To do this, specify the URL of the remote *.json file in the **GetData** method. The remaining configurations stay the same.
 
-In the server-side application, the CDN link is used to connect the same **sales-analysis.json** file which is already hosted in the Syncfusion server.
+In the server-side application, the CDN link is used to connect the same **sales-analysis.json** file which is already hosted on the server.
 
 ```csharp
 public async Task<object> GetData(FetchData param)
