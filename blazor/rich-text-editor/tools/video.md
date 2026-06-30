@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Video in Blazor Rich Text Editor Component | Syncfusion
+title: Video in Blazor Rich Text Editor Component | Syncfusion®
 description: Checkout and learn here all about insert video in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
