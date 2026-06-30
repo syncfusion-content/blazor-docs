@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Pager Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
