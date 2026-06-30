@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Barcode Generator in Server App | Syncfusion
+title: Getting Started with Barcode Generator in Server App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Barcode Generator Component in Blazor Server App.
 platform: Blazor
 component: Barcode Generator
