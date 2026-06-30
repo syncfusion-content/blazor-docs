@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Show Not Operator in Blazor QueryBuilder Component | Syncfusion
+title: Show Not Operator in Blazor QueryBuilder Component | Syncfusion®
 description: Checkout and learn here all about Show Not Operator in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
@@ -46,4 +46,4 @@ N> The `EnableNotCondition` property is false by default.
 
 ```
 
-![Displaying Not Operator in Blazor QueryBuilder](./../images/blazor-querybuilder-not-operator.png)
+![Displaying Not Operator in Blazor QueryBuilder](./../images/blazor-querybuilder-not-operator.webp)

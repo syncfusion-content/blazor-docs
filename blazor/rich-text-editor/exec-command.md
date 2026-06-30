@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ExecuteCommand in Blazor Rich Text Editor Component | Syncfusion
-description: Learn here all about ExecuteCommand in Rich Text Editor in Syncfusion Blazor Rich Text Editor component and more.
+description: Learn how to execute commands programmatically in Blazor Rich Text Editor to manipulate content dynamically.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

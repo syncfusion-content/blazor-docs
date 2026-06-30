@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working Days and Hours in Blazor Scheduler Component | Syncfusion
-description: Learn here all about working days and hours support in Syncfusion Blazor Scheduler component, it's elements and more.
+description: Learn here all about working days and hours support in Blazor Scheduler component, it's elements and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -63,7 +63,7 @@ The following example code depicts how to set the Scheduler to display Monday, W
 }
 ```
 
-![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.png)
+![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.webp)
 
 ## Dynamically setting work days
 
@@ -174,7 +174,7 @@ In this example, we retrieve the current view dates during initial rendering, da
     }
 }
 ```
-![Set dynamic work Days in Blazor Scheduler](images/blazor-scheduler-setWorkDays-resetWorkDays.png)
+![Set dynamic work Days in Blazor Scheduler](images/blazor-scheduler-setWorkDays-resetWorkDays.webp)
 
 ## Hiding weekend days
 
@@ -212,7 +212,7 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
 }
 ```
 
-![Hiding Weekend Days in Blazor Scheduler](images/blazor-scheduler-hide-weekend.png)
+![Hiding Weekend Days in Blazor Scheduler](images/blazor-scheduler-hide-weekend.webp)
 
 ## Show week numbers
 
@@ -247,7 +247,7 @@ N> The [`ShowWeekNumber`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-![Week Numbers in Blazor Scheduler](images/blazor-scheduler-weeknumber.png)
+![Week Numbers in Blazor Scheduler](images/blazor-scheduler-weeknumber.webp)
 
 ### Different options in showing week numbers
 
@@ -324,7 +324,7 @@ Working hours indicates the work hour limit within the Scheduler, which is visua
 }
 ```
 
-![Set Working Hours in Blazor Scheduler](images/blazor-scheduler-workhours.png)
+![Set Working Hours in Blazor Scheduler](images/blazor-scheduler-workhours.webp)
 
 ## Scheduler displaying custom hours
 
@@ -358,7 +358,7 @@ The following code example displays the Scheduler starting from the time range 7
 }
 ```
 
-![Displaying Custom Hours in Blazor Scheduler](images/blazor-scheduler-displayhours.png)
+![Displaying Custom Hours in Blazor Scheduler](images/blazor-scheduler-displayhours.webp)
 
 ## Setting start day of the week
 
@@ -393,7 +393,7 @@ N> Here, Sunday is always denoted as 0, Monday as 1 and so on.
 }
 ```
 
-![Start Day of Week in Blazor Scheduler](images/blazor-scheduler-week-firstday.png)
+![Start Day of Week in Blazor Scheduler](images/blazor-scheduler-week-firstday.webp)
 
 ## Scroll to specific time and date
 

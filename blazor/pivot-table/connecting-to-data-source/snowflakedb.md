@@ -11,7 +11,7 @@ documentation: ug
 
 This guide explains how to connect a Snowflake database to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) NuGet package. It covers two methods: directly retrieving and binding Snowflake data to the Pivot Table and using a Web API service to fetch and display Snowflake data.
 
-## Connecting a Snowflake Database to a Blazor Pivot Table
+## Connecting a Snowflake to a Blazor Pivot Table
 
 This section describes how to connect the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) to a Snowflake database by directly retrieving data using the [Snowflake.Data](https://www.nuget.org/packages/Snowflake.Data) library.
 
@@ -106,7 +106,7 @@ In the **Index.razor** file, under the `OnInitialized` method, use the [Snowflak
 
 ![Blazor Pivot Table bound with Snowflake data](../images/blazor-pivottable-Snowflake-databinding.webp)
 
-## Connecting a Snowflake Database to a Blazor Pivot Table via Web API Service
+## Connecting a Snowflake database to a Blazor Pivot Table via Web API service
 
 This section explains how to create a Web API service to fetch data from a Snowflake database and connect it to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table).
 

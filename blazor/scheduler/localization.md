@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Scheduler Component | Syncfusion
-description: This section explains how the Syncfusion Blazor Scheduler adapts to various languages and culture by parsing and formatting the date or number appropriately.
+description: This section explains how the Blazor Scheduler adapts to various languages and culture by parsing and formatting the date or number appropriately.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Scheduler Component
 
-[Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Setting date format
 

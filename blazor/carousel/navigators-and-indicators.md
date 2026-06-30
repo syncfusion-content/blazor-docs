@@ -114,7 +114,7 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdNdWLqBbvsovw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Navigators OnHover](images/navigators_onhover.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdNdWLqBbvsovw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel Navigators OnHover](images/navigators_onhover.webp)" %}
 
 ### Previous and next button template
 
