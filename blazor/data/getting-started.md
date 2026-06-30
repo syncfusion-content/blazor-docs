@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DataManager in Blazor WASM App
 
-The [Blazor DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides a robust data access layer for Blazor applications. It enables seamless interaction with both **local** and **remote** data sources and supports essential operations such as **querying**, **sorting**, **filtering**, and **CRUD** actions. The component is designed to work in conjunction with data-bound controls, ensuring efficient data management across the application.
+The Blazor DataManager component provides a robust data access layer for Blazor applications. It enables seamless interaction with both **local** and **remote** data sources and supports essential operations such as **querying**, **sorting**, **filtering**, and **CRUD** actions. The component is designed to work in conjunction with data-bound controls, ensuring efficient data management across the application.
 
 This guide explains how to configure and use the `DataManager` component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -31,6 +31,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,11 +157,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor DataManager component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the Blazor DataManager component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the Blazor DataManager component inside the razor file.
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component is designed to work with data-bound components that support data operations. It serves as a gateway for both local and remote data, enabling interaction with the data source based on the configured query.
 
@@ -169,7 +168,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 Local **JSON** data can be bound to the [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) component by assigning a collection of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -183,7 +182,8 @@ Local **JSON** data can be bound to the [DataGrid](https://blazor.syncfusion.com
     </GridColumns>
 </SfGrid>
 
-@code {
+@code 
+{
     public class EmployeeData
     {
         public int EmployeeID { get; set; }
@@ -254,7 +254,7 @@ dotnet run
 Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) component by configuring the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property and specifying the appropriate adaptor using the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -275,7 +275,8 @@ Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documen
     </GridColumns>
 </SfGrid>
 
-@code {
+@code
+{
 
     public class Order
     {
@@ -310,7 +311,8 @@ Local data can be bound to components such as `SfDropDownList` by assigning a co
     <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
 </SfDropDownList>
 
-@code {
+@code 
+{
     public class Country
     {
         public string? Name { get; set; }
@@ -347,7 +349,8 @@ Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/bla
     <DropDownListFieldSettings Value="CustomerID" Text="ContactName"></DropDownListFieldSettings>
 </SfDropDownList>
 
-@code {
+@code 
+{
     
     public class Contact
     {
