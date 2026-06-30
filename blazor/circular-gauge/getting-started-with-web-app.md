@@ -68,7 +68,7 @@ Install the [Syncfusion.Blazor.CircularGauge](https://www.nuget.org/packages/Syn
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.CircularGauge`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.CircularGauge`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
