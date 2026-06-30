@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearances in Blazor RadioButton Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor RadioButton component and more.
+description: Checkout and learn here all the features about Styles and Appearances in Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug

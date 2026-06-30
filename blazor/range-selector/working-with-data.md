@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Range Selector Component | Syncfusion
-description: Checkout and learn here all about Working with Data in Syncfusion Blazor Range Selector Component and much more.
+description: Checkout and learn here all about Working with Data in Blazor Range Selector Component with examples and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -303,4 +303,4 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 
 ![Blazor Chart with Web API Binding](images/working-data/blazor-range-observable-collection.webp)
 
-N> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor MultiSelect Dropdown | Syncfusion
-description: Learn here all about style and appearance in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Style and appearance in Blazor MultiSelect Dropdown | Syncfusion®
+description: Learn here all about style and appearance in Blazor MultiSelect Dropdown component and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -49,7 +49,7 @@ Customize the text color of a disabled component by targeting `.e-multiselect.e-
 
 ## Change remove icon color in chip
 
-To change the remove icon color in a chip within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect component, you can use the following CSS style to customize it.
+To change the remove icon color in a chip within the Blazor MultiSelect component, you can use the following CSS style to customize it.
 
 {% highlight cshtml %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Scheduler Component | Syncfusion
-description: This section includes the data binding topics explaining how to bind various data sources to Syncfusion Blazor Scheduler component using DataManager adaptors.
+description: This section includes the data binding topics explaining how to bind various data sources to Blazor Scheduler component using DataManager adaptors.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -417,7 +417,7 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
-N> You can find the complete procedures to perform CRUD actions with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
+N> You can find the complete procedures to perform CRUD actions with the Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
 ## Remote data
 
@@ -1379,5 +1379,5 @@ N> The runnable sample for the above code will be available [here](https://githu
 
 ## See also
 
-* [How to Access Microsoft Graph Calendar Events with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
+* [How to Access Microsoft Graph Calendar Events with Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
 * [Easy Steps to Synchronize JIRA Calendar Tasks with the Blazor Scheduler](https://www.syncfusion.com/blogs/post/easy-steps-to-synchronize-jira-calendar-tasks-with-the-blazor-scheduler.aspx)
