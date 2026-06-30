@@ -116,7 +116,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
 Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
 
