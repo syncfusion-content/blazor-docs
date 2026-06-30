@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Horizontal Card in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all about Horizontal Card in Syncfusion Blazor Card component and much more.
+description: Checkout and learn here all the features about Horizontal Card in Blazor Card component and much more details.
 platform: Blazor
 control: Card
 documentation: ug

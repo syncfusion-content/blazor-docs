@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Toolbar module in Syncfusion Blazor File Manager component and much more.
+title: Toolbar in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all the details about Toolbar module in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
