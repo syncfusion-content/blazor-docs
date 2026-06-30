@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events for Blazor Sankey Component | Syncfusion
+title: Events for Blazor Sankey Component | Syncfusion®
 description: Learn about the events supported by the Blazor Sankey component and how to use them for interactivity and customization.
 platform: Blazor
 control: Sankey

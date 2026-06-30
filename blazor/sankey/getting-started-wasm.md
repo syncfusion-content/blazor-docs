@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Sankey Diagram | Blazor WASM App | Syncfusion
+title: Getting Started with Sankey Diagram | Blazor WASM App | Syncfusion®
 description: Checkout and learn about getting started with Blazor Sankey Diagram in Blazor WASM App using Visual Studio and more.
 platform: Blazor
 control: Sankey
