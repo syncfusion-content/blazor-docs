@@ -29,6 +29,8 @@ To create a group using Nodes and Connectors in the Blazor Diagram, refer to the
 
 {% youtube "youtube:https://www.youtube.com/watch?v=qLIyc9RSytQ" %}
 
+<br><br>
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 

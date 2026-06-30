@@ -15,6 +15,7 @@ To create and position the Organizational Chart Using Blazor Diagram, you can ch
 
 {% youtube "youtube:https://www.youtube.com/watch?v=cjMCTTJssCE&t=22s" %}
 
+<br><br>
 
 The following code example illustrates how to create an organizational chart.
 

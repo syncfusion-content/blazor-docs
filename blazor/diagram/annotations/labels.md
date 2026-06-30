@@ -20,6 +20,8 @@ To create and add annotations to nodes and connectors using the Blazor Diagram, 
 
 {% youtube "youtube:https://www.youtube.com/watch?v=f7Jnl5hSy7I" %}
 
+<br><br>
+
 The following code example demonstrates how to create an annotation for a node and a connector.
 
 ```cshtml

@@ -338,7 +338,7 @@ The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/Delete.razor)
 
 ## How to Reset Diagram Zoom Level
-The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method restores the current zoom level of the diagram page to its default value of 100%. This method is particularly useful when the diagram is in a zoomed-in or zoomed-out state, allowing users to quickly return to the standard view. The following code example demonstrates how to implement the ResetZoom method to restore the diagram's default zoom level.
+The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method restores the current zoom level of the diagram page to its default value of **100%**. This method is particularly useful when the diagram is in a zoomed-in or zoomed-out state, allowing users to quickly return to the standard view. The following code example demonstrates how to implement the ResetZoom method to restore the diagram's default zoom level.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1693,7 +1693,7 @@ In the Blazor Diagram component, calculating the bounds of paths, text, images, 
 
 This property enables large data to be transmitted in smaller chunks, effectively preventing connection disconnection issues. Chunk messages allow for the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). This approach ensures seamless data processing and improved performance, especially when dealing with complex diagrams or large-scale visualizations.
 
-By default, the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property is set to `false`. Developers can easily enable this feature when working with substantial data sets to enhance the stability and reliability of their Blazor Diagram implementations.
+By default, the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property is set to **false**. Developers can easily enable this feature when working with substantial data sets to enhance the stability and reliability of their Blazor Diagram implementations.
 
 Here is an example demonstrating how to use the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property:
 
