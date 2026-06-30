@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -73,4 +73,4 @@ The accessibility compliance of the Blazor Smith Chart component is shown in the
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
