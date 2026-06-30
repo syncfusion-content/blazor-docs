@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in Blazor Range Selector Component | Syncfusion
+title: Tooltip in Blazor Range Selector Component | Syncfusion®
 description: Checkout and learn here all about tooltip in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector

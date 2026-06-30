@@ -95,7 +95,7 @@ The following code connects to a MongoDB database, retrieves data, and binds it 
 
 ![Blazor Pivot Table bound with MongoDB data](../images/blazor-pivottable-mongodb-databinding.webp)
 
-## Connecting a MongoDB to a Blazor Pivot Table via Web API Service
+## Connecting a MongoDB to a Blazor Pivot Table via Web API service
 
 This section explains how to create a Web API service to fetch data from a MongoDB database and connect it to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver).
 

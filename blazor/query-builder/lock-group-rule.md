@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lock Group/ Rule in Blazor QueryBuilder Component | Syncfusion
+title: Lock Group/ Rule in Blazor QueryBuilder Component | Syncfusion®
 description: Checkout and learn here all about Lock Group/ Rule in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
@@ -94,6 +94,6 @@ Locking can be done through the user interface or programmatically.
 
 ```
 
-![Lock Group/Rule in Blazor Query Builder](./images/lock-group-rule.png)
+![Lock Group/Rule in Blazor Query Builder](./images/lock-group-rule.webp)
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

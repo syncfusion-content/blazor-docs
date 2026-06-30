@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Razor Class Library in Visual Studio | Syncfusion
+title: Getting Started with Razor Class Library in VS | Syncfusion®
 description: Check out the documentation for Creating Razor Class Library (RCL) using Blazor components and much more details. 
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Creating Razor Class Library (RCL) using Blazor components
+# Creating Razor Class Library (RCL) using Syncfusion® Blazor components
 
 This guide explains how to create a Razor Class Library (RCL) that includes Blazor components using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -50,7 +50,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components packages are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Importing Blazor component in Razor Class Library
 
@@ -95,7 +95,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Create a Blazor project in Visual Studio
 
-* Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+* Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
@@ -140,7 +140,7 @@ dotnet restore
 
 {% endtabs %}
 
-N> Blazor components packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ## Importing Blazor component in Razor Class Library
 
@@ -185,7 +185,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Create a Blazor project in Visual Studio Code
 
-Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+Create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 {% endtabcontent %}
 

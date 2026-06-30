@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change the Color of the Blazor TextBox based on its Value | Syncfusion
-description: Learn here all about how to change the color of the text based on its value in Syncfusion Blazor TextBox component and more.
+description: Learn here all about how to change the color of the text based on its value in Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
