@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor ButtonGroup in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor ButtonGroup Component in Blazor Web App.
+title: Getting Started with Blazor Button Group in Blazor Web App | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor Button Group Component in Blazor Web App.
 platform: Blazor
-component: ButtonGroup
+component: Button Group
 documentation: ug
 ---
 
-# Getting Started with Blazor ButtonGroup in Blazor Web App
+# Getting Started with Blazor Button Group in Blazor Web App
 
-This section briefly explains about how to include [Blazor ButtonGroup](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Button Group](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -29,6 +29,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +47,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,11 +159,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+## Add Blazor Button Group component
 
-## Add Blazor ButtonGroup component
-
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor ButtonGroup](https://www.syncfusion.com/blazor-components/blazor-button-group) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Button Group](https://www.syncfusion.com/blazor-components/blazor-button-group) component inside the razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -183,7 +185,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor ButtonGroup component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Button Group component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -194,6 +196,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -209,6 +212,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -219,13 +223,13 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVftihITUHgzQAT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ButtonGroup Component](./images/blazor-button-group-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVftihITUHgzQAT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button Group Component](./images/blazor-button-group-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ButtonGroup).
 
 ## See also
 
-* [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Button Group example](https://blazor.syncfusion.com/demos/buttons/button-group?theme=bootstrap5) that shows you how to render and configure the button group.
+
