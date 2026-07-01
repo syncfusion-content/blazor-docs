@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell Edit Types in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Cell Edit Types in Syncfusion Blazor Tree Grid component and much more details.
+title: Cell Edit Types in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about Cell Edit Types in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
