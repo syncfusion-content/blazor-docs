@@ -2,7 +2,7 @@
 layout: post
 title: Bind data using Dapper and perform CRUD operations | Syncfusion
 component: "DataGrid component and DataManager"
-description: How to consume data from SQL database using Dapper, bind it to a Blazor Component, and perform CRUD operations.
+description: How to consume data from SQL database using Dapper, bind it to a Syncfusion Component, and perform CRUD operations.
 component: Common
 documentation: ug
 platform: Blazor
@@ -10,7 +10,7 @@ platform: Blazor
 
 # How to Bind Data Using Dapper and Perform CRUD Operations
 
-In this section, you can learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a `Blazor DataGrid` Component, and perform CRUD operations.
+In this section, you can learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a `Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid` Component, and perform CRUD operations.
 
 ## Prerequisite software
 
@@ -179,7 +179,7 @@ builder.Services.AddScoped<BugDataAccessLayer>();
 
 ```
 
-## Adding Blazor DataGrid component
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -194,9 +194,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-Open `_Import.razor` file and add the following namespaces which are required to use the Blazor DataGrid Component in this application.
+Open `_Import.razor` file and add the following namespaces which are required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid Component in this application.
 
 {% highlight razor %}
 
@@ -206,7 +206,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 {% endhighlight %}
 
-Open `Program.cs` file in your application and register the service.
+Open `Program.cs` file in your application and register the Syncfusion<sup style="font-size:70%">&reg;</sup> service.
 
 ```cshtml
 
@@ -218,7 +218,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Blazor provides different themes. They are:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides different themes. They are:
 
 * Bootstrap4
 * Material
@@ -265,7 +265,7 @@ In previous steps, you have successfully configured the Syncfusion<sup style="fo
 
 ## Binding data to the DataGrid component
 
-Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) here.
+Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) here.
 
 The following points must be considered for creating a custom adaptor.
 
@@ -351,7 +351,7 @@ Now, the DataGrid will look like this while running the application. The display
 
 ![Bug Grid Data in Blazor](../images/bug-grid-data.png)
 
-## Handling CRUD operations with our Blazor DataGrid component
+## Handling CRUD operations with our Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
 You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 
