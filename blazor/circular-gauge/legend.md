@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Legend in Syncfusion Blazor Circular Gauge component and much more.
+title: Legend in Blazor Circular Gauge Component | Syncfusion®
+description: Checkout and learn here all the features about Legend in Blazor Circular Gauge component and much more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -92,6 +92,7 @@ The following code example shows how to add legend in the gauge.
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
@@ -112,7 +113,7 @@ The following code example shows how to add legend in the gauge.
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVUWhBQArOwLnwY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Legend in Blazor Circular Gauge](./images/blazor-circulargauge-legend.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBnZdhxVoipsluO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Legend in Blazor Circular Gauge](./images/blazor-circulargauge-legend.webp)" %}
 
 <!-- markdownlint-disable MD036 -->
 
@@ -129,6 +130,7 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
@@ -149,7 +151,7 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrKMLBcAhEahQVw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge Legend with Toggle Option](./images/blazor-circulargauge-legend-with-toggle-option.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBnXdBnBIZlTtMp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge Legend with Toggle Option](./images/blazor-circulargauge-legend-with-toggle-option.webp)" %}
 
 ## Paging support in legend
 
@@ -164,6 +166,7 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
@@ -184,7 +187,7 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKWhLGgANsovmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge Legend with Paging](./images/blazor-circulargauge-legend-paging.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhxDxBHhpHNtYid?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge Legend with Paging](./images/blazor-circulargauge-legend-paging.webp)" %}
 
 ## Legend text customization
 
@@ -194,11 +197,12 @@ You can customize the legend text using `LegendText` property in `CircularGaugeR
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
-<CircularGaugeLegendSettings Visible="true" Height="50">
+<CircularGaugeLegendSettings Visible="true" Height="125">
     <CircularGaugeLegendBorder Color="green" Width="3"></CircularGaugeLegendBorder>
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
@@ -219,4 +223,4 @@ You can customize the legend text using `LegendText` property in `CircularGaugeR
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBUihhmUUjgdbpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Legend Text in Blazor Circular Gauge](./images/blazor-circulargauge-legend-text.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrHXnLxBJkPfyqH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Legend Text in Blazor Circular Gauge](./images/blazor-circulargauge-legend-text.webp)" %}

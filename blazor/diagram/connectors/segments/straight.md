@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Straight Segments in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Straight Segments in Syncfusion Blazor Diagram component and much more details.
+title: Straight Segments in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about Straight Segments in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Create Straight Segments
 
-To create a straight line, set the connector [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment to [Straight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Straight). Then add one or more straight segments to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
+To create a straight line, set the connector [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment to **Straight**. Then add one or more straight segments to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
