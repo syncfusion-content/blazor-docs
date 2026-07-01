@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor AppBar Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor AppBar component and much more.
+title: Accessibility in Blazor AppBar Component | Syncfusion®
+description: Check out and learn in detail about accessibility features in the Blazor AppBar component and much more.
 platform: Blazor
 control: AppBar
 documentation: ug
@@ -49,4 +49,4 @@ The accessibility compliance of the AppBar component is shown in the following s
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
