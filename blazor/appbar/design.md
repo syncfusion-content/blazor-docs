@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Design User Interface with Blazor AppBar Component | Syncfusion
+title: Design User Interface with Blazor AppBar Component | Syncfusion®
 description: Check out and learn about Design User Interface with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
