@@ -418,6 +418,8 @@ The Blazor DataGrid allows customizing the column chooser dialog using the [Temp
 
 The parameters passed to the templates can be accessed using the implicit **context** parameter.
 
+> Use the `e-ccdlg-mention` class in the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property of the SfMention component when placing the SfMention component inside the column chooser template. This approach ensures proper functioning of the column chooser.
+
 ### Customize the content of column chooser
 
 The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) is used to customize the content of the column chooser dialog. The **context** parameter can be typecast to [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to access the list of columns within the template.

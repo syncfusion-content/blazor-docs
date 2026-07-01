@@ -23,7 +23,7 @@ The DropDown List loads data from local sources through the [DataSource](https:/
 
 {% endhighlight %}
 
-![Blazor DropdownList with local data binding](./images/data-binding/blazor_dropdown_local-binding.png)
+![Blazor DropdownList with local data binding](./images/data-binding/blazor_dropdown_local-binding.webp)
 
 ### DataBound event
 
@@ -47,7 +47,7 @@ The following code demonstrates an array of string values bound to the DropDown 
 
 {% endhighlight %}
 
-![Blazor DropdownList with Primitive string type](./images/data-binding/blazor_dropdown_primitive-type-string.png)
+![Blazor DropdownList with Primitive string type](./images/data-binding/blazor_dropdown_primitive-type-string.webp)
 
 The following code demonstrates an array of integer values bound to the DropDown List component.
 
@@ -57,7 +57,7 @@ The following code demonstrates an array of integer values bound to the DropDown
 
 {% endhighlight %}
 
-![Blazor DropdownList with Primitive int type](./images/data-binding/blazor_dropdown_primitive-type-int.png)
+![Blazor DropdownList with Primitive int type](./images/data-binding/blazor_dropdown_primitive-type-int.webp)
 
 ### Complex data type
 
@@ -71,7 +71,7 @@ In the following example, `Code.ID` is mapped to [DropDownListFieldSettings.Valu
 
 {% endhighlight %}
 
-![Blazor DropdownList with Complex data type](./images/data-binding/blazor_dropdown_complex-data-type.png)
+![Blazor DropdownList with Complex data type](./images/data-binding/blazor_dropdown_complex-data-type.webp)
 
 ### Expando object binding
 
@@ -83,7 +83,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 {% endhighlight %}
 
-![Blazor DropdownList with Expando object binding](./images/data-binding/blazor_dropdown_expando-object-binding.png)
+![Blazor DropdownList with Expando object binding](./images/data-binding/blazor_dropdown_expando-object-binding.webp)
 
 ### Observable collection binding
 
@@ -95,7 +95,7 @@ Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/commo
 
 {% endhighlight %}
 
-![Blazor DropdownList with Observable collection binding](./images/data-binding/blazor_dropdown_observable-collection-binding.png)
+![Blazor DropdownList with Observable collection binding](./images/data-binding/blazor_dropdown_observable-collection-binding.webp)
 
 ### Dynamic object binding
 
@@ -107,7 +107,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 {% endhighlight %}
 
-![Blazor DropdownList with Dynamic object binding](./images/data-binding/blazor_dropdown_dynamic-data-binding.png)
+![Blazor DropdownList with Dynamic object binding](./images/data-binding/blazor_dropdown_dynamic-data-binding.webp)
 
 ### Enum data binding
 
@@ -119,7 +119,7 @@ Bind enum values to the DropDown List. The following example shows how to displa
 
 {% endhighlight %}
 
-![Blazor DropdownList with Enum data binding](./images/data-binding/blazor_dropdown_enum-data-binding.png)
+![Blazor DropdownList with Enum data binding](./images/data-binding/blazor_dropdown_enum-data-binding.webp)
 
 ### ValueTuple data binding
 
@@ -131,7 +131,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 {% endhighlight %}
 
-![Blazor DropdownList with ValueTuple data binding](./images/data-binding/blazor_dropdown_value-tuple-data-binding.png)
+![Blazor DropdownList with ValueTuple data binding](./images/data-binding/blazor_dropdown_value-tuple-data-binding.webp)
 
 ## Binding remote data 
 
@@ -181,7 +181,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% endhighlight %}
 
-![Blazor DropdownList with OData v4 Adaptor](./images/data-binding/blazor_dropdown_odata-v4-services.png)
+![Blazor DropdownList with OData v4 Adaptor](./images/data-binding/blazor_dropdown_odata-v4-services.webp)
 
 ### Web API adaptor
 
@@ -193,7 +193,7 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-![Blazor DropdownList with Web API Adaptor](./images/data-binding/blazor_dropdown_web-api-adaptor.png)
+![Blazor DropdownList with Web API Adaptor](./images/data-binding/blazor_dropdown_web-api-adaptor.webp)
 
 ### Custom adaptor
 
@@ -236,7 +236,7 @@ To reduce network requests, load all data at initialization and process actions 
 
 {% endhighlight %}
 
-![Blazor DropdownList with Offline mode](./images/data-binding/blazor_dropdown_offline-mode.png)
+![Blazor DropdownList with Offline mode](./images/data-binding/blazor_dropdown_offline-mode.webp)
 
 ### Entity Framework
 
@@ -372,7 +372,7 @@ Use [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 {% endhighlight %}
 
-![Blazor DropdownList with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.png)
+![Blazor DropdownList with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.webp)
 
 ## Getting datasource of dropdown list
 

@@ -26,4 +26,4 @@ Customize the width of the Dropdown Menu popup by assigning a value to the [Popu
 ```
 
 
-![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-popup-width.png)
+![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-popup-width.webp)

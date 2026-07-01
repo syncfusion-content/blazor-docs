@@ -145,7 +145,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion® Blazor File Upload component
 
-The Syncfusion Blazor File Upload component allows you to seamlessly integrate file upload functionalities into your Blazor applications. It supports various features like asynchronous and synchronous uploads, file type validation, progress tracking, and custom templates. A common use case is enabling users to upload documents, images, or other files to a server, or process them directly within the client-side application.
+The Blazor File Upload component allows you to seamlessly integrate file upload functionalities into your Blazor applications. It supports various features like asynchronous and synchronous uploads, file type validation, progress tracking, and custom templates. A common use case is enabling users to upload documents, images, or other files to a server, or process them directly within the client-side application.
 
 ### Simple Code to render a Usable File Upload Component
 
@@ -324,7 +324,7 @@ This example shows how to use the [`Created`](https://help.syncfusion.com/cr/bla
 
     private void OnUploaderCreated()
     {
-        statusMessage = "Syncfusion File Uploader has been successfully created and initialized!";
+        statusMessage = "File Uploader has been successfully created and initialized!";
         Console.WriteLine(statusMessage);
         // You could also interact with JavaScript to modify DOM here if needed.
         // For example: JSRuntime.InvokeVoidAsync("someJsFunction");

@@ -33,6 +33,6 @@ Example: for version `31.1.23`:
 
 ## See also
 
-* [Syncfusion<sup style="font-size:70%">&reg;</sup> product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
+* [Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 * [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)
 * [System requirements](https://blazor.syncfusion.com/documentation/system-requirements)

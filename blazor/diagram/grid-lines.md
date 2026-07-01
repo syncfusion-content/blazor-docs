@@ -53,7 +53,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/CustomGridline.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthoitNvgOEsjvmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GridLines in Blazor Diagram](images/blazor-diagram-gridlines.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthoitNvgOEsjvmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GridLines in Blazor Diagram](images/blazor-diagram-gridlines.webp)" %}
 
 To show only horizontal or vertical gridlines, or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
 
@@ -111,7 +111,7 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/CustomizeGridline.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeCjDFUEuuwDSA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLeCjDFUEuuwDSA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.webp)" %}
 
 
 ## How to Customize Line Intervals
@@ -145,7 +145,7 @@ The following code example illustrates how to customize the thickness of lines a
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/LineInterval.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDByMjjlTDjqLjhz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Custom Thickness of GridLines](images/blazor-diagram-custom-gridlines-thickness.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDByMjjlTDjqLjhz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Custom Thickness of GridLines](images/blazor-diagram-custom-gridlines-thickness.webp)" %}
 
 ## Snapping
 
@@ -185,7 +185,7 @@ Snapping to gridlines can be enabled or disabled with the [SnapConstraints](http
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapToLines.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLIsZtFpZDwzFgS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLIsZtFpZDwzFgS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.webp)" %}
 
 ### How to Customize Snap Intervals
 
@@ -284,7 +284,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapToObject.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeWZtPJtixDcGj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeWZtPJtixDcGj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.webp)" %}
 
 ### How to Customize Snap Line Style
 
@@ -334,4 +334,4 @@ The following code example illustrates how to customize the snap line style.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapLineStyle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSiXZbfDrShrCg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GuideLines in Blazor Diagram](images/SnapLineStyle.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSiXZbfDrShrCg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[GuideLines in Blazor Diagram](images/SnapLineStyle.webp)" %}

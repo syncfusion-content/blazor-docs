@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor AutoComplete component and more.
+title: Selection in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all features about the Selection feature in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -37,7 +37,7 @@ Bind a preselected value to the AutoComplete component using the [@bind-Value](h
 
 {% endhighlight %}
 
-![Blazor AutoComplete showing a preselected value on initial render](./images/selection/blazor_autocomplete_preselect_value.png)
+![Blazor AutoComplete showing a preselected value on initial render](./images/selection/blazor_autocomplete_preselect_value.webp)
 
 ## Programmatically change the selected value
 
@@ -85,7 +85,7 @@ The following sample shows how to bind the index during initial rendering.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with bind-index selecting an item by position](./images/selection/blazor_autocomplete_preselect-value-index.png)
+![Blazor AutoComplete with bind-index selecting an item by position](./images/selection/blazor_autocomplete_preselect-value-index.webp)
 
 ## Autofill the selected value
 

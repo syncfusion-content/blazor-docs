@@ -30,7 +30,7 @@ Open the action items in either a clockwise or an anticlockwise direction by set
 
 ```
 
-![Blazor SpeedDial radial mode](./images/Blazor-SpeedDial-RadialMenu.png)
+![Blazor SpeedDial radial mode](./images/Blazor-SpeedDial-RadialMenu.webp)
 
 ## Start and end angle
 
@@ -38,7 +38,7 @@ Modify the start and end angles of the action items using the [StartAngle](https
 
 The Speed Dial angle origin is 0° at the right side and increases in the clockwise direction.
 
-![Blazor SpeedDial radial angles](./images/Blazor-RadialAngle.png)
+![Blazor SpeedDial radial angles](./images/Blazor-RadialAngle.webp)
 
 
 ```cshtml
@@ -56,7 +56,7 @@ The Speed Dial angle origin is 0° at the right side and increases in the clockw
 
 ```
 
-![Blazor Speed Dial angles](./images/Blazor-SpeedDial-Angles.png)
+![Blazor Speed Dial angles](./images/Blazor-SpeedDial-Angles.webp)
 
 ## Offset
 
@@ -77,4 +77,4 @@ Adjust the distance between the Speed Dial button and its action items using the
 
 ```
 
-![Blazor SpeedDial radial offset](./images/Blazor-SpeedDial-Offset.png)
+![Blazor SpeedDial radial offset](./images/Blazor-SpeedDial-Offset.webp)

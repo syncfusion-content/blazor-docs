@@ -225,32 +225,32 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- | -------- |
-|Horizontal|Content| ![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Content.png)|
-|Horizontal|Port|![HorizontalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
-|Horizontal|Text| ![HorizontalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Text.png)|
-|Horizontal|Port And LabelOnly |![HorizontalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-portAndLabelOnly.png)|
-|Horizontal|Port With LabelText| ![HorizontalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortWithLabelText.png)|
-|Horizontal|LabelOnly|![HorizontalDirection with LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-labelOnly.png)|
-|Horizontal|All|![HorizontalDirection with All Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.png)|
-|Horizontal|None|![HorizontalDirection with None Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.png)|
-|Vertical|Content| ![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
-|Vertical|Port|![VerticalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-content.png)|
-|Vertical|Text| ![VerticalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Text.png)|
-|Vertical|Port And LabelOnly |![VerticalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-portAndLabelOnly.png)|
-|Vertical|Port With LabelText| ![VerticalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-PortWithLabelText.png)|
-|Vertical|LabelOnly|![VerticalDirection with LabelOnly  Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-LabelOnly.png)|
-|Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-All.png)|
-|Vertical|None|![VerticalDirection with None Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.png)|
-|Both|Content| ![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
-|Both|Port|![BothDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-content.png)|
-|Both|Text| ![BothDirection with  Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Text.png)|
-|Both|Port And LabelOnly |![BothDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-portAndLabelOnly.png)|
-|Both|Port With LabelText| ![BothDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-PortWithLabelText.png)|
-|Both|LabelOnly|![BothDirection with LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-LabelOnly.png)|
-|Both|All|![BothDirection with All Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.png)|
-|Both|None|![BothDirection with None Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.png)|
+|Horizontal|Content| ![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.webp)|
+|Horizontal|Port|![HorizontalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.webp)|
+|Horizontal|Text| ![HorizontalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Text.webp)|
+|Horizontal|Port And LabelOnly |![HorizontalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortAndLabelOnly.webp)|
+|Horizontal|Port With LabelText| ![HorizontalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortWithLabelText.webp)|
+|Horizontal|LabelOnly|![HorizontalDirection with LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-labelOnly.webp)|
+|Horizontal|All|![HorizontalDirection with All Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.webp)|
+|Horizontal|None|![HorizontalDirection with None Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.webp)|
+|Vertical|Content| ![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-content.webp)|
+|Vertical|Port|![VerticalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-content.webp)|
+|Vertical|Text| ![VerticalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-Text.webp)|
+|Vertical|Port And LabelOnly |![VerticalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-PortAndLabelOnly.webp)|
+|Vertical|Port With LabelText| ![VerticalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-PortWithLabelText.webp)|
+|Vertical|LabelOnly|![VerticalDirection with LabelOnly  Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-labelOnly.webp)|
+|Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-All.webp)|
+|Vertical|None|![VerticalDirection with None Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.webp)|
+|Both|Content| ![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-content.webp)|
+|Both|Port|![BothDirection with Port Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-content.webp)|
+|Both|Text| ![BothDirection with  Text Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-Text.webp)|
+|Both|Port And LabelOnly |![BothDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-PortAndLabelOnly.webp)|
+|Both|Port With LabelText| ![BothDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-PortWithLabelText.webp)|
+|Both|LabelOnly|![BothDirection with LabelOnly Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-labelOnly.webp)|
+|Both|All|![BothDirection with All Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.webp)|
+|Both|None|![BothDirection with None Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.webp)|
 
-![Flip](./images/blazor-diagram-flip-node.gif)
+![Flip](./images/blazor-diagram-flip-node.webp)
 ## How to flip the Group Node
 The flip functionality for a group node is similar to that of normal nodes. However, when flipping a group node, the flip of its child nodes is combined with the group’s flip. This combination ensures that the child nodes inherit the group’s flip while retaining their own individual flips.
 
@@ -473,16 +473,16 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- |-------- |
-|Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
-|Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.png)|
-|Horizontal|LabelOnly|![HorizontalDirection with LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-LabelOnly.png)|
-|Horizontal|Text|![HorizontalDirection with Text Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-Text.png)|
-|Horizontal|Port|![HorizontalDirection with PortMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-port.png)|
-|Horizontal|PortAndLabelOnly|![HorizontalDirection with Port and LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portandLabelOnly.png)|
-|Horizontal|PortWithLabelText|![HorizontalDirection with PortWithLabelText Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-PortWithLabelText.png)|
-|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
+|Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.webp)|
+|Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.webp)|
+|Horizontal|LabelOnly|![HorizontalDirection with LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-labelOnly.webp)|
+|Horizontal|Text|![HorizontalDirection with Text Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-Text.webp)|
+|Horizontal|Port|![HorizontalDirection with PortMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-port.webp)|
+|Horizontal|PortAndLabelOnly|![HorizontalDirection with Port and LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portAndLabelOnly.webp)|
+|Horizontal|PortWithLabelText|![HorizontalDirection with PortWithLabelText Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portWithLabelText.webp)|
+|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.webp)|
 
-![GroupFlip](./images/blazor-diagram-flip-groupnode.gif)
+![GroupFlip](./images/blazor-diagram-flip-groupnode.webp)
 
 ## How to Flip the Connector
 
@@ -560,10 +560,10 @@ The following code example shows how to flip the connector.
 
 | FlipDirection | Output|
 | -------- | -------- |
-|Horizontal|![HorizontalDirection](./images/blazor-diagram-flip-direction-as-horizontal.png)|
-|Vertical|![VerticalDirection](./images/blazor-diagram-flip-direction-as-vertical.png)|
-|Both|![BothDirection](./images/blazor-diagram-flip-direction-as-both.png)|
+|Horizontal|![HorizontalDirection](./images/blazor-diagram-flip-direction-as-horizontal.webp)|
+|Vertical|![VerticalDirection](./images/blazor-diagram-flip-direction-as-vertical.webp)|
+|Both|![BothDirection](./images/blazor-diagram-flip-direction-as-both.webp)|
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiDXPgupyReCL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Flip Connector](./images/blazor-diagram-connector-flip-direction.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiDXPgupyReCL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Flip Connector](./images/blazor-diagram-connector-flip-direction.webp)" %}
 
 For more information about node interaction, refer to [Connector Interaction](./connectors/interactions).

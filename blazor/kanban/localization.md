@@ -15,7 +15,7 @@ This section explains how to localize the Blazor Kanban component to support dif
 
 ## Localizing Kanban Text
 
-The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component supports localization by allowing you to translate built-in text strings into different languages. To learn how to configure localization across all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component supports localization by allowing you to translate built-in text strings into different languages. To learn how to configure localization across all Blazor components, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation.
 
 ## Enabling Right-to-Left (RTL) Layout
 
@@ -80,4 +80,4 @@ To enable RTL mode in the Kanban component, set the [EnableRtl](https://help.syn
 
 ```
 
-![Right to Left in Blazor Kanban](./images/blazor-kanban-right-to-left.png)
+![Right to Left in Blazor Kanban](./images/blazor-kanban-right-to-left.webp)

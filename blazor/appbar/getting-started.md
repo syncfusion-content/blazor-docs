@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor AppBar Component | Syncfusion
+title: Getting Started with Blazor AppBar Component | Syncfusion®
 description: Checkout and learn about getting started with Blazor AppBar component in Blazor WebAssembly Application.
 platform: Blazor
 control: AppBar

@@ -44,7 +44,7 @@ The **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes define the expand
 }
 ```
 
-Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [Syncfusion icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
+Modify the `content`, color, or size to align with custom icon sets. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
 
 ![Expand and collapse icons](../images/style-and-appearance/group-expand-or-collapse-icons.webp)
 

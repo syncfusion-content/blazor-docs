@@ -40,7 +40,7 @@ A modal dialog prevents users from interacting with the rest of the application 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrotFCppdZxjRFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Modal in Blazor Dialog](./images/blazor-modal-dialog.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrotFCppdZxjRFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Modal in Blazor Dialog](./images/blazor-modal-dialog.webp)" %}
 
 ## Handling Overlay Click Events
 

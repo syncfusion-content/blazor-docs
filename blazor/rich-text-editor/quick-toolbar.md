@@ -13,7 +13,7 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 
 | Target Element | Default Quick Toolbar items |
 |----------------|---------|
-| [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#fields) | Replace, Align, Caption, Remove, InsertLink, Display, AltText, Dimension |
+| [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#fields) | Replace, Align, WrapText, Caption, Remove, InsertLink, Display, AltText, Dimension |
 | [Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.LinkToolbarCommand.html#fields) | Open, Edit, UnLink |
 | [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#fields) | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
 | [Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#fields) | AudioReplace, AudioRemove, AudioLayoutOption |
@@ -28,6 +28,7 @@ Customize the inserted image using the [RichTextEditorQuickToolbarSettings.Image
 | --------------------| ------------- |
 | [Replace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Replace) | Can replace the image with some other image |
 | [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Align) | Align the image with left, right and justify |
+| [WrapText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_WrapText) |  Wraps text around the image by placing it on the left or right side |
 | [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Caption) | Set the captions for the image |
 | [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Remove) | Delete the image |
 | [InsertLink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_InsertLink) | Provide the link to the image |

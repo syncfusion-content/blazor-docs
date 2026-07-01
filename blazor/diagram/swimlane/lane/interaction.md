@@ -25,7 +25,7 @@ A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.ht
 
 The following image shows how to resize the lane.
 
-![Lane Resizing](../Swimlane-images/Lane_Resize.gif)
+![Lane Resizing](../Swimlane-images/Lane_Resize.webp)
 
 ## How to Swap Lanes
 
@@ -33,7 +33,7 @@ The following image shows how to resize the lane.
 * A helper indicator appears to show the insertion position during lane swapping.
 The following image shows how to swap lanes.
 
-![Lane Swapping](../Swimlane-images/Lane_Swapping.gif)
+![Lane Swapping](../Swimlane-images/Lane_Swapping.webp)
 
 ## How to Interact with Child Nodes in Lanes
 
@@ -46,7 +46,7 @@ The following image shows how to swap lanes.
 
 The following image shows children interaction in lane.
 
-![Lane Children Interaction](../Swimlane-images/Child_Interaction.gif)
+![Lane Children Interaction](../Swimlane-images/Child_Interaction.webp)
 
 ## How to restrict nodes from being dragged outside their swimlane
 
@@ -260,6 +260,6 @@ The following example demonstrates that a constraint can also be enabled or disa
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVeMBiRzuEmRSmS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVeMBiRzuEmRSmS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.webp)" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/Swimlanes/LaneInteraction/AllowDragWithinSwimlane.razor)

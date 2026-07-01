@@ -62,4 +62,4 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
 
 ```
 
-![Dialog opens when selecting Update in Blazor Dropdown Menu](./../images/blazor-dropdownmenu-with-dialog.png)
+![Dialog opens when selecting Update in Blazor Dropdown Menu](./../images/blazor-dropdownmenu-with-dialog.webp)

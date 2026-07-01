@@ -42,7 +42,7 @@ The `Linear` directions of Speed Dial are as follows:
 
 ```
 
-![Linear display mode with items opening to the left](./images/Blazor-SpeedDial-LinearMode.png)
+![Linear display mode with items opening to the left](./images/Blazor-SpeedDial-LinearMode.webp)
 
 ## Radial display mode (Radial Menu)
 

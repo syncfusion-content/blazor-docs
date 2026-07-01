@@ -27,7 +27,7 @@ In responsive mode, the Kanban user interface is optimized for smaller screens. 
 - Users can **tap and hold** a Kanban card to initiate drag-and-drop.
 - **Swipe left or right** to navigate between columns.
 
-![Blazor Kanban with Default Layout](./images/blazor-kanban-default-layout.PNG)
+![Blazor Kanban with Default Layout](./images/blazor-kanban-default-layout.webp)
 
 ### Swimlane Layout
 
@@ -37,13 +37,13 @@ In responsive mode, the swimlane header is displayed with a menu icon at the top
 - Selecting a swimlane group updates the Kanban board to show the corresponding cards.
 - By default, the first swimlane group is selected and displayed.
 
-![Blazor Kanban with Swimlane Layout](./images/blazor-kanban-swimlane-layout.PNG)
+![Blazor Kanban with Swimlane Layout](./images/blazor-kanban-swimlane-layout.webp)
 
 ## Scrolling
 
 Column scrolling will be shown when exceeding the screen size in the columns.
 
-![Scrolling in Blazor Kanban](./images/blazor-kanban-scrolling.PNG)
+![Scrolling in Blazor Kanban](./images/blazor-kanban-scrolling.webp)
 
 ## Selection
 
@@ -53,4 +53,4 @@ Select particular cards in the Kanban board by tapping the card.
 
 Single card will be selected when you tap the card once and the selection will be removed when you select another card.
 
-![Selection in Blazor Kanban](./images/blazor-kanban-selection.PNG)
+![Selection in Blazor Kanban](./images/blazor-kanban-selection.webp)

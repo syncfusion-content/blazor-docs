@@ -44,7 +44,7 @@ The following properties allow for further control over the chunk upload process
 
 ### Preview
 
-![Blazor FileUpload with Chunk Upload](./images/blazor-fileupload-with-chunk-upload.png)
+![Blazor FileUpload with Chunk Upload](./images/blazor-fileupload-with-chunk-upload.webp)
 
 ### Resumable Upload
 
@@ -100,7 +100,7 @@ The File Upload component supports resumable uploads, allowing users to pause an
 
 ### Preview
 
-![Resuming File Uploads in Blazor FileUpload](./images/blazor-fileupload-resume-file-upload.png)
+![Resuming File Uploads in Blazor FileUpload](./images/blazor-fileupload-resume-file-upload.webp)
 
 ### Cancel Upload
 
@@ -147,7 +147,7 @@ If an upload fails (e.g., due to server error), the pause icon transforms into a
 
 ### Preview
 
-![Canceling File Uploads in Blazor FileUpload](./images/blazor-fileupload-cancel-file-upload.png)
+![Canceling File Uploads in Blazor FileUpload](./images/blazor-fileupload-cancel-file-upload.webp)
 
 ## Backend Configuration (ASP.NET Core Hosted Application)
 

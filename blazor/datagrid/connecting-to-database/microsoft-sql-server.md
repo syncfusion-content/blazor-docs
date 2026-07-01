@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Data Grid connected to SQL via Entity Framework | Syncfusion
+title: Blazor Data Grid connected to SQL via Entity Framework | Syncfusion®
 description: Bind SQL Server data to Blazor Data Grid using Entity Framework Core with complete CRUD, filtering, sorting, paging, and advanced data operations.
 platform: Blazor
 control: DataGrid

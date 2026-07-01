@@ -25,4 +25,4 @@ Hide the default dropdown caret in the Dropdown Menu by applying the built-in `e
 
 ```
 
-![Hide the caret icon in the Blazor DropDownMenu](./../images/blazor-dropdownmenu-hide-arrow.png)
+![Hide the caret icon in the Blazor DropDownMenu](./../images/blazor-dropdownmenu-hide-arrow.webp)

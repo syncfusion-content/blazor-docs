@@ -50,4 +50,4 @@ Items in the popup can be grouped in the SplitButton by rendering a ListView ins
 
 ```
 
-![Grouped items in the Blazor SplitButton popup using ListView](./../images/blazor-splitbutton-grouping.png)
+![Grouped items in the Blazor SplitButton popup using ListView](./../images/blazor-splitbutton-grouping.webp)

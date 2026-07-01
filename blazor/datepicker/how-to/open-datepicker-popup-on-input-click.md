@@ -28,7 +28,7 @@ The following example demonstrates how to open the DatePicker popup when the inp
 }
 ```
 
-![Opening Blazor DatePicker Popup](../images/blazor-datepicker-popup.png)
+![Opening Blazor DatePicker Popup](../images/blazor-datepicker-popup.webp)
 
 ## Open the Blazor DatePicker popup on Focus
 

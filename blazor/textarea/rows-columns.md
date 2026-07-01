@@ -22,4 +22,4 @@ The TextArea size can be tailored for layout and readability using properties th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLpNnWUWKSXAMrN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Row and Column](./images/blazor-textarea-rows-columns.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLpNnWUWKSXAMrN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Row and Column](./images/blazor-textarea-rows-columns.webp)" %}

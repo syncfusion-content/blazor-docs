@@ -177,7 +177,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 </SfTreeView>
 
 @code {
-
     public class MailItem
     {
         public string? Id { get; set; }

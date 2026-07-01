@@ -66,7 +66,7 @@ WebAssembly requires the [`'wasm-unsafe-eval'`](https://developer.mozilla.org/en
 
 ## When you need *'unsafe-inline'* ?
 
-Most Syncfusion components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
+Most components support strict CSP. However, some components or features still need the **`style-src 'unsafe-inline'`** directive. Read the sections below to determine if your application needs it.
 
 
 ### Scenario 1: components that always require *'unsafe-inline'*
@@ -105,7 +105,7 @@ The following components need inline styles to work and always require `'unsafe-
 </td>
 <td>
 <ul>
-<li>These components are independent of external Syncfusion theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.</li>
+<li>These components are independent of external theme files and rely on runtime-generated inline styles for precise SVG, Canvas, and DOM rendering.</li>
 <li>Dynamic calculation of axes, scales, gradients, data labels, and tooltips at runtime.</li>
 <li>Inline styles ensure pixel-perfect alignment and high-performance redraws during zoom, pan, and real-time updates.</li>
 </ul>
@@ -117,7 +117,6 @@ The following components need inline styles to work and always require `'unsafe-
 </td>
 <td>
 <ul>
-<li>Block Editor</li>
 <li>Rich Text Editor</li>
 </ul>
 </td>
@@ -130,61 +129,11 @@ The following components need inline styles to work and always require `'unsafe-
 </tr>
 <tr>
 <td>
-<b>Interactive Chat</b>
-</td>
-<td>
-<ul>
-<li>Chat UI</li>
-</ul>
-</td>
-<td>
-<ul>
-<li>Chat UI component is implemented using Blazor's Virtualize component, which optimizes performance by rendering only the visible subset of messages within the viewport while representing the full dataset logically.</li>
-<li>Blazor's virtualization mechanism relies on runtime-generated inline styles as an essential part of its layout and scrolling model.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-<b>File Management</b>
-</td>
-<td>
-<ul>
-<li>File Manager</li>
-</ul>
-</td>
-<td>
-<ul>
-<li>Uses inline styles for responsive grid/list views, selection highlights, drag indicators, and context menus.</li>
-<li>Inline styles allow immediate visual feedback during selection, resizing panes, and drag operations.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-<b>Layout</b>
-</td>
-<td>
-<ul>
-<li>Card</li>
-</ul>
-</td>
-<td>
-<ul>
-<li>Card components dynamically adjust layout, elevation, spacing, and responsive breakpoints via inline styles.</li>
-<li>Enables adaptive layouts across different screen sizes and container widths.</li>
-<li>Supports dynamic styling scenarios such as hover effects and conditional emphasis.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
 <b>Diagrams and Maps</b>
 </td>
 <td>
 <ul>
 <li>Diagram</li>
-
 </ul>
 </td>
 <td>
@@ -192,21 +141,6 @@ The following components need inline styles to work and always require `'unsafe-
 <li>Diagram components depend extensively on inline styles for interactive behaviors.</li>
 <li>Inline styles are used for node positioning, connectors, ports, annotations, and selection states.</li>
 <li>Dragging, resizing, rotating, and snapping operations require continuous style updates at runtime.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-<b>Kanban</b>
-</td>
-<td>
-<ul>
-<li>Kanban</li>
-</ul>
-</td>
-<td>
-<ul>
-<li>Kanban boards use inline styles to provide fluid drag-and-drop interactions between columns and cards.</li>
 </ul>
 </td>
 </tr>
@@ -223,6 +157,7 @@ These components work under strict CSP for most features, but specific advanced 
 | Charts | Circular Gauge - [Click here for feature details](../circular-gauge/content-security-policy)<br> Heatmap Chart - [Click here for feature details](../heatmap-chart/content-security-policy) |
 | Navigation | TreeView - [Click here for feature details](../treeview/content-security-policy) |
 | Maps | Maps -[Click here for feature details](../maps/content-security-policy) |
+| ChatUI | ChatUI -[Click here for feature details](../chat-ui/content-security-policy) |
 
 ### Scenario 3: passing inline styles via component properties
 
@@ -276,3 +211,4 @@ This allows inline styles while keeping the rest of your security policy strict.
 * [Content security policy in Syncfusion® Maps component](https://blazor.syncfusion.com/documentation/maps/content-security-policy)
 * [Content security policy in Syncfusion® Pivot Table component](https://blazor.syncfusion.com/documentation/pivot-table/content-security-policy)
 * [Content security policy in Syncfusion® TreeView component](https://blazor.syncfusion.com/documentation/treeview/content-security-policy)
+* [Content security policy in Syncfusion® Chat UI component](../chat-ui/content-security-policy)

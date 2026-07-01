@@ -60,7 +60,7 @@ N> When downloading Material or Tailwind themes (alone or with other themes), th
     ```
 3. Run the application. The resources will load only the required components.
 
-N> Ensure the generated bundle version matches the installed Syncfusion Blazor NuGet package version. After upgrading packages, regenerate the CRG bundle. For reference on where to place script references, see [Reference script files for Syncfusion Blazor](https://blazor.syncfusion.com/documentation/common/adding-script-references).
+N> Ensure the generated bundle version matches the installed Syncfusion Blazor NuGet package version. After upgrading packages, regenerate the CRG bundle. For reference on where to place script references, see [Reference script files for Blazor](https://blazor.syncfusion.com/documentation/common/adding-script-references).
 
 ## Import previously generated settings into CRG
 

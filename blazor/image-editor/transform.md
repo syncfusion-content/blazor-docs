@@ -45,7 +45,7 @@ Note: Use multiples of 90° (for example, 90, 180, -90) for proper alignment.
 }
 ```
 
-![Blazor Image Editor with Rotate an image](./images/blazor-image-editor-rotate.jpg)
+![Blazor Image Editor with Rotate an image](./images/blazor-image-editor-rotate.webp)
 
 ## Flip an image
 
@@ -83,7 +83,7 @@ Here is an example of flipping an image on button click.
 }
 ```
 
-![Blazor Image Editor with Flip an image](./images/blazor-image-editor-flip.jpg)
+![Blazor Image Editor with Flip an image](./images/blazor-image-editor-flip.webp)
 
 ## Straighten an image
 
@@ -119,7 +119,7 @@ Here is an example of straightening an image.
 }
 ```
 
-![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.jpg)
+![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.webp)
 
 ## Zoom in or out an image 
 
@@ -199,7 +199,7 @@ Here is an example of configuring `MinZoomFactor` and `MaxZoomFactor` in [ImageE
 }
 ```
 
-![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.jpg)
+![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.webp)
 
 ### Enable the specific types of zooming
 
@@ -221,7 +221,7 @@ Using the [ZoomTrigger](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
-![Blazor Image Editor with ZoomWheel](./images/blazor-image-editor-zoomwheel.jpg)
+![Blazor Image Editor with ZoomWheel](./images/blazor-image-editor-zoomwheel.webp)
 
 ## Panning an image
 

@@ -17,7 +17,7 @@ documentation: ug
 
 Select an element by clicking it. A single click clears any previous selection and selects the clicked item. The following image shows the selected elements are visually represented.
 
-![Single Selection in Blazor Diagram](images/blazor-diagram-single-selection.gif)
+![Single Selection in Blazor Diagram](images/blazor-diagram-single-selection.webp)
 
 * Use the following events to customize selection behavior:
 * When selecting or unselecting the diagram elements, the following events get triggered and do customization on those events.
@@ -94,7 +94,7 @@ The Diagram Element Highlighter feature enhances the selection process by visual
 
 For more information about customizing the Diagram Element Highlighter, refer [Customize Highlights for Selected Diagram Elements](./style#how-to-customize-highlights-for-selected-diagram-elements).
 
-![Multiple Selection in Blazor Diagram](images/blazor-diagram-multiple-selection.gif)
+![Multiple Selection in Blazor Diagram](images/blazor-diagram-multiple-selection.webp)
 
 ## How to Select and Unselect Elements Using Program
 
@@ -138,7 +138,7 @@ In the following example, the node can be selected with the first click and unse
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/UnSelectSample.razor)
 
-![Toggle Selection in Blazor Diagram](images/UnselectSample.gif)
+![Toggle Selection in Blazor Diagram](images/UnselectSample.webp)
 
 ## How to Select Entire Elements in Diagram Programmatically
 
@@ -581,7 +581,7 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVICNXlrlnvNlVu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/CloneSelectedItems.razor)
-![Grouping in Blazor Diagram](images/CloneSelection.gif)
+![Grouping in Blazor Diagram](images/CloneSelection.webp)
 
 ### How to Access and Modify Selected Nodes and Connectors at Runtime
 Access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
@@ -988,7 +988,7 @@ User handles can be aligned relative to the node boundaries. It has [Margin](htt
 
 ##  How to Position User Handle
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle based on fractions. 0 represents top or left corner, 1 represents bottom or right corner, and 0.5 represents half of width or height.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle based on fractions. **0** represents top or left corner, **1** represents bottom or right corner, and **0.5** represents half of width or height.
 
 ## HHow to Align User Handles Based on Connector Boundary
 
@@ -1057,7 +1057,7 @@ The appearance of the user handle can be customized using the [Size](https://hel
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * The diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
-![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.gif)
+![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.webp)
 
 ## Keyboard Shortcuts and Navigation
 

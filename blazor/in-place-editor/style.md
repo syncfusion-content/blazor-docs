@@ -79,4 +79,4 @@ Use the following CSS to customize the outer container of the In-place Editor (f
 
 ```
 
-![Blazor In-place Editor outer style like material filled](./images/outer-style-like-material-filled.png)
+![Blazor In-place Editor outer style like material filled](./images/outer-style-like-material-filled.webp)

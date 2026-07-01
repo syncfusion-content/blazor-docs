@@ -23,7 +23,7 @@ In the following example, minimum stroke width is set as 0.5, maximum stroke wid
 <SfSignature MaxStrokeWidth="3" MinStrokeWidth="0.5" Velocity="0.7"></SfSignature>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-stroke-width.png)
+![Blazor Signature Component](./images/blazor-signature-stroke-width.webp)
 
 ## Stroke Color
 
@@ -74,7 +74,7 @@ Specify [`StrokeColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-stroke-color.png)
+![Blazor Signature Component](./images/blazor-signature-stroke-color.webp)
 
 ## Background Color
 
@@ -125,7 +125,7 @@ Specify [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-bg-color.png)
+![Blazor Signature Component](./images/blazor-signature-bg-color.webp)
 
 ## Background Image
 
@@ -192,7 +192,7 @@ N> To view the hosted images, you need to enable Directory Browsing option in II
 </configuration>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-bg-image.png)
+![Blazor Signature Component](./images/blazor-signature-bg-image.webp)
 
 ## See Also
 

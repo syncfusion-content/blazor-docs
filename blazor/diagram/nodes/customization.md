@@ -14,7 +14,7 @@ The appearance of a node can be customized by changing its [Fill](https://help.s
 To learn more about node customization, refer to the below video link,
 
 {% youtube "youtube:https://www.youtube.com/watch?v=iKuBSy8mOpE&t=271s" %}
-
+<br><br>
 The following code shows how to customize the appearance of a shape.
 
 ```cshtml
@@ -48,7 +48,7 @@ The following code shows how to customize the appearance of a shape.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeAppearance.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreCDNdTPXnzIxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtreCDNdTPXnzIxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.webp)" %}
 
 N> The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node must be unique. `ID` property is used to find nodes at runtime for further customization.
 
@@ -111,7 +111,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Update Node Templates 
 
-Define node style using a template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. To apply different templates to individual nodes, differentiate the nodes by the `ID` property. The following code explains how to define template for a node.
+Define node style using a template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. To apply different templates to individual nodes, differentiate the nodes by the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) property. The following code explains how to define template for a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -195,7 +195,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 N> In this example, the node's background color is updated using the click event of the button defined in the template.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLyCXjxTbrhOftv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLyCXjxTbrhOftv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Node Template](../images/blazor-diagram-node-template.webp)" %}
 
 ## How to Update Common Node Styles
 
@@ -301,7 +301,7 @@ The diagram's [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/SetTemplate.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIWZZRJvqiUhpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIWZZRJvqiUhpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.webp)" %}
 
 ## How to change the border color of a node
 
@@ -344,11 +344,11 @@ The diagram provides the ability to customize the border color of a node using t
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/BorderColor.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhosNjHfPAnHiMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Border Color for Node](../images/BorderColor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhosNjHfPAnHiMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Border Color for Node](../images/BorderColor.webp)" %}
 
 ## How to change the border width of a node
 
-The diagram allows customizing the border width of a node using the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderWidth) property. By default, the border width is **1** pixel. Adjust this value to increase or decrease the thickness of the node's border as needed.
+The diagram allows customizing the border width of a node using the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BorderWidth) property. By default, the border width is **1 pixel**. Adjust this value to increase or decrease the thickness of the node's border as needed.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -389,7 +389,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Update Node Shadow
 
-Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a node. `Shadow` is disabled by default and can be enabled by using the node’s constraints. The following example shows how to draw a shadow.
+Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a node.`Shadow` is disabled by default and can be enabled by using the node’s constraints. The following example shows how to draw a shadow.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -426,7 +426,7 @@ Diagram supports adding a [Shadow](https://help.syncfusion.com/cr/blazor/Syncfus
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/NodeShadow.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSWNXHzlpHUmqs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSWNXHzlpHUmqs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.webp)" %}
 
 ### How to Customize Node Shadow
 
@@ -475,7 +475,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/CustomShadow.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyiZjdpFIWLXYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyiZjdpFIWLXYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.webp)" %}
 
 ## How to Apply Gradient Style
 
@@ -538,7 +538,7 @@ There are two types of gradients:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/LinearGradientStyle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIWjNRpFSnUxQF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIWjNRpFSnUxQF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.webp)" %}
 
 ### How to Apply Radial Gradient Brush
 
@@ -597,7 +597,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Appearance/RadientGradientStyle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBosNDdJlxWJNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBosNDdJlxWJNRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.webp)" %}
 
 ## How to Add Additional Information for a Node
 
@@ -713,7 +713,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Set Pivot Property for a Node
 
-*  Node rotation is based on [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) values which range from **0 to 1** similar to offset values. By default, `Pivot` is **X = 0.5** and **Y = 0.5**.
+*  Node rotation is based on [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) values which range from **0 to 1** similar to offset values. By default, `Pivot` is X = **0.5** and Y = **0.5**.
 
 
 The following code illustrates how to set the Pivot value.

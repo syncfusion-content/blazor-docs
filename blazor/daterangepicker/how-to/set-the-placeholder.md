@@ -20,6 +20,6 @@ Using `Placeholder`, you can display a short hint in the input element.
 ```
 
 
-![Blazor DateRangePicker with Hint Element](../images/blazor-daterangepicker-hint-element.png)
+![Blazor DateRangePicker with Hint Element](../images/blazor-daterangepicker-hint-element.webp)
 
 N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.
