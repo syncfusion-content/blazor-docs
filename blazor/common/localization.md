@@ -265,7 +265,7 @@ using System.Globalization;
 ...
 
 builder.Services.AddSyncfusionBlazor();
-//Register the Syncfusion locale service to localize Syncfusion Blazor components.
+//Register the Syncfusion locale service to localize Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
 var host = builder.Build();

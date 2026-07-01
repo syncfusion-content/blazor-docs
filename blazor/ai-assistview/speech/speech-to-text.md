@@ -9,13 +9,13 @@ documentation: ug
 
 # Speech-to-Text in Blazor AI AssistView
 
-The Syncfusion Blazor AI AssistView component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the AI AssistView through voice input.
+The Blazor AI AssistView component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the AI AssistView through voice input.
 
 ## Prerequisites
 
 Before integrating `Speech-to-Text`, ensure the following:
 
-1. The Syncfusion AI AssistView component is properly set up in your Blazor application.
+1. The AI AssistView component is properly set up in your Blazor application.
     - [Blazor Getting Started Guide](../getting-started)
 
 2. The AI AssistView component is integrated with Azure OpenAI
