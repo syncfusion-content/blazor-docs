@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Connecting PostgreSQL to Blazor Scheduler Using Entity Framework
 
-The [Blazor Scheduler component](https://www.syncfusion.com/blazor-components/blazor-scheduler) supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries for managing appointments and calendar events.
+The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component](https://www.syncfusion.com/blazor-components/blazor-scheduler) supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries for managing appointments and calendar events.
 
 ## What is Entity Framework Core?
 
@@ -646,7 +646,7 @@ The `Program.cs` file is where application services are registered and configure
 
 The service registration has been completed successfully.
 
-## Integrating Blazor Scheduler
+## Integrating Syncfusion Blazor Scheduler
 
 ### Step 1: Install and Configure Blazor Scheduler Components
 
@@ -747,7 +747,7 @@ The database schema has been created successfully.
 
 ### Step 3: Create the Scheduler Component
 
-The Scheduler component will display appointment data in a Blazor Scheduler with full CRUD (Create, Read, Update, Delete) capabilities and multiple calendar views.
+The Scheduler component will display appointment data in a Syncfusion Blazor Scheduler with full CRUD (Create, Read, Update, Delete) capabilities and multiple calendar views.
 
 #### Instructions:
 
@@ -978,10 +978,10 @@ All operations are automatically saved to the PostgreSQL database.
 
 ## Output Preview
 ![Frontend Preview](./images/blazor-scheduler-postgresql-frontend.webp)
-*Image illustrating the Blazor Scheduler*
+*Image illustrating the Syncfusion Blazor Scheduler*
 
 ![Database Preview](./images/blazor-scheduler-postgresql-database.webp)
-*Image illustrating the events of the Blazor Scheduler stored in PostgreSQL*
+*Image illustrating the events of the Syncfusion Blazor Scheduler stored in PostgreSQL*
 
 ## Complete Sample Repository
 
@@ -1051,7 +1051,7 @@ The application now provides a professional appointment scheduling system with:
 
 ## Additional Resources
 
-- [Blazor Scheduler Documentation](https://blazor.syncfusion.com/documentation/scheduler/getting-started)
+- [Syncfusion Blazor Scheduler Documentation](https://blazor.syncfusion.com/documentation/scheduler/getting-started)
 - [Entity Framework Core Documentation](https://docs.microsoft.com/en-us/ef/core/)
 - [Npgsql Entity Framework Core Provider](https://www.npgsql.org/efcore/)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)

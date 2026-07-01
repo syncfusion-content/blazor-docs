@@ -6,7 +6,7 @@ platform: Blazor
 control: Scheduler
 documentation: ug
 ---
-
+ 
 # Header Customization in Blazor Scheduler Component
 
 The header part of Scheduler can be customized easily with the built-in options available.
@@ -50,7 +50,7 @@ By default, the header bar holds the date and view navigation options, through w
 
 ## Toolbar customization
 
-Blazor Scheduler enables comprehensive toolbar customization to match your application's navigation and filtering requirements. By using the `ScheduleToolBar` component and its child items, you can:
+Syncfusion Blazor Scheduler enables comprehensive toolbar customization to match your application's navigation and filtering requirements. By using the `ScheduleToolBar` component and its child items, you can:
 
 - Integrate built-in navigation controls (Previous, Next, Today, Views).
 - Embed custom elements, such as dropdowns and buttons.
