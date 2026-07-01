@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup settings in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about Popup Setting in Syncfusion Blazor MultiColumn ComboBox component and much more.
+title: Popup Settings in Blazor MultiColumn ComboBox | Syncfusion®
+description: Checkout and learn here all about Popup Setting in Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
