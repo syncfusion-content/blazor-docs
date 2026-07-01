@@ -16,6 +16,6 @@ The Blazor Smart Paste Button component fully inherits all the properties, types
 
 ## See also
 
-* [Blazor Button Types and Styles](https://blazor.syncfusion.com/documentation/button/types-and-styles)
-* [Getting Started with Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation)
-* [Getting Started with Blazor Smart Paste Button in Blazor Server App](https://blazor.syncfusion.com/documentation)
+* [Button Types and Styles](https://blazor.syncfusion.com/documentation/button/types-and-styles)
+* [Getting Started with Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
+
