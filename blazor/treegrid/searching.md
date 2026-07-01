@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in Blazor TreeGrid Component | Syncfusion
-description: Learn all about Searching in the Syncfusion Blazor TreeGrid component, including toolbar integration, external triggers, and search customization.
+title: Searching in Blazor TreeGrid Component | Syncfusion®
+description: Learn all about Searching in the Blazor TreeGrid component, including toolbar integration, external triggers, and search customization.
 platform: Blazor
 control: TreeGrid
 documentation: ug
