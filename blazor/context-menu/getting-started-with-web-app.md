@@ -239,7 +239,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Context Menu Component](./images/blazor-contextmenu-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrHjRWEJnVHwAGc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu Component](./images/blazor-contextmenu-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ContextMenu).
 
