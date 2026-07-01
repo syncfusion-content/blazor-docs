@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor TreeGrid component and much more.
+title: Globalization in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about Globalization in Blazor TreeGrid component and much more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-[Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ### Loading translations
 

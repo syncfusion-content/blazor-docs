@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adaptive Layout in Blazor TreeGrid Component | Syncfusion
+title: Adaptive Layout in Blazor TreeGrid Component | Syncfusion®
 description: The Blazor TreeGrid will render the adaptive UI filter, sort, and edit dialogs in full screen for a better user experience.
 platform: Blazor
 control: Tree Grid
