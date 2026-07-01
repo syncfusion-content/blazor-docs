@@ -62,4 +62,3 @@ The accessibility compliance of the Blazor Floating Action Button component is s
 ## See also
 
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
-
