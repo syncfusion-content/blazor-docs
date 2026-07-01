@@ -15,7 +15,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> publishes the Visual Studio ext
 
 ## Prerequisites
 
-The following software is required to install the Syncfusion® Blazor extension and to create projects, add snippets, convert, and upgrade Blazor applications.
+The following software is required to install the Syncfusion® Blazor extension and to create projects, add snippets, convert, and upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications.
 
 * [Visual Studio 2022 / Visual Studio 2026](https://visualstudio.microsoft.com/downloads/).
 

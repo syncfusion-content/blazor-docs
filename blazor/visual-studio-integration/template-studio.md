@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio creates a new Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor project preconfigured with required NuGet packages, theme styles, namespaces, and initial render code for the components you select. The Template Studio uses a step-by-step wizard so you can quickly scaffold an application with your choices for runtime, theme, authentication, and sample data.
 
-N> The The Syncfusion® Blazor extensions for Visual Studio require Essential Studio<sup style="font-size:70%">&reg;</sup> versions 31.2.10 or later.
+N> The Syncfusion® Blazor extensions for Visual Studio require Essential Studio<sup style="font-size:70%">&reg;</sup> versions 31.2.10 or later.
 
 Quick start
 
