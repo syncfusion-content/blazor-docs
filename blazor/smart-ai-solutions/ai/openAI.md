@@ -1,13 +1,13 @@
 ---
 layout: post
-title: OpenAI Integration with Syncfusion® Blazor AI | Syncfusion®
+title: OpenAI Integration with Blazor AI | Syncfusion®
 description: Learn how to configure and use the Syncfusion.Blazor.AI library with OpenAI, including setup, integration steps, practical examples. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
 ---
 
-# OpenAI Integration with Syncfusion® Blazor AI
+# OpenAI Integration with Blazor AI
 
 The [Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library integrates with [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) to add AI-driven features to Blazor applications. These features include anomaly detection (identifying irregular data patterns), data analysis (processing and summarizing data), and content generation (creating text based on user input).
 
@@ -69,7 +69,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 {% endhighlight %}
 {% endtabs %}
-- Add the following to `App.razor` for Syncfusion<sup style="font-size:70%">&reg;</sup> themes and scripts:
+- Add the following to `App.razor` for themes and scripts:
   
 ```html
 <head>
