@@ -15,4 +15,4 @@ documentation: ug
 
 ## RTL
 
-RTL provides an option to switch the text direction and layout of the Stepper component from right to left. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for Blazor components.
+RTL provides an option to switch the text direction and layout of the Stepper component from right to left. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Blazor components.

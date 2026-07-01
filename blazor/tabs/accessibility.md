@@ -79,4 +79,4 @@ The accessibility compliance of the Tabs component is shown in the following sam
 
 ## See also
 
-* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in  Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
