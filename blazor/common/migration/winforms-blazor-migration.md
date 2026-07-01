@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Windows Forms to Blazor
 
-Migrating enterprise applications from [Windows Forms (WinForms)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) involves a significant architectural shift, transitioning from a traditional event driven desktop UI framework to a modern, component based web framework running on .NET. This guide provides a structured, step-by-step migration approach for [WinForms controls](https://www.syncfusion.com/winforms-ui-controls) to their corresponding [Blazor components](https://www.syncfusion.com/blazor-components).
+Migrating enterprise applications from [Windows Forms (WinForms)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/) to [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) involves a significant architectural shift, transitioning from a traditional event driven desktop UI framework to a modern, component based web framework running on .NET. This guide provides a structured, step-by-step migration approach for [WinForms controls](https://www.syncfusion.com/winforms-ui-controls) to their corresponding [Blazor components](https://www.syncfusion.com/blazor-components) with the **Blazor Web App (Interactive Server)** rendering mode.
 
 ## Why Migrate from WinForms to Blazor?
 
@@ -40,7 +40,7 @@ WinForms and Blazor Web Apps follow different application architectures. The fol
 | `Program.cs` (with `Application.Run`) | `Program.cs` and `App.razor` | Defines startup and root rendering |
 | `Form1.cs` | `App.razor`, `MainLayout.razor`, and `Routes.razor` | Represents the application shell and routing structure |
 | `Form1.Designer.cs` | `.razor` markup section | Defines the UI layout and component hierarchy |
-| Event handlers and business logic | Services, component state, or `.razor.cs` | Contains UI logic and state |
+| Event handlers and business logic | Services, component state, `.razor.cs`, and component lifecycle methods | Contains UI logic, event handling, and state management |
 | `Models/*.cs` | `Models/*.cs` | Usually reusable without changes |
 | `Services/*.cs` or business layer | `Services/*.cs` | Handles shared application logic through dependency injection |
 | `Resources` folder or `Resources.resx` | `wwwroot` folder and static assets | Manages images, icons, and static resources |
@@ -54,6 +54,8 @@ Create a Blazor project using one of the following getting started guides.
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+
+This migration guide focuses on the **Blazor Web App (Interactive Server)** approach, which provides a straightforward migration path from WinForms applications by keeping business logic and state management on the server. Interactive Server rendering uses SignalR to synchronize UI interactions between the browser and server, making it suitable for enterprise applications that are traditionally built as desktop applications.
 
 The following shared setup applies to all components and covers the common configuration required before proceeding to the [component specific migration steps](#component-specific-migration-steps).
 
@@ -152,6 +154,53 @@ In Blazor, the theme stylesheet and script can be accessed from NuGet through [S
 
 {% endhighlight %}
 {% endtabs %}
+
+## Understanding data binding: WinForms data sources vs Blazor component state
+
+Data binding exists in both WinForms and Blazor, but the underlying programming models are different.
+
+### WinForms data binding approach
+
+WinForms commonly uses data binding through `BindingSource`, `DataSource`, and notification mechanisms such as `INotifyPropertyChanged` and `IBindingList`. Controls automatically react to changes from the bound data source.
+
+{% tabs %}
+{% highlight c# tabtitle="Form1.cs" %}
+
+BindingSource source = new BindingSource();
+source.DataSource = GetOrders();
+
+sfDataGrid1.DataSource = source;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor data binding approach
+
+Blazor uses component state, parameters, and the `@bind` directive. Instead of binding controls to a form-level data context, components explicitly receive and render data through parameters and state.
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+<SfGrid DataSource="@Orders"></SfGrid>
+
+@code {
+    List<Order> Orders = GetOrders();
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Key differences
+
+| Aspect | WinForms | Blazor |
+|---|---|---|
+| Data source | `BindingSource`, `DataTable`, collections | Component state and parameters |
+| Property updates | `INotifyPropertyChanged` | Component re-rendering |
+| Collection updates | `BindingList<T>` and observable collections | State updates and component refresh |
+| Two-way binding | Control binding APIs | `@bind` |
+| Scope | Form or control level | Component level |
+
+When migrating applications, data models can usually be reused with minimal changes. However, UI state management should be adapted to Blazor's component-based architecture.
 
 ## Component specific migration steps
 
@@ -488,6 +537,130 @@ namespace WinFormsSchedulerApp
 
 {% endhighlight %}
 {% endtabs %}
+
+## Migration limitations and considerations
+
+Migrating from WinForms to Blazor involves more than replacing desktop controls with web components. WinForms and Blazor use different rendering models, lifecycle patterns, and layout systems. The following considerations should be evaluated before migration.
+
+### UI layout differences: desktop layouts vs CSS layouts
+
+#### WinForms approach
+
+WinForms applications commonly use fixed layouts through properties such as `Location`, `Size`, `Anchor`, and `Dock`.
+
+{% tabs %}
+{% highlight c# tabtitle="Form1.cs" %}
+
+button1.Location = new Point(20, 20);
+button1.Size = new Size(120, 40);
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Blazor approach
+
+Blazor components render as standard HTML and CSS in the browser. Layouts are typically built using CSS Flexbox or CSS Grid and are designed to respond to varying screen sizes.
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+<div style="display:flex; gap:10px;">
+    <button>Save</button>
+    <button>Cancel</button>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Key differences
+
+| Aspect | WinForms | Blazor |
+|---|---|---|
+| Layout model | Fixed desktop layout | Responsive CSS layout |
+| Positioning | Coordinates, Dock, Anchor | Flexbox, Grid, CSS |
+| Screen adaptation | Manual resizing logic | Responsive design |
+| Rendering | Native Windows UI | Browser-based HTML rendering |
+
+**Migration strategy**
+
+* Replace coordinate-based positioning with CSS layouts.
+* Use Flexbox or CSS Grid instead of nested panels.
+* Validate layouts on different screen sizes and browsers.
+* Design for responsiveness rather than fixed resolutions.
+
+### Different lifecycle and event models
+
+#### WinForms lifecycle
+
+WinForms follows a traditional desktop event-driven lifecycle.
+
+{% tabs %}
+{% highlight c# tabtitle="Form1.cs" %}
+
+private void Form1_Load(object sender, EventArgs e)
+{
+    LoadData();
+}
+
+private void button1_Click(object sender, EventArgs e)
+{
+    SaveData();
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Blazor lifecycle
+
+Blazor components use lifecycle methods and event callbacks.
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadDataAsync();
+    }
+
+    private async Task Save()
+    {
+        await SaveDataAsync();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Key differences
+
+| Aspect | WinForms | Blazor |
+|---|---|---|
+| Initialization | `Form_Load` | `OnInitialized` / `OnInitializedAsync` |
+| UI updates | Immediate desktop updates | Component re-rendering |
+| Events | CLR events | EventCallback and component events |
+| Async support | Optional | Commonly used |
+| Cleanup | Form closing events | `IDisposable` / `IAsyncDisposable` |
+
+**Migration strategy**
+
+* Move initialization code from `Form_Load` to `OnInitializedAsync`.
+* Convert long-running operations to asynchronous methods.
+* Replace traditional event handlers with Blazor component events and callbacks.
+* Consider component re-rendering behavior when updating state.
+
+### Platform limitations
+
+Some WinForms features do not have direct web equivalents.
+
+* Direct access to Windows APIs.
+* Native desktop window management.
+* Low-level hardware integrations.
+* Desktop automation scenarios.
+* Certain drag-and-drop and operating-system-specific interactions.
+
+These scenarios may require web-specific alternatives, server-side services, or architectural redesign during migration.
 
 ## Run the application
 
