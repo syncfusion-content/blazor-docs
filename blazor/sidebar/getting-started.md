@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Sidebar Component | Syncfusion®
+title: Getting Started with Blazor Sidebar in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor Sidebar component in Blazor WebAssembly Application.
 platform: Blazor
 control: Sidebar

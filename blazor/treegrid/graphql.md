@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bind GraphQL Adaptor in Blazor TreeGrid | Syncfusion®
-description: Learn how to bind data from a GraphQL API to the Blazor TreeGrid, including querying, mutation, and integration techniques.es.
+description: Learn how to bind data from a GraphQL API to the Blazor TreeGrid, including querying, mutation, and integration techniques.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -685,7 +685,7 @@ This query will return the total count of employee data. Ensure the server is ru
 
 For more details, refer to the [Hot Chocolate documentation](https://chillicream.com/docs/hotchocolate).
 
-## Connecting Blazor TreeGrid to a GraphQL service
+## Connecting Blazor TreeGrid to an GraphQL service
  
 To integrate the Blazor TreeGrid into a project using Visual Studio, follow the steps below:
 
@@ -693,7 +693,7 @@ To integrate the Blazor TreeGrid into a project using Visual Studio, follow the 
 
 Create a **Blazor Web App** named **TreeGrid** using Visual Studio. Either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) can be used. Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
-**Step 2: Install the Blazor TreeGrid and Themes NuGet packages**
+**Step 2: Install Blazor TreeGrid and Themes NuGet packages**
 
 To add the Blazor TreeGrid to an application, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search for and install the following packages:
 
