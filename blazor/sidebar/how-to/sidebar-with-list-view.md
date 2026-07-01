@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Initialize the Blazor Sidebar with ListView | Syncfusion
+title: Initialize the Blazor Sidebar with ListView | Syncfusion®
 description: Learn here all about how to initialize the Sidebar with ListView in Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar

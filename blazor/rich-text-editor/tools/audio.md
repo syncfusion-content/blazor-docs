@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Audio in Blazor RichTextEditor Component | Syncfusion
+title: Audio in Blazor RichTextEditor Component | Syncfusion®
 description: Checkout and learn here all about insert audio in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

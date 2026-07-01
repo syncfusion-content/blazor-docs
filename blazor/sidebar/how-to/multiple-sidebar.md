@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiple Sidebar in Blazor Sidebar Component | Syncfusion
+title: Multiple Sidebar in Blazor Sidebar Component | Syncfusion®
 description: Checkout and learn here all the features about multiple Sidebar in Blazor Sidebar component and much more.
 platform: Blazor
 control: Sidebar

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style Encapsulation in Blazor Rich Text Editor | Syncfusion
+title: Style Encapsulation in Blazor Rich Text Editor | Syncfusion®
 description: Checkout and learn here all about Style Encapsulation in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

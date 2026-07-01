@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Items in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about items and how to configure action items in Syncfusion Timeline component and much more.
+title: Items in Blazor Timeline Component | Syncfusion®
+description: Checkout and learn here all about items and how to configure action items in Blazor Timeline component and much more.
 platform: Blazor
 control: Timeline
 documentation: ug

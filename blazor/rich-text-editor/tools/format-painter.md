@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Format Painter in Blazor RichTextEditor | Syncfusion
+title: Using Format Painter in Blazor RichTextEditor | Syncfusion®
 description: Checkout and learn here all about Format Painter in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

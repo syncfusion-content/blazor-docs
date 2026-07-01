@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization for Blazor Sankey Diagram | Syncfusion
+title: Customization for Blazor Sankey Diagram | Syncfusion®
 description: Explore various customization options available for enhancing the Blazor Sankey Diagram with background style, layout, and orientation configuration.
 platform: Blazor
 control: Sankey

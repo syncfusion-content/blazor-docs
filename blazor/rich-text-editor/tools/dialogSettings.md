@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DialogSettings in Blazor Rich Text Editor | Syncfusion
+title: DialogSettings in Blazor Rich Text Editor | Syncfusion®
 description: Check out and learn here all about DialogSettings in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor

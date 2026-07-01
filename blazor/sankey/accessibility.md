@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Sankey Component | Syncfusion
+title: Accessibility in Blazor Sankey Component | Syncfusion®
 description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Sankey component and more.
 platform: Blazor
 control: Sankey
