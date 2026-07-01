@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor Rich Text Editor component and more.
+title: Data Binding in Blazor Rich Text Editor | Syncfusion®
+description: Learn about data binding in Blazor Rich Text Editor, including value binding and synchronization with application data.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
