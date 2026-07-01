@@ -18,7 +18,7 @@ Before integrating `Text-to-Speech`, ensure the following:
 1. The AI AssistView component is properly set up in your Blazor application.
     - [Blazor Getting Started Guide](../getting-started)
 
-2. The AI AssistView component is integrated with [Azure OpenAI](https://microsoft.github.io/PartnerResources/skilling/ai-ml-academy/resources/openai).
+2. The AI AssistView component is integrated with [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-foundry/models/openai).
     - [Integration of Azure OpenAI With Blazor AI AssistView component](../ai-integrations/openai-integration.md)
 
 ## Configure Text-to-Speech
