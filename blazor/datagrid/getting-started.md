@@ -160,7 +160,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor DataGrid component
 
-Open a Razor file located in the **~/Components/Pages/Home.razor** and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the `.Client` project razor file.
+Open a Razor file located in the **~/Components/Pages/Home.razor** and add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
