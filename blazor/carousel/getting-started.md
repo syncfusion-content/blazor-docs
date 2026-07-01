@@ -266,6 +266,6 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthSMMhiVkQbevAP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Carousel Component](images/blazor-carousel-getting-started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRZHsVUrMKRirX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Carousel Component](images/blazor-carousel-getting-started.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
