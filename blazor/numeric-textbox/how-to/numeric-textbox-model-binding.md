@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Model Binding in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about model binding in Syncfusion Blazor Numeric TextBox component and more.
+title: Model Binding in Blazor Numeric TextBox | Syncfusion®
+description: Learn how to bind the Blazor Numeric TextBox value to a model using EditForm with data annotation validation.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

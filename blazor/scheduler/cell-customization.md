@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell Customizations in Blazor Scheduler Component | Syncfusion
-description: Learn here all about customizing the cells using template option, methods and events available in Syncfusion Blazor Scheduler component and more.
+title: Cell Customizations in Blazor Scheduler Component | Syncfusion®
+description: Learn here all about customizing the cells using template option, methods and events available in Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -65,7 +65,7 @@ The height and width of the Scheduler cells can be customized either to increase
 }
 ```
 
-![Cell Dimensions in Vertical Views in Blazor Scheduler](images/blazor-scheduler-celldimension-verticalviews.png)
+![Cell Dimensions in Vertical Views in Blazor Scheduler](images/blazor-scheduler-celldimension-verticalviews.webp)
 
 ## Setting cell dimensions in Timeline Views
 
@@ -109,7 +109,7 @@ The height and width of the Scheduler cells can be customized either to increase
 }
 ```
 
-![Cell Dimensions in Timeline Views in Blazor Scheduler](images/blazor-scheduler-celldimension-timelineviews.png)
+![Cell Dimensions in Timeline Views in Blazor Scheduler](images/blazor-scheduler-celldimension-timelineviews.webp)
 
 ## Customizing cells using CellTemplate
 
@@ -199,7 +199,7 @@ The [`CellTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sch
 }
 ```
 
-![Using CellTemplate in Blazor Scheduler](images/blazor-scheduler-celldimension-celltemplate.png)
+![Using CellTemplate in Blazor Scheduler](images/blazor-scheduler-celldimension-celltemplate.webp)
 
 ## Customizing cell header in month view
 
@@ -240,7 +240,7 @@ The month header of each date cell in the month view can be customized using the
 }
 ```
 
-![Customizing Cell Header in Blazor Scheduler](images/blazor-scheduler-celldimension-cellheader.png)
+![Customizing Cell Header in Blazor Scheduler](images/blazor-scheduler-celldimension-cellheader.webp)
 
 ## Customizing cells using OnRenderCell event
 
