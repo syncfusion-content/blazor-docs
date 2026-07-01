@@ -225,5 +225,5 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "(https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLxXdWhTmigQgxT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.webp)" %}
 
