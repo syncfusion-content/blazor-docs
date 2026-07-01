@@ -47,7 +47,7 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLIiXXdLYuCAIfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVdNnrozfJlfhVv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/BpmnExpandedSubProcessSample.razor)
 
@@ -100,7 +100,7 @@ The following code example explains how to add a BPMN node to an BPMN Expanded S
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBoitNxAtXgsIWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthnjxhIffeLGWnX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/AddChildren.razor)
 
@@ -158,7 +158,7 @@ The following image shows how to add BPMN node into the BPMN ExpandedSubProcess 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSCXtnAjCCJzPT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdDnLeTJyvepsJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessLoop.razor)
 
@@ -212,7 +212,7 @@ The following table describes the available loop types for an Expanded Sub-Proce
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBystZxqXilLbOk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrnDRVepfxqWnag?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessCompensation.razor)
 
@@ -257,7 +257,7 @@ An Ad-Hoc Expanded Sub-Process is a group of tasks that are executed in any orde
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBSsXjnKTCBmLLc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRNnroTpxwQWOK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessAdhoc.razor)
 
@@ -302,7 +302,7 @@ The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVoCZjRAziQIRel?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrxZdhIzzmWyJek?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessType.razor)
 
