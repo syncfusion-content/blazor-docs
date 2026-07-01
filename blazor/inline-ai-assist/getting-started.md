@@ -143,7 +143,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Inline AI Assist component
 
-Add the Syncfusion<sup style="font-size:70%">®</sup> Inline AI Assist component to your application and render it on the page using a functional component. Use the `RelateTo` property to position the Inline AI Assist relative to a specific DOM element, and the `Target` property to specify the element where the component should be appended. Both properties accept either a CSS selector string (for example, .container or #id) or an HTMLElement instance.
+Add the Inline AI Assist component to your application and render it on the page using a functional component. Use the `RelateTo` property to position the Inline AI Assist relative to a specific DOM element, and the `Target` property to specify the element where the component should be appended. Both properties accept either a CSS selector string (for example, .container or #id) or an HTMLElement instance.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -207,7 +207,7 @@ Add the Syncfusion<sup style="font-size:70%">®</sup> Inline AI Assist component
 
 {% previewsample "(https://blazorplayground.syncfusion.com/embed/BjhTCNsCMKFGRhuU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor Inline AI Assist sample](./images/inline-ai-assist-sample.webp)" %}
 
-To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor Inline AI Assist component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Blazor Inline AI Assist component in the default web browser.
 
 ## Response display modes
 
