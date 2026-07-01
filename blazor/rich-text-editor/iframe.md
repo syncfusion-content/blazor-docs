@@ -1,7 +1,7 @@
 ---
 layout: post
-title: IFrame Rendering in Blazor Rich Text Editor | Syncfusion
-description: Checkout and learn here all about IFrame Rendering in Syncfusion Blazor Rich Text Editor component and more.
+title: IFrame Rendering in Blazor Rich Text Editor | Syncfusion®
+description: Learn how to render Blazor Rich Text Editor in IFrame mode for content isolation and better security.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
