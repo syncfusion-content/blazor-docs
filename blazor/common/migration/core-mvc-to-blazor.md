@@ -13,9 +13,9 @@ Migrating enterprise applications from [ASP.NET Core MVC](https://learn.microsof
 
 ## Why migrate from ASP.NET Core MVC to Blazor?
 
-ASP.NET Core MVC applications follow a request response model, where user requests are handled by controllers and rendered using views. UI updates often require full page reloads or additional techniques such as partial views or AJAX, which can increase complexity as applications become more interactive.
+[ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview) applications follow a request response model, where user requests are handled by controllers and rendered using views. UI updates often require full page reloads or additional techniques such as partial views or AJAX, which can increase complexity as applications become more interactive.
 
-Blazor introduces a component based, event driven UI model, where user interactions trigger updates directly within components rather than full page reloads. It enables reusable UI components and aligns closely with modern .NET development practices.
+[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) introduces a component based, event driven UI model, where user interactions trigger updates directly within components rather than full page reloads. It enables reusable UI components and aligns closely with modern .NET development practices.
 
 | Aspect | ASP.NET Core MVC | Blazor |
 | --- | --- | --- |
@@ -36,9 +36,9 @@ Blazor introduces a component based, event driven UI model, where user interacti
 * [.NET 8 SDK or later](https://dotnet.microsoft.com/en-us/download/dotnet)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
-### Project structure comparison
+## Project structure comparison
 
-The following table maps common ASP.NET Core MVC application artifacts to their Blazor equivalents, highlighting how application structure transitions from a request driven model to a component based architecture.
+The following table maps common [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview) application artifacts to their [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) equivalents, highlighting how application structure transitions from a request driven model to a component based architecture.
 
 | Concept  | ASP.NET Core MVC artifact  | Blazor equivalent      |
 | -----| ------ | ----- |
@@ -54,7 +54,7 @@ The following table maps common ASP.NET Core MVC application artifacts to their 
 
 ## Migrating Components from ASP.NET Core MVC to Blazor
 
-Create a Blazor project using one of the following getting started guides.
+Create a [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) project using one of the following getting started guides.
 
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
@@ -64,17 +64,17 @@ The following shared setup applies to all components and covers the common confi
 
 ### Package installation
 
-In ASP.NET Core MVC, controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
+In [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview), controls are typically installed using a single combined package, such as [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core). 
 
-In Blazor applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/) applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
 ### Service registration
 
-In ASP.NET Core MVC, UI components are rendered as part of the view, and additional scripts and styles are included manually. There is no  dependency injection (DI) based registration model specifically for UI components.
+In [ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview), UI components are rendered as part of the view, and additional scripts and styles are included manually. There is no  dependency injection (DI) based registration model specifically for UI components.
 
-In Blazor, components rely on the built-in dependency injection (DI) system. UI libraries like Syncfusion must be registered in the service container so that required services (such as rendering, localization, and JavaScript interop) are available to components.
+In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/), components rely on the built-in dependency injection (DI) system. UI libraries like Syncfusion must be registered in the service container so that required services (such as rendering, localization, and [JavaScript interop](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-10.0)) are available to components.
 
 In the `Program.cs` file, add the Blazor namespace and register services.
 
@@ -97,8 +97,6 @@ var app = builder.Build();
 
 Namespaces are imported into Razor views using `~/_ViewImports.cshtml`, primarily to enable Tag Helpers and HTML helper extensions.
 
-Add the required namespace in `~/_ViewImports.cshtml`.
-
 {% tabs %}
 {% highlight cshtml tabtitle="~/_ViewImports.cshtml" %}
 
@@ -112,7 +110,7 @@ Add the required namespace in `~/_ViewImports.cshtml`.
 
 **Blazor equivalent**
 
-In Blazor, `~/_Imports.razor` serves a similar purpose but applies to Razor components. It allows components to access namespaces globally without requiring repeated `@using` statements in each `.razor` file.
+In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/), `~/_Imports.razor` serves a similar purpose but applies to Razor components. It allows components to access namespaces globally without requiring repeated `@using` statements in each `.razor` file.
 
 Import the required namespaces in the `~/_Imports.razor` file.
 
@@ -217,7 +215,7 @@ For additional details, refer to the [Blazor DataGrid getting started guide](htt
 The [ASP.NET Core MVC DataGrid](https://www.syncfusion.com/aspnet-mvc-ui-controls/grid) is defined using HTML Helper APIs, where [Columns](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Grids.Grid.html#Syncfusion_EJ2_Grids_Grid_Columns) are configured through properties during component initialization.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight cshtml tabtitle="Index.cshtml" %}
 
 @(Html.EJS().Grid("Grid").DataSource((IEnumerable<object>)Model).Columns(col =>
 {
@@ -302,7 +300,6 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 @page "/grid"
 @using Syncfusion.Blazor.Grids
-@rendermode InteractiveServer
 
 <SfGrid DataSource="@orderData" TValue="OrdersDetails">
   <GridColumns>
@@ -443,7 +440,6 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 @page "/schedule"
 
 @using Syncfusion.Blazor.Schedule
-@rendermode InteractiveServer
 
 <SfSchedule TValue="Meeting" Height="650px" CurrentView="View.Week">
     <ScheduleViews>
@@ -505,7 +501,7 @@ For detailed explanation, refer to the [Blazor Rich Text Editor getting started 
 The [ASP.NET Core MVC Rich Text Editor](https://www.syncfusion.com/aspnet-mvc-ui-controls/wysiwyg-rich-text-editor) is initialized with configurable [ToolbarSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditor.html#Syncfusion_EJ2_RichTextEditor_RichTextEditor_ToolbarSettings) and supports content formatting through predefined tools and customization options.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight cshtml tabtitle="Index.cshtml" %}
 
 @using Syncfusion.EJ2
 
@@ -538,7 +534,6 @@ The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazo
 
 @page "/rte"
 @using Syncfusion.Blazor.RichTextEditor
-@rendermode InteractiveServer
 
 <SfRichTextEditor @bind-Value="Content" Height="400px"></SfRichTextEditor>
 

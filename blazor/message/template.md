@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template with Blazor Message Component | Syncfusion
+title: Template with Blazor Message Component | Syncfusion®
 description: Checkout and learn about Template with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Message

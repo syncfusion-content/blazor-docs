@@ -155,8 +155,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Toast component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component inside the razor file.
@@ -255,8 +253,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-- [Show or hide toast from any page using service in Blazor](https://support.syncfusion.com/kb/article/11734/show-or-hide-toast-from-any-page-using-service-in-blazor)
-- [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-dotnet-cli)
-- [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-server-side-visual-studio)
-
-N> An interactive [Blazor Toast example](https://blazor.syncfusion.com/demos/toast/default-functionalities?theme=bootstrap5) demonstrates how to render and configure the Toast component.
+1. [Show or hide toast from any page using service in Blazor](https://support.syncfusion.com/kb/article/11734/show-or-hide-toast-from-any-page-using-service-in-blazor)
+2. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-dotnet-cli)
+3. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-server-side-visual-studio)

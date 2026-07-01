@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Scaffolding with Blazor scaffolder in VS Code | Syncfusion®
-description: Step‑by‑step guide to scaffold with Syncfusion Blazor Scaffolder Extension in Visual Studio Code, simplifying project creation.
+description: Step‑by‑step guide to scaffold with Blazor Scaffolder Extension in Visual Studio Code, simplifying project creation.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Syncfusion Blazor Scaffolder for Visual Studio Code
+# Syncfusion® Blazor Scaffolder for Visual Studio Code
 
 The [Syncfusion® Blazor Scaffolder](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Scaffolder-VSCode-Extensions) in Visual Studio Code helps you generate Razor pages and controller/service code that interact with your data models. It accelerates common data workflows for controls like controls like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram-component) by scaffolding CRUD-ready files and UI markup. The Syncfusion® Blazor Scaffolder is available from `v32.2.3` or later.
 

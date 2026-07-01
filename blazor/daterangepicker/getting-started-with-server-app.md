@@ -214,7 +214,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhTZCBOqWgwMmva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhnZRVfWbwVOGPP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.webp)" %}
 
 ## Setting the Min and Max
 
@@ -236,7 +236,7 @@ The minimum and maximum date range can be defined with the help of [Min](https:/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrztiraUCJLpmHG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLxtdLzWbvfKFbC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DateRangePicker).
 
