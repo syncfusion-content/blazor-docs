@@ -97,7 +97,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWitGJmjjBhnr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLRXcXiUxXngyvt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Multiple cell selection
 
@@ -183,7 +183,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLyWMtQzmNlCgRz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdjcZiARWsuoVw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Cell selection mode
 
@@ -294,7 +294,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeDSKXKGvShjyg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhxXQXiAdhruSzH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Select cells via programmatically
 
@@ -393,7 +393,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthojzsefOMTNQRS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrHNmXWURKqveSp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Multiple cell selection
 
@@ -493,7 +493,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSNfiHBoAvoKVp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdNmXWURKFfSsB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Cell selection requires the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be set to **Cell** or **Both**, and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) to be set to **Multiple**.
 
@@ -605,7 +605,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhxDVDSWiClYPGH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBRtcDCKRTedYIB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Get selected row cell indexes
@@ -715,7 +715,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNryZyZyzmehMywJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVHXwXiKdeIEMMA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Clear selection via programmatically
 
@@ -802,7 +802,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhStItSpmRvIpIy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdZcXigdeavwIM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Cell selection events
 
@@ -915,4 +915,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLeCWtmyXmWvtqM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVnjmXMgnHOXaQn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

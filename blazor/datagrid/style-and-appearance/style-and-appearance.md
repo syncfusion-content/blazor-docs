@@ -154,7 +154,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLoCDCeBCPXKind?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnNQZsBREHoLlL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize alternate rows with frozen columns
 
@@ -244,7 +244,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLysNWSLBgVRXGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhdjcDsrnOuJceC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the color of grid lines
 
@@ -346,4 +346,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheCtiyVBIDLkTf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxNmjWrwjAiIqF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

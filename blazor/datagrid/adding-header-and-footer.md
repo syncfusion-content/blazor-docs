@@ -165,7 +165,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBStoZvKaemjUsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLxXQNCVbNJxBxN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Draw a line in header and footer
 
@@ -369,7 +369,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLetytPqYKdmets?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLdZwZsBvCMRJin?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add page number in header and footer
 
@@ -536,7 +536,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLojkCeTOdnSgCJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhdXctWVvMQPhwa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Insert an image in header and footer
 
@@ -665,7 +665,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLeXINbTSiCxMZL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrnNcZWLlVMtwkw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Repeat column header on every page
 
@@ -764,4 +764,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVINuLIyMVDkBoc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLRNQZsVFropLvQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

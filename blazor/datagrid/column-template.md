@@ -185,7 +185,7 @@ public class EmployeeDetails
 {% endtabs %}
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBzshXniHTpBqBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhnDwZMpxzGhYNl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Render other components in a column
@@ -289,7 +289,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIDogDAvSxmdWU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBntcXsJRRbiNGl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render DropDownList in a column
 
@@ -379,7 +379,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBJCrtKzUHwTXIk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRtwZMpHYjAOtp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render Chip in a column
 
@@ -457,7 +457,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLfsihZJaDYOHeV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthHjcXWfcjznPwT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render ProgressBar in a column
 
@@ -534,7 +534,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVpMWhMhJHQEtIF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVxDwtCpmAUkksN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render RadioButton in a column
 
@@ -607,7 +607,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZheXoNwgrBgAFeR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRNQZWJQfqZZDl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Using condition template
 
@@ -695,7 +695,7 @@ The `Template` property provides access to the current row’s data through the 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKWsDsASInUbPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLHjQNiTQoBGWVd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Calculate column value based on other columns in Blazor DataGrid
 
@@ -753,7 +753,7 @@ The `Template` property allows defining inline expressions or logic that compute
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoNfKNztPbnpjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLdDQjszmSlwYdZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to get the row object by clicking on the template element
 
@@ -848,7 +848,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhJiCBLfgSrKWdw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVnDmXMTQQKqpXx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Use custom helper inside the template
 
@@ -928,7 +928,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthJiiBVViweNEBD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBxZcjWTwmYzIfZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Custom helpers can only be used inside the `Template` property of a column.
 
@@ -1029,7 +1029,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVJsChWpdcrPOlN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhRZGDizmFdbdgs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Using hyperlink column and performing routing on click
 

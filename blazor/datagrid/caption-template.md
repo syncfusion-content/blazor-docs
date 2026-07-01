@@ -96,7 +96,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBzXMjlgozlWLsz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdDQjWgSQmeAQm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Adding custom text in group caption
 
@@ -180,7 +180,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVzjiXvgoxRzKIb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLnXctMgobNFNrU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize group caption text using locale
 
@@ -442,4 +442,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqCsjEtWGsGdKj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBxZQZMqykMQscc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

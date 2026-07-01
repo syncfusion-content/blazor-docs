@@ -83,7 +83,7 @@ To override this and provide a custom header title, define the [HeaderText](http
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrUMtACJAAfwAum?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthntQNWfBjVvNir?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 >* The `HeaderText` property is optional. If it is not defined, the column’s `Field` value is used as the header text.
@@ -222,7 +222,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVJshXLfRNuKUbF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVnZQXiJhCsVQfn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 >* The `HeaderTemplate` property is applicable only to columns that have a header element.
 > * Any HTML or Blazor component can be used in the header template to add additional functionality.
@@ -337,7 +337,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhJMLtKrNbNTfwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrHDQjCfBCxdnZs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Header text alignment
 
@@ -416,7 +416,7 @@ The alignment can be changed by setting `HeaderTextAlign` to one of the followin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLqWMjsrtUyIcLO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLdZGtCzBLtVxyE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 >* The `HeaderTextAlign` property only changes the alignment of the text in the column header, not the content of the column. To align both the header and the column content, use the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) property.
 
@@ -526,7 +526,7 @@ public class InventoryData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVJMVDAgevobXAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrnDcXWfLBYnfRE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Change the height of header
 
@@ -713,7 +713,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthfsiLOBGoUXutu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxXwtspBKSODIP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Changing the header text of all columns**
 
@@ -801,7 +801,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVfCVDLUYQXoZkN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhxXcjCTqMFofrE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Change the orientation of header text
 
@@ -928,7 +928,7 @@ function setHeaderHeight(args) {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKiiDMrraFxmkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrRXwNiTKhhGDEy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Custom tooltip for header
 
@@ -1053,7 +1053,7 @@ public class OrderDetails
 
 > The Blazor DataGrid component includes a built-in feature to customize tooltip content for both header cells and content cells. For more information, refer to the documentation [here](https://blazor.syncfusion.com/documentation/datagrid/cell#show-tooltip).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrJirtAJDjvaNlx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLRjQjizUzMefeP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize header text styles 
 
@@ -1148,7 +1148,7 @@ To style a specific column header, assign a custom class to that column and defi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUsMjiVUSAIviT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRDQNMJgTcULCr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Using property 
 
@@ -1242,7 +1242,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVJMVtUKbqNkJzn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrRDQtMTqxWWjXH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Using event
 
@@ -1331,7 +1331,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLfsMWkTIsIyEuk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhnXGXWJqnongbU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to refresh header 
 
@@ -1413,4 +1413,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTCWruiIbAmHsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVRXcjizqdupFEK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

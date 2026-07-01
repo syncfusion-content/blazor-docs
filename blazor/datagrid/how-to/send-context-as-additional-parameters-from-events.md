@@ -150,4 +150,4 @@ Height="600" @ref="Grid">
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhIXYrfAswqgaHD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrxXmtWhiRjSsMo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

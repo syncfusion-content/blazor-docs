@@ -84,7 +84,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyjCrhrHDetIYc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhdtQXiTPWUFndp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Data annotation
 
@@ -129,6 +129,8 @@ In this configuration, custom validation is applied to the **EmployeeID** and **
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderDetails.cs" %}
+using System.Reflection;
+using System.ComponentModel.DataAnnotations;
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -220,7 +222,7 @@ public class CustomValidationFreight : ValidationAttribute
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrojMBhUyZJfcXd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhxNmtMJPgbJPho?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Validate complex column using data annotation attribute
 
@@ -655,7 +657,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBoZChqfqyraNHa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBdtQNsJldNlFzC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > A fully working sample is available [here](https://github.com/SyncfusionExamples/blazor-datagrid-display-validation-message-in-dialog-template).
 

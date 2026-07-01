@@ -156,4 +156,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXreCDMeBDUtgbSZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrnjQjiLRFmJSBc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

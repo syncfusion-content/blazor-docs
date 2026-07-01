@@ -76,7 +76,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVINMWGKEkClhfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrRDQZCrOdaLhef?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Automatically update the column based on another column edited value
 
@@ -187,7 +187,7 @@ public class ProductDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrejMhCfPQMlvUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLxtcjWhOGFjelf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Cancel edit based on condition
 
@@ -294,7 +294,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhSWCNQKMRZfxNn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrxDwDCralgqsdS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Adding a new row at the bottom of the Blazor DataGrid
 
@@ -393,7 +393,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhetirZBAiQraCy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLRtwZWVaEqLUes?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Confirmation dialog
 
@@ -488,7 +488,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtretsBNBSFKelXV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVHZGZsqDhnWPSu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to make editing in single click and arrow keys
 
@@ -585,7 +585,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoXsBNzpRlVgXw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBdDcDWKNmVlwTT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable editing for a particular cell
 
@@ -662,7 +662,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBoZshVWCZLddwb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBnZcDsqDmxKKTB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Save or update the changes immediately
 
@@ -743,7 +743,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVItChDTJgJazlr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrnNGZCgtPppkWO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Edit next row or previous row from the current row
 
@@ -835,7 +835,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeZshWVcvQDOWF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBRZGtsUDFcQPFS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Provide new item or edited item using events
 
@@ -936,7 +936,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhojCBWKkZwhwWp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhnNmtWqDkWsnuh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to perform bulk changes using a method
 
@@ -1027,7 +1027,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrStoqXKmIboOTG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhxXGtsKjOUzmtm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable single-click batch editing in Blazor DataGrid
 

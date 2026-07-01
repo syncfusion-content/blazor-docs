@@ -88,7 +88,7 @@ To define columns manually in Blazor DataGrid, use [GridColumn](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBqWMZdAcXwOxFl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhdNcNszTJiIrnX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Auto generated columns
 
@@ -152,7 +152,7 @@ The Blazor DataGrid automatically generates columns when the `Columns` collectio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBKWiXngmWUgDyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHtGjCfTJzsODc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * When columns are auto-generated, the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is determined from the first record of the `DataSource`.
 > * For large datasets, auto-generating columns can impact performance. In such cases, it is recommended to define columns manually or enable column virtualization by setting [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) to **true**.
@@ -232,7 +232,7 @@ Setting `IsPrimaryKey` to **true** for an auto-generated column ensures that the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLgsstnKwBBNbFo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhdjmjMzJfnfbuz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Configure column options for auto-generated columns
 
@@ -322,7 +322,7 @@ Column options such as [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBgMiDRgQqNWGJe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdXQNsTfJOIHUh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Dynamic column generation
 
@@ -395,7 +395,7 @@ The Blazor DataGrid supports generating columns dynamically at runtime based on 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBUCCNHAcKJQkfY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVxDQNMzfIiwhZZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Dynamic column binding using ExpandoObject
 
@@ -452,7 +452,7 @@ Columns can be generated dynamically at runtime by binding data as a list of [Ex
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqXHrjBldvsODR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLdZGtspJdiatcD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Complex data generation
 
@@ -516,7 +516,7 @@ This approach is helpful for binding nested properties like **Employee.FirstName
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKjRLjhvQYGrBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLnDGNWTfnlDaeV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ###  Using remote data
 
@@ -559,7 +559,7 @@ Complex data binding can be enabled by adding the [Expand](https://help.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgNFNfqhJiGCNS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhHZcXsJJcCcgUo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Complex data generation using ExpandoObject 
 
@@ -614,7 +614,7 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
 
 > * Data operations and CRUD operations are supported for complex DynamicObject binding fields.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgXRVXLFuZSlab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhdNmNspTQolWPD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Complex data generation using DynamicObject
 
@@ -684,7 +684,7 @@ Complex data binding can be achieved by using the **dot (.)** operator in the [F
 
 > * Data operations and CRUD operations can also be performed on complex DynamicObject binding fields.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgNdrjLuIpsnpS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLdtQNWTplGgeNg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### How to set complex column as foreign key column
 
@@ -745,4 +745,4 @@ In this configuration, the **Employee.EmployeeID** column is set as a foreign ke
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBoXTisskOldOAN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVnZwNszfOtMAzd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

@@ -171,7 +171,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDryMjMRrYykDUIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLntQXWVnLBYnNS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the filtering icon in the header
 
@@ -355,4 +355,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLIsNixVEFSwNFe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdNcDsVHVxdOKe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

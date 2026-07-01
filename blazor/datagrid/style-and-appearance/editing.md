@@ -132,7 +132,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBIWNCxTcuUSDfi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBdtwDMLHDBMvAD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the edit dialog header
 
@@ -232,7 +232,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLSMjiRTFXgRbNm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBxjwXsVxDdhWAx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize command column buttons
 
@@ -345,4 +345,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVSMNiHTPsZJUUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrdNGtWBRtOxHoF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
