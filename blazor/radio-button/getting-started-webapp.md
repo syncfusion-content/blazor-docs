@@ -226,7 +226,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBptsKNKsShQnkV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVxtcZCgJGWQglm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.webp)" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RadioButton)
 
