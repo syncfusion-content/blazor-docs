@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Install the Syncfusion® Blazor offline installer
+# Install the Blazor offline installer
 
 ## Install with the user interface
 
@@ -116,7 +116,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 Essential<sup style="font-size:70%">&reg;</sup> Blazor can be uninstalled silently using the Command Line.
 
-1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Run the Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
 2. The file syncfusionessentialblazor_(version).exe file will be extracted into the Temp directory.
 
