@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Download and installation for Blazor VS Code extension | Syncfusion®
-description: Learn here about how to download and install the Syncfusion Blazor extension for Visual Studio Code to scaffold and manage Blazor applications.
+description: Learn here about how to download and install the Blazor extension for Visual Studio Code to scaffold and manage Blazor applications.
 platform: Blazor
 control: Common
 documentation: ug
