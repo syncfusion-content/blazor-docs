@@ -157,34 +157,96 @@ In Blazor, the theme stylesheet and script can be accessed from NuGet through [S
 
 ## Understanding data binding: WinForms data sources vs Blazor component state
 
-Data binding exists in both WinForms and Blazor, but the underlying programming models are different.
+Data binding is a fundamental concept in both WinForms and Blazor. However, the way data is managed and updated differs because WinForms follows a form centric architecture, while Blazor uses component state and rendering.
 
 ### WinForms data binding approach
 
-WinForms commonly uses data binding through `BindingSource`, `DataSource`, and notification mechanisms such as `INotifyPropertyChanged` and `IBindingList`. Controls automatically react to changes from the bound data source.
+In WinForms, controls are commonly bound to data through the `DataSource` property. The bound data can come from collections, `DataTable` objects, datasets, or data retrieved from a database. The form typically acts as the central location for managing and updating application state.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
 
-BindingSource source = new BindingSource();
-source.DataSource = GetOrders();
+using Syncfusion.WinForms.DataGrid;
+using System.Collections.ObjectModel;
+using System.Windows.Forms;
 
-sfDataGrid1.DataSource = source;
+namespace WinFormsDataBindingApp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+            SfDataGrid dataGrid = new SfDataGrid();
+            dataGrid.Dock = DockStyle.Fill;
+
+            dataGrid.DataSource = GetOrders();
+
+            Controls.Add(dataGrid);
+        }
+
+        private ObservableCollection<Order> GetOrders()
+        {
+            return new ObservableCollection<Order>
+            {
+                new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+                new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+                new Order { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+            };
+        }
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Blazor data binding approach
 
-Blazor uses component state, parameters, and the `@bind` directive. Instead of binding controls to a form-level data context, components explicitly receive and render data through parameters and state.
+In Blazor, components receive data through parameters and component state. Data is commonly loaded during component initialization and supplied directly to UI components. When the underlying state changes, Blazor automatically updates the rendered UI.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
-<SfGrid DataSource="@Orders"></SfGrid>
+@page "/orders"
+@rendermode InteractiveServer
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
 @code {
-    List<Order> Orders = GetOrders();
+    private List<Order> Orders = new();
+    
+    protected override void OnInitialized()
+    {
+        // Component state is initialized with data
+        Orders = new List<Order>
+        {
+            new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 },
+            new Order { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61 },
+            new Order { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83 }
+        };
+    }
+    
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
 }
 
 {% endhighlight %}
@@ -194,13 +256,15 @@ Blazor uses component state, parameters, and the `@bind` directive. Instead of b
 
 | Aspect | WinForms | Blazor |
 |---|---|---|
-| Data source | `BindingSource`, `DataTable`, collections | Component state and parameters |
-| Property updates | `INotifyPropertyChanged` | Component re-rendering |
-| Collection updates | `BindingList<T>` and observable collections | State updates and component refresh |
-| Two-way binding | Control binding APIs | `@bind` |
-| Scope | Form or control level | Component level |
-
-When migrating applications, data models can usually be reused with minimal changes. However, UI state management should be adapted to Blazor's component-based architecture.
+| Application model | Form-based desktop application | Component-based web application |
+| Data binding scope | Form or control level | Component level |
+| Binding mechanism | `DataSource`, `BindingSource`, and control bindings | Component parameters, `DataSource`, and `@bind` |
+| Data flow | Event-driven data updates | State-driven UI rendering |
+| UI updates | Triggered by control notifications and data source changes | Triggered by component re-rendering and state changes |
+| Change notification | `INotifyPropertyChanged`, `IBindingList`, and `INotifyCollectionChanged` | `INotifyPropertyChanged`, `INotifyCollectionChanged`, and component re-rendering |
+| Initialization | Form constructor or `Load` event | `OnInitialized` or `OnInitializedAsync` |
+| Shared state | Typically managed through forms and helper classes | Commonly managed through dependency-injected services |
+| Event handling | CLR events and event handlers | Event callbacks and component events |
 
 ## Component specific migration steps
 
@@ -215,7 +279,7 @@ For additional details, refer to the [WinForms DataGrid getting started guide](h
 | Package (NuGet) | [Syncfusion.SfDataGrid.WinForms](https://www.nuget.org/packages/Syncfusion.SfDataGrid.WinForms) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
 | Component declaration | `SfDataGrid` (programmatic or Designer) | `<SfGrid>` |
 | Data binding | Direct `DataSource` property assignment | [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) with component state |
-| Collection type | `ObservableCollection<T>` (automatic notifications) | `List<T>` or `IEnumerable<T>` (state updates trigger re renders) |
+| Collection type | ObservableCollection<T>, BindingList<T>, DataTable | List<T>, IEnumerable<T>, ObservableCollection<T> |
 | Columns | Designer based column definitions or code behind | [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) with [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format), and [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditType) |
 | Templates | `CellTemplate` and `EditTemplate` | Razor `<Template>` |
 | Editing and events | Event handlers (`CellClick`, `ValueChanged`, etc.) | [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings), [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html), and event callbacks |
@@ -542,11 +606,11 @@ namespace WinFormsSchedulerApp
 
 Migrating from WinForms to Blazor involves more than replacing desktop controls with web components. WinForms and Blazor use different rendering models, lifecycle patterns, and layout systems. The following considerations should be evaluated before migration.
 
-### UI layout differences: desktop layouts vs CSS layouts
+### UI layout differences: desktop layouts vs responsive CSS layouts
 
 #### WinForms approach
 
-WinForms applications commonly use fixed layouts through properties such as `Location`, `Size`, `Anchor`, and `Dock`.
+WinForms applications commonly use coordinate based layouts through properties such as `Location`, `Size`, `Anchor`, and `Dock`. These layouts are typically optimized for fixed desktop screen resolutions.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
@@ -559,7 +623,7 @@ button1.Size = new Size(120, 40);
 
 #### Blazor approach
 
-Blazor components render as standard HTML and CSS in the browser. Layouts are typically built using CSS Flexbox or CSS Grid and are designed to respond to varying screen sizes.
+Blazor renders components as HTML and CSS in a web browser. Instead of placing controls at specific coordinates, layouts are usually built using CSS technologies such as Flexbox and Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -592,19 +656,71 @@ Blazor components render as standard HTML and CSS in the browser. Layouts are ty
 
 #### WinForms lifecycle
 
-WinForms follows a traditional desktop event-driven lifecycle.
+WinForms follows a desktop oriented, event driven programming model. Application logic is commonly executed through form and control events such as `Load`, `Click`, `Shown`, and `FormClosing`. User interactions are handled through event handlers that are attached directly to controls, and UI updates are performed by modifying control properties at runtime.
 
 {% tabs %}
 {% highlight c# tabtitle="Form1.cs" %}
 
-private void Form1_Load(object sender, EventArgs e)
-{
-    LoadData();
-}
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
-private void button1_Click(object sender, EventArgs e)
+namespace WinFormsApp
 {
-    SaveData();
+    public partial class OrdersForm : Form
+    {
+        private List<Order> Orders = new();
+
+        public OrdersForm()
+        {
+            InitializeComponent();
+            this.Load += OrdersForm_Load;
+            this.FormClosing += OrdersForm_FormClosing;
+        }
+
+        private void OrdersForm_Load(object sender, EventArgs e)
+        {
+            // Initialize data when the form loads.
+            Orders = GetOrders();
+            sfDataGrid1.DataSource = Orders;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveOrders();
+        }
+
+        private void OrdersForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Cleanup resources before closing.
+            DisposeResources();
+        }
+
+        private List<Order> GetOrders()
+        {
+            return new List<Order>
+            {
+                new Order { OrderID = 10248, CustomerID = "VINET" },
+                new Order { OrderID = 10249, CustomerID = "TOMSP" }
+            };
+        }
+
+        private void SaveOrders()
+        {
+            MessageBox.Show("Orders saved");
+        }
+
+        private void DisposeResources()
+        {
+            // Cleanup logic
+        }
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+    }
 }
 
 {% endhighlight %}
@@ -612,21 +728,91 @@ private void button1_Click(object sender, EventArgs e)
 
 #### Blazor lifecycle
 
+Blazor uses a component based lifecycle that is designed for web applications. Instead of form events, components provide lifecycle methods such as `OnInitializedAsync`, `OnParametersSetAsync`, and `OnAfterRenderAsync`. User interactions are handled through event callbacks, and the framework automatically updates the user interface when component state changes.
+
 Blazor components use lifecycle methods and event callbacks.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
 
+@page "/sample"
+@rendermode InteractiveServer
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="gridRef" DataSource="@Orders" OnActionBegin="@OnActionBegin">
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer ID"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="N2"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
 @code {
+    private SfGrid<Order> gridRef;
+    private List<Order> Orders = new();
 
     protected override async Task OnInitializedAsync()
     {
+        // Called once when the component is first initialized.
         await LoadDataAsync();
     }
 
-    private async Task Save()
+    protected override void OnParametersSet()
     {
-        await SaveDataAsync();
+        // Called when the component receives new parameters.
+        RefreshData();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Called after the component is rendered to the DOM.
+        if (firstRender)
+        {
+            await InitializeAsync();
+        }
+    }
+
+    private async Task OnActionBegin(ActionEventArgs<Order> args)
+    {
+        // Asynchronous event handling using EventCallback.
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
+        {
+            await SaveDataAsync(args.Data);
+        }
+    }
+
+    private async Task LoadDataAsync()
+    {
+        // Async data loading from a service or database.
+        await Task.Delay(100);
+        Orders = new List<Order>
+        {
+            new Order { OrderID = 10248, CustomerID = "VINET", Freight = 32.38 }
+        };
+    }
+
+    private void RefreshData()
+    {
+        // Data refresh logic.
+    }
+
+    private async Task InitializeAsync()
+    {
+        // Post-render initialization (e.g., JavaScript interop).
+        await Task.CompletedTask;
+    }
+
+    private async Task SaveDataAsync(Order order)
+    {
+        // Async save operation.
+        await Task.Delay(100);
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
     }
 }
 
@@ -637,7 +823,7 @@ Blazor components use lifecycle methods and event callbacks.
 
 | Aspect | WinForms | Blazor |
 |---|---|---|
-| Initialization | `Form_Load` | `OnInitialized` / `OnInitializedAsync` |
+| Initialization | `Form_Load` | `OnInitializedAsync` |
 | UI updates | Immediate desktop updates | Component re-rendering |
 | Events | CLR events | EventCallback and component events |
 | Async support | Optional | Commonly used |
@@ -646,21 +832,22 @@ Blazor components use lifecycle methods and event callbacks.
 **Migration strategy**
 
 * Move initialization code from `Form_Load` to `OnInitializedAsync`.
-* Convert long-running operations to asynchronous methods.
+* Convert long running operations to asynchronous methods.
 * Replace traditional event handlers with Blazor component events and callbacks.
 * Consider component re-rendering behavior when updating state.
 
-### Platform limitations
+### Platform limitations and migration considerations
 
-Some WinForms features do not have direct web equivalents.
+WinForms applications run directly on Windows and have access to operating system resources, desktop APIs, and local hardware. Blazor applications run in a web browser and operate within browser security boundaries. Because of this architectural difference, some desktop-specific capabilities do not have direct equivalents in web applications and may require alternative implementations.
 
-* Direct access to Windows APIs.
-* Native desktop window management.
-* Low-level hardware integrations.
-* Desktop automation scenarios.
-* Certain drag-and-drop and operating-system-specific interactions.
+The following areas should be reviewed carefully during migration:
 
-These scenarios may require web-specific alternatives, server-side services, or architectural redesign during migration.
+* **Windows-specific APIs** – Functionality that depends on Windows libraries, registry access, or native Win32 APIs cannot be accessed directly from Blazor components and may require server side services or platform specific integrations.
+* **Desktop window management** – Features such as multiple independent windows, modal desktop dialogs, system tray integration, and custom window behavior do not directly translate to browser based applications.
+* **Local file system access** – Web applications have limited access to user files and folders and must use browser-supported file upload and download mechanisms.
+* **Hardware and peripheral integration** – Direct communication with devices such as serial ports, scanners, printers, USB devices, and other hardware may require browser-supported APIs, specialized middleware, or server side components.
+* **Desktop automation and inter-process communication** – Scenarios that interact with other desktop applications, processes, or Windows services generally require architectural redesign when moving to a web application.
+* **Operating system-specific functionality** – Features tightly coupled to Windows user interfaces, shell integrations, drag-and-drop behaviors, or desktop workflows may require alternative web based user experiences.
 
 ## Run the application
 
