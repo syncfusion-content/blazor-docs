@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter menu in Blazor Gantt Chart component
 
-The Blazor Gantt Chart component provides a filter menu for each column, allowing filtering based on data type and supported operators. 
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides a filter menu for each column, allowing filtering based on data type and supported operators. 
 
 To enable this feature, configure [GanttFilterSettings.FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_FilterType) as **Menu** and set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to **true**.
 
