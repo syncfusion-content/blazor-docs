@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrating Blazor DataGrid with Fluxor | Syncfusion
-description: Step-by-step guide to integrate the Blazor DataGrid with the Fluxor state management library in a .NET 10 Blazor Web App (Interactive Server) and perform full CRUD operations through the Fluxor store.
+description: Learn how to integrate the Blazor DataGrid with Fluxor state management in a .NET 10 Blazor Web App to perform full CRUD operations.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Integrating Blazor DataGrid with Fluxor
 
-This article explains how to integrate the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with **[Fluxor](https://github.com/mrpmorris/Fluxor)**, a zero-boilerplate Flux/Redux state management library for .NET, in a Blazor Web App targeting .NET 10 with Interactive Server rendering.
+This article explains how to integrate the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with **[Fluxor](https://github.com/mrpmorris/fluxor)** in a **Blazor Web App** targeting .NET 10 with Interactive Server rendering. 
 
-Fluxor provides a unidirectional data flow architecture where all application state lives in a single, immutable store. Actions describe what happened, reducers compute the new state, and effects handle asynchronous side operations such as API calls. The DataGrid subscribes to the Fluxor store and automatically re-renders whenever the state changes.
+Fluxor is a zero-boilerplate Flux/Redux state management library for .NET. The integration demonstrates full CRUD operations on orders through the Fluxor store. All data changes are routed through the store instead of being bound directly to a service.
 
 ## Prerequisites
 
@@ -20,7 +20,9 @@ Fluxor provides a unidirectional data flow architecture where all application st
 
 ## Create a Blazor Web App
 
-Create a new **Blazor Web App** with Interactive Server rendering using the .NET CLI.
+In the following commands, `FluxorBlazorDataGrid` is used as the sample project name. Replace it with any project name you prefer.
+
+Open a terminal and run the following commands to create a new **Blazor Web App (Interactive Server)**.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -33,7 +35,21 @@ cd FluxorBlazorDataGrid
 
 ## Install required NuGet packages
 
-Install the Fluxor state management library and Blazor components for Grid, Dialog, Inputs, DatePicker, and DropDowns.
+Install the following **Fluxor** and **Blazor** NuGet packages. These packages provide Fluxor state management and the [Blazor components](https://www.syncfusion.com/blazor-components) needed for the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) integration.
+
+**Fluxor package:**
+* [Fluxor.Blazor.Web](https://www.nuget.org/packages/Fluxor.Blazor.Web)
+
+**Blazor packages:**
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups)
+* [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs)
+* [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars)
+* [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns)
+* [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+Open a terminal and run the following commands to install the above packages.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -50,9 +66,11 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
+Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+
 ## Add required namespaces
 
-Open the `~/Components/_Imports.razor` file and add the Syncfusion, Fluxor, and application namespaces.
+Open the `~/Components/_Imports.razor` file and add the required **Fluxor**, **Blazor**, and application namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
@@ -73,6 +91,8 @@ Open the `~/Components/_Imports.razor` file and add the Syncfusion, Fluxor, and 
 ## Create the data model
 
 Create a `Models` folder at the project root and add the `Order.cs` file.
+
+The `Order` model defines the data structure used by the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and the Fluxor store to manage order records. Data annotation attributes provide built-in validation for user input.
 
 {% tabs %}
 {% highlight c# tabtitle="Models/Order.cs" %}
@@ -114,7 +134,9 @@ namespace FluxorBlazorDataGrid.Models
 
 ## Create the order service
 
-Create a `Services` folder at the project root and add `OrderService.cs`. This service is **completely stateless** — it only simulates asynchronous I/O. All application state lives exclusively in the Fluxor store.
+Create a `Services` folder at the project root and add the `OrderService.cs` file.
+
+The `OrderService` simulates asynchronous data operations for loading, adding, updating, and deleting orders. It provides sample data and is used by Fluxor effects, while application state is maintained in the Fluxor store.
 
 {% tabs %}
 {% highlight c# tabtitle="Services/OrderService.cs" %}
@@ -196,7 +218,7 @@ namespace FluxorBlazorDataGrid.Services
 
 ## Set up the Fluxor store
 
-The Fluxor store is organized in a `Store/OrderState/` folder with the following structure:
+The `Fluxor store` manages the application's state and handles data updates through actions, reducers, and effects. Create a `Store` folder at the project root and add the following folder structure to organize the order-related state management components.
 
 ```
 Store/
@@ -213,7 +235,7 @@ Store/
 
 ### Define the state
 
-`OrderState` is an immutable C# record. The `init` property accessors and `with` expressions in reducers enforce immutability as required by Fluxor.
+The `OrderState` record represents the order-related state managed by the `Fluxor store`. It stores the order collection along with the loading and error information required by the application.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/OrderState.cs" %}
@@ -235,7 +257,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState
 
 ### Define the feature
 
-`OrderFeature` registers the `OrderState` with Fluxor and provides the initial state when the application starts.
+The feature registers the `OrderState` with the `Fluxor store` and provides the initial state for the application. It defines the default values used when the application starts.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/OrderFeature.cs" %}
@@ -265,7 +287,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState
 
 ### Define the actions
 
-Actions are plain C# records. Each action describes an event. Success/Failure pairs are used for every async operation.
+The action records define the actions used by the `Fluxor store` to load, add, update, and delete orders. Success and failure actions are used to handle the results of asynchronous operations.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/Actions/OrderActions.cs" %}
@@ -300,7 +322,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState.Actions
 
 ### Define the reducers
 
-Reducers are **pure, static functions** decorated with `[ReducerMethod]`. They receive the current state and an action, and return a new state using `record with` expressions. Reducers must never produce side effects.
+The reducers update the application state in the `Fluxor store` in response to actions. They handle loading, adding, updating, and deleting orders by returning the updated state.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/Reducers/OrderReducers.cs" %}
@@ -382,7 +404,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState.Reducers
 
 ### Define the effects
 
-Effects handle all asynchronous operations. They are decorated with `[EffectMethod]`, receive an action and `IDispatcher`, call the service, and dispatch a success or failure action.
+The effects handle asynchronous operations in the `Fluxor store`, such as loading, adding, updating, and deleting orders. They interact with the `OrderService` to process these operations and their results.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/Effects/OrderEffects.cs" %}
@@ -468,7 +490,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState.Effects
 
 ## Register services
 
-Open `~/Program.cs` and register the Syncfusion service, `OrderService`, and Fluxor with `ScanAssemblies`. The `ScanAssemblies` call automatically discovers all Features, Reducers, and Effects in the assembly.
+Open `~/Program.cs` and register the Blazor service, `OrderService`, and `Fluxor`. The Fluxor configuration automatically discovers and registers the state management components used by the application, including features, reducers, and effects.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="2 3 4 12 16 19 20 21 22" %}
@@ -483,7 +505,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Add Syncfusion Blazor service
+// Add Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 // OrderService is stateless — all state lives in the Fluxor store.
@@ -517,16 +539,14 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet, script, and StoreInitializer
+## Add stylesheet and script resources
 
-Open `~/Components/App.razor` and add the Syncfusion theme stylesheet, the Syncfusion script, and the Fluxor script. Also add the `StoreInitializer` component with `@rendermode="InteractiveServer"`.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the `~/App.razor` file.
 
-N> The `StoreInitializer` component **must** have `@rendermode="InteractiveServer"`. In a .NET 10 Blazor Web App, `App.razor` runs as Static SSR by default. Without an explicit render mode, `StoreInitializer` also runs as Static SSR, which means Fluxor's JavaScript bridge is never established and state changes will never trigger a UI re-render.
-
-The following snippet shows the relevant additions inside the existing `App.razor` file:
+Configure `HeadOutlet` and `Routes` with `@rendermode="InteractiveServer"` to ensure all routed pages run with interactive server rendering and respond correctly to Fluxor state changes.
 
 {% tabs %}
-{% highlight html tabtitle="Components/App.razor" hl_lines="3 8 11 12 13" %}
+{% highlight html tabtitle="Components/App.razor" %}
 
 <head>
     ...
@@ -535,27 +555,38 @@ The following snippet shows the relevant additions inside the existing `App.razo
 </head>
 
 <body>
-    <Fluxor.Blazor.Web.StoreInitializer @rendermode="InteractiveServer" />
     <Routes @rendermode="InteractiveServer" />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <script src="_content/Fluxor.Blazor.Web/scripts/index.js"></script>
 </body>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add StoreInitializer
+
+Open the `~/Components/Routes.razor` file and add the `StoreInitializer` component above the `Router` component. This ensures the `Fluxor store` is initialized before the application's routed components are rendered.
+
+{% tabs %}
+{% highlight razor tabtitle="Components/Routes.razor" %}
+
+<Fluxor.Blazor.Web.StoreInitializer />
+
+<Router AppAssembly="@typeof(Program).Assembly">
+   ...
+</Router>
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add the Order Management page
 
-Create `~/Components/Pages/OrderManagement.razor`. This component:
+Create a new `OrderManagement.razor` page in the `~/Components/Pages` folder to display and manage orders using the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and the `Fluxor store`.
 
-* Inherits `FluxorComponent` to enable automatic re-renders when state changes.
-* Injects `IState<OrderState>` to read the current state.
-* Injects `IDispatcher` to dispatch actions.
-* Dispatches `LoadOrdersAction` in `OnAfterRenderAsync` on first render (after the Interactive Server circuit is established) to load initial data.
-* Uses `GridEditSettings` to enable the toolbar Add button and command column Edit/Delete buttons. All edit triggers (toolbar Add, row double-click, F2 key, Edit button) route to the same custom `SfDialog` via event handlers, disabling the grid's built-in inline editing completely.
-* Wraps the dialog form content in `@if (DialogVisible)` to prevent an `ObjectDisposedException` from Syncfusion component JS interop callbacks when the dialog closes before an async effect completes.
+This page allows users to view, add, edit, and delete orders. It retrieves data from the `Fluxor store`, performs CRUD operations through Fluxor actions, and uses a custom dialog to manage order details.
+
+Add the following code to the `OrderManagement.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/Pages/OrderManagement.razor" %}
@@ -818,7 +849,7 @@ Create `~/Components/Pages/OrderManagement.razor`. This component:
 
 ## Add navigation link
 
-Open `~/Components/Layout/NavMenu.razor` and add a link to the Order Management page.
+Open the `~/Components/Layout/NavMenu.razor` file and add a navigation link to the `OrderManagement` page. This provides access to the Orders page from the application's navigation menu.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/Layout/NavMenu.razor" %}
@@ -834,7 +865,7 @@ Open `~/Components/Layout/NavMenu.razor` and add a link to the Order Management 
 
 ## Run the application
 
-Run the application using the .NET CLI.
+Run the application using the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -844,32 +875,18 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-Navigate to `https://localhost:{port}/orders` in a browser. The DataGrid loads with twenty seed orders and supports full CRUD operations through the Fluxor store.
+## Perform CRUD operations
 
-## How it works
+Open a browser and navigate to the URL shown in the terminal output (typically `https://localhost:5001`). Open the application and select the **Orders** page from the navigation menu.
 
-The following diagram shows the unidirectional data flow between the DataGrid, Fluxor store, and the order service.
+The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) loads with twenty seed orders and supports full CRUD operations through the Fluxor store.
 
-* **Load**: On first render, `LoadOrdersAction` is dispatched → the `LoadOrders` effect calls `GetOrdersAsync()` → dispatches `LoadOrdersSuccessAction` → the reducer updates `Orders` in state → `FluxorComponent` triggers `StateHasChanged()` → the DataGrid re-renders with data.
-* **Add**: The toolbar **Add** button opens an `SfDialog` → on submit, `AddOrderAction` is dispatched → the `AddOrder` effect calls `AddOrderAsync()` → dispatches `AddOrderSuccessAction` with the server-assigned order → the reducer appends it to `Orders`.
-* **Edit**: The command column **Edit** button opens the dialog pre-populated with the selected row's data → on submit, `UpdateOrderAction` is dispatched → the effect calls `UpdateOrderAsync()` → the reducer replaces the matching record in `Orders`.
-* **Delete**: The command column **Delete** button dispatches `DeleteOrderAction` immediately → the effect calls `DeleteOrderAsync()` → the reducer removes the record from `Orders` by ID.
-
-## Key implementation notes
-
-* **`@inherits FluxorComponent`**: Automatically subscribes to state changes and calls `StateHasChanged()` when any Fluxor state in the component changes. This is what causes the DataGrid to re-render after every action.
-
-* **`StoreInitializer @rendermode="InteractiveServer"`**: Required in `App.razor`. Without this, Fluxor's JavaScript bridge is never established in a Blazor Web App because `App.razor` renders as Static SSR by default. State changes will not trigger UI re-renders without this.
-
-* **`OnAfterRenderAsync` with `await base` first**: Dispatch the initial load action in `OnAfterRenderAsync(firstRender)` and always call `await base.OnAfterRenderAsync(firstRender)` before dispatching. The `FluxorComponent` base implementation sets up the state subscription on first render. Dispatching before the base call means the subscription is not yet active, and the grid will remain empty.
-
-* **`@if (DialogVisible)` guard in dialog content**: Wrapping the `SfDialog` content in `@if (DialogVisible)` prevents an `ObjectDisposedException`. When `SaveOrder()` is called, it dispatches an async Effect and immediately calls `CloseDialog()`. Blazor re-renders and removes the Syncfusion input components from the render tree, disposing their `DotNetObjectReference` JS interop callbacks. Approximately 300ms later, the Effect completes and Fluxor calls `StateHasChanged()`. Without the guard, Blazor encounters the disposed references. With the guard, when `DialogVisible` is `false`, the components are never in the render tree and no disposal conflict occurs.
-
-* **Copying state before edit**: In `ActionBeginHandler`, `CurrentEditOrder` is populated by copying each field from `args.Data` into a new `Order` instance. This ensures that form edits do not mutate the immutable Fluxor store directly, preserving the unidirectional data flow guarantee.
-
-* **Stateless `OrderService`**: The service holds no in-memory order list. All state lives in the Fluxor store. This means any number of service instances can be created without diverging state, and Scoped lifetime works correctly with Fluxor Effects.
-
-* **`args.Cancel = true` in `ActionBeginHandler`**: Cancels the DataGrid's built-in inline edit/add row when the toolbar Add or command column Edit is triggered, allowing the custom `SfDialog` form to handle the operation instead.
+* **Load** - The DataGrid fetches orders automatically on first render. A "Loading orders..." message appears until the data is ready, then twenty seed orders display with paging, sorting, and filtering enabled.
+* **Add** - Click the **Add** button in the toolbar to open the **Add New Order** dialog. Enter the **Customer Name** and **Product Name** (both required), set the **Quantity** and **Price**, pick the **Order Date**, choose a **Status**, then click **Save**. The new order appears as a new row in the grid. Click **Cancel** to close the dialog without saving.
+* **Edit** - Click the **Edit** (pencil) icon in the **Actions** column, double-click the row, or select the row and press <kbd>F2</kbd>. The **Edit Order** dialog opens with the selected row's values pre-filled. Update the fields and click **Save** to apply the changes. Click **Cancel** to discard them.
+* **Delete** - Click the **Delete** (trash) icon in the **Actions** column of the row you want to remove. The order is deleted immediately from the grid.
+* **Sort, filter, and page** - Click any column header to sort the grid by that column. Use the filter bar at the top of each column to narrow the displayed records. Use the pager at the bottom to move between pages, with ten records shown per page.
+* **Errors** - If loading, adding, updating, or deleting fails, an alert message displays the error detail at the top of the page. Correct the issue and retry the operation.
 
 ## See also
 
