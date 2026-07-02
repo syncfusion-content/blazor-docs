@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Export in Blazor TreeGrid Component | Syncfusion
-description: Learn how to export TreeGrid data to Excel in the Syncfusion Blazor TreeGrid component and much more.
+title: Excel Export in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn how to export TreeGrid data to Excel in the Blazor TreeGrid component and much more.
 platform: Blazor
 control: TreeGrid
 documentation: ug

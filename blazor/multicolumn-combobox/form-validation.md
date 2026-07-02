@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Validation in Syncfusion Blazor MultiColumn ComboBox
+title: Form Validation in Blazor MultiColumn ComboBox Component | Syncfusion®
 description: Checkout and learn about Form validation with Blazor MultiColumn ComboBox component in Blazor Sever App and Blazor WebAssembly App.
 platform: Blazor
 control: MultiColumn ComboBox

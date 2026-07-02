@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Toolbar styling in Blazor TreeGrid using CSS | Syncfusion
-description: Learn how to customize the Syncfusion Blazor TreeGrid toolbar using CSS, including styling the toolbar container and buttons with CSS isolation tips.
+title: Toolbar styling in Blazor TreeGrid using CSS | Syncfusion®
+description: Learn how to customize the Blazor TreeGrid toolbar using CSS, including styling the toolbar container and buttons with CSS isolation tips.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Toolbar customization in Syncfusion Blazor TreeGrid
+# Toolbar customization in Blazor TreeGrid
 
-The appearance of toolbar elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
+The appearance of toolbar elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the toolbar interface:
 
 - **Toolbar root container:** The outer wrapper that contains all toolbar items.
 - **Toolbar buttons:**  Shows interactive elements used for actions such as Add, Edit, Delete, Update, and Cancel.

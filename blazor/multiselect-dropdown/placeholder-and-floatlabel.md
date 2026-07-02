@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor MultiSelect component and more.
+title: Placeholder/FloatLabel in Blazor MultiSelect Component | Syncfusion®
+description: Checkout and learn here all about Placeholder and FloatLabel in Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug

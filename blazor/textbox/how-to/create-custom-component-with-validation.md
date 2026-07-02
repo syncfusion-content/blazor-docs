@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create a custom component using Blazor TextBox | Syncfusion
-description: Learn here all about using Blazor TextBox component to create a custom component with tooltip validation.
+title: Create a custom component using Blazor TextBox | Syncfusion®
+description: Learn here all about using Blazor TextBox component to create a custom component with tooltip validation and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug

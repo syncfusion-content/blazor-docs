@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn here all about Navigation with Blazor Breadcrumb component of Syncfusion and more.
+title: Navigation with Blazor Breadcrumb component | Syncfusion®
+description: Checkout and learn here all features about Navigation with Blazor Breadcrumb component and much more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -29,7 +29,7 @@ You can specify relative URL in the [Url](https://help.syncfusion.com/cr/blazor/
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUCBsJJKhvVXTj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-relative-url.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhHXRMMfeIkqkdX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-relative-url.webp)" %}
 
 ## Absolute URL
 
@@ -48,7 +48,7 @@ You can specify absolute URL in the [Url](https://help.syncfusion.com/cr/blazor/
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKsrifpggirdDv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-absolute-url.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrHtdMCfoHqDSRD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-absolute-url.webp)" %}
 
 ## Enable navigation for last Breadcrumb item
 
@@ -67,4 +67,4 @@ Breadcrumb enables the navigation for the last item by setting the [EnableActive
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKWhMpfqgKOtmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-enable-navigation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhnNdMWpenddqUg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-enable-navigation.webp)" %}

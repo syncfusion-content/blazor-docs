@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CDN fallback in Blazor - Syncfusion
+title: CDN fallback in Blazor | Syncfusion®
 description: Learn how to handle content delivery network (CDN) fallbacks in Blazor Web App, Blazor Server, and Blazor WebAssembly (WASM) apps using Static Web Assets.
 platform: Blazor
 control: Common
@@ -17,7 +17,7 @@ For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server
 
 ### Script fallback
 
-Check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object to determine whether scripts are loaded. If they are not loaded, create a script tag and reference the scripts from Static Web Assets inside the `<body>` of the **~/Components/App.razor** file in the Server App, as shown below.
+Check the Blazor object to determine whether scripts are loaded. If they are not loaded, create a script tag and reference the scripts from Static Web Assets inside the `<body>` of the **~/Components/App.razor** file in the Server App, as shown below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/App.razor" %}
@@ -62,7 +62,7 @@ For Blazor WebAssembly Standalone App, reference script and stylesheet fallback 
 
 ### Script fallback
 
-Check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object to determine whether scripts are loaded. If they are not loaded, create a script tag and reference the scripts from Static Web Assets inside the `<head>` of the **wwwroot/index.html** file in the client app, as shown below.
+Check the Blazor object to determine whether scripts are loaded. If they are not loaded, create a script tag and reference the scripts from Static Web Assets inside the `<head>` of the **wwwroot/index.html** file in the client app, as shown below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}

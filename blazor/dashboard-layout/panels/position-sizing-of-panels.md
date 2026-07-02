@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Size and Position in Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn here all about size and position in Syncfusion Blazor Dashboard Layout component and more.
+title: Size and Position in Blazor Dashboard Layout Component | Syncfusion®
+description: Checkout and learn here all about size and position in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug

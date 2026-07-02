@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Chooser in Blazor DataGrid Component | Syncfusion
-description: Learn how to use and customize the column chooser in the Syncfusion Blazor DataGrid, including templates, grouping, search, and programmatic access.
+title: Column Chooser in Blazor DataGrid Component | Syncfusion®
+description: Learn how to use and customize the column chooser in the Blazor DataGrid, including templates, grouping, search, and programmatic access.
 platform: Blazor
 control: DataGrid
 documentation: ug

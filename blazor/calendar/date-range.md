@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Range in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Date Range in the Syncfusion Blazor Calendar component and much more.
+title: Date Range in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Date Range in the Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -29,4 +29,4 @@ The following code allows you to select a date within the range of 7th to 27th d
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgMhBLLyBEcqBn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[DataRange in Blazor Calendar Component](./images/blazor-calendar-date-range.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRtRshrFnXUsXL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[DataRange in Blazor Calendar Component](./images/blazor-calendar-date-range.webp)" %}

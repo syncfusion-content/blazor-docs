@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Commands in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram Commands in Syncfusion Blazor Diagram component and much more details.
+title: Commands in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about diagram Commands in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Matrix generator in Blazor Barcode Component | Syncfusion
-description: Checkout and learn here all about Data Matrix generator in Syncfusion Blazor Barcode component and more.
+title: Data Matrix generator in Blazor Barcode Component | Syncfusion®
+description: Checkout and learn here all features about Data Matrix generator in Blazor Barcode component and much more.
 platform: Blazor
 control: Barcode
 documentation: ug
@@ -19,7 +19,7 @@ The [DataMatrix](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Barcode
 <SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrAWrMTJZbJfybQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBnDRWCfBWXhspH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.webp)" %}
 
 ## Customizing the Barcode color
 
@@ -31,7 +31,7 @@ A page or printed media with barcode often appears colorful in the backgrounds a
 <SfDataMatrixGenerator Width="200" ForeColor="red" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrqMVCfzDOMreTm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrnjxCCTVsAdGMu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.webp)" %}
 
 ## Customizing the Barcode dimension
 
@@ -43,7 +43,7 @@ The dimensions of the barcode can be adjusted by using the [Height](https://help
 <SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLgsLMJTtuzLKLY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBnjniWpLMlSGri?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customizing the text
 
@@ -57,7 +57,7 @@ Customize the barcode text by using the display [Text](https://help.syncfusion.c
 </SfDataMatrixGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUiLMffNOmVTuG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLxZnsWJrhASleB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.webp)" %}
 
 ## Event
 
@@ -76,4 +76,4 @@ Customize the barcode text by using the display [Text](https://help.syncfusion.c
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVystDPBHHDqsFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBHtdiMfBVxZrAz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

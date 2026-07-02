@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pager styling and customization in Blazor DataGrid | Syncfusion
+title: Pager styling and customization in Blazor DataGrid | Syncfusion®
 description: Learn how to style the Blazor DataGrid pager using CSS—customize container, buttons, numeric items, and page indicator.
 platform: Blazor
 control: DataGrid

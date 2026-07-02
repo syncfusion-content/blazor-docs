@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Breadcrumb Overflow with Blazor Breadcrumb component | Syncfusion
+title: Breadcrumb Overflow with Blazor Breadcrumb component | Syncfusion®
 description: Overflow section in Blazor Breadcrumb explains how to limit the number of Breadcrumb items to be displayed.
 platform: Blazor
 control: Breadcrumb
@@ -44,7 +44,7 @@ Collapsed mode shows the first and last Breadcrumb items and hides the remaining
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVgiLsTTKpNEpBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-collapsed.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrntHiCfSmzmBwt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-collapsed.webp)" %}
 
 ## Menu
 
@@ -68,7 +68,7 @@ Menu mode shows the number of Breadcrumb items that can be accommodated within t
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBqMhszzUTTXZrh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-menu.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVxDnMMzIcckQIo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-menu.webp)" %}
 
 ## Wrap
 
@@ -92,7 +92,7 @@ Wrap mode wraps the items to multiple lines when the Breadcrumb’s width exceed
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVAsLCzJKeBQENj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-wrap.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLHtHCWJIlCJHsj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-wrap.webp)" %}
 
 ## Scroll
 
@@ -118,7 +118,7 @@ Scroll mode shows an HTML scroll bar when the Breadcrumb’s width exceeds the c
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqihCTJgoRdALp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-scroll.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrnNnCMfIlIUhxy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/breadcrumb-scroll.webp)" %}
 
 ## Hidden
 
@@ -142,7 +142,7 @@ Hidden mode shows the maximum number of items possible in the container space an
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqChCzJqeEiZQD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/bread-overflow-hidden.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhRNniizeFOttlh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb Component](./images/bread-overflow-hidden.webp)" %}
 
 ## None
 

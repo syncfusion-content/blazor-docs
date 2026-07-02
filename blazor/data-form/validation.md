@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Types of Validation in Blazor DataForm Component | Syncfusion
+title: Types of Validation in Blazor DataForm | Syncfusion®
 description: Checkout and learn here about different types of validation that can be used in Blazor DataForm component.
 platform: Blazor
 control: DataForm

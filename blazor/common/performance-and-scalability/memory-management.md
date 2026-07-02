@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Memory management in Syncfusion Blazor Components
-description: Provides best practices for managing memory efficiently in Syncfusion Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
+title: Memory Management Best Practices for Blazor Applications | Syncfusion®
+description: Provides best practices for managing memory efficiently in Blazor components to improve performance, reduce leaks, and ensure optimal resource usage.
 platform: Blazor
 control: Common
 documentation: ug
@@ -35,7 +35,7 @@ In Blazor WebAssembly, releasing these references allows the browser runtime to 
 
 If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
 
-### Install required Syncfusion<sup style="font-size:70%">&reg;</sup> packages
+### Install required packages
 
 To add the Blazor components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
 
@@ -59,7 +59,7 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+### Register Blazor service
 
 Add the Syncfusion Blazor service to the `~/Program.cs` file to enable Syncfusion components in the application.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Breadcrumb Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor Breadcrumb component and more.
+title: Styles and Appearances in Blazor Breadcrumb Component | Syncfusion®
+description: Checkout and learn here all features about Styles and Appearances in Blazor Breadcrumb component and much more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -53,4 +53,4 @@ Use the following CSS to customize the background and text color of Breadcrumb.
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhoZsCXAGIEezKH?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb with Style and Appearance](./images/blazor-breadcrumb-style-and-appearance.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBdDniWTeEdrtCZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Breadcrumb with Style and Appearance](./images/blazor-breadcrumb-style-and-appearance.webp)" %}

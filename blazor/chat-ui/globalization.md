@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization in Blazor Chat UI Component | Syncfusion
+title: Globalization in Blazor Chat UI Component | Syncfusion®
 description: Checkout and learn about Globalization with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
