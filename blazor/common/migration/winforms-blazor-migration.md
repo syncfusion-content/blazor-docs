@@ -636,22 +636,6 @@ Blazor renders components as HTML and CSS in a web browser. Instead of placing c
 {% endhighlight %}
 {% endtabs %}
 
-#### Key differences
-
-| Aspect | WinForms | Blazor |
-|---|---|---|
-| Layout model | Fixed desktop layout | Responsive CSS layout |
-| Positioning | Coordinates, Dock, Anchor | Flexbox, Grid, CSS |
-| Screen adaptation | Manual resizing logic | Responsive design |
-| Rendering | Native Windows UI | Browser-based HTML rendering |
-
-**Migration strategy**
-
-* Replace coordinate-based positioning with CSS layouts.
-* Use Flexbox or CSS Grid instead of nested panels.
-* Validate layouts on different screen sizes and browsers.
-* Design for responsiveness rather than fixed resolutions.
-
 ### Different lifecycle and event models
 
 #### WinForms lifecycle
@@ -819,24 +803,7 @@ Blazor components use lifecycle methods and event callbacks.
 {% endhighlight %}
 {% endtabs %}
 
-#### Key differences
-
-| Aspect | WinForms | Blazor |
-|---|---|---|
-| Initialization | `Form_Load` | `OnInitializedAsync` |
-| UI updates | Immediate desktop updates | Component re-rendering |
-| Events | CLR events | EventCallback and component events |
-| Async support | Optional | Commonly used |
-| Cleanup | Form closing events | `IDisposable` / `IAsyncDisposable` |
-
-**Migration strategy**
-
-* Move initialization code from `Form_Load` to `OnInitializedAsync`.
-* Convert long running operations to asynchronous methods.
-* Replace traditional event handlers with Blazor component events and callbacks.
-* Consider component re-rendering behavior when updating state.
-
-### Platform limitations and migration considerations
+### Platform limitations
 
 WinForms applications run directly on Windows and have access to operating system resources, desktop APIs, and local hardware. Blazor applications run in a web browser and operate within browser security boundaries. Because of this architectural difference, some desktop-specific capabilities do not have direct equivalents in web applications and may require alternative implementations.
 
@@ -844,7 +811,7 @@ The following areas should be reviewed carefully during migration:
 
 * **Windows-specific APIs** – Functionality that depends on Windows libraries, registry access, or native Win32 APIs cannot be accessed directly from Blazor components and may require server side services or platform specific integrations.
 * **Desktop window management** – Features such as multiple independent windows, modal desktop dialogs, system tray integration, and custom window behavior do not directly translate to browser based applications.
-* **Local file system access** – Web applications have limited access to user files and folders and must use browser-supported file upload and download mechanisms.
+* **Local file system access** – Web applications have limited access to user files and folders and must use browser supported file upload and download mechanisms.
 * **Hardware and peripheral integration** – Direct communication with devices such as serial ports, scanners, printers, USB devices, and other hardware may require browser-supported APIs, specialized middleware, or server side components.
 * **Desktop automation and inter-process communication** – Scenarios that interact with other desktop applications, processes, or Windows services generally require architectural redesign when moving to a web application.
 * **Operating system-specific functionality** – Features tightly coupled to Windows user interfaces, shell integrations, drag-and-drop behaviors, or desktop workflows may require alternative web based user experiences.
