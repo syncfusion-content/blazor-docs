@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor Gantt Chart component and much more.
+title: Filtering in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all the features about Filtering in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -440,7 +440,7 @@ You can clear all the filtering conditions applied in the Gantt Chart component 
 
 ## Enable different filter for a column
 
-You can enable different filter types for individual columns in the Blazor Gantt Chart  component by setting the[GanttColumn.FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property.
+You can enable different filter types for individual columns in the Gantt Chart component by setting the[GanttColumn.FilterSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Type) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

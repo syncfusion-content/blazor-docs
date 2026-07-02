@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Export in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Excel Export in Syncfusion Blazor Gantt Chart component and much more.
+title: Excel Export in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Excel Export in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

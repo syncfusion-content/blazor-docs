@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Managing Tasks in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Managing Tasks in Syncfusion Blazor Gantt Chart component and more.
+title: Managing Tasks in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Managing Tasks in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control:  Managing tasks
 documentation: ug

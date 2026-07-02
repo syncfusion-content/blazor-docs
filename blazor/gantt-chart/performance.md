@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Blazor Gantt Chart Performance Optimization Guide
-description: Learn how to optimize the loading and rendering performance of the Syncfusion Blazor Gantt Chart component, especially when working with large datasets.
+title: Blazor Gantt Chart Performance Optimization Guide | Syncfusion®
+description: Learn how to optimize the loading and rendering performance of the Blazor Gantt Chart component, especially when working with large datasets.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -65,7 +65,7 @@ By utilizing the Column Template feature, you can efficiently render custom cont
 
 ## How to improve loading performance by referring individual script and CSS?
 
-Instead of using the consolidated `Syncfusion.Blazor` package, which includes all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components and can result in a larger package size, you should use the specific NuGet package for the Gantt Chart component, such as `Syncfusion.Blazor.Gantt`. This approach ensures that only the necessary components and dependencies for the Gantt Chart are included, leading to improved performance and reduced load times.
+Instead of using the consolidated `Syncfusion.Blazor` package, which includes all Blazor components and can result in a larger package size, you should use the specific NuGet package for the Gantt Chart component, such as `Syncfusion.Blazor.Gantt`. This approach ensures that only the necessary components and dependencies for the Gantt Chart are included, leading to improved performance and reduced load times.
 
 When configuring your Blazor `Gantt Chart`, use individual script and CSS files instead of a single large package file. This practice allows for more efficient loading and rendering of the component by reducing the amount of data processed during initialization. By referring to individual scripts and CSS files, you can ensure that only the necessary resources are loaded, which enhances performance and speeds up the initial rendering of the Gantt Chart.
 

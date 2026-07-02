@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Indent and outdent in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Indent and outdent in Syncfusion Blazor Gantt Chart component and more.
+title: Indent and outdent in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Indent and outdent in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

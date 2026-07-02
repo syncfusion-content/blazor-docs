@@ -1,7 +1,7 @@
 ---
 layout: post
-title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion
-description: Learn about bind data and performing CRUD operations using UrlAdaptor in Syncfusion Blazor Gantt Chart.
+title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
+description: Learn about bind data and performing CRUD operations using UrlAdaptor in Blazor Gantt Chart much more details.
 platform: Blazor
 control: Gantt Chart
 keywords: adaptors, urladaptor, url adaptor, remotedata 
@@ -20,7 +20,7 @@ To configure a server with the Blazor Gantt Chart, follow these steps:
  
 **1. Create a Blazor web app**
  
-You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Create a model class**
  
@@ -175,11 +175,11 @@ Run the application in Visual Studio. The API will be accessible at a URL like `
  
 To integrate the Blazor Gantt Chart into your project using Visual Studio 2026, follow the below steps:
  
-**1. Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt and Themes NuGet packages**
+**1. Install Blazor Gantt and Themes NuGet packages**
  
 To add the Blazor Gantt Chart in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in the client project.
+If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Blazor NuGet packages in the client project.
  
 Alternatively, use the following Package Manager commands:
  
@@ -188,9 +188,9 @@ Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
  
-> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
  
-**2. Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
+**2. Register Blazor service**
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
@@ -200,7 +200,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Data
 ```
  
-- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+- Register the Blazor service in the **~/Program.cs** file.
  
 ```csharp
 using Syncfusion.Blazor;

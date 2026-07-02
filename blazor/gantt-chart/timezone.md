@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Timezone Support in Blazor Gantt Chart Component | Syncfusion
-description: Learn about timezone support in the Syncfusion Blazor Gantt Chart, including configuration and behavior details.
+title: Timezone Support in Blazor Gantt Chart Component | Syncfusion®
+description: Learn about timezone support in the Blazor Gantt Chart, including configuration and behavior details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

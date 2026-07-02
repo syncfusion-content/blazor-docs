@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Icons and Navigation in Blazor ContextMenu Component | Syncfusion
-description: Checkout and learn here all about Icons and Navigation in Syncfusion Blazor ContextMenu component and more.
+title: Icons and Navigation in Blazor ContextMenu Component | Syncfusion®
+description: Checkout and learn here all the features about Icons and Navigation in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -48,7 +48,7 @@ The [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-co
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrUsBrmqknfsARd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu with Icon](./images/blazor-contextmenu-icon.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLxjniETEUzIMNB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu with Icon](./images/blazor-contextmenu-icon.webp)" %}
 
 N> The Context Menu provides a set of [icons](https://blazor.syncfusion.com/documentation/appearance/icons) that can be loaded by applying `e-icons` class name to the element.
 You can also use third party icons on the Context Menu using the `IconCss`property.
@@ -83,4 +83,4 @@ Navigation in Context Menu is used to navigate to the other web page when menu i
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVACrLGKuddWNNk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Navigation in Blazor ContextMenu](./images/blazor-contextmenu-navigation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVHZdskpEUcEtAV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Navigation in Blazor ContextMenu](./images/blazor-contextmenu-navigation.webp)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Timeline in Blazor Gantt Chart component | Syncfusion
-description: Learn how to configure timelines in the Syncfusion Blazor Gantt Chart component with view modes, zooming, weekend highlighting, and templates.
+title: Timeline in Blazor Gantt Chart component | Syncfusion®
+description: Learn how to configure timelines in the Blazor Gantt Chart component with view modes, zooming, weekend highlighting, and templates.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

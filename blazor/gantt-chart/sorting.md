@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor Gantt Chart component and much more details.
+title: Sorting in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all the features about Sorting in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -426,7 +426,7 @@ The following sample demonstrates sorting a custom column using an external butt
 
 ## Touch interaction
 
-To perform a tap action on a column header in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Gantt component, the [Sorting](https://blazor.syncfusion.com/documentation/gantt-chart/sorting) operation is triggered for the selected column. A popup appears when multi-column sorting is enabled. To sort multiple columns, tap the popup and then tap the desired column headers. 
+To perform a tap action on a column header in the Blazor Gantt component, the [Sorting](https://blazor.syncfusion.com/documentation/gantt-chart/sorting) operation is triggered for the selected column. A popup appears when multi-column sorting is enabled. To sort multiple columns, tap the popup and then tap the desired column headers. 
 
 The following screenshot shows Gantt touch sorting,
 

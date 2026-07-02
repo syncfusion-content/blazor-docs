@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CustomAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion
-description: Learn all about CustomAdaptor in the Syncfusion Blazor Gantt Chart and how to handle data loading, searching, filtering, sorting, and CRUD operations.
+title: CustomAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
+description: Learn all about CustomAdaptor in the Blazor Gantt Chart and how to handle data loading, searching, filtering, sorting, and CRUD operations.
 platform: Blazor
 control: Gantt Chart
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor Gantt Chart Connected to MySQL via EF | Syncfusion
+title: Blazor Gantt Chart Connected to MySQL via EF | Syncfusion®
 description: Bind MySQL data to Blazor Gantt Chart using Entity Framework Core with complete CRUD, filtering, sorting, and advanced data operations.
 platform: Blazor
 control: Gantt Chart
@@ -407,7 +407,7 @@ builder.Services.AddDbContext<TaskDbContext>(options =>
 // Register the repository for dependency injection
 builder.Services.AddScoped<TaskRepository>();
 
-// Register Syncfusion Blazor services
+// Register Blazor services
 builder.Services.AddSyncfusionBlazor();
 
 // Add other services as needed
@@ -436,7 +436,7 @@ The service registration has been completed successfully.
 
 ---
 
-## Integrating Syncfusion Blazor Gantt Chart
+## Integrating Blazor Gantt Chart
 
 ### Step 1: Install and configure Blazor Gantt Chart Components
 
@@ -452,19 +452,19 @@ Syncfusion is a library that provides pre-built UI components like Gantt Chart, 
 @using Syncfusion.Blazor.Data
 ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
+3. Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and add:
 
 ```html
-<!-- Syncfusion Blazor Stylesheet -->
+<!-- Blazor Theme Stylesheet -->
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
-<!-- Syncfusion Blazor Scripts -->
+<!-- Blazor Scripts -->
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
-For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Gantt Chart component [getting‑started](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app) documentation.
 
 ### Step 2: Update the Blazor Gantt Chart
 
@@ -1229,7 +1229,7 @@ Here is the complete and final `Home.razor` component with all features integrat
 
     /// <summary>
     /// Custom DataAdaptor to handle Gantt Chart data operations with MySQL using EF Core.
-    /// Bridges Syncfusion DataManager requests to the repository.
+    /// Bridges DataManager requests to the repository.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {

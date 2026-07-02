@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Top tier and bottom tier in Blazor Gantt Chart Component | Syncfusion
-description: Learn how to configure top and bottom tiers in the Syncfusion Blazor Gantt Chart component using timeline settings such as unit, format, count, and formatter.
+title: Top tier and bottom tier in Blazor Gantt Chart Component | Syncfusion®
+description: Learn how to configure top and bottom tiers in the Blazor Gantt Chart component using timeline settings such as unit, format, count, and formatter.
 platform: Blazor
 control: Top tier and bottom tier
 documentation: ug

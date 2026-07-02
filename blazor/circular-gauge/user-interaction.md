@@ -1,7 +1,7 @@
 ---
 layout: post
-title: User Interaction in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about User Interaction in Syncfusion Blazor Circular Gauge component and more.
+title: User Interaction in Blazor Circular Gauge Component | Syncfusion®
+description: Checkout and learn here all the features about User Interaction in Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

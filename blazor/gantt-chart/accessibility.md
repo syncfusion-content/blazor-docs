@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Gantt Chart Component | Syncfusion
-description: Learn about accessibility features in the Syncfusion Blazor Gantt Chart component, including WCAG 2.2, Section 508, and keyboard navigation support.
+title: Accessibility in Blazor Gantt Chart Component | Syncfusion®
+description: Learn about accessibility features in the Blazor Gantt Chart component, including WCAG 2.2, Section 508, and keyboard navigation support.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -197,6 +197,6 @@ Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque
 
 ## Related Resources
 
-- [Accessibility in Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/common/accessibility)
+- [Accessibility in Blazor Components](https://blazor.syncfusion.com/documentation/common/accessibility)
 - [Blazor Gantt Chart Feature Tour](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)
 - [Blazor Gantt Chart Example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Lazy Loading in Blazor Charts Component | Syncfusion
-description: Checkout and Checkout and learn here all about Lazy Loading in Syncfusion Blazor Charts component and much more.
+title: Lazy Loading in Blazor Charts Component | Syncfusion®
+description: Checkout and Checkout and learn here all the features about Lazy Loading in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -94,7 +94,7 @@ else
 }
 ```
 
-![LazyLoad Line](../images/lazyload-line.png)
+![LazyLoad Line](../images/lazyload-line.webp)
 
 ### Line 
 

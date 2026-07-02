@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding new tasks in Blazor Gantt Chart component | Syncfusion
-description: Learn how to add tasks dynamically in the Syncfusion Blazor Gantt Chart component using toolbar, context menu, or programmatic methods for project management.
+title: Adding new tasks in Blazor Gantt Chart component | Syncfusion®
+description: Learn how to add tasks dynamically in the Blazor Gantt Chart component using toolbar, context menu, or programmatic methods for project management.
 platform: Blazor
 control: Adding new tasks
 documentation: ug

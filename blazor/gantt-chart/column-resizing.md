@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Resizing in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Column Resizing in Syncfusion Blazor Gantt Chart component and much more details.
+title: Column Resizing in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Column Resizing in Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Holidays in Blazor Gantt Chart Component | Syncfusion
-description: Learn how to configure holidays in the Syncfusion Blazor Gantt Chart component for accurate task scheduling with non-working days.
+title: Holidays in Blazor Gantt Chart Component | Syncfusion®
+description: Learn how to configure holidays in the Blazor Gantt Chart component for accurate task scheduling with non-working days.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Blazor DataGrid Styling Guide with CSS and Theme Studio
+title: Blazor DataGrid Styling Guide with CSS and Theme Studio | Syncfusion®
 description: Learn to customize the Blazor DataGrid using CSS and Theme Studio, including headers, rows, alternate rows, and grid lines.
 platform: Blazor
 control: DataGrid

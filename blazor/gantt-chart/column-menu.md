@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Menu in Blazor Gantt Chart Component | Syncfusion
-description: Learn how to enable sorting, filtering, and autofit using the column menu in the Syncfusion Blazor Gantt Chart.
+title: Column Menu in Blazor Gantt Chart Component | Syncfusion®
+description: Learn how to enable sorting, filtering, and autofit using the column menu in the Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
