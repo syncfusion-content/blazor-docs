@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor TextBox in Blazor WASM App | Syncfusion
+title: Getting Started with TextBox in Blazor WASM App | Syncfusion®
 description: Check out and learn about getting started with Blazor TextBox component in Blazor WebAssembly Application.
 platform: Blazor
 control: TextBox
@@ -209,7 +209,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox component in Blazor WebAssembly](./images/blazor-textbox.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBxtwtMTAPuHeJM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox component in Blazor WebAssembly](./images/blazor-textbox.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextBox).
 
@@ -247,7 +247,7 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryXaVqqmBfrsXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with icon in Blazor WebAssembly](./images/blazor-textbox-icons.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLHDwZsTJemhYae?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox with icon in Blazor WebAssembly](./images/blazor-textbox-icons.webp)" %}
 
 ## Floating label
 
@@ -263,10 +263,10 @@ The floating label lifts above the input when the TextBox is focused or contains
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with floating label in Blazor WebAssembly](./images/blazor-textbox-float-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrHtmDMfIiXQjnB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox with floating label in Blazor WebAssembly](./images/blazor-textbox-float-label.webp)" %}
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
+* [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)

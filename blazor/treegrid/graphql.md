@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bind GraphQL Adaptor in Blazor TreeGrid | Syncfusion
-description: Learn how to bind data from a GraphQL API to the Syncfusion Blazor TreeGrid, including querying, mutation, and integration techniques.
+title: Bind GraphQL Adaptor in Blazor TreeGrid | Syncfusion®
+description: Learn how to bind data from a GraphQL API to the Blazor TreeGrid, including querying, mutation, and integration techniques.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -17,7 +17,7 @@ This section describes a step-by-step process for retrieving data from a GraphQL
 
 ## Configure a GraphQL server
 
-To configure a GraphQL server using Hot Chocolate with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid, follow these steps:
+To configure a GraphQL server using Hot Chocolate with the Blazor TreeGrid, follow these steps:
 
 **Step 1: Create a new ASP.NET Core application**
 
@@ -685,17 +685,17 @@ This query will return the total count of employee data. Ensure the server is ru
 
 For more details, refer to the [Hot Chocolate documentation](https://chillicream.com/docs/hotchocolate).
 
-## Connecting Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid to an GraphQL service
+## Connecting Blazor TreeGrid to an GraphQL service
  
-To integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid into a project using Visual Studio, follow the steps below:
+To integrate the Blazor TreeGrid into a project using Visual Studio, follow the steps below:
 
 **Step 1: Create a Blazor Web App**
 
-Create a **Blazor Web App** named **TreeGrid** using Visual Studio. Either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) can be used. Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+Create a **Blazor Web App** named **TreeGrid** using Visual Studio. Either [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) can be used. Configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
-**Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid and Themes NuGet packages**
+**Step 2: Install Blazor TreeGrid and Themes NuGet packages**
 
-To add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid to an application, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search for and install the following packages:
+To add the Blazor TreeGrid to an application, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search for and install the following packages:
 
 - [Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -709,9 +709,9 @@ Install-Package Syncfusion.Blazor.TreeGrid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
 
-> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
 
-**Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service**
+**Step 3: Register Blazor service**
 
 - Open the **~/_Imports.razor** file and import the required namespaces:
 
@@ -722,7 +722,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Data
 ```
 
-- Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file:
+- Register the Blazor service in the **~/Program.cs** file:
 
 ```csharp
 using Syncfusion.Blazor;
@@ -1001,7 +1001,7 @@ After completing the setup, run the application. The TreeGrid will fetch and dis
 
 **Understanding DataManagerRequestInput Class**
 
-Before performing specific data operations such as search, sorting, or filtering, it is essential to understand the request structure that the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid sends to the GraphQL server.
+Before performing specific data operations such as search, sorting, or filtering, it is essential to understand the request structure that the Blazor TreeGrid sends to the GraphQL server.
 
 The following code demonstrates the `DataManagerRequestInput` class, which encapsulates parameters such as pagination (Skip, Take), search filters (Search), sorting (Sorted), and more. These parameters are passed as arguments to the resolver function for processing.
 
@@ -1156,7 +1156,7 @@ namespace GraphQLServer.Models
 
 ## Handling searching operation
 
-To handle search operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid using the `GraphQLAdaptor`, the `dataManager.Search` parameters can be utilized and the search logic applied on the server side. This approach enables efficient filtering and retrieval of relevant records from the TreeGrid based on the provided search criteria.
+To handle search operations in the Blazor TreeGrid using the `GraphQLAdaptor`, the `dataManager.Search` parameters can be utilized and the search logic applied on the server side. This approach enables efficient filtering and retrieval of relevant records from the TreeGrid based on the provided search criteria.
 
 When a search is performed in the TreeGrid, the `DataManager` sends the search parameters to the server, which include the search keyword and the list of fields to search against. The server then processes these parameters and filters the data accordingly.
 
@@ -1636,7 +1636,7 @@ public class EmployeesDataResponse
 
 ## Handling filtering operation
 
-To handle filtering operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid using the `GraphQLAdaptor`, the `dataManager.Where` parameters can be utilized and the filter logic applied on the server side. This approach enables refinement of TreeGrid data by specifying one or more filter conditions based on column values.
+To handle filtering operations in the Blazor TreeGrid using the `GraphQLAdaptor`, the `dataManager.Where` parameters can be utilized and the filter logic applied on the server side. This approach enables refinement of TreeGrid data by specifying one or more filter conditions based on column values.
 
 When a filter is applied in the TreeGrid, the `DataManager` sends the filtering criteria to the server through the `Where` property. Each filter condition includes the target field, operator, filter value, and other optional settings such as case sensitivity or nested predicates.
 
@@ -2146,7 +2146,7 @@ public class EmployeesDataResponse
 
 ## Handling sorting operation
 
-To handle sorting operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid using the `GraphQLAdaptor`, the sorting logic can be implemented on the server side by utilizing the `dataManager.Sorted` parameter. This enables the TreeGrid to send sorting instructions to the server, specifying the fields and sort directions to apply.
+To handle sorting operations in the Blazor TreeGrid using the `GraphQLAdaptor`, the sorting logic can be implemented on the server side by utilizing the `dataManager.Sorted` parameter. This enables the TreeGrid to send sorting instructions to the server, specifying the fields and sort directions to apply.
 
 When a sort action is triggered in the TreeGrid, the `DataManager` sends the sorting configuration in the `Sorted` property. This includes the field name to sort and the direction (Ascending or Descending). The server processes this parameter and sorts the data accordingly before returning it to the TreeGrid.
 
@@ -2575,7 +2575,7 @@ public class EmployeesDataResponse
 
 ## Handling paging operation
 
-To handle paging operations in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid using the `GraphQLAdaptor`, the `dataManager.Skip` and `dataManager.Take` parameters can be utilized. These parameters enable retrieval of data in pages, helping to manage large datasets efficiently by loading only a subset of records at a time.
+To handle paging operations in the Blazor TreeGrid using the `GraphQLAdaptor`, the `dataManager.Skip` and `dataManager.Take` parameters can be utilized. These parameters enable retrieval of data in pages, helping to manage large datasets efficiently by loading only a subset of records at a time.
 
 When paging is applied, the `DataManager` sends the **Skip** and **Take** values to the server. The **Skip** parameter specifies the number of records to be skipped, while the **Take** parameter defines how many records to retrieve in the current page.
 
@@ -2966,7 +2966,7 @@ public class EmployeesDataResponse
 
 ## Handling CRUD operation using mutation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid integrates seamlessly with GraphQL APIs using the `GraphQLAdaptor`, enabling support for CRUD (Create, Read, Update, and Delete) and Batch operations. This adaptor maps TreeGrid actions to GraphQL queries and mutations for real-time data interaction.
+The Blazor TreeGrid integrates seamlessly with GraphQL APIs using the `GraphQLAdaptor`, enabling support for CRUD (Create, Read, Update, and Delete) and Batch operations. This adaptor maps TreeGrid actions to GraphQL queries and mutations for real-time data interaction.
 
 This section demonstrates how to configure the TreeGrid with actual code to bind data and perform CRUD actions using the `GraphQLAdaptor`.
 
@@ -3012,7 +3012,7 @@ The following steps outline how to set up these operations in the TreeGrid.
 
 To insert a new record into the GraphQL server, define the mutation query in the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object within [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
 
-This mutation query is executed when a new row is added to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid. The adaptor sends the necessary parameters to the GraphQL server to perform the insertion.
+This mutation query is executed when a new row is added to the Blazor TreeGrid. The adaptor sends the necessary parameters to the GraphQL server to perform the insertion.
 
 **Mutation query configuration**
 
@@ -3122,7 +3122,7 @@ namespace GraphQLServer.GraphQL
 
 To update an existing record on the GraphQL server, define the mutation query in the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) property of the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object within [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
 
-This mutation query is triggered when an existing row in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid is modified. The adaptor sends the updated data and relevant parameters to the GraphQL server for processing.
+This mutation query is triggered when an existing row in the Blazor TreeGrid is modified. The adaptor sends the updated data and relevant parameters to the GraphQL server for processing.
 
 **Mutation query configuration**
 
@@ -3247,7 +3247,7 @@ namespace GraphQLServer.GraphQL
 
 To delete an existing record from the GraphQL server, define the mutation query in the [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) property of the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) object within [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
 
-This mutation query is executed when a row is removed from the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid. The adaptor passes the required parameters to the GraphQL server to process the deletion.
+This mutation query is executed when a row is removed from the Blazor TreeGrid. The adaptor passes the required parameters to the GraphQL server to process the deletion.
 
 **Mutation query configuration**
 
