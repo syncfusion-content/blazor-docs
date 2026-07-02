@@ -247,7 +247,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrzNiKXJRibajXZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toast Component](./images/blazor-toast.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLxZmDhVuKTwYSa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toast Component](./images/blazor-toast.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Toast).
 

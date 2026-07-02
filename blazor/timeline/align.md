@@ -50,7 +50,7 @@ In [`Before`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Ti
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSMXMNhTCgiUvW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Before Alignment](./images/Blazor-align-before.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrnXcZrBNGcvsBu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Before Alignment](./images/Blazor-align-before.webp)" %}
 
 ## After
 
@@ -91,7 +91,7 @@ In [`After`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Tim
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBysNCtBpLrvjno?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with After Alignment](./images/Blazor-align-after.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLRXmNhhDYnHPdt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with After Alignment](./images/Blazor-align-after.webp)" %}
 
 ## Alternate
 
@@ -132,7 +132,7 @@ In [`Alternate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVIiDiDLprmoLpT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Alternate Alignment](./images/Blazor-align-alternate.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBdNwNhrMrgtBTy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Alternate Alignment](./images/Blazor-align-alternate.webp)" %}
 
 ## Alternate Reverse
 
@@ -173,4 +173,4 @@ In [`AlternateReverse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNreWNWXhzAhJPqo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Alternate Reverse Alignment](./images/Blazor-align-alternatereverse.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLRNcZhVhXhPTEZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Alternate Reverse Alignment](./images/Blazor-align-alternatereverse.webp)" %}
