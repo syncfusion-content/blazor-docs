@@ -6,10 +6,10 @@ platform: Blazor
 control: Scheduler
 documentation: ug
 ---
-
+ 
 # Blazor Scheduler Component in WebAssembly App using Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor Scheduler component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -17,9 +17,9 @@ This article provides a step-by-step instructions for building Blazor WebAssembl
 
 ## Create a Blazor WebAssembly App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Blazor Scheduler Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install required NuGet packages in the App
+## Install Blazor Scheduler and Themes NuGet in the App
 
 To add `Blazor Scheduler` component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Schedule](https://www.nuget.org/packages/Syncfusion.Blazor.Schedule) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -33,9 +33,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Blazor Scheduler components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Blazor Service
+## Register Blazor Scheduler Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Schedule` namespace.
 
@@ -48,7 +48,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Now, register the Blazor Scheduler Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}

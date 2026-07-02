@@ -6,7 +6,7 @@ platform: Blazor
 control: Scheduler
 documentation: ug
 ---
-
+ 
 # Header Customization in Blazor Scheduler Component
 
 The header part of Scheduler can be customized easily with the built-in options available.
