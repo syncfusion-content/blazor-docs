@@ -127,7 +127,7 @@ The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/StackLimit.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDryiZDPpEbHJxhw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[StackLimit in Blazor Diagram](images/stackLimitGIF.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrxjHqZLFSrQLIZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[StackLimit in Blazor Diagram](images/stackLimitGIF.webp)" %}
 
 ## Current entry
 We can also get the current history entry from the [CurrentEntry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_CurrentEntry) property of the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) that allows to track changes occurring during the undo or redo process.
@@ -176,7 +176,7 @@ The following code shows how to get the current entry from the diagram history:
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryWtjvfOEyNJQD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhRjxqDBbRhiPfL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/CurrentEntry.razor)
 
@@ -230,7 +230,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthSsNtPzakPcNfR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrHNxUtBPxnVjKy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/CustomEntry.razor)
 
@@ -277,7 +277,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBysZXbyDjAqTVC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhRNdqjhvHFxnjz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/HistoryAdding.razor)
 
@@ -358,7 +358,7 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Diagr
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVSWDXleZtmdTYS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrnZngZLFQiGjkj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/CustomUndoRedo.razor)
 
@@ -423,6 +423,6 @@ This feature is useful when want to temporarily restrict users from performing u
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLyWNNvojMQYlcS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdDnUDrvcSlvno?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/DisableUndoRedo.razor)
