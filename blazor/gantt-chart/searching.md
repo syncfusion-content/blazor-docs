@@ -9,7 +9,7 @@ documentation: ug
 
 # Search in Blazor Gantt Chart Component
 
-The Blazor Gantt Chart component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component allows quick filtering of records based on search input, improving access to relevant data in large datasets.
 
 To enable this feature, add the **Search** option to the `Toolbar` configuration.
 
