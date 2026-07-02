@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® Blazor DocumentEditor and DataGrid Integration
+title: Blazor DocumentEditor and DataGrid Integration | Syncfusion®
 description: Step-by-step guide to integrate Blazor DocumentEditor and DataGrid components in Blazor applications.
 platform: Blazor
 control: common

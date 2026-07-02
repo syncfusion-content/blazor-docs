@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Undo Redo Manager in Blazor Rich Text Editor | Syncfusion
-description: Checkout and learn here all about undo redo manager in Syncfusion Blazor Rich Text Editor component and much more.
+title: Undo Redo Manager in Blazor Rich Text Editor | Syncfusion®
+description: Checkout and learn here all about undo redo manager in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Types in Blazor Chip Component | Syncfusion
-description: Checkout and learn here all about Chip Types in Syncfusion Blazor Chip component and much more details.
+title: Types in Blazor Chip Component | Syncfusion®
+description: Checkout and learn here all the features about Chip Types in Blazor Chip component and much more details.
 platform: Blazor
 control: Chip
 documentation: ug
@@ -33,7 +33,7 @@ Input Chip holds information in compact form. It converts user input into chips.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhotaWuJwkKgwBO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip with Input Items](./images/blazor-chip-input-items.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVdXRsRfzhKbzVH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chip with Input Items](./images/blazor-chip-input-items.webp)" %}
 
 ## Choice Chip
 
@@ -52,7 +52,7 @@ Choice Chip allows you to select a single chip from the set of Chip/ChipItems. I
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgihLQrIIaiZzR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Single Selection in Blazor Chip](./images/blazor-chip-single-selection.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrHtxCHfTrRPhGu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Single Selection in Blazor Chip](./images/blazor-chip-single-selection.webp)" %}
 
 ## Filter Chip
 
@@ -71,7 +71,7 @@ Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVUChLGrodMJCaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNRMdffVaXBNI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.webp)" %}
 
 ## Action Chip
 
@@ -102,7 +102,7 @@ The Action Chip triggers the event like [`OnClick`](https://help.syncfusion.com/
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgCrLGBSnHjcxB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Action Chip](./images/blazor-action-chip.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRXnWRJzgVMAhV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Action Chip](./images/blazor-action-chip.gif)" %}
 
 ### Deletable Chip
 
@@ -120,4 +120,4 @@ Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enable
 </SfChip>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthgCBLwLodvAbRF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhnZHsRpTARlVRs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

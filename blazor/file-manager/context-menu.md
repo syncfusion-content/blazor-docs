@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Context Menu in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Context Menu in Syncfusion Blazor File Manager component and much more.
+title: Context Menu in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about Context Menu in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug

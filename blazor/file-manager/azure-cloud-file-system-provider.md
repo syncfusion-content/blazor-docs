@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure cloud provider in Blazor File Manager Component | Syncfusion
-description: Check out and learn about the Azure cloud file system provider in the Syncfusion Blazor File Manager component.
+title: Azure cloud provider in Blazor File Manager Component | Syncfusion®
+description: Check out and learn about the Azure cloud file system provider in the Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -71,7 +71,7 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 }
 ```
 
-## Configuring Syncfusion File Manager UI
+## Configuring Blazor File Manager UI
 
 To configure File Manager component, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), then search and install **Syncfusion.Blazor.FileManager** and **Syncfusion.Blazor.Themes**. Integrate the FileManager component by pasting the below code in your .razor file of the Blazor application. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app) for more details.
 

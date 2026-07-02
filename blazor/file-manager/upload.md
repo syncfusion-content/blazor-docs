@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upload in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about available Upload in Syncfusion Blazor File Manager component and much more.
+title: Upload in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about available Upload in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug

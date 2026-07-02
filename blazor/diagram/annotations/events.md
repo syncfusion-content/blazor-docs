@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Events in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn how to use annotation events in the Syncfusion Blazor Diagram component and much more details.
+title: Annotation Events in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn how to use annotation events in the Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

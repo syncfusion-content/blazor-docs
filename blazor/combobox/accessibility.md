@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor ComboBox component and much more.
+title: Accessibility in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Accessibility in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -120,7 +120,7 @@ N> In the following sample, pressing the <kbd>t</kbd> key disables the ComboBox 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBAsrrQgPQyWcgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVHDHhgBFCbvDHE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Ensuring accessibility
 
@@ -130,4 +130,4 @@ The accessibility compliance of the ComboBox component is demonstrated in the fo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

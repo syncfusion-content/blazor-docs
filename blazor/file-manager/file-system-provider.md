@@ -1,7 +1,7 @@
 ---
 layout: post
-title: File System Providers in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about File System Providers in Syncfusion Blazor File Manager component and more.
+title: File System Providers in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about File System Providers in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Orientation in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about orientation in Syncfusion Blazor Tabs component and much more details.
+title: Orientation in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about orientation in Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Extend and customize Syncfusion Blazor components - Syncfusion
-description: Learn how to extend, compose, and reuse Syncfusion Blazor components, including dynamic rendering patterns.
+title: Extend and customize Blazor components | Syncfusion®
+description: Learn how to extend, compose, and reuse Blazor components, including dynamic rendering patterns and much more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,13 +11,13 @@ documentation: ug
 
 Blazor framework provides the support to extend a component or customize it within another component for a strong composite model.
 
-## Extend Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
+## Extend Blazor component
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can be extended by creating a new Razor component and implementing custom logic.
+Blazor components can be extended by creating a new Razor component and implementing custom logic.
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Razor Component` to create a new Razor component (SyncButton.razor).
 
-2. Inherit any Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component and render your component based on your logic with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor API.
+2. Inherit any Blazor component and render your component based on your logic with Blazor API.
 
     ```cshtml
     @inherits SfButton;
@@ -84,13 +84,13 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components can be extend
 
     ![Output of extending a Syncfusion Blazor component example](images/extend-sync-component.webp)
 
-## Use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component within another Blazor component
+## Use Blazor component within another Blazor component
 
-A Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be implemented within another Razor component.
+A Blazor component can be implemented within another Razor component.
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Razor Component` to create a new Razor component (TodoList.razor).
 
-2. Add any Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component to the newly created Blazor component.
+2. Add any Blazor component to the newly created Blazor component.
 
     ```cshtml
     <h3>Todo List</h3>
@@ -156,9 +156,9 @@ A Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be imple
 
     ![Render Syncfusion Blazor components within another component](images/todolist.webp)
 
-## Render Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component dynamically
+## Render Blazor component dynamically
 
-The following methods can be used to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components dynamically:
+The following methods can be used to render the Blazor components dynamically:
 
 1. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment) with [Razor template syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components#razor-templates)
 2. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment) with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder) methods

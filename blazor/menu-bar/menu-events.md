@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Menu Bar Events in Blazor Menu Bar | Syncfusion
-description: Checkout and learn here all about Events in the Syncfusion Blazor MenuBar component and much more details.
+title: Menu Bar Events in Blazor Menu Bar | Syncfusion®
+description: Checkout and learn here all the features about Events in the Blazor MenuBar component and much more details.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
