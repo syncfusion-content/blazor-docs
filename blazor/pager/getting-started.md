@@ -157,7 +157,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Pager component
 
-Open a Razor file located in the **~/Components/Pages/Home.razor** and add the [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component inside the razor file.
+Open a Razor file located in the **~/Pages/Home.razor** and add the [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
