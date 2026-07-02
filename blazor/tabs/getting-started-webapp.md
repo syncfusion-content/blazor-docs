@@ -239,7 +239,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBJNWKNzICuUXkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs Component](./images/blazor-tabs.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRDcjigSBdnsag?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tabs Component](./images/blazor-tabs.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs).
 
@@ -288,7 +288,7 @@ The following code explains how to initialize tab content using `ContentTemplate
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLfjWqNJeVdyLDk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Template](./images/blazor-tabs-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVxNctiAeObYrRv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tabs with Template](./images/blazor-tabs-template.webp)" %}
 
 ## Two way binding of SelectedItem
 
@@ -340,7 +340,7 @@ Selected Tab
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBzDCgNzyqUhxZn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrdjctiUHoQOplC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.webp)" %}
 
 ## See also
 
