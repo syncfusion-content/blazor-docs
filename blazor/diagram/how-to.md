@@ -48,7 +48,7 @@ Create a node in a Blazor diagram, define a Node object and add it to the diagra
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZByCjXwfvJVAbsa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBntRhaIVikcIVU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/AddMethod.razor)
 
@@ -153,7 +153,7 @@ The [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDcJPTQYWFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVdtdVayrLypXlU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/AddDiagramElements.razor)
 
@@ -224,7 +224,7 @@ The [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBesjNQpboWvycs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrRXdhuehhbCfKg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/Clear.razor)
 
@@ -333,7 +333,7 @@ The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyMZNwplRtkZvS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLnjnhYorgiNVIA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/Delete.razor)
 
@@ -436,7 +436,7 @@ The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDByMttQzaXbtFcK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdNHruerKRBfuY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ResetZoom.razor)
 
@@ -530,7 +530,7 @@ The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDheWZZQzEjtSkVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhdZdrayBqkVIjA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ClearSelection.razor)
 
@@ -622,7 +622,7 @@ The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVysDjwpPuWVGUI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhHtdBEIhfCmTht?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetObjectMethod.razor)
 
@@ -714,7 +714,7 @@ The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVeiNNGfkUXpFSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVHXHBYShpzWEnl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetPageBounds.razor)
 
@@ -806,7 +806,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVIsjZmzYpWNISa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLnZxhYSVzOinJx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/SelectAllMethod.razor)
 
@@ -897,7 +897,7 @@ The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBIsNZmTYeioDqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdjxrkyhSzxcip?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ScaleMethod.razor)
 
@@ -973,7 +973,7 @@ The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
  }
  ```
- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVICjNmfaRXpFsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+ {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrHZxhkILyGppmE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetCustomCursor.razor)
 
@@ -1054,7 +1054,7 @@ The [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjByCXZmzadbzxhm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHtHVkIhykvjic?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/BeginAndEndUpdate.razor)
 
@@ -1146,7 +1146,7 @@ The [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.S
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSCjNQfYGbfwMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnNHBYIhxeAEhy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/UnSelectMethod.razor)
 
@@ -1239,7 +1239,7 @@ The [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBoWXXmTEFbzmUx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhdtnhaordbJspr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/CloneMethod.razor)
 
@@ -1445,7 +1445,7 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
  ```
- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIMDjQoNXUmgcU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+ {% previewsample "https://blazorplayground.syncfusion.com/embed/htrxjxrkSVGCbdQk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
  A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetCustomTool.razor)
 
@@ -1546,7 +1546,7 @@ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIiXDwyttPZhfR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVxNRhaSrmwLZba?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ZoomAndPan.razor)
 
@@ -1630,7 +1630,7 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhSCXtQSjiSpCit?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVHXxBaeLcEnnuZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/RefereshDataSource.razor)
 
@@ -1683,7 +1683,7 @@ The following code illustrates how to set background color for node.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhyMZZcyNVMWKLP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLdjHhkeBlnVEsR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/GetParent.razor)
 
@@ -1735,6 +1735,6 @@ Here is an example demonstrating how to use the [EnableChunkMessages](https://he
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXreCjjGeZLyqIGr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthxZHLkILbuFGte?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Methods/ChunkMessage.razor)

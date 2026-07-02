@@ -167,20 +167,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLTjdsAsprhYodH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea Component](./images/blazor-textarea.webp)" %}
-
-## Floating label
-
-The floating label displays the placeholder as a label above the TextArea when focused or when a value is present. Configure this behavior using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
-
-{% endhighlight %}
-{% endtabs %}
-
 **Run the application**
 
 {% tabcontents %}
@@ -221,7 +207,21 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTjdiKszhkOkia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHNGjWgOdtJAfj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea Component](./images/blazor-textarea.webp)" %}
+
+## Floating label
+
+The floating label displays the placeholder as a label above the TextArea when focused or when a value is present. Configure this behavior using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property.
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+<SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthdZGtiAuYOoHdl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.webp)" %}
 
 ## See also
 
