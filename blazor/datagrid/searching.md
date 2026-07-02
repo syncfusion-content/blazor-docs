@@ -916,3 +916,113 @@ The Blazor DataGrid provides the ability to clear the current search programmati
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzjpXoqkaJnBKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Also clear the searched records using the clear icon in the search input field.
+
+## Search events
+
+The Blazor DataGrid triggers two search events during search actions:
+
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searching) – Triggered before a search is applied. Use this event to validate or modify the search settings, or cancel the search operation through the event arguments.
+
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searched) – Triggered after a search operation completes. It provides information about the applied search and can be used to perform follow-up actions such as updating the UI, tracking analytics, or processing search results.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<div style="text-align : center; color: red">
+    <span>@message</span>
+
+</div>
+<br />
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@ToolbarItems>
+    <GridEvents Searching="SearchingHandler" Searched="SearchedHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> DefaultGrid;
+    public List<string> ToolbarItems = new List<string>() { "Search" };
+    public List<OrderData> Orders { get; set; }
+    public string message;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public void SearchingHandler(SearchingEventArgs args)
+    {
+        if (args.SearchText == "TOMSP" || args.SearchText == "HANAR")
+        {
+            args.Cancel = true;
+            message = "The Searching event has been triggered and the Searching action is cancelled for " + args.SearchText + " value";
+        }
+    }
+
+    public void SearchedHandler(SearchedEventArgs args)
+    {
+        if (args.SearchText != string.Empty)
+        {
+            message = "The Searched event has been triggered and the Searched action for the " + args.SearchText + " value has been successfully executed";
+        }
+        else
+        {
+            message = " ";
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chines", "Switzerland"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Bern", "Vins et alcools Chevalier"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Genève", "Richter Supermar"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLxtmXLWVtexTKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
