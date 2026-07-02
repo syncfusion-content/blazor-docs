@@ -44,12 +44,14 @@ The reference example for this type is `blazor/treegrid/getting-started-webapp.m
 |--------|-----------|
 | File is under `blazor/getting-started/` | Common |
 | File is under `blazor/{component}/` | Component-specific |
-| YAML has `component: Common` | Common |
-| YAML has `control: {ComponentName}` | Component-specific |
 | H1 is `# Getting Started with Blazor {AppType}` | Common |
 | H1 is `# Getting Started with Blazor {Component} in Blazor {AppType}` | Component-specific |
 | Contains `## Using Playground` section | Common |
 | Sections start directly at H2 (no `## Manually creating a project` wrapper) | Component-specific |
+| YAML has `component: Common` | Common *(low-priority signal — use file path and H1 first)* |
+| YAML has `control:` or `component: {ComponentName}` | Component-specific *(low-priority signal — both field names are accepted)* |
+
+> **Note**: The YAML field name (`control` vs `component`) is not a reliable or enforced signal — both are acceptable in component-specific guides. Do not flag this as an issue. Use the file path and H1 title as primary identifiers.
 
 If the input file targets multiple app types, read all relevant reference templates.
 
@@ -145,20 +147,21 @@ layout: post
 title: Getting Started with Blazor {ComponentName} in Blazor {AppType} | Syncfusion
 description: {Relevant description}
 platform: Blazor
-component: {ComponentName}
+control: {ComponentName}
 documentation: ug
 ---
 ```
-- `component` field must match the component name (e.g., `TreeGrid`, `Scheduler`, `DataGrid`)
+- The YAML field identifying the component may be named either `control` or `component` — both are acceptable. Do not flag this as an issue.
 - Title must follow the pattern: `Getting Started with Blazor {ComponentName} in Blazor {AppType} | Syncfusion`
 
-#### Section 2: H1 Title
 #### Section 2: H1 Title
 Format: `# Getting Started with Blazor {ComponentName} [Component] in Blazor {AppType}`
 - The `Component` suffix is **optional** — it may be included or omitted based on component name length or author preference. Both forms are accepted.
 - ✅ `# Getting Started with Blazor TreeGrid in Blazor Web App`
 - ✅ `# Getting Started with Blazor ListView Component in Blazor Web App`
 - ❌ `# Getting Started with Blazor Web App` (missing component name entirely)
+- App type must use the full name — abbreviations are a ℹ️ **Minor** finding:
+  - ❌ `in Blazor WASM App` → ✅ `in Blazor WebAssembly App`
 
 #### Section 3: Introductory paragraph
 - Must say "This guide explains how to integrate the [Blazor {ComponentName}](...) component in your Blazor {AppType} using [Visual Studio](...), [Visual Studio Code](...), and the [.NET CLI](...)."
@@ -170,7 +173,7 @@ Format: `# Getting Started with Blazor {ComponentName} [Component] in Blazor {Ap
 
 #### Section 4: `## Create a new Blazor {AppType}` (H2)
 - Must use `{% tabcontents %}` with exactly **three tabs**: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
-- **Visual Studio tab**: References Microsoft Templates link + Blazor Extension link + a "For detailed instructions, refer to the [Blazor {AppType} Getting Started](...) documentation." sentence linking to the common getting-started doc
+- **Visual Studio tab**: References Microsoft Templates link + Blazor Extension link
 - **Visual Studio Code tab**: Provides `dotnet new` CLI command + alternative links (Microsoft Templates, Blazor Extension, C# Dev Kit)
 - **.NET CLI tab**: Provides `dotnet new` CLI command only
 - Must be followed by a note about configuring Interactive render mode and Interactivity location (for Web App and Server App)
@@ -225,7 +228,7 @@ Format: `# Getting Started with Blazor {ComponentName} [Component] in Blazor {Ap
 #### Section 11: Preview sample and GitHub link
 - Must end with a `{% previewsample %}` shortcode with a valid Blazor Playground embed URL
 - For component-specific guides: `backgroundimage` attribute is **optional** (may be omitted unlike in common guides)
-- Must be followed by a note linking to the GitHub sample: `N> [View Sample in GitHub](...)`
+- A GitHub sample note `N> [View Sample in GitHub](...)` is **optional** for component-specific guides — do not flag its absence
 
 ---
 
@@ -275,9 +278,9 @@ Group findings by file, then by section. For each finding provide:
 
 - **Category**: Terminology Violation | Missing Section | Incorrect Structure | Tab Coverage Gap | Code Error | Link Issue | Version Error | Style/Formatting
 - **Severity**:
-  - ❌ **Critical** — Wrong terminology, missing mandatory section, broken code, wrong file path
+  - ❌ **Critical** — Wrong terminology, missing mandatory section, wrong host file for stylesheet/script, broken code, wrong file path
   - ⚠️ **Major** — Missing tab, wrong render mode, missing NuGet package, missing service registration
-  - ℹ️ **Minor** — Formatting inconsistency, missing note/tip, link text mismatch
+  - ℹ️ **Minor** — Formatting inconsistency, missing note/tip, link text mismatch, incorrect app-type abbreviation in title (e.g., "WASM" instead of "WebAssembly")
   - 💡 **Suggestion** — Wording improvement, additional context
 - **Location**: File path, line numbers (if available), section heading
 - **Issue**: Clear description
@@ -334,8 +337,8 @@ Reply with one of the following:
 - [ ] Component tag uses `Sf` prefix (e.g., `<SfGrid>`, `<SfTreeGrid>`, `<SfSchedule>`)
 
 ### Guide Type Identification
-- [ ] Guide type correctly identified (Common vs. Component-specific)
-- [ ] For Common: YAML has `component: Common`; for Component-specific: YAML has `control: {ComponentName}`
+- [ ] Guide type correctly identified (Common vs. Component-specific) — use file path and H1 title as primary signals
+- [ ] For Common: YAML typically has `component: Common`; for Component-specific: YAML may use either `control:` or `component:` — both are valid, do not flag either
 - [ ] No "Using Playground", "Using Blazor Templates", or "Manually creating a project" sections in component-specific guides
 - [ ] Heading levels are correct — H3 under `## Manually creating a project` for Common; H2 directly for Component-specific
 
@@ -343,7 +346,7 @@ Reply with one of the following:
 - [ ] YAML front matter is present with correct fields for the guide type
 - [ ] H1 title follows the correct pattern for the guide type (the `Component` suffix after the component name is optional and accepted)
 - [ ] Intro paragraph correctly names the component and lists the three tools
-- [ ] All mandatory sections are present in the correct order per guide type
+- [ ] All mandatory sections are present in the correct order per guide type *(missing mandatory section = ❌ Critical)*
 - [ ] Sections are not duplicated or out of order
 
 ### Tab Coverage (applies to both guide types)
@@ -351,7 +354,6 @@ Reply with one of the following:
 - [ ] **"Install packages"** section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI` *(missing tab = ⚠️ Major)*
 - [ ] **"Run the application"** section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI` *(missing tab = ⚠️ Major)*
 - [ ] Tab names use consistent exact casing: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
-- [ ] *(Component-specific only)* Visual Studio tab in "Create a new app" links to the corresponding common Getting Started doc
 
 ### Code Samples (applies to both guide types)
 - [ ] NuGet package names are correct (`Syncfusion.Blazor.{Component}` and `Syncfusion.Blazor.Themes`)
@@ -360,7 +362,7 @@ Reply with one of the following:
 - [ ] `Program.cs` includes `using Syncfusion.Blazor;` and `builder.Services.AddSyncfusionBlazor()`
 - [ ] Stylesheet path: `_content/Syncfusion.Blazor.Themes/fluent2.css`
 - [ ] Script path: `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`
-- [ ] Correct host file for stylesheet/script (`App.razor` for Web/Server; `index.html` for WASM)
+- [ ] Correct host file for stylesheet/script (`App.razor` for Web/Server; `index.html` for WASM) *(wrong host file = ❌ Critical)*
 - [ ] Component code sample uses correct `<Sf...>` tag
 - [ ] `@rendermode` directive is present where required
 
@@ -392,11 +394,12 @@ Reply with one of the following:
 - [ ] Visual Studio integration link: `https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio`
 - [ ] Visual Studio Code integration link: `https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project`
 - [ ] Static Web Assets theme link: `https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets`
+- [ ] *(Component-specific only)* Visual Studio tab in "Create a new app" does **not** need to link to the common Getting Started doc — this is not required
 
 ### Preview Sample and GitHub Link
 - [ ] `{% previewsample %}` shortcode is present at the end of the file with a valid Blazor Playground embed URL
 - [ ] *(Common guides only)* `backgroundimage` attribute is set with a valid relative image path
-- [ ] *(Component-specific guides only)* GitHub sample note is present: `N> [View Sample in GitHub](...)`
+- [ ] *(Component-specific guides only)* GitHub sample note `N> [View Sample in GitHub](...)` is **optional** — do not flag its absence as an issue
 
 ---
 
