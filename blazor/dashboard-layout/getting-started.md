@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Dashboard in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Dashboard component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Dashboard Layout in Blazor WASM App | Syncfusion
+description: Checkout and learn about getting started with Blazor Dashboard Layout component in Blazor WebAssembly Application.
 platform: Blazor
-control: Dashboard 
+control: Dashboard Layout
 documentation: ug
 ---
 
-# Getting Started with Blazor Dashboard component in Blazor WASM App
+# Getting Started with Blazor Dashboard Layout component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Dashboard](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -166,9 +166,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor Dashboard component
+## Add Blazor Dashboard Layout component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dashboard](https://www.syncfusion.com/blazor-components/blazor-dashboard) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -193,7 +193,7 @@ N> There is no need to assign default value for panels. Refer to the [Panels](./
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Dashboard component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Dashboard Layout component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -227,19 +227,19 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxtRLUKlzqHcwQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Component](images/blazor-dashboard-layout-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxtRLUKlzqHcwQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout Component](images/blazor-dashboard-layout-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
 
 ## Defining Panels
 
-The Dashboard component renders multiple panels, each designed using basic properties. Each panel consists of two sections: a header and a content section. These are defined using the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) and [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) properties, respectively.
+The Dashboard Layout component renders multiple panels, each designed using basic properties. Each panel consists of two sections: a header and a content section. These are defined using the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) and [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) properties, respectively.
 
 Panels are interactive, supporting functionalities such as dragging, floating, and resizing.
 
 ## Panels with Simple Data
 
-A basic Dashboard panel can display simple data. The panel's header is defined by  [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate), and its content by the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate).
+A basic Dashboard Layout panel can display simple data. The panel's header is defined by  [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate), and its content by the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -269,13 +269,13 @@ A basic Dashboard panel can display simple data. The panel's header is defined b
 {% endhighlight %}
 {% endtabs %}
 
-The Dashboard with simple content will be rendered in the web browser as demonstrated in the following screenshot.
+The Dashboard Layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHNxhgKwFngyBq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHNxhgKwFngyBq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
 
 ## Panels with Components
 
-A Dashboard can also host complex UI components such as charts, grids, maps, or gauges within its panels.
+A Dashboard Layout can also host complex UI components such as charts, grids, maps, or gauges within its panels.
 
 These components are placed as panel content by assigning the corresponding Blazor component element as the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) of the panel.
 
@@ -375,7 +375,8 @@ These components are placed as panel content by assigning the corresponding Blaz
     </SfDashboardLayout>
 </div>
 @code
- { SfChart chartObj;
+ { 
+    SfChart chartObj;
     SfChart barchartObj;
     SfRangeNavigator rangeObj;
     SfChart linechartObj;
@@ -394,7 +395,7 @@ These components are placed as panel content by assigning the corresponding Blaz
         public double Y4 { get; set; }
     }
     public List<ChartData> DataSource = new List<ChartData>
-{
+    {
         new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21, X = "USA", Y =300.2, Country = "USA: 72", X1= "2012"},
         new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24, X = "Russia", Y = 103.1, Country = "RUS: 103.1", X1= "2013"},
         new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36, X = "Brazil", Y = 139.1, Country = "BRZ: 139.1", X1= "2014"},
@@ -439,14 +440,14 @@ These components are placed as panel content by assigning the corresponding Blaz
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.webp)" %}
 
-To get started quickly with designing a Blazor Dashboard with UI Components, you can check the video below.
+To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=KOetW4f6_v4" %}
 
-By default, the Dashboard component is rendered with auto-adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) panels according to the parent dimensions.
+By default, the Dashboard Layout component is rendered with auto-adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) panels according to the parent dimensions.
 
 ## See also
 
