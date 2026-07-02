@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Content in Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn here all about Header and Content in Syncfusion Blazor Dashboard Layout component and more.
+title: Header and Content in Blazor Dashboard Layout Component | Syncfusion®
+description: Checkout and learn here all about Header and Content in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn how to create, add, remove, and update annotation for nodes and connectors in Syncfusion Blazor Diagram component and more.
+title: Annotation in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn how to create, add, remove, and update annotation for nodes and connectors in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -268,7 +268,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to animate connectors using annotation template in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotation template-in-angular-diagram )
 
-* [How to dynamically create and connect diagram nodes with annotations via ports in syncfusion<sup style="font-size:70%">&reg;</sup> blazor diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram) 
+* [How to dynamically create and connect diagram nodes with annotations via ports in blazor diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram) 
 * [How to Prevent text Overflow and display excess Content on hover in a diagram](https://support.syncfusion.com/kb/article/18726/how-to-prevent-text-overflow-and-display-excess-content-on-hover-in-a-diagram)
 
 * [How to generate a hierarchical layout with annotations at runtime](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)

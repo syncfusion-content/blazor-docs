@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize grouping in Blazor DataGrid | Syncfusion
+title: Customize grouping in Blazor DataGrid | Syncfusion®
 description: Learn how to style and customize the grouping UI in Blazor DataGrid—group headers, icons, caption rows, and indent cells with CSS tips.
 platform: Blazor
 control: DataGrid

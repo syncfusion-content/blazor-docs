@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Islamic Calendar in Blazor DateTimePicker Component | Syncfusion
-description: Checkout and learn here all about Islamic Calendar in the Syncfusion Blazor Datetime Picker  component and much more.
+title: Islamic Calendar in Blazor DateTimePicker Component | Syncfusion®
+description: Checkout and learn here all about Islamic Calendar in the Blazor Datetime Picker  component and much more.
 platform: Blazor
 control: Datetime Picker
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context Menu in Blazor DataGrid | Syncfusion
+title: Context Menu in Blazor DataGrid | Syncfusion®
 description: Explore and understand the Context Menu in Blazor DataGrid. Learn about its features, usage, customization, and more.
 platform: Blazor
 control: DataGrid
@@ -446,7 +446,7 @@ public class OrderData
 
 ## Disable the context menu for specific columns in DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup>  Blazor DataGrid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
+The Blazor DataGrid allows restricting the context menu for individual columns, which is useful when dealing with **sensitive** or **read-only** data.
 
 This behavior is controlled using the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. The event is triggered before the context menu appears and provides access to column details. By checking the column's **Field** property, the context menu can be conditionally disabled.
 

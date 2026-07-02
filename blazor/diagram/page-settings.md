@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Page Settings in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Page Setting in Syncfusion Blazor Diagram component and much more.
+title: Page Settings in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about Page Setting in Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -366,7 +366,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ## See also 
 
 
-* [How to Detect Nodes That Cross Page Breaks in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)
+* [How to Detect Nodes That Cross Page Breaks in Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)
 
 * [How to Set Background Color for Entire Diagram Area in Blazor Diagram](https://support.syncfusion.com/kb/article/16016/how-to-set-background-color-for-entire-diagram-area-in-blazor-diagram)
 

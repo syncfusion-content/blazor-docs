@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip for Button in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Tooltip for Button in Syncfusion Blazor Button component and more.
+title: Tooltip for Button in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all feature about Tooltip for Button in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -23,4 +23,4 @@ Tooltip can be shown on Button hover and it can be achieved by title attribute.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqMVVLsbtDTzCr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button displays ToolTip](./../images/blazor-button-tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVxNRiBhzZOVWOZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button displays ToolTip](./../images/blazor-button-tooltip.webp)" %}

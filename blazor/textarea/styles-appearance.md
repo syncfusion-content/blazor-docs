@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor TextArea Component | Syncfusion
-description: Learn here all about Style and appearance of the Syncfusion Blazor Textarea component and much more.
+title: Style and appearance in Blazor TextArea Component | Syncfusion®
+description: Learn here all about Style and appearance of the Blazor Textarea component and much more.
 platform: Blazor
 control: TextArea
 documentation: ug

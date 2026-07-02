@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pane Content in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about pane content in Syncfusion Blazor Splitter component and much more.
+title: Pane Content in Blazor Splitter Component | Syncfusion®
+description: Checkout and learn here all the features about pane content in Blazor Splitter component much more details.
 platform: Blazor
 control: Splitter
 documentation: ug

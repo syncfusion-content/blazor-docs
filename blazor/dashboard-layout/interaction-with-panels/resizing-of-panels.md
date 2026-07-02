@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resizing Panels in Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn here all about resizing panels in Syncfusion Blazor Dashboard Layout component and more.
+title: Resizing Panels in Blazor Dashboard Layout Component | Syncfusion®
+description: Checkout and learn here all about resizing panels in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug

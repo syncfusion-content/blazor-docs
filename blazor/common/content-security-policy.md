@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content Security Policy (CSP) - Syncfusion
-description: Learn how to use Syncfusion Blazor components with a strict Content Security Policy (CSP) in Blazor Web App, Blazor WebAssembly (WASM), and Blazor Server.
+title: Content Security Policy (CSP) | Syncfusion®
+description: Learn how to use Blazor components with a strict Content Security Policy (CSP) in Blazor Web App, Blazor WebAssembly (WASM), and Blazor Server.
 platform: Blazor
 control: Common
 documentation: ug

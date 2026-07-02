@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column and column span in Blazor DataForm Component | Syncfusion
+title: Column and column span in Blazor DataForm Component | Syncfusion®
 description: Checkout and learn here about how to configure column and column span  with Blazor DataForm component.
 platform: Blazor
 control: DataForm
@@ -40,4 +40,4 @@ In the following example, the DataForm is divided into six equal columns. Each e
 
 ## See Also
 
-* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout?theme=fluent)
+* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout)

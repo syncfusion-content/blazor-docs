@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Select Items in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about select items in Syncfusion Blazor ListBox component and much more.
+title: Select Items in Blazor ListBox Component | Syncfusion®
+description: Checkout and learn here all about select items in Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Icons with Blazor Message Component | Syncfusion
+title: Icons with Blazor Message Component | Syncfusion®
 description: Checkout and learn about Icons with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Message
