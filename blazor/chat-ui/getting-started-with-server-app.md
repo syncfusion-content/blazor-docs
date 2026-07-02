@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Blazor Chat UI in Blazor Server App |Syncfusion
-description: Check out the documentation for getting started with Blazor Chat UI Components in Blazor Server App.
+description: Check out the documentation for getting started with Blazor Chat UI Component in Blazor Server App.
 platform: Blazor
 control: Chat UI
 documentation: ug
