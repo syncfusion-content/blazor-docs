@@ -56,7 +56,7 @@ The following code example illustrates how to customize the tooltip for nodes.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipForSpecificNode.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeMXXFTQypyUzV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-nodetooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthnjdAZBrmPMqOb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-nodetooltip.webp)" %}
 
 The following code example illustrates how to customize the tooltip for connectors.
 
@@ -85,7 +85,7 @@ The following code example illustrates how to customize the tooltip for connecto
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipForSpecificConnector.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIsNXlpcxcfGTS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-connectortooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLRZHgDBLbeAdyL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the node](images/blazor-diagram-connectortooltip.webp)" %}
 
 ## How to Set Tooltip Position for Nodes and Connectors
 
@@ -149,7 +149,7 @@ The following code example sets the tooltip position for the nodes.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVestDPfwQykRfi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVHNnKZrLEcyiQO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipPositionforNode.razor)
 
@@ -189,7 +189,7 @@ The following code example sets the tooltip position for the connectors.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrysttvfwvHiBTt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVHDRqNrKZNsbiX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipPositionForConnector.razor)
 
@@ -239,7 +239,7 @@ The following code example sets the tooltip content for the nodes.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBeitZbzcPOcYHs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVnjHqXhUDIngVl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipContentForNode.razor)
 
@@ -276,7 +276,7 @@ The following code example sets the tooltip content for the connectors.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrSijXPTmEUTPOS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrHDRKZBUTMdEim?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipContentForConnector.razor)
 
@@ -327,7 +327,7 @@ The following code example is used to set the tooltip tip pointer for nodes.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBeMDZbTcEmCQNg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhxjxANhAHjVnpu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TipPointerForNodeTooltip.razor)
 
@@ -367,7 +367,7 @@ The following code example is used to set the tooltip tip pointer for connectors
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIsjXFzvDVUdbt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrnjnqXBAnqNZJl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TipPointerForConnectorTooltip.razor)
 
@@ -420,7 +420,7 @@ The following code example illustrates how to add formatted template content to 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZroCDZPfltRCJGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdjHAXhUxIEjpp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipTemplateForNode.razor)
 
@@ -466,7 +466,7 @@ The following code example illustrates how to add formatted template content to 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBSCjjbTbjOotkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBdtxqNLqxEjrwN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipTemplateForConnector.razor)
 
@@ -530,7 +530,7 @@ The following code example illustrates how to set animation for tooltip on nodes
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrSMjDFJPMyHtcE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLRjnqtBUwWxAzv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipAnimationForNode.razor)
 
@@ -581,7 +581,7 @@ The following code example illustrates how to set animation for tooltips on conn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrosZtbJbBrVkMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBHDxqZBgQeogzn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipAnimationForConnector.razor)
 
@@ -695,7 +695,7 @@ The following code example illustrates how to set the open mode for tooltips on 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrIMDjbTFKBVIss?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVnNdqDLqaEKmHy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipOpenModeForNode.razor)
 
@@ -770,7 +770,7 @@ The following code example illustrates how to set the open mode for tooltips on 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBeWNXPpPAcouxu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhnZRqtrfZBMZQy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/TooltipOpenModeForConnector.razor)
 
@@ -820,7 +820,7 @@ The following code example demonstrates how to set `IsSticky` property to **true
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/StickyForNode.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhSijNbTvfeFFpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyNode.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLHZHAXrfDTutCG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyNode.webp)" %}
 
 The following code example demonstrates how to set `IsSticky` property to **true** for a connector:
 
@@ -853,7 +853,7 @@ The following code example demonstrates how to set `IsSticky` property to **true
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Tooltip/StickyForConnector.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjByCDDFpvysxzPr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyConnector.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBRtxqZVTAgZgHz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the node with Stikcy Mode](images/StickyConnector.webp)" %}
 
 For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
 
@@ -910,7 +910,7 @@ By default, tooltips are not displayed. Need to explicitly configure the tooltip
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserhandleTooltip.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLosDtlTlSozUTB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Tooltip for UserHandle](images/UserHandleTooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLRDxKDLJTDYcyi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Tooltip for UserHandle](images/UserHandleTooltip.webp)" %}
 
 ### How to Set Sticky Tooltip for User Handles
 
@@ -969,7 +969,7 @@ The following code example demonstrates how to set `IsSticky` property to **true
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleIsSticky.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhesXNlflyEQBvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBHtxqXrpIXEYPJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.webp)" %}
 
 ## How to Set Tooltip for Fixed User Handle
 
@@ -1015,7 +1015,7 @@ The diagram component offers robust tooltip functionality for [FixedUserHandles]
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleTooltip.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZheCjNFJbPKBivq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Tooltip for UserHandle](images/FixedUserHandleTooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdZdAjLzdhyENb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Tooltip for UserHandle](images/FixedUserHandleTooltip.webp)" %}
 
 ### How to Set Sticky Tooltip for Fixed User Handles
 
@@ -1063,7 +1063,7 @@ The following code example demonstrates how to set `IsSticky` property to true f
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleIsSticky.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLyiXjbzvEDcPUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBnDngXVfGSfKsa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.webp)" %}
 
 ## How to Set Tooltip for Ports
 
@@ -1140,7 +1140,7 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/TooltipForSpecificPort.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthysNZbfPaIKgsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the port](./images/PortTooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBRtdUNLJlXsAsH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the port](./images/PortTooltip.webp)" %}
 
 ### How to Set Sticky Tooltip for Ports
 
@@ -1200,7 +1200,7 @@ The following code example demonstrates how to set `IsSticky` property to **true
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/PortIsSticky/PortIsSticky.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLoMttPJlkudJEW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](./images/PortIsSticky.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLnNnKXroZPFGJe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the ports with Stikcy Mode](./images/PortIsSticky.webp)" %}
 
 ## See also
 
