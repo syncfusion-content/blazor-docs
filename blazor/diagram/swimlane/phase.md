@@ -83,7 +83,7 @@ The following code example explains how to add a phase to a swimlane.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoWZDwgIxDznSV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdDdBarXeiPOlk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseCreation.razor).
 
@@ -184,7 +184,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXroWXXQAIHdICLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLHZRVOqixCMBUe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/AddRemovePhaseAtRuntime.razor).
 
@@ -259,7 +259,7 @@ The following code example shows how to define and customize a phase header.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVICNNmAenacKHW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthxNRhEKinmCphB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseHeader.razor).
 
@@ -341,7 +341,7 @@ The following code example explains how to define a phase header annotation temp
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSMjNcKovfbQWR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVnXdLOqicMpDMf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseHeaderTemplate.razor).
 
@@ -409,7 +409,7 @@ Below is an example demonstrating how to set the orientation for phases in an Sf
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhSWDDwUHjXBppC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthHtxBkgMQyXCKD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/Phase/PhaseOrientation.razor).
 
