@@ -207,7 +207,8 @@ dotnet run
 
 Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
-<SfChart3D>
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 cd ..
 cd BlazorWebApp
