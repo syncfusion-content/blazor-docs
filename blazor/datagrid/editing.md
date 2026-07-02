@@ -101,7 +101,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}      
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVoZysVJpYKYwEU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrHjcjLLwovaQjg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so the model class and any referenced complex type classes must have parameterless constructors defined. To provide custom logic for object creation during editing, refer to [this section](#provide-new-item-or-edited-item-using-events).
 > * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, the column will be treated as read-only when editing or adding a record.
@@ -196,7 +196,7 @@ To activate this feature, configure the [Toolbar](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBIDysApJMqmYgM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhHXQNBLwnYkNPH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable editing for particular column
 
@@ -317,7 +317,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtByjysAfpJUHTUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLdtwXBVQmmsmEa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * When the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a column, editing is automatically disabled for that column.
 > * To disable editing for a specific row, use the [RowEditing](https://blazor.syncfusion.com/documentation/datagrid/events#rowediting) event.
@@ -421,7 +421,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIDIsKfTIGXHqy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLdZGZrhbJnjbNQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize delete confirmation dialog
 
@@ -576,7 +576,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBSXSiUJTudnRLI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBxZwjLrFSWFKcc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Update boolean column value with a single click
 
@@ -676,7 +676,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDreXIsqTejwCyFR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRjcNBVFovQmmx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Edit enum column
 
@@ -744,7 +744,7 @@ In the example below, the [DropDownList](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVfsihYMwfNqnqV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLnNwtVhbHzRriq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Edit complex column
 
@@ -837,7 +837,7 @@ In the following example, input elements are rendered in the edit templates of t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVoZICKzSgNsjJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrnXcjBVluMfmaP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Edit foreign key column
 
@@ -993,7 +993,7 @@ By default, the Grid renders a `DropDownList` as the editor for foreign key colu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrfsBZACuuzbDIt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLnXGDVrYWNhyAE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to perform CRUD action externally
 
@@ -1130,7 +1130,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBSZSWKpIfWuqrR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdZmDLLOrDvDWl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Using external form
 
@@ -1324,7 +1324,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBytoiqfIIReUci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVnXcDrVOUiUMls?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Using external form](./images/blazor-datagrid-editing-form.webp)
 
@@ -1424,7 +1424,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthoDoCKTxtufhdP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHDGXrrEqRczEA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > If a template column has a corresponding [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property defined, the value entered in the template column’s input field will be stored in the associated edit column of the row’s data object.
 
@@ -1596,7 +1596,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBTWrDHUvvLUGmg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBRDcjLrkpeIpdq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Perform CRUD operation using Blazor DataGrid events
 

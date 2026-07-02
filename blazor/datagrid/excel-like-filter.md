@@ -96,7 +96,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVfZVDQLqvKxcHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrdZGZLqlQeiUbI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Key Features:**
 > * Supports multiple filter types: text, numbers, dates, and true/false values
@@ -185,7 +185,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZBNcrfDcFCUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrnDwZhgbmvyADP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the Number of Filter Options
 
@@ -305,7 +305,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVfXVjhBrOeigOb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNGtVUvPiyWQL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Performance Consideration:** Setting a high `FilterChoiceCount` may slow the filter dialog when it opens. Processing and displaying a large number of values requires additional time, potentially resulting in noticeable delays. To maintain smooth filtering, select a value that balances functional requirements with acceptable performance levels.
 
@@ -410,7 +410,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVzDrNsbrIRILzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhdZGZLKvPRzQQQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add Icons and Visual Elements to Filter Options
 
@@ -527,7 +527,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJjVtQgjHtuqOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrxDwjLUPYWYCQJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Style the Excel Filter Dialog with CSS
 
@@ -626,7 +626,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJZhtsFqnfgvJa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrdDwXhJQDpSjFF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Changing Filter Dialog Size
 
@@ -749,7 +749,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBpZBDBCFDseVPP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrxZGtBTQoosiyI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Styling the filtered column icon
 
@@ -842,7 +842,7 @@ By default, when a filter is applied multiple times to the same column, the new 
 
 ![Add current selection to filter in Blazor DataGrid.](images/blazor-datagrid-add-current-selection-to-filter.webp)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrRXGZVTwebipHI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See Also
 

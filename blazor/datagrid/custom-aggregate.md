@@ -106,7 +106,7 @@ The custom aggregate function is invoked differently based on the context:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVIXkVRertPQOeX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBnZcNhVMZXlKHt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > To access a custom aggregate value inside a template, use the **Custom** key (**AggregateTemplateContext.Custom**).
 
@@ -204,7 +204,7 @@ Custom aggregate functions can also compute distinct counts or other domain-spec
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVUDvBkVInESEoB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrdZmjhLCNPqmbA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > To display the aggregate value of the current column in another column, use the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property. If ColumnName is not defined, the value of Field is used.
 >

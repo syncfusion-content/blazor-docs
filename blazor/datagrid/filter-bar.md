@@ -111,7 +111,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLpDMBrqxKqAFyw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBRZQXVzwwUEllq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filter bar modes
 
@@ -231,7 +231,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBJjCrLfIsxkmhV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRtGNVJQGlxynp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Display filter text in pager
 
@@ -353,7 +353,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVfZhtdTBLebNJe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLntmjVpGFdAqJg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Disable filter for specific columns
 
@@ -431,7 +431,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLpZirLweUEtUYL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdZmZBpmkizFjd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Hide filter bar for template column
 
@@ -513,7 +513,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrTNshUBMYiOnUm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBRZcthJcYKgyRl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Filter bar template with custom component
 
@@ -725,7 +725,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTtWrFGgPwVFGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtQjrTYXtTPmW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Operator-based filtering in the filter bar
 

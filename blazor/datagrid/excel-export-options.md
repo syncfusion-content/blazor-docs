@@ -135,7 +135,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBejpMDzobgsSwy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBHDcDLAWnQITam?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Export the selected records 
 
@@ -236,7 +236,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeNziNTHvZEmUU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVntwDVqMmRMXuY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Exporting grouped records
 
@@ -333,7 +333,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSNTiDpmrJDsrV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrdNwZLqscObBez?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations
 
@@ -450,7 +450,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtByNpMDplOKPhoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhnZmNVUCFkWynX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show or hide columns while exporting
 
@@ -562,7 +562,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLeDpWWTcPQCFoF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrdDcjLUderOgQv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Define file name
 
@@ -667,7 +667,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBItJMWfSuvFmBn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhHNcjrKHnAeXVn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customizing columns on export
 
@@ -773,7 +773,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyDpiXSTLiKArB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBRZwXBKnnYFopT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > By default, the exported Excel document uses the **Material** theme styling.
 
@@ -896,7 +896,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyDpiXSTLiKArB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLRZGtVqHvLZXAB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customizing the background color for a Grid in an exported Excel or CSV document
 
@@ -1016,7 +1016,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrSZTCifvHcgdTG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrHXGDLAxYiCjdl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add additional worksheets to Excel document while exporting
 
@@ -1134,7 +1134,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxNHZhrfXTmOyO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrRNcNLUHOwetEF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Encoding support for CSV export
 
@@ -1397,7 +1397,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSZfiWAQxFziVz?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhdjQjVKmZHAvFE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Adding header and footer in the exported Excel document
 
@@ -1643,7 +1643,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVItTsCruFliZJm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBRZwDVKQLMtnCu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Exporting Grid Data as Stream
 
