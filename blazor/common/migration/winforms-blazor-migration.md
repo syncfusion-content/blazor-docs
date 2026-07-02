@@ -623,7 +623,7 @@ button1.Size = new Size(120, 40);
 
 #### Blazor approach
 
-Blazor renders components as HTML and CSS in a web browser. Instead of placing controls at specific coordinates, layouts are usually built using CSS technologies such as Flexbox and Grid.
+Blazor renders components as HTML and CSS in a web browser. Instead of placing controls at specific coordinates, layouts are usually built using CSS technologies.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
