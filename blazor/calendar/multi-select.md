@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multi Selection in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Multi Selection in Syncfusion Blazor Calendar component and much more.
+title: Multi Selection in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Multi Selection in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -25,4 +25,4 @@ public DateTime[] MultipleValues { get; set; } = new DateTime[] { new DateTime(D
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqCrrrBIKclcWx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Multi Selection in Blazor Calendar Component](./images/blazor-calendar-multi-selection.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBdjRsVLblhrqeB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multi Selection in Blazor Calendar Component](./images/blazor-calendar-multi-selection.webp)" %}

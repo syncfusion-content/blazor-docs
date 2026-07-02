@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hierarchical Layout in Blazor Diagram | Syncfusion
-description: Learn here all about how to create hierarchical layout in Syncfusion Blazor Diagram component and more.
+title: Hierarchical Layout in Blazor Diagram | Syncfusion®
+description: Learn here all about how to create hierarchical layout in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Types in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about types in Syncfusion Blazor ProgressBar component and much more details.
+title: Types in Blazor ProgressBar Component | Syncfusion®
+description: Learn about types in Blazor ProgressBar component with examples for linear, circular, and more progress types.
 platform: Blazor
 control: Progress Bar 
 documentation: ug

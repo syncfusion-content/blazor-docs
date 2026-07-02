@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Blazor Scheduler with GraphQL using Hot Chocolate | Syncfusion
+title: Blazor Scheduler with GraphQL using Hot Chocolate | Syncfusion®
 description: Connect Syncfusion’s Blazor Scheduler to a Hot Chocolate GraphQL backend for optimized CRUD, typed queries, and a responsive, scalable .NET application.
 control: Scheduler
 platform: blazor
 documentation: ug
 ---
- 
+
 # Connect Blazor Scheduler with GraphQL using Hot Chocolate
 
 [GraphQL](https://graphql.org/learn/introduction/) is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
@@ -502,7 +502,7 @@ A mutation resolver is a C# method decorated with GraphQL attributes that:
 | **Delete**      | User selects appointment and clicks "Delete"     | `DeleteAppointment`         | `primaryColumnValue` (Id), `primaryColumnName`  |
 | **BatchUpdate** |Editing/deleting **single occurrence** of recurring event<br>| `BatchAppointment`          | `added`: [AppointmentInput!]<br>`changed`: [AppointmentInput!]<br>`deleted`: [AppointmentInput!]<br>`action`: String (optional, e.g. "batch")<br>`primaryColumnName`: String (optional)<br>`additionalParameters`: Any (optional) |
 
-The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the Blazor Scheduler.
+The GraphQL Mutation class has been successfully created and is ready to handle all data modification operations from the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler).
 
 ---
 
@@ -560,25 +560,25 @@ All required packages are now installed.
 @using Syncfusion.Blazor.Data
 ```
 
-#### Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and `<body>`section to add:
+#### Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` section and `<body>`section to add:
 
 ```html
 <head>
-    <!-- Syncfusion Blazor Stylesheet -->
+    <!-- Blazor Stylesheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
 </head>
 <body>
 
-    <!-- Syncfusion Blazor Scripts -->
+    <!-- Blazor Scripts -->
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
 </body>
 ```
-For this project, the bootstrap5.3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
+For this project, the bootstrap5.3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
 
-#### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+#### Register Blazor Service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **Program.cs** file of your Blazor Web App.
+Register the Blazor Service in the **Program.cs** file of your Blazor Web App.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -596,7 +596,7 @@ var app = builder.Build();
 
 ```
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the Scheduler component’s [getting‑started](https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp) documentation.
+Blazor components are now configured and ready to use. For additional guidance, refer to the Scheduler component’s [getting‑started](https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp) documentation.
 
 ### Step 3: Create the Data Model
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: PostgreSQL Data Binding in Blazor Scheduler Component | Syncfusion
-description: Learn about consuming data from PostgreSQL Server and binding it to Syncfusion Blazor Scheduler Component, and performing CRUD operations.
+description: Learn about consuming data from PostgreSQL Server and binding it to Blazor Scheduler Component, and performing CRUD operations.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 # Connecting PostgreSQL to Blazor Scheduler Using Entity Framework
 
-The [Blazor Scheduler component](https://www.syncfusion.com/blazor-components/blazor-scheduler) supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries for managing appointments and calendar events.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component supports binding data from a PostgreSQL database using Entity Framework Core (EF Core). This modern approach provides a more maintainable and type-safe alternative to raw SQL queries for managing appointments and calendar events.
 
 ## What is Entity Framework Core?
 
@@ -580,7 +580,7 @@ The `Program.cs` file is where application services are registered and configure
     builder.Services.AddRazorComponents()
         .AddInteractiveServerComponents();
 
-    // Register Syncfusion Blazor service
+    // Register Blazor service
 
     builder.Services.AddSyncfusionBlazor();
 
@@ -635,7 +635,7 @@ The `Program.cs` file is where application services are registered and configure
 #### Explanation:
 
 - **`AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true)`**: Prevents PostgreSQL from automatically converting DateTime to UTC, avoiding timezone offset issues.
-- **`AddSyncfusionBlazor()`**: Registers Syncfusion Blazor components (Scheduler, themes, etc.).
+- **`AddSyncfusionBlazor()`**: Registers Blazor components (Scheduler, themes, etc.).
 - **`AddDbContext<ApplicationDbContext>`**: Registers the DbContext with PostgreSQL as the database provider using `UseNpgsql()`.
 - **Connection String Validation**: Ensures the connection string is configured before attempting to connect.
 - **`EnableSensitiveDataLogging()`**: Enabled in development to log detailed information about database operations (useful for debugging).
@@ -667,16 +667,16 @@ Syncfusion is a library that provides pre-built UI components like Scheduler, wh
     @using Syncfusion.Blazor.Data
     ```
 
-3. Add the Syncfusion stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` and `<body>`section to add:
+3. Add the stylesheet and scripts in the `Components/App.razor` file. Find the `<head>` and `<body>`section to add:
 
     
     ```html
     <head>
-        <!-- Syncfusion Blazor Stylesheet -->
+        <!-- Blazor Stylesheet -->
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.3.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Syncfusion Blazor Scripts -->
+        <!-- Blazor Scripts -->
         <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     </body>
     ```
@@ -688,11 +688,11 @@ Syncfusion is a library that provides pre-built UI components like Scheduler, wh
 - `fluent.css` - Microsoft Fluent Design theme
 - `tailwind3.css` - Tailwind CSS theme
 
-For this project, the **bootstrap5.3** theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Syncfusion Blazor Components Appearance documentation](https://blazor.syncfusion.com/documentation/appearance/themes) to learn more about theming and customization options.
+For this project, the **bootstrap5.3** theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance documentation](https://blazor.syncfusion.com/documentation/appearance/themes) to learn more about theming and customization options.
 
-> **Critical**: The Syncfusion JavaScript file (`syncfusion-blazor.min.js`) is **REQUIRED** for Syncfusion components to work with InteractiveServer render mode. Without this script, you'll see JavaScript interop errors.
+> **Critical**: The Syncfusion JavaScript file (`syncfusion-blazor.min.js`) is **REQUIRED** for Blazor components to work with InteractiveServer render mode. Without this script, you'll see JavaScript interop errors.
 
-Syncfusion components are now configured and ready to use. For additional guidance, refer to the [Scheduler component's getting-started documentation](https://blazor.syncfusion.com/documentation/scheduler/getting-started).
+Blazor components are now configured and ready to use. For additional guidance, refer to the [Scheduler component's getting-started documentation](https://blazor.syncfusion.com/documentation/scheduler/getting-started).
 
 ### Step 2: Create and Apply Database Migrations
 
@@ -993,7 +993,7 @@ A complete, working sample implementation is available in the [GitHub repository
 
 **Error**: `Could not find 'sfBlazor.Toolbar.initialize'` or `'sfBlazor' was undefined`
 
-**Solution**: Add Syncfusion JavaScript file in `App.razor` before closing `</body>` tag:
+**Solution**: Add JavaScript file in `App.razor` before closing `</body>` tag:
 ```html
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```

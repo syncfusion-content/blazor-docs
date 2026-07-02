@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Size and Color with Blazor AppBar Component | Syncfusion
+title: Size and Color with Blazor AppBar Component | Syncfusion®
 description: Check out and learn about Size and Color with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Steps in Blazor Stepper Component | Syncfusion
+title: Steps in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Steps with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper

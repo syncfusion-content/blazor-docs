@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable/Disable Context Menu items in Blazor ContextMenu | Syncfusion
-description: Learn here all about Enable/Disable Context Menu items in Syncfusion Blazor ContextMenu component and more.
+title: Enable/Disable Context Menu items in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Enable/Disable Context Menu items in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -63,6 +63,6 @@ In the following example, the **Display Settings** in parent items is disabled d
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUiVVGAalMSCbE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling or Disabling Items in Blazor ContextMenu](./../images/blazor-contextmenu-enable-disable-item.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrxtRWupOwRWZMh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Enabling or Disabling Items in Blazor ContextMenu](./../images/blazor-contextmenu-enable-disable-item.webp)" %}
 
 N> To disable sub menu items, use the `OnOpen` event.

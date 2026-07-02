@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zooming in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn here all about Zooming functionality in the Syncfusion Blazor Stock Chart component.
+title: Zooming in Blazor Stock Chart Component | Syncfusion®
+description: Check out and learn here all about Zooming functionality in the Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart
 documentation: ug
