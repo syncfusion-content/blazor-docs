@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor MultiColumn ComboBox component and more.
+title: Style and Appearance in Blazor MultiColumn ComboBox | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

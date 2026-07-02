@@ -47,7 +47,7 @@ To change the annotation content dynamically, use the [SetAnnotationValueAsync](
     } 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgsBrwgTGlriiD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLRNRrnKyjcQRLh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## SetPointerValueAsync
 
@@ -81,7 +81,7 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrqsVBwKfbNwfqv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge](./images/blazor-circulargauge.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVxNdVHUIWstkIv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge](./images/blazor-circulargauge.webp)" %}
 
 ## SetRangeValue
 
@@ -118,7 +118,7 @@ To change the start and end of a range in axis, use the [SetRangeValue](https://
     }
 }
  ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUiBhcUpvhczFW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHtHBxKeMgARef?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## RefreshAsync
 
@@ -147,4 +147,4 @@ The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Circu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrUMLrcAJPpcAFo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBRZxBRqyMGJsig?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
