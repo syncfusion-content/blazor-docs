@@ -153,3 +153,5 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 N> If encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor File Manager Component](images/blazor-filemanager-component.webp)
+
+N> Looking for the full Blazor File Manager Component component overview, features, pricing, and documentation? Visit the [Blazor File Manager Component](https://www.syncfusion.com/blazor-components/blazor-file-manager) page.
