@@ -121,13 +121,13 @@ Format: `# Getting Started with Blazor {AppType}`
 #### Section 6: `## Manually creating a project`
 Must contain the following **H3** subsections in order:
 
-- `### Create a new Blazor {AppType}`
-- `### Install the required Blazor packages`
+- `### Create a new Blazor {AppType}` — Must use `{% tabcontents %}` with exactly **three tabs**: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
+- `### Install the required Blazor packages` — Must use `{% tabcontents %}` with exactly **three tabs**: `Visual Studio`, `Visual Studio Code`, `.NET CLI`; both `Syncfusion.Blazor.{Component}` and `Syncfusion.Blazor.Themes` must be **hyperlinked to their nuget.org pages**
 - `### Add import namespaces`
 - `### Register the Blazor service`
 - `### Add stylesheet and script resources`
 - `### Add Blazor {ComponentName} component`
-- `**Run the application**` (bold heading, not H3)
+- `**Run the application**` (bold heading, not H3) — Must use `{% tabcontents %}` with exactly **three tabs**: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
 
 #### Section 7: Preview sample
 - Must end with a `{% previewsample %}` shortcode with a Blazor Playground embed URL and a `backgroundimage` attribute
@@ -145,11 +145,11 @@ layout: post
 title: Getting Started with Blazor {ComponentName} in Blazor {AppType} | Syncfusion
 description: {Relevant description}
 platform: Blazor
-control: {ComponentName}
+component: {ComponentName}
 documentation: ug
 ---
 ```
-- `control` field must match the component name (e.g., `TreeGrid`, `Scheduler`, `DataGrid`)
+- `component` field must match the component name (e.g., `TreeGrid`, `Scheduler`, `DataGrid`)
 - Title must follow the pattern: `Getting Started with Blazor {ComponentName} in Blazor {AppType} | Syncfusion`
 
 #### Section 2: H1 Title
@@ -162,7 +162,10 @@ Format: `# Getting Started with Blazor {ComponentName} [Component] in Blazor {Ap
 
 #### Section 3: Introductory paragraph
 - Must say "This guide explains how to integrate the [Blazor {ComponentName}](...) component in your Blazor {AppType} using [Visual Studio](...), [Visual Studio Code](...), and the [.NET CLI](...)."
-- Component link must point to `https://www.syncfusion.com/blazor-components/blazor-{component-slug}`
+- The **component name must be a hyperlink** pointing to its Feature Tour (FT) page: `https://www.syncfusion.com/blazor-components/blazor-{component-slug}`
+  - ✅ `[Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid)`
+  - ❌ `Blazor TreeGrid` (plain text — link missing)
+  - ❌ `[Blazor TreeGrid](https://blazor.syncfusion.com/...)` (wrong domain — must be syncfusion.com/blazor-components)
 - Must NOT use "Syncfusion Blazor {ComponentName}" — must be "Blazor {ComponentName}"
 
 #### Section 4: `## Create a new Blazor {AppType}` (H2)
@@ -173,11 +176,15 @@ Format: `# Getting Started with Blazor {ComponentName} [Component] in Blazor {Ap
 - Must be followed by a note about configuring Interactive render mode and Interactivity location (for Web App and Server App)
 
 #### Section 5: `## Install the required Blazor packages` (H2)
-- Must list `Syncfusion.Blazor.{Component}` and `Syncfusion.Blazor.Themes` NuGet packages
-- Must link both packages to nuget.org
-- Must link to the NuGet packages documentation page
+- Must list `Syncfusion.Blazor.{Component}` and `Syncfusion.Blazor.Themes` NuGet packages in prose
+- **Both NuGet package names must be hyperlinked** to their nuget.org pages:
+  - `Syncfusion.Blazor.{Component}` → `https://www.nuget.org/packages/Syncfusion.Blazor.{Component}/`
+  - `Syncfusion.Blazor.Themes` → `https://www.nuget.org/packages/Syncfusion.Blazor.Themes/`
+  - ✅ `[Syncfusion.Blazor.TreeGrid](https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/)`
+  - ❌ `Syncfusion.Blazor.TreeGrid` (plain text — link missing)
+- Must link to the NuGet packages documentation page: `https://blazor.syncfusion.com/documentation/nuget-packages`
 - For Blazor Web App with WebAssembly/Auto: must note packages should be installed in the `.Client` project
-- Must use **three tabs**: Visual Studio, Visual Studio Code, .NET CLI
+- Must use **three tabs**: `Visual Studio`, `Visual Studio Code`, `.NET CLI` — all three are mandatory; a missing tab is a Major finding
 - Visual Studio tab: NuGet Package Manager UI steps + Package Manager Console commands
 - Visual Studio Code tab: `dotnet add package` terminal commands
 - .NET CLI tab: `dotnet add package` command prompt commands
@@ -250,11 +257,16 @@ For each file, mark it **in-progress** in the todo list, then systematically che
 1. **Terminology scan** — Search for incorrect `Syncfusion` usage in prose (outside packages/namespaces/code)
 2. **Structure check** — Apply the correct structure (A or B) and verify all required sections exist in the correct order; flag any sections that belong only to common guides appearing in component-specific guides (e.g., "Using Playground", "Using Blazor Templates", "Manually creating a project")
 3. **Heading levels** — Common guides use H3 for integration steps (under `## Manually creating a project`); Component-specific guides use **H2** directly
-4. **Tab coverage** — Every tabbed section must have all three tabs (Visual Studio, Visual Studio Code, .NET CLI)
-5. **Code sample validation** — Verify NuGet commands, namespace imports, service registration, stylesheet/script paths, component tag, and render mode directive
-6. **Links validation** — Check that nuget.org, syncfusion.com, and learn.microsoft.com links are present and correctly formatted; for component-specific guides, verify the Visual Studio tab links to the common getting-started doc
-7. **Version placeholder** — `{{ site.releaseversion }}` must be used for NuGet version; never hardcode a version number
-8. **Reference template comparison** — Compare the reviewed file section-by-section against the reference template; flag any missing or extra content
+4. **Tab coverage** — The three sections below are **mandatory multi-tab sections**; verify each contains exactly three tabs (`Visual Studio`, `Visual Studio Code`, `.NET CLI`). A missing tab in any of these is a ⚠️ Major finding:
+   - **Create a new app** section (H3 in Common, H2 in Component-specific)
+   - **Install the required Blazor packages** section (H3 in Common, H2 in Component-specific)
+   - **Run the application** section (bold heading in both types)
+5. **Component hyperlink** — The component name in the introductory paragraph must be a hyperlink to the Feature Tour (FT) page at `https://www.syncfusion.com/blazor-components/blazor-{component-slug}`. A missing or incorrect link is a ❌ Critical finding.
+6. **NuGet hyperlinks** — In the "Install packages" section, both `Syncfusion.Blazor.{Component}` and `Syncfusion.Blazor.Themes` must be hyperlinked to their respective nuget.org pages. Plain text package names (without links) are a ⚠️ Major finding.
+7. **Code sample validation** — Verify NuGet commands, namespace imports, service registration, stylesheet/script paths, component tag, and render mode directive
+8. **Links validation** — Check that nuget.org, syncfusion.com, and learn.microsoft.com links are present and correctly formatted; for component-specific guides, verify the Visual Studio tab links to the common getting-started doc
+9. **Version placeholder** — `{{ site.releaseversion }}` must be used for NuGet version; never hardcode a version number
+10. **Reference template comparison** — Compare the reviewed file section-by-section against the reference template; flag any missing or extra content
 
 Mark file as **completed** after review.
 
@@ -335,9 +347,9 @@ Reply with one of the following:
 - [ ] Sections are not duplicated or out of order
 
 ### Tab Coverage (applies to both guide types)
-- [ ] "Create a new app" section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
-- [ ] "Install packages" section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
-- [ ] "Run the application" section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
+- [ ] **"Create a new app"** section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI` *(missing tab = ⚠️ Major)*
+- [ ] **"Install packages"** section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI` *(missing tab = ⚠️ Major)*
+- [ ] **"Run the application"** section has exactly three tabs: `Visual Studio`, `Visual Studio Code`, `.NET CLI` *(missing tab = ⚠️ Major)*
 - [ ] Tab names use consistent exact casing: `Visual Studio`, `Visual Studio Code`, `.NET CLI`
 - [ ] *(Component-specific only)* Visual Studio tab in "Create a new app" links to the corresponding common Getting Started doc
 
@@ -372,8 +384,9 @@ Reply with one of the following:
 - [ ] No render mode directive needed (WASM is always interactive)
 
 ### Links and References (applies to both guide types)
-- [ ] Component links point to `https://www.syncfusion.com/blazor-components/blazor-{component-slug}`
-- [ ] NuGet package links point to `https://www.nuget.org/packages/Syncfusion.Blazor.{Component}/`
+- [ ] **Component name in the intro paragraph is a hyperlink** to the FT page: `https://www.syncfusion.com/blazor-components/blazor-{component-slug}` *(plain text = ❌ Critical)*
+- [ ] **`Syncfusion.Blazor.{Component}` in "Install packages" section is hyperlinked** to `https://www.nuget.org/packages/Syncfusion.Blazor.{Component}/` *(plain text = ⚠️ Major)*
+- [ ] **`Syncfusion.Blazor.Themes` in "Install packages" section is hyperlinked** to `https://www.nuget.org/packages/Syncfusion.Blazor.Themes/` *(plain text = ⚠️ Major)*
 - [ ] "NuGet packages" doc link points to `https://blazor.syncfusion.com/documentation/nuget-packages`
 - [ ] Microsoft Templates links use `view=aspnetcore-{version}` parameter and correct pivot
 - [ ] Visual Studio integration link: `https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio`
