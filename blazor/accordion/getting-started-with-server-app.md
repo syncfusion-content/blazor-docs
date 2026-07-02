@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Accordion in Server App | Syncfusion®
+title: Getting Started with Blazor Accordion in Server App | Syncfusion®
 description: Checkout and learn about getting started with Blazor Accordion component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Accordion
