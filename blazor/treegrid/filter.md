@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor TreeGrid Component | Syncfusion
-description: Learn how to enable and configure filtering in the Syncfusion Blazor TreeGrid component and much more details.
+title: Filtering in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn how to enable and configure filtering in the Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
