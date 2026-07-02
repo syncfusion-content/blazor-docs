@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retrieve Node IconCss Dynamically in Blazor TreeView | Syncfusion
-description: Learn how to dynamically retrieve the IconCss class bound to a TreeView node upon user interaction in the Syncfusion Blazor TreeView component.
+description: Learn how to dynamically retrieve the IconCss class bound to a TreeView node upon user interaction in the Blazor TreeView component.
 platform: Blazor
 control: TreeView
 documentation: ug
