@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor In-place Editor in Server App | Syncfusion
+title: Getting Started with In-place Editor in Server App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor In-place Editor Component in Blazor Server App.
 platform: Blazor
 component: In-place Editor
@@ -187,7 +187,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     </tr>
 </table>
 
-@code
+@code 
 {
     public string TextValue = "Andrew";
 }
@@ -291,8 +291,6 @@ The following code explains how to initialize a simple In-place Editor with popu
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhIXOjhAIsuBPDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.gif)" %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZryjkXLAeqHmuVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.gif)" %}
 
@@ -413,24 +411,24 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 </div>
 
 <style>
-       #container {
-         text-align: center;
-         margin-top: 50px;
-       }
+    #container {
+        text-align: center;
+        margin-top: 50px;
+    }
 
-       #container table {
-          width: 400px;
-          margin: auto;
-       }
+        #container table {
+            width: 400px;
+            margin: auto;
+        }
 
-       #container table td {
-           height: 70px;
-           width: 150px;
-       }
+            #container table td {
+                height: 70px;
+                width: 150px;
+            }
 
-       #container table .left {
-            text-align: left;
-       }
+            #container table .left {
+                text-align: left;
+            }
 </style>
 
 @code 
@@ -525,7 +523,7 @@ After submit, the edited data is sent to the server, and the updated value is re
 </style>
 
 @code 
-{    
+{
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";

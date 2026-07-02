@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sidebar for specific content in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn here all about Sidebar for specific content in Syncfusion Blazor Sidebar component and more.
+title: Sidebar for specific content in Blazor Sidebar Component | Syncfusion®
+description: Checkout and learn here all about Sidebar for specific content in Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -125,4 +125,4 @@ In the following sample, click the toggle button to expand or collapse the Sideb
 
 ```
 
-![Blazor Sidebar with Custom Context](./images/blazor-sidebar-custom-context.png)
+![Blazor Sidebar with Custom Context](./images/blazor-sidebar-custom-context.webp)

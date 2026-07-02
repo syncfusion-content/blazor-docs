@@ -268,7 +268,7 @@ The following example shows how to initialize a simple In-place Editor with a po
     </tr>
 </table>
 
-@code 
+@code
 {
     public string AutoValue = "Australia";
 
@@ -290,8 +290,6 @@ The following example shows how to initialize a simple In-place Editor with a po
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhIXOjhAIsuBPDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.gif)" %}
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZryjkXLAeqHmuVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.gif)" %}
 
 ## Configuring DropDownList
@@ -312,7 +310,7 @@ Render the Blazor DropDownList by setting the [Type](https://help.syncfusion.com
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code 
+@code
 {
     public string DropdownValue = "Game4";
 
@@ -354,7 +352,7 @@ Render the Blazor `DatePicker` by setting the `Type` property to `Date` and conf
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code
+@code 
 {
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 }
@@ -522,8 +520,8 @@ After submission, the edited data is sent to the server, and the updated value i
     }
 </style>
 
-@code
-{    
+@code 
+{
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";

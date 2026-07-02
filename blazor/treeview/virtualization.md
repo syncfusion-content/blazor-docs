@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor TreeView component and much more details.
+title: Virtualization in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Virtualization in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -79,6 +79,6 @@ The following sample shows the example of Virtualization.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSCNsUVVQcEAYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Virtualization](./images/virtualization.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVSCNsUVVQcEAYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Virtualization](./images/Virtualization.webp)" %}
 
 N> Virtualization is not compatible with expand and collapse animation. Select all action will select only visible items in UI.
