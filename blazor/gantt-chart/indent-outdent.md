@@ -9,7 +9,7 @@ documentation: ug
 
 # Indent and outdent in Blazor Gantt Chart Component
 
-The Blazor Gantt Chart component provides built-in support for indenting and outdenting rows, allowing task levels to be updated within the hierarchical structure.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides built-in support for indenting and outdenting rows, allowing task levels to be updated within the hierarchical structure.
 
  * **Indent** – Moves a selected row one level deeper, making it the last child of its previous row.
  * **Outdent** – Shifts a row one level up, placing it as a sibling to its parent.
