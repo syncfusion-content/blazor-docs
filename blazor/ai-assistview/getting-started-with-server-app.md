@@ -207,7 +207,7 @@ N> If the Interactivity Location is set to `Global`, the render mode is automati
 {% endhighlight %}
 {% endtabs %}
 
-To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor AI AssistView component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Blazor AI AssistView component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVdtnMMrtxIxIqw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AI AssistView default prompt](./images/default-prompt.webp)" %}
 
