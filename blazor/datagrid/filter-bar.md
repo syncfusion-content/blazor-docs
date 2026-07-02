@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter Bar in Blazor DataGrid | Syncfusion
-description: Learn about the Filter Bar feature in Syncfusion Blazor DataGrid, including configuration, usage, and customization options.
+title: Filter Bar in Blazor DataGrid | Syncfusion®
+description: Learn about the Filter Bar feature in Blazor DataGrid, including configuration, usage, and customization options.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -726,3 +726,113 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTtWrFGgPwVFGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Operator-based filtering in the filter bar
+
+The Syncfusion Blazor DataGrid supports operator-based filtering in the filter bar through the **ShowFilterBarOperator** property in [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
+
+When the **ShowFilterBarOperator** property is enabled, clicking the filter icon in a filter bar cell displays an operator dropdown menu. A filtering condition appropriate to the column type can be selected, removing the need to type operator expressions manually.
+
+Each filter bar cell also includes a **clear filter icon** that reflects the filter state of its column. The icon is **enabled** when a filter is applied to the column and **disabled** otherwise, allowing active filters to be identified and removed quickly. This column-specific behavior improves control and visibility when managing filters across multiple columns.
+
+**Benefits of operator-based filtering**
+
+* Removes the need to enter operator expressions manually.
+* Provides type-safe input controls based on column data type.
+* Improves filtering accuracy and consistency across data types.
+* Offers a structured filtering interface with dedicated controls for each column.
+
+**Column-specific filter controls**
+
+When the **ShowFilterBarOperator** property is enabled, the filter bar dynamically generates input controls based on the data type of each column, ensuring a type-safe filtering experience.
+
+| Data Type | Filter Control |
+|-------------|----------------|
+| String | Text input |
+| Numeric | Numeric input |
+| DateOnly | Date picker |
+| TimeOnly | Time picker |
+| DateTime | DateTime picker |
+| Boolean | Dropdown (True/False) |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" AllowFiltering="true" AllowPaging="true" Height="273px">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridFilterSettings Type="FilterType.FilterBar" ShowFilterBarOperator="true"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.IsSelected) HeaderText="Is Selected" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName, bool IsSelected)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+        this.IsSelected = IsSelected;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+
+            int OrderID = 10247;
+
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali", false));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten", true));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes", false));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock", false));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices", false));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes", true));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese", false));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt", false));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import", true));
+                OrderID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public bool IsSelected { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+> The **ShowFilterBarOperator** feature is applicable only when the Grid uses the default **FilterType.FilterBar**. 

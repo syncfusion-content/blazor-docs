@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BPMN Shapes in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create various BPMN Shapes in Syncfusion Blazor Diagram component and more.
+title: BPMN Shapes in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create various BPMN Shapes in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -47,7 +47,7 @@ The following code example demonstrates how to create a simple BPMN Task shape.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLIMZDRqphwEgmr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhnXHLIpoMKuFfT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnShape/BpmnShape.razor)
 

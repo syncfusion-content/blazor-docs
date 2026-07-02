@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor RichTextEditor in WebAssembly | Syncfusion
-description: Checkout and learn about getting started with Blazor WebAssembly and Blazor RichTextEditor Component in Visual Studio and much more.
+title: Getting Started with RichTextEditor in WebAssembly | Syncfusion®
+description: Learn how to get started with Blazor RichTextEditor in a WebAssembly application with Visual Studio and detailed examples.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -19,9 +19,9 @@ This article provides a step-by-step instructions for building Blazor WebAssembl
 
 ## Create a Blazor WebAssembly App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install required Blazor packages
 
 Install the following NuGet packages in your project:
 
@@ -81,9 +81,9 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Blazor components packages are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.RichTextEditor` namespace.
 
@@ -96,7 +96,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Now, register the Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
@@ -135,10 +135,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor RichTextEditor component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the **~/Pages/Index.razor** file.
+Add the Blazor RichTextEditor component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfRichTextEditor>
 <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
@@ -149,6 +149,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor c
 {% endhighlight %}
 {% endtabs %}
 
-To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor RichTextEditor component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Blazor RichTextEditor component in the default web browser.
 
 ![Blazor RichTextEditor Component](../images/blazor-richtexteditor-component.webp)

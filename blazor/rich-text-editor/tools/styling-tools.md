@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styling tools in Blazor Rich Text Editor Component | Syncfusion
-description: Checkout and learn here all about Styling tools in Syncfusion Blazor Rich Text Editor component and more.
+title: Styling tools in Blazor Rich Text Editor Component | Syncfusion®
+description: Checkout and learn here all about Styling tools in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -60,7 +60,6 @@ The following font style links are referred in the page.
 * For **.NET 10** app, refer style in the `<head>` of the **~/Components/App.razor** file.
 
 {% tabs %}
-
 {% highlight cshtml tabtitle=".NET 10 (~/App.razor)" %}
 
 <head>

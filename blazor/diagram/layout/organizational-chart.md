@@ -104,7 +104,7 @@ The following code example illustrates how to create an organizational chart.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/OrganizationLayout1.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVIstZxJweMEFvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Chart example](../images/blazor-organization-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdNxhxphWWIdTF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Organization Chart example](../images/blazor-organization-chart.webp)" %}
 
 Organizational chart layout starts parsing from the root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides information about a node’s children and the way to arrange them (direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained below.
 
@@ -226,7 +226,7 @@ The following code example illustrates how to set the vertical right arrangement
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/OrganizationLayout2.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrIsNDxzGyEpDVX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrHNHhxfLLrqFyL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.webp)" %}
 
 ### How to Update Layout Spacing
 
@@ -368,7 +368,7 @@ The following code example illustrates how to add assistants to the layout.
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrIiZZHJcdHxLdP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRtRLnzhAKKwHd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to Refresh the Layout
 

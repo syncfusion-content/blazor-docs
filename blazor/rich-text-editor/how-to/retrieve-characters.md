@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Get Character Count in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn about how to get character count of characters in Blazor RichTextEditor component of Syncfusion, and more details.
+title: How to Get Character Count in Blazor RichTextEditor | Syncfusion®
+description: Learn how to retrieve the character count in Blazor RichTextEditor component with examples and detailed steps.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -19,12 +19,10 @@ To retrieve the number of characters in the Rich Text Editor content, use the [G
 @using Syncfusion.Blazor.Popups
 
 <SfButton @onclick="@GetCharCount">Get Char Count</SfButton>
-<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px"
-          Width="400px" ShowCloseIcon="true">
+<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px" Width="400px" ShowCloseIcon="true">
     <DialogButtons>
         <DialogButton Content="Ok" IsPrimary="true" OnClick="@DlgButtonClick" />
     </DialogButtons>
-
 </SfDialog>
 <SfRichTextEditor @ref="RteObj" @bind-Value="@RteValue"/>
 

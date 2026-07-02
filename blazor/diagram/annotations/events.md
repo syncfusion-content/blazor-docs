@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Events in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn how to use annotation events in the Syncfusion Blazor Diagram component and much more details.
+title: Annotation Events in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn how to use annotation events in the Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -61,7 +61,7 @@ The following code example shows how to register and get notifications from the 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoijjnBnkUtSTH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxtRrHqFMJdiFC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/TextChangedEvent.razor)
 

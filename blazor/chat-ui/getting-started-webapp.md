@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Chat UI in Blazor Web App | | Syncfusion®
+title: Getting started with Chat UI in Blazor Web App | Syncfusion®
 description: Checkout and learn the documentation for getting started with Blazor Chat UI Components in Blazor Web App.
 platform: Blazor
 control: Chat UI
@@ -185,7 +185,7 @@ User = "Albert"
 {% endhighlight %}
 {% endtabs %}
 
-To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">®</sup> Blazor Chat UI component in the default web browser.
+To launch the application, press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Blazor Chat UI component in the default web browser.
 
-{% previewsample "(https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5)" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLxXdWhTmigQgxT?appbar=flase&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.webp)" %}
 

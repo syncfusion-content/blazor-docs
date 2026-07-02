@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiple Segments in Blazor Diagram Component | Syncfusion
-description: Check out and learn about Multiple Segments in the Syncfusion Blazor Diagram component and much more details.
+title: Multiple Segments in Blazor Diagram Component | Syncfusion®
+description: Check out and learn about how to create connectors with Multiple Segments in the Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -60,7 +60,7 @@ Connectors can include a sequence of segment objects. To create a connector with
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/MultipleSegments.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheMXDnKoKLrXqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhRZRroJwivHxsq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.webp)" %}
 
 * Similarly, you can create multiple segments for all the connector type.
 

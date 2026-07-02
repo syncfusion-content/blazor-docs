@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in Blazor Diagram Component | Syncfusion
-description: Checkout and Learn how to create, add, remove, and update annotation for nodes and connectors in Syncfusion Blazor Diagram component and more.
+title: Annotation in Blazor Diagram Component | Syncfusion®
+description: Checkout and Learn how to create, add, remove, and update annotation for nodes and connectors in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -71,7 +71,7 @@ The following code example demonstrates how to create an annotation for a node a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjroijNRrQAsIOIt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRtRBdglUFtzei?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/CreateAnnotation.razor)
 
@@ -126,7 +126,7 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIMjtxrwUyoCqW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLnZdBxqFJjqhnA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AddAnnotationAtRunTime.razor)
 
@@ -192,7 +192,7 @@ An annotation can be removed from a node or connector's `Annotations` collection
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjByiXZHBwzKleyR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhHjnrdKPzTierC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RemoveAnnotationUsingRemoveAt.razor)
 
@@ -258,7 +258,7 @@ The following code sample shows how to change the content of a node's annotation
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIitZxBcSXRxWo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhdtnhxKFfGLdvX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/UpdateAnnotation.razor)
 
@@ -270,7 +270,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to animate connectors using annotation template in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotation template-in-angular-diagram )
 
-* [How to dynamically create and connect diagram nodes with annotations via ports in syncfusion<sup style="font-size:70%">&reg;</sup> blazor diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram) 
+* [How to dynamically create and connect diagram nodes with annotations via ports in blazor diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram) 
 * [How to Prevent text Overflow and display excess Content on hover in a diagram](https://support.syncfusion.com/kb/article/18726/how-to-prevent-text-overflow-and-display-excess-content-on-hover-in-a-diagram)
 
 * [How to generate a hierarchical layout with annotations at runtime](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)

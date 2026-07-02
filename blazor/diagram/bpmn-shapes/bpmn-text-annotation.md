@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BPMN Text Annotation in Diagram | Syncfusion
-description: Learn here all about how to create BPMN text annotation in Syncfusion Blazor Diagram component and more.
+title: BPMN Text Annotation in Diagram | Syncfusion®
+description: Learn here all about how to create BPMN text annotation in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -68,7 +68,7 @@ documentation: ug
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIsXNxgTgIKWVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVnXHryzyhNjdin?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotationSample.razor)
 
@@ -136,7 +136,7 @@ The following code example represents how to create a TextAnnotation and connect
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIWNXnKpTiBXyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrRXxBIforKpQCJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnTextAnnotation/TextAnnotationTargetSample.razor)
 

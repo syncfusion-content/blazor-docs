@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector Interactions in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram interaction in Syncfusion Blazor Diagram component and much more details.
+title: Connector Interactions in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about diagram interaction in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -62,7 +62,7 @@ Select an element by clicking it. A single click clears any previous selection a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLSMDtPLbKuecIg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBHXHrOogglROnV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramSelectionEvent.razor)
 
@@ -134,7 +134,7 @@ In the following example, the node can be selected with the first click and unse
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLSiNDbBbpTKpzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLdDnruyqJCNztG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/UnSelectSample.razor)
 
@@ -262,7 +262,7 @@ When RubberBandSelectionMode is set to [PartialIntersect](https://help.syncfusio
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthysXZvLFILllHo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLnjdhaSASjtAFU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/RubberBandSelectionModeSample.razor)
 
@@ -372,7 +372,7 @@ The DiagramSelectionSettings provides access to:
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSsDjFhlxZSZvL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHXRBuSqShJZzb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/CurrentSelection.razor)
 
@@ -578,13 +578,13 @@ Clone is a virtual method of the node used to create a copy of a diagram object.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVICNXlrlnvNlVu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrHXRLEIKIvirKV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/CloneSelectedItems.razor)
 ![Grouping in Blazor Diagram](images/CloneSelection.webp)
 
 ### How to Access and Modify Selected Nodes and Connectors at Runtime
-Access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
+Access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
 ```
 @page "/"
 @using Syncfusion.Blazor.Diagram
@@ -635,7 +635,7 @@ SelectionChanged="OnSelectionChanged">
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBIMDNbBPcaeybR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHDRrOSKxUlDfK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/SelectedElements.razor)
 ## How to Drag Elements
@@ -683,7 +683,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLosXtvrPFdHwTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhxDxLOyUHdJacK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramPositionEvent.razor)
 For more information about dragging, refer [Node Drag](./nodes/interaction#how-to-drag-the-node)
@@ -735,7 +735,7 @@ For more information about dragging, refer [Node Drag](./nodes/interaction#how-t
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVostNPrvOZhuso?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBRNRLESKQiLnFK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramSizeEvent.razor)
 
@@ -791,7 +791,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBIiZZlhvYIDpvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhxDxLYyAQqbjTG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramRotateEvent.razor)
 
@@ -887,7 +887,7 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIiDDFLkXDqWqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhHXnhkoAcnsTPH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/DiagramConnectionEvent.razor)
 
@@ -971,7 +971,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoiNXFhEtTKrJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVRtxBkyqcasKGd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/SegmentEditing.razor)
 
@@ -1044,7 +1044,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVoWNtPgqsPzFca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrdjnhYyqvVaHIr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Interaction/MouseClick.razor)
 
@@ -1093,17 +1093,17 @@ The following table illustrates those commands with the associated key values.
 
 * [How to Get the Mouse Position When Hovering Over the Diagram Area in Blazor Diagram](https://support.syncfusion.com/kb/article/18960/how-to-get-the-mouse-position-when-hovering-over-the-diagram-area-in-blazor-diagram)
 
-* [How to Drag a Node Programmatically Without User Interaction in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
+* [How to Drag a Node Programmatically Without User Interaction in Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
 
 * [How to Add Nodes and Connectors at Runtime Asynchronously in Blazor Diagram Component](https://support.syncfusion.com/kb/article/16312/how-to-add-nodes-and-connectors-at-runtime-asynchronously-in-blazor-diagram-component)
 
-* [How to Identify the Clicked Diagram Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+* [How to Identify the Clicked Diagram Elements in Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
 
 * [How to Notify the Double Click Event in Blazor Diagram](https://support.syncfusion.com/kb/article/16014/how-to-notify-the-double-click-event-in-blazor-diagram)
 
-* [How to Add Nodes or Connectors by Clicking on the Diagram in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
+* [How to Add Nodes or Connectors by Clicking on the Diagram in Blazor Diagram Component](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
 
-* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+* [How to Disable Node Interaction While Maintaining Layout Updates in Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
 
 * [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)
 

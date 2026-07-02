@@ -1,4 +1,4 @@
-# Syncfusion Blazor MCP Server Release Notes
+# Blazor MCP Server Release Notes
 
 This document provides information about the changes and new features included in each version of the [@syncfusion/blazor-assistant](https://www.npmjs.com/package/@syncfusion/blazor-assistant) MCP server package.
 
@@ -9,7 +9,7 @@ This document provides information about the changes and new features included i
 - Introduced **Agentic UI Builder** — a composite MCP tool that analyzes your UI requirements and coordinates specialized tools (Layout, Component, and Styling) to generate complete Blazor applications using natural language prompts, significantly boosting your productivity and accelerating development workflow.
 - Agentic UI Builder sub-tools:
   - **Layout Tool** (#sf_blazor_layout) — Generates responsive UI blocks, grids, dashboards, and pre-built patterns.
-  - **Component Tool** (#sf_blazor_component) — Provides full metadata, APIs, props, events, and configuration for 145+ Syncfusion Blazor components.
+  - **Component Tool** (#sf_blazor_component) — Provides full metadata, APIs, props, events, and configuration for 145+ Blazor components.
   - **Styling Tool** (#sf_blazor_style) — Applies theme configurations (Tailwind3 CSS, Bootstrap 5.3, Material 3, Fluent 2), dark mode, color customization, and icon integration.
 - Unlimited, unrestricted access with strict privacy (no project file access, no prompt storage or training).
 
@@ -34,6 +34,6 @@ This document provides information about the changes and new features included i
 
 ### Features
 
-- Initial release of AI Coding Assistant for Syncfusion Blazor components.
-- Provides context-aware assistance for building Blazor applications with Syncfusion components.
+- Initial release of AI Coding Assistant for Blazor components.
+- Provides context-aware assistance for building Blazor applications with Blazor components.
 - Includes support for component APIs, properties, and troubleshooting guidance.

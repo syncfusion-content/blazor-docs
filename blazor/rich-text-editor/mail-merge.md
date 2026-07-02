@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mail merge in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about Mail merge in Syncfusion Blazor RichTextEditor control and much more.
+title: Mail Merge in Blazor Rich Text Editor | Syncfusion®
+description: Learn how to perform mail merge operations in Blazor Rich Text Editor to generate personalized content.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -70,19 +70,18 @@ The `Insert Field` dropdown in the Rich Text Editor is designed to let users qui
 Here, `@items` refers to a list of `DropDownMenuItem` objects defined in the `@code` block.
 
 ```csharp
- private List<DropDownMenuItem> items = new List<DropDownMenuItem>
-    {
-        new DropDownMenuItem { Text = "First Name" },
-        new DropDownMenuItem { Text = "Last Name" },
-        new DropDownMenuItem { Text = "Support Email" },
-        new DropDownMenuItem { Text = "Company Name" },
-        new DropDownMenuItem { Text = "Promo Code" },
-        new DropDownMenuItem { Text = "Support Phone Number" },
-        new DropDownMenuItem { Text = "Customer ID" },
-        new DropDownMenuItem { Text = "Expiration Date" },
-        new DropDownMenuItem { Text = "Subscription Plan" }
-    };
-
+private List<DropDownMenuItem> items = new List<DropDownMenuItem>
+{
+    new DropDownMenuItem { Text = "First Name" },
+    new DropDownMenuItem { Text = "Last Name" },
+    new DropDownMenuItem { Text = "Support Email" },
+    new DropDownMenuItem { Text = "Company Name" },
+    new DropDownMenuItem { Text = "Promo Code" },
+    new DropDownMenuItem { Text = "Support Phone Number" },
+    new DropDownMenuItem { Text = "Customer ID" },
+    new DropDownMenuItem { Text = "Expiration Date" },
+    new DropDownMenuItem { Text = "Subscription Plan" }
+};
 ```
 
 When the user selects an item from the dropdown:
@@ -93,17 +92,17 @@ When the user selects an item from the dropdown:
 
 {% raw %}
 ```csharp
-    public async Task OnItemSelect(MenuEventArgs args)
+public async Task OnItemSelect(MenuEventArgs args)
+{
+    if (args.Item.Text != null)
     {
-        if (args.Item.Text != null)
-        {
-            var value = _mergeData.FirstOrDefault(md => md.Text == args.Item.Text)?.Value;
-           string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{{{{value}}}}}</span></span>";
-            var undoOption = new ExecuteCommandOption { Undo = true };
-            this._mailMergeEditor.ExecuteCommandAsync(CommandName.InsertHTML, htmlContent, undoOption);
-            await this._mailMergeEditor.SaveSelectionAsync();
-        }
+        var value = _mergeData.FirstOrDefault(md => md.Text == args.Item.Text)?.Value;
+        string htmlContent = $"<span contenteditable=\"false\" class=\"e-mention-chip\"><span>{{{{{value}}}}}</span></span>";
+        var undoOption = new ExecuteCommandOption { Undo = true };
+        this._mailMergeEditor.ExecuteCommandAsync(CommandName.InsertHTML, htmlContent, undoOption);
+        await this._mailMergeEditor.SaveSelectionAsync();
     }
+}
 ```
 {% endraw %}
 
@@ -142,20 +141,20 @@ When the `Insert Field` dropdown opens, the editor loses its current selection b
 **Why is this important?** Without saving and restoring the selection, placeholders might be inserted at the wrong location (e.g., at the end of the content), breaking the user experience.
 
 ```csharp
-    public async Task OnDropDownOpen()
+public async Task OnDropDownOpen()
+{
+    if (this._mailMergeEditor != null)
     {
-        if (this._mailMergeEditor != null)
-        {
-            await this._mailMergeEditor.SaveSelectionAsync();
-        }
+        await this._mailMergeEditor.SaveSelectionAsync();
     }
-    public async Task OnDropDownClose()
+}
+public async Task OnDropDownClose()
+{
+    if (this._mailMergeEditor != null)
     {
-        if (this._mailMergeEditor != null)
-        {
-            await this._mailMergeEditor.RestoreSelectionAsync();
-        }
+        await this._mailMergeEditor.RestoreSelectionAsync();
     }
+}
 ```
 
 ## Handling editor mode changes with OnActionComplete
@@ -166,21 +165,21 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 - When returning to **Preview mode**, these buttons are re-enabled for normal usage.
 
 ```csharp
- private void OnActionCompleteHandler(Syncfusion.Blazor.RichTextEditor.ActionCompleteEventArgs args)
+private void OnActionCompleteHandler(Syncfusion.Blazor.RichTextEditor.ActionCompleteEventArgs args)
+{
+    if (args.RequestType == "SourceCode")
     {
-        if (args.RequestType == "SourceCode")
-        {
-            this._buttonClass = "e-tbar-btn e-tbar-btn-text e-overlay";
-            this._dropDownButtonClass = "e-rte-elements e-rte-dropdown-menu e-overlay";
-            this._sourceCodeEnabled = true;
-        }
-        if (args.RequestType == "Preview")
-        {
-            this._buttonClass = "e-tbar-btn e-tbar-btn-text";
-            this._dropDownButtonClass = "e-rte-elements e-rte-dropdown-menu";
-            this._sourceCodeEnabled = false;
-        }
+        this._buttonClass = "e-tbar-btn e-tbar-btn-text e-overlay";
+        this._dropDownButtonClass = "e-rte-elements e-rte-dropdown-menu e-overlay";
+        this._sourceCodeEnabled = true;
     }
+    if (args.RequestType == "Preview")
+    {
+        this._buttonClass = "e-tbar-btn e-tbar-btn-text";
+        this._dropDownButtonClass = "e-rte-elements e-rte-dropdown-menu";
+        this._sourceCodeEnabled = false;
+    }
+}
 ```
 
 **Why is this important?** This prevents users from triggering merge operations or inserting fields while editing raw HTML, which could cause unexpected behavior.
@@ -195,24 +194,24 @@ When the `Merge Data` button is clicked:
 
 ```csharp
 {% raw %}
-    public void OnClickHandler()
+public void OnClickHandler()
+{
+    if (this._mailMergeEditor != null)
     {
-        if (this._mailMergeEditor != null)
-        {
-            var editorContent = this._mailMergeEditor.Value;
-            var mergedContent = ReplacePlaceholders(editorContent, this._placeholderData);
-            _rteValue = mergedContent;
-        }
+        var editorContent = this._mailMergeEditor.Value;
+        var mergedContent = ReplacePlaceholders(editorContent, this._placeholderData);
+        _rteValue = mergedContent;
     }
+}
 
-    public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
+public static string ReplacePlaceholders(string template, Dictionary<string, string> data)
+{
+    return Regex.Replace(template, @"{{\s*(\w+)\s*}}", match =>
     {
-        return Regex.Replace(template, @"{{\s*(\w+)\s*}}", match =>
-        {
-            string key = match.Groups[1].Value.Trim();
-            return data.TryGetValue(key, out var value) ? value : match.Value;
-        });
-    }
+        string key = match.Groups[1].Value.Trim();
+        return data.TryGetValue(key, out var value) ? value : match.Value;
+    });
+}
 {% endraw %}
 ```
 This ensures all placeholders are dynamically replaced without manual editing.
