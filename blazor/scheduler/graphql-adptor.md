@@ -1034,4 +1034,4 @@ This guide demonstrates how to:
 3. Running the Application. [🔗](#running-the-application)
 4. Complete Sample Repository. [🔗](#complete-sample-repository)
 
-The application now provides a complete solution for managing Appointments with a modern [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) integrated with a Hot Chocolate GraphQL backend.
+The application now provides a complete solution for managing Appointments with a modern Blazor Scheduler integrated with a Hot Chocolate GraphQL backend.
