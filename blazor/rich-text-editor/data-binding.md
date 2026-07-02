@@ -64,4 +64,4 @@ You can retrieve the editor's content using the [ValueChange](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-N> To explore the Rich Text Editor's features, visit the [feature tour page](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor). You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
+N> To explore the Rich Text Editor's features, visit the [feature tour page](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor). You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
