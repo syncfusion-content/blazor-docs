@@ -150,7 +150,7 @@ Add the Blazor Chart Wizard component in the **~/Pages/Index.razor** file.
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-<SfChartWizard Width="1000px" Height="400px">
+<SfChartWizard>
 
 </SfChartWizard>
 

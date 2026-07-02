@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Validation in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about column validation in Syncfusion Blazor TreeGrid component and much more details.
+title: Column Validation in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all about column validation in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

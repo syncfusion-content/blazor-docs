@@ -134,4 +134,4 @@ The Multiple level nesting supports in Context Menu. It can be achieved by mappi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdNxsupOVrvxsp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multilevel Nesting in Blazor ContextMenu](./images/blazor-contextmenu-with-multilevel.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdNxsupOVrvxsp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multilevel Nesting in Blazor ContextMenu](./images/blazor-contextmenu-with-multilevel.webp)" %}

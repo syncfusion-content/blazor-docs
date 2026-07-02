@@ -9,7 +9,7 @@ documentation: ug
 
 # Form Validation in ComboBox
 
-This article demonstrates how to use the ComboBox within a Blazor EditForm to validate user input with data annotations. The example shows a form where the user selects an item from the ComboBox, and validation ensures required fields are completed before submission.
+This article demonstrates how to use the Blazor ComboBox within a Blazor EditForm to validate user input with data annotations. The example shows a form where the user selects an item from the ComboBox, and validation ensures required fields are completed before submission.
 
 ## ComboBox inside edit form
 

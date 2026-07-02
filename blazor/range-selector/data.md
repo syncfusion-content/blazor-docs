@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Type of Data in Blazor Range Selector Component | Syncfusion
-description: Checkout and learn here all about type of data in Syncfusion Blazor Range Selector component and more.
+title: Type of Data in Blazor Range Selector Component | Syncfusion®
+description: Checkout and learn here all about type of data in Blazor Range Selector component with examples and much more details.
 platform: Blazor
 control: Range Selector
 documentation: ug

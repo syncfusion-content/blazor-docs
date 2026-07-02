@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor In-place Editor in Web App | Syncfusion
+title: Getting Started with Blazor In-place Editor in Web App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor In-place Editor Component in Blazor Web App.
 platform: Blazor
 component: In-place Editor
@@ -278,7 +278,7 @@ The following code explains how to initialize a simple In-place Editor with popu
     </tr>
 </table>
 
-@code
+@code 
 {
     public string AutoValue = "Australia";
 
@@ -300,7 +300,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhIXOjhAIsuBPDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZryjkXLAeqHmuVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.gif)" %}
 
 ## Configuring DropDownList
 
@@ -320,7 +320,7 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code
+@code 
 {
     public string DropdownValue = "Game4";
 
@@ -530,8 +530,8 @@ After submit, the edited data is sent to the server, and the updated value is re
     }
 </style>
 
-@code
-{    
+@code 
+{
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";
