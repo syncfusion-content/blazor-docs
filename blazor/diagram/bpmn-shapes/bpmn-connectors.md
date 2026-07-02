@@ -60,7 +60,7 @@ The following code example explains how to create an association.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBeitNHVuzaWWAu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrdNHreTKGeyCnx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Association.razor)
 
@@ -117,7 +117,7 @@ The following code example explains how to create a sequence flow.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIsDjHBuSBuntI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVxjxrITKQQaXrB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Sequence.razor)
 
@@ -176,7 +176,7 @@ The following code example explains how to define a message flow.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSittnhOeEgbiL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVxjxrITKQQaXrB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Message.razor)
 
