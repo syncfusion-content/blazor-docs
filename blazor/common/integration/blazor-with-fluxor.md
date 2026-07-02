@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrating Blazor DataGrid with Fluxor | Syncfusion
-description: Step by step guide to integrate Blazor DataGrid with the Fluxor state management library in a .NET 10 Blazor Web App (Interactive Server) with full CRUD operations.
+description: Step-by-step guide to integrate the Blazor DataGrid with the Fluxor state management library in a .NET 10 Blazor Web App (Interactive Server) and perform full CRUD operations through the Fluxor store.
 platform: Blazor
 control: Common
 documentation: ug
@@ -16,7 +16,7 @@ Fluxor provides a unidirectional data flow architecture where all application st
 ## Prerequisites
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
+* [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Create a Blazor Web App
 
@@ -874,7 +874,6 @@ The following diagram shows the unidirectional data flow between the DataGrid, F
 ## See also
 
 * [Getting Started with Blazor DataGrid in Blazor Web App](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
-* [Integrating Blazor DataGrid with GitHub Codespaces](https://blazor.syncfusion.com/documentation/common/integration/blazor-with-github-codespaces)
 * [Integrating Blazor DataGrid with PDF Viewer](https://blazor.syncfusion.com/documentation/common/integration/blazor-with-pdf-viewer)
 * [Integrating Blazor DataGrid with Spreadsheet](https://blazor.syncfusion.com/documentation/common/integration/blazor-grid-with-spreadsheet)
 * [Integrating Blazor DataGrid with Bold Report Viewer](https://blazor.syncfusion.com/documentation/common/integration/blazor-datagrid-boldreports)
