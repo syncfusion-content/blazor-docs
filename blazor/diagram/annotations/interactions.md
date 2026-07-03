@@ -13,13 +13,9 @@ Diagram provides extensive support for annotation interactions. Annotations can 
 
 ## How to Enable Annotation Interaction
 
-Annotation interaction is controlled by the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html) enumeration. Specific interactions or a combination of interactions can be enabled using this property.
+The [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html) enumeration controls the interactions supported by an annotation. Interactions can be enabled by using the **Interaction** flag, which allows all supported behaviors, or by enabling specific constraints such as **Select**, **Drag**, **Resize**, and **Rotate**.
 
-Annotation interaction can be enabled either by using the Interaction flag to turn on all behaviors or by enabling individual constraints such as Select, Drag, Resize, and Rotate.
-
-The available constraints are:
-
-| Constraint | Description |
+| AnnotationConstraints | Description |
 | -------- | -------- |
 | [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_None) | Disables all interactions on the annotation. |
 | [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) | Enables read-only mode for the annotation (cannot be edited). |
@@ -30,7 +26,6 @@ The available constraints are:
 | [Rotate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_Rotate) | Enables rotating the annotation. |
 | [Interaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_Interaction) | Enables all interactive behaviors: Select, Drag, Resize, and Rotate combined. |
 
-The following code illustrates how to enable interactive mode for annotations:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -79,11 +74,10 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ## How to Set a Drag Limit for Connector Annotations
 
-The diagram supports defining a [DragLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_DragLimit) to constrain connector label movement. The `DragLimit` property allows boundaries to be set for annotation dragging along a connector and snaps the position to the nearest segment offset.
+The [DragLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_DragLimit) property allows a connector annotation's movement to be restricted within a defined area along the connector. The boundary is specified using the `Left`, `Right`, `Top`, and `Bottom` values. During dragging, the annotation position snaps to the nearest connector segment offset within the configured boundary.
 
-Values for the `DragLimit` properties for `Left`, `Right`, `Top`, and `Bottom` can be set to restrict connector label dragging within a user-defined boundary. By default, the drag limit is disabled for connectors. It can be enabled by setting the connector constraint to `Drag`.
+By default, drag limits are disabled for connector annotations. To enable this behavior, configure the annotation constraints to include `Drag` along with the `Interaction` flag, as shown in the following example.
 
-The following code illustrates how to set a `DragLimit` for connector annotations:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -130,7 +124,7 @@ The following code illustrates how to set a `DragLimit` for connector annotation
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/DragLimitForAnnotation.razor)
 
->**Note**: The `DragLimit` property is only applicable to `PathAnnotation` (connector annotations).
+N> The `DragLimit` property applies only to `PathAnnotation` (connector annotations).
 
 ## How to Rotate Annotations
 

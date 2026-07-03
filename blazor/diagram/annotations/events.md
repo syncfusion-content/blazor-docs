@@ -11,14 +11,13 @@ documentation: ug
 
 ## How to Handle Annotation Selection Change Event
 
-The following events are triggered when selecting or unselecting annotations. Use these events to apply custom behavior during annotation selection.
+The annotation selection events are triggered when an annotation is selected or unselected. These events can be used to validate selection changes and apply custom styles.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the annotation selection is changed in the diagram.|
-|[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the annotation's selection is changed in the diagram.|
+|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the annotation selection is changed. Set `args.Cancel` to `true` to prevent the change.|
+|[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers after the annotation selection is changed.|
 
-The following code example demonstrates how to handle annotation selection change events:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -73,16 +72,17 @@ The following code example demonstrates how to handle annotation selection chang
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationSelectionChangeEvent.razor)
 
 ## How to Handle Annotation Position Change Event
 
-The following events are triggered when dragging an annotation. Use these events to apply custom behavior during annotation movement.
+The annotation position change events are triggered when an annotation is dragged. These events can be used to track movement in real time, restrict annotation movement, or save the updated position.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers while dragging the annotation in the diagram.|
-|[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers when the annotation's position is changed.|
+|[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers continuously while the annotation is being dragged. Set `args.Cancel` to `true` to prevent the move.|
+|[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers once when the annotation drag operation completes.|
+
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -137,16 +137,16 @@ The following events are triggered when dragging an annotation. Use these events
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationPositionChangeEvent.razor)
 
 ## How to Handle Annotation Size Change Event
 
-The following events are triggered when resizing an annotation. Use these events to apply custom behavior during annotation resizing.
+The annotation size change events are triggered when an annotation is resized. These events can be used to restrict annotation dimensions and track size changes.
 
 |Event Name|Arguments|Description|
 |------------|------------|-----------------------|
-|[SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging)|[SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)|Triggers before the annotation is resized.|
-|[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged)|[SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html)|Triggers when the annotation is resized.|
+|[SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging)|[SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)|Triggers continuously while the annotation is being resized. Set `args.Cancel` to `true` to prevent the resize.|
+|[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged)|[SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html)|Triggers once when the annotation resize operation completes.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -203,16 +203,17 @@ The following events are triggered when resizing an annotation. Use these events
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationSizeChangeEvent.razor)
 
 ## How to Handle Annotation Rotation Change Event
 
-The following events are triggered when rotating an annotation. Use these events to apply custom behavior during annotation rotation.
+The annotation rotation change events are triggered when an annotation is rotated. These events can be used to snap rotation to predefined angles, constrain the rotation range, or save the updated rotation angle.
 
 |Event Name|Arguments|Description|
 |------------|----------|-------------------------|
-|[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers before the annotation is rotated.|
-|[RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged)|[RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)|Triggers when the annotation is rotated.|
+|[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers continuously while the annotation is being rotated. Set `args.Cancel` to `true` to prevent the rotation.|
+|[RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged)|[RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)|Triggers once when the annotation rotation operation completes.|
+
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -268,7 +269,7 @@ The following events are triggered when rotating an annotation. Use these events
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteractionEvents.razor)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationRotationChangeEvent.razor)
 
 ## How to Handle Text Change Event
 
