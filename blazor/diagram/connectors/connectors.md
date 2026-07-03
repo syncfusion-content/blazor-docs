@@ -55,7 +55,7 @@ The following code example illustrates how to add a connector through the connec
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Connector/AddConnectorThroughConnectorCollection.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBdZxrkptcRnKHs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Connector](../images/blazor-diagram-connector.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBdZxrkptcRnKHs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"   backgroundimage "[Blazor Diagram Connector](../images/blazor-diagram-connector.webp)" %}
 
 >**Note:** 
 > * The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) of each connector should be unique so it is further used to find the connector at runtime and perform any customization. 
