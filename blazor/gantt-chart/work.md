@@ -11,7 +11,7 @@ documentation: ug
 
 ## Work
  
-The work is the total amount of time required to complete a task. Work can be mapped from the data source field using the property [GanttTaskFields.Work](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Work). By default, work is measured in `Hour`, and this can be changed using the `WorkUnit` property.
+Work represents the total amount of time required to complete a task. Work can be mapped from the data source field using the property [GanttTaskFields.Work](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Work). By default, work is measured in `Hour`, and this can be changed using the `WorkUnit` property.
  
 The Blazor Gantt Chart component supports the following work units:
  
