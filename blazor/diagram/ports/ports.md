@@ -73,7 +73,7 @@ To learn more about creating and customizing ports in the Blazor Diagram, watch 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/CreatePorts.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBSijXcVpWKTOyP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Creating a port on a node in Blazor Diagram](../images/blazor-diagram-create-port.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrdNxrRTqGgDHyk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Creating a port on a node in Blazor Diagram](../images/blazor-diagram-create-port.webp)" %}
 
 >**Note:** Port ID should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
@@ -155,7 +155,7 @@ The following code example demonstrates how to connect connectors to ports on no
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXheCtXwVJeRRDCO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBxjHrHzUbhbTSU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/NodePortConnection/NodePortConnection.razor).
 
@@ -202,7 +202,7 @@ The following code example demonstrates how to create a connector port.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjreWtDQLzdKOmAc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHZHVHzAFpbbCI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ConnectorPort/CreateConnectorPorts.razor)
 
@@ -273,7 +273,7 @@ The following code example demonstrates how to connect one connector to a port o
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrIitNQVpnbrMzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVRNdrxpUvwfREK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ConnectorPort/ConnectorPortConnection.razor)
 
@@ -327,7 +327,7 @@ If an `ID` is not set, then default `ID` is assigned automatically.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBSCjtcVJmUjDyF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVnXHBxJglEbCvq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/AddPort.razor)
 
@@ -428,7 +428,7 @@ The port [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Po
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/AddMultiplePorts.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoCjDmhJcOloQL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding multiple ports to a node in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVxDxBHTUOrtrJI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Adding multiple ports to a node in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.webp)" %}
 
 ## How to Remove Port at Runtime
 
@@ -488,7 +488,7 @@ A port can be removed from a node by using the native `RemoveAt` method. The fol
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrIsjtQhTvfKOEo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtRVHzptWgYnB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/RemovePorts.razor)
 
@@ -551,7 +551,7 @@ protected override void OnInitialized()
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrSCtjQVTaiSkyT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrxtRBnpfNUOSxn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/UpdatePorts.razor)
 
@@ -637,7 +637,7 @@ The following code example shows how to set the connection direction for a port.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/PortDirection.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLoWXZcrTaRefIs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Port Connection Direction](../images/PortDirection.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRZnBHzpZkOkRo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Port Connection Direction](../images/PortDirection.gif)" %}
 
 ## How to Get InEdges and OutEdges of Ports
 
@@ -741,7 +741,7 @@ The following code example shows how to get `InEdges` and `OutEdges` of a port.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhyCDDmBSZCuJme?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVRDxrxfTLZtxLH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/InedgesAndOutedges.razor)
 

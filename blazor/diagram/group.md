@@ -102,7 +102,7 @@ To create a group using Nodes and Connectors in the Blazor Diagram, refer to the
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/CreateGroup.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLeWZjlTtUfyBOf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHXdLOTuOSFkno?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Grouping in Blazor Diagram](images/blazor-diagram-grouping.webp)" %}
 
 The following code illustrates how to ungroup at runtime.
 
@@ -169,7 +169,7 @@ The following code illustrates how to ungroup at runtime.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBoWZZvfZpAdhre?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrHNHhYoXtzgNdx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/UnGroup.razor)
 
@@ -260,7 +260,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/CloneNodeGroup.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVeCDNPfjyioMFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Grouping in Blazor Diagram](images/CloneGroup.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhHjxhYSjZmeunZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Grouping in Blazor Diagram](images/CloneGroup.gif)" %}
 
 ### How to Add Padding to a Node Group
 
@@ -323,7 +323,7 @@ The following code illustrates how to add padding to a node group.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/CreateGroup.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjryCDZlzjyxnaIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Padding in Blazor Diagram](images/GroupPadding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhxjxrYeXTTHdtJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Padding in Blazor Diagram](images/GroupPadding.webp)" %}
 
 ## How to Add a Node Group at Runtime
 
@@ -390,7 +390,7 @@ The following code illustrates how a node group is added at runtime.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeWtNPpDntLeoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhHZHBkIjIoIHBE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/AddGroupAtRunTime.razor)
 * Also, Add the child to the node group through the [AddChildAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChildAsync_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through the AddChildAsync method.
 
@@ -478,7 +478,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLysNDlpXdPhsab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLdjnBOeXoPOADU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/AddChildMethod.razor)
 
@@ -548,7 +548,7 @@ Change the position of the node group similar to a node. For more information ab
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLIiDZbzDGhrbJg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLnXdLOeZnhDmFm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/UpdatePositionForGroup.razor)
 

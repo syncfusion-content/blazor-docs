@@ -260,6 +260,6 @@ The following example demonstrates that a constraint can also be enabled or disa
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVeMBiRzuEmRSmS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBxtnBkqMvKzUMZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Allow Drag Within Swimlane](../Swimlane-images/AllowDragWithinSwimlane.gif)" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/Swimlanes/LaneInteraction/AllowDragWithinSwimlane.razor)
