@@ -11,8 +11,6 @@ documentation: ug
 
 This section explains how to add the [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get started quickly with the Blazor Color Picker component, refer to this [GitHub sample](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ColorPicker).
-
 ## Create a new Blazor WebAssembly (Standalone) App
 
 {% tabcontents %}
@@ -210,6 +208,8 @@ dotnet run
 {% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHjdsEfhSURByW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Color Picker component](./images/blazor-colorpicker-component.webp)" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ColorPicker).
 
 ## See also
 
