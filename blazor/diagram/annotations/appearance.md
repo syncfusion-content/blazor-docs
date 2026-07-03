@@ -48,7 +48,7 @@ The annotation size can be customized using the [Height](https://help.syncfusion
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/SizeOfAnnotation.razor)
 
-![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
+![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.webp)
 
 ## How to Add a Hyperlink to an Annotation
 
@@ -96,11 +96,11 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinktoAnnotation.razor)
 
-![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
+![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.webp)
 
-### How to Display Text in Annotation Hyperlinks
+### How to Display Text in Annotation Hyperlink
 
-The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the `Hyperlink` can be set to display custom text for the link.
+The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the `Hyperlink` to specify custom text to be displayed for the hyperlink.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -145,11 +145,118 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinkWithContent.razor)
 
-![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
+![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.webp)
+
+### Configure Hyperlink Open Mode
+
+The [OpenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkSettings.html#Syncfusion_Blazor_Diagram_HyperlinkSettings_OpenMode) property of the `HyperlinkSettings` class specifies how annotation hyperlinks open. Configure this property to open hyperlinks either in the current browser tab or in a new tab.
+
+By default, the `OpenMode` property is set to `HyperlinkOpenMode.Self`, which opens the hyperlink in the current browser tab. Set the property to `HyperlinkOpenMode.Blank` to open the hyperlink in a new browser tab.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
+
+@code
+{
+    private DiagramObjectCollection<Node> _nodes;
+
+    protected override void OnInitialized()
+    {
+        _nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            // Sets the annotation for the Node.
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                // Add hyperlink that opens in a new tab.
+                new ShapeAnnotation 
+                { 
+                    Hyperlink = new HyperlinkSettings
+                    { 
+                        Content = "Open Syncfusion", 
+                        Url = "https://www.syncfusion.com",
+                        // Configures the hyperlink to open in a new tab.
+                        OpenMode = HyperlinkOpenMode.Blank
+                    } 
+                }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+        };
+        _nodes.Add(node);
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdZRNOTGCrZiyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenMode.razor)
+
+![Hyperlink Open Mode in Blazor Diagram](../images/blazor-diagram-hyperlink-open-mode.webp)
+
+Hyperlink behavior can be updated at runtime to modify the navigation target or open mode based on user interaction or application state.
+
+The following example demonstrates how to change the hyperlink open mode at runtime using a button.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Change Open Mode" OnClick="@ChangeOpenMode" />
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes" />
+
+@code
+{
+    SfDiagramComponent _diagram;
+    DiagramObjectCollection<Node> _nodes;
+
+    protected override void OnInitialized()
+    {
+        _nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
+                {
+                    Hyperlink = new HyperlinkSettings
+                    {
+                        Content = "Open Syncfusion",
+                        Url = "https://www.syncfusion.com",
+                        OpenMode = HyperlinkOpenMode.Self
+                    }
+                }
+            }
+        };
+        _nodes.Add(node);
+    }
+
+    public void ChangeOpenMode()
+    {
+        HyperlinkSettings hyperlink = _diagram.Nodes[0].Annotations[0].Hyperlink as HyperlinkSettings;
+        hyperlink.OpenMode = hyperlink.OpenMode == HyperlinkOpenMode.Self ? HyperlinkOpenMode.Blank : HyperlinkOpenMode.Self;
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBoiNtHrIBncXmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenModeRuntime.razor)
+
+N> Browser security policies and popup blockers may restrict opening links in new tabs. Ensure that the application handles such scenarios appropriately.
 
 ## How to Wrap Text Using Text Wrapping
 
-The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping) property of an annotation's style defines the wrapping behavior for its text content. When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The following code explains how to wrap a text in a node.
+The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping) property of an annotation's style defines the wrapping behavior for its text content. When text overflows the node boundaries, you can control the behavior using `TextWrapping` to wrap it across multiple lines. The following code explains how to wrap text in a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -196,9 +303,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | TextWrapping | Description | Image |
 | -------- | -------- | -------- |
-| [No Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_NoWrap) | Text will not be wrapped. | ![Blazor Diagram Text without Wrap](../images/blazor-diagram-label-without-wrap.png) |
-| [Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_Wrap) | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.png) |
-| [WrapWithOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_WrapWithOverflow) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.png) |
+| [No Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_NoWrap) | Text will not be wrapped. | ![Blazor Diagram Text without Wrap](../images/blazor-diagram-label-without-wrap.webp) |
+| [Wrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_Wrap) | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.webp) |
+| [WrapWithOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextWrap.html#Syncfusion_Blazor_Diagram_TextWrap_WrapWithOverflow) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.webp) |
 
 ### How to Control Text Overflow
 
@@ -256,17 +363,17 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 | TextOverflow | Wrapping | Image |
 | -------- | -------- | -------- |
-| Wrap | No Wrap | ![Blazor Diagram Without Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-nowrap.png) |
-| Wrap| Wrap | ![Blazor Diagram With Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrap.png) |
-| Wrap | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrapwithoverflow.png) |
-| Ellipsis | No Wrap | ![Blazor Diagram Without Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-nowrap.png) |
-| Ellipsis| Wrap | ![Blazor Diagram With Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrap.png) |
-| Ellipsis | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrapwithoverflow.png) |
-| Clip | No Wrap | ![Blazor Diagram Without Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-nowrap.png) |
-| Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.png) |
-| Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.png) |
+| Wrap | No Wrap | ![Blazor Diagram Without Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-nowrap.webp) |
+| Wrap| Wrap | ![Blazor Diagram With Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrap.webp) |
+| Wrap | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrapwithoverflow.webp) |
+| Ellipsis | No Wrap | ![Blazor Diagram Without Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-nowrap.webp) |
+| Ellipsis| Wrap | ![Blazor Diagram With Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrap.webp) |
+| Ellipsis | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrapwithoverflow.webp) |
+| Clip | No Wrap | ![Blazor Diagram Without Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-nowrap.webp) |
+| Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.webp) |
+| Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.webp) |
 
-N>**Note :** All overflow customizations are also applicable to connector annotations.
+>**Note:** All overflow customizations are also applicable to connector annotations.
 
 ## How to Customize the Appearance of an Annotation
 
@@ -278,7 +385,7 @@ The appearance of an annotation can be customized using various style properties
 
 * The transparency of the annotation is controlled by the [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) property.
 
-* The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Visibility) property of the annotation enables or disables the visibility of annotation.
+* The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Visibility) property enables or disables the visibility of the annotation.
 
 The following code explains how to customize the visual appearance of an annotation.
 
@@ -330,7 +437,7 @@ The following code explains how to customize the visual appearance of an annotat
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/Appearance.razor)
 
-![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
+![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.webp)
 
 ## How to Update Annotation Font Style at Runtime
 
@@ -409,11 +516,11 @@ Annotations can be edited at runtime either programmatically or interactively. B
     * Double-click the annotation.
     * Select the parent and press the F2 or enter key.
 
-Double-clicking an annotation enables edit mode. For a object with multiple annotations, double-clicking the object itself will start the edit for the first annotation in its collection. When the focus of editor is lost, the annotation content is updated. 
+Double-clicking an annotation enables edit mode. For an object with multiple annotations, double-clicking the object itself starts editing the first annotation in its collection. When the editor loses focus, the annotation content is updated.
 
 ## How to Set Read-Only Mode for Annotations
 
-Annotations can be set to read-only mode by configuring their [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints). Setting the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) constraints prevents user interaction and modification. The following code explains how to enable read-only mode.
+Annotations can be set to read-only mode by configuring their [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints). Setting the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) constraint prevents user interaction and modification. The following code explains how to enable read-only mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -537,11 +644,11 @@ Multiple annotations can be added to a single node or connector. The following c
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/MultipleAnnotation.razor)
 
-![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
+![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.webp)
 
-N>* Type of the annotation’s property of the node or connector is ObservableCollection.
-<br/>* Default value of the annotation will be **null**.
-<br/>* All customization options are applicable to each annotation in the collection.
+N>* The type of the annotation collection property on a node or connector is `ObservableCollection`.
+<br/>* The default value of an annotation is **null**.
+<br/>* All customization options apply to each annotation in the collection.
 <br/>* When double-clicking a node or connector, text editing is initiated only for the first annotation in the collection.
 
 ## How to Control Annotation Constraints
@@ -552,9 +659,9 @@ N>* Type of the annotation’s property of the node or connector is ObservableCo
 
 | Constraints | Usages |
 |---|---|
-| [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) | Enables or disables whether the annotation to be read only or not. |
-| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_None) | Disables all behaviors of Annotation. |
-|[InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) |Enables or disables to inherit the ReadOnly option from the parent object.|
+| [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) | Enables or disables the read-only mode for the annotation. |
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_None) | Disables all behaviors of the annotation. |
+| [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) | Enables or disables inheriting the ReadOnly option from the parent object. |
 
 N> The default value for an annotation's Constraints property is **InheritReadOnly**.
 
@@ -662,7 +769,7 @@ The following code illustrates how to define a template for both a node's and a 
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/TemplateSupportforAnnotation.razor)
 
-![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
+![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.webp)
 
 ## How to Add Additional Information for an Annotation
 
@@ -713,7 +820,7 @@ The following code demonstrates how to set a value for the `AdditionalInfo` prop
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AdditionalInfoProperty.razor)
 
-**Note:** The `AdditionalInfo` property can accept any type of object as its value.
+**Note:** The `AdditionalInfo` property accepts any type of object as its value.
 
 
 ## See also
