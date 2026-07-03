@@ -23,7 +23,7 @@ In the following sample, vegetables are grouped by category using the `MultiSele
 
 {% endhighlight %}
 
-![Grouping in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-grouping.png)
+![Grouping in Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-grouping.webp)
 
 ## Fixed group header
 

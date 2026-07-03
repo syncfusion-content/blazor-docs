@@ -162,4 +162,4 @@ Add the Blazor Message component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Message component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJNiKZLsAMXCNa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Message Component](./images/message-default.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJNiKZLsAMXCNa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Message Component](./images/message-default.webp)" %}

@@ -40,7 +40,7 @@ The following code demonstrates the filtering functionality in the ListBox compo
 
 ```
 
-![Blazor ListBox with filtering enabled](images/blazor-listbox-filtering.png)
+![Blazor ListBox with filtering enabled](images/blazor-listbox-filtering.webp)
 
 
 ## Filter type
@@ -83,4 +83,4 @@ In the following example, the `EndsWith` filter type is assigned to the `FilterT
 
 ```
 
-![Blazor ListBox using the EndsWith filter type](images/blazor-listbox-filter-type.png)
+![Blazor ListBox using the EndsWith filter type](images/blazor-listbox-filter-type.webp)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working in Offline Mode in Blazor DataManager | Syncfusion
+title: Working in Offline Mode in Blazor DataManager | Syncfusion®
 description: Learn how to enable offline mode in Syncfusion® Blazor DataManager to process queries locally without additional server requests.
 platform: Blazor
 control: DataManager

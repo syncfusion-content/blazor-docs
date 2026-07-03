@@ -341,7 +341,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor ComboBox with expando object data binding](./images/blazor_combobox_expando-object.png)
+![Blazor ComboBox with expando object data binding](./images/blazor_combobox_expando-object.webp)
 
 ## Binding DynamicObject
 
@@ -391,7 +391,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor ComboBox bound to DynamicObject data](./images/blazor_combobox_dynamic-object.png)
+![Blazor ComboBox bound to DynamicObject data](./images/blazor_combobox_dynamic-object.webp)
 
 ## Binding ObservableCollection
 

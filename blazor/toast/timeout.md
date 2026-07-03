@@ -84,7 +84,7 @@ N> The process can be terminated by using the `ShowCloseButton` property for des
 
 ```
 
-![TimeOut in Blazor Toast](./images/blazor-toast-timeout.png)
+![TimeOut in Blazor Toast](./images/blazor-toast-timeout.webp)
 
 ## Static toast
 
@@ -125,4 +125,4 @@ Auto hiding can be prevented in a toast as visible like static by setting zero (
 
 ```
 
-![TimeOut in Blazor Static Toast](./images/blazor-static-toast-timeout.png)
+![TimeOut in Blazor Static Toast](./images/blazor-static-toast-timeout.webp)

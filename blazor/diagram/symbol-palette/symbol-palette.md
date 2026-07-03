@@ -161,7 +161,7 @@ The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddNodeToPalette.razor)
 
 
-![Adding Node to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-node-to-palette.png)
+![Adding Node to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-node-to-palette.webp)
 
 ### How to Add Connector to Palette
 
@@ -233,7 +233,7 @@ The following example illustrates how to add a connector to a palette.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddConnectorToSymbolPalette.razor)
 
 
-![Adding Connector to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-connector-to-palette.png)
+![Adding Connector to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-connector-to-palette.webp)
 
 ### How to Add Node Group into Palette
 
@@ -324,7 +324,7 @@ The following example illustrates how to add a node group to a palette.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddGroupToPalette.razor)
 
 
-![Adding NodeGroup to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-node-group-to-palette.png)
+![Adding NodeGroup to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-node-group-to-palette.webp)
 
 ## How to Add Palette to Symbol Palette
 
@@ -482,7 +482,7 @@ _palettes = new DiagramObjectCollection<Palette>()
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddPaletteToSymbolPalette.razor)
 
-![Adding Palette to SymbolPalette in Blazor Diagram](../images/blazor-diagram-add-palette-to-symbol-palette.png)
+![Adding Palette to SymbolPalette in Blazor Diagram](../images/blazor-diagram-add-palette-to-symbol-palette.webp)
 
 ## How to Drag and Drop Symbols from Palette to Diagram
 
@@ -641,7 +641,7 @@ To enable drag and drop functionality, add the diagram component to the [Targets
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/DragAndDrop.razor)
 
-![Drag and Drop in Blazor Diagram](../images/blazor-diagram-drag-and-drop.gif)
+![Drag and Drop in Blazor Diagram](../images/blazor-diagram-drag-and-drop.webp)
 
 ## How to Add or Remove Symbols in the Symbol Palette at Runtime
 
@@ -840,7 +840,7 @@ The diagram component offers a search functionality within the symbol palette. B
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SearchOption.razor)
 
-![Search Option in Blazor Diagram](../images/SymbolSearch.gif)
+![Search Option in Blazor Diagram](../images/SymbolSearch.webp)
 
 ## How to Add Search keywords for Symbols
 
@@ -996,7 +996,7 @@ Use the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjByWXjmJsiXCdSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.png)
+![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.webp)
 
 ## How to Refresh the Symbols at Runtime
 
@@ -1117,7 +1117,7 @@ Customize the appearance of symbols using [SymbolPaletteTemplates](https://help.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtryiXNcTWhusyQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Symbol palette templates](../images/SymbolPaletteTemplate.png)
+![Symbol palette templates](../images/SymbolPaletteTemplate.webp)
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SymbolPaletteTemplate.razor)
 

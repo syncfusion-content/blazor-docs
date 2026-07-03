@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Welcome to Syncfusion® Blazor Components
+# Welcome to Blazor Components
 
 Blazor Components is an enterprise-grade, native UI components library for creating Blazor Web, Blazor WebAssembly and Blazor Server applications. Built specifically for Blazor, the components are lightweight, responsive, and touch-friendly to support modern web applications. The library is engineered for performance, keyboard-first accessibility, and global reach, with rich data visualization and productivity components.
 

@@ -80,7 +80,7 @@ Enable user handles for selected nodes or connectors by setting [SelectorConstra
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/InitializeUserHandle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIiNjPeXLREtrf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIiNjPeXLREtrf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.webp)" %}
 
 ## How to Customize User Handle Actions
 User handles in the Blazor Diagram component can be customized to perform specific actions when clicked. By default, user handles provide basic functionality; they can also be configured to execute custom logic such as cloning, deleting, or triggering other actions.
@@ -211,26 +211,26 @@ The following code explains how to customize user handle click actions.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleClickEvents.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIMXNloZKBydSJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/UserHandleClickEvents.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIMXNloZKBydSJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/UserHandleClickEvents.webp)" %}
 
 ## Customization
 
 ### How to Position User Handles
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of user handles allows precise positioning based on fractional values. A value of 0 represents the Top-Left corner, 1 represents the Bottom-Right corner, and 0.5 represents the midpoint of either the Width or Height. The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property determines the alignment orientation of the user handle relative to the specified `Offset`. Together, these properties offer flexible and accurate placement of user handles within the diagram.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of user handles allows precise positioning based on fractional values. A value of **0** represents the Top-Left corner, **1** represents the Bottom-Right corner, and **0.5** represents the midpoint of either the Width or Height. The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property determines the alignment orientation of the user handle relative to the specified `Offset`. Together, these properties offer flexible and accurate placement of user handles within the diagram.
 
 The following table visually demonstrates the possible alignments and user handle positions.
 
 | Offset | Side | Output |
 | -------- | -------- | -------- |
-|0|Left|![Blazor Diagram Node with User Handle at TopLeft Corner](images/blazor-diagram-user-handle-at-topleft-corner.png)|
-|0|Right|![Blazor Diagram Node with User Handle at TopRight Corner](images/blazor-diagram-user-handle-at-topright-corner.png)|
-|0|Top|![Blazor Diagram Node with User Handle at Top Corner](images/blazor-diagram-user-handle-at-top-corner.png)|
-|0|Bottom|![Blazor Diagram Node with User Handle at LeftBottom Corner](images/blazor-diagram-user-handle-at-leftbottom-corner.png)|
-|1|Left|![Blazor Diagram Node with User Handle at Left Corner](images/blazor-diagram-user-handle-at-left-corner.png)|
-|1|Right|![Blazor Diagram Node with User Handle at RightBottom Corner](images/blazor-diagram-user-handle-at-rightbottom-corner.png)|
-|1|Top|![Blazor Diagram Node with User Handle at RightTop Corner](images/blazor-diagram-user-handle-at-righttop-corner.png)|
-|1|Bottom|![Blazor Diagram Node with User Handle at Bottom Corner](images/blazor-diagram-user-handle-at-bottom-corner.png)|
+|0|Left|![Blazor Diagram Node with User Handle at TopLeft Corner](images/blazor-diagram-user-handle-at-topleft-corner.webp)|
+|0|Right|![Blazor Diagram Node with User Handle at TopRight Corner](images/blazor-diagram-user-handle-at-topright-corner.webp)|
+|0|Top|![Blazor Diagram Node with User Handle at Top Corner](images/blazor-diagram-user-handle-at-top-corner.webp)|
+|0|Bottom|![Blazor Diagram Node with User Handle at LeftBottom Corner](images/blazor-diagram-user-handle-at-leftbottom-corner.webp)|
+|1|Left|![Blazor Diagram Node with User Handle at Left Corner](images/blazor-diagram-user-handle-at-left-corner.webp)|
+|1|Right|![Blazor Diagram Node with User Handle at RightBottom Corner](images/blazor-diagram-user-handle-at-rightbottom-corner.webp)|
+|1|Top|![Blazor Diagram Node with User Handle at RightTop Corner](images/blazor-diagram-user-handle-at-righttop-corner.webp)|
+|1|Bottom|![Blazor Diagram Node with User Handle at Bottom Corner](images/blazor-diagram-user-handle-at-bottom-corner.webp)|
 
 ### How to Customize User Handle Size
 
@@ -386,7 +386,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### How to change the size of the user handle
 
-The Diagram component supports customizing user handle dimensions through the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. This sets the width and height of user handles in pixels. If not explicitly set, the `Size` property defaults to 25 pixels, providing a standard visual representation. Adjusting this value lets create user handles that are appropriately sized for the specific diagram requirements.
+The Diagram component supports customizing user handle dimensions through the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. This sets the width and height of user handles in pixels. If not explicitly set, the `Size` property defaults to **25 pixels**, providing a standard visual representation. Adjusting this value lets create user handles that are appropriately sized for the specific diagram requirements.
 
 ### How to Style User Handles
 
@@ -397,7 +397,7 @@ User handles can be styled using properties such as PathColor, BorderColor, Back
 
 * Use [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderColor) and [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BackgroundColor) properties to set the border and background colors respectively. Additionally, the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderWidth) property allows you to adjust the thickness of the user handle's border.
 
-* The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property controls the visibility of the user handle in the diagram. Set it to `true` to display the handle, or `false` to hide it from view.
+* The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property controls the visibility of the user handle in the diagram. Set it to **true** to display the handle, or **false** to hide it from view.
 
 The following code explains how to customize the appearance of the user handle.
 
@@ -475,7 +475,7 @@ The following code explains how to customize the appearance of the user handle.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/Style.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLesXNvIjJlaqCH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLesXNvIjJlaqCH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.webp)" %}
 
 ### How to Change the Userhandle's Visible Target
 
@@ -483,9 +483,9 @@ The [VisibleTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 | VisibleTarget | Node | Connector | Description |
 | -------- | -------- | -------- |-------- |
-|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When the VisibleTarget is set as the node, the userhandle only renders for nodes, not for connectors. |
-|Connector|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector1.png)|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget is set as the connector, the userhandle only renders for the connector, not for nodes. |
-|Both|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-connector.png)|When the VisibleTarget is set as both, then the userhandle renders for both nodes and connectors |
+|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.webp)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.webp)|When the VisibleTarget is set as the node, the userhandle only renders for nodes, not for connectors. |
+|Connector|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector1.webp)|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector.webp)|When VisibleTarget is set as the connector, the userhandle only renders for the connector, not for nodes. |
+|Both|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-node.webp)|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-connector.webp)|When the VisibleTarget is set as both, then the userhandle renders for both nodes and connectors |
 
 The following code example shows how to change the VisibleTarget in the user handle.
 
@@ -719,7 +719,7 @@ The following code example shows how to change the VisibleTarget in the user han
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/VisibleofUserhandle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheCXXuWinfoVfl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheCXXuWinfoVfl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[VisibleTarget](Images/blazor-diagram-user-handle-visible-target.webp)" %}
 
 ### How to define the type of user handle
 The Blazor Diagram component provides support to render different types of user handles, giving flexibility in how they appear and function. There are three main types of user handles:
@@ -954,7 +954,7 @@ The following code explains how to define a template for the [UserHandle](https:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandleTemplate.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrSWDjECDEhxaNC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for UserHandle](images/UserHandleTemplate.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrSWDjECDEhxaNC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for UserHandle](images/UserHandleTemplate.webp)" %}
 
 Precedence Order
 The user handle types follow a specific precedence order when multiple options are defined:
@@ -1108,14 +1108,14 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Margin | Output |
 | -------- | -------- | -------- |
-| (0,0) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftTop Position](images/blazor-diagram-user-handle-at-topleft-position.png)|
-| (0.5,0) | Bottom = 20 |![Blazor Diagram with Fixed User Handle at CenterTop Position](images/blazor-diagram-user-handle-at-topcenter-position.png)|
-| (1,0) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightTop Position](images/blazor-diagram-user-handle-at-topright-position.png)|
-| (0,0.5) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftCenter Position](images/blazor-diagram-user-handle-at-leftcenter-position.png)|
-| (1,0.5) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightCenter Position](images/blazor-diagram-user-handle-at-rightcenter-position.png)|
-| (0,1) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftBottom Position](images/blazor-diagram-user-handle-at-bottomleft-position.png)|
-| (0.5,1) | Top = 20 |![Blazor Diagram with Fixed User Handle at CenterBottom Position](images/blazor-diagram-user-handle-at-bottomcenter-position.png)|
-| (1,1) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightBottom Position](images/blazor-diagram-user-handle-at-bottomright-position.png)|
+| (0,0) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftTop Position](images/blazor-diagram-user-handle-at-topleft-position.webp)|
+| (0.5,0) | Bottom = 20 |![Blazor Diagram with Fixed User Handle at CenterTop Position](images/blazor-diagram-user-handle-at-topcenter-position.webp)|
+| (1,0) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightTop Position](images/blazor-diagram-user-handle-at-topright-position.webp)|
+| (0,0.5) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftCenter Position](images/blazor-diagram-user-handle-at-leftcenter-position.webp)|
+| (1,0.5) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightCenter Position](images/blazor-diagram-user-handle-at-rightcenter-position.webp)|
+| (0,1) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftBottom Position](images/blazor-diagram-user-handle-at-bottomleft-position.webp)|
+| (0.5,1) | Top = 20 |![Blazor Diagram with Fixed User Handle at CenterBottom Position](images/blazor-diagram-user-handle-at-bottomcenter-position.webp)|
+| (1,1) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightBottom Position](images/blazor-diagram-user-handle-at-bottomright-position.webp)|
 
 The following code explains how to customize the node fixed user handle.
 
@@ -1178,9 +1178,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ### How to Position Connector Fixed User Handle Using Offset
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Offset) property of the connector fixed user handle allows precise positioning along the connector's length. It uses a fractional value where:
-* 0 represents the connector source point
-* 1 represents the connector target point
-* 0.5 represents the midpoint of the connector segment
+* **0** represents the connector source point
+* **1** represents the connector target point
+* **0.5** represents the midpoint of the connector segment
 
 This fractional system enables flexible and accurate alignment of user handles on connectors.
 
@@ -1192,9 +1192,9 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Alignment | Output |
 | -------- | -------- | -------- |
-| 0 | Before |![Displaying Fixed User Handle in Before Blazor Diagram Connector](images/blazor-diagram-user-handle-in-before-connector.png)|
-| 0.5 | Center |![Displaying Fixed User Handle in Center of Blazor Diagram Connector](images/blazor-diagram-user-handle-in-center-of-connector.png)|
-| 1 | After |![Displaying Fixed User Handle in After Blazor Diagram Connector](images/blazor-diagram-user-handle-in-after-connector.png)|
+| 0 | Before |![Displaying Fixed User Handle in Before Blazor Diagram Connector](images/blazor-diagram-user-handle-in-before-connector.webpg)|
+| 0.5 | Center |![Displaying Fixed User Handle in Center of Blazor Diagram Connector](images/blazor-diagram-user-handle-in-center-of-connector.webp)|
+| 1 | After |![Displaying Fixed User Handle in After Blazor Diagram Connector](images/blazor-diagram-user-handle-in-after-connector.webp)|
 
 ### How to Adjust Connector Fixed User Handle Position Using Displacement 
 
@@ -1204,8 +1204,8 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Displacement | Alignment | Output |
 | -------- | -------- | -------- |
-| y = 10 | Before |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-before-node.png)|
-| y = 10 | After |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-after-node.png)|
+| y = 10 | Before |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-before-node.webp)|
+| y = 10 | After |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-after-node.webp)|
 
 N> Displacement will not be done if the alignment is set to center.
 
@@ -1334,7 +1334,7 @@ Define a custom style for fixed user handles using a template in the [FixedUserH
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeFixedUserHandle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLICNZYWsBxKDOk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for FixedUserHandle](images/FixedUserTemplate.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLICNZYWsBxKDOk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for FixedUserHandle](images/FixedUserTemplate.webp)" %}
 
 ## How to Handle Fixed User Handle Events
 

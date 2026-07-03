@@ -46,4 +46,4 @@ Bind the change event in the listbox [ValueChange](https://help.syncfusion.com/c
 
 ```
 
-![Blazor ListBox with change event binding example](./../images/blazor-listbox.png)
+![Blazor ListBox with change event binding example](./../images/blazor-listbox.webp)

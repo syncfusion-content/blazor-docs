@@ -27,7 +27,7 @@ The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Conte
 </SfDiagramComponent>
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/DefaultContextMenu.razor)
-![Default Context Menu](images/ContextMenuDefault.gif)
+![Default Context Menu](images/ContextMenuDefault.webp)
 
 The following code shows how to disable the default context menu items.
 
@@ -62,7 +62,7 @@ Custom context menu provides an option to add new custom items to the context me
 
 ### How to Add Custom and Default Context Menu Items Together
 
-The following code example shows how to add custom context menu items along with the default context menu. Set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to false to render both the custom context menu and default context menu.
+The following code example shows how to add custom context menu items along with the default context menu. Set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to **false** to render both the custom context menu and default context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -168,7 +168,7 @@ The following code example shows how to show custom context menu items alone.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/CustomContextMenuOnly.razor)
 
-![Custom Context Menu](images/ContextMenuCustomMenuOnly.gif)
+![Custom Context Menu](images/ContextMenuCustomMenuOnly.webp)
 
 ## How to Customize Context Menu Items Using Templates
 
@@ -276,7 +276,7 @@ Diagram provides template support for the context menu. The context menu items c
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSitXcpeBhpOuL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ContextMenu/ContextMenuTemplate.razor)
-![Context Menu Template](images/ContextMenuTemplate.gif)
+![Context Menu Template](images/ContextMenuTemplate.webp)
 
 ## Events
 

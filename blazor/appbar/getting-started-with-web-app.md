@@ -1,6 +1,10 @@
 ---
 layout: post
+<<<<<<< HEAD
 title: Getting Started with AppBar in Blazor Web App | Syncfusion®
+=======
+title: Getting Started with AppBar Component in Blazor Web App | Syncfusion®
+>>>>>>> remotes/origin/master
 description: Checkout and learn about the documentation for getting started with Blazor AppBar Component in Blazor Web App.
 platform: Blazor
 component: AppBar

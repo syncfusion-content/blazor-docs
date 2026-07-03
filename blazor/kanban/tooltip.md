@@ -71,4 +71,4 @@ N> To display tooltips on custom elements within the Kanban board, assign the `e
 
 ```
 
-![Tooltip displayed on Blazor Kanban card showing task summary](./images/blazor-kanban-tooltip.png)
+![Tooltip displayed on Blazor Kanban card showing task summary](./images/blazor-kanban-tooltip.webp)

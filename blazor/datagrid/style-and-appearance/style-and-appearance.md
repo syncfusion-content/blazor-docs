@@ -32,9 +32,9 @@ Properties like **background-color**, **color**, **font-family**, and **padding*
 
 **Using Theme Studio:**
 
-Syncfusion Theme Studio provides a unified approach to style all components, including the Blazor DataGrid.
+Theme Studio provides a unified approach to style all components, including the Blazor DataGrid.
 
-1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
+1. Open the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
 2. Select **Grid** in the left panel.
 3. Customize colors, typography, spacing, and other visual tokens.
 4. Download the generated CSS and include it in the Blazor project’s site stylesheet or theme bundle.

@@ -171,7 +171,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 </SfTreeView>
 
 @code {
-
     public class MailItem
     {
         public string? Id { get; set; }

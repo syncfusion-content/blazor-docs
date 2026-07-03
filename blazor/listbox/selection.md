@@ -46,7 +46,7 @@ To enable single selection, set the [Mode](https://help.syncfusion.com/cr/blazor
 
 ```
 
-![Blazor ListBox with Single Selection](./images/blazor-listbox-single-selection.png)
+![Blazor ListBox with Single Selection](./images/blazor-listbox-single-selection.webp)
 
 ## Multiple selection
 
@@ -82,7 +82,7 @@ N> By default, the selection mode is `Multiple`.
 
 ```
 
-![Blazor ListBox with Multiple Selection](./images/blazor-listbox-multiple-selection.png)
+![Blazor ListBox with Multiple Selection](./images/blazor-listbox-multiple-selection.webp)
 
 ## CheckBox Selection
 
@@ -121,7 +121,7 @@ To select all items in the ListBox, enable the [ShowSelectAll](https://help.sync
 
 ```
 
-![Blazor ListBox with Checkbox Selection](./images/blazor-listbox-with-checkbox-selection.png)
+![Blazor ListBox with Checkbox Selection](./images/blazor-listbox-with-checkbox-selection.webp)
 
 ### Maximum Selection Length
 

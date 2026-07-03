@@ -80,7 +80,7 @@ Styling the tip pointer's size, background, and border colors can be done using 
 </style>
 ```
 
-![Blazor Tooltip with Custom Tip Pointer](images/blazor-tooltip-custom-tip-pointer.png)
+![Blazor Tooltip with Custom Tip Pointer](images/blazor-tooltip-custom-tip-pointer.webp)
 
 ## Tooltip customization
 
@@ -188,4 +188,4 @@ The complete look and feel of the Tooltip can be customized by changing it's bac
 </style>
 ```
 
-![Blazor Tooltip Customization](images/blazor-tooltip-customization.png)
+![Blazor Tooltip Customization](images/blazor-tooltip-customization.webp)

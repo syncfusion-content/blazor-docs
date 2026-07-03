@@ -54,4 +54,4 @@ In the following example, the up arrow is updated on popup close and down arrow 
 
 
 
-![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-caret-icon.png)
+![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-caret-icon.webp)

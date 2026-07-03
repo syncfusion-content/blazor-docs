@@ -117,7 +117,11 @@ To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dot
 
 ### Final Evaluation
 
+<<<<<<< HEAD
 To evaluate application size, a Blazor WebAssembly test application was configured with Blazor components, specifically featuring the Blazor Grid with paging enabled.
+=======
+To evaluate application size, a Blazor WebAssembly test application was configured with components, specifically featuring the Blazor Grid with paging enabled.
+>>>>>>> remotes/origin/master
 
 |   AOT Status          | With Trim            | Without Trim         |
 |-----------------------|----------------------|----------------------|

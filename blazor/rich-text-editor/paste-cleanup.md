@@ -157,7 +157,7 @@ When pasting a large text into the editor it displays `Attempting to reconnect` 
 
 ### Blazor Server App
 
-Open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
+Open the **~/Program.cs** file and register the Blazor Service.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="11" %}
@@ -182,7 +182,7 @@ var app = builder.Build();
 
 ### Blazor WebAssembly App
 
-Open **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the client web app.
+Open **~/Program.cs** file and register the Blazor Service in the client web app.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" hl_lines="13" %}

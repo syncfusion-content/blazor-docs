@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Highlight search in Blazor AutoComplete component | Syncfusion
-description: Check out how to highlight search text in the Syncfusion Blazor AutoComplete component, including template-based highlighting and CSS customization.
+title: Highlight search in Blazor AutoComplete component | Syncfusion®
+description: Check out how to highlight search text in the Blazor AutoComplete component, including template-based highlighting and CSS customization.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -46,4 +46,4 @@ Customize the appearance of the highlighted text using the `.e-highlight` class.
 
 {% endhighlight %} 
 
-![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.png)
+![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.webp)

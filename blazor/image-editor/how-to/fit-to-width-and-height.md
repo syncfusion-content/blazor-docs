@@ -73,4 +73,4 @@ This example demonstrates scenarios that include buttons for fitting the image t
 }
 ```
 
-![Blazor Image Editor clearing the image](../images/blazor-image-editor-fit-to-width-and-height.jpg)
+![Blazor Image Editor clearing the image](../images/blazor-image-editor-fit-to-width-and-height.webp)

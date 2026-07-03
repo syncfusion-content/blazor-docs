@@ -830,7 +830,7 @@ td {
     max-width: 100%;
     position: relative;
 }
-.e-imginline {
+.e-img-inline {
     margin-left: 5px;
     margin-right: 5px;
     display: inline-block;
@@ -857,7 +857,7 @@ td {
     padding: 1px;
     vertical-align: bottom;
 }
-.e-imgcenter {
+.e-img-center {
     cursor: pointer;
     display: block;
     float: none;
@@ -879,7 +879,7 @@ td {
     max-width: 100%;
     position: relative;
 }
-.e-imgright {
+.e-img-right {
     float: right;
     margin-top: 0;
     margin-right: auto;
@@ -897,7 +897,7 @@ td {
     margin-left: 5px;
     text-align: right;
 }
-.e-imgleft {
+.e-img-left {
     float: left;
     margin-top: 0;
     margin-right: auto;
@@ -944,7 +944,7 @@ td {
     text-align: center;
     width: 100%;
 }
-.e-imgbreak {
+.e-img-break {
     border: 0;
     cursor: pointer;
     display: block;

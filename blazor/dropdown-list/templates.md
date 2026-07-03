@@ -27,7 +27,7 @@ In the following sample, the selected value shows a combined text of `FirstName`
 
 {% endhighlight %}
 
-![Blazor DropDownList with ValueTemplate](./images/template/blazor-dropdownlist-value-template.png)
+![Blazor DropDownList with ValueTemplate](./images/template/blazor-dropdownlist-value-template.webp)
 
 ## Item template
 
@@ -41,7 +41,7 @@ In the following sample, each list item is arranged into two columns to present 
 
 {% endhighlight %}
 
-![Blazor DropDownList with ItemTemplate](./images/template/blazor-dropdownlist-item-template.png)
+![Blazor DropDownList with ItemTemplate](./images/template/blazor-dropdownlist-item-template.webp)
 
 ## Group template
 
@@ -55,7 +55,7 @@ In the following sample, employees are grouped by city.
 
 {% endhighlight %}
 
-![Blazor DropDownList with GroupTemplate](./images/template/blazor-dropdownlist-group-template.png)
+![Blazor DropDownList with GroupTemplate](./images/template/blazor-dropdownlist-group-template.webp)
 
 ## Header template
 
@@ -69,7 +69,7 @@ In the following sample, the header and items are presented in two columns, simi
 
 {% endhighlight %}
 
-![Blazor DropDownList with HeaderTemplate](./images/template/blazor-dropdownlist-header-template.png)
+![Blazor DropDownList with HeaderTemplate](./images/template/blazor-dropdownlist-header-template.webp)
 
 ## Footer template
 
@@ -83,7 +83,7 @@ In the following sample, the footer displays the total number of items in the Dr
 
 {% endhighlight %}
 
-![Blazor DropDownList with Footer Template](./images/template/blazor-dropdownlist-footer-template.png)
+![Blazor DropDownList with Footer Template](./images/template/blazor-dropdownlist-footer-template.webp)
 
 ## No records template
 
@@ -97,7 +97,7 @@ In the following sample, the popup displays a “no data available” message.
 
 {% endhighlight %}
 
-![Blazor DropDownList without Data](./images/template/blazor-dropdownlist-without-data.png)
+![Blazor DropDownList without Data](./images/template/blazor-dropdownlist-without-data.webp)
 
 ## Action failure template
 
@@ -111,7 +111,7 @@ In the following sample, the DropDownList displays a notification when data retr
 
 {% endhighlight %}
 
-![Blazor DropDownList with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.png)
+![Blazor DropDownList with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.webp)
 
 ## See also
 
