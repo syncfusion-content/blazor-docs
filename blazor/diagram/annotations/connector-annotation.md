@@ -68,7 +68,7 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Pat
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSsDtHrxzCiyfQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVHNHhnUGuuxESy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/UpdateOffsetofConnectorAnnotation.razor)
 
@@ -123,7 +123,7 @@ The [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIWNNdhRHwmmwP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLRNRBHKPZUVXQm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AlignmentOfConnectorAnnotation.razor)
 
@@ -175,7 +175,7 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSiDjdhHmyHgYP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBHZxVnqPXoyybr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/DisplacementOfConnectorAnnotation.razor)
 
@@ -219,7 +219,7 @@ The following code example shows how the connector annotation rotated in its pat
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLIWtDnBRPnqaBj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBRXnrHqlZcPBgG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/SegmentAngleOfConnectorAnnotation.razor)
 

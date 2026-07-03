@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Gantt Chart Component
 
-The Blazor Gantt Chart component provides sorting functionality to arrange task data in ascending or descending order based on column values.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides sorting functionality to arrange task data in ascending or descending order based on column values.
 
 To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to **true**. You can configure sorting option using the [GanttSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSortSettings.html) property.
 

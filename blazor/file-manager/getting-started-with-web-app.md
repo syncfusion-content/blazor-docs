@@ -196,6 +196,8 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
     ```
 3. The application will start and display in your default web browser.
 
+N> Looking for the full Blazor File Manager Component component overview, features, pricing, and documentation? Visit the [Blazor File Manager Component](https://www.syncfusion.com/blazor-components/blazor-file-manager) page.
+
 ## See also
 
 1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar in Blazor Gantt Chart Component
 
-The Blazor Gantt Chart component includes built-in toolbar support for executing common actions such as editing, searching, and navigating the timeline. The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property accepts the collection of built-in toolbar items and `ToolbarItem` objects for custom toolbar items.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component includes built-in toolbar support for executing common actions such as editing, searching, and navigating the timeline. The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property accepts the collection of built-in toolbar items and `ToolbarItem` objects for custom toolbar items.
 
 ## Built-in toolbar items
 
