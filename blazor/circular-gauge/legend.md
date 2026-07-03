@@ -92,6 +92,7 @@ The following code example shows how to add legend in the gauge.
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
@@ -129,6 +130,7 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
@@ -164,6 +166,7 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
@@ -194,11 +197,12 @@ You can customize the legend text using `LegendText` property in `CircularGaugeR
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
-<CircularGaugeLegendSettings Visible="true" Height="50">
+<CircularGaugeLegendSettings Visible="true" Height="125">
     <CircularGaugeLegendBorder Color="green" Width="3"></CircularGaugeLegendBorder>
 </CircularGaugeLegendSettings>
 <CircularGaugeAxes>
     <CircularGaugeAxis Minimum="0" Maximum="100">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         <CircularGaugeAxisMajorTicks UseRangeColor="true">
         </CircularGaugeAxisMajorTicks>
         <CircularGaugeAxisMinorTicks UseRangeColor="true">
