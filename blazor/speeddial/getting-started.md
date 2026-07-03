@@ -216,7 +216,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrfjigtfqnDNcxJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdjcDAMIQBrSwy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 
@@ -250,7 +250,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrfZsUDfgdgUggM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBRXmNKCRlXCxsj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.webp)" %}
 
 ## Item clicked event
 
@@ -280,4 +280,4 @@ The Speed Dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBpjWAjTARQyWoC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNGtqsdvnitdW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.webp)" %}
