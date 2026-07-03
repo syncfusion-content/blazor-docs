@@ -13,8 +13,6 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get start quickly with Blazor Button component, refer to this [GitHub](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) sample.
-
 ## Create a new Blazor WebAssembly (Standalone) App
 
 {% tabcontents %}
