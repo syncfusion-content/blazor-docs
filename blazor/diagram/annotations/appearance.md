@@ -44,7 +44,7 @@ The annotation size can be customized using the [Height](https://help.syncfusion
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXByCtXxVTAfPZsm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrxjRhnUxRBTTJG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/SizeOfAnnotation.razor)
 
@@ -92,7 +92,7 @@ A [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBIWtDRBTaSnpxq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLxtnrRgnwFMPkt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinktoAnnotation.razor)
 
@@ -141,7 +141,7 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.An
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLoMXNRrIZKmISV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLRtHVnKRFQCTrp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperLinkWithContent.razor)
 
@@ -297,7 +297,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthoiXDdVIsShZlW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVnZdVdUdOLzqgm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationWithTextWrapping.razor)
 
@@ -357,7 +357,7 @@ The following code sample demonstrates how the `TextOverflow` property works wit
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVoCXtHLSBncEEM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBxXxrngHEmzbQw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationWithTextOverflow.razor)
 
@@ -433,7 +433,7 @@ The following code explains how to customize the visual appearance of an annotat
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBSMtXHByUvlGFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVnNdVRAwNUiEaJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/Appearance.razor)
 
@@ -503,7 +503,7 @@ The font style of annotations can be changed dynamically at runtime by modifying
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLSMXXHLypEIAGt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBHXRVxqGHHJqcC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationStyleAtRunTime.razor)
 
@@ -557,7 +557,7 @@ Annotations can be set to read-only mode by configuring their [Constraints](http
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrIWjtxBeoSmkMG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBHjnVnAwQNnWXR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/ReadonlyConstraints.razor)
 
@@ -640,7 +640,7 @@ Multiple annotations can be added to a single node or connector. The following c
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoMZtHrSEKMWRQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrntRBRqcwetSmQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/MultipleAnnotation.razor)
 
@@ -765,7 +765,7 @@ The following code illustrates how to define a template for both a node's and a 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVoMDtHVnZBKrQG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrxDdVdKwQaSqsV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/TemplateSupportforAnnotation.razor)
 
@@ -816,7 +816,7 @@ The following code demonstrates how to set a value for the `AdditionalInfo` prop
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtreCDDHBnjOUXBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLxjxBxqwlclibn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AdditionalInfoProperty.razor)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about accessibility and keyboard interaction in Syncfusion Rating component and much more.
+title: Accessibility in Blazor Rating Component | Syncfusion®
+description: Checkout and learn here all about accessibility and keyboard interaction in Blazor Rating component with examples and much more details.
 platform: Blazor
 control: Rating
 documentation: ug
@@ -71,4 +71,4 @@ The accessibility compliance of the Blazor Rating component is demonstrated in t
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
