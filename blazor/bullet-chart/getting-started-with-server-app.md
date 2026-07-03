@@ -66,7 +66,7 @@ Install the [Syncfusion.Blazor.BulletChart](https://www.nuget.org/packages/Syncf
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.BulletChart`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.BulletChart`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
@@ -281,8 +281,6 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBzDWVITXPjsQbH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.webp)" %}
-
-N> You can also explore our [Blazor Bullet Chart example](https://blazor.syncfusion.com/demos/bullet-chart/default-functionalities?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 
 ## See also
 
