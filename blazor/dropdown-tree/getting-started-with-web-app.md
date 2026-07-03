@@ -166,17 +166,9 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveAuto
 @using Syncfusion.Blazor.Navigations
 
 <SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px">
