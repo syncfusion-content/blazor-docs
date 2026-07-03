@@ -156,7 +156,7 @@ The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVyWNXcztJGwllm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhdtxrkpILDYTld?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddNodeToPalette.razor)
 
@@ -228,7 +228,7 @@ The following example illustrates how to add a connector to a palette.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVSsDtGpZyphJxt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLxNRBapoBUqjOR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddConnectorToSymbolPalette.razor)
 
@@ -319,7 +319,7 @@ The following example illustrates how to add a node group to a palette.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBeiXNwTXHzIlfp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdjnhuTIroogEV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddGroupToPalette.razor)
 
@@ -478,7 +478,7 @@ _palettes = new DiagramObjectCollection<Palette>()
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryMXXmTXcwMRie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRDdrupSVlRJcJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/AddPaletteToSymbolPalette.razor)
 
@@ -637,7 +637,7 @@ To enable drag and drop functionality, add the diagram component to the [Targets
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBeiXjGJZFQrXIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLxjnVufIqijoIo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/DragAndDrop.razor)
 
@@ -836,7 +836,7 @@ The diagram component offers a search functionality within the symbol palette. B
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLSsDXmJXuyQBBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLxDRhaTIqTdrvl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SearchOption.razor)
 
@@ -904,7 +904,7 @@ The [SearchTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBeCtXmpMXBaSVF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdDnrOpoAdbXbv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/SearchTag.razor)
 
@@ -994,7 +994,7 @@ Use the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjByWXjmJsiXCdSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVxDRVufSffSDId?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.png)
 
@@ -1074,7 +1074,7 @@ The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZroCDjcJiseOtxy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrxZHVEzeJxRBFm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/tree/master/Diagram/Server/Pages/SymbolPalette/RefereshPalette.razor)
 
@@ -1115,7 +1115,7 @@ Customize the appearance of symbols using [SymbolPaletteTemplates](https://help.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryiXNcTWhusyQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBHNdBETIJFunHz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Symbol palette templates](../images/SymbolPaletteTemplate.png)
 

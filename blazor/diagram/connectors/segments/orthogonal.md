@@ -55,7 +55,7 @@ documentation: ug
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/Orthogonal.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZroijZnUeUFxqCq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Orthogonal Segment in Blazor Diagram](../../images/blazor-diagram-connector-with-orthogonal.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrRXRVoJHhrnhzO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Connector with Orthogonal Segment in Blazor Diagram](../../images/blazor-diagram-connector-with-orthogonal.webp)" %}
 
 The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow you to define the flow and length of the segment. The following code example illustrates how to create customized orthogonal segments.
 
@@ -114,7 +114,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryWZNdUofLzsmT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVdXRLSpnVkTAhr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Ensure the connector type and each segment type are both set to **Orthogonal**. There should be no contradiction between connector type and segment type.
 
@@ -154,7 +154,7 @@ N> Ensure the connector type and each segment type are both set to **Orthogonal*
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/OrthogonalSegmentEditing.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIijXxgIHDFceR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Orthogonal connector segment in Blazor Diagram](../../images/blazor-diagram-edit-orthogonal-segment.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhdtHLypdqhHzRo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Orthogonal connector segment in Blazor Diagram](../../images/blazor-diagram-edit-orthogonal-segment.gif)" %}
 
 ## How to Customize Orthogonal Segment Thumb Shape
 
@@ -211,7 +211,7 @@ The following code example illustrates how to customize the orthogonal segment t
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/OrthogonalThumbShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhSMNXRqeQwfDfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrRDdLyTnSftFfO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings.webp)" %}
 
 When the `InheritSegmentThumbShape` constraint is enabled in the connector, the shape specified at the diagram level will be applied to the connector's segment thumb. This allows for consistent segment thumb shapes across the diagram.
 
@@ -245,7 +245,7 @@ The following code example illustrates how to customize the orthogonal segment t
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/OrthogonalThumbSetting.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVoMjNdUevUbNDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings1.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhxNxVyzPsynWPZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings1.webp)" %}
 
 >Note:  This feature ensures that the shape is updated regardless of whether the  [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) enum value is added to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the diagram. If you apply the `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
  To make the shapes visible, ensure that the [DragSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSegmentThumb) enum is added to the connector's constraints.
