@@ -103,7 +103,7 @@ The following properties can be used to configure UML class attributes and opera
 }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLClassShape.razor).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlClassShape.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Class Example](./images/UmlClassShapes/UMLClassShape.webp)" %}
 
@@ -147,7 +147,7 @@ For details on attributes and operations properties, refer to the [UML class sec
 }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLInterfaceShape.razor).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlInterfaceShape.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Interface Example](./images/UmlClassShapes/UMLInterfaceShape.webp)" %}
 
@@ -201,7 +201,7 @@ The following properties can be used to configure members in UML enumeration:
 }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLEnumerationShape.razor).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlEnumerationShape.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Enumeration Example](./images/UmlClassShapes/UMLEnumeration.webp)" %}
 
@@ -316,7 +316,7 @@ Each compartment — **Attributes**, **Operations**, and **Members** — has a h
     }
 }
 ```
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLClassHeaderProperties.razor).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlClassHeaderProperties.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML ClassHeader Example](./images/UmlClassShapes/UMLClassHeader.webp)" %}
 
@@ -624,7 +624,7 @@ Add UML classifier shapes and relationship connectors to the [SfSymbolPaletteCom
 }
 ```
 
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UMLCLassSymlbolShapes.razor).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlClassSymlbolShapes.razor).
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Class Symbol Example](./images/UmlClassShapes/UMLClassSymbolShapes.webp)" %}
 
@@ -636,4 +636,3 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 - [UmlClassifierShape API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html)
 - [RelationShip API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html)
 - [SfSymbolPaletteComponent API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfSymbolPaletteComponent.html)
-- [UML Activity Diagram in Blazor Diagram](https://blazor.syncfusion.com/documentation/diagram/uml-activity-diagram)
