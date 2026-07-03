@@ -57,7 +57,7 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/AddNode.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHNsqjzuLVLYHV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRDHVTTlEgoOnv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Adding a node from the nodes collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.webp)" %}
 
 >**Note:** Node ID should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
@@ -113,7 +113,7 @@ A node can be added at runtime by adding it to the `Nodes` collection of the Dia
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBxDsADfkUYPoPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLHZHVffajQZaTe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/AddNodeAtRuntime.razor)
 
@@ -182,7 +182,7 @@ The following code explains how to add a node with an annotation at runtime by u
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDreijNwLibcCWVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLnXdVppOMtdRKl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to Add a Node to the Palette
 
@@ -252,7 +252,7 @@ The following code shows how to remove a node at runtime.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXroCjZGVsEiiFIr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrdjxBTzkiplZkT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/RemoveNode.razor)
 
@@ -322,7 +322,7 @@ private void RemoveNodes()
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/CloneNode/CloneNode.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLyWXZchiOJEKsq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Clonning Node](../images/CloneNode.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVRXRhppEMmdCcd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Clonning Node](../images/CloneNode.webp)" %}
 
 ## How to Update Nodes at Runtime
 
@@ -372,7 +372,7 @@ The following code example explains how to change node properties.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVSCDNmhWOaZNES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVRXRBTfOhscAKT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ActionsofNodes/UpdateNode.razor)
 
