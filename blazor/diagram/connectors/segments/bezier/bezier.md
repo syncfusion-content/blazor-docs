@@ -54,7 +54,7 @@ Bezier segments are used to create curved connectors. The curve can be configure
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/Bezier.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreiNjHgpdAoFCX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-connector-with-bezier.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrntnrIzbUZOYGt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Connector with Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-connector-with-bezier.webp)" %}
 
  [Point1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point1) and [Point2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point2) configure the control points of the Bezier connector.
  The [vector1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) properties define the length and angle between the source point and target point, respectively. The following code example illustrates how to use these properties.
@@ -113,7 +113,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLoWXjHUpkqFQSO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrnXdrozvfUXfgL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/BezierSegmentSample.razor)
 
@@ -122,7 +122,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * A segment control point of the Bezier connector is used to change the bezier vectors and points of the connector.
 
-![Editing Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-edit-bezier-segment.gif)
+![Editing Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-edit-bezier-segment.webp)
 
 ## How to Avoid Overlapping with Bezier
 
@@ -190,7 +190,7 @@ By default, when there are no segments defined for a bezier connector, the bezie
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthoijXdqetYDHum?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrRDRByJveQhOKe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/BezierSegmentThumb.razor).
 
@@ -265,7 +265,7 @@ Also, if you provide segments during the initial rendering, the segment collecti
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/UpdateBezierSegment.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBSCDNnASCfNrtt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Avoid overlapping with bezier](../../../images/bezierOverlap.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrHjnLefahsOHyq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Avoid overlapping with bezier](../../../images/bezierOverlap.webp)" %}
 
 ## How to Customize Bezier Segment Thumb Shape 
 
@@ -332,7 +332,7 @@ The following code example illustrates how to create a customized bezier segment
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/BezierSegmentShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXryMtZnKysOPiqb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthHXHLeTYrEGSrh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape.webp)" %}
 
 The following code example illustrates how to create a customized bezier segment thumb shape without  using the `InheritSegmentThumbShape` constraints.
 
@@ -375,7 +375,7 @@ The following code example illustrates how to create a customized bezier segment
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/BezierSegmentShape1.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSMZtdUyrTVzDj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape1.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRjxryfaAFmxRM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape1.webp)" %}
 
 >Note:  This feature ensures that the shape is updated regardless of whether the  [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) enum value is added to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the diagram. If you apply the `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
  To make the shapes visible, ensure that the [DragSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSegmentThumb) enum is added to the connector's constraints.

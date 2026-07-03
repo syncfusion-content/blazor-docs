@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection and Highlight in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Selection and Highlight in Syncfusion Blazor TreeMap component and more.
+title: Selection and Highlight in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features Selection and Highlight in Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug

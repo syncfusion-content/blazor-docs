@@ -75,7 +75,7 @@ The following code example demonstrates how to get the selection change event in
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBSCjjmsOntdxie?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrdZxregkVxZXfl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/SelectionChange.razor)
 
@@ -139,7 +139,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthICtjciuGtobOO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLHNnLyAaVFvTzo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/PositionChange.razor)
 
@@ -202,7 +202,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVSCtZGiEcHqVrO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVHZxLyquKCWfCv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/SizeChange.razor)
 
@@ -265,7 +265,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMjNGMEPDIoUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBHjRBoAugASxPc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/RotationChange.razor)
 
@@ -316,7 +316,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVSMZNwsaPGCptX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVnNxhIAuUSYaCs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/NodeCreatingEvent.razor)
 
@@ -360,7 +360,7 @@ The [PropertyChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtroiXXcVZjLxVof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLdXHheAudeSiAU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/PropertyChangedEvent.razor)
 
@@ -404,7 +404,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNroWDXQBDjHmggk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBnZnVIKYdPUVcU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/CollectionChangeEvent.razor)
 
@@ -441,7 +441,7 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrSsDDGVXMoFpjP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLHtnVIgawCMilY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/MouseEnterEvent.razor)
 
@@ -478,7 +478,7 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVyCXZcBNhXdpGO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLRtRLSgEwUoVRV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/MouseLeaveEvent.razor)
 
@@ -515,7 +515,7 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBeiXjcLNBzlmCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVdNxLogEcyHGbo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Events/MouseHoverEvent.razor)
 

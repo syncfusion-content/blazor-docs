@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiSelect DropDown | Syncfusion®
-description: Checkout and learn about getting started with Blazor MultiSelect DropDown component in Blazor WebAssembly Application and much more details.
+title: Get Started with Blazor MultiSelect Dropdown in WASM App | Syncfusion
+description: Check out and learn about getting started with Blazor MultiSelect Dropdown component in Blazor WebAssembly Application.
 platform: Blazor
-control: MultiSelect DropDown
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect DropDown in Blazor WASM App
+# Getting Started with Blazor MultiSelect Dropdown in Blazor WASM App
 
 This guide briefly explains about how to include [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -155,9 +155,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-## Add Blazor MultiSelect DropDown component
+## Add Blazor MultiSelect Dropdown component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor MultiSelect DropDown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component inside the razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -175,7 +175,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor MultiSelect DropDown component will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor MultiSelect Dropdown component will render in your default web browser.
 
 {% endtabcontent %}
 
@@ -209,7 +209,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTZigtBWzsEjwg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTZigtBWzsEjwg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)" %}
 
 ## Binding data source
 
@@ -248,7 +248,7 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVxXyVyzZNgnHsA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVxXyVyzZNgnHsA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor MultiSelect Dropdown](./images/blazing-fast-multiselect-dropdown-data-binding.webp)" %}
 
 ## Configure the popup list
 
