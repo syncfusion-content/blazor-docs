@@ -36,7 +36,7 @@ In the following example, the vertical scroll bar is scrolled down by 50 pixels 
     </ScrollSettings>
 </SfDiagramComponent>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhysjXFTzpvVLgh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhHZdANsYmiwCQx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollSettingsSample.razor)
 ## How to Update Scroll Status
@@ -66,7 +66,7 @@ Programmatically change the scroll offsets at runtime by using the external butt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVIWNDFzfeFyPFB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdXnqjiOwfvdtc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollStatus.razor)
 
@@ -108,7 +108,7 @@ The Diagram control provides the following event for scroll settings.
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthesDXvffnSfzKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLdDxKXMavQUfRi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to Enable or Disable Auto Scroll 
 Autoscroll feature automatically scrolls the Diagram whenever the Node or Connector is moved beyond the boundary of the diagram. So that, it is always visible during dragging, resizing, and multiple selection operations. Autoscroll is automatically triggered when any one of the following is done towards the edges of the Diagram:
@@ -174,7 +174,7 @@ The auto-scroll behavior in the diagram can be enabled or disabled by using the 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIsZNlpJHYSVvY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhHtHgNCkaYYDMj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The auto-scrolling region is limited using [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of the [ScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html) class.Please refer [ScrollLimit](scroll-settings#scroll-limit) page for more details about ScrollLimit.
 
@@ -227,7 +227,7 @@ The following example illustrates how to set auto scroll padding.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBIWttvzTGEtyEB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrRNdgXLjjgxRuv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/AutoScrollPadding.razor)
 
@@ -257,7 +257,7 @@ The following example illustrates how to specify the scroll limit.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryiNXPzflwBSak?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVxZHUjLXXPXKdb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollLimit.razor)
 
@@ -312,7 +312,7 @@ The following example illustrates how to sets scroll padding.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollPadding.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSCZDFJpkPdyYI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scroll Padding support for node](images/ScrollPadding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVntRUDVtLswEEz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Scroll Padding support for node](images/ScrollPadding.webp)" %}
 
 ## How to Restrict Scrollable Area
 Scrolling beyond any particular rectangular area can be restricted using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as **limited**. The following code example illustrates how to customize the scrollable area.
@@ -350,7 +350,7 @@ Scrolling beyond any particular rectangular area can be restricted using the [Sc
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLeCZjlJesCAUEE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhxtHqjrrogYGpE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/ScrollSettings/ScrollableArea.razor)
 ## How to Handle Scroll Settings Property Changes Using Callback Methods
@@ -380,7 +380,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLysZDlzSiITIbl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrHXHUthVSnAJLH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
