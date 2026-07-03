@@ -4,7 +4,7 @@ title: WebApiAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
 description: Learn about binding data and performing CRUD operations using the WebApiAdaptor in the Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
-keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
+keywords: adaptors, WebApiAdaptor, webapi adaptor, remotedata
 documentation: ug
 ---
 
@@ -143,7 +143,7 @@ namespace WebApiAdaptor.Controllers
             existingTask.Duration = updatedTask.Duration;
             existingTask.Progress = updatedTask.Progress;
             existingTask.Priority = updatedTask.Priority;
-            existingTask.SubtaskOf = updatedTask.SubtaskOf;
+            existingTask.ParentId = updatedTask.ParentId;
             return Ok(existingTask);
         }
 
@@ -273,7 +273,7 @@ The following example shows a `WebApiAdaptor` configuration where the API is set
                      EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
-                     ParentID="SubtaskOf">
+                     ParentID="ParentId">
     </GanttTaskFields>
 
     <GanttEditSettings AllowAdding="true"
@@ -762,7 +762,7 @@ public IActionResult UpdateTask([FromBody] GanttData updatedTask)
     existingTask.Duration = updatedTask.Duration;
     existingTask.Progress = updatedTask.Progress;
     existingTask.Priority = updatedTask.Priority;
-    existingTask.SubtaskOf = updatedTask.SubtaskOf;
+    existingTask.ParentId = updatedTask.ParentId;
     return Ok(existingTask);
 }
 ```

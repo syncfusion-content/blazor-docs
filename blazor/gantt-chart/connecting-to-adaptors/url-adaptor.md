@@ -4,7 +4,7 @@ title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
 description: Learn how to bind remote data and perform CRUD operations using the UrlAdaptor in Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
-keywords: adaptors, urladaptor, url adaptor, remotedata 
+keywords: adaptors, UrlAdaptor, url adaptor, remotedata 
 documentation: ug
 ---
 
@@ -314,7 +314,7 @@ namespace URLAdaptor.Controllers
  
 **5. Run the application**
  
-When you run the application, the Blazor Gantt Chart  will display data fetched from the API.
+When you run the application, the Blazor Gantt Chart will display data fetched from the API.
  
 ![UrlAdaptor Data](../images/url-adaptor.webp)
  
@@ -613,7 +613,7 @@ To insert a new record, use the `InsertUrl` property to specify the controller a
 /// <summary>
 /// Inserts a new data item into the data collection.
 /// </summary>
-/// <param name="value">It contains the new record detail which is need to be inserted.</param>
+/// <param name="newRecord">It contains the new record detail that needs to be inserted.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Insert")]
@@ -641,7 +641,7 @@ For updating existing records, use the `UpdateUrl` property to specify the contr
 /// <summary>
 /// Update a existing data item from the data collection.
 /// </summary>
-/// <param name="updatedRecord">It contains the updated record detail which is need to be updated.</param>
+/// <param name="updatedRecord">It contains the updated record detail that needs to be updated.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Update")]
@@ -678,7 +678,7 @@ To delete existing records, use the `RemoveUrl` property to specify the controll
 /// <summary>
 /// Remove a specific data item from the data collection.
 /// </summary>
-/// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
+/// <param name="deletedRecord">It contains the specific record detail that needs to be removed.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Remove")]
