@@ -230,7 +230,7 @@ The following code examples illustrate how to configure `RotationAngle` for an a
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationAngleProperty.razor)
 
-![Annotation Rotation in Blazor Diagram](../images/RotationAngleAnnotation.webp)
+![Annotation Rotation in Blazor Diagram](../images/RotationAngleAnnotation.png)
 
 ## See also
 
