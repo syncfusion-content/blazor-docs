@@ -197,8 +197,6 @@ By default, the `OpenMode` property is set to `HyperlinkOpenMode.Self`, which op
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenMode.razor)
 
-![Hyperlink Open Mode in Blazor Diagram](../images/blazor-diagram-hyperlink-open-mode.webp)
-
 Hyperlink behavior can be updated at runtime to modify the navigation target or open mode based on user interaction or application state.
 
 The following example demonstrates how to change the hyperlink open mode at runtime using a button.
