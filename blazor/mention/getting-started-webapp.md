@@ -41,14 +41,14 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 
 {% tabcontent .NET CLI %}
 
-dotnet new blazor -o BlazorWebApp --interactivity Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
+Run the following command to create a new Blazor Web App.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
