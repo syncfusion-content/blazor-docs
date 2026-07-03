@@ -218,7 +218,7 @@ The following code example shows how to flip the node.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrysNtlgEhFRKGy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRjxBkJlMFlMZA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Flip/FlipDirectionSample.razor)
 
@@ -466,7 +466,7 @@ The following code example shows how to flip the group.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBeiZDvgaptrZdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrnjnBETPhBXPVl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 For more information about node interaction, refer to [Node Interaction](./nodes/interaction).
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Flip/FlipGroup.razor)
@@ -564,6 +564,6 @@ The following code example shows how to flip the connector.
 |Vertical|![VerticalDirection](./images/blazor-diagram-flip-direction-as-vertical.png)|
 |Both|![BothDirection](./images/blazor-diagram-flip-direction-as-both.png)|
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhoiDXPgupyReCL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Flip Connector](./images/blazor-diagram-connector-flip-direction.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxjdhYJFVHGgRf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Flip Connector](./images/blazor-diagram-connector-flip-direction.gif)" %}
 
 For more information about node interaction, refer to [Connector Interaction](./connectors/interactions).

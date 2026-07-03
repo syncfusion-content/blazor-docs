@@ -42,7 +42,7 @@ A data store is used to store or access data associated with a business process.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNryCNtxhaGiAiQN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrdZnrITzDqNHfR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnDataStore/BpmnDataStoreSample.razor)
 

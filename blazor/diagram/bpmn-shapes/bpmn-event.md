@@ -52,7 +52,7 @@ The [EventType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoWZZdracaAiTe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhxZHhIzJMtzxFk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnEvent/BpmnEventTypeSample.razor)
 
@@ -99,7 +99,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtresttdBOFpnepH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBnXHLopJMyqhvg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnEvent/BpmnEventTriggerSample.razor)
 

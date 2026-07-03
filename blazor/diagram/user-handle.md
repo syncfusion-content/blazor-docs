@@ -80,7 +80,7 @@ Enable user handles for selected nodes or connectors by setting [SelectorConstra
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/InitializeUserHandle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIiNjPeXLREtrf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHDxqDhFkOZoAT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.webp)" %}
 
 ## How to Customize User Handle Actions
 User handles in the Blazor Diagram component can be customized to perform specific actions when clicked. By default, user handles provide basic functionality; they can also be configured to execute custom logic such as cloning, deleting, or triggering other actions.
@@ -211,7 +211,7 @@ The following code explains how to customize user handle click actions.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleClickEvents.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIMXNloZKBydSJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Node with User Handle](images/UserHandleClickEvents.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrnDnANraCsjQcA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Node with User Handle](images/UserHandleClickEvents.gif)" %}
 
 ## Customization
 
@@ -296,7 +296,7 @@ The following code explains how to customize the displacement(margin) of the use
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhoiNtPotgQSkmt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhHXRgZrElleuTL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleDisplacement.razor)
 
@@ -380,7 +380,7 @@ The following code explains how to customize horizontal and vertical alignment o
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrSstXPSZJsYUHb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrHDdAXqtXphcQU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleAlignment.razor)
 
@@ -475,7 +475,7 @@ The following code explains how to customize the appearance of the user handle.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/Style.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLesXNvIjJlaqCH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBnNdAjKHMvOPpa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.webp)" %}
 
 ### How to Change the Userhandle's Visible Target
 
@@ -719,7 +719,7 @@ The following code example shows how to change the VisibleTarget in the user han
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/VisibleofUserhandle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDheCXXuWinfoVfl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrRjdqDAtIPbpMO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)" %}
 
 ### How to define the type of user handle
 The Blazor Diagram component provides support to render different types of user handles, giving flexibility in how they appear and function. There are three main types of user handles:
@@ -793,7 +793,7 @@ The following code demonstrates how to create a user handle using PathData:
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLeiZZPeXFydqps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhxjRUXUDdqAqUK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandlePath.razor)
 
@@ -868,7 +868,7 @@ The following code demonstrates how to create a user handle using an image URL:
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhoMjZEWtlIdmFN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthxjHUjKZRHdfSv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandleImage.razor)
 
@@ -954,7 +954,7 @@ The following code explains how to define a template for the [UserHandle](https:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandleTemplate.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrSWDjECDEhxaNC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for UserHandle](images/UserHandleTemplate.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdZnANgDmhtReH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Template for UserHandle](images/UserHandleTemplate.gif)" %}
 
 Precedence Order
 The user handle types follow a specific precedence order when multiple options are defined:
@@ -1011,7 +1011,7 @@ Create fixed user handles by defining them in the corresponding node or connecto
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSCNZEMXacGTMk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVnXdADADPPBYIB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleSample.razor)
 
@@ -1086,7 +1086,7 @@ The following code explains how to customize the appearance of fixed user handle
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBSstjOMMZqFkIF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVxNxUXqSGYrHwb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/ConnectorFixedUserHandleSample.razor)
 
@@ -1165,7 +1165,7 @@ The following code explains how to customize the node fixed user handle.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhIMNDkMsCzaaqE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrxjRKNUylSewvE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/Offset.razor)
 
@@ -1254,7 +1254,7 @@ The following code explains how to customize the connector fixed user handle.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjByWtNYiChZlICf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLRjxANKSblyTer?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/ConnectorFixedUserHandleSample.razor)
 
@@ -1334,7 +1334,7 @@ Define a custom style for fixed user handles using a template in the [FixedUserH
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeFixedUserHandle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLICNZYWsBxKDOk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Template for FixedUserHandle](images/FixedUserTemplate.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhHDdUXqIOUGzmC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Template for FixedUserHandle](images/FixedUserTemplate.webp)" %}
 
 ## How to Handle Fixed User Handle Events
 
@@ -1397,7 +1397,7 @@ The Diagram control provides the following event for fixed user handle.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZheiNXkiCqDgOux?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLRXxgtUdNPjtGN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleEvent.razor)
 
