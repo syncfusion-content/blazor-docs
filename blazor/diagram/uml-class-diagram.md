@@ -636,4 +636,3 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 - [UmlClassifierShape API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html)
 - [RelationShip API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html)
 - [SfSymbolPaletteComponent API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfSymbolPaletteComponent.html)
-- [UML Activity Diagram in Blazor Diagram](https://blazor.syncfusion.com/documentation/diagram/uml-activity-diagram)
