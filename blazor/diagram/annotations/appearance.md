@@ -98,9 +98,9 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.webp)
 
-### How to Display Text in Annotation Hyperlink
+### How to Display Text in Annotation Hyperlinks
 
-The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the `Hyperlink` to specify custom text to be displayed for the hyperlink.
+The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the `Hyperlink` can be set to display custom text for the link.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -147,11 +147,11 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.webp)
 
-### Configure Hyperlink Open Mode
+### How to Configure Hyperlink Open Mode
 
-The [OpenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkSettings.html#Syncfusion_Blazor_Diagram_HyperlinkSettings_OpenMode) property of the `HyperlinkSettings` class specifies how annotation hyperlinks open. Configure this property to open hyperlinks either in the current browser tab or in a new tab.
+The [OpenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkSettings.html#Syncfusion_Blazor_Diagram_HyperlinkSettings_OpenMode) property of the `Hyperlink` controls how annotation hyperlinks open. The hyperlink can be configured to open in the same tab or a new tab. The `OpenMode` property accepts `HyperlinkOpenMode` enum values: `Self` (same tab) or `Blank` (new tab).
 
-By default, the `OpenMode` property is set to `HyperlinkOpenMode.Self`, which opens the hyperlink in the current browser tab. Set the property to `HyperlinkOpenMode.Blank` to open the hyperlink in a new browser tab.
+By default, the `OpenMode` is set to `Self`, which opens the link in the same browser tab.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -193,15 +193,20 @@ By default, the `OpenMode` property is set to `HyperlinkOpenMode.Self`, which op
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdZRNOTGCrZiyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdZRNOTGCrZiyz?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenMode.razor)
 
-![Hyperlink Open Mode in Blazor Diagram](../images/blazor-diagram-hyperlink-open-mode.webp)
+The following table shows the available options for the `OpenMode` property:
 
-Hyperlink behavior can be updated at runtime to modify the navigation target or open mode based on user interaction or application state.
+| OpenMode | Description | Behavior |
+| -------- | -------- | -------- |
+| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkOpenMode.html#Syncfusion_Blazor_Diagram_HyperlinkOpenMode_Self) | Opens the hyperlink in the same browser tab, replacing the current page. | The application in the current tab navigates to the specified URL. |
+| [Blank](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkOpenMode.html#Syncfusion_Blazor_Diagram_HyperlinkOpenMode_Blank) | Opens the hyperlink in a new browser tab. | A new tab is opened with the specified URL. |
 
-The following example demonstrates how to change the hyperlink open mode at runtime using a button.
+The hyperlink behavior can be updated dynamically as needed, allowing navigation either within the current tab or in a new tab based on user interaction.
+
+The following example demonstrates how to change the hyperlink open mode at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -248,11 +253,7 @@ The following example demonstrates how to change the hyperlink open mode at runt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBoiNtHrIBncXmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenModeRuntime.razor)
-
-N> Browser security policies and popup blockers may restrict opening links in new tabs. Ensure that the application handles such scenarios appropriately.
+>**Note:** Browser security policies and popup blockers may restrict opening links in new tabs. Ensure that your application handles such scenarios appropriately.
 
 ## How to Wrap Text Using Text Wrapping
 
