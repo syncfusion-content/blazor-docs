@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Check/uncheck on clicking the tree node text in TreeView | Syncfusion
-description: Learn here all about how to check and uncheck the checkbox on clicking the tree node text in Syncfusion Blazor TreeView component and more.
+title: Check/uncheck on clicking the tree node text in TreeView | Syncfusion®
+description: Learn here all about how to check and uncheck the checkbox on clicking the tree node text in Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug

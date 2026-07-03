@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom toolbar with drop-down list in Blazor TreeGrid | Syncfusion
-description: Learn here all about how to create custom toolbar with drop-down list in Syncfusion Blazor TreeGrid component and more.
+title: Custom toolbar with drop-down list in Blazor TreeGrid | Syncfusion®
+description: Learn here all about how to create custom toolbar with drop-down list in Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
