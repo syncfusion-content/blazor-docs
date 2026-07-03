@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CustomAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
-description: Learn all about CustomAdaptor in the Blazor Gantt Chart and how to handle data loading, searching, filtering, sorting, and CRUD operations.
+description: Learn how to implement custom data binding and perform CRUD operations using a custom adaptor in Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
@@ -10,9 +10,9 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, enabling manual operations on data. It is useful for implementing custom data binding and editing operations in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart).
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors, giving you complete programmatic control over every data operation in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart). A custom adaptor is the right choice when your data source is not a standard REST endpoint for example, when task data must be loaded from an in-memory cache, a file system, a legacy system with a proprietary API, or a third-party SDK that does not expose a conventional HTTP interface.
 
-To implement custom data binding in the Gantt Chart, the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class is used. This abstract class serves as a base class for the custom adaptor.
+To implement custom data binding, extend the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class and override the relevant methods for reading and CRUD operations.
 
 The `DataAdaptor` abstract class includes both synchronous and asynchronous method signatures, which can be overridden in the custom adaptor. The following are the method signatures available in this class:
 
@@ -145,7 +145,7 @@ The following example demonstrates how to implement custom data binding using a 
     // Implementing custom adaptor by extending the DataAdaptor class.
     public class CustomAdaptor : DataAdaptor
     {
-        // Performs data Read operation.
+        // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<TaskData> DataSource = GanttData;
@@ -162,8 +162,8 @@ The following example demonstrates how to implement custom data binding using a 
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Filtering
-                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
-                else
+                // ParentID is used internally by the Gantt Chart to build the task hierarchy
+                if (dm.Where[0].Field != null && dm.Where[0].Field != nameof(TaskData.ParentID))
                 {
                     DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
                 }
@@ -314,7 +314,7 @@ The following example demonstrates how to inject a service into the Custom Adapt
 ```
 ## Handling searching operation
 
-When using a custom adaptor, searching operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` object provides details about the search action as shown in the image below:
+When using a custom adaptor, override the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class to handle server-side operations. The `DataManagerRequest` object carries the operation-specific criteria — for searching, it is available in `dm.Search`, as shown in the image below:
 
 ![Handling Searching in Custom Adaptor](../images/searching-custom-adaptor.webp)
 
@@ -405,8 +405,7 @@ The following example demonstrates how to implement searching operation for cust
 
 ## Handling filtering operation
 
-When using a custom adaptor, filtering operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` object provides filtering details as shown in the image below:
-
+Override the `Read` or `ReadAsync` method to handle filtering. The filter criteria are available in `dm.Where` within the `DataManagerRequest` object, as shown in the image below:
 ![Handling Filtering in Custom Adaptor](../images/filtering-in-custom-binding.webp)
 
 Based on this information, the custom data source can be filtered using the built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method of the `DataOperations` class.
@@ -453,11 +452,11 @@ The following example demonstrates how to implement the filtering operation for 
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskID = 0+ x,
-            TaskName = $"Task {0 + x}",
-            StartDate = baseDate.AddDays(x % 10),           
-            EndDate = baseDate.AddDays((x % 10) + 3),       
-            Progress = rand.Next(0, 101)                    
+            TaskID = x,
+            TaskName = $"Task {x}",
+            StartDate = baseDate.AddDays(x % 10),
+            EndDate = baseDate.AddDays((x % 10) + 3),
+            Progress = rand.Next(0, 101)
         }).ToList();
     }
 
@@ -482,8 +481,8 @@ The following example demonstrates how to implement the filtering operation for 
             // Apply filtering if filter criteria are provided.
             if (dm.Where != null && dm.Where.Count > 0)
             {
-                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
-                else
+                // ParentID is used internally by the Gantt Chart to build the task hierarchy
+                if (dm.Where[0].Field != null && dm.Where[0].Field != nameof(TaskData.ParentID))
                 {
                     DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
                 }
@@ -504,7 +503,7 @@ The following example demonstrates how to implement the filtering operation for 
 
 ## Handling sorting operation
 
-When using a custom adaptor, the sorting operation must be handled by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The `DataManagerRequest` object provides sorting details, as shown in the image below:
+Override the `Read` or `ReadAsync` method to handle sorting. The sort criteria are available in `dm.Sorted` within the `DataManagerRequest` object, as shown in the image below:
 
 ![Handling Sorting in Custom Adaptor](../images/sorting-in-custom-binding.webp)
 
@@ -552,11 +551,11 @@ The following example demonstrates how to implement the sorting operation for cu
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskID = 0+ x,
-            TaskName = $"Task {0 + x}",
-            StartDate = baseDate.AddDays(x % 10),           
-            EndDate = baseDate.AddDays((x % 10) + 3),       
-            Progress = rand.Next(0, 101)                    
+            TaskID = x,
+            TaskName = $"Task {x}",
+            StartDate = baseDate.AddDays(x % 10),
+            EndDate = baseDate.AddDays((x % 10) + 3),
+            Progress = rand.Next(0, 101)
         }).ToList();
     }
 
@@ -700,12 +699,16 @@ The following example demonstrates how to implement CRUD operations for custom-b
                 // Sorting
                 DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
             }        
-            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+            if (dm.Where != null && dm.Where.Count > 0)
             {
-                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskData.ParentID)){}
-                else
+                // Apply filtering if filter criteria are provided.
+                // ParentID is used internally by the Gantt Chart to build the task hierarchy
+                if (dm.Where != null && dm.Where.Count > 0)
                 {
-                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                    if (dm.Where[0].Field != null && dm.Where[0].Field != nameof(TaskData.ParentID))
+                    {
+                        DataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
+                    }
                 }
             }
             int count = DataSource.Cast<TaskData>().Count();
@@ -735,15 +738,15 @@ The following example demonstrates how to implement CRUD operations for custom-b
         // Performs Update operation.
         public override object Update(DataManager dm, object value, string keyField, string key)
         {
-            var data = GanttData.Where(or => or.TaskID == (value as TaskData).TaskID).FirstOrDefault();
+            var data = GanttData.FirstOrDefault(t => t.TaskID == (value as TaskData).TaskID);
             if (data != null)
             {
-                data.TaskID = (value as TaskData).TaskID;
                 data.TaskName = (value as TaskData).TaskName;
                 data.StartDate = (value as TaskData).StartDate;
                 data.EndDate = (value as TaskData).EndDate;
                 data.Duration = (value as TaskData).Duration;
                 data.Progress = (value as TaskData).Progress;
+                // Update other properties as required.
             }
             return value;
         }
@@ -808,11 +811,11 @@ The following example demonstrates how to send additional parameters to the serv
 
         Tasks = Enumerable.Range(1, 75).Select(x => new TaskData
         {
-            TaskID = 0+ x,
-            TaskName = $"Task {0 + x}",
-            StartDate = baseDate.AddDays(x % 10),           
-            EndDate = baseDate.AddDays((x % 10) + 3),       
-            Progress = rand.Next(0, 101)                    
+            TaskID = x,
+            TaskName = $"Task {x}",
+            StartDate = baseDate.AddDays(x % 10),
+            EndDate = baseDate.AddDays((x % 10) + 3),
+            Progress = rand.Next(0, 101)
         }).ToList();
     }
 

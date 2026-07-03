@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
-description: Learn about bind data and performing CRUD operations using UrlAdaptor in Blazor Gantt Chart much more details.
+description: Learn how to bind remote data and perform CRUD operations using the UrlAdaptor in Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
 keywords: adaptors, urladaptor, url adaptor, remotedata 
@@ -10,9 +10,9 @@ documentation: ug
 
 # UrlAdaptor in Syncfusion Blazor Gantt Chart
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor that enables communication between remote data services and a UI component. It supports seamless data binding and interaction with custom API services or any remote endpoint via URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place.
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) enables the Blazor Gantt Chart to load and manage task data from a remote server through a custom API service. It is the recommended choice when your application stores data on a server and needs to fetch, update, or delete records through an API rather than loading everything at once on the client side.
 
-This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server‑side data operations and CRUD actions.
+This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server side data operations and CRUD actions.
 
 ## Creating an API service
  
@@ -134,7 +134,7 @@ namespace URLAdaptor.Controllers
         /// <param name="DataManagerRequest">
         /// The request object contains parameters for searching, filtering, sorting, skip, and take.
         /// </param>
-        /// <returns>Returns the data and total count in result and count format.</returns>
+        /// <returns>Returns the processed data and total record count in result and count format.</returns>
         [HttpPost]
         [Route("api/[controller]")]
         public object Post([FromBody] DataManagerRequest DataManagerRequest)
@@ -169,11 +169,11 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:71xx/api/gantt` (where `71xx` represents the port number in the launchSettings.json). Please verify that the API returns the task data.
+Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:71xx/api/gantt` (where `71xx` represents the port number in **launchSettings.json**). Verify that the API returns the task data before proceeding.
 
 ## Connecting Blazor Gantt Chart to an API service
  
-To integrate the Blazor Gantt Chart into your project using Visual Studio 2026, follow the below steps:
+To integrate the Blazor Gantt Chart into your project, follow these steps:
  
 **1. Install Blazor Gantt and Themes NuGet packages**
  
@@ -231,7 +231,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
  
 **4. Add Blazor Gantt Chart and configure with server**
  
-To connect the Blazor Gantt chart to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). Update the **Index.razor** file as follows.
+To connect the Blazor Gantt Chart to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service are set up to return the resulting data in the result and count format.
  
@@ -519,7 +519,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling CRUD operations
 
-The Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every action, facilitating server-side operations.
+The Blazor Gantt Chart communicates CRUD (Create, Read, Update, and Delete) actions to the server through dedicated URL properties on `SfDataManager`: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). Each action triggers an HTTP POST to its corresponding endpoint, allowing the server to apply the appropriate database operation. To enable editing, refer to the [editing documentation](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks).
 
 **CRUD operations mapping**
 
