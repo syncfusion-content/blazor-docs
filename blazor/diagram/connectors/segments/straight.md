@@ -98,7 +98,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/StraightSegmentEditing.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHZRhozSoiByQY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHZRhozSoiByQY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.webp)" %}
 
 ## How to Customize Straight Segment Thumb Shape 
 

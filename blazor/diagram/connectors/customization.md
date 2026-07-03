@@ -833,7 +833,7 @@ The following code illustrates how to enable connector splitting and create conn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrdXxrugEPhQYwj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ConnectorSplitting](../images/ConnectorSplitDemo.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrdXxrugEPhQYwj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ConnectorSplitting](../images/ConnectorSplitDemo.webp)" %}
 
 >**Note:** Enable [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) in the connector constraints to allow dropping a node.
 

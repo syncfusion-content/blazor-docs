@@ -637,7 +637,7 @@ The following code example shows how to set the connection direction for a port.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/PortDirection.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRZnBHzpZkOkRo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Port Connection Direction](../images/PortDirection.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRZnBHzpZkOkRo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Port Connection Direction](../images/PortDirection.webp)" %}
 
 ## How to Get InEdges and OutEdges of Ports
 

@@ -160,7 +160,7 @@ Connectors can also be dragged through user interaction:
 * Drag an object by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
 * While dragging, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are triggered and allow customization in these events.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxZnhagdUUrKos?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxZnhagdUUrKos?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.webp)" %}
 
 ## How to Drag Connector Endpoints
 
@@ -224,7 +224,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/EndPointDragging.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdZHVOUdSSCidS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdZHVOUdSSCidS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.webp)" %}
 
 ## How to Route the Connectors
 
@@ -289,7 +289,7 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Interaction/DefaultRouting.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHjHhOKHmgkfbU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHjHhOKHmgkfbU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.webp)" %}
 
 **Note:** Routing is applicable only for orthogonal connectors.
 

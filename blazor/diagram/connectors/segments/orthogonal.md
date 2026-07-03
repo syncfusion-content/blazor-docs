@@ -154,7 +154,7 @@ N> Ensure the connector type and each segment type are both set to **Orthogonal*
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/OrthogonalSegmentEditing.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhdtHLypdqhHzRo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Orthogonal connector segment in Blazor Diagram](../../images/blazor-diagram-edit-orthogonal-segment.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhdtHLypdqhHzRo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Orthogonal connector segment in Blazor Diagram](../../images/blazor-diagram-edit-orthogonal-segment.webp)" %}
 
 ## How to Customize Orthogonal Segment Thumb Shape
 

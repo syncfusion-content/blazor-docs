@@ -195,7 +195,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 N> In this example, the node's background color is updated using the click event of the button defined in the template.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVxjHhfJaRzAWyn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVxjHhfJaRzAWyn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram with Node Template](../images/blazor-diagram-node-template.webp)" %}
 
 ## How to Update Common Node Styles
 

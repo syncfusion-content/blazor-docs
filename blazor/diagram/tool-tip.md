@@ -910,7 +910,7 @@ By default, tooltips are not displayed. Need to explicitly configure the tooltip
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserhandleTooltip.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLRDxKDLJTDYcyi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Tooltip for UserHandle](images/UserHandleTooltip.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLRDxKDLJTDYcyi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Tooltip for UserHandle](images/UserHandleTooltip.webp)" %}
 
 ### How to Set Sticky Tooltip for User Handles
 
@@ -1015,7 +1015,7 @@ The diagram component offers robust tooltip functionality for [FixedUserHandles]
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/FixedUserHandleTooltip.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdZdAjLzdhyENb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdZdAjLzdhyENb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Tooltip for UserHandle](images/FixedUserHandleTooltip.webp)" %}
 
 ### How to Set Sticky Tooltip for Fixed User Handles
 
@@ -1140,7 +1140,7 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ports/ActionofPorts/TooltipForSpecificPort.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBRtdUNLJlXsAsH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the port](./images/PortTooltip.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBRtdUNLJlXsAsH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip During hover the port](./images/PortTooltip.webp)" %}
 
 ### How to Set Sticky Tooltip for Ports
 

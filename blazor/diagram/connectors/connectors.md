@@ -151,7 +151,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Connector/CloneConnector.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVnNnrEpZulXIzo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Cloning a connector in Blazor Diagram](../images/CloneConnector.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVnNnrEpZulXIzo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Cloning a connector in Blazor Diagram](../images/CloneConnector.webp)" %}
 
 ## How to Add a Connector with Annotations at Runtime
 
@@ -293,13 +293,13 @@ Connectors can be predefined and added to the symbol palette. Then, drag and dro
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Connector/ConnectorFromPalette.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVdXdBazWStHuOo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging connectors from the symbol palette into the diagram in Blazor](../images/blazor-diagram-connector-from-palette.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVdXdBazWStHuOo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging connectors from the symbol palette into the diagram in Blazor](../images/blazor-diagram-connector-from-palette.webp)" %}
 
 ## How to Draw Connectors Using the Drawing Object
 
 Connectors can be interactively drawn by clicking and dragging on the diagram surface by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
-![Drawing a Connector interactively in Blazor Diagram](../images/blazor-diagram-draw-connector.gif)
+![Drawing a Connector interactively in Blazor Diagram](../images/blazor-diagram-draw-connector.webp)
 
 ## How to Remove Connectors at Runtime
 
