@@ -211,7 +211,7 @@ The following code explains how to customize user handle click actions.
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/UserHandleClickEvents.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrnDnANraCsjQcA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Node with User Handle](images/UserHandleClickEvents.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrnDnANraCsjQcA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Node with User Handle](images/UserHandleClickEvents.webp)" %}
 
 ## Customization
 
@@ -719,7 +719,7 @@ The following code example shows how to change the VisibleTarget in the user han
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/VisibleofUserhandle.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrRjdqDAtIPbpMO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrRjdqDAtIPbpMO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[VisibleTarget](Images/blazor-diagram-user-handle-visible-target.webp)" %}
 
 ### How to define the type of user handle
 The Blazor Diagram component provides support to render different types of user handles, giving flexibility in how they appear and function. There are three main types of user handles:
@@ -954,7 +954,7 @@ The following code explains how to define a template for the [UserHandle](https:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UserHandle/CustomizeUserHandleTemplate.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdZnANgDmhtReH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Template for UserHandle](images/UserHandleTemplate.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhdZnANgDmhtReH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Template for UserHandle](images/UserHandleTemplate.webp)" %}
 
 Precedence Order
 The user handle types follow a specific precedence order when multiple options are defined:
