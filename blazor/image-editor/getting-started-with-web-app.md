@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include the [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get started quickly with the Blazor Image Editor component, refer to this video or the [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/imageEditor) sample:
+To get started quickly with the Blazor Image Editor component, refer to this video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=lBB8oHvTuII"%}
 
@@ -163,8 +163,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Image Editor component
 
