@@ -9,16 +9,20 @@ documentation: ug
 
 # Integrating Blazor DataGrid with Fluxor
 
-This article explains how to integrate the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with **[Fluxor](https://github.com/mrpmorris/fluxor)** in a **Blazor Web App** targeting .NET 10 with Interactive Server rendering. 
+This article explains how to integrate the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with **[Fluxor](https://github.com/mrpmorris/fluxor)** in a **Blazor Web App** targeting .NET 10 with Interactive Server rendering.
 
-Fluxor is a zero-boilerplate Flux/Redux state management library for .NET. The integration demonstrates full CRUD operations on orders through the Fluxor store. All data changes are routed through the store instead of being bound directly to a service.
+Fluxor is a zero-boilerplate Flux/Redux state management library for .NET. This integration demonstrates how to perform full CRUD operations on orders using the Fluxor store as the application's central state container. All data changes are handled through the store instead of interacting directly with the service.
+
+N> Fluxor is a community-maintained state management library for .NET, compatible with modern Blazor applications, including .NET 8 and later. For Fluxor-specific issues, refer to the [Fluxor GitHub repository](https://github.com/mrpmorris/fluxor).
 
 ## Prerequisites
 
 * [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 * [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
-## Create a Blazor Web App
+## Create and configure the project
+
+### Create a Blazor Web App
 
 In the following commands, `FluxorBlazorDataGrid` is used as the sample project name. Replace it with any project name you prefer.
 
@@ -33,7 +37,7 @@ cd FluxorBlazorDataGrid
 {% endhighlight %}
 {% endtabs %}
 
-## Install required NuGet packages
+### Install required NuGet packages
 
 Install the following **Fluxor** and **Blazor** NuGet packages. These packages provide Fluxor state management and the [Blazor components](https://www.syncfusion.com/blazor-components) needed for the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) integration.
 
@@ -47,7 +51,7 @@ Install the following **Fluxor** and **Blazor** NuGet packages. These packages p
 * [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars)
 * [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns)
 * [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
 Open a terminal and run the following commands to install the above packages.
 
@@ -68,14 +72,17 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
-## Add required namespaces
+### Add required namespaces
 
 Open the `~/Components/_Imports.razor` file and add the required **Fluxor**, **Blazor**, and application namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="_Imports.razor" %}
 
+@using Fluxor
 @using Fluxor.Blazor.Web.Components
+@using FluxorBlazorDataGrid.Store.OrderState
+@using FluxorBlazorDataGrid.Store.OrderState.Actions
 @using FluxorBlazorDataGrid.Models
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -84,6 +91,31 @@ Open the `~/Components/_Imports.razor` file and add the required **Fluxor**, **B
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Buttons
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add stylesheet and script resources
+
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the `~/App.razor` file.
+
+Configure `HeadOutlet` and `Routes` with `@rendermode="InteractiveServer"` to ensure all routed pages run with interactive server rendering and respond correctly to Fluxor state changes.
+
+{% tabs %}
+{% highlight html tabtitle="Components/App.razor" %}
+
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    <HeadOutlet @rendermode="InteractiveServer" />
+</head>
+
+<body>
+    <Routes @rendermode="InteractiveServer" />
+    <ReconnectModal />
+    <script src="@Assets["_framework/blazor.web.js"]"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +155,7 @@ namespace FluxorBlazorDataGrid.Models
 
         public Order()
         {
-            OrderDate = DateTime.Now;
+            OrderDate = DateTime.UtcNow;
             Status = "Pending";
         }
     }
@@ -147,11 +179,10 @@ namespace FluxorBlazorDataGrid.Services
 {
     public class OrderService
     {
+        // _nextId is static so IDs remain unique across all Blazor Server circuits.
+        // In a production app, use a database-generated primary key instead.
         private static int _nextId = 1;
 
-        // Static constructor initializes _nextId to the max ID in seed data.
-        // Set to max (not max + 1) because Interlocked.Increment increments
-        // the value before returning it, so the first new ID will be max + 1.
         static OrderService()
         {
             var seedData = GetSeedData();
@@ -163,26 +194,26 @@ namespace FluxorBlazorDataGrid.Services
         {
             return new List<Order>
             {
-                new Order { Id =  1, CustomerName = "John Doe",        ProductName = "Laptop",              Quantity = 1, Price = 1200.00m, OrderDate = DateTime.Now.AddDays(-20), Status = "Completed"  },
-                new Order { Id =  2, CustomerName = "Jane Smith",      ProductName = "Mouse",               Quantity = 2, Price = 25.50m,   OrderDate = DateTime.Now.AddDays(-19), Status = "Pending"    },
-                new Order { Id =  3, CustomerName = "Bob Johnson",     ProductName = "Keyboard",            Quantity = 1, Price = 75.00m,   OrderDate = DateTime.Now.AddDays(-18), Status = "Processing" },
-                new Order { Id =  4, CustomerName = "Alice Brown",     ProductName = "Monitor",             Quantity = 2, Price = 350.00m,  OrderDate = DateTime.Now.AddDays(-17), Status = "Shipped"    },
-                new Order { Id =  5, CustomerName = "Charlie Wilson",  ProductName = "Webcam",              Quantity = 1, Price = 85.00m,   OrderDate = DateTime.Now.AddDays(-16), Status = "Pending"    },
-                new Order { Id =  6, CustomerName = "Diana Prince",    ProductName = "Headphones",          Quantity = 3, Price = 120.00m,  OrderDate = DateTime.Now.AddDays(-15), Status = "Shipped"    },
-                new Order { Id =  7, CustomerName = "Ethan Hunt",      ProductName = "USB Hub",             Quantity = 2, Price = 45.00m,   OrderDate = DateTime.Now.AddDays(-14), Status = "Completed"  },
-                new Order { Id =  8, CustomerName = "Fiona Green",     ProductName = "Desk Chair",          Quantity = 1, Price = 299.00m,  OrderDate = DateTime.Now.AddDays(-13), Status = "Processing" },
-                new Order { Id =  9, CustomerName = "George Harris",   ProductName = "Standing Desk",       Quantity = 1, Price = 499.00m,  OrderDate = DateTime.Now.AddDays(-12), Status = "Pending"    },
-                new Order { Id = 10, CustomerName = "Hannah Lee",      ProductName = "Laptop Stand",        Quantity = 2, Price = 60.00m,   OrderDate = DateTime.Now.AddDays(-11), Status = "Shipped"    },
-                new Order { Id = 11, CustomerName = "Ivan Petrov",     ProductName = "SSD Drive",           Quantity = 1, Price = 110.00m,  OrderDate = DateTime.Now.AddDays(-10), Status = "Completed"  },
-                new Order { Id = 12, CustomerName = "Julia Roberts",   ProductName = "Printer",             Quantity = 1, Price = 220.00m,  OrderDate = DateTime.Now.AddDays(-9),  Status = "Cancelled"  },
-                new Order { Id = 13, CustomerName = "Kevin Nguyen",    ProductName = "Ink Cartridge",       Quantity = 5, Price = 18.00m,   OrderDate = DateTime.Now.AddDays(-8),  Status = "Completed"  },
-                new Order { Id = 14, CustomerName = "Laura Martinez",  ProductName = "Ethernet Cable",      Quantity = 3, Price = 12.00m,   OrderDate = DateTime.Now.AddDays(-7),  Status = "Shipped"    },
-                new Order { Id = 15, CustomerName = "Mark Thompson",   ProductName = "Graphics Card",       Quantity = 1, Price = 650.00m,  OrderDate = DateTime.Now.AddDays(-6),  Status = "Processing" },
-                new Order { Id = 16, CustomerName = "Nina Patel",      ProductName = "RAM Module",          Quantity = 2, Price = 95.00m,   OrderDate = DateTime.Now.AddDays(-5),  Status = "Pending"    },
-                new Order { Id = 17, CustomerName = "Oscar Wilde",     ProductName = "Power Supply",        Quantity = 1, Price = 130.00m,  OrderDate = DateTime.Now.AddDays(-4),  Status = "Shipped"    },
-                new Order { Id = 18, CustomerName = "Paula Scott",     ProductName = "Cooling Pad",         Quantity = 2, Price = 40.00m,   OrderDate = DateTime.Now.AddDays(-3),  Status = "Completed"  },
-                new Order { Id = 19, CustomerName = "Quinn Adams",     ProductName = "Mechanical Keyboard", Quantity = 1, Price = 145.00m,  OrderDate = DateTime.Now.AddDays(-2),  Status = "Processing" },
-                new Order { Id = 20, CustomerName = "Rachel Kim",      ProductName = "Wireless Mouse",      Quantity = 2, Price = 55.00m,   OrderDate = DateTime.Now.AddDays(-1),  Status = "Pending"    }
+                new Order { Id =  1, CustomerName = "John Doe",        ProductName = "Laptop",              Quantity = 1, Price = 1200.00m, OrderDate = DateTime.UtcNow.AddDays(-20), Status = "Completed"  },
+                new Order { Id =  2, CustomerName = "Jane Smith",      ProductName = "Mouse",               Quantity = 2, Price = 25.50m,   OrderDate = DateTime.UtcNow.AddDays(-19), Status = "Pending"    },
+                new Order { Id =  3, CustomerName = "Bob Johnson",     ProductName = "Keyboard",            Quantity = 1, Price = 75.00m,   OrderDate = DateTime.UtcNow.AddDays(-18), Status = "Processing" },
+                new Order { Id =  4, CustomerName = "Alice Brown",     ProductName = "Monitor",             Quantity = 2, Price = 350.00m,  OrderDate = DateTime.UtcNow.AddDays(-17), Status = "Shipped"    },
+                new Order { Id =  5, CustomerName = "Charlie Wilson",  ProductName = "Webcam",              Quantity = 1, Price = 85.00m,   OrderDate = DateTime.UtcNow.AddDays(-16), Status = "Pending"    },
+                new Order { Id =  6, CustomerName = "Diana Prince",    ProductName = "Headphones",          Quantity = 3, Price = 120.00m,  OrderDate = DateTime.UtcNow.AddDays(-15), Status = "Shipped"    },
+                new Order { Id =  7, CustomerName = "Ethan Hunt",      ProductName = "USB Hub",             Quantity = 2, Price = 45.00m,   OrderDate = DateTime.UtcNow.AddDays(-14), Status = "Completed"  },
+                new Order { Id =  8, CustomerName = "Fiona Green",     ProductName = "Desk Chair",          Quantity = 1, Price = 299.00m,  OrderDate = DateTime.UtcNow.AddDays(-13), Status = "Processing" },
+                new Order { Id =  9, CustomerName = "George Harris",   ProductName = "Standing Desk",       Quantity = 1, Price = 499.00m,  OrderDate = DateTime.UtcNow.AddDays(-12), Status = "Pending"    },
+                new Order { Id = 10, CustomerName = "Hannah Lee",      ProductName = "Laptop Stand",        Quantity = 2, Price = 60.00m,   OrderDate = DateTime.UtcNow.AddDays(-11), Status = "Shipped"    },
+                new Order { Id = 11, CustomerName = "Ivan Petrov",     ProductName = "SSD Drive",           Quantity = 1, Price = 110.00m,  OrderDate = DateTime.UtcNow.AddDays(-10), Status = "Completed"  },
+                new Order { Id = 12, CustomerName = "Julia Roberts",   ProductName = "Printer",             Quantity = 1, Price = 220.00m,  OrderDate = DateTime.UtcNow.AddDays(-9),  Status = "Cancelled"  },
+                new Order { Id = 13, CustomerName = "Kevin Nguyen",    ProductName = "Ink Cartridge",       Quantity = 5, Price = 18.00m,   OrderDate = DateTime.UtcNow.AddDays(-8),  Status = "Completed"  },
+                new Order { Id = 14, CustomerName = "Laura Martinez",  ProductName = "Ethernet Cable",      Quantity = 3, Price = 12.00m,   OrderDate = DateTime.UtcNow.AddDays(-7),  Status = "Shipped"    },
+                new Order { Id = 15, CustomerName = "Mark Thompson",   ProductName = "Graphics Card",       Quantity = 1, Price = 650.00m,  OrderDate = DateTime.UtcNow.AddDays(-6),  Status = "Processing" },
+                new Order { Id = 16, CustomerName = "Nina Patel",      ProductName = "RAM Module",          Quantity = 2, Price = 95.00m,   OrderDate = DateTime.UtcNow.AddDays(-5),  Status = "Pending"    },
+                new Order { Id = 17, CustomerName = "Oscar Wilde",     ProductName = "Power Supply",        Quantity = 1, Price = 130.00m,  OrderDate = DateTime.UtcNow.AddDays(-4),  Status = "Shipped"    },
+                new Order { Id = 18, CustomerName = "Paula Scott",     ProductName = "Cooling Pad",         Quantity = 2, Price = 40.00m,   OrderDate = DateTime.UtcNow.AddDays(-3),  Status = "Completed"  },
+                new Order { Id = 19, CustomerName = "Quinn Adams",     ProductName = "Mechanical Keyboard", Quantity = 1, Price = 145.00m,  OrderDate = DateTime.UtcNow.AddDays(-2),  Status = "Processing" },
+                new Order { Id = 20, CustomerName = "Rachel Kim",      ProductName = "Wireless Mouse",      Quantity = 2, Price = 55.00m,   OrderDate = DateTime.UtcNow.AddDays(-1),  Status = "Pending"    }
             };
         }
 
@@ -218,7 +249,7 @@ namespace FluxorBlazorDataGrid.Services
 
 ## Set up the Fluxor store
 
-The `Fluxor store` manages the application's state and handles data updates through actions, reducers, and effects. Create a `Store` folder at the project root and add the following folder structure to organize the order-related state management components.
+The **Fluxor store** manages the application's state and handles data updates through actions, reducers, and effects. Create a `Store` folder at the project root and add the following folder structure to organize the order-related state management components.
 
 ```
 Store/
@@ -235,7 +266,7 @@ Store/
 
 ### Define the state
 
-The `OrderState` record represents the order-related state managed by the `Fluxor store`. It stores the order collection along with the loading and error information required by the application.
+The `OrderState` record represents the order-related state managed by the **Fluxor store**. It stores the order collection along with the loading and error information required by the application.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/OrderState.cs" %}
@@ -257,7 +288,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState
 
 ### Define the feature
 
-The feature registers the `OrderState` with the `Fluxor store` and provides the initial state for the application. It defines the default values used when the application starts.
+The feature registers the `OrderState` with the **Fluxor store** and provides the initial state for the application. It defines the default values used when the application starts.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/OrderFeature.cs" %}
@@ -287,7 +318,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState
 
 ### Define the actions
 
-The action records define the actions used by the `Fluxor store` to load, add, update, and delete orders. Success and failure actions are used to handle the results of asynchronous operations.
+The action records define the actions used by the **Fluxor store** to load, add, update, and delete orders. Success and failure actions are used to handle the results of asynchronous operations.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/Actions/OrderActions.cs" %}
@@ -322,7 +353,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState.Actions
 
 ### Define the reducers
 
-The reducers update the application state in the `Fluxor store` in response to actions. They handle loading, adding, updating, and deleting orders by returning the updated state.
+The reducers define how the application state changes in the **Fluxor store** when actions are processed. They create and return updated state instances that reflect loading, completed operations, and data changes without directly interacting with services or external resources.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/Reducers/OrderReducers.cs" %}
@@ -404,7 +435,7 @@ namespace FluxorBlazorDataGrid.Store.OrderState.Reducers
 
 ### Define the effects
 
-The effects handle asynchronous operations in the `Fluxor store`, such as loading, adding, updating, and deleting orders. They interact with the `OrderService` to process these operations and their results.
+The effects handle operations that require interaction with services or external resources in the **Fluxor store**. They use the `OrderService` to load, add, update, and delete orders, and then trigger the appropriate actions to update the application state with the results.
 
 {% tabs %}
 {% highlight c# tabtitle="Store/OrderState/Effects/OrderEffects.cs" %}
@@ -488,19 +519,19 @@ namespace FluxorBlazorDataGrid.Store.OrderState.Effects
 {% endhighlight %}
 {% endtabs %}
 
-## Register services
+### Register services
 
-Open `~/Program.cs` and register the Blazor service, `OrderService`, and `Fluxor`. The Fluxor configuration automatically discovers and registers the state management components used by the application, including features, reducers, and effects.
+Open `~/Program.cs` file and register the Blazor service, `OrderService`, and `Fluxor`. The Fluxor configuration automatically discovers and registers the state management components used by the application, including features, reducers, and effects.
 
 {% tabs %}
-{% highlight c# tabtitle="Program.cs" hl_lines="2 3 4 12 16 19 20 21 22" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 using FluxorBlazorDataGrid.Components;
 using Fluxor;
 using FluxorBlazorDataGrid.Services;
 using Syncfusion.Blazor;
 
-var builder = WebApplication.CreateBuilder(args);
+...
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
@@ -508,11 +539,10 @@ builder.Services.AddRazorComponents()
 // Add Blazor service
 builder.Services.AddSyncfusionBlazor();
 
-// OrderService is stateless — all state lives in the Fluxor store.
-// Scoped lifetime is appropriate for server-side Blazor.
+// Register OrderService with a scoped lifetime
 builder.Services.AddScoped<OrderService>();
 
-// Fluxor: ScanAssemblies automatically discovers all Features, Reducers, and Effects.
+// Register Fluxor and automatically discover features, reducers, and effects
 builder.Services.AddFluxor(options =>
 {
     options.ScanAssemblies(typeof(Program).Assembly);
@@ -520,71 +550,37 @@ builder.Services.AddFluxor(options =>
 
 var app = builder.Build();
 
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    app.UseHsts();
-}
+...
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapStaticAssets();
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
-app.Run();
+...
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+### Add StoreInitializer
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the `~/App.razor` file.
-
-Configure `HeadOutlet` and `Routes` with `@rendermode="InteractiveServer"` to ensure all routed pages run with interactive server rendering and respond correctly to Fluxor state changes.
-
-{% tabs %}
-{% highlight html tabtitle="Components/App.razor" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-    <HeadOutlet @rendermode="InteractiveServer" />
-</head>
-
-<body>
-    <Routes @rendermode="InteractiveServer" />
-    <ReconnectModal />
-    <script src="@Assets["_framework/blazor.web.js"]"></script>
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add StoreInitializer
-
-Open the `~/Components/Routes.razor` file and add the `StoreInitializer` component above the `Router` component. This ensures the `Fluxor store` is initialized before the application's routed components are rendered.
+Open the `~/Components/Routes.razor` file and add the `StoreInitializer` component above the `Router` component. This ensures the **Fluxor store** is initialized before the application's routed components are rendered.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/Routes.razor" %}
 
 <Fluxor.Blazor.Web.StoreInitializer />
-
-<Router AppAssembly="@typeof(Program).Assembly">
+<Router AppAssembly="typeof(Program).Assembly" NotFoundPage="typeof(Pages.NotFound)">
    ...
 </Router>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add the Order Management page
+### Add the Order Management page
 
-Create a new `OrderManagement.razor` page in the `~/Components/Pages` folder to display and manage orders using the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and the `Fluxor store`.
+Create a new `OrderManagement.razor` page in the `~/Components/Pages` folder to display and manage orders using the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and the **Fluxor store**.
 
-This page allows users to view, add, edit, and delete orders. It retrieves data from the `Fluxor store`, performs CRUD operations through Fluxor actions, and uses a custom dialog to manage order details.
+This page allows users to view, add, edit, and delete orders. It retrieves data from the Fluxor store, performs CRUD operations through Fluxor actions, and uses a custom dialog to manage order details.
 
 Add the following code to the `OrderManagement.razor` file.
 
@@ -592,10 +588,6 @@ Add the following code to the `OrderManagement.razor` file.
 {% highlight razor tabtitle="Components/Pages/OrderManagement.razor" %}
 
 @page "/orders"
-@using Fluxor
-@using Fluxor.Blazor.Web.Components
-@using FluxorBlazorDataGrid.Store.OrderState
-@using FluxorBlazorDataGrid.Store.OrderState.Actions
 @inherits FluxorComponent
 @inject IState<OrderState> OrderState
 @inject IDispatcher Dispatcher
@@ -611,78 +603,26 @@ Add the following code to the `OrderManagement.razor` file.
 
 @if (!string.IsNullOrEmpty(OrderState.Value.ErrorMessage))
 {
-    <div class="alert alert-danger" role="alert">
-        @OrderState.Value.ErrorMessage
-    </div>
+    <div class="alert alert-danger" role="alert">@OrderState.Value.ErrorMessage</div>
 }
 
 <div class="control-section">
-    <SfGrid DataSource="@OrderState.Value.Orders"
-            Toolbar="@(new List<string>() { "Add" })"
-            AllowPaging="true"
-            AllowSorting="true"
-            AllowFiltering="true">
+    <SfGrid DataSource="@OrderState.Value.Orders" Toolbar="@ToolbarItems" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
         <GridPageSettings PageSize="10"></GridPageSettings>
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
-        <GridEvents TValue="Order"
-                    OnActionBegin="ActionBeginHandler"
-                    CommandClicked="CommandClickHandler" />
+        <GridEvents TValue="Order" OnActionBegin="ActionBeginHandler" CommandClicked="CommandClickHandler" />
         <GridColumns>
-            <GridColumn Field="@nameof(Order.Id)"
-                        HeaderText="Order ID"
-                        IsPrimaryKey="true"
-                        TextAlign="TextAlign.Right"
-                        HeaderTextAlign="TextAlign.Right"
-                        Width="110"></GridColumn>
-
-            <GridColumn Field="@nameof(Order.CustomerName)"
-                        HeaderText="Customer Name"
-                        TextAlign="TextAlign.Left"
-                        Width="150"></GridColumn>
-
-            <GridColumn Field="@nameof(Order.ProductName)"
-                        HeaderText="Product Name"
-                        TextAlign="TextAlign.Left"
-                        Width="150"></GridColumn>
-
-            <GridColumn Field="@nameof(Order.Quantity)"
-                        HeaderText="Quantity"
-                        TextAlign="TextAlign.Center"
-                        HeaderTextAlign="TextAlign.Center"
-                        Width="100"></GridColumn>
-
-            <GridColumn Field="@nameof(Order.Price)"
-                        HeaderText="Price"
-                        Format="C2"
-                        TextAlign="TextAlign.Right"
-                        HeaderTextAlign="TextAlign.Right"
-                        Width="120"></GridColumn>
-
-            <GridColumn Field="@nameof(Order.OrderDate)"
-                        HeaderText="Order Date"
-                        Format="d"
-                        Type="ColumnType.Date"
-                        TextAlign="TextAlign.Center"
-                        HeaderTextAlign="TextAlign.Center"
-                        Width="130"></GridColumn>
-
-            <GridColumn Field="@nameof(Order.Status)"
-                        HeaderText="Status"
-                        TextAlign="TextAlign.Center"
-                        HeaderTextAlign="TextAlign.Center"
-                        Width="120"></GridColumn>
-
-            <GridColumn HeaderText="Actions"
-                        TextAlign="TextAlign.Center"
-                        HeaderTextAlign="TextAlign.Center"
-                        Width="150">
+            <GridColumn Field="@nameof(Order.Id)" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" HeaderTextAlign="TextAlign.Right" Width="110"></GridColumn>
+            <GridColumn Field="@nameof(Order.CustomerName)" HeaderText="Customer Name" TextAlign="TextAlign.Left" Width="150"></GridColumn>
+            <GridColumn Field="@nameof(Order.ProductName)" HeaderText="Product Name" TextAlign="TextAlign.Left" Width="150"></GridColumn>
+            <GridColumn Field="@nameof(Order.Quantity)" HeaderText="Quantity" TextAlign="TextAlign.Center" HeaderTextAlign="TextAlign.Center" Width="100"></GridColumn>
+            <GridColumn Field="@nameof(Order.Price)" HeaderText="Price" Format="C2" TextAlign="TextAlign.Right" HeaderTextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field="@nameof(Order.OrderDate)" HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" HeaderTextAlign="TextAlign.Center" Width="130"></GridColumn>
+            <GridColumn Field="@nameof(Order.Status)" HeaderText="Status" TextAlign="TextAlign.Center" HeaderTextAlign="TextAlign.Center" Width="120"></GridColumn>
+            <GridColumn HeaderText="Actions" TextAlign="TextAlign.Center" HeaderTextAlign="TextAlign.Center" Width="150">
                 <GridCommandColumns>
-                    <GridCommandColumn Type="CommandButtonType.Edit"
-                        ButtonOption="@(new CommandButtonOptions() { CssClass = "e-flat", IconCss = "e-edit e-icons" })">
-                    </GridCommandColumn>
-                    <GridCommandColumn Type="CommandButtonType.Delete"
-                        ButtonOption="@(new CommandButtonOptions() { CssClass = "e-flat", IconCss = "e-delete e-icons" })">
-                    </GridCommandColumn>
+                    <GridCommandColumn Type="CommandButtonType.Edit" ButtonOption="@(new CommandButtonOptions() { CssClass = "e-flat", IconCss = "e-edit e-icons" })"></GridCommandColumn>
+                    <GridCommandColumn Type="CommandButtonType.Delete" ButtonOption="@(new CommandButtonOptions() { CssClass = "e-flat", IconCss = "e-delete e-icons" })"></GridCommandColumn>
                 </GridCommandColumns>
             </GridColumn>
         </GridColumns>
@@ -690,10 +630,7 @@ Add the following code to the `OrderManagement.razor` file.
 </div>
 
 <!-- Add/Edit Dialog -->
-<SfDialog @bind-Visible="@DialogVisible"
-          IsModal="true"
-          Width="500px"
-          ShowCloseIcon="true">
+<SfDialog @bind-Visible="@DialogVisible" IsModal="true" Width="500px" ShowCloseIcon="true">
     <DialogTemplates>
         <Header>@DialogTitle</Header>
         <Content>
@@ -703,49 +640,29 @@ Add the following code to the `OrderManagement.razor` file.
                     <DataAnnotationsValidator />
                     <div class="form-group mb-3">
                         <label>Customer Name:</label>
-                        <SfTextBox @bind-Value="@CurrentEditOrder.CustomerName"
-                                   Placeholder="Enter customer name">
-                        </SfTextBox>
+                        <SfTextBox @bind-Value="@CurrentEditOrder.CustomerName" Placeholder="Enter customer name"></SfTextBox>
                         <ValidationMessage For="@(() => CurrentEditOrder.CustomerName)" />
                     </div>
                     <div class="form-group mb-3">
                         <label>Product Name:</label>
-                        <SfTextBox @bind-Value="@CurrentEditOrder.ProductName"
-                                   Placeholder="Enter product name">
-                        </SfTextBox>
+                        <SfTextBox @bind-Value="@CurrentEditOrder.ProductName" Placeholder="Enter product name"></SfTextBox>
                         <ValidationMessage For="@(() => CurrentEditOrder.ProductName)" />
                     </div>
                     <div class="form-group mb-3">
                         <label>Quantity:</label>
-                        <SfNumericTextBox TValue="int"
-                                          @bind-Value="CurrentEditOrder.Quantity"
-                                          Min="1"
-                                          Format="N0">
-                        </SfNumericTextBox>
+                        <SfNumericTextBox TValue="int" @bind-Value="CurrentEditOrder.Quantity" Min="1" Format="N0"></SfNumericTextBox>
                     </div>
                     <div class="form-group mb-3">
                         <label>Price:</label>
-                        <SfNumericTextBox TValue="decimal"
-                                          @bind-Value="CurrentEditOrder.Price"
-                                          Min="0.01m"
-                                          Format="C2">
-                        </SfNumericTextBox>
+                        <SfNumericTextBox TValue="decimal" @bind-Value="CurrentEditOrder.Price" Min="0.01m" Format="C2"></SfNumericTextBox>
                     </div>
                     <div class="form-group mb-3">
                         <label>Order Date:</label>
-                        <SfDatePicker TValue="DateTime"
-                                      @bind-Value="CurrentEditOrder.OrderDate"
-                                      Format="MM/dd/yyyy"
-                                      Placeholder="Select order date">
-                        </SfDatePicker>
+                        <SfDatePicker TValue="DateTime" @bind-Value="CurrentEditOrder.OrderDate" Format="MM/dd/yyyy" Placeholder="Select order date"></SfDatePicker>
                     </div>
                     <div class="form-group mb-3">
                         <label>Status:</label>
-                        <SfDropDownList TValue="string" TItem="string"
-                                        @bind-Value="CurrentEditOrder.Status"
-                                        DataSource="@StatusList"
-                                        Placeholder="Select status">
-                        </SfDropDownList>
+                        <SfDropDownList TValue="string" TItem="string" @bind-Value="CurrentEditOrder.Status" DataSource="@StatusList" Placeholder="Select status"></SfDropDownList>
                     </div>
                     <div class="form-group d-flex justify-content-end gap-2">
                         <SfButton Type="ButtonType.Submit" CssClass="e-primary">Save</SfButton>
@@ -758,6 +675,7 @@ Add the following code to the `OrderManagement.razor` file.
 </SfDialog>
 
 @code {
+    private List<string> ToolbarItems = new() { "Add" };
     private bool DialogVisible { get; set; }
     private string DialogTitle { get; set; } = "Add Order";
     private Order CurrentEditOrder { get; set; } = new Order();
@@ -766,10 +684,6 @@ Add the following code to the `OrderManagement.razor` file.
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        // Always call base first. FluxorComponent.OnAfterRenderAsync subscribes
-        // to state change notifications on the first render. Calling base last
-        // would cause the initial dispatch to fire before the subscription is
-        // active, meaning the grid would never receive the loaded data.
         await base.OnAfterRenderAsync(firstRender);
 
         if (firstRender && !OrderState.Value.IsLoading && !OrderState.Value.Orders.Any())
@@ -782,45 +696,33 @@ Add the following code to the `OrderManagement.razor` file.
     {
         if (args.RequestType == Syncfusion.Blazor.Grids.Action.Add)
         {
-            // Toolbar Add button clicked — open the custom dialog.
             IsAddMode = true;
             DialogTitle = "Add New Order";
             CurrentEditOrder = new Order();
             DialogVisible = true;
-            // Cancel the default grid inline add-row behavior so the
-            // custom SfDialog handles the form submission instead.
             args.Cancel = true;
         }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
+        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit && args.Data != null)
         {
-            // Row double-clicked, F2 key pressed, or command column Edit button clicked.
-            if (args.Data != null)
+            IsAddMode = false;
+            DialogTitle = "Edit Order";
+            CurrentEditOrder = new Order
             {
-                IsAddMode = false;
-                DialogTitle = "Edit Order";
-                // Create a copy so edits do not mutate the immutable Fluxor state directly.
-                CurrentEditOrder = new Order
-                {
-                    Id           = args.Data.Id,
-                    CustomerName = args.Data.CustomerName,
-                    ProductName  = args.Data.ProductName,
-                    Quantity     = args.Data.Quantity,
-                    Price        = args.Data.Price,
-                    OrderDate    = args.Data.OrderDate,
-                    Status       = args.Data.Status
-                };
-                DialogVisible = true;
-                // Cancel the default grid inline edit-row behavior so the
-                // custom SfDialog handles the form submission instead.
-                args.Cancel = true;
-            }
+                Id = args.Data.Id,
+                CustomerName = args.Data.CustomerName,
+                ProductName = args.Data.ProductName,
+                Quantity = args.Data.Quantity,
+                Price = args.Data.Price,
+                OrderDate = args.Data.OrderDate,
+                Status = args.Data.Status
+            };
+            DialogVisible = true;
+            args.Cancel = true;
         }
     }
 
     private void CommandClickHandler(CommandClickEventArgs<Order> args)
     {
-        // The Edit command raises Action.BeginEdit which is handled in ActionBeginHandler.
-        // Handle Delete here because it has no corresponding ActionBegin event.
         if (args.CommandColumn?.Type == CommandButtonType.Delete && args.RowData != null)
         {
             Dispatcher.Dispatch(new DeleteOrderAction(args.RowData.Id));
@@ -830,9 +732,13 @@ Add the following code to the `OrderManagement.razor` file.
     private void SaveOrder()
     {
         if (IsAddMode)
+        {
             Dispatcher.Dispatch(new AddOrderAction(CurrentEditOrder));
+        }
         else
+        {
             Dispatcher.Dispatch(new UpdateOrderAction(CurrentEditOrder));
+        }
 
         CloseDialog();
     }
@@ -847,7 +753,7 @@ Add the following code to the `OrderManagement.razor` file.
 {% endhighlight %}
 {% endtabs %}
 
-## Add navigation link
+### Add navigation link
 
 Open the `~/Components/Layout/NavMenu.razor` file and add a navigation link to the `OrderManagement` page. This provides access to the Orders page from the application's navigation menu.
 
@@ -863,7 +769,7 @@ Open the `~/Components/Layout/NavMenu.razor` file and add a navigation link to t
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+## Run and verify the application
 
 Run the application using the following command.
 
@@ -875,18 +781,33 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-## Perform CRUD operations
+After the application loads, select the **Orders** page from the navigation menu.
 
-Open a browser and navigate to the URL shown in the terminal output (typically `https://localhost:5001`). Open the application and select the **Orders** page from the navigation menu.
+### Load data
 
-The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) loads with twenty seed orders and supports full CRUD operations through the Fluxor store.
+When the Orders page opens, the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) automatically loads the available order records. A **Loading orders...** message appears while the data is being loaded. After loading completes, twenty sample orders are displayed in the grid with [paging](https://blazor.syncfusion.com/documentation/datagrid/paging), [sorting](https://blazor.syncfusion.com/documentation/datagrid/sorting), and [filtering](https://blazor.syncfusion.com/documentation/datagrid/filter-bar) enabled.
 
-* **Load** - The DataGrid fetches orders automatically on first render. A "Loading orders..." message appears until the data is ready, then twenty seed orders display with paging, sorting, and filtering enabled.
-* **Add** - Click the **Add** button in the toolbar to open the **Add New Order** dialog. Enter the **Customer Name** and **Product Name** (both required), set the **Quantity** and **Price**, pick the **Order Date**, choose a **Status**, then click **Save**. The new order appears as a new row in the grid. Click **Cancel** to close the dialog without saving.
-* **Edit** - Click the **Edit** (pencil) icon in the **Actions** column, double-click the row, or select the row and press <kbd>F2</kbd>. The **Edit Order** dialog opens with the selected row's values pre-filled. Update the fields and click **Save** to apply the changes. Click **Cancel** to discard them.
-* **Delete** - Click the **Delete** (trash) icon in the **Actions** column of the row you want to remove. The order is deleted immediately from the grid.
-* **Sort, filter, and page** - Click any column header to sort the grid by that column. Use the filter bar at the top of each column to narrow the displayed records. Use the pager at the bottom to move between pages, with ten records shown per page.
-* **Errors** - If loading, adding, updating, or deleting fails, an alert message displays the error detail at the top of the page. Correct the issue and retry the operation.
+### Add an order
+
+Click the **Add** button in the toolbar to open the **Add New Order** dialog. Enter the required order details, including **Customer Name**, **Product Name**, **Quantity**, **Price**, **Order Date**, and **Status**, and then click **Save**. The new order is added and displayed in the DataGrid. To close the dialog without saving, click **Cancel**.
+
+### Edit an order
+
+To edit an order, click the **Edit** (pencil) icon in the **Actions** column or double-click the row. The **Edit Order** dialog opens with the selected order details. Update the required values and click **Save** to apply the changes. The updated values are immediately reflected in the DataGrid. To close the dialog without saving your changes, click **Cancel**.
+
+### Delete an order
+
+To delete an order, click the **Delete** (trash) icon in the **Actions** column of the row that you want to remove. The order is removed from the DataGrid, and the updated list of orders is displayed automatically.
+
+### Sort, filter, and page records
+
+Click a column header to sort the records by that column. Use the filter bar at the top of each column to display only the records that match your criteria. Use the pager at the bottom of the DataGrid to navigate through the available pages, with ten records displayed per page.
+
+### Error messages
+
+If an operation cannot be completed, an error message is displayed at the top of the page. Review the message and try the operation again after resolving the issue.
+
+![Blazor DataGrid showing order records loaded from a Fluxor store, with Add, Edit, and Delete command buttons in the Actions column](images/datagrid-with-fluxor.webp)
 
 ## See also
 
