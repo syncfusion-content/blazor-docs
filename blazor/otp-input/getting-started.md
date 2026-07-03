@@ -207,4 +207,4 @@ dotnet run
 
 {% endtabcontents %}
 
-![Blazor OTP Input Component](images/blazor-otp-default.png)
+![Blazor OTP Input Component](images/blazor-otp-default.webp)
