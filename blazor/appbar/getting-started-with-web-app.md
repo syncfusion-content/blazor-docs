@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with AppBar in Blazor Web App | Syncfusion®
+title: Getting Started with AppBar Component in Blazor Web App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor AppBar Component in Blazor Web App.
 platform: Blazor
 component: AppBar
@@ -201,4 +201,3 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-
