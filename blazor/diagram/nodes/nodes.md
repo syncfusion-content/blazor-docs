@@ -322,7 +322,7 @@ private void RemoveNodes()
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/CloneNode/CloneNode.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVRXRhppEMmdCcd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Clonning Node](../images/CloneNode.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVRXRhppEMmdCcd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Clonning Node](../images/CloneNode.webp)" %}
 
 ## How to Update Nodes at Runtime
 

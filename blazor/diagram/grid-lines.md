@@ -185,7 +185,7 @@ Snapping to gridlines can be enabled or disabled with the [SnapConstraints](http
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapToLines.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVHNdVuTYswKeuS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVHNdVuTYswKeuS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.webp)" %}
 
 ### How to Customize Snap Intervals
 
@@ -284,7 +284,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Gridlines/SnapToObject.razor)
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdZxVYzOzIVHkw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdZxVYzOzIVHkw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.webp)" %}
 
 ### How to Customize Snap Line Style
 

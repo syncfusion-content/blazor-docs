@@ -163,7 +163,7 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Position/MinMaxSize.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVnjxBopVBzcxec?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVnjxBopVBzcxec?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.webp)" %}
 
 ## See also
 

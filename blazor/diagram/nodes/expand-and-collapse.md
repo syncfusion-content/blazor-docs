@@ -109,7 +109,7 @@ The following code example illustrates how to create icons of various shapes on 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/Icon.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthxDnBopjxyPgJQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthxDnBopjxyPgJQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.webp)" %}
 
 The following code example illustrates how to create an icon of various shapes in a layout.
 ```csharp
@@ -249,7 +249,7 @@ The following code example illustrates how to create an icon of various shapes i
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/ExpandAndCollapse/ExpandCollapsewithLayout.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhHtdBSTjkZIIoG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhHtdBSTjkZIIoG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.webp)" %}
 
 ## How to Customize Expand and Collapse Icon
 Diagram allows customization of the node’s expand and collapse icons. For available properties, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).

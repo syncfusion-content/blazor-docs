@@ -564,6 +564,6 @@ The following code example shows how to flip the connector.
 |Vertical|![VerticalDirection](./images/blazor-diagram-flip-direction-as-vertical.png)|
 |Both|![BothDirection](./images/blazor-diagram-flip-direction-as-both.png)|
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxjdhYJFVHGgRf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Flip Connector](./images/blazor-diagram-connector-flip-direction.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxjdhYJFVHGgRf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Flip Connector](./images/blazor-diagram-connector-flip-direction.webp)" %}
 
 For more information about node interaction, refer to [Connector Interaction](./connectors/interactions).

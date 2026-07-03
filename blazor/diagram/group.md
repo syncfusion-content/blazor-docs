@@ -260,7 +260,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Group/CloneNodeGroup.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhHjxhYSjZmeunZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Grouping in Blazor Diagram](images/CloneGroup.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhHjxhYSjZmeunZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Grouping in Blazor Diagram](images/CloneGroup.webp)" %}
 
 ### How to Add Padding to a Node Group
 
