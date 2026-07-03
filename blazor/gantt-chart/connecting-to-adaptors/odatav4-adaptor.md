@@ -579,6 +579,8 @@ In the example below, [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 To insert a new record into the Gantt, use the `HttpPost` method on the server. The sample implementation in the `GanttController` inserts the new task at the beginning of the in-memory list and returns it as JSON.
 
+![Insert Record](../images/odatav4-adaptor-insert.png)
+
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}
 
@@ -608,6 +610,8 @@ public IActionResult Post([FromBody] GanttData addRecord)
 **Update Record:**
 
 Updating a record in the Gantt – including changes from inline edit, dialog edit, **and** taskbar drag/resize – is handled by the `HttpPatch` method in your controller. The sample performs a partial update, only replacing fields that are not null in the update record. The same `PATCH` endpoint is used for taskbar edits; the Gantt sends the modified `StartDate`, `EndDate`, and/or `Duration` and the controller applies them to the matching task.
+
+![Update Record](../images/odatav4-adaptor-update.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}
@@ -650,6 +654,8 @@ public IActionResult Patch(int key, [FromBody] GanttData updateRecord)
 **Delete Record:**
 
 To delete a record from the Gantt, use the `HttpDelete` method in your controller. The sample looks up the task by its `TaskId`, removes it from the data source, and returns the deleted record as JSON.
+
+![Delete Record](../images/odatav4-adaptor-delete.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GanttController.cs" %}

@@ -182,6 +182,8 @@ app.MapControllers();
 
 Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/Gantt** (where **xxxx** represents the port number from **launchSettings.json**). Verify that the API returns the task data before proceeding.
 
+![Gantt WebApiAdaptor](../images/blazor-webapi-adaptors.png)
+
 ## Connecting Blazor Gantt Chart to an API service
 
 To integrate the Blazor Gantt Chart into your project, follow these steps:
@@ -314,11 +316,391 @@ The following table lists the query parameters used by the Blazor Gantt Chart fo
 
 | Key           | Description                                                                 |
 |---------------|-----------------------------------------------------------------------------|
-| `$skip`, `$top` | Specifies the query parameters for performing paging operations on the server side.   |
 | `$filter`      | Specifies the query parameter for performing filtering and searching operations on the server side. |
 | `$orderby`     | Specifies the query parameter for performing sorting operations on the server side.   |
 
 > These parameters are automatically sent when the `WebApiAdaptor` is used. You can access and process them in your Web API Controller to perform the corresponding operations. You can also handle them using your own logic based on the query string format or use dynamic expression evaluation libraries for a more generic approach.
+
+## Handling search operations
+
+When a search operation is triggered, the `$filter` parameter is sent to the server. The `$filter` parameter specifies the query conditions that are applied to the data to perform the search.
+
+The following example demonstrates how to extract the `$filter` parameter and apply search logic across multiple fields:
+
+{% tabs %}
+{% highlight cs tabtitle="GanttController.cs" %}
+
+/// <summary>
+/// Retrieves task data and handles search operations based on the provided filter query.
+/// </summary>
+/// <returns>Returns a JSON object containing the searched list of tasks and the total count.</returns>
+[HttpGet]
+[Route("api/[controller]")]
+public object GetTaskData()
+{
+    // Retrieve all task records from the data source.
+    var queryString = Request.Query;
+    var data = GanttData.GetAllRecords().ToList();
+
+    // Enable nullable reference types for handling filter queries.
+    #nullable enable
+    string? filterQuery = queryString["$filter"];
+    #nullable disable
+
+    // Check if a filter query is provided.
+    if (!string.IsNullOrEmpty(filterQuery))
+    {
+        // Split the filter query into individual conditions using "and" as a delimiter.
+        var filterConditions = filterQuery.Split(new[] { " and " }, StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (var condition in filterConditions)
+        {
+            // Check if the condition involves a substring search.
+            if (condition.Contains("substringof"))
+            {
+                // Extract the search value from the substring condition.
+                var conditionParts = condition.Split('(', ')', '\'');
+                var searchValue = conditionParts[3]?.ToLower() ?? "";
+
+                // Filter the data based on the search value across multiple fields.
+                data = data.Where(task =>
+                    task != null &&
+                    (task.TaskId.ToString().Contains(searchValue) ||
+                    (task.TaskName?.ToLower().Contains(searchValue, StringComparison.CurrentCultureIgnoreCase) ?? false) ||
+                    (task.Priority?.ToLower().Contains(searchValue, StringComparison.CurrentCultureIgnoreCase) ?? false))
+                ).ToList();
+            }
+            else
+            {
+                // Handle other filtering operations here.
+            }
+        }
+    }
+
+    // Calculate the total count of records.
+    int totalRecordsCount = data.Count();
+
+    // Return the filtered data and the total count as a JSON object.
+    return new { Items = data, count = totalRecordsCount };
+}
+
+{% endhighlight %}
+
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+
+<SfGantt TValue="GanttData"
+         Height="450px"
+         Width="100%"
+         AllowSorting="true"
+         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "ExpandAll", "CollapseAll", "Search" })">
+
+    <SfDataManager Url="https://localhost:xxxx/api/Gantt"
+                   Adaptor="Adaptors.WebApiAdaptor">
+    </SfDataManager>
+
+    <GanttTaskFields Id="TaskId"
+                     Name="TaskName"
+                     StartDate="StartDate"
+                     EndDate="EndDate"
+                     Duration="Duration"
+                     Progress="Progress"
+                     ParentID="SubtaskOf">
+    </GanttTaskFields>
+
+    <GanttEditSettings AllowAdding="true"
+                       AllowEditing="true"
+                       AllowDeleting="true"
+                       AllowTaskbarEditing="true"
+                       Mode="Syncfusion.Blazor.Gantt.EditMode.Auto">
+    </GanttEditSettings>
+
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date" Width="150"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="100"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Width="100"></GanttColumn>
+        <GanttColumn Field="Priority" HeaderText="Priority" Width="100"></GanttColumn>
+    </GanttColumns>
+
+    <GanttLabelSettings LeftLabel="TaskName" TValue="GanttData"></GanttLabelSettings>
+
+</SfGantt>
+
+{% endhighlight %}
+{% endtabs %}
+
+> This example demonstrates a custom way of handling the `$filter` query sent by the Gantt Chart. You can also handle it using your own logic based on the query string format or use dynamic expression evaluation libraries for a more generic approach.
+
+## Handling filtering operation
+
+When filtering is applied, the `$filter` parameter is sent to the server. The `$filter` parameter specifies the conditions for filtering the data based on the provided criteria.
+
+The following example demonstrates how to extract the `$filter` parameter and apply filtering logic based on custom conditions:
+
+
+{% tabs %}
+{% highlight cs tabtitle="GanttController.cs" %}
+
+/// <summary>
+/// Retrieves task data and processes filtering operations based on the provided query parameters.
+/// </summary>
+/// <returns>Returns a JSON object containing the filtered list of tasks and the total count.</returns>
+[HttpGet]
+[Route("api/[controller]")]
+public object GetTaskData()
+{
+    // Retrieve all task records from the data source.
+    var queryString = Request.Query;
+    var data = GanttData.GetAllRecords().ToList();
+
+    // Enable nullable reference types for handling filter queries.
+    #nullable enable
+    string? filterQuery = queryString["$filter"];
+    #nullable disable
+
+    // Check if a filter query is provided.
+    if (!string.IsNullOrEmpty(filterQuery))
+    {
+        // Split the filter query into individual conditions using "and" as a delimiter.
+        var filterConditions = filterQuery.Split(new[] { " and " }, StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (var condition in filterConditions)
+        {
+            // Check if the condition involves a substring search.
+            if (condition.Contains("substringof"))
+            {
+                // Handle substring search operation here.
+            }
+            else
+            {
+                // Initialize variables to hold the filter field and value.
+                string filterField = "";
+                string filterValue = "";
+
+                // Split the condition into parts to extract the field and value.
+                var filterParts = condition.Split('(', ')', '\'');
+
+                // Handle cases where the filter condition has fewer parts.
+                if (filterParts.Length < 6)
+                {
+                    var filterValueParts = filterParts[1].Split();
+                    filterField = filterValueParts[0];
+                    filterValue = filterValueParts.Length > 2 ? filterValueParts[2].Trim('\'') : "";
+                }
+                else
+                {
+                    filterField = filterParts[3];
+                    filterValue = filterParts[5];
+                }
+
+                // Apply filtering based on the extracted field and value.
+                switch (filterField)
+                {
+                    case "TaskId":
+                        data = data.Where(item => item != null && item.TaskId.ToString() == filterValue).ToList();
+                        break;
+                    case "TaskName":
+                        data = data.Where(item => item != null && item.TaskName?.ToLower().StartsWith(filterValue.ToLower()) == true).ToList();
+                        break;
+                    case "Priority":
+                        data = data.Where(item => item != null && item.Priority?.ToLower().StartsWith(filterValue.ToLower()) == true).ToList();
+                        break;
+                    case "Progress":
+                        if (int.TryParse(filterValue, out int prog))
+                            data = data.Where(item => item.Progress == prog).ToList();
+                        break;
+                    case "Duration":
+                        if (int.TryParse(filterValue, out int dur))
+                            data = data.Where(item => item.Duration == dur).ToList();
+                        break;
+                }
+            }
+        }
+    }
+
+    // Calculate the total count of records after filtering.
+    int totalRecordsCount = data.Count();
+
+    // Return the filtered data and the total count as a JSON object.
+    return new { Items = data, count = totalRecordsCount };
+}
+
+{% endhighlight %}
+
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+
+<SfGantt TValue="GanttData"
+         Height="450px"
+         Width="100%"
+         AllowFiltering="true"
+         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "ExpandAll", "CollapseAll" })">
+
+    <SfDataManager Url="https://localhost:xxxx/api/Gantt"
+                   Adaptor="Adaptors.WebApiAdaptor">
+    </SfDataManager>
+
+    <GanttTaskFields Id="TaskId"
+                     Name="TaskName"
+                     StartDate="StartDate"
+                     EndDate="EndDate"
+                     Duration="Duration"
+                     Progress="Progress"
+                     ParentID="SubtaskOf">
+    </GanttTaskFields>
+
+    <GanttEditSettings AllowAdding="true"
+                       AllowEditing="true"
+                       AllowDeleting="true"
+                       AllowTaskbarEditing="true"
+                       Mode="Syncfusion.Blazor.Gantt.EditMode.Auto">
+    </GanttEditSettings>
+
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date" Width="150"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="100"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Width="100"></GanttColumn>
+        <GanttColumn Field="Priority" HeaderText="Priority" Width="100"></GanttColumn>
+    </GanttColumns>
+
+    <GanttLabelSettings LeftLabel="TaskName" TValue="GanttData"></GanttLabelSettings>
+
+</SfGantt>
+
+{% endhighlight %}
+{% endtabs %}
+
+> The `$filter` parameter can include various conditions, such as **substringof**, **eq** (equals), **gt** (greater than), and more. You can customize the filtering logic based on your specific data structure and requirements.
+
+## Handling sorting operation
+
+When sorting is triggered, the `$orderby` parameter is sent to the server. The `$orderby` parameter specifies the fields to sort by, along with the sort direction (ascending or descending).
+
+The following example demonstrates how to extract the `$orderby` parameter and apply sorting logic:
+
+
+{% tabs %}
+{% highlight cs tabtitle="GanttController.cs" %}
+
+/// <summary>
+/// Retrieves task data and processes sorting operations based on the provided query parameters.
+/// </summary>
+/// <returns>Returns a JSON object containing the sorted list of tasks and the total count.</returns>
+[HttpGet]
+[Route("api/[controller]")]
+public object GetTaskData()
+{
+    // Retrieve all task records from the data source.
+    var queryString = Request.Query;
+    var data = GanttData.GetAllRecords().ToList();
+
+    // Enable nullable reference types for handling sorting queries.
+    #nullable enable
+    string? sort = queryString["$orderby"];
+    #nullable disable
+
+    // Check if a sorting query is provided.
+    if (!string.IsNullOrEmpty(sort))
+    {
+        // Split the sorting query into individual conditions using commas as delimiters.
+        var sortConditions = sort.Split(',');
+        IOrderedEnumerable<GanttData>? orderedData = null;
+
+        foreach (var sortCondition in sortConditions)
+        {
+            // Split each sorting condition into field and direction (asc/desc).
+            var sortParts = sortCondition.Trim().Split(' ');
+            var sortBy = sortParts[0];
+            var descending = sortParts.Length > 1 && sortParts[1].ToLower() == "desc";
+
+            // Define a key selector function to dynamically access the property to sort by.
+            Func<GanttData, object?> keySelector = item =>
+                item.GetType().GetProperty(sortBy)?.GetValue(item, null);
+
+            // Apply sorting based on the field and direction.
+            orderedData = orderedData == null
+                ? (descending ? data.OrderByDescending(keySelector) : data.OrderBy(keySelector))
+                : (descending ? orderedData.ThenByDescending(keySelector) : orderedData.ThenBy(keySelector));
+        }
+
+        // Update the data with the sorted result.
+        if (orderedData != null)
+        {
+            data = orderedData.ToList();
+        }
+    }
+
+    // Calculate the total count of records after sorting.
+    int totalRecordsCount = data.Count();
+
+    // Return the sorted data and the total count as a JSON object.
+    return new { Items = data, count = totalRecordsCount };
+}
+
+{% endhighlight %}
+
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+
+<SfGantt TValue="GanttData"
+         Height="450px"
+         Width="100%"
+         AllowSorting="true"
+         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "ExpandAll", "CollapseAll" })">
+
+    <SfDataManager Url="https://localhost:xxxx/api/Gantt"
+                   Adaptor="Adaptors.WebApiAdaptor">
+    </SfDataManager>
+
+    <GanttTaskFields Id="TaskId"
+                     Name="TaskName"
+                     StartDate="StartDate"
+                     EndDate="EndDate"
+                     Duration="Duration"
+                     Progress="Progress"
+                     ParentID="SubtaskOf">
+    </GanttTaskFields>
+
+    <GanttEditSettings AllowAdding="true"
+                       AllowEditing="true"
+                       AllowDeleting="true"
+                       AllowTaskbarEditing="true"
+                       Mode="Syncfusion.Blazor.Gantt.EditMode.Auto">
+    </GanttEditSettings>
+
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task ID" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date" Width="150"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="100"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Width="100"></GanttColumn>
+        <GanttColumn Field="Priority" HeaderText="Priority" Width="100"></GanttColumn>
+    </GanttColumns>
+
+    <GanttLabelSettings LeftLabel="TaskName" TValue="GanttData"></GanttLabelSettings>
+
+</SfGantt>
+
+{% endhighlight %}
+{% endtabs %}
+
+> You can parse the `$orderby` parameter to dynamically apply sorting on one or more fields in either ascending or descending order.
 
 ## Handling CRUD operations
 
@@ -339,7 +721,6 @@ To enable editing in the Gantt Chart, configure [GanttEditSettings](https://help
 
 To insert a new record into the Gantt Chart, the `WebApiAdaptor` issues an `HTTP POST` to the base URL. The new record is sent to the `AddTask` parameter of the controller. Below is a sample implementation that generates the next `TaskId` and appends the task to the in-memory collection:
 
-![Insert Record](../images/web-api-adaptor-insert.webp)
 
 ```csharp
 /// <summary>
@@ -361,7 +742,6 @@ public IActionResult AddTask([FromBody] GanttData newTask)
 
 Updating a record in the Gantt Chart — whether it is a cell edit, dialog edit, or a taskbar drag that changes the start date, end date, duration, progress, or parent — is performed through an `HTTP PUT` to the base URL. The updated record is sent to the `UpdateTask` parameter. Below is a sample implementation that finds the existing task by `TaskId` and applies the changes:
 
-![Update Record](../images/web-api-adaptor-update.webp)
 
 ```csharp
 /// <summary>
@@ -391,7 +771,6 @@ public IActionResult UpdateTask([FromBody] GanttData updatedTask)
 
 To delete a record from the Gantt Chart, the `WebApiAdaptor` issues an `HTTP DELETE` to the base URL with the task id passed as a query string parameter (`?taskId=<id>`). Below is a sample implementation that removes the task from the in-memory collection:
 
-![Delete Record](../images/web-api-adaptor-delete.webp)
 
 ```csharp
 /// <summary>
@@ -409,18 +788,18 @@ public IActionResult DeleteTask(int taskId)
 }
 ```
 
-# Benefits of using the WebApiAdaptor with the Gantt Chart
+## Benefits of using the WebApiAdaptor with the Gantt Chart
 - **Server-side data processing** – Operations filtering (`$filter`), sorting (`$orderby`), and record counting (`$count`) are transmitted to the server as query string parameters, reducing client workload and improving responsiveness for large project datasets.
 - **Minimal server-side requirements** – The API endpoint only needs to parse OData query strings from `Request.Query` and return a `{ Items, Count }` response object. There is no dependency on a full OData stack, `Microsoft.AspNetCore.OData`, or an EDM model, making it suitable for scenarios where a complete OData service is not an option.
 - **Built-in CRUD support** – All editing modes supported by the Gantt — adding tasks, editing via cell, row, dialog, or taskbar drag, and deleting — translate to standard `POST`, `PUT`, and `DELETE` HTTP requests on the Web API without any additional configuration.
 - **Flat payload with hierarchical rendering** – The server returns a flat list of tasks, each carrying a `SubtaskOf` parent identifier. Mapping this field to `GanttTaskFields.ParentID` instructs the Gantt Chart to reconstruct the full parent/child hierarchy in both the grid and the taskbar view.
 
-# Real-world use cases
+## Real-world use cases
 
 - **Enterprise project management** – Serving multi-level project structures from relational databases such as SQL Server or PostgreSQL, where scheduling constraints and business rules are evaluated on the server before tasks are delivered to the client.
 - **Construction and engineering schedules** – Managing Gantt views with large numbers of activities where only the visible page and relevant children are loaded at a time, with additional data fetched on demand from the server.
 - **Manufacturing and production planning** – Handling work order hierarchies that require filtering by production line or shift, sorting by priority, and frequent updates through taskbar drag interactions.
-- **Multi-tenant SaaS platforms** – Enforcing tenant-level data isolation at the server before paging and sorting are applied, ensuring each request returns only the data belonging to the authenticated tenant.
+- **Multi-tenant SaaS platforms** – Enforcing tenant-level data isolation at the server before sorting are applied, ensuring each request returns only the data belonging to the authenticated tenant.
 - **Existing Web API integrations** – Connecting the Gantt Chart to already-maintained ASP.NET Core Web APIs without the need to migrate or rebuild the backend as a full OData service.
 
 > ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Therefore, it is currently not feasible to support **Batch** mode CRUD operations until ASP.NET Core provides support for batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).

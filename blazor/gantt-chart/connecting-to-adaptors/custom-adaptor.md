@@ -857,3 +857,25 @@ The following example demonstrates how to send additional parameters to the serv
 ```
 
 ![Passing Additional Parameters to Custom Adaptor in Blazor Gantt Chart](../images/sending-additional-param-custom-binding.webp)
+
+
+## Real-world use cases
+
+The `CustomAdaptor` is the right choice when the task data cannot be fetched from a standard REST endpoint or when the data operations require logic that no built-in adaptor can provide. Typical use cases include:
+
+- **In-memory or static data sources** – Applications that load task data from a local list, an embedded JSON file, or an application-level cache can bind that data to the Gantt without standing up a separate API service.
+- **Legacy systems with proprietary APIs** – When task records are stored in an older system that exposes a non-standard interface (SOAP, gRPC, a vendor SDK), the custom adaptor wraps that interface and presents it to the Gantt as a normal data source.
+- **Third-party SDK integration** – Productivity suites, ERP platforms, and project management tools often ship with their own client SDKs. A custom adaptor calls the SDK directly inside the `Read` method and maps the response to the Gantt's data model.
+- **Complex business rules during data operations** – When inserting or updating a task requires validating against related records, recalculating dependent fields, or triggering side effects, that logic can be placed directly in the adaptor methods rather than in the server controller.
+- **Offline-first and PWA applications** – Applications that store tasks in IndexedDB or local storage can use a custom adaptor to read and write that local store, keeping the Gantt functional even when the device is offline.
+- **Testing and prototyping** – A custom adaptor backed by a static list lets teams build and validate the full Gantt UI — including CRUD, searching, filtering, and sorting — before the real backend is ready.
+
+## Benefits of using the CustomAdaptor with the Gantt Chart
+
+- **Complete control over every data operation** – You write the `Read`, `Insert`, `Update`, `Remove`, and `BatchUpdate` methods yourself, so the adaptor can handle any data source or business rule without being constrained by a predefined wire format.
+- **Works with any data source** – Unlike REST-based adaptors, the `CustomAdaptor` is not tied to HTTP. It can read from in-memory collections, file systems, local storage, third-party SDKs, or any other source that .NET can access.
+- **Inline business logic** – Validation, field recalculation, and dependent-record updates can be applied inside the adaptor methods, keeping that logic close to the data layer and out of the UI components.
+- **No server dependency** – Because the adaptor runs inside the Blazor application, there is no need for a separate API project or a network round-trip for data operations, which simplifies deployment and reduces latency.
+- **Supports both synchronous and asynchronous operations** – The `DataAdaptor` base class provides both `Read`/`ReadAsync` and `Insert`/`InsertAsync` signatures, so you can use `async/await` to call remote services or databases without blocking the UI.
+- **Seamless integration with dependency injection** – Registering the adaptor as a scoped service lets you inject repositories, caching layers, logging, and any other application service directly into the adaptor class.
+- **Ideal for testing and prototyping** – Swapping the real adaptor for a test adaptor backed by a fixed list requires no changes to the Gantt component itself, making unit and integration testing straightforward.

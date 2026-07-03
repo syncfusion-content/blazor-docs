@@ -8,33 +8,32 @@ keywords: adaptors, graphqladaptor, graphql adaptor, hot chocolate, remotedata
 documentation: ug
 ---
 
-# GraphQL Adaptor in Blazor Gantt Chart
+# Connect Syncfusion Blazor Gantt Chart with GraphQL using Hot Chocolate
 
-The [GraphQLAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-adaptor) connects the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) to a [GraphQL](https://graphql.org/) backend built with [Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15). The Gantt typically renders project schedules that can grow to thousands of hierarchical tasks, with sorting, filtering, searching, paging, and CRUD actions driven by the server. The `GraphQLAdaptor` is a strong fit for this scenario because it:
+GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 
-- **Speaks a single, flexible endpoint** – The Gantt talks to one `/graphql` endpoint instead of multiple REST routes, and the server returns exactly the fields the chart needs (no over-fetching of unrelated task data).
-- **Pushes work to the server** – Issues server-driven paging, filtering, sorting, and searching through the standard `DataManager` parameters, so the client only renders the slice it actually needs.
-- **Streams tree data efficiently** – The Gantt's hierarchical view is built from a flat result set plus a `ParentId` mapping; GraphQL responses map cleanly to this shape.
-- **Supports full CRUD** – Built-in `Insert`, `Update`, `Delete`, and `Batch` mutations cover add, edit, delete, and taskbar-drag operations without writing a custom REST surface.
+**Traditional REST APIs** and **GraphQL** differ mainly in how data is requested and returned: **REST APIs expose** multiple endpoints that return fixed data structures, often including unnecessary fields and requiring several requests to fetch related data, while **GraphQL** uses a single endpoint where queries define the exact fields needed, enabling precise responses and allowing related data to be retrieved efficiently in one request. This makes **GraphQL** especially useful for **Blazor Gantt Chart integration**, the **reason** is data‑centric UI components require well‑structured and selective datasets to support efficient filtering, reduce network calls, and improve overall performance.
 
-> The `GraphQLAdaptor` requires .NET 8 or later and a valid Syncfusion license.
+**Key GraphQL Concepts**
 
-## Why choose the GraphQLAdaptor for the Gantt Chart?
+- **Queries**: A query is a request to read data. Queries do not modify data; they only retrieve it.
+- **Mutations**: A mutation is a request to modify data. Mutations create, update, or delete records.
+- **Resolvers**: Each query or mutation is handled by a resolver, which is a function responsible for fetching data or executing an operation. **Query resolvers** handle **read operations**, while **mutation resolvers** handle **write operations**.
+- **Schema**: Defines the structure of the API. The schema describes available data types, the fields within those types, and the operations that can be executed. Query definitions specify how data can be retrieved, and mutation definitions specify how data can be modified. 
 
-- **Predictable, typed schema** – The GraphQL schema describes every task field, mutation argument, and return type, so the Gantt can be wired to a strongly typed backend without ad-hoc JSON contracts.
-- **Selective field loading** – A Gantt schedule often has 30+ task fields (dates, duration, progress, predecessors, resources, custom indicators). With GraphQL the client asks for only the columns it currently renders, which reduces payload size for large projects.
-- **Server-driven operations** – Searching across thousands of tasks, applying complex filters (for example, "tasks in phase X with progress less than 50%"), and sorting by calculated fields all happen on the server and are passed through `DataManagerRequestInput`.
-- **Hierarchical data with a flat payload** – The Gantt renders parent/child trees from a flat result set; the adaptor returns tasks with a `ParentId` field, and the `GanttTaskFields.ParentID` mapping turns that into the chart, grid, and taskbar hierarchy.
-- **Full CRUD out of the box** – Add (toolbar), edit (cell, row, dialog), delete, and taskbar drag operations on the Gantt are mapped to standard GraphQL mutations on the backend.
-- **Strongly typed `TaskDataInput`** – Hot Chocolate generates a `TaskDataInput` type from the model, so insert, update, and batch operations are validated at the schema level.
+[Hot Chocolate](https://chillicream.com/docs/hotchocolate/v15) is an open‑source GraphQL server framework for .NET. Hot Chocolate enables the creation of GraphQL APIs using ASP.NET Core and integrates seamlessly with modern .NET applications, including Blazor.
 
-## Real-world use cases
+## Prerequisites
 
-- **Enterprise project management** – Multi-phase project plans with thousands of tasks where business rules (dependencies, resource availability, schedule constraints) must be enforced on the server before tasks are returned.
-- **Construction and engineering schedules** – Long-running Gantt views where the chart only needs the visible page plus filtered children, and the rest must be served on demand.
-- **Manufacturing and production planning** – Work order hierarchies that must be filtered by shop, line, or shift, sorted by priority, and updated frequently with taskbar drag operations.
-- **Multi-tenant SaaS applications** – Each request must be scoped to the authenticated tenant; the `GraphQLAdaptor` lets the server apply that filter before paging and sorting are calculated.
-- **Modern .NET backends** – Teams that have already adopted Hot Chocolate for their API layer and want to plug the Gantt Chart in without maintaining a parallel REST service.
+Install the following software and packages before starting the process:
+
+| Software/Package | Version | Purpose |
+|-----------------|---------|---------|
+| Visual Studio 2026 | 18.0 or later | Development IDE with Blazor workload |
+| .NET SDK | net10.0 or compatible | Runtime and build tools |
+| HotChocolate.AspNetCore | 15.1 or later | GraphQL server framework |
+| Syncfusion.Blazor.Gantt | {{site.blazorversion}} | Gantt Chart component |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Gantt Chart |
 
 ## Setting Up the GraphQL Backend
 
@@ -171,7 +170,7 @@ All configuration steps are now complete.
 
 A data model represents the structure of data that the application stores. It defines the properties (fields) that make up a record. Each property corresponds to a column in the database table. The data model acts as the blueprint for how data is organized and accessed throughout the application.
 
-In the context of a project task manager, the data model defines what information is stored for each task entry. Properties include the task identifier, task name, schedule dates, duration, progress, priority, parent reference (for hierarchy), and resource details.
+In the context of a project task manager, the data model defines what information is stored for each task entry. Properties include the task identifier, task name, schedule dates, duration, progress, parent reference (for hierarchy).
 
 **Instructions**:
 
@@ -204,9 +203,9 @@ namespace Gantt_GraphQLAdaptor.Models
         {
             _taskStore = new List<TaskData>
             {
-                new TaskData { TaskId = 1, TaskName = "Project Initiation", StartDate = new DateTime(2025, 1, 6),  EndDate = new DateTime(2025, 1, 17), Duration = 10, Progress = 100, Priority = "High",   ParentId = null, IsExpanded = true,  Status = "Completed",   Assignee = "Alice Johnson", ResourceId = 1 },
-                new TaskData { TaskId = 2, TaskName = "Define Requirements", StartDate = new DateTime(2025, 1, 6), EndDate = new DateTime(2025, 1, 10), Duration = 5, Progress = 100, Priority = "High", ParentId = 1, IsExpanded = false, Status = "Completed", Assignee = "Alice Johnson", ResourceId = 1 },
-                new TaskData { TaskId = 3, TaskName = "System Design",       StartDate = new DateTime(2025, 1, 20), EndDate = new DateTime(2025, 2, 7), Duration = 15, Progress = 90, Priority = "High", ParentId = null, IsExpanded = true, Status = "In Progress", Assignee = "Carol White", ResourceId = 3 }
+                new TaskData { TaskId = 1, TaskName = "Project Initiation", StartDate = new DateTime(2025, 1, 6),  EndDate = new DateTime(2025, 1, 17), Duration = 10, Progress = 100,   ParentId = null},
+                new TaskData { TaskId = 2, TaskName = "Define Requirements", StartDate = new DateTime(2025, 1, 6), EndDate = new DateTime(2025, 1, 10), Duration = 5, Progress = 100, ParentId = 1 },
+                new TaskData { TaskId = 3, TaskName = "System Design",       StartDate = new DateTime(2025, 1, 20), EndDate = new DateTime(2025, 2, 7), Duration = 15, Progress = 90, ParentId = null }
                 // Additional seed records can be added here.
             };
         }
@@ -229,23 +228,8 @@ namespace Gantt_GraphQLAdaptor.Models
         [JsonPropertyName("progress")]
         public int Progress { get; set; }
 
-        [JsonPropertyName("priority")]
-        public string? Priority { get; set; }
-
         [JsonPropertyName("parentId")]
         public int? ParentId { get; set; }
-
-        [JsonPropertyName("isExpanded")]
-        public bool IsExpanded { get; set; }
-
-        [JsonPropertyName("status")]
-        public string? Status { get; set; }
-
-        [JsonPropertyName("assignee")]
-        public string? Assignee { get; set; }
-
-        [JsonPropertyName("resourceId")]
-        public int? ResourceId { get; set; }
     }
 }
 ```
@@ -262,12 +246,7 @@ The following table shows how C# properties map to GraphQL field names and Gantt
 | `EndDate` | `endDate` | `EndDate` | `DateTime?` | Scheduled end date of the task |
 | `Duration` | `duration` | `Duration` | `int?` | Duration in days |
 | `Progress` | `progress` | `Progress` | `int` | Completion percentage of the task |
-| `Priority` | `priority` | – | `string` | Priority level (High, Medium, Low, Critical) |
 | `ParentId` | `parentId` | `ParentID` | `int?` | Identifier of the parent task (builds hierarchy) |
-| `IsExpanded` | `isExpanded` | – | `bool` | Initial expand/collapse state of parent rows |
-| `Status` | `status` | – | `string` | Lifecycle status (Not Started, In Progress, Completed) |
-| `Assignee` | `assignee` | – | `string` | Person responsible for the task |
-| `ResourceId` | `resourceId` | – | `int?` | Identifier of the assigned resource |
 
 **Important Convention: Camel Case Conversion**
 
@@ -351,13 +330,6 @@ public class GraphQLQuery
 
         int totalRecords = dataSource.Count;
 
-        // 4. Paging – only apply when the client provides Take > 0
-        if (dataManager.Skip > 0)
-            dataSource = dataSource.Skip(dataManager.Skip).ToList();
-
-        if (dataManager.Take > 0)
-            dataSource = dataSource.Take(dataManager.Take).ToList();
-
         return new TaskDataResponse { Count = totalRecords, Result = dataSource };
     }
 
@@ -423,9 +395,8 @@ public class TaskDataResponse
 
 **Details:**
 
-- The `GetTaskData` method receives `DataManagerRequestInput`, which contains filter, sort, search, and paging parameters from the Gantt Chart.
+- The `GetTaskData` method receives `DataManagerRequestInput`, which contains filter, sort, search parameters from the Gantt Chart.
 - Hot Chocolate automatically converts the method name `GetTaskData` to camelCase: `taskData` in the GraphQL schema.
-- The response must contain `Count` (total records) and `Result` (current page data) for the Gantt Chart to process pagination.
 
 The query resolver has been created successfully.
 
@@ -433,7 +404,7 @@ The query resolver has been created successfully.
 
 ### Step 6: Create the DataManagerRequestInput Class
 
-A **DataManagerRequestInput** class is a GraphQL input type that represents all the parameters the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) sends to the backend when requesting data. This class acts as a container for filtering, sorting, searching, paging, and other data operation parameters.
+A **DataManagerRequestInput** class is a GraphQL input type that represents all the parameters the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) sends to the backend when requesting data. This class acts as a container for filtering, sorting, searching and other data operation parameters.
 
 **Purpose**
 When the Gantt Chart performs operations like sorting, filtering, or searching, it packages all these parameters into a `DataManagerRequestInput` object and sends it to the GraphQL backend. The backend then uses these parameters to fetch and return only the data the chart needs.
@@ -453,7 +424,7 @@ namespace Gantt_GraphQLAdaptor.Models;
 
 /// <summary>
 /// Represents the input structure for data manager requests from the Blazor Gantt Chart.
-/// Contains all parameters needed for data operations like filtering, sorting, paging, and searching.
+/// Contains all parameters needed for data operations like filtering, sorting and searching.
 /// </summary>
 public class DataManagerRequestInput
 {
@@ -602,7 +573,6 @@ public class WhereFilter
 
 | Property | Purpose | Type | Example |
 |----------|---------|------|---------|
-| `Skip` | Number of records to skip (used for paging) | `int` | `0` (start from first record) |
 | `Take` | Number of records to retrieve per page | `int` | `20` (fetch next 20 records) |
 | `RequiresCounts` | Whether the total record count should be returned | `bool` | `true` |
 | `Search` | Search filter configuration | `List<SearchFilter>` | Search term and target fields |
@@ -714,12 +684,7 @@ namespace Gantt_GraphQLAdaptor.Models
             target.EndDate    = source.EndDate;
             target.Duration   = source.Duration;
             target.Progress   = source.Progress;
-            target.Priority   = source.Priority;
             target.ParentId   = source.ParentId;
-            target.IsExpanded = source.IsExpanded;
-            target.Status     = source.Status;
-            target.Assignee   = source.Assignee;
-            target.ResourceId = source.ResourceId;
         }
     }
 }
@@ -761,7 +726,7 @@ Syncfusion is a library that provides pre-built UI components like the Gantt Cha
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
 <!-- Blazor Scripts -->
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+<script src="_content/Syncfusion.Blazor.Gantt/scripts/sf-gantt.min.js" type="text/javascript"></script>
 ```
 
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
@@ -781,9 +746,6 @@ The `Home.razor` component will display the project task data in a Blazor Gantt 
 
 ```cshtml
 @page "/"
-<PageTitle>Project Task Manager</PageTitle>
-
-<h1 class="mb-4 text-2xl font-bold">Project Task Manager - GraphQL Adaptor</h1>
 
 <SfGantt TValue="TaskData"
          Height="550px"
@@ -823,9 +785,6 @@ The `Home.razor` component will display the project task data in a Blazor Gantt 
         <GanttColumn Field="EndDate"   HeaderText="End Date"   Width="130"></GanttColumn>
         <GanttColumn Field="Duration"  HeaderText="Duration"   Width="100"></GanttColumn>
         <GanttColumn Field="Progress"  HeaderText="Progress"   Width="120"></GanttColumn>
-        <GanttColumn Field="Assignee"  HeaderText="Assignee"   Width="150"></GanttColumn>
-        <GanttColumn Field="Priority"  HeaderText="Priority"   Width="120"></GanttColumn>
-        <GanttColumn Field="Status"    HeaderText="Status"     Width="140"></GanttColumn>
     </GanttColumns>
 
     <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
@@ -875,7 +834,7 @@ The `SfDataManager` component connects the Gantt Chart to the GraphQL backend us
 
 ### Step 3: Configure the GraphQL Adaptor and Data Binding
 
-The GraphQL adaptor is a bridge that connects the Blazor Gantt Chart with the GraphQL backend. The adaptor translates Gantt operations (sorting, filtering, searching, paging, and CRUD) into GraphQL queries and mutations. When the user interacts with the chart, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the chart display.
+The GraphQL adaptor is a bridge that connects the Blazor Gantt Chart with the GraphQL backend. The adaptor translates Gantt operations (sorting, filtering, searching and CRUD) into GraphQL queries and mutations. When the user interacts with the chart, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the chart display.
 
 **What is a GraphQL Adaptor?**
 
@@ -922,12 +881,7 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
                             endDate
                             duration
                             progress
-                            priority
                             parentId
-                            isExpanded
-                            status
-                            assignee
-                            resourceId
                         }
                         count
                     }
@@ -937,12 +891,12 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
         {
             Insert = @"mutation create($record: TaskDataInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
                 createTask(record: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
-                    taskId taskName startDate endDate duration progress priority parentId status assignee
+                    taskId taskName startDate endDate duration progress parentId
                 }
             }",
             Update = @"mutation update($record: TaskDataInput!, $action: String!, $primaryColumnName: String!, $primaryColumnValue: String!, $additionalParameters: Any) {
                 updateTask(record: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
-                    taskId taskName startDate endDate duration progress priority parentId status assignee
+                    taskId taskName startDate endDate duration progress parentId
                 }
             }",
             Delete = @"mutation delete($primaryColumnValue: String!, $additionalParameters: Any) {
@@ -950,7 +904,7 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
             }",
             Batch = @"mutation batch($changed: [TaskDataInput!], $added: [TaskDataInput!], $deleted: [TaskDataInput!], $action: String!, $primaryColumnName: String!, $additionalParameters: Any, $dropIndex: Int) {
                 batchUpdate(changed: $changed, added: $added, deleted: $deleted, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters, dropIndex: $dropIndex) {
-                    taskId taskName startDate endDate duration progress priority parentId status assignee
+                    taskId taskName startDate endDate duration progress parentId
                 }
             }"
         }
@@ -978,7 +932,7 @@ taskData(dataManager: $dataManager) {}
 ```
 
 - `taskData(...)` – Calls the resolver method on the backend.
-- `dataManager: $dataManager` – Passes the variable to the resolver. The resolver receives this object and uses it to apply filters, sorts, searches, and paging.
+- `dataManager: $dataManager` – Passes the variable to the resolver. The resolver receives this object and uses it to apply filters, sorts, searches.
 
 ```
 count
@@ -989,7 +943,7 @@ result {
 }
 ```
 
-- `count` – Returns the total number of records (used for paging).
+- `count` – Returns the total number of records.
 - `result` – Contains the array of task records.
   - Each field must exist in the `TaskData` class.
   - Only the requested fields are returned (no over-fetching).
@@ -1011,12 +965,7 @@ When the backend executes the query, it returns a **JSON response** in this stru
           "endDate": "2025-01-17T00:00:00",
           "duration": 10,
           "progress": 100,
-          "priority": "High",
           "parentId": null,
-          "isExpanded": true,
-          "status": "Completed",
-          "assignee": "Alice Johnson",
-          "resourceId": 1
         },
         {
           "taskId": 2,
@@ -1025,12 +974,7 @@ When the backend executes the query, it returns a **JSON response** in this stru
           "endDate": "2025-01-10T00:00:00",
           "duration": 5,
           "progress": 100,
-          "priority": "High",
           "parentId": 1,
-          "isExpanded": false,
-          "status": "Completed",
-          "assignee": "Alice Johnson",
-          "resourceId": 1
         }
       ]
     }
@@ -1082,11 +1026,11 @@ The Gantt Chart will display the project schedule and is ready to perform server
 
 ## How Data Operations Work with the GraphQL Adaptor
 
-The Gantt Chart passes all data operation parameters (search, sort, filter, paging) inside the `dataManager` input variable. The backend resolver reads this object and applies the operations in the same order: **search → sort → filter → paging**.
+The Gantt Chart passes all data operation parameters (search, sort, filter) inside the `dataManager` input variable. The backend resolver reads this object and applies the operations in the same order: **search → sort → filter**.
 
 ### Searching
 
-When the **Search** toolbar button is used to enter a keyword, the Gantt Chart sends a `Search` array with the target fields and key. The backend `GetTaskData` resolver iterates over the configured fields and applies a case-insensitive `IndexOf` check, then continues to sort, filter, and paging.
+When the **Search** toolbar button is used to enter a keyword, the Gantt Chart sends a `Search` array with the target fields and key. The backend `GetTaskData` resolver iterates over the configured fields and applies a case-insensitive `IndexOf` check, then continues to sort, filter.
 
 **Variables Sent with the Request:**
 
@@ -1095,7 +1039,7 @@ When the **Search** toolbar button is used to enter a keyword, the Gantt Chart s
   "dataManager": {
     "Search": [
       {
-        "Fields": ["TaskName", "Assignee", "Status"],
+        "Fields": ["TaskName"],
         "Key": "design",
         "Operator": "contains",
         "IgnoreCase": true,
@@ -1120,7 +1064,7 @@ When a column header is selected for sorting, the Gantt Chart sends a `Sorted` a
   "dataManager": {
     "Sorted": [
       { "Name": "StartDate", "Direction": "Ascending" },
-      { "Name": "Priority",  "Direction": "Descending" }
+      { "Name": "Progress",  "Direction": "Descending" }
     ],
     "Skip": 0,
     "Take": 20,
@@ -1137,11 +1081,11 @@ Filtering is handled by the `Where` array. The backend resolver supports the sta
 
 | Operator | Purpose | Example |
 |----------|---------|---------|
-| `equal` | Exact match | `Priority equals "High"` |
-| `notequal` | Not equal to value | `Status notEqual "Completed"` |
+| `equal` | Exact match | `Progress equals "High"` |
+| `notequal` | Not equal to value | `Progress notEqual "Completed"` |
 | `contains` | Contains substring (case-insensitive) | `TaskName contains "design"` |
-| `startswith` | Starts with value | `Assignee startsWith "Alice"` |
-| `endswith` | Ends with value | `Status endsWith "Progress"` |
+| `startswith` | Starts with value | `TaskName startsWith "Alice"` |
+| `endswith` | Ends with value | `TaskName endsWith "Progress"` |
 | `greaterthan` | Greater than numeric value | `Progress > 50` |
 | `lessthan` | Less than numeric value | `Duration < 10` |
 | `greaterthanorequal` | Greater than or equal | `Progress >= 75` |
@@ -1159,8 +1103,8 @@ Filtering is handled by the `Where` array. The backend resolver supports the sta
           {
             "Operator": "or",
             "Predicates": [
-              { "Field": "Priority", "Value": "High",     "Operator": "equal" },
-              { "Field": "Priority", "Value": "Critical", "Operator": "equal" }
+              { "Field": "TaskId", "Value": "High",     "Operator": "equal" },
+              { "Field": "TaskName", "Value": "Critical", "Operator": "equal" }
             ]
           }
         ]
@@ -1177,36 +1121,20 @@ Filtering is handled by the `Where` array. The backend resolver supports the sta
 
 - Top-level predicates are combined with **AND** logic.
 - Nested predicates within a field are combined with **OR** logic.
-- This allows expressions like: `(Priority = "High" OR "Critical")`.
+- This allows expressions like: `(Progress = "100" OR "50")`.
 
-### Paging
-
-The `Skip` and `Take` values control paging. The resolver applies `Skip` only when it is greater than 0 and `Take` only when it is greater than 0, then returns the total `count` so the Gantt can render the chart over the full data set.
-
-**Variables Sent with the Request:**
-
-```json
-{
-  "dataManager": {
-    "Skip": 0,
-    "Take": 20,
-    "RequiresCounts": true
-  }
-}
-```
 
 **Backend Processing Order:**
 
 1. **Search** – Filter records by search keywords.
 2. **Sort** – Order records by the sort descriptors.
 3. **Filter** – Apply column filters.
-4. **Paging** – Slice the result for the current page.
 
 ---
 
 ## Perform CRUD Operations
 
-The Gantt Chart performs Create, Read, Update, and Delete operations through the four configured mutations: `Insert`, `Update`, `Delete`, and `Batch`. Unlike data operations (search/sort/filter/paging) which travel through `DataManagerRequestInput`, CRUD operations pass values directly to the corresponding GraphQL mutation.
+The Gantt Chart performs Create, Read, Update, and Delete operations through the four configured mutations: `Insert`, `Update`, `Delete`, and `Batch`. Unlike data operations (search/sort/filter) which travel through `DataManagerRequestInput`, CRUD operations pass values directly to the corresponding GraphQL mutation.
 
 Enable CRUD on the Gantt Chart by setting `AllowAdding`, `AllowEditing`, `AllowDeleting`, and `AllowTaskbarEditing` to `true` in `<GanttEditSettings>` (as shown in **Step 2**). Toolbar buttons such as **Add**, **Edit**, **Delete**, and **Update** are added through the `Toolbar="@ToolbarItems"` list.
 
@@ -1219,7 +1147,7 @@ The Insert operation adds a new task to the project schedule. When the **Add** b
 ```
 mutation create($record: TaskDataInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
   createTask(record: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
-    taskId taskName startDate endDate duration progress priority parentId status assignee
+    taskId taskName startDate endDate duration progress parentId
   }
 }
 ```
@@ -1235,10 +1163,7 @@ mutation create($record: TaskDataInput!, $index: Int!, $action: String!, $additi
     "endDate": "2025-03-12T00:00:00Z",
     "duration": 3,
     "progress": 0,
-    "priority": "Medium",
     "parentId": 9,
-    "status": "Not Started",
-    "assignee": "Frank Wilson"
   },
   "index": -1,
   "action": "add",
@@ -1275,7 +1200,7 @@ The Update operation modifies an existing task. The Gantt Chart calls the `updat
 ```
 mutation update($record: TaskDataInput!, $action: String!, $primaryColumnName: String!, $primaryColumnValue: String!, $additionalParameters: Any) {
   updateTask(record: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
-    taskId taskName startDate endDate duration progress priority parentId status assignee
+    taskId taskName startDate endDate duration progress parentId
   }
 }
 ```
@@ -1291,10 +1216,7 @@ mutation update($record: TaskDataInput!, $action: String!, $primaryColumnName: S
     "endDate": "2025-02-28T00:00:00Z",
     "duration": 15,
     "progress": 85,
-    "priority": "High",
-    "parentId": 9,
-    "status": "In Progress",
-    "assignee": "Eve Davis"
+    "parentId": 9
   },
   "action": "save",
   "primaryColumnName": "TaskId",
@@ -1378,7 +1300,7 @@ The Batch Update operation allows adding, updating, and deleting multiple tasks 
 ```
 mutation batch($changed: [TaskDataInput!], $added: [TaskDataInput!], $deleted: [TaskDataInput!], $action: String!, $primaryColumnName: String!, $additionalParameters: Any, $dropIndex: Int) {
   batchUpdate(changed: $changed, added: $added, deleted: $deleted, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters, dropIndex: $dropIndex) {
-    taskId taskName startDate endDate duration progress priority parentId status assignee
+    taskId taskName startDate endDate duration progress parentId
   }
 }
 ```
@@ -1395,10 +1317,7 @@ mutation batch($changed: [TaskDataInput!], $added: [TaskDataInput!], $deleted: [
       "endDate": "2025-02-28T00:00:00Z",
       "duration": 15,
       "progress": 80,
-      "priority": "High",
-      "parentId": 9,
-      "status": "In Progress",
-      "assignee": "Eve Davis"
+      "parentId": 9
     }
   ],
   "added": [
@@ -1409,10 +1328,7 @@ mutation batch($changed: [TaskDataInput!], $added: [TaskDataInput!], $deleted: [
       "endDate": "2025-03-12T00:00:00Z",
       "duration": 3,
       "progress": 0,
-      "priority": "Medium",
-      "parentId": 9,
-      "status": "Not Started",
-      "assignee": "Frank Wilson"
+      "parentId": 9
     }
   ],
   "deleted": [
@@ -1454,3 +1370,20 @@ This guide demonstrates how to:
 9. Perform CRUD operations from the chart using GraphQL mutations. [🔗](#perform-crud-operations)
 
 The application now provides a complete solution for managing project tasks with a modern [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) integrated with a Hot Chocolate GraphQL backend.
+
+## Benefits of using the GraphQLAdaptor with the Gantt Chart
+
+- **Predictable, typed schema** – The GraphQL schema describes every task field, mutation argument, and return type, so the Gantt can be wired to a strongly typed backend without ad-hoc JSON contracts.
+- **Selective field loading** – A Gantt schedule often has 30+ task fields (dates, duration, progress, predecessors, resources, custom indicators). With GraphQL the client asks for only the columns it currently renders, which reduces payload size for large projects.
+- **Server-driven operations** – Searching across thousands of tasks, applying complex filters (for example, "tasks in phase X with progress less than 50%"), and sorting by calculated fields all happen on the server and are passed through `DataManagerRequestInput`.
+- **Hierarchical data with a flat payload** – The Gantt renders parent/child trees from a flat result set; the adaptor returns tasks with a `ParentId` field, and the `GanttTaskFields.ParentID` mapping turns that into the chart, grid, and taskbar hierarchy.
+- **Full CRUD out of the box** – Add (toolbar), edit (cell, row, dialog), delete, and taskbar drag operations on the Gantt are mapped to standard GraphQL mutations on the backend.
+- **Strongly typed `TaskDataInput`** – Hot Chocolate generates a `TaskDataInput` type from the model, so insert, update, and batch operations are validated at the schema level.
+
+## Real-world use cases
+
+- **Enterprise project management** – Multi-phase project plans with thousands of tasks where business rules (dependencies, resource availability, schedule constraints) must be enforced on the server before tasks are returned.
+- **Construction and engineering schedules** – Long-running Gantt views where the chart only needs the visible page plus filtered children, and the rest must be served on demand.
+- **Manufacturing and production planning** – Work order hierarchies that must be filtered by shop, line, or shift, sorted and updated frequently with taskbar drag operations.
+- **Multi-tenant SaaS applications** – Each request must be scoped to the authenticated tenant; the `GraphQLAdaptor` lets the server apply that filter before sorting are calculated.
+- **Modern .NET backends** – Teams that have already adopted Hot Chocolate for their API layer and want to plug the Gantt Chart in without maintaining a parallel REST service.

@@ -697,4 +697,21 @@ public void Remove([FromBody] CRUDModel<TaskData> deletedRecord)
 {% endhighlight %}
 {% endtabs %}
 
+## Real-world use cases
 
+The `UrlAdaptor` is a strong fit for Gantt scenarios where task data lives on a server and must be kept in sync as users view, edit, or manage the project schedule. Typical use cases include:
+
+- **Enterprise project tracking systems** – Large organizations that maintain thousands of tasks in a central database can expose that data through a single API endpoint and let the Gantt load only what it needs, keeping the browser fast and the data always current.
+- **Construction and engineering schedules** – Work breakdown structures with many levels (Phase → Stage → Activity → Task) where data changes daily and the Gantt must always reflect the latest server state rather than a stale client-side snapshot.
+- **Team collaboration tools** – Applications where multiple users update task progress simultaneously. Because every change is saved back to the server through the API, the shared data store remains the single source of truth for all users.
+- **Resource and capacity planning** – Planning dashboards that pull task assignments and timelines from a backend service, allowing managers to adjust schedules and immediately persist those changes without a full page reload.
+- **Legacy system integration** – When task data already exists in an older system or a third-party platform, a lightweight API wrapper around that data lets the Gantt connect to it using the `UrlAdaptor` without migrating or duplicating the data.
+
+## Benefits of using the UrlAdaptor with the Gantt Chart
+
+- **Works with any backend** – The `UrlAdaptor` communicates through a standard HTTP POST endpoint, so it connects to any server technology — ASP.NET Core, Node.js, Java Spring, or Python Flask — without adaptor-specific server code.
+- **Server-side data operations** – Searching, filtering, and sorting are handled on the server, so the Gantt only receives the rows it needs. This keeps the application responsive even when the underlying dataset has thousands of tasks.
+- **Reduced client payload** – Because the server slices and shapes the data before sending it, the browser never has to download or hold the entire task list in memory.
+- **Full CRUD lifecycle** – Insert, update, and delete operations are each routed to the same API endpoint. Every change made through the Gantt — inline edit, dialog edit, toolbar actions, or taskbar drag/resize — is persisted back to the server automatically.
+- **Custom authentication and authorization** – Because you control the API, you can apply any authentication scheme (JWT, cookies, API keys) and enforce row-level permissions before the data reaches the Gantt.
+- **Reusable API** – The same endpoint that powers the Gantt can serve other UI components, mobile apps, or third-party integrations, avoiding duplicate server logic.
