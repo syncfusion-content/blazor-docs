@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AssistViewSettings Properties in Syncfusion Smart Rich Text Editor
+title: AssistViewSettings Properties in Smart Rich Text Editor | Syncfusion®
 description: AssistViewSettings reference with concise definitions and examples for configuring AI commands, popup sizing, placeholders, prompts, toolbars and history.
 platform: Blazor
 control: Smart Rich Text Editor
