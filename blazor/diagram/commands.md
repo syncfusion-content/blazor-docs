@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Commands in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram Commands in Syncfusion Blazor Diagram component and much more details.
+title: Commands in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about diagram Commands in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -84,7 +84,7 @@ The following example shows how to align selected objects.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVyCDjwJCfOjpco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdDRAXAxeoQuKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignLeft.razor)
 ### How to Align the Selected Objects to the Right
@@ -147,7 +147,7 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLysZZGJMcwqXVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRXHgNgxoPyvgj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignRight.razor)
 ### How to Align the Selected Objects to the Top
@@ -210,7 +210,7 @@ The following code example illustrates how to align all the selected objects at 
     }       
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhICDDQJCbChApg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhdXxgjUHRZQlVs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignTop.razor)
 ### How to Align the Selected Objects to the Bottom
@@ -273,7 +273,7 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSsXtczMFIBzzh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhRZRqZqdHLckJf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignBottom.razor)
 ### How to Align the Selected Objects to the Middle
@@ -336,7 +336,7 @@ The following code example illustrates how to align all the selected objects at 
     }         
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLSMtXGTLXtRoWh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVHDRUtKnHeDKlB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignMiddle.razor)
 ### How to Align the Selected Objects to the Center
@@ -399,7 +399,7 @@ The following code example illustrates how to align all the selected objects at 
     }        
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLyCNDwJrjONeSo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLHjxgNgHxbqOCl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/AlignCenter.razor)
 ## How to Distribute Diagram Elements
@@ -523,7 +523,7 @@ The following code example illustrates how to execute the space commands.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthyWtZcphWwlvSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhHXnqjAxFRlmKE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SetDistributeCommands.razor)
 ## How to Use Sizing Commands
@@ -611,7 +611,7 @@ The following code example illustrates how to execute the size commands.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhesNXwJrBISiKH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBHtHUNARaAemMo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SizingCommands.razor)
 ## How to Use Clipboard Commands
@@ -701,7 +701,7 @@ The following code illustrates the clipboard commands.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVyCNZwTrAtIRTn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrdtnqjqHYQdTvL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/ClipboardCommands.razor)
 ## How to Use Grouping commands
@@ -776,7 +776,7 @@ The following example demonstrates the grouping commands.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLeiXtGpVAehaos?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxXRKDqGDzFozH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/GroupingCommands.razor)
 ## How to Arrange Diagram Elements Using Z-Order Commands
@@ -843,7 +843,7 @@ The following code illustrates how to execute the BringToFront command.
     } 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBSCDtwzBJNbsnd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLnXdgZqQDkLpuc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringToFront.razor)
 
@@ -908,7 +908,7 @@ The following code illustrates how to execute the SendToBack command.
     } 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhyMDDQJVzeveQe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhRXRAZgGCriSKc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SendToBack.razor)
 
@@ -972,7 +972,7 @@ The following code illustrates how to execute the BringForward command.
     } 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVICjZczBStjvIA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhntdqNUGiTvKPw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringForward.razor)
 
@@ -1036,7 +1036,7 @@ The following code illustrates how to execute the SendBackward command.
     } 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLyMtXwzrIwhhCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhdZdUZqcCFfoVo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/SendBackward.razor)
 
@@ -1089,7 +1089,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLeCDZmpBRKjQLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhRXxgNUcgCMIBt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ZoomingCommands)
 
@@ -1125,7 +1125,7 @@ The following code illustrates how to execute nudge command.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrICNNGfrnxaSPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBRNdUDKcKgyCqE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/NudgeCommand.razor)
 
@@ -1173,7 +1173,7 @@ These commands enhance user experience by offering flexibility in diagram editin
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBIsXjmpVcUdGmM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVnDdAtgmKywiKs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/UndoRedoCommands.razor)
 
@@ -1212,7 +1212,7 @@ protected override void OnInitialized()
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVSijDGzLGPnCmi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrdNRgZqcgaribz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringIntoView.razor)
 
@@ -1250,7 +1250,7 @@ protected override void OnInitialized()
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLoMtXmfLFgyexg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLdXRAtUwfWAwEL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/BringIntoCenter.razor)
 
@@ -1390,7 +1390,7 @@ The following code illustrates how to execute the FitToPage method.
         }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLosXtmfLaNhXqr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLnZHAjAmpgOojf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/FitToPage.razor)
 
@@ -1540,7 +1540,7 @@ The following code illustrates how to execute the CanZoomIn command.
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoMDXQThuHMAcI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhnZHKNUQplMXyV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/CanZoomIn.razor)
 
@@ -1661,7 +1661,7 @@ The following code example shows how to define a custom command.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrSMtjmJKNVzxBS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdDxUtKQetktng?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/CustomCommands.razor)
 
@@ -1756,6 +1756,6 @@ The following code example shows how to disable a command and how to modify the 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrIsXtwzKjPJVBi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVdtxgZKwIArspT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Commands/ModifyExistingCommands.razor)

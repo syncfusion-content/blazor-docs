@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BPMN Data Object in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create BPMN data object in Syncfusion Blazor Diagram component and more.
+title: BPMN Data Object in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create BPMN data object in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -46,7 +46,7 @@ A [BpmnDataObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBeiXjxVORwXwCi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxZdLSzqaIFQKl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnDataObject/BpmnDataObjectSample.razor)
 

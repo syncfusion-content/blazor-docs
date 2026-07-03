@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scaffolding in Blazor Applications | Syncfusion
-description: Learn how to use the Syncfusion Blazor extension for Visual Studio to scaffold pages and code, accelerating data-driven development. Explore to more details.
+title: Scaffolding in Blazor Applications | Syncfusion®
+description: Learn how to use the Blazor extension for Visual Studio to scaffold pages and code, accelerating data-driven development. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug

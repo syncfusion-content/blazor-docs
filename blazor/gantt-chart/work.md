@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Work in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Work in Syncfusion Blazor Gantt Chart component and much more details.
+title: Work in Blazor Gantt Chart Component | Syncfusion®
+description: Checkout and learn here all about Work in Blazor Gantt Chart component, its configuration, usage, and key features.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -10,8 +10,16 @@ documentation: ug
 # Work in Blazor Gantt Chart Component
 
 ## Work
-
-The work is the total hours required to complete a task. Work can be mapped from the data source field using the property [GanttTaskFields.Work](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Work). Work can be measured in `Hour`, `Day`, `Minute`. By default, work is measured in `Hour` and it can be changed by using the property `WorkUnit`.
+ 
+Work represents the total amount of time required to complete a task. Work can be mapped from the data source field using the property [GanttTaskFields.Work](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Work). By default, work is measured in `Hour`, and this can be changed using the `WorkUnit` property.
+ 
+The Blazor Gantt Chart component supports the following work units:
+ 
+* [Hour](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in hours. This is the default work unit.
+* [Day](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in days.
+* [Minute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in minutes.
+* [Week](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in weeks.
+* [Month](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.WorkUnit.html#fields) - Displays work values in months.
 
 N> When the work field is mapped from the data source, the default task type will be `FixedWork`.
 
@@ -31,8 +39,8 @@ N> When the work field is mapped from the data source, the default task type wil
 
 @code {
     public SfGantt<TaskInfoModel> Gantt;
-    private DateTime ProjectStart = new DateTime(2022, 03, 25);
-    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private DateTime ProjectStart = new DateTime(2026, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2026, 05, 10);
     private List<TaskInfoModel> TaskCollection { get; set; }
     private List<ResourceInfoModel> ResourceCollection { get; set; }
     private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
@@ -55,11 +63,13 @@ N> When the work field is mapped from the data source, the default task type wil
         public int? ParentID { get; set; }
         public double? Work { get; set; }
     }
+
     public class ResourceInfoModel
     {
         public int Id { get; set; }
         public string? Name { get; set; }
     }
+
     public class AssignmentModel
     {
         public int PrimaryId { get; set; }
@@ -102,17 +112,18 @@ N> When the work field is mapped from the data source, the default task type wil
         };
         return assignments;
     }
+
     public static List<TaskInfoModel> GetTaskCollection()
     {
         List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-        new TaskInfoModel() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 03, 29), EndDate = new DateTime(2022, 04, 21), TaskType ="FixedDuration" },
-        new TaskInfoModel() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 03, 29), Progress = 30, ParentID = 1, Work=16 },
-        new TaskInfoModel() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 03, 29), ParentID = 1, Work=96 },
-        new TaskInfoModel() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 03, 29), Duration = "1", Progress = 30, ParentID = 1, Work=16 },
-        new TaskInfoModel() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 03, 29), EndDate = new DateTime(2022, 04, 21) },
-        new TaskInfoModel() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 03, 29), Duration = "3", Progress = 30, ParentID = 5, Work=30 },
-        new TaskInfoModel() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 01), Duration = "3", Progress = 30, ParentID = 5, Work=48 },
-        new TaskInfoModel() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 01), Duration = "2", ParentID = 5, Work=60 }
+            new TaskInfoModel() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 03, 30), TaskType ="FixedDuration" },
+            new TaskInfoModel() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 03, 30), Progress = 30, ParentID = 1, Work=16 },
+            new TaskInfoModel() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 03, 30), ParentID = 1, Work=96 },
+            new TaskInfoModel() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 03, 30), Duration = "1", Progress = 30, ParentID = 1, Work=16 },
+            new TaskInfoModel() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 03, 30) },
+            new TaskInfoModel() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 03, 30), Duration = "3", Progress = 30, ParentID = 5, Work=30 },
+            new TaskInfoModel() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 01), Duration = "3", Progress = 30, ParentID = 5, Work=48 },
+            new TaskInfoModel() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 01), Duration = "2", ParentID = 5, Work=60 }
         };
         return Tasks;
     }
@@ -121,7 +132,7 @@ N> When the work field is mapped from the data source, the default task type wil
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSjaCaWPubJKsb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrdNQDgUFsJHXeC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Task type
 
@@ -147,8 +158,8 @@ The work, duration and resource unit fields of a task depends upon each other an
 
 @code {
     public SfGantt<TaskInfoModel> Gantt;
-    private DateTime ProjectStart = new DateTime(2022, 03, 25);
-    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private DateTime ProjectStart = new DateTime(2026, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2026, 05, 10);
     private List<TaskInfoModel> TaskCollection { get; set; }
     private List<ResourceInfoModel> ResourceCollection { get; set; }
     private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
@@ -223,14 +234,14 @@ The work, duration and resource unit fields of a task depends upon each other an
     public static List<TaskInfoModel> GetTaskCollection()
     {
         List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-            new TaskInfoModel() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 03, 28), EndDate = new DateTime(2022, 07, 28), TaskType = TaskType.FixedDuration, Work=128, Duration="4" },
-            new TaskInfoModel() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 03, 29), Progress = 30, ParentID = 1, Duration="2", Work=16, TaskType = TaskType.FixedWork },
-            new TaskInfoModel() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 03, 29), ParentID = 1, Work=96, Duration="4", TaskType = TaskType.FixedWork },
-            new TaskInfoModel() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 03, 29), Duration = "1", Progress = 30, ParentID = 1, Work=16, TaskType = TaskType.FixedWork },
-            new TaskInfoModel() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 06), TaskType = TaskType.FixedDuration, Duration="4" },
-            new TaskInfoModel() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 02), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType = TaskType.FixedWork },
-            new TaskInfoModel() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 03), Duration = "3", Progress = 30, ParentID = 5, TaskType = TaskType.FixedWork, Work=48 },
-            new TaskInfoModel() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 03), Duration = "2", ParentID = 5, Work=60, TaskType = TaskType.FixedWork }
+            new TaskInfoModel() { TaskID = 1, TaskName = "Project initiation", StartDate = new DateTime(2026, 03, 30), TaskType = TaskType.FixedDuration, Work=128, Duration="4" },
+            new TaskInfoModel() { TaskID = 2, TaskName = "Identify Site location", StartDate = new DateTime(2026, 03, 30), Progress = 30, ParentID = 1, Duration="2", Work=16, TaskType = TaskType.FixedWork },
+            new TaskInfoModel() { TaskID = 3, TaskName = "Perform soil test", StartDate = new DateTime(2026, 03, 30), ParentID = 1, Work=96, Duration="4", TaskType = TaskType.FixedWork },
+            new TaskInfoModel() { TaskID = 4, TaskName = "Soil test approval", StartDate = new DateTime(2026, 03, 30), Duration = "1", Progress = 30, ParentID = 1, Work=16, TaskType = TaskType.FixedWork },
+            new TaskInfoModel() { TaskID = 5, TaskName = "Project estimation", StartDate = new DateTime(2026, 04, 02), TaskType = TaskType.FixedDuration, Duration="4" },
+            new TaskInfoModel() { TaskID = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2026, 04, 02), Duration = "3", Progress = 30, ParentID = 5, Work=30, TaskType = TaskType.FixedWork },
+            new TaskInfoModel() { TaskID = 7, TaskName = "List materials", StartDate = new DateTime(2026, 04, 03), Duration = "3", Progress = 30, ParentID = 5, TaskType = TaskType.FixedWork, Work=48 },
+            new TaskInfoModel() { TaskID = 8, TaskName = "Estimation approval", StartDate = new DateTime(2026, 04, 03), Duration = "2", ParentID = 5, Work=60, TaskType = TaskType.FixedWork }
         };
         return Tasks;
     }
@@ -239,7 +250,7 @@ The work, duration and resource unit fields of a task depends upon each other an
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBIDEsasEsvevVE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhxZHCiKonraqOn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following table explains how the work, duration, and resource unit fields will get updated on changing any of the fields
 

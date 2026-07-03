@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Constraints in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram Constraints in Syncfusion Blazor Diagram component and much more details.
+title: Constraints in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about diagram Constraints in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -72,7 +72,7 @@ Constraints="@_diagramConstraints" />
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLeWtDcpKCfcxTa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnNxhEpoHCdpmW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The following example shows how to add the Bridging constraint to the default constraints of the diagram.
 
@@ -173,7 +173,7 @@ The following example shows how to disable the `Rotate` constraint from the defa
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBSsDtQTUBrDCxW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrRDxhafSRgOJLz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/NodeConstraintsSample.razor)
 
@@ -284,7 +284,7 @@ The following code shows how to disable the `Select` constraint from the default
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIMZXGzUrueWNG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrdXRrazIxHeCLt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/ConnectorConstraintsSample.razor)
 
@@ -377,7 +377,7 @@ The following code shows how to disable creating connections with a port.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLeCNXQfqqgQgXk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRjdBkfeRbOeyg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/PortConstraintsSample.razor)
 
@@ -457,7 +457,7 @@ The following code shows how to enable read-only mode for annotations.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNroWZjcfAgQkhDE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrdNdrOzScWyrXk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/AnnotationConstraintsSample.razor)
 
@@ -522,7 +522,7 @@ The following code shows how to hide the rotator.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeCXNwpgTUNJnP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRjnVEpePDruFg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/SelectorConstraintsSample.razor)
 
@@ -581,7 +581,7 @@ The following code illustrates how to show or hide the tooltip for drag, resize,
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBeCXjwJAaYcwxx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhxtxVkJyvrTVfC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/SelectorDisableEnable.razor)
 
@@ -663,7 +663,7 @@ The following code shows how to display only horizontal gridlines.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXheiNXwJzZyzJDm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLHXxLuzebJOijO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/SnapConstraintsSample.razor)
 
@@ -729,7 +729,7 @@ The following code shows how to limit interaction within a page.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhSiDNGJpWtaRbJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrHtnrYJevcQmQZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/BoundaryConstraintsSample.razor)
 
@@ -781,7 +781,7 @@ The following code example shows how to inherit line bridging behavior from the 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoWXNQTzWHHdvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRDnhaJSaWAvLV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Constraints/InheritBehaviors.razor)
 
@@ -838,7 +838,7 @@ In the previous example, check whether the rotate constraints are enabled in a n
 
 ## See also
 
-* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+* [How to Disable Node Interaction While Maintaining Layout Updates in Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
 
 * [How to Zoom the Diagram Without Ctrl + Wheel and Enable Pan on Right-Click Instead of Left-Click in Blazor Diagram](https://support.syncfusion.com/kb/article/18992/how-to-zoom-the-diagram-without-ctrl--wheel-and-enable-pan-on-right-click-instead-of-left-click-in-blazor-diagram)
 

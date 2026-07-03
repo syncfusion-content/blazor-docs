@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about Data Binding such as local data, remote data in Syncfusion Blazor Diagram component and more.
+title: Data Binding in Blazor Diagram Component | Syncfusion®
+description: Learn here all about Data Binding such as local data, remote data in Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -86,7 +86,7 @@ The `ID` and `ParentID` properties are string in `DataSourceSettings`. When crea
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVysNXGTednqtYb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhnDnBapHzPADXI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/Parent-Child%20Relationship.razor)
 
@@ -197,7 +197,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBSitjmJywScwCt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhdtRhapHegaGcP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/LocalData.razor)
 
@@ -386,7 +386,7 @@ The following code example illustrates how to bind ExpandoObject data with the d
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLSiDtcJyboFLqr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVdNdBYpxIGqqPM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/ExpandoObjectSample.razor)
 
@@ -590,7 +590,7 @@ The following code example illustrates how to bind DynamicObject data with the d
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhSCNNGTykSwaxF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRZHBYJxxZTiuA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/DynamicObj.razor)
 
@@ -661,7 +661,7 @@ The following sample code demonstrates binding local data through SfDataManager 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLostXmzRXsgeJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrxtxVOpdHVlTgE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/JSONData.razor)
 
@@ -758,7 +758,7 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeWZNQpRDIabQI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhdNHBYTndyuLUW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/ODataAdaptor.razor)
 
@@ -849,7 +849,7 @@ OData V4 is an updated version of the OData protocols, and the `SfDataManager` c
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXreWtNmTdMAJWbU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthxXRLuzdHvovKX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/ODataV4Adaptor.razor)
 
@@ -944,7 +944,7 @@ The following sample code demonstrates how to bind remote data to the Diagram co
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrSsDXwpHLVLxIu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVnNnhOJncsNmHR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/WebAPIAdaptor.razor)
 
@@ -1036,7 +1036,7 @@ The following sample code demonstrates how to bind data to the Diagram component
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSMZjmfnrvrKJB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrHjdrOznbtALAk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/URLAdaptor.razor)
 
@@ -1174,7 +1174,7 @@ The following sample code demonstrates implementing custom data binding using cu
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIMjNbqJwtqCZT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVnDRhupnPflbpT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### How to Perform CRUD Operation
 
@@ -1398,7 +1398,7 @@ The following sample code demonstrates implementing CRUD operations for custom b
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthIMXNbKTJLixOX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhxXHVkTxELhgER?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/DataBinding/DiagramWithCustomAdaptor.razor)
 
@@ -2049,7 +2049,7 @@ A complete working sample can be downloaded from [github](https://github.com/Syn
 
 * [How to Specify Parent Child Relationship in Blazor Diagram Datasource](https://support.syncfusion.com/kb/article/16306/how-to-specify-parent-child-relationship-in-blazor-diagram-datasource)
 
-* [Why is it Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
+* [Why is it Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
 
 * [How to Create a Family Tree Structure in Blazor Diagram](https://support.syncfusion.com/kb/article/16300/how-to-create-a-family-tree-structure-in-blazor-diagram)
 

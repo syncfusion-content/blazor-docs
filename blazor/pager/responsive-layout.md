@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Responsive Layout in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about responsive layout in the Syncfusion Blazor Pager component and much more.
+title: Responsive Layout in Blazor Pager Component | Syncfusion®
+description: Learn about responsive layout in the Blazor Pager component for various devices  and much more details.
 platform: Blazor
 control: Pager
 documentation: ug

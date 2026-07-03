@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Firebase provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Firebase file system provider in Syncfusion Blazor File Manager component and more.
+title: Firebase provider in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about Firebase file system provider in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -21,11 +21,11 @@ Follow the given steps to generate the secret access key:
 
 * In the new dialog window, click the **Other service account** option to navigate to the Google service accounts console to generate the secret key.
 
-![Blazor File Manager displays File System Authentication](images/blazor-filemanager-file-system.png)
+![Blazor File Manager displays File System Authentication](images/blazor-filemanager-file-system.webp)
 
 * Now, open the Firebase service project from the Google services console, and generate a Secret key.
 
-![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key.png)
+![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key.webp)
 
 * After generating the secret key, replace secret key JSON in the access_key.json file in the Firebase Real time Database provider project to enable authentication for performing read and write operations.
 
@@ -135,7 +135,7 @@ After configuring the Firebase Real time Database service link, build and run th
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Firebase file system provider, you need to initialize the Firebase file system provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Blazor File Manager component using the Firebase file system provider, you need to initialize the Firebase file system provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FirebaseProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider/blob/master/Controllers/FirebaseProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

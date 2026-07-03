@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Container in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Container support in Syncfusion Blazor Diagram component and much more.
+title: Container in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about Container support in Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -42,7 +42,7 @@ To create a container, define a [Container](https://help.syncfusion.com/cr/blazo
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBICtDmzpHBjmkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBRXdVYJIEEiGCP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerNode.razor).
 
@@ -103,7 +103,7 @@ To add child elements to a container, define the child nodes and assign their ID
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLeijXGTpdvrBys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrdNRVOfnjWhhCS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerSample.razor).
 
@@ -180,7 +180,7 @@ The following example shows how to define a container header and customize its a
     }
 } 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBIMXZmTTwgGvNM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrdNHrOpxiXwSfF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerHeaderSample.razor).
 
@@ -276,7 +276,7 @@ The following code example shows how to define containers and add them to the sy
       }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtreMNtcpzlVcyaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxDxBuzxWgiUan?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerPalette.razor).
 

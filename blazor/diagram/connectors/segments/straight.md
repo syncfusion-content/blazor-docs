@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Straight Segments in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Straight Segments in Syncfusion Blazor Diagram component and much more details.
+title: Straight Segments in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about Straight Segments in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -52,7 +52,7 @@ To create a straight line, set the connector [Type](https://help.syncfusion.com/
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLosDNdKeaXEThH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrRDdroTyJmnOHw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/Straight.razor)
 
@@ -98,7 +98,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/StraightSegmentEditing.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLyiXjRAxXrpBqh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHZRhozSoiByQY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.webp)" %}
 
 ## How to Customize Straight Segment Thumb Shape 
 
@@ -164,7 +164,7 @@ The following code example illustrates how to create a customized straight segme
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/StraightSegmentShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNryWNXdAHtbHWYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with straight segment thumb shape and style in Blazor Diagram](../../images/StraightSegmentShape.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrHZHVSzoxPLlHb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Connector with straight segment thumb shape and style in Blazor Diagram](../../images/StraightSegmentShape.webp)" %}
 
 The following code example illustrates how to create a customized straight segment thumb shape without using the `InheritSegmentThumbShape` constraints.
 
@@ -203,7 +203,7 @@ The following code example illustrates how to create a customized straight segme
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/SegmentShape.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhoiNtnUHWzxrCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrxZnhyTIQSiybV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.webp)" %}
 
 >Note:  This feature ensures that the shape is updated regardless of whether the  [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) enum value is added to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the diagram. If you apply the `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
  To make the shapes visible, ensure that the [DragSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSegmentThumb) enum is added to the connector's constraints.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector Events in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Connector Events in Syncfusion Blazor Diagram component and much more details.
+title: Connector Events in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all about Connector Events in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -83,7 +83,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhyCDtnzispxatP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLRDRLkAvhnMojz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/SelectionChangeEvent.razor).
 
@@ -158,7 +158,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrIWDjdJMBXdkEx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhdtxhkUPLFuXFT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/PositionChangeEvent.razor).
 
@@ -242,7 +242,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSiZXnfsORuETx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRXRVEUFqWbAxh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/ConnectionChangeEvent.razor)
 
@@ -302,7 +302,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhICZXRfhZiGtIF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhHNHBYglUQZtzC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/SourcePointChanged.razor)
 
@@ -362,7 +362,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVSiXtHpVXnCpui?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLRXxLagFzZrJRl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/TargetPointChanged.razor)
 
@@ -415,7 +415,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrIWXjdfViroMCT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVHjRVEUFpAnyvp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/ConnectorCreating.razor)
 
@@ -462,7 +462,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSMZXHTrpgeJhU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdZxhugbTQXrhi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/SegmentCollectionChangeEvent.razor)
 
@@ -511,7 +511,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoCDNnpVAEjlgO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLnNRVEUFyZSdeh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/CollectionChangeEvent.razor)
 
@@ -553,7 +553,7 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVoCjXHTrIsWtog?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVdXnraqvoxFFyx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/MouseEnterEvent.razor)
 
@@ -597,7 +597,7 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSWNXnJLoppsUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLRNnLkUFRZDZYy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/MouseLeaveEvent.razor).
 
@@ -639,7 +639,7 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDroiZXnJhdsQvix?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhRtnBkglQqwgxl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/MouseHoverEvent.razor).
 
@@ -687,7 +687,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrIsNNxfhRxEZXL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrxNnLkgbGHlgkG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Events/PropertyChangedEvent.razor)
 

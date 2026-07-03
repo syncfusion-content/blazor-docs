@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor DataManager Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor DataManager component and much more.
+title: Data Binding in Blazor DataManager Component | Syncfusion®
+description: Checkout and learn here all the features about Data Binding in Blazor DataManager component and much more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Data Binding in Blazor DataManager Component
 
-Data binding establishes a connection between a Blazor component and its data source. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides an efficient way to manage this connection. It acts as an intermediary between the data source and UI components such as [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app).
+Data binding establishes a connection between a Blazor component and its data source. The Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides an efficient way to manage this connection. It acts as an intermediary between the data source and UI components such as [SfGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app).
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports two primary approaches for data binding:
 

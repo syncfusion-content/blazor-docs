@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Initialize the Blazor Sidebar with ListView | Syncfusion
-description: Learn here all about how to initialize the Sidebar with ListView in Syncfusion Blazor Sidebar component and more.
+title: Initialize the Blazor Sidebar with ListView | Syncfusion®
+description: Learn here all about how to initialize the Sidebar with ListView in Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -159,4 +159,4 @@ In the following example, the Sidebar is rendered with ListView component in its
 
 ```
 
-![Blazor Sidebar with ListView](./../images/blazor-sidebar-listview.png)
+![Blazor Sidebar with ListView](./../images/blazor-sidebar-listview.webp)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bezier Segments in Blazor Diagram Component | Syncfusion
-description:  Check out and learn about Bezier Segments in Syncfusion Blazor Diagram component and much more details.
+title: Bezier Segments in Blazor Diagram Component | Syncfusion®
+description:  Check out and learn about how to edit the Bezier Segments in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -89,6 +89,6 @@ The following code illustrates how to interact with Bezier efficiently by using 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXryiZZdAzIRXeTs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhRXRVITyAbMrPa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/BezierSegmentEditOrientationSample.razor).
