@@ -42,7 +42,9 @@ You can set the mid point of the Circular Gauge in pixel as shown below.
 
 <SfCircularGauge CenterX="20px" CenterY="20px">
     <CircularGaugeAxes>
-        <CircularGaugeAxis StartAngle="90" EndAngle="180"></CircularGaugeAxis>
+        <CircularGaugeAxis StartAngle="90" EndAngle="180">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
@@ -57,7 +59,10 @@ By setting the value in percentage, Circular Gauge gets its mid point with respe
 
 <SfCircularGauge CenterX="1%" CenterY="50%">
     <CircularGaugeAxes>
-        <CircularGaugeAxis StartAngle="0" EndAngle="180"></CircularGaugeAxis>
+        <CircularGaugeAxis StartAngle="0" EndAngle="180">
+        <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers></CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
@@ -109,6 +114,7 @@ You can render semi or quarter Circular Gauge by modifying the start and end ang
         <CircularGaugeAxis Radius="60%" StartAngle="270" EndAngle="90">
             <CircularGaugeAxisLineStyle Width="5">
             </CircularGaugeAxisLineStyle>
+            <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
