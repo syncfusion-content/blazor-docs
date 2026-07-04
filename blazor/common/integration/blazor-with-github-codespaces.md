@@ -22,7 +22,7 @@ Before getting started, ensure you have the following:
 
 ## Configure a development container for .NET 10 and Blazor
 
-To run Blazor applications in GitHub Codespaces, configure a development container with the **.NET 10 SDK** and support for **ASP.NET Core and Blazor development**.
+To run Blazor applications in GitHub Codespaces, configure a development container with the **[.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)** and support for **ASP.NET Core and Blazor development**.
 
 ### Prerequisites for dev container setup
 
@@ -150,13 +150,13 @@ GitHub Codespaces automatically performs the following actions:
 * Installs and configures the .NET 10 development container
 * Installs required VS Code extensions for [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp), Blazor tools, [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker), and [GitHub CLI](https://cli.github.com/)
 * Executes the post-create command to restore NuGet packages
-* Installs Blazor WebAssembly workload tools
+* Installs **Blazor WebAssembly** workload tools
 * Launches [Visual Studio Code](https://code.visualstudio.com/) in the browser
 
 After Codespaces finishes initializing, verify the setup:
 
 1. Open the terminal in Codespaces.
-2. Run `dotnet --list-sdks` to confirm that the .NET 10 SDK is installed.
+2. Run `dotnet --list-sdks` to confirm that the **[.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)** is installed.
 3. Run `dotnet workload list` to verify that the `wasm-tools` workload is present.
 4. Check the terminal output for any errors from the post-create command.
 
@@ -324,6 +324,8 @@ After running:
 The Blazor application loads with the DataGrid displaying 10 order records. The grid is fully interactive and runs within the Codespaces browser environment.
 
 ![Blazor DataGrid with Github Codespaces](images/datagrid-with-codespace.webp)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-codespaces-integration)
 
 ## See also
 
