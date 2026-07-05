@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Align Items Using Spacer in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about align the items using spacer in Syncfusion Blazor Toolbar component and more.
+title: Align Items Using Spacer in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about align the items using spacer in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug

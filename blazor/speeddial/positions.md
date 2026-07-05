@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Position in Blazor SpeedDial Component | Syncfusion
+title: Position in Blazor SpeedDial Component | Syncfusion®
 description: Checkout and learn here all about different built in positions in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial

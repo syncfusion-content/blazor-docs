@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Mode in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about open mode in Syncfusion Blazor Tooltip component and much more details.
+title: Open Mode in Blazor Tooltip Component | Syncfusion®
+description: Checkout and learn here all the features about open mode in Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug

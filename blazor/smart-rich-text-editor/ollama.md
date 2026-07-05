@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ollama Configuration for Blazor Smart Rich Text Editor | Syncfusion
+title: Ollama Configuration for Blazor Smart Rich Text Editor | Syncfusion®
 description: Step-by-step guide to configure Ollama for the Blazor Smart Rich Text Editor, covering installation, client setup, and usage examples for local AI.
 platform: Blazor
 control: Smart Rich Text Editor

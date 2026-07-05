@@ -46,7 +46,7 @@ You can place any custom element on the axis area using [ContentTemplate](https:
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLgWrBGKhmauxQC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Annotation](./images/blazor-circulargauge-annotation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBxjRhdWaPWNSlp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Annotation](./images/blazor-circulargauge-annotation.webp)" %}
 
 ## Positioning the annotation
 
@@ -87,7 +87,7 @@ The radius of an annotation takes values either in pixel or in percentage. By se
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBgsrVcKVvLKeKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Annotation Position in Blazor Circular Gauge](./images/blazor-circulargauge-annotation-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLHDRhHVNKqVrhw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Annotation Position in Blazor Circular Gauge](./images/blazor-circulargauge-annotation-position.webp)" %}
 
 ## Multiple annotations
 
@@ -142,7 +142,7 @@ Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVKWrBQqrFpJXLX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge with Multiple Annotation](./images/blazor-circulargauge-multiple-annotation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHXHLdLIUFgvum?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge with Multiple Annotation](./images/blazor-circulargauge-multiple-annotation.webp)" %}
 
 ## See also
 

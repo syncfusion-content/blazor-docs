@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization with Blazor Signature Component | Syncfusion
+title: Customization with Blazor Signature Component | Syncfusion®
 description: Checkout the customization available in Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature

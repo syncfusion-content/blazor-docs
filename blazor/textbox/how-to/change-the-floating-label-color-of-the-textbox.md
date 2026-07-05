@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Floating Label Color of Blazor TextBox Component | Syncfusion
-description: Learn here all about changing the floating label color of the Syncfusion Blazor TextBox component and more.
+title: Floating Label Color of Blazor TextBox Component | Syncfusion®
+description: Learn here all about changing the floating label color of the Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug

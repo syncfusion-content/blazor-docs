@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Appearance with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+title: Appearance in Blazor Rating Component | Syncfusion®
+description: Checkout and learn here all about Appearance with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating
 documentation: ug
@@ -25,11 +25,11 @@ You can specify the number of rating items using the [ItemsCount](https://help.s
 
 In this example, the rating component displays 8 rating items. The `Value` property specifies how many items appear filled, so 3 of the 8 items are filled.
 
-![Blazor Rating Component with ItemsCount](images/blazor-rating-items-count.png)
+![Blazor Rating Component with ItemsCount](images/blazor-rating-items-count.webp)
 
 ## Disabled
 
-Disable the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
+Disable the Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
 
 ```cshtml
 
@@ -39,7 +39,7 @@ Disable the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Rating compo
 
 ```
 
-![Blazor Rating Component with Disabled](images/blazor-rating-disabled.png)
+![Blazor Rating Component with Disabled](images/blazor-rating-disabled.webp)
 
 ## Visible
 
@@ -53,7 +53,7 @@ Use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 
 ```
 
-![Blazor Rating Component with Visible](images/blazor-rating-full-precision.png)
+![Blazor Rating Component with Visible](images/blazor-rating-full-precision.webp)
 
 ## Read only
 
@@ -67,7 +67,7 @@ Use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
 
 ```
 
-![Blazor Rating Component with ReadOnly](images/blazor-rating-full-precision.png)
+![Blazor Rating Component with ReadOnly](images/blazor-rating-full-precision.webp)
 
 ## CssClass
 
@@ -93,7 +93,7 @@ Change the rating icon border color in Blazor Rating component, you can use the 
 
 ```
 
-![Blazor Rating Component with rating symbol border color](images/blazor-rating-border-color.png)
+![Blazor Rating Component with rating symbol border color](images/blazor-rating-border-color.webp)
 
 ### Changing rated/un-rated symbol fill color 
 
@@ -119,7 +119,7 @@ Customize the fill colors of rated and un-rated icons in the Rating component us
 
 This customizes the rated fill color to `#ffe814` and the unrated fill color to `#d8d7d4`. The `--rating-value` custom property in the gradient reflects the current value of the rating item.
 
-![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.png)
+![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.webp)
 
 ### Changing the item spacing
 
@@ -140,7 +140,7 @@ To change the space between rating items in the Blazor Rating component, use the
 
 ```
 
-![Blazor Rating Component with custom space between rating items](images/blazor-rating-custom-space.png)
+![Blazor Rating Component with custom space between rating items](images/blazor-rating-custom-space.webp)
 
 ## Changing icon using CssClass
 
@@ -179,4 +179,4 @@ To change the rating item icon in the Blazor Rating component, use the `CssClass
 
 ```
 
-![Blazor Rating Component with change icon using CssClass](images/blazor-rating-cssclass-icon.png)
+![Blazor Rating Component with change icon using CssClass](images/blazor-rating-cssclass-icon.webp)

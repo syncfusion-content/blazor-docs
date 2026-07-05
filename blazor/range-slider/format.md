@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formatting in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about formatting in Syncfusion Blazor Range Slider component and much more.
+title: Formatting in Blazor Range Slider Component | Syncfusion®
+description: Checkout and learn here all about formatting in Blazor Range Slider component with examples and much more details.
 platform: Blazor
 control: Range Slider
 documentation: ug
@@ -81,4 +81,4 @@ For custom scenarios, use event handlers like [`TicksRendering`](https://help.sy
 
 ```
 
-![Blazor Range Slider events](images/blazor-rangeslider-format-using-events.png)
+![Blazor Range Slider events](images/blazor-rangeslider-format-using-events.webp)

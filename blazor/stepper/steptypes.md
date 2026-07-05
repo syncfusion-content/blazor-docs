@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Step Types in Blazor Stepper Component | Syncfusion
+title: Step Types in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Step Types with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper

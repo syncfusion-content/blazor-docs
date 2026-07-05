@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Types and Icons in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about types and icons in Syncfusion Blazor ProgressButton component and more.
+title: Types and Icons in Blazor ProgressButton Component | Syncfusion®
+description: Checkout and learn about the types and icons in Blazor ProgressButton component with examples and much more details.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -59,7 +59,7 @@ A primary ProgressButton uses a solid background to emphasize a primary action. 
 <SfProgressButton Content="Primary" IsPrimary="true"></SfProgressButton>
 ```
 
-![Blazor Primary ProgressButton](./images/blazor-primary-progress-button.png)
+![Blazor Primary ProgressButton](./images/blazor-primary-progress-button.webp)
 
 ## Icons
 
@@ -82,4 +82,4 @@ The ProgressButton can display an icon to visually represent the action. Assign 
 
 ```
 
-![Blazor ProgressButton with Icon](./images/blazor-progress-button-icon.png)
+![Blazor ProgressButton with Icon](./images/blazor-progress-button-icon.webp)

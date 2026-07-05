@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQL Server to Blazor Gantt Chart via Entity Framework
 
-The Blazor Gantt Chart supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) supports binding data from SQL Server using Entity Framework Core (EF Core) with REST API endpoints via UrlAdaptor. This approach enables clean separation of UI and data layers while supporting full data operations.
 
 **What is Entity Framework Core?**
 

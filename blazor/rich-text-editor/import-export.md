@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import/Export in Rich Text Editor | Syncfusion
-description: Checkout and learn here all about import and export in Syncfusion Blazor RichTextEditor component and more.
+title: Import/Export in Blazor Rich Text Editor | Syncfusion®
+description: Learn how to import and export content in Blazor Rich Text Editor, supporting various formats like HTML, PDF, and Word.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

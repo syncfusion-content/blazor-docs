@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Automatic Layout in Syncfusion Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create automatic layout in Syncfusion Blazor Diagram component and more.
+title: Automatic Layout in Blazor Diagram Component | Syncfusion®
+description: Learn here all about how to create automatic layout in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -89,7 +89,7 @@ The following code illustrates how to configure an automatic layout:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/BasicLayout.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLyCtNnJqIyRajV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram hierarchical layout example](../images/BasicLayout.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrHXRBxAvGeIwod?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram hierarchical layout example](../images/BasicLayout.webp)" %}
 
 ## How to Update Layout
 

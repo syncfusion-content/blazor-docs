@@ -1,6 +1,6 @@
 ---
 layout: post
-title: User Interaction with Blazor Signature Component | Syncfusion
+title: User Interaction with Blazor Signature Component | Syncfusion®
 description: Checkout and learn about the user interactions available in Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature

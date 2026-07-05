@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Action Buttons in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about action buttons in Syncfusion Blazor Toast component and much more.
+title: Action Buttons in Blazor Toast Component | Syncfusion®
+description: Checkout and learn here all the features about action buttons in Blazor Toast component and much more.
 platform: Blazor
 control: Toast
 documentation: ug

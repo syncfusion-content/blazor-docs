@@ -78,7 +78,7 @@ The following code example illustrates how to print the region occupied by the d
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBoCNXPziyzzRgP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLnZdADWOrhlxVg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Print/PrintSample.razor)
 
@@ -198,7 +198,7 @@ The following code example illustrates how to print a selected region in the dia
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLoMXXbpCREFrTL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLHjRANiYhQsBxu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Print/PrintUsingClipBounds.razor)
 

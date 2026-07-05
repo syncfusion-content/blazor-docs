@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Separator in Blazor OTP Input Component | Syncfusion
-description: Checkout and learn here all about Separator with Syncfusion Blazor OTP Input component in Blazor Server App and Blazor WebAssembly App.
+title: Separator in Blazor OTP Input Component | Syncfusion®
+description: Learn how to use separator in Blazor OTP Input component to visually distinguish adjacent input fields.
 platform: Blazor
 control: OTP Input
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Configuring options in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about configuring options in Syncfusion Blazor Toast component and more.
+title: Configuring options in Blazor Toast Component | Syncfusion®
+description: Checkout and learn here all the features about configuring options in Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

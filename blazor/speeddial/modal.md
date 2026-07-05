@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modal in Blazor SpeedDial Component | Syncfusion
+title: Modal in Blazor SpeedDial Component | Syncfusion®
 description: Checkout and learn about how to use modal in Blazor SpeedDial component to add overlay to prevent interaction. 
 platform: Blazor
 control: SpeedDial

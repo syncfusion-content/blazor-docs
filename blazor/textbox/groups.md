@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Groups in Blazor TextBox Component | Syncfusion
+title: Groups in Blazor TextBox Component | Syncfusion®
 description: Learn how to customize Blazor TextBox by combining icons, floating labels, clear buttons, and multiline features to create enhanced input experiences.
 platform: Blazor
 control: TextBox

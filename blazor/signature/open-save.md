@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open and Save with Blazor Signature Component | Syncfusion
+title: Open and Save with Blazor Signature Component | Syncfusion®
 description: Checkout and learn about loading and saving the signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature

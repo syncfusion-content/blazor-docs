@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Input Mask component and much more details.
+title: Events in Blazor Input Mask Component | Syncfusion®
+description: Checkout and learn here all the features and Events in Blazor Input Mask component and much more details.
 platform: Blazor
 control: Input Mask
 documentation: ug
@@ -112,4 +112,4 @@ This section lists the events available in the Blazor Input Mask (MaskedTextBox)
 }
 ```
 
-N> Input Mask currently includes these events. Additional events may be added based on user requests. If a required event is not listed, submit a feature request in the Syncfusion Blazor feedback portal: https://www.syncfusion.com/feedback/blazor-components
+N> Input Mask currently includes these events. Additional events may be added based on user requests. If a required event is not listed, submit a feature request in the Blazor feedback portal: https://www.syncfusion.com/feedback/blazor-components

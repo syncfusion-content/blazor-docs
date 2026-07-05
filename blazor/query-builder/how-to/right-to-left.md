@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right to Left in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Right to Left in Syncfusion Blazor QueryBuilder component and more.
+title: Right to Left in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about Right to Left in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -52,4 +52,4 @@ Right-to-left (RTL) support mirrors the text direction and layout of the Query B
 
 ```
 
-![Right to left in Blazor Query Builder](./../images/blazor-querybuilder-right-to-left.png)
+![Right to left in Blazor Query Builder](./../images/blazor-querybuilder-right-to-left.webp)

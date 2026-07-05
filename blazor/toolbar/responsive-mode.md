@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Responsive Mode in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about responsive mode in Syncfusion Blazor Toolbar component and much more.
+title: Responsive Mode in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about responsive mode in Blazor Toolbar component and much more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -27,11 +27,11 @@ The default [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 *   On devices, if navigation icons are not available, utilize touch swipe gestures to view hidden Toolbar items.
 *   Once the Toolbar reaches the last or first item, the corresponding navigation icon is disabled, restricting further movement in that direction.
 
-![Blazor Toolbar with Touch Scroll](images/blazor-toolbar-scrolling-touch.gif)
+![Blazor Toolbar with Touch Scroll](images/blazor-toolbar-scrolling-touch.webp)
 
 * The Toolbar content can be continuously scrolled by holding the navigation icon.
 
-![Blazor Toolbar with Long Press Scroll](images/blazor-toolbar-long-press-scrolling.gif)
+![Blazor Toolbar with Long Press Scroll](images/blazor-toolbar-long-press-scrolling.webp)
 
 ```cshtml
 

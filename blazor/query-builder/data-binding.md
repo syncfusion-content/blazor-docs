@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor QueryBuilder component and more.
+title: Data Binding in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about data binding in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -249,6 +249,6 @@ Complex data binding allows you to work with nested objects and subfields. Bind 
 
 ```
 
-![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.png)
+![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.webp)
 
 N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the Query Builder.

@@ -222,6 +222,8 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
+N> Looking for the full ASP.NET Core Gantt Chart component overview, features, pricing, and documentation? Visit the Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) page.
+
 ## See also
 
 * [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

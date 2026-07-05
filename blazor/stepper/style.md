@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and Appearance in Blazor Stepper Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor Stepper component and more.
+title: Style and Appearance in Blazor Stepper Component | Syncfusion®
+description: Checkout and learn here all about Style and Appearance in Blazor Stepper component much more details.
 platform: Blazor
 control: Stepper
 documentation: ug

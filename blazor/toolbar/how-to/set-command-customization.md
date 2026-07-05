@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set Items Customization in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about how to set Items customization in Syncfusion Blazor Toolbar component and more.
+title: Set Items Customization in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about how to set Items customization in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug

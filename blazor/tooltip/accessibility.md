@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Tooltip component and much more.
+title: Accessibility in Blazor Tooltip Component | Syncfusion®
+description: Checkout and learn here all the features about accessibility in Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -64,4 +64,4 @@ The accessibility compliance of the Tooltip component is shown in the following 
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

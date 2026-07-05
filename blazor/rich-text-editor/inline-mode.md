@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Inline Mode in Rich Text Editor in Blazor | Syncfusion
-description: Checkout and learn here all about Inline Mode in Syncfusion Blazor Rich Text Editor component and more.
+title: Inline Mode in Blazor Rich Text Editor | Syncfusion®
+description: Learn how to use inline editing mode in Blazor Rich Text Editor for compact, dialog-free content editing.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Inline Editor in Blazor Rich Text Editor Component
 
-The Blazor Rich Text Editor provides an option to display a floating toolbar on demand by enabling the [RichTextEditorInlineMode.Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_Enable) property.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) provides an option to display a floating toolbar on demand by enabling the [RichTextEditorInlineMode.Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_Enable) property.
 When the editable content is focused or selected, the inline toolbar appears automatically. This floating toolbar allows users to access formatting commands directly where they are working.
 
 ## Customizing Inline Toolbar Items

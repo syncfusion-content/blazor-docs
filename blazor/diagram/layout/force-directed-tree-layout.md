@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Force-Directed Tree Layout in Blazor Diagram Component | Syncfusion
-description: Learn how to create and customize the Force-Directed Tree Layout in the Syncfusion Blazor Diagram component through detailed steps and examples.
+title: Force-Directed Tree Layout in Blazor Diagram Component | Syncfusion®
+description: Learn how to create and customize the Force-Directed Tree Layout in the Blazor Diagram component through detailed steps and examples.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -288,7 +288,7 @@ Determines how strongly connected nodes pull toward each other.
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/ForceDirectedTreeLayout.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIChMmKdhvvsmf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Force-Directed layout example](../images/Force-DirectedTreeLayout.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBHjRVdUueboWvM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Diagram Force-Directed layout example](../images/Force-DirectedTreeLayout.webp)" %}
 
 ## How to create a force-directed tree using datasource
 
@@ -358,7 +358,7 @@ The Force-Directed Tree Layout can be rendered by binding a collection of object
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/ForceDirectedTreeDataSource.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrIWhiwURpVfzOI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Force Directed Tree Data Source Diagram](../images/ForceDirectedTreeDataSource.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLRNxhnguxRnSEZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Force Directed Tree Data Source Diagram](../images/ForceDirectedTreeDataSource.webp)" %}
 
 ## See also
 

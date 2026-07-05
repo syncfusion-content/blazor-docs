@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tab key navigation Tab item in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to Tab key navigation tab item in Syncfusion Blazor Tabs component and more.
+title: Tab key navigation Tab item in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about how to Tab key navigation tab item in Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug

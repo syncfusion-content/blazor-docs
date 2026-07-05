@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Toast component and much more details.
+title: Accessibility in Blazor Toast Component | Syncfusion®
+description: Checkout and learn here all the features about accessibility in Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -86,4 +86,4 @@ The accessibility compliance of the Toast component is shown in the following sa
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

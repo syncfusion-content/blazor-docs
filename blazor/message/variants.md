@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Variants with Blazor Message Component | Syncfusion
+title: Variants with Blazor Message Component | Syncfusion®
 description: Checkout and learn about Variants with Blazor Message component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Message

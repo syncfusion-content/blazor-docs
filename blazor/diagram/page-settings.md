@@ -63,7 +63,7 @@ To learn more about customization of diagram page, refer to the below video link
     private PageOrientation _orientation = PageOrientation.Landscape;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVyCZNFzDEIdtnt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBHDxVEopxQZPVT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/PageSettings/PageAppearance.razor)
 
@@ -116,7 +116,7 @@ Based on the diagramming element position, the size of the page dynamically incr
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/PageSettings/MultiplePage.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjheCNNvpCCugjmh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Multiple Page](./images/MultiplePage.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrHtxhaeJmCQmxq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Multiple Page](./images/MultiplePage.webp)" %}
 
 ## How to Customize Page Appearance
 
@@ -171,7 +171,7 @@ Customize page appearance using the `PageSettings` properties:
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/PageSettings/PageAppearance.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBSCXXlzWrgqfQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[PageBackground Color](./images/PageBackground.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrdjnVOepcEqzYA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[PageBackground Color](./images/PageBackground.webp)" %}
 
 ### How to Customize Page Break Appearance
 
@@ -204,7 +204,7 @@ Refer to the following code example on how to change the stroke, stroke-dasharra
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/PageSettings/PageBreak.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSMtXvJMhbUAKv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Pagebreak Color](./images/Pagebreak.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBRDRraoflzInec?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Pagebreak Color](./images/Pagebreak.webp)" %}
 
 ## How to Change Page Margins
 
@@ -224,7 +224,7 @@ The area between the maintain content of a page and the page edges can be change
     </PageSettings>
 </SfDiagramComponent>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhSWXDFfMKLYgqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdNRrOeflYwwoQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/PageSettings/Margin.razor)
 
@@ -294,7 +294,7 @@ The following code example illustrates how to define boundary constraints with r
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLSMtXPJiKwzUSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrHjRhEopEKrgyI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/PageSettings/BoundaryConstraintsExample.razor)
 
@@ -329,7 +329,7 @@ The following code example illustrates how to set width and height in percentage
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLSsZXvzCpMgFtp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVHXxrkeeCvXRqz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/PageSettings/ResponsiveWithParentContainer.razor)
 
@@ -361,7 +361,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBSsNtlfWfSvDNB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBRXdBOooVtvvgL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also 
 

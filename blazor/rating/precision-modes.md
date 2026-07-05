@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Precision Modes in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Precision Modes with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+title: Precision Modes in Blazor Rating Component | Syncfusion®
+description: Checkout and learn here all about Precision Modes with Blazor Rating component in Server App and WebAssembly App with examples.
 platform: Blazor
 control: Rating
 documentation: ug
@@ -36,4 +36,4 @@ The Blazor Rating component supports the following precision modes:
 
 ```
 
-![Blazor Rating component with different Precision Types](./images/blazor-rating-precision-types.png)
+![Blazor Rating component with different Precision Types](./images/blazor-rating-precision-types.webp)

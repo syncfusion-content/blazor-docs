@@ -106,7 +106,7 @@ The following code illustrates how to create an overview.
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVoitXvqgxOfTzQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthRtxrYyKOEPNrP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Overview/Overview.razor)
 
@@ -211,7 +211,7 @@ The following example shows how to disable the zoom constraint from the default 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhIstXbqgwxdWkw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhdjxBOypZqmZvc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Overview/OverviewConstraints.razor)
 

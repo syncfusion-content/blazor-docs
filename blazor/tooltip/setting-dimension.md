@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting Dimension in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about setting dimension in Syncfusion Blazor Tooltip component and more.
+title: Setting Dimension in Blazor Tooltip Component | Syncfusion®
+description: Checkout and learn here all the features about setting dimension in Blazor Tooltip component and more.
 platform: Blazor
 control: Tooltip
 documentation: ug

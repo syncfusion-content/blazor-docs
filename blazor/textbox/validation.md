@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Validation in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Validation in Syncfusion Blazor TextBox component and much more details.
+title: Validation in Blazor TextBox Component | Syncfusion®
+description: Checkout and learn here all the features about Validation in Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -49,4 +49,4 @@ TextBox supports to set the attributes directly also.
 
 ## See also
 
-* [Create Edit Forms with FluentValidation and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components](https://www.syncfusion.com/blogs/post/create-edit-forms-with-fluentvalidation-and-syncfusion-blazor-components.aspx)
+* [Create Edit Forms with FluentValidation and Blazor Components](https://www.syncfusion.com/blogs/post/create-edit-forms-with-fluentvalidation-and-syncfusion-blazor-components.aspx)

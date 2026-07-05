@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor Rich Text Editor Accessibility | Syncfusion
-description: Learn about the accessibility features in the Syncfusion Blazor Rich Text Editor component and more.
+title: Blazor Rich Text Editor Accessibility | Syncfusion®
+description: Learn about the accessibility features in the Blazor Rich Text Editor component, including keyboard navigation and screen reader support.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Rich Text Editor Accessibility
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) is designed in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, applying the appropriate roles, states, and properties. This ensures that the component is accessible to users who rely on assistive technologies (AT) or keyboard navigation.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is designed in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, applying the appropriate roles, states, and properties. This ensures that the component is accessible to users who rely on assistive technologies (AT) or keyboard navigation.
 
 The Blazor Rich Text Editor follows established accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -81,8 +81,8 @@ The Blazor Rich Text Editor component's accessibility is validated using the [ax
 
 The accessibility compliance of the Rich Text Editor component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the component with accessibility tools.
 
-N> You can explore the [Blazor Rich Text Editor feature tour page](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) to see its capabilities. You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
+N> You can explore the [Blazor Rich Text Editor feature tour page](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) to see its capabilities. You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

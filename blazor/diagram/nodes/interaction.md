@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node Interaction in Syncfusion Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about node interaction in Syncfusion Blazor Diagram component and much more details.
+title: Node Interaction in Blazor Diagram Component | Syncfusion®
+description: Checkout and learn here all the features about node interaction in Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -71,7 +71,7 @@ Selection is also available during interaction:
 
 * When elements are selected, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) events are triggered and do customization on those events.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVysXNchsTmFbDo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node Selection in Blazor Diagram](../images/blazor-diagram-node-selection.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhxXRLIqlZeAZmR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Node Selection in Blazor Diagram](../images/blazor-diagram-node-selection.webp)" %}
 
 ## How to Drag a Node
 
@@ -124,7 +124,7 @@ Dragging is also supported during interaction:
 * Drag an object by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements moves all the selected elements.
 * During dragging, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events are triggered and do customization on those events.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVIsjtwBioTisdy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Dragging a node at runtime in Blazor Diagram](../images/blazor-diagram-drag-node.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVnjHLoAlibhABz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Dragging a node at runtime in Blazor Diagram](../images/blazor-diagram-drag-node.webp)" %}
 
 ## How to Resize a Node
 
@@ -178,7 +178,7 @@ Resizing is also supported during interaction:
 * When one corner of the selector is dragged, the opposite corner will be in a static position.
 * When a node is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBoCtjmBWRAMAXB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Resizing a node using the selection handles in Blazor Diagram](../images/blazor-diagram-node-resizing.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHZRhSAvUbrOXq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Resizing a node using the selection handles in Blazor Diagram](../images/blazor-diagram-node-resizing.webp)" %}
 
 ## How to Rotate a Node
 
@@ -233,7 +233,7 @@ Rotation is also supported during interaction:
 * The rotate thumb (thumb at the middle of the node) appears when rotating the node to represent the static point.
 * When a node is rotated, the [RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging) and [RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged) events are triggered.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBSMZXcVsHwXFqk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Rotating a node using the rotation handle in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVHZdroqFynFImD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Rotating a node using the rotation handle in Blazor Diagram](../images/blazor-diagram-node-rotation.webp)" %}
 
 ## How to rotate a node using the RotationAngle property
 
@@ -264,7 +264,7 @@ Use this property when you want to specify the node’s rotation at the time of 
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Nodes/Interaction/RotateAngleProperty.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhSittQVMwKuLcJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Node rotated by a fixed angle using the RotationAngle property](../images/NodeRotation.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxXnBeAvEphhrK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Node rotated by a fixed angle using the RotationAngle property](../images/NodeRotation.webp)" %}
 
 ## How to Flip a Node
 
@@ -286,13 +286,13 @@ For more information about node flip, refer to [Node Flip](../flip#how-to-flip-t
 
 * [How to interact with the connector in diagram](../connectors/interactions)
 
-* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+* [How to Disable Node Interaction While Maintaining Layout Updates in Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
 
-* [How to Drag a Node Programmatically Without User Interaction in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
+* [How to Drag a Node Programmatically Without User Interaction in Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
 
-* [How to Select a Group Child Element Without Selecting the Parent Group Node in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component](https://support.syncfusion.com/kb/article/18996/how-to-select-a-group-child-element-without-selecting-the-parent-group-node-in-syncfusion-blazor-diagram-component)
+* [How to Select a Group Child Element Without Selecting the Parent Group Node in Blazor Diagram Component](https://support.syncfusion.com/kb/article/18996/how-to-select-a-group-child-element-without-selecting-the-parent-group-node-in-syncfusion-blazor-diagram-component)
 
-* [How to Select and Highlight Ports and Connect Selected Elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)
+* [How to Select and Highlight Ports and Connect Selected Elements in Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)
 
 * [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrade a Syncfusion Blazor project to the latest version | Syncfusion
+title: Upgrade a Blazor project to the latest version | Syncfusion®
 description: Learn how to upgrade a Blazor application to latest version using Blazor Project Migration wizard in VS 2022, including NuGet package updates and backup option.
 platform: Blazor
 control: Common
@@ -35,7 +35,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Migration add-in for
 
 3. In the Syncfusion® Project Migration window, select the desired Syncfusion® Blazor version to migrate.
 
-    ![Syncfusion Blazor Project Migration wizard with version selection](images/migration.webp)
+    ![Blazor Project Migration wizard with version selection](images/migration.webp)
 
     N> Versions are loaded from the Syncfusion® Blazor NuGet packages available on [NuGet.org](https://www.nuget.org/) and require an active internet connection.
 

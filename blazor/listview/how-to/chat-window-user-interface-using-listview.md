@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Chat window user interface using Blazor ListView | Syncfusion
-description: Learn here all about creating chat window user interface using Syncfusion Blazor ListView component and more.
+title: Chat window user interface using Blazor ListView | Syncfusion®
+description: Learn here all about creating chat window user interface using Blazor ListView component and much more details.
 platform: Blazor
 control: ListView
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization in Blazor Stepper Component | Syncfusion
+title: Globalization in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Globalization with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -11,8 +11,8 @@ documentation: ug
 
 ## Localization
 
-[Blazor Stepper](https://www.syncfusion.com/blazor-components/blazor-stepper) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor Stepper](https://www.syncfusion.com/blazor-components/blazor-stepper) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## RTL
 
-RTL provides an option to switch the text direction and layout of the Stepper component from right to left. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+RTL provides an option to switch the text direction and layout of the Stepper component from right to left. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Blazor components.

@@ -30,7 +30,7 @@ The following code demonstrates how to add a ruler to the diagram.
 </SfDiagramComponent>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVoiXXlTWQuPiRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Ruler](images/Ruler.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhnNdqDMaqHNpnd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Ruler](images/Ruler.webp)" %}
 
 ## How to Customize the Ruler
 
@@ -71,7 +71,7 @@ The code below demonstrates how the diagram ruler can be customized.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBostNPTCvJUslQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhxXxUtCkKuYBGV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Ruler/Ruler.razor)
 

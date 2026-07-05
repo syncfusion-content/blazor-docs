@@ -43,7 +43,7 @@ The `Blur` event is triggered when the input loses focus.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUWBifAHaoYZgv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRNxiCqcJAcoiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## ValueChange
 
@@ -79,7 +79,7 @@ The `ValueChange` event is triggered when the AutoComplete value changes.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhUMrszKHuvYJof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLdDHWsAwoSLAYm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Closed
 
@@ -113,7 +113,7 @@ The `Closed` event is triggered after the popup has been closed.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthKWVipUQZCbocB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLHZxCWqmnDNcxt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Created
 
@@ -147,7 +147,7 @@ The `Created` event is triggered when the component is created.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgCVWzgwZSNwtx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVRtdsiAQHoRmJg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Destroyed
 
@@ -181,7 +181,7 @@ The `Destroyed` event is triggered when the component is destroyed.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrKWrCJAwMMVCHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBdXRMiAmRYdBpR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Focus
 
@@ -215,7 +215,7 @@ The `Focus` event is triggered when the input gains focus.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLUsVMTUQsUbNIt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBRNHMiUcwqGpKd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## OnOpen
 
@@ -249,7 +249,7 @@ The `OnOpen` event is triggered when the popup is opened. If this event is cance
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUWVWJUcsHKlSD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRtRMiqGmPGREd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## OnClose
 
@@ -284,7 +284,7 @@ The `OnClose` event is triggered before the popup is closed. If this event is ca
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAiriTAGsaheaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrdjdWiAGFIXSFL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## DataBound
 
@@ -318,7 +318,7 @@ The `DataBound` event is triggered after the data source is populated in the pop
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUihMTqmLVLGDY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVntnsMKGlbSiyX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filtering
 
@@ -355,7 +355,7 @@ The `Filtering` event is triggered while typing in the input when `AllowFilterin
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAMhMJqwrTexBF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhdXnWMKQYUrkfy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## OnActionBegin
 
@@ -394,7 +394,7 @@ The `OnActionBegin` event is triggered before fetching data from the remote serv
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKiBsTKmrEVfKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLRZRWMgQYaDrSP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## OnActionFailure
 
@@ -433,7 +433,7 @@ The `OnActionFailure` event is triggered when the data fetch request from the re
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLAiVszKGArhgsH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLHXHWCUljfLRNM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## OnValueSelect
 
@@ -467,7 +467,7 @@ The `OnValueSelect` event is triggered when a user selects an item in the popup 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhqsrMJAGqIsOVh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxNHCiqPXPeyRi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Opened
 
@@ -502,6 +502,6 @@ The `Opened` event is triggered when the popup opens.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqsBCTAcAbJVPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVxZxiMKFCxOdeb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> The AutoComplete currently supports the events listed above. Additional events may be introduced in future releases based on user requests. If the required event is not listed, submit a request on the [Syncfusion Feedback](https://www.syncfusion.com/feedback/blazor-components) portal.

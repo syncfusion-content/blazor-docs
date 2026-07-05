@@ -150,6 +150,6 @@ Add the Blazor Avatar component in the **~/Components/Pages/*.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Avatar component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdtRWafjILAhFx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Avatar)

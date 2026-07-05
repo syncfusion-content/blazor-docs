@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create wizard in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to create wizard in Syncfusion Blazor Tabs component and much more details.
+title: Create wizard in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about how to create wizard in Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug

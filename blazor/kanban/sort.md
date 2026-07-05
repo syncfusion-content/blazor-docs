@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about sorting in Syncfusion Blazor Kanban component and much more details.
+title: Sorting in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all about sorting in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

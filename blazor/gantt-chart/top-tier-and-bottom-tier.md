@@ -9,7 +9,7 @@ documentation: ug
 
 # Top tier and Bottom tier in Blazor Gantt Chart component
 
-The Blazor Gantt Chart component supports a two-tier timeline layout, enabling customization of both the top and bottom tiers through specific configuration options.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component supports a two-tier timeline layout, enabling customization of both the top and bottom tiers through specific configuration options.
 
 - [TopTier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_TopTier) and [BottomTier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_BottomTier): Define the structure and visibility of each timeline tier.
 - [Unit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineTierSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineTierSettings_Unit): Specifies the time unit for each tier, such as day, week, or month.

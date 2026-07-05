@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create dual list using Blazor ListView Component | Syncfusion
-description: Check out and learn here all about creating dual list using Syncfusion Blazor ListView component and much more.
+title: Create dual list using Blazor ListView Component | Syncfusion®
+description: Check out and learn here all about creating dual list using Blazor ListView component and much more details.
 platform: Blazor
 control: ListView
 documentation: ug

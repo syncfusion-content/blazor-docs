@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dimension in the Predefined Dialogs in Blazor | Syncfusion
-description: Check out and learn here all about dimensions in predefined dialogs in blazor and much more details.
+title: Dimension in Predefined Dialogs in Blazor | Syncfusion®
+description: Learn how to customize and set dimensions (Width and Height) for predefined dialogs in Blazor applications using DialogOptions properties.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug

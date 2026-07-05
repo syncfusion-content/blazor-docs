@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Positioning in Blazor AppBar Component | Syncfusion
+title: Positioning in Blazor AppBar Component | Syncfusion®
 description: Check out and learn about Positioning in the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Templates with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+title: Templates in Blazor Rating Component | Syncfusion®
+description: Checkout and learn here all about Templates with Blazor Rating component in Blazor Server App and Blazor WebAssembly App with examples and much more details.
 platform: Blazor
 control: Rating
 documentation: ug
@@ -69,13 +69,13 @@ Use the `EmptyTemplate` tag directive to customize the appearance of unrated ite
 
 ```
 
-![Blazor Rating component with EmptyTemplate](./images/blazor-rating-empty-template.png)
+![Blazor Rating component with EmptyTemplate](./images/blazor-rating-empty-template.webp)
 
 N> The current value of the rating item is available in the template context (`RatingItemContext`) as `Value` and `Index`. The rating item element also exposes a CSS custom property (`--rating-value`) representing the filled portion, which can be used to support precision in templates.
 
 ## Full (rated) symbol template
 
-To customize the appearance of **rated** items in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
+To customize the appearance of **rated** items in the Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
 The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the rated item, such as its `Value` and `Index`.
 
 ```cshtml
@@ -129,7 +129,7 @@ The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Rating component with FullTemplate](./images/blazor-rating-full-template.png)
+![Blazor Rating component with FullTemplate](./images/blazor-rating-full-template.webp)
 
 ## Using Emoji icon as rating symbol
 
@@ -175,7 +175,7 @@ Use emoji as rating symbols by placing them as template content within the `Empt
 
 ```
 
-![Blazor Rating component with Emoji icon](./images/blazor-rating-emoji-icon.png)
+![Blazor Rating component with Emoji icon](./images/blazor-rating-emoji-icon.webp)
 
 ## Using SVG icon as rating symbol
 
@@ -243,11 +243,11 @@ Use SVG icons as rating symbols by specifying them as template content within th
 
 ```
 
-![Blazor Rating component with SVG icon](./images/blazor-rating-svg-icon.png)
+![Blazor Rating component with SVG icon](./images/blazor-rating-svg-icon.webp)
 
-## Using PNG image as rating symbol
+## Using webP image as rating symbol
 
-Use PNG images as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
+Use webP images as rating symbols by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 
@@ -269,4 +269,4 @@ Use PNG images as rating symbols by specifying them as template content within t
 
 ```
 
-![Blazor Rating component with PNG icon](./images/blazor-rating-png.png)
+![Blazor Rating component with webp icon](./images/blazor-rating-webp.webp)

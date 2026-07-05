@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set Tooltip to the Items in Blazor Toolbar Component | Syncfusion
-description: Learn here all about how to set Blazor Tooltip to the Items in Syncfusion Blazor Toolbar component and more.
+title: Set Tooltip to the Items in Blazor Toolbar Component | Syncfusion®
+description: Learn here all about how to set Blazor Tooltip to the Items in Blazor Toolbar component and much more details.
 platform: Blazor
 control: Toolbar
 documentation: ug

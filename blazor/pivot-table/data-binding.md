@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor Pivot Table component and much more.
+title: Data Binding in Blazor Pivot Table Component | Syncfusion®
+description: Learn about data binding options in Blazor Pivot Table component for JSON and remote data sources and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

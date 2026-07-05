@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validation in Blazor Stepper Component | Syncfusion
+title: Validation in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Validation with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper

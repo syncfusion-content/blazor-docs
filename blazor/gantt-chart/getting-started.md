@@ -225,6 +225,8 @@ Add the Blazor Gantt Chart component in the **~/Pages/Home.razor** file.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthyWNVzLgvAOlvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+N> Looking for the full Blazor Gantt Chart component overview, features, pricing, and documentation? Visit the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) page.
+
 ## See also
 
 * [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
