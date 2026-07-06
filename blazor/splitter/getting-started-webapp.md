@@ -172,8 +172,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @using Syncfusion.Blazor.Layouts
 
-@using Syncfusion.Blazor.Layouts
-
 <div>Horizontal Splitter</div>
 
 <SfSplitter Height="240px" Width="100%">
