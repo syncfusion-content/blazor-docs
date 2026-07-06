@@ -205,11 +205,12 @@ Format: `# Getting Started with Blazor {ComponentName} [Component] in Blazor {Ap
 - For Blazor Web App with WebAssembly/Auto: must note registration in both
 - References `_content/Syncfusion.Blazor.Themes/fluent2.css` (stylesheet)
 - References `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` (script)
-- Blazor Web App / Server App: host file is `App.razor`
+- Blazor Web App / Server App: host file is `Components/App.razor`
 - Blazor WASM: host file is `~wwwroot/index.html`
 
 #### Section 9: `## Add Blazor {ComponentName} component` (H2)
-- Opens `~/Pages/Home.razor` (or equivalent)
+- For Blazor Web App / Server App: opens `Components/Pages/Home.razor`
+- For Blazor WebAssembly App: opens `Pages/Home.razor`
 - For per-page/component interactivity (Web App): must include the `@rendermode` directive note
 - For Blazor Server App (per-page/component): `@rendermode InteractiveServer`
 - For Blazor Web App with Auto: `@rendermode InteractiveAuto`
@@ -362,7 +363,7 @@ Reply with one of the following:
 - [ ] `Program.cs` includes `using Syncfusion.Blazor;` and `builder.Services.AddSyncfusionBlazor()`
 - [ ] Stylesheet path: `_content/Syncfusion.Blazor.Themes/fluent2.css`
 - [ ] Script path: `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`
-- [ ] Correct host file for stylesheet/script (`App.razor` for Web/Server; `index.html` for WASM) *(wrong host file = ❌ Critical)*
+- [ ] Correct host file for stylesheet/script (`Components/App.razor` for Web App/Server App; `wwwroot/index.html` for WASM) *(wrong host file = ❌ Critical)*
 - [ ] Component code sample uses correct `<Sf...>` tag
 - [ ] `@rendermode` directive is present where required
 
@@ -373,16 +374,21 @@ Reply with one of the following:
 - [ ] Note present about configuring Interactive render mode and Interactivity location
 - [ ] For WebAssembly/Auto: service registration note covers both server and client `Program.cs`
 - [ ] `_Imports.razor` note refers to the `.Client` project
+- [ ] Stylesheet/script added to `Components/App.razor`
+- [ ] Component rendering code is in `Components/Pages/Home.razor`
 - [ ] "Run the application" VS Code and .NET CLI tabs navigate to the main project folder (`cd ..`, `cd BlazorWebApp`) before `dotnet run`
 
 **Blazor Server App**:
 - [ ] CLI command: `dotnet new blazor -o BlazorApp --interactivity Server`
 - [ ] Note present about configuring Interactive render mode
+- [ ] Stylesheet/script added to `Components/App.razor`
+- [ ] Component rendering code is in `Components/Pages/Home.razor`
 - [ ] `@rendermode InteractiveServer` used in component example
 
 **Blazor WebAssembly App**:
 - [ ] CLI command: `dotnet new blazorwasm -o BlazorApp`
-- [ ] Stylesheet/script added to `~wwwroot/index.html`
+- [ ] Stylesheet/script added to `wwwroot/index.html`
+- [ ] Component rendering code is in `Pages/Home.razor`
 - [ ] No render mode directive needed (WASM is always interactive)
 
 ### Links and References (applies to both guide types)
