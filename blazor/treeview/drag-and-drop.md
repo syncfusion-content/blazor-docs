@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor TreeView component and much more.
+title: Drag and Drop in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Drag and Drop in Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -566,7 +566,7 @@ For example, in the following code snippet, dragging is prevented for the "Inbox
 
 In the Blazor TreeView component, the index of the dropped node can be retrieved from the [DropIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DragAndDropEventArgs.html#Syncfusion_Blazor_Navigations_DragAndDropEventArgs_DropIndex) argument in the [OnNodeDragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStop) event. 
 
-In the example shown, the value of the `DropIndex` is displayed in the Syncfusion<sup style="font-size:70%">&reg;</sup> TextBox component based on the node that was dropped.
+In the example shown, the value of the `DropIndex` is displayed in the Blazor TextBox component based on the node that was dropped.
 
 ```cshtml
 

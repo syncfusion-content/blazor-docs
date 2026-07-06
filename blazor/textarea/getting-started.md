@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor TextArea in Blazor WASM App | Syncfusion
+title: Getting Started with Blazor TextArea in Blazor WASM App | Syncfusion®
 description: Check out and learn about getting started with Blazor TextArea component in Blazor WebAssembly Application.
 platform: Blazor
 control: TextArea
@@ -17,7 +17,7 @@ This guide explains how to add the [Blazor TextArea](https://www.syncfusion.com/
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WebAssembly App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WebAssembly App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
 {% endtabcontent %}
 
@@ -34,7 +34,7 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -167,20 +167,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLTjdsAsprhYodH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea Component](./images/blazor-textarea.webp)" %}
-
-## Floating label
-
-The floating label displays the placeholder as a label above the TextArea when focused or when a value is present. Configure this behavior using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property.
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-<SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
-
-{% endhighlight %}
-{% endtabs %}
-
 **Run the application**
 
 {% tabcontents %}
@@ -221,7 +207,21 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTjdiKszhkOkia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHNGjWgOdtJAfj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea Component](./images/blazor-textarea.webp)" %}
+
+## Floating label
+
+The floating label displays the placeholder as a label above the TextArea when focused or when a value is present. Configure this behavior using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) property.
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+<SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthdZGtiAuYOoHdl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.webp)" %}
 
 ## See also
 
