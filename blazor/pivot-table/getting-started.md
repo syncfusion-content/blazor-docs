@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Blazor Pivot Table in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Pivot Table component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Pivot Table in WASM App | Syncfusion
+description: Check out and learn about getting started with Blazor Pivot Table component in Blazor WebAssembly Application.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -36,6 +36,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -52,6 +53,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,16 +162,14 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Pivot Table component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component inside the razor file.
 
 Use the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) component with the specified data type.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.PivotView
 
@@ -193,7 +193,7 @@ Use the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
     </PivotViewDataSourceSettings>
 </SfPivotView>
 
-@code{
+@code {
     public List<ProductDetails> dataSource { get; set; }
     protected override void OnInitialized()
     {
@@ -286,7 +286,7 @@ You can handle errors that occur during Pivot Table actions without stopping you
 The following code example shows how to display a server-side error message to the user when a data operation fails:
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.PivotView
 
@@ -318,7 +318,7 @@ The following code example shows how to display a server-side error message to t
     }
 </style>
 
-@code{
+@code {
     public string ErrorDetails = "";
     public class PivotViewData
     {
@@ -343,6 +343,6 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor for Client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
