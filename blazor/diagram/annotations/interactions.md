@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation Interaction in Blazor Diagram Component
 
-Diagram provides extensive support for annotation interactions. Annotations can be selected, dragged, resized, and rotated interactively. By default, annotation interaction is disabled and can be enabled by configuring the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the annotation.
+Diagram provides extensive support for annotation interactions. Annotations can be selected, dragged, resized, and rotated interactively. By default, annotation interaction is disabled and can be enabled by configuring the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the annotation. 
 
 ## How to Enable Annotation Interaction
 
@@ -186,8 +186,8 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
  Value | Description | Image |
 | -------- | -------- | -------- |
-| **Page** | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![Blazor Diagram RotationReference page](../images/rotationReferencePage.gif) |
-| **Parent** | When this option is set, the annotation rotates along with its parent node. | ![Blazor Diagram RotationReference Parent](../images/rotationReferenceParent.gif) |
+| **Page** | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![Blazor Diagram RotationReference page](../images/rotationReferencePage.webp) |
+| **Parent** | When this option is set, the annotation rotates along with its parent node. | ![Blazor Diagram RotationReference Parent](../images/rotationReferenceParent.webp) |
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationReference.razor)
 
@@ -240,4 +240,3 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to add an annotation for a Connector](./connector-annotation)
 
-* [How to animate connectors using annotation template in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram)
