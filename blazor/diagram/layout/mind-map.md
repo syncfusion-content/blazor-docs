@@ -81,7 +81,7 @@ The following code example illustrates how to create a mind map layout using a d
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/MindmapSample1.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSiDNxJQsQKecM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRXHLRJWJsxlDI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.webp)" %}
 
 You can also control the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following example demonstrates how to configure all branches to appear on the right side using this method.
 
@@ -164,7 +164,7 @@ You can also control the branch for a mind map using the [GetBranch](https://hel
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/MindmapSample2.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrIiDXHJGLCZNgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBxDxhxzCxijnzL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.webp)" %}
 
 >**Note:** In `DataSourceSettings`, the `ID` and `ParentID` properties are string, and the provided `DataSource` should have a parent-child relationship. At least one node must have an empty `ParentID` to act as the root.
 
@@ -404,7 +404,7 @@ Also, you can render a mind map layout without using a Datasource. The following
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVIMtZRfwVSIPqf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLRjnrdTMQLUvQg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/MindMapWithoutDataSource.razor)
 
@@ -527,7 +527,7 @@ The following example demonstrates configuring the mind map layout with a vertic
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/MindmapOrientation.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeWNXxpmANjEaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor mind map with vertical orientation](../images/blazor-mind-map-diagram-with-orientation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrRDnrHJsQQLEsK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor mind map with vertical orientation](../images/blazor-mind-map-diagram-with-orientation.webp)" %}
 
 The following example demonstrates how to update the layout orientation dynamically at runtime using both data binding and direct method calls.
 
@@ -657,7 +657,7 @@ The following example demonstrates how to update the layout orientation dynamica
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhIWZXnfGJpthaI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBHtRrnTWlktVkZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/MindmapOrientationRuntime.razor).
 
