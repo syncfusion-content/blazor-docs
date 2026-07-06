@@ -217,7 +217,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTjshOAyMLHrtb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Menu component](./images/blazor-dropdownmenu-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhRDHLOgblZrSIQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dropdown Menu component](./images/blazor-dropdownmenu-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownMenu).
 
