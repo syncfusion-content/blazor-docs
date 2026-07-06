@@ -239,4 +239,3 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 * [How to add an annotation for a Node](./node-annotation)
 
 * [How to add an annotation for a Connector](./connector-annotation)
-
