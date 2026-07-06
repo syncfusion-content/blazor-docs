@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion® Blazor UI Builder Skill for AI Assistants | Syncfusion®
+title: Blazor UI Builder Skill for AI Assistants | Syncfusion®
 description: Install Syncfusion® Agentic Blazor UI Builder to generate production-ready Blazor components from natural-language prompts.
 control: Skills
 platform: Blazor
@@ -9,9 +9,9 @@ documentation: ug
 
 # Syncfusion® Agentic Blazor UI Builder Skill for AI Assistants
 
-**Syncfusion® Agentic Blazor UI Builder** is an AI-powered skill and companion agent that accelerates Blazor application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
+**Syncfusion® Agentic Blazor UI Builder** is an AI-powered skill and companion agent that accelerates Blazor application development by transforming natural-language UI requirements into production-ready components using Blazor UI libraries. 
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® components** to deliver accurate and ready-to-use code.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **Blazor components** to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Blazor UI Builder helps you rapidly build scalable dashboards and user interfaces without leaving your development workflow.
 
 ## Prerequisites
@@ -111,8 +111,8 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 3. **Component Mapping** - Map intent to Syncfusion® components and required feature modules.
 4. **Theming & Design System**  
    Load required theming guidelines and confirm key design choices:
-   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Syncfusion Tailwind3 theme are shown as the default option-proceed with this or change the theme as preferred.
-   - Syncfusion theme (Tailwind3, Bootstrap5, Material3, fluent2)
+   - CSS framework (Tailwind, Bootstrap, Material, or Greenfield(custom theme)). If no themes detected in the existing project, Greenfield and Tailwind3 theme are shown as the default option-proceed with this or change the theme as preferred.
+   - theme (Tailwind3, Bootstrap5, Material3, fluent2)
    - Light and Dark Mode
    - Core design basics (colors, spacing, typography, responsiveness, accessibility)
 5. **Code Generation** - Produce C# Blazor components, parameter interfaces, and CSS/styling scaffolding.
@@ -191,7 +191,7 @@ The skill proposes changes and requires confirmation for insertion; automatic de
 
 ## See also
 
-- [Syncfusion Blazor Skills](component-skills)
+- [Blazor Skills](component-skills)
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
 

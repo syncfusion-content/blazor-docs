@@ -45,7 +45,7 @@ A [BpmnGateway](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrIWZtdKJhVMLXv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHDRBeJIDKqAux?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnGateway/BpmnGatewaySample.razor)
 
