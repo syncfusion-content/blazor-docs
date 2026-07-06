@@ -108,6 +108,6 @@ The following code example demonstrates handling the `DataLoaded` event in the d
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBSstXHJJtrZCJc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBRjHBdgELRINal?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Layout/DataLoadedEvent.razor)

@@ -71,7 +71,7 @@ The following code example demonstrates how to create an annotation for a node a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjroijNRrQAsIOIt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhRtRBdglUFtzei?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/CreateAnnotation.razor)
 
@@ -126,7 +126,7 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLIMjtxrwUyoCqW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLnZdBxqFJjqhnA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AddAnnotationAtRunTime.razor)
 
@@ -192,7 +192,7 @@ An annotation can be removed from a node or connector's `Annotations` collection
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjByiXZHBwzKleyR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhHjnrdKPzTierC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RemoveAnnotationUsingRemoveAt.razor)
 
@@ -258,7 +258,7 @@ The following code sample shows how to change the content of a node's annotation
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIitZxBcSXRxWo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhdtnhxKFfGLdvX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/UpdateAnnotation.razor)
 

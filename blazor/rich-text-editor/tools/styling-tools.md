@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styling tools in Blazor Rich Text Editor Component | Syncfusion
-description: Checkout and learn here all about Styling tools in Syncfusion Blazor Rich Text Editor component and more.
+title: Styling tools in Blazor Rich Text Editor Component | Syncfusion®
+description: Checkout and learn here all about Styling tools in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

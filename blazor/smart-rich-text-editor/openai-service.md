@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OpenAI Configuration for Blazor Smart Rich Text Editor | Syncfusion
-description: Configure OpenAI for Syncfusion Blazor Smart Rich Text Editor API keys, client setup, DI registration, usage examples, and best practices.
+title: OpenAI Configuration for Blazor Smart Rich Text Editor | Syncfusion®
+description: Configure OpenAI for Blazor Smart Rich Text Editor API keys, client setup, DI registration, usage examples, and best practices.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # OpenAI Configuration
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor supports OpenAI's GPT models for intelligent content assistance.
+The Blazor Smart Rich Text Editor supports OpenAI's GPT models for intelligent content assistance.
 
 ## Prerequisites
 
@@ -120,7 +120,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-// Register Syncfusion Blazor Service
+// Register Blazor Service
 builder.Services.AddSyncfusionBlazor();
 
 // Configure OpenAI
@@ -162,7 +162,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion Smart Rich Text Editor OpenAI Integration](images/openai-integration.webp)
+![Smart Rich Text Editor OpenAI Integration](images/openai-integration.webp)
 
 ## Troubleshooting
 

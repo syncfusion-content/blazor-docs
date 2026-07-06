@@ -120,7 +120,7 @@ N> In the following sample, pressing the <kbd>t</kbd> key disables the ComboBox 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBAsrrQgPQyWcgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVHDHhgBFCbvDHE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Ensuring accessibility
 
