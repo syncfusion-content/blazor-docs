@@ -9,11 +9,11 @@ documentation: ug
 
 # Overview of Blazor extension for Visual Studio
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension for Visual Studio streamlines working with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by configuring the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and themes. Separate extensions are available for both Visual Studio 2022 and 2026.
+The Syncfusion® Blazor extension for Visual Studio streamlines working with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by configuring the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and themes. Separate extensions are available for both Visual Studio 2022 and 2026.
 
 [Download the Visual Studio 2022 / Visual Studio 2026 extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.BlazorVSExtension)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension provides the following add-ins in Visual Studio:
+The Syncfusion® Blazor extension provides the following add-ins in Visual Studio:
 
 [Project template](template-studio): Creates Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor applications with required configuration for development with Syncfusion<sup style="font-size:70%">&reg;</sup>Visual Blazor component.
 

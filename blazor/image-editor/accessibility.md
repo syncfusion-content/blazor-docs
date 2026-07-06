@@ -57,7 +57,7 @@ The Blazor Image Editor component's accessibility levels are validated using [ax
 
 The accessibility compliance of the Blazor Image Editor component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/image-editor) in a new window to evaluate the Blazor Image Editor component with accessibility tools.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrICNDYqKacaGsS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBnNGZKhdZgfGyp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
