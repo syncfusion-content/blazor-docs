@@ -85,7 +85,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -100,7 +100,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Command Prompt" %}
@@ -169,7 +169,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-@using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="string" Placeholder="Select a game"></SfComboBox>
 
@@ -228,8 +227,6 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>

@@ -81,7 +81,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -96,7 +96,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Command Prompt" %}

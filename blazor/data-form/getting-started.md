@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Getting Started with Blazor Data Form in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Data Form component in Blazor WebAssembly Application.
+description: Check out and learn how to get started with the Blazor Data Form component in a Blazor WebAssembly App.
 platform: Blazor
-control: Data Form
+component: Data Form
 documentation: ug
 ---
 
 # Getting Started with Blazor Data Form Component in Blazor WASM App
 
-This section briefly explains how to include [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to add the [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component to a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -26,7 +26,7 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -43,7 +43,7 @@ Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via 
 Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -69,7 +69,7 @@ Install the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusi
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight bash tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.DataForm -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -81,10 +81,10 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.DataForm -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -96,10 +96,10 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.DataForm -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DataForm` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DataForm
@@ -126,7 +126,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -142,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -157,7 +157,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Data Form component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** folder (for example, **Home.razor**) and add the [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component inside the Razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -206,7 +206,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -249,3 +249,9 @@ dotnet run
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHNxVKTJFKGNAG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DataForm getting started example](images/blazor-dataform.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataForm).
+
+## See also
+
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

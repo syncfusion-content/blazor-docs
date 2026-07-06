@@ -81,7 +81,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -96,7 +96,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Command Prompt" %}
@@ -162,8 +162,6 @@ Open a Razor file located in the **~/Pages/*.razor** folder (for example, **Home
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.DropDowns
-
 <SfComboBox TValue="string" TItem="string" Placeholder="Select a game"></SfComboBox>
 
 {% endhighlight %}
@@ -217,8 +215,6 @@ After initialization, populate the ComboBox with data using the [DataSource](htt
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
