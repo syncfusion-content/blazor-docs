@@ -24,7 +24,7 @@ Blazor Components is an enterprise-grade, native UI components library for creat
 
 ## What’s included?
 
-- Data bound components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), and more.
+- Data bound components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) and more.
 - [Form inputs](https://www.syncfusion.com/blazor-components/blazor-textbox), [Editors](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Pickers](https://www.syncfusion.com/blazor-components/blazor-datepicker), [Menus](https://www.syncfusion.com/blazor-components/blazor-menu-bar), [Navigation](https://www.syncfusion.com/blazor-components/blazor-treeview), and [Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) components.
 - Rich visualization: [2D/3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts), [Gauges](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), [HeatMaps](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), and [Sparklines](https://www.syncfusion.com/blazor-components/blazor-sparkline).
 - Theming system with multiple built-in themes and CSS variables for fine grained component.
@@ -439,7 +439,6 @@ padding-top: 20px;
     <td>
         <div><p class="controlcategory-topics">GRIDS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/getting-started"><span class="sf-home-icon sf-icon-datagrid"></span>DataGrid</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started"><span class="sf-home-icon sf-icon-pivottable"></span>Pivot Table</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started"><span class="sf-home-icon sf-icon-treegrid"></span>TreeGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started"><span class="sf-home-icon sf-icon-multicolumn-combobox"></span>Multicolumn ComboBox</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
