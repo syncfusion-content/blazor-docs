@@ -9,11 +9,126 @@ documentation: ug
 
 # Annotation Interaction in Blazor Diagram Component
 
-Diagram provides the support to the annotations rotation interactively.
+Diagram provides extensive support for annotation interactions. Annotations can be selected, dragged, resized, and rotated interactively. By default, annotation interaction is disabled and can be enabled by configuring the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the annotation.
+
+## How to Enable Annotation Interaction
+
+The [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html) enumeration controls the interactions supported by an annotation. Interactions can be enabled by using the **Interaction** flag, which allows all supported behaviors, or by enabling specific constraints such as **Select**, **Drag**, **Resize**, and **Rotate**.
+
+| AnnotationConstraints | Description |
+| -------- | -------- |
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_None) | Disables all interactions on the annotation. |
+| [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) | Enables read-only mode for the annotation (cannot be edited). |
+| [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) | Enables inheriting the ReadOnly option from the parent. |
+| [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_Select) | Enables selection of the annotation. |
+| [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_Drag) | Enables dragging the annotation. |
+| [Resize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_Resize) | Enables resizing the annotation. |
+| [Rotate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_Rotate) | Enables rotating the annotation. |
+| [Interaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_Interaction) | Enables all interactive behaviors: Select, Drag, Resize, and Rotate combined. |
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@_nodes" />
+
+@code
+{
+    DiagramObjectCollection<Node> _nodes;
+
+    protected override void OnInitialized()
+    {
+        _nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            // Sets the annotation for the node
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation 
+                { 
+                    Content = "Annotation Text",
+                    // Sets the constraints as Interaction (enables all interactions)
+                    Constraints = AnnotationConstraints.Interaction
+                }
+            }
+        };
+        _nodes.Add(node);
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteraction.razor)
+
+## How to Set a Drag Limit for Connector Annotations
+
+The [DragLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_DragLimit) property allows a connector annotation's movement to be restricted within a defined area along the connector. The boundary is specified using the `Left`, `Right`, `Top`, and `Bottom` values. During dragging, the annotation position snaps to the nearest connector segment offset within the configured boundary.
+
+By default, drag limits are disabled for connector annotations. To enable this behavior, configure the annotation constraints to include `Drag` along with the `Interaction` flag, as shown in the following example.
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@_connectors" />
+
+@code
+{
+    DiagramObjectCollection<Connector> _connectors;
+
+    protected override void OnInitialized()
+    {
+        _connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
+        {
+            ID = "connector",
+            Type = ConnectorSegmentType.Orthogonal,
+            SourcePoint = new DiagramPoint() { X = 200, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 300, Y = 300 },
+            // Sets the multiple annotation for the connector
+            Annotations = new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation 
+                { 
+                    Content = "connector1",
+                    Offset = 0.5,
+                    Constraints = AnnotationConstraints.Interaction | AnnotationConstraints.Drag,
+                    // Set drag limit for a connector annotation
+                    DragLimit = new DiagramThickness()
+                    {
+                        Left = 20,
+                        Right = 20,
+                        Top = 20,
+                        Bottom = 20
+                    }
+                }
+            }
+        };
+        _connectors.Add(connector);
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/DragLimitForAnnotation.razor)
+
+N> The `DragLimit` property applies only to `PathAnnotation` (connector annotations).
 
 ## How to Rotate Annotations
-The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_RotationReference) property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure `RotationReference` for an annotation.
 
+The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_RotationReference) property of an annotation controls whether the annotation text rotates relative to its parent node or the page. The following code examples illustrate how to configure `RotationReference` for an annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -67,17 +182,16 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVesNXxpShYJhRa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthxXxVHqPVhbsOZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
  Value | Description | Image |
 | -------- | -------- | -------- |
 | **Page** | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![Blazor Diagram RotationReference page](../images/rotationReferencePage.webp) |
 | **Parent** | When this option is set, the annotation rotates along with its parent node. | ![Blazor Diagram RotationReference Parent](../images/rotationReferenceParent.webp) |
 
-
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationReference.razor)
 
-## How to rotate a Annotation using the RotationAngle property
+## How to Rotate an Annotation Using the RotationAngle Property
 
 The [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_RotationAngle) property sets the rotation angle of an annotation in degrees. This determines how much the annotation text is tilted from its normal position. The default value is **0**.
 
@@ -112,7 +226,7 @@ The following code examples illustrate how to configure `RotationAngle` for an a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLIiZDRTogIAqku?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRDHhxgvLGppvm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationAngleProperty.razor)
 
@@ -126,4 +240,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 * [How to add an annotation for a Connector](./connector-annotation)
 
-* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )
+* [How to animate connectors using annotation template in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram)
