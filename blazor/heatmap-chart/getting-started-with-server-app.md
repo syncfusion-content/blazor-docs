@@ -232,7 +232,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTDWBuJXfSXofp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor HeatMap Chart](images/blazor-heatmap-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLxNGjgVJboqjOK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor HeatMap Chart](images/blazor-heatmap-chart.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/HeatMapChart).
 
