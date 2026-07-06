@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Binding in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about custom binding in Syncfusion Blazor TreeGrid component and much more.
+title: Custom Binding in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about custom binding in Blazor TreeGrid component and much more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
