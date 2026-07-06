@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Data Form in Blazor WASM App | Syncfusion
-description: Check out and learn how to get started with the Blazor Data Form component in a Blazor WebAssembly App.
+description: Check out and learn about how to get started with the Blazor Data Form component in a Blazor WebAssembly App.
 platform: Blazor
 component: Data Form
 documentation: ug
