@@ -9,7 +9,7 @@ documentation: ug
 
 # Restrict drag and drop upload
 
-In the Blazor File Manager component, you are able to prevent the external drag and drop upload action for any types of files or folders by setting the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property as `@null` in the [`FileManagerUploadSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) class. 
+In the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component, you are able to prevent the external drag and drop upload action for any types of files or folders by setting the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property as `@null` in the [`FileManagerUploadSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) class. 
 
 The following example demonstrates how to prevent the external drag and drop upload actions for all types of files in the Blazor File Manager component.
 

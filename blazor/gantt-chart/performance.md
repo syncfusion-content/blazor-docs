@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance tips for Blazor Gantt Chart component
 
-This guide provides practical strategies to enhance the loading performance of the Blazor Gantt Chart component, especially when dealing with large datasets and multiple columns. It provides valuable insights into effective strategies and best practices for binding extensive data sources without encountering performance degradation. It includes actionable tips to ensure smooth data binding and a responsive user experience.
+This guide provides practical strategies to enhance the loading performance of the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component, especially when dealing with large datasets and multiple columns. It provides valuable insights into effective strategies and best practices for binding extensive data sources without encountering performance degradation. It includes actionable tips to ensure smooth data binding and a responsive user experience.
 
 ## How to improve loading performance when binding large dataset?
 

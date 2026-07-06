@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tools in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn here all about drawing tools in Blazor Diagram component and much more details.
+description: Explore the Blazor Diagram component's drawing tools, connectors, annotations, and customization options with detailed documentation.
 platform: Blazor
 control: Diagram Component
 documentation: ug

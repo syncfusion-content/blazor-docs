@@ -226,6 +226,8 @@ dotnet run
 
 {% endtabcontents %}
 
+N> Looking for the full Blazor File Manager Component component overview, features, pricing, and documentation? Visit the [Blazor File Manager Component](https://www.syncfusion.com/blazor-components/blazor-file-manager) page.
+
 ## See also
 
 1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)

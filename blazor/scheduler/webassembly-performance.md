@@ -6,7 +6,7 @@ platform: Blazor
 control: Scheduler
 documentation: ug
 ---
-
+ 
 # WebAssembly Performance in Blazor Scheduler Component
 
 This section provides performance guidelines for using Blazor Scheduler component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).

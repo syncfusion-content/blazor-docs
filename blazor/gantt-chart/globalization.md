@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Gantt Chart component
 
-The Blazor Gantt Chart component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 
 Add **UseRequestLocalization** middle-ware in the **Program.cs** file to get browser Culture Info.
 

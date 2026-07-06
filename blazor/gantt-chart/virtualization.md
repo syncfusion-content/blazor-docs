@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtualization in Blazor Gantt Chart Component
 
-Virtual scrolling in the Blazor Gantt Chart improves performance by rendering only visible rows, columns, and timeline segments, reducing DOM operations for large datasets or extended timelines. Row virtualization handles large task volumes (e.g. displaying 10,000 tasks in a project), timeline virtualization loads timeline cells on-demand during horizontal scrolling (e.g. navigating multi-year timelines), and column virtualization renders only the columns currently in view. These techniques enable efficient and scalable project management.
+Virtual scrolling in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) improves performance by rendering only visible rows, columns, and timeline segments, reducing DOM operations for large datasets or extended timelines. Row virtualization handles large task volumes (e.g. displaying 10,000 tasks in a project), timeline virtualization loads timeline cells on-demand during horizontal scrolling (e.g. navigating multi-year timelines), and column virtualization renders only the columns currently in view. These techniques enable efficient and scalable project management.
 
 ## Configure row virtualization
 

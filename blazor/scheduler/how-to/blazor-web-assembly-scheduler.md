@@ -6,7 +6,7 @@ platform: Blazor
 control: Scheduler
 documentation: ug
 ---
-
+ 
 # Blazor Scheduler Component in WebAssembly App using Visual Studio
 
 This article provides a step-by-step instructions for building Blazor WebAssembly App with [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).

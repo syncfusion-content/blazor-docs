@@ -9,7 +9,7 @@ documentation: ug
 
 # Undo and Redo in Blazor Gantt Chart Component
 
-The Syncfusion® Blazor Gantt Chart component includes built-in undo and redo functionality to revert or restore recent changes. This support improves editing efficiency, reduces errors, and supports quick recovery from accidental modifications.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component includes built-in undo and redo functionality to revert or restore recent changes. This support improves editing efficiency, reduces errors, and supports quick recovery from accidental modifications.
 
 ## Enable undo and redo
 
@@ -185,7 +185,7 @@ The following table lists the built-in actions that can be included for undo and
 
 ## Configure undo redo step count
 
-The Syncfusion® Blazor Gantt Chart component provides an option to limit the number of undo and redo actions stored in the history. The number of stored history entries can be controlled using the [MaxUndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MaxUndoRedoSteps) property. The default capacity is `20`. When the count exceeds this value, the oldest entry is discarded and the newest action is appended, ensuring consistent memory usage.
+The Blazor Gantt Chart component provides an option to limit the number of undo and redo actions stored in the history. The number of stored history entries can be controlled using the [MaxUndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MaxUndoRedoSteps) property. The default capacity is `20`. When the count exceeds this value, the oldest entry is discarded and the newest action is appended, ensuring consistent memory usage.
 
 The following example illustrates how to configure the maximum number of undo and redo steps.
 

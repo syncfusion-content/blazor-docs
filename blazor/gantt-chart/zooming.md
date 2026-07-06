@@ -9,7 +9,7 @@ documentation: ug
 
 # Zooming functionality in Blazor Gantt Chart component
 
-The Blazor Gantt Chart component provides zooming support to adjust the timeline view dynamically. This includes increasing or decreasing the width of timeline cells and changing the timeline units to view tasks across various timespan from minutes to decades.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides zooming support to adjust the timeline view dynamically. This includes increasing or decreasing the width of timeline cells and changing the timeline units to view tasks across various timespan from minutes to decades.
 
 To enable zooming features, add `ZoomIn`, `ZoomOut`, and `ZoomToFit` to the toolbar items collection. These actions can also be triggered externally using the built-in methods like [ZoomInAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ZoomInAsync), [ZoomOutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ZoomOutAsync), and [ZoomToFitAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ZoomToFitAsync).
 
