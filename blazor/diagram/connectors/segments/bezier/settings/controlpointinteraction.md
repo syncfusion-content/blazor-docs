@@ -63,6 +63,6 @@ The visibility of the Bezier segment's control points can be enabled or disabled
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtreMjDxKTeXVpUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrHXxBezegfhBnt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Connectors/Segments/ControlPointsVisibilitySample.razor).
