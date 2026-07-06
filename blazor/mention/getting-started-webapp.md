@@ -256,7 +256,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTNCAjLjgvQOEF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention Component](images/blazor-mention.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVnZRAXMaVSDqth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Mention Component](images/blazor-mention.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Mention).
 
@@ -311,7 +311,7 @@ In the bellow example, the `Target` property of the Mention component is set to 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrfXCADhtJlNdUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention target](images/blazor-mention-target.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLdDRUjCYugUijJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Mention target](images/blazor-mention-target.webp)" %}
 
 ## See also
 
