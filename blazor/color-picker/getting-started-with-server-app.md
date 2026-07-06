@@ -26,7 +26,7 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
@@ -43,7 +43,7 @@ Alternatively, create a **Blazor Server App** using Visual Studio Code via [Micr
 Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
@@ -71,7 +71,7 @@ Install the [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight bash tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -86,7 +86,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Inputs -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -101,7 +101,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.Inputs -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -118,7 +118,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
@@ -147,7 +147,7 @@ builder.Services.AddSyncfusionBlazor();
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -188,7 +188,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 Open the terminal and run the following command.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet run
 
@@ -202,7 +202,7 @@ dotnet run
 Open the command prompt and run the following command.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet run
 

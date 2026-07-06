@@ -26,7 +26,7 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -43,7 +43,7 @@ Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via 
 Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -69,7 +69,7 @@ Install the [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight bash tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Inputs -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -84,7 +84,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Inputs -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -99,7 +99,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.Inputs -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
