@@ -207,7 +207,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLJXigtqGYfziwd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Signature Component](./images/blazor-signature-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdNQDrWkVQqYGF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Signature Component](./images/blazor-signature-component.webp)" %}
 
 N> The Signature component will render default height and width of canvas (300 * 150), when the Signature height and width are not specified.
 
