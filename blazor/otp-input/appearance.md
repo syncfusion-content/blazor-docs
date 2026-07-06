@@ -679,4 +679,4 @@ Cell performs a subtle wiggle animation when hovered — adds playful feedback t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBxDfrNIQOpmrvF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVRtmtCKFuWYLCi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
