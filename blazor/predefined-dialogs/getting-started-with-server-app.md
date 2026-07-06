@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Predefined Dialogs in Blazor Server App
 
-This section briefly explains about how to include [Blazor Predefined Dialogs](https://blazor.syncfusion.com/demos/predefined-dialogs/default-functionalities?theme=fluent2) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include Blazor Predefined Dialogs component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -158,8 +158,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in Blazor application.
-
 ## Add Blazor Predefined Dialogs component
 
 `SfDialogProvider` opens predefined dialogs based on `SfDialogService` settings from anywhere in the application. Add `SfDialogProvider` in `MainLayout.razor` or in a specific page, but include it only once in the app. When added to `MainLayout.razor`, predefined dialogs are available throughout the application; when added to a specific page, dialogs are available only within that page.
@@ -186,11 +184,12 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
-In the following example, an alert dialog is displayed upon clicking a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
+In the following example, an alert dialog is displayed upon clicking a Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveServer
 {% include_relative code-snippet/alert-dialog.razor %}
 
 {% endhighlight %}

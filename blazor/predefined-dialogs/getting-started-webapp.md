@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Predefined Dialogs in Blazor Web App
 
-This section briefly explains about how to include [Blazor Predefined Dialogs](https://blazor.syncfusion.com/demos/predefined-dialogs/default-functionalities?theme=fluent2) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include Blazor Predefined Dialogs component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -138,7 +138,7 @@ Open the **Program.cs** file in Blazor Web App and register the Blazor service. 
 ....
 using Syncfusion.Blazor;
 ....
-builder.Services.AddScoped<SfDialogService>();
+builder.Services.AddScoped<Syncfusion.Blazor.Popups.SfDialogService>();
 builder.Services.AddSyncfusionBlazor();
 ....
 
@@ -159,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Dialog Provider
 
