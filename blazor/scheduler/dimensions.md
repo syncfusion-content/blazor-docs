@@ -149,4 +149,4 @@ In the following example, the application header height (4.6rem) is reduced from
 }
 ```
 
-![Blazor Scheduler with View Port Height](images/blazor-scheduler-view-port-height.png)
+![Blazor Scheduler with View Port Height](images/blazor-scheduler-view-port-height.webp)

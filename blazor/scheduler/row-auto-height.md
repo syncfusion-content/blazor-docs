@@ -60,9 +60,9 @@ To get start quickly about row auto height in our Scheduler, you can check on th
 }
 ```
 
-![Row Auto Height in Blazor Scheduler](images/blazor-scheduler-row-auto-height.png)
+![Row Auto Height in Blazor Scheduler](images/blazor-scheduler-row-auto-height.webp)
 
-![Blazor Scheduler in Timeleine Month View](images/blazor-scheduler-timeline-month.png)
+![Blazor Scheduler in Timeleine Month View](images/blazor-scheduler-timeline-month.webp)
 
 ## Timeline views with multiple resources
 
@@ -119,7 +119,7 @@ To get start quickly about row auto height in our Scheduler, you can check on th
 }
 ```
 
-![Timeline Views with Multiple Resources in Blazor Scheduler](images/blazor-scheduler-timeline-resource.png)
+![Timeline Views with Multiple Resources in Blazor Scheduler](images/blazor-scheduler-timeline-resource.webp)
 
 ## Appointments occupying entire cell
 
@@ -181,6 +181,6 @@ By default, with the feature [`EnableAutoRowHeight`](https://help.syncfusion.com
 }
 ```
 
-![Ignoring Whitespace in Blazor Scheduler](images/blazor-scheduler-ignore-whitespace.png)
+![Ignoring Whitespace in Blazor Scheduler](images/blazor-scheduler-ignore-whitespace.webp)
 
 N> The property [`IgnoreWhitespace`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.IScheduleEventSettings.html#Syncfusion_Blazor_Schedule_IScheduleEventSettings_IgnoreWhitespace) will be applicable only when [`EnableAutoRowHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EnableAutoRowHeight) feature is enabled in the Scheduler.

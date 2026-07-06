@@ -53,7 +53,7 @@ To modify the Scheduler appearance, you need to override the default CSS of Sche
 
 ### Work cells in vertical views of scheduler
 
-This CSS selector targets the work cells in the vertical views (Day, Week, and WorkWeek) of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler component. These cells represent the individual time slots arranged vertically where appointments are displayed and can be scheduled.
+This CSS selector targets the work cells in the vertical views (Day, Week, and WorkWeek) of the Scheduler component. These cells represent the individual time slots arranged vertically where appointments are displayed and can be scheduled.
 
 ```cshtml
 
@@ -100,7 +100,7 @@ This CSS selector targets the work cells in the vertical views (Day, Week, and W
 
 ### Work cells in month view of scheduler
 
-This CSS selector targets the work cells (day cells) that belong to the current month in the month view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells represent the individual days of the displayed month where users can schedule and view appointments.
+This CSS selector targets the work cells (day cells) that belong to the current month in the month view of the Scheduler. These cells represent the individual days of the displayed month where users can schedule and view appointments.
 
 ```cshtml
 
@@ -187,7 +187,7 @@ This CSS selector targets the work cells that represent days from adjacent month
 
 ###  Work cells in timeline views of scheduler
 
-This CSS selector targets the work cells in the standard timeline views of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells represent time slots arranged horizontally across the scheduler.
+This CSS selector targets the work cells in the standard timeline views of the Scheduler. These cells represent time slots arranged horizontally across the scheduler.
 
 ```cshtml
 
@@ -232,7 +232,7 @@ This CSS selector targets the work cells in the standard timeline views of the S
 
 ###  Work cells in timeline month view of scheduler
 
-This CSS selector targets the work cells in the timeline month view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler component.
+This CSS selector targets the work cells in the timeline month view of the Scheduler component.
 
 ```cshtml
 
@@ -275,7 +275,7 @@ This CSS selector targets the work cells in the timeline month view of the Syncf
 
 ###  Work cells in timeline year view of scheduler
 
-This CSS selector targets the work cells in the timeline year view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler component. These cells represent time slots across the entire year, arranged in a timeline format that provides an overview of appointments throughout the entire year.
+This CSS selector targets the work cells in the timeline year view of the Scheduler component. These cells represent time slots across the entire year, arranged in a timeline format that provides an overview of appointments throughout the entire year.
 
 ```cshtml
 
@@ -361,7 +361,7 @@ This CSS selector targets the work cells representing days from adjacent months 
 
 ### Work cells in month agenda view of scheduler
 
-This CSS selector targets the work cells that represent the days in the month agenda view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells are areas where appointments can be placed.
+This CSS selector targets the work cells that represent the days in the month agenda view of the Scheduler. These cells are areas where appointments can be placed.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -451,7 +451,7 @@ This CSS selector targets the work cells representing days that belong to adjace
 
 ### Work Cells of Other Month in Year View of Scheduler
 
-This CSS selector targets the work cells representing days from adjacent months (previous or next month) that are visible in the year view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler.
+This CSS selector targets the work cells representing days from adjacent months (previous or next month) that are visible in the year view of the Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -494,7 +494,7 @@ This CSS selector targets the work cells representing days from adjacent months 
 
 ### All Day Cells in Vertical Views of Scheduler
 
-This CSS selector targets the all-day cells in the vertical views (Day, Week, and WorkWeek) of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler component. These cells represent the time slots designated for all-day events, providing users with a straightforward way to visualize and manage significant appointments.
+This CSS selector targets the all-day cells in the vertical views (Day, Week, and WorkWeek) of the Scheduler component. These cells represent the time slots designated for all-day events, providing users with a straightforward way to visualize and manage significant appointments.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -539,7 +539,7 @@ This CSS selector targets the all-day cells in the vertical views (Day, Week, an
 
 ### Work Hour Cells in Vertical Views of Scheduler
 
-This CSS selector targets the work hour cells in vertical views (Day, Week, WorkWeek) of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells show the working hours where users can add appointments, making it easier to see available time slots.
+This CSS selector targets the work hour cells in vertical views (Day, Week, WorkWeek) of the Scheduler. These cells show the working hours where users can add appointments, making it easier to see available time slots.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -584,7 +584,7 @@ This CSS selector targets the work hour cells in vertical views (Day, Week, Work
 
 ### Work Day Cells in Month View of Scheduler
 
-This CSS selector targets the work day cells in the month view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells show the days meant for scheduling work, helping users easily see which days are available for appointments.
+This CSS selector targets the work day cells in the month view of the Scheduler. These cells show the days meant for scheduling work, helping users easily see which days are available for appointments.
 
 ```cshtml
 
@@ -628,7 +628,7 @@ This CSS selector targets the work day cells in the month view of the Syncfusion
 
 ### Work Day Cells in Month Agenda View of Scheduler
 
-This CSS selector targets the work day cells that represent the days in the month agenda view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells show the specific days within the scheduled month where users can place appointments.
+This CSS selector targets the work day cells that represent the days in the month agenda view of the Scheduler. These cells show the specific days within the scheduled month where users can place appointments.
 
 ```cshtml
 
@@ -672,7 +672,7 @@ This CSS selector targets the work day cells that represent the days in the mont
 
 ### Work Hour Cells in Timeline Views of Scheduler
 
-This CSS selector targets the work hour cells in the timeline views (TimelineDay, TimelineWeek) of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells represent the slots of time designated for work hours, providing users with a visual indication of when appointments can be scheduled.
+This CSS selector targets the work hour cells in the timeline views (TimelineDay, TimelineWeek) of the Scheduler. These cells represent the slots of time designated for work hours, providing users with a visual indication of when appointments can be scheduled.
 
 ```cshtml
 
@@ -717,7 +717,7 @@ This CSS selector targets the work hour cells in the timeline views (TimelineDay
 
 ### Work Day Cells in Timeline Month View of Scheduler
 
-This CSS selector targets the work day cells in the timeline month view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells represent the specific days designated as working days for the month timeline, allowing users to visualize their tasks and appointments within those time frames.
+This CSS selector targets the work day cells in the timeline month view of the Scheduler. These cells represent the specific days designated as working days for the month timeline, allowing users to visualize their tasks and appointments within those time frames.
 
 ```cshtml
 
@@ -761,7 +761,7 @@ This CSS selector targets the work day cells in the timeline month view of the S
 
 ### Work Day Cells in Timeline Year View of Scheduler
 
-This CSS selector targets the work day cells in the timeline year view of the Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler. These cells highlight the working days throughout the entire year, giving users a comprehensive overview of their yearly schedule and enabling easier appointment management.
+This CSS selector targets the work day cells in the timeline year view of the Scheduler. These cells highlight the working days throughout the entire year, giving users a comprehensive overview of their yearly schedule and enabling easier appointment management.
 
 ```cshtml
 
@@ -1073,7 +1073,7 @@ This CSS selector targets appointment elements specifically in the timeline mont
 
 ### Appointment in timeline year view of scheduler
 
-This CSS selector targets appointment elements specifically in the timeline year view of the Blazor Scheduler component. The Timeline Year view in Blazor Scheduler is designed to display events across an entire year in a horizontal, scrollable layout.
+This CSS selector targets appointment elements specifically in the timeline year view of the Blazor Scheduler component. The Timeline Year view in Scheduler is designed to display events across an entire year in a horizontal, scrollable layout.
 
 ```cshtml
 
