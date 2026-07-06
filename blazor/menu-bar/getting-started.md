@@ -202,6 +202,8 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
+N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
+
 **Run the application**
 
 {% tabcontents %}
@@ -243,8 +245,6 @@ dotnet run
 {% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBxtxgZrzAhyvDQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MenuBar Component](./images/blazor-menubar.webp)" %}
-
-N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MenuBar).
 
