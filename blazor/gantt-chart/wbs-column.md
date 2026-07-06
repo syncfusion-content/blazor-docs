@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WBS Column in Blazor Gantt Chart Component | Syncfusion®
-description: Checkout and learn here all about WBS Column in Blazor Gantt Chart component and much more details.
+description: Checkout and learn here all about WBS Column in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -94,6 +94,8 @@ WBS codes follow a hierarchical structure: parent tasks use sequential numbers (
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLoDEroBqxKFzeJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> When the WBS column is enabled in the Blazor Gantt Chart using the [ShowWbsColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowWbsColumn) property along with the [WbsCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_WbsCode) and [WbsPredecessor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_WbsPredecessor) fields, the default **ID** and **Predecessor** columns are automatically disabled, as the WBS and WBS Predecessor columns already display the ID and predecessor values based on the task hierarchy.
 
 > The WBS column in Gantt chart currently supports string data types for both WBS codes and WBS predecessor values, ensuring consistent text-based representation across all project hierarchy levels and dependency relationships.
 
