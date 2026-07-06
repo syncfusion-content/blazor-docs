@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo Redo in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn here all about undo redo support in Blazor Diagram component and much more.
+description: Learn all about undo and redo support in the Blazor Diagram component, including implementation details, customization options, and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -191,7 +191,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 <SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">    
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">
 </SfDiagramComponent>
 
 @code
