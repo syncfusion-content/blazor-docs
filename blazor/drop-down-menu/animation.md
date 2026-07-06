@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Dropdown Menu Component | Syncfusion®
-description: Checkout and learn here all about Customize popup width in in Blazor Dropdown Menu component and more.
+description: Check out and learn here all about Customize popup width in Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -58,4 +58,4 @@ In this sample, three different SfDropDownButton instances are rendered, each sh
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVTWhizMQTMfCYP?appbar=false&editor=false&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Changing Blazor DropDownMenu Animation](./images/blazor-dropdownmenu-animation.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBxjdVkgGcuguUV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor DropDownMenu Animation](./images/blazor-dropdownmenu-animation.webp)" %}
