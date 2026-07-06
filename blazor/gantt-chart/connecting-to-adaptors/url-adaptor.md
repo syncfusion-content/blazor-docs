@@ -1,18 +1,18 @@
 ---
 layout: post
 title: UrlAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
-description: Learn about bind data and performing CRUD operations using UrlAdaptor in Blazor Gantt Chart much more details.
+description: Learn how to bind remote data and perform CRUD operations using the UrlAdaptor in Blazor Gantt Chart.
 platform: Blazor
 control: Gantt Chart
-keywords: adaptors, urladaptor, url adaptor, remotedata 
+keywords: adaptors, UrlAdaptor, url adaptor, remotedata 
 documentation: ug
 ---
 
 # UrlAdaptor in Syncfusion Blazor Gantt Chart
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor that enables communication between remote data services and a UI component. It supports seamless data binding and interaction with custom API services or any remote endpoint via URLs. The `UrlAdaptor` is particularly useful in scenarios where a custom API service with unique logic for handling data and CRUD operations is in place.
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) enables the Blazor Gantt Chart to load and manage task data from a remote server through a custom API service. It is the recommended choice when your application stores data on a server and needs to fetch, update, or delete records through an API rather than loading everything at once on the client side.
 
-This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server‑side data operations and CRUD actions.
+This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server side data operations and CRUD actions.
 
 ## Creating an API service
  
@@ -134,7 +134,7 @@ namespace URLAdaptor.Controllers
         /// <param name="DataManagerRequest">
         /// The request object contains parameters for searching, filtering, sorting, skip, and take.
         /// </param>
-        /// <returns>Returns the data and total count in result and count format.</returns>
+        /// <returns>Returns the processed data and total record count in result and count format.</returns>
         [HttpPost]
         [Route("api/[controller]")]
         public object Post([FromBody] DataManagerRequest DataManagerRequest)
@@ -169,11 +169,11 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:71xx/api/gantt` (where `71xx` represents the port number in the launchSettings.json). Please verify that the API returns the task data.
+Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:xxxx/api/gantt` (where `xxxx` represents the port number in **launchSettings.json**). Verify that the API returns the task data before proceeding.
 
 ## Connecting Blazor Gantt Chart to an API service
  
-To integrate the Blazor Gantt Chart into your project using Visual Studio 2026, follow the below steps:
+To integrate the Blazor Gantt Chart into your project, follow these steps:
  
 **1. Install Blazor Gantt and Themes NuGet packages**
  
@@ -231,7 +231,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
  
 **4. Add Blazor Gantt Chart and configure with server**
  
-To connect the Blazor Gantt chart to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). Update the **Index.razor** file as follows.
+To connect the Blazor Gantt Chart to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service are set up to return the resulting data in the result and count format.
  
@@ -310,11 +310,11 @@ namespace URLAdaptor.Controllers
 {% endhighlight %}
 {% endtabs %}
  
-> Replace `https://localhost:71xx/api/gantt`(Replace `71xx` with the port number shown in the **launchSettings.json**) with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> Replace `https://localhost:xxxx/api/gantt`(Replace `xxxx` with the port number shown in the **launchSettings.json**) with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
  
 **5. Run the application**
  
-When you run the application, the Blazor Gantt Chart  will display data fetched from the API.
+When you run the application, the Blazor Gantt Chart will display data fetched from the API.
  
 ![UrlAdaptor Data](../images/url-adaptor.webp)
  
@@ -519,7 +519,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ## Handling CRUD operations
 
-The Blazor Gantt Chart seamlessly integrates CRUD (Create, Read, Update, and Delete) operations with server-side controller actions through specific properties: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). These properties enable the Gantt Chart to communicate with the data service for every action, facilitating server-side operations.
+The Blazor Gantt Chart communicates CRUD (Create, Read, Update, and Delete) actions to the server through dedicated URL properties on `SfDataManager`: [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), and [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl). Each action triggers an HTTP POST to its corresponding endpoint, allowing the server to apply the appropriate database operation. To enable editing, refer to the [editing documentation](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks).
 
 **CRUD operations mapping**
 
@@ -613,7 +613,7 @@ To insert a new record, use the `InsertUrl` property to specify the controller a
 /// <summary>
 /// Inserts a new data item into the data collection.
 /// </summary>
-/// <param name="value">It contains the new record detail which is need to be inserted.</param>
+/// <param name="newRecord">It contains the new record detail that needs to be inserted.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Insert")]
@@ -641,7 +641,7 @@ For updating existing records, use the `UpdateUrl` property to specify the contr
 /// <summary>
 /// Update a existing data item from the data collection.
 /// </summary>
-/// <param name="updatedRecord">It contains the updated record detail which is need to be updated.</param>
+/// <param name="updatedRecord">It contains the updated record detail that needs to be updated.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Update")]
@@ -678,7 +678,7 @@ To delete existing records, use the `RemoveUrl` property to specify the controll
 /// <summary>
 /// Remove a specific data item from the data collection.
 /// </summary>
-/// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
+/// <param name="deletedRecord">It contains the specific record detail that needs to be removed.</param>
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/Remove")]
@@ -697,4 +697,21 @@ public void Remove([FromBody] CRUDModel<TaskData> deletedRecord)
 {% endhighlight %}
 {% endtabs %}
 
+## Real-world use cases
 
+The `UrlAdaptor` is a strong fit for Gantt scenarios where task data lives on a server and must be kept in sync as users view, edit, or manage the project schedule. Typical use cases include:
+
+- **Enterprise project tracking systems** – Large organizations that maintain thousands of tasks in a central database can expose that data through a single API endpoint and let the Gantt load only what it needs, keeping the browser fast and the data always current.
+- **Construction and engineering schedules** – Work breakdown structures with many levels (Phase → Stage → Activity → Task) where data changes daily and the Gantt must always reflect the latest server state rather than a stale client-side snapshot.
+- **Team collaboration tools** – Applications where multiple users update task progress simultaneously. Because every change is saved back to the server through the API, the shared data store remains the single source of truth for all users.
+- **Resource and capacity planning** – Planning dashboards that pull task assignments and timelines from a backend service, allowing managers to adjust schedules and immediately persist those changes without a full page reload.
+- **Legacy system integration** – When task data already exists in an older system or a third-party platform, a lightweight API wrapper around that data lets the Gantt connect to it using the `UrlAdaptor` without migrating or duplicating the data.
+
+## Benefits of using the UrlAdaptor with the Gantt Chart
+
+- **Works with any backend** – The `UrlAdaptor` communicates through a standard HTTP POST endpoint, so it connects to any server technology — ASP.NET Core, Node.js, Java Spring, or Python Flask — without adaptor-specific server code.
+- **Server-side data operations** – Searching, filtering, and sorting are handled on the server, so the Gantt only receives the rows it needs. This keeps the application responsive even when the underlying dataset has thousands of tasks.
+- **Reduced client payload** – Because the server slices and shapes the data before sending it, the browser never has to download or hold the entire task list in memory.
+- **Full CRUD lifecycle** – Insert, update, and delete operations are each routed to the same API endpoint. Every change made through the Gantt — inline edit, dialog edit, toolbar actions, or taskbar drag/resize — is persisted back to the server automatically.
+- **Custom authentication and authorization** – Because you control the API, you can apply any authentication scheme (JWT, cookies, API keys) and enforce row-level permissions before the data reaches the Gantt.
+- **Reusable API** – The same endpoint that powers the Gantt can serve other UI components, mobile apps, or third-party integrations, avoiding duplicate server logic.
