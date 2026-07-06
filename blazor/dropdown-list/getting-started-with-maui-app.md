@@ -184,7 +184,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLRZdrYBGspxvmI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.webp)" %}
 
 ## Configure the popup list
 
@@ -222,7 +222,7 @@ By default, the width of the popup list automatically adjusts according to the D
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTDWBYqHlMcKgk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVxDHruBwegSVIJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.webp)" %}
 
 ## Get selected value
 
