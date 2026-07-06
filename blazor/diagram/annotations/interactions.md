@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation Interaction in Blazor Diagram Component
 
-Diagram provides extensive support for annotation interactions. Annotations can be selected, dragged, resized, and rotated interactively. By default, annotation interaction is disabled and can be enabled by configuring the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the annotation.
+Diagram provides extensive support for annotation interactions. Annotations can be selected, dragged, resized, and rotated interactively. By default, annotation interaction is disabled and can be enabled by configuring the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the annotation. 
 
 ## How to Enable Annotation Interaction
 
