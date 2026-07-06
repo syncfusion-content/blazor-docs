@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about cell in Syncfusion Blazor TreeGrid component and much more details.
+title: Cell in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about cell in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
