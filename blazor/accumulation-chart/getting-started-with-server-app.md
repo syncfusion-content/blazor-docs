@@ -68,7 +68,7 @@ Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.Charts`) and install it.
 
-Alternatively, you can install the same package using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -82,7 +82,7 @@ Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -96,7 +96,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -132,7 +132,6 @@ Open the **Program.cs** file in Blazor Server App and register the Blazor servic
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
-....
 using Syncfusion.Blazor;
 ....
 builder.Services.AddSyncfusionBlazor();
@@ -178,21 +177,20 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {
     public class ChartData
     {
-        public string Country { get; set;}
-        public double Medals { get; set;}
+        public string Country { get; set; }
+        public double Medals { get; set; }
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { Country= "United States of America", Medals= 46 },
-        new ChartData { Country= "Great Britain", Medals= 27 },
         new ChartData { Country= "China", Medals= 26 },
         new ChartData { Country= "United Kingdom", Medals= 23 },
         new ChartData { Country= "Australia", Medals= 16 },
         new ChartData { Country= "India", Medals= 36 },
         new ChartData { Country= "Nigeria", Medals= 12 },
         new ChartData { Country= "Brazil", Medals= 20 },
-     };
+    };
 }
 
 {% endhighlight %}
@@ -244,5 +242,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
