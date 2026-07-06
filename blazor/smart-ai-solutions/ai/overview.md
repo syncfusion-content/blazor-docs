@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Syncfusion® Blazor AI Library Overview | Syncfusion®
+title: Blazor AI Library Overview | Syncfusion®
 description: Learn her about discover the Syncfusion® Blazor AI library, its key features, supported AI providers, how it powers AI-driven features in Blazor applications.
 platform: Blazor
 control: AI Integration
 documentation: ug
 ---
 
-# Syncfusion® Blazor AI Library Overview
+# Blazor AI Library Overview
+
 The [Blazor AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) library provides robust AI integration for Blazor applications, enabling connections to leading AI services such as [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), [Ollama](https://ollama.com), and custom AI providers. The library powers Syncfusion intelligent components, including the [Smart TextArea](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started) and [Smart Paste Button](https://blazor.syncfusion.com/documentation/smart-paste/getting-started), enabling AI‑enhanced applications. It offers text completion capabilities for real-time suggestions, content generation, and intelligent text processing tailored to user input and application needs.
 
 ## Prerequisites

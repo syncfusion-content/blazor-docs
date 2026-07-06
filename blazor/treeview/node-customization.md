@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node customization in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Node customization in Syncfusion Blazor TreeView component and much more details.
+title: Node customization in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Node customization in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug

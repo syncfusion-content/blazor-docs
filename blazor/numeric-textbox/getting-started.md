@@ -207,7 +207,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLzXCKXVVvZqDCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBnXxUDpUdClhCA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/NumericTextBox).
 
@@ -225,7 +225,7 @@ Set the minimum and maximum range of values in the Numeric Textbox using the [Mi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzjMgNLBEbgCZT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRDxKNpKHmjgrq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.webp)" %}
 
 ## Formatting the value
 
@@ -239,7 +239,7 @@ Set the display format of the Numeric Textbox component using the [Format](https
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBzjCUtBgMxHgbo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVRDRAZzgwJWeHd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.webp)" %}
 
 ## Precision of numbers
 
@@ -257,7 +257,7 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrpDsqNBqKqBEud?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVnXxUXpUFNUbPW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.webp)" %}
 
 ## See also
 

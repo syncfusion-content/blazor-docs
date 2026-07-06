@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about sorting in Syncfusion Blazor TreeGrid component and much more details.
+title: Sorting in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about sorting in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

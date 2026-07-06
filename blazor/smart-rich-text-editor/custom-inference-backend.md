@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom AI Service Integration with Syncfusion Smart Rich Text Editor
-description: Learn how to use IChatInferenceService to integrate custom AI services with the Syncfusion Blazor Smart Rich Text Editor component.
+title: AI Service Integration with Smart Rich Text Editor | Syncfusion®
+description: Learn how to use IChatInferenceService to integrate custom AI services with the Blazor Smart Rich Text Editor component.
 platform: Blazor
 control: Smart Rich Text Editor
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom AI Service Integration with Blazor Smart Rich Text Editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component leverages AI to provide context-aware content generation and editing, typically using OpenAI or Azure OpenAI services. Developers can integrate custom AI services using the `IChatInferenceService` interface, which standardizes communication between the Smart Rich Text Editor and third-party AI providers. This section explains how to implement and register a custom AI service for the Smart Rich Text Editor.
+The Blazor Smart Rich Text Editor component leverages AI to provide context-aware content generation and editing, typically using OpenAI or Azure OpenAI services. Developers can integrate custom AI services using the `IChatInferenceService` interface, which standardizes communication between the Smart Rich Text Editor and third-party AI providers. This section explains how to implement and register a custom AI service for the Smart Rich Text Editor.
 
 ## IChatInferenceService Interface
 
-The `IChatInferenceService` interface defines a contract for integrating custom AI services with Syncfusion Smart Rich Text Editor. It enables the Smart Rich Text Editor to request and receive AI-generated responses.
+The `IChatInferenceService` interface defines a contract for integrating custom AI services with Blazor Smart Rich Text Editor. It enables the Smart Rich Text Editor to request and receive AI-generated responses.
 
 ```csharp
 using Syncfusion.Blazor.AI;
@@ -81,7 +81,7 @@ var app = builder.Build();
 
 1. Implement and register the custom AI service as shown above.
 2. Follow the [Getting Started](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp) guide to configure and render the Smart Rich Text Editor component in the application and that prerequisites are met.
-3. Run the application press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Rich Text Editor component in the default web browser.
+3. Run the application press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio, run `dotnet run` from the CLI or integrated terminal in VS Code, or use the Run command in your preferred IDE to render the Blazor Smart Rich Text Editor component in the default web browser.
 4. Use the AI AssistView or AI Commands in the Smart Rich Text Editor to verify that the custom AI service generates appropriate responses.
 
 ![Smart Rich Text Editor with Custom AI Service](images/smart-richtexteditor-custom-ai-service.webp)
@@ -105,7 +105,7 @@ If the custom AI service does not work as expected, try the following:
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor Smart Rich Text Editor](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
+* [Getting Started with Blazor Smart Rich Text Editor](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp)
 * [OpenAI Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/openai-service)
 * [Azure OpenAI Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/azure-openai-service)
 * [Ollama Configuration](https://blazor.syncfusion.com/documentation/smart-rich-text-editor/ollama)

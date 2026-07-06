@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Create a Blazor Application Using VS Code Extension | Syncfusion®
-description: Learn how to create a Blazor application using the Syncfusion Blazor extension for Visual Studio Code.
+description: Learn how to create a Blazor application using the Blazor extension for Visual Studio Code and much more details.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Create a Syncfusion Blazor application
+# Create a Blazor application
 
 The **Syncfusion® Blazor Template Studio** for Visual Studio Code scaffolds a Blazor application preconfigured with Syncfusion® NuGet packages, namespaces, themes, and sample component render code. Use the guided wizard to quickly create an application tailored to your platform and selected controls.
 
