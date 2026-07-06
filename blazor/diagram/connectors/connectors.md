@@ -15,7 +15,7 @@ Connectors create links between points, nodes or ports to represent the relation
 
 A [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) is created by defining source and target points of the connector. The path to be drawn can be defined with a collection of segments.
 
-To learn how to create and customize connectors easily in the Blazor Diagram component, watch the following video:
+To learn how to create and customize connectors easily in the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component, watch the following video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=EH4c8QVQoHo" %}
 

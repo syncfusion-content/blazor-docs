@@ -9,7 +9,7 @@ documentation: ug
 
 # Lane Interaction in Blazor Diagram Component
 
-The diagram supports interactive lane operations, including selecting, resizing, and swapping lanes, as well as working with child elements inside lanes. 
+The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) supports interactive lane operations, including selecting, resizing, and swapping lanes, as well as working with child elements inside lanes. 
 
 ## How to Select a Lane
 

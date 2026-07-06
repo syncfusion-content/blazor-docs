@@ -9,7 +9,7 @@ documentation: ug
 
 # Container in Blazor Diagram Component
 
-Containers provide a structured way to organize and manage collections of diagram elements. They act as logical groupings of shapes enclosed by a customizable border, allowing for intuitive drag-and-drop operations during runtime. Changes to the container, such as position, size, or style, do not affect its children. This enhances diagram clarity by maintaining organization while allowing individual elements to be edited separately.
+Containers provide a structured way to organize and manage collections of [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) elements. They act as logical groupings of shapes enclosed by a customizable border, allowing for intuitive drag-and-drop operations during runtime. Changes to the container, such as position, size, or style, do not affect its children. This enhances diagram clarity by maintaining organization while allowing individual elements to be edited separately.
 
 ## How to Create a Container
 A container can be created and added to the diagram either programmatically or interactively.

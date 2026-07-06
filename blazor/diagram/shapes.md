@@ -9,7 +9,7 @@ documentation: ug
 
 # Node Shapes in Blazor Diagram Component
 
-Diagram supports creating several kinds of nodes. The available shape types include:
+[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) supports creating several kinds of nodes. The available shape types include:
 
 * Text shape
 * Image shape

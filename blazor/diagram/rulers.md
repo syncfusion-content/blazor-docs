@@ -9,7 +9,7 @@ documentation: ug
 
 # Ruler Settings in Blazor Diagram Component
 
-The Ruler provides horizontal and vertical guides for measuring in the Diagram control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful in creating scale models.
+The Ruler provides horizontal and vertical guides for measuring in the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful in creating scale models.
 
 ## How to Add Rulers to the Diagram Component
 

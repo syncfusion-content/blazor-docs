@@ -17,7 +17,7 @@ Nodes are graphical objects used to represent the geometric information, process
 
 A node can be created and added to the diagram either programmatically or interactively. In the diagram area, nodes are stacked from bottom to top in the order they are added.
 
-To learn more about creating nodes and exploring different node shapes in a Blazor Diagram, refer to the below video link.
+To learn more about creating nodes and exploring different node shapes in a [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), refer to the below video link.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=4_RCxBnDs3w" %}
 

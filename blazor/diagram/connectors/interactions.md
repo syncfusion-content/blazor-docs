@@ -9,7 +9,7 @@ documentation: ug
 
 # Interaction in Diagram Component
 
-Connectors support interactive operations such as selection, dragging, and routing to improve diagram editing and readability.
+Connectors support interactive operations such as selection, dragging, and routing to improve [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) editing and readability.
 
 ## How to Select and Deselect Connectors
 

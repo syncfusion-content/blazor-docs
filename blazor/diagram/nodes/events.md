@@ -11,7 +11,7 @@ documentation: ug
 
 ## Events
 
-The diagram provides a several events support for node that triggers when interacting with the node.
+The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) provides a several events support for node that triggers when interacting with the node.
 
 ## How to Handle Selection Change Event
 
@@ -532,4 +532,4 @@ The node [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 * [How to get events when they interact with the annotation](../annotations/events)
 
-* [How to identify the clicked diagram elements in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+* [How to identify the clicked diagram elements in Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)

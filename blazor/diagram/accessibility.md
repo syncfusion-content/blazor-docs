@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility Features in Blazor Diagram Component
 
-Accessibility in the Blazor Diagram component is achieved through compliance with [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, as well as [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and supports keyboard navigation. This ensures that users can effectively interact with diagram features using assistive technologies such as screen readers.
+Accessibility in the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component is achieved through compliance with [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, as well as [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and supports keyboard navigation. This ensures that users can effectively interact with diagram features using assistive technologies such as screen readers.
 
 The accessibility compliance for the Blazor Diagram component is outlined below:
 

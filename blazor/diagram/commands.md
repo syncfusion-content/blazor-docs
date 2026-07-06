@@ -9,7 +9,7 @@ documentation: ug
 
 # Commands in Diagram Component
 
-There are several commands available in the diagram as follows.
+There are several commands available in the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) as follows.
 
 * Alignment commands
 * Distribute commands

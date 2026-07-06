@@ -9,7 +9,7 @@ documentation: ug
 
 # Serialization in Diagram Component
 
-Serialization is the process of saving and loading the persistent state of a diagram.
+Serialization is the process of saving and loading the persistent state of a [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram).
 
 {% youtube "youtube:https://www.youtube.com/watch?v=2hhl00gMObc" %} 
 

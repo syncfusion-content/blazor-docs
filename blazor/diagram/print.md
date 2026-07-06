@@ -9,7 +9,7 @@ documentation: ug
 
 # Printing in Blazor Diagram Component
 
-Diagram supports printing the visible content using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
+[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) supports printing the visible content using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
 
 ## How to Set Up Page Layout for Printing 
 

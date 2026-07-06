@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Exporting in Blazor Diagram Component
-To save and export a Blazor Diagram, watch the following video tutorial for a quick walkthrough of key options and workflows.
+To save and export a [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), watch the following video tutorial for a quick walkthrough of key options and workflows.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=2hhl00gMObc" %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Constraints in Diagram Component
 
-Constraints are used to enable or disable specific behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
+Constraints are used to enable or disable specific behaviors of the [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), nodes, and connectors. Constraints are provided as flagged enumerations, so multiple behaviors can be enabled or disabled using bitwise operators `(&, |, ~, <<, etc.)`.
 
 To learn more about bitwise operators, refer to [Bitwise Operations](constraints#how-to-use-bitwise-operations).
 

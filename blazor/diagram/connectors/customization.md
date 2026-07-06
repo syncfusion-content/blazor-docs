@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Customize Connector Decorators
 
-Diagram allows you to customize the connector appearances. The following topics describe how to customize several properties of connectors.
+[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) allows you to customize the connector appearances. The following topics describe how to customize several properties of connectors.
 
 * The starting and ending points of a connector can be decorated with shapes such as arrows, circles, diamonds, or custom paths. The connection end points can be decorated with the [SourceDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceDecorator) and [TargetDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetDecorator) properties of the connector.
 

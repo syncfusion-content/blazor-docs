@@ -9,7 +9,7 @@ documentation: ug
 
 # User Handles for Node and Connector in Blazor Diagram Component
 
-User handles are customizable, interactive elements that enhance diagram usability. They can execute custom-defined actions as well as perform standard clipboard operations, providing a versatile and user-friendly interface for diagram manipulation.
+User handles are customizable, interactive elements that enhance [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) usability. They can execute custom-defined actions as well as perform standard clipboard operations, providing a versatile and user-friendly interface for diagram manipulation.
 
 ## How to Initialize the User Handle
 

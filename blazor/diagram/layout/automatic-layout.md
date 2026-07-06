@@ -9,7 +9,7 @@ documentation: ug
 
 # Automatic Layout in Diagram Component
 
-The Diagram component includes a set of built-in automatic layout algorithms that arrange nodes within the diagram area based on predefined layout logic. This feature, referred to as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html), simplifies organizing nodes and their connections, providing a clear and visually appealing structure for diagrams. The Diagram component supports the following  layout algorithms:
+The [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component includes a set of built-in automatic layout algorithms that arrange nodes within the diagram area based on predefined layout logic. This feature, referred to as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html), simplifies organizing nodes and their connections, providing a clear and visually appealing structure for diagrams. The Diagram component supports the following  layout algorithms:
 
 * Organizational chart layout
 * Flowchart layout
