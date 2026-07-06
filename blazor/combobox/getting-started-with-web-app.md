@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ComboBox in Blazor Web App | Syncfusion
-description: Checkout and learn here all about the documentation for getting started with Blazor ComboBox component in Blazor Web App.
+description: Check out and learn about how to get started with the Blazor ComboBox component in a Blazor Web App.
 platform: Blazor
 component: ComboBox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor ComboBox Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -26,7 +26,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 Run the following command to create a new Blazor Web App.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
@@ -44,7 +44,7 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 Run the following command to create a new Blazor Web App.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
 cd BlazorWebApp
@@ -73,7 +73,7 @@ Install the [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfus
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Package Manager Console" %}
+{% highlight bash tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.DropDowns -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -88,7 +88,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.DropDowns -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -103,7 +103,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.DropDowns -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
@@ -130,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -146,10 +146,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -161,9 +161,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor ComboBox component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** folder (for example, **Home.razor**) and add the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component inside the Razor file.
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the Razor file (for example, `InteractiveServer`, `InteractiveWebAssembly`, or `InteractiveAuto`). If the interactivity is set to `Global` with `Auto` or `WebAssembly`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -176,7 +176,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -191,7 +191,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
-{% highlight razor tabtitle="Terminal" %}
+{% highlight bash tabtitle="Terminal" %}
 
 cd ..
 cd BlazorWebApp
@@ -207,7 +207,7 @@ dotnet run
 Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
 
 {% tabs %}
-{% highlight razor tabtitle="Command Prompt" %}
+{% highlight bash tabtitle="Command Prompt" %}
 
 cd ..
 cd BlazorWebApp
@@ -263,12 +263,12 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 
 ## Custom values
 
-The ComboBox allows users to input custom values that are not present in the predefined list. This support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this case, the text and value are treated the same, and the custom value is posted with the form on submit.
+The ComboBox allows users to input custom values that are not present in the predefined list. This support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this case, the text and value are treated as identical, and the custom value is posted with the form on submit.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfComboBox TValue="string"  TItem="Games" AllowCustom=true Placeholder="Select a game" DataSource="@LocalData">
+<SfComboBox TValue="string" TItem="Games" AllowCustom="true" Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
 </SfComboBox>
 
@@ -284,7 +284,7 @@ By default, the popup list width automatically matches the ComboBox input width,
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfComboBox TValue="string" TItem="Games"PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
+<SfComboBox TValue="string" TItem="Games" PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
 </SfComboBox>
 
@@ -297,7 +297,8 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+2. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor ComboBox Events](https://blazor.syncfusion.com/documentation/combobox/events)
+3. [Getting Started with Blazor ComboBox Templates](https://blazor.syncfusion.com/documentation/combobox/templates)
 
