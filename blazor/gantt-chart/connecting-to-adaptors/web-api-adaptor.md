@@ -235,7 +235,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 ....
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Gantt/scripts/sf-gantt.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
 
@@ -791,13 +791,13 @@ public IActionResult DeleteTask(int taskId)
 ## Benefits of using the WebApiAdaptor with the Gantt Chart
 - **Server-side data processing** – Operations filtering (`$filter`), sorting (`$orderby`), and record counting (`$count`) are transmitted to the server as query string parameters, reducing client workload and improving responsiveness for large project datasets.
 - **Minimal server-side requirements** – The API endpoint only needs to parse OData query strings from `Request.Query` and return a `{ Items, Count }` response object. There is no dependency on a full OData stack, `Microsoft.AspNetCore.OData`, or an EDM model, making it suitable for scenarios where a complete OData service is not an option.
-- **Built-in CRUD support** – All editing modes supported by the Gantt — adding tasks, editing via cell, row, dialog, or taskbar drag, and deleting — translate to standard `POST`, `PUT`, and `DELETE` HTTP requests on the Web API without any additional configuration.
+- **Built-in CRUD support** – All editing modes supported by the Gantt Chart - adding tasks, editing via cell, row, dialog, or taskbar drag, and deleting — translate to standard `POST`, `PUT`, and `DELETE` HTTP requests on the Web API without any additional configuration.
 - **Flat payload with hierarchical rendering** – The server returns a flat list of tasks, each carrying a `SubtaskOf` parent identifier. Mapping this field to `GanttTaskFields.ParentID` instructs the Gantt Chart to reconstruct the full parent/child hierarchy in both the grid and the taskbar view.
 
 ## Real-world use cases
 
 - **Enterprise project management** – Serving multi-level project structures from relational databases such as SQL Server or PostgreSQL, where scheduling constraints and business rules are evaluated on the server before tasks are delivered to the client.
-- **Construction and engineering schedules** – Managing Gantt views with large numbers of activities where only the visible page and relevant children are loaded at a time, with additional data fetched on demand from the server.
+- **Construction and engineering schedules** – Managing Gantt Chart views with large numbers of activities where only the visible page and relevant children are loaded at a time, with additional data fetched on demand from the server.
 - **Manufacturing and production planning** – Handling work order hierarchies that require filtering by production line or shift, sorting by priority, and frequent updates through taskbar drag interactions.
 - **Multi-tenant SaaS platforms** – Enforcing tenant-level data isolation at the server before sorting are applied, ensuring each request returns only the data belonging to the authenticated tenant.
 - **Existing Web API integrations** – Connecting the Gantt Chart to already-maintained ASP.NET Core Web APIs without the need to migrate or rebuild the backend as a full OData service.

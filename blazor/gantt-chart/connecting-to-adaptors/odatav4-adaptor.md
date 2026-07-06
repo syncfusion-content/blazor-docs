@@ -254,7 +254,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 ....
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Gantt/scripts/sf-gantt.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
 
@@ -685,19 +685,19 @@ public IActionResult Delete(int key)
 
 ## Real-world use cases
 
-The `ODataV4Adaptor` is a strong fit for Gantt scenarios where the task list is large, shared, or backed by an enterprise data service. Typical use cases include:
+The `ODataV4Adaptor` is a strong fit for Gantt Chart scenarios where the task list is large, shared, or backed by an enterprise data service. Typical use cases include:
 
-- **Enterprise project portfolios** – Centralized OData services that already expose project/task data to other tools (reporting, mobile, integrations) can be reused by the Gantt without a separate API layer.
-- **Construction and engineering schedules** – Multi-level work breakdown structures (Phase → Stage → Activity → Task) where the same task records are read by Gantt, Grid, and reporting views.
+- **Enterprise project portfolios** – Centralized OData services that already expose project/task data to other tools (reporting, mobile, integrations) can be reused by the Gantt Chart without a separate API layer.
+- **Construction and engineering schedules** – Multi-level work breakdown structures (Phase → Stage → Activity → Task) where the same task records are read by Gantt Chart, Grid, and reporting views.
 - **Resource planning** – HR or production planning tools that need to surface dependency-heavy timelines from an existing OData feed and let users drag taskbars to reassign dates.
-- **Cross-team editing** – When multiple users edit the same project plan concurrently, the server-driven `PATCH` round-trip keeps the database as the source of truth and the Gantt in sync after each save.
-- **Hybrid data sources** – A single OData endpoint that joins tasks, resources, and calendars allows the Gantt to pull only the fields it needs via `$select` while still being able to drill into related entities.
+- **Cross-team editing** – When multiple users edit the same project plan concurrently, the server-driven `PATCH` round-trip keeps the database as the source of truth and the Gantt Chart in sync after each save.
+- **Hybrid data sources** – A single OData endpoint that joins tasks, resources, and calendars allows the Gantt Chart to pull only the fields it needs via `$select` while still being able to drill into related entities.
 
 ## Benefits of using the ODataV4Adaptor with the Gantt Chart
 
-- **Standardized wire format** – OData V4 responses (`value` + `@odata.context`) are predictable, so the Gantt can hydrate its tree, grid, and chart from a single payload.
+- **Standardized wire format** – OData V4 responses (`value` + `@odata.context`) are predictable, so the Gantt Chart can hydrate its tree, grid, and chart from a single payload.
 - **Server-driven shaping** – `$filter`, `$orderby`, `$top`, `$skip`, and `$count` keep large project datasets performant by pushing slicing, sorting, and counting to the server.
-- **Reduced client footprint** – Because filtering, sorting, and counting happen on the server, the Gantt only renders the rows it needs, which is critical for schedules with thousands of tasks.
-- **Reusable backend** – The same OData endpoint that powers the Gantt can power the DataGrid, charts, mobile apps, and third-party integrations, eliminating duplicate controller code.
-- **Full editing lifecycle** – Built-in `GET`, `POST`, `PATCH`, and `DELETE` conventions cover every Gantt editing surface (inline, dialog, toolbar Add/Delete, and taskbar drag/resize).
+- **Reduced client footprint** – Because filtering, sorting, and counting happen on the server, the Gantt Chart only renders the rows it needs, which is critical for schedules with thousands of tasks.
+- **Reusable backend** – The same OData endpoint that powers the Gantt Chart can power the DataGrid, charts, mobile apps, and third-party integrations, eliminating duplicate controller code.
+- **Full editing lifecycle** – Built-in `GET`, `POST`, `PATCH`, and `DELETE` conventions cover every Gantt Chart editing surface (inline, dialog, toolbar Add/Delete, and taskbar drag/resize).
 - **Type-safe contracts** – The `ODataConventionModelBuilder` generates an EDM from the model class, giving you a typed contract that documents which fields and operations are exposed.

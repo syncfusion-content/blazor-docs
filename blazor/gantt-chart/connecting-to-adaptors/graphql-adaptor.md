@@ -726,7 +726,7 @@ Syncfusion is a library that provides pre-built UI components like the Gantt Cha
 <link href="_content/Syncfusion.Blazor.Themes/tailwind3.css" rel="stylesheet" />
 
 <!-- Blazor Scripts -->
-<script src="_content/Syncfusion.Blazor.Gantt/scripts/sf-gantt.min.js" type="text/javascript"></script>
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
 
 For this project, the tailwind3 theme is used. A different theme can be selected or the existing theme can be customized based on project requirements. Refer to the [Blazor Components Appearance](https://blazor.syncfusion.com/documentation/appearance/themes) documentation to learn more about theming and customization options.
@@ -1373,17 +1373,17 @@ The application now provides a complete solution for managing project tasks with
 
 ## Benefits of using the GraphQLAdaptor with the Gantt Chart
 
-- **Predictable, typed schema** – The GraphQL schema describes every task field, mutation argument, and return type, so the Gantt can be wired to a strongly typed backend without ad-hoc JSON contracts.
-- **Selective field loading** – A Gantt schedule often has 30+ task fields (dates, duration, progress, predecessors, resources, custom indicators). With GraphQL the client asks for only the columns it currently renders, which reduces payload size for large projects.
+- **Predictable, typed schema** – The GraphQL schema describes every task field, mutation argument, and return type, so the Gantt Chart can be wired to a strongly typed backend without ad-hoc JSON contracts.
+- **Selective field loading** – A Gantt Chart schedule often has 30+ task fields (dates, duration, progress, predecessors, resources, custom indicators). With GraphQL the client asks for only the columns it currently renders, which reduces payload size for large projects.
 - **Server-driven operations** – Searching across thousands of tasks, applying complex filters (for example, "tasks in phase X with progress less than 50%"), and sorting by calculated fields all happen on the server and are passed through `DataManagerRequestInput`.
-- **Hierarchical data with a flat payload** – The Gantt renders parent/child trees from a flat result set; the adaptor returns tasks with a `ParentId` field, and the `GanttTaskFields.ParentID` mapping turns that into the chart, grid, and taskbar hierarchy.
-- **Full CRUD out of the box** – Add (toolbar), edit (cell, row, dialog), delete, and taskbar drag operations on the Gantt are mapped to standard GraphQL mutations on the backend.
+- **Hierarchical data with a flat payload** – The Gantt Chart renders parent/child trees from a flat result set; the adaptor returns tasks with a `ParentId` field, and the `GanttTaskFields.ParentID` mapping turns that into the chart, grid, and taskbar hierarchy.
+- **Full CRUD out of the box** – Add (toolbar), edit (cell, row, dialog), delete, and taskbar drag operations on the Gantt Chart are mapped to standard GraphQL mutations on the backend.
 - **Strongly typed `TaskDataInput`** – Hot Chocolate generates a `TaskDataInput` type from the model, so insert, update, and batch operations are validated at the schema level.
 
 ## Real-world use cases
 
 - **Enterprise project management** – Multi-phase project plans with thousands of tasks where business rules (dependencies, resource availability, schedule constraints) must be enforced on the server before tasks are returned.
-- **Construction and engineering schedules** – Long-running Gantt views where the chart only needs the visible page plus filtered children, and the rest must be served on demand.
+- **Construction and engineering schedules** – Long-running Gantt Chart views where the chart only needs the visible page plus filtered children, and the rest must be served on demand.
 - **Manufacturing and production planning** – Work order hierarchies that must be filtered by shop, line, or shift, sorted and updated frequently with taskbar drag operations.
 - **Multi-tenant SaaS applications** – Each request must be scoped to the authenticated tenant; the `GraphQLAdaptor` lets the server apply that filter before sorting are calculated.
 - **Modern .NET backends** – Teams that have already adopted Hot Chocolate for their API layer and want to plug the Gantt Chart in without maintaining a parallel REST service.

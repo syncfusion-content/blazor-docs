@@ -163,7 +163,8 @@ The following example demonstrates how to implement custom data binding using a 
             {
                 // Filtering
                 // ParentID is used internally by the Gantt Chart to build the task hierarchy
-                if (dm.Where[0].Field != null && dm.Where[0].Field != nameof(TaskData.ParentID))
+                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
+                else
                 {
                     DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
                 }
@@ -482,7 +483,8 @@ The following example demonstrates how to implement the filtering operation for 
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // ParentID is used internally by the Gantt Chart to build the task hierarchy
-                if (dm.Where[0].Field != null && dm.Where[0].Field != nameof(TaskData.ParentID))
+                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
+                else
                 {
                     DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
                 }
@@ -507,7 +509,7 @@ Override the `Read` or `ReadAsync` method to handle sorting. The sort criteria a
 
 ![Handling Sorting in Custom Adaptor](../images/sorting-in-custom-binding.webp)
 
-You can sort data using the built‑in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_SortedColumn__) method of the `DataOperations` class.
+Perform sort data using the built‑in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_SortedColumn__) method of the `DataOperations` class.
 
 N> Alternatively, you can also implement a custom sorting method and bind the sorted data to the Gantt Chart.
 
@@ -705,7 +707,8 @@ The following example demonstrates how to implement CRUD operations for custom-b
                 // ParentID is used internally by the Gantt Chart to build the task hierarchy
                 if (dm.Where != null && dm.Where.Count > 0)
                 {
-                    if (dm.Where[0].Field != null && dm.Where[0].Field != nameof(TaskData.ParentID))
+                    if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
+                    else
                     {
                         DataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
                     }
@@ -758,7 +761,7 @@ The following example demonstrates how to implement CRUD operations for custom-b
 
 ## How to pass additional parameters to custom adaptor
 
-The Gantt Chart allows sending custom parameters along with data requests.This is useful when additional information must be sent to the server.
+The Gantt Chart allows sending custom parameters along with data requests. This is useful when additional information must be sent to the server.
 
 Use the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Query) property of the Gantt Chart along with the [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) method of the `Query` class to send custom parameters.
 
@@ -863,12 +866,12 @@ The following example demonstrates how to send additional parameters to the serv
 
 The `CustomAdaptor` is the right choice when the task data cannot be fetched from a standard REST endpoint or when the data operations require logic that no built-in adaptor can provide. Typical use cases include:
 
-- **In-memory or static data sources** – Applications that load task data from a local list, an embedded JSON file, or an application-level cache can bind that data to the Gantt without standing up a separate API service.
-- **Legacy systems with proprietary APIs** – When task records are stored in an older system that exposes a non-standard interface (SOAP, gRPC, a vendor SDK), the custom adaptor wraps that interface and presents it to the Gantt as a normal data source.
-- **Third-party SDK integration** – Productivity suites, ERP platforms, and project management tools often ship with their own client SDKs. A custom adaptor calls the SDK directly inside the `Read` method and maps the response to the Gantt's data model.
+- **In-memory or static data sources** – Applications that load task data from a local list, an embedded JSON file, or an application-level cache can bind that data to the Gantt Chart without standing up a separate API service.
+- **Legacy systems with proprietary APIs** – When task records are stored in an older system that exposes a non-standard interface (SOAP, gRPC, a vendor SDK), the custom adaptor wraps that interface and presents it to the Gantt Chart as a normal data source.
+- **Third-party SDK integration** – Productivity suites, ERP platforms, and project management tools often ship with their own client SDKs. A custom adaptor calls the SDK directly inside the `Read` method and maps the response to the Gantt Chart data model.
 - **Complex business rules during data operations** – When inserting or updating a task requires validating against related records, recalculating dependent fields, or triggering side effects, that logic can be placed directly in the adaptor methods rather than in the server controller.
-- **Offline-first and PWA applications** – Applications that store tasks in IndexedDB or local storage can use a custom adaptor to read and write that local store, keeping the Gantt functional even when the device is offline.
-- **Testing and prototyping** – A custom adaptor backed by a static list lets teams build and validate the full Gantt UI — including CRUD, searching, filtering, and sorting — before the real backend is ready.
+- **Offline-first and PWA applications** – Applications that store tasks in IndexedDB or local storage can use a custom adaptor to read and write that local store, keeping the Gantt Chart functional even when the device is offline.
+- **Testing and prototyping** – A custom adaptor backed by a static list lets teams build and validate the full Gantt Chart UI — including CRUD, searching, filtering, and sorting — before the real backend is ready.
 
 ## Benefits of using the CustomAdaptor with the Gantt Chart
 
@@ -878,4 +881,4 @@ The `CustomAdaptor` is the right choice when the task data cannot be fetched fro
 - **No server dependency** – Because the adaptor runs inside the Blazor application, there is no need for a separate API project or a network round-trip for data operations, which simplifies deployment and reduces latency.
 - **Supports both synchronous and asynchronous operations** – The `DataAdaptor` base class provides both `Read`/`ReadAsync` and `Insert`/`InsertAsync` signatures, so you can use `async/await` to call remote services or databases without blocking the UI.
 - **Seamless integration with dependency injection** – Registering the adaptor as a scoped service lets you inject repositories, caching layers, logging, and any other application service directly into the adaptor class.
-- **Ideal for testing and prototyping** – Swapping the real adaptor for a test adaptor backed by a fixed list requires no changes to the Gantt component itself, making unit and integration testing straightforward.
+- **Ideal for testing and prototyping** – Swapping the real adaptor for a test adaptor backed by a fixed list requires no changes to the Gantt Chart component itself, making unit and integration testing straightforward.

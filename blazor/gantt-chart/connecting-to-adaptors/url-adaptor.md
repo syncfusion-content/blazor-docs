@@ -169,7 +169,7 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:71xx/api/gantt` (where `71xx` represents the port number in **launchSettings.json**). Verify that the API returns the task data before proceeding.
+Run the application in Visual Studio. The API will be accessible at a URL like `https://localhost:xxxx/api/gantt` (where `xxxx` represents the port number in **launchSettings.json**). Verify that the API returns the task data before proceeding.
 
 ## Connecting Blazor Gantt Chart to an API service
  
@@ -310,7 +310,7 @@ namespace URLAdaptor.Controllers
 {% endhighlight %}
 {% endtabs %}
  
-> Replace `https://localhost:71xx/api/gantt`(Replace `71xx` with the port number shown in the **launchSettings.json**) with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+> Replace `https://localhost:xxxx/api/gantt`(Replace `xxxx` with the port number shown in the **launchSettings.json**) with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
  
 **5. Run the application**
  
