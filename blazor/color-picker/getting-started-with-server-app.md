@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Color Picker in Blazor Server App | Syncfusion
+title: Getting Started with Blazor Color Picker in Server App | Syncfusion
 description: Check out and learn how to get started with the Blazor Color Picker component in a Blazor Server App.
 platform: Blazor
 component: Color Picker
