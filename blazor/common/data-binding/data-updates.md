@@ -92,6 +92,7 @@ In the following example, the DataGrid updates automatically when items are adde
 * Maps
 * Menu Bar
 * MultiSelect Dropdown
+* Pivot Table
 * QueryBuilder
 * Scheduler
 * Smith Chart
