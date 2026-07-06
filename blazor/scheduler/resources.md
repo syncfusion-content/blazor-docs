@@ -448,7 +448,7 @@ To get start quickly about multiple resource on scheduler, you can check on this
 ```
 The following image shows the appointment rendering on the multiple resource Scheduler.
 
-![Multiple Resources in Blazor Scheduler](images/blazor-scheduler-multipleresources.png)
+![Multiple Resources in Blazor Scheduler](images/blazor-scheduler-multipleresources.webp)
 
 N> Setting [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html#Syncfusion_Blazor_Schedule_Resource_AllowMultiple) to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
@@ -530,7 +530,7 @@ The following code example displays how the multiple resources are grouped and i
 }
 ```
 
-![Vertical Resource View in Blazor Scheduler](images/blazor-scheduler-resources-verticalview.png)
+![Vertical Resource View in Blazor Scheduler](images/blazor-scheduler-resources-verticalview.webp)
 
 ### Timeline resource view
 
@@ -598,7 +598,7 @@ The following code example depicts how to group the multiple resources on Timeli
 ```
 The following image shows the multiple resources rendering on the Timeline view Scheduler.
 
-![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-resource-timeline.png)
+![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-resource-timeline.webp)
 
 ### Grouping single-level resources
 
@@ -662,7 +662,7 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 ```
 The following image display the Scheduler with single level resource grouping.
 
-![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-singlelevel.png)
+![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-singlelevel.webp)
 
 N> The `Name` field defined in the **Resources** collection namely `Owners` will be mapped within the [`Group`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html) property, in order to enable the grouping option with those resource levels on the Scheduler.
 
@@ -746,7 +746,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
 ```
 The following image displays the resources of Scheduler in multi levels.
 
-![Grouping multi-level resources in Blazor Scheduler](images/blazor-scheduler-multiplelevel.png)
+![Grouping multi-level resources in Blazor Scheduler](images/blazor-scheduler-multiplelevel.webp)
 
 ### One-to-One grouping
 
@@ -816,7 +816,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
 
 The following image depicts how the scheduler will render when [`ByGroupID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByGroupID) sets as false.
 
-![Grouping in Blazor Scheduler](images/blazor-scheduler-grouping.png)
+![Grouping in Blazor Scheduler](images/blazor-scheduler-grouping.webp)
 
 ### Grouping resources by date
 
@@ -878,7 +878,7 @@ It groups the number of resources under each date and is applicable only on the 
 }
 ```
 
-![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-resource-by-date.png)
+![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-resource-by-date.webp)
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
@@ -945,7 +945,7 @@ N> Any actions such as create, edit or delete held on any one of the shared even
 }
 ```
 
-![Grouping Resources as shared events in Blazor Scheduler](images/blazor-scheduler-sharedevents.png)
+![Grouping Resources as shared events in Blazor Scheduler](images/blazor-scheduler-sharedevents.webp)
 
 ## Simple resource header customization
 
@@ -962,7 +962,7 @@ It is possible to customize the resource header cells using built-in template op
             @{
                 var resourceData = (context as TemplateContext).ResourceData as ResourceData;
                 <div class='template-wrap'>
-                    <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(resourceData.Image).png" /></div>
+                    <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(resourceData.Image).webp" /></div>
                     <div class="resource-details">
                         <div class="resource-name">@(resourceData.Text)</div>
                         <div class="resource-designation">@(resourceData.Designation)</div>
@@ -1055,11 +1055,11 @@ It is possible to customize the resource header cells using built-in template op
 </style>
 ```
 
-![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.png)
+![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.webp)
 
 N> To customize the resource header in compact mode properly make use of the class `e-device` as in the code example.
 
-![Resource Header Template in Compact Mode of Blazor Scheduler](images/blazor-scheduler-header-template.png)
+![Resource Header Template in Compact Mode of Blazor Scheduler](images/blazor-scheduler-header-template.webp)
 
 ## Customizing resource header with multiple columns
 
@@ -1279,7 +1279,7 @@ It is possible to customize the resource headers to display with multiple column
 </style>
 ```
 
-![Blazor Scheduler with Multiple columns](images/blazor-scheduler-multiple-columns.png)
+![Blazor Scheduler with Multiple columns](images/blazor-scheduler-multiple-columns.webp)
 
 ## Expand and collapse resource fields
 
@@ -1346,7 +1346,7 @@ It is possible to expand and collapse the resource field. By default, resource f
     }
 }
 ```
-![Blazor Scheduler expand and collapse resources](images/blazor-schedule-expand-collapse.png)
+![Blazor Scheduler expand and collapse resources](images/blazor-schedule-expand-collapse.webp)
 
 ## Displaying tooltip for resource headers
 
@@ -1361,7 +1361,7 @@ It is possible to display tooltip over the resource headers showing the resource
             @{
                 var resourceData = (context as TemplateContext).ResourceData as ResourceData;
                 <div class='template-wrap'>
-                    <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(resourceData.Image).png" /></div>
+                    <div class="resource-image"><img src="https://ej2.syncfusion.com/demos/src/schedule/images/@(resourceData.Image).webp" /></div>
                     <div class="resource-details">
                         <div class="resource-name">@(resourceData.Text)</div>
                     </div>
@@ -1420,7 +1420,7 @@ It is possible to display tooltip over the resource headers showing the resource
 }
 ```
 
-![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-tooltip.png)
+![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-tooltip.webp)
 
 ## Choosing between resource colors for appointments
 
@@ -1509,7 +1509,7 @@ By default, the colors defined on the top level resources collection will be app
 }
 ```
 
-![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resource-color.png)
+![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resource-color.webp)
 
 N> The value of the [`ResourceColorField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.IScheduleEventSettings.html#Syncfusion_Blazor_Schedule_IScheduleEventSettings_ResourceColorField) field should be mapped with the `Name` value given within the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.Resource.html).
 
@@ -1576,7 +1576,7 @@ Different working days can be set for the resources of Scheduler using the [`Wor
 }
 ```
 
-![Resources with Different Workdays in Blazor Scheduler](images/blazor-scheduler-resource-workdays.png)
+![Resources with Different Workdays in Blazor Scheduler](images/blazor-scheduler-resource-workdays.webp)
 
 ### Set different work hours
 
@@ -1641,7 +1641,7 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 
 In this example, a resource named `Will Smith` is depicted with working hours ranging from 7.00 AM to 1.00 PM and is visually illustrated with active colors, whereas the other two resources have different working hours set.
 
-![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-different-workhour.png)
+![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-different-workhour.webp)
 
 ### Hide non-working days when grouped by date
 
@@ -1724,7 +1724,7 @@ To use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion
 }
 ```
 
-![Hide non-working days when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+![Hide non-working days when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.webp)
 
 N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
 when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
@@ -1822,7 +1822,7 @@ Although the Scheduler views are designed keeping in mind the responsiveness of 
 
 With this compact view enabled on mobile, you can view only single resource at a time and to switch to other resources, there is a TreeView at the left listing out all other available resources - clicking on which will display that particular resource and its related appointments.
 
-![Blazor Scheduler Resources in Compact Mode](images/blazor-scheduler-resource-in-compact-mode.png)
+![Blazor Scheduler Resources in Compact Mode](images/blazor-scheduler-resource-in-compact-mode.webp)
 
 ## Adaptive UI in desktop
 
@@ -1902,7 +1902,7 @@ To get start quickly about adaptive UI in our Scheduler, you can check on this v
 }
 ```
 
-![Blazor Scheduler Resources in Adaptive UI](images/blazor-schedule-adaptiveui.png)
+![Blazor Scheduler Resources in Adaptive UI](images/blazor-schedule-adaptiveui.webp)
 
 ## See also
 
