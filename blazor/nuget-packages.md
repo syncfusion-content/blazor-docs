@@ -876,57 +876,6 @@ SfFileManager
 </tr>
 </table>
 
-## Syncfusion.Blazor.Gantt
-
-The Blazor Gantt is designed to visualize and edit the project schedule, and track the project progress. It helps to organize and schedule the projects, and also the project schedule can be updated through interactions like editing, dragging, and resizing.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Component friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/">Syncfusion.Blazor.Gantt</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app">Gantt Chart</a>
-</td>
-<td>
-SfGantt
-</td>
-<td>
-<ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorfilemanager">Syncfusion.Blazor.FileManager</a> (Utilized up to v18.4.0.49)</li>
-<li><a href="#syncfusionblazorgrid">Syncfusion.Blazor.Grid</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlayouts">Syncfusion.Blazor.Layouts</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorrichtexteditor">Syncfusion.Blazor.RichTextEditor</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="#syncfusionblazortreegrid">Syncfusion.Blazor.TreeGrid</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
 ## Syncfusion.Blazor.Grid
 
 Blazor DataGrid component is used to display and manipulate the tabular data with configuration options to control the way the data is presented. It can pull data from data sources such as IEnumerable, ObservableCollection, OData web services, or DataManager and binding data fields to columns. It also displays the column header to identify the field with support for grouped records.
