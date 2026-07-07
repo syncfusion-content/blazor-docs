@@ -131,7 +131,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
