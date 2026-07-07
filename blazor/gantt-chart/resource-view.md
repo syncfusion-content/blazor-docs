@@ -1091,6 +1091,7 @@ namespace BlazorGanttChart.Data
 * Unscheduled tasks (lacking start date or duration) are not supported in resource view.
 * Editing of resource records(parent record) is not supported in the resource view of the Gantt Chart.
 * CRUD operations are not supported when the [TaskMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskMode) is set to [Manual](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ScheduleMode.html#Syncfusion_Blazor_Gantt_ScheduleMode_Manual) or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ScheduleMode.html#Syncfusion_Blazor_Gantt_ScheduleMode_Custom) in the resource view.
+* Custom column values are not displayed for resource records (parent records) in resource view.
 
 ## See also
 
