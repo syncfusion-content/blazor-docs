@@ -241,5 +241,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 3. [Getting Started with Blazor DatePicker Events](https://blazor.syncfusion.com/documentation/datepicker/events)
-4. [Getting Started with Blazor DatePicker Templates](https://blazor.syncfusion.com/documentation/datepicker/templates)
-5. [Getting Started with Blazor DatePicker Globalization](https://blazor.syncfusion.com/documentation/datepicker/globalization)
+4. [Getting Started with Blazor DatePicker Globalization](https://blazor.syncfusion.com/documentation/datepicker/globalization)
