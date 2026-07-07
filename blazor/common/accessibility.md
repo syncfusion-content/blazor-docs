@@ -1173,37 +1173,6 @@ AA
 </tr>
 <tr>
 <td>
-Gantt Chart
-</td>
-<td>
-AA
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/gantt-chart" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/gantt-chart/accessibility" target="_blank">Documentation</a>
-</td>
-<tr>
-<td>
 HeatMap Chart
 </td>
 <td>
