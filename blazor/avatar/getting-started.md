@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Avatar in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Avatar component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Avatar component in Blazor WebAssembly Application.
 platform: Blazor
 control: Avatar
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Avatar Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Avatar](https://blazor.syncfusion.com/documentation/avatar/getting-started) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Avatar](https://www.syncfusion.com/blazor-components/blazor-avatar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -129,19 +129,19 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<!-- xSmall Avatar-->
+@* xSmall Avatar *@
 <div class="e-avatar e-avatar-xsmall image"></div>
 
-<!-- Small Avatar-->
+@* Small Avatar *@
 <div class="e-avatar e-avatar-small image"></div>
 
-<!-- Avatar-->
+@* Avatar *@
 <div class="e-avatar image"></div>
 
-<!-- Large Avatar-->
+@* Large Avatar *@
 <div class="e-avatar e-avatar-large image"></div>
 
-<!-- xLarge Avatar-->
+@* xLarge Avatar *@
 <div class="e-avatar e-avatar-xlarge image"></div>
 
 <style>
