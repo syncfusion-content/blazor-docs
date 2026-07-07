@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Started with Sankey Diagram in Blazor Server App | Syncfusion
-description: Checkout and learn about getting started with Blazor Sankey diagram in Blazor Server App using Visual Studio and more.
+description: Check out and learn about getting started with Blazor Sankey diagram in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -67,7 +67,7 @@ Install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Bla
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.Sankey`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
@@ -114,10 +114,10 @@ dotnet add package Syncfusion.Blazor.Sankey -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Sankey` namespaces.
+After the package is installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Sankey` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Sankey
@@ -130,7 +130,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -143,10 +143,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
@@ -155,9 +155,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 ## Add Blazor Sankey Diagram component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) component inside the razor file.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) component inside the razor file.
 
-N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -259,7 +259,7 @@ dotnet run
 
 ## Populate Blazor Sankey Diagram with data
 
-To bind data for the sankey diagram, you can assign an IEnumerable object to the `Nodes` and `Links` properties. These properties define the structure of the nodes and the relationships between them.
+To bind data for the Sankey diagram, you can assign an IEnumerable object to the `Nodes` and `Links` properties. These properties define the structure of the nodes and the relationships between them.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -317,7 +317,7 @@ To bind data for the sankey diagram, you can assign an IEnumerable object to the
 
 ## Add title
 
-Using the `Title` property, you can add a title to the sankey diagram to provide the user with quick information about the data plotted in the sankey diagram.
+Using the `Title` property, you can add a title to the Sankey diagram to provide the user with quick information about the data plotted in the Sankey diagram.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -334,7 +334,7 @@ Using the `Title` property, you can add a title to the sankey diagram to provide
 
 ## Add node labels
 
-You can add data labels to improve the readability of the sankey diagram. This can be achieved by setting the `Visible` property to **true** in the `SankeyLabelSettings`.
+You can add data labels to improve the readability of the Sankey diagram. This can be achieved by setting the `Visible` property to **true** in the `SankeyLabelSettings`.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -352,7 +352,7 @@ You can add data labels to improve the readability of the sankey diagram. This c
 
 ## Enable tooltip
 
-The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSettings` to **true**. However, the tooltip is enabled by default in the sankey diagram.
+The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSettings` to **true**. However, the tooltip is enabled by default in the Sankey diagram.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -370,7 +370,7 @@ The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSet
 
 ## Enable legend
 
-You can use legend for the sankey diagram by setting the `Visible` property to **true** in `SankeyLegendSettings`. However, the legend is enabled by default in the sankey diagram.
+You can use legend for the Sankey diagram by setting the `Visible` property to **true** in `SankeyLegendSettings`. However, the legend is enabled by default in the Sankey diagram.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -388,6 +388,6 @@ You can use legend for the sankey diagram by setting the `Visible` property to *
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+3. [Getting Started with Tooltip in Blazor Sankey](https://blazor.syncfusion.com/documentation/sankey/tooltip)
