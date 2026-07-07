@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print and Export in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Print and Export in Syncfusion Blazor TreeMap component and much more.
+title: Print and Export in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features Print and Export in Blazor TreeMap component and much more.
 platform: Blazor
 control: TreeMap
 documentation: ug

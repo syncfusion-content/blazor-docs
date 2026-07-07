@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Convert a project using the Blazor extension | Syncfusion®
-description: Learn here about how to convert an existing Blazor application into a Syncfusion Blazor application using the Blazor extension for Visual Studio Code.
+description: Learn here about how to convert an existing Blazor application into a Blazor application using the Blazor extension for Visual Studio Code.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Convert a Blazor Project to Syncfusion Blazor
+# Convert a Blazor Project to Syncfusion® Blazor
 
 The [Syncfusion® Blazor extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) for Visual Studio Code upgrades a Blazor project by adding the required NuGet packages and configuring the selected theme automatically.
 

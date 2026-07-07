@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor MultiSelect component and more.
+title: Selection in Blazor MultiSelect Component | Syncfusion®
+description: Checkout and learn here all about the Selection feature in Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug

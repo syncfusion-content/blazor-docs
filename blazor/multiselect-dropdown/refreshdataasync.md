@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RefreshDataAsync in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about RefreshDataAsync method in Syncfusion Blazor MultiSelect Dropdown component and much more.
+title: RefreshDataAsync in Blazor MultiSelect Dropdown | Syncfusion®
+description: Checkout and learn here all about RefreshDataAsync method in Blazor MultiSelect Dropdown component and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

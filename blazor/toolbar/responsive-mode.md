@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Responsive Mode in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about responsive mode in Syncfusion Blazor Toolbar component and much more.
+title: Responsive Mode in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about responsive mode in Blazor Toolbar component and much more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -27,11 +27,11 @@ The default [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 *   On devices, if navigation icons are not available, utilize touch swipe gestures to view hidden Toolbar items.
 *   Once the Toolbar reaches the last or first item, the corresponding navigation icon is disabled, restricting further movement in that direction.
 
-![Blazor Toolbar with Touch Scroll](images/blazor-toolbar-scrolling-touch.gif)
+![Blazor Toolbar with Touch Scroll](images/blazor-toolbar-scrolling-touch.webp)
 
 * The Toolbar content can be continuously scrolled by holding the navigation icon.
 
-![Blazor Toolbar with Long Press Scroll](images/blazor-toolbar-long-press-scrolling.gif)
+![Blazor Toolbar with Long Press Scroll](images/blazor-toolbar-long-press-scrolling.webp)
 
 ```cshtml
 
@@ -67,7 +67,7 @@ The default [`OverflowMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhoitCZzVqTpUBZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Scrolling in Blazor Toolbar](./images/blazor-toolbar-scrolling.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhxZQtVzAACSYYW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Scrolling in Blazor Toolbar](./images/blazor-toolbar-scrolling.webp)" %}
 
 ## Popup
 
@@ -100,7 +100,7 @@ N> If the popup content exceeds the height of the page, overflowing items will n
     </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoijsXzLKbvuYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item in Popup Mode](./images/blazor-toolbar-item-popup-mode.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhdDctBTqnLLtrN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toolbar Item in Popup Mode](./images/blazor-toolbar-item-popup-mode.webp)" %}
 
 ### Priority of Items
 
@@ -156,7 +156,7 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLeCXijTVTcokhS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Blazor Toolbar Item in Overflow](./images/blazor-toolbar-item-in-overflow.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVxNmDrzTJaEJas?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying Blazor Toolbar Item in Overflow](./images/blazor-toolbar-item-in-overflow.webp)" %}
 
 ## MultiRow
 
@@ -184,7 +184,7 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLSijMXTVoswbPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with MultiRow](./images/blazor-toolbar-item-with-multirow.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhdZmjVfpwtRNTW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toolbar Item with MultiRow](./images/blazor-toolbar-item-with-multirow.webp)" %}
 
 ## Extended
 
@@ -211,4 +211,4 @@ In the following code sample, text is only visible in the popup container and no
     </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNroCNiZJhSGdfxr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Extended Mode](./images/blazor-toolbar-item-extended-mode.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLHXcXVzfaHHNIp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toolbar Item with Extended Mode](./images/blazor-toolbar-item-extended-mode.webp)" %}

@@ -215,7 +215,7 @@ dotnet run
 
 Pointers are used to indicate values on an axis. You can change the pointer value using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property in [Circular Gauge Pointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html).
 
-N> In CircularGauge, you can configure multiple axes. On each axis, you can add a pointer.
+N> In Circular Gauge, you can configure multiple axes. On each axis, you can add a pointer.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
