@@ -219,6 +219,10 @@ Here's a detailed explanation of each component:
 3. **5FF-2d**: Task finishes 2 days before Task 5 finishes (Finish-to-Finish with 2-day lead)
 4. **6SF**: Task finishes when Task 6 starts (Start-to-Finish, no offset)
 
+> The format of the dependency string depends on the data type of the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field mapped in [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html):
+> - If the `Id` field is an **integer**, the compact format (for example, `3FS`) can be used without a space between the `Id` and the dependency type.
+> - If the `Id` field is a **string** or **GUID**, the format `[Id] [PredecessorType]` is mandatory, with a single space between the `Id` and the predecessor type (for example, `TASK-001 FS`). The Gantt Chart parses the two parts based on this space, so the space is required to correctly identify the predecessor type.
+
 ## Implementing complex dependencies
 
 The Gantt Chart component allows you to configure complex task dependencies to handle intricate project workflows. The following code snippets demonstrate how to define and set up such dependencies.
