@@ -217,6 +217,10 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 ## Populate Blazor 3D Charts with data
 
 To bind data for the 3D Charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
