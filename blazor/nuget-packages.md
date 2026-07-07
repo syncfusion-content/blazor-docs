@@ -629,55 +629,6 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 </tr>
 </table>
 
-## Syncfusion.Blazor.Diagram
-
-The Blazor Diagram component is a high-speed, robust library for crafting, editing, and interacting with dynamic diagrams. Unleash your creativity with flowcharts, org charts, mind maps, and more. Seamlessly edit and engage with intuitive interactions.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/">Syncfusion.Blazor.Diagram</a>
-</td>
-<td>
-<ul>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app">Diagram</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram/overview">Overview Panel</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram/symbol-palette">Symbol Palette</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li>SfDiagramComponent</li>
-<li>SfDiagramOverviewComponent </li>
-<li>SfSymbolPaletteComponent </li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Utilizing from v19.4.0.38)</li>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
 ## Syncfusion.Blazor.DropDowns
 
 A package of Blazor Dropdown contains a collection of Dropdown components such as Dropdown List, Combo Box, AutoComplete, Multiselect Dropdown, and List Box. Dropdown components contain specific features such as data binding, grouping, sorting, filtering, and templates.
