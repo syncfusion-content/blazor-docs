@@ -26,7 +26,7 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
@@ -43,7 +43,7 @@ Alternatively, create a **Blazor Server App** using Visual Studio Code via [Micr
 Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
@@ -71,7 +71,7 @@ Install the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusi
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Package Manager Console" %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.DataForm -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -86,7 +86,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.DataForm -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -101,7 +101,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.DataForm -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -159,9 +159,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Data Form component
 
-Open a Razor file located in the **~/Pages/*.razor** folder (for example, **Home.razor**) and add the [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component inside the Razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Data Form](https://www.syncfusion.com/blazor-components/blazor-data-form) component inside the Razor file.
 
-N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the Razor file (for example, `InteractiveServer`). If the interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the Razor file (for example, `InteractiveServer`). If the **Interactivity** is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -224,7 +224,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 Open the terminal and run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet run
 
@@ -238,7 +238,7 @@ dotnet run
 Open the command prompt and run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet run
 
@@ -255,6 +255,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Data Form Events](https://blazor.syncfusion.com/documentation/data-form/events)
+3. [Getting Started with Blazor Data Form Validation](https://blazor.syncfusion.com/documentation/data-form/validation)

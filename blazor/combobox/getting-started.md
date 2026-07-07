@@ -26,7 +26,7 @@ Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates
 Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -43,7 +43,7 @@ Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via 
 Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -69,7 +69,7 @@ Install the [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfus
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Package Manager Console" %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.DropDowns -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -84,7 +84,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.DropDowns -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -99,7 +99,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.DropDowns -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -157,7 +157,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor ComboBox component
 
-Open a Razor file located in the **~/Pages/*.razor** folder (for example, **Home.razor**) and add the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component inside the Razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor ComboBox](https://www.syncfusion.com/blazor-components/blazor-combobox) component inside the Razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -182,7 +182,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 Open the terminal and run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet run
 
@@ -196,7 +196,7 @@ dotnet run
 Open the command prompt and run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet run
 
@@ -282,6 +282,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Blazor ComboBox Events](../combobox/events)
+2. [Getting Started with Blazor ComboBox Templates](../combobox/templates)
+3. [Getting Started with Blazor ComboBox Data Binding](../combobox/data-binding)
