@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Image in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Image in Syncfusion Blazor RichTextEditor component and much more.
+title: Image in Blazor Rich Text Editor Component | Syncfusion®
+description: Checkout and learn here all the features about Image in Blazor Rich Text Editor component and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Image in Blazor RichTextEditor Component
+# Image in Blazor Rich Text Editor Component
 
 Rich Text Editor allows inserting images from online sources and local computer where you want to insert the image in your content. For inserting the image to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorImageSettings`.
 

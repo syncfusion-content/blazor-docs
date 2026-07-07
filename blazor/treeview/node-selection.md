@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node Selection in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Node Selection in Syncfusion Blazor TreeView component and much more details.
+title: Node Selection in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Node Selection in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug

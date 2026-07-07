@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node Editing in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Node Editing in Syncfusion Blazor TreeView component and much more.
+title: Node Editing in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Node Editing in Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug

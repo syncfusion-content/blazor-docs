@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar Configuration in Blazor Rich Text Editor | Syncfusion
-description: Checkout and learn here all about Toolbar in Syncfusion Blazor Rich Text Editor component and much more.
+title: Toolbar Configuration in Blazor Rich Text Editor | Syncfusion®
+description: Checkout and learn here all about Toolbar in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -87,7 +87,7 @@ You can enable or disable the floating toolbar using [RichTextEditorToolbarSetti
 
 <SfRichTextEditor Height="250px">
     <RichTextEditorToolbarSettings EnableFloating="true" />
-    <h2>Welcome to the Syncfusion Rich Text Editor</h2><p>The Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><h3>Do you know the key features of the editor?</h3>
+    <h2>Welcome to the Rich Text Editor</h2><p>The Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><h3>Do you know the key features of the editor?</h3>
     <ul><li>Basic features include headings, block quotes, numbered lists, bullet lists, and support to insert images, tables, audio, and video.</li> <li>Inline styles include <b>bold</b>, <em>italic</em>, <span style="text-decoration: underline">underline</span>, <span style="text-decoration: line-through">strikethrough</span>, <a class="e-rte-anchor" href="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" title="https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=material3" aria-label="Open in new window">hyperlinks</a>,<code>InlineCode</code> and more.</li> <li>The toolbar has multi-row, expandable, and scrollable modes. The Editor supports an inline toolbar, a floating toolbar, and custom toolbar items.</li></ul>
 </SfRichTextEditor>
 

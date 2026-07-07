@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor TreeGrid Component | Syncfusion
-description: Learn how to optimize large data rendering using virtualization features in Syncfusion Blazor TreeGrid component.
+title: Virtualization in Blazor TreeGrid Component | Syncfusion®
+description: Learn how to optimize large data rendering using virtualization features in Blazor TreeGrid component.
 platform: Blazor
 control: TreeGrid
 documentation: ug
