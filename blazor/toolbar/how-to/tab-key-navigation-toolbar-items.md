@@ -66,4 +66,4 @@ If [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
     </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLSWXCDJtDTYouf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar with TabIndex](../images/blazor-toolbar-item-tabindex.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRjctVJGuPuuQN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toolbar with TabIndex](../images/blazor-toolbar-item-tabindex.webp)" %}
