@@ -153,7 +153,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 ### Create a UML Enumeration
 
-A UML enumeration node displays the **«enumeration»** stereotype above the enumeration name, followed by a members section that lists its named constants. To create an enumeration node, set the `Classifier` property to `ClassifierShape.Enumeration` and define the enumeration details using the `EnumerationShape` property.
+A UML enumeration node displays the **«enumeration»** stereotype above the enumeration name, followed by a members section that lists its named constants. To create an enumeration node, set the `Classifier` property to **ClassifierShape.Enumeration** and define the enumeration details using the `EnumerationShape` property.
 
 The following properties can be used to configure members in UML enumeration:
 
@@ -253,10 +253,10 @@ Each compartment — **Attributes**, **Operations**, and **Members** — has a h
 |---|---|
 | `HeaderText` | Specifies the text label for the section header. |
 | `Style` | Defines the visual style for the section header row. |
-| `EnableAddAction` | Shows or hides the `+` button. The default value is `true`. |
-| `EnableRemoveAction` | Shows or hides the `–` button. The default value is `true`. |
-| `IsExpanded` | Specifies whether the section content is visible. The default value is `true`. |
-| `ShowExpandCollapseIcon` | Shows or hides the expand or collapse icon. The default value is `true`. |
+| `EnableAddAction` | Shows or hides the `+` button. The default value is **true**. |
+| `EnableRemoveAction` | Shows or hides the `–` button. The default value is **true**. |
+| `IsExpanded` | Specifies whether the section content is visible. The default value is **true**. |
+| `ShowExpandCollapseIcon` | Shows or hides the expand or collapse icon. The default value is **true**. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -532,7 +532,7 @@ using Syncfusion.Blazor.Diagram
 
 ## Add UML Shapes to the Symbol Palette
 
-Add UML classifier shapes and relationship connectors to the [SfSymbolPaletteComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfSymbolPaletteComponent.html) so users can drag and drop UML symbols onto the diagram canvas.
+Add UML classifier shapes and relationship connectors to the [SfSymbolPaletteComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html) so users can drag and drop UML symbols onto the diagram canvas.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -635,4 +635,4 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 - [SfDiagramComponent API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html)
 - [UmlClassifierShape API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlClassifierShape.html)
 - [RelationShip API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RelationShip.html)
-- [SfSymbolPaletteComponent API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfSymbolPaletteComponent.html)
+- [SfSymbolPaletteComponent API Reference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html)
