@@ -160,6 +160,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 @rendermode InteractiveServer
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
@@ -181,7 +182,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

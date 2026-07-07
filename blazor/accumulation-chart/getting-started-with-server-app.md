@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Accumulation Chart in Server App | Syncfusion
-description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor Server App.
+description: Learn how to get started with Blazor Accumulation Chart component in Blazor Server App.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -112,7 +112,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
 N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
 
@@ -161,13 +161,14 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 @rendermode InteractiveServer
 
-<!-- SfAccumulationChart is the root container component for the accumulation chart -->
+@* SfAccumulationChart is the root container component for the accumulation chart *@
 <SfAccumulationChart>
-    <!-- Container for defining chart series -->
+    @* Container for defining chart series *@
     <AccumulationChartSeriesCollection>
-        <!-- AccumulationChartSeries defines a data series with its data source and axis mappings -->
+        @* AccumulationChartSeries defines a data series with its data source and axis mappings *@
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
@@ -196,7 +197,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

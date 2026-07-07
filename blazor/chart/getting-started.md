@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Charts in Blazor Server App | Syncfusion
-description: Checkout and learn about getting started with Blazor Charts component in Blazor Server App using Visual Studio and more.
+description: Check out and learn about getting started with the Blazor Charts component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -167,7 +167,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveServer
-<!-- SfChart is the root container component for the chart -->
+@* SfChart is the root container component for the chart *@
 <SfChart>
 
 </SfChart>

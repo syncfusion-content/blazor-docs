@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Charts in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Charts Component in Blazor Web App.
+description: Check out and learn about the documentation for getting started with the Blazor Charts Component in Blazor Web App.
 platform: Blazor
 component: Charts
 documentation: ug
@@ -170,7 +170,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
-<!-- SfChart is the root container component for the chart -->
+@* SfChart is the root container component for the chart *@
 <SfChart>
 
 </SfChart>

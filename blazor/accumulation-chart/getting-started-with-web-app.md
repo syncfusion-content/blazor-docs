@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Accumulation Chart in Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Accumulation Chart Component in Blazor Web App.
+description: Check out and learn about the documentation for getting started with Blazor Accumulation Chart Component in Blazor Web App.
 platform: Blazor
 component: Accumulation Chart
 documentation: ug
@@ -114,7 +114,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
+After the package is installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
 N> 
 - The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
@@ -165,13 +165,14 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 @rendermode InteractiveAuto
 
-<!-- SfAccumulationChart is the root container component for the accumulation chart -->
+@* SfAccumulationChart is the root container component for the accumulation chart *@
 <SfAccumulationChart>
-    <!-- Container for defining chart series -->
+    @* Container for defining chart series *@
     <AccumulationChartSeriesCollection>
-        <!-- AccumulationChartSeries defines a data series with its data source and axis mappings -->
+        @* AccumulationChartSeries defines a data series with its data source and axis mappings *@
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
@@ -200,7 +201,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Accumulation Chart in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Accumulation Chart component in Blazor WebAssembly App.
+title: Getting Started with Accumulation Chart in WebAssembly App | Syncfusion
+description: Learn how to get started with Blazor Accumulation Chart component in Blazor WebAssembly App.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -112,7 +112,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
 N> The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
 
@@ -142,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -159,12 +159,13 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 
-<!-- SfAccumulationChart is the root container component for the accumulation chart -->
+@* SfAccumulationChart is the root container component for the accumulation chart *@
 <SfAccumulationChart>
-    <!-- Container for defining chart series -->
+    @* Container for defining chart series *@
     <AccumulationChartSeriesCollection>
-        <!-- AccumulationChartSeries defines a data series with its data source and axis mappings -->
+        @* AccumulationChartSeries defines a data series with its data source and axis mappings *@
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
@@ -193,7 +194,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

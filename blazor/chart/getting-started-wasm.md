@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Charts in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Blazor Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
+description: Check out and learn about getting started with the Blazor Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -70,7 +70,7 @@ Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.Charts`) and install it.
 
-Alternatively, you can install the same package using the Package Manager Console with the following command.
+Alternatively, you can install the package using the Package Manager Console with the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -162,7 +162,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<!-- SfChart is the root container component for the chart -->
+@* SfChart is the root container component for the chart *@
 <SfChart>
 
 </SfChart>
@@ -210,7 +210,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Charts Component](images/getting-started/blazor-chart.webp)" %}
 
 ## Populate Blazor Charts with data
 
