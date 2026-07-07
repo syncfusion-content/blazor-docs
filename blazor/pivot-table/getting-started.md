@@ -238,66 +238,6 @@ public class ProductDetails
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Pivot Table component in the default web browser.
 
-## Handling exceptions
-
-You can handle errors that occur during Pivot Table actions without stopping your application. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event to capture error messages or details from the server. We recommend binding this event while building your app, as it helps you identify issues early. You can share these error details with our support team to get help quickly.
-
-The following code example shows how to display a server-side error message to the user when a data operation fails:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.PivotView
-
-<span class="error">@ErrorDetails</span>
-<SfPivotView TValue="PivotViewData" Width="100%" Height="450" AllowDataCompression="true" EnableVirtualization="true" ShowFieldList="true" ShowGroupingBar="true" MaxNodeLimitInMemberEditor="50">
-    <PivotViewDataSourceSettings TValue="PivotViewData" Url="https://some.com/invalidUrl" ExpandAll="false" EnableSorting="true" EnableServerSideAggregation="true" AlwaysShowValueHeader="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="ProductID" Caption="Product ID"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            <PivotViewValue Name="Price" Caption="Unit Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Price" Format="C0"></PivotViewFormatSetting>
-            <PivotViewFormatSetting Name="Sold" Format="N0"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-    <PivotViewEvents TValue="PivotViewData" OnActionFailure="ActionFailure"></PivotViewEvents>
-</SfPivotView>
-
-<style>
-    .error {
-        color: red;
-    }
-</style>
-
-@code{
-    public string ErrorDetails = "";
-    public class PivotViewData
-    {
-        public string ProductID { get; set; }
-        public string Country { get; set; }
-        public string Product { get; set; }
-        public double Sold { get; set; }
-        public double Price { get; set; }
-        public string Year { get; set; }
-    }
-    public void ActionFailure(PivotActionFailureEventArgs args)
-    {
-        this.ErrorDetails = args.ErrorInfo.Message;
-        StateHasChanged();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable)
 
 ## See also
