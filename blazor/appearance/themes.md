@@ -854,10 +854,6 @@ Below table lists the importing theme path for the individual components.
         <td>@use 'blazor-themes/SCSS-Themes/calendars/datetimepicker/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
-        <td>Diagram</td>
-        <td>@use 'blazor-themes/SCSS-Themes/diagrams/diagram/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
         <td>Dialog</td>
         <td>@use 'blazor-themes/SCSS-Themes/popups/dialog/{THEME-NAME}.scss'</td>
     </tr>
@@ -1008,10 +1004,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>TreeView</td>
         <td>@use 'blazor-themes/SCSS-Themes/navigations/treeview/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
-        <td>Diagram(Classic)</td>
-        <td>@use 'blazor-themes/SCSS-Themes/diagrams/diagram/{THEME-NAME}.scss'</td>
     </tr>
 </table>
 
