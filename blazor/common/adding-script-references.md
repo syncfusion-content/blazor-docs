@@ -157,10 +157,6 @@ The following table lists components and their script file names.
         <td>sf-daterangepicker.min.js</td>
     </tr>
     <tr>
-        <td>DiagramComponent</td>
-        <td>sf-diagramcomponent.min.js</td>
-    </tr>
-    <tr>
         <td>TimePicker</td>
         <td>sf-timepicker.min.js</td>
     </tr>
@@ -355,10 +351,6 @@ The following table lists components and their script file names.
     <tr>
         <td>Dialog</td>
         <td>sf-dialog.min.js</td>
-    </tr>
-    <tr>
-        <td>RichTextEditor</td>
-        <td>sf-richtexteditor.min.js</td>
     </tr>
     <tr>
         <td>InPlaceEditor</td>

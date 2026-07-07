@@ -917,38 +917,6 @@ AA
 </tr>
 <tr>
 <td>
-Diagram
-</td>
-<td>
-AA
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/diagram" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/diagram/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
-<tr>
-<td>
 Dialog
 </td>
 <td>
@@ -1458,38 +1426,6 @@ N/A
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/maps/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
-<tr>
-<td>
-Markdown Editor
-</td>
-<td>
-AA
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes">
-</td>
-<td>
----
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/markdown-editor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2034,38 +1970,6 @@ AA
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/ribbon/accessibility" target="_blank">Documentation</a>
-</td>
-</tr>
-<tr>
-<td>
-Rich Text Editor
-</td>
-<td>
-AA
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/accessibility/rich-text-editor" target="_blank">Demo</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/rich-text-editor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
