@@ -7,7 +7,7 @@ component: Button Group
 documentation: ug
 ---
 
-# Getting started with Blazor Button Group component in Blazor Server App
+# Getting started with Blazor Button Group component in the Blazor Server App
 
 This section briefly explains how to include [Blazor Button Group](https://www.syncfusion.com/blazor-components/blazor-button-group) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
