@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Card in Blazor Server App | Syncfusion
-description: Check out and learn how to get started with the Blazor Card component in a Blazor Server App.
+description: Check out and learn about how to get started with the Blazor Card component in a Blazor Server App.
 platform: Blazor
 component: Card
 documentation: ug
@@ -242,4 +242,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 2. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-3. [Getting Started with Blazor Card Header and Content](https://blazor.syncfusion.com/documentation/card/header-and-content)
+3. [Getting Started with Blazor Card Header and Content](https://blazor.syncfusion.com/documentation/card/header-content)

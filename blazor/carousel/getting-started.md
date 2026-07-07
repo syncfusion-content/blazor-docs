@@ -272,6 +272,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor Carousel Data Binding](https://blazor.syncfusion.com/documentation/carousel/data-binding)
-4. [Getting Started with Blazor Carousel Events](https://blazor.syncfusion.com/documentation/carousel/events)
+3. [Getting Started with Blazor Carousel Navigators and Indicators](https://blazor.syncfusion.com/documentation/carousel/navigators-and-indicators)
 
