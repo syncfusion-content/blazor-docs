@@ -387,7 +387,7 @@ namespace WinFormsChartApp
 
 ### Scheduler
 
-[WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) is a feature rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
+[WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) is a feature rich scheduling control for managing appointments and resources in Windows desktop applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is the Blazor component designed for calendar and scheduling scenarios in web applications.
 
 For additional details, refer to the [WinForms Scheduler getting started guide](https://help.syncfusion.com/windowsforms/scheduler/getting-started) and [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app).
 
