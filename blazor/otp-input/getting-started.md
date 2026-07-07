@@ -11,7 +11,7 @@ documentation: ug
 
 This guide briefly explains how to include the [Blazor OTP Input](https://www.syncfusion.com/blazor-components/blazor-otp-input) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor WASM App
+## Create a new Blazor WebAssembly App
 
 {% tabcontents %}
 
