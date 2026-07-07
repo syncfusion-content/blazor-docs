@@ -468,7 +468,7 @@ namespace ScheduleSample.Pages
 
 **Blazor approach**
 
-The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) uses [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to bind a local event list, allowing the component to handle updates internally.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to bind a local event list, allowing the component to handle updates internally.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

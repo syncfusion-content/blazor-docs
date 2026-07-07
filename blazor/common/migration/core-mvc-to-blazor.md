@@ -432,7 +432,7 @@ public class Meeting
 
 **Blazor equivalent**
 
-The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component defines views using the [ScheduleViews](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) collection and binds event data through [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) to handle appointments within the component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

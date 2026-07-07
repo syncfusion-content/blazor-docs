@@ -406,7 +406,7 @@ For additional details, refer to the [WinForms Scheduler getting started guide](
 
 The [WinForms Scheduler](https://www.syncfusion.com/winforms-ui-controls/scheduler) control can be added programmatically or via the Visual Studio Designer. Views and appointments are configured programmatically or in the Designer, and data is assigned through the `DataSource` property.
 
-The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) parameter.
 
 **WinForms approach**
 
