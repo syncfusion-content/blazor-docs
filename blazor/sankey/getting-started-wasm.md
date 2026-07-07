@@ -13,7 +13,7 @@ documentation: ug
 
 This section briefly explains how to include the [Blazor Sankey Diagram](https://www.syncfusion.com/blazor-components/blazor-sankey) in a Blazor WASM App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor WASM App
+## Create a new Blazor WebAssembly App
 
 {% tabcontents %}
 
