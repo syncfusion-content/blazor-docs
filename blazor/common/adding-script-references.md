@@ -357,20 +357,12 @@ The following table lists components and their script file names.
         <td>sf-dialog.min.js</td>
     </tr>
     <tr>
-        <td>RichTextEditor</td>
-        <td>sf-richtexteditor.min.js</td>
-    </tr>
-    <tr>
         <td>InPlaceEditor</td>
         <td>sf-inplaceeditor.min.js</td>
     </tr>
     <tr>
         <td>Kanban</td>
         <td>sf-kanban.min.js</td>
-    </tr>
-    <tr>
-        <td>Gantt</td>
-        <td>sf-gantt.min.js</td>
     </tr>
     <tr>
         <td>ImageEditor</td>

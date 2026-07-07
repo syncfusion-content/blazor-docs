@@ -426,7 +426,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBzXMKtikurjnwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Media Query Component](images/blazor-media-query.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrdtmDhzdYJeDlu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Media Query Component](images/blazor-media-query.webp)" %}
 
 ## See also
 
