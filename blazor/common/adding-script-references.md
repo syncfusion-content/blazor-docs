@@ -369,10 +369,6 @@ The following table lists components and their script file names.
         <td>sf-kanban.min.js</td>
     </tr>
     <tr>
-        <td>Gantt</td>
-        <td>sf-gantt.min.js</td>
-    </tr>
-    <tr>
         <td>ImageEditor</td>
         <td>sf-image-editor.min.js</td>
     </tr>
