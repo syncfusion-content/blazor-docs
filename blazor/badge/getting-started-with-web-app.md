@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Badge in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Badge Component in Blazor Web App.
+description: Check out and learn about the documentation for getting started with Blazor Badge Component in Blazor Web App.
 platform: Blazor
 component: Badge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Badge](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=bootstrap5) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Badge](https://www.syncfusion.com/blazor-components/blazor-badge) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -112,12 +112,12 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-## Add stylesheet resources
+## Add stylesheet resource
  
-The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) in the **App.razor** file.
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) in the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
@@ -126,7 +126,7 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 
 ## Add Blazor Badge component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Badge](https://www.syncfusion.com/blazor-components/blazor-badge) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Badge](https://www.syncfusion.com/blazor-components/blazor-badge) component inside the `.Client` project razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

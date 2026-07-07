@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Badge in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Badge component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Badge component in Blazor WebAssembly Application.
 platform: Blazor
 control: Badge
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Badge](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=bootstrap5) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Badge](https://www.syncfusion.com/blazor-components/blazor-badge) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -110,7 +110,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-## Add stylesheet resources
+## Add stylesheet resource
  
 The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
