@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Numeric Textbox in Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Numeric Textbox Components in Web App.
+description: Check out and learn the documentation for getting started with Blazor Numeric Textbox Component in Web App.
 platform: Blazor
 control: Numeric Textbox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Numeric Textbox in Blazor Web App
 
-This section briefly explains about how to include [Blazor Numeric Textbox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Numeric Textbox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
@@ -146,10 +146,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -161,7 +161,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Numeric Textbox component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Numeric Textbox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Numeric Textbox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component inside the `.Client` project razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -175,7 +175,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -219,7 +219,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVHDRAZzVXhxWPI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVHDRAZzVXhxWPI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Numeric Textbox Component](./images/blazor-numerictextbox-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/NumericTextBox).
 
@@ -249,7 +249,7 @@ Set the display format using the [Format](https://help.syncfusion.com/cr/blazor/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBnNRUtJBOrHhIc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBnNRUtJBOrHhIc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Numeric TextBox with Formatting Value](./images/blazor-numerictextbox-format-value.webp)" %}
 
 ## Precision of numbers
 
@@ -267,7 +267,7 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxNRUtzKCXPvFf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxNRUtzKCXPvFf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Numeric Textbox with Precision Value](./images/blazor-numerictextbox-precision-value.webp)" %}
 
 ## See also
 
