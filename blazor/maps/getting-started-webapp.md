@@ -181,7 +181,7 @@ Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vec
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
