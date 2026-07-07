@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Charts in Blazor Server App | Syncfusion
-description: Checkout and learn about getting started with Blazor Charts component in Blazor Server App using Visual Studio and more.
+description: Check out and learn about getting started with the Blazor Charts component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Charts
 documentation: ug
@@ -72,7 +72,7 @@ Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.Charts`) and install it.
 
-Alternatively, you can install the same package using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -86,7 +86,7 @@ Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -100,7 +100,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -167,7 +167,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveServer
-<!-- SfChart is the root container component for the chart -->
+@* SfChart is the root container component for the chart *@
 <SfChart>
 
 </SfChart>
@@ -241,8 +241,8 @@ Map the data fields `Month` and `SalesValue` to the series [XName](https://help.
 {
     public class SalesInfo
     {
-        public string Month { get; set;}
-        public double SalesValue { get; set;}
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
     }
 
     public List<SalesInfo> Sales = new List<SalesInfo>
