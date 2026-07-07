@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Card in Blazor Server App | Syncfusion
-description: Check out and learn about how to get started with the Blazor Card component in a Blazor Server App.
+description: Check out and learn about the how to get started with the Blazor Card component in a Blazor Server App.
 platform: Blazor
 component: Card
 documentation: ug
