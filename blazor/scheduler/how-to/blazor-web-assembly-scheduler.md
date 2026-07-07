@@ -132,4 +132,4 @@ Add the Blazor Scheduler component in the **~/Pages/Index.razor** file.
 
 ![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.webp)
 
-N> Refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview) to understand how to manage appointments with multiple resources.
+N> Refer to our [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview) to understand how to manage appointments with multiple resources.
