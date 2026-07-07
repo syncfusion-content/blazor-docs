@@ -249,9 +249,6 @@ padding-top: 20px;
 .sf-icon-menubar:before {
     content: "\e746";
 }
-.sf-icon-scheduler:before {
-    content: "\e747";
-}
 .sf-icon-bullet-chart:before {
     content: "\e748";
 }
@@ -477,7 +474,6 @@ padding-top: 20px;
     </td>
     <td>
         <div><p class="controlcategory-topics">CALENDARS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/scheduler/getting-started"><span class="sf-home-icon sf-icon-scheduler"></span>Scheduler</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/calendar/getting-started"><span class="sf-home-icon sf-icon-calendar"></span>Calendar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datepicker/getting-started"><span class="sf-home-icon sf-icon-datepicker"></span>DatePicker</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started"><span class="sf-home-icon sf-icon-date-range-picker"></span>DateRangePicker</a></div>

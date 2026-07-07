@@ -946,10 +946,6 @@ Below table lists the importing theme path for the individual components.
         <td>@use 'blazor-themes/SCSS-Themes/inputs/slider/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
-        <td>Scheduler</td>
-        <td>@use 'blazor-themes/SCSS-Themes/schedule/schedule/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
         <td>Sidebar</td>
         <td>@use 'blazor-themes/SCSS-Themes/navigations/sidebar/{THEME-NAME}.scss'</td>
     </tr>

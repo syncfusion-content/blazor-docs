@@ -1615,58 +1615,6 @@ SfRangeNavigator
 </tr>
 </table>
 
-## Syncfusion.Blazor.Schedule
-
-The Blazor Scheduler component is an event calendar that facilitates users with the common Outlook-calendar features, thus allowing them to plan and manage their events/appointments and their time in an efficient way.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Schedule/">Syncfusion.Blazor.Schedule</a>
-</td>
-<td>
-<ul>
-<li><a href="https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp">Scheduler</a></li>
-<li>Recurrence Editor</li>
-</ul>
-</td>
-<td>
-<ul>
-<li>SfRecurrenceEditor</li>
-<li>SfSchedule</li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/" target="_blank">Syncfusion.ExcelExport.Net.Core</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
 ## Syncfusion.Blazor.SmithChart
 
 The Blazor Smith Chart is a control for showing the parameters of transmission lines in high-frequency circuit applications. Its rich feature set includes features like legends, markers, tooltips, and data labels.

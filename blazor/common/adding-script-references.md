@@ -233,10 +233,6 @@ The following table lists components and their script file names.
         <td>sf-toolbar.min.js</td>
     </tr>
     <tr>
-        <td>Schedule</td>
-        <td>sf-schedule.min.js</td>
-    </tr>
-    <tr>
         <td>BarcodeGenerator</td>
         <td>sf-barcode.min.js</td>
     </tr>
