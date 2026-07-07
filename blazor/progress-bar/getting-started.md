@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Stared with Blazor ProgressBar in WASM App | Syncfusion
-description: Checkout and learn here all about getting started with Blazor ProgressBar in Blazor WebAssembly Application.
+title: Getting Started with Blazor ProgressBar in WASM App | Syncfusion
+description: Check out and learn here all about getting started with Blazor ProgressBar in Blazor WebAssembly Application.
 platform: Blazor
 control: ProgressBar
 documentation: ug
 ---
 
-# Getting Started with Blazor ProgressBar in Blazor WASM App
+# Getting started with Blazor ProgressBar in Blazor WASM App
 
-This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -168,7 +168,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
