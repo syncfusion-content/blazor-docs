@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Align Items Using Spacer in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about align the items using spacer in Syncfusion Blazor Toolbar component and more.
+title: Align Items Using Spacer in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about align the items using spacer in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -34,7 +34,7 @@ Insert spacers at the end of the items on the left and in the center. This will 
   </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSMZiXfjMHImXT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-center-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLSMZiXfjMHImXT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-center-item.webp)" %}
 
 ## Left and Right alignment
 
@@ -56,7 +56,7 @@ Insert a spacer between items intended for left and right alignment. This pushes
   </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhyCjCNpZsakxAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhyCjCNpZsakxAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-left-right-item.webp)" %}
 
 ## Right alignment
 
@@ -78,7 +78,7 @@ Insert a spacer as the first item in the toolbar. This pushes all other items to
   </ToolbarItems>
 </SfToolbar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLesXsXJthASXEy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-right-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLesXsXJthASXEy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Spacer](./images/blazor-toolbar-spacer-right-item.webp)" %}
 
 
 N> Avoid using the `Align` property in toolbar items when `Spacer` is utilized.

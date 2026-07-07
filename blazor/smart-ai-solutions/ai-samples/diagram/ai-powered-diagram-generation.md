@@ -1,16 +1,16 @@
 ---
 layout: post
-title: AI‑Powered Diagram Generation Using Blazor Diagram | Syncfusion
-description: Generate Flow charts, Mind maps and Sequence diagrams using OpenAI, Azure OpenAI, or Ollama with Syncfusion Blazor Diagram. Explore to more details.
+title: AI‑Powered Diagram Generation Using Blazor Diagram | Syncfusion®
+description: Generate Flow charts, Mind maps and Sequence diagrams using OpenAI, Azure OpenAI, or Ollama with Blazor Diagram. Explore to more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor Diagram, AI embeddings, Memarid, Syncfusion Blazor AI
+keywords: Blazor Diagram, AI embeddings, Memarid, Blazor AI
 --- 
 
 # Generating AI-Powered Blazor Diagram
 
-The Syncfusion Blazor Diagram Component can be enhanced with AI-driven features by using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide explains how to create Flowchart, Mind Map, and Sequence Diagram using AI within the Syncfusion Blazor Diagram component. Different AI services can be utilized, such as **OpenAI**, **Azure OpenAI,** or **Ollama**. Natural-language text input enables AI to automatically generate and render diagrams.
+The Blazor Diagram Component can be enhanced with AI-driven features by using the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) NuGet package. This guide explains how to create Flowchart, Mind Map, and Sequence Diagram using AI within the Blazor Diagram component. Different AI services can be utilized, such as **OpenAI**, **Azure OpenAI,** or **Ollama**. Natural-language text input enables AI to automatically generate and render diagrams.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ To create a Blazor application, follow the "Getting Started" documentation for [
 
 ## Install Required NuGet Packages
 
-Installation of the following Syncfusion and AI NuGet packages is required, based on the chosen AI service.
+Installation of the following Blazor and AI NuGet packages is required, based on the chosen AI service.
 
 {% tabcontents %}
 {% tabcontent Syncfusion Packages %}
@@ -58,7 +58,7 @@ Installation of the following Syncfusion and AI NuGet packages is required, base
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Configure AI service and Syncfusion Blazor service
+## Configure AI service and Blazor service
 
 One of the following AI services (OpenAI, Azure OpenAI, or Ollama) should be selected based on project requirements:
 
@@ -66,7 +66,7 @@ One of the following AI services (OpenAI, Azure OpenAI, or Ollama) should be sel
 * **Azure OpenAI**: Enterprise-grade deployment with enhanced security and scalability.
 * **Ollama**: Self-hosted, privacy-focused AI models.
 
-Instructions for the chosen service should be followed to register the Syncfusion and AI model within the application.
+Instructions for the chosen service should be followed to register the Blazor and AI model within the application.
 
 ### OpenAI
 
@@ -112,7 +112,7 @@ using Microsoft.Extensions.AI;
 using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
-// Register Syncfusion blazor service
+// Register blazor service
 builder.Services.AddSyncfusionBlazor();
 
 string azureOpenAIKey = "AZURE_OPENAI_KEY";
@@ -149,7 +149,7 @@ using Microsoft.Extensions.AI;
 using OllamaSharp;
 
 var builder = WebApplication.CreateBuilder(args);
-// Register Syncfusion blazor service
+// Register blazor service
 builder.Services.AddSyncfusionBlazor();
 
 string modelName = "MODEL_NAME";
@@ -439,7 +439,7 @@ If the AI service fails to return a valid response, the Diagram displays an erro
 
 ## Sample code
 
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ## Live Demo
 

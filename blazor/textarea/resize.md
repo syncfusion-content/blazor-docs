@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize in Blazor TextArea Component | Syncfusion
-description: Check out and learn about the Resize feature of the Syncfusion Blazor TextArea component and explore much more functionality.
+title: Resize in Blazor TextArea Component | Syncfusion®
+description: Check out and learn about the Resize feature of the Blazor TextArea component and explore much more functionality.
 platform: Blazor
 control: TextArea
 documentation: ug
@@ -28,7 +28,7 @@ N> In Razor, enums are typically referenced with the @ prefix (for example, @Res
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhTjHsgMqknhFJF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Resize](./images/blazor-textarea-resize.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRNwtMzswuJcgJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with Resize](./images/blazor-textarea-resize.webp)" %}
 
 ## Width
 
@@ -42,4 +42,4 @@ Customize the width of the TextArea using the [Width](https://help.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLTjRCACTsLJegK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Custom Width and Resize](./images/blazor-textarea-resize-width.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdDcDWzLrHUkQN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with Custom Width and Resize](./images/blazor-textarea-resize-width.webp)" %}

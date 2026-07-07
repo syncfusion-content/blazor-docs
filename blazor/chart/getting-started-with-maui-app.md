@@ -85,7 +85,7 @@ N> The `~/` notation represents the root directory of your project. This file is
 
 ## Register Blazor service
 
-Register the Blazor service in the **~/MauiProgram.cs** file. This step enables the components to work in your application.
+Register the Blazor service in the **~/MauiProgram.cs** file. This step enables the Blazor components to work in your application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" %}
@@ -110,7 +110,7 @@ public static class MauiProgram
 
 ## Add script resources
 
-The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file (this is the main HTML entry point of your MAUI Blazor application).
+The JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/index.html** file (this is the main HTML entry point of your MAUI Blazor application).
 
 ```html
 

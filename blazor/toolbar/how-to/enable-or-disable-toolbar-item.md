@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable/Disable Toolbar Item in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about how to enable/disable toolbar item in Syncfusion Blazor Toolbar component and more.
+title: Enable/Disable Toolbar Item in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about how to enable/disable toolbar item in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -39,4 +39,4 @@ The `Disabled` property of a Toolbar item enables or disables the item by settin
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrIMDCZUEcssLph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling or Disabling Blazor Toolbar Item](../images/blazor-toolbar-disable-item.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrIMDCZUEcssLph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling or Disabling Blazor Toolbar Item](../images/blazor-toolbar-disable-item.webp)" %}

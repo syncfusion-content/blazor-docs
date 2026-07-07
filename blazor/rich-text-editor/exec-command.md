@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ExecuteCommand in Blazor Rich Text Editor Component | Syncfusion
-description: Learn here all about ExecuteCommand in Rich Text Editor in Syncfusion Blazor Rich Text Editor component and more.
+title: ExecuteCommand in Blazor Rich Text Editor | Syncfusion®
+description: Learn how to execute commands programmatically in Blazor Rich Text Editor to manipulate content dynamically.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -240,7 +240,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);
 
 <tr>
 <td><p>Redo</p></td>
-<td><p>Allows you to redo your actions. </p></td>
+<td><p>Allows you to redo your actions.</p></td>
 <td>
 {% highlight cshtml %}
 await this.RteObj.ExecuteCommandAsync(CommandName.Redo);

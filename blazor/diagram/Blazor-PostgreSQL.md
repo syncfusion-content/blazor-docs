@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Loading Blazor Diagram from PostgreSQL Database | Syncfusion®
-description: Fetch organizational chart layout data from PostgreSQL and bind it to a .NET API-backed Syncfusion® Blazor Diagram for Server and WASM samples.
+description: Fetch organizational chart layout data from PostgreSQL and bind it to a .NET API-backed Blazor Diagram for Server and WASM samples.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Loading Blazor Diagram from PostgreSQL Database
 
-This guide explains how to display an organizational chart using data stored in a PostgreSQL database and visualize it with the Syncfusion® Blazor Diagram component.
+This guide explains how to display an organizational chart using data stored in a PostgreSQL database and visualize it with the Blazor Diagram component.
 
 It covers:
 * Design and store organizational chart data in a database.
@@ -46,7 +46,7 @@ Ensure that the following software and packages are installed:
 | PostgreSQL Server | 12.x or later | Stores organizational chart data |
 | pgAdmin 4 (optional) | Latest | DB management UI |
 | Syncfusion.Blazor.Diagram | {{site.blazorversion}} | Diagram component |
-| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Syncfusion® Blazor components |
+| Syncfusion.Blazor.Themes | {{site.blazorversion}} | Styling for Blazor components |
 | Microsoft.EntityFrameworkCore.Design | 10.x |  EF Core design‑time tools |
 | Microsoft.EntityFrameworkCore.Tools | 10.x | EF Core CLI tools |
 | Npgsql.EntityFrameworkCore.PostgreSQL | 10.x | EF provider for PostgreSQL |
@@ -483,7 +483,7 @@ app.Run();
 
 **Explanation:**
 
-- `AddSyncfusionBlazor()`: Registers Syncfusion® Blazor components such as Diagram and themes.
+- `AddSyncfusionBlazor()`: Registers Blazor components such as Diagram and themes.
 - `AddDbContext<AppDbContext>`: Configures Entity Framework Core to use PostgreSQL via the `UseNpgsql` provider.
 - `AddHttpClient<LayoutService>(...)`: Registers `LayoutService` as a typed HTTP client, enabling it to call the **/api/layout** endpoint using dependency injection.
 - `AddControllers()`: Enables API controllers for handling HTTP API requests.
@@ -543,7 +543,7 @@ The backend setup is now complete. The next section focuses on configuring the B
 
 ### Step 1: Install and Configure Blazor Diagram Component
 
-This section explains how to render an organizational chart using the Syncfusion® Blazor Diagram component by binding it to data loaded from the backend API.
+This section explains how to render an organizational chart using the Blazor Diagram component by binding it to data loaded from the backend API.
 
 **Instructions:**
 
@@ -555,13 +555,13 @@ This section explains how to render an organizational chart using the Syncfusion
 @using Syncfusion.Blazor.Diagram
 ```
 
-* Before using Syncfusion® Blazor components, register your license key in **Program.cs**:
+* Before using Blazor components, register your license key in **Program.cs**:
 
 ```csharp
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 ```
 
-* Add the Syncfusion® stylesheet and scripts to the host page **<head>** element to ensure that required assets load before the Blazor components are rendered. Use the appropriate host file based on your project type:
+* Add the stylesheet and scripts to the host page **<head>** element to ensure that required assets load before the Blazor components are rendered. Use the appropriate host file based on your project type:
 
   - **Blazor Server (.NET 8+)**: Add the links to **Pages/App.razor** (inside the **<head>** element).
   - **Blazor WebAssembly**: Add the links to **wwwroot/index.html** (inside the **<head>** element).

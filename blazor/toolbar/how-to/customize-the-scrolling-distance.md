@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the Scrolling distance in Blazor Toolbar | Syncfusion
-description: Learn here all about customize the scrolling distance in Syncfusion Blazor Toolbar component and more.
+title: Customize the Scrolling distance in Blazor Toolbar | Syncfusion®
+description: Learn here all the features about customize the scrolling distance in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -50,4 +50,4 @@ The toolbar `ScrollStep` property supports to customize the scrolling distance, 
 </SfToolbar>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMZCNAknqZPUj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custominzing Scroll Step in Blazor Toolbar](../images/blazor-toolbar-scrollstep.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZryMZCNAknqZPUj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custominzing Scroll Step in Blazor Toolbar](../images/blazor-toolbar-scrollstep.webp)" %}

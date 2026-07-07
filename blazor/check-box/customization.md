@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customized Checkbox in Blazor CheckBox Component | Syncfusion
-description: Checkout and learn here all about Customized Checkbox in Syncfusion Blazor CheckBox component and more.
+title: Customized Checkbox in Blazor CheckBox Component | Syncfusion®
+description: Checkout and learn here all the features about Customized Checkbox in Blazor CheckBox component and more.
 platform: Blazor
 control: Checkbox
 documentation: ug

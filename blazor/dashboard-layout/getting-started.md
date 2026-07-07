@@ -164,7 +164,7 @@ N> There is no need to assign default value for panels. Refer to the [Panels](./
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Dashboard Layout component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVpXihOLKRGIhFf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout Component](images/blazor-dashboard-layout-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxtRLUKlzqHcwQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout Component](images/blazor-dashboard-layout-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
 
@@ -208,7 +208,7 @@ A basic Dashboard Layout panel can display simple data. The panel's header is de
 
 The Dashboard Layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzXChErUwBJvMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHNxhgKwFngyBq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout with Single Data](images/blazor-dashboard-layout-single-content.webp)" %}
 
 ### Panels with Components
 
@@ -376,7 +376,7 @@ These components are placed as panel content by assigning the corresponding Blaz
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSDIVjTEDbFVUJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.webp)" %}
 
 To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 

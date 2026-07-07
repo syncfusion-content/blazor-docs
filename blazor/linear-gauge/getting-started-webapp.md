@@ -89,21 +89,14 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install required Blazor packages
 
-Install the [Syncfusion.Blazor.LinearGauge](https://www.nuget.org/packages/Syncfusion.Blazor.LinearGauge) NuGet packages using one of the following methods.
+Install [Syncfusion.Blazor.LinearGauge](https://www.nuget.org/packages/Syncfusion.Blazor.LinearGauge) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
-**Visual Studio (NuGet Package Manager)**:
-
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.LinearGauge`) and install it.
-
-**Visual Studio Code or .NET CLI**:
-
-Open the terminal or command prompt and run the following commands:
+Alternatively, run the following command in the Package Manager Console to achieve the same.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET CLI" %}
+{% highlight C# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.LinearGauge -v {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.LinearGauge -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +120,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register Blazor service
 
-Register the Blazor service in the **Program.cs** file of your Blazor Web App.
+Register the Syncfusion Blazor service in the **Program.cs** file of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -155,17 +148,24 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Linear Gauge component
+## Add Blazor LinearGauge component
 
-* Open a Razor file located in the **~/Components/Pages** (for example, **Home.razor**) and add the Blazor Linear Gauge component inside the razor file.
-* If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
+Add the Blazor LinearGauge component in the **~/Components/Pages/*.razor** file. If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the `~/Pages/*.razor` file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`).
 
 N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
+{% highlight razor %}
+
+@* desired render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@rendermode InteractiveAuto
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
@@ -179,21 +179,7 @@ N> If the **Interactivity Location** is set to `Global` with `Auto` or `WebAssem
 {% endhighlight %}
 {% endtabs %}
 
-### Run the application
-
-**Visual Studio**:
-
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Linear Gauge component will render in your default web browser.
-
-**Visual Studio Code or .NET CLI**:
-
-1. Open the terminal (Visual Studio Code) or command prompt (.NET CLI) and navigate to the `Client` project folder.
-2. Run the following command:
-
-    ```
-    dotnet run
-    ```
-3. The application will start and display in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor LinearGauge component in the default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrzZCLkTTyPJnAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge Component](images/blazor-linear-gauge-component.webp)" %}
 

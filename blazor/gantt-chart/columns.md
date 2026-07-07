@@ -312,7 +312,7 @@ The following example code demonstrates the formatting of data for the **TaskID*
 
 ### Date formatting
 
-The Gantt component for Blazor supports date formatting in columns using the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where format strings such as **d**, **D**, **MMM dd, yyyy** can be applied. Both built-in formats like **yMd** and custom formats are supported to define the layout and detail of date and time values based on column requirements. The following custom formats and their corresponding output are listed below:
+The Blazor Gantt component for Blazor supports date formatting in columns using the [GanttColumn.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) property, where format strings such as **d**, **D**, **MMM dd, yyyy** can be applied. Both built-in formats like **yMd** and custom formats are supported to define the layout and detail of date and time values based on column requirements. The following custom formats and their corresponding output are listed below:
 
 Format | Formatted value
 -----|-----
@@ -382,7 +382,7 @@ Format | Formatted value
 
 ## AutoFit columns
 
-The Syncfusion<sup style="font-size:70%">®</sup> Gantt component for Blazor supports automatic column width adjustment based on content. Double-clicking the column header resizer adjusts the width to fit the maximum content, ensuring clear data visibility without wrapping. To enable this feature, set [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowResizing) to **true**.
+The Gantt component for Blazor supports automatic column width adjustment based on content. Double-clicking the column header resizer adjusts the width to fit the maximum content, ensuring clear data visibility without wrapping. To enable this feature, set [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowResizing) to **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -531,7 +531,7 @@ You can resize a column in Gantt Chart to fit its content using the [AutoFitColu
 
 ## Change tree column
 
-The Syncfusion<sup style="font-size:70%">®</sup> Blazor Gantt Chart component displays hierarchical task relationships using expand/collapse icons. These icons help users navigate parent and child tasks efficiently. To configure their position, set the [TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TreeColumnIndex) property to the index of the column where the icons should appear. By default, the value is **0**, which places them in the first column.
+The Blazor Gantt Chart component displays hierarchical task relationships using expand/collapse icons. These icons help users navigate parent and child tasks efficiently. To configure their position, set the [TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TreeColumnIndex) property to the index of the column where the icons should appear. By default, the value is **0**, which places them in the first column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -829,7 +829,7 @@ The Blazor Gantt Chart component allows fine-grained control over column-level a
 
 ## Responsive columns
 
-The  Blazor Gantt Chart component provides a built-in feature to control column visibility based on media queries using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HideAtMedia) property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
+The Blazor Gantt Chart component provides a built-in feature to control column visibility based on media queries using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HideAtMedia) property in the column object. This method can be used to hide columns automatically when the screen width matches specified [media query](http://cssmediaqueries.com/what-are-css-media-queries.html) conditions.
 
 The following example demonstrates a Gantt chart where the **Job Name** column is set to `(min-width: 700px)`, meaning it will be hidden when the browser width is less than or equal to 700px. Similarly, the **Duration** column is set to `(max-width: 500px)`, so it will be hidden when the browser width exceeds 500px.
 

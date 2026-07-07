@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Expand and collapse icon styling in Blazor TreeGrid | Syncfusion
-description: Learn how to customize the expand and collapse icons in the Syncfusion Blazor TreeGrid using CSS, including changing icon appearance, colors, and sizes.
+title: Expand and collapse icon styling in Blazor TreeGrid | Syncfusion®
+description: Learn how to customize the expand and collapse icons in the Blazor TreeGrid using CSS, including changing icon appearance, colors, and sizes.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Expand and collapse icon customization in Syncfusion Blazor TreeGrid
+# Expand and collapse icon customization in Blazor TreeGrid
 
-The appearance of expand and collapse icons in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be customized using CSS. Styling options are available for different aspects of the expand/collapse interface:
+The appearance of expand and collapse icons in the Blazor TreeGrid can be customized using CSS. Styling options are available for different aspects of the expand/collapse interface:
 
 - **Expand/collapse icon element:** The icon used to indicate expand or collapse state.
 - **Icon size and color:** Properties to modify icon dimensions and visual appearance.
@@ -44,7 +44,7 @@ The expand and collapse icons can be customized by changing the icon glyph using
 }
 ```
 
-Modify the `content` value to use different glyphs from the icon font. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [Syncfusion icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
+Modify the `content` value to use different glyphs from the icon font. Confirm that the appropriate icon font family is available so glyphs render correctly. Refer to the [Blazor icons](https://blazor.syncfusion.com/documentation/appearance/icons) documentation to choose glyphs for your theme.
 
 ![TreeGrid custom expand icons](../images/style-and-appearance/expand-custom-icon.webp)
 

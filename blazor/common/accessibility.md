@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Accessibility in Syncfusion® Blazor components
+# Accessibility in Blazor components
 
 All Blazor components follow WAI-ARIA by default, enabling accessible web applications that are fully navigable with assistive technologies.
 

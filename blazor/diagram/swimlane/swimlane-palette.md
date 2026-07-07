@@ -109,7 +109,7 @@ The following code shows how to add lanes and phases to a palette.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeWZXcKcyuCrTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdDxBugpXzBZdg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Swimlanes/SwimlanePalette/SwimlanePalette.razor)
 

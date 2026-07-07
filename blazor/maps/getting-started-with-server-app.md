@@ -83,7 +83,7 @@ cd BlazorApp
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+## Install required Blazor packages
 
 Install the [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps/) NuGet package in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (dotnet add package Syncfusion.Blazor.Maps --version {{ site.releaseversion }}), or the .NET CLI.
 
@@ -116,7 +116,7 @@ N> The `~/` notation represents the root directory of your project. This file is
 
 ## Register Blazor service
 
-Register the Blazor service in the **Program.cs** file of your Blazor Server App. This step enables the Blazor components to work in your application.
+Register the Blazor service in the **Program.cs** file of your Blazor Server App. This step enables the Syncfusion components to work in your application.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -132,7 +132,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file (this is the root layout file of your application).
+The Syncfusion JavaScript library needs to be included in your application. The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets). Include the script reference in the **~/Components/App.razor** file (this is the root layout file of your application).
 
 ```html
 

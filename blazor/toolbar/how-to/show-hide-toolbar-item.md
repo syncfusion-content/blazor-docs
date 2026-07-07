@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show/Hide Toolbar Item in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about how to show or hide toolbar item in Syncfusion Blazor Toolbar component and more.
+title: Show/Hide Toolbar Item in Blazor Toolbar Component | Syncfusion®
+description: Checkout and learn here all the features about how to show or hide toolbar item in Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -40,4 +40,4 @@ The `Visible` property of a Toolbar item controls its visibility by setting its 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhSsXCXqYOTHppI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Showing or Hiding Blazor Toolbar Items](../images/blazor-toolbar-show-or-hide-item.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhSsXCXqYOTHppI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Showing or Hiding Blazor Toolbar Items](../images/blazor-toolbar-show-or-hide-item.webp)" %}

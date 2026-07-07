@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor TreeMap component and much more.
+title: Data Binding in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features about Data Binding in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -267,7 +267,7 @@ N> Refer the data values for [product_growth](https://www.syncfusion.com/downloa
 
 ## Remote data
 
-To interact with the remote data source, provide the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with an appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). By default, the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
+To interact with the remote data source, provide the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with an appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). By default, the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) for remote data-binding.
 
 N> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is used for data binding then the **TValue** must be provided explicitly to the TreeMap component.
 

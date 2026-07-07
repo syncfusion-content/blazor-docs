@@ -1,16 +1,16 @@
 ---
 layout: post
-title: AI-Powered Content Assistance in Blazor Rich Text Editor | Syncfusion
+title: AI-Powered Content Assistance in Blazor Rich Text Editor | Syncfusion®
 description: Enhance content creation in Blazor Rich Text Editor using AI for grammar correction, summarization, translation, and more.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor Rich Text Editor, AI content enhancement, Syncfusion Blazor AI
+keywords: Blazor Rich Text Editor, AI content enhancement, Blazor AI
 ---
 
 # AI-Powered Content Assistance in Blazor Rich Text Editor
 
-This guide demonstrates how to use the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to enhance content creation in the Syncfusion Blazor Rich Text Editor. The AI integration enables intelligent features such as grammar correction, summarization, elaboration, translation, and rephrasing. These capabilities are powered by AI models hosted via services like OpenAI, Azure OpenAI, or Ollama.
+This guide demonstrates how to use the [**Syncfusion.Blazor.AI**](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to enhance content creation in the Blazor Rich Text Editor. The AI integration enables intelligent features such as grammar correction, summarization, elaboration, translation, and rephrasing. These capabilities are powered by AI models hosted via services like OpenAI, Azure OpenAI, or Ollama.
 
 ## Prerequisites
 
@@ -194,9 +194,9 @@ var app = builder.Build();
 
 - **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (e.g., `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor Service
+## Register Blazor Service
 
-Add the Syncfusion Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
+Add the Blazor service to your **~/Program.cs** file. The configuration depends on your app's **Interactive Render Mode**:
 
 - **Server Mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto Mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -635,7 +635,7 @@ Select text → Choose AI action → Dialog opens → AI processes → Updated c
 
 ## Sample Code
 
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ![Rich Text Editor AI Assistant - Output](../../ai/images/richtexteditor-ai-assistant.webp)
 

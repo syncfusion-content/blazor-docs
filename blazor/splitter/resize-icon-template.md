@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize Icon Template Support | Syncfusion
-description: Check out and learn here all about how to customize the resize icon in the separator using the template in Syncfusion Blazor Splitter component and much more.
+title: Resize Icon Template in Blazor Splitter Component | Syncfusion®
+description: Check out and learn here all about how to customize the resize icon in the separator using the template in Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -43,4 +43,4 @@ The Splitter allows to customize the resize icon of the separator using the temp
 
 ```
 
-![Blazor Splitter with Resize Icon Template](./images/blazor-splitter-resize-icon-template.png)
+![Blazor Splitter with Resize Icon Template](./images/blazor-splitter-resize-icon-template.webp)

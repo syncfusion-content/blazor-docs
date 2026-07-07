@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Accumulation Chart Blazor Web App | Syncfusion®
+title: Getting Started with Blazor Accumulation Chart in Web App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Accumulation Chart Component in Blazor Web App.
 platform: Blazor
 component: Accumulation Chart
@@ -29,6 +29,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +47,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,18 +59,18 @@ dotnet new blazor -o BlazorWebApp --interactivity Auto
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
-Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the `.Client` project.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Charts`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.Charts`) and install it.
 
-Alternatively, you can install the same packages using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -153,8 +157,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Accumulation Chart component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Accumulation Chart](https://www.syncfusion.com/blazor-components/blazor-charts) component inside the razor file.
@@ -176,7 +178,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-@code{
+@code
+{
     public class ChartData
     {
         public string Country { get; set; }
@@ -216,6 +219,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -231,6 +235,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -241,7 +246,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pie Chart](images/getting-started/blazor-pie-chart-webapp.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhzDWVeVKeUbWGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accumulation Chart](images/getting-started/blazor-pie-chart-webapp.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AccumulationChart)
 

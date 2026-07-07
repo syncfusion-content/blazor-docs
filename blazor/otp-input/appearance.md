@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance in Blazor OTP Input Component | Syncfusion
-description: Checkout and learn here all about Appearance with Syncfusion Blazor OTP Input component in Blazor Server App and Blazor WebAssembly App.
+title: Appearance in Blazor OTP Input Component | Syncfusion®
+description: Learn how to customize the appearance of Blazor OTP Input component including length, disabled state, and visual styles.
 platform: Blazor
 control: OTP Input
 documentation: ug

@@ -18,7 +18,7 @@ Common setup issues relate to:
 * Script reference management
 * Service registration in dependency injection
 
-N> This guide is intended for Blazor components version 33.2.3 or later, targeting .NET 8, .NET 9, or .NET 10. Some details may differ in earlier versions or older .NET releases.
+N> This guide is intended for Blazor components version 33.2.3 or later. Some details may differ in earlier versions or older .NET releases.
 
 ## Issue 1: Components rendering without styles
 

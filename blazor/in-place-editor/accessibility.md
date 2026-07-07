@@ -54,4 +54,3 @@ The accessibility compliance of the In-place Editor component is shown in the fo
 ## See also
 
 * [Accessibility in Blazor components](../common/accessibility)
-

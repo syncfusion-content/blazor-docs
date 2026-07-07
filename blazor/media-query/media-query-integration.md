@@ -84,12 +84,12 @@ Active media name: <b>@activeBreakpoint</b>
 
 ActiveBreakPoint as `Large`:
 
-![Blazor Media Query integration in Grid with activeBreakpoint as large](images/blazor-media-query-large-with-grid.png)
+![Blazor Media Query integration in Grid with activeBreakpoint as large](images/blazor-media-query-large-with-grid.webp)
 
 ActiveBreakPoint as `Medium`:
 
-![Blazor Media Query integration in Grid with activeBreakpoint as medium](images/blazor-media-query-medium-with-grid.png)
+![Blazor Media Query integration in Grid with activeBreakpoint as medium](images/blazor-media-query-medium-with-grid.webp)
 
 ActiveBreakPoint as `Small`:
 
-![Blazor Media Query integration in Grid with activeBreakpoint as small](images/blazor-media-query-small-with-grid.png)
+![Blazor Media Query integration in Grid with activeBreakpoint as small](images/blazor-media-query-small-with-grid.webp)

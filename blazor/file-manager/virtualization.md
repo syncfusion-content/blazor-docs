@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor File Manager Component | Syncfusion®
-description: Checkout and learn here all the features about virtualization in Blazor File Manager component and much more details.
+title: Views in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about available Views module in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug

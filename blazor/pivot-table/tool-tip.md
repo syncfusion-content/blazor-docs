@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about tooltip in Syncfusion Blazor Pivot Table component and much more details.
+title: Tooltip in Blazor Pivot Table Component | Syncfusion®
+description: Learn about tooltip in Blazor Pivot Table component for displaying contextual information with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

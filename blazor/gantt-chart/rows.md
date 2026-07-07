@@ -13,7 +13,7 @@ Each row in the Blazor Gantt Chart Component represents a record from the data s
 
 ## Row height
 
-You can customize row height in the Gantt Chart by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
+You can customize row height in the Blazor Gantt Chart by setting the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RowHeight) property. This helps display additional content within a row or reduce its height to align with the content size.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

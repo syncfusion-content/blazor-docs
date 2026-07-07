@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Insert image in Blazor Rich Text Editor Component | Syncfusion
-description: Checkout and learn here all about Insert image in Syncfusion Blazor Rich Text Editor component and more.
+title: Insert image in Blazor Rich Text Editor Component | Syncfusion®
+description: Checkout and learn here all about Insert image in Blazor Rich Text Editor component with examples and much more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -28,6 +28,7 @@ A generated `blob` URL is assigned to the `<img>` tag as shown below:
 ```
 <img src="blob:http://blazor.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
 ```
+
 A generated `base64` URL is assigned to the `<img>` tag as shown below:
 
 ```
@@ -320,7 +321,7 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
     <RichTextEditorImageSettings SaveUrl="api/Image/Save" Path="./Images/" RemoveUrl="api/Image/Delete"  />
 </SfRichTextEditor>
 
-@code{
+@code {
     public async Task OnImageDeleteHandler(AfterImageDeleteEventArgs args)
     {
         var imageSrc = args.Src;
@@ -329,7 +330,7 @@ The following sample demonstrates how to use the `ImageDelete` event in Rich Tex
         var dummyFile = new ByteArrayContent(new byte[0]);
         content.Add(dummyFile, "UploadFiles", fileName);
         try
-        {
+        {            
             var response = await Http.PostAsync($"{NavManager.BaseUri}api/Image/Delete", content);
 
             if (response.IsSuccessStatusCode)
