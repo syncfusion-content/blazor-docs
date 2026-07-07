@@ -255,6 +255,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-2. [Getting Started with Blazor Data Form Events](https://blazor.syncfusion.com/documentation/data-form/events)
-3. [Getting Started with Blazor Data Form Validation](https://blazor.syncfusion.com/documentation/data-form/validation)
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+3. [Getting Started with Blazor Data Form Events](https://blazor.syncfusion.com/documentation/data-form/events)
+4. [Getting Started with Blazor Data Form Validation](https://blazor.syncfusion.com/documentation/data-form/validation)
