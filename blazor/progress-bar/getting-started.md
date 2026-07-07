@@ -208,7 +208,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVzNiAXLOxVFFXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVxjcjWzGguuqmx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar).
 
@@ -225,4 +225,6 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpDMUZLacfZQlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLdZQNizGfKVGOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
+
+N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear) that shows you how to render and configure the ProgressBar.

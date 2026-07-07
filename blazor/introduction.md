@@ -153,9 +153,6 @@ padding-top: 20px;
 .sf-icon-dashboard-layout:before {
     content: "\e712";
 }
-.sf-icon-gantt-chart:before {
-    content: "\e713";
-}
 .sf-icon-radio-button:before {
     content: "\e714";
 }
@@ -497,7 +494,6 @@ padding-top: 20px;
     <td>
         <div><p class="controlcategory-topics">CALENDARS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/scheduler/getting-started"><span class="sf-home-icon sf-icon-scheduler"></span>Scheduler</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/gantt-chart/getting-started"><span class="sf-home-icon sf-icon-gantt-chart"></span>Gantt Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/calendar/getting-started"><span class="sf-home-icon sf-icon-calendar"></span>Calendar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datepicker/getting-started"><span class="sf-home-icon sf-icon-datepicker"></span>DatePicker</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started"><span class="sf-home-icon sf-icon-date-range-picker"></span>DateRangePicker</a></div>

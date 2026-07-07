@@ -886,10 +886,6 @@ Below table lists the importing theme path for the individual components.
         <td>@use 'blazor-themes/SCSS-Themes/buttons/floating-action-button/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
-        <td>Gantt Chart</td>
-        <td>@use 'blazor-themes/SCSS-Themes/gantt/gantt/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
         <td>In-place Editor</td>
         <td>@use 'blazor-themes/SCSS-Themes/inplace-editor/inplace-editor/{THEME-NAME}.scss'</td>
     </tr>

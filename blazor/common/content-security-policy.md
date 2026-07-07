@@ -153,7 +153,6 @@ These components work under strict CSP for most features, but specific advanced 
 | Category | Components | 
 |----------|------------|
 | Data Management | Pivot Table - [Click here for feature details](../pivot-table/content-security-policy) |
-| Scheduling | Gantt Chart - [Click here for feature details](../gantt-chart/content-security-policy) |
 | Charts | Circular Gauge - [Click here for feature details](../circular-gauge/content-security-policy)<br> Heatmap Chart - [Click here for feature details](../heatmap-chart/content-security-policy) |
 | Navigation | TreeView - [Click here for feature details](../treeview/content-security-policy) |
 | Maps | Maps -[Click here for feature details](../maps/content-security-policy) |
@@ -205,7 +204,6 @@ This allows inline styles while keeping the rest of your security policy strict.
 
 ## See also
 
-* [Content security policy in Syncfusion® Gantt Chart component](https://blazor.syncfusion.com/documentation/gantt-chart/content-security-policy)
 * [Content security policy in Syncfusion® Circular Gauge component](https://blazor.syncfusion.com/documentation/circular-gauge/content-security-policy)
 * [Content security policy in Syncfusion® HeatMap Chart component](https://blazor.syncfusion.com/documentation/heatmap-chart/content-security-policy)
 * [Content security policy in Syncfusion® Maps component](https://blazor.syncfusion.com/documentation/maps/content-security-policy)
