@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Blazor AutoComplete in Server App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Server App.
+description: Check out and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Server App.
 platform: Blazor
 component: AutoComplete
 documentation: ug
 ---
 
-# Getting Started with Blazor AutoComplete in Blazor Server App
+# Getting started with Blazor AutoComplete in Blazor Server App
 
 This section briefly explains about how to include [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -118,7 +118,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight csharp tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
@@ -194,7 +194,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
