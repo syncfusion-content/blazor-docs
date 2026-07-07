@@ -58,7 +58,6 @@ The following code illustrates how to create a text node.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVeMjjvpHHwFbIZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/TextNodeSample.razor)
 
@@ -103,7 +102,6 @@ The following code illustrates how an image node is created.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByCDZOBKhUldMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/ImageShapeSample.razor)
 
@@ -147,7 +145,6 @@ The following code illustrates how to add a Base64 image to the image node.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBICDtlzdkNlPxo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/Base64image.razor)
 
@@ -302,7 +299,6 @@ HTML elements can be embedded in the diagram by setting the node Shape type to [
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheMZZvpQZVXgoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/HTMLShape.razor)
 
@@ -352,7 +348,6 @@ The following code example illustrates how to create a basic shape.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrosZDvfQBMblZv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/BasicShapeSample.razor)
 
@@ -406,7 +401,6 @@ To create a path node, set the shape as **Path**. The geometry of the path is de
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSiXNFzQVQgiZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/PathShapeSample.razor)
 
@@ -449,7 +443,6 @@ The [FlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrSitZPfwqrXoFd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/FlowShapeSample.razor)
 
@@ -508,7 +501,6 @@ The diagram provides support to embed [SVG](https://help.syncfusion.com/cr/blazo
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBeWXXlpcUFFGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/SVGShape.razor)
 
@@ -557,7 +549,6 @@ The following code example illustrates how to create a BPMN shape.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryCXjbzmprSCAB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Shapes/BPMNShapeSample.razor)
 
