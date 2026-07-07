@@ -25,7 +25,7 @@ Blazor Components is an enterprise-grade, native UI components library for creat
 ## What’s included?
 
 - Data bound components like [DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid), [Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), [Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table), and more.
-- [Form inputs](https://www.syncfusion.com/blazor-components/blazor-textbox), [Editors](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Pickers](https://www.syncfusion.com/blazor-components/blazor-datepicker), [Menus](https://www.syncfusion.com/blazor-components/blazor-menu-bar), [Navigation](https://www.syncfusion.com/blazor-components/blazor-treeview), and [Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) components.
+- [Form inputs](https://www.syncfusion.com/blazor-components/blazor-textbox), [Pickers](https://www.syncfusion.com/blazor-components/blazor-datepicker), [Menus](https://www.syncfusion.com/blazor-components/blazor-menu-bar), [Navigation](https://www.syncfusion.com/blazor-components/blazor-treeview), and [Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) components.
 - Rich visualization: [2D/3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts), [Gauges](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Maps](https://www.syncfusion.com/blazor-components/blazor-map), [HeatMaps](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), and [Sparklines](https://www.syncfusion.com/blazor-components/blazor-sparkline).
 - Theming system with multiple built-in themes and CSS variables for fine grained component.
 
@@ -294,9 +294,6 @@ padding-top: 20px;
 .sf-icon-treegrid:before {
     content: "\e70d";
 }
-.sf-icon-richtexteditor:before {
-    content: "\e70f";
-}
 .sf-icon-listview:before {
     content: "\e71a";
 }
@@ -354,9 +351,7 @@ padding-top: 20px;
 .sf-icon-breadcrumb:before {
     content: "\e74f";
 }
-.sf-icon-blockeditor:before {
-    content: "\e900";
-}
+
 .sf-icon-media-query:before {
     content: "\e901";
 }
@@ -382,9 +377,6 @@ padding-top: 20px;
 }
 .sf-icon-mention:before {
     content: "\e909";
-}
-.sf-icon-markdown-editor:before {
-    content: "\e910";
 }
 .sf-icon-sankey:before{
   content: "\e911";
@@ -440,10 +432,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started"><span class="sf-home-icon sf-icon-treegrid"></span>TreeGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started"><span class="sf-home-icon sf-icon-multicolumn-combobox"></span>Multicolumn ComboBox</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"><span class="sf-home-icon sf-icon-richtexteditor"></span>Rich Text Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp"><span class="sf-home-icon sf-icon-markdown-editor"></span>Markdown Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/getting-started"><span class="sf-home-icon sf-icon-image_editor"></span>Image Editor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/block-editor/getting-started"><span class="sf-home-icon sf-icon-blockeditor"></span>Block Editor</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/getting-started"><span class="sf-home-icon sf-icon-dialog"></span>Dialog</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp"><span class="sf-home-icon sf-icon-predefined-dialogs"></span>Predefined Dialog</a></div>
@@ -458,7 +447,6 @@ padding-top: 20px;
         <div><p class="controlcategory">Smart AI</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started"><span class="sf-home-icon sf-icon-button"></span>Smart Paste Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started"><span class="sf-home-icon sf-icon-textarea"></span>Smart TextArea</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp"><span class="sf-home-icon sf-icon-richtexteditor"></span>Smart Rich Text Editor</a></div>
     </td>
     <td>
         <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
