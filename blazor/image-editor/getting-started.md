@@ -209,7 +209,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrICNDYqKacaGsS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Image Editor Component](./images/blazor-image-editor-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhRtQjKVmjhaVXY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Image Editor Component](./images/blazor-image-editor-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/imageEditor).
 

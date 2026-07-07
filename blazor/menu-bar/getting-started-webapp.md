@@ -210,6 +210,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
+N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
+
 **Run the application**
 
 {% tabcontents %}
@@ -254,11 +256,9 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhfDiUNVjEteVaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar Component](./images/blazor-menubar.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrRjRgZVpiiCkHc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor MenuBar Component](./images/blazor-menubar.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MenuBar).
-
-N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
 
 ## See also
 

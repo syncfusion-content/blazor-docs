@@ -219,4 +219,4 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrzZJtMfhknPrWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component](./images/blazor-timeline-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLHDwZrsYTyPKKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component](./images/blazor-timeline-component.webp)" %}

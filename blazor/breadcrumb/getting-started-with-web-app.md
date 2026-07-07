@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Getting Started with Blazor Breadcrumb in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Breadcrumb Component in Blazor Web App.
+description: Check out and learn about the documentation for getting started with Blazor Breadcrumb Component in Blazor Web App.
 platform: Blazor
 component: Breadcrumb
 documentation: ug
 ---
 
-# Getting Started with Blazor Breadcrumb in Blazor Web App
+# Getting started with Blazor Breadcrumb in Blazor Web App
 
-This section briefly explains about how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -175,7 +175,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -225,12 +225,11 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Add items to the Blazor Breadcrumb component
 
-To render Breadcrumb component with items use [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive as like below code example.
+To render Breadcrumb component with items use the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive as like below code example.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 
 <SfBreadcrumb>
     <BreadcrumbItems>
