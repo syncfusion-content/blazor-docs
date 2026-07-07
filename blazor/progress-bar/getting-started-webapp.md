@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Getting Started with Blazor ProgressBar in Web App | Syncfusion
-description: Checkout and learn the documentation for getting started with Blazor ProgressBar Components in Blazor Web App.
+description: Check out and learn the documentation for getting started with Blazor ProgressBar Components in Blazor Web App.
 platform: Blazor
 control: ProgressBar
 documentation: ug
 ---
 
-# Getting Started with Blazor ProgressBar in Blazor Web App
+# Getting started with Blazor ProgressBar in Blazor Web App
 
-This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -176,7 +176,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
