@@ -112,7 +112,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-## Add stylesheet resources
+## Add stylesheet resource
  
 The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) in the **~/Components/App.razor** file.
 
