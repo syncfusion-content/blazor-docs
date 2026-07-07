@@ -26,7 +26,7 @@ Create a **Blazor Server App** by using the **Blazor Web App** template in Visua
 Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
@@ -43,7 +43,7 @@ Alternatively, create a **Blazor Server App** using Visual Studio Code via [Micr
 Run the following command to create a new Blazor Server App.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
 cd BlazorApp
@@ -71,7 +71,7 @@ Install the [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfus
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Package Manager Console" %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.DropDowns -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -86,7 +86,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.DropDowns -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -101,7 +101,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.DropDowns -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
@@ -209,7 +209,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 Open the terminal and run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet run
 
@@ -223,7 +223,7 @@ dotnet run
 Open the command prompt and run the following command.
 
 {% tabs %}
-{% highlight bash tabtitle="Command Prompt" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet run
 
