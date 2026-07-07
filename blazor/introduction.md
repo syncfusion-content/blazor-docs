@@ -309,9 +309,6 @@ padding-top: 20px;
 .sf-icon-date-range-picker:before {
     content: "\e72a";
 }
-.sf-icon-diagram:before {
-    content: "\e72b";
-}
 .sf-icon-toast:before {
     content: "\e72c";
 }
@@ -457,7 +454,6 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started"><span class="sf-home-icon sf-icon-stock-chart"></span>Stock Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started"><span class="sf-home-icon sf-icon-circular-gauge"></span>Circular Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/linear-gauge/getting-started"><span class="sf-home-icon sf-icon-linear-gauge"></span>Linear Gauge</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/diagram/getting-started"><span class="sf-home-icon sf-icon-diagram"></span>Diagram</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/heatmap-chart/getting-started"><span class="sf-home-icon sf-icon-heatmap-chart"></span>HeatMap</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/maps/getting-started"><span class="sf-home-icon sf-icon-maps"></span>Maps</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-selector/getting-started"><span class="sf-home-icon sf-icon-range-selector"></span>Range Selector</a></div>
