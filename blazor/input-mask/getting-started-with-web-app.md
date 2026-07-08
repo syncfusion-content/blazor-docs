@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Input Mask in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Input Mask Component in Blazor Web App.
+description: Learn how to get started with the Blazor Input Mask component in a Blazor Web App.
 platform: Blazor
 component: Input Mask
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Input Mask in Blazor Web App
 
-This section briefly explains about how to include [Blazor Input Mask](https://www.syncfusion.com/blazor-components/blazor-input-mask) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Input Mask](https://www.syncfusion.com/blazor-components/blazor-input-mask) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -23,7 +23,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor Web App.
+Run the following commands to create a new Blazor Web App.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
@@ -135,11 +135,11 @@ Open the **Program.cs** file in Blazor Web App and register the Blazor service. 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-....
+...
 using Syncfusion.Blazor;
-....
+...
 builder.Services.AddSyncfusionBlazor();
-....
+...
 
 {% endhighlight %}
 {% endtabs %}
@@ -169,7 +169,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-@using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox></SfMaskedTextBox>
 
@@ -231,6 +230,8 @@ The following example demonstrates the mask element `0`, which allows any single
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveAuto
+
 <SfMaskedTextBox Mask='000-000-0000'></SfMaskedTextBox>
 
 {% endhighlight %}
@@ -242,5 +243,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
