@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Speed Dial in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Speed Dial component in Blazor WebAssembly Application.
+description: Check out and learn how to get started with the Blazor Speed Dial component in Blazor WebAssembly Application.
 platform: Blazor
 control: Speed Dial
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Speed Dial in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component to a Blazor WebAssembly application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to add the [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component to a Blazor WebAssembly application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -126,7 +126,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -142,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -157,7 +157,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Speed Dial component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Speed Dial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component inside the Razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -222,7 +222,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Linear and radial display modes
 
-Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to display action items either in a linear list or as a radial (circular) menu.
+Use the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to display action items either in a linear list or as a radial (circular) menu.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -254,7 +254,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons
 
 ## Item clicked event
 
-The Speed Dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) when an action item is clicked. Use this event to perform the required action.
+The Speed Dial control triggers the [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [SpeedDialItemEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) when an action item is clicked. Use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -281,3 +281,9 @@ The Speed Dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBpjWAjTARQyWoC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.webp)" %}
+
+## See also
+
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor SpeedDial Events](https://blazor.syncfusion.com/documentation/speeddial/events)

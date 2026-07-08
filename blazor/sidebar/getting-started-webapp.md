@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Sidebar in Blazor Web App
 
-This section briefly explains about how to include [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -146,7 +146,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -169,8 +169,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-
-@using Syncfusion.Blazor.Navigations
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
     Header
@@ -199,7 +197,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -249,14 +247,13 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Enable backdrop
 
-Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ShowBackdrop) in the Sidebar component will prevent the main content from user interactions.
+Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ShowBackdrop) in the Sidebar component will prevent users from interacting with the main content.
 
-Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen.
+Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses attention on the Sidebar.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
@@ -311,7 +308,6 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
@@ -366,7 +362,6 @@ In the following example, the Sidebar is rendered with Accordion component in it
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="head">
@@ -532,7 +527,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 ## Advantages of Blazor Sidebar
 
 1. Simply customizable and responsive design.
-2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.
+2. Different sliding types provides users to adjust the main content by pushing, overlaying or sliding the content.
 3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar) support.
 4. Provided with touch friendly gestures for easy interaction in mobile devices.
 5. Flexible option to initialize the Sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context) other than the body element.
@@ -546,6 +541,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Sidebar Accessibility](https://blazor.syncfusion.com/documentation/skeleton/shapes)
+

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Skeleton in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Skeleton component in Blazor WebAssembly Application.
+description: Check out and learn how to get started with the Blazor Skeleton component in Blazor WebAssembly Application.
 platform: Blazor
 control: Skeleton
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Skeleton in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to add the [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component to a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -126,7 +126,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -142,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -157,7 +157,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Skeleton component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component inside the Razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -214,7 +214,7 @@ dotnet run
 
 ## Blazor Skeleton shapes
 
-The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
+The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -239,3 +239,9 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBHjcZBLjrnkNoX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.webp)" %}
+
+## See also
+
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Skeleton Shapes](https://blazor.syncfusion.com/documentation/skeleton/shapes)
