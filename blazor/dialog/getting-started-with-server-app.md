@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dialog in Blazor Server App | Syncfusion
-description: Check out and learn how to get started with the Blazor Dialog Component in Blazor Server App.
+description: Check out and learn about how to get started with the Blazor Dialog Component in Blazor Server App.
 platform: Blazor
 component: Dialog
 documentation: ug

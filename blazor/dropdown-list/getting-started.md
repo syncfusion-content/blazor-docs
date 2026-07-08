@@ -307,4 +307,4 @@ Get the complete data object for the selected value in the [ValueChange](https:/
 
 1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting started with Blazor Dropdown List Data Binding](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding)
+3. [Getting Started with Blazor Dropdown List Data Binding](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding)

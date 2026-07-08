@@ -244,4 +244,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting started with Blazor Dropdown List Data Binding](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding)
+1. [Getting Started with Blazor Dropdown List Data Binding](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding)
