@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor AppBar in Blazor Server App | Syncfusion
+title: Getting Started with AppBar in Blazor Server App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor AppBar Component in Blazor Server App.
 platform: Blazor
 component: AppBar
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AppBar Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor AppBar](https://www.syncfusion.com/blazor-components/blazor-appbar) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor AppBar](https://www.syncfusion.com/blazor-components/blazor-appbar) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -118,7 +118,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight csharp tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
@@ -131,7 +131,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight csharp tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -167,7 +167,6 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveServer
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div class="control-container">
@@ -188,7 +187,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

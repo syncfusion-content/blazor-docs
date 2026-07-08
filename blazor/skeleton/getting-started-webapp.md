@@ -222,7 +222,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfNWgXUFWfbEvA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVdNwXBCaPIkMzo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 
@@ -252,4 +252,4 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfDiqjgFiEILVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLdZmXLLDZOBylY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.webp)" %}

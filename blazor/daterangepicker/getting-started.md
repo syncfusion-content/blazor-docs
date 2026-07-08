@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Getting Started with Blazor DateRangePicker in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor DateRangePicker component in Blazor WebAssembly Application.
+description: Check out and learn how to get started with the Blazor DateRangePicker component in a Blazor WebAssembly App.
 platform: Blazor
-control: DateRangePicker
+component: DateRangePicker
 documentation: ug
 ---
 
@@ -142,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
  
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -169,7 +169,7 @@ Add the Blazor DateRangePicker component in the **~/Pages/*.razor** (for example
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -213,7 +213,7 @@ dotnet run
 
 ## Setting the Min and Max
 
-The minimum and maximum date range can be defined with the help of [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Max) properties.
+Define the minimum and maximum date range using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_Max) properties.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -237,6 +237,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor DateRangePicker Events](https://blazor.syncfusion.com/documentation/daterangepicker/events)
+4. [Getting Started with Blazor DateRangePicker Globalization](https://blazor.syncfusion.com/documentation/daterangepicker/globalization)
