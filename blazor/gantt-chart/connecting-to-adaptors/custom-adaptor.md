@@ -148,16 +148,16 @@ The following example demonstrates how to implement custom data binding using a 
         // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
         {
-            IEnumerable<TaskData> DataSource = GanttData;
+            IEnumerable<TaskData> dataSource = GanttData;
             if (dm.Search != null && dm.Search.Count > 0)
             {
                 // Searching
-                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+                dataSource = DataOperations.PerformSearching(dataSource, dm.Search);
             }
             if (dm.Sorted != null && dm.Sorted.Count > 0)
             {
                 // Sorting
-                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+                dataSource = DataOperations.PerformSorting(dataSource, dm.Sorted);
             }
             if (dm.Where != null && dm.Where.Count > 0)
             {
@@ -166,19 +166,19 @@ The following example demonstrates how to implement custom data binding using a 
                 if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
                 else
                 {
-                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                    dataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
                 }
             }
-            int count = DataSource.Cast<TaskData>().Count();
+            int count = dataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
             {
-                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+                dataSource = DataOperations.PerformSkip(dataSource, dm.Skip);
             }
             if (dm.Take != 0)
             {
-                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+                dataSource = DataOperations.PerformTake(dataSource, dm.Take);
             }
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            return dm.RequiresCounts ? new DataResult() { Result = dataSource, Count = count } : (object)dataSource;
         }
     }
 }
@@ -275,36 +275,37 @@ The following example demonstrates how to inject a service into the Custom Adapt
         // Performs data Read operation
         public override object Read(DataManagerRequest dm, string key = null)
         {
-            IEnumerable<TaskData> DataSource = GanttData;
+            IEnumerable<TaskData> dataSource = GanttData;
             if (dm.Search != null && dm.Search.Count > 0)
             {
                 // Searching
-                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+                dataSource = DataOperations.PerformSearching(dataSource, dm.Search);
             }
             if (dm.Sorted != null && dm.Sorted.Count > 0)
             {
                 // Sorting
-                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+                dataSource = DataOperations.PerformSorting(dataSource, dm.Sorted);
             }
-            
-            if (dataManagerRequest.Where != null && dataManagerRequest.Where.Count > 0)
+
+            if (dm.Where != null && dm.Where.Count > 0)
             {
-                if (dataManagerRequest.Where[0].Field != null && dataManagerRequest.Where[0].Field == @nameof(TaskData.ParentID)){}
+                // ParentID is used internally by the Gantt Chart to build the task hierarchy
+                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)) { }
                 else
                 {
-                    DataSource = DataOperations.PerformFiltering(DataSource, dataManagerRequest.Where, dataManagerRequest.Where[0].Operator);
+                    dataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
                 }
             }
-            int count = DataSource.Cast<TaskData>().Count();
+            int count = dataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
             {
-                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+                dataSource = DataOperations.PerformSkip(dataSource, dm.Skip);
             }
             if (dm.Take != 0)
             {
-                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+                dataSource = DataOperations.PerformTake(dataSource, dm.Take);
             }
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            return dm.RequiresCounts ? new DataResult() { Result = dataSource, Count = count } : (object)dataSource;
         }
     }
     protected override void OnInitialized()
@@ -483,14 +484,14 @@ The following example demonstrates how to implement the filtering operation for 
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // ParentID is used internally by the Gantt Chart to build the task hierarchy
-                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
+                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)) { }
                 else
                 {
-                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                    dataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
                 }
             }
 
-            // Count the total number of records 
+            // Count the total number of records
             int count = dataSource.Count();
 
             // Return result / count as DataResult if requested.
@@ -499,7 +500,7 @@ The following example demonstrates how to implement the filtering operation for 
                 : (object)dataSource;
         }
     }
-} 
+}
 
 ```
 
@@ -511,7 +512,7 @@ Override the `Read` or `ReadAsync` method to handle sorting. The sort criteria a
 
 Perform sort data using the built‑in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_SortedColumn__) method of the `DataOperations` class.
 
-N> Alternatively, you can also implement a custom sorting method and bind the sorted data to the Gantt Chart.
+>* Alternatively, you can also implement a custom sorting method and bind the sorted data to the Gantt Chart.
 
 The following example demonstrates how to implement the sorting operation for custom-bound data:
 
@@ -607,7 +608,7 @@ The CRUD operations for custom-bound data can be implemented by overriding the f
 * [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_)/[UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_)
 * [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__)/[BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__)
 
-N> When using batch editing in the Gantt Chart, use the `BatchUpdate`/`BatchUpdateAsync` method to handle the corresponding CRUD operation.
+>* When using batch editing in the Gantt Chart, use the `BatchUpdate`/`BatchUpdateAsync` method to handle the corresponding CRUD operation.
 
 The following example demonstrates how to implement CRUD operations for custom-bound data:
 
@@ -690,40 +691,37 @@ The following example demonstrates how to implement CRUD operations for custom-b
         // Performs data Read operation.
         public override object Read(DataManagerRequest dm, string key = null)
         {
-            IEnumerable<TaskData> DataSource = GanttData;
+            IEnumerable<TaskData> dataSource = GanttData;
             if (dm.Search != null && dm.Search.Count > 0)
             {
                 // Searching
-                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+                dataSource = DataOperations.PerformSearching(dataSource, dm.Search);
             }
             if (dm.Sorted != null && dm.Sorted.Count > 0)
             {
                 // Sorting
-                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
-            }        
+                dataSource = DataOperations.PerformSorting(dataSource, dm.Sorted);
+            }
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Apply filtering if filter criteria are provided.
                 // ParentID is used internally by the Gantt Chart to build the task hierarchy
-                if (dm.Where != null && dm.Where.Count > 0)
+                if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)) { }
+                else
                 {
-                    if (dm.Where[0].Field != null && dm.Where[0].Field == @nameof(TaskData.ParentID)){}
-                    else
-                    {
-                        DataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
-                    }
+                    dataSource = DataOperations.PerformFiltering(dataSource, dm.Where, dm.Where[0].Operator);
                 }
             }
-            int count = DataSource.Cast<TaskData>().Count();
+            int count = dataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
             {
-                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+                dataSource = DataOperations.PerformSkip(dataSource, dm.Skip);
             }
             if (dm.Take != 0)
             {
-                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+                dataSource = DataOperations.PerformTake(dataSource, dm.Take);
             }
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            return dm.RequiresCounts ? new DataResult() { Result = dataSource, Count = count } : (object)dataSource;
         }
         public override object Insert(DataManager dm, object value, string key)
         {

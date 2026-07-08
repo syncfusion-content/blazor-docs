@@ -10,13 +10,13 @@ documentation: ug
 
 # WebApiAdaptor in Blazor Gantt Chart
 
-The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) extends the capabilities of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) and is intended for use with Web APIs that expose OData-compatible endpoints. It enables the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) to send OData-formatted requests for seamless data access and updates.
+The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) extends the capabilities of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) and is used when connecting to a Web API that exposes OData-compatible endpoints. It enables the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) to send OData-formatted requests for data access and updates.
 
 For proper functionality, the target Web API must support and interpret OData query options included in the request. To learn how to enable OData query support in ASP.NET Web APIs, refer to the official [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
 
 The following examples demonstrate how to use the `WebApiAdaptor` to connect an OData-enabled Web API with the Blazor Gantt Chart and perform data binding and CRUD operations.
- 
-Operations such as filtering (`$filter`), sorting (`$orderby`), and record counting (`$count`) are transmitted to the server as query string parameters, reducing client workload and improving responsiveness for large project datasets.
+
+Operations such as filtering (`$filter`), sorting (`$orderby`), and record counting (`$count`) are transmitted to the server as query string parameters, reducing client-side data processing for large project datasets.
 
 > **Prerequisites:** Ensure that .NET 8 or later is installed and a valid Syncfusion license is available.
 
@@ -246,7 +246,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 
 To connect the Blazor Gantt Chart to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote services through an API; the `WebApiAdaptor` works with any Web API endpoint that returns data in the **Items** and **Count** format and understands OData-formatted query strings.
 
-The following example shows a `WebApiAdaptor` configuration where the API is set up to return the resulting data in the **Items** and **Count** format. The `SubtaskOf` field on each task is mapped to `GanttTaskFields.ParentID` so the flat response is rendered as a parent/child hierarchy in the Gantt Chart.
+The following example shows a `WebApiAdaptor` configuration where the API is set up to return the resulting data in the **Items** and **Count** format. The `ParentId` field on each `GanttData` record is mapped to [GanttTaskFields.ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ParentID) so the flat response is rendered as a parent/child hierarchy in the Gantt Chart.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -381,7 +381,7 @@ public object GetTaskData()
     int totalRecordsCount = data.Count();
 
     // Return the filtered data and the total count as a JSON object.
-    return new { Items = data, count = totalRecordsCount };
+    return new { Items = data, Count = totalRecordsCount };
 }
 
 {% endhighlight %}
@@ -408,7 +408,7 @@ public object GetTaskData()
                      EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
-                     ParentID="SubtaskOf">
+                     ParentID="ParentId">
     </GanttTaskFields>
 
     <GanttEditSettings AllowAdding="true"
@@ -528,7 +528,7 @@ public object GetTaskData()
     int totalRecordsCount = data.Count();
 
     // Return the filtered data and the total count as a JSON object.
-    return new { Items = data, count = totalRecordsCount };
+    return new { Items = data, Count = totalRecordsCount };
 }
 
 {% endhighlight %}
@@ -555,7 +555,7 @@ public object GetTaskData()
                      EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
-                     ParentID="SubtaskOf">
+                     ParentID="ParentId">
     </GanttTaskFields>
 
     <GanttEditSettings AllowAdding="true"
@@ -646,7 +646,7 @@ public object GetTaskData()
     int totalRecordsCount = data.Count();
 
     // Return the sorted data and the total count as a JSON object.
-    return new { Items = data, count = totalRecordsCount };
+    return new { Items = data, Count = totalRecordsCount };
 }
 
 {% endhighlight %}
@@ -673,7 +673,7 @@ public object GetTaskData()
                      EndDate="EndDate"
                      Duration="Duration"
                      Progress="Progress"
-                     ParentID="SubtaskOf">
+                     ParentID="ParentId">
     </GanttTaskFields>
 
     <GanttEditSettings AllowAdding="true"
@@ -788,18 +788,11 @@ public IActionResult DeleteTask(int taskId)
 }
 ```
 
-## Benefits of using the WebApiAdaptor with the Gantt Chart
-- **Server-side data processing** – Operations filtering (`$filter`), sorting (`$orderby`), and record counting (`$count`) are transmitted to the server as query string parameters, reducing client workload and improving responsiveness for large project datasets.
-- **Minimal server-side requirements** – The API endpoint only needs to parse OData query strings from `Request.Query` and return a `{ Items, Count }` response object. There is no dependency on a full OData stack, `Microsoft.AspNetCore.OData`, or an EDM model, making it suitable for scenarios where a complete OData service is not an option.
-- **Built-in CRUD support** – All editing modes supported by the Gantt Chart - adding tasks, editing via cell, row, dialog, or taskbar drag, and deleting — translate to standard `POST`, `PUT`, and `DELETE` HTTP requests on the Web API without any additional configuration.
-- **Flat payload with hierarchical rendering** – The server returns a flat list of tasks, each carrying a `SubtaskOf` parent identifier. Mapping this field to `GanttTaskFields.ParentID` instructs the Gantt Chart to reconstruct the full parent/child hierarchy in both the grid and the taskbar view.
+## Key technical points of the WebApiAdaptor
 
-## Real-world use cases
-
-- **Enterprise project management** – Serving multi-level project structures from relational databases such as SQL Server or PostgreSQL, where scheduling constraints and business rules are evaluated on the server before tasks are delivered to the client.
-- **Construction and engineering schedules** – Managing Gantt Chart views with large numbers of activities where only the visible page and relevant children are loaded at a time, with additional data fetched on demand from the server.
-- **Manufacturing and production planning** – Handling work order hierarchies that require filtering by production line or shift, sorting by priority, and frequent updates through taskbar drag interactions.
-- **Multi-tenant SaaS platforms** – Enforcing tenant-level data isolation at the server before sorting are applied, ensuring each request returns only the data belonging to the authenticated tenant.
-- **Existing Web API integrations** – Connecting the Gantt Chart to already-maintained ASP.NET Core Web APIs without the need to migrate or rebuild the backend as a full OData service.
+- **Server-side data processing** – Filtering (`$filter`), sorting (`$orderby`), and record counting (`$count`) are transmitted to the server as query string parameters.
+- **Minimal server-side requirements** – The API endpoint parses OData query strings from `Request.Query` and returns a `{ Items, Count }` response object. There is no dependency on `Microsoft.AspNetCore.OData` or an EDM model.
+- **Built-in CRUD support** – Adding, editing (cell, row, dialog, or taskbar), and deleting translate to standard `POST`, `PUT`, and `DELETE` HTTP requests.
+- **Flat payload with hierarchical rendering** – The server returns a flat list of tasks; mapping `ParentId` to `GanttTaskFields.ParentID` reconstructs the parent/child hierarchy in the grid and the taskbar view.
 
 > ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Therefore, it is currently not feasible to support **Batch** mode CRUD operations until ASP.NET Core provides support for batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).

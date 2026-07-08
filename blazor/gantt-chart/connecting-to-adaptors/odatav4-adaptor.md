@@ -14,6 +14,19 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 Unlike vendor specific adaptor patterns, the `ODataV4Adaptor` works with any backend that exposes an OData V4 endpoint, so the Gantt is never locked into a particular server technology or platform.
 
+**How the `ODataV4Adaptor` maps to controller endpoints:**
+
+The adaptor converts Gantt Chart data operations into standard HTTP requests handled by ASP.NET Core controller actions. The mapping is:
+
+| Gantt Operation | HTTP Verb | Controller Method | Purpose |
+|-----------------|-----------|-------------------|---------|
+| Initial load / read | `GET` | `[HttpGet]` | Returns all task records |
+| Add | `POST` | `[HttpPost]` | Inserts a new task |
+| Edit / taskbar drag | `PATCH` | `[HttpPatch("{key}")]` | Partially updates a task |
+| Delete | `DELETE` | `[HttpDelete("{key}")]` | Removes a task |
+
+The `Adaptor="Adaptors.ODataV4Adaptor"` setting in the `SfDataManager` instructs the Gantt Chart to issue these HTTP requests and parse the standard OData V4 response shape (`value` array and `@odata.context` metadata).
+
 ## Configuring an OData V4 Service
 
 To configure a server with the Blazor Gantt Chart, follow these steps:
@@ -332,7 +345,7 @@ When you run the application, the Blazor Gantt Chart loads the task hierarchy di
 
 ## Handling searching operation
 
-OData V4 does not support global search by default. To overcome this limitation, Syncfusion provides a search fallback mechanism that allows a global search experience through the `EnableODataSearchFallback` option. Enable it in the same way as for the Grid – first add the `Filter` option to the OData setup, then flip `EnableODataSearchFallback` on after the Gantt renders.
+OData V4 does not support global search by default. To overcome this limitation, Syncfusion provides a search fallback mechanism that allows a global search experience through the [EnableODataSearchFallback](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.RemoteOptions.html#Syncfusion_Blazor_Data_RemoteOptions_EnableODataSearchFallback) option of `RemoteOptions`. Enable it in the same way as for the Grid - first add the `Filter` option to the OData setup, then flip `EnableODataSearchFallback` on after the Gantt renders.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -399,7 +412,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling filtering operation
 
-To enable filtering operations in your web application using OData, add the `Filter` method within the OData setup. Once enabled, clients can use the **$filter** query option in their requests to retrieve specific data entries – including hierarchical filters where only the matching branch of the Gantt tree needs to be returned.
+To enable filtering operations in your web application using OData, add the `Filter` method within the OData setup. Once enabled, clients can use the **$filter** query option in their requests to retrieve specific data entries - including hierarchical filters where only the matching branch of the Gantt tree needs to be returned.
 
 {% tabs %}
 {% highlight cs tabtitle="program.cs" %}
@@ -523,9 +536,9 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the `ODataV4Adaptor`, configure the Gantt for [editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks). The controller handles `GET`, `POST`, `PATCH`, and `DELETE` for tasks. With taskbar editing enabled [AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) to `true`, drag/resize operations on the timeline also round-trip to the same `PATCH` endpoint.
+To manage CRUD (Create, Read, Update, and Delete) operations using the `ODataV4Adaptor`, configure the Gantt for [editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks). The controller handles `GET`, `POST`, `PATCH`, and `DELETE` for tasks. With taskbar editing enabled, [AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) set to `true`, drag/resize operations on the timeline also round-trip to the same `PATCH` endpoint.
 
-In the example below, [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) edit mode is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property is configured to display toolbar items for editing.
+In the example below, [GanttEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_Mode) is set to `EditMode.Auto`, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property is configured to display toolbar items for editing.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -689,8 +702,8 @@ The `ODataV4Adaptor` is a strong fit for Gantt Chart scenarios where the task li
 
 - **Enterprise project portfolios** – Centralized OData services that already expose project/task data to other tools (reporting, mobile, integrations) can be reused by the Gantt Chart without a separate API layer.
 - **Construction and engineering schedules** – Multi-level work breakdown structures (Phase → Stage → Activity → Task) where the same task records are read by Gantt Chart, Grid, and reporting views.
-- **Resource planning** – HR or production planning tools that need to surface dependency-heavy timelines from an existing OData feed and let users drag taskbars to reassign dates.
-- **Cross-team editing** – When multiple users edit the same project plan concurrently, the server-driven `PATCH` round-trip keeps the database as the source of truth and the Gantt Chart in sync after each save.
+- **Resource planning** – HR or production planning tools that need to surface dependency-heavy timelines from an existing OData feed and enable taskbar drag operations to reassign dates.
+- **Cross-team editing** – In concurrent editing scenarios on the same project plan, the server-driven `PATCH` round-trip keeps the database as the source of truth and the Gantt Chart in sync after each save.
 - **Hybrid data sources** – A single OData endpoint that joins tasks, resources, and calendars allows the Gantt Chart to pull only the fields it needs via `$select` while still being able to drill into related entities.
 
 ## Benefits of using the ODataV4Adaptor with the Gantt Chart

@@ -10,7 +10,7 @@ documentation: ug
 
 # UrlAdaptor in Syncfusion Blazor Gantt Chart
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) enables the Blazor Gantt Chart to load and manage task data from a remote server through a custom API service. It is the recommended choice when your application stores data on a server and needs to fetch, update, or delete records through an API rather than loading everything at once on the client side.
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) enables the Blazor Gantt Chart to load and manage task data from a remote server through a custom API service. It is used when the application stores data on a server and needs to fetch, update, or delete records through an API rather than loading everything at once on the client side.
 
 This section provides a step-by-step guide to retrieving data using the `UrlAdaptor` and binding it to the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), including server side data operations and CRUD actions.
 
@@ -231,9 +231,9 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
  
 **4. Add Blazor Gantt Chart and configure with server**
  
-To connect the Blazor Gantt Chart to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To connect the Blazor Gantt Chart to a hosted API, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
-The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service are set up to return the resulting data in the result and count format.
+The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service is set up to return the resulting data in the `result` and `count` format.
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -697,21 +697,19 @@ public void Remove([FromBody] CRUDModel<TaskData> deletedRecord)
 {% endhighlight %}
 {% endtabs %}
 
-## Real-world use cases
+## Applicable scenarios for the UrlAdaptor
 
-The `UrlAdaptor` is a strong fit for Gantt scenarios where task data lives on a server and must be kept in sync as users view, edit, or manage the project schedule. Typical use cases include:
+- **Project tracking systems** – Centralized databases that expose task data through a single API endpoint.
+- **Construction and engineering schedules** – Work breakdown structures (Phase → Stage → Activity → Task) where the Gantt must always reflect the latest server state.
+- **Team collaboration tools** – Concurrent editing scenarios where the server is the source of truth.
+- **Resource and capacity planning** – Planning dashboards that persist schedule changes immediately without a full page reload.
+- **Legacy system integration** – A lightweight API wrapper around an existing system or third-party platform allows the Gantt to connect without migrating or duplicating data.
 
-- **Enterprise project tracking systems** – Large organizations that maintain thousands of tasks in a central database can expose that data through a single API endpoint and let the Gantt load only what it needs, keeping the browser fast and the data always current.
-- **Construction and engineering schedules** – Work breakdown structures with many levels (Phase → Stage → Activity → Task) where data changes daily and the Gantt must always reflect the latest server state rather than a stale client-side snapshot.
-- **Team collaboration tools** – Applications where multiple users update task progress simultaneously. Because every change is saved back to the server through the API, the shared data store remains the single source of truth for all users.
-- **Resource and capacity planning** – Planning dashboards that pull task assignments and timelines from a backend service, allowing managers to adjust schedules and immediately persist those changes without a full page reload.
-- **Legacy system integration** – When task data already exists in an older system or a third-party platform, a lightweight API wrapper around that data lets the Gantt connect to it using the `UrlAdaptor` without migrating or duplicating the data.
+## Key technical points of the UrlAdaptor
 
-## Benefits of using the UrlAdaptor with the Gantt Chart
-
-- **Works with any backend** – The `UrlAdaptor` communicates through a standard HTTP POST endpoint, so it connects to any server technology — ASP.NET Core, Node.js, Java Spring, or Python Flask — without adaptor-specific server code.
-- **Server-side data operations** – Searching, filtering, and sorting are handled on the server, so the Gantt only receives the rows it needs. This keeps the application responsive even when the underlying dataset has thousands of tasks.
-- **Reduced client payload** – Because the server slices and shapes the data before sending it, the browser never has to download or hold the entire task list in memory.
-- **Full CRUD lifecycle** – Insert, update, and delete operations are each routed to the same API endpoint. Every change made through the Gantt — inline edit, dialog edit, toolbar actions, or taskbar drag/resize — is persisted back to the server automatically.
-- **Custom authentication and authorization** – Because you control the API, you can apply any authentication scheme (JWT, cookies, API keys) and enforce row-level permissions before the data reaches the Gantt.
-- **Reusable API** – The same endpoint that powers the Gantt can serve other UI components, mobile apps, or third-party integrations, avoiding duplicate server logic.
+- **Works with any backend** – The `UrlAdaptor` communicates through standard HTTP POST endpoints and is not tied to a specific server technology.
+- **Server-side data operations** – Searching, filtering, and sorting are handled on the server, so the Gantt only receives the rows it needs.
+- **Reduced client payload** – The server slices and shapes the data before sending it, so the browser does not hold the full task list in memory.
+- **Full CRUD lifecycle** – Insert, update, delete, and batch operations are each routed to their own API endpoint.
+- **Custom authentication and authorization** – Authentication (JWT, cookies, API keys) and row-level permissions can be enforced in the API before the data reaches the Gantt.
+- **Reusable API** – The same endpoint can serve other UI components, mobile apps, or third-party integrations.
