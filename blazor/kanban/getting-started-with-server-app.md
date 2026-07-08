@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Kanban Component in Blazor Server App
 
-This section briefly explains how to include [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -161,7 +161,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component inside the razor file.
 
-N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -179,8 +179,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     <KanbanCardSettings HeaderField="Title" ContentField="Summary"></KanbanCardSettings>
 </SfKanban>
 
-@code {
-
+@code 
+{
     public class TasksModel
     {
         public string Id { get; set; }
@@ -207,7 +207,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrxtSWbKaleSUCK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
