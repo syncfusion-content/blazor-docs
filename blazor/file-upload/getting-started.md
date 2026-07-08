@@ -173,7 +173,7 @@ The most basic way to render the File Upload component is by adding the `<SfUplo
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

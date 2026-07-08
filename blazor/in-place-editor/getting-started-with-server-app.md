@@ -197,7 +197,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
 
 N> Specify the editor [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) when using non-default editors (for example, `DropDownList`, `Date`, or `AutoComplete`). Configure two-way binding between the In-place Editor and its editor component to synchronize values.
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

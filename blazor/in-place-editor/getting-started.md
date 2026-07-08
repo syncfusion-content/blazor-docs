@@ -195,7 +195,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 N> The type of component editor must be configured in the 'Type' Editor In-place property. Also, the two-way binding between the In-place Editor and its EditorComponent should be configured. It's used to update the editor component value into the In-place Editor component.
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
