@@ -13,7 +13,7 @@ documentation: ug
 
 This section explains how to include the [Blazor Radio Button](https://www.syncfusion.com/blazor-components/blazor-radio-button) component in a Blazor WebAssembly app using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor WASM App
+## Create a new Blazor WebAssembly (Standalone) App
 
 {% tabcontents %}
 
@@ -118,7 +118,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Buttons` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
@@ -164,8 +164,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Buttons
-
 <SfRadioButton Label="Option 1" Name="options" Value="card" @bind-Checked="stringChecked"></SfRadioButton>
 <SfRadioButton Label="Option 2" Name="options" Value="cash" @bind-Checked="stringChecked"></SfRadioButton>
 
@@ -176,7 +174,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -222,6 +220,8 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+4. [Native Events in Blazor RadioButton Component](https://blazor.syncfusion.com/documentation/radio-button/native-event)
+5. [Styles and Appearances in Blazor RadioButton Component](https://blazor.syncfusion.com/documentation/radio-button/customization)
