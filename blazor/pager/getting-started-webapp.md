@@ -320,6 +320,6 @@ The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The **Pager** component will render and enable navigation through the collection.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrpjCqNBJBSbqWn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRjwZbCmoaLxQE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Pager with ListView](./images/blazor-pager-with-list-view.webp)" %}
 
 N> [View Sample on GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Pager)
