@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with TreeView in Blazor MAUI App | Syncfusion®
-description: Checkout and learn about the documentation for getting started with Blazor TreeView Component in Blazor MAUI App.
+description: Check out and learn about the documentation for getting started with Blazor TreeView Component in Blazor MAUI App.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -109,12 +109,14 @@ public static class MauiProgram
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 

@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeView in Blazor Web App
+# Getting started with Blazor TreeView in Blazor Web App
 
 This section explains how to integrate the [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -228,7 +228,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
