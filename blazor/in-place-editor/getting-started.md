@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor In-place Editor in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor In-place Editor component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor In-place Editor component in Blazor WebAssembly Application.
 platform: Blazor
 control: In-place Editor
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor In-place Editor in Blazor WASM App
 
-This section briefly explains about how to include [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
