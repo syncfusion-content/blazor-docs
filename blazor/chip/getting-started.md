@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor Chips in Blazor WASM App | Syncfusion
 description: Check out and learn how to get started with the Blazor Chips component in Blazor WebAssembly Application.
 platform: Blazor
-control: Chips
+component: Chips
 documentation: ug
 ---
 

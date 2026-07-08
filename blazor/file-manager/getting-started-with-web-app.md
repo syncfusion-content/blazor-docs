@@ -227,6 +227,6 @@ dotnet run
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 3. [Getting Started with Blazor File Manager Data Binding](https://blazor.syncfusion.com/documentation/file-manager/data-binding)

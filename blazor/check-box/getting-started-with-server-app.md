@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Checkbox in Blazor Server App | Syncfusion
-description: Check out and learn about how to get started with Blazor Checkbox Component in Blazor Server App.
+description: Check out and learn about how to get started with the Blazor Checkbox Component in the Blazor Server App.
 platform: Blazor
 component: Checkbox
 documentation: ug

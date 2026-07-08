@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with FileManager in Blazor MAUI App | Syncfusion
-description: Check out and learn how to get started with the Blazor FileManager component in a Blazor MAUI App.
+description: Check out and learn about how to get started with the Blazor FileManager component in a Blazor MAUI App.
 platform: Blazor
 component: FileManager
 documentation: ug
