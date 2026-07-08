@@ -1,7 +1,7 @@
 ---
 layout: post
-title: State Management in Blazor DataGrid | Syncfusion
-description: Learn how to persist, restore, and manage state in Syncfusion Blazor DataGrid, including saving, resetting, and versioned persistence.
+title: State Management in Blazor DataGrid | Syncfusion®
+description: Learn how to persist, restore, and manage state in Blazor DataGrid, including saving, resetting, and versioned persistence.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -119,7 +119,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNByDfrqqfeXQzlJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxtGjRrfYmvrbw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Restore initial Blazor DataGrid state
 
@@ -215,7 +215,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVetwXgrJTvTIlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdNmjRheXDbKoj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Clearing local storage
 
@@ -300,7 +300,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVItfhCIjLifBTr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLdNcDHrINGCDHf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Restore to specific state version
 
@@ -429,7 +429,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIXJhrJGykpckS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhRZQXnLyWDgxdO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Restore to previous state
 
@@ -557,7 +557,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSjfrUBZTkusas?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHtmZRheMnycwL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Maintaining custom query in a persistent state
 

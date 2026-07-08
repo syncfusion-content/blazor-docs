@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent Panel Overlap in Blazor Dashboard | Syncfusion
-description: Check out and learn how to preventing panel overlap in the Syncfusion Blazor Dashboard Layout component.
+title: Prevent Panel Overlap in Blazor Dashboard | Syncfusion®
+description: Check out and learn how to preventing panel overlap in the Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -63,4 +63,4 @@ Here is an example demonstrating how to assign unique `Id` values to dynamically
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXryNOLepGKtuKUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Blazor DashboardLayout](../images/panel-overlap.png)
+![Blazor DashboardLayout](../images/panel-overlap.webp)

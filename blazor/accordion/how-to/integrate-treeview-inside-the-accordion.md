@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Treeview Integration in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Treeview Integration in Syncfusion Blazor Accordion component and more.
+title: Treeview Integration in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about Treeview Integration in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -181,4 +181,4 @@ The following example shows how to render a TreeView within the Accordion.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthqWrMKgwYXnecX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhRZdMsMYZuIXKE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.webp)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Threshold in Chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Threshold in Chart in Syncfusion Blazor Charts component and more.
+title: Threshold in Chart in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Threshold in Chart in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

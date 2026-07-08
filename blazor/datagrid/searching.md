@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in Blazor DataGrid | Syncfusion
-description: Learn search options in Syncfusion Blazor DataGrid including toolbar, initial, external search, operators, multi-keyword, and accent-insensitive support.
+title: Searching in Blazor DataGrid | Syncfusion®
+description: Learn search options in Blazor DataGrid including toolbar, initial, external search, operators, multi-keyword, and accent-insensitive support.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -84,7 +84,7 @@ To provide a search box in the UI, add the Search item to the toolbar using the 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqMDUXsngnslOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVRZmtdBCeQZiQx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The clear icon appears in the grid search box when focused or after typing a character. Selecting the clear icon removes the text and resets the search results.
 
@@ -172,7 +172,7 @@ By default, search is performed after the grid renders and a search action is tr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKWZUXimSvcekD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxZwjxhWRqTDIV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > By default, the grid searches all visible columns. To limit search to specific fields, set the `Fields` property of `GridSearchSettings`.
 
@@ -286,7 +286,7 @@ Search operators define how the search key is compared to data values. Configure
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLHNxjKrsEWoEWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBnDwjHhWGBMEMP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Search by external button
 
@@ -380,7 +380,7 @@ Steps:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgWjqXrthTCrNT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrnXmNHLMGTvvfo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Search specific columns
 
@@ -458,7 +458,7 @@ By default, the search scans all visible columns. To restrict the search to spec
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVKMNADrifXTYHZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLRjQZHhiwvhpPE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable search for particular column
 
@@ -613,7 +613,7 @@ public class InventorDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrItRCfhblhPJaR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLRNmXxBCbUodva?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Accent-insensitive comparison applies to searching and filtering when using an IEnumerable data source.
 > * This feature affects characters outside the ASCII range.
@@ -715,12 +715,12 @@ The search-on-keystroke approach enables real-time results while typing in the s
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrgXFLzhbsDRpHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVnDwZnVsPHwxMc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Perform search operation in Grid using multiple keywords
 
-The DataGrid can also be searched using multiple criteria. Build compound predicates with the grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Syncfusion Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
+The DataGrid can also be searched using multiple criteria. Build compound predicates with the grid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property and Data query helpers (**WhereFilter**, **And/Or**) to combine conditions. This approach is particularly useful for remote data scenarios where the server executes filtering.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -730,7 +730,7 @@ The DataGrid can also be searched using multiple criteria. Build compound predic
 @using Syncfusion.Blazor.Data
 
 <SfTextBox Input="OnInput"></SfTextBox>
-<SfRadioButton TChecked="bool" ValueChange="OnRadioButtonChecked" Label="Lucas"></SfRadioButton>
+<SfRadioButton TChecked="bool" ValueChange="OnRadioButtonChecked" Label="Lunas"></SfRadioButton>
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" Query="@SearchQuery">
     <GridColumns>
@@ -830,7 +830,7 @@ The DataGrid can also be searched using multiple criteria. Build compound predic
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqCDqNBkpniqXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrHjwNdLLtBxdSI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Clear search by external button
 
@@ -913,6 +913,6 @@ The Blazor DataGrid provides the ability to clear the current search programmati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzjpXoqkaJnBKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhnjQDHhrjxViih?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Also clear the searched records using the clear icon in the search input field.

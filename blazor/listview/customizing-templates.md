@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customizing Templates in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about customizing templates in Syncfusion Blazor ListView component and more.
+title: Customizing Templates in Blazor ListView Component | Syncfusion®
+description: Checkout and learn here all about customizing templates in Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -61,7 +61,7 @@ ListView header can be customized with the help of the [`HeaderTemplate`](https:
 }
 ```
 
-![Blazor ListView with Header Template](./images/list/blazor-listview-header-template.png)
+![Blazor ListView with Header Template](./images/list/blazor-listview-header-template.webp)
 
 ## Template
 
@@ -232,7 +232,7 @@ The following built-in CSS classes can be used to customize the list-items.
 
 ```
 
-![Blazor ListView with Item template](./images/list/blazor-listview-item-template.png)
+![Blazor ListView with Item template](./images/list/blazor-listview-item-template.webp)
 
 ## Group template
 
@@ -297,4 +297,4 @@ In the following example, ListView is grouped based on the category. The categor
 
 ```
 
-![Blazor ListView with Group Template](./images/list/blazor-listview-group-template.png)
+![Blazor ListView with Group Template](./images/list/blazor-listview-group-template.webp)

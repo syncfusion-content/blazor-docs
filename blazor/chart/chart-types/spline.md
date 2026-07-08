@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spline in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Spline Chart in Syncfusion Blazor Charts component and much more.
+title: Spline in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Spline Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

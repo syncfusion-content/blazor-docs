@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redact with Blazor Image Editor Component | Syncfusion
+title: Redact with Blazor Image Editor Component | Syncfusion®
 description: Explore the Redact support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

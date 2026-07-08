@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiple toasts in various positions using Blazor Toast | Syncfusion
-description: Learn here all about how to show multiple toasts in various positions in Syncfusion Blazor Toast component and more.
+title: Multiple toasts in various positions using Blazor Toast | Syncfusion®
+description: Learn here all about how to show multiple toasts in various positions in Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

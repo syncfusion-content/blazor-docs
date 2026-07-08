@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor DataGrid | Syncfusion
-description: Learn how to implement virtualization in the Syncfusion Blazor DataGrid, including virtual scrolling, paging, and performance optimization techniques.
+title: Virtualization in Blazor DataGrid | Syncfusion®
+description: Learn how to implement virtualization in the Blazor DataGrid, including virtual scrolling, paging, and performance optimization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -81,7 +81,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXreXrDghESsUlpk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLdtmZRLlcvHfNS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Render buffered data using Overscan count
 
@@ -167,7 +167,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBeDLNqVYqUifpB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVdjmtdLvkMQmAb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The `OverscanCount` property supports both local and remote data.
 
@@ -382,7 +382,7 @@ public class VirtualData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLoZWBlzonBSEEX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLHXcZHVvYYidUE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Column virtualization with row virtualization
 
@@ -474,7 +474,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLIZrZgBlddsUQU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVnDctdhuXTGRbt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Column virtualization with paging
 
@@ -567,7 +567,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVejhtAVPeiBUyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBHDQXRrOjmiEVu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Column [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) is required for column virtualization. If a column’s width is not defined, the Grid considers it as `200px`.
 > * The collapsed/expanded state of grouped data persists only for local data while scrolling.
@@ -682,7 +682,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroDWBkCQohrFJy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLntwjHLODYLkHi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > For a better experience, define both [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) and [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight).
 
@@ -881,7 +881,7 @@ public class VirtualData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhIDshOhHwVXCEM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrxDmZnBusRbLhV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Scroll the content by external button
 
@@ -988,7 +988,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrotMgNKGXhbHbT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLHNQDRBkBCYdNc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Refresh virtualized Grid externally
 

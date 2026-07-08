@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Heatmap - Strict CSP Feature Limitations - Syncfusion
-description: Details on features in Syncfusion Blazor Heatmap Chart that require Content Security Policy (CSP) relaxation
+title: Heatmap - Strict CSP Feature Limitations | Syncfusion®
+description: Details on features in Blazor Heatmap Chart that require Content Security Policy (CSP) relaxation and much more details.
 platform: Blazor
 control: Heatmap
 documentation: ug
@@ -84,4 +84,4 @@ Include `'unsafe-inline'` if you want users to select cells for drill-down or da
 
 ## See also
 
-* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
+* [Content security policy in Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Azure OpenAI with Blazor AI AssistView Component | Syncfusion
+title:  Azure OpenAI with Blazor AI AssistView Component | Syncfusion®
 description: Checkout and learn about Azure OpenAI with Blazor AI AssistView component in Blazor WebAssembly Application.
 platform: Blazor
 control: AI AssistView

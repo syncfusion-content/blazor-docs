@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Close the toast with click/tap in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about how to close the toast with click/tap in Syncfusion Blazor Toast component and more.
+title: Close the toast with click/tap in Blazor Toast Component | Syncfusion®
+description: Checkout and learn here all about how to close the toast with click/tap in Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

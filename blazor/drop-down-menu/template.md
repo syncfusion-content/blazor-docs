@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Item template in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn here all about Item template in Syncfusion Blazor Dropdown Menu component and much more.
+title: Item template in Blazor Dropdown Menu Component | Syncfusion®
+description: Checkout and learn here all the features about Item template in Blazor Dropdown Menu component and much more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -63,4 +63,4 @@ The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Split
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBfMhWTscHCszCa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor DropDownMenu Item template](./images/blazor-dropdown-menu-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVnNRLaUOtVlnUa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor DropDownMenu Item template](./images/blazor-dropdown-menu-template.webp)" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Z-order with Blazor Image Editor Component | Syncfusion
+title: Z-order with Blazor Image Editor Component | Syncfusion®
 description: Explore the Z-order support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

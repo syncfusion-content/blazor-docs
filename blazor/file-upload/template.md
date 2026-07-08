@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template in Blazor File Upload Component | Syncfusion
-description: Learn how to customize the Syncfusion Blazor File Upload component's appearance using templates, including how to add a progress bar.
+title: Template in Blazor File Upload Component | Syncfusion®
+description: Learn how to customize the Blazor File Upload component's appearance using templates, including how to add a progress bar.
 platform: Blazor
 control: File Upload
 documentation: ug

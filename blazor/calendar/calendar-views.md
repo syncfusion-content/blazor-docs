@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Calendar Views in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Calendar Views in Syncfusion Blazor Calendar component and much more.
+title: Calendar Views in Blazor Calendar Component | Syncfusion®
+description: Checkout and learn here all features about Calendar Views in Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -33,7 +33,7 @@ The following example demonstrates how to set the `Year` as the start view of th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLUsVVVhopruWLg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Calendar View](./images/blazor-full-calendar-view.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrdNRCBhvvQzKOi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor Calendar View](./images/blazor-full-calendar-view.webp)" %}
 
 ## View restriction
 
@@ -54,4 +54,4 @@ N> The Depth view must be “smaller” (more detailed) than the Start view. If 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgsLhhhofIigEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Restriction in Blazor Calendar](./images/blazor-calendar-restriction.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrHDRCrBbONJACo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Restriction in Blazor Calendar](./images/blazor-calendar-restriction.webp)" %}

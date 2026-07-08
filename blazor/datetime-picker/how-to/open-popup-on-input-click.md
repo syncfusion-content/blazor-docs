@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open the Blazor DateTimePicker popup on Focus | Syncfusion
-description: Learn how to open the Syncfusion Blazor DateTimePicker popup when the input receives focus by enabling the OpenOnFocus property.
+title: Open the Blazor DateTimePicker popup on Focus | Syncfusion®
+description: Learn how to open the Blazor DateTimePicker popup when the input receives focus by enabling the OpenOnFocus property.
 platform: Blazor
 control: DateTimePicker
 documentation: ug

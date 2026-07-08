@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reuse of Blazor Media Query component | Syncfusion
+title: Reuse of Blazor Media Query component | Syncfusion®
 description: Checkout and learn here all about how to use the Media Query component at the global level reuse on all pages and much more.
 platform: Blazor
 control: Media Query
@@ -83,4 +83,4 @@ The active breakpoint is @activeBreakPoint
 {% endhighlight %}
 {% endtabs %}
 
-![Reusable Blazor Media Query Component](images/blazor-media-query-reusable.gif)
+![Reusable Blazor Media Query Component](images/blazor-media-query-reusable.webp)

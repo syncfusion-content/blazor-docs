@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and Customization in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Style and Customization in Syncfusion Blazor Mention component and much more.
+title: Style and Customization in Blazor Mention Component | Syncfusion®
+description: Checkout and learn here all the features about Style and Customization in Blazor Mention component and much more details.
 platform: Blazor
 control: Mention
 documentation: ug
@@ -46,7 +46,7 @@ You can control its border, shape, and shadow by targeting the popup element usi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLHjJLWfcfFMNUD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhxtHADrtdVJjzM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
  
 **Visual Outcome**
  
@@ -68,7 +68,7 @@ This state can be styled using the `.e-custom .e-dropdownbase .e-list-item.e-act
     color: #fff;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLdtfhifQRBrIIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrxDHUXhNHEbBge?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Visual Outcome**
  
@@ -90,7 +90,7 @@ You can customize both hovered and active‑hovered items using the `.e-hover` a
     color: #fff;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrRXJVCpQxbdRlA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhHNnKXLZFcidqj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Visual Outcome**
  
@@ -112,7 +112,7 @@ This interaction state can be styled using the `:active` pseudo‑class in combi
     color: greenyellow;
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRjJrMpQwTcocW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrxNxAXVCuqJKmt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Visual Outcome**
  

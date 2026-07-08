@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mode and Value in Blazor Color Picker Component | Syncfusion
-description: Checkout and learn here all about Mode and Value in Syncfusion Blazor Color Picker component and more.
+title: Mode and Value in Blazor Color Picker Component | Syncfusion®
+description: Checkout and learn here all the features about Mode and Value in Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
@@ -22,7 +22,7 @@ In the following example, the palette is displayed at initial load.
 <SfColorPicker Mode="ColorPickerMode.Palette"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgshBQKIhHYIMT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgshBQKIhHYIMT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.png)" %}
 
 ## Color value
 
@@ -37,6 +37,6 @@ In the following example, a 4-digit hex value is used, where the last digit repr
 <SfColorPicker Value="035a" ModeSwitcher="false"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVUCBBQUeLkCZYv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVUCBBQUeLkCZYv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.png)" %}
 
 N> The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex codes with or without the `#` prefix.

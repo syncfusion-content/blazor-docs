@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change Submenu Position in Blazor Menu Bar | Syncfusion
-description: Checkout and learn about Change Submenu Position in Blazor Menu Bar  component of Syncfusion, and more details.
+title: Change Submenu Position in Blazor Menu Bar | Syncfusion®
+description: Checkout and learn about Change Submenu Position in Blazor Menu Bar component and much more details.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Candle in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Candle Chart in Syncfusion Blazor Charts component and much more.
+title: Candle in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Candle Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

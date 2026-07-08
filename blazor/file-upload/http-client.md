@@ -1,7 +1,7 @@
 ---
 layout: post
-title: HTTP Client in Blazor File Upload Component | Syncfusion
-description: Learn about using HTTP Client with the Syncfusion Blazor File Upload component for handling file uploads with customized requests.
+title: HTTP Client in Blazor File Upload Component | Syncfusion®
+description: Learn about using HTTP Client with the Blazor File Upload component for handling file uploads with customized requests.
 platform: Blazor
 control: File Upload
 documentation: ug

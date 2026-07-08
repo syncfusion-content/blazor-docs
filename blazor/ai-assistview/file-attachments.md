@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Attachments in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Attachments with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Attachments in Blazor AI AssistView Component | Syncfusion®
+description: Checkout and learn here all about Attachments with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: AI AssistView
 documentation: ug

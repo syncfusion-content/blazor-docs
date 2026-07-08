@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create Wizard in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about how to create Wizard in Syncfusion Blazor Accordion component and much more.
+title: Create Wizard in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about how to create Wizard in Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -226,7 +226,7 @@ The following example demonstrates a simple payment module that enables or disab
 In this example, we've created a three-step wizard using the Accordion component:
 
 1. **Sign In** - Collects user credentials
-2. **Delivery Address** - Gathers shipping information 
+2. **Delivery Address** - Gathers shipping information
 3. **Card Details** - Processes payment information
 
 The wizard functions by:
@@ -239,4 +239,4 @@ The wizard functions by:
 
 This pattern can be customized to create multi-step forms, registration processes, or any sequential workflow in your Blazor applications.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBgWVMgUGQmZvwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVHDxsssbFaexpb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

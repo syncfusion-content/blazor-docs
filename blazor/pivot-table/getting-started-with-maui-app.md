@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with PivotTable in Blazor MAUI App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor PivotTable Component in Blazor MAUI App.
+title: Getting Started with PivotTable in Blazor MAUI App | Syncfusion®
+description: checkout and learn all about how to get started with Blazor PivotTable component in Blazor MAUI App and much more details.
 platform: Blazor
 control: PivotTable
 documentation: ug
@@ -9,10 +9,10 @@ documentation: ug
 
 # Getting started with Blazor Pivot Table component in Hybrid MAUI App
 
-This section guides you through the steps to add the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in a Blazor MAUI App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This section guides you through the steps to add the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in a Blazor MAUI App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
-> **Want to simplify your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor development?**  
-> Explore the power of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components with Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants. Easily integrate components, set up projects, and get real-time, context-aware code suggestions in AI-powered IDEs like Visual Studio Code, Cursor, Syncfusion<sup style="font-size:70%">&reg;</sup> CodeStudio, and more. [Learn more about Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
+> **Want to simplify your Blazor development?**  
+> Explore the power of Blazor components with Syncfusion® AI Coding Assistants. Easily integrate components, set up projects, and get real-time, context-aware code suggestions in AI-powered IDEs like Visual Studio Code, Cursor, CodeStudio, and more. [Learn more about AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview).
 
 {% tabcontents %}
 
@@ -53,7 +53,7 @@ cd MauiBlazorApp
 
 {% endtabcontents %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install required Blazor packages
 
 Install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
 
@@ -94,9 +94,9 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
+Register the Blazor service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" %}
@@ -132,9 +132,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component
+## Add Blazor Pivot Table component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table component in the **~/Pages/Home.razor** file.
+Add the Blazor Pivot Table component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -224,71 +224,10 @@ N> If you face any issues with the Android emulator, check the [Troubleshooting 
 ![Blazor Pivot Table with Formatting](images/blazor-pivottable-formatting.webp)
 
 
-
-## Handling exceptions
-
-You can handle errors that occur during Pivot Table actions without stopping your application. Use the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event to capture error messages or details from the server. We recommend binding this event while building your app, as it helps you identify issues early. You can share these error details with our support team to get help quickly.
-
-The following code example shows how to display a server-side error message to the user when a data operation fails:
-
-{% tabs %}
-{% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.PivotView
-
-<span class="error">@ErrorDetails</span>
-<SfPivotView TValue="PivotViewData" Width="100%" Height="450" AllowDataCompression="true" EnableVirtualization="true" ShowFieldList="true" ShowGroupingBar="true" MaxNodeLimitInMemberEditor="50">
-    <PivotViewDataSourceSettings TValue="PivotViewData" Url="https://some.com/invalidUrl" ExpandAll="false" EnableSorting="true" EnableServerSideAggregation="true" AlwaysShowValueHeader="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="ProductID" Caption="Product ID"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            <PivotViewValue Name="Price" Caption="Unit Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Price" Format="C0"></PivotViewFormatSetting>
-            <PivotViewFormatSetting Name="Sold" Format="N0"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
-    <PivotViewEvents TValue="PivotViewData" OnActionFailure="ActionFailure"></PivotViewEvents>
-</SfPivotView>
-
-<style>
-    .error {
-        color: red;
-    }
-</style>
-
-@code{
-    public string ErrorDetails = "";
-    public class PivotViewData
-    {
-        public string ProductID { get; set; }
-        public string Country { get; set; }
-        public string Product { get; set; }
-        public double Sold { get; set; }
-        public double Price { get; set; }
-        public string Year { get; set; }
-    }
-    public void ActionFailure(PivotActionFailureEventArgs args)
-    {
-        this.ErrorDetails = args.ErrorInfo.Message;
-        StateHasChanged();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable)
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Blazor for Client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

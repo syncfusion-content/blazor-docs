@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Buttons in Blazor In-place Editor Component | Syncfusion
-description: Checkout and learn here all about Buttons in Syncfusion Blazor In-place Editor component and much more.
+title: Buttons in Blazor In-place Editor Component | Syncfusion®
+description: Checkout and learn here all about Buttons in Blazor In-place Editor component and much more details.
 platform: Blazor
 control: In-place Editor
 documentation: ug

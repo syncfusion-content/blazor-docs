@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable or Disable the Blazor DataGrid | Syncfusion
-description: Learn how to enable or disable the entire Syncfusion Blazor DataGrid component to control user interaction with it.
+title: Enable or Disable the Blazor DataGrid | Syncfusion®
+description: Learn how to enable or disable the entire Blazor DataGrid component to control user interaction with it.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -129,4 +129,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLoXYBJqYHSSFBl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVdZwXiCaGUgBeh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

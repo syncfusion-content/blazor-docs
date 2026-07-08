@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resizing Panels in Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn here all about resizing panels in Syncfusion Blazor Dashboard Layout component and more.
+title: Resizing Panels in Blazor Dashboard Layout Component | Syncfusion®
+description: Checkout and learn here all about resizing panels in Blazor Dashboard Layout component and much more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -41,6 +41,6 @@ The Dashboard Layout component provides panel resizing functionality, which can 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAsBVwTABPvxgH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Resizing Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-resizing.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAsBVwTABPvxgH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Resizing Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-resizing.webp)" %}
 
 N> Initially, the panels can be resized only in south-east direction. However, panels can also be resized in east, west, north, south, and south-west directions by defining the required directions with the [`ResizableHandles`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ResizableHandles) property.

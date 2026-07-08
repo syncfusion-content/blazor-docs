@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resizing with Blazor Image Editor Component | Syncfusion
+title: Resizing with Blazor Image Editor Component | Syncfusion®
 description: Explore the resizing support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

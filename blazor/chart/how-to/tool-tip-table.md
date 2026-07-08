@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Table in Tooltip in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Table in Tooltip in Syncfusion Blazor Charts component and much more.
+title: Table in Tooltip in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Table in Tooltip in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

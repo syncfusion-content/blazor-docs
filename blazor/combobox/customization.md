@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor ComboBox | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor ComboBox component and much more.
+title: Customization in Blazor ComboBox | Syncfusion®
+description: Checkout and learn here all the features about Customization in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -43,4 +43,4 @@ Automatically open the ComboBox dropdown when the input receives focus by handli
 }
 ```
 
-![Blazor ComboBox opening dropdown on focus](./images/blazor-combobox-customization.webp)
+![Blazor ComboBox opening dropdown on focus](./images/blazor-combobox-customization.png)

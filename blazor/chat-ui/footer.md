@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Footer in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Footer with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Footer in Blazor Chat UI Component | Syncfusion®
+description: Checkout and learn here all about Footer with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Drag and Drop in Blazor DataGrid | Syncfusion
-description: Learn how to enable row drag and drop in Syncfusion Blazor DataGrid, including reordering, cross-grid dragging, custom drops, and event handling.
+title: Row Drag and Drop in Blazor DataGrid | Syncfusion®
+description: Learn how to enable row drag and drop in Blazor DataGrid, including reordering, cross-grid dragging, custom drops, and event handling.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -99,7 +99,7 @@ The drag and drop feature enables reordering of rows within the Blazor DataGrid 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrzWWrtWInIGJbg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBRDcXUnBUAxRBy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Drag and drop to DataGrid
 
@@ -197,7 +197,7 @@ The Blazor DataGrid supports dragging rows from one grid and dropping them into 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfWirtinCYhFlS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVHtQXURVgmfzJV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Drag and drop in empty area
 
@@ -666,7 +666,7 @@ public class WrapData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBJCrZpfJngbJCc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLnXwZKxreBBpWo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Drag and drop events 
 
@@ -781,7 +781,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrpWVNeByBihtpL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVnXGXKxLSlNfyE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > To perform row drag and drop, define at least one column as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about toolbar in Syncfusion Blazor Pivot Table component and much more details.
+title: Toolbar in Blazor Pivot Table Component | Syncfusion®
+description: Learn about toolbar in Blazor Pivot Table component for quick access to common features with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -241,7 +241,7 @@ SQL Server is a relational database management system (RDBMS) that can be used t
 
 **2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
 
-![Add the NuGet package Microsoft.Data.SqlClient to the project](./images/ms-data-sqlclient-nuget-package-install.jpeg)
+![Add the NuGet package Microsoft.Data.SqlClient to the project](./images/ms-data-sqlclient-nuget-package-install.webp)
 
 **3.** Next, in the **Index.razor** page, the **OpenConnection** method is used to connect to the SQL database. The **GetDataTable** method then processes the specified SQL query string, retrieves data from the database, and converts it into a **DataTable** using **SqlCommand** and **SqlDataAdapter**. This **DataTable** can be used to retrieve saved reports and modify them further as shown in the code block below.
 
@@ -872,7 +872,7 @@ When you select the **"Create a new report"** option from the toolbar, the [NewR
 
 **2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
 
-![Add the NuGet package Microsoft.Data.SqlClient to the project](images/ms-data-sqlclient-nuget-package-install.jpeg)
+![Add the NuGet package Microsoft.Data.SqlClient to the project](images/ms-data-sqlclient-nuget-package-install.webp)
 
 **3.** Under the **Controllers** folder, create a Web API controller (aka, PivotController.cs) file that aids in data communication with the Pivot Table.
 

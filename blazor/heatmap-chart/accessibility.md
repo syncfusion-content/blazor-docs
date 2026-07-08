@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor HeatMap chart component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor HeatMap chart component and much more.
+title: Accessibility in Blazor HeatMap chart component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor HeatMap chart component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug

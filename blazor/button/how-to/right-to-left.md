@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right-To-Left in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Right-To-Left in Syncfusion Blazor Button component and much more.
+title: Right-To-Left in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all features about Right-To-Left support in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -20,9 +20,9 @@ The following example illustrates how to enable right-to-left support in Button 
 
 <style>
     .e-setting-icon::before {
-        content: '\e679';
+        content: '\e880';
     }
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVgirrrCcOUEMiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor Button](./../images/blazor-button-in-right-to-left.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhHjRWVVquoFAIg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Right to Left in Blazor Button](./../images/blazor-button-in-right-to-left.webp)" %}

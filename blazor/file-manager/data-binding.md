@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor File Manager component and much more.
+description: Learn how to configure and use data binding in the Blazor File Manager component with practical examples and implementation guidance.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -109,7 +109,7 @@ To access the above File Operations, you need some model class files that have f
 
 Add your required files and folders under the `wwwroot\Files` directory.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Manager component in your default web browser.
 
 ![Blazor File Manager Component](images/blazor-filemanager-component.png)
 
@@ -210,7 +210,7 @@ namespace filemanager.Server.Controllers
 To perform the directory(folder) upload in File Manager, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) as true within the FileManagerUploadSettings. The directory upload feature is supported for the following file service providers:
 * Physical file service provider.
 * Azure file service provider.
-* NodeJS file service provider.
+* Node.js file service provider.
 * Amazon file service provider.
 
 In this example, you can enable or disable the ability to upload directories by selecting an option from the DropDownButton. The DropDownButton is created using the Template feature in FileManagerCustomToolbarItems. 
@@ -347,9 +347,9 @@ For Azure file service provider, no customizations are needed for directory uplo
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs#L94) for more details.
 
-#### NodeJS file service provider
+#### Node.js file service provider
 
-To perform the directory upload in the NodeJS file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
+To perform the directory upload in the Node.js file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
 
 ```typescript
 var folders = (req.body.filename).split('/');
@@ -624,7 +624,7 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
 {% endhighlight %}
 {% endtabs %}
 
-N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data?theme=fluent).
+N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data).
 
 ### Injected service
 

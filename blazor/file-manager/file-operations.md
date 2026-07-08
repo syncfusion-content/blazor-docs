@@ -1,7 +1,7 @@
 ---
 layout: post
-title: File Operations in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about File Operations in Syncfusion Blazor File Manager component and more.
+title: File Operations in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about File Operations in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -1830,7 +1830,7 @@ The following table provides the toolbar buttons that appear based on the select
 
 ## Server-side Configuration
 
-This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Syncfusion Blazor File Manager component.
+This documentation outlines the server-side implementation and configuration required for enabling comprehensive file management operations in the Blazor File Manager component.
 
 ### Create Models
 
@@ -1952,7 +1952,7 @@ After configuring the server-side service, integrate the Syncfusion® Blazor Fil
 
 ### Create the Razor Component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in `.razor` file inside the `Pages` folder.
+Add the Blazor File Manager component in `.razor` file inside the `Pages` folder.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1971,7 +1971,7 @@ Add your required files and folders under the `wwwroot\Files` directory.
 
 * In your  project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of your server project.
 * Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Manager component in the default web browser.
 
 ![Blazor File Manager Component](images/blazor-filemanager-component.webp)
 

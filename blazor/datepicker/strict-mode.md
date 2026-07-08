@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Strict Mode in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Strict Mode in Syncfusion Blazor DatePicker component and much more.
+title: Strict Mode in Blazor DatePicker Component | Syncfusion®
+description: Checkout and learn here all the features about Strict Mode in Blazor DatePicker component and much more.
 platform: Blazor
 control: DatePicker
 documentation: ug

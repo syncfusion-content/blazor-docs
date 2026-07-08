@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor AutoComplete component and more.
+title: Accessibility in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all features about Accessibility in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -86,7 +86,7 @@ N> In the following sample, pressing the <kbd>t</kbd> key toggles the disabled s
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUCrMzKHwTMpln?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBnZRruVYVgLKsV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Ensuring accessibility
 
@@ -96,4 +96,4 @@ The accessibility compliance of the AutoComplete component is shown in the follo
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

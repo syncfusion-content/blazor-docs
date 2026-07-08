@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dynamic Points in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Dynamic Points in Syncfusion Blazor Charts component and much more.
+title: Dynamic Points in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Dynamic Points in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

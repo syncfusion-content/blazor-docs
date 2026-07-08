@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adaptive Layout in Blazor Charts Component | Syncfusion
-description: Check out and learn how to configure and utilize Adaptive Layout in Syncfusion Blazor Charts component.
+title: Adaptive Layout in Blazor Charts Component | Syncfusion®
+description: Check out and learn all the features how to configure and utilize Adaptive Layout in Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Live Chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Live Chart in Syncfusion Blazor Charts component and much more details.
+title: Live Chart in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Live Chart in Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
