@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native events in Blazor AutoComplete component | Syncfusion
-description: Check out how to use native events with the Syncfusion Blazor AutoComplete component, including @on{event} binding and passing event argument data.
+title: Native events in Blazor AutoComplete component | Syncfusion®
+description: Check out how to use native events with the Blazor AutoComplete component, including @on{event} binding and passing event argument data.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -44,7 +44,7 @@ In the following example, the `KeyPressed` method is called each time a key is p
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVUMrifgyJMzUUB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthHXdsiKvplRtfK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The same behavior can be written using a lambda expression. The following example prints a message when a key is pressed.
 
@@ -94,7 +94,7 @@ In the following example, the keypress handler receives `KeyboardEventArgs`. The
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgCVWTAdxsbIip?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrHZdsiKbeUmifq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 Lambda expressions can also pass event data to the event handler as shown above. Native events can be used alongside Syncfusion component events (such as `ValueChange`), depending on the use case.
 

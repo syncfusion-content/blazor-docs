@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Frame with Blazor Image Editor Component | Syncfusion
+title: Frame with Blazor Image Editor Component | Syncfusion®
 description: Explore the Frame feature in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

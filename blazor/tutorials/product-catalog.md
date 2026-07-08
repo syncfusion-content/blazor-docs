@@ -20,6 +20,134 @@ This guide shows how to build a **Product Catalog application** using [Blazor co
 
 To create a Blazor application, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code).
 
+### Install required Blazor packages
+
+
+Install the NuGet packages listed below to add the required Blazor components to your application.
+
+| Component Name | Package |
+|----------------|---------|
+| [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
+| [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
+| [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
+| [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) | [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) |
+| [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
+| Themes | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+1. Open your project in **Visual Studio**.
+2. Navigate to **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**.
+3. Search for and install the required packages listed in the preceding table.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Open the integrated terminal and run the following commands:
+
+{% tabs %}
+{% highlight bash tabtitle="Terminal" %}
+
+dotnet add package Syncfusion.Blazor.Buttons --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Inputs --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Navigations --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Popups --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Run the following commands from a command prompt or terminal:
+
+{% tabs %}
+{% highlight bash tabtitle="Command Prompt" %}
+
+dotnet add package Syncfusion.Blazor.Buttons --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Inputs --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Navigations --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Popups --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+### Register Blazor service
+
+Add the Blazor service to the `~/Program.cs` file to enable Blazor components across all pages.
+
+{% tabs %}
+{% highlight cs tabtitle="~/Program.cs" hl_lines="1 9" %}
+
+using Syncfusion.Blazor;
+using BlazorProductGrid.Services;
+...
+// Add services to the container.
+builder.Services.AddRazorComponents()
+.AddInteractiveServerComponents();
+
+// Register Syncfusion Blazor service
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+...
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add required namespaces
+
+Open the `Components/_Imports.razor` file and import the following Blazor component, model, data, and service namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="_Imports.razor" %}
+
+@using BlazorProductGrid.Models
+@using BlazorProductGrid.Data
+@using BlazorProductGrid.Services
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
+
+{% endhighlight %}
+{% endtabs %}
+
+### Add stylesheet and script resources
+
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+
+{% tabs %}
+{% highlight html tabtitle="App.razor" %}
+
+<head>
+    ...
+    <!-- Blazor theme stylesheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
+<body>
+    ...
+    <!-- Blazor core script (required for UI components) -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Project structure
 
 Organize the application using the following folder structure to maintain a clear and modular architecture.
@@ -46,92 +174,6 @@ BlazorProductGrid/
 ├── Program.cs
 └── BlazorProductGrid.csproj
 ```
-
-## Install required Syncfusion® Blazor packages
-
-Install the NuGet packages listed below to add the required Blazor components to your application.
-
-**Using Visual Studio**
-
-1. Go to **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**.
-2. Search for each required NuGet package and install it.
-
-**Using Visual Studio Code or .NET CLI**
-
-Click each package link in the table below to view the NuGet installation command. Copy the command and run it in the terminal to install the required package.
-
-| Component Name | Package |
-|----------------|---------|
-| [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) | [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) |
-| [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) | [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) |
-| [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) | [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) |
-| [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) | [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) |
-| [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) | [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) |
-| Themes | [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) |
-
-## Register Blazor service
-
-Add the Blazor service to the `~/Program.cs` file to enable Blazor components across all pages.
-
-{% tabs %}
-{% highlight cs tabtitle="~/Program.cs" hl_lines="1 9" %}
-
-using Syncfusion.Blazor;
-using BlazorProductGrid.Services;
-...
-// Add services to the container.
-builder.Services.AddRazorComponents()
-.AddInteractiveServerComponents();
-
-// Register Syncfusion Blazor service
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-...
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add stylesheet and script resources
-
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
-
-{% tabs %}
-{% highlight html tabtitle="App.razor" %}
-
-<head>
-    ...
-    <!-- Blazor theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
-<body>
-    ...
-    <!-- Blazor core script (required for UI components) -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
-</body>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add required namespaces
-
-Open the `Components/_Imports.razor` file and import the following Blazor component, model, data, and service namespaces.
-
-{% tabs %}
-{% highlight razor tabtitle="_Imports.razor" %}
-
-@using BlazorProductGrid.Models
-@using BlazorProductGrid.Data
-@using BlazorProductGrid.Services
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Popups
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Create the Product Model
 
@@ -205,11 +247,8 @@ public class ProductData
 
 Services manage business logic and share data across components. In Blazor, they are registered with dependency injection to provide consistent access throughout the application.
 
-### Cart Service
-
-The **CartService** handles all shopping cart operations including adding, removing, and updating item quantities. Create `Services/CartService.cs` with the following code.
-
 {% tabs %}
+
 {% highlight cs tabtitle="Services/CartService.cs" %}
 
 using BlazorProductGrid.Models;
@@ -287,13 +326,7 @@ public class CartService
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-### Wishlist Service
-
-The **WishlistService** manages the list of products a user has saved for later. Create `Services/WishlistService.cs` with the following code.
-
-{% tabs %}
 {% highlight cs tabtitle="Services/WishlistService.cs" %}
 
 using BlazorProductGrid.Models;
@@ -336,6 +369,7 @@ public class WishlistService
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ### Register services
@@ -343,7 +377,7 @@ public class WishlistService
 Register the application services in `Program.cs` so they can be accessed throughout the Blazor application using dependency injection.
 
 {% tabs %}
-{% highlight cs tabtitle="Program.cs" %}
+{% highlight cs tabtitle="Program.cs" hl_lines="8 9 10" %}
 
 ...
 using Syncfusion.Blazor;
@@ -373,7 +407,7 @@ Pages define the main user interface of the application. Each page handles a spe
 The product catalog page is the main entry point of the application. It uses the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to display all products with sorting, paging, and search. Category filter chips, a cart preview dialog, and an image gallery powered by [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) are also included on this page.
 
 {% tabs %}
-{% highlight razor tabtitle="Pages/ProductCatalog.razor" %}
+{% highlight razor tabtitle="ProductCatalog.razor" %}
 
 @page "/"
 @rendermode InteractiveServer
@@ -593,464 +627,466 @@ The product catalog page is the main entry point of the application. It uses the
     private string GetStarDisplay(double rating) => new string('★', (int)Math.Floor(rating)) + new string('☆', 5 - (int)Math.Floor(rating));
 }
 
-<style>
-    .catalog-container {
-        padding: 2rem;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .catalog-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .catalog-header h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-        color: #718096;
-        font-size: 1.1rem;
-    }
-
-    .filter-chips-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        margin-bottom: 1.5rem;
-        align-items: center;
-    }
-
-    .filter-label {
-        font-weight: 600;
-        color: #4a5568;
-        margin-right: 0.5rem;
-    }
-
-    .filter-chip {
-        padding: 0.5rem 1.25rem;
-        border: 2px solid #e2e8f0;
-        border-radius: 20px;
-        background: #fff;
-        color: #4a5568;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .filter-chip:hover {
-        border-color: #667eea;
-        color: #667eea;
-        background: rgba(102, 126, 234, 0.05);
-    }
-
-    .filter-chip.active {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-color: transparent;
-        color: #fff;
-        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
-    }
-
-    .toolbar-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .toolbar-actions {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .cart-summary {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: #fff;
-        border: 2px solid #e2e8f0;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .cart-summary:hover {
-        border-color: #667eea;
-        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
-    }
-
-    .cart-icon { font-size: 1.2rem; }
-    .cart-count {
-        background: #667eea;
-        color: #fff;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.75rem;
-        font-weight: bold;
-    }
-    .cart-text { font-weight: 500; color: #4a5568; }
-    .cart-total {
-        font-weight: bold;
-        color: #667eea;
-        margin-left: 0.5rem;
-    }
-
-    .wishlist-btn {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: #fff;
-        border: 2px solid #e2e8f0;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .wishlist-btn:hover {
-        border-color: #e53e3e;
-        background: rgba(245, 101, 101, 0.05);
-    }
-
-    .wishlist-btn.has-items {
-        border-color: #e53e3e;
-        background: rgba(245, 101, 101, 0.05);
-    }
-
-    .heart-icon { font-size: 1.2rem; }
-    .wishlist-count {
-        background: #e53e3e;
-        color: #fff;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.75rem;
-        font-weight: bold;
-    }
-
-    /* Cart Dialog */
-    .cart-dialog .e-dialog-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        padding: 1rem 1.5rem;
-    }
-
-    .cart-dialog .e-dialog-header h3 {
-        margin: 0;
-        font-size: 1.25rem;
-        color: #fff;
-    }
-
-    .cart-dialog .e-dialog-content {
-        padding: 0;
-    }
-
-    .cart-items {
-        padding: 1rem;
-        max-height: 400px;
-        overflow-y: auto;
-    }
-
-    .cart-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 0.75rem;
-        border-radius: 12px;
-        background: #f7fafc;
-        margin-bottom: 0.75rem;
-    }
-
-    .cart-item-image {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .cart-item-details { flex: 1; }
-    .cart-item-name { font-weight: 600; color: #2d3748; }
-    .cart-item-price { color: #667eea; font-weight: bold; }
-
-    .cart-item-qty {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .qty-btn {
-        width: 28px;
-        height: 28px;
-        border: 2px solid #e2e8f0;
-        background: #fff;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: bold;
-        color: #4a5568;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .qty-btn:hover {
-        background: #667eea;
-        color: #fff;
-        border-color: #667eea;
-    }
-
-    .qty-btn.disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
-
-    .qty-btn.disabled:hover {
-        background: #fff;
-        color: #4a5568;
-        border-color: #e2e8f0;
-    }
-
-    .cart-item-subtotal {
-        font-weight: bold;
-        color: #2d3748;
-        min-width: 70px;
-        text-align: right;
-    }
-
-    .remove-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.2rem;
-        opacity: 0.5;
-        transition: opacity 0.2s;
-    }
-
-    .remove-btn:hover { opacity: 1; }
-
-    .cart-footer {
-        padding: 1.25rem 1.5rem;
-        border-top: 1px solid #e2e8f0;
-        background: #f7fafc;
-    }
-
-    .cart-total-row {
-        display: flex;
-        justify-content: space-between;
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-
-    .cart-grand-total { color: #667eea; }
-
-    .cart-btn {
-        width: 100%;
-        padding: 1rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        border: none;
-        border-radius: 12px;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: transform 0.2s;
-    }
-
-    .cart-btn:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-
-    .cart-empty {
-        padding: 3rem;
-        text-align: center;
-    }
-
-    .empty-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
-
-    /* Action Buttons in Grid */
-    .action-buttons {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-    }
-
-    .action-btn {
-        width: 36px;
-        height: 36px;
-        border: 2px solid #e2e8f0;
-        background: #fff;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: all 0.2s ease;
-        text-align: center;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .action-btn:hover {
-        border-color: #667eea;
-        background: rgba(102, 126, 234, 0.1);
-        transform: scale(1.1);
-    }
-
-    .action-btn.in-cart {
-        background: #667eea;
-        border-color: #667eea;
-    }
-
-    .action-btn.wishlist.in-wishlist {
-        background: rgba(245, 101, 101, 0.1);
-        border-color: #e53e3e;
-    }
-
-    /* Grid Styling */
-    .e-grid {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
-    }
-
-    .e-grid .e-headercontent {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-        color: #fff;
-    }
-
-    .e-grid .e-headercell {
-        color: #fff !important;
-        font-weight: 600;
-        padding: 1rem 0.5rem;
-        background: transparent !important;
-        border-bottom: 2px solid rgba(255,255,255,0.3);
-    }
-
-    .e-grid .e-columnheader {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    }
-
-    .e-grid .e-rowcell {
-        vertical-align: middle;
-    }
-
-    .product-image-cell img {
-        width: 55px;
-        height: 55px;
-        object-fit: cover;
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
-        transition: transform 0.3s ease;
-    }
-
-    .product-image-cell img:hover {
-        transform: scale(1.15);
-    }
-
-    .stock-cell {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-    }
-
-    .stock-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-    }
-
-    .stock-high {
-        background: rgba(72, 187, 120, 0.15);
-        color: #2f855a;
-    }
-    .stock-high .stock-dot { background: #48bb78; }
-
-    .stock-medium {
-        background: rgba(236, 201, 75, 0.15);
-        color: #b7791f;
-    }
-    .stock-medium .stock-dot { background: #ecc94b; }
-
-    .stock-low {
-        background: rgba(245, 101, 101, 0.15);
-        color: #e53e3e;
-    }
-    .stock-low .stock-dot { background: #f56565; }
-
-    .rating-cell {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .rating-stars {
-        color: #f6c105;
-        letter-spacing: 2px;
-    }
-
-    /* Image Gallery Dialog */
-    .image-gallery-dialog .e-dialog-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        padding: 1rem 1.5rem;
-    }
-
-    .image-gallery-dialog .e-dialog-header h3 {
-        margin: 0;
-        font-size: 1.25rem;
-        color: #fff;
-    }
-
-    .image-gallery-dialog .e-dialog-content {
-        padding: 0;
-    }
-
-    .carousel-item-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        margin: 0;
-        padding: 1rem;
-    }
-
-    .gallery-image {
-        max-width: 100%;
-        max-height: 60vh;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    .image-gallery-dialog .e-carousel {
-        height: 100%;
-    }
-
-    .image-gallery-dialog .e-carousel .e-carousel-item {
-        height: 100%;
-    }
-</style>
+{% endhighlight %}
+
+{% highlight css tabtitle="ProductCatalog.razor.css"  %}
+
+.catalog-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.catalog-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.filter-chips-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.filter-label {
+    font-weight: 600;
+    color: #4a5568;
+    margin-right: 0.5rem;
+}
+
+.filter-chip {
+    padding: 0.5rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+    color: #4a5568;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.filter-chip.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.toolbar-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.toolbar-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cart-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cart-summary:hover {
+    border-color: #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.cart-icon { font-size: 1.2rem; }
+.cart-count {
+    background: #667eea;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.cart-text { font-weight: 500; color: #4a5568; }
+.cart-total {
+    font-weight: bold;
+    color: #667eea;
+    margin-left: 0.5rem;
+}
+
+.wishlist-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.wishlist-btn:hover {
+    border-color: #e53e3e;
+    background: rgba(245, 101, 101, 0.05);
+}
+
+.wishlist-btn.has-items {
+    border-color: #e53e3e;
+    background: rgba(245, 101, 101, 0.05);
+}
+
+.heart-icon { font-size: 1.2rem; }
+.wishlist-count {
+    background: #e53e3e;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Cart Dialog */
+.cart-dialog .e-dialog-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+.cart-dialog .e-dialog-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.cart-dialog .e-dialog-content {
+    padding: 0;
+}
+
+.cart-items {
+    padding: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    background: #f7fafc;
+    margin-bottom: 0.75rem;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details { flex: 1; }
+.cart-item-name { font-weight: 600; color: #2d3748; }
+.cart-item-price { color: #667eea; font-weight: bold; }
+
+.cart-item-qty {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #e2e8f0;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.qty-btn:hover {
+    background: #667eea;
+    color: #fff;
+    border-color: #667eea;
+}
+
+.qty-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.qty-btn.disabled:hover {
+    background: #fff;
+    color: #4a5568;
+    border-color: #e2e8f0;
+}
+
+.cart-item-subtotal {
+    font-weight: bold;
+    color: #2d3748;
+    min-width: 70px;
+    text-align: right;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.remove-btn:hover { opacity: 1; }
+
+.cart-footer {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    background: #f7fafc;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cart-grand-total { color: #667eea; }
+
+.cart-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cart-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cart-empty {
+    padding: 3rem;
+    text-align: center;
+}
+
+.empty-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+/* Action Buttons in Grid */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #e2e8f0;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    text-align: center;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    transform: scale(1.1);
+}
+
+.action-btn.in-cart {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+.action-btn.wishlist.in-wishlist {
+    background: rgba(245, 101, 101, 0.1);
+    border-color: #e53e3e;
+}
+
+/* Grid Styling */
+.e-grid {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.e-grid .e-headercontent {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+.e-grid .e-headercell {
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 0.5rem;
+    background: transparent;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.e-grid .e-columnheader {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.e-grid .e-rowcell {
+    vertical-align: middle;
+}
+
+.product-image-cell img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.product-image-cell img:hover {
+    transform: scale(1.15);
+}
+
+.stock-cell {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stock-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.stock-high {
+    background: rgba(72, 187, 120, 0.15);
+    color: #2f855a;
+}
+.stock-high .stock-dot { background: #48bb78; }
+
+.stock-medium {
+    background: rgba(236, 201, 75, 0.15);
+    color: #b7791f;
+}
+.stock-medium .stock-dot { background: #ecc94b; }
+
+.stock-low {
+    background: rgba(245, 101, 101, 0.15);
+    color: #e53e3e;
+}
+.stock-low .stock-dot { background: #f56565; }
+
+.rating-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-stars {
+    color: #f6c105;
+    letter-spacing: 2px;
+}
+
+/* Image Gallery Dialog */
+.image-gallery-dialog .e-dialog-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+.image-gallery-dialog .e-dialog-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.image-gallery-dialog .e-dialog-content {
+    padding: 0;
+}
+
+.carousel-item-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+}
+
+.gallery-image {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.image-gallery-dialog .e-carousel {
+    height: 100%;
+}
+
+.image-gallery-dialog .e-carousel .e-carousel-item {
+    height: 100%;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1060,7 +1096,7 @@ The product catalog page is the main entry point of the application. It uses the
 The **Wishlist** page displays all products the user has saved. It uses a Blazor DataGrid to list wishlist items and provides **Add to Cart** and **Remove** actions for each product.
 
 {% tabs %}
-{% highlight razor tabtitle="Pages/Wishlist.razor" %}
+{% highlight razor tabtitle="Wishlist.razor" %}
 
 @page "/wishlist"
 @rendermode InteractiveServer
@@ -1195,179 +1231,180 @@ The **Wishlist** page displays all products the user has saved. It uses a Blazor
     };
 }
 
+{% endhighlight %}
 
-<style>
+{% highlight css tabtitle="Wishlist.razor.css"  %}
+
+.wishlist-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wishlist-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.wishlist-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.wishlist-grid-section {
+    margin-bottom: 2rem;
+}
+
+.product-image-cell img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.stock-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stock-high {
+    background: rgba(72, 187, 120, 0.15);
+    color: #2f855a;
+}
+
+.stock-medium {
+    background: rgba(236, 201, 75, 0.15);
+    color: #b7791f;
+}
+
+.stock-low {
+    background: rgba(245, 101, 101, 0.15);
+    color: #e53e3e;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.add-cart-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.add-cart-btn.in-cart {
+    background: #48bb78;
+}
+
+.remove-btn {
+    background: #fff;
+    border: 1px solid #e53e3e;
+    color: #e53e3e;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+}
+
+.remove-btn:hover {
+    background: #e53e3e;
+    color: #fff;
+}
+
+.wishlist-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.continue-btn {
+    background: #fff;
+    color: #4a5568;
+    border: 2px solid #e2e8f0;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.continue-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.clear-btn {
+    background: #fff;
+    color: #e53e3e;
+    border: 2px solid #e53e3e;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.clear-btn:hover {
+    background: #e53e3e;
+    color: #fff;
+}
+
+.empty-wishlist {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.empty-wishlist h3 {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.empty-wishlist p {
+    color: #a0aec0;
+    margin-bottom: 1.5rem;
+}
+
+.browse-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
     .wishlist-container {
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .wishlist-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .wishlist-header h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-        color: #718096;
-        font-size: 1.1rem;
-    }
-
-    .wishlist-grid-section {
-        margin-bottom: 2rem;
-    }
-
-    .product-image-cell img {
-        width: 55px;
-        height: 55px;
-        object-fit: cover;
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
-    }
-
-    .stock-badge {
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-    }
-
-    .stock-high {
-        background: rgba(72, 187, 120, 0.15);
-        color: #2f855a;
-    }
-
-    .stock-medium {
-        background: rgba(236, 201, 75, 0.15);
-        color: #b7791f;
-    }
-
-    .stock-low {
-        background: rgba(245, 101, 101, 0.15);
-        color: #e53e3e;
+        padding: 1rem;
     }
 
     .action-buttons {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-    }
-
-    .add-cart-btn {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-        color: #fff !important;
-        border: none !important;
-        padding: 0.5rem 1rem !important;
-        border-radius: 8px !important;
-        font-weight: 600 !important;
-        font-size: 0.875rem !important;
-    }
-
-    .add-cart-btn.in-cart {
-        background: #48bb78 !important;
-    }
-
-    .remove-btn {
-        background: #fff !important;
-        border: 1px solid #e53e3e !important;
-        color: #e53e3e !important;
-        padding: 0.5rem 0.75rem !important;
-        border-radius: 8px !important;
-    }
-
-    .remove-btn:hover {
-        background: #e53e3e !important;
-        color: #fff !important;
+        flex-direction: column;
     }
 
     .wishlist-actions {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
+        flex-direction: column;
     }
-
-    .continue-btn {
-        background: #fff !important;
-        color: #4a5568 !important;
-        border: 2px solid #e2e8f0 !important;
-        padding: 0.875rem 2rem !important;
-        border-radius: 8px !important;
-        font-weight: 600 !important;
-    }
-
-    .continue-btn:hover {
-        border-color: #667eea !important;
-        color: #667eea !important;
-    }
-
-    .clear-btn {
-        background: #fff !important;
-        color: #e53e3e !important;
-        border: 2px solid #e53e3e !important;
-        padding: 0.875rem 2rem !important;
-        border-radius: 8px !important;
-        font-weight: 600 !important;
-    }
-
-    .clear-btn:hover {
-        background: #e53e3e !important;
-        color: #fff !important;
-    }
-
-    .empty-wishlist {
-        text-align: center;
-        padding: 4rem 2rem;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .empty-icon {
-        font-size: 4rem;
-        display: block;
-        margin-bottom: 1rem;
-    }
-
-    .empty-wishlist h3 {
-        color: #4a5568;
-        margin-bottom: 0.5rem;
-    }
-
-    .empty-wishlist p {
-        color: #a0aec0;
-        margin-bottom: 1.5rem;
-    }
-
-    .browse-btn {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-        color: #fff !important;
-        border: none !important;
-        padding: 1rem 2rem !important;
-        border-radius: 12px !important;
-        font-weight: 600 !important;
-    }
-
-    @@media (max-width: 768px) {
-        .wishlist-container {
-            padding: 1rem;
-        }
-
-        .action-buttons {
-            flex-direction: column;
-        }
-
-        .wishlist-actions {
-            flex-direction: column;
-        }
-    }
-</style>
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1377,7 +1414,7 @@ The **Wishlist** page displays all products the user has saved. It uses a Blazor
 The **Cart** page provides an order summary view. It displays all cart items in a Blazor DataGrid with per-item subtotals, a totals summary card, and a **Confirm Order** button that clears the cart and returns the user to the catalog.
 
 {% tabs %}
-{% highlight razor tabtitle="Pages/Cart.razor" %}
+{% highlight razor tabtitle="Cart.razor" %}
 
 @page "/cart"
 @rendermode InteractiveServer
@@ -1490,187 +1527,188 @@ The **Cart** page provides an order summary view. It displays all cart items in 
     }
 }
 
+{% endhighlight %}
 
-<style>
+{% highlight css tabtitle="Cart.razor.css"  %}
+
+.cart-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cart-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.order-summary-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.order-summary-card h3 {
+    margin: 0 0 1.5rem 0;
+    color: #2d3748;
+    font-size: 1.25rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.summary-row span:last-child {
+    font-weight: 600;
+}
+
+.free-shipping {
+    color: #48bb78;
+    font-weight: 600;
+}
+
+.summary-divider {
+    height: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 1rem 0;
+}
+
+.summary-row.grand-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.summary-row.grand-total span:last-child {
+    color: #667eea;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.confirm-btn {
+    flex: 2;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.confirm-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    opacity: 0.9;
+}
+
+.continue-btn {
+    flex: 1;
+    background: #fff;
+    color: #4a5568;
+    border: 2px solid #e2e8f0;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.continue-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: #f7fafc;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.empty-cart h3 {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.empty-cart p {
+    color: #a0aec0;
+    margin-bottom: 1.5rem;
+}
+
+.cart-grid-section {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product-image-cell img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.qty-badge {
+    background: #f0f0f0;
+    color: #2d3748;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.subtotal-text {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+@media (max-width: 768px) {
     .cart-container {
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .cart-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .cart-header h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-        color: #718096;
-        font-size: 1.1rem;
-    }
-
-    .order-summary-card {
-        background: #fff;
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
-    }
-
-    .order-summary-card h3 {
-        margin: 0 0 1.5rem 0;
-        color: #2d3748;
-        font-size: 1.25rem;
-    }
-
-    .summary-row {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.75rem 0;
-        color: #4a5568;
-        font-size: 1rem;
-    }
-
-    .summary-row span:last-child {
-        font-weight: 600;
-    }
-
-    .free-shipping {
-        color: #48bb78;
-        font-weight: 600;
-    }
-
-    .summary-divider {
-        height: 2px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        margin: 1rem 0;
-    }
-
-    .summary-row.grand-total {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #2d3748;
-    }
-
-    .summary-row.grand-total span:last-child {
-        color: #667eea;
+        padding: 1rem;
     }
 
     .cart-actions {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
+        flex-direction: column;
     }
 
-    .confirm-btn {
-        flex: 2;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        border: none;
-        padding: 1rem;
-        border-radius: 12px;
-        font-weight: bold;
-        font-size: 1.1rem;
-        cursor: pointer;
-        transition: transform 0.2s, box-shadow 0.2s;
+    .order-summary-card {
+        padding: 1.5rem;
     }
-
-    .confirm-btn:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        opacity: 0.9;
-    }
-
-    .continue-btn {
-        flex: 1;
-        background: #fff;
-        color: #4a5568;
-        border: 2px solid #e2e8f0;
-        padding: 0.875rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.2s;
-    }
-
-    .continue-btn:hover {
-        border-color: #667eea;
-        color: #667eea;
-        background: #f7fafc;
-    }
-
-    .empty-cart {
-        text-align: center;
-        padding: 4rem 2rem;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .empty-icon {
-        font-size: 4rem;
-        display: block;
-        margin-bottom: 1rem;
-    }
-
-    .empty-cart h3 {
-        color: #4a5568;
-        margin-bottom: 0.5rem;
-    }
-
-    .empty-cart p {
-        color: #a0aec0;
-        margin-bottom: 1.5rem;
-    }
-
-    .cart-grid-section {
-        margin-bottom: 2rem;
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    .product-image-cell img {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        border-radius: 6px;
-        border: 1px solid #e2e8f0;
-    }
-
-    .qty-badge {
-        background: #f0f0f0;
-        color: #2d3748;
-        padding: 0.25rem 0.75rem;
-        border-radius: 12px;
-        font-weight: 600;
-        font-size: 0.875rem;
-    }
-
-    .subtotal-text {
-        font-weight: bold;
-        color: #2d3748;
-    }
-
-    @@media (max-width: 768px) {
-        .cart-container {
-            padding: 1rem;
-        }
-
-        .cart-actions {
-            flex-direction: column;
-        }
-
-        .order-summary-card {
-            padding: 1.5rem;
-        }
-    }
-</style>
+}
 
 {% endhighlight %}
 {% endtabs %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Polar in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Polar Chart in Syncfusion Blazor Charts component and much more.
+title: Polar in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about the Polar Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

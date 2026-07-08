@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with data in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Working with data in Syncfusion Blazor HeatMap Chart component and more.
+title: Working with data in Blazor HeatMap Chart | Syncfusion®
+description: Checkout and learn here all about Working with data in Blazor HeatMap Chart component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug

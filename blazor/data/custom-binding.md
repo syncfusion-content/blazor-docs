@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Binding in Blazor DataManager | Syncfusion
-description: Learn how to implement custom binding in Syncfusion Blazor DataManager for flexible data operations and CRUD integration with DataGrid.
+title: Custom Binding in Blazor DataManager | Syncfusion®
+description: Learn how to implement custom binding in Blazor DataManager for flexible data operations and CRUD integration with DataGrid.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Custom Binding in Blazor DataManager Component
 
-Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.htm) component provides a mechanism to implement custom logic for data retrieval and manipulation. It allows defining how data operations are executed by creating a [custom adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) that overrides default behavior.
+Custom binding in the Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.htm) component provides a mechanism to implement custom logic for data retrieval and manipulation. It allows defining how data operations are executed by creating a [custom adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) that overrides default behavior.
 
 Custom binding is applicable in scenarios where:
 
@@ -123,11 +123,11 @@ The methods listed below provide signatures for both synchronous and asynchronou
 
     * [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) / [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) – Handles batch operations for editing scenarios.
 
-Overriding these methods enables custom logic for **creating**, **reading**, **updating**, and **deleting** data while maintaining compatibility with Syncfusion Blazor components such as [DataGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).
+Overriding these methods enables custom logic for **creating**, **reading**, **updating**, and **deleting** data while maintaining compatibility with Blazor components such as [DataGrid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).
 
 ## Implementing Custom Adaptor
 
-Custom binding in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor `DataManager` component can be integrated with the `DataGrid` by creating a custom adaptor that defines data operations and CRUD functionality.
+Custom binding in the Blazor `DataManager` component can be integrated with the `DataGrid` by creating a custom adaptor that defines data operations and CRUD functionality.
 
 **Steps to implement custom binding and integrate with DataGrid**
 

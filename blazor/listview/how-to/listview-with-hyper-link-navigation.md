@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor ListView Component with hyper-link navigation | Syncfusion
-description: Checkout and learn here all about Blazor ListView Component with hyper-link navigation and much more.
+title: Blazor ListView Component with hyper-link navigation | Syncfusion®
+description: Checkout and learn here all about Blazor ListView Component with hyper-link navigation and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -94,4 +94,4 @@ The `anchor` tag can be used along with `href` attribute in the ListView [`Templ
 </style>
 ```
 
-![Blazor ListView with Hyperlink](../images/list/blazor-listview-with-hyperlink.png)
+![Blazor ListView with Hyperlink](../images/list/blazor-listview-with-hyperlink.webp)

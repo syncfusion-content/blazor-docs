@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Check list in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about check list in Syncfusion Blazor ListView component and much more details.
+title: Check list in Blazor ListView Component | Syncfusion®
+description: Checkout and learn here all the features about check list in Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -46,7 +46,7 @@ private DataModel[] Data = {
 }
 ```
 
-![Blazor ListView with Checklist](./images/list/blazor-listview-with-checklist.png)
+![Blazor ListView with Checklist](./images/list/blazor-listview-with-checklist.webp)
 
 ## Checkbox Position
 
@@ -83,4 +83,4 @@ private DataModel[] Data = {
 }
 ```
 
-![Changing Checklist Position in Blazor ListView](./images/list/blazor-listview-checklist-position.png)
+![Changing Checklist Position in Blazor ListView](./images/list/blazor-listview-checklist-position.webp)

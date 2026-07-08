@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor DateRangePicker component and more.
+title: Globalization in Blazor DateRangePicker Component | Syncfusion®
+description: Checkout and learn here all about Globalization in Blazor DateRangePicker component and much more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor DateRangePicker Component
 
-[Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right-To-Left
 

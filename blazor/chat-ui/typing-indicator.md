@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Typing indicator in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Typing indicator with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Typing indicator in Blazor Chat UI Component | Syncfusion®
+description: Checkout and learn here all about Typing indicator with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug

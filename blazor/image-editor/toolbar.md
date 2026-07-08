@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar with Blazor Image Editor Component | Syncfusion
+title: Toolbar with Blazor Image Editor Component | Syncfusion®
 description: Learn about the toolbar in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

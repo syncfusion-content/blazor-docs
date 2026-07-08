@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 100% Stacked Line in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about 100% Stacked Line Chart in Syncfusion Blazor Charts component and more.
+title: 100% Stacked Line in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about 100% Stacked Line Chart in Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about virtualization in Syncfusion Blazor ListView component and much more.
+title: Virtualization in Blazor ListView Component | Syncfusion®
+description: Checkout and learn here all the features about virtualization in Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -103,7 +103,7 @@ UI virtualization can be enabled in the ListView by setting the [`EnableVirtuali
 }
 ```
 
-![Virtualization in Blazor ListView](./images/list/blazor-listview-virtualization.png)
+![Virtualization in Blazor ListView](./images/list/blazor-listview-virtualization.webp)
 
 ## Limitations for virtualization
 

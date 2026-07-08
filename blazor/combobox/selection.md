@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor ComboBox component and more.
+title: Selection in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about the Selection feature in Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug

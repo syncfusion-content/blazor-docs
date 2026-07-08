@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent upload in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about prevent external upload in Syncfusion Blazor File Manager component and much more.
+title: Prevent upload in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about prevent external upload in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug

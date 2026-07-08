@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Scheduler Component | Syncfusion
-description: This section explains how the Syncfusion Blazor Scheduler adapts to various languages and culture by parsing and formatting the date or number appropriately.
+title: Globalization in Blazor Scheduler Component | Syncfusion®
+description: This section explains how the Blazor Scheduler adapts to various languages and culture by parsing and formatting the date or number appropriately.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Scheduler Component
 
-[Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Setting date format
 
@@ -44,7 +44,7 @@ Scheduler can be used with all valid date formats and by default it follows the 
 }
 ```
 
-![Date Format in Blazor Scheduler](images/blazor-scheduler-dateformat.png)
+![Date Format in Blazor Scheduler](images/blazor-scheduler-dateformat.webp)
 
 ## Time mode
 
@@ -80,7 +80,7 @@ The time mode of the Scheduler can be either 12 or 24 hours format which is comp
 }
 ```
 
-![Time Format in Blazor Scheduler](images/blazor-scheduler-timeformat.png)
+![Time Format in Blazor Scheduler](images/blazor-scheduler-timeformat.webp)
 
 ## Displaying Scheduler in RTL mode
 
@@ -116,7 +116,7 @@ The Scheduler layout and its behavior can be changed as per the common RTL (Righ
 }
 ```
 
-![RTL Mode in Blazor Scheduler](images/blazor-scheduler-rtl.png)
+![RTL Mode in Blazor Scheduler](images/blazor-scheduler-rtl.webp)
 
 ## See also
 

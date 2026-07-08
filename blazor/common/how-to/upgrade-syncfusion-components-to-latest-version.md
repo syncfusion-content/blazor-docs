@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upgrade Syncfusion Blazor components to the latest version
-description: Learn how to upgrade Syncfusion Blazor components, verify .NET compatibility, ensure correct CSS references and configuration for Blazor Web, Server, WASM App.
+title: Upgrade Blazor components to the latest version | Syncfusion®
+description: Learn how to upgrade Blazor components, verify .NET compatibility, ensure correct CSS references and configuration for Blazor Web, Server, WASM App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Upgrade Syncfusion® Blazor components to the latest version
 
-Use the following checklist to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components safely and consistently.
+Use the following checklist to upgrade Blazor components safely and consistently.
 
 ## Compatible .NET version
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components and .NET SDK.
+Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Blazor components and .NET SDK.
 
 ## Client resource file references
 
@@ -41,18 +41,18 @@ Review breaking changes for each release to understand required code or behavior
 
 ## Cache problem
 
-Before restoring NuGet packages, clear older versions of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages to avoid conflicts.
+Before restoring NuGet packages, clear older versions of Syncfusion Blazor NuGet packages to avoid conflicts.
 
 The following steps explain how to clean the cache:
 
-1. Delete the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/`. In Windows, the installed location of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages can be found using `%userprofile%/.nuget/packages/`.
-2. Update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
+1. Delete the Blazor NuGet packages from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/`. In Windows, the installed location of Blazor NuGet packages can be found using `%userprofile%/.nuget/packages/`.
+2. Update to the latest Blazor NuGet packages.
 
 Tip: The NuGet cache can also be cleared using the .NET CLI: run `dotnet nuget locals all --clear` in a terminal.
 
 ## Linker.xml configuration
 
-For Blazor WebAssembly applications, ensure that a Linker.xml (trimming configuration) file is configured when required. Missing this configuration can prevent Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components from rendering.
+For Blazor WebAssembly applications, ensure that a Linker.xml (trimming configuration) file is configured when required. Missing this configuration can prevent Blazor components from rendering.
 
 Refer to this [KB article](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for details on Linker.xml usage.
 

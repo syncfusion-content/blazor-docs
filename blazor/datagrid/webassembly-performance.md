@@ -1,7 +1,7 @@
 ---
 layout: post
-title: WebAssembly Performance in Blazor DataGrid Component | Syncfusion
-description: Boost Blazor WebAssembly performance in Syncfusion DataGrid using PreventRender, paging, virtualization, and key optimization techniques.
+title: WebAssembly Performance in Blazor DataGrid Component | Syncfusion®
+description: Boost Blazor WebAssembly performance in DataGrid using PreventRender, paging, virtualization, and key optimization techniques.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -107,7 +107,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVIZyWdAaNWlsFx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrntmNHrYKBrMhu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - `PreventRender` accepts a Boolean argument to disable (**true**) or enable (**false**) participation in rendering.
 > - Call `PreventRender` only after the DataGrid completes its initial render; calling during initial render has no effect.
@@ -203,7 +203,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBoDIWnqvasLQsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRDGNxBEqcogXh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - `args.PreventRender` affects rendering only for the event-triggered cycle and does not change component state beyond that cycle.
 > - Prefer setting `PreventRender` to **true** for user-interactive events (for example, [RowSelected](https://blazor.syncfusion.com/documentation/datagrid/events#rowselected), [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)) to reduce UI latency. For events without args (for example, [DataBound](https://blazor.syncfusion.com/documentation/datagrid/events#databound)), call the grid’s `PreventRender` method.

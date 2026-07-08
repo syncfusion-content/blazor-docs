@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about drag and drop in Syncfusion Blazor Tabs component and much more details.
+title: Drag and Drop in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about drag and drop in Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -61,4 +61,4 @@ N> External drag and drop is not possible in blazor Tabs.
 
  ```
 
-![Drag and Drop Items in Blazor Tabs](./images/blazor-tabs-drag-drop-items.gif)
+![Drag and Drop Items in Blazor Tabs](./images/blazor-tabs-drag-drop-items.webp)

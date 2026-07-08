@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Optimizing Blazor DataGrid Performance | Syncfusion
-description: Learn best practices to optimize Syncfusion Blazor DataGrid performance when handling large datasets and multiple columns.
+title: Optimizing Blazor DataGrid Performance | Syncfusion®
+description: Learn best practices to optimize Blazor DataGrid performance when handling large datasets and multiple columns.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Performance Optimization for Syncfusion Blazor DataGrid
+# Performance Optimization for Blazor DataGrid
 
 The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) provides advanced features for displaying and managing large collections of data. When working with extensive datasets or grids containing numerous columns, performance optimization becomes essential to ensure responsive rendering and smooth interactions. This guide outlines proven strategies and best practices for improving DataGrid performance during data binding and rendering operations.
 
@@ -138,11 +138,11 @@ For detailed guidance, refer to:
 
 To optimize the initial rendering and improve performance during interactions, use the individual NuGet package (**Syncfusion.Blazor.Grid**) along with its corresponding script and CSS files instead of the consolidated package (**Syncfusion.Blazor**).
 
-The consolidated package includes resources for all Syncfusion Blazor components, which increases overall package size and script load time. Referencing only the required Grid resources reduces payload size and improves rendering performance.
+The consolidated package includes resources for all Blazor components, which increases overall package size and script load time. Referencing only the required Grid resources reduces payload size and improves rendering performance.
 
 For more details, refer to:
 
-* [Install Syncfusion Blazor Grid NuGet Package](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app#install-syncfusion-blazor-grid-and-themes-nuget-in-the-blazor-web-app)
+* [Install Blazor Grid NuGet Package](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app#install-syncfusion-blazor-grid-and-themes-nuget-in-the-blazor-web-app)
 * [Add Stylesheet and Script Resources](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app#add-stylesheet-and-script-resources)
 
 ## How to update cell values without frequent server calls 

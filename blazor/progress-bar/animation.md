@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about animation in Syncfusion Blazor ProgressBar component and much more.
+title: Animation in Blazor ProgressBar Component | Syncfusion®
+description: Learn about animation in Blazor ProgressBar component with examples and much more details about progress animation.
 platform: Blazor
 control: Progress Bar 
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Speech-to-Text with Blazor Chat UI Component | Syncfusion
+title: Speech-to-Text with Blazor Chat UI Component | Syncfusion®
 description: Checkout and learn about Speech-to-Text configuration with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
@@ -9,7 +9,7 @@ documentation: ug
 
 # Speech-to-Text in Blazor Chat UI
 
-The Syncfusion Blazor Chat UI component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the Chat UI through voice input.
+The Blazor Chat UI component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the Chat UI through voice input.
 
 ## Configure Speech-to-Text
 
@@ -200,7 +200,7 @@ function updateContentEditableDiv(element, value) {
 
 {% endtabs %}
 
-![Integrating Speech-to-Text with Chat UI](./images/chatui-stt.png)
+![Integrating Speech-to-Text with Chat UI](./images/chatui-stt.webp)
 
 ## Error Handling
 

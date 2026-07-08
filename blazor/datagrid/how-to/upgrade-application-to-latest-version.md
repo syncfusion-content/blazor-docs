@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upgrade Blazor DataGrid App to Latest Syncfusion Version
-description: Learn how to upgrade a Blazor DataGrid application to the latest Syncfusion version, update resource links, and resolve NuGet cache issues.
+title: Upgrade Blazor DataGrid App to Latest Version | Syncfusion®
+description: Learn how to upgrade a Blazor DataGrid application to the latest version, update resource links, and resolve NuGet cache issues.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -15,11 +15,11 @@ documentation: ug
 
 ## Compatible .NET version
 
-The latest Blazor components are compatible with the latest .NET (for example, .NET 9). It is recommended to upgrade the .NET SDK on the machine before updating to the latest Syncfusion version.
+The latest Blazor components are compatible with the latest .NET (for example, .NET 9). It is recommended to upgrade the .NET SDK on the machine before updating to the latest version.
 
 ## Client resource file references
 
-Ensure Syncfusion CSS resources are properly referenced in the application.
+Ensure CSS resources are properly referenced in the application.
 
 * For a Blazor Server app, add the following style file reference in **~/Pages/_Host.cshtml**.
 
@@ -32,7 +32,7 @@ Ensure Syncfusion CSS resources are properly referenced in the application.
     </head>
 ```
 
-N> For production scenarios and minimal footprint, Syncfusion<sup style="font-size:70%">&reg;</sup> provides the Custom Resource Generator (CRG) web tool to generate scripts and styles for selected controls. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
+N> For production scenarios and minimal footprint, Syncfusion provides the Custom Resource Generator (CRG) web tool to generate scripts and styles for selected controls. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
 
 ## Breaking changes
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor SpeechToText Component | Syncfusion
+title: Accessibility in Blazor SpeechToText Component | Syncfusion®
 description: Checkout and learn about Accessibility in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeechToText
@@ -59,4 +59,4 @@ The Blazor SpeechToText component's accessibility levels are ensured through an 
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Download the Syncfusion Blazor web installer - Syncfusion
-description: Learn how to download the Blazor web installer for trial or licensed use from your Syncfusion account, including links to Start trials and License & Downloads.
+title: Download the Blazor web installer | Syncfusion®
+description: Learn how to download the Blazor web installer for trial or licensed use from your account, including links to Start trials and License & Downloads.
 platform: Blazor
 control: Common
 documentation: ug

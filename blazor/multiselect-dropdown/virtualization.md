@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about virtualization in Syncfusion Blazor MultiSelect Dropdown component and much more.
+title: Virtualization in Blazor MultiSelect Dropdown Component | Syncfusion®
+description: Checkout and learn here all about virtualization in Blazor MultiSelect Dropdown component and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load webp format image with Blazor Carousel Component | Syncfusion
+title: Load webp format image with Blazor Carousel Component | Syncfusion®
 description: Checkout and learn about how to load webp format image with Blazor Carousel component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Carousel

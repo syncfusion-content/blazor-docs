@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range Step Area in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Range Step Area Chart in Syncfusion Blazor Charts component and much more.
+title: Range Step Area in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Range Step Area Chart in Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

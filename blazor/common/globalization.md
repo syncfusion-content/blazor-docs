@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor - Syncfusion
-description: Learn how Syncfusion Blazor components handle globalization for numbers, dates, times, and currencies across cultures in Blazor Web App, WASM, and Server App.
+title: Globalization in Blazor | Syncfusion®
+description: Learn how Blazor components handle globalization for numbers, dates, times, and currencies across cultures in Blazor Web App, WASM, and Server App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Globalization combines internationalization (i18n)—parsing and formatting dates, times, numbers, and currencies—and localization (l10n)—adding culture-specific customizations and translating UI text.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components use American English (`en-US`) by default. Blazor relies on .NET globalization to parse and format numbers and dates based on the active culture. In Blazor WebAssembly, ensure globalization data is available when using non‑en cultures.
+The Blazor UI components use American English (`en-US`) by default. Blazor relies on .NET globalization to parse and format numbers and dates based on the active culture. In Blazor WebAssembly, ensure globalization data is available when using non‑en cultures.
 
 Blazor uses built-in .NET types from the System.Globalization namespace, such as the CultureInfo class and its culture properties.
 

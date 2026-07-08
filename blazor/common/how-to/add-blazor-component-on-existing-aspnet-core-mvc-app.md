@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add Blazor component to an existing ASP.NET Core MVC App | Syncfusion
-description: Learn how to integrate a Syncfusion Blazor component into an existing ASP.NET Core MVC application using the component tag helper and explore to more details.
+title: Add Blazor component to an existing ASP.NET Core MVC App | Syncfusion®
+description: Learn how to integrate a Blazor component into an existing ASP.NET Core MVC application using the component tag helper and explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Add a Blazor component to an existing ASP.NET Core MVC application
 
-This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component to an existing ASP.NET Core MVC application.
+This guide explains how to add a Blazor component to an existing ASP.NET Core MVC application.
 
 1. Open the existing ASP.NET Core MVC application in Visual Studio 2022.
 
@@ -19,9 +19,9 @@ This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup
 
 3. Search for the `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` NuGet packages and install them.
 
-    ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.webp)
+    ![Installing Blazor Grid NuGet package](images/asp-mvc-install-nuget.webp)
 
-4. Register Blazor Server and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in the `~/Program.cs` file.
+4. Register Blazor Server and Blazor services in the `~/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
@@ -57,7 +57,7 @@ This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup
     @using Syncfusion.Blazor.Grids
     ```
 
-7. Add Blazor script references at the end of the `<body>` tag and Syncfusion<sup style="font-size:70%">&reg;</sup> theme and script references inside the `<head>` tag in the `~/Views/Shared/_Layout.cshtml` file.
+7. Add Blazor script references at the end of the `<body>` tag and theme and script references inside the `<head>` tag in the `~/Views/Shared/_Layout.cshtml` file.
 
     ```cshtml
     <head>
@@ -75,7 +75,7 @@ This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup
 
 8. Create a new `~/Components` folder at the root of the application. Right-click the `~/Components` folder and add a new razor component via `Add -> Razor Component`.
 
-9. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the created razor component file.
+9. Add the Blazor component in the created razor component file.
 
     ```cshtml
     <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -120,9 +120,9 @@ This guide explains how to add a Syncfusion<sup style="font-size:70%">&reg;</sup
     <component type="typeof(MyGrid)" render-mode="ServerPrerendered" />
     ```
 
-11. Run the application by pressing `F5`. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component is rendered in the ASP.NET Core MVC application.
+11. Run the application by pressing `F5`. The Blazor Grid component is rendered in the ASP.NET Core MVC application.
 
-    ![Syncfusion Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.webp)
+    ![Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.webp)
 
 ## See Also
 

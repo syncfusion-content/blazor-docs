@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Positions in Blazor Floating Action Button Component | Syncfusion
-description: Checkout and learn here all about Positions in Syncfusion Blazor Floating Action Button component and much more.
+title: Positions in Blazor Floating Action Button Component | Syncfusion®
+description: Checkout and learn here all about Positions in Blazor Floating Action Button component and much more.
 platform: Blazor
 control: Floating Action Button
 documentation: ug

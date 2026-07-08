@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Attachments in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Attachments with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Attachments in Blazor Chat UI Component | Syncfusion®
+description: Checkout and learn here all about Attachments with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Bullet Chart component and more.
+title: Accessibility in Blazor Bullet Chart Component | Syncfusion®
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart
 documentation: ug
@@ -69,4 +69,4 @@ The accessibility compliance of the Blazor Bullet Chart component is shown in th
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

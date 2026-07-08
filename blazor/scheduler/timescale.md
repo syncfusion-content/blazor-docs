@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Timescale Customization in Blazor Scheduler Component | Syncfusion
-description: Learn how to set different time slot duration on Syncfusion Blazor Scheduler and to customize the major and minor time slots using templates.
+title: Timescale Customization in Blazor Scheduler Component | Syncfusion®
+description: Learn how to set different time slot duration on Blazor Scheduler and to customize the major and minor time slots using templates.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -50,7 +50,7 @@ The [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedul
 }
 ```
 
-![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.png)
+![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.webp)
 
 ## Adjusting the time slot duration for various views
 
@@ -90,8 +90,8 @@ By using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-![Time Slot Duration for Day View in Blazor Scheduler](images/blazor-scheduler-timeslot-day-view.png)
-![Time Slot Duration for Week and WorkWeek View in Blazor Scheduler](images/blazor-scheduler-timeslot-week-view.png)
+![Time Slot Duration for Day View in Blazor Scheduler](images/blazor-scheduler-timeslot-day-view.webp)
+![Time Slot Duration for Week and WorkWeek View in Blazor Scheduler](images/blazor-scheduler-timeslot-week-view.webp)
 
 ## Customizing time cells using template
 
@@ -145,7 +145,7 @@ The template option is available to allow customization of time slots which are 
 }
 ```
 
-![Customizing Time Cells in Blazor Scheduler](images/blazor-scheduler-custom-timecell.png)
+![Customizing Time Cells in Blazor Scheduler](images/blazor-scheduler-custom-timecell.webp)
 
 ## Hide the timescale
 
@@ -179,7 +179,7 @@ The grid lines which indicates the exact time duration can be enabled or disable
 }
 ```
 
-![Hide Time Scale in Blazor Scheduler](images/blazor-scheduler-hide-timecell.png)
+![Hide Time Scale in Blazor Scheduler](images/blazor-scheduler-hide-timecell.webp)
 
 ## Highlighting current date and time
 
@@ -212,4 +212,4 @@ By default, Scheduler indicates current date with a highlighted date header on a
 }
 ```
 
-![Highlight current Time in Blazor Scheduler](images/blazor-scheduler-highlight.png)
+![Highlight current Time in Blazor Scheduler](images/blazor-scheduler-highlight.webp)

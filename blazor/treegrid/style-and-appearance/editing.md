@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customize editing in Blazor TreeGrid | Syncfusion
-description: Learn how to style and customize edited and added rows, input fields, the edit dialog header, and command buttons in the Syncfusion Blazor TreeGrid using CSS.
+title: Customize editing in Blazor TreeGrid | Syncfusion®
+description: Learn how to style and customize edited and added rows, input fields, the edit dialog header, and command buttons in the Blazor TreeGrid using CSS.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Editing customization in Syncfusion Blazor TreeGrid
+# Editing customization in Blazor TreeGrid
 
-The appearance of editing elements in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the editing interface:
+The appearance of editing elements in the Blazor TreeGrid can be customized using CSS. Styling options are available for different parts of the editing interface:
 
 - **Edited and newly added rows:** Highlights rows that are being modified or newly inserted.
 - **Edit form input fields:** Displays text boxes used to enter or update values during editing.

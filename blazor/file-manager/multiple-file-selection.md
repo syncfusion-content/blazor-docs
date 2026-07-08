@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiple File Selection in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about multiple file selection in Syncfusion Blazor File Manager component and more.
+title: Multiple File Selection in Blazor File Manager Component | Syncfusion®
+description: Checkout and learn here all about multiple file selection in Blazor File Manager component and much more details.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -31,7 +31,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 
 
-![Blazor File Manager with Multiple Selection](images/blazor-filemanager-multi-selection.png)
+![Blazor File Manager with Multiple Selection](images/blazor-filemanager-multi-selection.webp)
 
 ## Getting Selected Files
 

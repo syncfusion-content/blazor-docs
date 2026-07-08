@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open a Dialog on condition in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Open a Dialog on condition in Syncfusion Blazor Dialog component and more.
+title: Open a Dialog on condition in Blazor Dialog Component | Syncfusion®
+description: Checkout and learn here all about Open a Dialog on condition in Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

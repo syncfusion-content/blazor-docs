@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stacked Bar in Blazor 3D Chart Component | Syncfusion
-description: Checkout and learn here all about Stacked Bar Chart in Syncfusion Blazor 3D Chart component and much more.
+title: Stacked Bar in Blazor 3D Chart Component | Syncfusion®
+description: Checkout and learn here all features about Stacked Bar Chart in Blazor 3D Chart component and much more.
 platform: Blazor
 control: 3D Chart
 documentation: ug

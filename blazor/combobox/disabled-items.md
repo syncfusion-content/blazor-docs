@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Disabled Items in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Disabled Items in Syncfusion Blazor ComboBox component and much more.
+title: Disabled Items in Blazor ComboBox Component | Syncfusion®
+description: Checkout and learn here all the features about Disabled Items in Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -19,7 +19,7 @@ In the following sample, items are disabled based on a data field mapped to Disa
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVfjnWVJFyoSyKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLntRLUrLALCUzc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 
