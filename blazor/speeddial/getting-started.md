@@ -162,8 +162,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Buttons
-
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfSpeedDial Target="#target" Content="Edit">
         <SpeedDialItems>
@@ -227,8 +225,6 @@ Use the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.S
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Buttons
-
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfSpeedDial Target="#target" Position="FabPosition.BottomLeft" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
         <SpeedDialRadialSettings OffSet="80px"/>
@@ -258,8 +254,6 @@ The Speed Dial control triggers the [ItemClicked](https://help.syncfusion.com/cr
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfSpeedDial Target="#target" OpenIconCss="e-icons e-edit" ItemClicked="ItemEventClick">

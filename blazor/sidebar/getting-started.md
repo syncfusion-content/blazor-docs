@@ -164,8 +164,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
-
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
     Header
 </div>
@@ -243,7 +241,6 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
@@ -298,7 +295,6 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
@@ -353,7 +349,6 @@ In the following example, the Sidebar is rendered with Accordion component in it
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="head">
