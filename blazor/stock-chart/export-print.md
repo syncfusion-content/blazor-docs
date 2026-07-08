@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print and Export in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn how to configure and use print and export feature in the Syncfusion Blazor Stock Chart component.
+title: Print and Export in Blazor Stock Chart Component | Syncfusion®
+description: Check out and learn how to configure and use print and export feature in the Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug

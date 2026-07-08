@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change the First Day of Week in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Change the First Day of Week in Syncfusion Blazor Calendar component and more.
+title: Change the First Day of Week in Blazor Calendar | Syncfusion®
+description: Checkout and learn here all features about Change the First Day of Week in Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -20,4 +20,4 @@ The following code shows the Calendar with `Tuesday` as the first day of the wee
 
 <SfCalendar TValue="DateTime?" FirstDayOfWeek=2></SfCalendar>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgChhVBSnmAEDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing First Day of Week in Blazor Calendar](../images/blazor-calendar-first-day-of-week.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgChhVBSnmAEDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing First Day of Week in Blazor Calendar](../images/blazor-calendar-first-day-of-week.png)" %}

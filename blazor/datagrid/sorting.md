@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in Blazor DataGrid | Syncfusion
-description: Explore sorting in Syncfusion Blazor DataGrid including single/multi-column sort, initial sort, custom icons, foreign key sorting, and sorting events.
+title: Sorting in Blazor DataGrid | Syncfusion®
+description: Explore sorting in Blazor DataGrid including single/multi-column sort, initial sort, custom icons, foreign key sorting, and sorting events.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -94,7 +94,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhoMjBsUXCtbeqV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBHZwDRBVGfdVWH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 <!-- > * Columns are sorted in **ascending** order by default.
 > * Use [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) to sort programmatically.
@@ -178,7 +178,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAiCDLKrKWrRVA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdtmjnrLwcZoyG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Initial sorting defined in the `GridSortSettings` of the Columns is applied on first render and overrides any sorting applied through interaction.
 
@@ -255,7 +255,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhAWCDhqqMpzrfL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhnNGNxrhFDJcOT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disabling sorting for specific column
 
@@ -327,7 +327,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVgWMDhqzLxBsoB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVnjwXHLhvqqSie?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Controlling Unsort behavior in Blazor DataGrid
 
@@ -396,7 +396,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVUMsiJfaBVSChx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVRNGZdrBvRzXMc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Custom sorting 
 
@@ -479,7 +479,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhIWXBiJFYfNCrP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrnZQtdhBlYAzFX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The **SortComparer** function receives two parameters: `a` and `b`, which represent the values to be compared. The function must return:
     - **-1** if `a` should appear before `b`
@@ -610,7 +610,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrosDBrMaWuSWBG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhdXmtdVBuAvlqc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to customize sort icon
 
@@ -703,7 +703,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXryiZBieWXbgwvN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVdtcXxrBOwkjlk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Sort via programmatically
 
@@ -827,7 +827,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhIijrBrMZftWiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrHDmDnLqDMewoe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 **Sort Multiple Columns**
@@ -913,7 +913,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVIWWNyHeMxowAh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBHDmjnrqZeMlWQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > When sorting is applied again using `SortColumnsAsync`, the new sort settings are added to the existing ones. This means previously sorted columns will remain sorted unless explicitly removed or overridden.
 
@@ -1009,7 +1009,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBeCWtoRymxjAYV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBHDmXdrUNYMMwx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Clear sorting
 The Blazor DataGrid component provides flexible options to remove sorting from columns. Sorting can be cleared either for specific column or for all columns at once, depending on the requirement.
@@ -1133,7 +1133,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSWsNSxHIlXqJW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLRZGjdBUspnVxN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Clear sorting for all columns**
 
@@ -1224,7 +1224,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLesWjoncQhUnwS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHtQDdBqVimWoB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Sorting events
 
@@ -1329,7 +1329,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLeCCXSmsecZFpA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxNwDdBqVIJSKU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Sorted
 
@@ -1425,6 +1425,6 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLSsiZewifHMFkS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLnDmZnhUhlYcsj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.

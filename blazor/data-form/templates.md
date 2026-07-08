@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Templates in Blazor DataForm Component | Syncfusion
+title: Templates in Blazor DataForm Component | Syncfusion®
 description: Checkout and learn here about how to customize the specific editor component or entire form components in Blazor DataForm component.
 platform: Blazor
 control: DataForm

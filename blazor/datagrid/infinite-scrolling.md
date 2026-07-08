@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Infinite Scrolling in Blazor DataGrid | Syncfusion
-description: Learn how to implement Infinite Scrolling in Syncfusion Blazor DataGrid and explore more advanced features and customization options.
+title: Infinite Scrolling in Blazor DataGrid | Syncfusion®
+description: Learn how to implement Infinite Scrolling in Blazor DataGrid and explore more advanced features and customization options.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -78,7 +78,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjreXMrOAPkHeOht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLdZQDgIhNFteKy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Number of blocks rendered during initial loading
 
@@ -179,7 +179,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDheZMAZCHNIhdIg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrxNcNUeLCWkTqi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Efficient data caching and DOM management in Grid cache mode
 
@@ -264,7 +264,7 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZreNsUXVSieZxOY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBdNwDgIBWfxSsV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: HTML Attribute Support in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about HTML Attribute Support in Syncfusion Blazor Button component and more.
+title: HTML Attribute Support in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all feature about HTML Attribute Support in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -22,4 +22,4 @@ The following example demonstrates how to set type attribute in the [SfButton](h
 ```
 
 
-![Blazor Button with HTML Attribute](./../images/blazor-button-with-html.webp)
+![Blazor Button with HTML Attribute](./../images/blazor-button-with-html.png)

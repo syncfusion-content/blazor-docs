@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Aggregates in Blazor DataGrid Component | Syncfusion
-description: Learn how to configure and display aggregates in Syncfusion Blazor DataGrid using templates for footer, group footer, and caption.
-
+title: Aggregates in Blazor DataGrid Component | Syncfusion®
+description: Learn how to configure and display aggregates in Blazor DataGrid using templates for footer, group footer, and caption.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -128,7 +127,7 @@ N> Group footer and group caption aggregates appear when grouping is enabled and
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrIDaLdIjQgCsmJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBdXcNMhFTVLdtC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - With local data, total summaries are calculated over the entire bound dataset. Footer aggregates reflect calculations across all rows.
 > - With remote data, footer summaries typically reflect only the current page unless the data adaptor or server returns total summaries. When paging is enabled, the footer shows aggregates for visible page records by default.
@@ -289,7 +288,7 @@ The available built-in aggregate types are :
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeturxIXlkRbPO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhnXQZsrFTTYvPe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > - Multiple aggregate types for a single column are supported only when one of the aggregate templates is used.
 > - Access aggregate values inside the template using the corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name (for example, Sum, Average, Min, Max, Count, TrueCount, FalseCount).

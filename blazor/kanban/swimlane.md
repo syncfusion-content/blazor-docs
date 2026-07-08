@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Swimlane in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about swimlane in Syncfusion Blazor Kanban component and much more details.
+title: Swimlane in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all about swimlane in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

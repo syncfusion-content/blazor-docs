@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hiding Axis in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Hiding Axis in Syncfusion Blazor Charts component and much more details.
+title: Hiding Axis in Blazor Charts Component | Syncfusion®
+description: Checkout and learn here all the features about Hiding Axis in Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -50,4 +50,4 @@ In the following sample, Sub Menu will open while clicking `File` menu.
 </SfMenu>
 ```
 
-![Opening Menu Item in Blazor MenuBar](./../images/blazor-menubar-with-menu-item.png)
+![Opening Menu Item in Blazor MenuBar](./../images/blazor-menubar-with-menu-item.webp)

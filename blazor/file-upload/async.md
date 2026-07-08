@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Asynchronous Upload in Blazor File Upload Component | Syncfusion
-description: Checkout and learn here all about Asynchronous Upload in Syncfusion Blazor File Upload component and more.
+title: Asynchronous Upload in Blazor File Upload Component | Syncfusion®
+description: Checkout and learn here all about Asynchronous Upload in Blazor File Upload component and much more details.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -155,7 +155,7 @@ public void Remove(IList<IFormFile> UploadFiles)
 
 ## Events
 
-The Syncfusion File Upload component provides several events to help you control and customize the upload process. Below is detailed documentation for each event including their usage scenarios and sample code.
+The Blazor File Upload component provides several events to help you control and customize the upload process. Below is detailed documentation for each event including their usage scenarios and sample code.
 
 ### BeforeUpload
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content Render Mode in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Content Render Mode in Syncfusion Blazor Accordion component and more.
+title: Content Render Mode in Blazor Accordion Component | Syncfusion®
+description: Checkout and learn here all features about Content Render Mode in Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -26,4 +26,4 @@ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accor
 </SfAccordion>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqCVMgAzIOTDDm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLdZdCssPiTKIXB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

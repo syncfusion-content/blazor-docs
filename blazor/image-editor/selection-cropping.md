@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection cropping with Blazor Image Editor Component | Syncfusion
+title: Selection cropping with Blazor Image Editor Component | Syncfusion®
 description: Explore selection cropping in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

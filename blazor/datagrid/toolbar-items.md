@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar Items in Blazor DataGrid Component | Syncfusion
-description: Learn how to use built-in and custom toolbar items in Syncfusion Blazor DataGrid, including icons, alignment, tooltips, and handling toolbar actions.
+title: Toolbar Items in Blazor DataGrid Component | Syncfusion®
+description: Learn how to use built-in and custom toolbar items in Blazor DataGrid, including icons, alignment, tooltips, and handling toolbar actions.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -103,7 +103,7 @@ N> Built-in item IDs are typically prefixed with the grid ID (for example, Grid_
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrAMXrYLyKJdugz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrHXQXnLlBkzsCZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Show only icons in built-in Toolbar Items
 
@@ -187,7 +187,7 @@ To show only icons, hide the text part of the buttons using CSS. For accessibili
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLAsNrYBydmAXyF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrHNQtnVFgJeljJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Customize the built-in toolbar items
 
@@ -277,7 +277,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVINzCcAGRIvWxA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLdXQZdBbzDDpXK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Custom Toolbar Items
 
@@ -377,7 +377,7 @@ By default, custom toolbar items are positioned on the **left** side. Change the
 {% endtabs %}
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLIDOgtGItGVQpJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRDGDxBlThnXMj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Both built-in and custom items in Toolbar
 
@@ -470,7 +470,7 @@ Define the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBKCXBEUwAbaVmT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLntwZnrFTpmyLK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Custom Toolbar Items in a specific position
 
@@ -565,7 +565,7 @@ By default, custom toolbar items are aligned on the left. Modify the position by
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhIXaKXmSgAyyhA?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthdtGZHhFpQrGBR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the text name of custom Toolbar Items with same as default Toolbar Items
 
@@ -653,7 +653,7 @@ To avoid this behavior and ensure proper functionality:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLSXOUtQoSjTmfY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVHNQXHLvfkEkrS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customizing the toolbar items tooltip text
 
@@ -753,4 +753,4 @@ Customize a toolbar item’s tooltip text by adding items externally and setting
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVIiXZMiFpezqWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhHjGjRrlSBkMmJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

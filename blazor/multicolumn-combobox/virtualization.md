@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor MultiColumn ComboBox component and much more.
+title: Virtualization in Blazor MultiColumn ComboBox Component | Syncfusion®
+description: Checkout and learn here all about Virtualization in Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

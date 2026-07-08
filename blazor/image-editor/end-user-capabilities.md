@@ -1,6 +1,6 @@
 ---
 layout: post
-title: End-user capabilities with Blazor Image Editor Component | Syncfusion
+title: End-user capabilities with Blazor Image Editor Component | Syncfusion®
 description: Explore end-user capabilities in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

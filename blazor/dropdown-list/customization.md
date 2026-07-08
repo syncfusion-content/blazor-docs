@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor DropDown List | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor DropDown List component and much more.
+title: Customization in Blazor DropDown List | Syncfusion®
+description: Checkout and learn here all about Customization in Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDownList
 documentation: ug

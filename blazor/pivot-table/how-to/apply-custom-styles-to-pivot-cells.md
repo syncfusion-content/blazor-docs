@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Apply custom style to pivot cells in Blazor Pivot Table | Syncfusion
-description: Learn here all about Apply custom style to pivot cells in Syncfusion Blazor Pivot Table component and more.
+title: Apply Custom Style to Pivot Cells in Blazor Pivot Table | Syncfusion®
+description: Learn how to apply custom styles to pivot cells in Blazor Pivot Table component with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

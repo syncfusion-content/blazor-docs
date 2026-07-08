@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Image Restrictions with Blazor Image Editor Component | Syncfusion
+title: Image Restrictions with Blazor Image Editor | Syncfusion®
 description: Explore image extension and file size restrictions in the Blazor Image Editor for Blazor Server and WebAssembly applications.
 platform: Blazor
 control: Image Editor

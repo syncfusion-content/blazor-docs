@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting Maximum Height to the Blazor Dialog component | Syncfusion
-description: Checkout and learn here all about setting MaxHeight to the Dialog in Syncfusion Blazor Dialog component and more.
+title: Setting Maximum Height to the Blazor Dialog component | Syncfusion®
+description: Checkout and learn here all about setting MaxHeight to the Dialog in Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug

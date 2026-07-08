@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shapefile in Blazor Maps component | Syncfusion
-description: Check out and learn how to view and work with shapefiles in the Syncfusion Blazor Maps component for better map rendering.
+title: Shapefile in Blazor Maps component | Syncfusion®
+description: Check out and learn how to view and work with shapefiles in the Blazor Maps component for better map rendering.
 platform: Blazor
 control: Maps
 documentation: ug

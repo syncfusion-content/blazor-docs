@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Annotation in Blazor DataGrid | Syncfusion
-description: Learn how to use Data Annotations for validation and column metadata in Syncfusion Blazor DataGrid, including enum display and CRUD form validation.
+title: Data Annotation in Blazor DataGrid | Syncfusion®
+description: Learn how to use Data Annotations for validation and column metadata in Blazor DataGrid, including enum display and CRUD form validation.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -196,6 +196,6 @@ The `Display` attribute can be used to show user-friendly labels for enum values
 
 The following image shows how Data Annotations are applied to Grid columns in a Blazor application:
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthIZotuimdZMRyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrRXQDrLszxRyQn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Annotation in Grid](./images/blazor-datagrid-data-annotation.webp)" %}
 
 N> Refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour for an overview of available features. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to see how data is presented and managed within an application.

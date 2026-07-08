@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form validtion in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Form Validation in Syncfusion Blazor Dropdown Tree component and much more.
+title: Form validtion in Blazor Dropdown Tree Component | Syncfusion®
+description: Checkout and learn here all the features about Form Validation in Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -167,4 +167,4 @@ When the Dropdown Tree input is valid, the form is ready to be submitted. If the
 }
 ```
 
-![Blazor Dropdown Tree inside editform](./images/blazor-dropdowntree-component-validation.PNG)
+![Blazor Dropdown Tree inside editform](./images/blazor-dropdowntree-component-validation.webp)

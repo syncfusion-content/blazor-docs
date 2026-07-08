@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor Range Slider component and much more.
+title: Tooltip in Blazor Range Slider Component | Syncfusion®
+description: Checkout and learn here all about Tooltip in Blazor Range Slider component with examples and much more details.
 platform: Blazor
 control: Range Slider
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor Button component and more.
+title: Styles and Appearances in Blazor Button Component | Syncfusion®
+description: Checkout and learn here all features about Styles and Appearances in Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -44,4 +44,4 @@ Use the following CSS to customize the background color of button while clicking
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLKMVhVimxEUqsl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button with Style and Appearance](./images/blazor-button-style-and-appearance.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrdZHCVVKwTFEJD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button with Style and Appearance](./images/blazor-button-style-and-appearance.gif)" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bot Framework with Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Integrate Microsoft Bot Framework with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Bot Framework with Blazor Chat UI Component | Syncfusion®
+description: Checkout and learn here all about Integrate Microsoft Bot Framework with Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug
@@ -17,7 +17,7 @@ Before starting, ensure you have the following:
 
 * [Microsoft Azure Account](https://portal.azure.com/#home): Required to create and host the bot.
 
-* **Syncfusion Chat UI**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
+* **Chat UI**: Package [Syncfusion Blazor package](https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat) installed.
 
 * **Deployed Azure Bot**: A bot should be created and published using the [Microsoft Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0), which is accessible via an Azure App Service. Refer to Microsoft's Bot Creation Guide.
 

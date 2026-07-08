@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Started Blazor Smart Paste Button in Blazor Web App | Syncfusion
-description: Learn how to integrate the Blazor Smart Paste Button in a Blazor Web App with step-by-step instructions.
+title: Get Started with Blazor Smart Paste Button | Syncfusion®
+description: Learn how to integrate the Blazor Smart Paste Button in a Blazor Web App Server with step-by-step instructions.
 platform: Blazor
 control: Smart Paste Button
 documentation: ug
@@ -570,7 +570,7 @@ dotnet run
 
 Copy the `Sample Content` and click the `Smart Paste` button to see the form fields automatically populated.
 
-![Syncfusion Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.webp)
+![Smart Paste Button filling a form in a Blazor Web App](images/smart-paste.webp)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 

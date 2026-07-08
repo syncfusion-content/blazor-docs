@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Icons and Templates in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about icons and templates in Syncfusion Blazor ListBox component and more.
+title: Icons and Templates in Blazor ListBox Component | Syncfusion®
+description: Checkout and learn here all about icons and templates in Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Icons
 
-To display an icon for each ListBox item, map the [IconCss field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_IconCss) to a CSS class name. By default, the icon is positioned on the left side of the item text. Icon glyphs are provided by the Syncfusion theme CSS; custom icons can also be supplied via user-defined CSS classes.
+To display an icon for each ListBox item, map the [IconCss field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_IconCss) to a CSS class name. By default, the icon is positioned on the left side of the item text. Icon glyphs are provided by the theme CSS; custom icons can also be supplied via user-defined CSS classes.
 
 In the following example, icon classes are mapped to the `IconCss` field.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open a Dialog on Item click in Blazor ContextMenu | Syncfusion
-description: Learn here all about Open a dialog on Context Menu item click in Syncfusion Blazor ContextMenu component and more.
+title: Open a Dialog on Item click in Blazor ContextMenu | Syncfusion®
+description: Checkout and learn here all about Open a dialog on Context Menu item click in Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -65,4 +65,4 @@ In the following sample, Dialog will open while clicking `Save As...` item.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUWrrGqYuNWlPV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu](./../images/blazor-contextmenu.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBRZxiYTYYnyRwc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu](./../images/blazor-contextmenu.webp)" %}

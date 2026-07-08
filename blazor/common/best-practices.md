@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Best practices to optimize Syncfusion Blazor App performance
-description: Learn practical ways to optimize Syncfusion Blazor Apps, including smaller packages, minimal scripts, optimized themes, lazy loading, and PreventRender.
+title: Best practices to optimize Blazor App performance | Syncfusion®
+description: Learn practical ways to optimize Blazor Apps, including smaller packages, minimal scripts, optimized themes, lazy loading, and PreventRender.
 platform: Blazor
 control: Common
 documentation: ug
@@ -13,7 +13,7 @@ Improve rendering performance by applying the following best practices.
 
 ## Use individual NuGet packages
 
-Use individual Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages for specific components. This lets the app include only what it needs and reduces download size. Learn more in [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
+Use individual NuGet packages for specific components. This lets the app include only what it needs and reduces download size. Learn more in [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
 ## Reduce script reference size
 
@@ -28,11 +28,11 @@ To reduce CSS payload and improve rendering speed, use optimized CSS themes that
 
 ## Lazy loading in Blazor WebAssembly App
 
-If using a Blazor WebAssembly App, implement lazy loading to reduce initial load time. See [WebAssembly lazy load assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies) and the Syncfusion blog on [lazy loading Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor assemblies](https://www.syncfusion.com/blogs/post/lazy-loading-syncfusion-blazor-assemblies-in-a-blazor-webassembly-application.aspx).
+If using a Blazor WebAssembly App, implement lazy loading to reduce initial load time. See [WebAssembly lazy load assemblies](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies) and the Syncfusion blog on [lazy loading Blazor assemblies](https://www.syncfusion.com/blogs/post/lazy-loading-syncfusion-blazor-assemblies-in-a-blazor-webassembly-application.aspx).
 
 ## Use PreventRender in Blazor WebAssembly App
 
-In a Blazor WebAssembly App, use the `PreventRender` option to avoid unnecessary re-rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components and improve performance. For details, see:
+In a Blazor WebAssembly App, use the `PreventRender` option to avoid unnecessary re-rendering of Blazor components and improve performance. For details, see:
 
 - DataGrid: [WebAssembly performance](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance)
 - Pivot Table: [WebAssembly performance](https://blazor.syncfusion.com/documentation/pivot-table/webassembly-performance)
