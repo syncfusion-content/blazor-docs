@@ -170,8 +170,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.DropDowns
-
 <SfListBox TValue="string[]" TItem="string[]"></SfListBox>
 
 {% endhighlight %}
@@ -183,8 +181,6 @@ After initialization, populate the ListBox using the `DataSource` property. In t
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
     <ListBoxFieldSettings Text="Text" Value="Id" />
