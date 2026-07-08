@@ -85,7 +85,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrfZCsImdiJgcDd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBHZcZAhMwIhgzM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Apply and clear filtering using [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_System_String_) and [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearFilteringAsync) methods.
 > * To disable filtering for a specific column, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) as **false**.
@@ -173,7 +173,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVTZCCymbPjhVWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrxDGNqrClTopun?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Initial filter with multiple values for same column
 
@@ -296,7 +296,7 @@ To apply an initial filter with multiple values for the same column, define the 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVzXLjnKdMxxvHP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBRXQjqLWkyDjiK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Initial filter with multiple values for different columns
 
@@ -437,7 +437,7 @@ To apply an initial filter with multiple values for different columns, define th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrzNLDngxUMWDzM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBxZwtgLBArfZrI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filter operators
 
@@ -603,7 +603,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLpjMAsrilvEiin?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdDQZUrBUmoUsc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable different filter for a column
 
@@ -762,7 +762,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrpjMMlByBHiEUG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrHNwjKLBfMHZlw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Change default filter operator for particular column
 
@@ -923,7 +923,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLTXCAsUitWDKfU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVRZmNALhSBbNUt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filter via programmatically
 
@@ -1021,7 +1021,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVptiACLTgtLlbq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVnDQZKLBolClLI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## How to get filtered records
 
@@ -1181,7 +1181,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhpZCiFKFFRoZzt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLHZwjUrLnYKlIy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Remote Data**
 
@@ -1287,7 +1287,7 @@ When using a remote data source, the [GetFilteredRecordsAsync](https://help.sync
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLTXiUChxbmPDxX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLdtcjUrrOFngKU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Accessing filter details via FilteredEventArgs Properties**
 
@@ -1389,7 +1389,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVptMsmVVFUgOdG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVHDGjqrqjBaUAi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filtering events
 
@@ -1502,7 +1502,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJDMMmLnklDAQG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLxDQXArAjQybJp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filter enum column
 
@@ -1624,4 +1624,4 @@ public enum FileType : short
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhTDiriFpkNhDml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLnZmjKVqsLjYip?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
