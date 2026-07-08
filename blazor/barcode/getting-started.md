@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Barcode Generator in WASM App  | Syncfusion
-description: Checkout and learn about getting started with Blazor Barcode Generator component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Barcode Generator component in Blazor WebAssembly Application.
 platform: Blazor
 control: Barcode Generator
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Barcode Generator Component in WASM App
 
-This section explains how to include [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Barcode Generator](https://www.syncfusion.com/blazor-components/blazor-barcode) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.BarcodeGenerator` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -129,7 +129,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -167,7 +167,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -213,7 +213,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Adding QR Generator control
 
-Add a QR code in our Barcode Generator component.
+Add a QR code to the Barcode Generator component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -227,7 +227,7 @@ Add a QR code in our Barcode Generator component.
 
 ## Adding Data Matrix Generator control
 
-Add a Data Matrix code in our Barcode Generator component.
+Add a Data Matrix code to the Barcode Generator component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
