@@ -71,7 +71,7 @@ Install the [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusio
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight razorr tabtitle="Package Manager Console" %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -188,7 +188,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 Open the terminal and run the following command.
 
 {% tabs %}
-{% highlight razorr tabtitle="Terminal" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet run
 
