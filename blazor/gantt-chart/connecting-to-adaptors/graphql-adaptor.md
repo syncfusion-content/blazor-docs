@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GraphQLAdaptor with CRUD Operations in Blazor Gantt Chart | Syncfusion®
+title: GraphQLAdaptor in Blazor Gantt Chart | Syncfusion
 description: Learn how to bind data and perform CRUD operations using the GraphQLAdaptor in the Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
@@ -941,9 +941,8 @@ The `Mode` property of `<GanttEditSettings>` accepts the following `EditMode` en
 |-------|-------------|
 | `Auto` | Automatically selects the appropriate editing mode based on the user action (cell click for inline editing, toolbar **Add**/**Edit** for dialog editing, or row double-click for row editing). Recommended for most scenarios. |
 | `Dialog` | Opens a modal dialog window for editing. The dialog is used for both **Add** (toolbar) and **Edit** (toolbar or row double-click) actions. |
-| `Cell` | Enables inline cell editing. Click a cell to edit its value directly without opening a dialog. Best for quick edits and grids with many columns. |
 
-Use `EditMode.Auto` when the workflow mixes quick inline edits and full-form edits; use `EditMode.Dialog` when the dataset is complex and benefits from a focused editing experience; use `EditMode.Cell` for spreadsheet-like editing behavior.
+Use `EditMode.Auto` when the workflow mixes quick inline edits and full-form edits; use `EditMode.Dialog` when the dataset is complex and benefits from a focused editing experience.
 
 **GraphQL Query Structure Explained in Detail**
 
@@ -1409,5 +1408,5 @@ The application now provides an implementation example of managing project tasks
 - **Typed schema** – Hot Chocolate generates a typed schema from the `TaskData` class, so insert, update, and batch operations are validated at the schema level.
 - **Selective field loading** – The GraphQL query lists only the fields the Gantt Chart renders, which reduces payload size for large projects.
 - **Server-driven operations** – Searching, sorting, and filtering happen on the server through `DataManagerRequestInput`.
-- **Hierarchical data with a flat payload** – The adaptor returns tasks with a `ParentId` field, and the [GanttTaskFields](https://blazor.syncfusion.com/documentation/api/gantt-task-fields) `ParentID` mapping reconstructs the parent/child hierarchy in the grid and the taskbar view.
+- **Hierarchical data with a flat payload** – The adaptor returns tasks with a `ParentId` field, and the `ParentID` mapping reconstructs the parent/child hierarchy in the grid and the taskbar view.
 - **Full CRUD** – Add (toolbar), edit (cell, row, dialog), delete, and taskbar drag operations are mapped to standard GraphQL mutations on the backend.
