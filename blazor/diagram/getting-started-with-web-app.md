@@ -149,7 +149,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </head>
 <body>
     ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.Diagram/scripts/sf-diagramcomponent.min.js" type="text/javascript"></script>
 </body>
 ```
 
