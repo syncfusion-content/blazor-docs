@@ -506,7 +506,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhTMsZwzXeNByOG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVRDcZdikVPoDDp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render Chart in row template
 
@@ -622,7 +622,7 @@ To render a Blazor Chart in a row template, use the [RowTemplate](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVINfWegMFKNCdv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVHjmtnMETVsmNm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations
 

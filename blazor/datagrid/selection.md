@@ -112,7 +112,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrIZyjJxwYNLLwY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLHtwtHhrBXLwbw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Selection mode
 
@@ -216,7 +216,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLyXeNfdPWbBobj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrxtwtHhBhhPcbd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 <!-- ## Touch interaction
 
@@ -353,7 +353,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLItyZpnEdccjFY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnDcXxLrqivebU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * If multi-selection is enabled, clicking a selected row without pressing the **Ctrl** key will first clear the multi-selection. A second click on the same row will unselect it.
 > * Toggle selection applies to all selection types. When the `CheckboxOnly` property is set to **true**, selection and deselection by clicking are disabled, restricting interaction to checkbox clicks only.
@@ -448,7 +448,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLItyZpnEdccjFY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrdtcXRrBgdvBMs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Drag selection
 
@@ -536,7 +536,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVSNSZoplknSuoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVnNQXdVrfNoBoS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Drag selection is not compatible with [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
 
@@ -625,7 +625,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrSjeUtTtrXrowm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthxjcDnLVTbzhJl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * In **Both** mode, calling `ClearCellSelectionAsync` first will clear cell selections, followed by `ClearRowSelectionAsync` to clear row selections. The order of method calls determines which selection type is cleared first.
 > * To remove a specific selection type, use the following methods:
@@ -714,6 +714,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLejIZoMcsYDjdk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhntmtnrVSBeSlF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > When **Select All** is used, only records visible in the current view are selected. The **SelectedRecords** property shows the count for the current page. As navigation continues to other pages, new records load on demand, and **SelectedRecords** includes selections from each visited page. This design ensures efficient data retrieval with paging. Selecting all records across the entire dataset and retrieving them at once is not supported when **Select All** is enabled.
