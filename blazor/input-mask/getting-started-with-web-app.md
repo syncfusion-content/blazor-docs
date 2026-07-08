@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Input Mask in Blazor Web App | Syncfusion
-description: Learn how to get started with the Blazor Input Mask component in a Blazor Web App.
+description: Check out and learn about the documentation for getting started with Blazor Input Mask Component in Blazor Web App.
 platform: Blazor
 component: Input Mask
 documentation: ug
@@ -175,7 +175,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -243,5 +243,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Native Events in Blazor Input Mask Component](https://blazor.syncfusion.com/documentation/input-mask/native-events)
