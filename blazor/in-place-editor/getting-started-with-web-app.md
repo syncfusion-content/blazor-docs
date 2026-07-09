@@ -172,6 +172,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -214,7 +215,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the terminal and navigate to the server project folder (for example, `BlazorWebApp`) then run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -230,7 +231,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the command prompt and navigate to the server project folder (for example, `BlazorWebApp`) then run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -315,7 +316,7 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
 
 <SfInPlaceEditor @bind-Value="@DropdownValue" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList" TValue="string">
     <EditorComponent>
-        <SfDropDownList TValue="string" TItem="Games"  @bind-Value="@DropdownValue" Placeholder="Select a game" DataSource="@LocalData">
+        <SfDropDownList TValue="string" TItem="Games" @bind-Value="@DropdownValue" Placeholder="Select a game" DataSource="@LocalData">
             <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
         </SfDropDownList>
     </EditorComponent>
@@ -331,17 +332,18 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
         public string Text { get; set; }
     }
     List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
-  };
+        new Games() { ID = "Game1", Text = "American Football" },
+        new Games() { ID = "Game2", Text = "Badminton" },
+        new Games() { ID = "Game3", Text = "Basketball" },
+        new Games() { ID = "Game4", Text = "Cricket" },
+        new Games() { ID = "Game5", Text = "Football" },
+        new Games() { ID = "Game6", Text = "Golf" },
+        new Games() { ID = "Game7", Text = "Hockey" },
+        new Games() { ID = "Game8", Text = "Rugby" },
+        new Games() { ID = "Game9", Text = "Snooker" },
+        new Games() { ID = "Game10", Text = "Tennis" }
+    };
+
 }
 
 {% endhighlight %}
@@ -363,7 +365,7 @@ Render the Blazor `DatePicker` by changing the `Type` property to `Date` and con
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code 
+@code
 {
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 }
@@ -453,8 +455,8 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
     }
     List<Gender> dropdownData = new List<Gender>()
     {
-        new Gender(){ text= "Male" },
-        new Gender(){ text= "Female" }
+        new Gender() { Text = "Male" },
+        new Gender() { Text = "Female" }
     };
 }
 
@@ -573,6 +575,6 @@ After submit, the edited data is sent to the server, and the updated value is re
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli)
 2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with ListView in Blazor Server App | Syncfusion®
+title: Getting Started with ListView in Blazor Server App | Syncfusion®
 description: Check out the documentation for getting started with Blazor ListView Components in Blazor Server App.
 platform: Blazor
 control: ListView
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor ListView Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -118,7 +118,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Lists` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Lists
@@ -133,11 +133,11 @@ Open the **Program.cs** file in Blazor Server App and register the Blazor servic
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
-....
+...
 using Syncfusion.Blazor;
-....
+...
 builder.Services.AddSyncfusionBlazor();
-....
+...
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +167,6 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveServer
-@using Syncfusion.Blazor.Lists
 
 <SfListView DataSource="@Data">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
@@ -194,7 +193,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -240,5 +239,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Virtualization in Blazor ListView Component](https://blazor.syncfusion.com/documentation/listview/virtualization)

@@ -162,7 +162,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component inside the razor file.
 
-N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file (for example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -249,6 +249,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
 
@@ -302,6 +303,7 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -346,6 +348,7 @@ Render the Blazor `DatePicker` by changing the `Type` property to `Date` and con
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveServer
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Calendars
 
@@ -565,6 +568,6 @@ After submit, the edited data is sent to the server, and the updated value is re
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli)
 2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli)

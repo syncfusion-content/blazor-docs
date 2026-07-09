@@ -171,7 +171,7 @@ public class ShipmentData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrxDphrTkisQobX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxNGNFJsUcscbr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize cell selection background
 
@@ -329,4 +329,4 @@ public class ShipmentData
 
 {% endhighlight %}
 {% endtabs %}
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLxXzVVTuylwmnU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVHXGtFfWzibrqn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
