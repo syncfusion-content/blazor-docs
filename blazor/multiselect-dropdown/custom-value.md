@@ -13,7 +13,7 @@ The Blazor [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/mu
 
 When a user types a value that does not match any existing item, the component creates a custom list item and places it at the top of the dropdown list. The user must then explicitly select this item from the dropdown to add it to the selection.
 
-![Custom value creation in MultiSelect Dropdown](./images/custom-value/Custom_value_creation_in_MultiSelect_Dropdown.gif)
+![Custom value creation in MultiSelect Dropdown](./images/custom-value/Custom_value_creation_in_MultiSelect_Dropdown.webp)
 
 N> Custom values are not added to the original `DataSource`. They are tracked internally by the component. The original data source remains unmodified throughout the interaction.
 
