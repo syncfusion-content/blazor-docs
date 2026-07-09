@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Tooltip in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Tooltip component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Tooltip Component | Syncfusion
+description: Check out and learn about getting started with Blazor Tooltip component in Blazor WebAssembly Application.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -162,7 +162,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
@@ -171,13 +170,13 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 @code
 {
-    string Content = "Lets go green & Save Earth !!";
+    string Content = "Let's go green & Save Earth !!";
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -233,6 +232,4 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 4. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-5. [Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-
-6. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+5. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

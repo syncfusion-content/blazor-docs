@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Toggle Switch Button in Blazor Web App
 
-This section briefly explains about how to include [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -130,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -183,7 +183,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -228,7 +228,6 @@ dotnet run
 {% endtabcontents %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnZGDhUjkSdaFN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.webp)" %}
-
 ## Setting On and Off Text
 
 On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OnLabel) and [OffLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OffLabel) properties of Toggle Switch Button component. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
@@ -247,7 +246,7 @@ On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor
 {% endhighlight %}
 {% endtabs %}
 
-N> Switch does not have text support for material themes, and does not support long custom text.
+N> The Switch component does not support text for material themes and does not support long custom text.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhxtwjrqMXGBZXU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.webp)" %}
 
