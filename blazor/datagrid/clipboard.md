@@ -92,7 +92,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLosNWcpKkBYKnF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhRNGZCfsUftPWT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Copy to clipboard using external buttons
 
@@ -191,7 +191,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthSsjCcfTtZWPnL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhxjGXCTCUxIVsj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## AutoFill
 
@@ -280,7 +280,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIsNicJTjOUEma?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrnDcXszsUECbja?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * When [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) is set to **true**, the autofill handle appears on cell selection.
 > * AutoFill requires selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) set to **Cell**, [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) set to **Box**, and [EditMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditMode.html#fields) set to `Batch`.
@@ -377,7 +377,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBoWNsGJziFNQMu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBdjwjMTCzMwQCj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > To paste content, set selection [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to **Cell**, set [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to **Box**, and enable [Batch editing](https://blazor.syncfusion.com/documentation/datagrid/batch-editing).
 

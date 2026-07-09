@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor MultiSelect Dropdown in Blazor Web App
 
-This section briefly explains about how to include [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
@@ -170,14 +170,12 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.DropDowns
-
 <SfMultiSelect TValue="string[]" TItem="string" Placeholder='First Name'></SfMultiSelect>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -232,7 +230,7 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.DropDowns
+@rendermode InteractiveAuto
 
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
@@ -273,7 +271,7 @@ The height and width of the popup list can also be customized using the [PopupHe
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.DropDowns
+@rendermode InteractiveAuto
 
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" PopupHeight="350px" PopupWidth="350px" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
@@ -296,6 +294,8 @@ Handle the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+4. [Data Binding in Blazor MultiSelect Dropdown Component](https://blazor.syncfusion.com/documentation/multiselect-dropdown/data-binding)
+5. [Virtualization in Blazor MultiSelect Dropdown Component](https://blazor.syncfusion.com/documentation/multiselect-dropdown/virtualization)
