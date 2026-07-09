@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Accumulation Chart in Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Accumulation Chart Component in Blazor Web App.
+description: Check out and learn about the documentation for getting started with Blazor Accumulation Chart Component in Blazor Web App.
 platform: Blazor
 component: Accumulation Chart
 documentation: ug
@@ -70,7 +70,7 @@ Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.Charts`) and install it.
 
-Alternatively, you can install the same package using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -84,7 +84,7 @@ Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -98,7 +98,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -114,7 +114,7 @@ dotnet add package Syncfusion.Blazor.Charts -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
+After the package is installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespaces.
 
 N> 
 - The `~/` notation represents the root directory of your project. This file is typically located in your project's root folder.
@@ -136,7 +136,6 @@ Open the **Program.cs** file in Blazor Web App and register the Blazor service. 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
 
-....
 using Syncfusion.Blazor;
 ....
 builder.Services.AddSyncfusionBlazor();
@@ -166,13 +165,14 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@page "/"
 @rendermode InteractiveAuto
 
-<!-- SfAccumulationChart is the root container component for the accumulation chart -->
+@* SfAccumulationChart is the root container component for the accumulation chart *@
 <SfAccumulationChart>
-    <!-- Container for defining chart series -->
+    @* Container for defining chart series *@
     <AccumulationChartSeriesCollection>
-        <!-- AccumulationChartSeries defines a data series with its data source and axis mappings -->
+        @* AccumulationChartSeries defines a data series with its data source and axis mappings *@
         <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
@@ -189,20 +189,19 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { Country= "United States of America", Medals= 46 },
-        new ChartData { Country= "Great Britain", Medals= 27 },
         new ChartData { Country= "China", Medals= 26 },
         new ChartData { Country= "United Kingdom", Medals= 23 },
         new ChartData { Country= "Australia", Medals= 16 },
         new ChartData { Country= "India", Medals= 36 },
         new ChartData { Country= "Nigeria", Medals= 12 },
         new ChartData { Country= "Brazil", Medals= 20 },
-     };
+    };
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -252,5 +251,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

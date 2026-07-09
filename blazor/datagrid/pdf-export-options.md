@@ -128,7 +128,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLIZYBdToDnlIhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrHNcZUyqxIPguZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Export selected records
 
@@ -224,7 +224,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyDOVxJSyuJdwK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBnXmtUSgcKBXLr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Export filtered records
 
@@ -319,7 +319,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrejOBnTelxNELN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBnZmjUIAwHFeas?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Export with hidden columns
 
@@ -428,7 +428,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDreDkhHfwtjHYWh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrdtcZKoAbKpBDn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show or hide columns while exporting
 
@@ -536,7 +536,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDreZOVnTQCljdmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRXQtgogYRqWLp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Change page orientation
 
@@ -661,7 +661,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhoDOrnfPtLEIQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthdZwNKSJZpiLJw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Change page size
 
@@ -828,7 +828,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhoNIXoheMzaxjw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhRDQtKSzMTgsKb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Define file name
 
@@ -917,7 +917,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDByjpMMziSSVgoO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBRZGZqIpVfqkrm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enabling horizontal overflow
 
@@ -1129,7 +1129,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBesBNzTyIDvtLO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVxjcZAITqBPysx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Customize column width in exported PDF document
 
@@ -1214,7 +1214,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVetyXEWnovmFoM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBnZcNqSTpZSdgE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Font and color customization
 
@@ -1372,7 +1372,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrIjIjeLyPqfijX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLRtmjKyTyUNogh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Add custom font
 
@@ -1504,7 +1504,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjByXSXoVxArjAFT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrxjcDKSpIvMdft?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Rotate a header text in the exported PDF document
 

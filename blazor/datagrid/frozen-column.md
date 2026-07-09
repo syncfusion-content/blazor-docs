@@ -150,7 +150,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhfWsCbfiSSvvZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLnXmDghJLsdZBL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Frozen columns must remain within the visible viewport of the grid.
 > * When the `FreezeDirection` property is not set at the column level, the grid automatically applies the Left freeze direction by default.
@@ -292,7 +292,7 @@ To change the default frozen line color, apply styles using these class selector
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzWrNLBIWVbdGA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBdXwZUVfBngFzu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Detail template with frozen columns
 
@@ -423,7 +423,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZheNULQpBltUNaZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBdNcjUVTgmcnMb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Freeze columns using either the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) or [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties.
 
@@ -516,7 +516,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBTMhthBzKufVpW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrdtQDUhpfoKBMK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > If no columns are frozen, the frozen column separator appears at the **left** and **right** edges of the Grid. Columns can be dynamically frozen or unfrozen by dragging the separator.
 
