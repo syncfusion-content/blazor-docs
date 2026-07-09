@@ -357,7 +357,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Migrate to Blazor Scheduler component
 
-The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler) is a comprehensive event calendar for managing time-based activities, while  [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) provides a modern, high performance component for building interactive scheduling user interfaces.
+The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/scheduler-sdk/aspnet-mvc-scheduler) is a comprehensive event calendar for managing time-based activities, while  [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) provides a modern, high performance component for building interactive scheduling user interfaces.
 
 For detailed explanation, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [ASP.NET Core MVC Scheduler getting started guide](https://ej2.syncfusion.com/aspnetmvc/documentation/schedule/getting-started).
 
@@ -377,7 +377,7 @@ For detailed explanation, refer to the [Blazor Scheduler getting started guide](
 
 **ASP.NET Core MVC approach**
 
-The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler) is configured with [Views](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_Views) options such as Day, Week, and Month, and [EventSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_EventSettings) are applied to control how appointments are displayed and managed.
+The [ASP.NET Core MVC Scheduler](https://www.syncfusion.com/scheduler-sdk/aspnet-mvc-scheduler) is configured with [Views](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_Views) options such as Day, Week, and Month, and [EventSettings](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Schedule.Schedule.html#Syncfusion_EJ2_Schedule_Schedule_EventSettings) are applied to control how appointments are displayed and managed.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
