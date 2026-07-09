@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Getting Started with Blazor Button in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Button Component in Blazor Web App.
+description: Check out and learn about the documentation for getting started with Blazor Button Component in Blazor Web App.
 platform: Blazor
 component: Button
 documentation: ug
 ---
 
-# Getting Started with Blazor Button Component in Blazor Web App
+# Getting started with Blazor Button component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -130,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -161,7 +161,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Button component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component to the Razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -175,7 +175,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -225,7 +225,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
 

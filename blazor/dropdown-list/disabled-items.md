@@ -19,7 +19,7 @@ In the following sample, items are rendered as disabled based on the value of th
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVfZRsLzvcQPnwt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVxjRraBxXQbElB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Bullet Chart in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Bullet Chart component in Blazor WebAssembly App.
+description: Check out and learn about getting started with Blazor Bullet Chart component in Blazor WebAssembly App.
 platform: Blazor
 control: Bullet Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Bullet Chart Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -57,16 +57,16 @@ cd BlazorApp
 
 ## Install the required Blazor package
 
-Install the [Syncfusion.Blazor.BulletChart](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.BulletChart](https://www.nuget.org/packages/Syncfusion.Blazor.BulletChart) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.BulletChart`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.BulletChart`) and install it.
 
-Alternatively, you can install the same package using the Package Manager Console with the following commands.
+Alternatively, you can install the same package using the Package Manager Console with the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Package Manager Console" %}
@@ -80,7 +80,7 @@ Install-Package Syncfusion.Blazor.BulletChart -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and run the following commands.
+Open the terminal and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -94,7 +94,7 @@ dotnet add package Syncfusion.Blazor.BulletChart -v {{ site.releaseversion }}
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and run the following commands.
+Open the command prompt and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -156,7 +156,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Charts
+@page "/"
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
 </SfBulletChart>
@@ -177,7 +177,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -228,8 +228,6 @@ Add a title by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusio
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
 </SfBulletChart>
 
@@ -244,8 +242,6 @@ Add ranges by using the [BulletChartRangeCollection](https://help.syncfusion.com
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
     <BulletChartRangeCollection>
@@ -267,8 +263,6 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
     <BulletChartTooltip TValue="ChartData" Enable="true"></BulletChartTooltip>
     <BulletChartRangeCollection>
@@ -283,3 +277,6 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBzDWVITXPjsQbH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.webp)" %}
 
+## See also
+
+1. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
