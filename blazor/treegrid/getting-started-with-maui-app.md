@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with TreeGrid in Blazor MAUI App | Syncfusion®
-description: Checkout and learn about the documentation for getting started with Blazor TreeGrid Component in Blazor MAUI App.
+description: Check out and learn about the documentation for getting started with Blazor TreeGrid Component in Blazor MAUI App.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeGrid in Blazor MAUI App
+# Getting started with Blazor TreeGrid in Blazor MAUI App
 
 This section explains you through the step-by-step process of integrating the [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
