@@ -122,7 +122,7 @@ pipeline {
 * Once the license key is registered, it can be validated by using the ValidateLicense("Platform.Blazor") method. This ensures that the license key is valid for the platform and version you are using. For reference, please check the following example.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="Before v34.1.29" %}
 using Syncfusion.Licensing;
 
 // Register the Syncfusion license key
@@ -131,9 +131,24 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 // Validate the registered license key
 bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.Blazor);
 {% endhighlight %}
+
+{% highlight c# tabtitle="v34.1.29 and later" %}
+using Syncfusion.Licensing;
+
+// Register the Syncfusion license key
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+//Validate the registered license key
+bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.Blazor });
+{% endhighlight %}
 {% endtabs %}
 
+**Before v34.1.29:**
 ![LicenseKeyValidationMethod](images/license-validation-method.webp)
+
+**v34.1.29 and later:**
+
+![LicenseKeyValidationMethod](images/license-validation-method-new.webp)
 
 * If the ValidateLicense() method returns true, registered license key is valid and can proceed with deployment.
 
