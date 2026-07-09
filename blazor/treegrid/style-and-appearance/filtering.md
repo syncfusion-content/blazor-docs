@@ -168,7 +168,7 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrnDzrfVMyBtkVY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVntwjvfXOiyGVq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the filtering icon in the header
 
@@ -347,4 +347,4 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLntfVJBBQMQeiU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVdjwNPJjEaBEuc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
