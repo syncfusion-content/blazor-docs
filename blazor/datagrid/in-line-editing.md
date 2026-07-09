@@ -76,7 +76,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhTWVWxfiLoTefJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxtGNqSDqQFUdl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * **Normal** is the default editing mode.
 > * To enable editing, set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property must be set to **true** for the unique column.
@@ -193,7 +193,7 @@ public class ProductDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrJMhsGhTuTRXHB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLxXcNUytJzvbKZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Cancel edit based on condition
 
@@ -304,7 +304,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBfWhsbiluKzXeX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVdjmNKSZoWolVb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Perform CRUD action programmatically
 
@@ -444,7 +444,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBTWrWOgendnpyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhHDGtqejIPGmPS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show confirmation dialog while deleting
 
@@ -525,7 +525,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBfiLsFpKplAfEA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVHDctAysKpvPin?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The `ShowDeleteConfirmDialog` property supports all types of edit modes.
 
@@ -600,7 +600,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVJCLsuBDjebSEM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLRXQXgyCTgDngV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Delete multiple rows
 
@@ -676,7 +676,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLpiBMkLcuVmJPN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLHDwjUSCIiBfsI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The **Delete** keyboard shortcut can also be used to remove selected records.
 
@@ -761,7 +761,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLStsZBUpReRDUm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhnjQZUSiSoeKZH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Adding a new row at the bottom of the Blazor DataGrid
 
@@ -857,7 +857,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTCBWEJgzWWmwI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVxXGtqyCxbJVIi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The `NewRowPosition` property is supported for **Normal** and **Batch** editing modes.
 
@@ -920,7 +920,7 @@ The following example demonstrates how to use the `ActionBegin` event and **args
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDByNfVYAhjTFmxS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhxZcZgesmyhPJA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show add new row always in Blazor DataGrid
 
@@ -990,7 +990,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLfiLskTTrNxaux?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVHXcXAyCbqZlXJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > To save newly added records, press the **Enter** key or click the **Update** button on the toolbar after filling in the add new row form.
 
@@ -1085,7 +1085,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtryNWXVhqPKVwhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLnNQNKIMPvDctZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable editing for a particular row
 
@@ -1165,7 +1165,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLotiNrUuudyXpE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVntwtUIWkMvsSD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Provide new item or edited item using events
 
@@ -1260,7 +1260,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthINCtgBmWlAIwy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrxtwXqIMucqFEy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Supported events for inline and dialog editing
 

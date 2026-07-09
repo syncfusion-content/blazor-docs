@@ -157,8 +157,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Radio Button component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Radio Button](https://www.syncfusion.com/blazor-components/blazor-radio-button) component inside the razor file.
@@ -218,7 +216,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBptsKNKsShQnkV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.png)" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVRjcDCUfJOJPQY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.webp)" %} 
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RadioButton).
 
