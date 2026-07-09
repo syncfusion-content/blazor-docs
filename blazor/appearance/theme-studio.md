@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Blazor Component Themes with Theme Studio
 
-[Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=fluent2) for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map), and [Blazor Range Navigator](https://www.syncfusion.com/blazor-components/blazor-range-selector).
+[Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=fluent2) for Blazor can be used to customize a new theme from an existing theme. It does not support data visualization components such as [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts), [Blazor Diagram](https://www.syncfusion.com/diagram-sdk/blazor-diagram), [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge), [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge), [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map), and [Blazor Range Navigator](https://www.syncfusion.com/blazor-components/blazor-range-selector).
 
 ## Customize theme colors from Theme Studio
 

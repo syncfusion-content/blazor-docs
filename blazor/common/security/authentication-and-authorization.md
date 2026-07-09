@@ -86,7 +86,7 @@ This guide uses authentication and authorization in a Blazor Server application 
 
 ## Authentication with Blazor components
 
-This section explains how to implement **UI-level** and **data-level authorization** in [Blazor components](https://www.syncfusion.com/blazor-components) such as [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), and [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview). UI-level authentication is demonstrated across all components using `<AuthorizeView>` to control the visibility of UI elements based on the user’s authentication state.
+This section explains how to implement **UI-level** and **data-level authorization** in [Blazor components](https://www.syncfusion.com/blazor-components) such as [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler), and [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview). UI-level authentication is demonstrated across all components using `<AuthorizeView>` to control the visibility of UI elements based on the user’s authentication state.
 
 For data-level security, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is configured to include **Bearer tokens** in API requests, enabling secure access to protected backend endpoints for components such as **Blazor DataGrid** and **Blazor Scheduler**. In this example, the **Blazor TreeView** component uses local data and focuses only on UI-level authentication.
 
@@ -196,7 +196,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Blazor Scheduler component
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to send authenticated requests and retrieve event data securely from protected APIs. This ensures that only authorized users can access protected data from the API.
+The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to send authenticated requests and retrieve event data securely from protected APIs. This ensures that only authorized users can access protected data from the API.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

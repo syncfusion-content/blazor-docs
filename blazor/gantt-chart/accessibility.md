@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Gantt Chart Component
 
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component adheres to accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) standards, ensuring compatibility with assistive technologies, including those relying on assistive technologies.
+The [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart) component adheres to accessibility guidelines, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) standards, ensuring compatibility with assistive technologies, including those relying on assistive technologies.
 
 ## Accessibility Compliance
 
@@ -198,5 +198,5 @@ Accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque
 ## Related Resources
 
 - [Accessibility in Blazor Components](https://blazor.syncfusion.com/documentation/common/accessibility)
-- [Blazor Gantt Chart Feature Tour](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)
+- [Blazor Gantt Chart Feature Tour](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart)
 - [Blazor Gantt Chart Example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5)
