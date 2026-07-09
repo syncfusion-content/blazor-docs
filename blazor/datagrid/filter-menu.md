@@ -73,7 +73,7 @@ public class OrderData
                 Orders.Add(new OrderData(OrderID+7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
                 Orders.Add(new OrderData(OrderID + 8, "ERNSH", "Münster", "Richter Supermarkt"));
                 Orders.Add(new OrderData(OrderID+9, "WELLI", "Reims", "Wellington Import"));
-                OrderID += 9;
+                OrderID += 9;   
             }
         }
         return Orders;
@@ -88,7 +88,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVJXMVKpLxfzxZN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLxtGXLfauEsCvF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object to **false** prevents the filter menu from rendering for that specific column.
 
@@ -186,7 +186,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVSWMhnrOEBQtDs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhRZQZretjzMTgn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Default filter input for OrderID column**
 
@@ -288,7 +288,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLTXsUNzHJMohoW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBnNGtLeZCDWqrV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customizing filter menu operators list
 
@@ -435,7 +435,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJtytkMuAjiQlR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhHZcDVStiIdAyc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize filter input editor
 
@@ -648,7 +648,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrftBDxzDMOqgsi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVHZmNBStrsgYgs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Prevent autofill option in autocomplete of menu filter
 
@@ -736,7 +736,7 @@ To prevent autofill, set the [Autofill](https://help.syncfusion.com/cr/blazor/Sy
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBpXMrazUJxtJCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVxXwjryXLfbAFT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Hide the filter operator dropdownlist in the filter menu dialog
 
@@ -828,7 +828,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVeXQrIANVmdQhp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrntmDhSZAvQgzk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filter by multiple keywords using filter menu
 
@@ -1048,7 +1048,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhftMLkrRRXmpHY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLxjmtLSZTSLAVH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Hide default filter icons while perform filtering through method
 
@@ -1120,7 +1120,7 @@ To hide the filter icon in the Grid, apply the CSS style to the filter menu elem
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBpXMrazUJxtJCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVHjmXreNpvBPiP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Filter menu events
 
@@ -1284,7 +1284,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrTZWVuFpHxbSMS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHjGXroNSoIEKU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Limitations of using different filter types in different columns
 
@@ -1433,7 +1433,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJCLClyfCMmKmA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHZwtVSDGLEFzr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Troubleshoot filter menu operator issue
 

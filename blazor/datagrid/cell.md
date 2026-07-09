@@ -110,7 +110,7 @@ To configure:
     {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAMZDRBetNXSsV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhHjGjMUHFzfqVe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property disables HTML encoding for the corresponding column in the DataGrid.
 > * When set to **false**, HTML tags in the column’s data are rendered as HTML.
@@ -230,7 +230,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBgiiNgrTpwZLYn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLdXwDsKHvFCLxU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize cell styles
 
@@ -347,7 +347,7 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLgjvivAmfpAZcD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhHtQZiAdEMndYb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 * Using the `QueryCellInfo` event, the appearance of the **Freight** column can be customized based on value ranges. Each range is styled with distinct text and background colors using refined CSS.
 
@@ -457,7 +457,7 @@ In this setup, the column is checked to confirm if it corresponds to the **Freig
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNroZyCqJkbikUBx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdZGNCKmDdAaVR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is triggered for every cell in the DataGrid.
 > * Frequent use of this event to modify a large number of cells significantly impacts Grid performance.
@@ -557,7 +557,7 @@ Styles can be applied to DataGrid cells using CSS selectors. The Blazor DataGrid
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVgjFsvqbeONlFV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnjmXMUQhCdBFN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### property-based customization
 
@@ -657,7 +657,7 @@ In this configuration, the `CustomAttributes` property of the **ShipCity** colum
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVKDuDnTisVMfBa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnDGDiKwrSnave?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Custom attributes can be used to customize any cell in the Grid, including header and footer cells.
 
@@ -767,7 +767,7 @@ Available ClipMode options:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiMZUrUOzmfhI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrRZcjWAGUtixMn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property is set to **Ellipsis** by default.
 > * When the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property is defined for a column, clip mode is automatically applied if the content exceeds the specified width.
@@ -851,7 +851,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoZEshhfHlMplf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVdZQZsqcgUyjsk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Tooltip template
 
@@ -1029,7 +1029,7 @@ public class OrdersDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVetYCVBodvFKAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhRDmNsUmUwgtqV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Custom tooltips are displayed only when the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowTooltip) property is set to **true**.
 
@@ -1124,7 +1124,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUXxhczXWCAKzo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVxZmZWgcpBTpTh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Grid lines
 
@@ -1238,7 +1238,7 @@ In this configuration, the `GridLines` property is updated dynamically based on 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgjYDHsYMePtHJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdZmtCUQfRBfZA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > By default, the GridLines property is set to **Default**.
 
