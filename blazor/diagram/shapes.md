@@ -200,13 +200,13 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 |Scale |ImageAlign |Result|
 |---|---|---|
-|   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmin-ymax.png)|
-|Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xin-ymin.png)|
-|Meet|XMaxYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmax-ymax.png)|
-|None|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymax.png)|
-|None|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymin.png)|
-|Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymax.png)|
-|Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymin.png)|
+|   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmin-ymax.webp)|
+|Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xin-ymin.webp)|
+|Meet|XMaxYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmax-ymax.webp)|
+|None|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymax.webp)|
+|None|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymin.webp)|
+|Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymax.webp)|
+|Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymin.webp)|
 
 ## How to Create HTML Template Shapes
 

@@ -68,7 +68,7 @@ The [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRtcDkiTBKiGJN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteraction.razor)
 
@@ -120,7 +120,7 @@ By default, drag limits are disabled for connector annotations. To enable this b
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBnZcNuWzKgCZZY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/DragLimitForAnnotation.razor)
 
@@ -182,7 +182,7 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthxXxVHqPVhbsOZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBnXcDEMfAbsGbg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 | Value | Description | Image |
 | -------- | -------- | -------- |
@@ -226,7 +226,7 @@ The following code examples illustrate how to configure `RotationAngle` for an a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRDHhxgvLGppvm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRNmNksfTijOMy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationAngleProperty.razor)
 

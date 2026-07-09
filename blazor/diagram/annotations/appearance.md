@@ -193,7 +193,7 @@ By default, the `OpenMode` property is set to **HyperlinkOpenMode.Self**, which 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdZRNOTGCrZiyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLnDmtkixXouruK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenMode.razor)
 
@@ -246,7 +246,7 @@ The following example demonstrates how to change the hyperlink open mode at runt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBoiNtHrIBncXmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBntmXkidWBWuli?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenModeRuntime.razor)
 

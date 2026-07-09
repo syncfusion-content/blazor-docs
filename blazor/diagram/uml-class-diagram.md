@@ -105,7 +105,7 @@ The following properties can be used to configure UML class attributes and opera
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlClassShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Class Example](./images/UmlClassShapes/UMLClassShape.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVnZQjECTvxFAiO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[UML Class Example](./images/UmlClassShapes/UMLClassShape.webp)" %}
 
 ### Create a UML Interface
 
@@ -149,7 +149,7 @@ For details on attributes and operations properties, refer to the [UML class sec
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlInterfaceShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Interface Example](./images/UmlClassShapes/UMLInterfaceShape.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLRNQDkiTYWHRSv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[UML Interface Example](./images/UmlClassShapes/UMLInterfaceShape.webp)" %}
 
 ### Create a UML Enumeration
 
@@ -203,7 +203,7 @@ The following properties can be used to configure members in UML enumeration:
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlEnumerationShape.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Enumeration Example](./images/UmlClassShapes/UMLEnumeration.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxNcDuMpayISVL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[UML Enumeration Example](./images/UmlClassShapes/UMLEnumeration.webp)" %}
 
 N> The `UmlClassifierShape` automatically adjusts its height based on the number of rows in each section, eliminating the need to set an explicit `Height`. UML classifier nodes can be resized only from the right side (East resize handle). Rotation and corner resize handles are not supported.
 
@@ -318,7 +318,7 @@ Each compartment — **Attributes**, **Operations**, and **Members** — has a h
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlClassHeaderProperties.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML ClassHeader Example](./images/UmlClassShapes/UMLClassHeader.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLxjmDOioJpcJra?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[UML ClassHeader Example](./images/UmlClassShapes/UMLClassHeader.webp)" %}
 
 ### Customize Attributes, Operations, and Members
 
@@ -626,7 +626,7 @@ Add UML classifier shapes and relationship connectors to the [SfSymbolPaletteCom
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/UMLCLassDiagram/UmlClassSymlbolShapes.razor).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLIWjZPfYneFRWq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[UML Class Symbol Example](./images/UmlClassShapes/UMLClassSymbolShapes.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBdtQDuWendDoCV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[UML Class Symbol Example](./images/UmlClassShapes/UMLClassSymbolShapes.webp)" %}
 
 
 ## See also
