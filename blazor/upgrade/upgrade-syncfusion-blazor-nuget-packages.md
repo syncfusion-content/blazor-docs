@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upgrade Syncfusion Blazor NuGet packages to the latest version
-description: Learn here about how to upgrade Syncfusion Blazor NuGet packages to the latest version using the Package Manager UI, .NET CLI, or Package Manager Console.
+title: Upgrade Blazor NuGet packages to the latest version | Syncfusion®
+description: Learn here about how to upgrade Blazor NuGet packages to the latest version using the Package Manager UI, .NET CLI, or Package Manager Console.
 platform: Blazor
 control: Common
 documentation: ug

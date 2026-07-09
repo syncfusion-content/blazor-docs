@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Orientation in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about orientation in Syncfusion Blazor Tabs component and much more details.
+title: Orientation in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about orientation in Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -158,4 +158,4 @@ It is also adaptable to the available space when the tab items exceed the view s
 </style>
 ```
 
-![Blazor Tabs with Horizontal Orientation](./images/blazor-tabs-orientation.gif)
+![Blazor Tabs with Horizontal Orientation](./images/blazor-tabs-orientation.webp)

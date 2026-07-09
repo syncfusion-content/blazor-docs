@@ -226,7 +226,7 @@ The following example demonstrates a simple payment module that enables or disab
 In this example, we've created a three-step wizard using the Accordion component:
 
 1. **Sign In** - Collects user credentials
-2. **Delivery Address** - Gathers shipping information 
+2. **Delivery Address** - Gathers shipping information
 3. **Card Details** - Processes payment information
 
 The wizard functions by:

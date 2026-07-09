@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in Blazor RadioButton Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor RadioButton component and more.
+title: Customization in Blazor RadioButton Component | Syncfusion®
+description: Checkout and learn here all about Customization in Syncfusion Blazor RadioButton component with examples and much more details.
 platform: Blazor
 control: Radio Button
 documentation: ug

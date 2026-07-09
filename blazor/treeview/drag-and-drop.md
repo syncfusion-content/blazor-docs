@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor TreeView component and much more.
+title: Drag and Drop in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Drag and Drop in Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -113,7 +113,7 @@ N> In the [**OnNodeDragged**](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
  ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhyMZsBJDLnhwpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Node in Blazor TreeView](./images/blazor-treeview-drag-drop-node.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhyMZsBJDLnhwpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Node in Blazor TreeView](./images/blazor-treeview-drag-drop-node.webp)" %}
 
 ## Multiple-Node Drag and Drop
 
@@ -206,7 +206,7 @@ To enable dragging and dropping of multiple nodes, enable both the [`AllowMultiS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhSsXsVfZUjOzRj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Multiple Node in Blazor TreeView](./images/blazor-treeview-drag-drop-multi-node.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhSsXsVfZUjOzRj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Multiple Node in Blazor TreeView](./images/blazor-treeview-drag-drop-multi-node.webp)" %}
 
 
 ## Drag and Drop within a TreeView
@@ -273,7 +273,7 @@ The default value of `AllowDragAndDrop` property is false.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLyitsLTjUePIsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and drop within a TreeView](./images/blazor-treeview-drag-and-drop-within-treeview.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLyitsLTjUePIsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and drop within a TreeView](./images/blazor-treeview-drag-and-drop-within-treeview.webp)" %}
 
 ## Drag and Drop Between TreeViews
 
@@ -487,7 +487,7 @@ The Blazor TreeView component includes built-in drag and drop support, allowing 
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryiDsBftpsSWPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and drop between TreeViews](./images/blazor-treeview-drag-and-drop-between-treeviews.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryiDsBftpsSWPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and drop between TreeViews](./images/blazor-treeview-drag-and-drop-between-treeviews.webp)" %}
 
 ## Restrict Drag and Drop for Individual node
 
@@ -566,7 +566,7 @@ For example, in the following code snippet, dragging is prevented for the "Inbox
 
 In the Blazor TreeView component, the index of the dropped node can be retrieved from the [DropIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DragAndDropEventArgs.html#Syncfusion_Blazor_Navigations_DragAndDropEventArgs_DropIndex) argument in the [OnNodeDragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStop) event. 
 
-In the example shown, the value of the `DropIndex` is displayed in the Syncfusion<sup style="font-size:70%">&reg;</sup> TextBox component based on the node that was dropped.
+In the example shown, the value of the `DropIndex` is displayed in the Blazor TextBox component based on the node that was dropped.
 
 ```cshtml
 

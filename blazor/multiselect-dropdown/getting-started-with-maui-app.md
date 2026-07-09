@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiSelect Dropdown | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor MultiSelect DropDown Component in Blazor MAUI App.
+title: Getting Started with Blazor MultiSelect Dropdown | Syncfusion®
+description: Checkout and learn about the documentation for getting started with Blazor MultiSelect Dropdown Component in Blazor MAUI App and much more details.
 platform: Blazor
-control: MultiSelect DropDown
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect DropDown Component in MAUI App
+# Getting Started with Blazor MultiSelect Dropdown Component in MAUI App
 
-This guide walks through integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in a Blazor MAUI App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This guide walks through integrating the [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in a Blazor MAUI App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -38,7 +38,7 @@ Create a Blazor MAUI App using Visual Studio Code via [Microsoft templates](http
 Alternatively, create a MAUI application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor MAUI App" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet new maui-blazor -o MauiBlazorApp
 cd MauiBlazorApp
@@ -50,7 +50,7 @@ cd MauiBlazorApp
 
 {% endtabcontents %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install required Blazor packages
 
 Install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -80,9 +80,9 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
+Register the Blazor service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" %}
@@ -118,27 +118,27 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect DropDown component
+## Add Blazor MultiSelect Dropdown component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect DropDown component in the **~/Pages/Home.razor** file.
+Add the Blazor MultiSelect Dropdown component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" TItem="string" Placeholder='First Name'></SfMultiSelect>
 
 {% endhighlight %}
 {% endtabs %}
 
-### How to run the sample on Windows
+## Run the application
+
+### Run the sample on Windows
 
 Run the sample on Windows to launch the .NET MAUI Blazor app.
 
 ![Blazor MultiSelect Dropdown Component](./images/blazor-multiselect-dropdown-maui-app.webp)
 
-### How to run the sample on Android
+### Run the sample on Android
 
 To run the Blazor MultiSelect Dropdown in a .NET MAUI Android app using the Android Emulator, follow these steps:
 
@@ -154,8 +154,6 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
@@ -176,9 +174,9 @@ After initialization, populate the MultiSelect using the [DataSource](https://he
     new Games() { ID= "Game5", Text= "Football" },
     new Games() { ID= "Game6", Text= "Golf" },
     new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
+    new Games() { ID= "Game8", Text= "Rugby" },
     new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
+    new Games() { ID= "Game10", Text= "Tennis" },
     };
 }
 
@@ -196,8 +194,6 @@ The height and width of the popup list can also be customized using the [PopupHe
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.DropDowns
-
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" PopupHeight="350px" PopupWidth="350px" DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
@@ -211,14 +207,18 @@ The height and width of the popup list can also be customized using the [PopupHe
 
 Get the selected value of the MultiSelect component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event using the [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectChangeEventArgs-1.html#Syncfusion_Blazor_DropDowns_MultiSelectChangeEventArgs_1_Value) property.
 
+{% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 {% include_relative code-snippet/getting-started/get-selected-value.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+4. [Data Binding in Blazor MultiSelect Dropdown Component](https://blazor.syncfusion.com/documentation/multiselect-dropdown/data-binding)
+5. [Virtualization in Blazor MultiSelect Dropdown Component](https://blazor.syncfusion.com/documentation/multiselect-dropdown/virtualization)

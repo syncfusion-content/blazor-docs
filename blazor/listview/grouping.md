@@ -39,4 +39,4 @@ The ListView supports to wrap the nested element into a group based on the categ
 
 ```
 
-![Grouping in Blazor ListView](./images/list/blazor-listview-grouping.png)
+![Grouping in Blazor ListView](./images/list/blazor-listview-grouping.webp)

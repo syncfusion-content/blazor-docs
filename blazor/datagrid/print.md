@@ -78,7 +78,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLoiXMfUGltKtYZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBHZcDgdBDMtdCy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Page Setup for Printing
 
@@ -166,7 +166,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyCZsJTDndUnwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLRZGNKHVjIqLIF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Print only the visible page
 
@@ -268,7 +268,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAWMNUhrlcjXzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBnNGZKnLXkdMwz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 <!-- Print the hierarchy datagrid
 
@@ -364,7 +364,7 @@ To include more columns in the printable area:
 
 These adjustments ensure visibility of all columns for wide grids.
 
-![Printing large number of columns in Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.webp)
+![Printing large number of columns in Blazor DataGrid](./images/blazor-datagrid-print-large-columns.webp)
 
 <!-- Show or hide columns while Printing
 

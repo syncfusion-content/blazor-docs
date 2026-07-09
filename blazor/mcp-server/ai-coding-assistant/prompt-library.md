@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Syncfusion AI Coding Assistant Prompt Library | Syncfusion®
+title: AI Coding Assistant Prompt Library | Syncfusion®
 description: Explore the AI Coding Assistant Prompt Library to enhance Blazor development productivity with code generation, configuration examples, and contextual guidance.
-control: Syncfusion AI Coding Assistant Prompt Library
+control: AI Coding Assistant Prompt Library
 platform: Blazor
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Prompt Library - AI Coding Assistant
 
-Speed up your Blazor projects using these ready-made prompts for popular Blazor components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
+Speed up your Blazor projects using these ready-made prompts for popular components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 
 ## How to use
 

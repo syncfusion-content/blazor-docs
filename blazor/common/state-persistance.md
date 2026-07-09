@@ -9,7 +9,7 @@ documentation: ug
 
 # State Persistence in Blazor
 
-The Blazor library supports persisting a component's state across page refreshes and navigation. To enable this feature, set the `EnablePersistence` property to `true` on the target component. The component's state is saved to the browser's `localStorage` when the page unloads. The following example enables persistence for the Grid component.
+The Syncfusion® Blazor library supports persisting a component's state across page refreshes and navigation. To enable this feature, set the `EnablePersistence` property to `true` on the target component. The component's state is saved to the browser's `localStorage` when the page unloads. The following example enables persistence for the Grid component.
 
 N> The state of a component will be retained during navigation or refreshment based on the ID. Make sure to set an ID for the component to store the component's state in the browser.
 

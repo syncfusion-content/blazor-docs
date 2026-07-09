@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor FAB Component in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Floating Action Button component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with the Blazor Floating Action Button component in Blazor WebAssembly Application.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Floating Action Button in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include the [Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Buttons` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
@@ -171,7 +171,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -211,23 +211,23 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLTtsVaAldOGCVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Floating Action Button Component](./images/blazor-fab-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBxXdVOJodJphhn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "![Blazor Floating Action Button Component](./images/blazor-fab-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
 
-## Event Click In Blazor Floating Action Button
+## Event click in Blazor Floating Action Button
 
 The floating action button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_OnClick) event when you click the floating action button. Use this event to perform the required action.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
 </div>
 
 @code
-{    
+{
     public void EventClick()
     {
         // Here, you can call your desired action.
@@ -237,4 +237,4 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTtMrOqlmTgqWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrntHrupIxbJefK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.webp)" %}

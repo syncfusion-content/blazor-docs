@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Last Data Label in Blazor Stock Chart Component | Syncfusion
-description: Check out and learn how to enable and customize the Last Data Label in the Syncfusion Blazor Stock Chart component.
+title: Last Data Label in Blazor Stock Chart Component | Syncfusion®
+description: Check out and learn how to enable and customize the Last Data Label in the Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
