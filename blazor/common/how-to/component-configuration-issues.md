@@ -36,7 +36,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR(options =>
 {
     // Default is 32 KB. Increase only as needed for your scenario.
-    options.MaximumReceiveMessageSize = 104857600; // 100 MB in bytes
+    options.MaximumReceiveMessageSize = 5242880; // 5 MB in bytes
 
     // Optional: Configure other SignalR options
     options.EnableDetailedErrors = builder.Environment.IsDevelopment();
@@ -72,7 +72,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR(options =>
 {
     // Maximum message size (required)
-    options.MaximumReceiveMessageSize = 104857600; // 100 MB in bytes
+    options.MaximumReceiveMessageSize = 5242880; // 5 MB in bytes
 
     // Enable detailed errors in development
     options.EnableDetailedErrors = builder.Environment.IsDevelopment();
