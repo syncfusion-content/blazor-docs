@@ -127,7 +127,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Spinner
-@using Buttons
+@using Syncfusion.Blazor.Buttons
 
 {% endhighlight %}
 {% endtabs %}
