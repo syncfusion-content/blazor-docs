@@ -131,6 +131,13 @@ Add the Blazor Badge component in the **~/Components/Pages/*.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor Badge component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthfshXvfQkIZbeA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Badge Component](images/blazor-badge-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrRtHLxKnDeTneq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Badge Component](images/blazor-badge-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Badge).
+
+
+## See also
+
+1. [Getting Started with Blazor for client-side in Visual Studio or .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+
+N> You can also explore our [Blazor Badge example](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=fluent2) that shows you how to render and configure the Badge.
