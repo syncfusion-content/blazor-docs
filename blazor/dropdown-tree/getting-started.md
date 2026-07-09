@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dropdown Tree in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Dropdown Tree component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Dropdown Tree component in Blazor WebAssembly Application.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Dropdown Tree in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
@@ -193,7 +193,7 @@ The `TValue` parameter specifies the type of the [Value](https://help.syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
