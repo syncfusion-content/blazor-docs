@@ -139,4 +139,4 @@ This allows users to see visual feedback when interacting with expand/collapse c
 
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVnDzAtBLxPJJYP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBdDmjlpXbVCdQz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
