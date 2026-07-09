@@ -103,7 +103,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrStJXuTcIPierd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHjGZVUmSbgRKo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show spinner while exporting 
 
@@ -204,7 +204,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLetTiMCmRvgSSs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrHZGNhUwmNhHrB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Binding custom data source while exporting
 
@@ -304,7 +304,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhotfhJUHIXUNlC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBnjGDBKcclxQPe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Exporting with custom aggregate
 
@@ -427,7 +427,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtretpMNVVBLBlTI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLHtGZrKcldSsoQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Exporting with custom date format
 
@@ -521,7 +521,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeDfWXVMQonozp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrHZcNBgGEkXTft?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Passing additional parameters to the server when exporting
 
@@ -644,4 +644,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNryZJitJZwsZqkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrdjcDrgPzoxnBX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

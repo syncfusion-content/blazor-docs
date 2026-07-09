@@ -121,6 +121,6 @@ When the DataGrid is in batch editing mode, aggregate values in the footer, grou
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLSNYqjWbvJQVPF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHDwjKxLCmXMyp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Aggregate values refresh after batch changes are saved (Update). Adding a new record does not update aggregates until the changes are saved.
