@@ -9,7 +9,7 @@ documentation: ug
 
 # Rows in Blazor Gantt Chart Component
 
-Each row in the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) Component represents a record from the data source and displays its associated field values in both tabular and timeline views. Rows support various interactions such as selection, cell editing, taskbar manipulation, sorting, filtering, and event triggering.
+Each row in the [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart) Component represents a record from the data source and displays its associated field values in both tabular and timeline views. Rows support various interactions such as selection, cell editing, taskbar manipulation, sorting, filtering, and event triggering.
 
 ## Row height
 
@@ -705,4 +705,4 @@ You can enable the Grid cell tooltip by setting the [GanttColumn.ClipMode](https
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthICtZaVfSafppV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the Gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the Gantt.
