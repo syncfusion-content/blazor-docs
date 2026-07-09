@@ -229,7 +229,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBTDCKZfTxNJwlE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper Component](images/blazor-stepper-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVHXwtAsmSEKTrr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stepper Component](images/blazor-stepper-component.webp)" %}
 
 ## Configure icon and label
 
@@ -290,6 +290,6 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBzZsKNpJRTvqSH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper with Icon and Label](./images/blazor-iconwithlabel.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthRjcjgiwPEhGGb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stepper with Icon and Label](./images/blazor-iconwithlabel.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Stepper).
