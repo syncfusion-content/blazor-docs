@@ -15,7 +15,7 @@ The annotation selection events are triggered when an annotation is selected or 
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the annotation selection is changed. Set `args.Cancel` to `true` to prevent the change.|
+|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the annotation selection is changed. Set `args.Cancel` to **true** to prevent the change.|
 |[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers after the annotation selection is changed.|
 
 
@@ -70,7 +70,7 @@ The annotation selection events are triggered when an annotation is selected or 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhnNmtaCTJSBEwS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationSelectionChangeEvent.razor)
 
@@ -80,7 +80,7 @@ The annotation position change events are triggered when an annotation is dragge
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers continuously while the annotation is being dragged. Set `args.Cancel` to `true` to prevent the move.|
+|[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers continuously while the annotation is being dragged. Set `args.Cancel` to **true** to prevent the move.|
 |[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers once when the annotation drag operation completes.|
 
 
@@ -135,7 +135,7 @@ The annotation position change events are triggered when an annotation is dragge
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVdtcXEsJplnHKN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationPositionChangeEvent.razor)
 
@@ -145,7 +145,7 @@ The annotation size change events are triggered when an annotation is resized. T
 
 |Event Name|Arguments|Description|
 |------------|------------|-----------------------|
-|[SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging)|[SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)|Triggers continuously while the annotation is being resized. Set `args.Cancel` to `true` to prevent the resize.|
+|[SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging)|[SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)|Triggers continuously while the annotation is being resized. Set `args.Cancel` to **true** to prevent the resize.|
 |[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged)|[SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html)|Triggers once when the annotation resize operation completes.|
 
 ```cshtml
@@ -201,7 +201,7 @@ The annotation size change events are triggered when an annotation is resized. T
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhdtmjuMToLIrtX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationSizeChangeEvent.razor)
 
@@ -211,7 +211,7 @@ The annotation rotation change events are triggered when an annotation is rotate
 
 |Event Name|Arguments|Description|
 |------------|----------|-------------------------|
-|[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers continuously while the annotation is being rotated. Set `args.Cancel` to `true` to prevent the rotation.|
+|[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers continuously while the annotation is being rotated. Set `args.Cancel` to **true** to prevent the rotation.|
 |[RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged)|[RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)|Triggers once when the annotation rotation operation completes.|
 
 
@@ -267,7 +267,7 @@ The annotation rotation change events are triggered when an annotation is rotate
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrRDmjkWfIRMiBL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationRotationChangeEvent.razor)
 
@@ -322,7 +322,7 @@ The following code example shows how to register and get notifications from the 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLxtRrHqFMJdiFC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrdZwNEspHjjpXm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/TextChangedEvent.razor)
 
