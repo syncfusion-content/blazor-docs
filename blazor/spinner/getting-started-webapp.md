@@ -127,7 +127,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Spinner
-@using Buttons
+@using Syncfusion.Blazor.Buttons
 
 {% endhighlight %}
 {% endtabs %}
@@ -243,6 +243,6 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTZCUjfzWlJVVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLxZmDgDmvEZPKp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spinner).

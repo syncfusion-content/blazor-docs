@@ -122,4 +122,4 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLeXzrApyBafWHl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVdDmtisvkVUGFo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
