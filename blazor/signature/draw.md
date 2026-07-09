@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Draw with Blazor Signature Component | Syncfusion
+title: Draw with Blazor Signature Component | Syncfusion®
 description: Checkout how to draw the text as a signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature

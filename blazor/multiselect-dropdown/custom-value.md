@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Value in Blazor MultiSelect Dropdown | Syncfusion
-description: Enable and use custom values in the Syncfusion Blazor MultiSelect Dropdown, including type handling, CustomValueSpecifier, filtering, and display modes.
+title: Custom Value in Blazor MultiSelect Dropdown | Syncfusion®
+description: Enable and use custom values in the Blazor MultiSelect Dropdown, including type handling, CustomValueSpecifier, filtering and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Value in Blazor MultiSelect Dropdown
 
-The Syncfusion Blazor [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started) component provides the **custom value** feature, which enables users to add values that are not present in the predefined data source. This is particularly useful in tag selectors, skill pickers, keyword inputs, and any scenario where the selection set is not fully known in advance.
+The Blazor [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started) component provides the **custom value** feature, which enables users to add values that are not present in the predefined data source. This is particularly useful in tag selectors, skill pickers, keyword inputs, and any scenario where the selection set is not fully known in advance.
 
 When a user types a value that does not match any existing item, the component creates a custom list item and places it at the top of the dropdown list. The user must then explicitly select this item from the dropdown to add it to the selection.
 

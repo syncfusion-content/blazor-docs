@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adding Custom value to the Blazor MultiColumn ComboBox | Syncfusion
-description: Checkout and learn here all about adding custom value in Syncfusion Blazor MultiColumn ComboBox component and much more.
+title: Adding Custom Value to Blazor MultiColumn ComboBox | Syncfusion®
+description: Checkout and learn here all about adding custom value in Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

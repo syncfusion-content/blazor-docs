@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Blazor SpeechToText Component | Syncfusion
+title: Events in Blazor SpeechToText Component | Syncfusion®
 description: Checkout and learn about Events in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeechToText

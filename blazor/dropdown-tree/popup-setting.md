@@ -49,7 +49,7 @@ In the following sample, the `PopupWidth` is set as `300px`.
 }
 ```
 
-![Blazor Dropdown Tree with customizing popup width](./images/blazor-dropdowntree-component-popup-width.PNG)
+![Blazor Dropdown Tree with customizing popup width](./images/blazor-dropdowntree-component-popup-width.webp)
 
 ## Change the popup height
 
@@ -89,7 +89,7 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
 }
 ```
 
-![Blazor Dropdown Tree with customizing popup height](./images/blazor-dropdowntree-component-popup-height.PNG)
+![Blazor Dropdown Tree with customizing popup height](./images/blazor-dropdowntree-component-popup-height.webp)
 
 ## Change the popup ZIndex
 
@@ -208,7 +208,7 @@ You can programmatically open and close the popup by accessing the [`ShowPopupAs
 }
 ```
 
-![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-open.PNG)
+![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-open.webp)
 
 ## Show popup on initial loading
 
@@ -251,7 +251,7 @@ You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/
     }
 }
 ```
-![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component.png)
+![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component.webp)
 
 ## Preventing opening and closing
 
@@ -301,4 +301,4 @@ Prevent the popup open and close in the event argument [PopupEventArgs.cancel](h
 }
 ```
 
-![Blazor Dropdown Tree with Preventing opening and closing](./images/blazor-dropdowntree-component-prevent-open.png)
+![Blazor Dropdown Tree with Preventing opening and closing](./images/blazor-dropdowntree-component-prevent-open.webp)

@@ -38,9 +38,7 @@ The following themes are available in the [Blazor components](https://www.syncfu
 |---|---|---|
 | High Contrast | `highcontrast.css` | Designed for accessibility-focused experiences |
 
-The `Bootstrap 3` theme is based on Bootstrap v3.
-
-N> The `Bootstrap 4` theme is based on Bootstrap v4, specifically v4.3. It is compatible with Bootstrap v4.6 applications, as there are no significant differences between v4.3 and v4.6 that affect Blazor components.
+N> The `Bootstrap 3` theme is based on Bootstrap v3. The `Bootstrap 4` theme is based on Bootstrap v4, specifically v4.3. It is compatible with Bootstrap v4.6 applications, as there are no significant differences between v4.3 and v4.6 that affect Blazor components.
 
 ## Optimized CSS themes
 
@@ -667,7 +665,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-libman)
 
 ## NPM package reference
 
-The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
+The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by [Blazor components](https://www.syncfusion.com/blazor-components). These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
 You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
@@ -856,10 +854,6 @@ Below table lists the importing theme path for the individual components.
         <td>@use 'blazor-themes/SCSS-Themes/calendars/datetimepicker/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
-        <td>Diagram</td>
-        <td>@use 'blazor-themes/SCSS-Themes/diagrams/diagram/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
         <td>Dialog</td>
         <td>@use 'blazor-themes/SCSS-Themes/popups/dialog/{THEME-NAME}.scss'</td>
     </tr>
@@ -886,10 +880,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>Floating Action Button</td>
         <td>@use 'blazor-themes/SCSS-Themes/buttons/floating-action-button/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
-        <td>Gantt Chart</td>
-        <td>@use 'blazor-themes/SCSS-Themes/gantt/gantt/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
         <td>In-place Editor</td>
@@ -956,10 +946,6 @@ Below table lists the importing theme path for the individual components.
         <td>@use 'blazor-themes/SCSS-Themes/inputs/slider/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
-        <td>RichTextEditor</td>
-        <td>@use 'blazor-themes/SCSS-Themes/richtexteditor/rich-text-editor/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
         <td>Scheduler</td>
         <td>@use 'blazor-themes/SCSS-Themes/schedule/schedule/{THEME-NAME}.scss'</td>
     </tr>
@@ -1018,10 +1004,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>TreeView</td>
         <td>@use 'blazor-themes/SCSS-Themes/navigations/treeview/{THEME-NAME}.scss'</td>
-    </tr>
-    <tr>
-        <td>Diagram(Classic)</td>
-        <td>@use 'blazor-themes/SCSS-Themes/diagrams/diagram/{THEME-NAME}.scss'</td>
     </tr>
 </table>
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular Blazor integration | Syncfusion
+title: Angular Blazor integration | Syncfusion®
 description: Learn how to host Angular components into a Blazor app by packaging them as Angular Custom Elements for seamless UI rendering.
 platform: Blazor
 control: Common
@@ -258,7 +258,7 @@ Once the compilation is complete, open your browser and navigate to the hosted l
 
 ### Angular build fails (Bundle Budget Exceeded)
 
-If the Angular build fails due to the bundle size exceeding the configured budget, consider importing only the *required modules, removing unused Angular features, avoiding wildcard imports, and enabling lazy loading* wherever possible. If the issue persists after these optimizations, increase the bundle budget limits in the `angular.json` file to accommodate the application size.
+If the Angular build fails due to the bundle size exceeding the configured budget, consider importing only the *required Syncfusion modules, removing unused Angular features, avoiding wildcard imports, and enabling lazy loading* wherever possible. If the issue persists after these optimizations, increase the bundle budget limits in the `angular.json` file to accommodate the application size.
 
 ## See also
 

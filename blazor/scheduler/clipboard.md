@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Clipboard in Blazor Scheduler Component | Syncfusion
-description: Learn here all about how to integrate the Clipboard manually to a Syncfusion Blazor Scheduler component and use it with required options.
+title: Clipboard in Blazor Scheduler Component | Syncfusion®
+description: Learn here all about how to integrate the Clipboard manually to a Blazor Scheduler component and use it with required options.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -17,7 +17,7 @@ N> The [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Cut, copy and paste using keyboard
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
+The Blazor Scheduler supports keyboard shortcuts to streamline the process of managing appointments.
 
 These keyboard shortcuts enable users to efficiently manage their schedules:
 
@@ -115,7 +115,7 @@ N> For Mac users, use **Cmd** instead of **Ctrl** for copy, cut, and paste opera
 
 You can programmatically manage appointments by using the public methods **cut**, **copy**, and **paste**. These methods allow you to perform the same actions as the context menu or external buttons.
 
-Utilize these public methods to manage appointments programmatically in Syncfusion<sup style="font-size:70%">&reg;</sup> Schedule:
+Utilize these public methods to manage appointments programmatically in Blazor Schedule:
 
 | Method          | Parameters                            | Description                                                        |
 |-----------------|---------------------------------------|--------------------------------------------------------------------|

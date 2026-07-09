@@ -830,7 +830,7 @@ public async Task<bool> BulkImportBooksAsync(List<Book> books)
 
 ### Step 9: Register Services in Program.cs
 
-The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Firestore service and Blazor components.
+The `Program.cs` file is where application services are registered and configured. This file must be updated to enable Firestore service and components.
 
 **Instructions:**
 

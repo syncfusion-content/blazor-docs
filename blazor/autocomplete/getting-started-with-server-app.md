@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started Blazor AutoComplete in Blazor Server App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Server App.
+title: Getting Started with Blazor AutoComplete in Server App | Syncfusion
+description: Check out and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Server App.
 platform: Blazor
 component: AutoComplete
 documentation: ug
 ---
 
-# Getting Started with Blazor AutoComplete in Blazor Server App
+# Getting started with Blazor AutoComplete in Blazor Server App
 
 This section briefly explains about how to include [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor Server App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorApp --interactivity Server
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +118,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight csharp tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
@@ -155,8 +157,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor AutoComplete component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component inside the razor file.
@@ -173,7 +173,8 @@ N>If the interactivity location is set to `Per page/component`, define a render 
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
-@code {
+@code 
+{
 
     public class Country
     {
@@ -193,7 +194,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -250,8 +251,8 @@ After initialization, populate the AutoComplete with data using the [DataSource]
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
-@code {
-
+@code 
+{
     public class Country
     {
         public string Name { get; set; }
@@ -304,5 +305,5 @@ By default, the suggestion list width automatically matches the AutoComplete inp
 
 ## See also
 
-* [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)

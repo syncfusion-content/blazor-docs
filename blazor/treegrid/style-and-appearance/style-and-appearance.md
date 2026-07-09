@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Styling and Appearance in Blazor TreeGrid Component | Syncfusion
-description: Learn to customize the Syncfusion Blazor TreeGrid using CSS and Theme Studio, including headers, rows, alternate rows, and styling options.
+title: Styling and Appearance in Blazor TreeGrid Component | Syncfusion®
+description: Learn to customize the Blazor TreeGrid using CSS and Theme Studio, including headers, rows, alternate rows, and styling options.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Style and appearance in Syncfusion Blazor TreeGrid
+# Style and appearance in Blazor TreeGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
+The Blazor TreeGrid supports visual customization using CSS and theme-based styling. Styles can be applied to various elements to match the application's design. Styling options are available for:
 
 - **TreeGrid root element:** Defines the overall appearance of the TreeGrid container.
 - **Alternate rows:** Applies styles to alternate rows for improved readability.
@@ -150,7 +150,7 @@ Additional styling can be applied to rows, alternate rows, selected rows, and ho
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhdjfhhTZDovGda?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBxjcDFJiPhfopY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize alternate rows
 
@@ -218,11 +218,11 @@ Adjust properties like **background-color**, **font-family**, and **border** to 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVHZTLLfZmyOSzU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrRXwZPzsvcyTpL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the color of grid lines
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
+The Blazor TreeGrid allows customization of grid lines to match application design requirements. Apply CSS to structural elements such as header cells, row cells, and the grid container to control color, thickness, and border style.
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GridLines) property defines border visibility and supports options for `Horizontal`, `Vertical`, `Both`, or `None`.
 
@@ -292,4 +292,4 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhnZzBhpMMBfcws?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLnNcZPTMYTdPaP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor QueryBuilder component and more.
+title: Styles and Appearances in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about Styles and Appearances in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -71,7 +71,7 @@ The rules region below the header uses `.e-group-body .e-rule-container`. Adjust
 
 ## AND / OR Button Group Customization
 
-The connector toggle is a Syncfusion button group. The two visible buttons are the labels `.e-btngroup-and-lbl` and `.e-btngroup-or-lbl`; the active label is selected via the `:checked + label` sibling selector against the hidden radios `.e-btngroup-and` / `.e-btngroup-or`. Use these to style the unselected, hover and selected states.
+The connector toggle is a Blazor button group. The two visible buttons are the labels `.e-btngroup-and-lbl` and `.e-btngroup-or-lbl`; the active label is selected via the `:checked + label` sibling selector against the hidden radios `.e-btngroup-and` / `.e-btngroup-or`. Use these to style the unselected, hover and selected states.
 
 ```css
 .e-query-builder .e-group-header .e-btn.e-btngroup-and-lbl,

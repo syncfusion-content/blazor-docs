@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Query Processing with Blazor Query Builder and AI models | Syncfusion
-description: Learn how to use the Syncfusion Blazor Query Builder with OpenAI, Azure OpenAI, or Ollama to automatically organize hierarchical data. Explore to more details.
+title: Query Processing with Blazor Query Builder and AI models | Syncfusion®
+description: Learn how to use Blazor Query Builder with OpenAI, Azure OpenAI, or Ollama to automatically organize hierarchical data with examples and much more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor Query Builder, AI query processing, Syncfusion Blazor AI
+keywords: Blazor Query Builder, AI query processing, Blazor AI
 --- 
 
 # Query Processing with Blazor Query Builder and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatically generate the database queries in a Syncfusion Blazor Query Builder component.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatically generate the database queries in a Blazor Query Builder component.
 
 ## Prerequisites
 
@@ -274,13 +274,13 @@ var app = builder.Build();
 
 - **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor Web App.
+Register the Blazor Service in the **~/Program.cs** file of the Blazor Web App.
 
-If the **Interactive Render Mode** is set to `Server`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, register the Blazor service in the **~/Program.cs** file.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/Program.cs** files of the main server project and associated .Client project.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in the **~/Program.cs** files of the main server project and associated .Client project.
 
 {% tabs %}
 {% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
@@ -313,7 +313,7 @@ await builder.Build().RunAsync();
 
 ### AI-powered Query Builder Natural Language Query Processing
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Query Builder component in the **~Pages/Home.razor** file.
+Add the Blazor Query Builder component in the **~Pages/Home.razor** file.
 
 The **Natural Language Querying** feature in the Query Builder allows users to construct complex queries using plain, everyday language. Instead of relying on technical query syntax, users can simply type their questions or requests as they would naturally speak them. This feature interprets the intent and generates the corresponding query, making data retrieval more accessible to non-technical users.
 
@@ -511,7 +511,7 @@ Explore the AI-powered Smart Query Builder in action by visiting the live demo:
 
 👉 [Try the Live Demo](https://blazor.syncfusion.com/demos/query-builder/ai-natural-languagequery?theme=fluent2)
 
-N> A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
+N> A complete working example is available in the [Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
 
 ## How it Works
 

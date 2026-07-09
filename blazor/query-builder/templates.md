@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Templates in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about templates in Syncfusion Blazor QueryBuilder component and much more.
+title: Templates in Blazor QueryBuilder Component | Syncfusion®
+description: Checkout and learn here all about templates in Blazor QueryBuilder component with examples and much more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
