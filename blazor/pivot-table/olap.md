@@ -1,7 +1,7 @@
 ---
 layout: post
-title: OLAP in Blazor Pivot Table component | Syncfusion
-description: Checkout and learn here all about OLAP in Syncfusion Blazor Pivot Table component and much more details.
+title: OLAP in Blazor Pivot Table Component | Syncfusion®
+description: Learn about OLAP data source support in Blazor Pivot Table component with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -14,15 +14,15 @@ documentation: ug
 
 ## Getting started
 
-This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
+This section explains how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) using an OLAP data source. For details on setting up a Blazor application, refer to the [Getting started with Blazor for client-side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) guide, which covers the initial setup and configuration steps.
 
-### Adding the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component package
+### Adding the Blazor component package
 
 To use the Pivot Table, install the **Syncfusion.Blazor** NuGet package in your application using the NuGet Package Manager. Make sure to select the **Include prerelease** option to access the latest package versions.
 
 ### Setting up the Pivot Table component
 
-You can add the Syncfusion<sup style="font-size:70%">&reg;</sup> Pivot Table component to any Razor page in the `~/Pages` folder. In this example, the component is added to the `~/Pages/Index.razor` page. If the `Index.razor` page contains default content, remove it and add the following code to initialize the Pivot Table.
+You can add the Pivot Table component to any Razor page in the `~/Pages` folder. In this example, the component is added to the `~/Pages/Index.razor` page. If the `Index.razor` page contains default content, remove it and add the following code to initialize the Pivot Table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

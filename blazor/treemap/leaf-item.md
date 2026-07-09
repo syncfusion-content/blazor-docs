@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaf Item in Blazor TreeMap Component | Syncfusion
-description: Checkout and learn here all about Leaf Item in Syncfusion Blazor TreeMap component and much more details.
+title: Leaf Item in Blazor TreeMap Component | Syncfusion®
+description: Checkout and learn here all the features Leaf Item in Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug

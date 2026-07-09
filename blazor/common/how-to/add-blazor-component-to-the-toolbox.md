@@ -13,11 +13,11 @@ This guide explains how to add Blazor component snippets to the Visual Studio To
 
 To include components for Blazor in the Toolbox, follow these steps:
 
-1. Right-click anywhere within the Visual Studio Toolbox, select **Add Tab**, then name the tab (for example, "Syncfusion Blazor Components") and press Enter.
+1. Right-click anywhere within the Visual Studio Toolbox, select **Add Tab**, then name the tab (for example, "Blazor Components") and press Enter.
 
 ![Add new tab in toolbox](images/new-tab-toolbox.webp)
 
-2. In the code editor, write or paste a Blazor component snippet (for example, `SfCalendar`). Select the entire snippet, then drag and drop it into the new tab in the Toolbox.
+2. In the code editor, write or paste a Blazor component snippet (for example, the `SfCalendar`). Select the entire snippet, then drag and drop it into the new tab in the Toolbox.
 
 ![Add code snippet to toolbox](images/add-snippet.webp)
 

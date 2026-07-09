@@ -56,7 +56,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLHXRiIgPLmJsJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Bubble Chart](../images/chart-types-images/blazor-bubble-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVfZlVZAFsaTHgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Bubble Chart](../images/chart-types-images/blazor-bubble-chart.webp)" %}
 
 N> Refer to the [Blazor Bubble Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations and also explore the [Blazor Bubble Chart Example](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap5) to know how to render and configure the bubble type charts.
 
@@ -107,7 +107,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthntHCeqFUtCIPZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVfZlVZAFsaTHgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
@@ -160,7 +160,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhdjHMoAFKfIESA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJjFLDKFITLPEy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the bubble series. By configuring this property with gradient values will create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -216,7 +216,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLHNdWyAlKcXfvq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBfZlVjgFdRuSQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Opacity**
 
@@ -266,7 +266,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxZRMSAlJCHoPy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpNbhjgvPifngh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Bubble size mapping
 
@@ -316,7 +316,7 @@ The [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhRNdMoqbJTTDLC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLfZPVXqYFMgJrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
 
@@ -370,7 +370,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhRZnieAPfmPFbF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrTZbhZqkBHEzZc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
 
@@ -421,7 +421,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrRjxWeglSMFShc?appbar=false&editor=false&result=false&errorlist=true&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLJjlrjqEAmyrpm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
@@ -473,7 +473,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrnNHiSUvdFjRgJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfNFBNAEzlQWwl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -530,7 +530,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLRjnCyqlSkdJqC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBJNbhjgEOdityZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -585,7 +585,7 @@ Use the [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxXxiIUbdVMHTl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBJtFhNpNKNdooM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

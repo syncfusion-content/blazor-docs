@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Numeric TextBox component and more.
+title: Style and appearance in Blazor Numeric TextBox Component | Syncfusion®
+description: Learn how to customize the style and appearance of Blazor Numeric TextBox with CSS for container elements, icons, and visual polish.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

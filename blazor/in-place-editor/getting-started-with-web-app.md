@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor In-place Editor in Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor In-place Editor Component in Blazor Web App.
+title: Getting Started with Blazor In-place Editor in Web App | Syncfusion®
+description: Check out and learn about the documentation for getting started with Blazor In-place Editor component in Blazor Web App.
 platform: Blazor
 component: In-place Editor
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor In-place Editor in Blazor Web App
 
-This section briefly explains about how to include [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -122,7 +122,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.InPlaceEditor` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.InPlaceEditor
@@ -161,8 +161,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor In-place Editor component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component inside the razor file.
@@ -173,6 +171,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
+
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -193,7 +192,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
     </tr>
 </table>
 
-@code {
+@code 
+{
     public string TextValue = "Andrew";
 }
 
@@ -202,7 +202,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 N> Specify the editor [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) when using non-default editors (for example, `DropDownList`, `Date`, or `AutoComplete`). Configure two-way binding between the In-place Editor and its editor component to synchronize values.
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -214,7 +214,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the terminal and navigate to the server project folder (for example, `BlazorWebApp`) then run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -230,7 +230,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the command prompt and navigate to the server project folder (for example, `BlazorWebApp`) then run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -246,7 +246,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhJtMLkzWvWaMvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor Component](images/blazor-inplace-editor-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhxtwNqUsIyzhgE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor In-place Editor Component](images/blazor-inplace-editor-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/InPlaceEditor).
 
@@ -279,7 +279,8 @@ The following code explains how to initialize a simple In-place Editor with popu
     </tr>
 </table>
 
-@code {
+@code 
+{
     public string AutoValue = "Australia";
 
     public class Countries
@@ -300,9 +301,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhIXOjhAIsuBPDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.gif)" %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZryjkXLAeqHmuVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVnNmZKKVeHyUHX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.webp)" %}
 
 ## Configuring DropDownList
 
@@ -316,13 +315,14 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
 
 <SfInPlaceEditor @bind-Value="@DropdownValue" Type="Syncfusion.Blazor.InPlaceEditor.InputType.DropDownList" TValue="string">
     <EditorComponent>
-        <SfDropDownList TValue="string" TItem="Games"  @bind-Value="@DropdownValue" Placeholder="Select a game" DataSource="@LocalData">
+        <SfDropDownList TValue="string" TItem="Games" @bind-Value="@DropdownValue" Placeholder="Select a game" DataSource="@LocalData">
             <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
         </SfDropDownList>
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code 
+{
     public string DropdownValue = "Game4";
 
     public class Games
@@ -331,17 +331,18 @@ Render the Blazor DropDownList by changing the [Type](https://help.syncfusion.co
         public string Text { get; set; }
     }
     List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
-  };
+        new Games() { ID = "Game1", Text = "American Football" },
+        new Games() { ID = "Game2", Text = "Badminton" },
+        new Games() { ID = "Game3", Text = "Basketball" },
+        new Games() { ID = "Game4", Text = "Cricket" },
+        new Games() { ID = "Game5", Text = "Football" },
+        new Games() { ID = "Game6", Text = "Golf" },
+        new Games() { ID = "Game7", Text = "Hockey" },
+        new Games() { ID = "Game8", Text = "Rugby" },
+        new Games() { ID = "Game9", Text = "Snooker" },
+        new Games() { ID = "Game10", Text = "Tennis" }
+    };
+
 }
 
 {% endhighlight %}
@@ -363,9 +364,9 @@ Render the Blazor `DatePicker` by changing the `Type` property to `Date` and con
     </EditorComponent>
 </SfInPlaceEditor>
 
-@code {
+@code
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-
 }
 
 {% endhighlight %}
@@ -440,7 +441,8 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
             }
 </style>
 
-@code {
+@code 
+{
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
     public string TextValue = "Andrew";
     public string DropdownValue = "Male";
@@ -452,15 +454,15 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
     }
     List<Gender> dropdownData = new List<Gender>()
     {
-        new Gender(){ text= "Male" },
-        new Gender(){ text= "Female" }
+        new Gender() { Text = "Male" },
+        new Gender() { Text = "Female" }
     };
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpDiBOpBgAmQAj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVnZcNgUAYMlbOy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.webp)" %}
 
 ## Submitting data to the server (save)
 
@@ -530,7 +532,8 @@ After submit, the edited data is sent to the server, and the updated value is re
     }
 </style>
 
-@code {
+@code 
+{
     SfInPlaceEditor<string> InPlaceObj;
     public string PreviousValue { get; set; }
     public string DropdownValue = "Andrew";
@@ -571,7 +574,7 @@ After submit, the edited data is sent to the server, and the updated value is re
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli)
 2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=.net-cli)
 

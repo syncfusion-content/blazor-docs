@@ -22,8 +22,8 @@ Before implementing theme switching, ensure you have created your Blazor applica
 
 All theme switching implementations for both Blazor Web App and Blazor WebAssembly Standalone App require the following NuGet packages:
 
-1. **[Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns)** - For the theme switcher dropdown component
-2. **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)** - For the sample DataGrid component to demonstrate theme changes
+1. **[Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns)** - For the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component
+2. **[Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)** - For the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to demonstrate theme changes
 3. **[Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)** - For the theme stylesheet assets used by the sample
 
 Install these packages using one of the following methods.

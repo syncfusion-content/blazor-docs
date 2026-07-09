@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Sidebar to MainLayout of the .NET 8 Blazor Web app | Syncfusion
+title: Add Sidebar to MainLayout of the .NET 8 Blazor Web app | Syncfusion®
 description: Learn here all about how to render the Sidebar component in the MainLayout page of the .NET 8 Blazor Web application and more.
 platform: Blazor
 control: Sidebar

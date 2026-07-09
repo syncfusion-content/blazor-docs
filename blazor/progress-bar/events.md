@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor ProgressBar component and much more details.
+title: Events in Blazor ProgressBar Component | Syncfusion®
+description: Learn about events in Blazor ProgressBar component with examples for tracking progress changes and much more details.
 platform: Blazor
 control: Progress Bar 
 documentation: ug

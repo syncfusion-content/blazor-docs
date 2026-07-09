@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Tooltip in Blazor Web App | Syncfusion
+title: Getting Started with Tooltip in Blazor Web App | Syncfusion®
 description: Check out and learn the documentation for getting started with Blazor Tooltip Components in Blazor Web App.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Getting Started with Blazor Tooltip Component in Blazor Web App
+# Getting started with Blazor Tooltip component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -17,7 +17,7 @@ This section briefly explains about how to include [Blazor Tooltip](https://www.
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
 
@@ -35,7 +35,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -159,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor Tooltip component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component inside the razor file.
@@ -172,7 +170,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
@@ -181,7 +178,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @code
 {
-    string Content = "Lets go green & Save Earth !!";
+    string Content = "Let's go green & Save Earth !!";
 }
 
 {% endhighlight %}
@@ -192,6 +189,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Run the application
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor Tooltip component will render in your default web browser.
 
@@ -231,7 +230,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLJNWgNzHwucLWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHNGZrgxTUeScj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip-component.webp)" %}
 
 N> The Tooltip component in our system uses the HTML element's id or class name to identify the target for the tooltip. However, when using a GUID as the target ID, it is not able to recognize IDs that start with a digit.
 
@@ -239,16 +238,12 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-* [Positioning Tooltip](./position)
+1. [Positioning Tooltip](./position)
 
-* [Tooltip Open Mode](./open-mode)
+2. [Tooltip Open Mode](./open-mode)
 
-* [Customize the Tooltip](./customization)
+3. [Customize the Tooltip](./customization)
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+4. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-* [Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-
-N> You can also explore our [Blazor Tooltip example](https://blazor.syncfusion.com/demos/tooltip/default?) that shows you how to render and configure the tooltip
+5. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

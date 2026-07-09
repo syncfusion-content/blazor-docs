@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Time Range in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about Time Range in Syncfusion Blazor TimePicker component and much more.
+title: Time Range in Blazor TimePicker Component | Syncfusion®
+description: Checkout and learn here all the features about Time Range in Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug

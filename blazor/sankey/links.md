@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Links for Blazor Sankey Diagram | Syncfusion
+title: Links for Blazor Sankey Diagram | Syncfusion®
 description: Learn how to define and configure links in the Blazor Sankey Diagram to represent connections between nodes.
 platform: Blazor
 control: Sankey

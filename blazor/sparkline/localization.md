@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in Blazor Sparkline Charts Component | Syncfusion
-description: Learn about localization support in the Syncfusion Blazor Sparkline Charts component, including culture and RTL settings.
+title: Localization in Blazor Sparkline Charts Component | Syncfusion®
+description: Learn about localization support in the Blazor Sparkline Charts component, including culture and RTL settings.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

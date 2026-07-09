@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hide empty headers in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about how to hide empty headers in Syncfusion Blazor Pivot Table component and more.
+title: Hide Empty Headers in Blazor Pivot Table Component | Syncfusion®
+description: Learn how to hide empty headers in Blazor Pivot Table component with detailed examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

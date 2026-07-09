@@ -13,7 +13,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 **Supported Adaptors**
 
-Multiple adaptors to integrate the DataGrid with various server protocols and APIs. Each adaptor works with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to manage data operations and automatically trigger CRUD actions based on Grid interactions. Backend services must implement appropriate endpoints to handle these requests.
+The Syncfusion® provides multiple adaptors to integrate the DataGrid with various server protocols and APIs. Each adaptor works with [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to manage data operations and automatically trigger CRUD actions based on Grid interactions. Backend services must implement appropriate endpoints to handle these requests.
 
 **UrlAdaptor**
 

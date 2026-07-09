@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Responsive Modes in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about responsive modes in Syncfusion Blazor Tabs component and much more.
+title: Responsive Modes in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about responsive modes in Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -23,11 +23,11 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 * By default, navigation icon in the left direction is disabled, you can see the overflowed items by moving in the right direction.
 * By clicking the arrow or by holding the arrow continuously, you can see the overflowed items.
 
-![Scrolling in Blazor Tabs](images/blazor-tabs-scroll.gif)
+![Scrolling in Blazor Tabs](images/blazor-tabs-scroll.webp)
 
 * In devices the navigation icons are not available. You can touch and swipe to see the overflowed items of the Tab header.
 
-![Touch Scroll in Blazor Tabs](images/blazor-tabs-touch-scroll.gif)
+![Touch Scroll in Blazor Tabs](images/blazor-tabs-touch-scroll.webp)
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -78,7 +78,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfTab>
 ```
 
-![Scrolling in Blazor Tabs](./images/blazor-tabs-scrolling.png)
+![Scrolling in Blazor Tabs](./images/blazor-tabs-scrolling.webp)
 
 ## Popup
 
@@ -88,7 +88,7 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 
 * If the popup height exceeds the height of the visible area, you can scroll through the popup items and select one.
 
-![Blazor Tabs with Popup](images/blazor-tabs-popup.gif)
+![Blazor Tabs with Popup](images/blazor-tabs-popup.webp)
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -139,4 +139,4 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 </SfTab>
 ```
 
-![Blazor Tabs with Popup](./images/blazor-tabs-popup.png)
+![Blazor Tabs with Popup](./images/blazor-tabs-popup.webp)

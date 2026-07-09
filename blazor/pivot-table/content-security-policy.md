@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pivot Table - Strict CSP Feature Limitations - Syncfusion
-description: Details on Syncfusion Blazor features in Pivot Table that require Content Security Policy (CSP) relaxation.
+title: Pivot Table - Strict CSP Feature Limitations | Syncfusion®
+description: Details on Blazor Pivot Table features that require Content Security Policy (CSP) relaxation and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -90,4 +90,4 @@ Include `'unsafe-inline'` if you need Pivot Chart view, conditional formatting, 
 
 ## See also
 
-* [Content security policy in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)
+* [Content security policy in Blazor components](https://blazor.syncfusion.com/documentation/common/content-security-policy)

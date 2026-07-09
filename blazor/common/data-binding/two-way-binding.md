@@ -47,7 +47,6 @@ The following Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 * [Input Mask](https://blazor.syncfusion.com/documentation/input-mask/data-binding)
 * [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/data-binding)
 * [Numeric TextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/data-binding)
-* [RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/data-binding)
 * [Splitter](https://blazor.syncfusion.com/documentation/splitter/two-way-binding)
 * [TextBox](https://blazor.syncfusion.com/documentation/textbox/data-binding)
 * [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/data-binding)

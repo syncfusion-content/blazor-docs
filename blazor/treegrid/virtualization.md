@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor TreeGrid Component | Syncfusion
-description: Learn how to optimize large data rendering using virtualization features in Syncfusion Blazor TreeGrid component.
+title: Virtualization in Blazor TreeGrid Component | Syncfusion®
+description: Learn how to optimize large data rendering using virtualization features in Blazor TreeGrid component.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -335,7 +335,7 @@ By default, the TreeGrid renders twice as many records as the defined height per
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVHXBLThJiOQFnr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVdtctlpKXixSun?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> When the OverscanCount is set to 5, five buffer rows are rendered on the first and last pages. In between pages, a total of ten buffer rows (five before and five after) are rendered around the visible rows.
 

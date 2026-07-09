@@ -52,7 +52,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhRDHCLysdCeIuP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Waterfall Chart](../images/othertypes/blazor-waterfall-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzNbVjepXCmPUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Waterfall Chart](../images/othertypes/blazor-waterfall-chart.webp)" %}
 
 N> Explore the [Blazor Waterfall Chart Example](https://blazor.syncfusion.com/demos/chart/waterfall?theme=bootstrap5) to know how to render and configure the Waterfall type chart.
 
@@ -99,7 +99,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBdZxWLIsnSbonu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzNbVjepXCmPUR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization 
 
@@ -145,7 +145,7 @@ The negative changes of waterfall charts are represented by using [NegativeFillC
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrxjHMLSMwZKzGF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhTtuiqSypahHvu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Corner radius
 
@@ -189,7 +189,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhdtxsBoiwxaGyi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBINztpgOESJjZh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.webp)" %}
 
 Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -242,7 +242,7 @@ Customize the corner radius for individual points in the chart series using the 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBdXRsLoCFTkiLm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Waterfall Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-waterfall-chart-corner-radius-onPointRender.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrSZfDfpXVcpRWL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Waterfall Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-waterfall-chart-corner-radius-onPointRender.webp)" %}
 
 ## Empty points
 
@@ -292,7 +292,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthnZHCreWkCTHcl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhptlBXopnVPtmr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
 
@@ -338,7 +338,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVnNHCrIMaylXLp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLTXlVNSzGeHAIC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
@@ -386,7 +386,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLHXRMhSVNijbaN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrJNvBZIJlcWPCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -439,7 +439,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrdDdsVyhZRSkVt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhpZvrtIHLqzmYX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -490,7 +490,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnXnMLeBWgBnvV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJtbVtIdfizCZu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

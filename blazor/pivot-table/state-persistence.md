@@ -1,7 +1,7 @@
 ---
 layout: post
-title: State Persistence in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about state persistence in Syncfusion Blazor Pivot Table component and more.
+title: State Persistence in Blazor Pivot Table Component | Syncfusion®
+description: Learn about state persistence in Blazor Pivot Table component for retaining configuration with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
