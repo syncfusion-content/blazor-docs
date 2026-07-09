@@ -96,7 +96,7 @@ The File Upload component supports resumable uploads, allowing users to pause an
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBSCiBHpPMIERUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVxNwNaphVsZxeQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Preview
 
@@ -143,7 +143,7 @@ If an upload fails (e.g., due to server error), the pause icon transforms into a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSiiVdpPBHTykT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhHNQNaprVpXebg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Preview
 
@@ -381,4 +381,4 @@ The Blazor Uploader component provides several events specific to chunk upload o
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhoiCrRfOPSTmJm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrdDwjkJVrYILdF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
