@@ -264,7 +264,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJXWqjfqKBvkdq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Charts](./images/blazor-sparkline.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVdDQDRtmNUMSyI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Charts](./images/blazor-sparkline.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sparkline).
 
@@ -288,7 +288,7 @@ Change the Sparkline Charts type using the [Type](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLTtsqNTqqdYsqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Area Chart](./images/blazor-area-sparkline.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBdZcZdNmrZAISz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Area Chart](./images/blazor-area-sparkline.webp)" %}
 
 N> Refer to [code block](#populate-blazor-sparkline-charts-with-data) to know about the property value of the **ClimateData**.
 
@@ -324,7 +324,7 @@ Available types are:
 
 N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJXsqtfqzDdTTI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Charts with Data Label](./images/blazor-sparkline-data-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVRXGjdtQApBCIY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Charts with Data Label](./images/blazor-sparkline-data-label.webp)" %}
 
 ## Enable tooltip
 
@@ -350,7 +350,7 @@ When space constraints prevent from displaying information using Data Labels, th
 
 N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLfDsUNfgJpNFjr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Charts with Tooltip](./images/blazor-sparkline-tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBHNmNdXmcKOFsY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Charts with Tooltip](./images/blazor-sparkline-tooltip.webp)" %}
 
 ## See also
 
