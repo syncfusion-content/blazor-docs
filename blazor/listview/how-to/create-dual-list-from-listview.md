@@ -258,4 +258,4 @@ The following example demonstrates how to manipulate data between two ListView c
 </style>
 ```
 
-![Displaying Dual List in Blazor ListView](../images/list/blazor-listview-with-dual-list.png)
+![Displaying Dual List in Blazor ListView](../images/list/blazor-listview-with-dual-list.webp)

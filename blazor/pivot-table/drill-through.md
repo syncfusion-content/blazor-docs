@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drill Through in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about drill through in Syncfusion Blazor Pivot Table component and more.
+title: Drill Through in Blazor Pivot Table Component | Syncfusion®
+description: Learn about drill through feature in Blazor Pivot Table component to view raw data with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

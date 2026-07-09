@@ -56,7 +56,7 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhnNniyzESblqnr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stacked Column100 Chart](../images/chart-types-images/blazor-stacked-column-100-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfZusKfwGsxziN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stacked Column100 Chart](../images/chart-types-images/blazor-stacked-column-100-chart.webp)" %}
 
 N> Refer to the [Blazor 100% Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor 100% Stacked Column Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-column?theme=bootstrap5) to know how to render and configure the 100% Stacked Column type chart.
 
@@ -107,7 +107,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrnNRCyTYdrHhbs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfZusKfwGsxziN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
@@ -160,7 +160,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhRZnWeJkHSrFqa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJZEMqpcuWJVqq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the 100% stacked column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -244,7 +244,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLHDxsefYdQTnQk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLpjuMAzvXXBMPY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Opacity**
 
@@ -293,7 +293,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBxNRMSzYROPFjN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhzNEWUfbhCGWta?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DashArray**
 
@@ -346,7 +346,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhHDxWyTacVDDCd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLfNkWqJvLPaVvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Series Border**
 
@@ -399,7 +399,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthnXnWefuQSuSGu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLfNkWqJvLPaVvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Corner radius
 
@@ -451,7 +451,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBHXRMopumbBjUv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Stacked Column 100 Chart with corner radius](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrytzZpqmFAhCEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Stacked Column 100 Chart with corner radius](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius.webp)" %}
 
 Customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -508,7 +508,7 @@ Customize the corner radius for individual points in the chart series using the 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrHDdMofElDqCaR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Stacked Column 100 Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius-onPointRender.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjroXTtTUvBXPRDt?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Stacked Column 100 Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius-onPointRender.webp)" %}
 
 ## Empty points
 
@@ -563,7 +563,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVdtRWIJEvUfXmj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVTDOsUTvSZFJrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
 
@@ -614,7 +614,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrntRsefOPySIQM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftOigTlvMAcAr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
@@ -667,7 +667,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBHDdWeJYvQmFTF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBzjOiKJPvwwvgy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Stack labels
 
@@ -737,7 +737,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLRjdMITkuXBGmh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrSNdhdTtoODqWV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customization
 
@@ -834,7 +834,7 @@ Customize the border of the stack labels using the [ChartStackLabelBorder](https
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrxZdCofOkBnVJx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjByDnrnpjdwQmCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -905,7 +905,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLHZHiIpaEkHRlC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrfXEWAJvYesKuJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -952,7 +952,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVnXnCofOOeRyeF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLzjOsUzYZXkqsk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

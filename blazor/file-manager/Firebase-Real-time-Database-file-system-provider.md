@@ -21,11 +21,11 @@ Follow the given steps to generate the secret access key:
 
 * In the new dialog window, click the **Other service account** option to navigate to the Google service accounts console to generate the secret key.
 
-![Blazor File Manager displays File System Authentication](images/blazor-filemanager-file-system.png)
+![Blazor File Manager displays File System Authentication](images/blazor-filemanager-file-system.webp)
 
 * Now, open the Firebase service project from the Google services console, and generate a Secret key.
 
-![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key.png)
+![Generating Key for Service Project in Blazor FileManager](images/blazor-filemanager-generate-key.webp)
 
 * After generating the secret key, replace secret key JSON in the access_key.json file in the Firebase Real time Database provider project to enable authentication for performing read and write operations.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Template in Syncfusion Blazor TreeView component and much more details.
+title: Template in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Template in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -163,7 +163,7 @@ In the following sample, employee information such as employee photo, name, and 
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrICtCABhRfFWww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Template](./images/blazor-treeview-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrICtCABhRfFWww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Template](./images/blazor-treeview-template.webp)" %}
 
 ## Apply Template to Header
 
@@ -324,4 +324,4 @@ The Blazor TreeView component provides the ability to customize the appearance o
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htheCZiqVVQMJDpI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Header Template](./images/blazor-treeview-template-header.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htheCZiqVVQMJDpI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Header Template](./images/blazor-treeview-template-header.webp)" %}

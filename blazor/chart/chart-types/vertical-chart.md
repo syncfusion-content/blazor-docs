@@ -44,7 +44,7 @@ One can draw a vertical chart by changing the axis orientation, and all series t
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLRZHMBeLsOkQPq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Vertical Spline Chart](../images/othertypes/blazor-vertical-spline-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrzXFhjSvWwRZBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Vertical Spline Chart](../images/othertypes/blazor-vertical-spline-chart.webp)" %}
 
 ## Binding data with series
 
@@ -81,7 +81,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhdXxWBILVIDJEo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrzXFhjSvWwRZBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Empty points
 
@@ -124,7 +124,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrnDxsBIrhkxwft?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLTXvhXoPpvTSiM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 **Fill**
 
@@ -163,7 +163,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxZxCVeLASSsbV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBzDbhNyvnMrQhi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 **Border**
 
@@ -204,7 +204,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthntnsheBftGcYJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBpXvrDyvQhZCyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Events
 
@@ -249,7 +249,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVHXRsBeLToFsUO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLTDFLZSllvdqCl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Point render
 
@@ -293,7 +293,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVdXxsrSrpbyEKM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrztlLNoFEcaytl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

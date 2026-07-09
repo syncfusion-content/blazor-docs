@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Legend in Syncfusion Blazor Smith Chart component and much more details.
+title: Legend in Blazor Smith Chart Component | Syncfusion®
+description: Checkout and learn here all the features about Legend in Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug

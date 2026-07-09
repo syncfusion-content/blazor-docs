@@ -31,7 +31,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 
 
-![Blazor File Manager with Multiple Selection](images/blazor-filemanager-multi-selection.png)
+![Blazor File Manager with Multiple Selection](images/blazor-filemanager-multi-selection.webp)
 
 ## Getting Selected Files
 

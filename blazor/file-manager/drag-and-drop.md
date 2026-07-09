@@ -42,4 +42,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 
 
-![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)
+![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.webp)

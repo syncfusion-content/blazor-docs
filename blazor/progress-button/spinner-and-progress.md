@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spinner and Progress in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about spinner and progress in Syncfusion Blazor ProgressButton component and more.
+title: Spinner and Progress in Blazor ProgressButton Component | Syncfusion®
+description: Learn about spinner and progress in Blazor ProgressButton component with examples and much more details.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -107,7 +107,7 @@ The progress can be visualized at the specified interval by changing the [Step](
 }
 
 ```
-![Changing Step of Blazor ProgressButton](./images/blazor-progressbutton-step.png)
+![Changing Step of Blazor ProgressButton](./images/blazor-progressbutton-step.webp)
 
 N> The class `e-hide-spinner` hides the spinner in the Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
 
@@ -144,7 +144,7 @@ The progress state can be changed dynamically by modifying the [Percent](https:/
 }
 
 ```
-![Changing Blazor ProgressButton State](./images/blazor-progressbutton-state.png)
+![Changing Blazor ProgressButton State](./images/blazor-progressbutton-state.webp)
 
 ### Start and Stop Methods
 
@@ -208,7 +208,7 @@ You can pause and resume the progress using the [StopAsync](https://help.syncfus
 </style>
 
 ```
-![Blazor ProgressButton displays Start and Stop Process](./images/blazor-progressbutton-start-stop-process.png)
+![Blazor ProgressButton displays Start and Stop Process](./images/blazor-progressbutton-start-stop-process.webp)
 
 ### EndProgressAsync Method
 

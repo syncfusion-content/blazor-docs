@@ -9,7 +9,7 @@ documentation: ug
 
 # Enable Touch Friendly Size Modes in Blazor
 
-Blazor components support two size modes: **normal** and **touch** (bigger theme). The touch mode provides larger, touch-friendly UI elements for better accessibility on touch devices.
+[Blazor components](https://www.syncfusion.com/blazor-components) support two size modes: **normal** and **touch** (bigger theme). The touch mode provides larger, touch-friendly UI elements for better accessibility on touch devices.
 
 ## Set the size mode for the application
 

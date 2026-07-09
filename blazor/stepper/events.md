@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in Blazor Stepper Component | Syncfusion
+title: Events in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Events with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper

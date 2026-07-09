@@ -185,4 +185,4 @@ ListDataModel item = context as ListDataModel;
 
 ```
 
-![Blazor ListView with Mobile Contact Layout](../images/list/blazor-listview-mobile-contact-layout.png)
+![Blazor ListView with Mobile Contact Layout](../images/list/blazor-listview-mobile-contact-layout.webp)

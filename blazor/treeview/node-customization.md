@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node customization in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Node customization in Syncfusion Blazor TreeView component and much more details.
+title: Node customization in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Node customization in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -613,7 +613,7 @@ The TreeView component provides a straightforward way to enable tooltips for tre
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVIsDigMkgFfzRJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip in Blazor TreeView](./images/tooltip.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVIsDigMkgFfzRJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip in Blazor TreeView](./images/tooltip.webp)" %}
 
 ## Customize Nodes Tooltip in Blazor TreeView Component
 
@@ -775,7 +775,7 @@ While native tooltip elements might offer limited customization, the Blazor Tool
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyMNMqsOQjSsJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip Template in Blazor TreeView](./images/tooltip-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyMNMqsOQjSsJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip Template in Blazor TreeView](./images/tooltip-template.webp)" %}
 
 ## Get all Nodes in Blazor TreeView Component
 

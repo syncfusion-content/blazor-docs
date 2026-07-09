@@ -61,7 +61,7 @@ documentation: ug
 
    **Cause:**
 
-    This issue occurred, if you are creating the application name as **SyncfusionBlazor**. The name **SyncfusionBlazor** is already registered in the Syncfusion<sup style="font-size:70%">&reg;</sup> service handling. So your application name and the internally used class name gets conflict.
+    This issue occurred, if you are creating the application name as **SyncfusionBlazor**. The name **SyncfusionBlazor** is already registered in the service handling. So your application name and the internally used class name gets conflict.
 
    **Solution:**
 
@@ -91,11 +91,11 @@ documentation: ug
 
     **Cause:**
 
-    You may use deprecated namespace in the application with Syncfusion Blazor NuGet package version greater than or equal to 18.1.0.36.
+    You may use deprecated namespace in the application with Blazor NuGet package version greater than or equal to 18.1.0.36.
 
     **Solution**
 
-    The Blazor library changed its namespace, NuGet package name, and component names starting with v18.1.0.36. Refer to this [documentation](../how-to/upgrade-syncfusion-components-to-18dot1-version#namespace-changes) to migrate the application with the correct namespace. Example: `Syncfusion.EJ2.Blazor` is now `Syncfusion.Blazor`.
+    The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library changed its namespace, NuGet package name, and component names starting with v18.1.0.36. Refer to this [documentation](../how-to/upgrade-syncfusion-components-to-18dot1-version#namespace-changes) to migrate the application with the correct namespace. Example: `Syncfusion.EJ2.Blazor` is now `Syncfusion.Blazor`.
 
 * **Found markup element with unexpected name 'Ejs'. If this is intended to be a component, add a @using directive for its namespace**
 
@@ -109,7 +109,7 @@ documentation: ug
 
     **Solution**
 
-    The Blazor library changed its namespace, NuGet package name, and component names starting with v18.1.0.36. Refer to this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#component-name-changes) to migrate the application with the correct component names. Example: `EjsGrid` is now `SfGrid`.
+    The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library changed its namespace, NuGet package name, and component names starting with v18.1.0.36. Refer to this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#component-name-changes) to migrate the application with the correct component names. Example: `EjsGrid` is now `SfGrid`.
 
 ## Browser console errors
 
@@ -121,11 +121,11 @@ documentation: ug
 
     **Cause:**
 
-    If you upgraded Syncfusion Blazor packages from previous versions to 18.4.0.* version or later, this issue occurred.
+    If you upgraded Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages from previous versions to 18.4.0.* version or later, this issue occurred.
 
     **Solution**
 
-    The Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
+    The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
 
     ```html
         <head>
@@ -196,5 +196,5 @@ documentation: ug
 
 * [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
 
-* [Components doesn't render in Blazor WebAssembly application](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application?isInternalRefresh=False#problem)
+* [components doesn't render in Blazor WebAssembly application](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application?isInternalRefresh=False#problem)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Convert complex data and assign it to the Blazor | Syncfusion
-description: Learn here all about how to convert complex data to flat data and assign it to the Syncfusion Blazor Pivot Table component and more.
+title: Convert Complex Data to Flat Data in Blazor Pivot Table | Syncfusion®
+description: Learn how to convert complex data to flat data and assign it to Blazor Pivot Table component with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

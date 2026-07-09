@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Markers in Blazor Sparkline Component | Syncfusion
-description: Check out and learn about marker options and customization in the Syncfusion Blazor Sparkline component.
+title: Markers in Blazor Sparkline Component | Syncfusion®
+description: Check out and learn about marker options and customization in the Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
