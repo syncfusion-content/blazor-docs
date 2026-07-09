@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor MultiColumn ComboBox in Blazor Web App
 
-This section briefly explains about how to include [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get started quickly with Blazor MultiColumn ComboBox component, you can check the video below.
+To get started quickly with the Blazor MultiColumn ComboBox component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=2B5ctnHw4vk" %}
 
@@ -167,21 +167,19 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) component inside the razor file.
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file (for example, `InteractiveServer`, `InteractiveWebAssembly`, or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.MultiColumnComboBox
-
 <SfMultiColumnComboBox TItem="string" TValue="string" Placeholder="Select any product"></SfMultiColumnComboBox>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -234,8 +232,6 @@ After initialization, populate the MultiColumn ComboBox with data using the [Dat
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.MultiColumnComboBox
-
 <SfMultiColumnComboBox @bind-Value="@Value" DataSource="@Products" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
 
 @code {
@@ -274,8 +270,6 @@ The MultiColumn ComboBox supports auto-generating columns from the data source. 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.MultiColumnComboBox
-
 <SfMultiColumnComboBox @bind-Value="@Value" DataSource="@Products" PopupWidth="600px" ValueField="Name" TextField="Name" Placeholder="Select any product">
     <MultiColumnComboboxColumns>
         <MultiColumnComboboxColumn Field="Name" Width="200px" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></MultiColumnComboboxColumn>
@@ -289,14 +283,12 @@ The MultiColumn ComboBox supports auto-generating columns from the data source. 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthptYsEgssKVDPs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Data Binding](./images/blazor-multicolumncombobox-columns.webp)" %}
 
-## Configuring the popup list
+## Configuring the Popup List
 
 By default, the popup list width matches the input element width, and the height is `350px`. Customize the popup height and width using [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupWidth).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.MultiColumnComboBox
 
 <SfMultiColumnComboBox @bind-Value="@Value" DataSource="@Products" PopupHeight="350px" PopupWidth="400px" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
 
@@ -309,7 +301,8 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Filtering in Blazor MultiColumn ComboBox Component](https://blazor.syncfusion.com/documentation/multicolumn-combobox/filtering)
+4. [Adding Custom Value to Blazor MultiColumn ComboBox Component](https://blazor.syncfusion.com/documentation/multicolumn-combobox/custom-value)
 
