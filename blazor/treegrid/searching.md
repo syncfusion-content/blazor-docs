@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in Blazor TreeGrid Component | Syncfusion
-description: Learn all about Searching in the Syncfusion Blazor TreeGrid component, including toolbar integration, external triggers, and search customization.
+title: Searching in Blazor TreeGrid Component | Syncfusion®
+description: Learn all about Searching in the Blazor TreeGrid component, including toolbar integration, external triggers, and search customization.
 platform: Blazor
 control: TreeGrid
 documentation: ug
@@ -429,7 +429,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIshikhPJJKWJV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhxZwDvzhIskjJl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Searching with ignore accent
 
@@ -550,7 +550,7 @@ namespace TreeGridComponent.Data {
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBSCBMuBFBKInJs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVdtcZPzLSoruAK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * This feature ignores accents for both searching and filtering operations in the Blazor TreeGrid when using an `IEnumerable` data source.
 > * This feature works only for characters outside the ASCII range.

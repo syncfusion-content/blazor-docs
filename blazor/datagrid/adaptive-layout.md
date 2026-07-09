@@ -235,7 +235,7 @@ public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>()
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrTCCMIipRSVeiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrxjwZCLceflRsG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Vertical row rendering
 
@@ -496,7 +496,7 @@ public class AdaptiveDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTCssyWfxDKTfT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLdjcDMVmntycTa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) must be enabled for vertical row rendering.
 
@@ -746,6 +746,6 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfsMCfznwypGTw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhxXQZMhmQidgML?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)

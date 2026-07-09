@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ListBox in Blazor WASM App | Syncfusion®
-description: Check out and learn about getting started with Blazor ListBox component in Blazor WebAssembly Application.
+description: Check out and learn how to get started with the Blazor ListBox component in a Blazor WebAssembly Application.
 platform: Blazor
 control: ListBox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor ListBox Component in Blazor WASM App
 
-This guide briefly explains about how to include [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This guide briefly explains how to include the [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -52,6 +52,8 @@ cd BlazorApp
 {% endtabs %}
 
 {% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Install required Blazor packages
 
@@ -109,9 +111,22 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
+## Add import namespaces
+
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.DropDowns
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -147,8 +162,6 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.DropDowns
-
 <SfListBox TValue="string[]" TItem="string[]"></SfListBox>
 
 {% endhighlight %}
@@ -160,8 +173,6 @@ After initialization, populate the ListBox using the `DataSource` property. In t
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
     <ListBoxFieldSettings Text="Text" Value="Id" />
@@ -189,7 +200,7 @@ After initialization, populate the ListBox using the `DataSource` property. In t
 
 N> `TValue` specifies the value type of the data source for type inference. It is a generic type and can be specified as string[], int[], and so on.
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -229,12 +240,13 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhJNsLEzexthhCN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ListBox Component](./images/blazor-listbox.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLdXcNVrzYLWIRm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ListBox Component](./images/blazor-listbox.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ListBox).
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+4. [Sorting and Grouping in Blazor ListBox Component](https://blazor.syncfusion.com/documentation/listbox/sorting-grouping)

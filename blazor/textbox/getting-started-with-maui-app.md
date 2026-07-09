@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with TextBox in Blazor MAUI App | Syncfusion
+title: Getting Started with TextBox in Blazor MAUI App | Syncfusion®
 description: Checkout and learn about the documentation for getting started with Blazor TextBox Component in Blazor MAUI App.
 platform: Blazor
 control: TextBox
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TextBox component in MAUI App
 
-This section provides a step-by-step guide to integrating the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
+This guide explains how to include the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
 {% tabcontents %}
 
@@ -35,10 +35,10 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 Create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor MAUI App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/maui-blazor-app) documentation.
 
-Alternatively, create a MAUI application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a MAUI application by running the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor MAUI App" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet new maui-blazor -o MauiBlazorApp
 cd MauiBlazorApp
@@ -50,7 +50,7 @@ cd MauiBlazorApp
 
 {% endtabcontents %}
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages
+## Install the required Blazor packages
 
 Install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
@@ -74,15 +74,15 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
-@using Syncfusion.Blazor 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the **~/MauiProgram.cs** file.
+Register the Blazor service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" %}
@@ -109,18 +109,20 @@ public static class MauiProgram
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox component
+## Add Blazor TextBox component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox component in the **~/Pages/Home.razor** file.
+Add the Blazor TextBox component in the **~/Pages/Home.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -132,19 +134,19 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextBox componen
 {% endhighlight %}
 {% endtabs %}
 
-### How to run the sample on Windows
+## How to run the sample
 
-Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+### Run on Windows
+
+Run the sample in **Windows Machine** mode, and it will run the Blazor MAUI app on Windows.
 
 ![Blazor TextBox Component](./images/blazor-textbox-maui-app.webp)
 
-### How to run the sample on Android
+### Run on Android
 
-To run the Blazor TextBox in an Android .NET MAUI Blazor app using the Android emulator, follow the Microsoft guidance to set up and launch an Android virtual device.
+To run the Blazor TextBox in an Android .NET MAUI Blazor app using the Android emulator, follow the Microsoft guidance to set up and launch an Android virtual device. Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
-Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
-
-N> If any errors occur while using the Android Emulator, see Troubleshooting Android Emulator for common resolutions: [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
+N> If any errors occur while using the Android Emulator, see [Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for common resolutions.
 
 ![Blazor TextBox Component](./images/blazor-textbox.webp)
 
@@ -173,9 +175,9 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
     {
         if (TextBoxDropDownObj != null)
         {
-            //Add icon to the TextBox
+            // Add icon to the TextBox
             await TextBoxDropDownObj.AddIconAsync("append", "e-icons e-date-icon");
-}
+        }
     }
 }
 
@@ -202,5 +204,7 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 
 ## See also
 
-* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor WebAssembly app in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Native Events in Blazor TextBox Component](https://blazor.syncfusion.com/documentation/textbox/native-events)
+4. [Data Binding in Blazor TextBox Component](https://blazor.syncfusion.com/documentation/textbox/data-binding)

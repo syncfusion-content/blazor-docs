@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Minimal API Data Binding in Blazor Scheduler Component | Syncfusion
-description: Learn about consuming data from ASP.NET Core Minimal API and binding it to Syncfusion Blazor Scheduler Component, and performing CRUD operations.
+description: Learn about consuming data from ASP.NET Core Minimal API and binding it to Blazor Scheduler Component, and performing CRUD operations.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -26,7 +26,7 @@ Install the following software and packages before starting the process:
 
 ## Binding data from Minimal API endpoints
 
-This section explains how to create an ASP.NET Core Minimal API backend within a Blazor Server application and bind appointment data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scheduler component. The following steps demonstrate the actual project creation flow.
+This section explains how to create an ASP.NET Core Minimal API backend within a Blazor Server application and bind appointment data to the Blazor Scheduler component. The following steps demonstrate the actual project creation flow.
 
 ### Step 1: Create a Blazor Web App
 
@@ -52,7 +52,7 @@ cd BlazorSchedulerApp
 
 ### Step 2: Install Required NuGet Packages
 
-Install the Syncfusion Blazor packages using the .NET CLI:
+Install the Blazor packages using the .NET CLI:
 
 **Using .NET CLI:**
 ```bash
@@ -257,7 +257,7 @@ Open the **Components/_Imports.razor** file and import the `BlazorSchedulerApp.S
 
 ### Step 7: Configure Application Services
 
-The `Program.cs` file must be updated to register required services, including Syncfusion Blazor components, HttpClient, CORS, and Razor components.This section configures the foundational services used across the Scheduler application.
+The `Program.cs` file must be updated to register required services, including Blazor components, HttpClient, CORS, and Razor components.This section configures the foundational services used across the Scheduler application.
 
 [Program.cs]
 
@@ -285,7 +285,7 @@ builder.Services.AddScoped(sp =>
 });
 builder.Services.AddScoped<AppointmentService>();
 
-// Add Syncfusion Blazor service
+// Add Blazor service
 builder.Services.AddSyncfusionBlazor();
 
 // Configure CORS
@@ -576,7 +576,7 @@ http://localhost:5175
 
 ## Output Preview
 ![Frontend Preview](./images/blazor-minimalAPI-frontend.webp)
-*Image illustrating the Syncfusion Blazor Scheduler with Minimal API*
+*Image illustrating the Blazor Scheduler with Minimal API*
 
 ## Complete Sample Repository
 
@@ -588,7 +588,7 @@ A complete, working sample implementation is available in the [GitHub repository
 
 **Issue**: Errors like `Could not find 'sfBlazor.Toolbar.initialize'`
 
-**Fix**: Add Syncfusion script in `App.razor` before `</body>`:
+**Fix**: Add script in `App.razor` before `</body>`:
 ```html
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 ```
