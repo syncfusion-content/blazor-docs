@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor 3D Charts in Blazor Server App | Syncfusion
+title: Getting Started with Blazor 3D Charts in Server App | Syncfusion
 description: Check out and learn about getting started with Blazor 3D Charts component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: 3D Charts
