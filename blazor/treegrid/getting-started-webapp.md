@@ -182,7 +182,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 </SfTreeGrid>
 
 @code {
-    
+
    public class BusinessObject
     {
         public int TaskId { get; set; }
@@ -255,6 +255,6 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVnZQNlpVLkzdkR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid).
