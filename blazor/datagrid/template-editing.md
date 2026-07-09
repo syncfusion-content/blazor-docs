@@ -179,7 +179,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLIDCZkVpxqbOjj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhdjwDnLSUULjaA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Dialog template editing
 
@@ -349,7 +349,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLIjCXEfrNMUTiV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBntcDnregEXzsB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Disable components in dialog template
 
@@ -520,7 +520,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLSDiXETysiUAfk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBHNQDHVezLgbFY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Get value from editor
 
@@ -684,7 +684,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVSDiMXgcVQdJxD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVxDmDnVyzyydbH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Set focus to particular column editor
 
@@ -852,7 +852,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhSNCsjpMQvVsVT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVxZmXdVeJugwKk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ## Render tab component inside the dialog template
 
@@ -1066,7 +1066,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjroDWiAVWieIsqG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVdNmZdBIISxizu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ### Complex data binding with dialog template
 
@@ -1174,7 +1174,7 @@ public class SalaryDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLetiCKJZroywnF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBHNcXxBoHrMJhC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Use FileUploader in Grid dialog edit template
 

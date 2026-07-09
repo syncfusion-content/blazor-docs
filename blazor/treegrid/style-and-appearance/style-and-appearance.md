@@ -150,7 +150,7 @@ Additional styling can be applied to rows, alternate rows, selected rows, and ho
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhdjfhhTZDovGda?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBxjcDFJiPhfopY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize alternate rows
 
@@ -218,7 +218,7 @@ Adjust properties like **background-color**, **font-family**, and **border** to 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVHZTLLfZmyOSzU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrRXwZPzsvcyTpL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the color of grid lines
 
@@ -292,4 +292,4 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhnZzBhpMMBfcws?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLnNcZPTMYTdPaP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

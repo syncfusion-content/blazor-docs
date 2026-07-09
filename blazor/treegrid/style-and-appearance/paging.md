@@ -247,4 +247,4 @@ public class ShipmentData
 
 {% endhighlight %}
 {% endtabs %}
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrdjpBVzbiapgnK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBHDwjvJiLwVcJx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
