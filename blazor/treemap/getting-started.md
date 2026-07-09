@@ -3,15 +3,15 @@ layout: post
 title: Getting Started with Blazor TreeMap in Blazor WASM App | Syncfusion
 description: Check out and learn about getting started with Blazor TreeMap component in Blazor WebAssembly Application.
 platform: Blazor
-control: TreeMap
+component: TreeMap
 documentation: ug
 ---
 
 # Getting Started with Blazor TreeMap Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor WASM App
+## Create a new Blazor WebAssembly App
 
 {% tabcontents %}
 
@@ -63,7 +63,7 @@ Install [Syncfusion.Blazor.TreeMap](https://www.nuget.org/packages/Syncfusion.Bl
 
 {% tabcontent Visual Studio %}
 
-1. Go to *Tools → NuGet Package Manager → Manage NuGet Package for Solution*.
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
 2. Search the required NuGet package (`Syncfusion.Blazor.TreeMap`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following command.
@@ -113,7 +113,7 @@ dotnet add package Syncfusion.Blazor.TreeMap -v {{ site.releaseversion }}
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.TreeMap` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.TreeMap
@@ -126,7 +126,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -188,7 +188,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -332,7 +332,7 @@ Legend items are used to denote the color mapping categories and show the legend
 
 ## Enable tooltip
 
-When space constraints prevents from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property to **true** in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html).
+When space constraints prevent displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property to **true** in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -363,8 +363,5 @@ N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.c
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor for Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
