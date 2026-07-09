@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dropdown List in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Dropdown List component in Blazor WebAssembly Application.
+description: Check out and learn how to get started with the Blazor Dropdown List component in Blazor WebAssembly Application.
 platform: Blazor
 control: Dropdown List
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dropdown List in Blazor WASM App
 
-This guide briefly explains how to include [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Ensure a valid Syncfusion license is registered in the application and choose a theme (Bootstrap, Fluent, Material, or Tailwind) as part of setup.
+This guide briefly explains how to add the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component to a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). Ensure a valid Syncfusion license is registered in the application and choose a theme (Bootstrap, Fluent, Material, or Tailwind) as part of setup.
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
@@ -142,7 +142,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -157,19 +157,17 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Dropdown List component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component inside the Razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game"></SfDropDownList>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -209,7 +207,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBdNxBkAVJwRyuP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
 
@@ -219,8 +217,6 @@ After initialization, populate the DropDownList with data using the [DataSource]
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
@@ -250,7 +246,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor Dropdown List](./images/blazor-dropdownlist-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrdtRVaKhyQFbXP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.webp)" %}
 
 ## Configure the popup list
 
@@ -258,8 +254,6 @@ By default, the popup list width automatically adjusts to the Dropdown List inpu
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Games" PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
@@ -289,7 +283,7 @@ By default, the popup list width automatically adjusts to the Dropdown List inpu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTDWBYqHlMcKgk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthHtdVOgLnzzzff?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.webp)" %}
 
 ## Get selected value
 
@@ -311,6 +305,6 @@ Get the complete data object for the selected value in the [ValueChange](https:/
 
 ## See also
 
-1. [Getting started with Blazor for client-side using the .NET CLI](../getting-started/blazor-webassembly-app)
-2. [Getting started with Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-3. [Getting started with Blazor for server-side using the .NET CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Dropdown List Data Binding](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding)

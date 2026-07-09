@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Getting Started with Blazor Tooltip Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Tooltip component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Tooltip component in Blazor WebAssembly Application.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Getting Started with Blazor Tooltip Component
+# Getting started with Blazor Tooltip component
 
-This section briefly explains about how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 
@@ -131,15 +131,15 @@ builder.Services.AddSyncfusionBlazor();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 ....
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-```
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component
 
@@ -148,7 +148,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip componen
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
@@ -157,7 +156,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip componen
 
 @code
 {
-    string Content = "Lets go green & Save Earth !!";
+    string Content = "Let's go green & Save Earth !!";
 }
 
 {% endhighlight %}
@@ -165,7 +164,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip componen
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLJNWgNzHwucLWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrHNGZrgxTUeScj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip-component.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip).
 
@@ -181,8 +180,6 @@ N> The Tooltip component in our system uses the HTML element's id or class name 
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Tooltip example](https://blazor.syncfusion.com/demos/tooltip/default?theme=bootstrap5) that shows you how to render and configure the tooltip
+N> You can also explore our [Blazor Tooltip example](https://blazor.syncfusion.com/demos/tooltip/default?theme=fluent2) that shows you how to render and configure the tooltip
