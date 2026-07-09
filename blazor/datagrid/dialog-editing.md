@@ -75,7 +75,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBTihBtqxaHFdKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxtwDhBqPcsjMi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the edit dialog
 
@@ -173,7 +173,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVyZWjvKbTMIaIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdZwtrBgOCWMim?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The DataGrid add or edit dialog element includes a max-height property, which is calculated based on the available window height. In a standard window size of **1920×1080** pixels, the dialog height can be set up to **658px**.
 > * Refer to the Blazor DataGrid feature tour for a broad overview. Explore the [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand data presentation and manipulation.
@@ -313,7 +313,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrzWVLAqtMKVgod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLRDQDhhgufkYDE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Use wizard-like dialog editing
 
@@ -545,7 +545,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLyZMjvJXWZYAiP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBHtGjVhpXqNLBP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize add/edit dialog footer
 
@@ -630,7 +630,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLSZyKtglluvsMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhnDGtrLTZQKqEz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Implement calculated column inside Blazor DataGrid dialog editing
 
@@ -774,6 +774,6 @@ public class ProductDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLyXsZxfZTvqDJz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrHDGtVVpsHZhzb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > For details about events triggered during **Dialog editing**, refer to the supported events [documentation](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing#supported-events-for-inline-and-dialog-editing).
