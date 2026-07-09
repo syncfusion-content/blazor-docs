@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get Start Blazor Toggle Switch Button in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Toggle Switch Button component in Blazor webAssembly Application.
+title: Get Started with Blazor Toggle Switch Button in WASM App | Syncfusion®
+description: Check out and learn about getting started with Blazor Toggle Switch Button component in Blazor webAssembly Application.
 platform: Blazor
 control: Toggle Switch Button
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Toggle Switch Button in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Toggle Switch Button]
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WebAssembly App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WebAssembly App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
 {% endtabcontent %}
 
@@ -30,12 +30,13 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -46,7 +47,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,7 +128,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -155,14 +157,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor Toggle Switch Button component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -177,7 +177,7 @@ Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor To
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -217,14 +217,14 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBpXsqjfdrkkiow?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnZGDhUjkSdaFN?appbar=false&editor=false&result=true&errorlist=true&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.webp)" %}
 
 ## Setting On and Off text
 
 On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OnLabel) and [OffLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OffLabel) properties of Toggle Switch Button component. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -237,14 +237,14 @@ On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor
 {% endhighlight %}
 {% endtabs %}
 
-N> Switch does not have text support for material themes, and does not support long custom text.
+N> The Switch component does not support text for material themes and does not support long custom text.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLzZiKtzdAdnBzy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhxtwjrqMXGBZXU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ToggleSwitchButton).
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+* [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 * [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

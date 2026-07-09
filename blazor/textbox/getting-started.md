@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor TextBox in Blazor WASM App | Syncfusion
+title: Getting Started with TextBox in Blazor WASM App | Syncfusion®
 description: Check out and learn about getting started with Blazor TextBox component in Blazor WebAssembly Application.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Getting started with the Blazor TextBox in Blazor WASM App
+# Getting Started with the Blazor TextBox in Blazor WASM App
 
 This guide explains how to include the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -28,7 +28,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +45,8 @@ Run the following command to create a new Blazor WebAssembly App.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-dotnet new blazorwasm -o BlazorWASMApp
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -114,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
@@ -153,23 +155,19 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
-
 ## Add Blazor TextBox component
 
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Inputs
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfTextBox Placeholder='First Name'></SfTextBox>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -209,7 +207,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox component in Blazor WebAssembly](./images/blazor-textbox.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBxtwtMTAPuHeJM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox component in Blazor WebAssembly](./images/blazor-textbox.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextBox).
 
@@ -218,9 +216,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 Add an icon to the TextBox component using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. The following example shows how to implement this in a Blazor WebAssembly app.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Inputs
+{% highlight razor tabtitle="Home.razor" %}
 
 <div id="sample" style="margin:130px auto;width:300px">
     <SfTextBox @ref=@TextBoxDropDownObj
@@ -247,26 +243,25 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryXaVqqmBfrsXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with icon in Blazor WebAssembly](./images/blazor-textbox-icons.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLHDwZsTJemhYae?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox with icon in Blazor WebAssembly](./images/blazor-textbox-icons.webp)" %}
 
 ## Floating label
 
 The floating label lifts above the input when the TextBox is focused or contains a value. Configure it by setting the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Inputs
+{% highlight razor tabtitle="Home.razor" %}
 
 <SfTextBox Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextBox>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with floating label in Blazor WebAssembly](./images/blazor-textbox-float-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrHtmDMfIiXQjnB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox with floating label in Blazor WebAssembly](./images/blazor-textbox-float-label.webp)" %}
 
 ## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Native Events in Blazor TextBox Component](https://blazor.syncfusion.com/documentation/textbox/native-events)
+4. [Data Binding in Blazor TextBox Component](https://blazor.syncfusion.com/documentation/textbox/data-binding)

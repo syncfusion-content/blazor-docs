@@ -18,7 +18,7 @@ Common package management issues relate to:
 * Maintaining version consistency across packages
 * Managing package dependencies in multi-project solutions
 
-N> This guide is intended for Blazor components version 33.2.3 or later, targeting .NET 8, .NET 9, or .NET 10. Some details may differ in earlier versions or older .NET releases.
+N> This guide is intended for Blazor components version 33.2.3 or later. For supported .NET and Blazor package release combinations, see [Version compatibility for Blazor components](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility).
 
 ## Issue 1: Installing redundant NuGet packages  
 
@@ -34,13 +34,13 @@ and 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(...) [path\to\Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-**Root cause**: The project references both the all‑in‑one package ([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) and one or more individual component packages (for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) or [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)). These packages expose the same public types from different assemblies, producing duplicate type definitions and ambiguous method overloads. The compiler therefore reports ambiguous-call or duplicate-type errors.
+**Root cause**: The project references both the all-in-one package ([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) and one or more individual component packages (for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) or [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts)). These packages expose the same public types from different assemblies, producing duplicate type definitions and ambiguous method overloads. The compiler therefore reports ambiguous-call or duplicate-type errors.
 
-**Solution**: Choose **one** packaging approach based on your application requirements.
+**Solution**: Use only the individual component packages that your application requires. The comprehensive [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package is not recommended for any application and should not be used.
 
-### Option 1: Install individual component packages
+### Recommended package strategy
 
-Install only the specific component packages your application uses. This option is recommended for most projects.
+Install only the specific component packages your application uses. This is the recommended approach for all projects.
 
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
@@ -60,29 +60,11 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 * Clear dependency tracking
 * Reduced licensing footprint for production deployments
 
-### Option 2: Install comprehensive package
-
-Install the all-in-one package([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)) that includes all Blazor components. This option is recommended for applications that use many components.
-
-{% tabs %}
-{% highlight bash tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Blazor -v {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Benefits**:
-* Simplified package management
-* Single version number to track
-* Easier upgrades across all components
-* Suitable for applications using 5 or more different component types
-
 ### Best practices
 
-* Never mix [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) (comprehensive) with individual component packages in the same project.
+* Do not use the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package in your application
+* Install only the specific component packages required by the application
 * Audit your `.csproj` file regularly to identify redundant packages
-* Use individual packages unless you are using 5 or more component types
 * Document your package strategy in team guidelines
 
 ### How to check for redundancy
@@ -94,9 +76,8 @@ To check for redundant packages, inspect your project's `.csproj` file for dupli
 
 <Project Sdk="Microsoft.NET.Sdk.Web">
   ...
-
   <ItemGroup>
-    <!-- BAD: Both comprehensive and individual packages -->
+    <!-- BAD: Avoid using the comprehensive package -->
     <PackageReference Include="Syncfusion.Blazor" Version="{{ site.releaseversion }}" />
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="{{ site.releaseversion }}" />
   </ItemGroup>
@@ -109,7 +90,7 @@ To check for redundant packages, inspect your project's `.csproj` file for dupli
   ...
 
   <ItemGroup>
-    <!-- GOOD: Only individual packages -->
+    <!-- GOOD: Use only individual packages -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="{{ site.releaseversion }}" />
     <PackageReference Include="Syncfusion.Blazor.Calendars" Version="{{ site.releaseversion }}" />
     <PackageReference Include="Syncfusion.Blazor.Themes" Version="{{ site.releaseversion }}" />
@@ -124,12 +105,8 @@ To check for redundant packages, inspect your project's `.csproj` file for dupli
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-# Remove the comprehensive package if you have individual packages
+# Remove the comprehensive package if it is present
 dotnet remove package Syncfusion.Blazor
-
-# Remove individual packages if you prefer the comprehensive package
-dotnet remove package Syncfusion.Blazor.Grid
-dotnet remove package Syncfusion.Blazor.Calendars
 
 # Restore packages after cleanup
 dotnet restore
@@ -137,7 +114,7 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-The [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) package should always be installed separately, regardless of which approach you choose, as it only contains theme stylesheets.
+The [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) package should always be installed separately, as it only contains theme stylesheets.
 
 ## Issue 2: Duplicate package references
 
@@ -145,7 +122,7 @@ The [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.
 
 **Root cause**: The same NuGet package is referenced multiple times with different versions, either directly in the project file or transitively through dependencies.
 
-**Solution**: Identify and consolidate all package references to use a single version.
+**Solution**: Identify and consolidate all package references to use a single version. For supported version combinations, see [Version compatibility for Blazor components](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility).
 
 ### Step 1: Identify duplicate references
 
@@ -244,7 +221,7 @@ Then update your project files to reference packages without versions.
 {% endhighlight %}
 {% endtabs %}
 
-For single‑project apps, consolidating package references directly in the `.csproj` file may be sufficient.
+For single-project apps, consolidating package references directly in the `.csproj` file may be sufficient.
 
 ### Best practices
 
@@ -262,7 +239,7 @@ When upgrading Syncfusion packages, update **all Syncfusion packages** in your s
 
 **Root cause**: Different Blazor packages are installed with incompatible versions. For example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) version 33.2.3 alongside [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) version 32.1.19.
 
-**Solution**: Ensure all Blazor packages in your project use the **exact same version number**.
+**Solution**: Ensure all Blazor packages in your project use the **exact same version number**. For supported version combinations, see [Version compatibility for Blazor components](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility).
 
 ### Step 1: Check current package versions
 

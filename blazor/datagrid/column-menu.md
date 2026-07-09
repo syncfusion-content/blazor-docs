@@ -1,5 +1,6 @@
 ---
 layout: post
+
 title: Column Menu in Blazor DataGrid Component | Syncfusion®
 description: Learn how to use and customize the column menu in Blazor DataGrid, including events, actions, and advanced options for better control.
 platform: Blazor
@@ -89,7 +90,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzMLWLKTPWHQcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBxXQZiTqvsamoD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * To disable the column menu for a specific column, set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to **false**.
 > * To customize the menu items, define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property with the required options.
@@ -165,7 +166,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBfiCVHTnFFingT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLHXQtMfpNzRioA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Add custom column menu item
 
@@ -262,7 +263,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVJMrMgCLBDWpXz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhRZmtMTfjQILsE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize menu items for specific columns
 
@@ -355,7 +356,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrJWVWUgqiNTWDr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhdDwXCfJWAhmUk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render nested column menu
 
@@ -540,7 +541,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthetSqtfZnABCcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBRZwDWTTMannTm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Column menu events
 
@@ -660,4 +661,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthfMhiKzNimycPe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrdNGNWppVmuQGI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

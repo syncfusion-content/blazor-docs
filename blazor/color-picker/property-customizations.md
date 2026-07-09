@@ -22,7 +22,7 @@ The following sample shows inline rendering of the Color Picker.
 <SfColorPicker Value="035a" Inline="true" ShowButtons="false"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVrQgIVKJnGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inline Rendering in Blazor ColorPicker](./images/blazor-colorpicker-inline-rendering.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLRtxsOpJfpxiQi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Inline Rendering in Blazor ColorPicker](./images/blazor-colorpicker-inline-rendering.webp)" %}
 
 N> The `ShowButtons` property is disabled in this sample because control buttons are not needed for inline rendering. For details about control buttons functionality, see [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons).
 
@@ -37,7 +37,7 @@ In the following example, the Color Picker is rendered in RTL mode with an Arabi
 
 <SfColorPicker EnableRtl="true"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBUsrLmqSKnHwGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Right to Left in Blazor ColorPicker](./images/blazor-colorpicker-right-to-left.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrRZRCkppyUgqmJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Right to Left in Blazor ColorPicker](./images/blazor-colorpicker-right-to-left.webp)" %}
 
 
 ## Rendering palette at initial load
@@ -53,7 +53,7 @@ In the following example, the palette is displayed at initial load.
 <SfColorPicker Mode="ColorPickerMode.Palette"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgshBQKIhHYIMT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhdZHiuJfEjVSHR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.webp)" %}
 
 ## Color value in Blazor Color Picker Component
 
@@ -68,7 +68,7 @@ In the following example, a 4-digit hex value is used, where the last digit repr
 <SfColorPicker Value="035a" ModeSwitcher="false"></SfColorPicker>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVUCBBQUeLkCZYv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBHjRskpzaPqqcU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.webp)" %}
 
 N> The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex codes with or without the `#` prefix.
 
@@ -85,7 +85,7 @@ The following example shows the `Disabled` state of the Color Picker component.
 <h4>Choose a color</h4>
 <SfColorPicker Disabled="true"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKsLrGgeJFrvZn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Disable State in Blazor ColorPicker](./images/blazor-colorpicker-disable-state.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhxZHCOpSNzTBZQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Disable State in Blazor ColorPicker](./images/blazor-colorpicker-disable-state.webp)" %}
 
 ## Hide control buttons in Blazor Color Picker Component
 
@@ -97,7 +97,7 @@ Render the Color Picker without control buttons (Apply/Cancel) by setting the [S
 <h4>Choose a color</h4>
 <SfColorPicker ShowButtons="false"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAWLBcqoIBqnae?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hide Control Buttons in Blazor ColorPicker](./images/blazor-colorpicker-hide-control.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhHtHiOpyWWBLFm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hide Control Buttons in Blazor ColorPicker](./images/blazor-colorpicker-hide-control.webp)" %}
 
 ## Show Recent color in Blazor Color Picker Component
 
@@ -113,4 +113,4 @@ In the following sample, the [ShowRecentColors](https://help.syncfusion.com/cr/b
 <h4>Choose a color</h4>
 <SfColorPicker ShowRecentColors="true"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKiLLGUoxTFJzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Rendering Show Recent color in Blazor ColorPicker](./images/blazor-colorpicker-show-recent-color.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLHtxMuzoVXVRFv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Rendering Show Recent color in Blazor ColorPicker](./images/blazor-colorpicker-show-recent-color.webp)" %}

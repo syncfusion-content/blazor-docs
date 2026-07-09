@@ -41,4 +41,4 @@ The following example demonstrates how to set the **id**, **style**, and **title
 
 ```
 
-![Blazor ListView with HTML Attribute](./../images/blazor-listview-with-html.png)
+![Blazor ListView with HTML Attribute](./../images/blazor-listview-with-html.webp)

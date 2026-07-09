@@ -50,7 +50,7 @@ A detailed walkthrough for customizing the dateTime axis is provided in the vide
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhxDnCrJWRuHHpe?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Chart with DateTime Axis](images/datetime/blazor-line-chart-datetime-axis.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBAMLVBfMpwmDHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart with DateTime Axis](images/datetime/blazor-line-chart-datetime-axis.webp)" %}
 
 ## DateTime category axis
 
@@ -87,7 +87,7 @@ The [DateTime Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhHjHsLfiGqdHKu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Line Chart with DateTime Axis](images/datetime/blazor-line-chart-with-datetime-axis.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLAWVVVTCIjNxnP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart with DateTime Axis](images/datetime/blazor-line-chart-with-datetime-axis.webp)" %}
 
 ### Range
 
@@ -127,7 +127,7 @@ The axis range will be calculated automatically based on the provided data; howe
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhdZRMBTiwvqqLh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor Line Chart DateTime Axis based on Range](images/datetime/blazor-line-chart-axis-based-on-range.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUirVVpWyKBAAB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Line Chart DateTime Axis based on Range](images/datetime/blazor-line-chart-axis-based-on-range.webp)" %}
 
 ### Interval customization
 
@@ -176,7 +176,7 @@ The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVxNdMLfWvMcOcG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor Line Chart DateTime Axis based on Interval](images/datetime/blazor-line-chart-axis-based-on-interval.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgCLLrTWoQFSbR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Blazor Line Chart DateTime Axis based on Interval](images/datetime/blazor-line-chart-axis-based-on-interval.webp)" %}
 
 **Applying padding to the Range**
 
@@ -221,7 +221,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhRjHiBzMFGgGhA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Line Chart without RangePadding](images/datetime/blazor-line-chart-axis-based-on-range.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVnZLXqBdqfnaMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Line Chart without RangePadding](images/datetime/blazor-line-chart-axis-based-on-range.webp)" %}
 
 **DateTime - Round**
 
@@ -258,7 +258,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVntxMLJVYeODlE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBnZLZKrRHJgzgq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DateTime - Additional**
 
@@ -294,7 +294,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLdXdirJqDBndTw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLRZVjUBdFmrpNy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Label format
 
@@ -329,7 +329,7 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVntnMLpqjGHWfF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Axis Label Formatting in Blazor Line Chart](images/datetime/blazor-line-chart-axis-label-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhdXhNgLdCIhTrD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Axis Label Formatting in Blazor Line Chart](images/datetime/blazor-line-chart-axis-label-format.webp)" %}
 
 The table below shows the results of applying various popular date and time formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property.
 

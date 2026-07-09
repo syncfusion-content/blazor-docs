@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Perform Custom Filtering in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Custom Filtering in Syncfusion Blazor File Manager component and more.
+description: Learn how to configure custom filtering in the Blazor File Manager component with step-by-step instructions and practical guidance.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 In the Blazor File Manager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
 
-In the following example, the SearchStringvalue **Downloads** is passed, and based on that, a search operation is performed in the Blazor File Manager using a button click.
+In the following example, the SearchString value **Downloads** is passed, and based on that, a search operation is performed in the Blazor File Manager using a button click.
 
 ```cshtml
 

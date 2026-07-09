@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor TimePicker in Blazor Web App | Syncfusion
+title: Getting Started with TimePicker in Blazor Web App | Syncfusion
 description: Check out and learn the documentation for getting started with Blazor TimePicker Components in Blazor Web App.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Getting Started with Blazor TimePicker in Blazor Web App
+# Getting started with Blazor TimePicker in Blazor Web App
 
-This section briefly explains about how to include [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -17,7 +17,7 @@ This section briefly explains about how to include [Blazor TimePicker](https://w
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
 
@@ -29,11 +29,13 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -45,6 +47,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +59,7 @@ dotnet new blazor -o BlazorWebApp --interactivity Auto
 
 N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
-## Install Blazor packages
+## Install required Blazor packages
 
 Install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
@@ -126,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the clie
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -139,8 +143,6 @@ builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
 {% endtabs %}
-
-N> If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 ## Add stylesheet and script resources
 
@@ -157,8 +159,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor TimePicker component
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component inside the razor file.
@@ -169,7 +169,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" PlaceHolder="Select a time"></SfTimePicker>
@@ -177,7 +176,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -194,6 +193,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -209,6 +209,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -219,15 +220,15 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBJjCKtzSOIsHLx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrnjGjiTlQrevvn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TimePicker).
 
 ## Setting the time format
 
-Time format is a way of representing the time value in different string format in textbox and popup list. By default, the TimePicker’s Format is based on the culture. But the Format of the TimePicker can be customized using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property.
+Time format is a way of representing the time value in different string formats in the textbox and popup list. By default, the TimePicker’s Format is based on the culture. The TimePicker format can be customized using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property.
 
-The below code demonstrates how to render TimePicker component in 24 hours Format with 60 minutes interval. The time interval is set to 60 minutes by using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Step) property.
+The below code demonstrates how to render TimePicker component in 24 hours format with 60 minutes interval. The time interval is set to 60 minutes by using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Step) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -243,11 +244,9 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVpXCUtfRjicUbp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLxNQtMzPOeTKMR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.webp)" %}
 
 ## See also
 
 * [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
 * [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
-
-N> You can also explore our [Blazor TimePicker Example](https://blazor.syncfusion.com/demos/timepicker/default-functionalities) that shows you how to render and configure the TimePicker.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add dynamic template in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about how to add dynamic template in Syncfusion Blazor Toast component and more.
+title: Add dynamic template in Blazor Toast Component | Syncfusion®
+description: Checkout and learn here all the features about how to add dynamic template in Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

@@ -69,10 +69,11 @@ In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-dat
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridPageSettings PageSize="10"></GridPageSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150">
-    </GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer Name" Width="150"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
 @code {
@@ -92,27 +93,29 @@ For more details, refer to [Handling paging operation](https://blazor.syncfusion
 
 Incremental loading (load-on-demand) fetches data in smaller chunks as needed. For example, when navigating pages or scrolling through a list. This keeps the app responsive with large datasets.
 
-The [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) supports incremental loading through the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand) feature. Child records load only when a parent row expands.
+The [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) supports incremental loading through the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand) feature. With this approach, only root-level records are loaded initially. Child records are requested and loaded from the data source when users expand a parent row.
+
+For example, in an organizational hierarchy containing thousands of employee records, loading all levels during initial rendering can affect performance. By enabling **LoadChildOnDemand**, only the visible hierarchy level is loaded initially, while deeper levels are retrieved as users navigate through the hierarchy.
 
 For more information, refer to the [load-on-demand](https://blazor.syncfusion.com/documentation/treegrid/data-binding?cs-save-lang=1&cs-tab-name=RAZOR&cs-lang=razor#loadchildondemand) documentation.
 
-Incremental loading fetches additional data blocks as needed, while virtualization reduces DOM elements. Use both together for best performance.
+N> Incremental loading fetches additional data blocks as needed, while virtualization minimizes the number of rendered DOM elements. For large datasets, use virtualization together with paging or infinite scrolling to achieve optimal loading and rendering performance.
 
 ## Apply server driven querying
 
-For large datasets, the server handle filtering, sorting, grouping, and searching. The component sends query parameters to the server, which returns only the processed result.
+For large datasets, the server handles filtering, sorting, grouping, and searching. The component sends query parameters to the server, which returns only the processed result.
 
-When a user applies a column filter, the filter criteria are sent to the server, and only matching records return.
+When a user applies a column filter, the filter criteria are sent to the server, and only matching records are returned.
 
 For more information, refer to the [Handling server side filtering using adaptors](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/url-adaptor#handling-filtering-operation) documentation.
 
 ## Use virtualization or infinite scrolling
 
-**Virtualization** renders only the visible items in the viewport. As you scroll, existing UI elements reuse instead of creating new ones.
+For large datasets, it is recommended to combine virtualization with paging or infinite scrolling. While paging and infinite scrolling reduce the amount of data requested and displayed at a given time, virtualization further improves performance by rendering only the visible rows in the viewport.
 
-**Infinite scrolling** auto loads more data as the user scrolls, providing a continuous scrolling experience without pagination controls.
+This combination minimizes DOM elements, reduces memory usage, and maintains smooth scrolling even when working with thousands of records.
 
-In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), enable virtualization using the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property.
+In the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), enable virtualization using the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property with paging.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -218,6 +221,21 @@ Lazy loading defers data retrieval until it is actually required. Instead of loa
 For example, when a component becomes visible, a node expands, or additional details are requested. Lazy loading improves perceived performance by reducing initial load time.
 
 For an example of implementing the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) pattern in hierarchical [Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) components, refer to the [Gantt Chart data binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
+
+## Choosing the right approach
+
+Different large data techniques solve different performance challenges. Select the approach based on your data size and user experience requirements.
+
+| Scenario                                                              | Recommended approach                                 |
+| --------------------------------------------------------------------- | ---------------------------------------------------- |
+| Up to 10,000 records with frequent local operations                   | Client side processing with paging                   |
+| More than 10,000 records                                              | Server side processing                               |
+| Large flat datasets displayed in grids or lists                       | UI virtualization                                    |
+| Continuous browsing experience without page navigation                | Infinite scrolling with virtualization               |
+| Hierarchical data such as TreeGrid or Gantt                           | Incremental loading (LoadChildOnDemand)              |
+| Large database-backed datasets with filtering, sorting, and searching | Server driven querying                               |
+| Large datasets where initial load time must be minimized              | Lazy loading                                         |
+| Real time applications with large datasets                            | Paging or virtualization with server-side processing |
 
 ## How Blazor components handle large data
 

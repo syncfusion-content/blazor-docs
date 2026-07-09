@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor Image Editor Component in Blazor Web App
 
-This section briefly explains about how to include the [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-To get started quickly with the Blazor Image Editor component, refer to this video or the [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/imageEditor) sample:
+To get started quickly with the Blazor Image Editor component, refer to this video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=lBB8oHvTuII"%}
 
@@ -33,6 +33,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -49,6 +51,8 @@ Run the following command to create a new Blazor Web App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazor -o BlazorWebApp --interactivity Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +109,6 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-
 dotnet add package Syncfusion.Blazor.ImageEditor -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
@@ -121,7 +124,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.ImageEditor` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.ImageEditor
@@ -147,10 +150,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
  
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -160,11 +163,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-
 ## Add Blazor Image Editor component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component inside the `.Client` project razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -179,7 +180,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -196,6 +197,7 @@ Open the terminal and navigate to the main project folder (for example, `BlazorW
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -211,6 +213,7 @@ Open the command prompt and navigate to the main project folder (for example, `B
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
+cd ..
 cd BlazorWebApp
 dotnet run
 
@@ -221,7 +224,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrICNDYqKacaGsS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Image Editor Component](./images/blazor-image-editor-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVHDctgLxExiJhY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Image Editor Component](./images/blazor-image-editor-component.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/imageEditor).
 

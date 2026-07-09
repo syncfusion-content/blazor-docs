@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code generator for the Blazor extension | Syncfusion
-description: Learn how to add Syncfusion Blazor component markup using the Code Generator in the Syncfusion Blazor extension for Visual Studio. Explore to more details.
+title: Code generator for the Blazor extension | Syncfusion®
+description: Learn how to add Blazor component markup using the Code Generator in the Blazor extension for Visual Studio. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This topic explains how to use the Syncfusion® Blazor Code Generator to insert component markup into a Razor file and automatically configure the project with required packages, styles, and namespaces. The Code Generator is a wizard that reads your project's data models and inserts ready-to-use component markup.
 
-N> Ensure the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor extension is installed in Visual Studio (Extensions → Manage Extensions → Installed). If it is not installed, follow the steps in the [download and installation](download-and-installation) topic.
+N> Ensure the Syncfusion® Blazor extension is installed in Visual Studio (Extensions → Manage Extensions → Installed). If it is not installed, follow the steps in the [download and installation](download-and-installation) topic.
 
 Steps
 
