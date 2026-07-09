@@ -168,6 +168,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveAuto
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" PlaceHolder="Select a time"></SfTimePicker>

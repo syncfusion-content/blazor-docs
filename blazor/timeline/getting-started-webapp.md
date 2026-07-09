@@ -168,6 +168,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@rendermode InteractiveAuto
+
 <div style="height: 250px;">
     <SfTimeline>
         <TimelineItems>
