@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand And Collapse Resource Dynamically in Blazor Scheduler Component
 
-In [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler), a resource can be expanded or collapsed by clicking the expand/collapse icons. You can also programmatically expand or collapse the resource using public methods `ExpandResourceAsync` and `CollapseResourceAsync` respectively. The following code shows how to expand and collapse the resource `Room 1` on external button click.
+In [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler), a resource can be expanded or collapsed by clicking the expand/collapse icons. You can also programmatically expand or collapse the resource using public methods `ExpandResourceAsync` and `CollapseResourceAsync` respectively. The following code shows how to expand and collapse the resource `Room 1` on external button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
