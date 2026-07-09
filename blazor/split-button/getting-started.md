@@ -215,7 +215,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzDWqZppKquUiR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Split Button Component](./images/blazor-splitbutton.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBHZmtMVkZgsKUF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Split Button Component](./images/blazor-splitbutton.webp)" %}
 
 ## See also
 
