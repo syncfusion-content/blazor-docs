@@ -266,7 +266,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVHjeVNVEQConrD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBnDwNHMzuuMpdO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/StockChart).
 
