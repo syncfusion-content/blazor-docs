@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Sidebar in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Sidebar component in Blazor WebAssembly Application.
+description: Check out and learn how to get started with the Blazor Sidebar component in Blazor WebAssembly Application.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Sidebar in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to add the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component to a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Sidebar](https://www.
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WebAssembly App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
+Create a **Blazor WebAssembly App** using Visual Studio in [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WebAssembly App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
 {% endtabcontent %}
 
@@ -128,7 +128,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -144,7 +144,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -159,12 +159,10 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Sidebar component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) component inside the Razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Navigations
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
     Header
@@ -193,7 +191,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -237,13 +235,12 @@ dotnet run
 
 ## Enable backdrop
 
-Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ShowBackdrop) in the Sidebar component will prevent the main content from user interactions.
+Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ShowBackdrop) in the Sidebar component will prevent users from interacting with the main content.
 Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
@@ -298,7 +295,6 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
@@ -353,7 +349,6 @@ In the following example, the Sidebar is rendered with Accordion component in it
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
 <div id="head">
@@ -393,7 +388,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
                     <ContentTemplate>
                         <ul>
                             <li><span class="e-icons e-content-icon">Attendance</span>  </li>
-                            <li><span class="e-icons e-content-icon">Perfomrance</span>  </li>
+                            <li><span class="e-icons e-content-icon">Performance</span>  </li>
                             <li><span class="e-icons e-content-icon">Team mates</span></li>
                         </ul>
                     </ContentTemplate>
@@ -523,7 +518,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 1. Simply customizable and responsive design.
 2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.
 3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar) support.
-4. Provided with touch friendly gestures for easy interaction in mobile devices.
+4. Provided with touch friendly gestures for easy interaction on mobile devices.
 5. Flexible option to initialize the Sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context) other than the body element.
 6. Any type of HTML content or component can be placed in the sidebar for quick access and easy navigation.
 7. The component can position content to the left or right side of the main content area, allowing placement of two sidebars simultaneously for showing primary and secondary content.
@@ -535,6 +530,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Sidebar Accessibility](https://blazor.syncfusion.com/documentation/skeleton/shapes)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Menu Bar in Blazor Web App | Syncfusion
-description: Check out and learn the documentation for getting started with Blazor Menu Bar Components in Web App.
+description: Check out and learn the documentation for getting started with Blazor Menu Bar component in a Blazor Web App.
 platform: Blazor
 control: Menu Bar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Menu Bar in Blazor Web App
 
-This section briefly explains about how to include [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section explains how to include the [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -61,7 +61,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install the required Blazor packages
 
-Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
 {% tabcontents %}
 
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
@@ -130,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -170,8 +170,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
-@using Syncfusion.Blazor.Navigations
-
 <SfMenu TValue="MenuItem">
     <MenuItems>
         <MenuItem Text="File">
@@ -191,7 +189,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
         <MenuItem Text="View">
             <MenuItems>
                 <MenuItem Text="Toolbars"></MenuItem>
-                <MenuItem Text="Zoomr"></MenuItem>
+                <MenuItem Text="Zoom"></MenuItem>
                 <MenuItem Text="Full Screen"></MenuItem>
             </MenuItems>
         </MenuItem>
@@ -212,7 +210,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -224,7 +222,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 {% tabcontent Visual Studio Code %}
 
-Open the terminal and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the terminal, navigate to the main project folder (for example, `BlazorWebApp`), and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -240,7 +238,7 @@ dotnet run
 
 {% tabcontent .NET CLI %}
 
-Open the command prompt and navigate to the main project folder (for example, `BlazorWebApp`) and run the following command.
+Open the command prompt, navigate to the main project folder (for example, `BlazorWebApp`), and run the following command.
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -262,6 +260,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+4. [DataSource Binding and Custom Items in Blazor Menu Bar Component](https://blazor.syncfusion.com/documentation/menu-bar/data-source-binding-and-custom-menu-items)
