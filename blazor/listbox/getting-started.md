@@ -231,7 +231,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhJNsLEzexthhCN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ListBox Component](./images/blazor-listbox.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLdXcNVrzYLWIRm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ListBox Component](./images/blazor-listbox.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ListBox).
 

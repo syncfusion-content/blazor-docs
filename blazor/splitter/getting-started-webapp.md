@@ -172,8 +172,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @using Syncfusion.Blazor.Layouts
 
-@using Syncfusion.Blazor.Layouts
-
 <div>Horizontal Splitter</div>
 
 <SfSplitter Height="240px" Width="100%">
@@ -252,7 +250,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLntQDUsFpQxMov?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.webp)" %}
 
 ## See also
 
