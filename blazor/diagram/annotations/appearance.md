@@ -151,7 +151,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 
 The [OpenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HyperlinkSettings.html#Syncfusion_Blazor_Diagram_HyperlinkSettings_OpenMode) property of the `HyperlinkSettings` class specifies how annotation hyperlinks open. Configure this property to open hyperlinks either in the current browser tab or in a new tab.
 
-By default, the `OpenMode` property is set to `HyperlinkOpenMode.Self`, which opens the hyperlink in the current browser tab. Set the property to `HyperlinkOpenMode.Blank` to open the hyperlink in a new browser tab.
+By default, the `OpenMode` property is set to **HyperlinkOpenMode.Self**, which opens the hyperlink in the current browser tab. Set the property to **HyperlinkOpenMode.Blank** to open the hyperlink in a new browser tab.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -193,7 +193,7 @@ By default, the `OpenMode` property is set to `HyperlinkOpenMode.Self`, which op
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLdZRNOTGCrZiyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLnDmtkixXouruK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenMode.razor)
 
@@ -246,7 +246,7 @@ The following example demonstrates how to change the hyperlink open mode at runt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBoiNtHrIBncXmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBntmXkidWBWuli?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/HyperlinksOpenModeRuntime.razor)
 
