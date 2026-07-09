@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Linear Gauge in Blazor Server App
 
-This section briefly explains about how to include [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Server App 
 
@@ -112,7 +112,7 @@ dotnet add package Syncfusion.Blazor.LinearGauge -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.LinearGauge` namespaces.
+After the package is installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.LinearGauge` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -139,9 +139,9 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script resources
+## Add script resource
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -153,7 +153,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 
 ## Add Blazor Linear Gauge component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component inside the razor file.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component inside the razor file.
 
 N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -175,7 +175,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
