@@ -7,9 +7,9 @@ control: Sparkline Charts
 documentation: ug
 ---
 
-# Getting Started with Blazor Sparkline Charts in Blazor WASM App
+# Getting started with Blazor Sparkline Charts in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Sparkline Charts](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor Sparkline Charts](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -163,7 +163,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-## Populate Blazor Sparkline Charts with Data
+## Populate Blazor Sparkline Charts with data
 
 To bind data for the Sparkline Charts component, assign a `IEnumerable` object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -175,7 +175,7 @@ To bind data for the Sparkline Charts component, assign a `IEnumerable` object t
     {
         public string Month { get; set; }
         public double Celsius { get; set; }
-    };
+    }
     public List<WeatherReport> ClimateData = new List<WeatherReport> {
         new  WeatherReport { Month= "Jan", Celsius= 34 },
         new  WeatherReport { Month= "Feb", Celsius= 36 },
@@ -212,7 +212,7 @@ Now map the `Month` and the `Celsius` fields from the datasource to [XName](http
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -252,7 +252,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJXWqjfqKBvkdq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Charts](./images/blazor-sparkline.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVdXGZdXGmYzGQO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Charts](./images/blazor-sparkline.webp)" %}
 
 ## Blazor Sparkline Charts types
 
@@ -274,9 +274,9 @@ Change the Sparkline Charts type using the [Type](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLTtsqNTqqdYsqg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Area Chart](./images/blazor-area-sparkline.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrRDGtnDmFfUvvJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Area Chart](./images/blazor-area-sparkline.webp)" %}
 
-N> Refer to [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
+N> Refer to [code block](#populate-blazor-sparkline-charts-with-data) to know about the property value of the **ClimateData**.
 
 ## Adding Data Label
 
@@ -308,9 +308,9 @@ Available types are:
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
+N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJXsqtfqzDdTTI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Chart with Data Label](./images/blazor-sparkline-data-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrdtGtxDwlFlrSn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Chart with Data Label](./images/blazor-sparkline-data-label.webp)" %}
 
 ## Enable tooltip
 
@@ -336,7 +336,7 @@ When space constraints prevent from displaying information using Data Labels, th
 
 N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLfDsUNfgJpNFjr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sparkline Charts with Tooltip](./images/blazor-sparkline-tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrxZGZRZcYIIukq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Sparkline Charts with Tooltip](./images/blazor-sparkline-tooltip.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sparkline).
 
@@ -346,4 +346,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

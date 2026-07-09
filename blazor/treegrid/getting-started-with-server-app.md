@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with TreeGrid in Blazor Server App | Syncfusion®
-description: Checkout and learn about getting started with Blazor TreeGrid component in Blazor Server Application.
+description: Check out and learn about getting started with Blazor TreeGrid component in Blazor Server Application.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeGrid in Blazor Server App
+# Getting started with Blazor TreeGrid in Blazor Server App
 
 This section briefly explains about how to include [Blazor TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -209,7 +209,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -249,4 +249,4 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxtSsPSYTTRmob?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVnZQNlpVLkzdkR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

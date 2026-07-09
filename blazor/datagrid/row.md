@@ -120,7 +120,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLpWjrbKtniHxws?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXwZdskYjgYrs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event customizes individual cells and triggers for every cell. Use it when styling is required at the cell level based on conditions.
 
@@ -213,7 +213,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBTCNBvAmQGVWzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBHtwNxMOkzfyWw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 **Customize selected row**
 
@@ -307,7 +307,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLzMXVvTiZCSxLF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhRNQDnMukwZusy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Row height
 
@@ -409,7 +409,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJWDgtqYsIJUYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLRNcZxBjNTyCNC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The `RowHeight` property sets the height for all Grid rows. It does not configure individual cell heights.
 > The `RowHeight` setting applies to header and footer rows as well.
@@ -510,7 +510,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhJMsNIiHrTRolf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxDGtRBDiIMRls?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Row hover
 
@@ -601,7 +601,7 @@ By default, `EnableHover` is **true**. Set it to **false** to disable row hover.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhpiDUZpjrcFKJP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRtmtnBjLWvIBj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The `EnableHover` property applies to the entire Grid rather than to specific rows or columns.
 
@@ -715,7 +715,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrTMjUtTMnyFhpX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhxXQjHLNGLEGXW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > Frozen rows should remain within the Grid viewport.
 > Frozen Grid supports row virtualization to improve performance with large datasets.
@@ -823,7 +823,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVpWNgjTWFRHyLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBxjmZHrjmdCCjF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > When a validation message is displayed in the frozen area (Left, Right, or Fixed), scrolling is blocked until the message is cleared.
 
@@ -969,7 +969,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzsZKZJLyoxcEx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRtmXRLDPXXeAX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > When working with remote data, adding a new row between existing rows is not supported.
 > To insert a new record at the beginning, pass 0 as the second parameter to `AddRecordAsync`.
@@ -1116,4 +1116,4 @@ Use the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrzCCLcgeRbJEvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLRDwZRVNPHhdNx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

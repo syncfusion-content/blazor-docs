@@ -211,7 +211,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrzZCLkTTyPJnAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear Gauge Component](images/blazor-linear-gauge-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVxZwZIIAwxSWhN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Linear Gauge Component](images/blazor-linear-gauge-component.webp)" %}
 
 ## Set pointer value
 
@@ -236,7 +236,7 @@ N> In Linear Gauge, you can configure multiple axes. On each axis, you can add a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrJtWhEJTREUVHV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear Gauge with Pointer Value](images/blazor-linear-gauge-with-pointer.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVHDctISqvNdJoj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Linear Gauge with Pointer Value](images/blazor-linear-gauge-with-pointer.webp)" %}
 
 ## Add a title for Blazor Linear Gauge
 
@@ -258,7 +258,7 @@ The title can be added to the linear gauge to provide a piece of quick informati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVTtsBuJzGmldKw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear Gauge with Title](images/blazor-linear-gauge-with-title.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLdjmjyyqPJPJRa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Linear Gauge with Title](images/blazor-linear-gauge-with-title.webp)" %}
 
 ## Add ranges in the Blazor Linear Gauge
 
@@ -288,7 +288,7 @@ The range is used to specify a group of scale values in the gauge. You can set t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfjCrEpJFVEbRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear Gauge with Range Bar](images/blazor-linear-gauge-with-ranges.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxjmZeSKFvlbfY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Linear Gauge with Range Bar](images/blazor-linear-gauge-with-ranges.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/LinearGauge).
 
