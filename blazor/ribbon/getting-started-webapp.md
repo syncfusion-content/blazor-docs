@@ -125,7 +125,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Ribbon` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Ribbon
@@ -195,9 +195,9 @@ Options in the ribbon are organized into tabs. Use the [RibbonTabs](https://help
 {% endhighlight %}
 {% endtabs %}
 
-### Adding ribbon group
+### Adding a Ribbon Group
 
-To define a ribbon group under each tab, you can use the [RibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroups.html) tag directive like below. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
+To define a ribbon group under each tab, use the [RibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroups.html) tag directive as shown below. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of the ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -222,7 +222,6 @@ Within a group, items are organized into collections. Use the [RibbonCollection]
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Ribbon;
 @using Syncfusion.Blazor.SplitButtons;
 
 <SfRibbon>
@@ -261,16 +260,16 @@ Within a group, items are organized into collections. Use the [RibbonCollection]
 @code {
     List<DropDownMenuItem> formatItems = new List<DropDownMenuItem>()
     {
-        new DropDownMenuItem{ Text = "Keep Source Format" },
-        new DropDownMenuItem{ Text = "Merge Format" },
-        new DropDownMenuItem{ Text = "Keep Text Only" }
+        new DropDownMenuItem { Text = "Keep Source Format" },
+        new DropDownMenuItem { Text = "Merge Format" },
+        new DropDownMenuItem { Text = "Keep Text Only" }
     };
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -314,4 +313,4 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJCLsRVGKvCOVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Ribbon Component](./images/getting-started.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrxtmZANRhaAMiY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Ribbon Component](./images/getting-started.webp)" %}
