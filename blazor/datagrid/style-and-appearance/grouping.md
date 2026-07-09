@@ -199,4 +199,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBSCDinhwfxPloP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBHZmDiLngpxcKL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
