@@ -113,7 +113,7 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxDphpWvpEiDsX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxNQNbzjcDRlbd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the edit dialog header
 
@@ -296,4 +296,4 @@ namespace TreeGridComponent.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrnjJrTBZixrfzY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBntcjvpNmISNZI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
