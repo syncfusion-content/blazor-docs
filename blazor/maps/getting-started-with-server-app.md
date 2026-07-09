@@ -221,7 +221,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBzNsUjWcevzcvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with GeoJSON Layer](./images/blazor-map.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrnDcNFJxBpejiI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Maps with GeoJSON Layer](./images/blazor-map.webp)" %}
 
 ## Bind data source
 

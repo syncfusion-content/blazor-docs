@@ -48,7 +48,7 @@ The Blazor File Upload component allows for the customization of the file list i
 </SfUploader>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrSZOLhhmAhbeZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLntGNafPjyQoid?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Adding a progress bar using a template
 
@@ -205,6 +205,6 @@ When using a file upload template, the default progress bar is not displayed in 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLytYhhLmmEGpkj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXctEJbKBDChs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor File Upload with a custom template and progress bar](./images/blazor-template-progressbar.gif)
+![Blazor File Upload with a custom template and progress bar](./images/blazor-template-progressbar.webp)
