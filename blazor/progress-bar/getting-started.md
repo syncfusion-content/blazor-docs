@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Stared with Blazor ProgressBar in WASM App | Syncfusion
-description: Checkout and learn here all about getting started with Blazor ProgressBar in Blazor WebAssembly Application.
+title: Getting Started with Blazor ProgressBar in WASM App | Syncfusion
+description: Check out and learn here all about getting started with Blazor ProgressBar in Blazor WebAssembly Application.
 platform: Blazor
 control: ProgressBar
 documentation: ug
 ---
 
-# Getting Started with Blazor ProgressBar in Blazor WASM App
+# Getting started with Blazor ProgressBar in Blazor WASM App
 
-This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -168,7 +168,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -208,7 +208,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVzNiAXLOxVFFXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVxjcjWzGguuqmx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Linear ProgressBar](images/blazor-linear-progressbar.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar).
 
@@ -225,4 +225,6 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhpDMUZLacfZQlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLdZQNizGfKVGOC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular ProgressBar](images/blazor-circular-progressbar.webp)" %}
+
+N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear) that shows you how to render and configure the ProgressBar.

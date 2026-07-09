@@ -123,7 +123,7 @@ The Blazor DataGrid allows control over the number of records displayed per page
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVTtshJAItZMYUX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLnDwZqIVQNoHJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Change the page count
 
@@ -228,7 +228,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpNsrfUyIpaGxQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhxjmjgIrGTzrkV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Change the current page
 
@@ -333,7 +333,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLJjCLJKHyfBBpf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLxDmtUILGnbTSv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Pager template
 
@@ -437,7 +437,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNheXEKNqEnQEOmc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLntQDASrPjtMxA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * Inside the `Template` RenderFragment, access parameters using the implicit parameter named context, which is of type [PagerTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.PagerTemplateContext.html) API.
 > * Refer to the [Blazor Grid Pager Template](https://blazor.syncfusion.com/demos/datagrid/pager-template) online demo showcasing the Pager Template feature in the Blazor DataGrid.
@@ -520,7 +520,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVfjCjETzzrPfLW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLHNmtqoLlLKwWE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * If the PageSizes property is set to a boolean value (true or false), the page size dropdown defaults to options such as [‘All’, ‘5’, ‘10’, ‘15’, ‘20’].
 > * Refer to the [Blazor Grid Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) feature tour for an overview of paging.
@@ -597,7 +597,7 @@ The Blazor DataGrid allows customizing the default values in the page size dropd
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBfDWZOTOXcRZBT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVRZwjKIhFIXWLs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The PageSizes property can be configured with either an array of strings or a boolean value.
 
@@ -704,7 +704,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhptiBJfZoASXjt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthdNwDgorFllWXK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Dynamically calculate page size based on element height
 
@@ -801,7 +801,7 @@ It is possible to dynamically calculate the page size of a Grid by considering t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBJZWhzpcLcPshm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhdNwZqyhuqpZAJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render pager at the top of the Grid
 
@@ -916,7 +916,7 @@ In the following sample, `Pager` component is rendered above the Grid. Initially
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpChMvrRAWDWAS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrxDGtAeAMFPRqM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * In this approach, the Grid’s default pager is not used.
 > * During paging, the pager triggers the following events:
@@ -1020,7 +1020,7 @@ The Blazor DataGrid triggers two pager events during paging actions:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrTNWWXXgQbHprJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVHtmNUoKBseWzs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
