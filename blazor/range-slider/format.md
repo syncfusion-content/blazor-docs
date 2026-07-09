@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formatting in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about formatting in Syncfusion Blazor Range Slider component and much more.
+title: Formatting in Blazor Range Slider Component | Syncfusion®
+description: Checkout and learn here all about formatting in Blazor Range Slider component with examples and much more details.
 platform: Blazor
 control: Range Slider
 documentation: ug

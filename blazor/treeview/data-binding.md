@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about data binding support in Syncfusion Blazor TreeView component, it's elements and more.
+title: Data Binding in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about data binding support in Blazor TreeView component, it's elements and more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -15,7 +15,7 @@ The Blazor TreeView features "load on demand" (lazy loading) by default, which m
 
 By default, the [`LoadOnDemand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) property is set to `true`. Disabling this property renders all tree nodes at once at the beginning. The [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataBound) event triggers once the data source is populated in the TreeView, allowing for post-data-binding actions.
 
-A video demonstrating how to bind list data and service URLs to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeView component is available:
+A video demonstrating how to bind list data and service URLs to the Blazor TreeView component is available:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=yvzewBlBRrI" %}

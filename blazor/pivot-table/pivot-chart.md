@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pivot Chart in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Pivot Chart in Syncfusion Blazor Pivot Table component and much more.
+title: Pivot Chart in Blazor Pivot Table Component | Syncfusion®
+description: Learn about Pivot Chart in Blazor Pivot Table component for data visualization with examples and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

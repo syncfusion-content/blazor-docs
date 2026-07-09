@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about filtering in Syncfusion Blazor Pivot Table component and much more.
+title: Filtering in Blazor Pivot Table Component | Syncfusion®
+description: Learn about filtering options in Blazor Pivot Table component including member, label, and value filtering.
 platform: Blazor
 control: Pivot Table
 documentation: ug

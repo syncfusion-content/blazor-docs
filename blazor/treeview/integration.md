@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Integration in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Integration in Syncfusion Blazor TreeView component and much more.
+title: Integration in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Integration in Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -252,7 +252,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
 ## Badge Integration
 
-The Blazor TreeView component integrates with the Syncfusion Badge component, enabling customization of the node structure. This is achieved using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which facilitates the creation of a tree node with any custom structure, such as a web mail folder displaying a name and unread message count using the Badge component.
+The Blazor TreeView component integrates with the Blazor Badge component, enabling customization of the node structure. This is achieved using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which facilitates the creation of a tree node with any custom structure, such as a web mail folder displaying a name and unread message count using the Badge component.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -791,7 +791,7 @@ The Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/b
 
 ## Tooltip in Blazor TreeView Component
 
-Implemented the functionality to display a Syncfusion<sup style="font-size:70%">&reg;</sup> Tooltip when hovering over nodes in the Blazor TreeView component. This was achieved by utilizing the Tooltip component's [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event and performing a JavaScript interop call to dynamically update the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) based on the node being hovered over.
+Implemented the functionality to display a Tooltip when hovering over nodes in the Blazor TreeView component. This was achieved by utilizing the Tooltip component's [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event and performing a JavaScript interop call to dynamically update the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) based on the node being hovered over.
 
 ```cshtml
 
