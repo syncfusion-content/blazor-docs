@@ -139,7 +139,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVItzhpzpJHfBYo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRNmZdVyFUFREp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with column template](./images/exporting-pdf-column-template.webp)
 
@@ -254,7 +254,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyjfMHqkQMUKqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLnDcDHVSbYHIko?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with group caption template](./images/exporting-pdf-group-caption-template.webp)
 
@@ -606,7 +606,7 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLIDYhxTrzASqVV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrHNcDRLyaKTjGY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with detail template](./images/exporting-pdf-detail-template.webp)
 
@@ -884,6 +884,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhxZQDxhxZQxBlQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %} 
 
 ![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.webp)

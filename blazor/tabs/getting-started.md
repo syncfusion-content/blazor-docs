@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor Tabs in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor WASM App
+## Create a new Blazor WebAssembly (Standalone) App
 
 {% tabcontents %}
 
@@ -57,7 +57,7 @@ cd BlazorApp
 
 ## Install the required Blazor packages
 
-Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 {% tabcontents %}
 
@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
@@ -129,7 +129,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -187,7 +187,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -227,7 +227,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBJNWKNzICuUXkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs Component](./images/blazor-tabs.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRDcjigSBdnsag?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tabs Component](./images/blazor-tabs.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs).
 
@@ -276,9 +276,9 @@ The following code explains how to initialize tab content using `ContentTemplate
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLfjWqNJeVdyLDk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Template](./images/blazor-tabs-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVxNctiAeObYrRv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tabs with Template](./images/blazor-tabs-template.webp)" %}
 
-## Two way binding of SelectedItem
+## Two-way binding of SelectedItem
 
 The property [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) supports two way property binding, in the following code example if either the value is changed in numeric text box or selected tab item is changed, it will reflect in both the value of numeric text box and selected tab item.
 
@@ -328,7 +328,7 @@ Selected Tab
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBzDCgNzyqUhxZn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrdjctiUHoQOplC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.webp)" %}
 
 ## See also
 

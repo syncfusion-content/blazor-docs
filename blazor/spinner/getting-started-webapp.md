@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Getting Started with Blazor Spinner in Blazor Web App | Syncfusion
-description: Check out the documentation for getting started with Blazor Spinner Components in Blazor Web Application.
+description: Check out and learn the documentation for getting started with Blazor Spinner Components in Blazor Web Application.
 platform: Blazor
-control: Spinner
+component: Spinner
 documentation: ug
 ---
 
 # Getting Started with Blazor Spinner in Blazor Web App
 
-This section briefly explains about how to include [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -61,7 +61,7 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install the required Blazor packages
 
-Install the [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner), [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
 {% tabcontents %}
 
@@ -76,6 +76,7 @@ Alternatively, you can install the same packages using the Package Manager Conso
 {% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Spinner -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -91,6 +92,7 @@ Open the terminal and run the following commands.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Spinner -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Buttons -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -106,6 +108,7 @@ Open the command prompt and run the following commands.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet add package Syncfusion.Blazor.Spinner -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Buttons -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -120,10 +123,11 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spinner` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Spinner
+@using Syncfusion.Blazor.Buttons
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,10 +150,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -161,7 +165,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Spinner component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component inside the `.Client` project razor file.
 
 N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -195,7 +199,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -239,6 +243,6 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTZCUjfzWlJVVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLxZmDgDmvEZPKp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spinner).
