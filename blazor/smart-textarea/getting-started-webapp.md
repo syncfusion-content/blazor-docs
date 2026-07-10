@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Getting Started with Blazor Smart TextArea in Server App | Syncfusion
-description: Check out and learn here all about Getting started with Blazor Smart TextArea component in Blazor Server App and more.
+title: Getting Started with Blazor Smart TextArea in Web App | Syncfusion
+description: Check out and learn here all about Getting started with Blazor Smart TextArea component in Blazor Webapp and more.
 platform: Blazor
 component: Smart TextArea
 documentation: ug
 ---
 
-# Getting Started with Blazor Smart TextArea in Blazor Server App
+# Getting Started with Blazor Smart TextArea in Blazor Web App
 
-This section briefly explains about how to include [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component in your Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 To get started quickly with Blazor Smart TextArea component, you can check on this video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=RjHkC3idOdg" %}
 
-## Create a new Blazor Server App
+## Create a new Blazor Web App 
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Server App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor Server App.
+Run the following command to create a new Blazor Web App with the Server interactive render mode
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -38,13 +38,13 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor Server App.
+Run the following command to create a new Blazor Web App with the Server interactive render mode
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -59,7 +59,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install the required Blazor packages
 
@@ -119,7 +119,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/Components/_Imports.razor** file in the client project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespaces.
+After the packages are installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespaces.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Imports.razor" %}
@@ -132,7 +132,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Server App and register the Blazor service.
+Open the **Program.cs** file to register the Blazor service, then add the required namespaces in ~/Components/_Imports.razor for Server interactive render mode.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -148,7 +148,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Configure AI Service
 
-Follow the instructions below to register an AI model in your application.
+Use the following instructions to register and configure an AI model for your application.
 
 ### OpenAI
 
@@ -213,7 +213,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 {% endtabcontents %}
 
-* To configure the AI service, add the following settings to the **Program.cs** file in your Blazor Server app.
+* To configure the AI service, add the following settings to the **Program.cs** file in your Blazor Web app.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="9 11 12 13 14 15 17 18" %}
@@ -310,7 +310,7 @@ dotnet add package Azure.AI.OpenAI
 
 {% endtabcontents %}
 
-* To configure the AI service, add the following settings to the **Program.cs** file in your Blazor Server app.
+* To configure the AI service, add the following settings to the **Program.cs** file in your Blazor Web app.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="11 13 14 15 16 17 18 19 20 21 23 24" %}
@@ -417,7 +417,7 @@ dotnet add package OllamaSharp
 
 {% endtabcontents %}
 
-* Add the following settings to the **Program.cs** file in your Blazor Server app.
+* Add the following settings to the **Program.cs** file in your Blazor Web app.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" hl_lines="9 11 12 13 15 16" %}
@@ -464,7 +464,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smart-textarea) component inside the razor file.
 
-N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -546,3 +546,5 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 ## See also
 
 1. [Getting Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
