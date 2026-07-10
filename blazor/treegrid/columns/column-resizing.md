@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Resizing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about column resizing in the Syncfusion Blazor Tree Grid component and much more details.
+title: Column Resizing in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about column resizing in the Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

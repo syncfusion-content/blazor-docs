@@ -115,7 +115,7 @@ Customize the focus appearance when using an outline theme by targeting the `e-o
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdNHsigMVXcNNo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete focusing color outline theme](./images/style/blazor_autocomplete_outline-focus-color.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhRZxMvJEJFlUAR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete focusing color outline theme](./images/style/blazor_autocomplete_outline-focus-color.webp)" %}
 
 ## Customizing the background color of focus, hover, and active items
 
@@ -259,7 +259,7 @@ Add a search icon to the AutoComplete by overriding the content of the existing 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhnXxssKHshcbws?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete Search Icon](./images/blazor_searchicon_autocomplete.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLdXnibyNsbUnuS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete Search Icon](./images/blazor_searchicon_autocomplete.webp)" %}
 
 ## Customizing the float label element's focusing color
 
@@ -307,4 +307,4 @@ Customize the text selection appearance within the AutoComplete input by targeti
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrRtdCMqHTDIXkH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_text-selection-color.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVdtRiPeZntDBVT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_text-selection-color.webp)" %}

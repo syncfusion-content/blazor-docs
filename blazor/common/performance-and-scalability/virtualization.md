@@ -18,11 +18,10 @@ With virtualization enabled, large datasets become easier to handle, even when t
 The following Blazor components provide built-in virtualization support for efficiently handling large datasets.
 
 * **[DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** - Supports row virtualization, column virtualization, overscan buffering, virtual loading placeholders (mask rows), frozen columns with virtualization, and infinite scrolling.
-* **[Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler)** - Supports virtual scrolling to efficiently render large appointment collections and improve timeline performance.
+* **[Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler)** - Supports virtual scrolling to efficiently render large appointment collections and improve timeline performance.
 * **[ListView](https://www.syncfusion.com/blazor-components/blazor-listview)** - Supports UI virtualization with window or container scrolling modes.
 * **[File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)** - Supports UI virtualization in both Details and Large Icons views.
 * **[TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview)** - Supports UI virtualization to render only visible nodes, significantly improving performance in large hierarchical structures.
-* **[Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart)** - Supports row virtualization, timeline virtualization, and column virtualization to efficiently render large project schedules and complex timelines.
 * **[TreeGrid](https://www.syncfusion.com/blazor-components/blazor-tree-grid)** - Supports row virtualization, column virtualization, and cell placeholders (VirtualMaskRow) for smoother loading with large hierarchical data.
 
 ## Advantages of virtualization
@@ -45,7 +44,7 @@ For complete virtualization guidance, see:
 
 ## Scheduler virtualization
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) supports virtual scrolling to efficiently render large appointment collections and improve timeline performance. This helps reduce DOM size and keeps the scheduler responsive when working with extensive schedules.
+The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) supports virtual scrolling to efficiently render large appointment collections and improve timeline performance. This helps reduce DOM size and keeps the scheduler responsive when working with extensive schedules.
 
 For complete virtualization guidance, see:
 
@@ -74,14 +73,6 @@ The [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treevi
 For complete virtualization guidance, see:
 
 * [Virtualization in Blazor TreeView](https://blazor.syncfusion.com/documentation/treeview/virtualization)
-
-## Gantt Chart virtualization
-
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) supports row, timeline, and column virtualization to handle large project schedules efficiently. This reduces DOM size and improves scrolling performance in complex timelines.
-
-For complete virtualization guidance, see:
-
-* [Virtualization in Blazor Gantt Chart](https://blazor.syncfusion.com/documentation/gantt-chart/virtualization)
 
 ## TreeGrid virtualization
 

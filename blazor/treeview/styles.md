@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles and Appearance in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about styles and appearance in Syncfusion Blazor TreeView component and more.
+title: Styles and Appearance in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about styles and appearance in Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug

@@ -72,6 +72,7 @@ builder.Services.AddSyncfusionBlazor();
 ### Add stylesheets and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+
 {% tabs %}
 {% highlight html tabtitle="App.razor"  %}
 
@@ -118,11 +119,7 @@ This organization improves code readability and modularity, enabling easier main
 
 ## Define data models
 
-The application uses the following data models to represent products, cart items, and order details.
-
-### `Product` model
-
-Represents a product in the catalog, including its basic details, pricing, and availability.
+The application uses the following data models to represent products, cart items, and order details. `Product` model represents a product in the catalog, including its basic details, pricing, and availability. `CartItem` model represents a product added to the cart along with quantity and calculated subtotal. `Order` model represents an order, including selected items, total amount, and associated shipping and payment details.
 
 {% tabs %}
 {% highlight cs tabtitle="Models/Product.cs"  %}
@@ -144,13 +141,7 @@ namespace ShoppingCart.Models
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-### `CartItem` model
-
-Represents a product added to the cart along with quantity and calculated subtotal.
-
-{% tabs %}
 {% highlight cs tabtitle="Models/CartItem.cs"  %}
 
 namespace ShoppingCart.Models
@@ -167,13 +158,7 @@ namespace ShoppingCart.Models
 }
 
 {% endhighlight %}
-{% endtabs %}
 
-### `Order` model
-
-Represents an order, including selected items, total amount, and associated shipping and payment details.
-
-{% tabs %}
 {% highlight cs tabtitle="Models/Order.cs"  %}
 
 using System.ComponentModel.DataAnnotations;
@@ -598,9 +583,7 @@ builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 Reusable components help create a consistent user interface and promote code reusability. They encapsulate common UI elements and logic that can be shared across multiple pages.
 
-### Create the `ProductCard` component
-
-Displays product details and provides actions for adding items to the cart and managing the wishlist.
+`ProductCard` component displays product details and provides actions for adding items to the cart and managing the wishlist. The `CartBadge` component displays a cart icon with a badge that indicates the current number of items in the cart.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/ProductCard.razor"  %}
@@ -664,81 +647,73 @@ Displays product details and provides actions for adding items to the cart and m
 
 {% highlight css tabtitle="Components/ProductCard.razor.css"  %}
 
-    .product-card {
-        border-radius: 10px;
-        transition: box-shadow 0.2s ease;
-        width: 100%;
-        min-height: 360px;
-        box-sizing: border-box;
-    }
+.product-card {
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease;
+    width: 100%;
+    min-height: 360px;
+    box-sizing: border-box;
+}
 
-    .product-card:hover {
-        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+.product-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.product-image {
+    height: 150px;
+    background: #f4f6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@@media (max-width: 576px) {
+    .product-card {
+        border-radius: 8px;
+        padding: 10px;
     }
 
     .product-image {
-        height: 150px;
-        background: #f4f6f8;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .card-img {
-        max-height: 100%;
-        max-width: 100%;
-        object-fit: contain;
-    }
-
-    @@media (max-width: 576px) {
-        .product-card {
-            border-radius: 8px;
-            padding: 10px;
-        }
-
-        .product-image {
-            height: 120px;
-        }
-
-        .price {
-            font-size: 0.95rem;
-        }
-
-        .wishlist-btn {
-            font-size: 20px;
-        }
-    }
-
-    .footer-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer-actions {
-        display: flex;
-        gap: 6px;
+        height: 120px;
     }
 
     .price {
-        font-weight: 700;
+        font-size: 0.95rem;
     }
 
     .wishlist-btn {
-        font-size: 25px;
-        color: crimson;
+        font-size: 20px;
     }
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.price {
+    font-weight: 700;
+}
+
+.wishlist-btn {
+    font-size: 25px;
+    color: crimson;
+}
 
 {% endhighlight %}
-{% endtabs %}
 
-This component accepts product data as a parameter and renders a structured card layout. It uses [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card), [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), and [Blazor Rating](https://www.syncfusion.com/blazor-components/blazor-rating) to build the UI. It also uses event callbacks for cart actions and integrates with the wishlist service to maintain the current state.
-
-### Create the `CartBadge` component
-
-Displays a cart icon with a badge that indicates the current number of items in the cart.
-
-{% tabs %}
 {% highlight razor tabtitle="Components/CartBadge.razor"  %}
 
 @using ShoppingCart.Services
@@ -768,9 +743,12 @@ Displays a cart icon with a badge that indicates the current number of items in 
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
-This component reads the cart item count from the cart service and updates automatically when changes occur. It can be placed in a layout or header to provide global visibility of the cart state alongside navigation elements.
+This `ProductCard` component accepts product data as a parameter and renders a structured card layout. It uses [Blazor Card](https://www.syncfusion.com/blazor-components/blazor-card), [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button), and [Blazor Rating](https://www.syncfusion.com/blazor-components/blazor-rating) to build the UI. It also uses event callbacks for cart actions and integrates with the wishlist service to maintain the current state.
+
+This `CartBadge` component reads the cart item count from the cart service and updates automatically when changes occur. It can be placed in a layout or header to provide global visibility of the cart state alongside navigation elements.
 
 ## Create pages for catalog & cart
 
@@ -825,66 +803,65 @@ Serves as the landing page and provides quick navigation to key sections of the 
 
 {% highlight css tabtitle="Home.razor.css"  %}
 
-    /* PAGE LAYOUT */
-    .home-container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 30px;
-    }
+/* PAGE LAYOUT */
+.home-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
 
-    /* HERO CARD */
-    .hero-card {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-        margin-bottom: 40px;
-    }
-    .content {
-        text-align: center;
-    }
-    .hero-image {
-        width: 100%;
-        height: auto;
-    
-    }
+/* HERO CARD */
+.hero-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    margin-bottom: 40px;
+}
+.content {
+    text-align: center;
+}
+.hero-image {
+    width: 100%;
+    height: auto;
+}
 
-    .hero-card h2 {
-        margin-top: 15px;
-        font-size: 26px;
-        text-align: center;
-    }
+.hero-card h2 {
+    margin-top: 15px;
+    font-size: 26px;
+    text-align: center;
+}
 
-    .hero-card p {
-        color: #666;
-        font-size: 16px;
-        text-align: center;
-    }
+.hero-card p {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
 
-    /* NAV CARDS */
-    .nav-card-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 28px;
-    }
+/* NAV CARDS */
+.nav-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
 
-    .nav-card {
-        cursor: pointer;
-        text-align: center;
-    }
+.nav-card {
+    cursor: pointer;
+    text-align: center;
+}
 
-    .nav-card img {
-        width: 130px;
-        margin-bottom: 15px;
-    }
+.nav-card img {
+    width: 130px;
+    margin-bottom: 15px;
+}
 
-    .nav-card h3 {
-        margin-bottom: 5px;
-    }
+.nav-card h3 {
+    margin-bottom: 5px;
+}
 
-    .nav-card p {
-        color: #666;
-        font-size: 14px;
-    }
+.nav-card p {
+    color: #666;
+    font-size: 14px;
+}
 
 {% endhighlight %}
 
@@ -981,22 +958,25 @@ Displays available products and provides filtering and cart actions.
 
 {% highlight css tabtitle="Catalog.razor.css"  %}
   
-    article.content {
-       overflow: hidden;
-    }
+article.content {
+    overflow: hidden;
+}
 
-    .catalog-scroll {
-        max-height: calc(100vh - 140px);
-        overflow-y: auto;
-        padding-right: 8px; /* avoid content hiding behind scrollbar */
-    }
+.catalog-scroll {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding-right: 8px; /* avoid content hiding behind scrollbar */
+}
 
-    .catalog-scroll::-webkit-scrollbar { width: 10px; }
-    .catalog-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 6px; }
+.catalog-scroll::-webkit-scrollbar { width: 10px; }
+.catalog-scroll::-webkit-scrollbar-thumb { 
+    background: rgba(0,0,0,0.12); 
+    border-radius: 6px; 
+}
 
-    @@media (max-width: 768px) {
-        .catalog-scroll { max-height: calc(100vh - 160px); }
-    }
+@@media (max-width: 768px) {
+    .catalog-scroll { max-height: calc(100vh - 160px); }
+}
 
 {% endhighlight %}
 
@@ -1225,80 +1205,105 @@ Displays selected items and allows users to update quantities or remove items.
 
 {% highlight css tabtitle="Cart.razor.css"  %}
 
-    .e-card {
-        border: 0px;
-        box-shadow: none;
-    }
-    .empty-cart-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 3rem 1rem;
-    }
+.e-card {
+    border: 0px;
+    box-shadow: none;
+}
+.empty-cart-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
 
-    .empty-cart-card {
-        max-width: 640px;
-        width: 100%;
-        border-radius: 12px;
+.empty-cart-card {
+    max-width: 640px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.empty-icon {
+    font-size: 48px;
+    background: #f1f7ff;
+    width: 84px;
+    height: 84px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+@@media (max-width: 576px) {
+    .empty-cart-card { padding: 1rem; }
+    .empty-icon { 
+        width: 64px; 
+        height:64px; 
+        font-size:36px; 
     }
+}
 
-    .empty-icon {
-        font-size: 48px;
-        background: #f1f7ff;
-        width: 84px;
-        height: 84px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-    }
-
-    @@media (max-width: 576px) {
-        .empty-cart-card { padding: 1rem; }
-        .empty-icon { width: 64px; height:64px; font-size:36px; }
-    }
-
-    /* Order summary styles */
-    .order-summary-card { border-radius: 12px; overflow: hidden; }
-
-    .order-summary-header {
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        gap:10px;
-        padding: 0.75rem 1rem;
-        background: rgb(15, 108, 189);
-        border: rgb(15, 108, 189);
-        color: white;
+/* Order summary styles */
+.order-summary-card { 
+    border-radius: 12px; 
+    overflow: hidden;
     }
 
-    .order-summary-header small {
-        color: rgba(255,255,255,0.95);
-        opacity: 0.95;
-        display: block;
+.order-summary-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding: 0.75rem 1rem;
+    background: rgb(15, 108, 189);
+    border: rgb(15, 108, 189);
+    color: white;
+}
+
+.order-summary-header small {
+    color: rgba(255,255,255,0.95);
+    opacity: 0.95;
+    display: block;
+}
+
+.order-total { 
+    font-weight:700; 
+    font-size:1.1rem; 
+}
+
+.summary-thumb { 
+    width:42px; 
+    height:42px; 
+    object-fit:cover; 
+    border-radius:6px; 
+    background:#fff; 
+}
+
+.summary-item .fw-semibold { font-size:0.95rem; }
+.summary-items  {     
+    font-size: large;
+    font-weight: bold; 
+}
+@@media (max-width: 576px) {
+    .empty-cart-card { padding: 1rem; }
+    .empty-icon { 
+        width: 64px; 
+        height:64px; 
+        font-size:36px; 
     }
+    .order-summary-header { padding:0.6rem; }
+}
 
-    .order-total { font-weight:700; font-size:1.1rem; }
+.summary-list {
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
 
-    .summary-thumb { width:42px; height:42px; object-fit:cover; border-radius:6px; background:#fff; }
-
-    .summary-item .fw-semibold { font-size:0.95rem; }
-    .summary-items  {     font-size: large;
-    font-weight: bold; }
-    @@media (max-width: 576px) {
-        .empty-cart-card { padding: 1rem; }
-        .empty-icon { width: 64px; height:64px; font-size:36px; }
-        .order-summary-header { padding:0.6rem; }
-    }
-
-    .summary-list {
-        max-height: 320px;
-        overflow-y: auto;
-        padding-right: 6px;
-    }
-
-    .summary-list::-webkit-scrollbar { width: 8px; }
-    .summary-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 6px; }
+.summary-list::-webkit-scrollbar { width: 8px; }
+.summary-list::-webkit-scrollbar-thumb { 
+    background: rgba(0,0,0,0.12); 
+    border-radius: 6px; 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1702,14 +1707,43 @@ else
 {% endhighlight %}
 {% highlight css tabtitle="Whishlist.razor.css"  %}
 
-    .e-card.empty-wishlist-card {
-        border: 0px;
-        box-shadow: none;
+.e-card.empty-wishlist-card {
+    border: 0px;
+    box-shadow: none;
+}
+.empty-wishlist-wrapper { 
+    display:flex; 
+    justify-content:center; 
+    padding:3rem 1rem; 
+}
+
+.empty-wishlist-card { 
+    max-width:700px; 
+    width:100%; 
+    border-radius:12px; 
+}
+
+.wishlist-icon { 
+    font-size:48px; 
+    width:84px; 
+    height:84px; 
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center; 
+    border-radius:50%; 
+    background:#fff6fb; 
+    color:#d6336c; 
+    margin:auto;
+}
+
+@@media (max-width:576px) { 
+    .empty-wishlist-card { padding:1rem } 
+    .wishlist-icon { 
+        width:64px;
+        height:64px;
+        font-size:36px 
     }
-    .empty-wishlist-wrapper { display:flex; justify-content:center; padding:3rem 1rem; }
-    .empty-wishlist-card { max-width:700px; width:100%; border-radius:12px; }
-    .wishlist-icon { font-size:48px; width:84px; height:84px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#fff6fb; color:#d6336c; margin:auto; }
-    @@media (max-width:576px){ .empty-wishlist-card{ padding:1rem } .wishlist-icon{ width:64px;height:64px;font-size:36px }}
+}
 
 {% endhighlight %}
 {% endtabs %}

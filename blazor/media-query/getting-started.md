@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Blazor Media Query in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Media Query component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Media Query in WASM App | Syncfusion
+description: Check out and learn about getting started with Blazor Media Query component in Blazor WebAssembly Application.
 platform: Blazor
 control: Media Query
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor Media Query in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Media Query](https://www.syncfusion.com/blazor-components/blazor-media-query) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Media Query](https://www.syncfusion.com/blazor-components/blazor-media-query) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-### Create a new Blazor WASM App
+## Create a new Blazor WebAssembly App
 
 {% tabcontents %}
 
@@ -29,6 +29,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,6 +46,7 @@ Run the following command to create a new Blazor WebAssembly App.
 {% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +55,7 @@ dotnet new blazorwasm -o BlazorApp
 
 {% endtabcontents %}
 
-### Install the required Blazor packages
+## Install the required Blazor packages
 
 Install [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -109,19 +111,19 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces
+## Add import namespaces
 
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
 {% endhighlight %}
 {% endtabs %}
 
-### Register the Blazor service
+## Register the Blazor service
 
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
@@ -137,7 +139,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-### Add stylesheet and script resources
+## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
@@ -152,14 +154,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application.
+## Add Blazor Media Query component
 
-### Add Blazor Media Query component
-
-Open a Razor file located in the **~/Pages/*Index.razor** and add the [Blazor Media Query](https://www.syncfusion.com/blazor-components/blazor-media-query) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Media Query](https://www.syncfusion.com/blazor-components/blazor-media-query) component inside the razor file.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -386,7 +386,7 @@ else
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -426,10 +426,10 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBzXMKtikurjnwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Media Query Component](images/blazor-media-query.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrdtmDhzdYJeDlu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Media Query Component](images/blazor-media-query.webp)" %}
 
-### See also
+## See also
 
-* [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

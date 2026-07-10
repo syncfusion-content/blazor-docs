@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor MultiColumn ComboBox Component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor MultiColumn ComboBox component and more.
+title: Selection in Blazor MultiColumn ComboBox Component | Syncfusion®
+description: Checkout and learn here all about the Selection feature in Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug

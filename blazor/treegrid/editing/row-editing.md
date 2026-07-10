@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Editing in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Row Editing in Syncfusion Blazor Tree Grid component and much more details.
+title: Row Editing in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all the features about Row Editing in Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

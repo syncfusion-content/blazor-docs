@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Blazor Data Grid with GraphQL using Custom Adaptor | Syncfusion®
-description: Build Blazor apps with GraphQL and Syncfusion Data Grid to enable CRUD, filtering, sorting, paging, and grouping for seamless data operations.
+description: Build Blazor apps with GraphQL and Data Grid to enable CRUD, filtering, sorting, paging, and grouping for seamless data operations.
 control: DataGrid
 platform: blazor
 documentation: ug
 ---
 
-# Connect Syncfusion Blazor DataGrid with GraphQL using Hot Chocolate
+# Connect Blazor DataGrid with GraphQL using Hot Chocolate
 
 GraphQL is a query language that allows applications to request exactly the data needed, nothing more and nothing less. Unlike traditional REST APIs that return fixed data structures, GraphQL enables the client to specify the shape and content of the response.
 

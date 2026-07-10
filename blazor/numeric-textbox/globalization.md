@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about globalization in Syncfusion Blazor Numeric TextBox component and more.
+title: Globalization in Blazor Numeric TextBox Component | Syncfusion®
+description: Checkout and learn here all the features about globalization in Blazor Numeric TextBox component and much more details.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Numeric TextBox Component
 
-The [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+The [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right to Left
 
@@ -33,4 +33,4 @@ The following code example initializes the Numeric TextBox in `Chinese` culture.
 }
 ```
 
-![Right to Left in Blazor Numeric TextBox](./images/blazor-numerictextbox-right-to-left.webp)
+![Right to Left in Blazor Numeric TextBox](./images/blazor-numerictextbox-right-to-left.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Learn how to enable and configure filtering in Syncfusion Blazor MultiSelect component for search-based item selection.
+title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion®
+description: Learn how to enable and configure filtering in Blazor MultiSelect component for search-based item selection and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # AllowFiltering in MultiSelect Dropdown
 
-The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) feature in the Syncfusion Blazor MultiSelect component enables real-time search capability within the dropdown popup. Users can filter the list of items dynamically based on their input, supporting both simple text searches and complex filtered queries.
+The [**AllowFiltering**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) feature in the Blazor MultiSelect component enables real-time search capability within the dropdown popup. Users can filter the list of items dynamically based on their input, supporting both simple text searches and complex filtered queries.
 
 ## Getting Started with AllowFiltering
 
@@ -28,7 +28,7 @@ To enable filtering, set the `AllowFiltering` property to `true`. By default, th
     private string[] countries = new string[] { "Apple", "Banana", "Cherry", "Date", "Grape", "Orange" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLntoDxfhqAYVys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLHZGjPVtupHRAs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 In this example, the MultiSelect component displays a list of countries with filtering enabled. When the user types in the search box, the list filters in real-time to show only matching items.
 
@@ -50,7 +50,7 @@ In **CheckBox** mode, the filter input appears as a dedicated search bar at the 
     private string[] fruits = new string[] { "Apple", "Banana", "Cherry", "Mango", "Orange", "Papaya", "Peach" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBnZyNxJUCQLNrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrRZwNvBjkmGOLI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The filter bar includes the following features when used in CheckBox mode:
 
@@ -70,7 +70,7 @@ In **Box**, **Default**, and **Delimiter** modes, the filter functionality integ
     private string[] colors = new string[] { "Red", "Green", "Blue", "Yellow", "Orange", "Purple" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxjyDnfAJHWEyb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLnZctlViNClvwA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > **Note:** In these modes, the user must manually clear the input to see the unfiltered list again, as there is no dedicated filter UI element.
 
@@ -94,7 +94,7 @@ The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDow
     private string[] vegetables = new string[] { "Carrot", "Cabbage", "Broccoli", "Spinach", "Potato" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxDIDnTqlYHKSk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBdNQDvVWjpQhPP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The default filter type is **StartsWith**, which provides an autocomplete-style filtering experience. The **Contains** filter type is most commonly used for flexible search scenarios.
 
@@ -114,7 +114,7 @@ The [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Wh
     private string[] countries = new string[] { "Apple", "Banana", "Cherry", "America", "Australia" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnXSZdJzWeXYri?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrnXQtbBWjOwiAl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 With `IgnoreCase="true"`, typing "apple" matches "Apple", "APPLE", and "apple". When set to `false`, only exact case matches are returned.
 
@@ -130,7 +130,7 @@ The [IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
     private string[] names = new string[] { "Jose", "José", "Mänge", "Mange", "Zoë", "Zoe" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVdDyZHJTptxWPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhdZctlhMMCaRDT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 With `IgnoreAccent="true"`, typing "Jose" matches both "Jose" and "José". This is particularly useful when working with international data or names with special characters.
 
@@ -146,7 +146,7 @@ The [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
     private string[] cities = new string[] { "New York", "New Delhi", "Newcastle", "Newton", "New Orleans" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLHjoXdzpmqdWon?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrdNcjvrisRYsJJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The default debounce delay is **300 milliseconds**. Setting this value to **0** causes filtering to occur on every keystroke, which may impact performance with large datasets or remote data sources.
 
@@ -181,7 +181,7 @@ When working with complex object types, you must configure which fields to use f
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrxtSXdfpYSzibJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhnXQDbBWiakxCT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 In this example, filtering occurs based on the `Name` property as configured in [`MultiSelectFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#properties). When the user types "John", the list filters to show only employees with "John" in their name.
 
@@ -225,7 +225,7 @@ public class Product
 }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRXoZHzyVvCEeT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLRjmDPhMVHsitk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 When virtualization is enabled with filtering:
 
@@ -250,7 +250,7 @@ The [HideSelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     private string[] languages = new string[] { "CSharp", "JavaScript", "Python", "Java", "TypeScript", "Go" };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhHXeXdfyorhvoq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxDcNbBCBOAgBj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 In **Box**, **Default**, and **Delimiter** modes, selected items are hidden from the dropdown list when filtering. In **CheckBox** mode, selected items remain visible with checkmarks.
 
@@ -285,7 +285,7 @@ You can provide a custom base query that filtering will be applied on top of. Th
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBxNyNdTeGhgMSc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrdNwDvAJvEgacH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 When filtering is applied with a custom query:
 
@@ -319,7 +319,7 @@ The [Filtering](https://blazor.syncfusion.com/documentation/multiselect-dropdown
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVRXoZHzyVvCEeT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdtQjvLWgweBaG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Using WhereFilter.Or with Filtering Event
 
@@ -363,7 +363,7 @@ You can construct complex filter conditions using `WhereFilter.Or()` with a `Lis
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxtoLLgPhapZPz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVxtoLLgPhapZPz?appbar=false&editor=true&result=true&errorlist=false&theme=fluent2" %}
 
 When using `WhereFilter.Or()`:
 
@@ -393,7 +393,7 @@ When [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 With both properties enabled, users can type a custom value (such as "Purple") that does not exist in the list and add it as a new selection.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVHjejdJHmrOLoY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhdZmjPqJERJzgn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## No Records Found Behavior
 
@@ -420,7 +420,7 @@ When filtering produces no matching items, the MultiSelect component displays a 
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVHtSXxznverDnx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhRtGDFqIjHcgnF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Keyboard Navigation During Filtering
 

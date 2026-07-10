@@ -1,77 +1,49 @@
 ---
 layout: post
-title: Getting Started with Blazor DataManager Component | Syncfusion®
+title: Getting Started with Blazor DataManager in WASM App | Syncfusion
 description: Learn how to configure and use the Syncfusion Blazor DataManager component in a Blazor WebAssembly application.
 platform: Blazor
 control: DataManager
 documentation: ug
 ---
 
-# Getting Started with Blazor DataManager Component
+# Getting Started with Blazor DataManager in Blazor WASM App
 
-The [Blazor DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component provides a robust data access layer for Blazor applications. It enables seamless interaction with both **local** and **remote** data sources and supports essential operations such as **querying**, **sorting**, **filtering**, and **CRUD** actions. The component is designed to work in conjunction with data-bound controls, ensuring efficient data management across the application.
+This section explains how to include the Blazor DataManager component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-This guide explains how to configure and use the `DataManager` component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+## Create a new Blazor WebAssembly (Standalone) App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor App in Visual Studio
-
-Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor App in Visual Studio Code
-
-Create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code) documentation.
-
-Alternatively, create a WebAssembly application by using the following command in the integrated terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-
-{% highlight c# tabtitle="Blazor WASM App" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
-
 {% endtabs %}
+
+Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
-
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a Blazor WebAssembly App using .NET CLI
-
-Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -83,42 +55,85 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-## Install required Blazor packages
+## Install the required Blazor packages
 
-Install [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages in your project using the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
+Install the [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/), [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid), and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
-Alternatively, run the following commands in the Package Manager Console to achieve the same.
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Data`, `Syncfusion.Blazor.Grid`, and `Syncfusion.Blazor.Themes`) and install them.
+
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Data -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+{% endtabcontent %}
 
-## Add import namespaces
+{% tabcontent Visual Studio Code %}
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Data` namespaces.
+Open the terminal and run the following commands.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="Terminal" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
+dotnet add package Syncfusion.Blazor.Data -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor service
+{% endtabcontent %}
 
-Register the Blazor service in the **Program.cs** file of your Blazor WebAssembly App.
+{% tabcontent .NET CLI %}
+
+Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet add package Syncfusion.Blazor.Data -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Add import namespaces
+
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, and `Syncfusion.Blazor.Data` namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register the Blazor service
+
+Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+
+{% tabs %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -131,30 +146,31 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references in the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
+...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-....
+...
 <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 
-```
-
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Blazor DataManager component
 
-Add the Blazor DataManager component in the **~/Pages/Index.razor** file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the Blazor DataManager component inside the razor file.
 
 The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component is designed to work with data-bound components that support data operations. It serves as a gateway for both local and remote data, enabling interaction with the data source based on the configured query.
 
-### Binding to JSON data
+## Binding to JSON data
 
 Local **JSON** data can be bound to the [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) component by assigning a collection of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -168,7 +184,8 @@ Local **JSON** data can be bound to the [DataGrid](https://blazor.syncfusion.com
     </GridColumns>
 </SfGrid>
 
-@code {
+@code 
+{
     public class EmployeeData
     {
         public int EmployeeID { get; set; }
@@ -194,12 +211,52 @@ Local **JSON** data can be bound to the [DataGrid](https://blazor.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-### Binding to OData
+## Run the application
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Blazor DataManager component will render in your default web browser.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Open the terminal and run the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Open the command prompt and run the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Binding to OData
 
 Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started) component by configuring the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property and specifying the appropriate adaptor using the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -220,8 +277,8 @@ Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documen
     </GridColumns>
 </SfGrid>
 
-@code {
-
+@code
+{
     public class Order
     {
         public int? OrderID { get; set; }
@@ -236,16 +293,16 @@ Remote data can be bound to the [DataGrid](https://blazor.syncfusion.com/documen
 
 ## Component binding
 
-The Blazor [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component can be integrated with any data-bound component to manage local or remote data operations.
+The Blazor DataManager component can be integrated with any data-bound component to manage local or remote data operations.
 
 This configuration demonstrates how the `DataManager` is bound to the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to enable consistent interaction with local or remote data sources.
 
-### Local data binding
+## Local data binding
 
 Local data can be bound to components such as `SfDropDownList` by assigning a collection of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the `SfDataManager` component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
@@ -255,7 +312,8 @@ Local data can be bound to components such as `SfDropDownList` by assigning a co
     <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
 </SfDropDownList>
 
-@code {
+@code 
+{
     public class Country
     {
         public string? Name { get; set; }
@@ -274,14 +332,14 @@ Local data can be bound to components such as `SfDropDownList` by assigning a co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeCWWaPtlNQoPM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthdDHVATdWQWVJr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding DropDown List Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.webp)" %}
 
-### Remote data binding
+## Remote data binding
 
 Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property and specifying the appropriate adaptor using the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the `SfDataManager` component.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -292,8 +350,8 @@ Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/bla
     <DropDownListFieldSettings Value="CustomerID" Text="ContactName"></DropDownListFieldSettings>
 </SfDropDownList>
 
-@code {
-    
+@code 
+{
     public class Contact
     {
         public string? ContactName { get; set; }
@@ -304,6 +362,6 @@ Remote data can be bound by setting the [Url](https://help.syncfusion.com/cr/bla
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVyMWMEFjOIhipK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLxNRLKJdVyyhZu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.webp)" %}
 
 N> [View Sample on GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).

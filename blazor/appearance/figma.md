@@ -101,5 +101,5 @@ To upgrade the UI kits, download the latest versions from the links above. Follo
 
 ## See also
 
-* [Apply Blazor Themes and Switch Themes Dynamically](https://blazor.syncfusion.com/documentation/appearance/themes)
+* [Apply and Customize Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes)
 * [Customize Blazor Component Themes with Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio)

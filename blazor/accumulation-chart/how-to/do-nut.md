@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text placing center of Blazor Doughnut Chart Component | Syncfusion
-description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and more.
+title: Text placing center of Blazor Doughnut Chart Component | Syncfusion®
+description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and much more details.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

@@ -27,7 +27,7 @@ Copy the default `.resx` file (`SfResources.resx`) and any required culture-spec
 
 ![Adding Resource Files in Blazor](images/localization-resource.webp)
 
-N> Update the localization files whenever upgrading Syncfusion NuGet packages to prevent mismatches in localization strings.
+N> Update the localization files whenever upgrading NuGet packages to prevent mismatches in localization strings.
 
 After adding the resource files, open the default resource file (`SfResources.resx`) in the **Resource Editor** and set **Access Modifier** to **Public**.
 
@@ -265,7 +265,7 @@ using System.Globalization;
 ...
 
 builder.Services.AddSyncfusionBlazor();
-//Register the locale service to localize Blazor components.
+//Register the Syncfusion locale service to localize Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
 var host = builder.Build();

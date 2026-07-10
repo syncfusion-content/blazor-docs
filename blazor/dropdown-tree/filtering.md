@@ -49,7 +49,7 @@ The following code demonstrates the filtering functionality with local data in t
 }
 ```
 
-![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-local-filter.png)
+![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-local-filter.webp)
 
 ## Remote data
 
@@ -137,7 +137,7 @@ The Data items can be filtered with or without case sensitivity using the [Ignor
 
 You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox. `FilterBarPlaceholder` is applicable when [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is used as `true`. `FilterBarPlaceholder` is depends on [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) property.
 
-![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-placeholder.png)
+![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-placeholder.webp)
 
 ## Minimum filter length
 

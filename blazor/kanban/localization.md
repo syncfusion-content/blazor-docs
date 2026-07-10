@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about localization in Syncfusion Blazor Kanban component and much more details.
+title: Localization in Blazor Kanban Component | Syncfusion®
+description: Checkout and learn here all the features about localization in Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -15,7 +15,7 @@ This section explains how to localize the Blazor Kanban component to support dif
 
 ## Localizing Kanban Text
 
-The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component supports localization by allowing you to translate built-in text strings into different languages. To learn how to configure localization across all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component supports localization by allowing you to translate built-in text strings into different languages. To learn how to configure localization across all Blazor components, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation.
 
 ## Enabling Right-to-Left (RTL) Layout
 

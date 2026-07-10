@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor Sparkline Component | Syncfusion
-description: Check out and learn about globalization support in the Syncfusion Blazor Sparkline component for better adaptability.
+title: Globalization in Blazor Sparkline Component | Syncfusion®
+description: Check out and learn about globalization support in the Blazor Sparkline component for better adaptability.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug

@@ -18,7 +18,7 @@ Common setup issues relate to:
 * Script reference management
 * Service registration in dependency injection
 
-N> This guide is intended for Blazor components version 33.2.3 or later, targeting .NET 8, .NET 9, or .NET 10. Some details may differ in earlier versions or older .NET releases.
+N> This guide is intended for Blazor components version 33.2.3 or later. Some details may differ in earlier versions or older .NET releases.
 
 ## Issue 1: Components rendering without styles
 
@@ -71,61 +71,6 @@ If you switch themes during development, clear your browser cache (Ctrl+F5 or Ct
 This applies when interactivity location is set to **Per page/component**. Add the render mode directive at the top of your `.razor` page.
 
 {% tabs %}
-{% highlight razor tabtitle="Counter.razor" hl_lines="2" %}
-
-@page "/counter"
-@rendermode InteractiveServer
-
-<PageTitle>Counter</PageTitle>
-
-<h1>Counter</h1>
-
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### For Global Interactivity configuration
-
-In `~/Program.cs`, configure global render mode.
-
-{% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Registers Razor Components and enables interactive Server and WebAssembly components
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
-    .AddInteractiveWebAssemblyComponents();
-
-var app = builder.Build();
-
-// Maps the root component and enables the corresponding render modes globally
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode()
-    .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
-
-{% endhighlight %}
-{% endtabs %}
-
-### For Blazor components
-
-Apply an appropriate render mode to pages or components that use Blazor components.
-
-{% tabs %}
 {% highlight razor tabtitle="DataGridPage.razor" hl_lines="2" %}
 
 @page "/datagrid"
@@ -159,6 +104,31 @@ Apply an appropriate render mode to pages or components that use Blazor componen
         public string CustomerName { get; set; } = "";
     }
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+### For Global Interactivity configuration
+
+In `~/Program.cs`, configure global render mode.
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Registers Razor Components and enables interactive Server and WebAssembly components
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
+
+var app = builder.Build();
+
+// Maps the root component and enables the corresponding render modes globally
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
 
 {% endhighlight %}
 {% endtabs %}
@@ -249,7 +219,7 @@ In addition to the core script, specific Blazor components such as the [Blazor P
 
 * Placing scripts in `<head>` instead of at the end of `<body>`
 * Incorrect script paths (for example, using old paths from .NET 6 documentation)
-* Missing component-specific scripts for Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)
+* Missing component-specific scripts for Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor)
 * Loading the script before the Blazor framework script
 * Using outdated script references from previous Blazor versions
 

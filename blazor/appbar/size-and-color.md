@@ -41,7 +41,7 @@ This mode is the default one in which the AppBar is displayed with the default h
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxtdWWLymgXJjV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Regular Size](./images/regular_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxtdWWLymgXJjV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Regular Size](./images/regular_appbar.webp)" %}
 
 ### Prominent AppBar
 
@@ -91,7 +91,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLxNHWMVIQcoNhC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Prominent Size](./images/prominent_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLxNHWMVIQcoNhC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Prominent Size](./images/prominent_appbar.webp)" %}
 
 ### Dense AppBar
 
@@ -117,7 +117,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLRtnsWLHmcqcJo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Dense Size](./images/dense_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLRtnsWLHmcqcJo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Dense Size](./images/dense_appbar.webp)" %}
 
 ## Color
 
@@ -157,7 +157,7 @@ This color mode is the default one in which the AppBar can be displayed with a l
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRXnWChdvsdJLn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Light Color](./images/light_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRXnWChdvsdJLn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Light Color](./images/light_appbar.webp)" %}
 
 ### Dark AppBar
 
@@ -187,7 +187,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the pr
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHXRCCrxlHLAkz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Dark Color](./images/dark_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHXRCCrxlHLAkz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Dark Color](./images/dark_appbar.webp)" %}
 
 ### Primary AppBar
 
@@ -217,7 +217,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRjdMMrHFknIeA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Primary Color](./images/primary_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRjdMMrHFknIeA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Primary Color](./images/primary_appbar.webp)" %}
 
 ### Inherit AppBar
 
@@ -248,4 +248,4 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVxDdMiBxOKpSGv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Inherit Color](./images/inherit_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVxDdMiBxOKpSGv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Inherit Color](./images/inherit_appbar.webp)" %}

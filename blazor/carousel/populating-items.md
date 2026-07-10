@@ -110,7 +110,7 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXxMLgBrfFPXo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel selected slide](images/selected_index.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXxMLgBrfFPXo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel selected slide](images/selected_index.webp)" %}
 
 ### Select an item using the method
 
@@ -235,7 +235,7 @@ The Carousel component supports to show one complete slide and a partial view of
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdXRshqBqhCAOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/partial-visible.jpg)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdXRshqBqhCAOS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/partial-visible.webp)" %}
 
 N> Slide animation only applicable if the `partialVisible` is enabled. 
 
@@ -294,7 +294,7 @@ The following example code depicts the functionality of `partialVisible` and wit
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXniVUBqodeNT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/without-loop.jpg)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxXniVUBqodeNT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Carousel partial visible slide](images/without-loop.webp)" %}
 
 ## See also
 

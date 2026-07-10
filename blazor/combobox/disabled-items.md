@@ -19,7 +19,7 @@ In the following sample, items are disabled based on a data field mapped to Disa
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVfjnWVJFyoSyKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLntRLUrLALCUzc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Breakpoints in Blazor Media Query Component | Syncfusion
-description: Checkout and learn here all about Breakpoints in Syncfusion Blazor Media Query component and much more details.
+title: Breakpoints in Blazor Media Query Component | Syncfusion®
+description: Checkout and learn here all about Breakpoints in Blazor Media Query component and much more details.
 platform: Blazor
 control: Media Query
 documentation: ug

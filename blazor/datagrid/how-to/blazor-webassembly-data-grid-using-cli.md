@@ -224,7 +224,7 @@ After the app starts, navigate to `http://localhost:<port-number>` in the browse
 
 ![Blazor DataGrid running in a WebAssembly app](../images/blazor-datagrid-component.webp)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRNdgtetUSCuOz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Defining row data
 
@@ -292,7 +292,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrotoiKCoYkHoHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRjRKtIXhPRUvl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Defining columns
 
@@ -379,7 +379,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLyNosqiEMHcPrL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBHjHqjSjJlQWGd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable paging
 
@@ -455,7 +455,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrejSMgCdnGAijD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVxDxgNSjSVyErQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable sorting
 
@@ -530,7 +530,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSXosACxQRZrki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVRtnKtejeojQfd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable filtering
 
@@ -606,7 +606,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIDoMqsHPeUEtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVHXRgtotIQaqeb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Enable grouping
 
@@ -682,7 +682,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBxZHgDIXxXecpf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor DataGrid](../images/blazor-datagrid-render.webp)
 

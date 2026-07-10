@@ -67,7 +67,7 @@ To select a point, set the `SelectionMode` property to **Point**.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLxtHsXJJuaiovf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Point Selection](images/selection/blazor-chart-point-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVpjnMgCpXGYJIf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Point Selection](images/selection/blazor-chart-point-selection.webp)" %}
 
 ## Series
 
@@ -114,7 +114,7 @@ To select a series, set the `SelectionMode` property to **Series**.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLdjxCXfIZnReZC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Series Selection](images/selection/blazor-chart-series-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrpXHWUCJCTRDgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Series Selection](images/selection/blazor-chart-series-selection.webp)" %}
 
 ## Cluster
 
@@ -161,7 +161,7 @@ To select the points that corresponds to the same index in all the series, set t
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBRZdCDJoiKRbtk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Cluster Selection](images/selection/blazor-chart-cluster-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhpXxsKCJCblvOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Cluster Selection](images/selection/blazor-chart-cluster-selection.webp)" %}
 
 ## Selection type
 
@@ -208,7 +208,7 @@ To select multiple points or series, enable the `AllowMultiSelection`  property.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrxNxCjToCEVMlG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Multiple Selection](images/selection/blazor-chart-multiple-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVTZxiqipLEJFtn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Multiple Selection](images/selection/blazor-chart-multiple-selection.webp)" %}
 
 ## Selection during initial loading
 
@@ -257,7 +257,7 @@ In a 3D chart, selecting a point or series during initial loading can only be do
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLxNRWNTorgyrlH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Selection during initial loading](images/selection/blazor-chart-initial-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVJDnsqWfUAipdG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Selection during initial loading](images/selection/blazor-chart-initial-selection.webp)" %}
 
 
 ## Selection through legend
@@ -302,4 +302,4 @@ To select a point or series through legend use the `ToggleVisibility` property. 
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVRZRiNTyVQbBjQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Column 3D Chart with Legend Selection](images/selection/blazor-chart-legend-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrpDRsqiTqkPxPM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column 3D Chart with Legend Selection](images/selection/blazor-chart-legend-selection.webp)" %}

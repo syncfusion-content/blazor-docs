@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Download the Syncfusion Blazor offline installer | Syncfusion
-description: Learn here about how to download the Syncfusion Blazor offline installer for trial or licensed use, including Start trials and License & Downloads options.
+title: Download the Blazor offline installer | Syncfusion®
+description: Learn here about how to download the Blazor offline installer for trial or licensed use, including Start trials and License & Downloads options.
 platform: Blazor
 control: Common
 documentation: ug

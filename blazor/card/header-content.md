@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header and Content in Blazor Card Component | Syncfusion®
-description: Checkout and learn here all about Header and Content in Syncfusion Blazor Card component and much more.
+description: Checkout and learn here all about Header and Content in Blazor Card component and much more details.
 platform: Blazor
 control: Card
 documentation: ug
@@ -94,4 +94,4 @@ Card content is designed to display an image tag within it. You can wrap an imag
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnjRsrrunDISPn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBnjRsrrunDISPn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.webp)" %}

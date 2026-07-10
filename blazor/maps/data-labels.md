@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Labels in Blazor Maps Component | Syncfusion
-description: Check out and learn how to configure and customize data labels in the Syncfusion Blazor Maps component.
+title: Data Labels in Blazor Maps Component | Syncfusion®
+description: Check out and learn how to configure and customize data labels in the Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug

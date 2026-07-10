@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Display string values in Blazor Pivot Table value cells | Syncfusion
-description: Learn how to display custom string values in Pivot Table value cells by using the CellTemplate property in the Syncfusion Blazor Pivot Table component.
+title: Display String Values in Blazor Pivot Table Value Cells | Syncfusion®
+description: Learn how to display custom string values in Pivot Table value cells using CellTemplate and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

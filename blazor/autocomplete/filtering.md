@@ -69,7 +69,7 @@ In the following example, `StartsWith` filter type has been mapped to the `Filte
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthRjHMsLYNsBVoo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBdjdCxivByeWfM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.webp)" %}
 
 ## Minimum length
 
@@ -83,7 +83,7 @@ In the following example, the search data will not be fetched (for either local 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrnDRCWhutJezSj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBRtHWHMvzzCECq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.webp)" %}
 
 ## Multi-column filtering
 
@@ -137,7 +137,7 @@ Refer to the following example to restrict the suggestion list to 3 items.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrntdiWLkCSbMBC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdXxsniPRmKSNw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.webp)" %}
 
 ## AutoComplete with Google search results
 
