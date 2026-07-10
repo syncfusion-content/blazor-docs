@@ -29,7 +29,7 @@ Files can be uploaded automatically or manually. For more information, you can r
 </UploaderAsyncSettings>
 </SfUploader>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBSWWBdJDLpZIrg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrHNQtuAuncUTyM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Without server-side API endpoint
 
@@ -185,7 +185,7 @@ The Blazor File Upload component provides several events to help you control and
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVeCiVoAGUKZnZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLdNwDYfjmubMZb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnUploadStart
 
@@ -212,7 +212,7 @@ The Blazor File Upload component provides several events to help you control and
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBeWMBIUlraMdku?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLRXGtYzNPyLbIi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Progressing
 
@@ -255,7 +255,7 @@ The Blazor File Upload component provides several events to help you control and
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZreCWBeTZzShNnS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhdNwXapNknpQJu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnActionComplete
 
@@ -297,7 +297,7 @@ The Blazor File Upload component provides several events to help you control and
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhyCirozVBSfKLa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBRjmXazskLYRUB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Success
 
@@ -330,7 +330,7 @@ The Blazor File Upload component provides several events to help you control and
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLoCCBSTgJSDCIc?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVdjQXaJiuwUyDl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnFailure
 
@@ -364,7 +364,7 @@ The Blazor File Upload component provides several events to help you control and
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrSiWrIJpNySjIM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhdjcZOzLNtVxTh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnCancel
 
@@ -407,7 +407,7 @@ The Blazor File Upload component provides several events to help you control and
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSWsLngIuAERjF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLxZQDOpBZonczl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnClear
 
@@ -448,7 +448,7 @@ The OnClear event is triggered when the file list in the uploader is cleared (ei
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhoCiVdgQLbOfil?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBdtGjYJrNcacZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### BeforeRemove
 
@@ -483,7 +483,7 @@ The OnClear event is triggered when the file list in the uploader is cleared (ei
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVoWsVdqFwdMHay?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXGZOJhWtqEgL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnRemove
 
@@ -521,7 +521,7 @@ The OnClear event is triggered when the file list in the uploader is cleared (ei
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthSWWLxgaAOmLBJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdXQNuJhMANqYG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See Also
 
