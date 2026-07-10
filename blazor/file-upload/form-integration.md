@@ -77,7 +77,7 @@ When the form is successfully submitted, the `OnValidSubmit` event handler recei
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXroWjZwIzUqaemW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor File Upload component within an EditForm, showing validation and submission.](./images/blazor-uploader-editform.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdZwNOpeOIlyvL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor File Upload component within an EditForm, showing validation and submission.](./images/blazor-uploader-editform.gif)" %}
 
 ## File Upload with DataForm Integration
 
@@ -148,4 +148,4 @@ When the `DataForm` is submitted, the [OnSubmit](https://help.syncfusion.com/cr/
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZheWNXGeJtxWIXQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor File Upload component within a DataForm](./images/blazor-uploader-dataform.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrHjQZEfRJCTAFn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor File Upload component within a DataForm](./images/blazor-uploader-dataform.gif)" %}

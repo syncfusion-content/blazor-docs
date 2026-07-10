@@ -39,4 +39,4 @@ The Toolbar supports defining custom content for an item using its `Template` pr
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBeCZWZqOFgmHpq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Item with Custom Template](../images/blazor-toolbar-item-custom-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLxNcZBpQytmGsS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toolbar Item with Custom Template](../images/blazor-toolbar-item-custom-template.webp)" %}

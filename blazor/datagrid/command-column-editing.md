@@ -94,7 +94,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVyZWBVCmUhlVYq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxtGXrCkmbjMxB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Custom command column
 
@@ -199,7 +199,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVoDiBhCEmvtthU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVHDwDBiEFgGUVy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The Blazor DataGrid does not support **adding new records** using the command column. This limitation exists because the command column and its buttons are rendered only after a record is created. Therefore, the command column supports only **edit**, **delete**, **cancel**, and **update** operations.
 
@@ -286,4 +286,4 @@ The following steps outline how to conditionally hide command buttons:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLetprbTsENCfsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrxtctVWavQkxmJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

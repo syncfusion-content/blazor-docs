@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with TimePicker in Blazor WASM App | Syncfusion®
+title: Getting Started with TimePicker in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor TimePicker component in Blazor WebAssembly Application.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Getting Started with Blazor TimePicker in Blazor WASM App
+# Getting started with Blazor TimePicker in Blazor WASM App
 
-This section briefly explains about how to include [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WASM App
 
@@ -126,7 +126,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
+Open the **Program.cs** file in the Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -169,7 +169,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -209,13 +209,13 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBJjCKtzSOIsHLx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrnjGjiTlQrevvn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.webp)" %}
 
 ## Setting the time format
 
-Time format is a way of representing the time value in different string format in textbox and popup list. By default, the TimePicker’s Format is based on the culture. But the Format of the TimePicker can be customized using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property.
+Time format is a way of representing the time value in different string formats in the textbox and popup list. By default, the TimePicker’s Format is based on the culture. The TimePicker format can be customized using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property.
 
-The below code demonstrates how to render TimePicker component in 24 hours Format with 60 minutes interval. The time interval is set to 60 minutes by using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Step) property.
+The below code demonstrates how to render TimePicker component in 24 hours format with 60 minutes interval. The time interval is set to 60 minutes by using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Step) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -231,7 +231,7 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVpXCUtfRjicUbp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLxNQtMzPOeTKMR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TimePicker).
 
