@@ -35,8 +35,6 @@ Write-Host $result
 {% endhighlight %}
 {% endtabs %}
 
-![PowerShell license validation output](images/license-validation.webp)
-
 * Update the parameters in the script:
    * **Platform:** Set /platform:"Blazor" (use the relevant Syncfusion platform as needed).
    * **Version:** Set /version:"26.2.4" (match the Syncfusion package version used in the build).
@@ -132,7 +130,7 @@ SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 
 //Validate the registered license key.
 // The array overload allows validating against multiple platforms in a single call.
-bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.Blazor });
+bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.UIComponent });
 {% endhighlight %}
 
 {% highlight c# tabtitle="Before v34.1.29" %}
@@ -146,11 +144,7 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.Blazor);
 {% endhighlight %}
 {% endtabs %}
 
-**v34.1.29 and later:**
-![LicenseKeyValidationMethod](images/license-validation-method-new.webp)
-
-**Before v34.1.29:**
-![LicenseKeyValidationMethod](images/license-validation-method.webp)
+N> Use `Platform.UIComponent` for UI component license validation in v34.1.29 and later. `Platform.Blazor` is not supported from v34.1.29 onwards.
 
 * If the ValidateLicense() method returns true, registered license key is valid and can proceed with deployment.
 
@@ -173,27 +167,20 @@ N> * Place the license key between double quotes. Also, ensure that Syncfusion.L
 * For reference, please check the following example that demonstrates how to register and validate the license key in the unit test project.
 
 {% tabs %}
-{% highlight c# tabtitle="NUnit" %}
-using NUnit.Framework;
-using Syncfusion.Licensing;
-
-public class SyncfusionLicenseTests
+{% highlight c# %}
+public void TestSyncfusionBlazorLicense()
 {
-	[Test]
-	public void TestSyncfusionBlazorLicense()
+	var platform = Platform.Blazor;
+	// Register the Syncfusion license key
+	SyncfusionLicenseProvider.RegisterLicense("Your License Key");
+
+	bool isValidLicense = SyncfusionLicenseProvider.ValidateLicense(platform, out var validationMessage);
+	Assert.That(isValidLicense, Is.True, $"Validation failed for {platform}." + $" Validation Message: {validationMessage}");
+
+	// Log validation messages to TestContext output
+	if (isValidLicense)
 	{
-		var platform = Platform.Blazor;
-		// Register the Syncfusion license key
-		SyncfusionLicenseProvider.RegisterLicense("Your License Key");
-
-		bool isValidLicense = SyncfusionLicenseProvider.ValidateLicense(platform, out var validationMessage);
-		Assert.That(isValidLicense, Is.True, $"Validation failed for {platform}. Validation Message: {validationMessage}");
-
-		// Log validation messages to TestContext output
-		if (isValidLicense)
-		{
-			TestContext.Out.WriteLine($"Platform {platform} is correctly licensed for version {typeof(SyncfusionLicenseProvider).Assembly.GetName().Version}");
-		}
+		TestContext.Out.WriteLine($"Platform {platform} is correctly licensed for version " + $"{typeof(SyncfusionLicenseProvider).Assembly.GetName().Version}");
 	}
 }
 {% endhighlight %}
