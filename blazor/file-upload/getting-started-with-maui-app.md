@@ -179,7 +179,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Upload component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhnNwtkJRehYUOA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.webp)" %}
 
 ## Use ValueChange event
 
@@ -236,7 +236,7 @@ This example demonstrates how to use the [`ValueChange`](https://help.syncfusion
 
 N> When saving files directly in a Blazor MAUI application using [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) and [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload), the files are saved on the device where the Blazor MAUI app is running, not on a remote server. You need appropriate file system permissions for the server process to write to the specified directory. Also, ensure the target directory (`wwwroot/uploads` in this example) exists or is created programmatically. In a production environment, consider secure storage solutions for uploaded files.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVyZkrqBvaSlvht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLRZwNOJRHzUJms?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Memory stream
 
@@ -303,7 +303,7 @@ This example demonstrates how to read the content of an uploaded file into a [Me
 
 N> When using `MemoryStream` for large files, be mindful of device memory consumption. If you expect very large files, consider processing them in chunks or saving them to temporary storage before processing to avoid out-of-memory exceptions. The `long.MaxValue` in `OpenReadStream` indicates the maximum buffer size. In a Blazor MAUI app, `Stream` operations occur on the device where the app is running.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreNaLUhdwxzvHS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdXGZaJnGixNvW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Created event
@@ -340,7 +340,7 @@ This example shows how to use the [`Created`](https://help.syncfusion.com/cr/bla
 
 N> The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_Created) event is useful for client-side JavaScript interop if you need to manipulate the DOM elements of the uploader component immediately after it's ready. However, for most Blazor-specific customizations (like custom templates), you should use the built-in Blazor features.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLyNuVUBGtPZrdo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVxXcZafdwFmHvE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## File selected event
@@ -391,7 +391,7 @@ This example demonstrates how to use the [FileSelected](https://help.syncfusion.
 
 N> Setting `args.Cancel = true` in the `FileSelected` event will prevent the file (or files if `args.Files` contains multiple) from being added to the uploader's internal file list. This is a client-side validation and should be complemented with server-side validation for robust security and data integrity.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLIZuBUVwEJoJpz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLxXwZkJHbTJDls?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## OnFileListRender
