@@ -59,7 +59,7 @@ The [`GetFileDetails`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 > **Note:** The [`GetFileDetails`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_GetFileDetails_System_Collections_Generic_List_Syncfusion_Blazor_Inputs_FileInfo__) method returns a `List<FileInfo>` object, where each `FileInfo` contains properties like `Name`, `Size`, `Type`, etc., allowing for comprehensive inspection of selected files.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLetYVyVNjMlOlP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRXQZuzeoZQfaC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2"  %}
 
 
 ## GetFilesDataAsync
@@ -99,7 +99,7 @@ The [`GetFilesDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 > **Note:** The `GetFilesDataAsync` method returns a `List<FileInfo>`, which includes important properties like `Name`, `Size`, `Type`, and `Status` (`Uploaded`, `Failed`, etc.) for each file that has gone through the upload process.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthoZYLzypWUmzGy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthnZQtufSIzaFaK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## UploadAsync
 
@@ -127,7 +127,7 @@ The [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 > **Note:** When [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) is set to `false`, calling [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_UploadAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__) is essential to begin the file transfer. If [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) is `true`, files will start uploading automatically upon selection, and [`UploadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_UploadAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__) may not be necessary.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBeXYVTezyQELFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthHZmNEpoHIEIdi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## CancelAsync
 
@@ -159,7 +159,7 @@ The [`CancelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 > **Note:** To cancel a specific file's upload, you typically need to pass an identifier like a `fileInfo[]` to the CancelAsync method. Without an argument, it generally attempts to cancel all pending or in-progress uploads. The exact behavior might depend on the implementation of the Uploader component.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrSNkBzSzuxWFbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBnNGDOTonlbKWG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## ClearAllAsync
 
@@ -187,7 +187,7 @@ The [`ClearAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 > **Note:** [`ClearAllAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ClearAllAsync)  only affects the client-side representation in the File Upload component. It does not automatically delete files from the server if they have already been uploaded. Server-side deletion would require a separate call to your server-side API.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVItErIihaDlaeE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxtGjEpoQsxKHK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## RemoveAsync
 
@@ -224,4 +224,4 @@ The [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 > **Note:** The [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) method typically requires the fileInfo[] of the file you wish to remove. If [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) is configured in [`UploaderAsyncSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html), calling [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) will also trigger a server-side call to the specified [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) to handle server-side file deletion. If no [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) is configured, [`RemoveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_RemoveAsync_Syncfusion_Blazor_Inputs_FileInfo___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_) will only remove the file from the client-side component.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhSjYreMJJIqYvz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxNmZkpeGoPkqc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
