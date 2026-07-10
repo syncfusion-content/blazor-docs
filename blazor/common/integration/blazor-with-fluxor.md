@@ -11,8 +11,6 @@ documentation: ug
 
 This article explains how to integrate the **[Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid)** with **[Fluxor](https://github.com/mrpmorris/fluxor)** in a **Blazor Web App** targeting .NET 10 with Interactive Server rendering.
 
-Fluxor is a zero-boilerplate Flux/Redux state management library for .NET. This integration demonstrates how to perform full CRUD operations on orders using the Fluxor store as the application's central state container. All data changes are handled through the store instead of interacting directly with the service.
-
 N> Fluxor is a community-maintained state management library for .NET, compatible with modern Blazor applications, including .NET 8 and later. For Fluxor-specific issues, refer to the [Fluxor GitHub repository](https://github.com/mrpmorris/fluxor).
 
 ## Prerequisites
@@ -23,8 +21,6 @@ N> Fluxor is a community-maintained state management library for .NET, compatibl
 ## Create and configure the project
 
 ### Create a Blazor Web App
-
-In the following commands, `FluxorBlazorDataGrid` is used as the sample project name. Replace it with any project name you prefer.
 
 Open a terminal and run the following commands to create a new **Blazor Web App (Interactive Server)**.
 
@@ -37,9 +33,11 @@ cd FluxorBlazorDataGrid
 {% endhighlight %}
 {% endtabs %}
 
+In the above commands, `FluxorBlazorDataGrid` is used as the sample project name. Replace it with any project name you prefer.
+
 ### Install required NuGet packages
 
-Install the following **Fluxor** and **Blazor** NuGet packages. These packages provide Fluxor state management and the [Blazor components](https://www.syncfusion.com/blazor-components) needed for the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) integration.
+Install the following **Fluxor** and **Blazor** NuGet packages. These packages provide Fluxor state management and the [Blazor components](https://www.syncfusion.com/blazor-components) needed for the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) integration. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 **Fluxor package:**
 * [Fluxor.Blazor.Web](https://www.nuget.org/packages/Fluxor.Blazor.Web)
@@ -69,8 +67,6 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
-
-Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
 ### Add required namespaces
 
