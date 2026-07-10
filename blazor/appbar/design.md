@@ -206,7 +206,7 @@ Media query is used to adjust the AppBar for different screen sizes. Resize the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLHDxCMLcgrSrvt?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Buttons.](./images/blazor-appbar-buttons.webp)" %}
 
-## Designing AppBar with Sidebar
+## Designing AppBar with SideBar
 
 AppBar toggle button used to control the expand and collapse state of **SfSidebar** component. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
 
