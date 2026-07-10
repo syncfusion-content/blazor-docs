@@ -99,4 +99,4 @@ Properties such as **background-color**, **color**, **border**, **font-size**, a
 
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdXfBBzwxxUVoB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVRZmZlJLNLGhnL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

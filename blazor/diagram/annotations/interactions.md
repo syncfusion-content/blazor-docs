@@ -68,13 +68,13 @@ The [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRtcDkiTBKiGJN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/AnnotationInteraction.razor)
 
 ## How to Set a Drag Limit for Connector Annotations
 
-The [DragLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_DragLimit) property allows a connector annotation's movement to be restricted within a defined area along the connector. The boundary is specified using the `Left`, `Right`, `Top`, and `Bottom` values. During dragging, the annotation position snaps to the nearest connector segment offset within the configured boundary.
+The [DragLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_DragLimit) property allows a connector annotation's movement to be restricted within a defined area along the connector. The boundary is specified using the `Left`, `Right`, `Top`, and `Bottom` values. During dragging, the annotation position snaps to the nearest connector segment offset within the configured boundary.
 
 By default, drag limits are disabled for connector annotations. To enable this behavior, configure the annotation constraints to include `Drag` along with the `Interaction` flag, as shown in the following example.
 
@@ -120,11 +120,11 @@ By default, drag limits are disabled for connector annotations. To enable this b
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/YOUR_SAMPLE_ID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBnZcNuWzKgCZZY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/DragLimitForAnnotation.razor)
 
-N> The `DragLimit` property applies only to `PathAnnotation` (connector annotations).
+N> The `DragLimit` property applies only to **PathAnnotation** (connector annotations).
 
 ## How to Rotate Annotations
 
@@ -182,9 +182,9 @@ The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthxXxVHqPVhbsOZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBnXcDEMfAbsGbg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
- Value | Description | Image |
+| Value | Description | Image |
 | -------- | -------- | -------- |
 | **Page** | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![Blazor Diagram RotationReference page](../images/rotationReferencePage.webp) |
 | **Parent** | When this option is set, the annotation rotates along with its parent node. | ![Blazor Diagram RotationReference Parent](../images/rotationReferenceParent.webp) |
@@ -226,7 +226,7 @@ The following code examples illustrate how to configure `RotationAngle` for an a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrRDHhxgvLGppvm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRNmNksfTijOMy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Annotations/RotationAngleProperty.razor)
 

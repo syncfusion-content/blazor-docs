@@ -9,7 +9,7 @@ documentation: ug
 
 # Value Binding in Blazor Rich Text Editor
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) supports two-way data binding to its [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property using the `@bind-Value` attribute. The `Value` property accepts a `string` type. When the editor's content is modified, the bound variable is automatically updated. Likewise, any changes to the variable will be reflected in the editor's content.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) supports two-way data binding to its [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property using the `@bind-Value` attribute. The `Value` property accepts a `string` type. When the editor's content is modified, the bound variable is automatically updated. Likewise, any changes to the variable will be reflected in the editor's content.
 
 {% tabs %}
 {% highlight razor %}
@@ -64,4 +64,4 @@ You can retrieve the editor's content using the [ValueChange](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-N> To explore the Rich Text Editor's features, visit the [feature tour page](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor). You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
+N> To explore the Rich Text Editor's features, visit the [feature tour page](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor). You can also refer to the [Blazor Rich Text Editor demo](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) to learn how to render and configure the component and its tools.
