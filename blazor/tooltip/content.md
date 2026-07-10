@@ -31,7 +31,7 @@ The simplest way to use a Tooltip is with a string of text using the [Content](h
 
 This displays a simple text message when users hover over the button.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-string-content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-string-content.webp)
 
 ## Using the Title Attribute
 
@@ -55,7 +55,7 @@ You can also use the **title** attribute of the target element as the Tooltip co
 
 This approach is useful when you want to enhance existing HTML title attributes with a more stylish Tooltip.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-title-content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-title-content.webp)
 
 
 ## Using Template
@@ -126,7 +126,7 @@ Check out the following code example to see how to include an HTML template insi
 </style>
 ```
 
-![Blazor Tooltip with Template](images/blazor-tooltip-template.gif)
+![Blazor Tooltip with Template](images/blazor-tooltip-template.webp)
 
 
 ## Dynamic Content with RenderFragment
@@ -178,7 +178,7 @@ The SfTooltip is used to display dynamic content generated using a RenderFragmen
 
 This approach gives you full control over the Tooltip's content, allowing for interactive elements and dynamic data.
 
-![Blazor Tooltip with Template](images/blazor-tooltip-renderfragment-content.gif)
+![Blazor Tooltip with Template](images/blazor-tooltip-renderfragment-content.webp)
 
 ##  Rendering HTML content using MarkupString
 
@@ -215,6 +215,6 @@ By default, the Tooltip can show any kind of formatted content. To improve its l
 
 This is useful when you need to render HTML content that's stored as a string, perhaps from a database or API.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-with-content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-with-content.webp)
 
 By using these different content options, you can create Tooltips that range from simple text hints to rich, interactive information displays, enhancing the user experience of your Blazor application.

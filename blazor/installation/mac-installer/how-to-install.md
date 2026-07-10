@@ -48,7 +48,7 @@ Follow these steps to install the Essential Studio<sup style="font-size:70%">&re
 
    ![Copying the app into the Applications folder](images/Mac_Installer4.webp)
 
-5. Open the Applications folder and launch the Syncfusion installer app.
+5. Open the Applications folder and launch the installer app.
 
    ![Launch the Blazor installer app from Applications](images/Mac_Installer5.webp)
 

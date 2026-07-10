@@ -22,10 +22,10 @@ The DataForm component can align form buttons horizontally within the form conta
 
 | FormButtonsAlignment | Snapshot |
 | ------------ | ----------------------- |
-|[FormButtonsAlignment.Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Center)|![DataForm with buttons aligned to the center](images/blazor_dataform_button_alignment_center.png)|
-|[FormButtonsAlignment.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Left)|![DataForm with buttons aligned to the left](images/blazor_dataform_button_alignment_left.png)|
-|[FormButtonsAlignment.Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Right)|![DataForm with buttons aligned to the right](images/blazor_dataform_button_alignment_right.png)|
-|[FormButtonsAlignment.Stretch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Stretch)|![DataForm with buttons stretched to full width](images/blazor_dataform_button_alignment_stretch.png)|
+|[FormButtonsAlignment.Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Center)|![DataForm with buttons aligned to the center](images/blazor_dataform_button_alignment_center.webp)|
+|[FormButtonsAlignment.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Left)|![DataForm with buttons aligned to the left](images/blazor_dataform_button_alignment_left.webp)|
+|[FormButtonsAlignment.Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Right)|![DataForm with buttons aligned to the right](images/blazor_dataform_button_alignment_right.webp)|
+|[FormButtonsAlignment.Stretch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html#Syncfusion_Blazor_DataForm_FormButtonsAlignment_Stretch)|![DataForm with buttons stretched to full width](images/blazor_dataform_button_alignment_stretch.webp)|
 
 The following example shows how to use the `ButtonsAlignment` property in the DataForm component.
 
@@ -51,7 +51,7 @@ In the following example, an additional button is added to reset input fields by
 {% endhighlight %}
 {% endtabs %}
 
-![DataForm with default submit buttons and a custom reset button](images/blazor_dataform_formbuttons.png)
+![DataForm with default submit buttons and a custom reset button](images/blazor_dataform_formbuttons.webp)
 
 ## Label position
 
@@ -59,9 +59,9 @@ The DataForm component aligns labels either at the top or to the left of the fie
 
 | LabelPosition | Snapshot |
 | ------------ | ----------------------- |
-|[FormLabelPosition.Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormLabelPosition.html#Syncfusion_Blazor_DataForm_FormLabelPosition_Top)|![DataForm with labels positioned above editors](images/blazor_dataform_label_position_top.png)|
-|[FormLabelPosition.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormLabelPosition.html#Syncfusion_Blazor_DataForm_FormLabelPosition_Left)|![DataForm with labels positioned to the left of editors](images/blazor_dataform_label_position_left.png)|
-|When no specific value is provided, the layout defaults to `FormLabelPosition.Top`. For boolean editors such as [SfCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) and [SfSwitch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html), labels are positioned to the right of the control.|![DataForm default label positioning and boolean editor label placement](images/blazor_dataform_default_label_position.png)|
+|[FormLabelPosition.Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormLabelPosition.html#Syncfusion_Blazor_DataForm_FormLabelPosition_Top)|![DataForm with labels positioned above editors](images/blazor_dataform_label_position_top.webp)|
+|[FormLabelPosition.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormLabelPosition.html#Syncfusion_Blazor_DataForm_FormLabelPosition_Left)|![DataForm with labels positioned to the left of editors](images/blazor_dataform_label_position_left.webp)|
+|When no specific value is provided, the layout defaults to `FormLabelPosition.Top`. For boolean editors such as [SfCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) and [SfSwitch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html), labels are positioned to the right of the control.|![DataForm default label positioning and boolean editor label placement](images/blazor_dataform_default_label_position.webp)|
 
 The following example demonstrates how to configure the `LabelPosition` in the DataForm component.
 
@@ -108,4 +108,4 @@ Customize the width of the form container by using the [Width](https://help.sync
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm with custom form width applied](images/blazor_dataform_change_form_width.png)
+![Blazor DataForm with custom form width applied](images/blazor_dataform_change_form_width.webp)

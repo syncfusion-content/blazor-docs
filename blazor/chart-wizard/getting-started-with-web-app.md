@@ -106,7 +106,7 @@ Install-Package Syncfusion.Blazor.ChartWizard -Version {{ site.releaseversion }}
 
 If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the client project.
 
-N> All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+N> All Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
 ## Add Import Namespaces
 

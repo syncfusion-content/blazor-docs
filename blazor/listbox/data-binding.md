@@ -37,7 +37,7 @@ public string[] Games = new string[] { "Badminton", "Cricket", "Football", "Golf
 }
 ```
 
-![Data Binding in Blazor ListBox](images/blazor-listbox-data-binding.png)
+![Data Binding in Blazor ListBox](images/blazor-listbox-data-binding.webp)
 
 ### Array of object
 
@@ -71,7 +71,7 @@ In the following example, the `Text` property is mapped to the Text field and th
 }
 ```
 
-![Binding Blazor ListBox Items](images/blazor-listbox-binding-items.png)
+![Binding Blazor ListBox Items](images/blazor-listbox-binding-items.webp)
 
 ### Array of complex object
 
@@ -109,7 +109,7 @@ In the following example, the `Sports.Name` property from the complex data is ma
 }
 ```
 
-![Blazor ListBox bound to complex objects with nested field mapping](images/blazor-listbox-bind-complex-items.png)
+![Blazor ListBox bound to complex objects with nested field mapping](images/blazor-listbox-bind-complex-items.webp)
 
 ## Remote Data
 
@@ -146,4 +146,4 @@ The following example displays customer IDs from the `Orders` table.
 
 ```
 
-![Blazor ListBox bound to remote data using DataManager](images/blazor-listbox-with-data-binding.png)
+![Blazor ListBox bound to remote data using DataManager](images/blazor-listbox-with-data-binding.webp)

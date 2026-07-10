@@ -21,25 +21,25 @@ To enable the Force-Directed Tree Layout, set the layout [Type](https://help.syn
 
 Defines the ideal distance between connected nodes.
 
->**Note:** Minimum value: 30. Larger values spread nodes farther apart.
+>**Note:** Minimum value: **30**. Larger values spread nodes farther apart.
 
 ### MaximumIteration
 
 Specifies how many times the algorithm runs to stabilize the layout.
 
->**Note:** Minimum value: 100. Higher values improve stability but increase processing time.
+>**Note:** Minimum value: **100**. Higher values improve stability but increase processing time.
 
 ### RepulsionStrength
 
 Controls how strongly nodes repel each other.
 
->**Note:** Minimum value: 3000. Higher values create more space between nodes.
+>**Note:** Minimum value: **3000**. Higher values create more space between nodes.
 
 ### AttractionStrength
 
 Determines how strongly connected nodes pull toward each other.
 
->**Note:** Range: 0 to 1. Higher values cluster connected nodes more tightly.
+>**Note:** Range: **0 to 1**. Higher values cluster connected nodes more tightly.
 
 ```
 @using Syncfusion.Blazor.Diagram

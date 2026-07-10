@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor AutoComplete component and much more.
+title: Filtering in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all features about Filtering in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -21,7 +21,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-![Blazor AutoComplete with local data filtering](./images/filtering/blazor_autocomplete_local-data.png)
+![Blazor AutoComplete with local data filtering](./images/filtering/blazor_autocomplete_local-data.webp)
 
 ## Remote data
 
@@ -35,7 +35,7 @@ The code below demonstrates the filtering functionality with [`ODataAdaptor`](ht
 
 {% endhighlight %}
 
-![Blazor AutoComplete with remote data filtering](./images/filtering/blazor_autocomplete_remote-data.png)
+![Blazor AutoComplete with remote data filtering](./images/filtering/blazor_autocomplete_remote-data.webp)
 
 ## Debounce delay
 
@@ -95,7 +95,7 @@ The AutoComplete component can visually present data across multiple columns. Th
 
 {% endhighlight %}
 
-![Blazor AutoComplete with multi-column display](./images/filtering/blazor_autocomplete_multi-column.png)
+![Blazor AutoComplete with multi-column display](./images/filtering/blazor_autocomplete_multi-column.webp)
 
 Achieve filtering across multiple data fields by passing a list of [`predicates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [`And`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [`Or`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [`WhereFilters`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html).
 

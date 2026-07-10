@@ -31,7 +31,7 @@ The Blazor Floating Action Button supports the following predefined styles that 
 
 ```
 
-![Blazor FAB Component with Styles](./images/Style.png)
+![Blazor FAB Component with Styles](./images/Style.webp)
 
 N> Predefined Floating Action Button styles provide only visual indication. So, Floating Action Button [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) property should define the Floating Action Button style for the users of assistive technologies such as screen readers.
 
@@ -80,7 +80,7 @@ By using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butt
 
 ```
 
-![Blazor FAB Component with Hover](./images/onhover.png)
+![Blazor FAB Component with Hover](./images/onhover.webp)
 
 ## Outline customization
 
@@ -103,4 +103,4 @@ By using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor FAB Component with Outline](./images/FabOutline.png)
+![Blazor FAB Component with Outline](./images/FabOutline.webp)

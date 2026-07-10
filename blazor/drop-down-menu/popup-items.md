@@ -47,7 +47,7 @@ In the following sample, the icons for edit, delete, mark as read and like messa
 
 ```
 
-![Blazor dropdown menu shows icons in popup items](./images/blazor-dropdownmenu-with-popup-icon.png)
+![Blazor dropdown menu shows icons in popup items](./images/blazor-dropdownmenu-with-popup-icon.webp)
 
 ## Separator
 
@@ -72,7 +72,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 ```
 
-![Blazor dropdown menu with separator](./images/blazor-dropdownmenu-separator.png)
+![Blazor dropdown menu with separator](./images/blazor-dropdownmenu-separator.webp)
 
 ## Navigations
 
@@ -102,7 +102,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ```
 
-![Blazor dropdown menu items with navigation links](./images/blazor-dropdownmenu-navigation.png)
+![Blazor dropdown menu items with navigation links](./images/blazor-dropdownmenu-navigation.webp)
 
 ## Template
 
@@ -132,7 +132,7 @@ Popup items can be customized using the [CssClass](https://help.syncfusion.com/c
 
 ```
 
-![Blazor dropdown menu with customized popup items](./images/blazor-dropdownmenu-with-popup-items.png)
+![Blazor dropdown menu with customized popup items](./images/blazor-dropdownmenu-with-popup-items.webp)
 
 ## Populate multilevel sub menu items
 
@@ -220,6 +220,6 @@ Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu
 
 ```
 
-![Blazor dropdown menu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.png)
+![Blazor dropdown menu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Populate-multilevel-sub-menu-items-in-Blazor-Dropdown-Menu)

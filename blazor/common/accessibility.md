@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Syncfusion Blazor components
-description: Syncfusion Blazor components support WCAG 2.2, Section 508, WAI-ARIA, ADA, and keyboard accessibility standards.
+title: Accessibility in Blazor components | Syncfusion®
+description: Blazor components support WCAG 2.2, Section 508, WAI-ARIA, ADA, and keyboard accessibility standards.
 platform: Blazor
 control: Common
 documentation: ug

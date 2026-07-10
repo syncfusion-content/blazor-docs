@@ -75,4 +75,4 @@ Set the inner Dialog target as `#dialog`.
 
 
 
-![Creating Nested Blazor Dialog](../images/blazor-nested-dialog.png)
+![Creating Nested Blazor Dialog](../images/blazor-nested-dialog.webp)

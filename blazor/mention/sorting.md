@@ -23,4 +23,4 @@ SortOrder     | Description
 
 {% endhighlight %}
 
-![Blazor Mention with sortOrder descending](./images/blazor-mention-sorting.png)
+![Blazor Mention with sortOrder descending](./images/blazor-mention-sorting.webp)

@@ -83,7 +83,7 @@ N> By default, the `SortBy` property is `DataSourceOrder`.
 
 ```
 
-![Sorting in Blazor Kanban](./images/blazor-kanban-sorting.png)
+![Sorting in Blazor Kanban](./images/blazor-kanban-sorting.webp)
 
 ### Sorting by Index Field
 
@@ -189,7 +189,7 @@ For Example,
 
 ```
 
-![Blazor Kanban Card with Index](./images/blazor-kanban-card-index.PNG)
+![Blazor Kanban Card with Index](./images/blazor-kanban-card-index.webp)
 
 ### Custom
 
@@ -254,7 +254,7 @@ The SortBy `Custom` property must require datasource `Field` mapping. In this be
 
 ```
 
-![Custom Sorting in Blazor Kanban](./images/blazor-kanban-custom-sorting.png)
+![Custom Sorting in Blazor Kanban](./images/blazor-kanban-custom-sorting.webp)
 
 ## Sorting Direction Configuration
 
@@ -323,4 +323,4 @@ In the following sample, cards are aligned in `Descending` order.
 
 ```
 
-![Changing Sort Direction in Blazor Kanban](./images/blazor-kanban-sort-direction.png)
+![Changing Sort Direction in Blazor Kanban](./images/blazor-kanban-sort-direction.webp)

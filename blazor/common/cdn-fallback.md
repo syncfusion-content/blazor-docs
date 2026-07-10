@@ -26,7 +26,7 @@ Check the Blazor object to determine whether scripts are loaded. If they are not
     ...
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
     <script>
-    if (!window.sfBlazor) { // the Syncfusion Blazor object is not present
+    if (!window.sfBlazor) { // the Blazor object is not present
         var fallbackScript = document.createElement("script");
         fallbackScript.setAttribute("src", "_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"); // path to static assets from the individual NuGet packages
         document.getElementsByTagName("body")[0].appendChild(fallbackScript);
@@ -71,7 +71,7 @@ Check the Blazor object to determine whether scripts are loaded. If they are not
     ...
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
     <script>
-    if (!window.sfBlazor) { // the Syncfusion Blazor object is not present
+    if (!window.sfBlazor) { // the Blazor object is not present
         var fallbackScript = document.createElement("script");
         fallbackScript.setAttribute("src", "_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"); // path to static assets from the Syncfusion package
         document.getElementsByTagName("head")[0].appendChild(fallbackScript);
@@ -99,7 +99,7 @@ Reference the theme stylesheet inside the `<head>` of the **wwwroot/index.html**
     <script>
     function cdnStyleTest() {
         var testElem = document.createElement("div");
-        testElem.className = "e-control"; // Syncfusion themes provides the e-control class
+        testElem.className = "e-control"; // Themes provides the e-control class
         document.body.appendChild(testElem);
         var testFontSize = window.getComputedStyle(testElem).getPropertyValue("font-size");
         if (testFontSize !== "12px") {

@@ -21,6 +21,7 @@ You can customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Background= "rgba(0, 128, 128, 0.3)">
+            <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLineStyle Width="2" Color="red">
             </CircularGaugeAxisLineStyle>
         </CircularGaugeAxis>
@@ -39,7 +40,8 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGa
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Minimum= "50" Maximum= "250">
-        </CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="50"></CircularGaugePointer></CircularGaugePointers>
+         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
@@ -55,6 +57,7 @@ You can sweep the Circular Gauge axis from 0 to 360 degrees. By default, the sta
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis StartAngle= "270" EndAngle= "90">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
@@ -75,6 +78,7 @@ You can set the radius of the Circular Gauge in pixel as shown below.
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Radius="150px">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
@@ -90,7 +94,11 @@ By setting value in percentage, Circular Gauge gets its dimension with respect t
 
 <SfCircularGauge>
     <CircularGaugeAxes>
-        <CircularGaugeAxis Radius="50%"></CircularGaugeAxis>
+        <CircularGaugeAxis Radius="50%">
+        <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
@@ -108,6 +116,9 @@ By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+             <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Interval="10" Color="red" Height="10" Width="3">
             </CircularGaugeAxisMajorTicks>
             <CircularGaugeAxisMinorTicks Interval="5" Color="green" Height="5" Width="2">
@@ -132,6 +143,9 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Color="red"
                                          Height="10" Width="3"
                                          Position = "Position.Inside"
@@ -158,6 +172,7 @@ The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](h
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle>
                 <CircularGaugeAxisLabelFont Color="red" Size="20px" FontWeight="Bold">
                 </CircularGaugeAxisLabelFont>
@@ -182,6 +197,7 @@ The labels can be moved using the [Offset](https://help.syncfusion.com/cr/blazor
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Position="Position.Outside"
                                 Offset="5">
             </CircularGaugeAxisLabelStyle>
@@ -201,6 +217,7 @@ The labels can be swept along the axis angle by enabling the [AutoAngle](https:/
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+            <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle AutoAngle="true"></CircularGaugeAxisLabelStyle>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
@@ -221,6 +238,9 @@ When an axis makes a complete circle, then the first and last labels of the axis
                            Maximum="12"
                            EndAngle="360"
                            StartAngle="0">
+                           <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Position="Position.Inside"
                                 HiddenLabel="HiddenLabel.First">
             </CircularGaugeAxisLabelStyle>
@@ -248,6 +268,7 @@ The axis labels can be formatted using the [Format](https://help.syncfusion.com/
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Format="p1"></CircularGaugeAxisLabelStyle>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
@@ -325,6 +346,7 @@ Axis labels support custom label format using placeholder like {value}°C, in 
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisLabelStyle Format="{value}°C"></CircularGaugeAxisLabelStyle>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
@@ -343,6 +365,7 @@ If the maximum value does not enter the interval of major ticks, the last label 
     <CircularGaugeAxes>
         <CircularGaugeAxis Maximum="100"
                            ShowLastLabel="true">
+            <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Interval="30"></CircularGaugeAxisMajorTicks>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
@@ -358,6 +381,7 @@ When the axis labels overlap with each other, you can hide the intersected label
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Maximum="200" StartAngle="270" EndAngle="90" Minimum="0" HideIntersectingLabel="true">
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeAxisMajorTicks Interval="4"></CircularGaugeAxisMajorTicks>
             <CircularGaugeAxisMinorTicks Interval="2"></CircularGaugeAxisMinorTicks>
         </CircularGaugeAxis>
@@ -378,7 +402,8 @@ You can change the axis direction of the circular gauge using [Direction](https:
 
 <SfCircularGauge>
     <CircularGaugeAxes>
-        <CircularGaugeAxis Direction="GaugeDirection.AntiClockWise">
+           <CircularGaugeAxis Direction="GaugeDirection.AntiClockWise">
+                <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>

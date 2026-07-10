@@ -19,7 +19,7 @@ Enable week numbers in the DateTimePicker to display the week index in the calen
 
 ```
 
-![Blazor DateTimePicker with week numbers](./images/blazor_datetimepicker_weeknumber.png)
+![Blazor DateTimePicker with week numbers](./images/blazor_datetimepicker_weeknumber.webp)
 
 ## Week Rule
 
@@ -33,8 +33,8 @@ FirstFourDayWeek | The first week with at least four days in the new year is wee
 
 N> The current culture (Locale) and the first day of the week influence week numbering. By default, the DateTimePicker uses the culture’s settings unless overridden.
 
-![Blazor DateTimePicker displays Week Rule of FirstDay](./images/blazor-datetimepicker-first-day.png)
+![Blazor DateTimePicker displays Week Rule of FirstDay](./images/blazor-datetimepicker-first-day.webp)
 
-![Blazor DateTimePicker displays Week Rule of FirstFullWeek](./images/blazor-datetimepicker-first-full-week.png)
+![Blazor DateTimePicker displays Week Rule of FirstFullWeek](./images/blazor-datetimepicker-first-full-week.webp)
 
-![Blazor DateTimePicker displays Week Rule of FirstFourDayWeek](./images/blazor-datetimepicker-first-four-Day-Week.png)
+![Blazor DateTimePicker displays Week Rule of FirstFourDayWeek](./images/blazor-datetimepicker-first-four-Day-Week.webp)

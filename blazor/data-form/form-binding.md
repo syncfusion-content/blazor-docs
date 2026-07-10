@@ -23,7 +23,7 @@ The following example illustrates how the `Model` is bound to the DataForm compo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Model Binding](images/blazor_dataform_formbinding.png)
+![Blazor DataForm Model Binding](images/blazor_dataform_formbinding.webp)
 
 ## Edit context binding 
 

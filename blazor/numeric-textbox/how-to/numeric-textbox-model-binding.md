@@ -41,4 +41,4 @@ In this sample, select a value in the Numeric TextBox and click Submit to trigge
 }
 ```
 
-![Validation in Blazor Numeric TextBox](../images/blazor-numerictextbox-validation.png)
+![Validation in Blazor Numeric TextBox](../images/blazor-numerictextbox-validation.webp)

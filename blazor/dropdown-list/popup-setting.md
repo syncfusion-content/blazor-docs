@@ -33,7 +33,7 @@ In the following sample, `PopupWidth` is set to `300px`.
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup width](./images/popup-setting/blazor_dropdown_popup-width.png)
+![Blazor DropDownList with customized popup width](./images/popup-setting/blazor_dropdown_popup-width.webp)
 
 ## Handling TextOverflow 
 
@@ -47,7 +47,7 @@ In the following sample, `PopupWidth` is set to `100px`, so ellipsis is automati
 
 {% endhighlight %}
 
-![Text overflow handling in Blazor DropDownList](./images/popup-setting/blazor_dropdown_text-overflow.png)
+![Text overflow handling in Blazor DropDownList](./images/popup-setting/blazor_dropdown_text-overflow.webp)
 
 ## Change the popup height
 
@@ -59,7 +59,7 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup height](./images/popup-setting/blazor_dropdown_popup-height.png)
+![Blazor DropDownList with customized popup height](./images/popup-setting/blazor_dropdown_popup-height.webp)
 
 ## Change the popup z-index
 
@@ -75,7 +75,7 @@ Show the popup on initial render by invoking [ShowPopupAsync()](https://help.syn
 
 {% endhighlight %}
 
-![Blazor DropDownList with popup shown on initial loading](./images/popup-setting/blazor_dropdown_popup-initial-loading.png)
+![Blazor DropDownList with popup shown on initial loading](./images/popup-setting/blazor_dropdown_popup-initial-loading.webp)
 
 ## Preventing opening and closing
 
@@ -87,7 +87,7 @@ Prevent the popup from opening or closing by setting the event argument’s canc
 
 {% endhighlight %}
 
-![Blazor DropDownList with prevented opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.png)
+![Blazor DropDownList with prevented opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.webp)
 
 The following events are used to trigger when opening and closing popup.
 

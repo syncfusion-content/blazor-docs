@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to Create Straight Segments
 
-To create a straight line, set the connector [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment to [Straight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Straight). Then add one or more straight segments to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
+To create a straight line, set the connector [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment to **Straight**. Then add one or more straight segments to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -112,18 +112,18 @@ The following predefined shapes are available for segment thumbs:
 
 | Shape name | Shape |
 |-------- | -------- |
-|Rhombus| ![Rhombus](../../images/RhombusStraight.png) |
-| Square | ![Square](../../images/SquareStraight.png) |
-| Rectangle | ![Rectangle](../../images/RectangleStraight.png) |
-| Ellipse |![Ellipse](../../images/EllipseStraight.png) |
-| Circle |![Circle](../../images/CircleStraight.png) |
-|Arrow| ![Arrow](../../images/ArrowStraight.png) |
-| OpenArrow | ![OpenArrow](../../images/OpenArrowStraight.png) |
-| Fletch|![Fletch](../../images/FletchStraight.png) |
-|OpenFetch| ![OpenFetch](../../images/OpenFetchStraight.png) |
-| IndentedArrow | ![IndentedArrow](../../images/IndentedStraight.png) |
-| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedStraight.png) |
-| DoubleArrow |![DoubleArrow](../../images/DoubleArrowStraight.png) |
+|Rhombus| ![Rhombus](../../images/RhombusStraight.webp) |
+| Square | ![Square](../../images/SquareStraight.webp) |
+| Rectangle | ![Rectangle](../../images/RectangleStraight.webp) |
+| Ellipse |![Ellipse](../../images/EllipseStraight.webp) |
+| Circle |![Circle](../../images/CircleStraight.webp) |
+|Arrow| ![Arrow](../../images/ArrowStraight.webp) |
+| OpenArrow | ![OpenArrow](../../images/OpenArrowStraight.webp) |
+| Fletch|![Fletch](../../images/FletchStraight.webp) |
+|OpenFetch| ![OpenFetch](../../images/OpenFetchStraight.webp) |
+| IndentedArrow | ![IndentedArrow](../../images/IndentedStraight.webp) |
+| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedStraight.webp) |
+| DoubleArrow |![DoubleArrow](../../images/DoubleArrowStraight.webp) |
 
 
 The following code example illustrates how to create a customized straight segment thumb shape using the `InheritSegmentThumbShape` constraints.

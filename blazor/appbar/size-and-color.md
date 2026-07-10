@@ -229,7 +229,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Inherit">
-         <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="Syncfusion blazor components">
+         <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="blazor components">
             <div class="syncfusion-logo"></div>
          </a>
         <AppBarSpacer></AppBarSpacer>

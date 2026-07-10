@@ -43,7 +43,7 @@ The following example renders one Dropdown Menu with the default icon position a
 
 ```
 
-![Blazor dropdown menu with icon](./images/blazor-dropdownmenu-icon.png)
+![Blazor dropdown menu with icon](./images/blazor-dropdownmenu-icon.webp)
 
 The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property also supports third-party icon libraries. Ensure the corresponding icon font or stylesheet is available in the application.
 
@@ -70,7 +70,7 @@ Create a vertical layout by applying the `e-vertical` class through the [CssClas
 
 ```
 
-![Blazor dropdown menu with vertical button](./images/blazor-dropdownmenu-in-vertical.png)
+![Blazor dropdown menu with vertical button](./images/blazor-dropdownmenu-in-vertical.webp)
 
 ## See also
 

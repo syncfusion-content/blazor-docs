@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeView in Blazor Web App
+# Getting started with Blazor TreeView in Blazor Web App
 
 This section explains how to integrate the [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component into a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -177,7 +177,6 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 </SfTreeView>
 
 @code {
-
     public class MailItem
     {
         public string? Id { get; set; }
@@ -229,7 +228,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -280,5 +279,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 ## See also
 
 * [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-* [Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 * [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

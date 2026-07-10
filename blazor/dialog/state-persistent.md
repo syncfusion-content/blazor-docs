@@ -17,7 +17,6 @@ By default, `AllowPrerender` is set to `false`, which means the dialog's DOM ele
 
 The following code demonstrates how to configure a dialog with state persistence:
 
-
 ```cshtml
 
 @using Syncfusion.Blazor.Popups

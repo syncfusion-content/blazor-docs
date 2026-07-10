@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo Redo in Blazor Diagram Component | Syncfusion®
-description: Checkout and learn here all about undo redo support in Blazor Diagram component and much more.
+description: Learn all about undo and redo support in the Blazor Diagram component, including implementation details, customization options, and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -127,7 +127,7 @@ The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Undo-Redo/StackLimit.razor)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrxjHqZLFSrQLIZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[StackLimit in Blazor Diagram](images/stackLimitGIF.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrxjHqZLFSrQLIZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[StackLimit in Blazor Diagram](images/stackLimitGIF.webp)" %}
 
 ## Current entry
 We can also get the current history entry from the [CurrentEntry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_CurrentEntry) property of the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) that allows to track changes occurring during the undo or redo process.
@@ -191,7 +191,7 @@ A complete working sample can be downloaded from [GitHub](https://github.com/Syn
 <SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">    
+<SfDiagramComponent @ref="@_diagram" Height="600px" Nodes="@_nodes">
 </SfDiagramComponent>
 
 @code

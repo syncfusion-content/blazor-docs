@@ -82,7 +82,7 @@ Blazor components can be extended by creating a new Razor component and implemen
     <SyncButton Content="Danger" Styles="SyncButton.ButtonStyles.Danger"></SyncButton>
     ```
 
-    ![Output of extending a Syncfusion Blazor component example](images/extend-sync-component.webp)
+    ![Output of extending a Blazor component example](images/extend-sync-component.webp)
 
 ## Use Blazor component within another Blazor component
 
@@ -154,7 +154,7 @@ A Blazor component can be implemented within another Razor component.
     <TodoList></TodoList>
     ```
 
-    ![Render Syncfusion Blazor components within another component](images/todolist.webp)
+    ![Render Blazor components within another component](images/todolist.webp)
 
 ## Render Blazor component dynamically
 
@@ -327,7 +327,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
                 builder.AddContent(4, Label);
                 builder.CloseElement();
 
-                // create Syncfusion TextBox component.
+                // create TextBox component.
                 builder.OpenComponent<SfTextBox>(5);
                 builder.AddAttribute(6, "ID", ID);
                 // Added similar attributes used in the component.

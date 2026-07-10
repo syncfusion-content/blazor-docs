@@ -32,9 +32,9 @@ Properties like **background-color**, **color**, **font-family**, and **padding*
 
 **Using Theme Studio:**
 
-Syncfusion Theme Studio provides a unified approach to style all components, including the Blazor DataGrid.
+Theme Studio provides a unified approach to style all components, including the Blazor DataGrid.
 
-1. Open the [Syncfusion<sup style="font-size:70%">&reg;</sup> Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
+1. Open the [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3).
 2. Select **Grid** in the left panel.
 3. Customize colors, typography, spacing, and other visual tokens.
 4. Download the generated CSS and include it in the Blazor project’s site stylesheet or theme bundle.
@@ -154,7 +154,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLoCDCeBCPXKind?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrnNQZsBREHoLlL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize alternate rows with frozen columns
 
@@ -244,7 +244,7 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLysNWSLBgVRXGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhdjcDsrnOuJceC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the color of grid lines
 
@@ -346,4 +346,4 @@ internal sealed class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXheCtiyVBIDLkTf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLxNmjWrwjAiIqF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

@@ -62,7 +62,7 @@ The following example demonstrates the Bottom Left position of the FAB.
 
 ```
 
-![Blazor FAB component at bottom-left position](./images/BottomLeftPosition.png)
+![Blazor FAB component at bottom-left position](./images/BottomLeftPosition.webp)
 
 The following example demonstrates multiple supported positions of the FAB.
 
@@ -111,7 +111,7 @@ The following example demonstrates multiple supported positions of the FAB.
 
 ```
 
-![Blazor FAB component demonstrating all built-in positions](./images/FabPositions.png)
+![Blazor FAB component demonstrating all built-in positions](./images/FabPositions.webp)
 
 ## Custom position
 
@@ -136,4 +136,4 @@ Define a custom position for the Floating Action Button by overriding the `top`,
 
 ```
 
-![Blazor FAB component with custom position](./images/CustomPosition.png)
+![Blazor FAB component with custom position](./images/CustomPosition.webp)

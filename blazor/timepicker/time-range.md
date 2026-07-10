@@ -26,7 +26,7 @@ The following code allows to select a time value within a range of `9:00 AM` to 
 
 ```
 
-![Blazor TimePicker Value within Range](./images/blazor-timepicker-within-range.png)
+![Blazor TimePicker Value within Range](./images/blazor-timepicker-within-range.webp)
 
 When the `Min` and `Max` properties are configured and the selected time value is out-of-range or invalid, then the model value will be set to `out of range` time value or `null` respectively with highlighted `error` class to indicate that the time is out of range or invalid.
 
@@ -42,6 +42,6 @@ When the `Min` and `Max` properties are configured and the selected time value i
 }
 ```
 
-![Blazor TimePicker Value without Time Range](./images/blazor-timepicker-value-without-range.png)
+![Blazor TimePicker Value without Time Range](./images/blazor-timepicker-value-without-range.webp)
 
 N> If the value of `Min` or `Max` property is changed through code behind, you have to update the `Value` property to set within the range.

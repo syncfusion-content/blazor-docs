@@ -41,12 +41,12 @@ Review breaking changes for each release to understand required code or behavior
 
 ## Cache problem
 
-Before restoring NuGet packages, clear older versions of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages to avoid conflicts.
+Before restoring NuGet packages, clear older versions of Syncfusion Blazor NuGet packages to avoid conflicts.
 
 The following steps explain how to clean the cache:
 
-1. Delete the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/`. In Windows, the installed location of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages can be found using `%userprofile%/.nuget/packages/`.
-2. Update to the latest Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
+1. Delete the Blazor NuGet packages from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/`. In Windows, the installed location of Blazor NuGet packages can be found using `%userprofile%/.nuget/packages/`.
+2. Update to the latest Blazor NuGet packages.
 
 Tip: The NuGet cache can also be cleared using the .NET CLI: run `dotnet nuget locals all --clear` in a terminal.
 

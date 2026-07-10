@@ -567,20 +567,20 @@ The following table shows the relationship between the Icon position and Icon **
 
 | OffsetX,OffsetY values | Output |
 |---|---|
-| (0,0) | ![Blazor Diagram Icon in Left Top Offset Values](../images/blazor-diagram-DiagramIcon-in-lefttop-offset-values.png) |
-| (0,0.5) | ![Blazor Diagram Port in Left Center Offset Values](../images/blazor-diagram-DiagramIcon-in-leftcenter-offset-values.png) |
-| (0,1) | ![Blazor Diagram Port in Left Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-leftbottom-offset-values.png) |
-| (0.5,0) | ![Blazor Diagram Port in Center Top Offset Values](../images/blazor-diagram-DiagramIcon-in-centertop-offset-values.png) |
-| (0.5,0.5) | ![Blazor Diagram Port in Center Offset Values](../images/blazor-diagram-DiagramIcon-in-center-offset-values.png) |
-| (0.5,1) | ![Blazor Diagram Port in Center Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-centerbottom-offset-values.png) |
-| (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-DiagramIcon-in-righttop-offset-values.png) |
-| (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-DiagramIcon-in-rightcenter-offset-values.png) |
-| (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-rightbottom-offset-values.png) |
+| (0,0) | ![Blazor Diagram Icon in Left Top Offset Values](../images/blazor-diagram-DiagramIcon-in-lefttop-offset-values.webp) |
+| (0,0.5) | ![Blazor Diagram Port in Left Center Offset Values](../images/blazor-diagram-DiagramIcon-in-leftcenter-offset-values.webp) |
+| (0,1) | ![Blazor Diagram Port in Left Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-leftbottom-offset-values.webp) |
+| (0.5,0) | ![Blazor Diagram Port in Center Top Offset Values](../images/blazor-diagram-DiagramIcon-in-centertop-offset-values.webp) |
+| (0.5,0.5) | ![Blazor Diagram Port in Center Offset Values](../images/blazor-diagram-DiagramIcon-in-center-offset-values.webp) |
+| (0.5,1) | ![Blazor Diagram Port in Center Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-centerbottom-offset-values.webp) |
+| (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-DiagramIcon-in-righttop-offset-values.webp) |
+| (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-DiagramIcon-in-rightcenter-offset-values.webp) |
+| (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-rightbottom-offset-values.webp) |
 
 
 ### How to find node is in expanded or not 
 
-**IsExpanded** is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of **IsExpanded** property is **true**.
+[IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of `IsExpanded` property is **true**.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

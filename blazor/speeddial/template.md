@@ -52,7 +52,7 @@ Use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.B
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with ItemTemplate](./images/Blazor-SpeedDial-ItemTemplate.png)
+![Blazor SpeedDial with ItemTemplate](./images/Blazor-SpeedDial-ItemTemplate.webp)
 
 ## Popup template
 
@@ -86,4 +86,4 @@ Use the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with PopupTemplate](./images/Blazor-SpeedDial-PopupTemp.png)
+![Blazor SpeedDial with PopupTemplate](./images/Blazor-SpeedDial-PopupTemp.webp)

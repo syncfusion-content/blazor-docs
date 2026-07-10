@@ -1494,7 +1494,7 @@ GraphQL is a query language for APIs that allows you to can get exactly what you
 }
 ```
 
-![Binding with GraphQL service](images/GraphQLAdaptor.png) 
+![Binding with GraphQL service](images/GraphQLAdaptor.webp) 
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/GraphQLAdaptor)
 

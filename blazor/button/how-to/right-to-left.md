@@ -20,7 +20,7 @@ The following example illustrates how to enable right-to-left support in Button 
 
 <style>
     .e-setting-icon::before {
-        content: '\e679';
+        content: '\e880';
     }
 </style>
 ```

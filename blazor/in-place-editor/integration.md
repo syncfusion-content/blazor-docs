@@ -68,7 +68,7 @@ In the following template example, the input is bound and, before submitting dat
 ```
 
 
-![Integrating an HTML template in Blazor In-place Editor](./images/blazor-inplace-editor-html-template.png)
+![Integrating an HTML template in Blazor In-place Editor](./images/blazor-inplace-editor-html-template.webp)
 
 ## See Also
 

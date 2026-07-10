@@ -175,7 +175,6 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 </SfTreeView>
 
 @code {
-
     public class MailItem
     {
         public string? Id { get; set; }
@@ -227,7 +226,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

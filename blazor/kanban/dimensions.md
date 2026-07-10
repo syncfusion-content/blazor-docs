@@ -81,7 +81,7 @@ When the Kanban's height and width are set to `auto`, it automatically adjusts t
 
 ```
 
-![Changing Blazor Kanban Card Height and Width in Automatic](./images/blazor-kanban-change-height-and-width.png)
+![Changing Blazor Kanban Card Height and Width in Automatic](./images/blazor-kanban-change-height-and-width.webp)
 
 ## Fixed dimensions using pixel values
 
@@ -147,7 +147,7 @@ When pixel values are specified for the Kanban's [Height](https://help.syncfusio
 
 ```
 
-![Changing Blazor Kanban Card Height and Width in Pixel](./images/blazor-kanban-change-height-width-in-pixel.png)
+![Changing Blazor Kanban Card Height and Width in Pixel](./images/blazor-kanban-change-height-width-in-pixel.webp)
 
 ## Responsive dimensions using percentage
 
@@ -213,4 +213,4 @@ Specifying [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanb
 
 ```
 
-![Changing Blazor Kanban Card Height and Width in Percentage](./images/blazor-kanban-change-height-width-in-percentage.png)
+![Changing Blazor Kanban Card Height and Width in Percentage](./images/blazor-kanban-change-height-width-in-percentage.webp)

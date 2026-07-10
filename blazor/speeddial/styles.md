@@ -35,7 +35,7 @@ Use the [OpenIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Bu
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with Icon](./images/Blazor-SpeedDial-IconOnly.png)
+![Blazor SpeedDial with Icon](./images/Blazor-SpeedDial-IconOnly.webp)
 
 ### SpeedDial with Text
 
@@ -57,7 +57,7 @@ Show text only in the SpeedDial button by setting the [Content](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with Text](./images/Blazor-SpeedDial-TextOnly.png)
+![Blazor SpeedDial with Text](./images/Blazor-SpeedDial-TextOnly.webp)
 
 ### SpeedDial with Icon and Text
 
@@ -79,7 +79,7 @@ Show both an icon and text in the Blazor SpeedDial button by setting the [OpenIc
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with Icon and Text](./images/Blazor-SpeedDial-IconText.png)
+![Blazor SpeedDial with Icon and Text](./images/Blazor-SpeedDial-IconText.webp)
 
 ## Disabled
 
@@ -101,7 +101,7 @@ Enable or disable the Speed Dial component using the [Disabled](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with Disabled](./images/Blazor-SpeedDial-Disabled.png)
+![Blazor SpeedDial with Disabled](./images/Blazor-SpeedDial-Disabled.webp)
 
 ## CssClass
 
@@ -132,7 +132,7 @@ Apply predefined visual styles using the [CssClass](https://help.syncfusion.com/
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with CssClass](./images/Blazor-SpeedDial-Cssclass.png)
+![Blazor SpeedDial with CssClass](./images/Blazor-SpeedDial-Cssclass.webp)
 
 ## Visible
 
@@ -194,7 +194,7 @@ Use the [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.B
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with OpensOnHover](./images/Blazor-SpeedDial-OpensOnHover.png)
+![Blazor SpeedDial with OpensOnHover](./images/Blazor-SpeedDial-OpensOnHover.webp)
 
 ## Customized icon
 
@@ -222,6 +222,6 @@ Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butto
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial With CustomIcon Close](./images/Blazor-SpeedDial-CustomIcon-Close.png)
+![Blazor SpeedDial With CustomIcon Close](./images/Blazor-SpeedDial-CustomIcon-Close.webp)
 
-![Blazor SpeedDial With CustomIcon Open](./images/Blazor-SpeedDial-CustomIcon-Open.png)
+![Blazor SpeedDial With CustomIcon Open](./images/Blazor-SpeedDial-CustomIcon-Open.webp)

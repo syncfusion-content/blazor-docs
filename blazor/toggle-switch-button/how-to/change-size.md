@@ -26,4 +26,4 @@ The different Toggle Switch Button sizes available are default and small. To red
 
 ```
 
-![Changing Size of Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-size.png)
+![Changing Size of Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-size.webp)

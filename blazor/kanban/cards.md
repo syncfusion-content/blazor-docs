@@ -77,7 +77,7 @@ In the following demo, the `ShowHeader` property is disabled on Kanban board.
 
 ```
 
-![Blazor Kanban Card with Header](./images/blazor-kanban-card-header.png)
+![Blazor Kanban Card with Header](./images/blazor-kanban-card-header.webp)
 
 ## Content
 
@@ -146,7 +146,7 @@ N> The mapped datasource key value contains single or multiple tags. If it is mu
 
 ```
 
-![Blazor Kanban Card with Tags](./images/blazor-kanban-card-tags.png)
+![Blazor Kanban Card with Tags](./images/blazor-kanban-card-tags.webp)
 
 ## Customizing left border color
 
@@ -211,7 +211,7 @@ N> By default, the card border left color width is `3px`.
 
 ```
 
-![Customizing Left Border Color in Blazor Kanban Card](./images/blazor-kanban-card-with-custom-border-color.png)
+![Customizing Left Border Color in Blazor Kanban Card](./images/blazor-kanban-card-with-custom-border-color.webp)
 
 ## Rendering custom footer elements
 
@@ -360,7 +360,7 @@ In the following demo, images and icons are rendered using the `FooterCssField` 
 
 ```
 
-![Blazor Kanban Card with Custom Elements](./images/blazor-kanban-card-with-custom-element.png)
+![Blazor Kanban Card with Custom Elements](./images/blazor-kanban-card-with-custom-element.webp)
 
 ## Customizing card layout with templates
 
@@ -466,7 +466,7 @@ You can customize the default card layout using template as per your application
 
 ```
 
-![Customizing Default Card in Blazor Kanban](./images/blazor-kanban-card-customization.png)
+![Customizing Default Card in Blazor Kanban](./images/blazor-kanban-card-customization.webp)
 
 ## Selection
 
@@ -538,4 +538,4 @@ Select multiple cards randomly using Ctrl + mouse click and select the multiple 
 
 ```
 
-![Displaying Multiple Selection in Blazor Kanban Card](./images/blazor-kanban-card-multiple-selection.png)
+![Displaying Multiple Selection in Blazor Kanban Card](./images/blazor-kanban-card-multiple-selection.webp)

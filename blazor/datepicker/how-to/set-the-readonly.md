@@ -35,4 +35,4 @@ The following code demonstrates how to set `Readonly` in DatePicker component. Y
 
 
 
-![Blazor DatePicker in Read-only Mode](../images/blazor-datepicker-read-only-mode.png)
+![Blazor DatePicker in Read-only Mode](../images/blazor-datepicker-read-only-mode.webp)

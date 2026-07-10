@@ -78,4 +78,4 @@ In the following example, render [DropDownList](https://help.syncfusion.com/cr/b
 
 
 
-![Creating DropDown List in Popup of Blazor DropDownMenu](./../images/blazor-dropdownmenu-create-dropdownlist.png)
+![Creating DropDown List in Popup of Blazor DropDownMenu](./../images/blazor-dropdownmenu-create-dropdownlist.webp)

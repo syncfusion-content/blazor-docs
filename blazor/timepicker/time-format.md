@@ -24,7 +24,7 @@ By default, the TimePicker's format is based on the culture. You can also set th
 {% endhighlight %}
 
 
-![Time Format in Blazor TimePicker](./images/TimePicker.png)
+![Time Format in Blazor TimePicker](./images/TimePicker.webp)
 
 ## Input Formats
 

@@ -25,7 +25,7 @@ You can place any custom element on the axis area using [ContentTemplate](https:
                 <CircularGaugePointer Value="50"></CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Angle="195" ZIndex="1">
+                <CircularGaugeAnnotation Angle="180" ZIndex="1">
                     <ContentTemplate>
                         <div class="custom-annotation">50</div>
                     </ContentTemplate>
@@ -65,7 +65,7 @@ The radius of an annotation takes values either in pixel or in percentage. By se
             </CircularGaugePointers>
             <CircularGaugeAnnotations>
                 <CircularGaugeAnnotation Angle="90"
-                                         Radius="110%"
+                                         Radius="120%"
                                          ZIndex="1">
                     <ContentTemplate>
                         <div class="custom-annotation">50</div>

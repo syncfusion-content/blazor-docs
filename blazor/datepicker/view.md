@@ -35,7 +35,7 @@ The following example demonstrates how to create a DatePicker with `Decade` as i
 
 
 
-![Blazor DatePicker displays Start View](./images/blazor-datepicker-view.png)
+![Blazor DatePicker displays Start View](./images/blazor-datepicker-view.webp)
 
 ## Depth view
 

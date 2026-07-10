@@ -52,4 +52,4 @@ In the following example, the ListView is provided as PopupContent for the Dropd
 
 
 
-![Grouped ListView items inside the Blazor Dropdown Menu popup](./../images/blazor-dropdownmenu-grouping-popup-item.png)
+![Grouped ListView items inside the Blazor Dropdown Menu popup](./../images/blazor-dropdownmenu-grouping-popup-item.webp)

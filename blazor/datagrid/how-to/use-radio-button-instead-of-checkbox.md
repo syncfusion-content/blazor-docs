@@ -76,5 +76,5 @@ Steps to configure row selection using radio buttons:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSDOVfUiyKZUmQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhdZcXiricboXss?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 

@@ -91,7 +91,7 @@ Here is an example of applying frames using the `DrawFrameAsync` method.
 }
 ```
 
-![Blazor Image Editor with a frame applied](./images/blazor-image-editor-frame.jpg)
+![Blazor Image Editor with a frame applied](./images/blazor-image-editor-frame.webp)
 
 ## Frame changing event
 

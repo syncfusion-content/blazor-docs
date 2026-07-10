@@ -36,7 +36,7 @@ The available position values for the SpeedDial are:
 
 ```
 
-![Blazor Speed Dial Position](./images/Blazor-SpeedDial-Position.png)
+![Blazor Speed Dial Position](./images/Blazor-SpeedDial-Position.webp)
 
 ## Opens on hover
 
@@ -56,7 +56,7 @@ Open the SpeedDial action items on mouse hover by setting the [OpensOnHover](htt
 
 ```
 
-![Blazor Speed Dial OpensOnHover](./images/Blazor-SpeedDial-Icon.png)
+![Blazor Speed Dial OpensOnHover](./images/Blazor-SpeedDial-Icon.webp)
 
 ## Programmatically show/hide
 
@@ -94,8 +94,8 @@ Below example demonstrates open/close action items on button click.
 
 ```
 
-![Blazor Speed Dial Show Items](./images/Blazor-SpeedDial-ShowItem.png)
-![Blazor Speed Dial Hide Items](./images/Blazor-SpeedDial-HideItem.png)
+![Blazor Speed Dial Show Items](./images/Blazor-SpeedDial-ShowItem.webp)
+![Blazor Speed Dial Hide Items](./images/Blazor-SpeedDial-HideItem.webp)
 
 ## Programmatically refresh the position
 

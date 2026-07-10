@@ -71,19 +71,19 @@ The following table shows the relationship between the shape port position and p
 
 | Offset values | Output |
 |---|---|
-| (0,0) | ![Blazor Diagram Port in Left Top Offset Values](../images/blazor-diagram-port-in-lefttop-offset-values.png) |
-| (0,0.5) | ![Blazor Diagram Port in Left Center Offset Values](../images/blazor-diagram-port-in-leftcenter-offset-values.png) |
-| (0,1) | ![Blazor Diagram Port in Left Bottom Offset Values](../images/blazor-diagram-port-in-leftbottom-offset-values.png) |
-| (0.5,0) | ![Blazor Diagram Port in Center Top Offset Values](../images/blazor-diagram-port-in-centertop-offset-values.png) |
-| (0.5,0.5) | ![Blazor Diagram Port in Center Offset Values](../images/blazor-diagram-port-in-center-offset-values.png) |
-| (0.5,1) | ![Blazor Diagram Port in Center Bottom Offset Values](../images/blazor-diagram-port-in-centerbottom-offset-values.png) |
-| (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-port-in-righttop-offset-values.png) |
-| (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-port-in-rightcenter-offset-values.png) |
-| (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-port-in-rightbottom-offset-values.png) |
+| (0,0) | ![Blazor Diagram Port in Left Top Offset Values](../images/blazor-diagram-port-in-lefttop-offset-values.webp) |
+| (0,0.5) | ![Blazor Diagram Port in Left Center Offset Values](../images/blazor-diagram-port-in-leftcenter-offset-values.webp) |
+| (0,1) | ![Blazor Diagram Port in Left Bottom Offset Values](../images/blazor-diagram-port-in-leftbottom-offset-values.webp) |
+| (0.5,0) | ![Blazor Diagram Port in Center Top Offset Values](../images/blazor-diagram-port-in-centertop-offset-values.webp) |
+| (0.5,0.5) | ![Blazor Diagram Port in Center Offset Values](../images/blazor-diagram-port-in-center-offset-values.webp) |
+| (0.5,1) | ![Blazor Diagram Port in Center Bottom Offset Values](../images/blazor-diagram-port-in-centerbottom-offset-values.webp) |
+| (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-port-in-righttop-offset-values.webp) |
+| (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-port-in-rightcenter-offset-values.webp) |
+| (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-port-in-rightbottom-offset-values.webp) |
 
 ## How to Set Path Position for Connector Port
 
-Use the `PathPosition` property to place a connector port along the connector path. It accepts values between 0 to 1, where:
+Use the `PathPosition` property to place a connector port along the connector path. It accepts values between **0 to 1**, where:
 
 * **0** represents the start point of the connector
 * **1** represents the end point of the connector
@@ -92,9 +92,9 @@ Use the `PathPosition` property to place a connector port along the connector pa
 
 | PathPosition value | Output |
 |---|---|
-| 0 | ![Connector port at start position](../images/ConnectorPort/ConnectorPortPathPosition0.png) |
-| 0.5 | ![Connector port at midpoint](../images/ConnectorPort/ConnectorPortDefault.png) |
-| 1 | ![Connector port at end position](../images/ConnectorPort/ConnectorPortPathPosition1.png) |
+| 0 | ![Connector port at start position](../images/ConnectorPort/ConnectorPortPathPosition0.webp) |
+| 0.5 | ![Connector port at midpoint](../images/ConnectorPort/ConnectorPortDefault.webp) |
+| 1 | ![Connector port at end position](../images/ConnectorPort/ConnectorPortPathPosition1.webp) |
 
 The following code example demonstrates how to set path position for a connector port.
 
@@ -148,15 +148,15 @@ The following table shows all the possible alignments visually with `offset (0, 
 
 | Horizontal Alignment | Vertical Alignment | Output with Offset(0,0) |
 | -------- | -------- | -------- |
-| Left | Top | ![Blazor Diagram Port in Left Top Position](../images/blazor-diagram-port-in-lefttop-position.png) |
-| Center | Top | ![Blazor Diagram Port in Center Top Position](../images/blazor-diagram-port-in-centertop-position.png) |
-| Right | Top |  ![Blazor Diagram Port in Right Top Position](../images/blazor-diagram-port-in-righttop-position.png) |
-| Left | Center | ![Blazor Diagram Port in Left Center Position](../images/blazor-diagram-port-in-leftcenter-position.png) |
-| Center | Center| ![Blazor Diagram Port in Center Center Position](../images/blazor-diagram-port-in-centercenter-position.png) |
-| Right | Center | ![Blazor Diagram Port in Right Center Position](../images/blazor-diagram-port-in-rightcenter-position.png) |
-| Left | Bottom | ![Blazor Diagram Port in Left Bottom Position](../images/blazor-diagram-port-in-leftbottom-position.png) |
-| Center | Bottom | ![Blazor Diagram Port in Center Bottom Position](../images/blazor-diagram-port-in-centerbottom-position.png) |
-| Right |Bottom |![Blazor Diagram Port in Right Bottom Position](../images/blazor-diagram-port-in-rightbottom-position.png) |
+| Left | Top | ![Blazor Diagram Port in Left Top Position](../images/blazor-diagram-port-in-lefttop-position.webp) |
+| Center | Top | ![Blazor Diagram Port in Center Top Position](../images/blazor-diagram-port-in-centertop-position.webp) |
+| Right | Top |  ![Blazor Diagram Port in Right Top Position](../images/blazor-diagram-port-in-righttop-position.webp) |
+| Left | Center | ![Blazor Diagram Port in Left Center Position](../images/blazor-diagram-port-in-leftcenter-position.webp) |
+| Center | Center| ![Blazor Diagram Port in Center Center Position](../images/blazor-diagram-port-in-centercenter-position.webp) |
+| Right | Center | ![Blazor Diagram Port in Right Center Position](../images/blazor-diagram-port-in-rightcenter-position.webp) |
+| Left | Bottom | ![Blazor Diagram Port in Left Bottom Position](../images/blazor-diagram-port-in-leftbottom-position.webp) |
+| Center | Bottom | ![Blazor Diagram Port in Center Bottom Position](../images/blazor-diagram-port-in-centerbottom-position.webp) |
+| Right |Bottom |![Blazor Diagram Port in Right Bottom Position](../images/blazor-diagram-port-in-rightbottom-position.webp) |
 
 The following code shows how to align ports.
 

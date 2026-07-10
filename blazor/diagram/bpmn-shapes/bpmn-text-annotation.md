@@ -72,7 +72,7 @@ documentation: ug
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotationSample.razor)
 
-![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)
+![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.webp)
 
 The following code example represents how to create a TextAnnotation and connect the Activity and TextAnnotation shape.
 
@@ -140,7 +140,7 @@ The following code example represents how to create a TextAnnotation and connect
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnTextAnnotation/TextAnnotationTargetSample.razor)
 
-![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
+![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.webp) 
 
 ## How to Connect a BPMN Text Annotation to a BPMN Node
 
@@ -148,14 +148,14 @@ Drag and drop any bpmn shapes from the palette to the diagram and connect the BP
 
 The following image shows how to drag a symbol from the palette and connect the TextAnnotation to the BPMNNode with interaction.
 
-![Auto BPMN Shape](../images/Bpmn-TextAnnotationTarget-Connect.gif)
+![Auto BPMN Shape](../images/Bpmn-TextAnnotationTarget-Connect.webp)
 
 The following table describes the available Text annotation directions
 
 | Direction | Image |
 | -------- | -------- |
-| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Auto) | ![Auto TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
-| [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Left) | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
-| [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Right) | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png)|
-| [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Top) | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png)|
-| [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Bottom) | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.png)|
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Auto) | ![Auto TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.webp)|
+| [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Left) | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.webp)|
+| [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Right) | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.webp)|
+| [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Top) | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.webp)|
+| [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Bottom) | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.webp)|

@@ -76,4 +76,4 @@ Change the floating label color for the Blazor TextBox in specific validation st
 </style>
 ```
 
-![Changing Float Label Color in Blazor TextBox](../images/blazor-textbox-custom-float-label-color.png)
+![Changing Float Label Color in Blazor TextBox](../images/blazor-textbox-custom-float-label-color.webp)

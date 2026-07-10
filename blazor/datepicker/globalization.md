@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor DatePicker Component
 
-[Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+[Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Right-To-Left
 
@@ -35,4 +35,4 @@ The following code example initializes the DatePicker component in `Arabic` cult
 
 
 
-![Right to Left in Blazor DatePicker with Arabic Culture](./images/blazor-datepicker-right-to-left.png)
+![Right to Left in Blazor DatePicker with Arabic Culture](./images/blazor-datepicker-right-to-left.webp)

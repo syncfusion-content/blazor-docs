@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor AutoComplete component and more.
+title: Style and appearance in Blazor AutoComplete Component | Syncfusion®
+description: Checkout and learn here all about Style and appearance in Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -21,7 +21,7 @@ Specify a boolean value for the [Readonly](https://help.syncfusion.com/cr/blazor
 
 {% endhighlight %}
 
-![Blazor AutoComplete showing read-only mode](./images/style/blazor_autocomplete_readonly-mode.png)
+![Blazor AutoComplete showing read-only mode](./images/style/blazor_autocomplete_readonly-mode.webp)
 
 ## Disabled state
 
@@ -33,7 +33,7 @@ Specify a boolean value for the [Enabled](https://help.syncfusion.com/cr/blazor/
 
 {% endhighlight %}
 
-![Blazor AutoComplete in a disabled state](./images/style/blazor_autocomplete_disabled-state.png)
+![Blazor AutoComplete in a disabled state](./images/style/blazor_autocomplete_disabled-state.webp)
 
 ### Customizing the disabled component’s text color
 
@@ -57,7 +57,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom dropdown icon](./images/style/blazor_autocomplete_dropdown-icon.png)
+![Blazor AutoComplete with a custom dropdown icon](./images/style/blazor_autocomplete_dropdown-icon.webp)
 
 Customize the dropdown icon for a specific component instance using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and apply styles to that custom class.
 
@@ -67,7 +67,7 @@ Customize the dropdown icon for a specific component instance using the [CssClas
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom dropdown icon using CssClass](./images/style/blazor_autocomplete_dropdown-icon.png)
+![Blazor AutoComplete with a custom dropdown icon using CssClass](./images/style/blazor_autocomplete_dropdown-icon.webp)
 
 ## Customizing the appearance of container element
 
@@ -151,7 +151,7 @@ Add additional HTML attributes, such as styles and classes, to the root element 
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom font family via HTMLAttributes](./images/style/blazor_autocomplete_html-attributes.png)
+![Blazor AutoComplete with a custom font family via HTMLAttributes](./images/style/blazor_autocomplete_html-attributes.webp)
 
 ## Set the various font family for autocomplete elements
 
@@ -165,7 +165,7 @@ In the following sample, the font family of the AutoComplete input, list item te
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a different font family](./images/style/blazor_autocomplete_font-family.png)
+![Blazor AutoComplete with a different font family](./images/style/blazor_autocomplete_font-family.webp)
 
 ## Show tooltip on list item
 
@@ -179,7 +179,7 @@ The following code demonstrates how to display a tooltip when hovering over an A
 
 {% endhighlight %}
 
-![Blazor AutoComplete showing a tooltip on list items](./images/style/blazor-autocomplete-tooltip.png)
+![Blazor AutoComplete showing a tooltip on list items](./images/style/blazor-autocomplete-tooltip.webp)
 
 ## Customize selected item opacity
 
@@ -191,7 +191,7 @@ In the following code, CSS targets the `.e-list-item` elements within `.e-dropdo
 
 {% endhighlight %}
 
-![Blazor AutoComplete with customized selected item opacity](./images/style/blazor_autocomplete_opacity-style.png)
+![Blazor AutoComplete with customized selected item opacity](./images/style/blazor_autocomplete_opacity-style.webp)
 
 ## Customizing the height
 
@@ -205,7 +205,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom popup height](./images/style/blazor_autocomplete_height.png)
+![Blazor AutoComplete with a custom popup height](./images/style/blazor_autocomplete_height.webp)
 
 ### Width of AutoComplete
 
@@ -217,7 +217,7 @@ To customize the width of the popup alone, use the [PopupWidth](https://help.syn
 
 {% endhighlight %}
 
-![Blazor AutoComplete with a custom popup width](./images/style/blazor_autocomplete_width-popup-width.png)
+![Blazor AutoComplete with a custom popup width](./images/style/blazor_autocomplete_width-popup-width.webp)
 
 ## Disable specific items in AutoComplete
 
@@ -247,7 +247,7 @@ In the following code, a single list item is disabled using JavaScript interop.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AutoComplete with a disabled list item](./images/style/blazor_autocomplete_disable-listitem.png)
+![Blazor AutoComplete with a disabled list item](./images/style/blazor_autocomplete_disable-listitem.webp)
 
 ## Adding search icon in the Blazor AutoComplete component.
 

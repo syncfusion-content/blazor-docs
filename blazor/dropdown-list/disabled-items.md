@@ -19,7 +19,7 @@ In the following sample, items are rendered as disabled based on the value of th
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVfZRsLzvcQPnwt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVxjRraBxXQbElB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 
@@ -34,4 +34,4 @@ Use the disable item API to change the disabled state of an item at runtime (for
 
 If you want to disabled the overall component to set the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Enabled) property to false.
 
-![Disabled DropDownList Component](./images/dropdownlist-disable.png)
+![Disabled DropDownList Component](./images/dropdownlist-disable.webp)

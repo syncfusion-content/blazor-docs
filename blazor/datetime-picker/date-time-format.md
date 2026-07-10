@@ -23,7 +23,7 @@ By default, the DateTimePicker’s format is based on the current culture. You c
 {% endhighlight %}
 
 
-![Date Time Format in Blazor DateTimePicker](./images/DateTimePicker.png)
+![Date Time Format in Blazor DateTimePicker](./images/DateTimePicker.webp)
 
 ## Input Formats
 

@@ -27,4 +27,4 @@ In the following demonstration sample, the items in the datasource are shuffled 
 
 {% endhighlight %}
 
-![Blazor MultiSelect sorted in descending order](./images/sorting/blazor_MultiSelect_sorting.png)
+![Blazor MultiSelect sorted in descending order](./images/sorting/blazor_MultiSelect_sorting.webp)

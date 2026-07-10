@@ -29,4 +29,4 @@ The default icons of `e-spin-up` and `e-spin-down` classes using the following C
     }
 </style>
 ```
-![Customizing Up and Down Arrow in Blazor Numeric TextBox](../images/blazor-numerictextbox-custom-icon.png)
+![Customizing Up and Down Arrow in Blazor Numeric TextBox](../images/blazor-numerictextbox-custom-icon.webp)

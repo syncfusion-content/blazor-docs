@@ -24,7 +24,7 @@ The TextBox supports three types of validation styles, namely `error`, `warning`
 <SfTextBox Placeholder="Enter your address" CssClass="e-warning"></SfTextBox>
 ```
 
-![Validation in Blazor TextBox](./images/blazor-textbox-validation.png)
+![Validation in Blazor TextBox](./images/blazor-textbox-validation.webp)
 
 ## Limit no of character count
 

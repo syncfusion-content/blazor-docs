@@ -99,4 +99,4 @@ The text can be drawn as [Blazor Signature](https://www.syncfusion.com/blazor-co
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-draw.png)
+![Blazor Signature Component](./images/blazor-signature-draw.webp)

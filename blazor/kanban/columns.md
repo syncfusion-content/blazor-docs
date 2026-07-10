@@ -75,7 +75,7 @@ N> The [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban
 
 ```
 
-![Blazor Kanban Columns with Single Key](./images/blazor-kanban-columns-with-single-key.png)
+![Blazor Kanban Columns with Single Key](./images/blazor-kanban-columns-with-single-key.webp)
 
 ## Multi-key mapping
 
@@ -139,7 +139,7 @@ The Kanban board supports rendering a single column with multiple key mappings u
 
 ```
 
-![Blazor Kanban Column with Multi Key](./images/blazor-kanban-column-with-multi-key.png)
+![Blazor Kanban Column with Multi Key](./images/blazor-kanban-column-with-multi-key.webp)
 
 ## Header text
 
@@ -319,7 +319,7 @@ To quickly get started with using templates in the Blazor Kanban component, watc
 
 ```
 
-![Customizing Column Header in Blazor Kanban](./images/blazor-kanban-header-customization.png)
+![Customizing Column Header in Blazor Kanban](./images/blazor-kanban-header-customization.webp)
 
 ## Toggle columns
 
@@ -385,7 +385,7 @@ N> By default, collapsed column width is set to `50px`.
 
 ```
 
-![Blazor Kanban with Toggle Columns](./images/blazor-kanban-toggle-columns.png)
+![Blazor Kanban with Toggle Columns](./images/blazor-kanban-toggle-columns.webp)
 
 ### Initially collapsed column
 
@@ -453,7 +453,7 @@ In the following example, the Backlog column is collapsed on initialization of K
 
 ```
 
-![Blazor Kanban with Collapsed Column](./images/blazor-kanban-collapsed-column.png)
+![Blazor Kanban with Collapsed Column](./images/blazor-kanban-collapsed-column.webp)
 
 ## Stacked headers
 
@@ -524,4 +524,4 @@ In the following code, the kanban columns 'InProgress, Review' are grouped under
 
 ```
 
-![Blazor Kanban with Stacked Header](./images/blazor-kanban-stacked-header.png)
+![Blazor Kanban with Stacked Header](./images/blazor-kanban-stacked-header.webp)

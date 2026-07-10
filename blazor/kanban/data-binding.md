@@ -110,7 +110,7 @@ To get started quickly with Blazor Kanban component using ExpandoObject and Dyna
 
 ```
 
-![Expando object example in Blazor Kanban](./images/blazor-kanban-expando-object.png)
+![Expando object example in Blazor Kanban](./images/blazor-kanban-expando-object.webp)
 
 ### Binding with DynamicObject
 
@@ -176,7 +176,7 @@ N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/syst
 
 ```
 
-![Dynamic object example in Blazor Kanban](./images/blazor-kanban-dynamic-object.png)
+![Dynamic object example in Blazor Kanban](./images/blazor-kanban-dynamic-object.webp)
 
 ### Binding with Observable Collection
 
@@ -195,7 +195,7 @@ To get started quickly with Blazor Kanban component using Observable collection,
 
 {% endhighlight %}
 
-![ObservableCollection binding example in Blazor Kanban](./images/blazor-kanban-observable-object.png)
+![ObservableCollection binding example in Blazor Kanban](./images/blazor-kanban-observable-object.webp)
 
 ## Binding Remote Data
 
@@ -371,10 +371,10 @@ The following sample code demonstrates enabling data manager condition in the Ka
 ```
 
 **Before Button click**
-![Kanban before enabling DataManager dynamically](./images/blazor-kanban-dynamic-before-data-manager.png)
+![Kanban before enabling DataManager dynamically](./images/blazor-kanban-dynamic-before-data-manager.webp)
 
 **After Button click**
-![Kanban after enabling DataManager dynamically](./images/blazor-kanban-dynamic-after-data-manager.png)
+![Kanban after enabling DataManager dynamically](./images/blazor-kanban-dynamic-after-data-manager.webp)
 
 ### Sending additional parameters to the server
 
@@ -473,10 +473,10 @@ It is possible to dynamically modify Kanban [Query](https://help.syncfusion.com/
 ```
 
 **Before button Click**
-![Kanban before modifying query parameter dynamically](./images/blazor-kanban-before-dynamic-query.png)
+![Kanban before modifying query parameter dynamically](./images/blazor-kanban-before-dynamic-query.webp)
 
 **After button Click**
-![Kanban after modifying query parameter dynamically](./images/blazor-kanban-after-dynamic-query.png)
+![Kanban after modifying query parameter dynamically](./images/blazor-kanban-after-dynamic-query.webp)
 
 ### Binding with Custom Adaptor
 
@@ -604,4 +604,4 @@ In the following sample, Kanban fields are mapped with complex data binding.
 
 {% endhighlight %}
 
-![Complex data binding example in Blazor Kanban](./images/blazor-kanban-complex-data-binding.png)
+![Complex data binding example in Blazor Kanban](./images/blazor-kanban-complex-data-binding.webp)

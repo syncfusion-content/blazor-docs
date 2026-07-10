@@ -85,4 +85,4 @@ The `MaxCount` property sets the maximum number of cards allowed in a column or 
 
 ```
 
-![Validation in Blazor Kanban](./images/blazor-kanban-validation.png)
+![Validation in Blazor Kanban](./images/blazor-kanban-validation.webp)

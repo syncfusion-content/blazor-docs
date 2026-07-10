@@ -52,7 +52,7 @@ body .e-upload-drag-hover {
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLoiZrPzKWARfzw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrxZmDETrTdjcsO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 ![Customizing Drop Area in Blazor FileUpload](./images/blazor-fileupload-drop-area-customization.gif)
 
 ## DropEffect
@@ -80,7 +80,7 @@ Shows a copy cursor during drag-and-drop. Dropped files are added to the File Up
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZroMDBPfgwxYYBv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRZcZOzrTkTunQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 ![Copy drop effect in Blazor FileUpload](./images/blazor-fileupload-drag-and-drop-copy.gif)
 
 ### Move
@@ -104,7 +104,7 @@ Shows a move cursor during drag-and-drop. Source files are not moved from their 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBICXBPfzZPgIvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBRjGZOfgiCOgyH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 ![Move drop effect in Blazor FileUpload](./images/blazor-fileupload-drop-area-move.gif)
 
 ### Link
@@ -128,7 +128,7 @@ Shows a link cursor during drag-and-drop. This changes the cursor feedback only;
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBIsDLFJfLAjrAD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLxDwtkfqCTdsWX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 ![Link drop effect in Blazor FileUpload](./images/blazor-fileupload-drop-area-link.gif)
 
 ### None
@@ -152,7 +152,7 @@ Prevents dropping files on the File Upload or the configured drop area. Use this
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrosDhbppKYbVqC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVRjGjkfUWdafZM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 ![None drop effect in Blazor FileUpload](./images/blazor-fileupload-drop-area-none.gif)
 
 ## Clipboard Paste
@@ -173,5 +173,5 @@ The File Upload component supports file selection through clipboard paste operat
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBysXhPpSVDXqxx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrnZQjEpUqNYtFv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 ![Clipboard paste file handling in Blazor File Upload component](./images/blazor-fileupload-clipboard-paste.gif)

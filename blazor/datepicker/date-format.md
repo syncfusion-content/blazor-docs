@@ -26,7 +26,7 @@ By default, the DatePicker's format is based on the culture. You can also set th
 {% endhighlight %}
 
 
-![Date Format in Blazor DatePicker](./images/DatePicker.png)
+![Date Format in Blazor DatePicker](./images/DatePicker.webp)
 
 ## Input Formats
 

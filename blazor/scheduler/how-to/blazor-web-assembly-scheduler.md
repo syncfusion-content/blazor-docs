@@ -9,7 +9,7 @@ documentation: ug
  
 # Blazor Scheduler Component in WebAssembly App using Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -132,4 +132,4 @@ Add the Blazor Scheduler component in the **~/Pages/Index.razor** file.
 
 ![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.webp)
 
-N> Refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview) to understand how to manage appointments with multiple resources.
+N> Refer to our [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview) to understand how to manage appointments with multiple resources.

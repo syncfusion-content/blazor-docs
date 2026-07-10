@@ -23,7 +23,7 @@ The MultiSelect loads the data from local data sources through the [DataSource](
 
 {% endhighlight %}
 
-![Blazor MultiSelect with local data binding](./images/data-binding/blazor_multiselect_local-binding.png)
+![Blazor MultiSelect with local data binding](./images/data-binding/blazor_multiselect_local-binding.webp)
 
 ### DataBound event
 
@@ -47,7 +47,7 @@ The following example demonstrates binding an array of string values to the Mult
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Primitive string type](./images/data-binding/blazor_multiselect_primitive-type-string.png)
+![Blazor MultiSelect with Primitive string type](./images/data-binding/blazor_multiselect_primitive-type-string.webp)
 
 The following example demonstrates binding an array of integer values to the MultiSelect component.
 
@@ -57,7 +57,7 @@ The following example demonstrates binding an array of integer values to the Mul
 
 {% endhighlight %}
 
-![Blazor MultiSelect with primitive int type](./images/data-binding/blazor_multiselect_primitive-type-int.png)
+![Blazor MultiSelect with primitive int type](./images/data-binding/blazor_multiselect_primitive-type-int.webp)
 
 ### Complex data type
 
@@ -71,7 +71,7 @@ In the following example, the `Code.ID` field and `Country.CountryID` field from
 
 {% endhighlight %}
 
-![Binding complex items with Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-complex-item.png)
+![Binding complex items with Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-complex-item.webp)
 
 ### Expando object binding
 
@@ -83,7 +83,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 {% endhighlight %}
 
-![Blazor MultiSelect with expando object data binding](./images/blazor_multiselect_expando-object.png)
+![Blazor MultiSelect with expando object data binding](./images/blazor_multiselect_expando-object.webp)
 
 ### Observable collection binding
 
@@ -95,7 +95,7 @@ Bind [ObservableCollection](https://blazor.syncfusion.com/documentation/common/d
 
 {% endhighlight %}
 
-![Blazor MultiSelect with observable collection data binding](./images/blazor_multiselect_observable-collection.png)
+![Blazor MultiSelect with observable collection data binding](./images/blazor_multiselect_observable-collection.webp)
 
 ### Dynamic object binding
 
@@ -107,7 +107,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 {% endhighlight %}
 
-![Blazor MultiSelect with DynamicObject data binding](./images/blazor_multiselect_dynamic-object.png)
+![Blazor MultiSelect with DynamicObject data binding](./images/blazor_multiselect_dynamic-object.webp)
 
 ### Enum data binding
 
@@ -119,7 +119,7 @@ Convert enum values into a list of strings and bind them to the [DataSource](htt
 
 {% endhighlight %}
 
-![Blazor MultiSelect with enum data binding](./images/data-binding/blazor_multiselect_enum-data-binding.png)
+![Blazor MultiSelect with enum data binding](./images/data-binding/blazor_multiselect_enum-data-binding.webp)
 
 ### ValueTuple data binding
 
@@ -131,7 +131,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.png)
+![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.webp)
 
 
 ## Binding remote data 
@@ -182,7 +182,7 @@ The [OData v4 adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% endhighlight %}
 
-![Blazor MultiSelect with OData v4 adaptor](./images/data-binding/blazor_multiselect_odata-v4-services.png)
+![Blazor MultiSelect with OData v4 adaptor](./images/data-binding/blazor_multiselect_odata-v4-services.webp)
 
 ### Web API adaptor
 
@@ -194,7 +194,7 @@ The [Web API adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with Web API data](./images/blazor-multiselect-dropdown-web-api-data.png)
+![Blazor MultiSelect Dropdown with Web API data](./images/blazor-multiselect-dropdown-web-api-data.webp)
 
 ### Custom adaptor
 
@@ -241,7 +241,7 @@ The following example demonstrates remote data binding with offline mode enabled
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown in offline mode](./images/blazor-multiselect-dropdown-web-api-data.png)
+![Blazor MultiSelect Dropdown in offline mode](./images/blazor-multiselect-dropdown-web-api-data.webp)
 
 ## Entity Framework
 
@@ -377,7 +377,7 @@ Add new items to the popup by using the [AddItemsAsync](https://help.syncfusion.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with adding new item](./images/data-binding/blazor_multiselect_add-new-item.png)
+![Blazor MultiSelect with adding new item](./images/data-binding/blazor_multiselect_add-new-item.webp)
 
 ## Customizing the Change Event
 

@@ -33,7 +33,7 @@ Specify a boolean value for the [Enabled](https://help.syncfusion.com/cr/blazor/
 
 {% endhighlight %}
 
-![Blazor ComboBox in disabled state](./images/style/blazor_ComboBox_disabled-state.png)
+![Blazor ComboBox in disabled state](./images/style/blazor_ComboBox_disabled-state.webp)
 
 ## CssClass  
 
@@ -53,7 +53,7 @@ Some of the possible values are:
 
 {% endhighlight %} 
 
-![Blazor ComboBox with CssClass property](./images/style/blazor_combobox_cssclass-property.png)
+![Blazor ComboBox with CssClass property](./images/style/blazor_combobox_cssclass-property.webp)
 
 ## Customizing the disabled component’s text color
 
@@ -149,7 +149,7 @@ Add additional HTML attributes such as styles and class to the root element usin
 
 {% endhighlight %}
 
-![Blazor ComboBox with custom HTML attributes](./images/style/blazor_ComboBox_html-attributes.png)
+![Blazor ComboBox with custom HTML attributes](./images/style/blazor_ComboBox_html-attributes.webp)
 
 ## Show tooltip on list item
 
@@ -161,13 +161,13 @@ Display a tooltip when hovering over ComboBox options by integrating the Tooltip
 
 {% endhighlight %}
 
-![Blazor ComboBox with tooltip](./images/style/blazor-combobox-tooltip.png)
+![Blazor ComboBox with tooltip](./images/style/blazor-combobox-tooltip.webp)
 
 ## Customize selected item opacity
 
 In the following code , the CSS style that targets the `.e-list-item` class within the `.e-dropdownbase` class when it is in an active or active and hovered state. It sets the opacity property , which will make the elements appear transparent. This can be used to change the appearance of the dropdown list items when they are in a certain state.
 
-![Blazor ComboBox with opacity style](./images/style/blazor_combobox_opacity-style.png)
+![Blazor ComboBox with opacity style](./images/style/blazor_combobox_opacity-style.webp)
 
 ## Disable specific items in ComboBox
 

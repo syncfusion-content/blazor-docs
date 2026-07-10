@@ -17,7 +17,7 @@ To enable this functionality, assign an instance of `UmlSequenceDiagramModel` to
 
 A sequence diagram consists of several key elements, including participants, messages, activation boxes, and fragments. Each of these components plays a crucial role in representing the flow of interaction between objects over time.
 
-The diagram component allows to define and manage these elements through the `UmlSequenceDiagramModel`. Below is an overview of how each element can be implemented:
+The diagram component allows to define and manage these elements through the `UmlSequenceDiagramModel.Below` is an overview of how each element can be implemented:
 
 * [Participants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Participants): Represent the lifelines (such as actors or systems) involved in the interaction.
 * [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html#Syncfusion_Blazor_Diagram_UmlSequenceDiagramModel_Messages): Indicate the communication between participants, including synchronous and asynchronous calls, returns, and self-messages.
@@ -107,12 +107,12 @@ The [UmlSequenceMessageType](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 | Message Type | Description | Example |
 |---|---|---|
-| [Synchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Synchronous) | The sender waits for a response | ![Synchronous Message](images/UmlSequenceDiagram/SynchronousMessage.png) |
-| [Asynchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Asynchronous) | The sender continues without waiting | ![Asynchronous Message](images/UmlSequenceDiagram/AsyncronousMessage.png) |
-| [Reply](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Reply) | A response to a previous message | ![Reply Message](images/UmlSequenceDiagram/ReplyMessage.png) |
-| [Create](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Create) | Creates a new participant | ![Create Message](images/UmlSequenceDiagram/CreateMessage.png) |
-| [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Delete) | Terminates a participant | ![Delete Message](images/UmlSequenceDiagram/DeleteMessage.png) |
-| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Self) | A message from a participant to itself | ![Self Message](images/UmlSequenceDiagram/SelfMessage.png) |
+| [Synchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Synchronous) | The sender waits for a response | ![Synchronous Message](images/UmlSequenceDiagram/SynchronousMessage.webp) |
+| [Asynchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Asynchronous) | The sender continues without waiting | ![Asynchronous Message](images/UmlSequenceDiagram/AsyncronousMessage.webp) |
+| [Reply](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Reply) | A response to a previous message | ![Reply Message](images/UmlSequenceDiagram/ReplyMessage.webp) |
+| [Create](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Create) | Creates a new participant | ![Create Message](images/UmlSequenceDiagram/CreateMessage.webp) |
+| [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Delete) | Terminates a participant | ![Delete Message](images/UmlSequenceDiagram/DeleteMessage.webp) |
+| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Self) | A message from a participant to itself | ![Self Message](images/UmlSequenceDiagram/SelfMessage.webp) |
 
 
 The following code example explains how to create messages in sequence diagram.
@@ -344,9 +344,9 @@ The [UmlSequenceFragmentType](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
-| [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Optional)  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/UmlSequenceDiagram/OptFragment.png) |  
-| [Alternative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Alternative) | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/UmlSequenceDiagram/AltFragment.png) |  
-| [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Loop) | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/UmlSequenceDiagram/LoopFragment.png) |  
+| [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Optional)  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/UmlSequenceDiagram/OptFragment.webp) |  
+| [Alternative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Alternative) | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/UmlSequenceDiagram/AltFragment.webp) |  
+| [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Loop) | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/UmlSequenceDiagram/LoopFragment.webp) |  
 
 #### Creating Fragments
 

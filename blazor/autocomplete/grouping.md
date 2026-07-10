@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor AutoComplete Component | Syncfusion
-description: Learn how to group items in the Syncfusion Blazor AutoComplete component using the GroupBy field, fixed group headers, and group header templates.
+title: Grouping in Blazor AutoComplete Component | Syncfusion®
+description: Learn how to group items in the Blazor AutoComplete component using the GroupBy field, fixed group headers, and group header templates.
 platform: Blazor
 control: AutoComplete
 documentation: ug

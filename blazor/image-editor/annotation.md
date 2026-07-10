@@ -99,7 +99,7 @@ Here is an example of adding a text in a button click using `DrawTextAsync`.
 }
 ```
 
-![Blazor Image Editor with text annotation](./images/blazor-image-editor-draw-text.png)
+![Blazor Image Editor with text annotation](./images/blazor-image-editor-draw-text.webp)
 
 ### Multiline text
 
@@ -135,7 +135,7 @@ Here is an example of adding a multiline text in a button click using `DrawTextA
 }
 ```
 
-![Blazor Image Editor with multiline text annotation](./images/blazor-image-editor-draw-multiline-text.jpg)
+![Blazor Image Editor with multiline text annotation](./images/blazor-image-editor-draw-multiline-text.webp)
 
 ### Delete a text
 
@@ -179,7 +179,7 @@ Here is an example of deleting a text in a button click using `DeleteShapeAsync`
 }
 ```
 
-![Blazor Image Editor deleting a text annotation](./images/blazor-image-editor-delete-text.jpg)
+![Blazor Image Editor deleting a text annotation](./images/blazor-image-editor-delete-text.webp)
 
 ### Customize font family and text color
 
@@ -212,7 +212,7 @@ Here is an example of changing the text color and font family using `ShapeChangi
 }
 ```
 
-![Blazor Image Editor with custom text styling](./images/blazor-image-editor-custom-text.jpg)
+![Blazor Image Editor with custom text styling](./images/blazor-image-editor-custom-text.webp)
 
 ### Add additional font families
 
@@ -245,7 +245,7 @@ Here is an example of adding additional font families using `ImageEditorFontFami
 }
 ```
 
-![Blazor Image Editor with custom font family](./images/blazor-image-editor-font.jpg)
+![Blazor Image Editor with custom font family](./images/blazor-image-editor-font.webp)
 
 ### Formatting text with bold, italic, underline, and strikethrough
 
@@ -394,7 +394,7 @@ Here is an example of adding a formatting text in a button click using `DrawText
 }
 ```
 
-![Blazor Image Editor with formatted text](./images/blazor-image-editor-formatting-text.jpg)
+![Blazor Image Editor with formatted text](./images/blazor-image-editor-formatting-text.webp)
 
 ## Freehand drawing
 
@@ -438,7 +438,7 @@ Here is an example of using `EnableFreehandDrawAsync` and `DisableFreehandDrawAs
 }
 ```
 
-![Blazor Image Editor with freehand drawing](./images/blazor-image-editor-Freehanddraw.jpg)
+![Blazor Image Editor with freehand drawing](./images/blazor-image-editor-Freehanddraw.webp)
 
 ### Adjust stroke width and color
 
@@ -470,7 +470,7 @@ Here is an example of changing the freehand draw stroke width and color using `S
 }
 ```
 
-![Blazor Image Editor adjusting stroke width and color](./images/blazor-image-editor-adjust-stroke-color.jpg)
+![Blazor Image Editor adjusting stroke width and color](./images/blazor-image-editor-adjust-stroke-color.webp)
 
 ### Delete a freehand drawing
 
@@ -508,7 +508,7 @@ Here is an example of deleting a freehand annotation in a button click using `De
 }
 ```
 
-![Blazor Image Editor deleting a freehand drawing](./images/blazor-image-editor-delete-freehanddraw.jpg)
+![Blazor Image Editor deleting a freehand drawing](./images/blazor-image-editor-delete-freehanddraw.webp)
 
 ## Shape annotation
 
@@ -676,7 +676,7 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in but
 }
 ```
 
-![Blazor Image Editor with shape annotations](./images/blazor-image-editor-annotation.jpg)
+![Blazor Image Editor with shape annotations](./images/blazor-image-editor-annotation.webp)
 
 ### Delete a shape
 
@@ -715,7 +715,7 @@ Here is an example of deleting ellipse in a button click event.
 }
 ```
 
-![Blazor Image Editor deleting a shape](./images/blazor-image-editor-delete-shape.jpg)
+![Blazor Image Editor deleting a shape](./images/blazor-image-editor-delete-shape.webp)
 
 ### Customize default stroke color for shapes
 
@@ -743,7 +743,7 @@ Default settings are provided for stroke color, stroke width, fill color, and ot
     }
 }
 ```
-![Blazor Image Editor with default stroke color customization](./images/blazor-image-editor-default-stroke-color.jpg)
+![Blazor Image Editor with default stroke color customization](./images/blazor-image-editor-default-stroke-color.webp)
 
 ## Image annotation
 
@@ -802,7 +802,7 @@ Here is an example of adding a image in a button click using `DrawImageAsync`.
 }
 ```
 
-![Blazor Image Editor with an image annotation](./images/blazor-image-editor-add-image.jpg)
+![Blazor Image Editor with an image annotation](./images/blazor-image-editor-add-image.webp)
 
 ## Show or hide the annotation options
 
@@ -842,7 +842,7 @@ Using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Imag
 }
 
 ```
-![Blazor Image Editor with annotation options](./images/blazor-image-editor-annotation-option.jpg)
+![Blazor Image Editor with annotation options](./images/blazor-image-editor-annotation-option.webp)
 
 ## See Also
 

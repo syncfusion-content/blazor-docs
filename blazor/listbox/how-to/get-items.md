@@ -51,4 +51,4 @@ The following example demonstrates the `GetDataByValue` method. In this sample, 
 
 ```
 
-![Get items by value in Blazor ListBox](./../images/blazor-listbox-item-selection.png)
+![Get items by value in Blazor ListBox](./../images/blazor-listbox-item-selection.webp)

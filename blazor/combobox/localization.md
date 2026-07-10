@@ -27,4 +27,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor ComboBox with RTL enabled](./images/localization/blazor_combobox_enableRtl.png)
+![Blazor ComboBox with RTL enabled](./images/localization/blazor_combobox_enableRtl.webp)

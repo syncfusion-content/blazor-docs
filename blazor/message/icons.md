@@ -51,7 +51,7 @@ The following example demonstrates the different severity messages without the s
 {% endhighlight %}
 {% endtabs %}
 
-![Message Severity with No Icons](./images/message-severity.png)
+![Message Severity with No Icons](./images/message-severity.webp)
 
 ## Custom Icon
 
@@ -98,7 +98,7 @@ The following example demonstrates how the default message is rendered with a cu
 {% endhighlight %}
 {% endtabs %}
 
-![Message Custom Icon](./images/message-custom-icon.png)
+![Message Custom Icon](./images/message-custom-icon.webp)
 
 ## Close Icon
 
@@ -223,4 +223,4 @@ In the following example, the messages are rendered with the close icon.
 {% endhighlight %}
 {% endtabs %}
 
-![Message Close Icon](./images/message-close-icon.png)
+![Message Close Icon](./images/message-close-icon.webp)

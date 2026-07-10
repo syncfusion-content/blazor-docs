@@ -27,4 +27,4 @@ Use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Button
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with IsModal](./images/Blazor-SpeedDial-ModalProperty.png)
+![Blazor SpeedDial with IsModal](./images/Blazor-SpeedDial-ModalProperty.webp)

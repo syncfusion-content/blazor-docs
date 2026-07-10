@@ -17,4 +17,4 @@ Set the TextBox to read-only to prevent editing while still allowing focus and s
 <SfTextBox Placeholder='First Name' Readonly=true></SfTextBox>
 ```
 
-![Blazor TextBox in Readonly Mode](../images/blazor-textbox-disable-state.png)
+![Blazor TextBox in Readonly Mode](../images/blazor-textbox-disable-state.webp)

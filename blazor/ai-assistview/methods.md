@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Methods in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Methods with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Methods in Blazor AI AssistView Component | Syncfusion®
+description: Checkout and learn here all about Methods with Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: AI AssistView
 documentation: ug

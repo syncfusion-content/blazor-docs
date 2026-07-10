@@ -38,7 +38,7 @@ The Signature component integrates with the toolbar and the interaction performe
                         <SfSplitButton Content="Save" IconCss="e-sign-icons e-save" Disabled="saveDisabled">
                             <SplitButtonEvents Clicked="onSaveClicked" ItemSelected="onSaveType" />
                             <DropDownMenuItems>
-                                <DropDownMenuItem Text="PNG" />
+                                <DropDownMenuItem Text="webp" />
                                 <DropDownMenuItem Text="JPEG" />
                                 <DropDownMenuItem Text="SVG" />
                             </DropDownMenuItems>
@@ -97,7 +97,7 @@ The Signature component integrates with the toolbar and the interaction performe
     private bool undoDisabled = true;
     private bool clearDisabled = true;
     private bool saveDisabled = true;
-    private SignatureFileType type = SignatureFileType.Png;
+    private SignatureFileType type = SignatureFileType.webp;
     private Dictionary<string, string[]> circlePaletteColors = new Dictionary<string, string[]>() {
         { "Custom", new string[] {"#000000", "#e91e63", "#9c27b0", "#673ab7", "#2196f3", "#03a9f4", "#00bcd4",
         "#009688", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107" } }
@@ -182,8 +182,8 @@ The Signature component integrates with the toolbar and the interaction performe
     {
         switch (args.Item.Text)
         {
-            case "PNG":
-                type = SignatureFileType.Png;
+            case "webp":
+                type = SignatureFileType.webp;
                 break;
             case "JPEG":
                 type = SignatureFileType.Jpeg;
@@ -364,4 +364,4 @@ The Signature component integrates with the toolbar and the interaction performe
 </style>
 ```
 
-![Blazor Signature Component](../images/blazor-signature-toolbar.PNG)
+![Blazor Signature Component](../images/blazor-signature-toolbar.webp)

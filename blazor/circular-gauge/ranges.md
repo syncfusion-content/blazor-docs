@@ -21,6 +21,7 @@ The start and end values of a range in an axis can be customized using the [Star
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers><CircularGaugePointer Value="0"></CircularGaugePointer></CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="40" End="80">
                 </CircularGaugeRange>
@@ -41,6 +42,9 @@ Using [StartWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Circu
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="40"
                                     End="80"
@@ -64,6 +68,9 @@ The color of a range can be customized using the [Color](https://help.syncfusion
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+         <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="40"
                                     End="80"
@@ -89,6 +96,9 @@ The ranges can be placed either inside, outside or center of the axis using the 
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="40" End="80" StartWidth="15" EndWidth="15" Color="#ff5985" Position="PointerRangePosition.Cross">
                 </CircularGaugeRange>
@@ -109,6 +119,9 @@ You can customize the corner radius using the [RoundedCornerRadius](https://help
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+         <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="40" End="80" RoundedCornerRadius="5">
                 </CircularGaugeRange>
@@ -153,6 +166,9 @@ By setting value in percentage, a range gets its dimension with respect to its a
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="40" End="80" Radius="50%">
                 </CircularGaugeRange>
@@ -201,6 +217,9 @@ You can set the range color to ticks and labels of an axis by enabling the [UseR
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
+        <CircularGaugePointers>
+                <CircularGaugePointer Value="0"></CircularGaugePointer>
+            </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="0" End="25" Radius="108%">
                 </CircularGaugeRange>

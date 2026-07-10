@@ -41,7 +41,7 @@ pre-selected value with the MultiColumn ComboBox component, use the [@bind-Value
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrTDYVKgaYDmQmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with pre-select value](./images/selection/blazor_combobox_preselect-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrTDYVKgaYDmQmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with pre-select value](./images/selection/blazor_combobox_preselect-value.webp)" %}
 
 ## Programmatically change the selected value
 
@@ -91,7 +91,7 @@ The following sample shows how to bind the index on initial rendering.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhpZkBApjCrhVtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhpZkBApjCrhVtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.webp)" %}
 
 <!-- ## Autofill the selected value
 

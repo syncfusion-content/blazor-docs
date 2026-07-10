@@ -73,7 +73,7 @@ In the following example, `Name` column from complex data have been mapped to th
 }
 ```
 
-![Binding Blazor MultiSelect Dropdown items](./images/blazor-multiselect-dropdown-binding-items.png)
+![Binding Blazor MultiSelect Dropdown items](./images/blazor-multiselect-dropdown-binding-items.webp)
 
 ### Array of complex object
 
@@ -120,7 +120,7 @@ public List<Complex> LocalData { get; set; } = new Complex().GetData();
 }
 ```
 
-![Binding complex items with Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-complex-item.png)
+![Binding complex items with Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-complex-item.webp)
 
 ## Binding remote data
 
@@ -158,7 +158,7 @@ The following sample displays the first six orders from the `Orders` table of th
 }
 ```
 
-![Blazor MultiSelect Dropdown with data binding](./images/blazor-multiselect-dropdown-with-data-binding.png)
+![Blazor MultiSelect Dropdown with data binding](./images/blazor-multiselect-dropdown-with-data-binding.webp)
 
 ### Web API Adaptor
 
@@ -187,7 +187,7 @@ Use the `WebApiAdaptor` to bind the MultiSelect with Web API endpoints that foll
 }
 ```
 
-![Blazor MultiSelect Dropdown with Web API data](./images/blazor-multiselect-dropdown-web-api-data.png)
+![Blazor MultiSelect Dropdown with Web API data](./images/blazor-multiselect-dropdown-web-api-data.webp)
 
 ### Custom Adaptor
 
@@ -293,7 +293,7 @@ To avoid a postback for every action, load all data during initialization and pr
 }
 ```
 
-![Blazor MultiSelect Dropdown in offline mode](./images/blazor-multiselect-dropdown-web-api-data.png)
+![Blazor MultiSelect Dropdown in offline mode](./images/blazor-multiselect-dropdown-web-api-data.webp)
 
 ### ValueTuple data binding
 
@@ -310,7 +310,7 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 ```
 
-![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.png)
+![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.webp)
 
 ## Binding ExpandoObject
 
@@ -341,7 +341,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor MultiSelect with ExpandoObject data binding](./images/blazor_multiselect_expando-object.png)
+![Blazor MultiSelect with ExpandoObject data binding](./images/blazor_multiselect_expando-object.webp)
 
 ## Binding DynamicObject
 
@@ -391,7 +391,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor MultiSelect with dynamic object data binding](./images/blazor_multiselect_dynamic-object.png)
+![Blazor MultiSelect with dynamic object data binding](./images/blazor_multiselect_dynamic-object.webp)
 
 ## Binding ObservableCollection
 
@@ -434,7 +434,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-![Blazor MultiSelect with observable collection data binding](./images/blazor_multiselect_observable-collection.png)
+![Blazor MultiSelect with observable collection data binding](./images/blazor_multiselect_observable-collection.webp)
 
 ## Entity Framework
 

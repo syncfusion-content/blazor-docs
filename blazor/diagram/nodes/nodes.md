@@ -11,7 +11,7 @@ documentation: ug
 
 Nodes are graphical objects used to represent the geometric information, process flows, internal business procedures, entities, or any other kind of data and it represents the functions of a complete system, including how it interacts with external entities, providing a clear visual representation of complex processes and relationships.
 
-![Node in Blazor Diagram](../images/blazor-diagram-node.png)
+![Node in Blazor Diagram](../images/blazor-diagram-node.webp)
 
 ## How to Create a Node
 
@@ -194,7 +194,7 @@ Nodes can be predefined and added to the symbol palette, then dragged and droppe
 * When a symbol is dragged and dropped from the symbol palette to the diagram area, the [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is triggered. [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html) notifies when the element is dropped on the diagram.
 * When a symbol is dragged outside the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event is triggered. [DragLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html) notifies when the element leaves the diagram.
 
-![Adding nodes from the symbol palette in Blazor Diagram](../images/blazor-diagram-add-node-from-palette.gif)
+![Adding nodes from the symbol palette in Blazor Diagram](../images/blazor-diagram-add-node-from-palette.webp)
 
 ## How to Draw Nodes Using Drawing Object
 
@@ -202,7 +202,7 @@ Nodes can be drawn interactively by clicking and dragging on the diagram surface
 
 For more information about drawing nodes, refer to the [Draw Nodes](https://blazor.syncfusion.com/documentation/diagram/tools#how-to-draw-shapes-using-the-drawing-tool).
 
-![Drawing a node on the diagram surface in Blazor Diagram](../images/blazor-diagram-node-drawing.gif)
+![Drawing a node on the diagram surface in Blazor Diagram](../images/blazor-diagram-node-drawing.webp)
 
 ## How to Create Nodes from DataSource
 

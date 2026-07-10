@@ -44,7 +44,7 @@ The following properties allow for further control over the chunk upload process
 
 ### Preview
 
-![Blazor FileUpload with Chunk Upload](./images/blazor-fileupload-with-chunk-upload.png)
+![Blazor FileUpload with Chunk Upload](./images/blazor-fileupload-with-chunk-upload.webp)
 
 ### Resumable Upload
 
@@ -96,11 +96,11 @@ The File Upload component supports resumable uploads, allowing users to pause an
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBSCiBHpPMIERUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVxNwNaphVsZxeQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Preview
 
-![Resuming File Uploads in Blazor FileUpload](./images/blazor-fileupload-resume-file-upload.png)
+![Resuming File Uploads in Blazor FileUpload](./images/blazor-fileupload-resume-file-upload.webp)
 
 ### Cancel Upload
 
@@ -143,11 +143,11 @@ If an upload fails (e.g., due to server error), the pause icon transforms into a
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhSiiVdpPBHTykT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhHNQNaprVpXebg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Preview
 
-![Canceling File Uploads in Blazor FileUpload](./images/blazor-fileupload-cancel-file-upload.png)
+![Canceling File Uploads in Blazor FileUpload](./images/blazor-fileupload-cancel-file-upload.webp)
 
 ## Backend Configuration (ASP.NET Core Hosted Application)
 
@@ -381,4 +381,4 @@ The Blazor Uploader component provides several events specific to chunk upload o
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhoiCrRfOPSTmJm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrdDwjkJVrYILdF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

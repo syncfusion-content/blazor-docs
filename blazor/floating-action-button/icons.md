@@ -52,7 +52,7 @@ Display an icon-only FAB by setting the [IconCss](https://help.syncfusion.com/cr
 
 ```
 
-![Blazor Floating Action Button with Icon](./images/FabWithIcon.png)
+![Blazor Floating Action Button with Icon](./images/FabWithIcon.webp)
 
 ## FAB with icon and text
 
@@ -95,7 +95,7 @@ You can show icon along with text in Floating Action Button by setting [IconCss]
 
 ```
 
-![Blazor Floating Action Button with Icon and Text](./images/IconandText.png)
+![Blazor Floating Action Button with Icon and Text](./images/IconandText.webp)
 
 ### Icon position
 
@@ -140,4 +140,4 @@ Below example demonstrates a FAB with icon and text.
 
 ```
 
-![Blazor Floating Action Button with Icon Position](./images/IconPosition.png)
+![Blazor Floating Action Button with Icon Position](./images/IconPosition.webp)

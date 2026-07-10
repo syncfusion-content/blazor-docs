@@ -41,4 +41,4 @@ In this sample, click the submit button to post the value in the MaskedTextBox. 
 }
 ```
 
-![Blazor Input Mask model binding validation error](../images/validation.png)
+![Blazor Input Mask model binding validation error](../images/validation.webp)

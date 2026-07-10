@@ -23,4 +23,4 @@ The following code demonstrates the disabled component.
 }
 ```
 
-![Blazor DateTimePicker shown in a disabled state](../images/blazor-datetimepicker-disable-state.png)
+![Blazor DateTimePicker shown in a disabled state](../images/blazor-datetimepicker-disable-state.webp)

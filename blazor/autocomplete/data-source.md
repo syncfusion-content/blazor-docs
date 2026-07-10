@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Source in Blazor AutoComplete Component | Syncfusion
-description: Learn how to bind data sources in the Syncfusion Blazor AutoComplete component using local collections or remote services with DataManager and adaptors.
+title: Data Source in Blazor AutoComplete Component | Syncfusion®
+description: Learn how to bind data sources in the Blazor AutoComplete component using local collections or remote services with DataManager and adaptors.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -133,30 +133,20 @@ The following sample displays the first 6 contacts from the Customers table of t
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-        <SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a name" Query="@RemoteDataQuery" Autofill="true">
-            <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
-            <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-        </SfAutoComplete>
+<SfAutoComplete TValue="string" TItem="EmployeeData" PopupHeight="200px" Placeholder="Select a name" Query="@RemoteQuery" Autofill="true" @bind-Value="@EmployeeValue">
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Employees" Offline="true" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+    <AutoCompleteFieldSettings Value="FirstName"/>
+</SfAutoComplete>
 
 @code{
-
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
-
-    public Syncfusion.Blazor.Lists.SortOrder Sort { get; set; } = Syncfusion.Blazor.Lists.SortOrder.Ascending;
-
-     public class OrderDetails
+    public string EmployeeValue { get; set; }
+    public Query RemoteQuery = new Query();
+    public class EmployeeData
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
+        public int EmployeeID { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Country { get; set; }
     }
 }
 ```
@@ -346,7 +336,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor AutoComplete with expando object data binding](./images/blazor_autocomplete_expando-object.png)
+![Blazor AutoComplete with expando object data binding](./images/blazor_autocomplete_expando-object.webp)
 
 ## Binding DynamicObject
 

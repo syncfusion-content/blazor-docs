@@ -64,15 +64,15 @@ The following code example explains how to create an association.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Association.razor)
 
-![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.png)
+![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.webp)
 
 The following table shows the visual representation of association flows.
 
 | Association | Image |
 | -------- | -------- |
-| [AssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_AssociationFlow) | ![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.png) |
-| [DirectionalAssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_DirectionalAssociationFlow) | ![Directional BPMN FlowShapes](../images/Bpmn-DirectionalAssociatinFlow.png) |
-| [BiDirectionalAssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_BiDirectionalAssociationFlow) | ![BiDirectional BPMN FlowShapes](../images/Bpmn-BidirectionalAssociationFlow.png) |
+| [AssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_AssociationFlow) | ![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.webp) |
+| [DirectionalAssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_DirectionalAssociationFlow) | ![Directional BPMN FlowShapes](../images/Bpmn-DirectionalAssociatinFlow.webp) |
+| [BiDirectionalAssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_BiDirectionalAssociationFlow) | ![BiDirectional BPMN FlowShapes](../images/Bpmn-BidirectionalAssociationFlow.webp) |
 
 ## How to Create a Sequence
 
@@ -121,15 +121,15 @@ The following code example explains how to create a sequence flow.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Sequence.razor)
 
-![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) 
+![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.webp) 
 
 The following table shows the different representations of sequence flows.
 
 | Sequence | Image |
 | -------- | -------- |
-| [DefaultSequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_DefaultSequenceFlow) | ![Default Sequence BPMN Shape](../images/Bpmn-DefaultSequentialFlow.png) |
-| [ConditionalSequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_ConditionalSequenceFlow) | ![Conditional Sequence BPMN Shape](../images/Bpmn-ConditionalSequenceFlow.png) |
-| [SequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_SequenceFlow) | ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) |
+| [DefaultSequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_DefaultSequenceFlow) | ![Default Sequence BPMN Shape](../images/Bpmn-DefaultSequentialFlow.webp) |
+| [ConditionalSequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_ConditionalSequenceFlow) | ![Conditional Sequence BPMN Shape](../images/Bpmn-ConditionalSequenceFlow.webp) |
+| [SequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_SequenceFlow) | ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.webp) |
 
 N> The default value for the property `Sequence` is **Normal.**
 
@@ -180,14 +180,14 @@ The following code example explains how to define a message flow.
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/BpmnEditor/BpmnConnectors/Message.razor)
 
- ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.png)
+ ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.webp)
 
 The following table shows the different representations of message flows.
 
 | Message | Image |
 | -------- | -------- |
-| [MessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_MessageFlow) | ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.png) |
-| [InitiatingMessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_InitiatingMessageFlow) | ![InitiatingMessage Message BPMN Shape](../images/Bpmn-NonInitiatingMessageFlow.png) |
-| [NonInitiatingMessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_NonInitiatingMessageFlow) | ![NonInitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.png) |
+| [MessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_MessageFlow) | ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.webp) |
+| [InitiatingMessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_InitiatingMessageFlow) | ![InitiatingMessage Message BPMN Shape](../images/Bpmn-NonInitiatingMessageFlow.webp) |
+| [NonInitiatingMessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_NonInitiatingMessageFlow) | ![NonInitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.webp) |
 
 N> The default value for the property `Flow` property of a `BpmnFlow` shape is **SequenceFlow.**

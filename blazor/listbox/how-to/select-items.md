@@ -45,4 +45,4 @@ This example shows how to programmatically select items using the [SelectItemsAs
 
 ```
 
-![Selecting items in the Blazor ListBox](./../images/blazor-listbox-item-selection.png)
+![Selecting items in the Blazor ListBox](./../images/blazor-listbox-item-selection.webp)

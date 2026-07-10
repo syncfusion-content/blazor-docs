@@ -17,7 +17,7 @@ The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Sf
 </SfTooltip>
 ```
 
-![Blazor Tooltip Target](images/target.png)
+![Blazor Tooltip Target](images/target.webp)
 
 ## Displaying Tooltip for dynamically created target element
 
@@ -52,4 +52,4 @@ Set the [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 The [`TargetContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_TargetContainer) property enables automatic Tooltip registration for newly added elements, enhancing dynamic content interactivity.
 
-![Blazor Tooltip with Dynamic Targets](images/dynamic-target.gif)
+![Blazor Tooltip with Dynamic Targets](images/dynamic-target.webp)

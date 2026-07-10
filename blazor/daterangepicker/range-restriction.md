@@ -32,7 +32,7 @@ In the following sample, you can select a range from 15th day of this month to 1
 ```
 
 
-![Range Restriction in Blazor DateRangePicker](./images/blazor-daterangepicker-range-restriction.png)
+![Range Restriction in Blazor DateRangePicker](./images/blazor-daterangepicker-range-restriction.webp)
 
 ## Range span
 
@@ -51,7 +51,7 @@ In the following sample, the range selection should be greater than 5 days and l
 ```
 
 
-![Blazor DateRangePicker Selection in Span between Range](./images/blazor-daterangepicker-range-span.png)
+![Blazor DateRangePicker Selection in Span between Range](./images/blazor-daterangepicker-range-span.webp)
 
 ## Strict mode
 
@@ -79,7 +79,7 @@ If both the Start and End dates are higher than the Max date, then Start and End
 If StartDate is less than Min date, it will be updated with Min date. If EndDate is greater than Max date, it will be updated with the Max date.
 
 
-![Blazor DateRangePicker in Strict Mode](./images/blazor-daterangepicker-strict-mode.png)
+![Blazor DateRangePicker in Strict Mode](./images/blazor-daterangepicker-strict-mode.webp)
 
 By default, the DatePicker acts in `StrictMode` false state that allows you to enter the invalid or out-of-range date in text box.
 
@@ -102,6 +102,6 @@ The following code demonstrates the `StrictMode` as false. Here, it allows you t
 
 
 
-![Blazor DateRangePicker without Strict Mode](./images/blazor-daterangepicker-without-strict-mode.png)
+![Blazor DateRangePicker without Strict Mode](./images/blazor-daterangepicker-without-strict-mode.webp)
 
 N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap5) to understand how to present and manipulate data.

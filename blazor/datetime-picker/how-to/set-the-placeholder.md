@@ -19,4 +19,4 @@ Using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 <SfDateTimePicker TValue="DateTime?" Placeholder="Choose a datetime"></SfDateTimePicker>
 ```
 
-![Blazor DateTimePicker displays hint text using the Placeholder property](../images/blazor-datetimepicker-hint-element.png)
+![Blazor DateTimePicker displays hint text using the Placeholder property](../images/blazor-datetimepicker-hint-element.webp)

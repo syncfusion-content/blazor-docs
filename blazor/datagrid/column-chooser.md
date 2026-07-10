@@ -78,7 +78,7 @@ To enable this feature, set the [ShowColumnChooser](https://help.syncfusion.com/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLfsVirCTHjHXFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRZwZipCISvmmc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The column chooser dialog displays the header text of each column by default. If the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) is not defined, the corresponding [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) name is shown instead.
 
@@ -155,7 +155,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVJihiLMwbAZjZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBxNGXCzCeFriuA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > * The `ShowInColumnChooser` property is applied to each column individually. By setting it to **false**, specific columns can be excluded from the column chooser dialog.
 > * At least one column must remain visible in the Grid to ensure proper rendering and interaction.
@@ -240,7 +240,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLTMhsLCaIRtynp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVxjQDCfCRtdDgF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize column chooser dialog size
 
@@ -336,7 +336,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrfsrWdrlMlVALs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLRXwNCJCneGwlK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Change default search operator of the column chooser
 
@@ -410,13 +410,15 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVojSqXAvCdYvzJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrdNmXiJMRlzgGB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Column chooser template
 
 The Blazor DataGrid allows customizing the column chooser dialog using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) properties of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html). These templates enable injecting custom content into the body and footer of the column chooser.
 
 The parameters passed to the templates can be accessed using the implicit **context** parameter.
+
+> Use the `e-ccdlg-mention` class in the [CSSClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_CssClass) property of the SfMention component when placing the SfMention component inside the column chooser template. This approach ensures proper functioning of the column chooser.
 
 ### Customize the content of column chooser
 
@@ -622,7 +624,7 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLJiLVTWKyyPjml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBxNwXMfCmdjjbl?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Column chooser content template in Blazor DataGrid.](images/blazor-datagrid-column-chooser-content-template.webp)
 
@@ -714,7 +716,7 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhUiMtVWQPZQjGs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLnjmXCTWQkSMHS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Group column chooser items in Blazor DataGrid
 
@@ -869,4 +871,4 @@ public class Order
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLIjphYJvURjaoU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBdtwDizibeexoc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

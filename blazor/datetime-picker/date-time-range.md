@@ -29,7 +29,7 @@ The following code allows selecting a date within the range from the 7th to the 
 }
 ```
 
-![DateTime Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-selection.png)
+![DateTime Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-selection.webp)
 
 When Min and Max are configured:
 - With StrictMode enabled, out-of-range input is clamped to the nearest boundary (Min/Max) and invalid input reverts to the previous valid value.
@@ -47,7 +47,7 @@ When Min and Max are configured:
 }
 ```
 
-![Blazor DateTimePicker displays Selected Date and Time](./images/blazor-datetimepicker-date-time-selection.png)
+![Blazor DateTimePicker displays Selected Date and Time](./images/blazor-datetimepicker-date-time-selection.webp)
 
 N> If the values of `Min` or `Max` are changed through code-behind, update the `Value` property to ensure it remains within the defined range. Calendar selection always respects Min and Max; disabled dates cannot be selected from the popup.
 
@@ -74,7 +74,7 @@ The following code allows selecting a time between 10:00 AM and 8:30 PM each day
 }
 ```
 
-![Time Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-time-selection.png)
+![Time Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-time-selection.webp)
 
 The example below also allows selecting a time within the range from 10:00 AM to 8:30 PM of each day.
 
@@ -90,4 +90,4 @@ The example below also allows selecting a time within the range from 10:00 AM to
 }
 ```
 
-![Blazor DateTimePicker displays Time Selection](./images/blazor-datetimepicker-time-validation.png)
+![Blazor DateTimePicker displays Time Selection](./images/blazor-datetimepicker-time-validation.webp)

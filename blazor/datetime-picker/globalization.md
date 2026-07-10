@@ -33,4 +33,4 @@ The following code example initializes the DateTimePicker component with the `ar
 }
 ```
 
-![Blazor DateTimePicker in Arabic culture with right-to-left layout](./images/blazor-datetimepicker-right-to-left.png)
+![Blazor DateTimePicker in Arabic culture with right-to-left layout](./images/blazor-datetimepicker-right-to-left.webp)

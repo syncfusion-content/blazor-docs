@@ -56,4 +56,4 @@ The following example illustrates how to add and remove items in Dropdown Menu c
 
 ```
 
-![Add and remove items in Blazor Dropdown Menu](./../images/blazor-dropdownmenu-add-items.png)
+![Add and remove items in Blazor Dropdown Menu](./../images/blazor-dropdownmenu-add-items.webp)

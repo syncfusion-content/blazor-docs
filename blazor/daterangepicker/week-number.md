@@ -20,7 +20,7 @@ You can enable WeekNumber in the DateRangePicker by using the [WeekNumber](https
 ```
 
 
-![Blazor DateRangePicker with week numbers](./images/blazor_daterangepicker_weeknumber.png)
+![Blazor DateRangePicker with week numbers](./images/blazor_daterangepicker_weeknumber.webp)
 
 ## Week Rule
 
@@ -33,8 +33,8 @@ FirstFullWeek |Set the first week of the year's week number to be started from 5
 FirstFourDayWeek | Set the week number based on the majority of dates present in the week for the respected months. If January dates are presented in the week more than December, the first week of the year's week number will be started from 1. If December dates are presented in the week more than January, the first week of the year's week number will be started from 52 or 53.
 
 
-![Blazor DateRangePicker displays Week Rule of FirstDay](./images/blazor-daterangepicker-first-day.png)
+![Blazor DateRangePicker displays Week Rule of FirstDay](./images/blazor-daterangepicker-first-day.webp)
 
-![Blazor DateRangePicker displays Week Rule of FirstFullWeek](./images/blazor-daterangepicker-first-full-week.png)
+![Blazor DateRangePicker displays Week Rule of FirstFullWeek](./images/blazor-daterangepicker-first-full-week.webp)
 
-![Blazor DateRangePicker displays Week Rule of FirstFourDayWeek](./images/blazor-daterangepicker-first-four-Day-Week.png)
+![Blazor DateRangePicker displays Week Rule of FirstFourDayWeek](./images/blazor-daterangepicker-first-four-Day-Week.webp)

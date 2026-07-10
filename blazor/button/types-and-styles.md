@@ -123,7 +123,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 <style>
 
     .e-play::before {
-        content: '\e324';
+        content: '\e70c';
     }
 
     .e-pause::before {
@@ -150,10 +150,10 @@ The Button can have an icon to provide the visual representation of the action. 
 
 <style>
     .e-play-icon::before {
-        content: '\e324';
+        content: '\e70c';
     }
     .e-pause-icon::before {
-        content: '\e326';
+        content: '\e77b';
     }
 </style>
 

@@ -17,4 +17,4 @@ Spin buttons allows to increase or decrease the value with the predefined [Step]
 <SfNumericTextBox TValue="int?" Value=10 Min=10 Max=100 Step=2 ShowSpinButton=false></SfNumericTextBox>
 ```
 
-![Hiding Spin Button in Blazor Numeric TextBox](../images/blazor-numerictextbox-hide-spin-button.png)
+![Hiding Spin Button in Blazor Numeric TextBox](../images/blazor-numerictextbox-hide-spin-button.webp)

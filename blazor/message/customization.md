@@ -46,7 +46,7 @@ The following example demonstrates the message with different content alignments
 {% endhighlight %}
 {% endtabs %}
 
-![Message Content Alignment](./images/message-content-alignment.png)
+![Message Content Alignment](./images/message-content-alignment.webp)
 
 ## Rounded and Square
 
@@ -90,7 +90,7 @@ The following example shows the rounded and squared appearance of the message, w
 {% endhighlight %}
 {% endtabs %}
 
-![Message Custom Appearance](./images/message-rounded-square.png)
+![Message Custom Appearance](./images/message-rounded-square.webp)
 
 ## CSS Message
 
@@ -168,4 +168,4 @@ The following example shows the message which renders without any script referen
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Message Component](./images/message-default.PNG)
+![Blazor Message Component](./images/message-default.webp)

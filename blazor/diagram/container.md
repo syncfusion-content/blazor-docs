@@ -184,7 +184,7 @@ The following example shows how to define a container header and customize its a
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerHeaderSample.razor).
 
-![Blazor Diagram Container Header](images/ContainerImages/ContainerWithHeader.png)
+![Blazor Diagram Container Header](images/ContainerImages/ContainerWithHeader.webp)
 
 >Note: Edit the header by double-clicking the header region, or by pressing F2.
 
@@ -280,13 +280,13 @@ The following code example shows how to define containers and add them to the sy
 
 A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/Blazor-UG-Examples/blob/master/Diagram/Server/Pages/Container/ContainerPalette.razor).
 
-![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.png)
+![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.webp)
 
 ## How to Interactively Add or Remove Diagram Elements into Container
 
 Diagram elements can be added to or removed from a container at runtime. When an element is dropped onto the container's edges, the container automatically adjusts its size to accommodate the new element.
 
-![Blazor Diagram Container Interaction](images/ContainerImages/ContainerInteraction.gif)
+![Blazor Diagram Container Interaction](images/ContainerImages/ContainerInteraction.webp)
 
 ## Interaction
 
@@ -295,7 +295,7 @@ Diagram supports selecting, dragging, and resizing containers interactively..
 ### How to Select a Container 
 A container can be selected by clicking (or tapping) it. It can also be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method, and selection can be cleared by using [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
 
-![Blazor Diagram Container Selection](images/ContainerImages/ContainerSelection.png)
+![Blazor Diagram Container Selection](images/ContainerImages/ContainerSelection.webp)
 
 ### How to Drag a Container 
 
@@ -303,7 +303,7 @@ A container can be selected by clicking (or tapping) it. It can also be selected
 
 * When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and we can do customization on those events.
 
-![Drag Container](images/ContainerImages/ContainerDrag.gif)
+![Drag Container](images/ContainerImages/ContainerDrag.webp)
 
 ### How to Resize a Container
 
@@ -312,4 +312,4 @@ A container can be selected by clicking (or tapping) it. It can also be selected
 * To maintain the container's aspect ratio during resizing, enable the [AspectRatio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AspectRatio) constraint in NodeConstraints.
 * A container can be resized by using the selector or by moving child nodes toward the container edge. If a child node reaches the container edge, the container is resized automatically.
 
-![Blazor Diagram Resize Container](images/ContainerImages/ContainerResize.gif)
+![Blazor Diagram Resize Container](images/ContainerImages/ContainerResize.webp)

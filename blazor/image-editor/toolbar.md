@@ -79,7 +79,7 @@ Here is an example of adding custom toolbar item for rotate transformation using
 }
 ```
 
-![Blazor Image Editor with Toolbar](./images/blazor-image-editor-custom-toolbar.jpg)
+![Blazor Image Editor with Toolbar](./images/blazor-image-editor-custom-toolbar.webp)
 
 ## Show or hide a toolbar
 
@@ -105,7 +105,7 @@ Here is an example of hiding the toolbar of the Image Editor using the `Toolbar`
 }
 ```
 
-![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-toolbar.jpg)
+![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-toolbar.webp)
 
 ## Show or hide a toolbar item
 
@@ -142,7 +142,7 @@ Here is an example of hiding the crop and transform toolbar item using the `Tool
 }
 ```
 
-![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-crop-toolbar.jpg)
+![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-crop-toolbar.webp)
 
 ## Enable or disable a toolbar item
 
@@ -180,7 +180,7 @@ Here is an example of disabling custom toolbar items using the `Toolbar` propert
 }
 ```
 
-![Blazor Image Editor with Disable a Toolbar](./images/blazor-image-editor-disable-toolbar.jpg)
+![Blazor Image Editor with Disable a Toolbar](./images/blazor-image-editor-disable-toolbar.webp)
 
 ## Enable or disable a contextual toolbar item
 
@@ -220,7 +220,7 @@ In the following example, the contextual toolbar for freehand drawing is rendere
 }
 ```
 
-![Blazor Image Editor with Customize Toolbar](./images/blazor-image-editor-customize-toolbar.jpg)
+![Blazor Image Editor with Customize Toolbar](./images/blazor-image-editor-customize-toolbar.webp)
 
 ## Toolbar created event
 
@@ -258,7 +258,7 @@ Here is an example of the toolbar item clicked event using the `ToolbarItemClick
 }
 ```
 
-![Blazor Image Editor with Item click Toolbar](./images/blazor-image-editor-toolbar-click.jpg)
+![Blazor Image Editor with Item click Toolbar](./images/blazor-image-editor-toolbar-click.webp)
 
 ## Toolbar template
 
@@ -295,4 +295,4 @@ Here is an example of using `ToolbarTemplate` to render only a button to toggle 
 }
 ```
 
-![Blazor Image Editor with Toolbar template](./images/blazor-image-editor-toolbar-template.jpg)
+![Blazor Image Editor with Toolbar template](./images/blazor-image-editor-toolbar-template.webp)

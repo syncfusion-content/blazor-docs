@@ -75,7 +75,7 @@ Cards can be grouped into swimlane rows based on the `KeyField`, with each row r
 ```
 
 
-![Swimlane rows rendered in Blazor Kanban](./images/blazor-kanban-with-swimlane-row.png)
+![Swimlane rows rendered in Blazor Kanban](./images/blazor-kanban-with-swimlane-row.webp)
 
 ## Custom row text
 
@@ -245,7 +245,7 @@ To get started quickly with Blazor Kanban component using Templates, you can che
 
 ```
 
-![Customized swimlane row text using template in Blazor Kanban](./images/blazor-kanban-custom-swimlane-row.png)
+![Customized swimlane row text using template in Blazor Kanban](./images/blazor-kanban-custom-swimlane-row.webp)
 
 ## Sorting
 
@@ -291,7 +291,7 @@ N> If the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ka
 
 ```
 
-![Swimlane rows sorted in descending order in Blazor Kanban](./images/blazor-kanban-swimlane-row-sorting.png)
+![Swimlane rows sorted in descending order in Blazor Kanban](./images/blazor-kanban-swimlane-row-sorting.webp)
 
 ### Custom order
 
@@ -350,7 +350,7 @@ In the following code, changed the order of the swimlane rows at positions 2, 0,
 
 ```
 
-![Custom swimlane row order in Blazor Kanban](./images/blazor-kanban-swimlane-row-custom.png)
+![Custom swimlane row order in Blazor Kanban](./images/blazor-kanban-swimlane-row-custom.webp)
 
 ## Calculate cards count
 
@@ -419,7 +419,7 @@ In the following example, the `ShowItemCount` property is disabled to render swi
 
 ```
 
-![Swimlane rows without card count in Blazor Kanban](./images/blazor-kanban-cards-count.png)
+![Swimlane rows without card count in Blazor Kanban](./images/blazor-kanban-cards-count.webp)
 
 ## Enable frozen rows
 
@@ -488,4 +488,4 @@ N> Note: This feature is supported only when Kanban content scrolling is enabled
 
 ```
 
-![Blazor Kanban with Frozen Rows](./images/blazor-kanban-frozen-rows.png)
+![Blazor Kanban with Frozen Rows](./images/blazor-kanban-frozen-rows.webp)

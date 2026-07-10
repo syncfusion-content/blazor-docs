@@ -52,7 +52,7 @@ text-align: right;
 </style>
 ```
 
-![Blazor TextBox Text Alignment](./images/blazor-textbox-align-right.png)
+![Blazor TextBox Text Alignment](./images/blazor-textbox-align-right.webp)
 
 To align text in a specific TextBox only, set text-align via a custom class using the CssClass property.
 
@@ -68,7 +68,7 @@ text-align: right;
 </style>
 ```
 
-![Blazor TextBox text alignment](./images/blazor-textbox-align-individual.png)
+![Blazor TextBox text alignment](./images/blazor-textbox-align-individual.webp)
 
 ## See also
 
