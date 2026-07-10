@@ -227,8 +227,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnZGDhUjkSdaFN?appbar=false&editor=false&result=true&errorlist=true&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.webp)" %}
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnZGDhUjkSdaFN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.webp)" %}
 ## Setting On and Off Text
 
 On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OnLabel) and [OffLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OffLabel) properties of Toggle Switch Button component. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
@@ -249,7 +248,7 @@ On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor
 
 N> The Switch component does not support text for material themes and does not support long custom text.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLzZiKtzdAdnBzy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhxtwjrqMXGBZXU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ToggleSwitchButton).
 
