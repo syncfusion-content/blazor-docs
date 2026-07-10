@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dialog in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Dialog Component in Blazor Web App.
+description: Check out and learn about how to get started with the Blazor Dialog Component in the Blazor Web App.
 platform: Blazor
 component: Dialog
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dialog Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Popups` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Popups
@@ -130,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -146,7 +146,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -161,15 +161,14 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Dialog component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component inside the Razor file.
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-@using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px">
     <DialogTemplates>
@@ -180,7 +179,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -249,8 +248,6 @@ html, body {
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Popups
-
 <SfDialog>
     <DialogEvents Created="@CreatedHandler" Destroyed="@DestroyedHandler"></DialogEvents>
 </SfDialog>
@@ -280,7 +277,6 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <div id="target">
@@ -311,12 +307,10 @@ The [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pop
 
 ## Set Header to Dialog
 
-The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) property allows rendering a dialog with custom text header.
+The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) property allows rendering a dialog with a custom text header.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px" Header="Dialog Header"></SfDialog>
 
@@ -327,12 +321,10 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Dial
 
 ## Set Content to Dialog 
 
-The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property allows rendering a dialog with custom text content.
+The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Content) property allows rendering a dialog with a custom text content.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Popups
 
 <SfDialog Width="250px" Content="This is a dialog with Content property."></SfDialog>
 
@@ -345,5 +337,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Dialog Template](https://blazor.syncfusion.com/documentation/dialog/template)
