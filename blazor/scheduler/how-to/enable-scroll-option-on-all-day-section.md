@@ -63,4 +63,4 @@ N> This property is not applicable for Scheduler with height `auto`.
 }
 ```
 
-![Scrolling in Blazor Scheduler](../images/blazor-scheduler-scrolling.png)
+![Scrolling in Blazor Scheduler](../images/blazor-scheduler-scrolling.webp)

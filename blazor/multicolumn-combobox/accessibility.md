@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor MultiColumn ComboBox component and much more.
+title: Accessibility in Blazor MultiColumn ComboBox Component | Syncfusion®
+description: Checkout and learn here all about Accessibility in Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
@@ -83,4 +83,4 @@ The accessibility compliance of the MultiColumn ComboBox component is demonstrat
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

@@ -92,7 +92,7 @@ The menu item contains an icon/image in it to provide a visual representation of
 </style>
 ```
 
-![Blazor MenuBar with Icons](./images/blazor-menubar-icons.png)
+![Blazor MenuBar with Icons](./images/blazor-menubar-icons.webp)
 
 ## Navigation
 
@@ -131,7 +131,7 @@ Navigation in Menu Bar is used to navigate to the other web page when a Menu Bar
 </SfMenu>
 ```
 
-![Navigation in Blazor MenuBar](./images/blazor-menubar-navigation.png)
+![Navigation in Blazor MenuBar](./images/blazor-menubar-navigation.webp)
 
 ## Multilevel nesting
 
@@ -204,4 +204,4 @@ The Menu Bar supports multiple level nesting, and it can be achieved by mapping 
 </SfMenu>
 ```
 
-![Blazor MenuBar with Multilevel Nesting](./images/blazor-menubar-multilevel-nesting.png)
+![Blazor MenuBar with Multilevel Nesting](./images/blazor-menubar-multilevel-nesting.webp)

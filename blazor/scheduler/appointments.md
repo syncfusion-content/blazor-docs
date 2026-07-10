@@ -302,7 +302,7 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 }
 ```
 
-![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-block-events.png)
+![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-block-events.webp)
 
 Block events can also be defined to repeat on several days as shown in the following code example.
 
@@ -344,7 +344,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 }
 ```
 
-![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-multiple-block-events.png)
+![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-multiple-block-events.webp)
 
 ## Readonly
 
@@ -478,7 +478,7 @@ By default, the scheduler will render the overlapping events based on the start 
     }
 }
 ```
-![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
+![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.webp)
 
 ## Preventing Overlapping Events
 
@@ -739,9 +739,120 @@ More indicator can be shown if more than one appointment is available in a same 
 }
 ```
 
-![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-entirecell.png)
+![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-entirecell.webp)
 
 N> The [`EnableIndicator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableIndicator) property will work, only when the [`EnableMaxHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableMaxHeight) property value is set to true.
+
+## Limiting maximum number of events displayed
+
+In the Scheduler, you can limit the number of concurrent events displayed in each time slot to improve the quality of the presentation and prevent visual overcrowding. This can be accomplished using the following properties based on the view type:
+
+### Limiting events in month and timeline views
+
+In the Scheduler, the default behavior is to display concurrent events based on cell height, with each new event represented as
+`+N more` characters. However, you may want to improve the quality of the presentation by limiting the number of concurrent events. This can be accomplished by using the [MaxEventsPerRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property, which is defaulted to the [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) property.
+
+The [MaxEventsPerRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property is specific to the **Month**, **TimelineMonth**, and **TimelineYear** views, allowing you to view events visually in these rows. Below is a code example that demonstrates how to use this constraint and the events displayed in a cell have been created:
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Month" MaxEventsPerRow="3"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    DateTime CurrentDate = new DateTime(2026, 6, 15);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2026, 6, 15, 9, 30, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Annual Conference", StartTime = new DateTime(2026, 6, 15, 10, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Tech Symposium", StartTime = new DateTime(2026, 6, 15, 10, 30, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 30, 0) },
+        new AppointmentData { Id = 4, Subject = "Client Meeting", StartTime = new DateTime(2026, 6, 15, 12, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 14, 0, 0) },
+        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2026, 6, 15, 13, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 15, 0, 0) },
+    };
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+    }
+}
+```
+![Blazor Scheduler with MaxEventsPerRow](images/blazor-scheduler-max-event-row.png)
+
+N> The [MaxEventsPerRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_MaxEventsPerRow) property will be applicable only when the [RowAutoHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_RowAutoHeight) feature is disabled in the Scheduler.
+
+### Limiting events in vertical views
+
+The `MaxEventStack` property on the [ScheduleView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html) allows you to limit the number of overlapping events displayed in each time slot. When the number of overlapping events exceeds the specified limit, a "+N" indicator appears, indicating how many additional events exist. Users can click this indicator to view all remaining events in a popup window. By default, the Scheduler shows all overlapping events without any restrictions. The default value of `MaxEventStack` is `0`. 
+
+Below is a code example that demonstrates how to use this constraint:
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day" MaxEventStack="2"></ScheduleView>
+        <ScheduleView Option="View.Week" MaxEventStack="2"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek" MaxEventStack="2"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    DateTime CurrentDate = new DateTime(2026, 6, 15);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2026, 6, 15, 9, 30, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Annual Conference", StartTime = new DateTime(2026, 6, 15, 10, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Tech Symposium", StartTime = new DateTime(2026, 6, 15, 10, 30, 0),
+        EndTime = new DateTime(2026, 6, 15, 11, 30, 0) },
+        new AppointmentData { Id = 4, Subject = "Client Meeting", StartTime = new DateTime(2026, 6, 15, 12, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 14, 0, 0) },
+        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2026, 6, 15, 13, 0, 0),
+        EndTime = new DateTime(2026, 6, 15, 15, 0, 0) },
+    };
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+    }
+}
+```
+
+**How it works:** In this example, `MaxEventStack` is set to `2` for all three views. When you have three or more overlapping events in the same time slot:
+- The Scheduler displays only the first two events
+- A "+N" indicator appears to show how many additional events exist (for example, "+1" if there are 3 total events)
+- Users can click the indicator to open a popup displaying all remaining events for that time slot
+
+![Blazor Scheduler with MaxEventStack](images/blazor-scheduler-max-event-stack.png)
+
+N> The `MaxEventStack` property is applicable only with **Day**, **Week**, and **WorkWeek** views when the [`TimeScale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTimeScale.html) option is enabled.
 
 ## Display tooltip for appointments
 
@@ -790,7 +901,7 @@ The tooltip can be displayed for appointments by setting `true` to the [EnableTo
 }
 ```
 
-![Built-in Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip.png)
+![Built-in Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip.webp)
 
 ### Customizing event tooltip using template
 
@@ -841,7 +952,7 @@ After enabling the default tooltip, it is possible to customize the display of n
 }
 ```
 
-![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip-template.png)
+![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip-template.webp)
 
 N> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
 

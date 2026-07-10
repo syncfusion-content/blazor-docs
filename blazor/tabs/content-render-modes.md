@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content Render Modes in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about content render modes in Syncfusion Blazor Tabs component and more.
+title: Content Render Modes in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all the features about content render modes in Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -212,9 +212,9 @@ In the following code example, Calendar and Scheduler have been rendered in firs
             </ContentTemplate>
         </TabItem>
         <TabItem>
-            <HeaderTemplate>Syncfusion Blazor</HeaderTemplate>
+            <HeaderTemplate>Blazor</HeaderTemplate>
             <ContentTemplate>
-                <p>You can check out our Syncfusion Blazor demo here - https://blazor.syncfusion.com/demos/ </p>
+                <p>You can check out our Blazor demo here - https://blazor.syncfusion.com/demos/ </p>
                 <br />
                 <p>Also user guide will be avail here - https://blazor.syncfusion.com/documentation/introduction/</p>
             </ContentTemplate>

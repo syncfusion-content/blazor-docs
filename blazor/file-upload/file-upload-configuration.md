@@ -21,7 +21,7 @@ The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUplo
 
 > Note: Ensure the `ID` is unique across your application. When using AsyncSettings, the `name` must match the controller's save method parameter name.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjryjYhTgSOYvHEJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVHXQDEzUIfNuRG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -35,7 +35,7 @@ The [`AllowedExtensions`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 >Note: Multiple extensions should be separated by commas.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryjOhzKHgiZDmV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrRjQjYTAemUpBL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -49,7 +49,7 @@ The [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 >Note: When `AllowMultiple` is `false`, only one file can be selected at a time.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVojOhTKxefALsN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVRXwtOJKnDrngs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -63,7 +63,7 @@ The [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
 
 If [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) is `false`, you'll typically need to upload a file manually on upload button click.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrStOhTKnuyPkKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrRXmjEfqHINosH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -77,7 +77,7 @@ The [`SequentialUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 >Note: This property is only effective when `AllowMultiple` is `true`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhSjkLpqQTZKrlg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrxNGXupqHwwkrs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -91,7 +91,7 @@ The [`DirectoryUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 >Note: Browser support for directory upload may vary.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeDOBfgceWwSNY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBRNGjYfgcXGFNT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -105,7 +105,7 @@ The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.S
 
 >Note: When disabled, users cannot interact with the upload area.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLeNkVfKcOhxybv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxjQDuTgcqQbhT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -119,7 +119,7 @@ The [`MaxFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 >Note: The value is in bytes. Make sure your server-side configuration also handles maximum file sizes appropriately.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVStkLpqlnsPFdX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBxNwZkJUcwiRvj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ---
@@ -132,7 +132,7 @@ The [`MinFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 <SfUploader MinFileSize="1024" /> @* 1 KB *@
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVotaVTUYsmdyXM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhxDwjYpgPXMBJu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -146,7 +146,7 @@ The [`EnableHtmlSanitizer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 >Note: It's recommended to keep this property `true` for security reasons, especially in public-facing applications.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBeNYVfUOhomymd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrRtmDETUvlrVzS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## EnablePersistence
 
@@ -169,7 +169,7 @@ The [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 <SfUploader EnableRtl="true" />
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhINEhJpCTkMvdI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVnZwNYzUuOtNls?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -183,7 +183,7 @@ The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 >Note: This property accepts a `Dictionary<string, object>`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoDYrpTrbUcwZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdjcDOJJDLwHRc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -197,7 +197,7 @@ The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 >Note: This property accepts a `Dictionary<string, object>`. Be cautious not to override essential attributes managed by the component.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBetuhfzUNEgeqP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhnDQNEJTtlIzvw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -213,7 +213,7 @@ The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.
 
 >Note: A value of 0 means the element will be focused in the default tab order. Negative values remove the element from the tab order.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhotYhzzqUHHLgt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhntctETTMTDYZB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Preloaded files
@@ -230,5 +230,5 @@ The FileUpload component supports displaying a list of files that are already av
 </SfUploader>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBytuBzpzikFnSt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVHXQjufzMPnzDz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 

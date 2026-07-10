@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Retrieve Node Data by ID in Blazor TreeView | Syncfusion
-description: Learn here more about how to get all child nodes through parentID in Syncfusion Blazor TreeView component and more.
+title: Retrieve Node Data by ID in Blazor TreeView | Syncfusion®
+description: Learn here more about how to get all child nodes through parentID in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug

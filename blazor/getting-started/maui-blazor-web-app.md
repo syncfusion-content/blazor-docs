@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Integrating Components in .NET MAUI and Web App | Syncfusion®
-description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web App and integrate Syncfusion® Blazor components.
+title: Integrating Blazor Components in .NET MAUI and Web App | Syncfusion
+description: Steps to create a .NET MAUI Blazor Hybrid and Blazor Web App and integrate Blazor components and much more details.
 platform: Blazor
 component: Common
 documentation: ug
@@ -29,7 +29,7 @@ Open the NuGet Package Manager in Visual Studio by selecting **(*Tools → NuGet
  * [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
  * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
-N> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
+N> Blazor components packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the list of packages and component details.
 
 ## Add required namespaces
 

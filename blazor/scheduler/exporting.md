@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting in Blazor Scheduler Component | Syncfusion
-description: Learn how to export Syncfusion Blazor Scheduler events to an excel/ICS file, import events from ICS file and print the Scheduler with customization options.
+title: Exporting in Blazor Scheduler Component | Syncfusion®
+description: Learn how to export Blazor Scheduler events to an excel/ICS file, import events from ICS file and print the Scheduler with customization options.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -58,7 +58,7 @@ The Scheduler allows to export all its events into an Excel format file by using
 }
 ```
 
-![Excel Exporting in Blazor Scheduler](images/blazor-scheduler-excel-export.png)
+![Excel Exporting in Blazor Scheduler](images/blazor-scheduler-excel-export.webp)
 
 ### Exporting with custom fields
 
@@ -103,7 +103,7 @@ By default, Scheduler exports all the default event fields that are mapped to it
 }
 ```
 
-![Excel Exporting with custom Fields in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-fields.png)
+![Excel Exporting with custom Fields in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-fields.webp)
 
 ### Exporting individual occurrences of a recurring series
 
@@ -271,7 +271,7 @@ You can change the field names of appointment in the column header when exportin
 }
 ```
 
-![Excel Exporting with custom header texts in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-header.png)
+![Excel Exporting with custom header texts in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-header.webp)
 
 ### Export with custom file name
 
@@ -417,7 +417,7 @@ You can export the Scheduler data with specific date format, by defining the [`D
 }
 ```
 
-![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.png)
+![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.webp)
 
 ### How to customize the excel sheet on before exporting
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show/Hide Tab item in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to show or hide tab item in Syncfusion Blazor Tabs component and much more.
+title: Show/Hide Tab item in Blazor Tabs Component | Syncfusion®
+description: Checkout and learn here all about how to show or hide tab item in Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -50,4 +50,4 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
 
 ```
 
-![Showing or Hiding TabItem in Blazor Tabs](../images/blazor-tabs-hide-show-tabitem.gif)
+![Showing or Hiding TabItem in Blazor Tabs](../images/blazor-tabs-hide-show-tabitem.webp)

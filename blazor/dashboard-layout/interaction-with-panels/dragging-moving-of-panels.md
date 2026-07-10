@@ -91,4 +91,4 @@ The draggable handle for panels can be customized using the [`DraggableHandle`](
 
 The following output demonstrates customizing the dragging handle, where panels can only be dragged by interacting with their header section.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBxXxBUpsYHfSbH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Customizing Dragging Handler of Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-handler-of-panels.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLyiMsUAeyvtIeu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 backgroundimage "[Customizing Dragging Handler of Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-handler-of-panels.webp)" %}

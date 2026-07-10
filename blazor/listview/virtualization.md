@@ -103,7 +103,7 @@ UI virtualization can be enabled in the ListView by setting the [`EnableVirtuali
 }
 ```
 
-![Virtualization in Blazor ListView](./images/list/blazor-listview-virtualization.png)
+![Virtualization in Blazor ListView](./images/list/blazor-listview-virtualization.webp)
 
 ## Limitations for virtualization
 

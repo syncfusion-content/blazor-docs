@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Value in Blazor MultiSelect Dropdown | Syncfusion
-description: Enable and use custom values in the Syncfusion Blazor MultiSelect Dropdown, including type handling, CustomValueSpecifier, filtering, and display modes.
+title: Custom Value in Blazor MultiSelect Dropdown | Syncfusion®
+description: Enable and use custom values in the Blazor MultiSelect Dropdown, including type handling, CustomValueSpecifier, filtering and much more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom Value in Blazor MultiSelect Dropdown
 
-The Syncfusion Blazor [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started) component provides the **custom value** feature, which enables users to add values that are not present in the predefined data source. This is particularly useful in tag selectors, skill pickers, keyword inputs, and any scenario where the selection set is not fully known in advance.
+The Blazor [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started) component provides the **custom value** feature, which enables users to add values that are not present in the predefined data source. This is particularly useful in tag selectors, skill pickers, keyword inputs, and any scenario where the selection set is not fully known in advance.
 
 When a user types a value that does not match any existing item, the component creates a custom list item and places it at the top of the dropdown list. The user must then explicitly select this item from the dropdown to add it to the selection.
 
-![Custom value creation in MultiSelect Dropdown](./images/custom-value/Custom_value_creation_in_MultiSelect_Dropdown.gif)
+![Custom value creation in MultiSelect Dropdown](./images/custom-value/Custom_value_creation_in_MultiSelect_Dropdown.webp)
 
 N> Custom values are not added to the original `DataSource`. They are tracked internally by the component. The original data source remains unmodified throughout the interaction.
 
@@ -51,7 +51,7 @@ To enable custom value input, set the [AllowCustomValue](https://help.syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBRZVVmJwrlKrlU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom value creation in MultiSelect Dropdown](./images/custom-value/Custom_value_creation_in_MultiSelect_Dropdown.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBdNQNlsFlwDIXX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Custom value creation in MultiSelect Dropdown](./images/custom-value/Custom_value_creation_in_MultiSelect_Dropdown.webp)" %}
 
 N> If the user types text and does not select the created custom item from the dropdown, the item is **not** added to the `Value` collection. Selecting the item from the list is mandatory to complete the addition.
 
@@ -109,7 +109,7 @@ Use the [CustomValueSpecifier](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLHjhVcTviXCvho?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Custom value with complex object types](./images/custom-value/Custom_value_with_complex_object_types.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrRDmXPWuqGvaqi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Custom value with complex object types](./images/custom-value/Custom_value_with_complex_object_types.webp)" %}
 
 N> The `Value` field, the `Text` field, and the `Value` property must be of type `string` when custom value is enabled and no `CustomValueSpecifier` event is used. For non-string value types (such as `int`), you must handle the `CustomValueSpecifier` event and manually set `args.NewData` with the correct typed value.
 
@@ -176,7 +176,7 @@ The following example rejects any custom value shorter than three characters.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBnZrVmpvquBJnk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[CustomValueSpecifier event-Validating custom input](./images/custom-value/CustomValueSpecifier_event_Validating_custom_input.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBRZwDbLjtbzCWj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[CustomValueSpecifier event-Validating custom input](./images/custom-value/CustomValueSpecifier_event_Validating_custom_input.webp)" %}
 
 N> There is no built-in deduplication for custom values with identical text. If a user selects the same custom text multiple times, each occurrence is treated as a distinct addition. Use the `CustomValueSpecifier` event to implement uniqueness validation.
 
@@ -260,7 +260,7 @@ Selected custom values are rendered as delimiter-separated text, visually identi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrdNrLGzYqWkNxO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Visual mode behavior](./images/custom-value/Visual_mode_behavior.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBHNQNvhDUzJphZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Visual mode behavior](./images/custom-value/Visual_mode_behavior.webp)" %}
 
 N> Custom value is **automatically disabled** when [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Mode) is set to `VisualMode.CheckBox`. Setting `AllowCustomValue="true"` alongside `VisualMode.CheckBox` has no effect; the property is internally forced to `false`.
 

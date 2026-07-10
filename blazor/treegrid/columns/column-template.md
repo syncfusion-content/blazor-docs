@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Template in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about column template in the Syncfusion Blazor Tree Grid component and much more details.
+title: Column Template in Blazor Tree Grid Component | Syncfusion®
+description: Checkout and learn here all about column template in the Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

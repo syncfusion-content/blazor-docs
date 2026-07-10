@@ -80,6 +80,7 @@ The font size of the Icon can be changed using the [Size](https://help.syncfusio
 <SfIcon Name="IconName.Bold" Size="IconSize.Small"></SfIcon>
 <SfIcon Name="IconName.Underline" Size="IconSize.Small"></SfIcon>
 <SfIcon Name="IconName.Italic" Size="IconSize.Small"></SfIcon>
+
 <p>Medium icons</p>
 <SfIcon Name="IconName.Cut" Size="IconSize.Medium"></SfIcon>
 <SfIcon Name="IconName.Copy" Size="IconSize.Medium"></SfIcon>
@@ -87,6 +88,7 @@ The font size of the Icon can be changed using the [Size](https://help.syncfusio
 <SfIcon Name="IconName.Bold" Size="IconSize.Medium"></SfIcon>
 <SfIcon Name="IconName.Underline" Size="IconSize.Medium"></SfIcon>
 <SfIcon Name="IconName.Italic" Size="IconSize.Medium"></SfIcon>
+
 <p>Larger icons</p>
 <SfIcon Name="IconName.Cut" Size="IconSize.Large"></SfIcon>
 <SfIcon Name="IconName.Copy" Size="IconSize.Large"></SfIcon>
@@ -231,7 +233,7 @@ The following example demonstrates how to customize the Icon font size using the
 
 ## Integrate Icons with the Button component
 
-The built-in Blazor icons can be integrated with other Blazor components without defining the `<SfIcon>` tag. To use Blazor icons, add the `e-icons` class that contains the font-family and common properties of the font icons. Add the icon class with the corresponding icon name from the [available icons](#icons-list) with the `e-` prefix.
+The built-in Blazor icons can be integrated with other [Blazor components](https://www.syncfusion.com/blazor-components) without defining the `<SfIcon>` tag. To use Blazor icons, add the `e-icons` class that contains the font-family and common properties of the font icons. Add the icon class with the corresponding icon name from the [available icons](#icons-list) with the `e-` prefix.
 
 The following example shows how to integrate icons with the [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component by defining the icon class in the `IconCss` property of the button.
 

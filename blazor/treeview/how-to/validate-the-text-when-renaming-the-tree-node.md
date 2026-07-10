@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Validate text when renaming TreeView nodes in Blazor | Syncfusion
-description: Learn here all about validating the text when renaming the tree node in Syncfusion Blazor TreeView component and more.
+title: Validate text when renaming TreeView nodes in Blazor | Syncfusion®
+description: Learn here all about validating the text when renaming the tree node in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -120,4 +120,4 @@ Node text is validated during the editing process using the [`NodeEdited`](https
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDresjCVKbokLFvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Renaming Tree Node in Blazor TreeView](../images/blazor-treeview-rename-tree-node.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDresjCVKbokLFvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Renaming Tree Node in Blazor TreeView](../images/blazor-treeview-rename-tree-node.webp)" %}

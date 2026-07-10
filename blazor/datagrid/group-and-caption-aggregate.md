@@ -1,4 +1,4 @@
----
+                                                                                                                ---
 layout: post
 title:  Group and caption aggregates in Blazor DataGrid | Syncfusion®
 description: Checkout and learn how to configure group footer and caption aggregates in Blazor DataGrid using templates and AggregateTemplateContext.
@@ -108,7 +108,7 @@ Group footer aggregates appear in the footer cells of each group and provide per
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDheZEVxysGhsjjP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVnDcZUqicUluNN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Group caption aggregates
 
@@ -205,6 +205,6 @@ Group caption aggregates appear in the caption cells at the top of each group an
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVyDaVxoilKLoVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrnZctUqCmlLwsy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The group total summary in Grid is calculated based on the current page records for each group by default.

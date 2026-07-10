@@ -48,4 +48,4 @@ In Scheduler, by default all the date ranges are available. A particular date ra
 }
 ```
 
-![Setting Minimum and Maximum Date in Blazor Scheduler](../images/blazor-scheduler-min-max-date.png)
+![Setting Minimum and Maximum Date in Blazor Scheduler](../images/blazor-scheduler-min-max-date.webp)

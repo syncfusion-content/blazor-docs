@@ -95,7 +95,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryNWBTfUaCEgqf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVRZwNRhiDRsWyU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Responsive with parent container
 
@@ -162,7 +162,7 @@ public class LazyLoadDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIjMBcAgEnKHGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBRNwjdVMWBmbzB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Sticky header
 
@@ -241,7 +241,7 @@ public class LazyLoadDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLIZfLlyiVvXGhD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLnjwDRVWiHMBBS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Scroll to selected row
 
@@ -353,7 +353,7 @@ public class LazyLoadDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthyZpBboVNkPPvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhRDGDHBiLtkUgW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the appearance of scrollbar
 
@@ -446,6 +446,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIjfVOsgWujwMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBdNGjnhMVlqfgC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > A fully working sample is available [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-default-scrollbar).
