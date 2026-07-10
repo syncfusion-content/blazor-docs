@@ -181,7 +181,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Blazor File Upload component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhnNwtkJRehYUOA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.webp)" %}
 
 ## Use ValueChange event
 
@@ -310,7 +310,7 @@ This example demonstrates how to read the content of an uploaded file into a [Me
 
 N> When using `MemoryStream` for large files, be mindful of device memory consumption. If you expect very large files, consider processing them in chunks or saving them to temporary storage before processing to avoid out-of-memory exceptions. The `long.MaxValue` in `OpenReadStream` indicates the maximum buffer size. In a Blazor MAUI app, `Stream` operations occur on the device where the app is running.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreNaLUhdwxzvHS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdXGZaJnGixNvW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Created event

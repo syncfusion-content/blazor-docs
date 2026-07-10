@@ -344,7 +344,7 @@ This example demonstrates how to read the content of an uploaded file into a [Me
 
 N> When using `MemoryStream` for large files, be mindful of server memory consumption. If you expect very large files, consider processing them in chunks or saving them to temporary storage before processing to avoid out-of-memory exceptions. The `long.MaxValue` in `OpenReadStream` indicates the maximum buffer size. In a Blazor Server app, `Stream` operations occur on the server.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreNaLUhdwxzvHS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdXGZaJnGixNvW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Created event
 
