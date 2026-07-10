@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Types and Styles in Blazor ButtonGroup Component | Syncfusion®
-description: Checkout and learn here all features about Types and Styles in Blazor ButtonGroup component and more.
+title: Types and Styles in Blazor Button Group Component | Syncfusion®
+description: Checkout and learn here all features about Types and Styles in Blazor Button Group component and more.
 platform: Blazor
-control: ButtonGroup
+control: Button Group
 documentation: ug
 ---
 
-# Types and Styles in Blazor ButtonGroup Component
+# Types and Styles in Blazor Button Group Component
 
-This section explains about different types and styles of ButtonGroup.
+This section explains about different types and styles of Button Group.
 
-## ButtonGroup styles
+## Button Group styles
 
-The Blazor ButtonGroup has the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_CssClass) property.
+The Blazor Button Group has the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_CssClass) property.
 
 | Class | Description |
 | -------- | -------- |
@@ -40,20 +40,20 @@ The Blazor ButtonGroup has the following predefined styles that can be defined u
 </SfButtonGroup>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrHNdiBhdsGvJpD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with different Style](./images/blazor-buttongroup-style.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrHNdiBhdsGvJpD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Group with different Style](./images/blazor-buttongroup-style.webp)" %}
 
-N> Predefined ButtonGroup styles provide only the visual indication. So, ButtonGroup content should define the ButtonGroup style for the users of assistive technologies such as screen readers.
+N> Predefined Button Group styles provide only the visual indication. So, Button Group content should define the Button Group style for the users of assistive technologies such as screen readers.
 
 ### CSS Customization Classes
 
-To modify the ButtonGroup appearance, you need to override the default CSS of the ButtonGroup component. Find the list of CSS classes and their corresponding section in ButtonGroup. You can also create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Button Group appearance, you need to override the default CSS of the Button Group component. Find the list of CSS classes and their corresponding section in Button Group. You can also create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | --------- | ---------------- |
-| `.e-btn` | To customize the ButtonGroup. |
-| `.e-btn:hover` | To customize the ButtonGroup on hover. |
-| `.e-btn:focus` | To customize the ButtonGroup on focus. |
-| `.e-btn:active` | To customize the ButtonGroup on active. |
+| `.e-btn` | To customize the Button Group. |
+| `.e-btn:hover` | To customize the Button Group on hover. |
+| `.e-btn:focus` | To customize the Button Group on focus. |
+| `.e-btn:active` | To customize the Button Group on active. |
 
 The following example demonstrates how to apply a custom styles using CSS classes for various properties like color, background color, font, border, padding, margin, and more:
 
@@ -122,27 +122,27 @@ The following example demonstrates how to apply a custom styles using CSS classe
 
 ```
 
-## ButtonGroup types
+## Button Group types
 
-The types of Blazor ButtonGroup are as follows:
+The types of Blazor Button Group are as follows:
 
-* Flat ButtonGroup
-* Outline ButtonGroup
-* Round ButtonGroup
+* Flat Button Group
+* Outline Button Group
+* Round Button Group
 
-### Flat ButtonGroup
+### Flat Button Group
 
-The Flat ButtonGroup is styled with no background color. To create a flat ButtonGroup, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-flat`.
+The Flat Button Group is styled with no background color. To create a flat Button Group, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-flat`.
 
-### Outline ButtonGroup
+### Outline Button Group
 
-An outline ButtonGroup has a border with transparent background. To create an outline ButtonGroup, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-outline`.
+An outline Button Group has a border with transparent background. To create an outline Button Group, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-outline`.
 
-### Round ButtonGroup
+### Round Button Group
 
-A round ButtonGroup is shaped like a circle. Usually, it contains an icon representing its action. To create a round ButtonGroup, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-round-corner`.
+A round Button Group is shaped like a circle. Usually, it contains an icon representing its action. To create a round Button Group, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-round-corner`.
 
-The following example demonstrates the types of Blazor ButtonGroup:
+The following example demonstrates the types of Blazor Button Group:
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -165,13 +165,13 @@ The following example demonstrates the types of Blazor ButtonGroup:
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhxXHihrnVqqrwi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying different Type of ButtonGroup Component](./images/blazor-buttongroup-type.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhxXHihrnVqqrwi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying different Type of Button Group Component](./images/blazor-buttongroup-type.webp)" %}
 
 ## Icons
 
-### ButtonGroup with font icons
+### Button Group with font icons
 
-To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_IconCss) property of the button component can be used. You can customize the icon's position by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_IconPosition) property.
+To create Button Group with icons, [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_IconCss) property of the button component can be used. You can customize the icon's position by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_IconPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -193,11 +193,11 @@ To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazo
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRNxiFhfBAtUDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "Blazor ButtonGroup with Icon" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRNxiFhfBAtUDm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "Blazor Button Group with Icon" %}
 
-## ButtonGroup size
+## Button Group size
 
-The two types of ButtonGroup sizes are default and small. To change the size of the default ButtonGroup to small ButtonGroup, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-small`.
+The two types of Button Group sizes are default and small. To change the size of the default Button Group to small Button Group, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-small`.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -214,4 +214,4 @@ The two types of ButtonGroup sizes are default and small. To change the size of 
 </SfButtonGroup>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhHXdsVVHJjdneu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor ButtonGroup Size](./images/blazor-buttongroup-size.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhHXdsVVHJjdneu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Blazor Button Group Size](./images/blazor-buttongroup-size.webp)" %}

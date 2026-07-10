@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Selection and Nesting in Blazor ButtonGroup Component | Syncfusion®
-description: Checkout and learn here all features about Selection and Nesting in Blazor ButtonGroup component and more.
+title: Selection and Nesting in Blazor Button Group Component | Syncfusion®
+description: Checkout and learn here all features about Selection and Nesting in Blazor Button Group component and more.
 platform: Blazor
-control: ButtonGroup
+control: Button Group
 documentation: ug
 ---
 
-# Selection and Nesting in Blazor ButtonGroup Component
+# Selection and Nesting in Blazor Button Group Component
 
-Blazor ButtonGroup component provides two-way binding support in both single and multiple selection modes through the `Selected` property of `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties.
+Blazor Button Group component provides two-way binding support in both single and multiple selection modes through the `Selected` property of `Button Group`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties.
 
 ## Single selection
 
-ButtonGroup supports single selection type in which only one button can be selected.
+Button Group supports single selection type in which only one button can be selected.
 
-The following example illustrates the single selection behavior in ButtonGroup.
+The following example illustrates the single selection behavior in Button Group.
 
 ```cshtml
 
@@ -46,13 +46,13 @@ The following example illustrates the single selection behavior in ButtonGroup.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrxXxMrBHIUsMVJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with Single Selection](./images/blazor-buttongroup-single-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrxXxMrBHIUsMVJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Group with Single Selection](./images/blazor-buttongroup-single-selection.webp)" %}
 
 ## Multiple selection
 
-ButtonGroup supports multiple selection type in which multiple button can be selected.
+Button Group supports multiple selection type in which multiple button can be selected.
 
-The following example illustrates the multiple selection behavior in ButtonGroup.
+The following example illustrates the multiple selection behavior in Button Group.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -83,17 +83,17 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrdXnMrrdnbElhh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with Multiple Selection](./images/blazor-buttongroup-multiple-selection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrdXnMrrdnbElhh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Group with Multiple Selection](./images/blazor-buttongroup-multiple-selection.webp)" %}
 
 ## Nesting
 
-Nesting with other components can be possible in ButtonGroup. The following components can be nested in ButtonGroup.
+Nesting with other components can be possible in Button Group. The following components can be nested in Button Group.
 * DropDownButton
 * SplitButton
 
 ### DropDownButton
 
-In the following example, the DropDownButton component can be added to the ButtonGroup tag.
+In the following example, the DropDownButton component can be added to the Button Group tag.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -112,11 +112,11 @@ In the following example, the DropDownButton component can be added to the Butto
 </SfButtonGroup>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrnDxCLhHwqCfKF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with DropDown Button](./images/blazor-buttongroup-with-dropdown.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrnDxCLhHwqCfKF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Group with DropDown Button](./images/blazor-buttongroup-with-dropdown.webp)" %}
 
 ### SplitButton
 
-In the following example, SplitButton component can be added to the ButtonGroup tag.
+In the following example, SplitButton component can be added to the Button Group tag.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -134,4 +134,4 @@ In the following example, SplitButton component can be added to the ButtonGroup 
         </SfSplitButton>
 </SfButtonGroup>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLdXRiVLRwlWzov?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ButtonGroup with SplitButton](./images/blazor-buttongroup-with-splitbutton.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLdXRiVLRwlWzov?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Button Group with SplitButton](./images/blazor-buttongroup-with-splitbutton.webp)" %}
