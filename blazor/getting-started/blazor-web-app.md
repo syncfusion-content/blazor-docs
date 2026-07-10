@@ -24,7 +24,7 @@ To get started quickly with a Blazor Web App, watch the following video.
 
 ## Using Templates
 
-Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://helpstaging.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
+Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
 
 First, install the template using the .NET CLI.
 
@@ -41,23 +41,32 @@ Next, create a new project with one of the following interactivity modes.
 {% tabs %}
 {% highlight razor tabtitle="Auto" %}
 
-dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Auto --all-interactive PerPage/component
 
 {% endhighlight %}
 
 {% highlight razor tabtitle="WebAssembly" %}
 
-dotnet new syncfusionblazorwebapp --name MyApp --interactivity WebAssembly
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity WebAssembly --all-interactive PerPage/component
 
 {% endhighlight %}
 
 {% highlight razor tabtitle="Server" %}
 
-dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server --all-interactive Global
 
 {% endhighlight %}
 
 {% endtabs %}
+
+After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
+
+{% highlight razor tabtitle=".NET CLI" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
 
 ## Manually creating a project
 

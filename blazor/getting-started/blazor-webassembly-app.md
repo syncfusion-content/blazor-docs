@@ -19,7 +19,7 @@ This article provides step-by-step instructions for building a Blazor WebAssembl
 
 ## Using Templates
 
-Quickly set up a Blazor application using the preconfigured [Syncfusion WebAssembly App Template](https://helpstaging.syncfusion.com/extension/syncfusion-blazor-webassemblyapp-template-via-nuget/installation).
+Quickly set up a Blazor application using the preconfigured [Syncfusion WebAssembly App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webassemblyapp-template-via-nuget/installation).
 
 First, install the template using the .NET CLI.
 
@@ -36,11 +36,20 @@ Next, create a new project with following command.
 {% tabs %}
 {% highlight razor tabtitle="WebAssembly" %}
 
-dotnet new syncfusionblazorwasmapp App -n MyApp
+dotnet new syncfusionblazorwasmapp --name MyApp --pwa true
 
 {% endhighlight %}
 
 {% endtabs %}
+
+After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
+
+{% highlight razor tabtitle=".NET CLI" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
 
 ## Manually creating a project
 
