@@ -17,6 +17,40 @@ This article provides step-by-step instructions for building a Blazor Server App
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
+## Using Templates
+
+Quickly set up a Blazor application using the preconfigured [Syncfusion Web App Template](https://help.syncfusion.com/extension/syncfusion-blazor-webapp-template-via-nuget/installation).
+
+First, install the template using the .NET CLI.
+
+{% tabs %}
+{% highlight razor tabtitle=".NET CLI" %}
+
+dotnet new install Syncfusion.Blazor.WebApp.Templates
+
+{% endhighlight %}
+{% endtabs %}
+
+Next, create a new project with the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Server" %}
+
+dotnet new syncfusionblazorwebapp --name MyApp --interactivity Server
+
+{% endhighlight %}
+
+{% endtabs %}
+
+After creating the project, navigate to the main project folder (for example, `MyApp`) and run the following command.
+
+{% highlight razor tabtitle=".NET CLI" %}
+
+cd MyApp
+dotnet run
+
+{% endhighlight %}
+
 ## Manually creating a project
 
 This section provides a brief guide on how to manually create a Blazor Server App.
