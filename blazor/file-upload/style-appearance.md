@@ -36,7 +36,7 @@ The File Upload component allows you to add a custom CSS class to its wrapper el
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVeDkrSTBqHOkfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthHtmjOTxuQlFmS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor File Upload with custom styles applied using CssClass](./images/blazor-file-upload-cssclass.webp)
 
@@ -55,7 +55,7 @@ Customize the main container of the File Upload component to control its overall
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhSDuVSpLzhuZgm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLnDQtYfGXppZvL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor File Upload with a customized container size](./images/blazor-file-upload-container.webp)
 
@@ -73,7 +73,7 @@ Alter the **Browse** button's appearance by targeting the `.e-file-select-wrap .
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVItYBoTrJQsbao?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrHjQDkfciMvbZa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor File Upload with a customized Browse button](./images/blazor-file-upload-browser.webp)
 
@@ -89,7 +89,7 @@ Style the drop zone where users drag and drop files to provide better visual fee
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhetarophoebktx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVdtwDOfGMPCrNB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor File Upload with a customized content area](./images/blazor-file-upload-content.webp)
 
@@ -104,9 +104,9 @@ Customize the appearance of the file list that displays selected files. Target t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrIjEVIphdshIUl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthxXwtEzmVeEcmG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor File Upload with a customized file list background](./images/blazor-file-upload-file-list.gif)
+![Blazor File Upload with a customized file list background](./images/blazor-file-upload-file-list.webp)
 
 ## Customizing the Progress Bar
 
@@ -125,9 +125,9 @@ Provide a consistent look during file uploads by customizing the progress bar an
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVetaVyzLHkRSPG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBHtmXOJGgdmVNv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor File Upload with a customized progress bar](./images/blazor-file-upload-progress.gif)
+![Blazor File Upload with a customized progress bar](./images/blazor-file-upload-progress.webp)
 
 ## See Also
 
