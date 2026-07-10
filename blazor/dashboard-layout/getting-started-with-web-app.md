@@ -273,7 +273,7 @@ The Dashboard Layout with simple content will be rendered in the web browser as 
 
 A Dashboard Layout can also host complex UI components such as charts, grids, maps, or gauges within its panels.
 
-### Install the required Blazor packages for Panels with Components
+## Install the required Blazor packages for Panels with Components
 
 Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/), [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/), and [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
@@ -332,7 +332,7 @@ dotnet add package Syncfusion.Blazor.RangeNavigator -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-### Add import namespaces for Panels with Components
+## Add import namespaces for Panels with Components
 
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor.Charts` and `Syncfusion.Blazor.Grids` namespaces.
 
@@ -508,8 +508,6 @@ These components are placed as panel content by assigning the corresponding Blaz
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthdjxLUqbWENRZr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Dashboard Layout displays Chart Component](images/blazor-dashboard-layout-with-chart-component.webp)" %}
-
-N> When using the **SfRangeNavigator** component in this sample, ensure that the [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) NuGet package is installed in your project. You can install the package from [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor).
 
 To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 
