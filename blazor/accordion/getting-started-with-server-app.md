@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Getting Started with Blazor Accordion in Server App | Syncfusion®
-description: Checkout and learn about getting started with Blazor Accordion component in Blazor Server App using Visual Studio and more.
+description: Check out and learn about getting started with Blazor Accordion component in Blazor Server App using Visual Studio and more.
 platform: Blazor
-control: Accordion
+component: Accordion
 documentation: ug
 ---
 
 # Getting Started with Blazor Accordion Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-## Create a new Blazor Server App 
+## Create a new Blazor Server App
 
 {% tabcontents %}
 
@@ -115,10 +115,10 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
+After the packages are installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
@@ -131,7 +131,7 @@ After the packages are installed, open the **~/_Imports.razor** file and import 
 Open the **Program.cs** file in Blazor Server App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -144,10 +144,10 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add stylesheet and script resources
  
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **App.razor** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) and [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 ...
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
@@ -159,7 +159,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Accordion component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component inside the razor file.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component inside the razor file.
 
 N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
@@ -179,7 +179,7 @@ N>If the interactivity location is set to `Per page/component`, define a render 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

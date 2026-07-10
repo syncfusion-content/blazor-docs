@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Stared with Blazor 3D Charts in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor 3D Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Started with Blazor 3D Charts in Blazor WASM App | Syncfusion
+description: Check out and learn about getting started with Blazor 3D Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: 3D Charts
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor 3D Charts Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor 3D Charts](https://www.syncfusion.com/blazor-components/blazor-3d-charts) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -57,7 +57,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install the [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 
@@ -115,7 +115,7 @@ dotnet add package Syncfusion.Blazor.Chart3D -v {{ site.releaseversion }}
 After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Chart3D` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Chart3D
@@ -128,7 +128,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -139,7 +139,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script resources
+## Add script resource
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference in the **~wwwroot/index.html** file.
 
@@ -165,7 +165,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -207,7 +207,7 @@ dotnet run
 
 ## Populate Blazor 3D Charts with data
 
-To bind data for the 3D charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
+To bind data for the 3D Charts component, you can assign a IEnumerable object to the `DataSource` property. It can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
