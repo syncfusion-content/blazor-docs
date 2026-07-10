@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Linear Gauge in WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Linear Gauge component in Blazor WebAssembly Application.
+description: Check out and learn about getting started with Blazor Linear Gauge component in Blazor WebAssembly Application.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 
-This section briefly explains about how to include [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -112,7 +112,7 @@ dotnet add package Syncfusion.Blazor.LinearGauge -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.LinearGauge` namespaces.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.LinearGauge` namespaces.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -139,7 +139,7 @@ builder.Services.AddSyncfusionBlazor();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script resources
+## Add script resource
  
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
@@ -171,7 +171,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
