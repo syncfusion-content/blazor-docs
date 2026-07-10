@@ -219,7 +219,7 @@ In addition to the core script, specific Blazor components such as the [Blazor P
 
 * Placing scripts in `<head>` instead of at the end of `<body>`
 * Incorrect script paths (for example, using old paths from .NET 6 documentation)
-* Missing component-specific scripts for Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)
+* Missing component-specific scripts for Blazor components such as the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer),  [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor), and [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor)
 * Loading the script before the Blazor framework script
 * Using outdated script references from previous Blazor versions
 
