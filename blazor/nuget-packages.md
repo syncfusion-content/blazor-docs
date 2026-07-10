@@ -1,21 +1,21 @@
 ---
 layout: post
-title: NuGet Packages List | Syncfusion Blazor Components
-description: Learn here about the installing, managing and upgrading of NuGet packages of Syncfusion Blaor Components.
+title: NuGet Packages List for Blazor Components | Syncfusion®
+description: Learn here about the installing, managing and upgrading of NuGet packages of Blaor Components and much more details.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# NuGet Packages for Syncfusion® Blazor UI components
+# NuGet Packages for Blazor UI components
 
-Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace. The complete NuGet package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
+Starting with v18.4.0.30 (Volume 4, 2020), the Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace. The complete NuGet package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
 
 W> Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
 ## Syncfusion.Blazor.Core
 
-This package contains the base component, common classes, common functionalities, and interfaces for the entire Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components.
+This package contains the base component, common classes, common functionalities, and interfaces for the entire Blazor UI components.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -52,7 +52,7 @@ Common, Base, MediaQuery
 
 ## Syncfusion.Blazor.SmartComponents
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are designed to seamlessly integrate with AI and offering intelligent features that go beyond standard user interfaces.
+The Blazor Smart Components are designed to seamlessly integrate with AI and offering intelligent features that go beyond standard user interfaces.
 
 <table>
 <tr>
@@ -91,54 +91,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are
 <li><a href="##syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
 <li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
 <li><a href="https://www.nuget.org/packages/Azure.AI.OpenAI/">Azure.AI.OpenAI</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
-## Syncfusion.Blazor.SmartRichTextEditor
-
-This package contains the Blazor SmartRichTextEditor for Blazor applications. The Blazor Smart Rich Text Editor is an advanced rich text editing component in Syncfusion's Blazor suite that integrates artificial intelligence to enhance content creation and editing.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartRichTextEditor">Syncfusion.Blazor.SmartRichTextEditor</a>
-</td>
-<td>
-<ul>
-<li><a href="https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp">Smart Rich Text Editor</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li>SfSmartRichTextEditor</li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.AI">Syncfusion.Blazor.AI</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter">Syncfusion.Blazor.MarkdownConverter</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor">Syncfusion.Blazor.RichTextEditor</a></li>
 </ul>
 </td>
 </tr>
@@ -228,53 +180,6 @@ The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and comp
 </td>
 <td>
 <a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
-</td>
-</tr>
-</table>
-
-## Syncfusion.Blazor.BlockEditor
-
-The Blazor BlockEditor is a modern, block-based content editor for composing rich, structured documents.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BlockEditor">Syncfusion.Blazor.BlockEditor</a>
-</td>
-<td>
-<ul>
-<li><a href="https://blazor.syncfusion.com/documentation/block-editor/getting-started">Block Editor</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li>SfBlockEditor</li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons">Syncfusion.Blazor.SplitButtons</a></li>
-</ul>
 </td>
 </tr>
 </table>
@@ -724,55 +629,6 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 </tr>
 </table>
 
-## Syncfusion.Blazor.Diagram
-
-The Blazor Diagram component is a high-speed, robust library for crafting, editing, and interacting with dynamic diagrams. Unleash your creativity with flowcharts, org charts, mind maps, and more. Seamlessly edit and engage with intuitive interactions.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/">Syncfusion.Blazor.Diagram</a>
-</td>
-<td>
-<ul>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app">Diagram</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram/overview">Overview Panel</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram/symbol-palette">Symbol Palette</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li>SfDiagramComponent</li>
-<li>SfDiagramOverviewComponent </li>
-<li>SfSymbolPaletteComponent </li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Utilizing from v19.4.0.38)</li>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
 ## Syncfusion.Blazor.DropDowns
 
 A package of Blazor Dropdown contains a collection of Dropdown components such as Dropdown List, Combo Box, AutoComplete, Multiselect Dropdown, and List Box. Dropdown components contain specific features such as data binding, grouping, sorting, filtering, and templates.
@@ -871,57 +727,6 @@ SfFileManager
 <li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
 <li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
 <li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
-## Syncfusion.Blazor.Gantt
-
-The Blazor Gantt is designed to visualize and edit the project schedule, and track the project progress. It helps to organize and schedule the projects, and also the project schedule can be updated through interactions like editing, dragging, and resizing.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Component friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/">Syncfusion.Blazor.Gantt</a>
-</td>
-<td>
-<a href="https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app">Gantt Chart</a>
-</td>
-<td>
-SfGantt
-</td>
-<td>
-<ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorfilemanager">Syncfusion.Blazor.FileManager</a> (Utilized up to v18.4.0.49)</li>
-<li><a href="#syncfusionblazorgrid">Syncfusion.Blazor.Grid</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlayouts">Syncfusion.Blazor.Layouts</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorrichtexteditor">Syncfusion.Blazor.RichTextEditor</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="#syncfusionblazortreegrid">Syncfusion.Blazor.TreeGrid</a></li>
 </ul>
 </td>
 </tr>
@@ -1778,51 +1583,6 @@ SfRangeNavigator
 </tr>
 </table>
 
-## Syncfusion.Blazor.RichTextEditor
-
-The Rich Text Editor component is the HTML and markdown editor that provides the best user experience for creating, updating, and formatting the content.
-
-<table>
-<tr>
-<td>
-<b>NuGet package</b>
-</td>
-<td>
-<b>Components friendly name</b>
-</td>
-<td>
-<b>Components name</b>
-</td>
-<td>
-<b>Dependencies</b>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/">Syncfusion.Blazor.RichTextEditor</a>
-</td>
-<td>
-<ul>
-<li><a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-webapp">RichTextEditor</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></li>
-</ul>
-</td>
-<td>
-SfRichTextEditor
-</td>
-<td>
-<ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
-</ul>
-</td>
-</tr>
-</table>
-
 ## Syncfusion.Blazor.Sankey
 
 <table>
@@ -2115,7 +1875,7 @@ SfStockChart
 
 ## Syncfusion.Blazor.Themes
 
-This package contains the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components theme files.
+This package contains the Blazor UI components theme files.
 
 <table>
 <tr>
@@ -2236,7 +1996,7 @@ SfTreeMap
 
 ## Benefits of using individual NuGet packages
 
-* These individual NuGet packages are extremely useful while rendering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
+* These individual NuGet packages are extremely useful while rendering Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
 
 * While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
 

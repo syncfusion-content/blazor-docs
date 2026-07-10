@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor TreeView component and much more details.
+title: Virtualization in Blazor TreeView Component | Syncfusion®
+description: Checkout and learn here all the features about Virtualization in Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug

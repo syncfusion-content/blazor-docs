@@ -139,7 +139,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVHtQtHVxCOKVfd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with column template](./images/column-template.webp)
 
@@ -256,7 +256,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBHXQNRBxrmrVfn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with group caption template](./images/group-caption.webp)
 
@@ -416,7 +416,7 @@ public class ProductInfo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdXKMYVbPmnvEo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhRNcDnBHKtGCqp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with group caption template by customizing the alignment](./images/group-caption-alignment.webp)
 
@@ -754,7 +754,7 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBHNmjdVdAcTUKR?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting with detail template](./images/detail-template.webp)
 
@@ -1052,6 +1052,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLdNctHLxmRANOV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.webp)

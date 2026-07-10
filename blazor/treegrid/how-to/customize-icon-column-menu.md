@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize column menu icon in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about how to customize column menu icon in Syncfusion Blazor TreeGrid component and more.
+title: Customize column menu icon in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all about how to customize column menu icon in Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug

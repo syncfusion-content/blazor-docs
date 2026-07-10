@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor TextBox in Blazor Server App | Syncfusion
+title: Getting Started with TextBox in Blazor Server App | Syncfusion®
 description: Check out and learn about getting started with Blazor TextBox component in Blazor Server Application.
 platform: Blazor
 control: TextBox
@@ -55,7 +55,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Server App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating the Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install the required Blazor packages
 
@@ -118,7 +118,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
@@ -161,21 +161,19 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) component inside the razor file.
 
-N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
+N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file (for example, `@rendermode InteractiveServer`). If the interactivity location is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveServer
 
-@using Syncfusion.Blazor.Inputs
-
 <SfTextBox Placeholder='First Name'></SfTextBox>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -215,7 +213,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox component in Blazor Server](./images/blazor-textbox.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBxtwtMTAPuHeJM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox component in Blazor Server](./images/blazor-textbox.webp)" %}
 
 ## Adding icons to the Blazor TextBox
 
@@ -223,8 +221,6 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
-
-@using Syncfusion.Blazor.Inputs
 
 <div id="sample" style="margin:130px auto;width:300px">
     <SfTextBox @ref=@TextBoxDropDownObj
@@ -251,7 +247,7 @@ Add an icon to the TextBox component using the [AddIconAsync](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryXaVqqmBfrsXR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with icon in Blazor Server](./images/blazor-textbox-icons.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLHDwZsTJemhYae?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox with icon in Blazor Server](./images/blazor-textbox-icons.webp)" %}
 
 ## Floating label
 
@@ -260,18 +256,18 @@ The floating label moves above the input when the TextBox is focused or contains
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-@using Syncfusion.Blazor.Inputs
-
 <SfTextBox Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextBox>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with floating label in Blazor Server](./images/blazor-textbox-float-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrHtmDMfIiXQjnB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextBox with floating label in Blazor Server](./images/blazor-textbox-float-label.webp)" %}
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextBox).
 
 ## See also
 
-1. [Getting Started with Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+3. [Native Events in Blazor TextBox Component](https://blazor.syncfusion.com/documentation/textbox/native-events)
+4. [Data Binding in Blazor TextBox Component](https://blazor.syncfusion.com/documentation/textbox/data-binding)

@@ -13,9 +13,9 @@ Migrating enterprise applications from [ASP.NET Web Forms](https://learn.microso
 
 ## Why migrate from Web Forms to Blazor?
 
-ASP.NET Web Forms follows a **server-side page model** that uses ViewState, postback, and a tightly coupled page lifecycle to process requests and maintain UI state across interactions.
+[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) follows a **server-side page model** that uses ViewState, postback, and a tightly coupled page lifecycle to process requests and maintain UI state across interactions.
 
-Blazor uses a component based architecture with reusable Razor components and **event driven UI updates**, where user interactions trigger handlers that refresh the UI without full page reloads. This modern approach improves maintainability, scalability, and testability, making Blazor the preferred choice for migrating and modernizing Web Forms applications.
+[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) uses a component based architecture with reusable Razor components and **event driven UI updates**, where user interactions trigger handlers that refresh the UI without full page reloads. This modern approach improves maintainability, scalability, and testability, making Blazor the preferred choice for migrating and modernizing Web Forms applications.
 
 | Aspect | Web Forms | Blazor |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Blazor uses a component based architecture with reusable Razor components and **
 
 ## Project structure comparison
 
-ASP.NET Web Forms and Blazor Web Apps follow different application architectures. The following table maps common Web Forms artifacts to their Blazor equivalents and describes their roles in a Blazor Web App.
+[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) and [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) Web Apps follow different application architectures. The following table maps common Web Forms artifacts to their Blazor equivalents and describes their roles in a Blazor Web App.
 
 | Web Forms Artifact | Blazor Web App Equivalent | Description |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ ASP.NET Web Forms and Blazor Web Apps follow different application architectures
 
 ## Migrating components from Web Forms to Blazor
 
-Create a Blazor project using one of the following getting started guides.
+Create a [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) project using one of the following getting started guides.
 
 * [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
@@ -62,17 +62,17 @@ The following shared setup applies to all components and covers the common confi
 
 ### Package installation
 
-In Web Forms applications, components are typically installed using a single package, [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet).
+In [ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) applications, components are typically installed using a single package, [Syncfusion.AspNet](https://www.nuget.org/packages/Syncfusion.AspNet).
 
-In Blazor applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
+In [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) applications, using individual component packages improves performance and reduces application size. For the complete list of available packages, refer to the [Blazor NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 Additionally, install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet package for styling support.
 
 ### Service registration
 
-ASP.NET Web Forms initializes controls automatically as part of the page lifecycle, without requiring explicit service registration.
+[ASP.NET Web Forms](https://learn.microsoft.com/en-us/aspnet/web-forms/) initializes controls automatically as part of the page lifecycle, without requiring explicit service registration.
 
-Blazor uses dependency injection (DI), where components must be registered in the service container to enable required functionality such as rendering and interaction.
+[Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-10.0) uses dependency injection (DI), where components must be registered in the service container to enable required functionality such as rendering and interaction.
 
 In the `Program.cs` file, add the following namespace and register the required services.
 
@@ -256,7 +256,7 @@ The [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagr
 
 ### Migrate to Blazor Scheduler component
 
-**ASP.NET Web Forms Scheduler** is used to organize and manage events across different calendar views in web applications, while [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) is a modern component that offers a more dynamic and user friendly way to handle appointments and scheduling. 
+**ASP.NET Web Forms Scheduler** is used to organize and manage events across different calendar views in web applications, while [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) is a modern component that offers a more dynamic and user friendly way to handle appointments and scheduling. 
 
 For additional details, refer to the [Blazor Scheduler getting started guide](https://blazor.syncfusion.com/documentation/scheduler/getting-started-with-server-app) and [Web Forms Scheduler getting started guide](https://help.syncfusion.com/aspnet/schedule/getting-started).
 
@@ -327,7 +327,7 @@ namespace WebFormsScheduler
 
 **Blazor equivalent**
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [ScheduleEventSettings.Datasource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
+The [Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component is declared in Razor markup, where views are configured using child components, and appointment data is supplied through the [ScheduleEventSettings.Datasource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Schedule.razor" %}
@@ -369,7 +369,7 @@ N> The event class (`Meeting` in this example) property names match the Schedule
 
 ### Migrate to Blazor Rich Text Editor component
 
-**ASP.ET Web Forms Rich Text Editor**  is a component used for creating and formatting content such as text, images, tables, and links with various editing tools. [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is a modern component that offers a more dynamic and user-friendly way to create rich content with support for HTML, Markdown, and responsive design. 
+**ASP.ET Web Forms Rich Text Editor**  is a component used for creating and formatting content such as text, images, tables, and links with various editing tools. [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) is a modern component that offers a more dynamic and user-friendly way to create rich content with support for HTML, Markdown, and responsive design. 
 
 For additional details, refer to the [Blazor Rich Text Editor getting started guide](https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-with-server-app) and [Web Forms Rich Text Editor getting started guide](https://help.syncfusion.com/aspnet/richtexteditor/getting-started).
 
@@ -402,7 +402,7 @@ The Rich Text Editor content is defined directly within the markup using the `RT
 
 **Blazor equivalent**
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) is implemented as a Razor component, where content is bound dynamically using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property with two-way binding.
 
 {% tabs %}
 {% highlight razor tabtitle="Editor.razor" %}

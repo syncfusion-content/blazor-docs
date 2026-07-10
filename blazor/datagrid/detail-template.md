@@ -295,7 +295,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBotJBVqIGMRxXj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdtGXVhVxUreCB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Creating custom component/Hierarchical DataGrid 
 
@@ -464,7 +464,7 @@ public class CustomerDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLoDoUtUlcPEWyj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBHtwZBVVmHWFvQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > The Blazor DataGrid does not include built-in hierarchical support. Use the detail template to create multi-level hierarchical layouts, as shown in the example.
 
@@ -1025,7 +1025,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVfCMsBMmVxgIHX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrnjGtLLgMBtsbJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize detail template icon
 
@@ -1399,7 +1399,7 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhpWWCAsuvxiajJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLnNmDrrUUbmDBc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 > View a complete sample on GitHub: [Set instance for child component in detail template](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component).
 
@@ -1552,7 +1552,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtryXzhVUTHNobav?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhnZGXhBKSgaXeg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Render aggregates in detail DataGrid
 
@@ -1706,7 +1706,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLSXTVBKnztlkUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBHNmDVLAybpsVP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Customize the detail Blazor DataGrid
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about print in Syncfusion Blazor TreeGrid component and much more details.
+title: Print in Blazor TreeGrid Component | Syncfusion®
+description: Checkout and learn here all the features about print in Blazor TreeGrid component and much more details.
 platform: Blazor
 control: TreeGrid
 documentation: ug
 ---
 
-# Print in Syncfusion Blazor TreeGrid Component
+# Print in Blazor TreeGrid Component
 
 To print the TreeGrid, use the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_PrintAsync) method from the TreeGrid instance. The print option can be enabled in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** item.
 
