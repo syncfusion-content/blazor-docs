@@ -27,7 +27,7 @@ Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https:
 
 {% tabcontent Visual Studio Code %}
 
-Run the following command to create a new Blazor Web App with the Server interactive render mode
+Run the following command to create a new Blazor Web App with the Interactive Server render mode
 
 {% tabs %}
 {% highlight razor tabtitle="Terminal" %}
@@ -44,7 +44,7 @@ Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microso
 
 {% tabcontent .NET CLI %}
 
-Run the following command to create a new Blazor Web App with the Server interactive render mode
+Run the following command to create a new Blazor Web App with the Interactive Server render mode
 
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
@@ -59,7 +59,7 @@ cd BlazorApp
 
 {% endtabcontents %}
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [Interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install the required Blazor packages
 
