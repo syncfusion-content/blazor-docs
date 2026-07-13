@@ -207,7 +207,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrdtQiDUvLCzhIf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rating Component](images/blazor-rating-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVRZQtqtSHQyZZo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Rating Component](images/blazor-rating-component.webp)" %}
 
 ## Value
 
@@ -221,4 +221,4 @@ Set the rating value by using the [Value](https://help.syncfusion.com/cr/blazor/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVRjQiZqvWTEUHY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBxtctKNSmnWHMJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.webp)" %}
