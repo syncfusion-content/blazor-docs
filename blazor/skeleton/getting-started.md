@@ -208,7 +208,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfNWgXUFWfbEvA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrRtmXhVZBkBWnp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.webp)" %}
 
 ## Blazor Skeleton shapes
 
@@ -234,7 +234,7 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notification
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfDiqjgFiEILVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBHjcZBLjrnkNoX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.webp)" %}
 
 ## See also
 
