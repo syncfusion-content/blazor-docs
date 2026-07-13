@@ -294,4 +294,3 @@ The speed dial control triggers the [ItemClicked](https://help.syncfusion.com/cr
 1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 3. [Getting Started with Blazor SpeedDial Events](https://blazor.syncfusion.com/documentation/speeddial/events)
-
