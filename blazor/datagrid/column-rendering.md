@@ -467,7 +467,7 @@ This approach is helpful for binding nested properties like **Employee.FirstName
 > The **nameof** operator can also be used for complex columns instead of assigning static text for the `Field` property:
 
 > ```cshtml
-> <GridColumn Field="@(nameof(EmployeeData.EmployeeName) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
+> <GridColumn Field="@(nameof(EmployeeData.Name) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
 > ```
 
 {% tabs %}
