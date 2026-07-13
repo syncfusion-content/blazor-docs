@@ -277,7 +277,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLzXCAtAueCOnlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthnXQXdjSlWLoSP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.webp)" %}
 
 ## Adding Title
 
@@ -308,7 +308,7 @@ Title can be added to the Smith Chart to provide a quick information to the user
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBJXMUNfrbavmEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhHNctntSvooJRX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.webp)" %}
 
 ## Enable Marker
 
@@ -340,7 +340,7 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBJZMANTVYSwBSX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBRZGNnZSvOvSFA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.webp)" %}
 
 ## Enable Data Label
 
@@ -374,7 +374,7 @@ To display data label for particular marker series, set the [Visible](https://he
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzjCANJgZtmWaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrHjQNHjeOQYYJP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.webp)" %}
 
 ## Enable Legend
 
@@ -408,7 +408,7 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLfDCAjfUjfvoAi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVRNcNRXHXPJqsY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.webp)" %}
 
 ## Enable Tooltip
 
@@ -444,7 +444,7 @@ When space constraints prevents from displaying information using data labels, t
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhztsKjJAXFyuof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLRZcNHjnCqvITq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.webp)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SmithChart).
 
