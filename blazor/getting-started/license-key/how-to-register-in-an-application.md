@@ -11,11 +11,29 @@ documentation: ug
 
 Register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key before any Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component is initialized when referencing packages from [NuGet.org](https://www.nuget.org/packages?q=syncfusion) or using the trial installer. The license key is a string that must be registered at application startup.
 
+**Registering a single license key**
+ 
 {% tabs %}
 {% highlight c# %}
-
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
-
+{% endhighlight %}
+{% endtabs %}
+ 
+**Registering multiple license keys**
+ 
+You can register multiple license keys using either a comma (,) or a semicolon (;) as the separator between keys.
+ 
+{% tabs %}
+{% highlight c# %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1,YOUR LICENSE KEY_2,...");
+{% endhighlight %}
+{% endtabs %}
+ 
+or
+ 
+{% tabs %}
+{% highlight c# %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY_1;YOUR LICENSE KEY_2;...");
 {% endhighlight %}
 {% endtabs %}
 
