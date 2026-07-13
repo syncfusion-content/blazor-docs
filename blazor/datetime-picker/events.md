@@ -7,7 +7,7 @@ control: DateTimePicker
 documentation: ug
 ---
 
-# Events in Blazor Datetime Picker Component
+# Events in Blazor DateTime Picker Component
 
 This section lists and describes the events raised by the DateTimePicker component for user interactions and lifecycle actions.
 

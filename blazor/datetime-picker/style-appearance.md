@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Style and appearance in Blazor Datetime Picker Component | Syncfusion®
+title: Style and appearance in Blazor DateTime Picker Component | Syncfusion®
 description: Checkout and learn here all about Style and appearance in Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker
 documentation: ug
 ---
 
-# Style and Appearance in Blazor Datetime Picker Component
+# Style and Appearance in Blazor DateTime Picker Component
 
 Use the following CSS selectors to modify the DateTimePicker component’s appearance based on user preferences.
 
-## Customizing the appearance of Datetime Picker container element
+## Customizing the appearance of DateTime Picker container element
 
 Apply the following CSS to adjust the input height and font size for the DateTimePicker container element.
 
@@ -23,7 +23,7 @@ Apply the following CSS to adjust the input height and font size for the DateTim
     }
 ```
 
-## Customizing the Datetime Picker icons element
+## Customizing the DateTime Picker icons element
 
 Use the following CSS to style the DateTimePicker’s date and time icon elements.
 
