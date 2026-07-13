@@ -184,7 +184,7 @@ Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **
 
 N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
-In the following example, an alert dialog is displayed upon clicking a Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component.
+In the following example, an alert dialog is displayed upon clicking a Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app) component.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}

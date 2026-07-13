@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Scheduler Component
 
-[Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
+[Blazor Scheduler](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components.
 
 ## Setting date format
 

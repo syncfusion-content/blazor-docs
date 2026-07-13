@@ -113,7 +113,7 @@ N> In the [**OnNodeDragged**](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
  ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhyMZsBJDLnhwpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Node in Blazor TreeView](./images/blazor-treeview-drag-drop-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhRXcCtUxCIcDAh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Drag and Drop Node in Blazor TreeView](./images/blazor-treeview-drag-drop-node.webp)" %}
 
 ## Multiple-Node Drag and Drop
 
@@ -206,7 +206,7 @@ To enable dragging and dropping of multiple nodes, enable both the [`AllowMultiS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhSsXsVfZUjOzRj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and Drop Multiple Node in Blazor TreeView](./images/blazor-treeview-drag-drop-multi-node.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBHjwCjKnhScWiS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Drag and Drop Multiple Node in Blazor TreeView](./images/blazor-treeview-drag-drop-multi-node.webp)" %}
 
 
 ## Drag and Drop within a TreeView
@@ -273,7 +273,7 @@ The default value of `AllowDragAndDrop` property is false.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLyitsLTjUePIsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and drop within a TreeView](./images/blazor-treeview-drag-and-drop-within-treeview.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthxZmsNAHKzJYiM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Drag and drop within a TreeView](./images/blazor-treeview-drag-and-drop-within-treeview.webp)" %}
 
 ## Drag and Drop Between TreeViews
 
@@ -487,7 +487,7 @@ The Blazor TreeView component includes built-in drag and drop support, allowing 
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZryiDsBftpsSWPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Drag and drop between TreeViews](./images/blazor-treeview-drag-and-drop-between-treeviews.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLxtQWZgRzQvRMq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Drag and drop between TreeViews](./images/blazor-treeview-drag-and-drop-between-treeviews.webp)" %}
 
 ## Restrict Drag and Drop for Individual node
 
