@@ -10,7 +10,7 @@ documentation: ug
 # PDF Export in Blazor TreeGrid Component
 
 The PDF export feature enables users to convert TreeGrid data into a downloadable PDF document. To perform the export, use the
- **ExportToPdfAsync** method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
+ **ExportToPdfAsync** method for exporting. To enable PDF export in the TreeGrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowPdfExport) as true.
 
 For a visual walkthrough of PDF export in the Blazor TreeGrid component, refer to the following video:
 
@@ -662,3 +662,92 @@ public class TreeData
 {% endtabs %}
 
 N> By default, material theme is applied to exported PDF document.
+
+
+
+## Globalization – Using TrueType Fonts (TTF) in PDF Export
+
+### Overview
+
+To enable PDF exporting in the Blazor **TreeGrid**, you must explicitly set the **`AllowPdfExport`** property to **`true`**.
+
+The Blazor TreeGrid supports exporting data to PDF format when PDF export is enabled. By default, the TreeGrid PDF exporter supports only a limited set of built‑in fonts. Because of this limitation, non‑English languages—such as Chinese, Japanese, Arabic, or other Unicode‑based characters—may not render correctly in the exported PDF.
+
+To ensure accurate and consistent rendering of Unicode and multi‑byte characters, you must apply a **custom TrueType Font (TTF)**. The TreeGrid component provides globalization support during PDF export by allowing you to configure TrueType fonts through the **`ExportToPdfAsync()`** method using the **`PdfGridFont`** settings.
+
+---
+
+### When to Use Custom TTF Fonts
+
+Use a custom TrueType font in the following scenarios:
+
+- Exporting **Unicode or multi‑byte languages** such as Chinese, Japanese, Arabic, Korean, or other non‑Latin scripts  
+- Using **fonts that are not supported** by the default TreeGrid PDF exporter  
+- Ensuring **consistent and accurate text rendering** in PDF headers, records, and aggregated values  
+- Building **globalized or localized applications** that generate PDF reports for international users  
+
+---
+
+### Applying a TrueType Font in PDF Export
+
+The **`PdfGridFont`** class defines the font configuration used by the TreeGrid PDF exporter. It controls text rendering in the exported document, including font family, encoding, and Unicode support.
+
+Follow the steps below to apply a custom TrueType font during PDF export:
+
+#### Step‑by‑Step Procedure
+
+1. **Convert the font file**  
+   Convert the required `.ttf` font file into a **Base64‑encoded string**.
+
+2. **Configure the PDF font settings**  
+   Assign the Base64 string to the `FontFamily` property of the `PdfGridFont` instance and set the `IsTrueType` property to `true`.
+
+3. **Enable PDF export**  
+   Enable PDF exporting in the TreeGrid by setting the **`AllowPdfExport`** property to **`true`**.
+
+4. **Export the TreeGrid to PDF**  
+   Call the **`ExportToPdfAsync()`** method to generate the PDF document.
+
+Once applied, the custom TrueType font will be used consistently across:
+- TreeGrid column headers  
+- Data records  
+- Aggregated and summary values  
+
+This ensures correct rendering of all Unicode characters in the exported PDF.
+
+---
+
+### Toolbar Click Event – Code Example
+
+```csharp
+private void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
+{
+    if (Args.Item.Text == "PDF Export")
+    {
+        Syncfusion.Blazor.Grids.PdfExportProperties exportProperties =
+            new Syncfusion.Blazor.Grids.PdfExportProperties();
+
+        PdfTheme theme = new PdfTheme();
+
+        PdfThemeStyle recordThemeStyle = new PdfThemeStyle()
+        {
+            FontColor = "#0000FF",
+            FontName = "Calibri",
+            FontSize = 17,
+            Font = new PdfGridFont()
+            {
+                IsTrueType = true,
+                FontSize = 11,
+                FontFamily = "encodedbase64stringhere"
+            }
+        };
+
+        theme.Record = recordThemeStyle;
+        theme.Header = recordThemeStyle;
+        exportProperties.Theme = theme;
+
+        this.TreeGrid.ExportToPdfAsync(exportProperties);
+    }
+}
+```
+
