@@ -37,7 +37,7 @@ The DataForm can arrange multiple form groups across columns using the form-leve
 {% endhighlight %}
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet/form-group/multiple-form-group.razor %}
+{% include_relative code-snippet/form-group/multiple-form-group.cs %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +56,7 @@ This section explains how to divide the collection of [FormGroups](https://help.
 {% endhighlight %}
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet/form-group/column-layout.razor %}
+{% include_relative code-snippet/form-group/column-layout.cs %}
 
 {% endhighlight %}
 {% endtabs %}
