@@ -1,0 +1,49 @@
+@using Syncfusion.Blazor.DropDowns;
+
+<div class="button">
+<button @onclick="GetDataByValue">GetDataByValue</button>
+</div>
+
+<div class="content">
+<SfDropDownList  @ref="DDLObj" TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData" @bind-Value="@GameValue" >
+  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
+</SfDropDownList>
+</div>
+
+@code {
+    SfDropDownList<string, Games> DDLObj;
+
+    public string GameValue { get; set; } = "Game3";
+
+    public class Games
+    {  
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" },
+    new Games() { ID= "Game5", Text= "Football" },
+    new Games() { ID= "Game6", Text= "Golf" },
+    new Games() { ID= "Game7", Text= "Hockey" },
+    new Games() { ID= "Game8", Text= "Rugby"},
+    new Games() { ID= "Game9", Text= "Snooker" },
+    new Games() { ID= "Game10", Text= "Tennis"},
+    };
+
+    public void GetDataByValue () {
+        var val = this.DDLObj.Value;
+        var Data = this.DDLObj.GetDataByValue (val);
+        Console.WriteLine (Data.ID.ToString());
+        Console.WriteLine (Data.Text.ToString());
+    }
+}
+
+<style>
+    .content{
+        position:relative;
+    }
+    </style>
