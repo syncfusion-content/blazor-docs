@@ -19,7 +19,7 @@ In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the 
 
 This mode is the default one in which the content of the selected tab alone will be loaded and available in DOM initially and it will be replaced with corresponding content if you select the tab dynamically. Since in this mode, the browser maintains the DOM with current active tab content alone, page loading performance is increased with rendering DOM. But the Tabs doesn't maintain its current state since every time tab loaded with fresh content.
 
-In the following code example, there are two tabs. The first tab have a login page and second tab have Grid component. The second tab Grid component will be rendered in the DOM only when the login is completed. The second tab will be replaced the first tab in the DOM.
+In the following code example, there are two tabs. The first tab has a login page and the second tab has a Grid component. The second tab Grid component will be rendered in the DOM only when the login is completed. The second tab will be replaced the first tab in the DOM.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -226,7 +226,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
                     <form id="formId">
                         <div class="form-group">
                             <div class="e-float-input">
-                                <SfTextBox Placeholder="Enetr name" @bind-Value="UserName"></SfTextBox>
+                                <SfTextBox Placeholder="Enter name" @bind-Value="UserName"></SfTextBox>
                             </div>
                             <div class="e-float-input">
                                 <SfTextBox @bind-Value="MailAddress" Placeholder="Email" Type="InputType.Email"></SfTextBox>
