@@ -14,7 +14,7 @@ keywords: chart wizard, blazor, chart
 
 This section briefly explains about how to include the [Blazor Chart Wizard](https://www.syncfusion.com/blazor-components/blazor-chart-wizard) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
+> **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, Code Studio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview)
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -134,7 +134,7 @@ After the package is installed, open the **~/_Imports.razor** file and import th
 Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service.
 
 {% tabs %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight c# tabtitle="Program.cs" %}
 
 ....
 using Syncfusion.Blazor;
@@ -167,14 +167,14 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<SfChartWizard>
+<SfChartWizard Height="600px">
 
 </SfChartWizard>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -218,7 +218,7 @@ dotnet run
 
 ## Populate Blazor Chart Wizard data
 
-To bind data for the Chart Wizard component, you can assign a IEnumerable object to the `DataSource` property.
+To bind data for the Chart Wizard component, you can assign an IEnumerable object to the `DataSource` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -306,10 +306,10 @@ The default series type is Line. Use the `SeriesType` property to change the ser
 
 ## Prerequisites
 
-In order to apply same theme update for the overall Chart Wizard UI, include the same theme stylesheet (this can be accessed from NuGet through Static Web Assets) in the <head> tag in the App.razor file as shown below:
+In order to apply same theme update for the overall Chart Wizard UI, include the same theme [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) (this can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)) in the **<head>** tag in the **~wwwroot/index.html** file as shown below:
 
 {% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+{% highlight html tabtitle="index.html" %}
 
 <head>
     ....
