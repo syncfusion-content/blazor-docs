@@ -102,7 +102,7 @@ Sanitize all HTML before storing it in the database and again before rendering i
 
 #### Built-in sanitization in Blazor components
 
-The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property is available in the **[Blazor BlockEditor](https://www.syncfusion.com/blazor-components/blazor-block-editor)**, **[Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)**, and **[Blazor RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor)** components. It provides built-in client-side XSS protection.
+The [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BlockEditor.SfBlockEditor.html#Syncfusion_Blazor_BlockEditor_SfBlockEditor_EnableHtmlSanitizer) property is available in the **[Blazor BlockEditor](https://www.syncfusion.com/blazor-components/blazor-block-editor)**, **[Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager)**, and **[Blazor RichTextEditor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor)** components. It provides built-in client-side XSS protection.
 
 #### How EnableHtmlSanitizer works?
 
@@ -397,7 +397,7 @@ Server-side sanitization is the **authoritative and required** defense against X
 
 ### Server-side sanitization example
 
-The following example demonstrates server-side sanitization of user‑entered HTML submitted from the [Blazor RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component. The sanitization process removes script tags, embedded script content, disallowed HTML elements, inline event handler attributes, and unsafe URL protocols before the content is processed or stored.
+The following example demonstrates server-side sanitization of user‑entered HTML submitted from the [Blazor RichTextEditor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) component. The sanitization process removes script tags, embedded script content, disallowed HTML elements, inline event handler attributes, and unsafe URL protocols before the content is processed or stored.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Services/HtmlSanitizerService.cs"  %}

@@ -99,6 +99,6 @@ Creation and deletion can be done through the UI or programmatically.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrnXJrwgflPYISJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering in Blazor Query Builder](./images/blazor-querybuilder-filtering.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrdZwXuBFsbVQDk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering in Blazor Query Builder](./images/blazor-querybuilder-filtering.webp)" %}
 
 N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.

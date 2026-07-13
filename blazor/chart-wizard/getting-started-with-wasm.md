@@ -214,7 +214,7 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Chart Wizard Default](images/chart-wizard-default.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLRtHiyAsLphCAN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Chart Wizard Default](images/chart-wizard-default.webp)" %}
 
 ## Populate Blazor Chart Wizard data
 
