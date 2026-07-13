@@ -730,6 +730,9 @@ The following sample code demonstrates how to implement the paging operation for
         {
             // Retrieve the data source.
             IEnumerable<Order> DataSource = Orders;
+            
+            // Count the total number of records.
+            int count = DataSource.Cast<Order>().Count();
 
             // Apply paging by skipping and taking the specified number of records.
             if (dm.Skip != 0)
@@ -740,9 +743,6 @@ The following sample code demonstrates how to implement the paging operation for
             {
                 DataSource = DataOperations.PerformTake(DataSource, dm.Take);
             }
-
-            // Count the total number of records.
-            int count = DataSource.Cast<Order>().Count();
 
             // Return the result with or without counts based on the request.
             return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
