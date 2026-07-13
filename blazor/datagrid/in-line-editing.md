@@ -865,9 +865,9 @@ public class OrderDetails
 
 Blazor DataGrid supports saving newly added rows at a specific index within the data source. By default, new rows are inserted and saved at the top of the Grid’s data source. Certain scenarios may require saving the new row at a custom position, such as at the end of the current page or a specific index based on business logic.
 
-To configure a custom save position, set the **args.Index** property during the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the Grid. This property defines the index at which the new row is saved in the underlying data source.
+To configure a custom save position, set the **args.Index** property during the [RowCreated](https://blazor.syncfusion.com/documentation/datagrid/events#rowcreated) event of the Grid. This property defines the index at which the new row is saved in the underlying data source.
 
-The following example demonstrates how to use the `ActionBegin` event and **args.Index** property to specify a custom save index for a newly added row.
+The following example demonstrates how to use the `RowCreated` event and **args.Index** property to specify a custom save index for a newly added row.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -876,7 +876,7 @@ The following example demonstrates how to use the `ActionBegin` event and **args
 
 <SfGrid @ref="GridInstance" AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" NewRowPosition="NewRowPosition.Bottom"></GridEditSettings>
-    <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents>
+    <GridEvents RowCreated="RowCreatedHandler" TValue="Order"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
@@ -900,13 +900,10 @@ The following example demonstrates how to use the `ActionBegin` event and **args
             ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
         }).ToList();
     }
-    public void OnActionBegin(ActionEventArgs<Order> args)
+    public void RowCreatedHandler(RowCreatedEventArgs<Order> args)
     {
-        if (args.RequestType.Equals(Action.Save) && args.Action == "Add")
-        {
-            //Here you can set the custom index for the saved new row. Below calculation save the new row as last row of current page.
-            args.Index = (GridInstance.PageSettings.CurrentPage * GridInstance.PageSettings.PageSize) - 1;
-        }
+        // Here you can set the custom index for the saved new row. Below calculation save the new row as last row of current page.
+        args.Index = (GridInstance.PageSettings.CurrentPage * GridInstance.PageSettings.PageSize) - 1;
     }
     public class Order
     {
@@ -920,7 +917,7 @@ The following example demonstrates how to use the `ActionBegin` event and **args
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDByNfVYAhjTFmxS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrdNHitpEsTvEiU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show add new row always in Blazor DataGrid
 
