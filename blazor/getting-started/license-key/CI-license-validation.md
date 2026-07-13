@@ -26,7 +26,15 @@ Follow these steps to validate the Syncfusion<sup style="font-size:70%">&reg;</s
 * Open the LicenseKeyValidation.ps1 PowerShell script in a text or code editor and update the parameters as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="PowerShell" %}
+{% highlight c# tabtitle="v34.1.29 and later" %}
+# Replace the parameters with the desired platform, version, and actual license key.
+
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"UIComponent" /version:"34.1.29" /licensekey:"Your License Key"
+
+Write-Host $result
+{% endhighlight %}
+
+{% highlight c# tabtitle="Before v34.1.29" %}
 # Replace the parameters with the desired platform, version, and actual license key.
 
 $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"Blazor" /version:"26.2.4" /licensekey:"Your License Key"
@@ -36,7 +44,7 @@ Write-Host $result
 {% endtabs %}
 
 * Update the parameters in the script:
-   * **Platform:** Set /platform:"Blazor" (use the relevant Syncfusion platform as needed).
+   * **Platform:** Set /platform:"**UIComponent**" for v34.1.29 and later, or /platform:"**Blazor**" for earlier versions (use the relevant Syncfusion platform as needed).
    * **Version:** Set /version:"26.2.4" (match the Syncfusion package version used in the build).
    * **License key:** Set /licensekey:"Your License Key" (inject via secure variable or secret).
 
