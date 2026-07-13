@@ -25,8 +25,6 @@ Create a Blazor MAUI App using Visual Studio via [Microsoft Templates](https://l
 
 {% endtabcontent %}
 
-{% endtabcontent %}
-
 {% tabcontent Visual Studio Code %}
 
 Run the following command to create a new Blazor MAUI App.
