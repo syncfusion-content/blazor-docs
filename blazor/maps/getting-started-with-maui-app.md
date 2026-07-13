@@ -116,7 +116,7 @@ dotnet add package Syncfusion.Blazor.Maps -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Maps` namespaces.
+After the package is installed, open the **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Maps` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -127,7 +127,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 {% endhighlight %}
 {% endtabs %}
 
-## Register Blazor service
+## Register the Blazor service
 
 Open the **MauiProgram.cs** file in Blazor MAUI App and register the Blazor service.
 
@@ -151,7 +151,7 @@ public static class MauiProgram
 {% endhighlight %}
 {% endtabs %}
 
-## Add script resources
+## Add script resource
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) in the **~wwwroot/index.html** file.
 
