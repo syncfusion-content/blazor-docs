@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Range Slider in Blazor Web App
 
-This section briefly explains how to include the [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Inputs` namespaces.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
@@ -130,7 +130,7 @@ After the packages are installed, open the **~/_Imports.razor** file in the `.Cl
 
 ## Register the Blazor service
 
-Open the **Program.cs** file in the Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in the **Program.cs** files of both the server and client projects in your Blazor Web App.
+Open the **Program.cs** file in Blazor Web App and register the Blazor service. If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, register the Blazor service in **Program.cs** files of both the server and client projects in your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -177,7 +177,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-## Run the application
+**Run the application**
 
 {% tabcontents %}
 
@@ -227,10 +227,11 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## See also
 
-1. [Tooltip in Blazor Range Slider Component](https://blazor.syncfusion.com/documentation/range-slider/tooltip)
-2. [Ticks in Blazor Range Slider Component](https://blazor.syncfusion.com/documentation/range-slider/ticks)
-3. [Formatting in Blazor Range Slider Component](https://blazor.syncfusion.com/documentation/range-slider/format)
-4. [Limits in Blazor Range Slider Component](https://blazor.syncfusion.com/documentation/range-slider/limits)
-5. [CSS Structure in Blazor Range Slider Component](https://blazor.syncfusion.com/documentation/range-slider/style)
-6. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-7. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Slider Types](./types)
+2. [Slider Formatting](./format)
+3. [Orientation Slider](./orientation)
+4. [Ticks in Slider](./ticks)
+5. [Tooltip in Slider](./tooltip)
+6. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+7. [Getting Started with Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+8. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
