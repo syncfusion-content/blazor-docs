@@ -132,7 +132,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file to register the Blazor service, then add the required namespaces in ~/Components/_Imports.razor for Server interactive render mode.
+Open the **Program.cs** file to register the Blazor service.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
