@@ -268,5 +268,3 @@ Use webP images as rating symbols by specifying them as template content within 
 }
 
 ```
-
-![Blazor Rating component with webp icon](./images/blazor-rating-webp.webp)
