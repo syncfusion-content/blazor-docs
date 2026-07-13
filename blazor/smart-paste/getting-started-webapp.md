@@ -132,7 +132,7 @@ After the packages are installed, open the **~/Components/_Imports.razor** file 
 
 ## Register the Blazor service
 
-Open the **Program.cs** file to register the Blazor service, then add the required namespaces in ~/Components/_Imports.razor for Server interactive render mode.
+Open the **Program.cs** file to register the Blazor service.
 
 {% tabs %}
 {% highlight c# tabtitle="Program.cs" %}
@@ -463,7 +463,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Smart Paste Button Component
 
-Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component inside the razor file. This example uses the [Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component to manage form input fields. Install the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package.
+Open a Razor file located in the **~/Components/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component inside the razor file. This example uses the [Blazor DataForm](https://www.syncfusion.com/blazor-components/blazor-data-form) component to manage form input fields. Install the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package.
 
 N> If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
