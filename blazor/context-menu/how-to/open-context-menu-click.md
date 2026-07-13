@@ -48,4 +48,4 @@ In the following sample, Sub Menu will open while clicking `Save` item.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUiLLwAuYIrlKL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu](./../images/contextmenu-submenu.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxZmWjJPMOZAfA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu](./../images/contextmenu-submenu.webp)" %}
