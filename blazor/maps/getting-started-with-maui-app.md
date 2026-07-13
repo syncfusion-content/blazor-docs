@@ -15,7 +15,7 @@ This section explains the step-by-step process of integrating the [Blazor Maps](
 
 {% tabcontent Visual Studio %}
 
-## Create a new Blazor MAUI App in Visual Studio
+## Create a new Blazor MAUI App
 
 {% tabcontents %}
 
