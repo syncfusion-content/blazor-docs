@@ -137,4 +137,4 @@ Modify properties such as **background-color**, **font-family**, **font-size**, 
 
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrxtJBhJOqgvtXA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2 %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrRXQZbTWoOuxSF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

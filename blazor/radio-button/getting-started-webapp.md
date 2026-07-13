@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Radio Button in Blazor Web App
 
-This section briefly explains about how to include [Blazor Radio Button](https://www.syncfusion.com/blazor-components/blazor-radio-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Radio Button](https://www.syncfusion.com/blazor-components/blazor-radio-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -61,14 +61,14 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install the required Blazor packages
 
-Install [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
+Install the [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. When using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these packages in the `.Client` project.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet packages (`Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Themes`) and install them.
+2. Search for the required NuGet packages (`Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Themes`) and install them.
 
 Alternatively, you can install the same packages using the Package Manager Console with the following commands.
 
@@ -120,7 +120,7 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 After the packages are installed, open the **~/_Imports.razor** file in the `.Client` project and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Buttons` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
@@ -163,14 +163,12 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Radio Button](https://www.syncfusion.com/blazor-components/blazor-radio-button) component inside the razor file.
 
-N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the razor file. (For example, `InteractiveServer`, `InteractiveWebAssembly` or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.t.
+N> If the interactivity location is set to `Per page/component` in the Web App, define a render mode at the top of the Razor file (for example, `InteractiveServer`, `InteractiveWebAssembly`, or `InteractiveAuto`). If the **Interactivity** is set to `Global` with `Auto` or `WebAssembly`, the render mode is automatically configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
 @rendermode InteractiveAuto
-
-@using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Option 1" Name="options" Value="card" @bind-Checked="stringChecked"></SfRadioButton>
 <SfRadioButton Label="Option 2" Name="options" Value="cash" @bind-Checked="stringChecked"></SfRadioButton>
@@ -182,7 +180,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 
@@ -226,12 +224,14 @@ dotnet run
 
 {% endtabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBptsKNKsShQnkV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVxtcZCgJGWQglm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.webp)" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RadioButton)
 
 ## See also
 
-1. [Getting Started with Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+4. [Native Events in Blazor RadioButton Component](https://blazor.syncfusion.com/documentation/radio-button/native-event)
+5. [Styles and Appearances in Blazor RadioButton Component](https://blazor.syncfusion.com/documentation/radio-button/customization)
