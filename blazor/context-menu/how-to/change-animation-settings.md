@@ -48,4 +48,4 @@ The following sample illustrates how to open Context Menu with `FadeIn` effect w
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAirrwgacxYkyN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLdjGWDTbsteVcQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.webp)" %}

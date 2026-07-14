@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Circular Gauge in Blazor WASM App
 
-This section briefly explains how to include [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Circular Gauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) component in a Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor WebAssembly (Standalone) App
 
@@ -110,7 +110,7 @@ dotnet add package Syncfusion.Blazor.CircularGauge -v {{ site.releaseversion }}
 
 ## Add import namespaces
 
-After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.CircularGauge` namespaces.
+After the package is installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.CircularGauge` namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
