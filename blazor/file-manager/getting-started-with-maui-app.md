@@ -11,10 +11,6 @@ documentation: ug
 
 This section explains the step-by-step process of integrating the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor MAUI App using both [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
 ## Create a new Blazor MAUI App in Visual Studio
 
 {% tabcontents %}
