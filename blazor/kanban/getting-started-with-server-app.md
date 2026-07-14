@@ -205,7 +205,7 @@ N> If the interactivity location is set to `Per page/component`, define a render
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrxtSWbKaleSUCK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVdDQiDhpBhNlVy?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Run the application
 

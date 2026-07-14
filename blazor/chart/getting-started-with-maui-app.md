@@ -57,7 +57,7 @@ cd MauiBlazorApp
 
 {% endtabcontents %}
 
-## Install the required Blazor packages
+## Install the required Blazor package
 
 Install the [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
 

@@ -154,7 +154,7 @@ You can set a radius of the range in pixel as demonstrated below.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLqCBBGKrtreVuz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Circular Gauge Range with Custom Radius in Pixel](./images/blazor-circulargauge-radius-in-pixel.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrdjGCXfxbEWuxd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Circular Gauge Range with Custom Radius in Pixel](./images/blazor-circulargauge-radius-in-pixel.webp)" %}
 
 ### In percentage
 
@@ -203,7 +203,7 @@ The ranges can be dragged over the axis line by clicking and dragging the same. 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhgCVrQUhNwEaRQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVntwCtTxOxaHvC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Multiple ranges
 
