@@ -114,7 +114,7 @@ Change properties like **font-size**, **font-weight**, and **color** to highligh
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrxjTVrfnMFtzVT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrRtcZvJWMrmBVW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Hide the Blazor TreeGrid header
 
@@ -188,4 +188,4 @@ To hide the header for a specific TreeGrid only, apply the style using the grid'
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXroMtixVyHRNvjg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBRNQjPTiWwnenV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

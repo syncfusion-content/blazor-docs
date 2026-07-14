@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Markdown Editor Component in Server App
 
-This section briefly explains about how to include [Blazor Markdown Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains about how to include [Blazor Markdown Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) component in a Blazor Server App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 {% tabcontents %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Gantt Chart in Blazor Server App
 
-This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component in your Blazor server app using Visual Studio and Visual Studio Code.
+This section briefly explains about how to include [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart) component in your Blazor server app using Visual Studio and Visual Studio Code.
 
 > **Ready to streamline your Blazor development?** <br/>Discover the full potential of Blazor components with AI Coding Assistants. Effortlessly integrate, configure, and enhance your projects with intelligent, context-aware code suggestions, streamlined setups, and real-time insights—all seamlessly integrated into your preferred AI-powered IDEs like VS Code, Cursor, CodeStudio and more. [Explore AI Coding Assistants](https://blazor.syncfusion.com/documentation/ai-coding-assistants/overview)
 
@@ -161,7 +161,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 ## Add Blazor Gantt Chart component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Gantt Chart](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart) component inside the razor file.
 
 N>If the interactivity location is set to `Per page/component`, define a render mode at the top of the razor file. (For example `InteractiveServer`). If the Interactivity is set to `Global`, the render mode is automatically configured in the `App.razor` file by default.
 
