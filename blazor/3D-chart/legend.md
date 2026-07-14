@@ -56,7 +56,7 @@ By using the `Position` property, the legend can be positioned at left, right,
 }
 
 ```
-{% previewsample "hhttps://blazorplayground.syncfusion.com/embed/BDVHDdijJgmJeEtL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVHDdijJgmJeEtL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.webp)" %}
 
 The custom position helps you to position the legend anywhere in the 3D chart using x and y coordinates.
 

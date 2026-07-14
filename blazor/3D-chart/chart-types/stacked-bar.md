@@ -50,7 +50,7 @@ To render a stacked bar series, use series `Type` as `StackingBar`.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLRtdMDJdwRFrah?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stacked Bar 3D Chart](../images/chart-types-images/blazor-stacked-Bar-chart.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLxDGWpfclepuSO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Stacked Bar 3D Chart](../images/chart-types-images/blazor-stacked-Bar-chart.webp)" %}
 
 ## Stacking group
 
