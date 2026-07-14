@@ -190,6 +190,8 @@ You can use the [TextToSpeechSettings](https://help.syncfusion.com/cr/blazor/Syn
 
 {% endtabs %}
 
+![Built-in Text-to-Speech in AI AssistView](../images/assist-built-in-tts.webp)
+
 ## See Also
 
 * [Speech-to-Text](./speech-to-text.md)
