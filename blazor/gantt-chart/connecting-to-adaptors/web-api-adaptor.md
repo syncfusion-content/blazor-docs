@@ -704,7 +704,7 @@ public object GetTaskData()
 
 ## Handling CRUD operations
 
-The Blazor Gantt Chart uses `WebApiAdaptor` CRUD conventions that map directly to the HTTP verbs on your controller. When a user adds, edits (cell, row, dialog, or taskbar), or deletes a record, the `SfDataManager` automatically issues the corresponding `POST`, `PUT`, or `DELETE` request to the base URL. Each action sends the task payload as JSON to the same controller, so a single endpoint per HTTP verb is enough to handle the full edit lifecycle.
+The Blazor Gantt Chart uses `WebApiAdaptor` CRUD conventions that map directly to the HTTP verbs on your controller. While adding, editing (cell, row, dialog, or taskbar), or deleting a record, the `SfDataManager` automatically issues the corresponding `POST`, `PUT`, or `DELETE` request to the base URL. Each action sends the task payload as JSON to the same controller, so a single endpoint per HTTP verb is enough to handle the full edit lifecycle.
 
 To enable editing in the Gantt Chart, configure [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) with `AllowAdding`, `AllowEditing`, `AllowTaskbarEditing`, and `AllowDeleting` set to **true**, and include the `Add`, `Edit`, `Delete`, `Update`, and `Cancel` toolbar items.
 

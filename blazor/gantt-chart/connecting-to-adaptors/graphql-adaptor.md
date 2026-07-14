@@ -823,7 +823,7 @@ The `Home.razor` component will display the project task data in a Blazor Gantt 
 - **`<SfGantt>`** – The Gantt Chart component that displays hierarchical tasks with a timeline.
 - **`<SfDataManager>`** – Connects the Gantt Chart to the GraphQL backend through the GraphQL adaptor options.
 - **`<GanttTaskFields>`** – Maps model fields to Gantt properties: `Id`, `Name`, `StartDate`, `EndDate`, `Duration`, `Progress`, and `ParentID` (for hierarchy).
-- **`<GanttEditSettings>`** – Enables add, edit, delete, and taskbar editing (`AllowTaskbarEditing="true"` is Gantt-specific; it lets the user drag and resize taskbars, which calls the `UpdateTask` mutation).
+- **`<GanttEditSettings>`** – Enables add, edit, delete, and taskbar editing (`AllowTaskbarEditing="true"` is Gantt-specific; it enables dragging and resizing taskbars, which calls the `UpdateTask` mutation).
 - **`<GanttColumns>`** – Defines the columns shown in the grid section of the Gantt Chart.
 - **`<GanttSplitterSettings>`** – Controls the position of the splitter between the grid and the timeline.
 - **`Toolbar="@ToolbarItems"`** – Provides toolbar buttons for Add, Edit, Delete, ExpandAll, CollapseAll, and Search actions.
@@ -854,7 +854,7 @@ The `SfDataManager` component connects the Gantt Chart to the GraphQL backend us
 
 ### Step 3: Configure the GraphQL Adaptor and Data Binding
 
-The GraphQL adaptor is a bridge that connects the Blazor Gantt Chart with the GraphQL backend. The adaptor translates Gantt operations (sorting, filtering, searching and CRUD) into GraphQL queries and mutations. When the user interacts with the chart, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the chart display.
+The GraphQL adaptor is a bridge that connects the Blazor Gantt Chart with the GraphQL backend. The adaptor translates Gantt operations (sorting, filtering, searching and CRUD) into GraphQL queries and mutations. While interacting with the chart, the adaptor automatically sends the appropriate GraphQL request to the backend, receives the response, and updates the chart display.
 
 **What is a GraphQL Adaptor?**
 
@@ -935,11 +935,11 @@ The `@code` block in `Home.razor` contains C# code that configures how the adapt
 
 **EditMode Options**
 
-The `Mode` property of `<GanttEditSettings>` accepts the following `EditMode` enum values, which control how users edit a task in the Gantt Chart:
+The `Mode` property of `<GanttEditSettings>` accepts the following `EditMode` enum values, which determine how tasks can be edited in the Gantt Chart:
 
 | Value | Description |
 |-------|-------------|
-| `Auto` | Automatically selects the appropriate editing mode based on the user action (cell click for inline editing, toolbar **Add**/**Edit** for dialog editing, or row double-click for row editing). Recommended for most scenarios. |
+| `Auto` | Automatically selects the appropriate editing mode based on the action (cell click for inline editing, toolbar **Add**/**Edit** for dialog editing, or row double-click for row editing). Recommended for most scenarios. |
 | `Dialog` | Opens a modal dialog window for editing. The dialog is used for both **Add** (toolbar) and **Edit** (toolbar or row double-click) actions. |
 
 Use `EditMode.Auto` when the workflow mixes quick inline edits and full-form edits; use `EditMode.Dialog` when the dataset is complex and benefits from a focused editing experience.
@@ -1277,13 +1277,13 @@ mutation update($record: TaskDataInput!, $action: String!, $primaryColumnName: S
 | **4. Preserve ID** | Keep the original `TaskId` unchanged | `TaskId` is not updated, only used for lookup |
 | **5. Return Updated** | Send back the modified record with new values | Return the `existing` object |
 
-**Taskbar Editing Note:** When a user drags or resizes a taskbar, the Gantt Chart calls `updateTask` with the new `StartDate`, `EndDate`, and `Duration`. The same `UpdateTask` mutation handles both dialog edits and timeline edits, so no extra wiring is required.
+**Taskbar Editing Note:** While dragging or resizing a taskbar, the Gantt Chart calls `updateTask` with the new `StartDate`, `EndDate`, and `Duration`. The same `UpdateTask` mutation handles both dialog edits and timeline edits, so no extra wiring is required.
 
 ---
 
 ### Delete
 
-The Delete operation removes a task from the schedule. When the **Delete** button is selected and the user confirms, the `deleteTask` mutation is sent with only the primary key value.
+The Delete operation removes a task from the schedule. When the **Delete** button is selected, the `deleteTask` mutation is sent with only the primary key value.
 
 **GraphQL Mutation Request:**
 
@@ -1325,7 +1325,7 @@ If the task does not exist, the response is `false`.
 
 ### Batch Update
 
-The Batch Update operation allows adding, updating, and deleting multiple tasks in a single request. The Gantt Chart uses this when several changes are accumulated before being sent to the server in one round trip (for example, when the user applies a series of edits and then clicks **Update**).
+The Batch Update operation allows adding, updating, and deleting multiple tasks in a single request. The Gantt Chart uses this when several changes are accumulated before being sent to the server in one round trip (for example, while applying a series of edits and then clicks **Update**).
 
 **GraphQL Mutation Request:**
 
