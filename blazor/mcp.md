@@ -150,7 +150,7 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
-**Verifying Installation** Check your editor's MCP Server list for `sf-blazor-mcp` with a **Connected** status to confirm a successful installation.
+**Verifying Installation** Check your editor's MCP Server list for **sf-blazor-mcp** with a **Connected** status to confirm a successful installation.
 
 ## Available Tools
 
@@ -252,7 +252,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 | **Server failed to start** | Update to Node.js 18+, verify JSON syntax in the config file, and restart your IDE. |
 | **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://syncfusion.com/account/api-key). |
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
-| **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
+| **Wrong config file location** | VS Code: **.vscode/mcp.json** • Code Studio: **.codestudio/mcp.json** • Cursor: **.cursor/mcp.json** in the workspace root. |
 | **Check IDE logs** | VS Code / Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors. |
 
 ## Privacy & Security
