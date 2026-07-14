@@ -9,7 +9,7 @@ documentation: ug
 
 # Input Sanitization in Blazor Components
 
-This documentation explains how to protect [Blazor components](https://www.syncfusion.com/blazor-components) from unsafe or malicious user input using **input sanitization** techniques. It highlights built‑in sanitization support in components such as the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) and [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor), along with best practices like HTML encoding to ensure safe rendering of user content.
+This documentation explains how to protect [Blazor components](https://www.syncfusion.com/blazor-components) from unsafe or malicious user input using **input sanitization** techniques. It highlights built‑in sanitization support in components such as the [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) and [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor), along with best practices like HTML encoding to ensure safe rendering of user content.
 
 ## What is input sanitization?
 
@@ -37,7 +37,7 @@ Sanitizing user input ensures that only safe and expected values are stored or d
 
 ## Built-in sanitization features
 
-Several [Blazor components](https://www.syncfusion.com/blazor-components) include HTML sanitization capabilities to prevent harmful scripts or unsafe markup from being rendered. Components that accept or display HTML content such as the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor), [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.
+Several [Blazor components](https://www.syncfusion.com/blazor-components) include HTML sanitization capabilities to prevent harmful scripts or unsafe markup from being rendered. Components that accept or display HTML content such as the [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor), [Blazor Block Editor](https://www.syncfusion.com/blazor-components/blazor-block-editor) have built-in `EnableHtmlSanitizer` property to remove unsafe elements before rendering.
 
 Components such as [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip), [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast), and [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) apply sanitization when rendering HTML content in templates. For [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid), HTML encoding should be applied explicitly when rendering user-provided content. This ensures that any user provided HTML is safe.
 
@@ -54,7 +54,7 @@ In the example shown, the sanitizer removes embedded scripts and event based att
 
 ### Rich Text Editor (RTE)
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) allows users to input and render HTML content. To prevent unsafe markup from being inserted or displayed, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property.
+The [Blazor Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor) allows users to input and render HTML content. To prevent unsafe markup from being inserted or displayed, enable the built-in sanitizer using the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

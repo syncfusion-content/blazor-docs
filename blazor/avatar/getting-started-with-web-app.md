@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Avatar in Blazor Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Avatar Component in Blazor Web App.
+description: Check out and learn about the documentation for getting started with Blazor Avatar Component in Blazor Web App.
 platform: Blazor
 component: Avatar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Avatar Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Avatar](https://blazor.syncfusion.com/documentation/avatar/getting-started) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+This section briefly explains how to include the [Blazor Avatar](https://www.syncfusion.com/blazor-components/blazor-avatar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
 ## Create a new Blazor Web App
 
@@ -61,14 +61,14 @@ N> Configure the appropriate [Interactive render mode](https://learn.microsoft.c
 
 ## Install the required Blazor package
 
-Install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install these package in the `.Client` project.
+Install the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details. If using the `WebAssembly` or `Auto` render modes in the Blazor Web App, install this package in the `.Client` project.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
 1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-2. Search the required NuGet package (`Syncfusion.Blazor.Themes`) and install them.
+2. Search the required NuGet package (`Syncfusion.Blazor.Themes`) and install it.
 
 Alternatively, you can install the same package using the Package Manager Console with the following commands.
 
@@ -112,12 +112,12 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endtabcontents %}
 
-## Add stylesheet resources
+## Add stylesheet resource
  
-The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) in the **App.razor** file.
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) in the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight html tabtitle="App.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
@@ -126,24 +126,24 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 
 ## Add Blazor Avatar component
 
-Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Avatar](https://www.syncfusion.com/blazor-components/blazor-avatar) component inside the razor file.
+Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Avatar](https://www.syncfusion.com/blazor-components/blazor-avatar) component inside the `.Client` project razor file.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
-<!-- xSmall Avatar-->
+@* xSmall Avatar *@
 <div class="e-avatar e-avatar-xsmall image"></div>
 
-<!-- Small Avatar-->
+@* Small Avatar *@
 <div class="e-avatar e-avatar-small image"></div>
 
-<!-- Avatar-->
+@* Avatar *@
 <div class="e-avatar image"></div>
 
-<!-- Large Avatar-->
+@* Large Avatar *@
 <div class="e-avatar e-avatar-large image"></div>
 
-<!-- xLarge Avatar-->
+@* xLarge Avatar *@
 <div class="e-avatar e-avatar-xlarge image"></div>
 
 <style>
@@ -155,7 +155,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 {% endhighlight %}
 {% endtabs %}
 
-**Run the application**
+## Run the application
 
 {% tabcontents %}
 

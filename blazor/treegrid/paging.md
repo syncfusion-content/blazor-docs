@@ -326,7 +326,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLdDBLfVTTxAGqR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrxDcNPJVzhorwT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Pager with page size dropdown
 
