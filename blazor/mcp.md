@@ -29,7 +29,7 @@ Before beginning, ensure the following prerequisites are met:
 - **Node.js** version 18 or higher
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **Blazor application** (existing or new); see [Quick Start](https://ej2.syncfusion.com/blazor/documentation/getting-started/quick-start)
+- A **Blazor application** (existing or new); see [Quick Start](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
@@ -238,7 +238,7 @@ To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blaz
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your Blazor project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different component or task to maintain clean context.
 - **Use Advanced AI Models** - For best results, use **Claude Sonnet 4.5 or higher**. Other compatible models include **GPT-5 and Gemini 3 Pro**. Higher-capability models produce more accurate component implementations.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://ej2.syncfusion.com/blazor/documentation) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://blazor.syncfusion.com/documentation/introduction) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
