@@ -161,7 +161,7 @@ The Blazor TreeView component has the built-in option to customize each node's a
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVSMDigsIlAHSne?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVnXQWZUlfCTnpZ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Wrapping Text in Blazor TreeView Component
 
@@ -226,7 +226,7 @@ The default value of the `AllowTextWrap` property is false.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXByMDMgWSPkEWvC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxjQiZAPfpgRZF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable or Disable Individual Node on Load in Blazor TreeView Component
 
@@ -294,7 +294,7 @@ Individual nodes are disabled on initial rendering by passing their IDs to the [
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLyMXsUsyYSAomx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrRZGMNKvpGKwyW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Enable or Disable Individual Node Programmatically in Blazor TreeView Component
 
@@ -370,7 +370,7 @@ Individual nodes are enabled or disabled dynamically by passing their IDs to the
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVIitiKinXtmohD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVxNmsZAvzacvMU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Show or Hide an Individual Node on Load in Blazor TreeView Component
 
@@ -613,7 +613,7 @@ The TreeView component provides a straightforward way to enable tooltips for tre
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVIsDigMkgFfzRJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip in Blazor TreeView](./images/tooltip.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBHDcijqPSbLuUI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip in Blazor TreeView](./images/tooltip.webp)" %}
 
 ## Customize Nodes Tooltip in Blazor TreeView Component
 
@@ -625,21 +625,16 @@ While native tooltip elements might offer limited customization, the Blazor Tool
 <SfTreeView TValue="EmployeeDetails" CssClass="custom" FullRowSelect="true">
     <TreeViewFieldsSettings TValue="EmployeeDetails" Id="EmployeeId" Text="EmployeeName" DataSource="@Employee" Expanded="Expanded" HasChildren="HasChild" Selected="Selected" ParentID="ParentId"></TreeViewFieldsSettings>
     <TreeViewTemplates TValue="EmployeeDetails">
-        <NodeTemplate>
+       <NodeTemplate>
             @{
-                var employee = ((context as EmployeeDetails));
-                <SfTooltip Target="#def">
-                    <ContentTemplate>
-                            @employee.EmployeeName @employee.EmployeeId
-                    </ContentTemplate>
-                    <ChildContent>
-                    <div id="def">
-                        <div class="ename">@((@context as EmployeeDetails).EmployeeName)</div>
-                        <div class="ejob">@((@context as EmployeeDetails).Designation)</div>
-                    </div>
-                    </ChildContent>
-                </SfTooltip>
+                var employee = (EmployeeDetails)context;
             }
+            <div class="employee-node"
+                title="@($"{employee.EmployeeName} ({employee.EmployeeId}) - {employee.Designation}")">
+
+                <div class="ename">@employee.EmployeeName</div>
+                <div class="ejob">@employee.Designation</div>
+            </div>
         </NodeTemplate>
     </TreeViewTemplates>
     <TreeViewEvents TValue="EmployeeDetails"></TreeViewEvents>
@@ -775,7 +770,7 @@ While native tooltip elements might offer limited customization, the Blazor Tool
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLyMNMqsOQjSsJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[ToolTip Template in Blazor TreeView](./images/tooltip-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLnZwsZzjKQRjTS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[ToolTip Template in Blazor TreeView](./images/tooltip-template.webp)" %}
 
 ## Get all Nodes in Blazor TreeView Component
 
