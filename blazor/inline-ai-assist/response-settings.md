@@ -7,7 +7,7 @@ control: Inline AI Assist
 documentation: ug
 ---
 
-# Response actions in ##Platform_Name## Inline AI Assist control
+# Response actions in Inline AI Assist component
 
 You can render response action popup by using `Items` property in the `ResponseSettings` tag helper.
 
@@ -34,7 +34,7 @@ Each response item object can include the following properties:
 
 ## Response interactions
 
-The `ItemSelect` event is triggered when an item is selected from the response popup in the Inline AI Assist control.
+The `ItemSelect` event is triggered when an item is selected from the response popup in the Inline AI Assist component.
 
 The below example demonstrates the `ResponseSettings` tag
 
