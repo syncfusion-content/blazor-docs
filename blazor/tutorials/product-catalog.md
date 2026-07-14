@@ -89,10 +89,9 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 Add the Blazor service to the `~/Program.cs` file to enable Blazor components across all pages.
 
 {% tabs %}
-{% highlight cs tabtitle="~/Program.cs" hl_lines="1 9" %}
+{% highlight cs tabtitle="~/Program.cs" hl_lines="1 8" %}
 
 using Syncfusion.Blazor;
-using BlazorProductGrid.Services;
 ...
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -377,11 +376,9 @@ public class WishlistService
 Register the application services in `Program.cs` so they can be accessed throughout the Blazor application using dependency injection.
 
 {% tabs %}
-{% highlight cs tabtitle="Program.cs" hl_lines="8 9 10" %}
+{% highlight cs tabtitle="Program.cs" hl_lines="6 7 8" %}
 
-...
 using Syncfusion.Blazor;
-
 ...
 // Syncfusion Blazor service
 builder.Services.AddSyncfusionBlazor();
