@@ -105,7 +105,7 @@ Open the command prompt and run the following commands.
 {% tabs %}
 {% highlight razor tabtitle="Command Prompt" %}
 
-Install-Package Syncfusion.Blazor.LinearGauge -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.LinearGauge -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
