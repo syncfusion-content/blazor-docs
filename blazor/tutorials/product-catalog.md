@@ -44,7 +44,7 @@ Install the NuGet packages listed below to add the required Blazor components to
 Alternatively, install the packages using the **Package Manager Console**:
 
 {% tabs %}
-{% highlight bash tabtitle="Terminal" %}
+{% highlight bash tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Grid
 Install-Package Syncfusion.Blazor.Buttons
