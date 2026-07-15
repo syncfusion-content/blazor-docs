@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Build a Blazor Product Catalog App | Syncfusion®
+title: Build a Blazor Product Catalog App with DataGrid | Syncfusion
 description: Learn how to build a step-by-step Blazor Product Catalog application using Blazor components including DataGrid, Carousel, Dialog, and more.
 platform: Blazor
 control: Tutorials
 documentation: ug
 ---
 
-# Build a Blazor Product Catalog App
+# Build a Blazor Product Catalog App with DataGrid
 
 This guide shows how to build a **Product Catalog application** using [Blazor components](https://www.syncfusion.com/blazor-components). You will learn how to display, manage, and interact with product data efficiently. The application includes features like product listing, category filtering, search functionality, shopping cart, and favorites list management.
 
@@ -21,7 +21,6 @@ This guide shows how to build a **Product Catalog application** using [Blazor co
 To create a Blazor application, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code).
 
 ### Install required Blazor packages
-
 
 Install the NuGet packages listed below to add the required Blazor components to your application.
 
@@ -41,6 +40,21 @@ Install the NuGet packages listed below to add the required Blazor components to
 1. Open your project in **Visual Studio**.
 2. Navigate to **(*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*)**.
 3. Search for and install the required packages listed in the preceding table.
+
+Alternatively, install the packages using the **Package Manager Console**:
+
+{% tabs %}
+{% highlight bash tabtitle="Terminal" %}
+
+Install-Package Syncfusion.Blazor.Grid
+Install-Package Syncfusion.Blazor.Buttons
+Install-Package Syncfusion.Blazor.Inputs
+Install-Package Syncfusion.Blazor.Navigations
+Install-Package Syncfusion.Blazor.Popups
+Install-Package Syncfusion.Blazor.Themes
+
+{% endhighlight %}
+{% endtabs %}
 
 {% endtabcontent %}
 
@@ -200,7 +214,7 @@ public class Product
 
 ## Create Product Data
 
-The **ProductData** class provides static sample data used to populate the DataGrid. Create a `Data/ProductData.cs` file with the following code.
+The **ProductData** class provides static sample data used to populate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). Create a `Data/ProductData.cs` file with the following code.
 
 {% tabs %}
 {% highlight cs tabtitle="Data/ProductData.cs" %}
@@ -1090,7 +1104,7 @@ The product catalog page is the main entry point of the application. It uses the
 
 ### Create the Wishlist Page
 
-The **Wishlist** page displays all products the user has saved. It uses a Blazor DataGrid to list wishlist items and provides **Add to Cart** and **Remove** actions for each product.
+The **Wishlist** page displays all products the user has saved. It uses a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) to list wishlist items and provides **Add to Cart** and **Remove** actions for each product.
 
 {% tabs %}
 {% highlight razor tabtitle="Wishlist.razor" %}
@@ -1408,7 +1422,7 @@ The **Wishlist** page displays all products the user has saved. It uses a Blazor
 
 ### Create the Cart Page
 
-The **Cart** page provides an order summary view. It displays all cart items in a Blazor DataGrid with per-item subtotals, a totals summary card, and a **Confirm Order** button that clears the cart and returns the user to the catalog.
+The **Cart** page provides an order summary view. It displays all cart items in a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with per-item subtotals, a totals summary card, and a **Confirm Order** button that clears the cart and returns the user to the catalog.
 
 {% tabs %}
 {% highlight razor tabtitle="Cart.razor" %}
@@ -1712,7 +1726,7 @@ The **Cart** page provides an order summary view. It displays all cart items in 
 
 ## Navigation Setup
 
-Update the navigation menu to include links to the Product Catalog, Wishlist, and Cart pages so users can move between sections of the application.
+Update the navigation menu to include links to the [Product Catalog](#create-the-product-catalog-page), [Wishlist](#create-the-wishlist-page), and [Cart](#create-the-cart-page) pages so users can move between sections of the application.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/Layout/NavMenu.razor" %}
@@ -1775,10 +1789,7 @@ dotnet run
 
 ## See Also
 
-* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
-* [Getting started with Blazor Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-server-app)
-* [Getting started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started-with-server-app)
-* [Getting started with Blazor Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-server-app)
-* [Getting started with Blazor Carousel](https://blazor.syncfusion.com/documentation/carousel/getting-started-with-server-app)
-* [Getting started with Blazor TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-with-server-app)
+* [Build a Order Management Dashboard in Blazor](./order-management-dashboard.md)
+* [Creating a Shopping Cart with Blazor Components](./shopping-cart.md)
+* [Build a Blazor stay reservation app](./build-a-blazor-stay-reservation-app.md)
 
