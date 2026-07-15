@@ -830,8 +830,8 @@ dotnet run
 
 ## See also
 
-- [Getting Started with WinForms Blazor Application](https://blazor.syncfusion.com/documentation/getting-started/winforms-blazor-app)
+- [Getting Started with WinForms Blazor application](https://blazor.syncfusion.com/documentation/getting-started/winforms-blazor-app)
 - [Blazor Hybrid PDF Viewer for WinForms, WPF, and .NET MAUI](https://www.syncfusion.com/blogs/post/blazor-hybrid-pdf-viewer-winforms-wpf-maui)
-- [Migrate ASP.NET Web Forms Controls to Blazor Components](./webform-to-blazor-migration.md)
-- [Migrating WPF Controls to Blazor Components](./wpf-blazor-migration.md)
+- [Migrate ASP.NET Web Forms controls to Blazor components](./webform-to-blazor-migration.md)
+- [Migrating WPF controls to Blazor components](./wpf-blazor-migration.md)
 

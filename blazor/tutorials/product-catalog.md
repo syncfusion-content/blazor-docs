@@ -1789,7 +1789,7 @@ dotnet run
 
 ## See Also
 
-* [Build a Order Management Dashboard in Blazor](./order-management-dashboard.md)
-* [Creating a Shopping Cart with Blazor Components](./shopping-cart.md)
+* [Build a order management dashboard in Blazor](./order-management-dashboard.md)
+* [Creating a shopping cart with Blazor components](./shopping-cart.md)
 * [Build a Blazor stay reservation app](./build-a-blazor-stay-reservation-app.md)
 
