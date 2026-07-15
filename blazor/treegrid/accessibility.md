@@ -89,8 +89,10 @@ The Blazor Tree Grid component followed the [keyboard interaction](https://www.w
 |<kbd>←</kbd>| <kbd>←</kbd> | Moves to the left cell selection.|
 |<kbd>Alt + DownArrow</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Expands the selected group.|
 |<kbd>Ctrl + DownArrow</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Expands all the visible groups.|
+|<kbd>Ctrl + Shift + DownArrow</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↓</kbd> | Expands the selected group.|
 |<kbd>Alt + UpArrow</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Collapses the selected group.|
 |<kbd>Ctrl + UpArrow</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Collapses all the visible groups.|
+|<kbd>Ctrl + Shift + UpArrow</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Collapses the selected group.|
 |<kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Tree Grid.|
 
 ## Ensuring accessibility
