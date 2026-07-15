@@ -98,7 +98,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
     ![Web Installer Installation Summary](images/webinstaller-12.webp)
 
-12. After installation, there are two Syncfusion<sup style="font-size:70%">&reg;</sup> control panel entries, as shown below. The Essential Studio<sup style="font-size:70%">&reg;</sup> entry manages all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the Product entry only uninstalls the specific product setup.
+12. After installation, there are two Syncfusion<sup style="font-size:70%">&reg;</sup> control panel entries, as shown below. The Essential Studio<sup style="font-size:70%">&reg;</sup> entry manages all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the Product entry only uninstall the specific product setup.
 
     ![Control Panel Installation entries](images/webinstaller-13.webp)
 
@@ -113,7 +113,7 @@ Follow one of the options below to uninstall the Syncfusion<sup style="font-size
 
 ### Option 1: Uninstall Using the Syncfusion Blazor Web Installer
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Online Installer file from the download location by double-clicking it. Select the products to be uninstalled from the list, and the Web Installer uninstalls them one by one.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Online Installer file from the download location by double-clicking it. Select the products to be uninstalled from the list, and the Web Installer uninstall them one by one.
 
 ![Web Installer Installed Products Uninstall](images/webinstaller-uninstall-2.webp)
 
