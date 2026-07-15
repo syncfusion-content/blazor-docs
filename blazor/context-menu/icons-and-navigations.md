@@ -83,4 +83,6 @@ Navigation in Context Menu is used to navigate to the other web page when menu i
 
 ```
 
+N> For security reasons, external domains are not supported/loaded within the preview samples.
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVHZdskpEUcEtAV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Navigation in Blazor ContextMenu](./images/blazor-contextmenu-navigation.webp)" %}
