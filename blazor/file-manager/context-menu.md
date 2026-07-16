@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor File Manager Component
 
-The context menu items can be added for the files, folders, and layout in the [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component using the properties of the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) below.
+The context menu items can be added for the files, folders, and layout in the Blazor File Manager component using the properties of the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) below.
 
 * [File](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_File) - Specifies the array of string that is used to configure file items.
 * [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) - Specifies the array of string that is used to configure folder items.
@@ -92,10 +92,10 @@ The following example demonstrates how to add a custom item to the context menu.
 
 <SfFileManager TValue="FileManagerDirectoryContent" @ref="FileManager">
     <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerContextMenuSettings File="@Items" Folder="@Items" Layout="@Items"></FileManagerContextMenuSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" MenuOpened="MenuOpened"></FileManagerEvents>
@@ -136,10 +136,10 @@ The following example demonstrates how to achieve this by showing different cont
 
 <SfFileManager TValue="FileManagerDirectoryContent" @ref="FileManager">
     <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerContextMenuSettings File="@FileItems" Folder="@FolderItems"></FileManagerContextMenuSettings>
 </SfFileManager>
@@ -164,10 +164,10 @@ In the following example, the **Cut** context menu item is disabled for the fold
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" MenuOpened="MenuOpened"></FileManagerEvents>
 </SfFileManager>
@@ -203,10 +203,10 @@ In the following example, the **Cut** context menu item is shown for the files.
 
 <SfFileManager TValue="FileManagerDirectoryContent" >
     <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" MenuOpened="MenuOpened"></FileManagerEvents>
 </SfFileManager>
@@ -244,10 +244,10 @@ The [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMan
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" MenuOpened="MenuOpened"></FileManagerEvents>
 </SfFileManager>
@@ -270,10 +270,10 @@ The [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                             UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                             DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                             GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnMenuClick="OnMenuClick"></FileManagerEvents>
 </SfFileManager>

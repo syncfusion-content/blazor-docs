@@ -20,10 +20,10 @@ Here is a sample demonstrating Virtualization enabled in the **Details** ViewTyp
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details" EnableVirtualization="true">
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/Virtualization/FileOperations"
+                                 UploadUrl="https://physical-service.syncfusion.com/api/Virtualization/Upload"
+                                 DownloadUrl="https://physical-service.syncfusion.com/api/Virtualization/Download"
+                                 GetImageUrl="https://physical-service.syncfusion.com/api/Virtualization/GetImage">
         </FileManagerAjaxSettings>        
     </SfFileManager>
 

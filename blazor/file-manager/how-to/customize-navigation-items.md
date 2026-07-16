@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Navigation Pane in Blazor File Manager Component
 
-The navigation pane in the [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component displays the folder hierarchy in a tree-like structure. You can customize the layout of each folder node in the navigation pane using the `NavigationPaneTemplate` property. This allows you to modify the appearance of folders based on your application's requirements.
+The navigation pane in the Blazor File Manager component displays the folder hierarchy in a tree-like structure. You can customize the layout of each folder node in the navigation pane using the `NavigationPaneTemplate` property. This allows you to modify the appearance of folders based on your application's requirements.
 
 You may use this template to show additional metadata, custom icons, or other UI elements alongside the folder name.
 
@@ -19,10 +19,10 @@ You may use this template to show additional metadata, custom icons, or other UI
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <ChildContent>
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+        <FileManagerAjaxSettings Url="https://physical-service.syncfusion.com/api/FileManager/FileOperations"
+                                 UploadUrl="https://physical-service.syncfusion.com/api/FileManager/Upload"
+                                 DownloadUrl="https://physical-service.syncfusion.com/api/FileManager/Download"
+                                 GetImageUrl="https://physical-service.syncfusion.com/api/FileManager/GetImage">
         </FileManagerAjaxSettings>
     </ChildContent>
     <NavigationPaneTemplate>
