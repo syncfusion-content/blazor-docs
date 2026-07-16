@@ -35,7 +35,7 @@ Key behavioral changes in RTL mode include:
 - Navigation controls are mirrored to match the reading direction.
 - The overall interaction flow is adapted to provide a natural and consistent user experience.
 
-To enable RTL, configure the **EnableRtl** option in the Syncfusion Blazor service during application startup. This ensures that the component integrates seamlessly into applications designed for RTL languages without requiring additional customization.
+To enable RTL, configure the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) option in the Syncfusion Blazor service during application startup. This ensures that the component integrates seamlessly into applications designed for RTL languages without requiring additional customization.
 
 **Register the `EnableRtl` option in Program.cs**:
 
